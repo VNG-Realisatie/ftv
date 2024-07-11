@@ -1,6 +1,11 @@
-[[_TOC_]]
+# Federatieve toegangsverlening
 
-# Introduction
+## Welkom
+Deze Gitlab omgeving hoort bij het project Federatieve Toegangsverlening. 
+Hier wordt uitgelegd wat we doen, en worden gaandeweg de resultaten te verzamelen.
 
-Hello world!
-Ons zinnetje
+Lees hier meer over:
+- [Doelstellingen, context en scope](1.doelstellingen)
+- [Resultaten en status](2.0resultaten)
+- Open vragen / taken
+- Aantekening
