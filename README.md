@@ -2,7 +2,7 @@
 
 ## Welkom
 Deze Gitlab omgeving hoort bij het project Federatieve Toegangsverlening. 
-Hier wordt uitgelegd wat we doen, en worden gaandeweg de resultaten te verzamelen.
+Hier wordt uitgelegd wat we doen, en worden gaandeweg de resultaten verzameld.
 
 Lees hier meer over:
 - [Doelstellingen, context en scope](1.doelstellingen.md)
