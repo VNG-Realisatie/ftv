@@ -5,6 +5,7 @@
 
 
 - PBAC / ABAC / PAC
+  - https://federatief.datastelsel.nl/kennisbank/pbac/
   - https://en.wikipedia.org/wiki/Attribute-based_access_control
   - https://www.paloaltonetworks.com/cyberpedia/what-is-policy-as-code
   - https://www.crowdstrike.com/cybersecurity-101/security-operations/policy-as-code/
