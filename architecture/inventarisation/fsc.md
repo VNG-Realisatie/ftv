@@ -1,7 +1,12 @@
 # references
+- https://nlx.io/
+- https://digilab.overheid.nl/projecten/federatieve-service-connectiviteit-fsc/
 - https://federatief.datastelsel.nl/kennisbank/fsc/
 - https://commonground.nl/page/view/736309a1-739a-47fc-abfd-67e71f1d9e59/consultatie-fsc
 - https://commonground.nl/page/view/272a6103-4c0a-46c3-a597-5d7199aca983/architectuur
+- https://gitlab.com/commonground/nlx/fsc-nlx
+- https://docs.fsc.nlx.io/introduction
+- https://commonground.gitlab.io/standards/fsc/core/draft-fsc-core-00.html
 
 # snippets
 - FSC heeft zijn wortels in NLX, een eerder project met hetzelfde doel dat gericht was op gegevensuitwisseling tussen overheidsinstanties. Tot september 2022 volgde het NLX-team een pad waarbij verplichte NLX gateway-software werd gebruikt voor gegevensuitwisseling. Dit riep echter weerstand op en vormde de aanleiding voor een objectiveringsonderzoek wat uitgevoerd is door Gartner.
