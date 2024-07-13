@@ -5,10 +5,10 @@ Deze Gitlab omgeving hoort bij het project Federatieve Toegangsverlening.
 Hier wordt uitgelegd wat we doen, en worden gaandeweg de resultaten verzameld.
 
 Lees hier meer over:
-- [Doelstellingen, context en scope](project_documentation/1.doelstellingen.md)
-- [Resultaten en status](project_documentation/2.0resultaten.md)
+- [Doelstellingen, context en scope](project_documentatie/1.doelstellingen.md)
+- [Resultaten en status](project_documentatie/2.0resultaten.md)
 - Open vragen / taken
-- [Links](project_documentation/4.0links.md)
+- [Links](project_documentatie/4.0links.md)
 
 ## Contact
 
