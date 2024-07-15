@@ -15,3 +15,10 @@
 - FSC legt de nadruk op het uniformeren van gegevensuitwisseling, niet op het uniformeren van de gegevens zelf. Het biedt een uniforme werkmethode voor gegevensuitwisseling op basis van organisatie-identiteit.
 - FSC bevat transparante gedelegeerde toegangsfunctionaliteit, waardoor organisaties hun rechten kunnen delegeren aan derden om gegevens te gebruiken zonder hun PKI-Overheid certificaten af te staan. Het biedt ook interoperabele logging voor transparantie en regie op gegevens,  waarbij over organisatiegrenzen heen inzicht is in het gebruik van gegevens.
 - FSC is ontworpen met het oog op bestaande gateway-software en biedt een laagdrempelige adoptie voor bestaande systemen. 
+
+# observations
+FSC already contains an authorization chain, which is handled through "plugins", which translate to https requests to other services.
+This mechanism can be used to plug in a PEP based on some policy engine (e.g. OPA/rego or Cedar).
+However, currently, the authorization chain only accepts yes/no and a reason string.
+There are no options to inject, transform or remove headers, query parameters or the body of the original request.
+It is also not possible to perform any modification of the eventual response. 
