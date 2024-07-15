@@ -21,4 +21,5 @@ FSC already contains an authorization chain, which is handled through "plugins",
 This mechanism can be used to plug in a PEP based on some policy engine (e.g. OPA/rego or Cedar).
 However, currently, the authorization chain only accepts yes/no and a reason string.
 There are no options to inject, transform or remove headers, query parameters or the body of the original request.
-It is also not possible to perform any modification of the eventual response. 
+It is also not possible to perform any modification of the eventual response.
+- https://gitlab.com/commonground/nlx/fsc-nlx/-/blob/main/docs/docs/fsc-in-production/setup-authorization.md?ref_type=heads
