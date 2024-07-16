@@ -3,5 +3,6 @@
 - https://www.forumstandaardisatie.nl/open-standaarden/verplicht
 - https://www.forumstandaardisatie.nl/open-standaarden/aanbevolen
 - https://www.forumstandaardisatie.nl/open-standaarden/in-behandeling
+- https://docs.geostandaarden.nl/eu/VerkenningDataspaces/
 
 # snippets

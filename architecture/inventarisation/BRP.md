@@ -1,0 +1,13 @@
+# references
+- https://publicaties.rvig.nl/Besluiten_en_modelautorisaties/Besluiten/BRP_besluiten
+- https://www.rvig.nl/lo-brp
+- https://www.rvig.nl/landelijke-tabellen-en-besluiten
+- https://publicaties.rvig.nl/Landelijke_tabellen/Zoekpagina_tabel_35_autorisatietabel
+- https://www.rvig.nl/w172-lo-brp-toelichting-apis-fase-ii-informatievragen
+
+# snippets
+- .
+
+# observations
+- tables in the BRP dataset have unique 2-digit numeric code assigned. E.g. table 34 = countries, 35 = autorisations.
+- columns in a table have a unique code assigned, consisting of two 2-digit numeric values. E.g. 24.94.12 ISO3166 alpha2 code of a country.
