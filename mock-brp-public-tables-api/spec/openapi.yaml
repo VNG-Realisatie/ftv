@@ -1,0 +1,124 @@
+openapi: 3.0.3
+info:
+  title: Mock BRP public tables API
+  description: |-
+    This is a mock BRP API to expose the publicly available BRP tables 32-61.
+  contact:
+    email: digilab@vng.nl
+  license:
+    name: EUPL 1.2
+    url: https://eupl.eu/1.2/en/
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080/v1
+
+paths:
+  /nationaliteiten:
+    get:
+      summary: Find nationaliteiten by attributes
+      description: Returns all nationaliteiten matching specified attributes.
+      operationId: findNationailteit
+
+      parameters:
+        - $ref: "#/components/parameters/queryNaam"
+        - $ref: "https://gitlab.com/digilab.overheid.nl/ecosystem/fsc-vwl-api/-/raw/main/spec/openapi.yaml#/components/parameters/FSCVWLVerwerkingsActiviteit"
+        - $ref: "https://gitlab.com/digilab.overheid.nl/ecosystem/fsc-vwl-api/-/raw/main/spec/openapi.yaml#/components/parameters/FSCVWLVerwerkingsSpan"
+        - $ref: "https://gitlab.com/digilab.overheid.nl/ecosystem/fsc-vwl-api/-/raw/main/spec/openapi.yaml#/components/parameters/FSCVWLSysteem"
+        - $ref: "https://gitlab.com/digilab.overheid.nl/ecosystem/fsc-vwl-api/-/raw/main/spec/openapi.yaml#/components/parameters/FSCVWLVerwerker"
+        - $ref: "https://gitlab.com/digilab.overheid.nl/ecosystem/fsc-vwl-api/-/raw/main/spec/openapi.yaml#/components/parameters/FSCVWLVerantwoordelijke"
+      responses:
+        "200":
+          $ref: "#/components/responses/NationaiteitenResponse"
+        "400":
+          $ref: "#/components/responses/BadRequestErrorResponse"
+
+components:
+  schemas:
+    # attributes (camelCase):
+    code:
+      description: Code of a nationaliteit.
+      type: string
+      pattern: "^[0-9]{4}$"
+      example: "1234"
+    Error:
+      description: The error that occurred while processing this request.
+      type: object
+      properties:
+        message:
+          type: string
+          example: foo went wrong
+    Nationaliteit:
+      description: A nationaliteit.
+      allOf:
+        - type: object
+          properties:
+            id:
+              $ref: "#/components/schemas/code"
+          required:
+            - id
+  parameters:
+    queryNaam:
+      name: naam
+      in: query
+      description: (part of) the name of a nationaliteit.
+      required: false
+      schema:
+        type: string
+      example: "nederland"
+  responses:
+    EmptyResponse:
+      description: Nothing needs to be returned.
+      content:
+        application/json:
+          schema:
+            type: object
+    BadRequestErrorResponse:
+      description: Invalid input supplied.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              errors:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Error"
+            required:
+              - errors
+    GoneErrorResponse:
+      description: ID not found (but the route itself is valid).
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              errors:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Error"
+            required:
+              - errors
+    NationaiteitenResponse:
+      description: Successful operation
+      headers:
+        FSC-VWL-Verwerkings-Activiteit:
+          $ref: "https://gitlab.com/digilab.overheid.nl/ecosystem/fsc-vwl-api/-/raw/main/spec/openapi.yaml#/components/headers/FSCVWLVerwerkingsActiviteit"
+        FSC-VWL-Verwerkings-Span:
+          $ref: "https://gitlab.com/digilab.overheid.nl/ecosystem/fsc-vwl-api/-/raw/main/spec/openapi.yaml#/components/headers/FSCVWLVerwerkingsSpan"
+        FSC-VWL-Systeem:
+          $ref: "https://gitlab.com/digilab.overheid.nl/ecosystem/fsc-vwl-api/-/raw/main/spec/openapi.yaml#/components/headers/FSCVWLSysteem"
+        FSC-VWL-Verantwoordelijke:
+          $ref: "https://gitlab.com/digilab.overheid.nl/ecosystem/fsc-vwl-api/-/raw/main/spec/openapi.yaml#/components/headers/FSCVWLVerantwoordelijke"
+        FSC-VWL-Verwerker:
+          $ref: "https://gitlab.com/digilab.overheid.nl/ecosystem/fsc-vwl-api/-/raw/main/spec/openapi.yaml#/components/headers/FSCVWLVerwerker"
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Nationaliteit"
+            required:
+              - data

@@ -1,0 +1,8 @@
+go 1.22.5
+
+use (
+	./mock-brp-public-tables-api
+	./mock-brp-public-tables-backend
+	./mock-brp-public-tables-data
+	./utilities
+)
