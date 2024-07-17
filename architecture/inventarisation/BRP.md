@@ -11,8 +11,8 @@
 - .
 
 # observations
-- tables in the BRP dataset have unique 2-digit numeric code assigned. E.g. table 34 = countries, 35 = autorisations.
-- columns in a table have a unique code assigned, consisting of two 2-digit numeric values. E.g. 24.94.12 ISO3166 alpha2 code of a country.
+- tables in the BRP dataset have unique 2-digit numeric code assigned. E.g. table 34 = countries, 35 = authorisations.
+- columns in a table have a unique code assigned, consisting of two 2-digit numeric values prefixed by the table code. E.g. 34.94.12 countries table, ISO3166 alpha2 code.
 
 # public data tables
 - 32 nationaliteiten
