@@ -55,6 +55,7 @@
   - pure Golang implementation
   - https://github.com/open-policy-agent/opa
   - https://www.cncf.io/blog/2020/08/13/introducing-policy-as-code-the-open-policy-agent-opa/
+  - https://www.openpolicyagent.org/docs/latest/policy-performance/
   - https://github.com/permitio/opal
   - https://github.com/StyraInc/regal
   - https://www.topaz.sh/
