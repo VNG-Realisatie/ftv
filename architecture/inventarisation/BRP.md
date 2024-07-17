@@ -2,6 +2,8 @@
 - https://publicaties.rvig.nl/Besluiten_en_modelautorisaties/Besluiten/BRP_besluiten
 - https://www.rvig.nl/lo-brp
 - https://www.rvig.nl/landelijke-tabellen-en-besluiten
+- https://publicaties.rvig.nl/Landelijke_tabellen
+- https://publicaties.rvig.nl/Landelijke_tabellen/Landelijke_tabellen_32_t_m_61_excl_tabel_35/Landelijke_Tabellen_32_t_m_61_in_csv_formaat
 - https://publicaties.rvig.nl/Landelijke_tabellen/Zoekpagina_tabel_35_autorisatietabel
 - https://www.rvig.nl/w172-lo-brp-toelichting-apis-fase-ii-informatievragen
 
