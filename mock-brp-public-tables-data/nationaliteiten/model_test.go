@@ -52,7 +52,7 @@ func TestNewFromCSV(t *testing.T) {
 		},
 		{
 			name:        "non-coded headers, good data",
-			headers:     []string{"Code", "Omschrijving", "Datum Ingang", "Einde Datum"},
+			headers:     []string{"Code", "Omschrijving", "Datum Ingang", "Beëindiging Datum"},
 			data:        []string{"1", "Nederlandse", "16000101", "21991231"},
 			want:        &Nationaliteit{Code: 1, Omschrijving: "Nederlandse", DatumIngang: &d1, DatumEinde: &d2},
 			wantCodeX:   "0001",
