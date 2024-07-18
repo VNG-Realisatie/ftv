@@ -1,4 +1,4 @@
-package nationaliteiten
+package autorisatieregels
 
 import (
 	"regexp"
@@ -6,7 +6,7 @@ import (
 )
 
 // Search implements the Selecter interface.
-func (c *cache) Search(opts ...SearchOpt) []*Nationaliteit {
+func (c *cache) Search(opts ...SearchOpt) []*AutorisatieRegel {
 	s := search{c: c}
 	for i := range opts {
 		opts[i](&s)
@@ -17,38 +17,60 @@ func (c *cache) Search(opts ...SearchOpt) []*Nationaliteit {
 // SearchOpt is the function signature for search options.
 type SearchOpt func(s *search)
 
-// CodeFrom sets the minimum code to search for.
-func CodeFrom(from uint) SearchOpt {
+// Afnemer sets the exact Afnemer to search for.
+func Afnemer(afnemer uint32) SearchOpt {
 	return func(s *search) {
-		s.codeFrom = from
+		s.afnemerFrom = afnemer
+		s.afnemerTo = afnemer
 	}
 }
 
-// CodeTo sets the maximum code to search for.
-func CodeTo(to uint) SearchOpt {
+// AfnemerFrom sets the minimum Afnemer to search for.
+func AfnemerFrom(from uint32) SearchOpt {
 	return func(s *search) {
-		s.codeTo = to
+		s.afnemerFrom = from
 	}
 }
 
-// OmschrijvingRX sets the regular expresion to match with Omschrijving.
-func OmschrijvingRX(rx *regexp.Regexp) SearchOpt {
+// AfnemerTo sets the maximum Afnemer to search for.
+func AfnemerTo(to uint32) SearchOpt {
 	return func(s *search) {
-		s.omschrijvingRX = rx
+		s.afnemerTo = to
 	}
 }
 
-// OmschrijvingFrom sets the minimum omschrijving to search for.
-func OmschrijvingFrom(from string) SearchOpt {
+// NaamRX sets the regular expresion to match with AfnemerNaam.
+func NaamRX(rx *regexp.Regexp) SearchOpt {
 	return func(s *search) {
-		s.omschrijvingFrom = from
+		s.naamRX = rx
 	}
 }
 
-// OmschrijvingTo sets the maximum omschrijving to search for.
-func OmschrijvingTo(to string) SearchOpt {
+// NaamFrom sets the minimum AfnemerNaam to search for.
+func NaamFrom(from string) SearchOpt {
 	return func(s *search) {
-		s.omschrijvingTo = to
+		s.naamFrom = from
+	}
+}
+
+// NaamTo sets the maximum AfnemerNaam to search for.
+func NaamTo(to string) SearchOpt {
+	return func(s *search) {
+		s.naamTo = to
+	}
+}
+
+// IsValid limits the search to valid (true) or not valid (false) AutorisatieRegels.
+//
+// An AutorisatieRegel is valid if the DatumIngang is nil or not after the current date,
+// and the DatumEinde is nil or not before the current date.
+func IsValid(valid bool) SearchOpt {
+	return func(s *search) {
+		if valid {
+			s.valid = 1
+		} else {
+			s.valid = 2
+		}
 	}
 }
 
@@ -88,17 +110,21 @@ func DatumEindeTo(to time.Time) SearchOpt {
 	}
 }
 
-func (s *search) search() []*Nationaliteit {
-	out := make([]*Nationaliteit, 0)
+func (s *search) search() []*AutorisatieRegel {
+	out := make([]*AutorisatieRegel, 0)
 
 	s.c.mutex.RLock()
 	defer s.c.mutex.RUnlock()
 
-	for _, n := range s.c.byCode {
-		if s.codeFrom > 0 && n.Code < s.codeFrom {
+	for _, n := range s.c.byAfnemer {
+		if s.afnemerFrom > 0 && n.Afnemer < s.afnemerFrom {
 			continue
 		}
-		if s.codeTo > 0 && n.Code > s.codeTo {
+		if s.afnemerTo > 0 && n.Afnemer > s.afnemerTo {
+			continue
+		}
+
+		if (s.valid == 1 && !n.IsValid()) || (s.valid == 2 && n.IsValid()) {
 			continue
 		}
 
@@ -116,13 +142,13 @@ func (s *search) search() []*Nationaliteit {
 			continue
 		}
 
-		if s.omschrijvingFrom != "" && n.Omschrijving < s.omschrijvingFrom {
+		if s.naamFrom != "" && n.AfnemerNaam < s.naamFrom {
 			continue
 		}
-		if s.omschrijvingTo != "" && n.Omschrijving > s.omschrijvingTo {
+		if s.naamTo != "" && n.AfnemerNaam > s.naamTo {
 			continue
 		}
-		if s.omschrijvingRX != nil && !s.omschrijvingRX.MatchString(n.Omschrijving) {
+		if s.naamRX != nil && !s.naamRX.MatchString(n.AfnemerNaam) {
 			continue
 		}
 
@@ -133,14 +159,15 @@ func (s *search) search() []*Nationaliteit {
 }
 
 type search struct {
-	c                *cache
-	codeFrom         uint
-	codeTo           uint
-	omschrijvingRX   *regexp.Regexp
-	omschrijvingFrom string
-	omschrijvingTo   string
-	datumIngangTo    time.Time
-	datumIngangFrom  time.Time
-	datumEindeTo     time.Time
-	datumEindeFrom   time.Time
+	valid           uint8
+	afnemerFrom     uint32
+	afnemerTo       uint32
+	c               *cache
+	naamRX          *regexp.Regexp
+	naamFrom        string
+	naamTo          string
+	datumIngangTo   time.Time
+	datumIngangFrom time.Time
+	datumEindeTo    time.Time
+	datumEindeFrom  time.Time
 }
