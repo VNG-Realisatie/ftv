@@ -14,10 +14,11 @@ func TestNew(t *testing.T) {
 	var (
 		h1          = `"Versie","95.10 Afnemersindicatie","95.20 Afnemernaam","99.98 Datum ingang tabelregel","99.99 Datum beëindiging tabelregel"`
 		r1          = `"1","001401","Gemeente Groningen","19931215","20130101"`
+		r1b         = `"1","001401","Gemeente Groningen","19931215"`
 		r2          = `"2","001401","Gemeente Groningen","20150131","20150801"`
 		r3          = `"4","001401","Gemeente Groningen/Burgerzakentaken","20180801","20190203"`
 		r4          = `"5","001401","Gemeente Groningen/Burgerzakentaken","20190203"`
-		badFile     = strings.Join([]string{h1, r1, r2, r1, r4}, "\n")
+		badFile     = strings.Join([]string{h1, r1, r2, r1b, r4}, "\n")
 		goodFile    = strings.Join([]string{h1, r1, r2, r3, r4}, "\n")
 		emptyLoader = LoadFromCSV(bytes.NewBufferString(""))
 		badLoader   = LoadFromCSV(bytes.NewBufferString(badFile))

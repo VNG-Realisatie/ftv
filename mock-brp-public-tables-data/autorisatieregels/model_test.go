@@ -52,7 +52,7 @@ func TestNewFromCSV(t *testing.T) {
 		},
 		{
 			name:         "non-coded headers, good data",
-			headers:      []string{"AfnemerCode", "AfnemerNaam", "Datum Ingang", "Beëindiging Datum"},
+			headers:      []string{"AfnemerIndicatie", "AfnemerNaam", "Datum Ingang", "Beëindiging Datum"},
 			data:         []string{"1", "Gemeente Rotterdam", "16000101", "21991231"},
 			want:         &AutorisatieRegel{Afnemer: 1, AfnemerNaam: "Gemeente Rotterdam", DatumIngang: &d1, DatumEinde: &d2},
 			wantAfnemerX: "000001",
