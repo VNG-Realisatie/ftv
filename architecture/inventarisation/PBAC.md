@@ -12,6 +12,7 @@
   - https://www.devopsschool.com/blog/what-is-policy-as-code-a-complete-guide/
   - https://www.redhat.com/sysadmin/policy-as-code-automation
   - https://github.com/hysnsec/awesome-policy-as-code
+  - https://gitlab.com/digilab.overheid.nl/ecosystem/pbac
 
 
 - XACML <https://groups.oasis-open.org/communities/tc-community-home2?CommunityKey=67afe552-0921-49b7-9a85-018dc7d3ef1d>
@@ -21,6 +22,7 @@
   - https://github.com/wso2/balana
   - https://code.google.com/archive/p/no-xacml/
   - https://github.com/infobloxopen/themis/tree/master (!)
+
 
 - ALFA - Axiomatics <https://alfa.guide/>
   - commercial
