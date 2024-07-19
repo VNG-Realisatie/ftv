@@ -9,13 +9,14 @@ Lees hier meer over het project:
 - [Resultaten, planning en status](project_documentatie/2.0resultaten.md)
 
 Er wordt gewerkt aan de volgende deliverables:
-1.	[In kaart brengen van de stakeholders](project_documentatie/2.1stakeholders.md)
-2.	[Inventarisatie van de huidig (meest voorkomende) ge&iuml;mplementeerde oplossingen](project_documentatie/2.2huidige_oplossingen.md)
-3.	[Onderzoek mogelijke moderne oplossingen passend bij API’s](project_documentatie/2.3.0moderne_oplossingsrichtingen.md)
+1.	[Een kaart van stakeholders](project_documentatie/2.1stakeholders.md)
+2.	[Inventarisatie van de huidig ge&iuml;mplementeerde oplossingen](project_documentatie/2.2huidige_oplossingen.md)
+3.	[Een onderzoek naar mogelijke moderne oplossingen](project_documentatie/2.3.0moderne_oplossingsrichtingen.md)
 
-
-- Open vragen / taken
-- [Links](project_documentatie/4.0links.md)
+Omdat er nogal wat begrippen, standaarden en projecten rondom het project leven is er een verzameling links aangelegd:
+1. [De context](project_documentatie/4.1.links_context.md) - De organisatie en standaarden rondom FTV, ons umfeld
+2. [Kennis](project_documentatie/4.2.links_pbac.md) - Standaarden en projecten specifiek over toegangsverlening
+3. [Operationeel](project_documentatie/4.4.links_operationeel.md). Praktische links en informatie voor het team
 
 ## Contact
 
