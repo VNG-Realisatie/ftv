@@ -1,10 +1,10 @@
 package: api
 output: ./generated.go
 generate:
-  embedded-spec: true
-  strict-server: true
+  embedded-spec: false
+  strict-server: false
   models: true
-  chi-server: true
-  client: true
+  chi-server: false
+  client: false
 import-mapping:
   https://gitlab.com/digilab.overheid.nl/ecosystem/fsc-vwl-api/-/raw/main/spec/openapi.yaml: gitlab.com/digilab.overheid.nl/ecosystem/fsc-vwl-api
