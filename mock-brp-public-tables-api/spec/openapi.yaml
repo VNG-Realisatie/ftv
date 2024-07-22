@@ -2,7 +2,7 @@ openapi: 3.0.3
 info:
   title: Mock BRP public tables API
   description: |-
-    This is a mock BRP API to expose the publicly available BRP tables 32-61.
+    This is a mock REST API to expose the publicly available BRP tables 32-61.
   contact:
     email: digilab@vng.nl
   license:
@@ -15,31 +15,114 @@ servers:
 paths:
   /nationaliteiten:
     get:
-      summary: Find nationaliteiten by attributes
-      description: Returns all nationaliteiten matching specified attributes.
+      summary: List nationaliteiten (tabel 32)
+      description: Returns all nationaliteiten matching the specified filters.
       operationId: findNationailteit
 
       parameters:
-        - $ref: "#/components/parameters/queryNaam"
-        - $ref: "https://gitlab.com/digilab.overheid.nl/ecosystem/fsc-vwl-api/-/raw/main/spec/openapi.yaml#/components/parameters/FSCVWLVerwerkingsActiviteit"
-        - $ref: "https://gitlab.com/digilab.overheid.nl/ecosystem/fsc-vwl-api/-/raw/main/spec/openapi.yaml#/components/parameters/FSCVWLVerwerkingsSpan"
-        - $ref: "https://gitlab.com/digilab.overheid.nl/ecosystem/fsc-vwl-api/-/raw/main/spec/openapi.yaml#/components/parameters/FSCVWLSysteem"
-        - $ref: "https://gitlab.com/digilab.overheid.nl/ecosystem/fsc-vwl-api/-/raw/main/spec/openapi.yaml#/components/parameters/FSCVWLVerwerker"
-        - $ref: "https://gitlab.com/digilab.overheid.nl/ecosystem/fsc-vwl-api/-/raw/main/spec/openapi.yaml#/components/parameters/FSCVWLVerantwoordelijke"
+        - name: codeFrom
+          in: query
+          description: The minimum Code of the Nationaliteit to search for.
+          required: false
+          schema:
+            type: integer
+            format: int32
+        - name: codeTo
+          in: query
+          description: The maximum Code of the Nationaliteit to search for.
+          required: false
+          schema:
+            type: integer
+            format: int32
+        - $ref: "#/components/parameters/omschrijvingRx"
+        - $ref: "#/components/parameters/omschrijvingFrom"
+        - $ref: "#/components/parameters/omschrijvingTo"
+        - $ref: "#/components/parameters/datumIngangFrom"
+        - $ref: "#/components/parameters/datumIngangTo"
+        - $ref: "#/components/parameters/datumEindeFrom"
+        - $ref: "#/components/parameters/datumEindeTo"
+
       responses:
         "200":
-          $ref: "#/components/responses/NationaiteitenResponse"
+          $ref: "#/components/responses/NationaliteitenResponse"
         "400":
           $ref: "#/components/responses/BadRequestErrorResponse"
 
 components:
+  parameters:
+    omschrijvingRx:
+      name: omschrijvingRx
+      in: query
+      description: Regular expression to filter the Omschrijving of the element on.
+      required: false
+      schema:
+        type: string
+
+    omschrijvingFrom:
+      name: omschrijvingFrom
+      in: query
+      description: The minimum Omschrijving of the element to search for.
+      required: false
+      schema:
+        type: string
+
+    omschrijvingTo:
+      name: omschrijvingTo
+      in: query
+      description: The maximum Omschrijving of the element to search for.
+      required: false
+      schema:
+        type: string
+
+    datumIngangFrom:
+      name: datumIngangFrom
+      in: query
+      description: The minimum DatumIngang of the element to search for.
+      required: false
+      schema:
+        type: string
+        format: full-date
+
+    datumIngangTo:
+      name: datumIngangTo
+      in: query
+      description: The maximum DatumIngang of the element to search for.
+      required: false
+      schema:
+        type: string
+        format: full-date
+
+    datumEindeFrom:
+      name: datumEindeFrom
+      in: query
+      description: The minimum DatumEinde of the element to search for.
+      required: false
+      schema:
+        type: string
+        format: full-date
+
+    datumEindeTo:
+      name: datumEindeTo
+      in: query
+      description: The maximum DatumEinde of the element to search for.
+      required: false
+      schema:
+        type: string
+        format: full-date
+
   schemas:
-    # attributes (camelCase):
-    code:
-      description: Code of a nationaliteit.
+    datumIngang:
+      description: Date on which the element becomes valid
       type: string
-      pattern: "^[0-9]{4}$"
-      example: "1234"
+      format: full-date
+      example: "1990-04-01"
+
+    datumEinde:
+      description: Date after which the element becomes invalid.
+      type: string
+      format: full-date
+      example: "2020-12-31"
+
     Error:
       description: The error that occurred while processing this request.
       type: object
@@ -47,24 +130,29 @@ components:
         message:
           type: string
           example: foo went wrong
+
     Nationaliteit:
       description: A nationaliteit.
       allOf:
         - type: object
           properties:
-            id:
-              $ref: "#/components/schemas/code"
+            code:
+              description: Code of a nationaliteit.
+              type: string
+              pattern: "^[0-9]{4}$"
+              example: "0080"
+            omschrijving:
+              description: Omschrijving of a nationaliteit.
+              type: string
+              example: "Nederlandse"
+            datumIngang:
+              $ref: "#/components/schemas/datumIngang"
+            datumEinde:
+              $ref: "#/components/schemas/datumEinde"
           required:
-            - id
-  parameters:
-    queryNaam:
-      name: naam
-      in: query
-      description: (part of) the name of a nationaliteit.
-      required: false
-      schema:
-        type: string
-      example: "nederland"
+            - code
+            - omschrijving
+
   responses:
     EmptyResponse:
       description: Nothing needs to be returned.
@@ -72,6 +160,7 @@ components:
         application/json:
           schema:
             type: object
+
     BadRequestErrorResponse:
       description: Invalid input supplied.
       content:
@@ -85,6 +174,7 @@ components:
                   $ref: "#/components/schemas/Error"
             required:
               - errors
+
     GoneErrorResponse:
       description: ID not found (but the route itself is valid).
       content:
@@ -98,19 +188,9 @@ components:
                   $ref: "#/components/schemas/Error"
             required:
               - errors
-    NationaiteitenResponse:
+
+    NationaliteitenResponse:
       description: Successful operation
-      headers:
-        FSC-VWL-Verwerkings-Activiteit:
-          $ref: "https://gitlab.com/digilab.overheid.nl/ecosystem/fsc-vwl-api/-/raw/main/spec/openapi.yaml#/components/headers/FSCVWLVerwerkingsActiviteit"
-        FSC-VWL-Verwerkings-Span:
-          $ref: "https://gitlab.com/digilab.overheid.nl/ecosystem/fsc-vwl-api/-/raw/main/spec/openapi.yaml#/components/headers/FSCVWLVerwerkingsSpan"
-        FSC-VWL-Systeem:
-          $ref: "https://gitlab.com/digilab.overheid.nl/ecosystem/fsc-vwl-api/-/raw/main/spec/openapi.yaml#/components/headers/FSCVWLSysteem"
-        FSC-VWL-Verantwoordelijke:
-          $ref: "https://gitlab.com/digilab.overheid.nl/ecosystem/fsc-vwl-api/-/raw/main/spec/openapi.yaml#/components/headers/FSCVWLVerantwoordelijke"
-        FSC-VWL-Verwerker:
-          $ref: "https://gitlab.com/digilab.overheid.nl/ecosystem/fsc-vwl-api/-/raw/main/spec/openapi.yaml#/components/headers/FSCVWLVerwerker"
       content:
         application/json:
           schema:
