@@ -1,0 +1,7 @@
+baseURL = 'https://digilab.overheid.nl.gitlab.io/ecosystem/federatieve-toegangsverlening/'
+languageCode = 'nl-nl'
+title = 'Federatieve Toegangsverlening APIs'
+[params]
+  subtitle = 'Een project van VNG Realisatie t.b.v. standaardisering toegangsverlening APIs.'
+  [params.contact]
+    email = 'info@vng.nl'
