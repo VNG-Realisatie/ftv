@@ -16,7 +16,7 @@ Er wordt gewerkt aan de volgende deliverables:
 Omdat er nogal wat begrippen, standaarden en projecten rondom het project leven is er een verzameling links aangelegd:
 1. [De context](project_documentatie/4.1.links_context.md) - De organisatie en standaarden rondom FTV, ons umfeld
 2. [Kennis](project_documentatie/4.2.links_pbac.md) - Standaarden en projecten specifiek over toegangsverlening
-3. [Operationeel](project_documentatie/4.4.links_operationeel.md). Praktische links en informatie voor het team
+3. [Onderhanden werk](project_documentatie/4.3.links_onderhanden_werk). Vragen/aantekeningen waar het team nu mee bezig is
 
 ## Contact
 
