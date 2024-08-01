@@ -1,4 +1,4 @@
-baseURL = 'https://digilab.overheid.nl.gitlab.io/ecosystem/federatieve-toegangsverlening/'
+baseURL = 'https://ftv-design.nl/'
 languageCode = 'nl-nl'
 title = 'Federatieve Toegangsverlening APIs'
 [params]
