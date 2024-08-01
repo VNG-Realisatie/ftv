@@ -1,3 +1,12 @@
++++
+date = 2024-08-01T11:57:00+02:00
+draft = false
+title = 'Federatieve toegangsverlening'
+weight = 10
+[params]
+author = 'Marc de Boer'
++++
+
 # Federatieve toegangsverlening
 
 ## Welkom
