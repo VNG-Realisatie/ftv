@@ -1,3 +1,7 @@
+---
+weight: 10
+---
+
 # Links over de context van FTV
 
 ## Overheidsbreed
@@ -5,33 +9,33 @@
 ### Principes
 
 - [Data Bij de Bron](https://www.digitaleoverheid.nl/data-bij-de-bron/) 
-  - Zie ook [data_bij_de_bron.md](../content/docs/architecture/inventarisation/data_bij_de_bron.md)
-  - S[tappenplan introductie](https://realisatieibds.nl/attachment/entity/8654996c-81ff-4594-9bc0-d5c4943612a3), geschreven door FDS
-- [Regie op gegevens](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/regie-op-gegevens/) - Zie ook [regie_op_gegevens.md](../content/docs/architecture/inventarisation/regie_op_gegevens.md)
+  - Zie ook [data_bij_de_bron](/docs/architecture/inventarisation/data_bij_de_bron)
+  - [Stappenplan introductie](https://realisatieibds.nl/attachment/entity/8654996c-81ff-4594-9bc0-d5c4943612a3), geschreven door FDS
+- [Regie op gegevens](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/regie-op-gegevens/) - Zie ook [regie_op_gegevens](/docs/architecture/inventarisation/regie_op_gegevens)
 - [Pas toe of leg uit](https://www.forumstandaardisatie.nl/pas-toe-leg-uit-beleid)
 
 ### Programma's
-- [IBDS](https://www.digitaleoverheid.nl/interbestuurlijke-datastrategie/) - Zie ook [IBDS.md](../content/docs/architecture/inventarisation/IBDS.md)
+- [IBDS](https://www.digitaleoverheid.nl/interbestuurlijke-datastrategie/) - Zie ook [IBDS](/docs/architecture/inventarisation/ibds)
   - [Realisatie IBDS](https://realisatieibds.nl/)
-- FDS - Zie ook [fds.md](../content/docs/architecture/inventarisation/fds.md)
+- FDS - Zie ook [fds](/docs/architecture/inventarisation/fds)
   - [Platform](https://federatief.datastelsel.nl/)
   - [FDS bij NORA](https://www.noraonline.nl/wiki/FDS_Basis_concept)
   - [Regie FDS bij VNG](https://vng.nl/projecten/regie-federatief-datastelsel-fds)
   - [FDS catalogus](https://gitlab.com/digilab.overheid.nl/ecosystem/fds-catalogus)
-  - FSC - Zie ook [fsc.md](../content/docs/architecture/inventarisation/fsc.md)
+  - FSC - Zie ook [fsc](/docs/architecture/inventarisation/fsc)
     - [FSC bij VNG](https://vng.nl/projecten/federatieve-service-connectiviteit-fsc)
     - [GitLab](https://gitlab.com/commonground/nlx/fsc-nlx)
-  - [Poortwachter](https://federatief.datastelsel.nl/kennisbank/stelselfuncties/#poortwachter) - Zie ook [poortwachter.md](../content/docs/architecture/inventarisation/poortwachter.md)
+  - [Poortwachter](https://federatief.datastelsel.nl/kennisbank/stelselfuncties/#poortwachter) - Zie ook [poortwachter](/docs/architecture/inventarisation/poortwachter)
 - [Rijks CIO](https://organisaties.overheid.nl/134864/directie_Chief_Information_Office-_Rijk_CIO-Rijk) 
 - [Open regels van de overheid](https://regels.overheid.nl/) 
 
 ### Architectuurstandaarden
-- [GDI](https://www.digitaleoverheid.nl/mido/generieke-digitale-infrastructuur-gdi/) - Zie ook [GDI.md](../content/docs/architecture/inventarisation/GDI.md)
+- [GDI](https://www.digitaleoverheid.nl/mido/generieke-digitale-infrastructuur-gdi/) - Zie ook [GDI](/docs/architecture/inventarisation/gdi)
   - [MIDO](https://www.digitaleoverheid.nl/mido/)
   
     Domeinen
     - Toegang
-      - **[Domeinarchitectuur toegang](https://minbzk.github.io/gdi-toegang/content/views/Domeinarchitectuur%20toegang.html) Onze belangrijkste richtlijn** -Zie ook [domeinarchitectuur-toegang.md](../content/docs/architecture/inventarisation/domeinarchitectuur-toegang.md)
+      - **[Domeinarchitectuur toegang](https://minbzk.github.io/gdi-toegang/content/views/Domeinarchitectuur%20toegang.html) Onze belangrijkste richtlijn** -Zie ook [domeinarchitectuur-toegang](/docs/architecture/inventarisation/domeinarchitectuur-toegang)
         - [Afsprakenstelsel Elektronische Toegangsdiensten (behorende bij eHerkenning)](https://afsprakenstelsel.etoegang.nl/Startpagina/v2/?l=nl)
         - [Het Nieuwe Stelsel](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/wetgeving/wet-digitale-overheid/veelgestelde-vragen-over-de-inwerkingtreding-van-de-wdo/)
         - [EDI-stelsel NL](https://edi.pleio.nl/)
@@ -44,14 +48,14 @@
     - Infrastructuur
       - [Diginetwerk](https://www.logius.nl/domeinen/infrastructuur/diginetwerk)
       - [Digikoppeling](https://www.logius.nl/domeinen/gegevensuitwisseling/digikoppeling/documentatie)
-      - [NORA](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/nora/) - Zie ook [NORA.md](../content/docs/architecture/inventarisation/NORA.md)
+      - [NORA](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/nora/) - Zie ook [NORA](/docs/architecture/inventarisation/nora)
         - [IAM bij NORA](https://www.noraonline.nl/wiki/Identity_%26_Access_Management_(IAM))
       - [Forum Standaardisatie](https://www.forumstandaardisatie.nl/)
-- Haven - Zie ook [haven.md](../content/docs/architecture/inventarisation/haven.md)
+- Haven - Zie ook [haven](/docs/architecture/inventarisation/haven)
 
 ### Koppelvlakstandaarden
-- [StUF](https://standaarden.vng.nl/StUF-standaarden) - Zie ook [stuf.md](../content/docs/architecture/inventarisation/stuf.md)
-- [HaalCentraal](https://haalcentraal.pleio.nl/) - Zie ook [haalcentraal.md](../content/docs/architecture/inventarisation/haalcentraal.md) 
+- [StUF](https://standaarden.vng.nl/StUF-standaarden) - Zie ook [stuf](/docs/architecture/inventarisation/stuf)
+- [HaalCentraal](https://haalcentraal.pleio.nl/) - Zie ook [haalcentraal](/docs/architecture/inventarisation/haalcentraal) 
   - [Project bij VNG](https://vng.nl/projecten/haal-centraal-gegevens-ophalen-bij-basisregistraties)
   - [GitHub](https://vng-realisatie.github.io/Haal-Centraal/)
 
@@ -69,26 +73,26 @@
 
 ### Platforms
 - [Developer.overheid.nl](https://developer.overheid.nl/)
-- [Kennisplatform API's](https://www.geonovum.nl/themas/kennisplatform-apis) - Zie ook [kennisplatform_apis.md](../content/docs/architecture/inventarisation/kennisplatform_apis.md)
+- [Kennisplatform API's](https://www.geonovum.nl/themas/kennisplatform-apis) - Zie ook [kennisplatform_apis](/docs/architecture/inventarisation/kennisplatform_apis)
 - [Nationaal Cyber Security Centrum](https://www.ncsc.nl)
 - [BOMOS](https://www.logius.nl/domeinen/infrastructuur/bomos/documentatie) - Hoe maak je een standaard
 
 ### Aanbieders
-- [Stelsel van Basisregistraties](https://stelselvanbasisregistraties.nl/about-system) - Zie ook [stelsel_van_basisregistraties.md](../content/docs/architecture/inventarisation/stelsel_van_basisregistraties.md)
+- [Stelsel van Basisregistraties](https://stelselvanbasisregistraties.nl/about-system) - Zie ook [stelsel_van_basisregistraties](/docs/architecture/inventarisation/stelsel_van_basisregistraties)
   - [Lijst van basisregistraties](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/10-basisregistraties/)
   - [Lijst van sectorregistraties](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/sectorregistraties/)
   - [LinkedData model van volledige stelsel](https://stelselvanbasisregistraties.nl/details/DATASET/STCdata)
 
 ## Gemeentelijk
 ### Gemeentelijke programma's
-- GGI netwerk - Zie ook [GGI.md](../content/docs/architecture/inventarisation/GGI.md)
-- [Gemeentelijke Model Architectuur (GEMMA)](https://vng.nl/projecten/gemeentelijke-model-architectuur-gemma) - Zie ook [Gemma.md](../content/docs/architecture/inventarisation/Gemma.md)
+- GGI netwerk - Zie ook [GGI](/docs/architecture/inventarisation/GGI)
+- [Gemeentelijke Model Architectuur (GEMMA)](https://vng.nl/projecten/gemeentelijke-model-architectuur-gemma) - Zie ook [Gemma](/docs/architecture/inventarisation/gemma)
   - [IAM bij GEMMA](https://www.gemmaonline.nl/wiki/WMA_Identiteit_en_Toegangbeheer)
 
 ## Commerci&euml;le partijen
 - Maykin
 - SonicBee
-- [enable-u](../content/docs/architecture/inventarisation/enable-u.md)
+- [enable-u](/docs/architecture/inventarisation/enable-u)
   - In de [softwarecatalogus](https://www.softwarecatalogus.nl/pakket/enable-u-2secure)
 - Pink Roccade
 - Centric

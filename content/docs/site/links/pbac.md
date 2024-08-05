@@ -1,10 +1,14 @@
+---
+weight: 20
+---
+
 # Links over de wereld van moderne toegangsverlening
 
 ## Trust frameworks
 - Bestaande trust frameworks
   - [Data spaces support centre (dssc)](https://dssc.eu/space/BVE/357075461/Trust+Framework)
   - [iSHARE](https://ishare.eu/nl/home/over-ishare/)
-  - [International Data Spaces Assocation](https://internationaldataspaces.org/) - Zie ook [IDS.md](../content/docs/architecture/inventarisation/IDS.md)
+  - [International Data Spaces Assocation](https://internationaldataspaces.org/) - Zie ook [IDS](/docs/architecture/inventarisation/ids)
     - [Usage control](https://docs.internationaldataspaces.org/ids-knowledgebase/v/ids-ram-4/perspectives-of-the-reference-architecture-model/4_perspectives/4_1_security_perspective/4_1_6_usage_control#figure-4.1.6.4-odrl-information-model)
     - [Usage Control Language](https://docs.internationaldataspaces.org/ids-knowledgebase/v/ids-g/usagecontrol/contract)
   - [Gaia-X](https://www.gaia-x.eu/)
@@ -17,7 +21,7 @@
 - EBSI [VC Framework](https://ec.europa.eu/digital-building-blocks/sites/display/EBSI/EBSI+Verifiable+Credentials)
 
 ## Policytalen en -producten
-- Zie ook [PBAC.md](../content/docs/architecture/inventarisation/PBAC.md)
+- Zie ook [PBAC](/docs/architecture/inventarisation/pbac)
 - [XACML](https://en.wikipedia.org/wiki/XACML), OASIS standaard dus echt open, 300 functies dus uitgebreid
   - [xacnk4j](https://github.com/policy4j/xacml4j), een referentie implementatie in Java
   - [Balana](https://svn.wso2.org/repos/wso2/trunk/commons/balana/), implementatie door Sun
@@ -37,7 +41,7 @@
 - [Een vergelijking uitgevoerd onder GEMMA](https://www.gemmaonline.nl/wiki/WMA_RBAC_ABAC_en_PBAC)
 - [Position paper geschreven onder FDS](https://federatief.datastelsel.nl/kennisbank/pbac/)
 - [RAWA heeft ook federatief op ABAC/PBAC voorgesteld](https://vng-realisatie.github.io/RAWA/uitwerking/introductie/)
-- [lock-unlock](https://digilab.overheid.nl/projecten/lock-unlock/) - Zie ook [lock_unlock.md](../content/docs/architecture/inventarisation/lock_unlock.md)
+- [lock-unlock](https://digilab.overheid.nl/projecten/lock-unlock/) - Zie ook [lock_unlock](/docs/architecture/inventarisation/lock_unlock)
   - [volledige documentatie](https://kadaster-labs.github.io/lock-unlock-docs/federatieve-bevraging/apis/)
   - [artikel op ibds](https://realisatieibds.nl/news/view/04652138-5853-4f9c-9700-87945211c5d5/lock-unlock-lock-de-data-unlock-het-potentieel)
   - [nog een artikel op ibds](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/news/view/9b197d80-a955-49c0-b8be-136e1d07ad64/de-kracht-van-het-integraal-verbinden-van-afgeschermde-data)
@@ -47,7 +51,7 @@
 - [Linked Data](https://en.wikipedia.org/wiki/Linked_data)
 - [RDF](https://en.wikipedia.org/wiki/Resource_Description_Framework)
 - [GraphQL](https://en.wikipedia.org/wiki/GraphQL)
-- [DCAT](http://www.w3.org/TR/vocab-dcat/) - [zie ook DCAT.md](../content/docs/architecture/inventarisation/DCAT.md)
+- [DCAT](http://www.w3.org/TR/vocab-dcat/) - [zie ook DCAT](/docs/architecture/inventarisation/dcat)
 - [DCAT2.0](https://docs.datacommunities.nl/data-overheid-nl-documentatie/dcat/dcat-2.0)
 - [DCAT-DONL](https://data.overheid.nl/ondersteuning/open-data/dcat)
 - [SKOS](https://en.wikipedia.org/wiki/Simple_Knowledge_Organization_System)

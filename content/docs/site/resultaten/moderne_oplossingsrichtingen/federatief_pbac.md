@@ -1,0 +1,24 @@
+---
+weight: 20
+---
+
+# PBAC in een federatief stelsel
+
+De voorgestelde oplossing is gebruik maken van PBAC in een federatief stelsel.
+
+We kijken voor dit project specifiek naar de opstelling met PBAC aan beide zijden van de API aanroep,
+zoals beschreven in [dit hoofdstuk.](https://federatief.datastelsel.nl/kennisbank/pbac/#hoe-werkt-pbac-over-verschillende-organisaties-in-een-federatief-datastelsel)
+
+## To do
+> Verder onderzoek dient gedaan te worden naar:
+> - Gebruik van PBAC in andere trust frameworks
+
+> Nader uit te werken aspecten zijn:
+> - Welke **notatiestandaard** te kiezen.
+> - Welke **policy engine** te kiezen/bouwen.
+> - **Beheer van policies.** Het beheer van toegangsregels wordt snel bewerkelijk. Van RBAC en ABAC wordt gezegd dat het snel onoverzichtelijk
+wordt als er veel rollen respectievelijk attributen zijn. Bij PBAC kan dat net zo goed gebeuren, zeker omdat de regels
+in de meeste notaties lastig te lezen zijn. Een vorm van 
+> - **Logging** Clearing house
+ 
+> Verder naar [use cases](../../use_cases)

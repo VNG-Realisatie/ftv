@@ -1,7 +1,4 @@
 baseURL = 'https://ftv-design.nl/'
 languageCode = 'nl-nl'
-title = 'Federatieve Toegangsverlening APIs'
-[params]
-  subtitle = 'Een project van VNG Realisatie t.b.v. standaardisering toegangsverlening APIs.'
-  [params.contact]
-    email = 'info@vng.nl'
+title = 'VNG Realisatie - FTV'
+theme = "hugo-book"

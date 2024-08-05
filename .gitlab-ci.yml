@@ -5,7 +5,7 @@ variables:
   GIT_DEPTH: 0
   GIT_STRATEGY: clone
   GIT_SUBMODULE_STRATEGY: recursive
-  TZ: America/Los_Angeles
+  TZ: Europe/Amsterdam
 
 image:
   name: golang:1.22.1-bookworm

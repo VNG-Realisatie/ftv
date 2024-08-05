@@ -1,3 +1,8 @@
+---
+bookCollapseSection: false
+weight: 20
+---
+
 # Inventarisatie van huidige oplossingen
 
 ## Scope
@@ -69,9 +74,9 @@ die methode geleverd zijn.
 
 Daarnaast zijn er API's voor zaakgericht werken gebaseerd op [OpenZaak](https://github.com/open-zaak/open-zaak/blob/d9c14e1257d6ec6751b218b18cdd9eae4b8f9b63/docs/manual/general.rst#api-autorisaties).
 
-| Code                                                  | Naam basisregistratie / dienst                                                                                                | Koppelvlak   | Toegangsverlening   | [Digimelding](../content/docs/architecture/inventarisation/TMV.md) | Digilevering |
+| Code                                                  | Naam basisregistratie / dienst                                                                                                | Koppelvlak   | Toegangsverlening   | [Digimelding](../architecture/inventarisation/TMV.md) | Digilevering |
 |-------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|--------------|---------------------|-------------------------------------------------------|--------------|
-| [BRP](../content/docs/architecture/inventarisation/BRP.md)         | Personen (inclusief RNI)                                                                                                      | HaalCentraal | Eigen model en expressietaal                    | X                                                     |              |
+| [BRP](../architecture/inventarisation/BRP.md)         | Personen (inclusief RNI)                                                                                                      | HaalCentraal | Eigen model en expressietaal                    | X                                                     |              |
 | [HR](https://www.kvk.nl/producten-bestellen/kvk-api/) | Handelsregister                                                                                                               | REST         | Geen, alles is open | X                                                     | X            |
 | BAG                                                   | Adressen en Gebouwen                                                                                                          |              |                     | X                                                     | X            |
 | BRT                                                   | Topografie                                                                                                                    | HaalCentraal |                     | X                                                     |              |
@@ -82,4 +87,4 @@ Daarnaast zijn er API's voor zaakgericht werken gebaseerd op [OpenZaak](https://
 | BGT                                                   | Grootschalige Topografie (voorheen GBKN)                                                                                      |              |                     |                                                       |              |
 | BRO                                                   | Ondergrond                                                                                                                    |              |                     |                                                       |              |
 
-> Ga verder naar [moderne oplossingen](2.3.0moderne_oplossingsrichtingen.md)
+> Ga verder naar [moderne oplossingen](../moderne_oplossingsrichtingen)

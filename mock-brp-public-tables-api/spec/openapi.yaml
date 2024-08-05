@@ -17,7 +17,7 @@ paths:
     get:
       summary: List nationaliteiten (tabel 32)
       description: Returns all nationaliteiten matching the specified filters.
-      operationId: findNationailteit
+      operationId: findNationaliteit
 
       parameters:
         - name: codeFrom
@@ -137,12 +137,12 @@ components:
         - type: object
           properties:
             code:
-              description: Code of a nationaliteit.
+              description: Unique code.
               type: string
               pattern: "^[0-9]{4}$"
               example: "0080"
             omschrijving:
-              description: Omschrijving of a nationaliteit.
+              description: Unique description.
               type: string
               example: "Nederlandse"
             datumIngang:
@@ -152,6 +152,52 @@ components:
           required:
             - code
             - omschrijving
+
+    AutorisatieRegel:
+      description: An autorisatie regel.
+      allOf:
+        - type: object
+          properties:
+            versie:
+              description: Sequential version number.
+              type: integer
+              format: int32
+              example: "1"
+            afnemerIndicatie:
+              description: Unique consumer identifier (95.10).
+              type: string
+              pattern: "^[0-9]{6}$"
+              example: "000203"
+            afnemerNaam:
+              description: Unique consumer name (95.20).
+              type: string
+              example: "Gemeente Amsterdam"
+            aantekening:
+              description: Remarks (95.11).
+              type: string
+            geheimhouding:
+              description: Secrecy indicator (95.12).
+              type: integer
+              format: int32
+              example: 1
+            verstrekkingsBeperking:
+              description: Limited delivery indicator (95.13).
+              type: integer
+              format: int32
+              example: 1
+            kindRelatieBeperking:
+              description: Limited delivery indicator for child relationship (95.14).
+              type: integer
+              format: int32
+              example: 1
+            datumIngang:
+              $ref: "#/components/schemas/datumIngang"
+            datumEinde:
+              $ref: "#/components/schemas/datumEinde"
+          required:
+            - versie
+            - afnemerIndicatie
+            - afnemerNaam
 
   responses:
     EmptyResponse:
@@ -200,5 +246,19 @@ components:
                 type: array
                 items:
                   $ref: "#/components/schemas/Nationaliteit"
+            required:
+              - data
+
+    AutorisatieRegelsResponse:
+      description: Successful operation
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  $ref: "#/components/schemas/AutorisatieRegel"
             required:
               - data
