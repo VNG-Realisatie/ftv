@@ -1,4 +1,5 @@
 .idea/
+.hugo_build.lock
 cover.out
 cover.html
 bin/
