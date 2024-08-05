@@ -17,11 +17,10 @@
 
 - XACML <https://groups.oasis-open.org/communities/tc-community-home2?CommunityKey=67afe552-0921-49b7-9a85-018dc7d3ef1d>
   - XML based
-  - no (open-source) Golang implementation
   - https://en.wikipedia.org/wiki/XACML
+  - https://github.com/infobloxopen/themis
   - https://github.com/wso2/balana
   - https://code.google.com/archive/p/no-xacml/
-  - https://github.com/infobloxopen/themis/tree/master (!)
 
 
 - ALFA - Axiomatics <https://alfa.guide/>
