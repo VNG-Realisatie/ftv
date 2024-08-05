@@ -1,5 +1,6 @@
 ---
 weight: 20
+title: "Federatief PBAC"
 ---
 
 # PBAC in een federatief stelsel

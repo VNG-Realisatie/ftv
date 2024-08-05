@@ -1,7 +1,7 @@
 ---
 weight: 20
 bookFlatSection: true
-title: "Federatieve Toegangsverlening"
+title: "Federatieve toegangsverlening"
 ---
 
 # Federatieve toegangsverlening

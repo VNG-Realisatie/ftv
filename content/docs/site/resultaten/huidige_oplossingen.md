@@ -1,6 +1,7 @@
 ---
 bookCollapseSection: false
 weight: 20
+title: "Huidige oplossingen"
 ---
 
 # Inventarisatie van huidige oplossingen

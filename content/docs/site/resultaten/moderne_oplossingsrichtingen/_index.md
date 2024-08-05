@@ -1,6 +1,7 @@
 ---
 weight: 30
 bookCollapseSection: true
+title: "Moderne oplossingsrichtingen"
 ---
 
 # Inventarisatie van moderne oplossingen
