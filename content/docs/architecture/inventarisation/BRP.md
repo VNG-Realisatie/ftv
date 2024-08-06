@@ -1,4 +1,11 @@
-# references
+---
+weight: 10
+type: 'docs'
+---
+
+# Basis Registratie Personen (RvIG)
+
+## References
 - https://publicaties.rvig.nl/Besluiten_en_modelautorisaties/Besluiten/BRP_besluiten
 - https://www.rvig.nl/lo-brp
 - https://www.rvig.nl/landelijke-tabellen-en-besluiten
@@ -7,14 +14,14 @@
 - https://publicaties.rvig.nl/Landelijke_tabellen/Zoekpagina_tabel_35_autorisatietabel
 - https://www.rvig.nl/w172-lo-brp-toelichting-apis-fase-ii-informatievragen
 
-# snippets
+## Snippets
 - .
 
-# observations
+## Observations
 - tables in the BRP dataset have unique 2-digit numeric code assigned. E.g. table 34 = countries, 35 = authorisations.
 - columns in a table have a unique code assigned, consisting of two 2-digit numeric values prefixed by the table code. E.g. 34.94.12 countries table, ISO3166 alpha2 code.
 
-# public data tables
+## Public data tables
 - 32 nationaliteiten
 - 33 gemeenten
 - 34 landen

@@ -1,9 +1,16 @@
-# references
+---
+weight: 10
+type: 'docs'
+---
+
+# FDS
+
+## References
 - https://federatief.datastelsel.nl/
 - https://federatief.datastelsel.nl/kennisbank/
 - https://federatief.datastelsel.nl/besluiten/
 
-# snippets
+## Snippets
 - Het federatief datastelsel is een open source project dat voor iedereen toegankelijk is om te gebruiken en te verbeteren. De ontwikkeling hiervan doen we juist graag met elkaar, dus we kijken uit naar je betrokkenheid.
 - Voor het delen van data is identificatie van de aanbieder en afnemer nodig. Het digitale identiteitenbeheer van personen en organisaties (natuurlijke en niet-natuurlijke personen) is een vraagstuk op zich.
 - Voor het FDS gaan we er vanuit dat een partij beschikt over een middel dat een digitale identiteit aantoont. De authenticatie betreft de verificatie hiervan. Vervolgens is het middel in te zetten om te komen tot het wederzijds veilig opzetten van een verbinding voor de uitwisseling van data.

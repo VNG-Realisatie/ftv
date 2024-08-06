@@ -1,7 +1,14 @@
-# reference
+---
+weight: 10
+type: 'docs'
+---
+
+# Domeinarchitectuur Toegang
+
+## Reference
 https://minbzk.github.io/gdi-toegang/content/views/Domeinarchitectuur%20toegang.html#:~:text=lopen%20zijn%20het-,programma/stelsel%20toegang,-en%20het%20programma
 
-# snippets
+## Snippets
 - De Generieke Digitale Infrastructuur (GDI) ondersteunt de digitale overheid met afspraken, standaarden en voorzieningen.
 - Het domein toegang omvat alles dat nodig is om de identiteit en bevoegdheden van mensen, organisaties en apparaten te controleren.
 - In de context van de GDI gaat het vooral over toegang tot overheidsdiensten voor burgers en organisaties. Dit staat relatief los van hoe organisaties hun eigen medewerkers toegang verlenen, alhoewel het ook gebruikt kan worden om medewerkers van de ene overheidsorganisatie toegang te geven tot andere overheidsorganisaties.
@@ -17,7 +24,7 @@ https://minbzk.github.io/gdi-toegang/content/views/Domeinarchitectuur%20toegang.
 - Het is wenselijk om te onderzoeken hoe met (vrijwillig) machtigen in de toekomst zou moeten worden omgegaan. Er zijn allerlei behoeften aan meer uitbreide vormen van machtigen die nu niet worden ondersteund, zoals het machtigen voor een zaak. Is het wenselijk om eHerkenning en/of DigiD machtigen uit te breiden met alle veelvoorkomende vormen van machtigen? Het onderzoek zou zich moeten richten op het verzamelen van de eisen en wensen en het bepalen of een centrale of federatieve oplossing wenselijk is. Er moet expliciet rekening worden gehouden met de relatie met de EDI-wallet. Deze zal ook vertegenwoordiging en machtigen moeten ondersteunen voor burgers die andere burgers of bedrijven vertegenwoordigen.
 - Professionele partijen die mogen handelen na het overlijden van iemand moeten toegang kunnen krijgen tot digitale diensten namens de overledene. Er is inmiddels een oplossing beschikbaar voor de Belastingdienst. Er is een bredere voorziening gewenst. De toegangsinfrastructuur moet op deze voorziening worden aangesloten.
 
-# see also
+## See also
 - https://github.com/minbzk/gdi-toegang
 - https://github.com/minbzk/gdi-gegevensuitwisseling
 - https://pgdi.nl/ado

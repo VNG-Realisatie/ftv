@@ -1,11 +1,18 @@
-# references
+---
+weight: 10
+type: 'docs'
+---
+
+# APIs
+
+## References
 - https://geonovum.github.io/KP-APIs/
 - https://docs.geostandaarden.nl/api/API-Strategie-mod-access-control/#authorization
 - https://docs.geostandaarden.nl/api/API-Strategie-architectuur/#autorisatie
 - https://docs.geostandaarden.nl/api/API-Strategie-architectuur/#token-based-autorisatie
 - https://docs.geostandaarden.nl/api/API-Strategie-architectuur/#event-driven-architecture-eda
 
-# snippets
+## Snippets
 - It is RECOMMENDED to use token-based access to APIs. REST APIs SHOULD NOT maintain session state on the server. The authentication and authorization of a request SHOULD NOT depend on sessions. Instead, a token has to be sent with each request.
 - In a production environment as little information as possible is to be disclosed. Apply the following rules for returning the status error code 401 Unauthorized, 403 Forbidden, and 404 Not Found.
 - Note that authentication in the cases below is typically client authentication, and the Authorization header contains information on the End-User authorization and authentication, if applicable.

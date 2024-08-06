@@ -1,8 +1,15 @@
-# references
+---
+weight: 10
+type: 'docs'
+---
+
+# Enable-U
+
+## References
 - https://enable-u.nl/
 - https://www.softwarecatalogus.nl/leverancier/enable-u?tab=products
 
-# snippets
+## Snippets
 - Enable U is dé expert op het gebied van integratie, met best-of-breed technologie en oplossingen voor API Management, Secure API Gateway, iPaaS en Datadistributie. Van Architectuur en ontwikkeling tot Managed Services en Managed Integrations.
 - Uw organisatie wil digitaal toegang bieden tot data uit basisadministraties en backoffice applicaties. En u wilt voor de dienstverlening aan uw klanten ook gebruik kunnen maken van wat anderen te bieden hebben via API’s. Deze ontsluitingen en aansluitingen van API’s moeten goed beveiligd zijn en over de gehele levenscyclus goed beheerd worden.
 - Met de Enable U Digikoppeling kunt u veilig en eenvoudig aansluiten op diensten waar betrouwbaarheid een voorwaarde is.
