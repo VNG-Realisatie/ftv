@@ -1,5 +1,6 @@
 ---
 weight: 10
+type: 'docs'
 ---
 
 # references
