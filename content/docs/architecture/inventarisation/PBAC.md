@@ -3,13 +3,15 @@ weight: 10
 type: 'docs'
 ---
 
-# References
+# Policy Based Access Control / Policy As Code
 
-## eBook
+## References
+
+### eBook
 - https://www.oreilly.com/library/view/policy-as-code/9781098139179/
 
 
-## PBAC / ABAC / PAC
+### PBAC / ABAC / PAC
 - https://federatief.datastelsel.nl/kennisbank/pbac/
 - https://en.wikipedia.org/wiki/Attribute-based_access_control
 - https://www.paloaltonetworks.com/cyberpedia/what-is-policy-as-code
@@ -20,7 +22,7 @@ type: 'docs'
 - https://gitlab.com/digilab.overheid.nl/ecosystem/pbac
 
 
-## XACM
+### XACM
 - https://groups.oasis-open.org/communities/tc-community-home2?CommunityKey=67afe552-0921-49b7-9a85-018dc7d3ef1d
 - XML based
 - Golang implementation available
@@ -31,7 +33,7 @@ type: 'docs'
 - https://code.google.com/archive/p/no-xacml/
 
 
-## ODRL
+### ODRL
 - https://www.w3.org/2012/09/odrl/archive/odrl.net/index.html
 - no (open-source) Golang implementation
 - primarily geared towards DRM
@@ -40,7 +42,7 @@ type: 'docs'
 - https://www.w3.org/TR/odrl-model/
 
 
-## OPA
+### OPA
 - https://www.openpolicyagent.org/docs/latest/
 - no Wikipedia
 - open-source
@@ -56,7 +58,7 @@ type: 'docs'
 - https://github.com/tmobile/magtape
 
 
-## Cedar - AWS
+### Cedar - AWS
 - https://www.cedarpolicy.com/en
 - no Wikipedia
 - open-source from AWS
@@ -67,7 +69,7 @@ type: 'docs'
 - https://github.com/permitio/opal
 
 
-## ALFA - Axiomatics
+### ALFA - Axiomatics
 - https://alfa.guide/
 - commercial
 - no (open-source) Golang implementation
@@ -76,33 +78,33 @@ type: 'docs'
 - https://www.kuppingercole.com/blog/kuppinger/simplifying-xacml-the-axiomatics-alfa-plugin-for-eclipse-ide
 
 
-## NIST policy machine
+### NIST policy machine
 - https://csrc.nist.gov/Projects/Policy-Machine
 - no Wikipedia
 - no (open-source) Golang implementation
 - virtual machine based
 
 
-## EPAL - IBM
+### EPAL - IBM
 - https://www.w3.org/2003/p3p-ws/pp/ibm3.html
 - old (2003)
 - lawsuit about owner rights
 - https://en.wikipedia.org/wiki/Enterprise_Privacy_Authorization_Language
 
 
-## Sentinal - Hashicorp
+### Sentinal - Hashicorp
 - https://developer.hashicorp.com/sentinel
 - not open-source
 - geared towards hashicorp products
 
 
-## Verified Permissions - Amazon
+### Verified Permissions - Amazon
 - https://aws.amazon.com/verified-permissions/
 - based on Cedar 
 - https://aws.amazon.com/blogs/security/governance-at-scale-enforce-permissions-and-compliance-by-using-policy-as-code/
 
 
-## Azure PAC - MS
+### Azure PAC - MS
 - https://azure.github.io/enterprise-azure-policy-as-code/
 - not open-source
 - tied into Azure
@@ -110,7 +112,7 @@ type: 'docs'
 - https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/azure-enterprise-policy-as-code-a-new-approach/ba-p/3607843
 
 
-# Observations
+## Observations
 - XACML / ODRL appear to be the oldest and widest used.
 - XACML has a Golang implementation; ODRL does not.
 - OPA / CEDAR are more modern and implemented in Golang / Rust.
