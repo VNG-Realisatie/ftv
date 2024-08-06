@@ -1,8 +1,15 @@
-# references
+---
+weight: 10
+type: 'docs'
+---
+
+# Verifiable Credentials
+
+## References
 - https://www.w3.org/TR/vc-data-model/
 - https://ec.europa.eu/digital-building-blocks/sites/display/EBSI/EBSI+Verifiable+Credentials
 
-# snippets
+## Snippets
 - Credentials are a part of our daily lives; driver's licenses are used to assert that we are capable of operating a motor vehicle, university degrees can be used to assert our level of education, and government-issued passports enable us to travel between countries. This specification provides a mechanism to express these sorts of credentials on the Web in a way that is cryptographically secure, privacy respecting, and machine-verifiable.
 -  In the physical world, a credential might consist of:
    - Information related to identifying the subject of the credential (for example, a photo, name, or identification number)
@@ -15,6 +22,6 @@
 - Holders of verifiable credentials can generate verifiable presentations and then share these verifiable presentations with verifiers to prove they possess verifiable credentials with certain characteristics.
 - Both verifiable credentials and verifiable presentations can be transmitted rapidly, making them more convenient than their physical counterparts when trying to establish trust at a distance.
 
-# observations
+## Observations
 - designed for identification, keeping claims in personal digital wallets, and the means to verify those claims.
 - in EU based on blockchain technology (EBSI).

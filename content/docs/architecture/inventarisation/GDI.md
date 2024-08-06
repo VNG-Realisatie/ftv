@@ -1,9 +1,16 @@
-# reference
+---
+weight: 10
+type: 'docs'
+---
+
+# GDI
+
+## References
 - home: https://www.digitaleoverheid.nl/mido/generieke-digitale-infrastructuur-gdi/
 - autehntication: https://www.digitaleoverheid.nl/mido/generieke-digitale-infrastructuur-gdi/domein-toegang/
 - authorization: https://www.digitaleoverheid.nl/mido/generieke-digitale-infrastructuur-gdi/domein-gegevensuitwisseling/
 
-# snippets
+## Snippets
 - De Generieke Digitale Infrastructuur (GDI) is de verzameling van standaarden, afspraken(stelsels) en voorzieningen die door alle publieke dienstverleners wordt gebruikt voor hun digitale dienstverlening aan burgers en ondernemers.
 - Met Digimelding (link naar andere website) kunnen organisaties onjuistheden in de gegevens van een (basis)registratie uniform, betrouwbaar en efficiënt terugmelden aan de bronhouder van deze registratie. <https://logius.nl/domeinen/gegevensuitwisseling/digimelding>
 - Digilevering (link naar andere website) levert berichten over belangrijke gebeurtenissen. Abonnees krijgen zo actuele en accurate gegevens uit basisregistraties. <https://logius.nl/domeinen/gegevensuitwisseling/digilevering>

@@ -1,8 +1,16 @@
-# references
+---
+weight: 10
+type: 'docs'
+---
+
+# RDW
+
+## References
 - https://www.rdw.nl/over-rdw/dienstverlening/open-data
 - https://opendata.rdw.nl/
 
-# snippets
+## Snippets
+- .
 
-# observations
+## Observations
 - appears to be just open datasets; not real API's.
