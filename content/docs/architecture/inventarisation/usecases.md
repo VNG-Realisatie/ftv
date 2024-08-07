@@ -7,30 +7,33 @@ type: 'docs'
 
 ## Requirements
 - zero trust
+- least privilege
 - only case related data
 - compliance with laws and regulations
 - compliance with "Pas toe of leg uit"
 - based on open standards
+- data bij de bron
 
-## Identity complexities
-- DigiD: BSN
-- JWT with claims: OpenID, eIDAS
-- eHerkenning: KvK nr
-- machtiging (?)
-- nabestaande (?)
-- automatic (batch) processes (?)
+## Identity challenges
+- DigiD: BSN of hash
+- OpenID: JWT with claims
+- eIDAS: digital identity with claims
+- eHerkenning: KvK number
+- machtiging: BSN of hash (?)
+- nabestaande: BSN of hash (?)
+- automatic (batch) processes: API key (?)
   - statistics
   - digimelding
   - digilevering
 
-## Connection complexities
+## Connection challenges
 - digikoppeling
 - StUF
 - FSC
 - FDS
 - application internals; e.g. replace RBAC/ABAC with policies (?)
 
-## Potential target complexities
+## Policy targets
 - data protection
   - hide/disallow address details
   - hide/disallow name details
@@ -63,6 +66,7 @@ type: 'docs'
   - only from registered IP addresses
   - case related data only
   - only from whitelisted devices
+  - request from machtiging/nabestaande
 - comparison
   - address is within gemeente bounderies
   - income above/below N
@@ -77,7 +81,7 @@ type: 'docs'
 - add/modify/remove query parameters from request
 - add/modify/remove data fields/records from response
 
-## Potential use cases by organization type
+## Potential use cases by org type
 
 ### Gemeenten
 - aanvraag recht op inzage
