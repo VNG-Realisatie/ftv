@@ -2,9 +2,29 @@ weight: 10
 type: 'docs'
 ---
 
-# Potential use cases
+# Use cases
 
-## Gemeenten
+## Target complexities
+- data protection (e.g. hide address, name details, dob)
+- anonymization (e.g. hide address, name details, dob)
+- pseudonymization (e.g. hash BSN, name, address)
+- regie op gegevens; is also data protection; possibly anonymization/pseudonymization 
+- conversion (e.g. dob -> age)
+- comparison (e.g. "income > x" -> true/false)
+- calculation (e.g. time period)
+- aggregation (e.g. nr of children)
+- regular expression (e.g. people with part of name equal "piet")
+
+## Potential requirements
+- prove that(/which) policies were executed on consumer side
+- prove that(/which) policies were executed on supplier side
+- add/modify/remove headers from request
+- add/modify/remove query parameters
+
+## Cases by organization
+
+### Gemeenten
+- recht op inzage
 - 1e inschrijving
 - vervolg inschrijving
 - digimelding adreswijziging
@@ -12,82 +32,103 @@ type: 'docs'
 - aanvraag vergunning (2x)
 - ...
 
-## Waterschappen
+### Waterschappen
+- recht op inzage
 - ...
 
-## Provincies
+### Provincies
+- recht op inzage
 - ...
 
-## Politie
+### Politie
+- recht op inzage
 - ...
 
-## Belastingdienst
+### Belastingdienst
+- recht op inzage
 - ...
 
-## Defensie
+### Defensie
 - ...
 
-## Justitie
+### Justitie
+- recht op inzage
 - ...
 
-## Ministeries
+### Ministeries
 - ...
 
-## Inlichtingendiensten
+### Inlichtingendiensten
 - ...
 
-## Sociale diensten
+### Sociale diensten
+- recht op inzage
 - ...
 
-## Overige rijksdiensten
+### Overige rijksdiensten
 - ...
 
-## GGD
+### GGD
+- recht op inzage
 - ...
 
-## GGZ
+### GGZ
+- recht op inzage
 - ...
 
-## Ziekenhuizen
+### Ziekenhuizen
+- medisch dossier inzien
 - ...
 
-## Universiteiten
+### Universiteiten
 - ...
 
-## Verzekeringsmaatschappijen
+### Verzekeringsmaatschappijen
+- recht op inzage
+- verzekering aanvragen
+- verzekering wijzigen
+- schade/verlies/diefstal melden
+- verzekering opzeggen
 - ...
 
-## Pensioenfondsen
+### Pensioenfondsen
+- recht op inzage
+- aanmelding
+- jaarlijks overzicht
 - ...
 
-## Agentschappen
+### Agentschappen
 - ...
 
-## Overzeese gebieden
+### Overzeese gebieden
 - ...
 
-## Deurwaarders
+### Deurwaarders
 - ...
 
-## Notarissen
+### Notarissen
 - ...
 
-## Accountants
+### Accountants
 - ...
 
-## Openbaar vervoer
+### Openbaar vervoer
+- recht op inzage
 - ...
 
-## Bedrijfsverenigingen
+### Bedrijfsverenigingen
+- recht op inzage
 - ...
 
-## Fondsenbeheer
+### Fondsenbeheer
+- recht op inzage
 - ...
 
-## Sociale instellingen
+### Sociale instellingen
+- recht op inzage
 - ...
 
-## Statistisch onderzoek
+### Statistisch onderzoek
 
-### CBS
+#### CBS
 -  ...
