@@ -15,12 +15,12 @@ type: 'docs'
 - data bij de bron
 
 ## Identity challenges
-- DigiD: BSN of hash
-- OpenID: JWT with claims
-- eIDAS: digital identity with claims
+- OpenID: verifiable claims
+- eIDAS: verifiable claims
 - eHerkenning: KvK number
-- machtiging: BSN of hash (?)
-- nabestaande: BSN of hash (?)
+- DigiD: BSN or hash
+- machtiging: BSN or hash (?)
+- nabestaande: BSN or hash (?)
 - automatic (batch) processes: API key (?)
   - statistics
   - digimelding
@@ -33,7 +33,7 @@ type: 'docs'
 - FDS
 - application internals; e.g. replace RBAC/ABAC with policies (?)
 
-## Policy targets
+## Desirable policy coverage
 - data protection
   - hide/disallow address details
   - hide/disallow name details
@@ -50,12 +50,12 @@ type: 'docs'
   - is also data protection
   - possibly requires anonymization/pseudonymization
   - only the permitted data related to the civilian who gave permission
-- conversion
+- conversions
   - convert date of birth into age
-- mapping
+- mappings
   - convert postcode into gemeente
   - convert gemeente into province
-- calculation
+- calculations
   - calculate time period between two events (in days/weeks/months)
   - calculate time period between an event and today (in days/weeks/months)
   - distance of address from a geographic point
@@ -67,7 +67,7 @@ type: 'docs'
   - case related data only
   - only from whitelisted devices
   - request from machtiging/nabestaande
-- comparison
+- comparisons
   - address is within gemeente bounderies
   - income above/below N
   - age above/below N years
