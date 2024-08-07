@@ -5,26 +5,48 @@ type: 'docs'
 # Use cases
 
 ## Target complexities
-- data protection (e.g. hide address, name details, dob)
-- anonymization (e.g. hide address, name details, dob)
-- pseudonymization (e.g. hash BSN, name, address)
-- regie op gegevens; is also data protection; possibly anonymization/pseudonymization 
-- conversion (e.g. dob -> age)
-- comparison (e.g. "income > x" -> true/false)
-- calculation (e.g. time period)
-- aggregation (e.g. nr of children)
-- regular expression (e.g. people with part of name equal "piet")
+- data protection
+  - hide/disallow address details
+  - hide/disallow name details
+  - hide/disallow date of birth
+- anonymization
+  - hide address details
+  - hide name details
+  - hide date of birth
+- pseudonymization
+  - hash BSN
+  - hash name details
+  - hash address details
+- regie op gegevens
+  - is also data protection; possibly anonymization/pseudonymization
+  - only the permitted data related to the civilian who gave permission
+- conversion
+  - convert date of birth into age
+- mapping
+  - convert postcode into gemeente
+- calculation
+  - calculate time period between two events (in days/weeks/months)
+  - calculate time period between an event and today (in days/weeks/months)
+  - distance of address from a geographic point
+- aggregation
+  - count number of children
+- comparison
+  - address is within gemeente bounderies
+  - income above/below N
+  - age above/below N years
+- regular expression
+  - people with part of the first names equal to "piet"
 
 ## Potential requirements
-- prove that(/which) policies were executed on consumer side
-- prove that(/which) policies were executed on supplier side
+- verifiable proof that(/which) policies were executed
 - add/modify/remove headers from request
-- add/modify/remove query parameters
+- add/modify/remove query parameters from request
+- add/modify/remove data fields/records from response
 
 ## Cases by organization
 
 ### Gemeenten
-- recht op inzage
+- aanvraag recht op inzage
 - 1e inschrijving
 - vervolg inschrijving
 - digimelding adreswijziging
@@ -33,26 +55,26 @@ type: 'docs'
 - ...
 
 ### Waterschappen
-- recht op inzage
+- aanvraag recht op inzage
 - ...
 
 ### Provincies
-- recht op inzage
+- aanvraag recht op inzage
 - ...
 
 ### Politie
-- recht op inzage
+- aanvraag recht op inzage
 - ...
 
 ### Belastingdienst
-- recht op inzage
+- aanvraag recht op inzage
 - ...
 
 ### Defensie
 - ...
 
 ### Justitie
-- recht op inzage
+- aanvraag recht op inzage
 - ...
 
 ### Ministeries
@@ -62,18 +84,18 @@ type: 'docs'
 - ...
 
 ### Sociale diensten
-- recht op inzage
+- aanvraag recht op inzage
 - ...
 
 ### Overige rijksdiensten
 - ...
 
 ### GGD
-- recht op inzage
+- aanvraag recht op inzage
 - ...
 
 ### GGZ
-- recht op inzage
+- aanvraag recht op inzage
 - ...
 
 ### Ziekenhuizen
@@ -84,7 +106,7 @@ type: 'docs'
 - ...
 
 ### Verzekeringsmaatschappijen
-- recht op inzage
+- aanvraag recht op inzage
 - verzekering aanvragen
 - verzekering wijzigen
 - schade/verlies/diefstal melden
@@ -92,7 +114,7 @@ type: 'docs'
 - ...
 
 ### Pensioenfondsen
-- recht op inzage
+- aanvraag recht op inzage
 - aanmelding
 - jaarlijks overzicht
 - ...
@@ -113,19 +135,19 @@ type: 'docs'
 - ...
 
 ### Openbaar vervoer
-- recht op inzage
+- aanvraag recht op inzage
 - ...
 
 ### Bedrijfsverenigingen
-- recht op inzage
+- aanvraag recht op inzage
 - ...
 
 ### Fondsenbeheer
-- recht op inzage
+- aanvraag recht op inzage
 - ...
 
 ### Sociale instellingen
-- recht op inzage
+- aanvraag recht op inzage
 - ...
 
 ### Statistisch onderzoek
