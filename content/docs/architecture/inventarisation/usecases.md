@@ -13,22 +13,22 @@ type: 'docs'
 - based on open standards
 
 ## Identity complexities
-- DigiD (BSN)
-- JWT with claims (OpenID, eIDAS)
-- eHerkenning (OIN)
+- DigiD: BSN
+- JWT with claims: OpenID, eIDAS
+- eHerkenning: KvK nr
 - machtiging (?)
 - nabestaande (?)
-- automatic processes (?)
+- automatic (batch) processes (?)
   - statistics
   - digimelding
+  - digilevering
 
 ## Connection complexities
 - digikoppeling
 - StUF
 - FSC
 - FDS
-- application internals (?)
-- batch processes (?)
+- application internals; e.g. replace RBAC/ABAC with policies (?)
 
 ## Potential target complexities
 - data protection
