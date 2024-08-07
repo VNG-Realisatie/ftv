@@ -4,7 +4,32 @@ type: 'docs'
 
 # Use cases
 
-## Target complexities
+## Requirements
+- zero trust
+- only case related data
+- compliance with laws and regulations
+- compliance with "Pas toe of leg uit"
+- based on open standards
+
+## Identity complexities
+- DigiD (BSN)
+- JWT with claims (OpenID, eIDAS)
+- eHerkenning (OIN)
+- machtiging (?)
+- nabestaande (?)
+- automatic processes (?)
+  - statistics
+  - digimelding
+
+## Connection complexities
+- digikoppeling
+- StUF
+- FSC
+- FDS
+- application internals (?)
+- batch processes (?)
+
+## Potential target complexities
 - data protection
   - hide/disallow address details
   - hide/disallow name details
@@ -18,32 +43,40 @@ type: 'docs'
   - hash name details
   - hash address details
 - regie op gegevens
-  - is also data protection; possibly anonymization/pseudonymization
+  - is also data protection
+  - possibly requires anonymization/pseudonymization
   - only the permitted data related to the civilian who gave permission
 - conversion
   - convert date of birth into age
 - mapping
   - convert postcode into gemeente
+  - convert gemeente into province
 - calculation
   - calculate time period between two events (in days/weeks/months)
   - calculate time period between an event and today (in days/weeks/months)
   - distance of address from a geographic point
 - aggregation
   - count number of children
+- context
+  - only during office hours
+  - only from registered IP addresses
+  - case related data only
+  - only from whitelisted devices
 - comparison
   - address is within gemeente bounderies
   - income above/below N
   - age above/below N years
+  - married/not married
 - regular expression
   - people with part of the first names equal to "piet"
 
-## Potential requirements
+## Potential additional requirements
 - verifiable proof that(/which) policies were executed
 - add/modify/remove headers from request
 - add/modify/remove query parameters from request
 - add/modify/remove data fields/records from response
 
-## Cases by organization
+## Potential use cases by organization type
 
 ### Gemeenten
 - aanvraag recht op inzage
