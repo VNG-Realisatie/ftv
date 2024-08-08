@@ -48,6 +48,7 @@ type: 'docs'
   - hide address details
   - hide name details
   - hide date of birth
+  - hide gender
   - ...
 - pseudonymization
   - hash BSN
@@ -109,10 +110,12 @@ type: 'docs'
 - digimelding adreswijziging
 - aanvraag subsidie (2x)
 - aanvraag vergunning (2x)
+- bezwaar gemeentelijke heffingen
 - ...
 
 ### Waterschappen
 - aanvraag recht op inzage
+- bezwaar waterschapsbelasting
 - ...
 
 ### Provincies
@@ -125,9 +128,14 @@ type: 'docs'
 
 ### Belastingdienst
 - aanvraag recht op inzage
+- aanvraag uitstel
+- aangifte inkomstenbelasting
+- aangifte omzetbelasting
+- aangifte VPB
 - ...
 
 ### Defensie
+- aanvraag recht op inzage
 - ...
 
 ### Justitie
@@ -135,9 +143,11 @@ type: 'docs'
 - ...
 
 ### Ministeries
+- aanvraag recht op inzage
 - ...
 
 ### Inlichtingendiensten
+- aanvraag recht op inzage
 - ...
 
 ### Sociale diensten
@@ -145,10 +155,14 @@ type: 'docs'
 - ...
 
 ### Overige rijksdiensten
+- aanvraag recht op inzage
 - ...
 
 ### GGD
 - aanvraag recht op inzage
+- gezondheidstest
+- vaccinatie
+- inenting
 - ...
 
 ### GGZ
@@ -156,10 +170,12 @@ type: 'docs'
 - ...
 
 ### Ziekenhuizen
+- aanvraag recht op inzage
 - medisch dossier inzien
 - ...
 
 ### Universiteiten
+- aanvraag recht op inzage
 - ...
 
 ### Verzekeringsmaatschappijen
@@ -177,18 +193,23 @@ type: 'docs'
 - ...
 
 ### Agentschappen
+- aanvraag recht op inzage
 - ...
 
 ### Overzeese gebieden
+- aanvraag recht op inzage
 - ...
 
 ### Deurwaarders
+- aanvraag recht op inzage
 - ...
 
 ### Notarissen
+- aanvraag recht op inzage
 - ...
 
 ### Accountants
+- aanvraag recht op inzage
 - ...
 
 ### Openbaar vervoer
