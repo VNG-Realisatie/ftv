@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"regexp"
+	"slices"
 	"strings"
 
 	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/cmd-brp-tb35/internal/maps"
@@ -23,26 +24,45 @@ func main() {
 		panic(err2)
 	}
 
+	sort := make([]string, 0, 128)
+	report := make(map[string]string, 128)
+
 	list := c.Search(autorisatieregels.IsValid(true))
 	for _, item := range list {
 		if item.VoorwaardeSpontaan != "" {
-			printCond(item, "spontaan", item.VoorwaardeSpontaan)
+			k, v := makeKeyValue(item, "spontaan", item.VoorwaardeSpontaan)
+			sort = append(sort, k)
+			report[k] = v
 		}
 		if item.VoorwaardeSelectie != "" {
-			printCond(item, "selectie", item.VoorwaardeSelectie)
+			k, v := makeKeyValue(item, "selectie", item.VoorwaardeSelectie)
+			sort = append(sort, k)
+			report[k] = v
 		}
 		if item.VoorwaardeAdhoc != "" {
-			printCond(item, "ad hoc", item.VoorwaardeAdhoc)
+			k, v := makeKeyValue(item, "ad hoc", item.VoorwaardeAdhoc)
+			sort = append(sort, k)
+			report[k] = v
 		}
 		if item.VoorwaardeAdres != "" {
-			printCond(item, "adres", item.VoorwaardeAdres)
+			k, v := makeKeyValue(item, "adres", item.VoorwaardeAdres)
+			sort = append(sort, k)
+			report[k] = v
 		}
+	}
+
+	slices.Sort(sort)
+
+	for ix := range sort {
+		k := sort[ix]
+		v := report[k]
+		fmt.Printf("## %s\n%s\n\n", k, v)
 	}
 }
 
-func printCond(item *autorisatieregels.AutorisatieRegel, kind, condition string) {
+func makeKeyValue(item *autorisatieregels.AutorisatieRegel, kind, condition string) (string, string) {
 	condition = convertCondition(condition)
-	fmt.Printf("## %s - versie %d - %s\n%s\n\n", item.AfnemerNaam, item.Versie, kind, condition)
+	return fmt.Sprintf("%s - versie %d - %s", item.AfnemerNaam, item.Versie, kind), condition
 }
 
 func convertCondition(in string) string {
