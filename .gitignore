@@ -2,6 +2,6 @@
 .hugo_build.lock
 cover.out
 cover.html
-bin/
-public/
-resources/
+/bin/
+/public/
+/resources/

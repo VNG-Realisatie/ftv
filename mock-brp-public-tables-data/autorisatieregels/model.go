@@ -56,7 +56,7 @@ func NewFromCSV(headers, data []string) *AutorisatieRegel {
 
 	for i := range headers {
 		if i < ld {
-			h, d := headers[i], data[i]
+			h, d := unescapeQuotes(headers[i]), unescapeQuotes(data[i])
 
 			var fc string
 			if len(h) >= 5 {
@@ -126,7 +126,7 @@ func NewFromCSV(headers, data []string) *AutorisatieRegel {
 			default:
 				lowerH := strings.ToLower(h)
 				switch {
-				case lowerH == "versie":
+				case strings.Contains(lowerH, "versie"):
 					a.Versie = convert.MustUint32Decimal(d)
 
 				case strings.Contains(lowerH, "afnemer"):
@@ -180,7 +180,7 @@ func NewFromCSV(headers, data []string) *AutorisatieRegel {
 						a.RubriekAdres = convert.MustUint32Decimal(d)
 					}
 
-				case strings.Contains(lowerH, "vooirwaarderegel"):
+				case strings.Contains(lowerH, "voorwaarderegel"):
 					switch {
 					case strings.Contains(lowerH, "spontaan"):
 						a.VoorwaardeSpontaan = d
@@ -340,6 +340,14 @@ func afnemerKey(afnemer, versie uint32) uint64 {
 	return uint64(afnemer)<<32 + uint64(versie)
 }
 
-func naamKey(naam string, versie uint32) string {
-	return fmt.Sprintf("%s:%d", strings.ToLower(naam), versie)
+func naamKey(afnemer uint32, naam string, versie uint32) string {
+	return fmt.Sprintf("%s:%d:%d", strings.ToLower(naam), afnemer, versie)
+}
+
+func unescapeQuotes(in string) string {
+	out, done := strings.CutPrefix(in, "\"")
+	if done {
+		out, _ = strings.CutSuffix(out, "\"")
+	}
+	return out
 }

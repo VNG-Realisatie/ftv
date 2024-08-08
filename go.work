@@ -1,6 +1,7 @@
-go 1.22.2
+go 1.22.5
 
 use (
+	./cmd-brp-tb35
 	./mock-brp-public-tables-api
 	./mock-brp-public-tables-backend
 	./mock-brp-public-tables-data

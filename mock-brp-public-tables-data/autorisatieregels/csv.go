@@ -18,12 +18,14 @@ func LoadFromCSV(f io.Reader) Loader {
 		defer c.mutex.Unlock()
 
 		clear(c.byAfnemer)
+		clear(c.lastAfnemer)
 		clear(c.byNaam)
+		clear(c.lastNaam)
 
 		return csv.ProcessWithHeader(f, func(headers, data []string, line int) error {
 			a := NewFromCSV(headers, data)
 			afnemer, naam, versie := a.Afnemer, strings.ToLower(a.AfnemerNaam), a.Versie
-			key1, key2 := afnemerKey(afnemer, versie), naamKey(naam, versie)
+			key1, key2 := afnemerKey(afnemer, versie), naamKey(afnemer, naam, versie)
 
 			if dupe, ok := c.byAfnemer[key1]; ok {
 				if dupe.IsEqual(a) {

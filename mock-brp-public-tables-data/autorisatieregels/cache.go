@@ -8,7 +8,7 @@ import (
 type Selecter interface {
 	SelectAfnemer(afnemer, versie uint32) *AutorisatieRegel
 	SelectAfnemerLast(afnemer uint32) *AutorisatieRegel
-	SelectNaam(naam string, versie uint32) *AutorisatieRegel
+	SelectNaam(naam string, afnemer, versie uint32) *AutorisatieRegel
 	SelectNaamLast(naam string) *AutorisatieRegel
 	Search(opts ...SearchOpt) []*AutorisatieRegel
 }
@@ -52,8 +52,8 @@ func (c *cache) SelectAfnemerLast(afnemer uint32) *AutorisatieRegel {
 }
 
 // SelectNaam implements the Selecter interface.
-func (c *cache) SelectNaam(naam string, versie uint32) *AutorisatieRegel {
-	key := naamKey(naam, versie)
+func (c *cache) SelectNaam(naam string, afnemer, versie uint32) *AutorisatieRegel {
+	key := naamKey(afnemer, naam, versie)
 	c.mutex.RLock()
 	defer c.mutex.RUnlock()
 	return c.byNaam[key]
