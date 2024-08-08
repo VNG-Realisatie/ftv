@@ -42,7 +42,7 @@ func main() {
 
 func printCond(item *autorisatieregels.AutorisatieRegel, kind, condition string) {
 	condition = convertCondition(condition)
-	fmt.Printf("%s:%d - %s\n%s\n\n", item.AfnemerNaam, item.Versie, kind, condition)
+	fmt.Printf("## %s - versie %d - %s\n%s\n\n", item.AfnemerNaam, item.Versie, kind, condition)
 }
 
 func convertCondition(in string) string {
