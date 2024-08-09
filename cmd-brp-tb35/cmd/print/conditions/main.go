@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 	"regexp"
-	"slices"
+	"sort"
 	"strings"
 
 	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/cmd-brp-tb35/internal/maps"
@@ -24,45 +24,121 @@ func main() {
 		panic(err2)
 	}
 
-	sort := make([]string, 0, 128)
-	report := make(map[string]string, 128)
+	keys := make([]string, 0, 128)
+	report := make(map[string]reportLine, 128)
 
 	list := c.Search(autorisatieregels.IsValid(true))
 	for _, item := range list {
 		if item.VoorwaardeSpontaan != "" {
-			k, v := makeKeyValue(item, "spontaan", item.VoorwaardeSpontaan)
-			sort = append(sort, k)
-			report[k] = v
+			l := makeReportLine(item.AfnemerNaam, "spontaan", convertCondition(item.VoorwaardeSpontaan))
+			keys = append(keys, l.key())
+			report[l.key()] = l
 		}
 		if item.VoorwaardeSelectie != "" {
-			k, v := makeKeyValue(item, "selectie", item.VoorwaardeSelectie)
-			sort = append(sort, k)
-			report[k] = v
+			l := makeReportLine(item.AfnemerNaam, "selectie", convertCondition(item.VoorwaardeSelectie))
+			keys = append(keys, l.key())
+			report[l.key()] = l
 		}
 		if item.VoorwaardeAdhoc != "" {
-			k, v := makeKeyValue(item, "ad hoc", item.VoorwaardeAdhoc)
-			sort = append(sort, k)
-			report[k] = v
+			l := makeReportLine(item.AfnemerNaam, "adhoc", convertCondition(item.VoorwaardeAdhoc))
+			keys = append(keys, l.key())
+			report[l.key()] = l
 		}
 		if item.VoorwaardeAdres != "" {
-			k, v := makeKeyValue(item, "adres", item.VoorwaardeAdres)
-			sort = append(sort, k)
-			report[k] = v
+			l := makeReportLine(item.AfnemerNaam, "adres", convertCondition(item.VoorwaardeAdres))
+			keys = append(keys, l.key())
+			report[l.key()] = l
 		}
 	}
 
-	slices.Sort(sort)
+	sort.Slice(keys, func(i, j int) bool {
+		return strings.ToLower(keys[i]) < strings.ToLower(keys[j])
+	})
 
-	for ix := range sort {
-		k := sort[ix]
-		v := report[k]
-		fmt.Printf("## %s\n%s\n\n", k, v)
+	var last reportLine
+
+	for ix := range keys {
+		k := keys[ix]
+		l := report[k]
+
+		switch {
+		case l.orgPrefix != last.orgPrefix:
+			fmt.Printf("## %s\n### %s\n#### %s\n%s\n", l.orgPrefix, l.org(), l.kind, l.condition)
+		case l.orgSuffix != last.orgSuffix:
+			fmt.Printf("### %s\n#### %s\n%s\n", l.org(), l.kind, l.condition)
+		default:
+			fmt.Printf("#### %s\n%s\n", l.kind, l.condition)
+		}
+
+		last = l
 	}
 }
 
-func makeKeyValue(item *autorisatieregels.AutorisatieRegel, kind, condition string) (string, string) {
-	condition = convertCondition(condition)
-	return fmt.Sprintf("%s - versie %d - %s", item.AfnemerNaam, item.Versie, kind), condition
+type reportLine struct {
+	orgPrefix string
+	orgSuffix string
+	kind      string
+	condition string
+}
+
+func (r reportLine) key() string {
+	return fmt.Sprintf("%s %s %s", r.orgPrefix, r.orgSuffix, r.kind)
+}
+
+func (r reportLine) org() string {
+	if strings.Contains(r.orgSuffix, r.orgPrefix) {
+		return r.orgSuffix
+	}
+	return fmt.Sprintf("%s %s", r.orgPrefix, r.orgSuffix)
+}
+
+func fixPrefix(in string) string {
+	if prefix, ok := prefixes[in]; ok {
+		return prefix
+	}
+	return in
+}
+
+var prefixes = map[string]string{
+	"St.":        "Stichting",
+	"Radboud":    "Universiteit",
+	"Erasmus":    "Universiteit",
+	"Noordelijk": "Belastingkantoor",
+	"Min.":       "Ministerie",
+}
+
+func makeReportLine(org, kind, condition string) reportLine {
+	r := reportLine{kind: kind, condition: condition}
+	ix := strings.Index(org, " ")
+	iy := strings.Index(org, "/")
+
+	switch {
+	case strings.HasPrefix(org, "MvEL&I"):
+		r.orgPrefix = "Ministerie"
+		r.orgSuffix = "van EL&I"
+	case strings.HasPrefix(org, "MvI&M"):
+		r.orgPrefix = "Ministerie"
+		r.orgSuffix = "van I&M"
+	case strings.HasPrefix(org, "MvVWS"):
+		r.orgPrefix = "Ministerie"
+		r.orgSuffix = "van VWS"
+	case strings.HasPrefix(org, "CBS"):
+		r.orgPrefix = "CBS"
+		r.orgSuffix = org[3:]
+	case strings.HasPrefix(org, "Wageningen"):
+		r.orgPrefix = "Universiteit"
+		r.orgSuffix = org
+	case ix > 0:
+		r.orgPrefix = fixPrefix(org[:ix])
+		r.orgSuffix = org[ix+1:]
+	case iy > 0:
+		r.orgPrefix = fixPrefix(org[:iy])
+		r.orgSuffix = org
+	default:
+		r.orgPrefix = org
+	}
+
+	return r
 }
 
 func convertCondition(in string) string {
