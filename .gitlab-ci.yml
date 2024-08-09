@@ -32,8 +32,6 @@ pages:
     - "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
     # Build
     - hugo --gc --minify
-    # fix page width
-    - sed -i 's/80rem/84rem/g' public/*.css
     # Compress
     - find public -type f -regex '.*\.\(css\|html\|js\|txt\|xml\)$' -exec gzip -f -k {} \;
     - find public -type f -regex '.*\.\(css\|html\|js\|txt\|xml\)$' -exec brotli -f -k {} \;
