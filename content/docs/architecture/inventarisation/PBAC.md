@@ -22,7 +22,7 @@ type: 'docs'
 - https://gitlab.com/digilab.overheid.nl/ecosystem/pbac
 
 
-### XACM
+### XACML
 - https://groups.oasis-open.org/communities/tc-community-home2?CommunityKey=67afe552-0921-49b7-9a85-018dc7d3ef1d
 - XML based
 - Golang implementation available
