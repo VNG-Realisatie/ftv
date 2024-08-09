@@ -7,9 +7,6 @@ title: 'RvIG / BRP - tabel 35'
 # Tabel 35 - voorwaarden uitvergroot
 
 ## Belastingkantoor
-### Belastingkantoor/Gemeentelijke en waterschapsbelastingen
-#### spontaan
-( ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 0014 || 0037 || 0047 || 0059 || 0060 || 0072 || 0074 || 0080 || 0085 || 0086 || 0088 || 0090 || 0093 || 0096 || 0098 || 0737 || 0765 || 1680 || 1699 || 1730 || 1891 || 1895 || 1900 || 1940 || 1949 || 1950 || 1952 || 1966 || 1969 || 1970 || 1979 ) || ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 0106 && '08.11.60 Verblijfsplaats:Postcode' == "9401/*" || "9402/*" || "9403/*" || "9404/*" || "9405/*" || "9406/*" || "9407/*" || "9409/*" || "9486/*" || "9487/*" || "9488/*" || "9489/*" || "9492/*" ) || ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 0109 && '08.11.60 Verblijfsplaats:Postcode' == "7849/*" ) || ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 0114 && '08.11.60 Verblijfsplaats:Postcode' == "7826/*" || "7831/*" || "7881/*" || "7884/*" || "7889/*" || "7895/*" ) || ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 1681 && '08.11.60 Verblijfsplaats:Postcode' == "7858/*" || "7859/*" || "7872/*" || "7875/*" || "7876/*" || "7877/*" || "952/*" || "953/*" || "9564/*" || "957/*" ) || ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 1731 && '08.11.60 Verblijfsplaats:Postcode' == "9414/*" ) ) && '08.10.10 Verblijfsplaats:Functie adres' != "B" && ISNULL '07.67.10 Inschrijving:Datum opschorting bijhouding'
 ### Belastingkantoor BghU/Gemeentelijke en waterschapsbelastingen
 #### selectie
 ( '14.40.10 Afnemersindicatie:Afnemersindicatie' == 252601 ) && ( ISNULL '07.67.20 Inschrijving:Omschrijving reden opschorting bijhouding' || ( '07.67.20 Inschrijving:Omschrijving reden opschorting bijhouding' != "O" ) )
@@ -74,6 +71,9 @@ title: 'RvIG / BRP - tabel 35'
 '14.40.10 Afnemersindicatie:Afnemersindicatie' == 250402
 #### spontaan
 ( ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 0744 || 0748 || 0758 || 0766 || 0777 || 0779 || 0784 || 0809 || 0826 || 0840 || 0851 || 0867 || 0873 || 0879 || 1655 || 1674 || 1709 || 1719 || 1723 ) || ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 0785 && '08.11.60 Verblijfsplaats:Postcode' == "5051/*" || "5052/*" || "5133/*" ) || ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 0855 && '08.11.60 Verblijfsplaats:Postcode' == "5011/*" || "5015/*" || "5017/*" || "5018/*" || "502/*" || "503/*" || "504/*" ) ) && '08.10.10 Verblijfsplaats:Functie adres' != "B" && ISNULL '07.67.10 Inschrijving:Datum opschorting bijhouding'
+### Noordelijk Belastingkantoor/Gemeentelijke en waterschapsbelastingen
+#### spontaan
+( ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 0014 || 0037 || 0047 || 0059 || 0060 || 0072 || 0074 || 0080 || 0085 || 0086 || 0088 || 0090 || 0093 || 0096 || 0098 || 0737 || 0765 || 1680 || 1699 || 1730 || 1891 || 1895 || 1900 || 1940 || 1949 || 1950 || 1952 || 1966 || 1969 || 1970 || 1979 ) || ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 0106 && '08.11.60 Verblijfsplaats:Postcode' == "9401/*" || "9402/*" || "9403/*" || "9404/*" || "9405/*" || "9406/*" || "9407/*" || "9409/*" || "9486/*" || "9487/*" || "9488/*" || "9489/*" || "9492/*" ) || ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 0109 && '08.11.60 Verblijfsplaats:Postcode' == "7849/*" ) || ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 0114 && '08.11.60 Verblijfsplaats:Postcode' == "7826/*" || "7831/*" || "7881/*" || "7884/*" || "7889/*" || "7895/*" ) || ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 1681 && '08.11.60 Verblijfsplaats:Postcode' == "7858/*" || "7859/*" || "7872/*" || "7875/*" || "7876/*" || "7877/*" || "952/*" || "953/*" || "9564/*" || "957/*" ) || ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 1731 && '08.11.60 Verblijfsplaats:Postcode' == "9414/*" ) ) && '08.10.10 Verblijfsplaats:Functie adres' != "B" && ISNULL '07.67.10 Inschrijving:Datum opschorting bijhouding'
 ## Bevolkingsonderzoek
 ### Bevolkingsonderzoek Nederland
 #### selectie
@@ -85,28 +85,28 @@ title: 'RvIG / BRP - tabel 35'
 #### adhoc
 '08.09.10 Verblijfsplaats:Gemeente van inschrijving' != 1999
 ## CBS
-### CBS 11: Toerismestatistieken Caribisch Nederland (BES)
+### CBS11: Toerismestatistieken Caribisch Nederland (BES)
 #### adhoc
 ( '04.05.10 Nationaliteit:Nationaliteit' == 0001 ) || ( '04.65.10 Nationaliteit:Aanduiding bijzonder Nederlanderschap' == "B" )
-### CBS 1: Structuurtelling (selectie)
+### CBS1: Structuurtelling (selectie)
 #### selectie
 ISNULL '07.67.20 Inschrijving:Omschrijving reden opschorting bijhouding' || ( '07.67.10 Inschrijving:Datum opschorting bijhouding' >= 19941001 )
-### CBS 2: Vestiging en Verhuizing
+### CBS2: Vestiging en Verhuizing
 #### spontaan
 '01.03.10 Persoon:Geboortedatum' != '08.10.30 Verblijfsplaats:Datum aanvang adreshouding'
-### CBS 3: Geboorte en Afstamming (kind)
+### CBS3: Geboorte en Afstamming (kind)
 #### spontaan
 ( ( '01.03.10 Persoon:Geboortedatum' == '08.10.30 Verblijfsplaats:Datum aanvang adreshouding' ) || ( '02.62.10 Ouder1:Datum ingang familierechtelijke betrekking' > '08.14.20 Verblijfsplaats:Datum vestiging in Nederland' ) || ( '03.62.10 Ouder2:Datum ingang familierechtelijke betrekking' > '08.14.20 Verblijfsplaats:Datum vestiging in Nederland' ) || ( ISNULL '08.14.20 Verblijfsplaats:Datum vestiging in Nederland' ) ) && ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' != 1999 )
-### CBS 4: Geb. & Afstamming (ouder)
+### CBS4: Geb. & Afstamming (ouder)
 #### spontaan
 ( ISNULL '08.14.20 Verblijfsplaats:Datum vestiging in Nederland' || '09.85.10 Kind:Ingangsdatum geldigheid' > '08.14.20 Verblijfsplaats:Datum vestiging in Nederland' ) && '09.85.10 Kind:Ingangsdatum geldigheid' > '07.68.10 Inschrijving:Datum eerste inschrijving BRP'
-### CBS 6: Huwelijk/gereg.partnerschap
+### CBS6: Huwelijk/gereg.partnerschap
 #### spontaan
 ( ISNULL '08.14.20 Verblijfsplaats:Datum vestiging in Nederland' || '05.85.10 Huwelijk/geregistreerd partnerschap:Ingangsdatum geldigheid' >= '08.14.20 Verblijfsplaats:Datum vestiging in Nederland' ) && '05.85.10 Huwelijk/geregistreerd partnerschap:Ingangsdatum geldigheid' >= '07.68.10 Inschrijving:Datum eerste inschrijving BRP'
-### CBS 7: Nationaliteit
+### CBS7: Nationaliteit
 #### spontaan
 ( '04.85.10 Nationaliteit:Ingangsdatum geldigheid' > '07.68.10 Inschrijving:Datum eerste inschrijving BRP' ) && ( ISNULL '08.14.20 Verblijfsplaats:Datum vestiging in Nederland' || ( '04.85.10 Nationaliteit:Ingangsdatum geldigheid' > '08.14.20 Verblijfsplaats:Datum vestiging in Nederland' ) )
-### CBS 9: A-nummer/Burgerservicenummer
+### CBS9: A-nummer/Burgerservicenummer
 #### spontaan
 ( NOT ISNULL '51.01.10 Persoon*:A-nummer' && ( '01.01.10 Persoon:A-nummer' != '51.01.10 Persoon*:A-nummer' ) ) || ( NOT ISNULL '51.01.20 Persoon*:Burgerservicenumer' && ( '01.01.20 Persoon:Burgerservicenumer' != '51.01.20 Persoon*:Burgerservicenumer' ) )
 ## Centraal
@@ -177,7 +177,7 @@ ISNULL '06.08.10 Overlijden:Datum overlijden' && ( '16.09.10 Tijdelijk verblijfa
 ### Gemeente 's-Hertogenbosch/Algemene gemeentetaken
 #### selectie
 ISNULL '06.08.10 Overlijden:Datum overlijden' && ( '16.09.10 Tijdelijk verblijfadres:Gemeente van inschrijving' == 0796 ) && ( ISNULL '16.18.10 Tijdelijk verblijfadres:Einddatum geldigheid' || ( '16.18.10 Tijdelijk verblijfadres:Einddatum geldigheid' > SELECTION-DATE - 00000000 ) )
-### Aalsmeer via Belastingkantoor Amstelland/Gemeentelijke belastingen
+### Gemeente Aalsmeer via Belastingkantoor Amstelland/Gemeentelijke belastingen
 #### selectie
 ( kolom1 == '01.01.10 Persoon:A-nummer' ) && NOT ISNULL '01.01.10 Persoon:A-nummer'
 #### spontaan
@@ -191,7 +191,7 @@ ISNULL '06.08.10 Overlijden:Datum overlijden' && ( '16.09.10 Tijdelijk verblijfa
 ### Gemeente Altena/Algemene gemeentetaken
 #### selectie
 ISNULL '06.08.10 Overlijden:Datum overlijden' && ( '16.09.10 Tijdelijk verblijfadres:Gemeente van inschrijving' == 1959 ) && ( ISNULL '16.18.10 Tijdelijk verblijfadres:Einddatum geldigheid' || ( '16.18.10 Tijdelijk verblijfadres:Einddatum geldigheid' > SELECTION-DATE - 00000000 ) )
-### Amstelveen via Belastingkantoor Amstelland/Gemeentelijke belastingen
+### Gemeente Amstelveen via Belastingkantoor Amstelland/Gemeentelijke belastingen
 #### selectie
 ( kolom1 == '01.01.10 Persoon:A-nummer' ) && NOT ISNULL '01.01.10 Persoon:A-nummer'
 #### spontaan
@@ -202,7 +202,7 @@ ISNULL '06.08.10 Overlijden:Datum overlijden' && ( '16.09.10 Tijdelijk verblijfa
 ### Gemeente Amsterdam/Algemene gemeentetaken
 #### selectie
 ISNULL '06.08.10 Overlijden:Datum overlijden' && ( '16.09.10 Tijdelijk verblijfadres:Gemeente van inschrijving' == 0363 ) && ( ISNULL '16.18.10 Tijdelijk verblijfadres:Einddatum geldigheid' || ( '16.18.10 Tijdelijk verblijfadres:Einddatum geldigheid' > SELECTION-DATE - 00000000 ) )
-### Berkelland via Belastingkantoor Twente/Gemeentelijke belastingen
+### Gemeente Berkelland via Belastingkantoor Twente/Gemeentelijke belastingen
 #### selectie
 '14.40.10 Afnemersindicatie:Afnemersindicatie' == 257001
 #### spontaan
@@ -216,7 +216,7 @@ ISNULL '06.08.10 Overlijden:Datum overlijden' && ( '16.09.10 Tijdelijk verblijfa
 ### Gemeente Boxtel/Algemene gemeentetaken
 #### selectie
 ISNULL '06.08.10 Overlijden:Datum overlijden' && ( '16.09.10 Tijdelijk verblijfadres:Gemeente van inschrijving' == 0757 ) && ( ISNULL '16.18.10 Tijdelijk verblijfadres:Einddatum geldigheid' || ( '16.18.10 Tijdelijk verblijfadres:Einddatum geldigheid' > SELECTION-DATE - 00000000 ) )
-### Bronckhorst via Belastingkantoor Twente/Gemeentelijke belastingen
+### Gemeente Bronckhorst via Belastingkantoor Twente/Gemeentelijke belastingen
 #### selectie
 '14.40.10 Afnemersindicatie:Afnemersindicatie' == 257101
 #### spontaan
@@ -229,7 +229,7 @@ ISNULL '06.08.10 Overlijden:Datum overlijden' && ( '16.09.10 Tijdelijk verblijfa
 ### Gemeente Deventer/Algemene gemeentetaken
 #### selectie
 ISNULL '06.08.10 Overlijden:Datum overlijden' && ( '16.09.10 Tijdelijk verblijfadres:Gemeente van inschrijving' == 0150 ) && ( ISNULL '16.18.10 Tijdelijk verblijfadres:Einddatum geldigheid' || ( '16.18.10 Tijdelijk verblijfadres:Einddatum geldigheid' > SELECTION-DATE - 00000000 ) )
-### Diemen via Belastingkantoor Amstelland/Gemeentelijke belastingen
+### Gemeente Diemen via Belastingkantoor Amstelland/Gemeentelijke belastingen
 #### selectie
 ( '14.40.10 Afnemersindicatie:Afnemersindicatie' == 256501 ) && ( ISNULL '07.67.20 Inschrijving:Omschrijving reden opschorting bijhouding' || ( '07.67.20 Inschrijving:Omschrijving reden opschorting bijhouding' != "O" ) )
 #### spontaan
@@ -303,7 +303,7 @@ ISNULL '06.08.10 Overlijden:Datum overlijden' && ( '16.09.10 Tijdelijk verblijfa
 ### Gemeente Opmeer/Algemene gemeentetaken
 #### selectie
 '14.40.10 Afnemersindicatie:Afnemersindicatie' == 510274
-### Ouder-Amstel via Belastingkantoor Amstelland/Gemeentelijke belastingen
+### Gemeente Ouder-Amstel via Belastingkantoor Amstelland/Gemeentelijke belastingen
 #### selectie
 ( kolom1 == '01.01.10 Persoon:A-nummer' ) && NOT ISNULL '01.01.10 Persoon:A-nummer'
 #### spontaan
@@ -329,7 +329,7 @@ ISNULL '06.08.10 Overlijden:Datum overlijden' && ( '16.09.10 Tijdelijk verblijfa
 ### Gemeente Son en Breugel/Algemene gemeentetaken
 #### selectie
 '14.40.10 Afnemersindicatie:Afnemersindicatie' == 510365
-### Uithoorn via Belastingkantoor Amstelland/Gemeentelijke belastingen
+### Gemeente Uithoorn via Belastingkantoor Amstelland/Gemeentelijke belastingen
 #### selectie
 ( '14.40.10 Afnemersindicatie:Afnemersindicatie' == 256401 ) && ( ISNULL '07.67.20 Inschrijving:Omschrijving reden opschorting bijhouding' || ( '07.67.20 Inschrijving:Omschrijving reden opschorting bijhouding' != "O" ) )
 #### spontaan
@@ -491,6 +491,11 @@ ISNULL '06.08.10 Overlijden:Datum overlijden' && ( '16.09.10 Tijdelijk verblijfa
 ### GGD Zuid-Limburg (JGZ/overig)
 #### spontaan
 ( '01.03.10 Persoon:Geboortedatum' > TODAY - 0019 ) && ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 0882 || 0888 || 0899 || 0917 || 0928 || 0935 || 0938 || 0965 || 0971 || 0981 || 0986 || 0994 || 1729 || 1883 || 1903 || 1954 ) && ISNULL '07.67.10 Inschrijving:Datum opschorting bijhouding'
+### RDOG GGD Hollands Midden (JGZ/overig)
+#### selectie
+( '01.03.10 Persoon:Geboortedatum' > SELECTION-DATE - 0019 ) && ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 0484 || 0513 || 0534 || 0537 || 0546 || 0547 || 0553 || 0569 || 0575 || 0579 || 0626 || 0627 || 0638 || 1525 || 1884 || 1892 || 1901 || 1931 ) && ISNULL '07.67.10 Inschrijving:Datum opschorting bijhouding'
+#### spontaan
+( '01.03.10 Persoon:Geboortedatum' > TODAY - 0019 ) && ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 0484 || 0513 || 0534 || 0537 || 0546 || 0547 || 0553 || 0569 || 0575 || 0579 || 0626 || 0627 || 0638 || 1525 || 1884 || 1892 || 1901 || 1931 ) && ISNULL '07.67.10 Inschrijving:Datum opschorting bijhouding'
 ## Hoogheemraadschap
 ### Hoogheemraadschap Hollands Noorderkwartier
 #### selectie
@@ -527,123 +532,123 @@ ISNULL '06.08.10 Overlijden:Datum overlijden' && ( '16.09.10 Tijdelijk verblijfa
 #### selectie
 ( kolom1 == '01.01.10 Persoon:A-nummer' ) && ISNULL '07.67.20 Inschrijving:Omschrijving reden opschorting bijhouding' && ( '07.70.10 Inschrijving:Indicatie geheim' == 0 )
 ## Ministerie
-### Ministerie van BZK/Logius/MijnOverheid Berichtenbox (1)
+### Ministerie Min. van BZK/Logius/MijnOverheid Berichtenbox (1)
 #### selectie
 ( ( '01.03.10 Persoon:Geboortedatum' < SELECTION-DATE - 001309 ) && ( '01.03.10 Persoon:Geboortedatum' != 00000000 ) ) && ( ( ISNULL '07.67.20 Inschrijving:Omschrijving reden opschorting bijhouding' ) || ( ( '07.67.20 Inschrijving:Omschrijving reden opschorting bijhouding' == "E" || "M" || "R" ) && ( '04.05.10 Nationaliteit:Nationaliteit' == 0001 || '04.65.10 Nationaliteit:Aanduiding bijzonder Nederlanderschap' == "B" ) ) )
 #### spontaan
 ( ( '01.03.10 Persoon:Geboortedatum' < TODAY - 001309 ) && ( '01.03.10 Persoon:Geboortedatum' != 00000000 ) ) && ( ( ISNULL '07.67.20 Inschrijving:Omschrijving reden opschorting bijhouding' ) || ( ( '07.67.20 Inschrijving:Omschrijving reden opschorting bijhouding' == "E" || "M" || "R" ) && ( '04.05.10 Nationaliteit:Nationaliteit' == 0001 || '04.65.10 Nationaliteit:Aanduiding bijzonder Nederlanderschap' == "B" ) ) )
-### Ministerie van BZK/Logius/Overheidstoegangsvoorziening DigiD (1)
+### Ministerie Min. van BZK/Logius/Overheidstoegangsvoorziening DigiD (1)
 #### selectie
 ( kolom1 == '01.01.20 Persoon:Burgerservicenumer' ) && ISNULL '07.67.20 Inschrijving:Omschrijving reden opschorting bijhouding'
-### Ministerie van BZK/Logius/Overheidstoegangsvoorziening DigiD (2)
+### Ministerie Min. van BZK/Logius/Overheidstoegangsvoorziening DigiD (2)
 #### selectie
 ( kolom1 == '01.01.20 Persoon:Burgerservicenumer' ) && ISNULL '06.08.10 Overlijden:Datum overlijden'
-### Ministerie van BZK/RvIG/Aanpak adreskwaliteit/Raadpleging voor gemeenten (op A-nummer)
+### Ministerie Min. van BZK/RvIG/Aanpak adreskwaliteit/Raadpleging voor gemeenten (op A-nummer)
 #### selectie
 ( kolom1 == '01.01.10 Persoon:A-nummer' ) && NOT ISNULL '01.01.10 Persoon:A-nummer'
-### Ministerie van BZK/RvIG/Aanpak adreskwaliteit/Raadpleging voor gemeenten (op BSN)
+### Ministerie Min. van BZK/RvIG/Aanpak adreskwaliteit/Raadpleging voor gemeenten (op BSN)
 #### selectie
 ( kolom1 == '01.01.20 Persoon:Burgerservicenumer' ) && NOT ISNULL '01.01.20 Persoon:Burgerservicenumer'
-### Ministerie van BZK/RvIG/Authenticatie publieke dienstverlening Nederland (vanuit EER)
+### Ministerie Min. van BZK/RvIG/Authenticatie publieke dienstverlening Nederland (vanuit EER)
 #### selectie
 ( kolom1 == '01.01.20 Persoon:Burgerservicenumer' ) && NOT ISNULL '01.01.20 Persoon:Burgerservicenumer'
-### Ministerie van BZK/RvIG/Basisregister reisdocumenten (1)
+### Ministerie Min. van BZK/RvIG/Basisregister reisdocumenten (1)
 #### selectie
 ( kolom1 == '01.01.20 Persoon:Burgerservicenumer' ) && NOT ISNULL '01.01.20 Persoon:Burgerservicenumer'
 #### spontaan
 KLOPT1: ( '12.35.10@A' != "RD" && "RM" && "RV" && "R1" && "R2" ) && NOT ISNULL '12.35.70@A'
-### Ministerie van BZK/RvIG/Basisregister reisdocumenten (2)
+### Ministerie Min. van BZK/RvIG/Basisregister reisdocumenten (2)
 #### spontaan
 NOT ISNULL '06.08.10 Overlijden:Datum overlijden'
-### Ministerie van BZK/RvIG/Basisregister reisdocumenten (3)
+### Ministerie Min. van BZK/RvIG/Basisregister reisdocumenten (3)
 #### selectie
 ( kolom1 == '01.01.20 Persoon:Burgerservicenumer' ) && NOT ISNULL '01.01.20 Persoon:Burgerservicenumer'
-### Ministerie van BZK/RvIG/PIVA-GBA Koppeling (PGK)
+### Ministerie Min. van BZK/RvIG/PIVA-GBA Koppeling (PGK)
 #### spontaan
 ( ( '07.67.10 Inschrijving:Datum opschorting bijhouding' >= TODAY - 000001 ) && ( '07.67.20 Inschrijving:Omschrijving reden opschorting bijhouding' == "E" ) && ( '08.13.10 Verblijfsplaats:Land adres buitenland' == 5095 || 5106 || 5107 || 5108 || 5109 || 5110 ) ) || ( '08.14.10 Verblijfsplaats:Land vanwaar ingeschreven' == 5095 || 5106 || 5107 || 5108 || 5109 || 5110 )
-### Ministerie van BZK/RvIG/Register paspoortsignaleringen
+### Ministerie Min. van BZK/RvIG/Register paspoortsignaleringen
 #### selectie
 ( kolom1 == '01.01.20 Persoon:Burgerservicenumer' ) && NOT ISNULL '01.01.20 Persoon:Burgerservicenumer'
-### Ministerie van BZK/RvIG/Register vermiste of vervallen reisdocumenten (1)
+### Ministerie Min. van BZK/RvIG/Register vermiste of vervallen reisdocumenten (1)
 #### selectie
 '12.35.70 Reisdocument:Aanduiding inhouding dan wel vermissing Nederlands reisdocument' == "I" || "R" || "V" || "."
 #### spontaan
 ( '12.35.70 Reisdocument:Aanduiding inhouding dan wel vermissing Nederlands reisdocument' == "R" || "V" ) && ( '12.35.10 Reisdocument:Soort Nederlands reisdocument' != "RD" && "RM" && "RV" && "R1" && "R2" )
-### Ministerie van BZK/RvIG/Register vermiste of vervallen reisdocumenten (2)
+### Ministerie Min. van BZK/RvIG/Register vermiste of vervallen reisdocumenten (2)
 #### selectie
 ( '06.08.10 Overlijden:Datum overlijden' >= 20090101 ) && ( '12.35.50 Reisdocument:Datum einde geldigheid Nederlands reisdocument' > '06.08.10 Overlijden:Datum overlijden' )
 #### spontaan
 ( NOT ISNULL '06.08.10 Overlijden:Datum overlijden' && ( '12.35.50 Reisdocument:Datum einde geldigheid Nederlands reisdocument' > TODAY - 00000000 ) ) && ( '12.35.10 Reisdocument:Soort Nederlands reisdocument' != "RD" && "RM" && "RV" && "R1" && "R2" )
-### Ministerie van BZK/RvIG/Register vermiste of vervallen reisdocumenten (3)
+### Ministerie Min. van BZK/RvIG/Register vermiste of vervallen reisdocumenten (3)
 #### spontaan
 ( NOT ISNULL '51.01.10 Persoon*:A-nummer' && ( '01.01.10 Persoon:A-nummer' != '51.01.10 Persoon*:A-nummer' ) && NOT ISNULL '12.35.10 Reisdocument:Soort Nederlands reisdocument' ) && ( '12.35.10 Reisdocument:Soort Nederlands reisdocument' != "RD" && "RM" && "RV" && "R1" && "R2" )
-### Ministerie van BZK/Verkiezingen Europees Parlement
+### Ministerie Min. van BZK/Verkiezingen Europees Parlement
 #### selectie
 ( '04.05.10 Nationaliteit:Nationaliteit' == 0027 || 0028 || 0042 || 0043 || 0044 || 0045 || 0046 || 0052 || 0053 || 0054 || 0055 || 0056 || 0057 || 0059 || 0061 || 0062 || 0064 || 0067 || 0068 || 0071 || 0072 || 0073 || 0074 || 0077 || 0080 || 0308 ) && ( '13.31.10 Kiesrecht:Aanduiding Europees kiesrecht' == 2 ) && ( '13.31.20 Kiesrecht:Datum verzoek of mededeling Europees kiesrecht' < 20240424 ) && ISNULL '07.67.20 Inschrijving:Omschrijving reden opschorting bijhouding'
-### Ministerie van Defensie/Taken inzake dienstplicht en veteranenzorg
+### Ministerie Min. van Defensie/Taken inzake dienstplicht en veteranenzorg
 #### adhoc
 ( '01.03.10 Persoon:Geboortedatum' <= TODAY - 0017 ) && ( '04.05.10 Nationaliteit:Nationaliteit' == 0001 )
 #### selectie
 ( '01.03.10 Persoon:Geboortedatum' <= SELECTION-DATE - 0017 ) && ( '01.03.10 Persoon:Geboortedatum' > SELECTION-DATE - 0035 ) && ( ( '01.04.10 Persoon:Geslachtsaanduiding' == "M" ) || ( ( '01.04.10 Persoon:Geslachtsaanduiding' == "O" || "V" ) && ( '01.03.10 Persoon:Geboortedatum' >= 20030000 ) ) ) && ( '04.05.10 Nationaliteit:Nationaliteit' == 0001 ) && ISNULL '07.67.20 Inschrijving:Omschrijving reden opschorting bijhouding' && ( '64.40.10 Afnemersindicatie*:Afnemersindicatie' != 890001 )
 #### spontaan
 ( '01.03.10 Persoon:Geboortedatum' <= TODAY - 0017 ) && ( '01.03.10 Persoon:Geboortedatum' > TODAY - 0035 ) && ( ( '01.04.10 Persoon:Geslachtsaanduiding' == "M" ) || ( ( '01.04.10 Persoon:Geslachtsaanduiding' == "O" || "V" ) && ( '01.03.10 Persoon:Geboortedatum' >= 20030000 ) ) ) && ( '04.05.10 Nationaliteit:Nationaliteit' == 0001 ) && ISNULL '07.67.20 Inschrijving:Omschrijving reden opschorting bijhouding' && ( '64.40.10 Afnemersindicatie*:Afnemersindicatie' != 890001 )
-### Ministerie van EL&I
-#### adhoc
-'08.09.10 Verblijfsplaats:Gemeente van inschrijving' != 1999
-### Ministerie van Financiën/Belastingdienst
+### Ministerie Min. van Financiën/Belastingdienst
 #### selectie
 '14.40.10 Afnemersindicatie:Afnemersindicatie' == 250001
-### Ministerie van I&M
-#### adhoc
-'08.09.10 Verblijfsplaats:Gemeente van inschrijving' != 1999
-### Ministerie van JenV via DSW Zorgverzekeraar/Zorgverzekering ontheemden Oekraïne
+### Ministerie Min. van JenV via DSW Zorgverzekeraar/Zorgverzekering ontheemden Oekraïne
 #### selectie
 '10.39.10 Verblijfstitel:Aanduiding verblijfstitel' == 46 && ISNULL '07.67.20 Inschrijving:Omschrijving reden opschorting bijhouding'
 #### spontaan
 '10.39.10 Verblijfstitel:Aanduiding verblijfstitel' == 46
-### Ministerie van JenV/Immigratie- en Naturalisatiedienst/Taken inzake Nederlanders
+### Ministerie Min. van JenV/Immigratie- en Naturalisatiedienst/Taken inzake Nederlanders
 #### adhoc
 ( '04.05.10 Nationaliteit:Nationaliteit' == 0001 ) || ( '04.65.10 Nationaliteit:Aanduiding bijzonder Nederlanderschap' == "B" )
-### Ministerie van JenV/Immigratie- en Naturalisatiedienst/Taken inzake vreemdelingen
+### Ministerie Min. van JenV/Immigratie- en Naturalisatiedienst/Taken inzake vreemdelingen
 #### adhoc
 ( '04.05.10 Nationaliteit:Nationaliteit' != 0001 ) && ( '04.65.10 Nationaliteit:Aanduiding bijzonder Nederlanderschap' != "B" )
 #### spontaan
 ( '04.05.10 Nationaliteit:Nationaliteit' != 0001 ) && ( '04.65.10 Nationaliteit:Aanduiding bijzonder Nederlanderschap' != "B" ) && ( '04.82.30 Nationaliteit:Beschrijving document' != "proba/*" && "Proba/*" && "PRoba/*" && "PROba/*" && "PROBa/*" && "PROBA/*" && "pROBA/*" && "/?proba/*" && "/?Proba/*" && "/?PRoba/*" && "/?PROba/*" && "/?PROBa/*" && "/?PROBA/*" && "/?pROBA/*" ) && ISNULL '07.67.10 Inschrijving:Datum opschorting bijhouding'
-### Ministerie van JenV/Justitiële Informatiedienst/Taken inzake casus-overleggen
+### Ministerie Min. van JenV/Justitiële Informatiedienst/Taken inzake casus-overleggen
 #### adhoc
 '08.09.10 Verblijfsplaats:Gemeente van inschrijving' != 1999
-### Ministerie van JenV/Taken inzake beleid tijdelijke bescherming ontheemden Oekraïne
+### Ministerie Min. van JenV/Taken inzake beleid tijdelijke bescherming ontheemden Oekraïne
 #### selectie
 ( kolom1 == '01.01.10 Persoon:A-nummer' ) && NOT ISNULL '01.01.10 Persoon:A-nummer'
-### Ministerie van OCW/Dienst Uitvoering Onderwijs (DUO)
+### Ministerie Min. van OCW/Dienst Uitvoering Onderwijs (DUO)
 #### selectie
 ( ( '01.03.10 Persoon:Geboortedatum' <= SELECTION-DATE - 000206 ) && ( '01.03.10 Persoon:Geboortedatum' > SELECTION-DATE - 00180000 ) ) && ISNULL '07.67.10 Inschrijving:Datum opschorting bijhouding'
 #### spontaan
 ( ( '01.03.10 Persoon:Geboortedatum' <= TODAY - 00020600 ) && ( '01.03.10 Persoon:Geboortedatum' > TODAY - 00180000 ) ) && ISNULL '07.67.10 Inschrijving:Datum opschorting bijhouding'
+### Ministerie Min. van VWS/CIBG/Taken inzake donorregistratie
+#### adhoc
+'01.03.10 Persoon:Geboortedatum' <= TODAY - 00120000
+#### selectie
+( ( '01.03.10 Persoon:Geboortedatum' == SELECTION-DATE - 001801 ) || ( ( '01.03.10 Persoon:Geboortedatum' <= SELECTION-DATE - 001901 ) && ( ISNULL '08.14.20 Verblijfsplaats:Datum vestiging in Nederland' || ( '08.14.20 Verblijfsplaats:Datum vestiging in Nederland' <= SELECTION-DATE - 000301 ) ) ) ) && ISNULL '07.67.10 Inschrijving:Datum opschorting bijhouding'
+### Ministerie Min. van VWS/Jodiumdistributie
+#### selectie
+( '01.03.10 Persoon:Geboortedatum' > SELECTION-DATE - 004100 ) && ( ISNULL '06.08.10 Overlijden:Datum overlijden' ) && ( ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 0654 || 0664 || 0677 || 0678 || 0687 || 0703 || 0715 || 0717 || 0718 || 0873 || 1695 || 1714 ) || ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 0168 && '08.11.60 Verblijfsplaats:Postcode' == "7587/*" || "7588/*" ) || ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 1674 && '08.11.60 Verblijfsplaats:Postcode' == "4725/*" ) || ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 1774 && '08.11.60 Verblijfsplaats:Postcode' == "7591/*" || "7635/*" ) ) && ( '08.10.10 Verblijfsplaats:Functie adres' == "W" )
+### Ministerie Min. van VWS/RIVM/Onderzoek en crisissituaties
+#### selectie
+ISNULL '07.67.10 Inschrijving:Datum opschorting bijhouding' && ( '07.70.10 Inschrijving:Indicatie geheim' == 0 )
+### Ministerie Min. van VWS/RIVM/Rijksvaccinatieprogramma en neonatale screening
+#### selectie
+( ( '01.03.10 Persoon:Geboortedatum' < SELECTION-DATE - 0018 ) && ( '01.03.10 Persoon:Geboortedatum' >= SELECTION-DATE - 0026 ) ) && ( '14.40.10 Afnemersindicatie:Afnemersindicatie' == 601202 )
+#### spontaan
+( '01.03.10 Persoon:Geboortedatum' > TODAY - 00190000 ) && ISNULL '07.67.10 Inschrijving:Datum opschorting bijhouding'
+### Ministerie Min. van VWS/RIVM/Vaccinatie Covid
+#### spontaan
+( ISNULL '07.67.20 Inschrijving:Omschrijving reden opschorting bijhouding' || ( ISNULL '06.08.10 Overlijden:Datum overlijden' && ( '08.13.10 Verblijfsplaats:Land adres buitenland' == 6030 ) ) ) && ( '64.40.10 Afnemersindicatie*:Afnemersindicatie' != 601205 )
+### Ministerie van EL&I
+#### adhoc
+'08.09.10 Verblijfsplaats:Gemeente van inschrijving' != 1999
+### Ministerie van I&M
+#### adhoc
+'08.09.10 Verblijfsplaats:Gemeente van inschrijving' != 1999
 ### Ministerie van VWS
 #### adhoc
 ( '01.03.10 Persoon:Geboortedatum' > TODAY - 00230000 ) && ISNULL '07.67.10 Inschrijving:Datum opschorting bijhouding'
 #### selectie
 '14.40.10 Afnemersindicatie:Afnemersindicatie' == 609901 && ISNULL '07.67.10 Inschrijving:Datum opschorting bijhouding'
-### Ministerie van VWS/CIBG/Taken inzake donorregistratie
-#### adhoc
-'01.03.10 Persoon:Geboortedatum' <= TODAY - 00120000
-#### selectie
-( ( '01.03.10 Persoon:Geboortedatum' == SELECTION-DATE - 001801 ) || ( ( '01.03.10 Persoon:Geboortedatum' <= SELECTION-DATE - 001901 ) && ( ISNULL '08.14.20 Verblijfsplaats:Datum vestiging in Nederland' || ( '08.14.20 Verblijfsplaats:Datum vestiging in Nederland' <= SELECTION-DATE - 000301 ) ) ) ) && ISNULL '07.67.10 Inschrijving:Datum opschorting bijhouding'
-### Ministerie van VWS/Jodiumdistributie
-#### selectie
-( '01.03.10 Persoon:Geboortedatum' > SELECTION-DATE - 004100 ) && ( ISNULL '06.08.10 Overlijden:Datum overlijden' ) && ( ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 0654 || 0664 || 0677 || 0678 || 0687 || 0703 || 0715 || 0717 || 0718 || 0873 || 1695 || 1714 ) || ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 0168 && '08.11.60 Verblijfsplaats:Postcode' == "7587/*" || "7588/*" ) || ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 1674 && '08.11.60 Verblijfsplaats:Postcode' == "4725/*" ) || ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 1774 && '08.11.60 Verblijfsplaats:Postcode' == "7591/*" || "7635/*" ) ) && ( '08.10.10 Verblijfsplaats:Functie adres' == "W" )
-### Ministerie van VWS/RIVM/Onderzoek en crisissituaties
-#### selectie
-ISNULL '07.67.10 Inschrijving:Datum opschorting bijhouding' && ( '07.70.10 Inschrijving:Indicatie geheim' == 0 )
-### Ministerie van VWS/RIVM/Rijksvaccinatieprogramma en neonatale screening
-#### selectie
-( ( '01.03.10 Persoon:Geboortedatum' < SELECTION-DATE - 0018 ) && ( '01.03.10 Persoon:Geboortedatum' >= SELECTION-DATE - 0026 ) ) && ( '14.40.10 Afnemersindicatie:Afnemersindicatie' == 601202 )
-#### spontaan
-( '01.03.10 Persoon:Geboortedatum' > TODAY - 00190000 ) && ISNULL '07.67.10 Inschrijving:Datum opschorting bijhouding'
-### Ministerie van VWS/RIVM/Vaccinatie Covid
-#### spontaan
-( ISNULL '07.67.20 Inschrijving:Omschrijving reden opschorting bijhouding' || ( ISNULL '06.08.10 Overlijden:Datum overlijden' && ( '08.13.10 Verblijfsplaats:Land adres buitenland' == 6030 ) ) ) && ( '64.40.10 Afnemersindicatie*:Afnemersindicatie' != 601205 )
 ## MN
 ### MN Services
 #### selectie
@@ -671,7 +676,6 @@ ISNULL '07.67.10 Inschrijving:Datum opschorting bijhouding' && ( '07.70.10 Insch
 ### Pensioenuitvoerder Wolters Kluwer Nederland
 #### selectie
 '14.40.10 Afnemersindicatie:Afnemersindicatie' == 802301
-## Pensioenuitvoerders
 ### Pensioenuitvoerders via Achmea Pensioenservices
 #### selectie
 ( kolom1 == '01.01.10 Persoon:A-nummer' ) && NOT ISNULL '01.01.10 Persoon:A-nummer'
@@ -695,12 +699,6 @@ ISNULL '07.67.10 Inschrijving:Datum opschorting bijhouding' && ( '07.70.10 Insch
 ### Raad van State/Bestuursrechtspraak
 #### adhoc
 '08.09.10 Verblijfsplaats:Gemeente van inschrijving' != 1999
-## RDOG
-### RDOG GGD Hollands Midden (JGZ/overig)
-#### selectie
-( '01.03.10 Persoon:Geboortedatum' > SELECTION-DATE - 0019 ) && ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 0484 || 0513 || 0534 || 0537 || 0546 || 0547 || 0553 || 0569 || 0575 || 0579 || 0626 || 0627 || 0638 || 1525 || 1884 || 1892 || 1901 || 1931 ) && ISNULL '07.67.10 Inschrijving:Datum opschorting bijhouding'
-#### spontaan
-( '01.03.10 Persoon:Geboortedatum' > TODAY - 0019 ) && ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 0484 || 0513 || 0534 || 0537 || 0546 || 0547 || 0553 || 0569 || 0575 || 0579 || 0626 || 0627 || 0638 || 1525 || 1884 || 1892 || 1901 || 1931 ) && ISNULL '07.67.10 Inschrijving:Datum opschorting bijhouding'
 ## Rijksdienst
 ### Rijksdienst voor het Wegverkeer (RDW)
 #### selectie
@@ -741,7 +739,7 @@ ISNULL '07.67.10 Inschrijving:Datum opschorting bijhouding' && ( '07.70.10 Insch
 #### selectie
 ( '07.67.20 Inschrijving:Omschrijving reden opschorting bijhouding' != "O" ) && ( '14.40.10 Afnemersindicatie:Afnemersindicatie' != 852102 )
 ## Stichting
-### Stichting Interkerkelijke Ledenadministratie
+### Stichting St. Interkerkelijke Ledenadministratie
 #### adhoc
 '08.09.10 Verblijfsplaats:Gemeente van inschrijving' != 1999
 #### selectie
@@ -754,20 +752,20 @@ ISNULL '07.67.10 Inschrijving:Datum opschorting bijhouding' && ( '07.70.10 Insch
 #### adhoc
 '08.09.10 Verblijfsplaats:Gemeente van inschrijving' != 1999
 ## Universiteit
-### Universiteit MC/Afdeling Maatschappelijke Gezondheidszorg/ROBINSCA-studie
+### Universiteit Erasmus MC/Afdeling Maatschappelijke Gezondheidszorg/ROBINSCA-studie
 #### adhoc
 ( '01.04.10 Persoon:Geslachtsaanduiding' == "V" && ( '01.03.10 Persoon:Geboortedatum' <= TODAY - 0055 ) ) || ( '01.04.10 Persoon:Geslachtsaanduiding' == "M" && ( '01.03.10 Persoon:Geboortedatum' <= TODAY - 0045 ) )
 #### selectie
 ( ( '01.04.10 Persoon:Geslachtsaanduiding' == "V" && ( '01.03.10 Persoon:Geboortedatum' <= SELECTION-DATE - 0055 && '01.03.10 Persoon:Geboortedatum' > SELECTION-DATE - 0075 ) ) || ( '01.04.10 Persoon:Geslachtsaanduiding' == "M" && ( '01.03.10 Persoon:Geboortedatum' <= SELECTION-DATE - 0045 && '01.03.10 Persoon:Geboortedatum' > SELECTION-DATE - 0075 ) ) ) && ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 0005 || 0009 || 0014 || 0017 || 0018 || 0022 || 0025 || 0040 || 0053 || 0056 || 1699 || 1730 ) && ISNULL '07.66.20 Inschrijving:Datum ingang blokkering PL' && ISNULL '07.67.10 Inschrijving:Datum opschorting bijhouding'
-### Universiteit MC/Proefbevolkingsonderzoek longkanker
+### Universiteit Erasmus MC/Proefbevolkingsonderzoek longkanker
 #### adhoc
 '01.03.10 Persoon:Geboortedatum' <= TODAY - 0060
 #### selectie
 ( '01.03.10 Persoon:Geboortedatum' <= SELECTION-DATE - 0060 ) && ( '01.03.10 Persoon:Geboortedatum' > SELECTION-DATE - 0080 ) && ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 0059 || 0074 || 0080 || 0085 || 0086 || 0090 || 0307 || 0308 || 0310 || 0342 || 0344 || 0355 || 0362 || 0363 || 0402 || 0737 || 1900 || 1940 ) && ISNULL '07.66.20 Inschrijving:Datum ingang blokkering PL' && ISNULL '07.67.10 Inschrijving:Datum opschorting bijhouding'
-### Universiteit Nijmegen/Gastro-oesofageale refluxziekte (GORZ)-onderzoek
+### Radboud Universiteit Nijmegen/Gastro-oesofageale refluxziekte (GORZ)-onderzoek
 #### selectie
 ( kolom1 == '01.01.10 Persoon:A-nummer' ) && ISNULL '07.67.20 Inschrijving:Omschrijving reden opschorting bijhouding' && ( '07.70.10 Inschrijving:Indicatie geheim' == 0 )
-### Universiteit Nijmegen/Nederlandse levensloop studie (NELLS)-onderzoek
+### Radboud Universiteit Nijmegen/Nederlandse levensloop studie (NELLS)-onderzoek
 #### selectie
 ( kolom1 == '01.01.10 Persoon:A-nummer' ) && ISNULL '07.67.20 Inschrijving:Omschrijving reden opschorting bijhouding' && ( '07.70.10 Inschrijving:Indicatie geheim' == 0 )
 ### Universiteit Utrecht/TransExpo-onderzoek
@@ -783,10 +781,10 @@ ISNULL '07.67.10 Inschrijving:Datum opschorting bijhouding' && ( '07.70.10 Insch
 ### Waterschap Amstel, Gooi en Vecht
 #### spontaan
 ( ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 0362 || 0376 || 0384 || 0402 || 0406 || 0417 || 0437 || 0451 || 0736 || 1696 || 1904 || 1942 ) || ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 0358 && '08.11.60 Verblijfsplaats:Postcode' == "1433/*" ) || ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 0363 && '08.11.60 Verblijfsplaats:Postcode' != "1024/*" && "1025/*" && "1026/*" && "1027/*" && "1028/*" && "1034/*" && "1035/*" ) ) && '08.10.10 Verblijfsplaats:Functie adres' != "B" && ISNULL '07.67.10 Inschrijving:Datum opschorting bijhouding'
-### De Dommel/Waterschapsbelastingen (1)
+### Waterschap De Dommel/Waterschapsbelastingen (1)
 #### spontaan
 ( ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 0753 || 0757 || 0770 || 0772 || 0785 || 0798 || 0820 || 0823 || 0824 || 0848 || 0855 || 0858 || 0861 || 0865 || 0866 || 1658 || 1667 || 1706 || 1724 || 1728 || 1771 ) || ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 0744 && '08.11.60 Verblijfsplaats:Postcode' == "5111/*" ) || ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 0794 && '08.11.60 Verblijfsplaats:Postcode' == "5706KB" || "5707DC" ) || ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 0796 && '08.11.60 Verblijfsplaats:Postcode' == "5211CM" || "5216HH" || "5216PZ" || "5216VT" || "5216VV" || "5216VW" || "5216VX" ) || ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 0797 && '08.11.60 Verblijfsplaats:Postcode' == "5151RB" || "5151RD" || "5151RE" || "5151RG" || "5151RH" || "5151RK" ) || ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 0809 && '08.11.60 Verblijfsplaats:Postcode' == "5175NW" || "5175NX" || "5175NZ" || "5175PB" || "5175PC" || "5175PS" || "5175PT" ) || ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 0845 && '08.11.60 Verblijfsplaats:Postcode' == "527/*" || "529/*" ) || ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 0847 && '08.11.60 Verblijfsplaats:Postcode' == "5711PX" || "5711RJ" || "5711RL" || "5712/*" ) || ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 1659 && '08.11.60 Verblijfsplaats:Postcode' == "5737P/*" || "5737SG" ) || ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 1948 && '08.11.60 Verblijfsplaats:Postcode' == "5466PZ" || "5481JD" || "5481JG" || "5481S/*" || "5481V/*" || "5481X/*" || "5482/*" || "549/*" ) ) && '08.10.10 Verblijfsplaats:Functie adres' != "B" && ISNULL '07.67.10 Inschrijving:Datum opschorting bijhouding'
-### De Dommel/Waterschapsbelastingen (2)
+### Waterschap De Dommel/Waterschapsbelastingen (2)
 #### selectie
 ( ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 0794 && '08.11.60 Verblijfsplaats:Postcode' == "5707DA" ) || ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 0809 && '08.11.60 Verblijfsplaats:Postcode' == "5175BC" || "5175BD" || "5175NV" || "5175PJ" || "5175RV" || "5175RW" || "5175RX" || "5175RZ" || "5175SV" ) || ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 0847 && '08.11.60 Verblijfsplaats:Postcode' == "5711PV" || "5711PZ" || "5711RA" || "5711RD" || "5711RG" ) || ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 1659 && '08.11.60 Verblijfsplaats:Postcode' == "5737RM" ) || ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 1723 && '08.11.60 Verblijfsplaats:Postcode' == "5131RN" || "5131RP" ) || ( '08.09.10 Verblijfsplaats:Gemeente van inschrijving' == 1948 && '08.11.60 Verblijfsplaats:Postcode' == "5465LA" ) ) && '08.10.10 Verblijfsplaats:Functie adres' != "B" && ISNULL '07.67.10 Inschrijving:Datum opschorting bijhouding'
 #### spontaan

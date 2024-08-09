@@ -100,11 +100,13 @@ func fixPrefix(in string) string {
 }
 
 var prefixes = map[string]string{
-	"St.":        "Stichting",
-	"Radboud":    "Universiteit",
-	"Erasmus":    "Universiteit",
-	"Noordelijk": "Belastingkantoor",
-	"Min.":       "Ministerie",
+	"St.":                 "Stichting",
+	"Radboud":             "Universiteit",
+	"Erasmus":             "Universiteit",
+	"Noordelijk":          "Belastingkantoor",
+	"Min.":                "Ministerie",
+	"Pensioenuitvoerders": "Pensioenuitvoerder",
+	"RDOG":                "GGD",
 }
 
 func makeReportLine(org, kind, condition string) reportLine {
@@ -124,13 +126,13 @@ func makeReportLine(org, kind, condition string) reportLine {
 		r.orgSuffix = "van VWS"
 	case strings.HasPrefix(org, "CBS"):
 		r.orgPrefix = "CBS"
-		r.orgSuffix = org[3:]
+		r.orgSuffix = org
 	case strings.HasPrefix(org, "Wageningen"):
 		r.orgPrefix = "Universiteit"
 		r.orgSuffix = org
 	case ix > 0:
 		r.orgPrefix = fixPrefix(org[:ix])
-		r.orgSuffix = org[ix+1:]
+		r.orgSuffix = org
 	case iy > 0:
 		r.orgPrefix = fixPrefix(org[:iy])
 		r.orgSuffix = org
