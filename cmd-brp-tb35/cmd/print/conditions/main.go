@@ -29,23 +29,25 @@ func main() {
 
 	list := c.Search(autorisatieregels.IsValid(true))
 	for _, item := range list {
+		org := fmt.Sprintf("%s (%d)", item.AfnemerNaam, item.Afnemer)
+
 		if item.VoorwaardeSpontaan != "" {
-			l := makeReportLine(item.AfnemerNaam, "spontaan", convertCondition(item.VoorwaardeSpontaan))
+			l := makeReportLine(org, "spontaan", convertCondition(item.VoorwaardeSpontaan))
 			keys = append(keys, l.key())
 			report[l.key()] = l
 		}
 		if item.VoorwaardeSelectie != "" {
-			l := makeReportLine(item.AfnemerNaam, "selectie", convertCondition(item.VoorwaardeSelectie))
+			l := makeReportLine(org, "selectie", convertCondition(item.VoorwaardeSelectie))
 			keys = append(keys, l.key())
 			report[l.key()] = l
 		}
 		if item.VoorwaardeAdhoc != "" {
-			l := makeReportLine(item.AfnemerNaam, "adhoc", convertCondition(item.VoorwaardeAdhoc))
+			l := makeReportLine(org, "adhoc", convertCondition(item.VoorwaardeAdhoc))
 			keys = append(keys, l.key())
 			report[l.key()] = l
 		}
 		if item.VoorwaardeAdres != "" {
-			l := makeReportLine(item.AfnemerNaam, "adres", convertCondition(item.VoorwaardeAdres))
+			l := makeReportLine(org, "adres", convertCondition(item.VoorwaardeAdres))
 			keys = append(keys, l.key())
 			report[l.key()] = l
 		}
@@ -100,11 +102,9 @@ func fixPrefix(in string) string {
 }
 
 var prefixes = map[string]string{
-	"St.":                 "Stichting",
 	"Radboud":             "Universiteit",
 	"Erasmus":             "Universiteit",
 	"Noordelijk":          "Belastingkantoor",
-	"Min.":                "Ministerie",
 	"Pensioenuitvoerders": "Pensioenuitvoerder",
 	"RDOG":                "GGD",
 }
@@ -129,6 +129,18 @@ func makeReportLine(org, kind, condition string) reportLine {
 		r.orgSuffix = org
 	case strings.HasPrefix(org, "Wageningen"):
 		r.orgPrefix = "Universiteit"
+		r.orgSuffix = org
+	case strings.HasPrefix(org, "St. "):
+		r.orgPrefix = "Stichting"
+		r.orgSuffix = org[4:]
+	case strings.HasPrefix(org, "Min. "):
+		r.orgPrefix = "Ministerie"
+		r.orgSuffix = org[5:]
+	case strings.HasPrefix(org, "UMC"):
+		r.orgPrefix = "Universiteit"
+		r.orgSuffix = org[1:]
+	case strings.Contains(org, "KNAW"):
+		r.orgPrefix = "KNAW"
 		r.orgSuffix = org
 	case ix > 0:
 		r.orgPrefix = fixPrefix(org[:ix])
