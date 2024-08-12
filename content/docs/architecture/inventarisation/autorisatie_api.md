@@ -3,7 +3,7 @@ weight: 10
 type: 'docs'
 ---
 
-# Basis Registratie Personen (RvIG)
+# Autorisatie API
 
 ## References
 - https://github.com/VNG-Realisatie/autorisaties-api
