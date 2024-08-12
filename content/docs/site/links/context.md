@@ -44,7 +44,7 @@ weight: 10
       - **[Domeinarchitectuur gegevensuitwisseling](https://minbzk.github.io/gdi-gegevensuitwisseling/content/views/Domeinarchitectuur%20gegevensuitwisseling.html) En deze een niveau hoger**
       - [Digimelding](https://www.logius.nl/domeinen/gegevensuitwisseling/digimelding)
       - [Digilevering](https://www.logius.nl/domeinen/gegevensuitwisseling/digilevering)
-      - [Stelselcatalogus](https://www.stelselcatalogus.nl/)
+      - [Stelselcatalogus](https://stelselcatalogus.nl/)
     - Infrastructuur
       - [Diginetwerk](https://www.logius.nl/domeinen/infrastructuur/diginetwerk)
       - [Digikoppeling](https://www.logius.nl/domeinen/gegevensuitwisseling/digikoppeling/documentatie)
