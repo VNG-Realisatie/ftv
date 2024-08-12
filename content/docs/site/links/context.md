@@ -17,12 +17,12 @@ weight: 10
 ### Programma's
 - [IBDS](https://www.digitaleoverheid.nl/interbestuurlijke-datastrategie/) - Zie ook [IBDS](/docs/architecture/inventarisation/ibds)
   - [Realisatie IBDS](https://realisatieibds.nl/)
-- FDS - Zie ook [FDS](/docs/architecture/inventarisation/FDS)
+- FDS - Zie ook [FDS](/docs/architecture/inventarisation/fds)
   - [Platform](https://federatief.datastelsel.nl/)
   - [FDS bij NORA](https://www.noraonline.nl/wiki/FDS_Basis_concept)
   - [Regie FDS bij VNG](https://vng.nl/projecten/regie-federatief-datastelsel-fds)
   - [FDS catalogus](https://gitlab.com/digilab.overheid.nl/ecosystem/fds-catalogus)
-  - FSC - Zie ook [FSC](/docs/architecture/inventarisation/FSC)
+  - FSC - Zie ook [FSC](/docs/architecture/inventarisation/fsc)
     - [FSC bij VNG](https://vng.nl/projecten/federatieve-service-connectiviteit-fsc)
     - [GitLab](https://gitlab.com/commonground/nlx/fsc-nlx)
   - [Poortwachter](https://federatief.datastelsel.nl/kennisbank/stelselfuncties/#poortwachter) - Zie ook [poortwachter](/docs/architecture/inventarisation/poortwachter)
@@ -54,8 +54,8 @@ weight: 10
 - Haven - Zie ook [haven](/docs/architecture/inventarisation/haven)
 
 ### Koppelvlakstandaarden
-- [StUF](https://standaarden.vng.nl/StUF-standaarden) - Zie ook [StUF](/docs/architecture/inventarisation/StUF)
-- [HaalCentraal](https://haalcentraal.pleio.nl/) - Zie ook [HaalCentraal](/docs/architecture/inventarisation/HaalCentraal)
+- [StUF](https://standaarden.vng.nl/StUF-standaarden) - Zie ook [StUF](/docs/architecture/inventarisation/stuf)
+- [HaalCentraal](https://haalcentraal.pleio.nl/) - Zie ook [HaalCentraal](/docs/architecture/inventarisation/haalcentraal)
   - [Project bij VNG](https://vng.nl/projecten/haal-centraal-gegevens-ophalen-bij-basisregistraties)
   - [GitHub](https://vng-realisatie.github.io/Haal-Centraal/)
 
