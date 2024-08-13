@@ -1,6 +1,7 @@
 ---
 weight: 30
 type: 'docs'
+bookCollapseSection: true
 ---
 
 # Use cases
@@ -12,14 +13,14 @@ type: 'docs'
 - compliance with laws and regulations
 - compliance with "Pas toe of leg uit"
 - based on open standards
-- data bij de bron
+- [data bij de bron](../inventarisation/data_bij_de_bron)
 - decentralized
 - modifyable in real time
 - ...
 
 ## Identity challenges
 - OpenID: verifiable claims
-- eIDAS: verifiable claims
+- [eIDAS](../inventarisation/eIDAS): verifiable claims
 - eHerkenning: KvK number
 - DigiD: BSN or hash
 - machtiging: BSN or hash (?)
@@ -31,10 +32,10 @@ type: 'docs'
   - ...
 
 ## Connection challenges
-- digikoppeling
-- StUF
-- FSC
-- FDS
+- [digikoppeling](../inventarisation/digikoppeling)
+- [StUF](../inventarisation/StUF)
+- [FSC](../inventarisation/FSC)
+- [FDS](../inventarisation/FDS)
 - application internals; e.g. replace RBAC/ABAC with policies (?)
 - ...
 
@@ -55,7 +56,7 @@ type: 'docs'
   - hash name details
   - hash address details
   - ...
-- regie op gegevens
+- [regie op gegevens](../inventarisation/regie_op_gegevens)
   - is also data protection
   - possibly requires anonymization/pseudonymization
   - only the permitted data related to the civilian who gave permission
