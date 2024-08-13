@@ -4,7 +4,7 @@ weight: 20
 
 ## Resultaten
 
-De beoogde resultaten van fase 1 zijn, zoals vastgelegd in de subsidieaanvraag:
+De beoogde resultaten van fase 1 zijn, zoals vastgelegd in de subsidie:
 1.	[In kaart brengen van de stakeholders](stakeholders)
 2.	[Inventarisatie van de huidig (meest voorkomende) ge&iuml;mplementeerde oplossingen](huidige_oplossingen))
 3.	[Onderzoek mogelijke moderne oplossingen passend bij API’s](moderne_oplossingsrichtingen)
@@ -13,10 +13,6 @@ De beoogde resultaten van fase 1 zijn, zoals vastgelegd in de subsidieaanvraag:
 
 Het einddoel van fase 1 is dat er een goed beschreven en geteste methodiek aan de programmeringstafel toegang
 besproken is, en daar positief advies voor, en richting aan, fase 2 gegeven wordt.
-
-## Planning en status
-
-![planning.png](/images/planning.png)
 
 ## Aanpak
 
@@ -28,7 +24,7 @@ visionairs zijn allemaal essentieel voor het slagen. Het project zal deze commun
 discussie begeleiden en de resultaten vastleggen en agenderen. Dit is iets anders dan
 de beste oplossing menen te hebben en die aan zoveel mogelijk partijen op te leggen.
 
-Ook is het van belang dat de juist balans gevonden wordt tussen beschrijven, uitleggen en uitdragen
+Ook is het van belang dat de juiste balans gevonden wordt tussen beschrijven, uitleggen en uitdragen
 enerzijds en concrete technische resultaten laten zien anderzijds. Beide zullen nodig zijn om
 positieve zichtbaarheid en adoptie te verkrijgen.
 
@@ -49,9 +45,15 @@ De projectactiviteiten zijn ingedeeld volgens de bovengenoemde doelstellingen:
 8. Regelmatige afstemming van tussenresultaten en uitdaging bij de voornaamste klankborden: FDS, overlegtafels en
    Digilab
 
-## Begroting
+## Team
+- Marc de Boer, product owner
+- Gerard Juijn, ontwikkelaar
+- Vacature, architect
 
-![begroting.png](/images/begroting.png)
+## Planning en status
+
+![planning.png](/images/planning.png)
+
 
 ## Activiteiten
 
@@ -75,6 +77,3 @@ De projectactiviteiten zijn ingedeeld volgens de bovengenoemde doelstellingen:
   - systemen en platforms voor PBAC
 - **Inventariseren (in de markt)** van
   - andere vertrouwensraamwerken
-
-
-> Verder naar [Stakeholder kaart](stakeholders)

@@ -10,20 +10,21 @@ title: "Huidige oplossingen"
 Als we gaan kijken naar 'huidige oplossingen' dan beperken we ons tot in productie zijnde API's
 binnen het stelsel van basisregistraties, inclusief sectorale registraties. 
 
-Er zijn voorgestelde oplossingen die niet uitgevoerd zijn,
+Daarnaast zijn er voorgestelde oplossingen die niet uitgevoerd zijn,
 oplossingen buiten het stelsel, open API's, en oplossingen die niet met API's te maken hebben. 
 Die laten we buiten beschouwing.
 
 ## Methodieken van toegangsverlening
-Een algemene beschrijving van de gangbare methodieken van toegangsverlening, en een [vergelijking](https://federatief.datastelsel.nl/kennisbank/pbac/) 
-daartussen, is gemaakt in het FDS project. Ook onder GEMMA is een [vergelijking](https://www.gemmaonline.nl/wiki/WMA_RBAC_ABAC_en_PBAC) gemaakt.
-Dit gaat over methodieken, dus categorie&euml;n van oplossingen, niet concrete implementaties.
+In het project FDS is een [algemene beschrijving van de gangbare methodieken van toegangsverlening](https://federatief.datastelsel.nl/kennisbank/pbac/) gemaakt, 
+inclusief een vergelijking daartussen. 
+Ook onder GEMMA is een [vergelijking](https://www.gemmaonline.nl/wiki/WMA_RBAC_ABAC_en_PBAC) gemaakt.
+Deze vergelijkingen gaat over methodieken, dus categorie&euml;n van oplossingen, niet concrete implementaties.
 
 Aan de buitenkant, aan de API, de interface, is niet te zien hoe toegangsverlenging werkelijk
-gerealiseerd is. Neem als voorbeeld een REST API waar geen toegangsverleningsinformatie wordt meegegeven.
+gerealiseerd is. Neem als voorbeeld een REST API waar geen expliciete toegangsverleningsinformatie wordt meegegeven.
 De toegang zal dan zijn afgeleid uit de identificatie. De dienst kan dan een lijst van identiteiten 
 hebben, en als de identiteit op de lijst staat wordt volledige toegang verleend. Dan noemen
-we de methodiek Access Control List (ACL). Het kan ook zijn dat aan elke identiteit op de lijst
+we de methodiek Access Control List (ACL). Maar het kan ook zijn dat aan elke identiteit op de lijst
 weer een lijst van rollen is gekoppeld, waarmee een vorm van RBAC is bereikt. En het kan evengoed
 zijn dat de dienst per identiteit een lijst van attributen of toegangsregels heeft die intern uitgevoerd, en dus
 ABAC of PBAC genoemd mag worden. We zullen dus bij de aanbieders moeten informeren hoe het gerealiseerd is.
@@ -31,7 +32,7 @@ ABAC of PBAC genoemd mag worden. We zullen dus bij de aanbieders moeten informer
 We kunnen er wel vanuit gaan dat er geen federatieve methodieken in gebruik zijn. 
 
 ## Relatie met bestaande koppelvlakstandaarden
-De volgende koppelstandaarden zijn relevant om als context te zien:
+De volgende koppelstandaarden zijn relevant om als context te kennen:
 - **Diginetwerk**. Een afsprakenstelsel op infrastructuurniveau dat een besloten netwerk realiseert voor de overheid (de transportlaag).
 - **Digikoppeling**. Een set van standaarden en afspraken over koppelvlakken die o.a. de encryptie regelt (de sessielaag). 
 
@@ -48,10 +49,10 @@ de Nederlandse overheid REST toepast.
 Voor dit project stellen we dat ebMS2, WUS en Grote Berichten een oudere generatie zijn en niet als API's gezien worden 
 in onze terminologie. StUF, REST en HaalCentraal zijn wel in scope.
 
-### Autorisatie in bestaande koppelvlakstaarden
-StUF is een oudere generatie die niet meer wordt doorontwikkeld, maar nog wel volop in gebruik is.
+### Autorisatie in de bestaande koppelvlakstaarden
 
 #### Stuf
+StUF is een oudere generatie die niet meer wordt doorontwikkeld, maar nog wel volop in gebruik is.
 In de generieke onderlaag van StUF is ruimte om 4 gegevens mee te geven van zowel de afzender als de ontvanger: 
 organisatie, applicatie, administratie en gebruiker. Expliciet staat in de handleiding, pagina 45: "StUF bevat geen 
 voorschriften met betrekking tot autorisatie, maar het biedt dankzij dit stuurgegeven wel de mogelijkheid om
@@ -64,14 +65,15 @@ standaarden gedefinieerd. Ook hierin is geen autorisatiefunctionaliteit beschrev
 Digikoppeling met REST is de huidige standaard voor basisregistratie-API's, en in het bijzonder HaalCentraal waarin uitgebreide
 voorzieningen worden geboden voor onder andere IAM en logging.
 
-> Nog te onderzoeken: wat is generiek bedacht voor autorisatie in HaalCentraal
+Op de [HaalCentraal website](https://vng-realisatie.github.io/Haal-Centraal/aansluiten-op-apis) kunnen we vinden welke API's volgens die methode geleverd zijn.
 
 ## Inventarisatie
+Zoals gezegd kunnen we niet aan de buitenkant van een API zien hoe toegang geregeld is. Daarom maken we zoveel
+mogelijk rechtstreeks contact met de beheerders van de registraties. 
+
 Dit is het totale aanbod van registraties:
 - [Lijst van basisregistraties](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/10-basisregistraties/)
 - [Lijst van sectorregistraties](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/sectorregistraties/)
-Op de [HaalCentraal website](https://vng-realisatie.github.io/Haal-Centraal/aansluiten-op-apis) kunnen we vinden welke API's volgens
-die methode geleverd zijn.
 
 Daarnaast zijn er API's voor zaakgericht werken gebaseerd op [OpenZaak](https://github.com/open-zaak/open-zaak/blob/d9c14e1257d6ec6751b218b18cdd9eae4b8f9b63/docs/manual/general.rst#api-autorisaties).
 
@@ -87,5 +89,3 @@ Daarnaast zijn er API's voor zaakgericht werken gebaseerd op [OpenZaak](https://
 | WOZ                                                   | Waarde Onroerende Zaken                                                                                                       | HaalCentraal |                     |                                                       | X            |
 | BGT                                                   | Grootschalige Topografie (voorheen GBKN)                                                                                      |              |                     |                                                       |              |
 | BRO                                                   | Ondergrond                                                                                                                    |              |                     |                                                       |              |
-
-> Ga verder naar [moderne oplossingen](../moderne_oplossingsrichtingen)

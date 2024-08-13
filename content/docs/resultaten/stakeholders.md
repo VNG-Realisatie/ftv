@@ -15,10 +15,8 @@ Dat kan zijn omdat ze belang hebben bij de resultaten, maar ook dat ze het onder
 
 De verticale as gaat over invloed. 
 Boven het midden geplaatste stakeholders kunnen meer invloed uitoefenen op de resultaten. 
-Dat kan zijn omdat ze advies geven, omdat ze concreet daan meewerken aan de producten, of bijvoorbeeld het onderwerp kunnen agenderen.
+Dat kan zijn omdat ze concreet meewerken aan de resultaten, omdat ze autoriteit zijn, of bijvoorbeeld omdat ze het onderwerp kunnen agenderen.
 
 **Let op**:
 Hoe ver een stakeholder naar links/rechts of boven/beneden staat geeft niet per se weer hoeveel invloed dan wel interesse er is. 
 De plaatsing is eerder een praktische gevolg van de vormgeving.
-
-> Verder naar [huidige oplossingen](../huidige_oplossingen)

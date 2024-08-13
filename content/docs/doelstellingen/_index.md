@@ -68,5 +68,3 @@ Autorisatie had ook gekund, zeker omdat die term op het Engelse Authorisation li
 
 ***Toegangsregels*** is de Nederlandse term voor de formalisering van beleid.
 Policies is de Engelse vertaling.
-
-> Verder naar [resultaten](../resultaten)
