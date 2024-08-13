@@ -1,6 +1,7 @@
 ---
 weight: 10
 type: 'docs'
+title: 'BRP'
 ---
 
 # Basis Registratie Personen (RvIG)

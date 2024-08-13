@@ -1,6 +1,7 @@
 ---
 weight: 10
 type: 'docs'
+title: 'ADR'
 ---
 
 # Architecture Design Rules

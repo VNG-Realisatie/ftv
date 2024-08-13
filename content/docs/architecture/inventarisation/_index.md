@@ -1,5 +1,6 @@
 ---
-weight: 0
+weight: 10
+bookCollapseSection: true
 type: 'docs'
 ---
 
