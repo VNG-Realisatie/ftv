@@ -1,4 +1,4 @@
-baseURL = 'https://ftv-design.nl/'
+baseURL = 'https://federatieve-toegangsverlening-digilab-overheid-n-5d4b9badc9bcfa.gitlab.io/'
 languageCode = 'nl-nl'
-title = 'VNG Realisatie - FTV'
+title = 'Federatieve Toegangsverlening'
 theme = "hugo-book"
