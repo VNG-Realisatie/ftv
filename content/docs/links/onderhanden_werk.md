@@ -2,6 +2,31 @@
 weight: 30
 ---
 
+# ** Uitzoeken **
+
+## Activiteiten
+
+### Recent afgerond
+- start project met PO (17 juni)
+- start ontwikkelaar (1 juli)
+- eerste versie stakeholder kaart (3 juli)
+- project publiek zichtbaar op Gitlab (12 juli)
+- Scope en context in kaart brengen (19 juli)
+
+### Huidige activiteiten
+- Contact maken met platforms en projecten in de context
+- **Inventariseren (in overheidscontext)** van
+  - toegangsverleningsoplossingen zoals nu in productie gebruikt worden
+  - bestaande onderzoeken naar:
+    - vastleggen van wetten en beleidsregels (policies) zodat ze mens- en machineleesbaar zijn
+    - gebruik van policy based access control (PBAC)
+  - Standaarden en gebruik van semantiek (Linked Data) in datastelsels
+- **Inventariseren (in de markt)** van
+  - standaarden voor policies
+  - systemen en platforms voor PBAC
+- **Inventariseren (in de markt)** van
+  - andere vertrouwensraamwerken
+
 # Onderhanden werk
 
 ## Project

@@ -1,20 +1,23 @@
 ---
+Title: Plan van aanpak
 weight: 20
 ---
+
+# Aanpak
 
 ## Resultaten
 
 De beoogde resultaten van fase 1 zijn, zoals vastgelegd in de subsidie:
 1.	[In kaart brengen van de stakeholders](stakeholders)
 2.	[Inventarisatie van de huidig (meest voorkomende) ge&iuml;mplementeerde oplossingen](huidige_oplossingen))
-3.	[Onderzoek mogelijke moderne oplossingen passend bij API’s](moderne_oplossingsrichtingen)
+3.	[Onderzoek mogelijke moderne oplossingen passend bij API’s](../4.%20resultaten/4.3 moderne_oplossingsrichtingen)
 4.	Plan van Aanpak fase 2
 5.	Agendering van een besluit voor in gang zetten Fase 2 op programmeringstafel Gegevensuitwisseling / Toegang
 
 Het einddoel van fase 1 is dat er een goed beschreven en geteste methodiek aan de programmeringstafel toegang
 besproken is, en daar positief advies voor, en richting aan, fase 2 gegeven wordt.
 
-## Aanpak
+## Activiteiten
 
 Het project beoogt een standaard voor te stellen. Zowel het verkrijgen van een status als standaard
 als de adoptie ervan vergen veel communicatie. Een belangrijk deel van de aanpak richt zich daarom op
@@ -45,35 +48,13 @@ De projectactiviteiten zijn ingedeeld volgens de bovengenoemde doelstellingen:
 8. Regelmatige afstemming van tussenresultaten en uitdaging bij de voornaamste klankborden: FDS, overlegtafels en
    Digilab
 
+## Planning
+
+![planning.png](/images/planning.png)
+
 ## Team
 - Marc de Boer, product owner
 - Gerard Juijn, ontwikkelaar
 - Vacature, architect
 
-## Planning en status
 
-![planning.png](/images/planning.png)
-
-
-## Activiteiten
-
-### Recent afgerond
-- start project met PO (17 juni)
-- start ontwikkelaar (1 juli)
-- eerste versie stakeholder kaart (3 juli)
-- project publiek zichtbaar op Gitlab (12 juli)
-- Scope en context in kaart brengen (19 juli)
-
-### Huidige activiteiten
-- Contact maken met platforms en projecten in de context
-- **Inventariseren (in overheidscontext)** van
-  - toegangsverleningsoplossingen zoals nu in productie gebruikt worden
-  - bestaande onderzoeken naar:
-    - vastleggen van wetten en beleidsregels (policies) zodat ze mens- en machineleesbaar zijn
-    - gebruik van policy based access control (PBAC)
-  - Standaarden en gebruik van semantiek (Linked Data) in datastelsels
-- **Inventariseren (in de markt)** van
-  - standaarden voor policies
-  - systemen en platforms voor PBAC
-- **Inventariseren (in de markt)** van
-  - andere vertrouwensraamwerken
