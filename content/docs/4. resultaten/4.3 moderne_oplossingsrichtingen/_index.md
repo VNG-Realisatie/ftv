@@ -1,5 +1,5 @@
 ---
-weight: 30
+weight: 43
 bookCollapseSection: true
 title: "Moderne oplossingsrichtingen"
 ---

@@ -23,9 +23,9 @@ Hier een paar concrete deliverables:
 ## Links
 Omdat FTV leeft in een wereld van heel wat begrippen, standaarden, projecten en programma's hebben we een verzameling
 links aangelegd, zeg maar een woordenboek:
-1. [De context](docs/links/context) - De organisatie en standaarden rondom FTV, ons umfeld
-2. [Kennis](docs/links/pbac) - Standaarden en projecten specifiek over toegangsverlening
-3. [Onderhanden werk](docs/links/onderhanden_werk). Onze takenlijst, waar we nu me bezig zijn
+1. [De context](docs/6. links/context) - De organisatie en standaarden rondom FTV, ons umfeld
+2. [Kennis](docs/6. links/pbac) - Standaarden en projecten specifiek over toegangsverlening
+3. [Onderhanden werk](docs/6. links/onderhanden_werk). Onze takenlijst, waar we nu me bezig zijn
 
 ## Contact
 

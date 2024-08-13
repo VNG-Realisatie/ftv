@@ -1,7 +1,7 @@
 ---
 title: Introductie
 type: docs
-weight: 1
+weight: 10
 ---
 
 # Welkom
@@ -24,12 +24,12 @@ Het resultaat van ons werk tot nu toe is te vinden onder:
 3.	[Een onderzoek naar mogelijke moderne oplossingen](../4.%20resultaten/4.3 moderne_oplossingsrichtingen)
 4. Links. Omdat FTV leeft in een wereld van heel wat begrippen, standaarden, projecten en programma's hebben we verzamelingen
 links aangelegd, als begrippenlijst:
-    1. [De context](../links/context) - De organisatie en standaarden rondom FTV, ons umfeld
-    2. [Kennis](../links/pbac) - Standaarden en projecten specifiek over toegangsverlening
+    1. [De context](../6.%20links/context) - De organisatie en standaarden rondom FTV, ons umfeld
+    2. [Kennis](../6.%20links/pbac) - Standaarden en projecten specifiek over toegangsverlening
 
 ## Voortgang en openstaande taken
 
-[Onderhanden werk](../links/onderhanden_werk). Onze takenlijst, waar we nu me bezig zijn
+[Onderhanden werk](../6.%20links/onderhanden_werk). Onze takenlijst, waar we nu me bezig zijn
 
 ## Contact
 
