@@ -49,6 +49,11 @@ title: "PBAC"
   - [nog een artikel op ibds](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/news/view/9b197d80-a955-49c0-b8be-136e1d07ad64/de-kracht-van-het-integraal-verbinden-van-afgeschermde-data)
   - [artikel op fds](https://federatief.datastelsel.nl/kennisbank/lock-unlock/)
 
+### Zaakgericht werken
+- [ZaakGericht werken API's](https://github.com/VNG-Realisatie/gemma-zaken?tab=readme-ov-file)
+  - Komt een nieuwe PO Rutger ter Borg, eind augustus meldt hij zich
+  - [Autorisatie API](https://github.com/VNG-Realisatie/autorisaties-api) Met Maykin
+
 ## Linked data
 - [Linked Data](https://en.wikipedia.org/wiki/Linked_data)
 - [RDF](https://en.wikipedia.org/wiki/Resource_Description_Framework)

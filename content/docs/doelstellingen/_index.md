@@ -2,30 +2,31 @@
 weight: 10
 ---
 
-## Doelstelling
+## Doelstellingen
 
-De subsidie heeft als doelstelling:
+FTV wordt uitgevoerd met geld uit een subsidie. De subsidie benoemt als doelstelling:
 
 > **Definieer een standaardmethodiek voor toegangsverlening tot API's**
 
 Er bestaat nu een grote diversiteit aan oplossingen voor toegangsverlening. Dat geeft uitdagingen voor zowel afnemers als aanbieders.
 
-De doelstellingen van het project, en hoe een standaardmethodiek een oplossing voor de uitdagingen kan zijn, luidt als volgt:
+De doelstellingen van het project, en hoe een standaardmethodiek een oplossing voor de uitdagingen kan zijn, luiden als volgt:
 
 1. **Verbeterde technische interoperabiliteit**. API's en hun afnemers zullen beter op elkaar aansluiten als ze dezelfde methodiek gebruiken.
 2. **Verlaging van de beheerslast**. E&eacute;n enkele methodiek meerdere malen toepassen levert op termijn besparingen in ontwerp, realisatie en beheer.
 3. **Verhoging van in controle zijn op toegangsbeslissingen**. Door beleid gestandaardiseerd te implementeren wordt het eenvoudiger de juiste toepassing
    ervan te verifiëren en te monitoren.
-4. **Geef richting aan het transitiepad naar de eindsituatie**.
+4. **Geeft richting aan het transitiepad naar de eindsituatie**. In de meerjarenvisie worden grote doelen gedefinieerd. Met een concrete invulling
+van een deel van de weg daarheen wordt de juiste richting ingezet naar die doelen.
 
 ## Context
 
 ### Bestuur
 
-Deze opdracht is verstrekt vanuit BZK, en wordt uitgevoerd door VNG Realisatie. Voor praktische uitvoering en ondersteuning is aansluiting bij Digilab gevonden.
+De subsidie is verstrekt door BZK, en wordt uitgevoerd door VNG Realisatie. Voor praktische uitvoering en ondersteuning is aansluiting bij Digilab gevonden.
 
-Qua sturing valt dit onderwerp binnen het programma Realisatie IBDS, en daarbinnen onder het [Federatieve Datastelsel](https://federatief.datastelsel.nl/).
-Het primaire doelgebied is het FDS, en secundair wordt gekeken of dezelfde of andere methodieken buiten het FDS inzetbaar zijn.
+Qua grote context valt dit onderwerp binnen het programma [Realisatie IBDS](https://realisatieibds.nl/), en daarbinnen onder het [Federatieve Datastelsel](https://federatief.datastelsel.nl/).
+Het primaire doelgebied is daarmee toegang regelen in het FDS. Secundair wordt gekeken of dezelfde of andere methodieken buiten het FDS inzetbaar zijn.
 
 ### Architectuur
 
@@ -35,7 +36,7 @@ en in het bijzonder de domeinarchitecturen [Gegevensuitwisseling](https://minbzk
 
 De methodiek zal de eigenschap 'federatief' dragen, passend in het FDS. Dat wil zeggen dat toegangsverlening niet gecentraliseerd zal zijn rond een
 enkel vertrouwd punt, en ook niet in gescheiden silo's zal plaatsvinden, maar een collectief stelsel van afspraken zal zijn, een samenwerkingsverband.
-In de plaat van FDS valt FTV onder de stelselfunctie [Poortwachter](https://federatief.datastelsel.nl/kennisbank/stelselfuncties/#poortwachter).
+In de plaat van FDS geeft FTV invulling aan de stelselfunctie [Poortwachter](https://federatief.datastelsel.nl/kennisbank/stelselfuncties/#poortwachter).
 
 ## Scope
 

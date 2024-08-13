@@ -3,27 +3,36 @@ title: Introductie
 type: docs
 ---
 
-## Introductie
+# Welkom
 
-Lees hier meer over het project:
-- [Doelstellingen, context en scope](docs/doelstellingen)
-- [Resultaten, planning en status](docs/resultaten)
+Dit is de website van het project Federatieve Toegangsverlening, afgekort FTV.
 
-Er wordt gewerkt aan de volgende deliverables:
+## Wat we doen
+FTV onderzoekt een **standaardmethodiek** om **toegang tot gegevens** te regelen in een modern **federatief stelsel**. 
+
+Wat dat precies inhoudt (en wat het niet is) is te lezen op [doelstellingen, context en scope](docs/doelstellingen).
+
+## Hoe we dat doen
+Hoe we dat aanpakken en wat van ons verwacht mag worden is te lezen op [Resultaten, planning en status](docs/resultaten).
+
+Hier een paar concrete deliverables:
 1.	[Een kaart van stakeholders](docs/resultaten/stakeholders)
 2.	[Inventarisatie van de huidig ge&iuml;mplementeerde oplossingen](docs/resultaten/huidige_oplossingen)
 3.	[Een onderzoek naar mogelijke moderne oplossingen](docs/resultaten/moderne_oplossingsrichtingen)
 
-Omdat er nogal wat begrippen, standaarden en projecten rondom het project leven is er een verzameling links aangelegd:
+## Links
+Omdat FTV leeft in een wereld van heel wat begrippen, standaarden, projecten en programma's hebben we een verzameling
+links aangelegd, zeg maar een woordenboek:
 1. [De context](docs/links/context) - De organisatie en standaarden rondom FTV, ons umfeld
 2. [Kennis](docs/links/pbac) - Standaarden en projecten specifiek over toegangsverlening
-3. [Operationeel](docs/links/operationeel). Praktische links en informatie voor het team
+3. [Onderhanden werk](docs/links/onderhanden_werk). Onze takenlijst, waar we nu me bezig zijn
 
 ## Contact
 
-Neem voor meer informatie contact op met:
+Alle informatie en resultaten zijn open source beschikbaar voor iedereen. 
+Neem voor meer informatie gerust contact op met:
 
-**Product owner**  
 Marc de Boer  
+**Product owner**  
 [marc.deboer@vng.nl](mailto:marc.deboer@vng.nl)  
 06-14460350

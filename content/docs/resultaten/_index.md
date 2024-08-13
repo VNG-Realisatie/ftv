@@ -42,9 +42,11 @@ De projectactiviteiten zijn ingedeeld volgens de bovengenoemde doelstellingen:
 5. Inventariseren van de moderne methodieken. Met desktop research, gesprekken met andere initiatieven, en het uitvoeren
    van concrete technische verkenning worden de mogelijkheden overwogen. Resultaat hiervan is ook expliciet het laten
    zien dat de voorgestelde oplossing(en) correct en haalbaar zijn.
-6. Houden van bijeenkomsten waarin de meest relevante en inspirerende resultaten toe nu toe gedeeld worden,
-   en eenieder vragen te reflecteren en mee te praten.
-7. Regelmatige afstemming van tussenresultaten en uitdaging bij de voornaamste klankborden: FDS, overlegtafels en
+6. Het uitvoeren van een proef samen met een implementatiepartner is een optie; het valt nog te bezien of hier ruimte
+   voor is qua tijd en of er goede use cases en partners gevonden kunnen worden. 
+7. Houden van bijeenkomsten waarin de meest relevante en inspirerende resultaten toe nu toe gedeeld worden,
+   en eenieder vragen te reflecteren en mee te praten. 
+8. Regelmatige afstemming van tussenresultaten en uitdaging bij de voornaamste klankborden: FDS, overlegtafels en
    Digilab
 
 ## Begroting
