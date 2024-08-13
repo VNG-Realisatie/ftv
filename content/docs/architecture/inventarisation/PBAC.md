@@ -1,9 +1,10 @@
 ---
 weight: 10
 type: 'docs'
+title: 'PAC (PBAC)'
 ---
 
-# Policy Based Access Control / Policy As Code
+# Policy As Code (Policy Based Access Control)
 
 ## References
 
