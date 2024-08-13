@@ -19,7 +19,7 @@ type: 'docs'
 
 ## Identity challenges
 - OpenID: verifiable claims
-- [eIDAS](../inventarisation/eIDAS): verifiable claims
+- [eIDAS](../inventarisation/eidas): verifiable claims
 - eHerkenning: KvK number
 - DigiD: BSN or hash
 - machtiging: BSN or hash (?)
@@ -32,9 +32,9 @@ type: 'docs'
 
 ## Connection challenges
 - [digikoppeling](../inventarisation/digikoppeling)
-- [StUF](../inventarisation/StUF)
-- [FSC](../inventarisation/FSC)
-- [FDS](../inventarisation/FDS)
+- [StUF](../inventarisation/stuf)
+- [FSC](../inventarisation/fsc)
+- [FDS](../inventarisation/fds)
 - application internals; e.g. replace RBAC/ABAC with policies (?)
 - ...
 
