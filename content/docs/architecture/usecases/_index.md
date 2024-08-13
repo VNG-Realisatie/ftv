@@ -8,7 +8,7 @@ type: 'docs'
 ## Requirements
 - zero trust
 - least privilege
-- only case related data
+- data minimalisation
 - compliance with laws and regulations
 - compliance with "Pas toe of leg uit"
 - based on open standards
