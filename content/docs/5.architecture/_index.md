@@ -1,6 +1,7 @@
 ---
 weight: 50
 type: 'docs'
+title: Architecture
 ---
 
 # Architecture

@@ -10,7 +10,7 @@ weight: 30
 De beoogde resultaten van fase 1 zijn, zoals vastgelegd in de subsidie:
 1.	[In kaart brengen van de stakeholders](stakeholders)
 2.	[Inventarisatie van de huidig (meest voorkomende) ge&iuml;mplementeerde oplossingen](huidige_oplossingen))
-3.	[Onderzoek mogelijke moderne oplossingen passend bij API’s](../4.%20resultaten/4.3 moderne_oplossingsrichtingen)
+3.	[Onderzoek mogelijke moderne oplossingen passend bij API’s](../4.resultaten/3.moderne_oplossingsrichtingen)
 4.	Plan van Aanpak fase 2
 5.	Agendering van een besluit voor in gang zetten Fase 2 op programmeringstafel Gegevensuitwisseling / Toegang
 
