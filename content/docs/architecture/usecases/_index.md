@@ -1,7 +1,6 @@
 ---
 weight: 30
 type: 'docs'
-bookCollapseSection: true
 ---
 
 # Use cases

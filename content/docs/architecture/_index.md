@@ -1,7 +1,6 @@
 ---
 weight: 90
 type: 'docs'
-bookCollapseSection: true
 ---
 
 # Architecture
