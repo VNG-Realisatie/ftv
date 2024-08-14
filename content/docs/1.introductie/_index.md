@@ -4,14 +4,14 @@ type: docs
 weight: 10
 ---
 
-# Welkom
+# Welkom!
 
-Dit is de website van het project Federatieve Toegangsverlening, afgekort FTV.
+Dit is de site van het project Federatieve Toegangsverlening, afgekort FTV.
 
 ## Wat we doen
 FTV onderzoekt een **standaardmethodiek** om **toegang tot gegevens** te regelen in een modern **federatief stelsel**.
 
-Wat dat precies inhoudt (en wat het niet is) is te lezen op [doelstellingen, context en scope](docs/2.doelstellingen).
+Wat dat precies inhoudt (en wat het niet is) is te lezen op [doelstellingen, context en scope](../2.doelstellingen).
 
 ## Hoe we dat doen
 Hoe we dat aanpakken en wat van ons verwacht mag worden is te lezen op [Plan van aanpak](../3.aanpak).
@@ -19,8 +19,8 @@ Hoe we dat aanpakken en wat van ons verwacht mag worden is te lezen op [Plan van
 ## Resultaten
 
 Het resultaat van ons werk tot nu toe is te vinden onder:
-1.	[Een kaart van stakeholders](../4.resultaten/stakeholders)
-2.	[Inventarisatie van de huidig ge&iuml;mplementeerde oplossingen](../4.resultaten/huidige_oplossingen)
+1.	[Een kaart van stakeholders](../4.resultaten/1.stakeholders)
+2.	[Inventarisatie van de huidig ge&iuml;mplementeerde oplossingen](../4.resultaten/2.huidige_oplossingen)
 3.	[Een onderzoek naar mogelijke moderne oplossingen](../4.resultaten/3.moderne_oplossingsrichtingen)
 4. Links. Omdat FTV leeft in een wereld van heel wat begrippen, standaarden, projecten en programma's hebben we verzamelingen
 links aangelegd, als begrippenlijst:
