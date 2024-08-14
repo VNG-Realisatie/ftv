@@ -1,13 +1,13 @@
 ---
 bookCollapseSection: false
-weight: 10
+weight: 20
 title: "Huidige oplossingen"
 ---
 
 # Beschrijving van huidige oplossingen
 ## Aanpak
 
-Toegangsverlening is van alle tijden. Alle basisregistraties hebben nu een vorm van toegangsverlening. 
+Toegangsverlening is niet nieuw. Alle basisregistraties hebben nu een vorm van toegangsverlening. 
 Zelfs de open API's gebruiken meestal een API key om grip te houden op wie hoe vaak welke data opvraagt.
 In deze sectie doen we een inventarisatie van de huidige oplossingen. Dit kan ons vertellen wat er nu goed gaat en welke uitdagingen er zijn. 
 En geeft ons ook een vorm van minimale requirements: FTV moet minstens kunnen bieden wat nu al bestaat. 
@@ -24,25 +24,32 @@ Die laten we buiten beschouwing.
 
 ## Methodieken van toegangsverlening
 Eerst kijken we naar de methodieken. Dan zijn werkwijzen, oftewel categorie&euml;n van oplossingen, niet concrete implementaties.
-Er zijn in andere projecten al goede vergelijkingen gemaakt:
-- Door het project FDS is [deze](https://federatief.datastelsel.nl/kennisbank/pbac/) gemaakt 
-- Onder GEMMA is een soortgelijke [vergelijking](https://www.gemmaonline.nl/wiki/WMA_RBAC_ABAC_en_PBAC) gemaakt.
 
-Aan de buitenkant, aan de API, de interface, is niet te zien hoe toegangsverlenging werkelijk
-gerealiseerd is. Neem als voorbeeld een REST API waar geen expliciete toegangsverleningsinformatie wordt meegegeven.
+De gangbare indeling is:
+1. Lijsten van gebruikers (ACL)
+2. Rolgebaseerd (RBAC)
+3. Attribuutgebaseerd (ABAC)
+4. Policy-gebaseerd (PBAC)
+
+Er zijn al goede beschrijvingen en vergelijkingen gemaakt:
+- Door het project FDS is een [ position paper](https://federatief.datastelsel.nl/kennisbank/pbac/) gemaakt 
+- Onder GEMMA is een [vergelijking](https://www.gemmaonline.nl/wiki/WMA_RBAC_ABAC_en_PBAC) gemaakt.
+
+De gebruikte methodiek is aan de buitenkant, aan de API niet te zien.
+Neem als voorbeeld een REST API waar geen expliciete toegangsverleningsinformatie wordt meegegeven.
 De toegang zal dan zijn afgeleid uit de identificatie. De dienst kan dan een lijst van identiteiten 
 hebben, en als de identiteit op de lijst staat wordt volledige toegang verleend. Dan noemen
 we de methodiek Access Control List (ACL). Maar het kan ook zijn dat aan elke identiteit op de lijst
 weer een lijst van rollen is gekoppeld, waarmee een vorm van RBAC is bereikt. En het kan evengoed
 zijn dat de dienst per identiteit een lijst van attributen of toegangsregels heeft die intern uitgevoerd, en dus
-ABAC of PBAC genoemd mag worden. We zullen dus bij de aanbieders moeten informeren hoe het gerealiseerd is.
+ABAC of PBAC genoemd mag worden. 
 
-We kunnen er wel vanuit gaan dat er geen federatieve methodieken in gebruik zijn. 
+We zullen daarom voor een inventarisatie direct bij de aanbieders en afnemers moeten informeren hoe het gerealiseerd is.
 
 ## Relatie met koppelvlakstandaarden
 Koppelvlakstandaarden bepalen methodieken van koppelen. Onder koppelen wordt veel meer verstaan dan toegangsverlening: 
-ze beschrijven ook diepere lagen van het OSI-model. FTV zal ook geen nieuwe koppelvlakstandaard voorstellen, maar alleen
-een nieuwe invulling van het aspect autorisatie daarbovenop.
+ze beschrijven ook diepere lagen van het [OSI-model](https://nl.wikipedia.org/wiki/OSI-model). 
+FTV zal geen nieuwe koppelvlakstandaard voorstellen, maar alleen een nieuwe invulling van het aspect autorisatie daarbovenop.
 
 De volgende koppelstandaarden zijn relevant:
 - **Diginetwerk**. Een afsprakenstelsel op infrastructuurniveau dat een besloten netwerk realiseert voor de overheid (de transportlaag).
