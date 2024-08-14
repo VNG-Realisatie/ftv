@@ -1,6 +1,6 @@
 ---
-weight: 10
-type: 'docs'
+weight: 7030
+title: 'IMX-GEO'
 ---
 
 # IMX-GEO

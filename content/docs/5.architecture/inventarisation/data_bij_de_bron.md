@@ -1,6 +1,5 @@
 ---
-weight: 10
-type: 'docs'
+weight: 3010
 ---
 
 # Data Bij De Bron

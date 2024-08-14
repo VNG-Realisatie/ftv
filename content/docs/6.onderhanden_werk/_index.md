@@ -1,5 +1,6 @@
 ---
 weight: 60
+title: 'Onderhanden werk'
 ---
 
 # ** Uitzoeken **
@@ -32,7 +33,7 @@ weight: 60
 ## Project
 ### Algemeen
 - Architect vinden [Marc]
-- Een SSG aan de praat krijgen, eventueel overstappen op GitLab bij VNG [Gerard]
+- De SSG en website content eventueel overhevelen op GitLab bij VNG [Gerard]
 - Dick Jense spreken [Marc]
 - Thanim spreken [Marc]
 

@@ -1,6 +1,5 @@
 ---
-weight: 10
-type: 'docs'
+weight: 5070
 title: 'eIDAS'
 ---
 
