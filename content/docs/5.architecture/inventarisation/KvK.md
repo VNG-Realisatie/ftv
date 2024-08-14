@@ -1,5 +1,5 @@
 ---
-weight: 10
+weight: 2020
 type: 'docs'
 title: 'KvK'
 ---

@@ -1,6 +1,5 @@
 ---
-weight: 10
-type: 'docs'
+weight: 7010
 ---
 
 # Implementations

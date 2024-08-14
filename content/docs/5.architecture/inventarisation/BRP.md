@@ -1,5 +1,5 @@
 ---
-weight: 10
+weight: 2010
 type: 'docs'
 title: 'BRP'
 ---

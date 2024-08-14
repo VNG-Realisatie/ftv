@@ -1,6 +1,6 @@
 ---
-weight: 10
-type: 'docs'
+weight: 5110
+title: 'APIs'
 ---
 
 # APIs
