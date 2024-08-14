@@ -11,16 +11,16 @@ Dit is de site van het project Federatieve Toegangsverlening, afgekort FTV.
 ## Over het project
 FTV onderzoekt een **standaardmethodiek** om **toegang tot gegevens** te regelen in een modern **federatief stelsel**.
 
-- Wat dat precies inhoudt (en wat het niet is) is te lezen op [doelstellingen, context en scope](docs/1.over_het_project/1.doelstellingen).
-- Hoe we dat aanpakken en wat van ons verwacht mag worden is te lezen op [Plan van aanpak](docs/1.over_het_project/2.aanpak).
+- Wat dat precies inhoudt (en wat het niet is) is te lezen op [doelstellingen, context en scope](1.doelstellingen).
+- Hoe we dat aanpakken en wat van ons verwacht mag worden is te lezen op [Plan van aanpak](2.aanpak).
 
 ## Resultaten
 
-Het resultaat van ons werk tot nu toe is [hier](docs/4.resultaten) te vinden.
+Het resultaat van ons werk tot nu toe is [hier](../4.resultaten) te vinden.
 
 ## Voortgang en openstaande taken
 
-[Onderhanden werk](docs/6.onderhanden_werk). Onze takenlijst, waar we nu me bezig zijn
+[Onderhanden werk](../6.onderhanden_werk). Onze takenlijst, waar we nu me bezig zijn
 
 ## Contact
 
