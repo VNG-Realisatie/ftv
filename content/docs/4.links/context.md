@@ -10,33 +10,34 @@ Title: De context van FTV
 ### Principes
 
 - [Data Bij de Bron](https://www.digitaleoverheid.nl/data-bij-de-bron/) 
-  - Zie ook [Data bij de bron](/docs/architecture/inventarisation/data_bij_de_bron)
+  - Zie ook [Data bij de bron](../5.architecture/inventarisation/data_bij_de_bron)
+  - [bla](../5.architecture)
   - [Stappenplan introductie](https://realisatieibds.nl/attachment/entity/8654996c-81ff-4594-9bc0-d5c4943612a3), geschreven door FDS
-- [Regie op gegevens](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/regie-op-gegevens/) - Zie ook [Regie op gegevens](/docs/architecture/inventarisation/regie_op_gegevens)
+- [Regie op gegevens](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/regie-op-gegevens/) - Zie ook [Regie op gegevens](../5.architecture/inventarisation/regie_op_gegevens)
 - [Pas toe of leg uit](https://www.forumstandaardisatie.nl/pas-toe-leg-uit-beleid)
 
 ### Programma's
-- [IBDS](https://www.digitaleoverheid.nl/interbestuurlijke-datastrategie/) - Zie ook [IBDS](/docs/architecture/inventarisation/ibds)
+- [IBDS](https://www.digitaleoverheid.nl/interbestuurlijke-datastrategie/) - Zie ook [IBDS](../5.architecture/inventarisation/ibds)
   - [Realisatie IBDS](https://realisatieibds.nl/)
-- FDS - Zie ook [FDS](/docs/architecture/inventarisation/fds)
+- FDS - Zie ook [FDS](../5.architecture/inventarisation/fds)
   - [Platform](https://federatief.datastelsel.nl/)
   - [FDS bij NORA](https://www.noraonline.nl/wiki/FDS_Basis_concept)
   - [Regie FDS bij VNG](https://vng.nl/projecten/regie-federatief-datastelsel-fds)
   - [FDS catalogus](https://gitlab.com/digilab.overheid.nl/ecosystem/fds-catalogus)
-  - FSC - Zie ook [FSC](/docs/architecture/inventarisation/fsc)
+  - FSC - Zie ook [FSC](../5.architecture/inventarisation/fsc)
     - [FSC bij VNG](https://vng.nl/projecten/federatieve-service-connectiviteit-fsc)
     - [GitLab](https://gitlab.com/commonground/nlx/fsc-nlx)
-  - [Poortwachter](https://federatief.datastelsel.nl/kennisbank/stelselfuncties/#poortwachter) - Zie ook [Poortwachter](/docs/architecture/inventarisation/poortwachter)
+  - [Poortwachter](https://federatief.datastelsel.nl/kennisbank/stelselfuncties/#poortwachter) - Zie ook [Poortwachter](../5.architecture/inventarisation/poortwachter)
 - [Rijks CIO](https://organisaties.overheid.nl/134864/directie_Chief_Information_Office-_Rijk_CIO-Rijk) 
 - [Open regels van de overheid](https://regels.overheid.nl/) 
 
 ### Architectuurstandaarden
-- [GDI](https://www.digitaleoverheid.nl/mido/generieke-digitale-infrastructuur-gdi/) - Zie ook [GDI](/docs/architecture/inventarisation/gdi)
+- [GDI](https://www.digitaleoverheid.nl/mido/generieke-digitale-infrastructuur-gdi/) - Zie ook [GDI](../5.architecture/inventarisation/gdi)
   - [MIDO](https://www.digitaleoverheid.nl/mido/)
   
     Domeinen
     - Toegang
-      - **[Domeinarchitectuur toegang](https://minbzk.github.io/gdi-toegang/content/views/Domeinarchitectuur%20toegang.html) Onze belangrijkste richtlijn** - Zie ook [Domeinarchitectuur toegang](/docs/architecture/inventarisation/domeinarchitectuur-toegang)
+      - **[Domeinarchitectuur toegang](https://minbzk.github.io/gdi-toegang/content/views/Domeinarchitectuur%20toegang.html) Onze belangrijkste richtlijn** - Zie ook [Domeinarchitectuur toegang](../5.architecture/inventarisation/domeinarchitectuur-toegang)
         - [Afsprakenstelsel Elektronische Toegangsdiensten (behorende bij eHerkenning)](https://afsprakenstelsel.etoegang.nl/Startpagina/v2/?l=nl)
         - [Het Nieuwe Stelsel](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/wetgeving/wet-digitale-overheid/veelgestelde-vragen-over-de-inwerkingtreding-van-de-wdo/)
         - [EDI-stelsel NL](https://edi.pleio.nl/)
@@ -49,14 +50,14 @@ Title: De context van FTV
     - Infrastructuur
       - [Diginetwerk](https://www.logius.nl/domeinen/infrastructuur/diginetwerk)
       - [Digikoppeling](https://www.logius.nl/domeinen/gegevensuitwisseling/digikoppeling/documentatie)
-      - [NORA](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/nora/) - Zie ook [NORA](/docs/architecture/inventarisation/nora)
+      - [NORA](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/nora/) - Zie ook [NORA](../5.architecture/inventarisation/nora)
         - [IAM bij NORA](https://www.noraonline.nl/wiki/Identity_%26_Access_Management_(IAM))
       - [Forum Standaardisatie](https://www.forumstandaardisatie.nl/)
-- Haven - Zie ook [Haven](/docs/architecture/inventarisation/haven)
+- Haven - Zie ook [Haven](../5.architecture/inventarisation/haven)
 
 ### Koppelvlakstandaarden
-- [StUF](https://standaarden.vng.nl/StUF-standaarden) - Zie ook [StUF](/docs/architecture/inventarisation/stuf)
-- [HaalCentraal](https://haalcentraal.pleio.nl/) - Zie ook [HaalCentraal](/docs/architecture/inventarisation/haalcentraal)
+- [StUF](https://standaarden.vng.nl/StUF-standaarden) - Zie ook [StUF](../5.architecture/inventarisation/stuf)
+- [HaalCentraal](https://haalcentraal.pleio.nl/) - Zie ook [HaalCentraal](../5.architecture/inventarisation/haalcentraal)
   - [Project bij VNG](https://vng.nl/projecten/haal-centraal-gegevens-ophalen-bij-basisregistraties)
   - [GitHub](https://vng-realisatie.github.io/Haal-Centraal/)
 
@@ -74,26 +75,26 @@ Title: De context van FTV
 
 ### Platforms
 - [Developer.overheid.nl](https://developer.overheid.nl/)
-- [Kennisplatform API's](https://www.geonovum.nl/themas/kennisplatform-apis) - Zie ook [Kennisplatform_APIs](/docs/architecture/inventarisation/kennisplatform_apis)
+- [Kennisplatform API's](https://www.geonovum.nl/themas/kennisplatform-apis) - Zie ook [Kennisplatform_APIs](../5.architecture/inventarisation/kennisplatform_apis)
 - [Nationaal Cyber Security Centrum](https://www.ncsc.nl)
 - [BOMOS](https://www.logius.nl/domeinen/infrastructuur/bomos/documentatie) - Hoe maak je een standaard
 
 ### Aanbieders
-- [Stelsel van Basisregistraties](https://stelselvanbasisregistraties.nl/about-system) - Zie ook [Stelsel van Basisregistraties](/docs/architecture/inventarisation/stelsel_van_basisregistraties)
+- [Stelsel van Basisregistraties](https://stelselvanbasisregistraties.nl/about-system) - Zie ook [Stelsel van Basisregistraties](../5.architecture/inventarisation/stelsel_van_basisregistraties)
   - [Lijst van basisregistraties](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/10-basisregistraties/)
   - [Lijst van sectorregistraties](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/sectorregistraties/)
   - [LinkedData model van volledige stelsel](https://stelselvanbasisregistraties.nl/details/DATASET/STCdata)
 
 ## Gemeentelijk
 ### Gemeentelijke programma's
-- GGI netwerk - Zie ook [GGI](/docs/architecture/inventarisation/ggi)
-- [Gemeentelijke Model Architectuur (GEMMA)](https://vng.nl/projecten/gemeentelijke-model-architectuur-gemma) - Zie ook [Gemma](/docs/architecture/inventarisation/gemma)
+- GGI netwerk - Zie ook [GGI](../5.architecture/inventarisation/ggi)
+- [Gemeentelijke Model Architectuur (GEMMA)](https://vng.nl/projecten/gemeentelijke-model-architectuur-gemma) - Zie ook [Gemma](../5.architecture/inventarisation/gemma)
   - [IAM bij GEMMA](https://www.gemmaonline.nl/wiki/WMA_Identiteit_en_Toegangbeheer)
 
 ## Commerci&euml;le partijen
 - Maykin
 - SonicBee
-- [enable-u](/docs/architecture/inventarisation/enable-u)
+- [enable-u](../5.architecture/inventarisation/enable-u)
   - In de [softwarecatalogus](https://www.softwarecatalogus.nl/pakket/enable-u-2secure)
 - Pink Roccade
 - Centric
