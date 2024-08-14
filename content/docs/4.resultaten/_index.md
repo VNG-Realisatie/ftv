@@ -1,11 +1,14 @@
 ---
 Title: Resultaten
-weight: 1
+weight: 20
 ---
 
-Het resultaat van ons werk tot nu toe is te vinden onder:
+# Resultaten
+
+De resultaten van ons werk tot nu toe verzamelen we hier.
+
 1.	[Een kaart van stakeholders](../4.resultaten/1.stakeholders)
-2.	[Inventarisatie van de huidig geïmplementeerde oplossingen](../4.resultaten/2.huidige_oplossingen)
+2.	[Inventarisatie van de huidig geïmplementeerde oplossingen](2. Huidige oplossingen/2.huidige_oplossingen.md)
 3.	[Een onderzoek naar mogelijke moderne oplossingen](../4.resultaten/3.moderne_oplossingsrichtingen)
 4. Links. Omdat FTV leeft in een wereld van heel wat begrippen, standaarden, projecten en programma's hebben we verzamelingen
    links aangelegd, als begrippenlijst:

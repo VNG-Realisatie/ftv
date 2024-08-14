@@ -1,6 +1,6 @@
 ---
 weight: 20
-title: "PBAC"
+title: "Toegangsverlening"
 ---
 
 # Links over de wereld van moderne toegangsverlening
