@@ -1,0 +1,37 @@
+---
+weight: 1040
+type: 'docs'
+title: 'Organisation groups'
+---
+
+# Organisation groups
+
+## Groups
+- Gemeenten
+- Waterschappen
+- Provincies
+- Politie
+- Belastingdienst
+- Defensie
+- Justitie
+- Ministeries
+- Inlichtingendiensten
+- Sociale diensten
+- Overige rijksdiensten
+- GGD
+- GGZ
+- Ziekenhuizen
+- Universiteiten
+- Verzekeringsmaatschappijen
+- Pensioenfondsen
+- Agentschappen
+- Overzeese gebieden
+- Deurwaarders
+- Notarissen
+- Accountants
+- Openbaar vervoer
+- Bedrijfsverenigingen
+- Fondsenbeheer
+- Statistisch onderzoek
+- ...
+- ...
