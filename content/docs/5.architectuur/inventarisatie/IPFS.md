@@ -18,4 +18,4 @@ title: 'IPFS'
 - IPFS allows users to host and receive content in a manner similar to BitTorrent. As opposed to a centrally located server, IPFS is built around a decentralized system of user-operators who hold a portion of the overall data, creating a resilient system of file storage and sharing. Any user in the network can serve a file by its content address, and other peers in the network can find and request that content from any node who has it using a distributed hash table (DHT). In contrast to BitTorrent, IPFS aims to create a single global network. This means that if two users publish a block of data with the same hash, the peers downloading content from one user will also exchange data with those downloading it from the second.
 
 ## Questions
-Possible to use for decentralized storage of policies?
+Mogelijk te gebruiken voor decentrale opslag van policies?

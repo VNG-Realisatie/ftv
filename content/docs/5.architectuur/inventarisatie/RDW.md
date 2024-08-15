@@ -14,4 +14,4 @@ title: 'RDW'
 - .
 
 ## Observaties
-- appears to be just open datasets; not real API's.
+- lijkt alleen een set van open data bestanden te zijn; niet echte API's.

@@ -20,5 +20,5 @@ weight: 5020
 - BAG, BGT, BRK, BRP, HR, WOZ
 
 ## Observaties
-- HaalCentraal is a set of APIs at the side of the basic registrations (basisregistraties). It supports authentication & authorization, but only on the side of the data suppliers.
-- HaalCentraal only defines GET requests.
+- HaalCentraal is een set APIs aan de kant van enkele basisregistraties. Het ondersteunt autenticatie & autorisatie, maar alleen aan de kant van de dataleveranciers.
+- HaalCentraal definieert alleen GET requests.

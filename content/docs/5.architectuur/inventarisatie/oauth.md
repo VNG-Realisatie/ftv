@@ -18,7 +18,7 @@ title: 'OAuth'
 - The tokens presented by the OAuth customer can be considered as attribute values that will be used by the Service Provider to make an authorization decision based on the defined ABAC policies.
 
 ## Observaties
-- OAuth separates identification from authorization.
-- OAuth provides claims and scopes to a consumer which are attributes that can be used to perform authorization.
-- OAuth is not an authorization mechanism; it only provides the attributes to perform authorization.
-- the most logical authorization mehanisms on top of OAuth are ABAC and PBAC, but RBAC can also be simulated.
+- OAuth scheidt identificatie van autorisatie.
+- OAuth levert claims en scopes aan een process welke als attributen gebruikt kunnen worden om autorisatie uit te voeren.
+- OAuth is geen autorisatie mechanisme; het levert alleen de attributen die voor autorisatie kunnen dienen.
+- de meest logische autorisatie mehanismen bovenop OAuth zijn ABAC en PBAC, maar RBAC kan ook gesimuleerd worden.

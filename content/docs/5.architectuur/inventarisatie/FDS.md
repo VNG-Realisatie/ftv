@@ -21,7 +21,7 @@ title: 'FDS'
 - Logging die hier zo mogelijk een rol bij speelt met oog op verantwoording is bij zowel afnemer als aanbieder aanwezig (afhankelijk van de voorwaarden, gevoeligheid van data).
 - Aan de kant van de afnemer ligt de verantwoordelijkheid om goed om te gaan met de data, bijvoorbeeld om er voor te zorgen dat een eindgebruiker van een toepassing binnen een aangegeven doelbinding blijft.
 
-## Relevant puzzles
+## Relevante puzzels
 - https://digilab.overheid.nl/puzzels/translatie/
 - https://digilab.overheid.nl/puzzels/bulkbevragingen/
 - https://digilab.overheid.nl/puzzels/homomorfe-encryptie/

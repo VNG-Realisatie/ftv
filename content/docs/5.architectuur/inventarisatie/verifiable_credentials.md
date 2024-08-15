@@ -22,5 +22,5 @@ weight: 5100
 - Both verifiable credentials and verifiable presentations can be transmitted rapidly, making them more convenient than their physical counterparts when trying to establish trust at a distance.
 
 ## Observaties
-- designed for identification, keeping claims in personal digital wallets, and the means to verify those claims.
-- in EU based on blockchain technology (EBSI).
+- ontworpen voor identificatie, het bewaren van claims in persoonlijke digitale wallets, en de mogelijkheid om die c=laims te verifieren.
+- in de EU gebaseerd op blockchain technologie (EBSI).

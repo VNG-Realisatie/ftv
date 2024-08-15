@@ -1,12 +1,12 @@
 ---
 weight: 1040
 type: 'docs'
-title: 'Organisation groups'
+title: 'Organisatiegroepen'
 ---
 
-# Organisation groups
+# Organisatiegroepen
 
-## Groups
+## Groepen
 - Gemeenten
 - Waterschappen
 - Provincies

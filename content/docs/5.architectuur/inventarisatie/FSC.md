@@ -24,9 +24,9 @@ title: 'FSC'
 - FSC is ontworpen met het oog op bestaande gateway-software en biedt een laagdrempelige adoptie voor bestaande systemen. 
 
 ## Observaties
-FSC already contains an authorization chain, which is handled through "plugins", which translate to https requests to other services.
-This mechanism can be used to plug in a PEP based on some policy engine (e.g. OPA/rego, Cedar, XACML or ODRL).
-However, currently, the authorization chain only accepts yes/no and a reason string as response from a PEP.
-There are no options to inject, transform or remove headers, query parameters or the body of the original request.
-It is also not possible to perform any modification of the eventual response body.
+FSC bevat reeds een autorisatie koppeling, welke middels "plugins" aangeroepen wordt, wat in feite een http(s) request/response aktie is.
+Dit mechanisme kan gebruikt worden om (als PEP) een policy engine (PDP) voor de beslissing aan te roepen (bv. OPA/rego, Cedar, XACML of ODRL).
+Echter, op dit moment, kan de autorisatiekoppeling alleen een ja/nee antwoord accepteren met de reden voor een nee antwoord.
+Er lijken geen opties te zijn om headers of query parameters toe te voegen/wijzigen/verwijderen.
+Het lijkt ook niet mogelijk om eventueel wijzigingen in de response uit te voeren.
 - https://gitlab.com/commonground/nlx/fsc-nlx/-/blob/main/docs/docs/fsc-in-production/setup-authorization.md?ref_type=heads

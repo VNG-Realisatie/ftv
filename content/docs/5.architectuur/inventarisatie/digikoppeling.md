@@ -26,4 +26,4 @@ weight: 5010
 - Grote Berichten
 
 ## Observaties
-DigiKoppeling REST APIs does not appear to have support for authorization.
+DigiKoppeling REST APIs lijkt geen directe support voor autorisatie te bevatten.
