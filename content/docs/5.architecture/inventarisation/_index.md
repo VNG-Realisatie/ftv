@@ -10,7 +10,7 @@ type: 'docs'
 1. [CommonGround](common_ground)
 2. [IBDS](ibds)
 3. [IDS](ids)
-4. [Organisation types](organisations)
+4. [Organisation groups](organisations)
 
 ## Datasets
 1. [BRP](brp)

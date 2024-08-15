@@ -1,11 +1,12 @@
 ---
 weight: 1040
 type: 'docs'
+title: 'Organisation groups'
 ---
 
-# Organisaties
+# Organisation groups
 
-## Soorten
+## Groups
 - Gemeenten
 - Waterschappen
 - Provincies
@@ -31,7 +32,6 @@ type: 'docs'
 - Openbaar vervoer
 - Bedrijfsverenigingen
 - Fondsenbeheer
-- Sociale instellingen
 - Statistisch onderzoek
 - ...
 - ...
