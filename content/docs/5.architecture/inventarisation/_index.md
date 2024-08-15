@@ -48,7 +48,8 @@ type: 'docs'
 9. [poortwachter](poortwachter)
 10. [Verifiable credentials](verifiable_credentials)
 11. [Geonovum API's](apis)
-12. [ADR](ADR)
+12. [ADR](adr)
+13. [OAuth](oauth)
 
 ## Implementors
 1. [Enable-U](enable-u)
