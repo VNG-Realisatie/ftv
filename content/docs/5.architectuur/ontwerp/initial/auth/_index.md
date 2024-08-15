@@ -6,10 +6,10 @@ title: 'Autorisatie - van oud naar nieuw'
 # Autorisatie - van oud naar nieuw
 
 ## Oud
-![Current authorisation](/architecture/curr-conn-o2o-auth.png)
+![Huidige autorisatie](/architecture/curr-conn-o2o-auth.png)
 
 ## Nieuw
-![Current authorisation](/architecture/modern-auth-o2o.png)
+![Nieuwe autorisatie](/architecture/modern-auth-o2o.png)
 
 ## FDS
-![Current authorisation](/architecture/modern-auth-fds.png)
+![Binnen FDS](/architecture/modern-auth-fds.png)
