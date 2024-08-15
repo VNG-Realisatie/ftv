@@ -11,7 +11,6 @@ Title: De context van FTV
 
 - [Data Bij de Bron](https://www.digitaleoverheid.nl/data-bij-de-bron/) 
   - Zie ook [Data bij de bron](../5.architecture/inventarisation/data_bij_de_bron)
-  - [bla](../5.architecture)
   - [Stappenplan introductie](https://realisatieibds.nl/attachment/entity/8654996c-81ff-4594-9bc0-d5c4943612a3), geschreven door FDS
 - [Regie op gegevens](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/regie-op-gegevens/) - Zie ook [Regie op gegevens](../5.architecture/inventarisation/regie_op_gegevens)
 - [Pas toe of leg uit](https://www.forumstandaardisatie.nl/pas-toe-leg-uit-beleid)
