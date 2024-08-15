@@ -1,8 +1,9 @@
 ---
 weight: 7010
+title: 'PBAC projects'
 ---
 
-# Implementations
+# PBAC projects
 
 ## References
 - https://gitlab.com/digilab.overheid.nl/ecosystem/pbac

@@ -57,7 +57,7 @@ type: 'docs'
 3. Logius
 
 ## Techniek
-1. [Implementations](implementations)
+1. [PBAC projects](projects)
 2. [Autorisatie API](autorisatie_api)
 3. [IMX GEO](imx_geo)
 4. [IPFS](ipfs)
