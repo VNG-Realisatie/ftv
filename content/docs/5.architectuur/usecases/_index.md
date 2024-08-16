@@ -9,8 +9,8 @@ title: 'Use cases'
 - zero trust
 - least privilege
 - data minimalisatie
-- compliant met alle wet en regelgeving
-- compliant met "Pas toe of leg uit"
+- conformerend aan alle wet en regelgeving
+- conformerend aan "Pas toe of leg uit"
 - gebaseerd op open standaarden
 - [data bij de bron](../inventarisatie/data_bij_de_bron)
 - decentraal
