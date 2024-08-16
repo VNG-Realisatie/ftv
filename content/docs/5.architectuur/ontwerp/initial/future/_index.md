@@ -12,19 +12,29 @@ Op basis van policies wordt dan toegang verleend of niet.
 Een policy is een set van (beleids-)regels waaraan een dataverzoek moet voldoen.
 
 Een andere aanduiding voor PBAC is Policy As Code (PAC).
-De toegangsregels worden uit een softwarepakket gehaald en als losse code (de policies) aangeboden.
+De toegangsregels worden namelijk uit een softwarepakket gehaald en als losse code (de policies) aangeboden en uitgevoerd.
+Deze termen zijn min of meer uitwisselbaar.
 
-Voor een afnemer is de sleutel, om te bepalen welke policy(ies) van toepassing zijn, gekoppeld aan de gebruiker,
-eventueel de rol en/of het zaaktype, de te bevragen data (URL) en het soort bevraging (in de meeste gevallen vooralsnog een GET request).
+Voor het bepalen welke policies van toepassing zijn, worden sleutelattributen uit de request gebruikt.
 
-Bij de aanbieder zal de sleutel meest waarschijnlijk aan het OIN van de afnemer en de te bevragen data (URL) en soort bevraging (GET) gekoppeld zijn.
+Voor een afnemer is het selecteren van de juiste policies gekoppeld aan
+- de gebruiker, de rol van de gebuiker, claims over de gebruiker, de applicatie en/of het zaaktype
+- de te bevragen data (URL)
+- het soort bevraging (in de meeste gevallen vooralsnog een GET request)
+
+Bij de aanbieder is de selectie gekoppeld aan
+- het OIN van de afnemer
+- de te bevragen data (URL)
+- het soort bevraging (GET).
 
 ## Toegevoegde waarde van policies
 
 Middels diverse PBAC-standaarden is het mogelijk om extra voorwaarden aan een request te stellen.
-Bv. door extra headers of query parameters toe te voegen danwel te wijzigen.
+Bv. door extra headers of query parameters toe te voegen dan wel te wijzigen.
 
 Op dit gebied is voor zover bekend (nog) geen onderzoek verricht.
+
+Dit vereist wel een grotere rol van de PEP.
 
 ### Centraliseren van rol/zaaktype gerichte API calls 
 
@@ -65,7 +75,15 @@ en dan aan de PEP doorgeeft of toegang verleend mag worden of niet, en zo ja, on
 ### Policy Information Point (PIP)
 
 Dit is het onderdeel dat door de PEP aangeleverde attributen omzet naar voor de PDP te begrijpen waarden.
-Bv. het zaaktype wordt omgezet naar een federatief aanvaarde code.
+Bv. het zaaktype wordt omgezet naar een federatief afgesproken code.
+De toegangsregels zullen ook op federatief niveau vastgelegd worden en moeten dus op basis van federatief vastgelegde codes ingevuld worden.
+
+Technisch en formeel gezien dient voorkomen te worden dat een PIP van de afnemer bij de aanbieder informatie op moet gaan vragen om een transformatie mogelijk te maken.
+Een voorbeeld is het filteren op leeftijd. De afnemer kent de geboortedatum pas als deze opgevraagd wordt, maar mag dit eigenlijk niet weten.
+Dus is het beter een dergelijk filter aan de kant van de aanbieder in de relevant policies op te nemen.
+
+Omgekeerd zal een aanbieder geen weet hebben van gebruikers, rollen en zaaktypen. 
+Dus is het beter dit aan de kant van de afnemer te toetsen, middels een juiste invulling van de policies.
 
 ### Policy Administration Point (PAP)
 
@@ -73,13 +91,17 @@ Dit is het onderdeel dat de policies beheerd.
 Op verzoek van de PDP bepaalt de PAP op basis van de meegeleverde attributen de sleutel van 1 of meerdere policies,
 en geeft deze terug aan het PDP om uit te voeren.
 
-Een PAP kan mogelijk beschikbaar gesteld worden via een publiek toegankelijke API waarmee de policies op te vragen zijn (transparantie).
+De PAP haalt de policies uit een federatief systeem op (bv de poortwachterfunctie in FDS),
+en slaat deze op in een lokale cache.
+
+De lokale policies van de PAP kunnen potentieel ontsloten worden via een publiek toegankelijke API waarmee deze op te vragen zijn.
+Hiermee kunnen transparantie en verantwoording gewaarborgd worden, en vereenvoudigt de mogelijkheden voor auditing (vooraf).
 
 ## PBAC Integratie
 
-Voor de integratie van PBAC zijn twee mogelijkheden.
-Het is mogelijk, en wellicht ook wenselijk, om beide mogelijkheden in een toekomstige standaard op te nemen.
-Voor het uitvoeren van policies maakt het verder niet uit waar de PEP zich bevindt. 
+Voor de integratie van PBAC zijn twee opties.
+Het is mogelijk, en wellicht ook wenselijk, om beide opties in een toekomstige standaard op te nemen.
+Voor het uitvoeren van policies maakt het echt niet uit waar de PEP in de softwareketen geplaatst wordt.
 
 ## PBAC optie 1
 
@@ -114,10 +136,13 @@ Met name om het gebruiksvriendelijk te houden zonder functionaliteit te verlieze
 en om te voorkomen dat de hoeveelheid en complexiteit van alle toegangsregels te overweldigend wordt.
 
 Een notificatie-systeem kan een welkome toevoeging op dit plaatje zijn.
-Middels notificaties kunnen de PAPs van de diverse partijen dan op de hoogte gehouden van wijzigingen,
+Middels notificaties kunnen de PAP's van de diverse partijen dan op de hoogte gehouden van wijzigingen,
 zodat zij in staat zijn hun lokale cache van policies op te frissen.
 
-Er dient nog bepaald te worden hoe dit niet als een single point-of-failure gezien kan worden.
+Er dient nog bepaald te worden hoe de poortwachter niet als een single point-of-failure gezien kan worden.
+Overigens valt dan alleen het bewerken van policies weg.
+De policies behoren al in de lokale cache van alle PAP's aanwezig te zijn.
+
 Een ander punt is welke partij(en) de verantwoording voor de juiste invulling op zich dienen te nemen,
 en hoe men daar invulling aan moet geven.
 

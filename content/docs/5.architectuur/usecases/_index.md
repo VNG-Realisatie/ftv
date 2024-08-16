@@ -9,12 +9,12 @@ title: 'Use cases'
 - zero trust
 - least privilege
 - data minimalisatie
-- conformerend aan alle wet en regelgeving
+- conformerend aan alle wet- en regelgeving
 - conformerend aan "Pas toe of leg uit"
 - gebaseerd op open standaarden
 - [data bij de bron](../inventarisatie/data_bij_de_bron)
 - decentraal
-- in real time aan te passen
+- in realtime aan te passen
 - ...
 
 ## Uitdagingen op gebied van identificatie

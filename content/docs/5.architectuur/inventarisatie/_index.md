@@ -19,7 +19,7 @@ type: 'docs'
 4. [Stelsel van basisregistraties](stelsel_van_basisregistraties)
 5. [TMV](tmv)
 
-## Wet en regelgeving
+## Wet- en regelgeving
 1. [Data bij de bron](data_bij_de_bron)
 2. [Domeinarchitectuur Toegang](domeinarchitectuur-toegang)
 3. [GDI](gdi)

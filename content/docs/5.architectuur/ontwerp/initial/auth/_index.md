@@ -20,7 +20,7 @@ In feite de kern van dit project dus.
 
 Het toevoegen van generieke autorisatie in of rond de API-gateway kan zelfs bovenop de autorisatie van bestaande applicatie(s) geimplementeerd worden.
 Aangezien het dezelfde (of wellicht meer) functionailiteit bevat, zal de werking van de applicatie(s) niet belemmerd worden.
-Het kan wel beter aan de huidige wet en regelgeving voldoen, en daardoor mogelijk ongezien misbruik voorkomen.
+Het kan wel beter aan de huidige wet- en regelgeving voldoen, en daardoor mogelijk ongezien misbruik voorkomen.
 Op deze manier wordt echter wel het belang van een gefaseerde invoering gewaarborgd.
 
 Bij autorisatie hoort ook logging.
