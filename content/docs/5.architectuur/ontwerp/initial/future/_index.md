@@ -9,7 +9,10 @@ Een potentiele oplossing ligt in het gebruik van Policy Based Access Control (PB
 Op basis van policies wordt dan toegang verleend of niet.
 Een policy is een set van (beleids-)regels waaraan een dataverzoek moet voldoen.
 
-Voor een afnemer is de sleutel om te bepalen welke policy(ies) van toepassing zijn, gekoppeld aan de gebruiker,
+Een andere aanduiding voor PBAC is Policy As Code (PAC).
+De toegangsregels worden uit een softwarepakket gehaald en als losse code (de policies) aangeboden.
+
+Voor een afnemer is de sleutel, om te bepalen welke policy(ies) van toepassing zijn, gekoppeld aan de gebruiker,
 eventueel de rol en/of het zaaktype, de te bevragen data (URL) en het soort bevraging (in de meeste gevallen vooralsnog een GET request).
 
 Bij de aanbieder zal de sleutel meest waarschijnlijk aan het OIN van de afnemer en de te bevragen data (URL) en soort bevraging (GET) gekoppeld zijn.
@@ -25,12 +28,13 @@ PBAC wordt vaak uit 4 componenten samengesteld.
 
 ### Policy Enforcement Point (PEP)
 
-Dit is het onderdeel dat de slagboom vormt en op basis van het resultaat van de PDP bepaald of er toegang wordt verleend, en mogelijk ook onder welke voorwaarden.
+Dit is het onderdeel dat de slagboom vormt en op basis van het resultaat van de PDP bepaald of er toegang wordt verleend of niet, 
+en mogelijk, indien wel toegang wordt verleend, onder welke toegevoegde voorwaarden.
 
 ### Policy Decision Point (PDP)
 
 Dit is het onderdeel dat door de PEP wordt aangestuurd en op basis van (mogelijk door de PIP getransformeerde) attributen de door het PAP uitgekozen policies uitvoert,
-en dan aan de PEP doorgeeft of toegang verleend mag worden of niet, en zo ja onder welke condities.
+en dan aan de PEP doorgeeft of toegang verleend mag worden of niet, en zo ja, onder welke toegevoegde voorwaarden.
 
 ### Policy Information Point (PIP)
 
@@ -43,15 +47,25 @@ Dit is het onderdeel dat de policies beheerd.
 Op verzoek van de PDP bepaalt de PAP op basis van de meegeleverde attributen de sleutel van 1 of meerdere policies,
 en geeft deze terug aan het PDP om uit te voeren.
 
-## PBAC versie 1
+### Integratie
 
-In deze schets bevat de API-gateway het PEP onderdeel en roept vandaaruit de PDP aan.
+Voor de integratie van PBAC zijn twee mogelijkheden.
+Het is mogelijk, en wellicht ook wenselijk, om beide mogelijkheden in een toekomstige standaard op te nemen.
+Voor het uitvoeren van policies maakt het verder niet uit waar de PEP zich bevindt. 
+
+## PBAC optie 1
+
+In deze schets bevat de API-gateway de PEP en roept vandaaruit de PDP aan.
+
+Deze optie valt te verkiezen indien de API-gateway voldoende ondersteuning heeft om als PEP te fungeren.
 
 ![PBAC versie 1](/architecture/modern-auth-pbac1.png)
 
-## PBAC versie 2
+## PBAC optie 2
 
-In deze schets is de PEP een losse component die tussen de App en de API-gateway geplaatst wordt en vandaaruit de PDP aanroept.
+In deze schets is de PEP een losse component die tussen de applicatie en de API-gateway geplaatst wordt en vandaaruit de PDP aanroept.
+
+Deze optie valt te verkiezen indien de API-gateway niet voldoende ondersteuning heeft om als PEP te fungeren.
 
 ![PBAC versie 2](/architecture/modern-auth-pbac2.png)
 
