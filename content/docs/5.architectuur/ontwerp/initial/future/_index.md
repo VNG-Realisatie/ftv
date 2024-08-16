@@ -5,6 +5,8 @@ title: 'Potentiele toekomst'
 
 # Potentiele toekomst
 
+## Toekomst
+
 Een potentiele oplossing ligt in het gebruik van Policy Based Access Control (PBAC).
 Op basis van policies wordt dan toegang verleend of niet.
 Een policy is een set van (beleids-)regels waaraan een dataverzoek moet voldoen.
@@ -80,6 +82,12 @@ Een policy generator zou op basis van deze toegangsregels policies moeten kunnen
 Bv. XACML, ODRL of Rego (OPA).
 
 De poortwachter stelselfunctie verdient duidelijk nog een intensievere inventarisatie en uitwerking.
-Hier moeten de beheerders en de techniek samenkomen, en het is te voorzien dat dit verreweg de meeste inspanning gaat vergen.
+Hier moeten de beheerders en de techniek samenkomen, 
+en het is te voorzien dat dit verreweg de meeste inspanning zal vergen.
+Met name om het gebruiksvriendelijk te houden zonder functionaliteit te verliezen,
+en om te voorkomen dat de hoeveelheid en complexiteit van alle toegangsregels te overweldigend wordt.
+
+Ook dient nog bepaald te worden hoe dit niet een single point-of-failure wordt,
+en welke partijen de verantwoording voor de juiste invulling op zich nemen.
 
 ![PBAC uitgeklapt](/architecture/pbac1-poortwachter.png)
