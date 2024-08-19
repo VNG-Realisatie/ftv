@@ -19,7 +19,7 @@ title: 'BRP'
 
 ## Observaties
 - tabellen in de BRP dataset hebben unieke 2-cijferige numerieke codes toegekend. Bv. tabel 34 = landen, 35 = autorisatieregels.
-- kolommen in een tabel habben een unieke code, bestaande uit twee 2-cijferige numerieke waarden, gekoppeld aan de tabelcode. Bv. 34.94.12 landen tabel-ISO3166 alpha2 code.
+- kolommen in een tabel hebben een unieke code, bestaande uit twee 2-cijferige numerieke waarden, gekoppeld aan de tabelcode. Bv. 34.94.12 = landen tabel / ISO3166 alpha2 code.
 
 ## Publiekelijk beschikbare tabellen
 - 32 nationaliteiten
@@ -38,7 +38,9 @@ title: 'BRP'
 - 60 RNI deelnemers
 - 61 gezagsverhoudingen
 
-# Nieuw BRP model
-- incompleet project; lijkt een volledig nieuiwe implementatie voor de BRP te zijn
+## Nieuw BRP model
+- incompleet project; lijkt een volledig nieuwe implementatie voor de BRP te zijn
 - documentatie stamt (voor een groot deel) uit 2017
 - zeer uitgebreid autorisatie model gebaseerd op organisaties, rollen, personen, regels, regel groeperingen, leveringscondities, etc.
+- er is alleen een aantal beschrijvende documenten beschikbaar gesteld, dus niet geschikt om use-cases uit samen te stellen
+ autorisatie model zou de basis kunnen vormen voor een federatieve verzameling van toegangsregels, maar dient mogelijk wel verder uitgebreid te worden
