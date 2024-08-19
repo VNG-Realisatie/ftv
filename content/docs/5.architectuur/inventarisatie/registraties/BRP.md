@@ -43,4 +43,4 @@ title: 'BRP'
 - documentatie stamt (voor een groot deel) uit 2017
 - zeer uitgebreid autorisatie model gebaseerd op organisaties, rollen, personen, regels, regel groeperingen, leveringscondities, etc.
 - er is alleen een aantal beschrijvende documenten beschikbaar gesteld, dus niet geschikt om use-cases uit samen te stellen
- autorisatie model zou de basis kunnen vormen voor een federatieve verzameling van toegangsregels, maar dient mogelijk wel verder uitgebreid te worden
+- autorisatie model zou de basis kunnen vormen voor een federatieve verzameling van toegangsregels, maar dient mogelijk wel verder uitgebreid te worden
