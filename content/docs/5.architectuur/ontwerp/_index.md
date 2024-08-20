@@ -13,7 +13,7 @@ bookCollapseSection: true
 - Afnemer = de datavragende partij
 - API = Application Programming Interface; bv. een service bij de aanbieder die data kan opleveren
 - API GW = API Gateway; onderdeel van het koppelvlak tussen afnemer en aanbieder 
-- App = Applicatie bij de datavragende partij; be. desktop applicatie, web-app, mobiele app
+- App = Applicatie bij de datavragende partij; bv. desktop applicatie, web-app, mobiele app
 - Dataset = een set van gegevens
 - Identity Provider = onderdeel van de OAuth standaard welke identiteiten kan uitgeven en verifieren
 - Organisatie - afnemer, aanbieder of een derde partij  
