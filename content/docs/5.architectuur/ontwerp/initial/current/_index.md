@@ -28,6 +28,6 @@ De situatie waarin een medewerker van een organisatie via een website/portaal/ap
 
 ## OAuth met bv. OpenID of eIDAS
 
-De situatie waarin een persoon via een open standaard met behulp van een identiteis provider geauthenticeerd wordt door een applicatie van de afnemer en vervolgens data kan bevragen bij de aanbieder.
+De situatie waarin een persoon via een open standaard met behulp van een identity provider (IDP) geauthenticeerd wordt door een applicatie van de afnemer en vervolgens data kan bevragen bij de aanbieder.
 
 ![OAuth](/architecture/curr-conn-p2o2o-oauth.png)
