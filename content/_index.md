@@ -12,22 +12,22 @@ Dit is de site van het project Federatieve Toegangsverlening, afgekort FTV.
 FTV onderzoekt een **standaardmethodiek** om **toegang tot gegevens** te regelen in een modern **federatief stelsel**.
 
 
-- Op [doelstellingen, context en scope](docs/1.over_het_project/2.doelstellingen) is te lezen wat dat precies inhoudt (en wat het niet is).
-- Op [Plan van aanpak](docs/1.over_het_project/3.aanpak) staat hoe we dat aanpakken en wat van ons verwacht mag worden.
-- [Onderhanden werk](docs/1.over_het_project/4.onderhanden_werk) is onze takenlijst, waar we nu me bezig zijn.
+- Op [doelstellingen, context en scope](/docs/1.over_het_project/2.doelstellingen) is te lezen wat dat precies inhoudt (en wat het niet is).
+- Op [Plan van aanpak](/docs/1.over_het_project/3.aanpak) staat hoe we dat aanpakken en wat van ons verwacht mag worden.
+- [Onderhanden werk](/docs/1.over_het_project/4.onderhanden_werk) is onze takenlijst, waar we nu mee bezig zijn.
 
 ## Resultaten
 
-Het resultaat van ons werk tot nu toe is [hier](docs/2.resultaten) te vinden.
+Het resultaat van ons werk tot nu toe is [hier](/docs/2.resultaten) te vinden.
 
 ## Links
 
 Omdat FTV leeft in een wereld van heel wat begrippen, standaarden, projecten en programma's hebben we verzamelingen
-[links](docs/4.links) aangelegd, als begrippenlijst.
+[links](/docs/4.links) aangelegd, als begrippenlijst.
 
 ## Contact
 
-Alle informatie en resultaten zijn open source beschikbaar voor iedereen.
+Alle informatie en resultaten zijn als open-source beschikbaar voor iedereen.
 Neem voor meer informatie gerust contact op met:
 
 Marc de Boer  

@@ -58,14 +58,11 @@ FTV zal geen nieuwe koppelvlakstandaard voorstellen, maar alleen een nieuwe invu
 De volgende koppelstandaarden zijn relevant:
 - **Diginetwerk**. Een afsprakenstelsel op infrastructuurniveau dat een besloten netwerk realiseert voor de overheid (de transportlaag).
 - **Digikoppeling**. Een set van standaarden en afspraken over koppelvlakken die o.a. de encryptie regelt (de sessielaag). 
-
-  Digikoppeling omvat, bovenop een encryptielaag, de standaarden ebMS, WUS, REST en Grote Berichten, die elk een berichtenstandaard 
-  beschrijven (de applicatielaag).
+  Digikoppeling omvat, bovenop een encryptielaag, de standaarden ebMS, WUS, REST en Grote Berichten, die elk een berichtenstandaard beschrijven (de applicatielaag).
   - WUS is een samentrekking van drie wat oudere standaarden: WSDL, UDDI en SOAP, en digikoppeling beschrijft de Nederlandse regels over het gebruik daarvan.
   - ebMS gaat over asynchroon uitwisselen met betrouwbare aflevering.
   - Grote Berichten gaat, zoals de naam al zegt, over het uitwisselen van grote berichten, en dan over WUS of ebMS2.
-  - REST is een standaard die wereldwijd voor alle moderne API's gebruikt wordt. De beschrijving onder digikoppeling zegt meer over hoe
-de Nederlandse overheid REST toepast. 
+  - REST is een standaard die wereldwijd voor alle moderne API's gebruikt wordt. De beschrijving onder digikoppeling zegt meer over hoe de Nederlandse overheid REST toepast. 
 - **StUF**. Een standaard bovenop WUS die een XML-formaat voor berichtenuitwisseling beschrijft.
 - **HaalCentraal**. Een set van afspraken en standaarden bovenop Digikoppeling REST, specifiek voor basisregistraties.
 
@@ -73,21 +70,21 @@ Voor dit project stellen we dat ebMS2, WUS en Grote Berichten een oudere generat
 in onze terminologie. StUF, REST en HaalCentraal zijn wel in scope.
 
 Het is goed hier nog expliciet **FSC** te vermelden: de nieuwe koppelvlakstandaard die in het FDS programma ontwikkeld wordt.
-Daar zal de FTV oplossing sowieso in moeten passen. Er zijn echter nog geen productieimplementaties van FSC, en valt daarom
-buiten scope van deze inventarisatie.
+Daar zal de FTV oplossing sowieso in moeten passen. Er zijn echter nog geen productieimplementaties van FSC, en het valt daarom
+buiten de scope van deze inventarisatie.
 
 ### Autorisatie in de koppelvlakstandaarden
 
 #### Stuf
 StUF is een oudere generatie die niet meer wordt doorontwikkeld, maar nog wel volop in gebruik is.
-Qua autorisatie is in de generieke onderlaag van StUF in ruimte voorzien om 4 gegevens mee te geven van zowel de afzender als de ontvanger: 
+Qua autorisatie is in de generieke onderlaag van StUF ruimte voorzien om 4 gegevens mee te geven van zowel de afzender als de ontvanger:
 organisatie, applicatie, administratie en gebruiker. Expliciet staat in de handleiding, pagina 45: 
 > StUF bevat geen voorschriften met betrekking tot autorisatie, maar het biedt dankzij dit stuurgegeven wel de mogelijkheid om
 autorisatiemechanismen in te bouwen in de berichtverwerkende software. 
 
-Er zijn daarnaast foutcodes om aan te geven dat een 
-bericht niet ontvankelijk is vanwege autorisatie. Bovenop StUF basis zijn er een aantal registratie- of sectorspecifieke 
-standaarden gedefinieerd. Ook hierin is geen autorisatiefunctionaliteit beschreven.
+Er zijn daarnaast foutcodes om aan te geven dat een bericht niet ontvankelijk is vanwege autorisatie. 
+Bovenop StUF basis zijn er een aantal registratie- of sectorspecifieke standaarden gedefinieerd.
+Ook hierin is geen autorisatiefunctionaliteit beschreven.
 
 #### HaalCentraal
 
@@ -100,5 +97,3 @@ De opgeleverde koppelingen zijn nog in gebruik en daarom relevant voor dit onder
 
 HaalCentraal heeft in de koppelvlakstandaard geen voorzieningen voor toegangsverlening.
 Er is een enkele API key waarmee individuele implementaties zelf aan de slag kunnen.
-
-
