@@ -1,9 +1,9 @@
 ---
+title: 'HR - KvK'
 weight: 40
-title: 'KvK'
 ---
 
-# Kamer van Koophandel
+# HR - Kamer van Koophandel
 
 ## Links
 - https://developers.kvk.nl/nl/documentation

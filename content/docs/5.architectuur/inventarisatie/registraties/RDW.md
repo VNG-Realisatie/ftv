@@ -1,6 +1,6 @@
 ---
-weight: 50
 title: 'BRV (RDW)'
+weight: 80
 ---
 
 # BRV (RDW)

@@ -1,6 +1,6 @@
 ---
-weight: 20
 title: 'BRP'
+weight: 30
 ---
 
 # Basis Registratie Personen (RvIG)

@@ -1,6 +1,6 @@
 ---
 title: 'BRK'
-weight: 110
+weight: 70
 ---
 
 # BRK (Kadaster)
