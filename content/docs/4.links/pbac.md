@@ -25,7 +25,7 @@ title: "Toegangsverlening"
 - Zie ook [PBAC](../../5.architectuur/inventarisatie/standaarden/pbac)
 - [XACML](https://en.wikipedia.org/wiki/XACML), OASIS standaard dus echt open, 300 functies dus uitgebreid
   - [Themis](https://github.com/infobloxopen/themis), een implementatie in Go 
-  - [xacnk4j](https://github.com/policy4j/xacml4j), een referentie implementatie in Java
+  - [xacnk4j](https://github.com/policy4j/xacml4j), een referentie-implementatie in Java
   - [Balana](https://svn.wso2.org/repos/wso2/trunk/commons/balana/), implementatie door Sun
   - [AuthzForce](https://github.com/authzforce/core), ook Java
   - [Alle op GitHub](https://github.com/topics/xacml)
