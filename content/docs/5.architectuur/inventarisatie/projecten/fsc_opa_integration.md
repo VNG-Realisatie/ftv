@@ -8,7 +8,7 @@ title: 'FSC - OPA integration'
 ## Links
 - https://gitlab.com/digilab.overheid.nl/platform/fsc-opa-integration
 
-## Snippets
+## Fragmenten
 - This repo is an example of how to use Open Policy Agent (OPA) for policy-based authorization in combination with your FSC inway and/or outway.
 
 ## Observations

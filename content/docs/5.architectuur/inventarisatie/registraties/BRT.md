@@ -12,7 +12,7 @@ weight: 60
 - https://github.com/kadaster/imbrt
 - https://register.geostandaarden.nl/
 
-## Snippets
+## Fragmenten
 - Het Kadaster is houder van de Basisregistratie Topografie (BRT). De BRT bestaat uit digitale topografische bestanden op verschillende schaalniveaus. Zowel de opgemaakte kaarten als de objectgerichte bestanden zijn beschikbaar als open data. Dat betekent dat het Kadaster deze gegevensbestanden gratis en met minimale leveringsvoorwaarden ter beschikking stelt.
 
 ## Observaties

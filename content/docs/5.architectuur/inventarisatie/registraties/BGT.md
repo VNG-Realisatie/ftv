@@ -13,7 +13,7 @@ weight: 100
 - https://www.kadaster.nl/zakelijk/producten/geo-informatie/bgt-features
 - https://bgtviewer.nl/
 
-## Snippets
+## Fragmenten
 - De Basisregistratie Grootschalige Topografie (BGT) is een gedetailleerde digitale kaart van Nederland. In de BGT worden objecten zoals gebouwen, wegen, water, spoorlijnen en groen op eenduidige manier vastgelegd.
 
 ## Observaties

@@ -8,7 +8,7 @@ weight: 70
 ## Links
 - https://www.kadaster.nl/zakelijk/registraties/basisregistraties/brk
 
-## Snippets
+## Fragmenten
 - De Basisregistratie Kadaster (BRK) bestaat uit:
   - de kadastrale registratie van onroerende zaken en zakelijke rechten
   - de kadastrale kaart. Hierop ziet u de ligging van de kadastrale percelen (inclusief perceelnummer) en de grenzen van het rijk, de provincies en de gemeenten.

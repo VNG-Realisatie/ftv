@@ -12,7 +12,7 @@ weight: 90
 - https://vng.nl/artikelen/basisregistratie-waardering-onroerende-zaken-woz
 - https://www.rijksoverheid.nl/onderwerpen/waardering-onroerende-zaken-woz/vraag-en-antwoord/waar-wordt-de-woz-waarde-voor-gebruikt
 
-## Snippets
+## Fragmenten
 
 ## Observaties
 - er zijn 2 gratis API's beschikbaar (beide via DigiKoppeling)

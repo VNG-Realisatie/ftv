@@ -8,7 +8,7 @@ weight: 90
 ## Links
 - https://gitlab.com/commonground/virtueel-inkomstenloket/poc_utrecht_iit
 
-## Snippets
+## Fragmenten
 - Onze droom
   - Een simpel digitaal loket voor alle regelingen dat elke inwoner of hulpverlener kan gebruiken
   - Je ziet niet alleen waar je recht op hebt, maar het wordt ook gelijk toegekend
