@@ -6,7 +6,8 @@ weight: 70
 # BAG (Kadaster)
 
 ## Links
-- https://www.kadaster.nl/zakelijk/registraties/basisregistraties/bag/over-bag
+- https://www.kadaster.nl/zakelijk/registraties/basisregistraties/bag
+- https://www.kadaster.nl/zakelijk/producten/adressen-en-gebouwen/bag-api-individuele-bevragingen
 - https://www.geobasisregistraties.nl/documenten/publicatie/2018/03/12/catalogus-2018
 - https://imbag.github.io/praktijkhandleiding/
 - https://bagviewer.kadaster.nl/lvbag/bag-viewer/?zoomlevel=1
@@ -24,4 +25,4 @@ weight: 70
   - veiligheidsregio's
 
 ## Observaties
-- Voor BAG lijken API's te bestaan.
+- Voor BAG is er een API beschikbaar: https://www.kadaster.nl/zakelijk/producten/adressen-en-gebouwen/bag-api-individuele-bevragingen
