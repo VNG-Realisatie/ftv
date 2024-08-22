@@ -109,7 +109,6 @@ Beiden zouden dus voor het vastleggen van de autorisatieregels van hetzelfde fed
 ## Vastleggen van autorisatie
 Op dit gebied moet nog veel onderzocht en bedacht worden.
 Een federatief systeem ligt voor de hand, maar dat kan op vele verschillende technische manieren ingevuld worden.
-Hier is verder onderzoek nodig.
 
 Vanuit dit federatieve systeem zou dan de autorisatie-onthologie van Lock-Unlock gevuld kunnen worden.
 Ook de policies voor de diverse organisaties zouden hiervanuit gegenereerd kunnen worden.
@@ -120,7 +119,7 @@ Naast het vastleggen, is ook het vertalen van wet- en regelgeving naar technisch
 Op dit gebied lijken wel wat (voorzichtige) stappen gezet te zijn. Zie [Regelbeheer](/docs/5.architectuur/inventarisatie/wet_regelgeving/regelbeheer).
 Echter, dit lijkt, op een enkel project na, in een vrij prematuur stadium te verkeren.
 
-Op al deze vlakken zal meer onderzoek nopdig zijn.
+Op al deze vlakken zal meer onderzoek nodig zijn.
 
 ## Uitvoeren van autorisatie
 Het uitvoeren van autorisatie is in diverse [projecten](/docs/5.architectuur/inventarisatie/projecten/projects) al (voor een deel) uitgeprobeerd.
@@ -129,4 +128,4 @@ ook wel als Policy As Code (PAC) aangeduidt.
 
 Vanuit dit project lijkt het vooralsnog wenselijk om hier op voort te borduren.
 Welke policy taal (of talen) hiervoor in aanmerking komen wordt langzaam duidelijk.
-Een belangrijke (nog te bepalen) factor hierin is, of de toegangsverlening puur voor de API moet gaan gelden, of ook, voor de te benaderen functies/data.
+Een belangrijke (nog te bepalen) factor hierin is, of de toegangsverlening puur voor de API moet gaan gelden, of ook voor de te benaderen functies/data.
