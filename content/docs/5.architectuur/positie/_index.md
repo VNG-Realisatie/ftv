@@ -185,12 +185,12 @@ Een belangrijke (nog te bepalen) factor hierin is, of de toegangsverlening puur 
 
 ## Technologie
 
-Voor het vastleggen en uitvoeren van autorisatie zijn verschillende standaarden, methodieken en implementaties beschikbaar.
-Hier geven we in het kort een overzicht om de overeenkomsten en verschillen iets breder te inventariseren,
-en de bruikbaarheid ervan binnen dit project aan te geven.
+Voor het vastleggen en uitvoeren van autorisatie zijn verschillende standaarden, methodieken, implementaties en ideeen beschikbaar.
+Hier geven we in het kort een overzicht van een aantal mogelijkheden, zodat de overeenkomsten en verschillen vergeleken kunnen worden.
+Tevens wordt de potentiele bruikbaarheid ervan binnen dit project aangegeven.
 
 ### ACL - Access Control Lists
-Relatief simpele en zeer grofmazige manier voor autorisatie en binnen dit project niet bruikbaar.
+Relatief simpele en zeer grofmazige manier voor autorisatie en daardoor binnen dit project niet bruikbaar.
 
 ### RBAC - Role-Based Access Control
 Moderner dan ACL, en iets minder grofmazig, maar nog steeds niet geschikt.
@@ -199,17 +199,23 @@ Moderner dan ACL, en iets minder grofmazig, maar nog steeds niet geschikt.
 ABAC en PBAC zijn namen voor dezelfde methodiek.
 Het wordt ook wel als Policy As Code (PAC) aangeduidt.
 
-Er lijkt misverstand te zijn dat dit twee verschillende methodieken zijn.
-Het enige verschil dat mogelijk tot dit misverstand leidt, ligt wellicht in het soort policy taal en of deze al dan niet leesbaar is.
-De term ABAC is wel wat ouder, en PBAC is een wat modernere naamgeving voor dezelfde methodiek.
+Er lijkt soms het misverstand te zijn dat ABAC en PBAC twee verschillende methodieken zijn.
+Het enige verschil dat mogelijk tot dit misverstand zou kunnen leiden, ligt wellicht in het soort policy taal en of deze taal al dan niet leesbaar is.
+De term ABAC is wel wat ouder, en PBAC is een wat modernere naamgeving ([Wikipedia](https://en.wikipedia.org/wiki/Attribute-based_access_control)).
 
-De talen en implementaties (zoals XACML, ALfa, ORDL, OPA en Cedar) zijn policy based, waarbij sets van autorisatieregels in een policy bestand zijn beschreven.
-Het uitvoeren van de policy gebeurd door een engine, die de gebruikte policy taal interpreteert, en de controles uitvoert op basis van in de request meegeleverde attributen.
+De talen en implementaties (zoals XACML, Alfa, ODRL, OPA en Cedar) zijn policy based, waarbij sets van autorisatieregels in een policy bestand zijn beschreven.
+Het controleren van de policy gebeurd door een engine, die de gebruikte policy taal interpreteert, en de controles uitvoert op basis van in de request meegeleverde attributen.
 
-Dezxe methodiiek sluit zeer goed aan op de eisen die in dit project gesteld worden.
+Deze methodiek sluit zeer goed aan op de eisen die in dit project gesteld worden.
+
+### Autorisatie onthologie
+Dit is een manier om de autorisatieregels, volgens een vast schema, in een database vast te leggen.
+Hierdoor kan het bv. als metadata binnen een federatief data stelsel gekoppeld worden om data autorisatie te beheren en af te dwingen.
+
+Deze methodiek is al via het Lock-Unlock project voorgesteld voor het FDS.
 
 ### ReBAC - Relation Based Access Control
-Deze methodiek legt relaties vast tussen verschillende objecten en kan gebruikt worden om autorisatie toe te passen.
-Het wordt gezien als een aanvulling op ABAC/PBAC.
+Deze methodiek legt relaties vast tussen verschillende objecten en kan gebruikt worden om (op een hoog niveau) bepaalde autorisatie toe te passen.
+Het wordt dan ook gezien als een aanvulling op ABAC/PBAC.
 
 Het zou voor dit project een welkome aanvulling kunnen zijn.
