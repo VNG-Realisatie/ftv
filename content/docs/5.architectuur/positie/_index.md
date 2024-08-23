@@ -33,23 +33,29 @@ Dit is de breedste zin van het woord.
 In het kader van dit project is
 - iets wat toegang krijgt: een persoon, organisatie of geautomatiseerd systeem,
 - iets waartoe toegang wordt verleend: een systeem dat een verzameling resources (functies en/of datasets) ter beschikking stelt,
-- het binnenkomen: de toegang tot de verzameling resources (bv. via een API),
+- ergens binnenkomen: toegang verkrijgen tot een verzameling resources (bv. via een API),
 - het doen: het bevragen van data (ook het bekijken) of uitvoeren van functies, en mogelijk het toevoegen, wijzigen of verwijderen van data.
+
+Het ergens binnenkomen of iets doen/bekijken zullen we in het verdere loop van dit verhaal **een actie** noemen.
 
 Autorisatie kent twee belangrijke domeinen:
 1. Het vastleggen van de autorisatie.\
+   Het beheer van de technische autorisatieregels die gebruikt kunnen worden om te bepalen of een actie geoorloofd is.\
    Dit kan op vele manieren:
    - in de applicatiecode; het gebeurt nog steeds, maar is niet wenselijk.
    - in een database.
    - in machine leesbare policies; Policy As Code, losse code die niet in de applicatie gebakken zit.
-   - middels verifieerbare credentials; dit levert een deel van de benodigde attributen.
+   - middels verifieerbare credentials; hiermee kan een deel van de benodigde attributen vastgelegd zijn.
 2. Het uitvoeren/controleren van de autorisatie.\
+   Het ophalen en controleren van een set autorisatieregels die voor een bepaalde actie gelden.
    Een stuk software dat op basis van de vastgelegde autorisatieregels de attributen van een bevraging (request) controleert en toegang verleent of niet.
    Hierbij kan opgemerkt worden dat het toegang verlenen niet alleen een wel of niet resultaat kan zijn,
-   maar het soms wenselijk is om ook extra filtering toe te passen op de bevraagde data in zowel horizontale als vertikale richting.
+   maar het soms wenselijk is om ook extra filtering toe te passen op de bevraagde data in horizontale en/of vertikale richting.
 
-Voor de uitvoering van de toegangsverlening gaan we uit van een geautomatiseerd systeem (een applicatie) dat toegang probeert te krijgen tot een ander geautomatiseerd systeem (een API).
-Nu wordt het uitvoeren van toegangsverlening nog vooral bij de aanbieders neergelegd.
+Het verlenen van toegang valt onder het uitvoeren van de autorisatie, maar kan niet plaatsvinden zondar dat de autorisatieregels ergens zijn vastgelegd.
+
+Voor de uitvoering van de autorisatie gaan we uit van een geautomatiseerd systeem (een applicatie) dat toegang probeert te krijgen tot een ander geautomatiseerd systeem (een API).
+Nu wordt het uitvoeren van autorisatie nog vooral bij de aanbieders neergelegd.
 Maar omdat niet alle autorisatieregels door de aanbieder uitgevoerd kunnen worden, is het wenselijk om dit deels ook bij de afnemer neer te leggen.
 Beide partijen hebben hun verantwoordelijkheid hiervoor, en dienen dus hun deel van de autorisatie-taak uit te voeren.
 
@@ -81,10 +87,57 @@ Hierbij wordt ook meer flexibiliteit geboden voor de regelmatig aan verandering 
 Het regelmatig aanpassen van applicatie-code wordt voor veel partijen als een uitermate groot probleem gezien en ervaren.
 Een centrale aanpak van alle autorisatie binnen iedere organisatie, middels een geaccepteerde standaard, kan dus heel veel voordeel bieden.
 
+## Doelbinding
+Met doelbinding wordt bedoeld dat het duidelijk moet zijn waarom een actie uitgevoerd wordt.
+Dit heeft een koppeling naar zaakgericht werken, waarbij het zaaktype het waarom aan kan geven.
+In het geval er geen zaak-type bekend is, zou de rol van de gebruiker een indicatie vormen voor het waarom.
+
+## Context
+In diverse documentatie wordt de wens geopperd om ook de context van een actie te controleren tijdens de toegangsverlening.
+Dit kan bijvoorbeeld zijn:
+- de tijd van de actie
+- het IP-adres van de gebruiker
+- het soort device dat gebruikt wordt
+- mogelijk het OS, soort browser, specifieke versies hiervan
+- de applicatie waaruit de actie voortkomt
+
+Bepaalde context is automatisch aanwezig in een request, of zijn er inherent aan verbonden.
+Bijvoorbeeld, de tijd van de actie is het moment op de klok dat het request gecontroleerd wordt.
+Andere gegevens zullen door de applicatie zelf meegegeven moeten worden.
+De autorisatieregels kunnen dan de aanwezigheid van contextgegevens afdwingen, maar indien gewenst ook inhoudelijk controleren.
+
+De aanwezigheid en juistheid van contextgegevens is ook belangrijk voor de logging.
+
+## Verifieerbare credentials
+Eerder werd al aangegevenm dat verifieerbare credentials een deel van de attributen kunnen bevatten die voor het uitvoeren van autorisatie benodigd zijn.
+Het hebben van deze credentials (bv. in de vorm van OAuth claims) geeft aan dat de identiteit (gebruiker) van de credentials bepaalde acties mag uitvoeren.
+Dat is een vastgelegd gegeven dat te verifieren is.
+Maar het moet nog steeds gecontroleerd worden om daadwerkelijk de toegang te verlenen, en het is niet het enige gegeven dat gecontroleerd moet worden.
+
+Een credential is te vergelijken met een fysiek bewijs, bv. een rijbewijs.
+Het rijbewijs geeft iemand de bevoegdheid om in een auto te rijden.
+Dat is een gegeven.
+
+Maar op het moment dat men aangehouden wordt door een agent (in de rol van controleur), zal deze niet alleen het rijbewijs controleren, maar bv. ook:
+- of de eigenaar of huurder van de auto aanwezig is
+- of het kentekenbewijs in orde is
+- of de verzekeringspapieren nog kloppen
+- of het kenteken niet als gestolen is opgegeven
+- of de auto rijwaardig lijkt
+- of er geen verboden voorwerpen in de auto aanwezig zijn
+- of de bestuurder niet onder (teveel) invloed van alcohol of drugs is
+- ...
+
+Het rijbewijs geeft aan dat men in een auto mag rijden, maar niet onder willekeurige condities (de context).
+Het rijbewijs op zich is dus slechts een onderdeel van het autorisatiemechanisme voor het besturen van een auto.
+
 ## Logging
 Naast het beheren van autorisatieregels en het uitvoeren ervan, speelt ook logging een belangrijke rol.
-Middels logging van het gehele toegangsverzoek (request) met de codes van de uitgevoerde policy(ies) en de uitkomst(en),
+Middels logging van het gehele toegangsverzoek (request) met de codes van de uitgevoerde policy(ies) en de uitkomst(en) ervan,
 kan eenvoudig achteraf controle plaatsvinden of alles volgens de regels is verlopen.
+
+Omdat logging een flinke omvang aan kan nemen, is het noodzakelijk dat er voldoende kenmerken in iedere request aanwezig zijn, 
+zodat er gerichte selecties op de logregels plaats kunnen vinden. 
 
 ## Federatief
 Het vastleggen van de autorisatieregels past in een federatief systeem.
