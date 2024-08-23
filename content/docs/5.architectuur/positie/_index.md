@@ -177,8 +177,39 @@ Op al deze vlakken zal meer onderzoek nodig zijn.
 ## Uitvoeren van autorisatie
 Het uitvoeren van autorisatie is in diverse [projecten](/docs/5.architectuur/inventarisatie/projecten/projects) al (voor een deel) uitgeprobeerd.
 De meeste wegen leiden hier naar Policy Based Access Control ([PBAC](/docs/5.architectuur/inventarisatie/standaarden/pbac)) 
-ook wel als Policy As Code (PAC) aangeduidt.
+ook wel als Policy As Code (PAC) en Attribute Based Access Control (ABAC) aangeduidt.
 
 Vanuit dit project lijkt het vooralsnog wenselijk om hier op voort te borduren.
 Welke policy taal (of talen) hiervoor in aanmerking komen wordt langzaam duidelijk.
 Een belangrijke (nog te bepalen) factor hierin is, of de toegangsverlening puur voor de API moet gaan gelden, of ook voor de te benaderen functies/data.
+
+## Technologie
+
+Voor het vastleggen en uitvoeren van autorisatie zijn verschillende standaarden, methodieken en implementaties beschikbaar.
+Hier geven we in het kort een overzicht om de overeenkomsten en verschillen iets breder te inventariseren,
+en de bruikbaarheid ervan binnen dit project aan te geven.
+
+### ACL - Access Control Lists
+Relatief simpele en zeer grofmazige manier voor autorisatie en binnen dit project niet bruikbaar.
+
+### RBAC - Role-Based Access Control
+Moderner dan ACL, en iets minder grofmazig, maar nog steeds niet geschikt.
+
+### ABAC/PBAC - Attribute/Policy Based Access Control
+ABAC en PBAC zijn namen voor dezelfde methodiek.
+Het wordt ook wel als Policy As Code (PAC) aangeduidt.
+
+Er lijkt misverstand te zijn dat dit twee verschillende methodieken zijn.
+Het enige verschil dat mogelijk tot dit misverstand leidt, ligt wellicht in het soort policy taal en of deze al dan niet leesbaar is.
+De term ABAC is wel wat ouder, en PBAC is een wat modernere naamgeving voor dezelfde methodiek.
+
+De talen en implementaties (zoals XACML, ALfa, ORDL, OPA en Cedar) zijn policy based, waarbij sets van autorisatieregels in een policy bestand zijn beschreven.
+Het uitvoeren van de policy gebeurd door een engine, die de gebruikte policy taal interpreteert, en de controles uitvoert op basis van in de request meegeleverde attributen.
+
+Dezxe methodiiek sluit zeer goed aan op de eisen die in dit project gesteld worden.
+
+### ReBAC - Relation Based Access Control
+Deze methodiek legt relaties vast tussen verschillende objecten en kan gebruikt worden om autorisatie toe te passen.
+Het wordt gezien als een aanvulling op ABAC/PBAC.
+
+Het zou voor dit project een welkome aanvulling kunnen zijn.
