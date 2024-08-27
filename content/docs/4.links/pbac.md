@@ -17,7 +17,7 @@ title: "Toegangsverlening"
     - [Design Principles for Data Spaces](https://design-principles-for-data-spaces.org/)
 - [Vergelijking gemaakt door Geonovum](https://docs.geostandaarden.nl/eu/VerkenningDataspaces/)
 
-## Gekwaliceerde verklaringen
+## verifieerbare verklaringen
 - W3C [Validated Credentials](https://www.w3.org/TR/vc-data-model/) Data Model
 - EBSI [VC Framework](https://ec.europa.eu/digital-building-blocks/sites/display/EBSI/EBSI+Verifiable+Credentials)
 

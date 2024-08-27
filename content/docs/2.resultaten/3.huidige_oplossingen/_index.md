@@ -1,6 +1,6 @@
 ---
 bookCollapseSection: false
-weight: 20
+weight: 30
 title: "Huidige oplossingen"
 ---
 
