@@ -26,7 +26,7 @@ maar vormt het wel de basis van wat we in deze pagina uiteenzetten.
 
 ## Toegangsverlening / autorisatie
 
-Toegangsverlening (letterlijk vertaald naar Engels: access control) is een deelgebied van autorisatie.
+Toegangsverlening (letterlijk vertaald naar Engels: access control) is een onderdeel van autorisatie.
 Iets krijgt toegang om bijvoorbeeld ergens binnen te komen, iets te doen en/of iets te bekijken.
 Dit is de breedste zin van het woord.
 
@@ -36,24 +36,24 @@ In het kader van dit project is
 - ergens binnenkomen: toegang verkrijgen tot een verzameling resources (bv. via een API),
 - het doen: het bevragen van data (ook het bekijken) of uitvoeren van functies, en mogelijk het toevoegen, wijzigen of verwijderen van data.
 
-Het ergens binnenkomen of iets doen/bekijken zullen we in het verdere loop van dit verhaal **een actie** noemen.
+Het ergens binnenkomen of iets doen/bekijken zullen we in het verdere verloop van deze pagina **een verzoek** noemen.
 
 Autorisatie kent twee belangrijke domeinen:
 1. Het vastleggen van de autorisatie.\
-   Het beheer van de technische autorisatieregels die gebruikt kunnen worden om te bepalen of een actie geoorloofd is.
+   Het beheer van de technische autorisatieregels die gebruikt kunnen worden om te bepalen of een verzoek geoorloofd is.
    Dit kan op vele manieren:
    - in de applicatiecode; het gebeurt nog steeds, maar is niet wenselijk
    - in een database
    - in machine leesbare policies; Policy As Code, losse code die niet in de applicatie gebakken zit
    - middels verifieerbare credentials; hiermee kan een deel van de benodigde attributen vastgelegd zijn
 2. Het uitvoeren/controleren van de autorisatie.\
-   Het ophalen en controleren van een set autorisatieregels die voor een bepaalde actie gelden.
-   Een stuk software dat op basis van de vastgelegde autorisatieregels de attributen van een actie controleert en toegang verleent of niet.
-   De attributen van een actie zijn bv. de request headers, query parameters en de data in de request body.
+   Het ophalen en controleren van een set autorisatieregels die voor een bepaald verzoek gelden.
+   Een stuk software dat op basis van de vastgelegde autorisatieregels de attributen van een verzoek controleert en toegang verleent of niet.
+   De attributen van een verzoek zijn bv. de request headers, query parameters en de data in de request body.
    Hierbij kan opgemerkt worden dat het toegang verlenen niet alleen een wel of niet resultaat kan zijn,
    maar het soms wenselijk is om ook extra filtering toe te passen op de bevraagde data, in horizontale en/of vertikale richting.
 
-Het verlenen van toegang valt onder het uitvoeren van de autorisatie, maar kan niet plaatsvinden zondar dat de autorisatieregels ergens zijn vastgelegd.
+Het verlenen van toegang is duidelijk het uitvoeren van de autorisatie, maar kan niet plaatsvinden zondar dat de autorisatieregels ergens zijn vastgelegd en bereikbaar zijn.
 
 Voor de uitvoering van de autorisatie gaan we uit van een geautomatiseerd systeem (een applicatie) dat toegang probeert te krijgen tot een ander geautomatiseerd systeem (een API).
 Nu wordt het uitvoeren van autorisatie nog vooral bij het aanbiedende systeem (de aanbieder) neergelegd.
@@ -61,13 +61,13 @@ Maar omdat niet alle autorisatieregels door de aanbieder uitgevoerd kunnen worde
 is het wenselijk om dit deels ook bij het afnemende systeem (de afnemer) neer te leggen.
 Beide partijen hebben hun verantwoordelijkheid hiervoor, en dienen dus hun deel van de autorisatie-taak uit te voeren.
 
-Hierbij kan aan de kant van de afnemer een persoon van een organisatie geidentificeerd worden die de verantwoordelijkheid draagt voor de actie.
+Hierbij kan aan de kant van de afnemer een persoon van een organisatie geidentificeerd worden die het verzoek gestart heeft.
 Een kanttekening hierbij is dat er mogelijk ook automatische processen zijn die toegang vragen,
 welke echter niet aan een persoon gekoppeld zijn, maar wel aan de organisatie waar het proces plaats vindt.
 
 Aan de kant van de aanbieder is de persoon over het algemeen niet meer te identificeren,
 maar wel de organisatie van het toegang zoekende systeem.
-Het gebruik van verifieerbare credentials zou wel de mogelijkheid bieden om de verantwoordelijke, die de actie gestart heeft,
+Het gebruik van verifieerbare credentials zou wel de mogelijkheid bieden om de verantwoordelijke, die het verzoek gestart heeft,
 te autoriseren zonder de identiteit van die persoon te kennen.
 
 ## Toegangsverlening op API's
@@ -90,21 +90,21 @@ Het regelmatig aanpassen van applicatie-code wordt voor veel partijen als een ui
 Een centrale aanpak van alle autorisatie binnen iedere organisatie, middels een geaccepteerde standaard, kan dus heel veel voordeel bieden.
 
 ## Doelbinding
-Met doelbinding wordt bedoeld dat het duidelijk moet zijn waarom een actie uitgevoerd wordt.
+Met doelbinding wordt bedoeld dat het duidelijk moet zijn waarom een verzoek uitgevoerd wordt.
 Dit heeft een koppeling naar zaakgericht werken, waarbij het zaaktype het waarom aan kan geven.
 In het geval er geen zaak-type bekend is, zou de rol van de gebruiker een indicatie kunnen vormen voor de doelbinding.
 
 ## Context
-In diverse documentatie wordt de wens geopperd om ook de context van een actie te controleren tijdens de toegangsverlening.
+In diverse documentatie wordt de wens geopperd om ook de context van een verzoek te controleren tijdens de toegangsverlening.
 Dit kan bijvoorbeeld zijn:
-- de tijd van de actie
+- de tijd van het verzoek
 - het IP-adres van de gebruiker
 - het soort device dat gebruikt wordt
 - mogelijk het OS, soort browser, specifieke versies hiervan
-- de applicatie waaruit de actie voortkomt
+- de applicatie waaruit het verzoek voortkomt
 
 Bepaalde context is automatisch aanwezig in een request, of zijn er inherent aan verbonden.
-Bijvoorbeeld, de tijd van de actie is het moment op de klok dat de actie gecontroleerd wordt.
+Bijvoorbeeld, de tijd van het verzoek is het moment op de klok dat het verzoek gecontroleerd wordt.
 Andere gegevens zullen door de applicatie zelf meegegeven moeten worden.
 De autorisatieregels kunnen dan de aanwezigheid van contextgegevens afdwingen, maar indien gewenst, ook inhoudelijk controleren.
 
@@ -113,7 +113,7 @@ De aanwezigheid en juistheid van contextgegevens is ook belangrijk voor de loggi
 ## Verifieerbare credentials
 Eerder werd al aangegeven dat verifieerbare credentials een deel van de attributen kunnen bevatten die voor het uitvoeren van autorisatie benodigd zijn.
 Het hebben van deze credentials (bv. in de vorm van OAuth claims) geeft aan dat autenticatie van de gebruiker succesvol heeft plaats gevonden.
-Vanuit het autenticateproces zijn de credentials van de gebruiker bepald, die aan kunnen geven welke acties de gebruiker mag uitvoeren.
+Vanuit het autenticateproces zijn de credentials van de gebruiker bepald, die aan kunnen geven welke verzoeks de gebruiker mag uitvoeren.
 De credentials zijn vastgelegde gegevens die te verifieren zijn.
 
 Maar het moet nog steeds gecontroleerd worden om daadwerkelijk de toegang te verlenen, en het zijn niet de enige gegevens die gecontroleerd moeten worden.
@@ -139,7 +139,7 @@ Het rijbewijs op zich is dus slechts een onderdeel van het autorisatiemechanisme
 
 ## Logging
 Naast het beheren van autorisatieregels en het uitvoeren ervan, speelt ook logging een belangrijke rol.
-Middels logging van de actie met de codes van de uitgevoerde policy(ies) en de uitkomst(en) ervan,
+Middels logging van het verzoek met de codes van de uitgevoerde policy(ies) en de uitkomst(en) ervan,
 kan eenvoudig achteraf controle plaatsvinden of alles volgens de regels is verlopen.
 
 Omdat logging een flinke omvang aan kan nemen, is het noodzakelijk dat er voldoende kenmerken in iedere request aanwezig zijn, 
@@ -150,7 +150,7 @@ Het vastleggen van de autorisatieregels past in een federatief systeem.
 Er is overkoepelende wet- en regelgeving en beleidsregels die voor alle partijen gelden.
 Er zijn contractafspraken tussen partijen, waarbij er overlap is tussen de autorisatieregels die vanuit het contract opgesteld worden.
 Er zijn veel soortgelijke organisaties die dezelfde set toegangsregels moeten toepassen.
-Bv. gemeenten mogen alleen acties op persoonsgegevens uitvoeren van personen die binnen de gemeentegrenzen wonen.
+Bv. gemeenten mogen alleen verzoeks op persoonsgegevens uitvoeren van personen die binnen de gemeentegrenzen wonen.
 
 Als iedere partij voor zichzelf alle toe te passen toegangsregels moet gaan opstellen en bijhouden, levert dat een veelvoud van hetzelfde werk op.
 
@@ -213,7 +213,7 @@ Het enige verschil dat mogelijk tot dit misverstand zou kunnen leiden, ligt well
 De term ABAC is wel wat ouder, en PBAC is een wat modernere naamgeving ([Wikipedia](https://en.wikipedia.org/wiki/Attribute-based_access_control)).
 
 De talen en implementaties (zoals XACML, Alfa, ODRL, OPA en Cedar) zijn policy based, waarbij sets van autorisatieregels in een policy bestand zijn beschreven.
-Het controleren van de policy gebeurd door een engine, die de gebruikte policy taal interpreteert, en de controles uitvoert op basis van in de actie meegeleverde attributen.
+Het controleren van de policy gebeurd door een engine, die de gebruikte policy taal interpreteert, en de controles uitvoert op basis van in het verzoek meegeleverde attributen.
 
 Deze methodiek sluit zeer goed aan op de eisen die in dit project gesteld worden.
 
