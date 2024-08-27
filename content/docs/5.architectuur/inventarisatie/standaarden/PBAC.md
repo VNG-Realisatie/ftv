@@ -1,9 +1,9 @@
 ---
 weight: 140
-title: 'PAC (PBAC)'
+title: 'Access Control'
 ---
 
-# Policy As Code (Policy Based Access Control)
+# Access Control
 
 ## Links
 
@@ -11,15 +11,26 @@ title: 'PAC (PBAC)'
 - https://www.oreilly.com/library/view/policy-as-code/9781098139179/
 
 
-### PBAC / ABAC / PAC
-- https://federatief.datastelsel.nl/kennisbank/pbac/
+### Access Control
 - https://en.wikipedia.org/wiki/Attribute-based_access_control
+- https://bok.idpro.org/article/id/42/
+- https://bok.idpro.org/article/id/61/
 - https://www.paloaltonetworks.com/cyberpedia/what-is-policy-as-code
 - https://www.crowdstrike.com/cybersecurity-101/security-operations/policy-as-code/
 - https://www.devopsschool.com/blog/what-is-policy-as-code-a-complete-guide/
 - https://www.redhat.com/sysadmin/policy-as-code-automation
 - https://github.com/hysnsec/awesome-policy-as-code
+- https://federatief.datastelsel.nl/kennisbank/pbac/
 - https://gitlab.com/digilab.overheid.nl/ecosystem/pbac
+
+
+### AI Access Control
+- https://www.spica.com/blog/access-control-and-ai
+- https://fpc-security.com/blogs/articles/artificial-intelligence-ai-in-access-control
+
+
+### Autorisatie
+- https://en.wikipedia.org/wiki/Authorization
 
 
 ### XACML
