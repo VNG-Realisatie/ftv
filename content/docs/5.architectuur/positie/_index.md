@@ -155,7 +155,7 @@ Bv. gemeenten mogen alleen verzoeks op persoonsgegevens uitvoeren van personen d
 Als iedere partij voor zichzelf alle toe te passen toegangsregels moet gaan opstellen en bijhouden, levert dat een veelvoud van hetzelfde werk op.
 
 Het ligt dus voor de hand dat er een federatief stelsel is waarin dit eenduidig en gecontroleerd door de diverse organisaties beheerd wordt.
-Hier ligt echter wel  een behoorlijk ingewikkelde taak, en dient nog verder onderzoek uitgevoerd te worden.
+Hier ligt echter wel een behoorlijk ingewikkelde taak, en is zeker verder onderzoek benodigd.
 
 ## Raakvlak met FDS
 Het [Federatief Data Stelsel](/docs/5.architectuur/inventarisatie/standaarden/fds) zal dezelfde autorisatieregels moeten hanteren als welke benodigd zijn voor het beveiligen van API's.
@@ -186,7 +186,7 @@ Op al deze vlakken zal meer onderzoek nodig zijn.
 ## Uitvoeren van autorisatie
 Het uitvoeren van autorisatie is in diverse [projecten](/docs/5.architectuur/inventarisatie/projecten/projects) al (voor een deel) uitgetest.
 De meeste wegen leiden hier naar Policy Based Access Control ([PBAC](/docs/5.architectuur/inventarisatie/standaarden/pbac)) 
-ook wel als Policy As Code (PAC) en Attribute Based Access Control (ABAC) aangeduidt.
+ook wel als Policy As Code (PAC) en een vorm van Attribute Based Access Control (ABAC).
 
 Vanuit dit project lijkt het vooralsnog wenselijk om hier op voort te borduren.
 Welke policy taal (of talen) hiervoor in aanmerking komen wordt zo langzaamaan duidelijk.
@@ -206,6 +206,7 @@ Moderner dan ACL, en iets minder grofmazig, maar nog steeds niet geschikt.
 
 ### ABAC/PBAC - Attribute/Policy Based Access Control
 ABAC en PBAC zijn namen voor dezelfde methodiek.
+PBAC is een vorm van ABAC. Technisch gezien doen beiden attributen matchen met een set autorisatieregels om toegang te verlenen of niet.
 Het wordt ook wel als Policy As Code (PAC) aangeduidt.
 
 Er lijkt soms het misverstand te zijn dat ABAC en PBAC twee verschillende methodieken zijn.
@@ -229,3 +230,8 @@ Men mag alleen de verschillende objecten gelijktijdig bevragen indien er een rel
 Het wordt dan ook gezien als een toevoeging op ABAC/PBAC.
 
 Het zou voor dit project een welkome aanvulling kunnen zijn.
+
+### AIAC - AI Access Control
+Er wordt reeds onderzoek gedaan om AI in te zetten voor toegangsverlening:
+- middels AI modellen de auditlog analyseren en afwijkingen ontdekken
+- met generatieve AI een policy beheerder de mogelijkheid bieden om middels natuurlijke taal autorisatieregels vast te leggen
