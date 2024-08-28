@@ -7,13 +7,14 @@ weight: 10
 # Welkom!
 
 Dit is de site van het project Federatieve Toegangsverlening, afgekort FTV.
+Deze site wordt gegenereerd vanuit [Gitlab](https://gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening) waar ook de rest van het project te vinden is.
 
 ## Over het project
 FTV onderzoekt een **standaardmethodiek** om **toegang tot gegevens** te regelen in een modern **federatief stelsel**.
 
 
 - Op [doelstellingen, context en scope](/docs/1.over_het_project/2.doelstellingen) is te lezen wat dat precies inhoudt (en wat het niet is).
-- Op [Plan van aanpak](/docs/1.over_het_project/3.aanpak) staat hoe we dat aanpakken en wat van ons verwacht mag worden.
+- Op [plan van aanpak](/docs/1.over_het_project/3.aanpak) staat hoe we dat aanpakken en wat van ons verwacht mag worden.
 - [Onderhanden werk](/docs/1.over_het_project/4.onderhanden_werk) is onze takenlijst, waar we nu mee bezig zijn.
 
 ## Resultaten

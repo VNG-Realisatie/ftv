@@ -33,7 +33,7 @@ Een gangbare indeling is:
 1. Lijsten van gebruikers ([ACL](https://en.wikipedia.org/wiki/Access-control_list))
 2. Rolgebaseerd ([RBAC](https://en.wikipedia.org/wiki/Role-based_access_control))
 3. Attribuutgebaseerd ([ABAC](https://en.wikipedia.org/wiki/Attribute-based_access_control))
-4. Policy-gebaseerd (PBAC)
+4. Policy-gebaseerd ([PBAC](/docs/5.architectuur/inventarisatie/standaarden/pbac))
 
 Er zijn al goede beschrijvingen en vergelijkingen beschikbaar:
 - Door het project FDS is een [ position paper](https://federatief.datastelsel.nl/kennisbank/pbac/) gemaakt 

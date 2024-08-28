@@ -1,7 +1,7 @@
 ---
 weight: 50
 bookCollapseSection: true
-title: "Moderne oplossingsrichtingen"
+title: "Voorgestelde oplossing"
 ---
 
 # Voorgestelde oplossing
