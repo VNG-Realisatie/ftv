@@ -1,22 +1,23 @@
 ---
 Title: Migratiepad
-weight: 20
+weight: 60
 ---
 
 # Migratiepad 
 
-Implementatie van FTV vanuit de situatie waar de meeste koppeling nu staan gaat over twee veranderingen: PBAC en federatief werken.
+Implementatie van FTV, vanuit de situatie waar de meeste koppeling nu staan, gaat over twee veranderingen: PBAC en federatief werken.
 In een overgang naar FTV kunnen deze twee apart worden opgepakt, hetgeen de transitie makkelijker kan maken.
 
 ## PBAC implementatieplan
 
-Implementatie van PBAC kan in een stappenplan gaan:
+Voor de oimplementatie van PBAC kan het volgende stappenplan gevolgd worden:
 - Kiezen en inrichten van PBAC-software
-- Aanpassen van de bestaande koppelsoftware (gateway, applicatie of API) om PBAC aan te roepen, en de beslissing daarvan te volgen
+- Aanpassen van de bestaande koppelsoftware (gateway, applicatie of API) om PBAC aan te roepen, 
+en de beslissing daarvan op te volgen
 - Identificeren van de toegangsregels die (zouden moeten) gelden
 - Testscenario's schrijven die het correct toepassen van de regels kunnen toetsen
-- In kaart brengen of en hoe die nu in de applicatie of API zijn ingebouwd
-- Ingebouwde regels opschrijven in een formele taal, en eventueel verwijderen uit code. Per regel kan met de testscenario's
+- In kaart brengen of en hoe de regels nu in de applicatie of API zijn ingebouwd
+- Ingebouwde regels noteren in de gekozen formele taal, en eventueel verwijderen uit code. Per regel kan met de testscenario's
 worden vastgesteld of dit correct is gebeurd.
 
 Veelal zal dit voor aanbieders en afnemers verschillend uitpakken. 
