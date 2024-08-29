@@ -1,6 +1,5 @@
 ---
 weight: 20
-type: 'docs'
 bookCollapseSection: true
 ---
 
