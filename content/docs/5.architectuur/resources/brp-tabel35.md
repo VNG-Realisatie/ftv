@@ -1,6 +1,5 @@
 ---
-weight: 20
-type: 'docs'
+weight: 100
 title: 'RvIG / BRP - tabel 35'
 ---
 
