@@ -23,8 +23,10 @@ De reden hiervoor is dat we de pagina niet al te lang willen maken, en sommigen 
 Mochten er toch nog vragen zijn, schroom niet om contact op te nemen via [de gebruikelijke kanalen.](/docs/1.over_het_project/1.introductie)
 
 Diverse beschrijvingen zijn (voor een deel) uit andere projecten overgenomen, 
-zoals [RAWA](https://vng-realisatie.github.io/RAWA/uitwerking/terminologie) en [Lock/Unlock](https://kadaster-labs.github.io/lock-unlock-docs/achtergrond/glossary).
+zoals RAWA[^1] en Lock/Unlock[^2].
 Daar waar de overgenomen beschrijving in het Engels is, hebben we deze zo goed als mogelijk naar het Nederlands vertaald.
+Als we de overgenomen beschrijving iets anders invullen, om het duidelijker binnen het kader van Federatieve Toegansverlening te trekken,
+zullen we dat ook zo goed als mogelijk verdedigen.
 
 ## Termen
 
@@ -47,13 +49,13 @@ Ook de aanwezigheid of afwezigheid van een attribuut kan voor autorisatie gebrui
 [Meer.](auditing)
 
 ### Authenticatie
-Authenticatie is het proces om te bewijzen dat een gebruiker, welke middels een digitale identiteit om toegang verzoekt, de gerechtigede eigenaar van die identiteit is.
+RAWA[^1]: Authenticatie is het proces om te bewijzen dat een gebruiker, welke middels een digitale identiteit om toegang verzoekt, de gerechtigede eigenaar van die identiteit is.
 Afhakelijk van de use-case, kan een 'identiteit' een natuurlijk persoon of niet-natuurlijk persoon zijn.
 
 [Meer.](authenticatie)
 
 ### Autorisatie
-Determining a user's rights to access functionality with a computer application and the level at which that access should be granted.
+RAWA[^1]: Determining a user's rights to access functionality with a computer application and the level at which that access should be granted.
 In most cases, an 'authority' defines and grants access, but in some cases, access is granted because of inherent rights (like patient access to their own medical data).
 
 [Meer.](autorisatie)
@@ -65,13 +67,17 @@ Het is meestal een, al dan niet complexe, vergelijking van één of meer attribu
 [Meer.](autorisatieregel)
 
 ### Context
-Conditions under which an action on a resource is authorized for a subject, such as time of access, location of access, or a compliance state.
+RAWA[^1]: Conditions under which an action on a resource is authorized for a subject, such as time of access, location of access, or a compliance state.
 
 [Meer.](context)
 
 ### Data minimalisatie
 
 [Meer.](data_minimalisatie)
+
+### Dataspaces
+
+[Meer.](dataspaces)
 
 ### Federatief
 
@@ -158,7 +164,7 @@ Binnen dit project zullen we de term autorisatieregel gebruiken.
 [Meer.](abac)
 
 ### ACL
-An Access Control List (ACL) is a definition around who or what are allowed or denied access to a resource.
+RAWA[^1]: An Access Control List (ACL) is a definition around who or what are allowed or denied access to a resource.
 For example, a file share may have an Access Control List that allows Marketing Department users to read and write,
 IT Department users to read-only, and denies all other users' access.
 
@@ -231,3 +237,9 @@ IT Department users to read-only, and denies all other users' access.
 ### XML
 
 [Meer.](xml)
+
+## Referenties
+[^1]: RAWA terminologie\
+  https://vng-realisatie.github.io/RAWA/uitwerking/terminologie
+[^2]: Lock/Unlock glossary\
+  https://kadaster-labs.github.io/lock-unlock-docs/achtergrond/glossary
