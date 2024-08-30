@@ -13,6 +13,8 @@ weight: 30
 - https://publicaties.rvig.nl/Landelijke_tabellen/Landelijke_tabellen_32_t_m_61_excl_tabel_35/Landelijke_Tabellen_32_t_m_61_in_csv_formaat
 - https://publicaties.rvig.nl/Landelijke_tabellen/Zoekpagina_tabel_35_autorisatietabel
 - https://www.rvig.nl/w172-lo-brp-toelichting-apis-fase-ii-informatievragen
+- https://brp-api.github.io/Haal-Centraal-BRP-bevragen/
+- https://brp-api.github.io/Haal-Centraal-BRP-bevragen/v2/redoc
 
 ## Fragmenten
 - .
