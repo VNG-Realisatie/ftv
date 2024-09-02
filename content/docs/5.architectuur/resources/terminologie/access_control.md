@@ -53,9 +53,9 @@ Het iets waar toegang toe wordt verleend is een [resource](../resource) ([een AP
 die een dienst vertegenwoordigt om data op te vragen of te beheren, of om een functie uit te voeren.
 
 ## Referenties
-[^1]: “Access.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/access. Accessed 30 Aug. 2024.
-[^2]: “Control.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/control. Accessed 30 Aug. 2024.
-[^3]: “Access control.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/access%20control. Accessed 30 Aug. 2024.
+[^1]: Merriam-Webster, https://www.merriam-webster.com/dictionary/access. [30 Aug. 2024].
+[^2]: Merriam-Webster, https://www.merriam-webster.com/dictionary/control. [30 Aug. 2024].
+[^3]: Merriam-Webster, https://www.merriam-webster.com/dictionary/access%20control. [30 Aug. 2024].
 [^4]: Cambridge, https://dictionary.cambridge.org/dictionary/english/access [30 Aug. 2024].
 [^5]: Cambridge, https://dictionary.cambridge.org/dictionary/english/control [30 Aug. 2024].
 [^6]: Cambridge, https://dictionary.cambridge.org/dictionary/english/access-control [30 Aug. 2024].

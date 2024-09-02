@@ -5,7 +5,7 @@ bookCollapseSection: true
 
 # Terminologie
 
---- ***WERK IN UITVOERING (vullingsgraad: 5%)*** ---
+--- ***WERK IN UITVOERING (vullingsgraad: 10%)*** ---
 
 De communicatie in en rond een project is altijd een uitdaging.
 Wat voor de één duidelijk is, is voor de ander een groot vraagteken.
