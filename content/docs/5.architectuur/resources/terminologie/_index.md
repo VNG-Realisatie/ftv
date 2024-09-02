@@ -112,9 +112,9 @@ RAWA[^1]: Condities waaronder een verwerking op een resource is toegestaan voor 
 
 ### Policy
 Policy kent veel betekenissen:
-- Een wet of beleidsregel kun je als een policy beschouwen
-- Een bedrijf heeft policies voor de verschillende taken die binnen het bedrijf uitgevoerd worden
-- Binnen dit project wordt policy gebruikt als een samenhangende set van autorisatieregels
+- Een wet of beleidsregel kun je als een policy beschouwen.
+- Een bedrijf heeft policies voor de verschillende taken die binnen het bedrijf uitgevoerd worden.
+- Binnen dit project wordt policy gebruikt als een samenhangende set van autorisatieregels.
 
 [Meer.](policy)
 
