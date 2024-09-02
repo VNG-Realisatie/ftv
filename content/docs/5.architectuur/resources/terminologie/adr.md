@@ -2,7 +2,7 @@
 title: 'ADR'
 ---
 
-# Architecture Design Rules
+# Architecture Decision Record
 
 ## Definitie voor FTV
 
