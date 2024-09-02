@@ -1,3 +1,7 @@
+---
+title: 'Attribuut'
+---
+
 # Attribuut
 
 ## Woordenboek
@@ -25,6 +29,19 @@
   1. symbolisch kenmerk
 
 ## Definitie voor FTV
+
+Een attribuut zien we als een gegeven met een code en een te controleren waarde die aan bepaalde eisen moet voldoen.
+Een [verwerkingsverzoek](../verwerking) dient van de benodigde attributen te zijn voorzien om toegangsverlening correct uit te voeren.
+
+Tijdens het uitvoeren van toegangscontrole worden attributen op aanwezigheid, geldigheid en waarde getoetst,
+om te bepalen of het [verwerkingsverzoek](../verwerking) gelegitimeerd is.
+
+Voor gestandaardiseerde uitvoering van [policies](../policy) voor toegangsverlening,
+is het noodzakelijk dat de code van een attribuut aan gestelde afspraken voldoet.
+
+Om te voorkomen dat alle applicaties hierop aangepast zouden moeten worden,
+biedt de [PIP](../pip)-component van het [ABAC](../abac)- / [PBAC](../pbac)-mechanisme,
+de mogelijkheid om, attributen van diverse applicaties, om te vormen naar gestandaardiseerde attributen.
 
 ## Referenties
 

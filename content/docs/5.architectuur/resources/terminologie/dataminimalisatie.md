@@ -1,3 +1,7 @@
+---
+title: 'Dataminimalisatie'
+---
+
 # Dataminimalisatie
 
 ## Woordenboek

@@ -1,3 +1,7 @@
+---
+title: 'Verifieerbare verklaring'
+---
+
 # Verifieerbare verklaring
 
 ## Woordenboek

@@ -1,3 +1,7 @@
+---
+title: 'Verwerking'
+---
+
 # Verwerking
 
 ## Woordenboek

@@ -1,3 +1,7 @@
+---
+title: 'Authenticatie'
+---
+
 # Authenticatie
 
 ## Woordenboek

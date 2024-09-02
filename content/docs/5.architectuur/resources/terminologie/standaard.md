@@ -1,3 +1,7 @@
+---
+title: 'Standaard'
+---
+
 # Standaard
 
 ## Woordenboek

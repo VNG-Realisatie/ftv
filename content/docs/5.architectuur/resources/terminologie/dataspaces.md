@@ -1,3 +1,7 @@
+---
+title: 'Dataspaces'
+---
+
 # Dataspaces
 
 ## Definitie voor FTV

@@ -1,3 +1,7 @@
+---
+title: 'Policy'
+---
+
 # Policy
 
 ## Woordenboek

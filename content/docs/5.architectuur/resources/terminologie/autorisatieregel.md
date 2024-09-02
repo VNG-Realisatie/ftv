@@ -1,3 +1,7 @@
+---
+title: 'Autorisatieregel'
+---
+
 # [Autorisatie](../autorisatie)regel
 
 ## Woordenboek

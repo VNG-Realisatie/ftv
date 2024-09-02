@@ -5,7 +5,7 @@ bookCollapseSection: true
 
 # Terminologie
 
---- ***WERK IN UITVOERING (vullingsgraad: 15%)*** ---
+--- ***WERK IN UITVOERING (vullingsgraad: 20%)*** ---
 
 De communicatie in en rond een project is altijd een uitdaging.
 Wat voor de één duidelijk is, is voor de ander een groot vraagteken.
@@ -38,13 +38,16 @@ In het kader van dit project zullen we de term gebruiken als het verlenen van to
 [Meer.](access_control)
 
 ### Attribuut
-Een attribuut zien we in dit project als een gegeven met een gedefinieerde code en een variabele waarde (in het Engels een key/value pair).
+Een attribuut is een gegeven met een gedefinieerde code en een variabele waarde (in het Engels een key/value pair).
 De code is een vereiste on te bepalen waar het gegeven over gaat, en op basis hiervan kan de waarde op de één of andere manier voor autorisatie gebruikt worden.
 Ook de aanwezigheid of afwezigheid van een attribuut kan voor autorisatie gebruikt worden.
 
 [Meer.](attribuut)
 
 ### Audit
+Audit is het process om controles uit te voeren op de geldigheid van verwerkingen.
+Dit gebeurt, al dan niet door externe partijen, op basis van de logboeken van de te controleren verwerkingen,
+bij alle relevante organisaties die bij de verwerking betrokken waren.
 
 [Meer.](audit)
 
@@ -55,8 +58,8 @@ Afhakelijk van de use-case, kan een 'identiteit' een natuurlijk persoon of niet-
 [Meer.](authenticatie)
 
 ### Autorisatie
-RAWA[^1]: Determining a user's rights to access functionality with a computer application and the level at which that access should be granted.
-In most cases, an 'authority' defines and grants access, but in some cases, access is granted because of inherent rights (like patient access to their own medical data).
+RAWA[^1]: Het bepalen van de rechten van een gebruiker om functionaliteit te benaderen met een computer-systeem, en het niveau waartoe de toegang mag worden verleend.
+Over het algemeen, zal een 'autoriteit' de toegang definiëren en toekennen, echter in sommige gevallen, wordt toegang verleend op basis van inherente rechten (bv. een patient krijgt toegang tot eigen gegevens).
 
 [Meer.](autorisatie)
 
@@ -67,13 +70,13 @@ Het is meestal een, al dan niet complexe, vergelijking van één of meer attribu
 [Meer.](autorisatieregel)
 
 ### Context
-RAWA[^1]: Conditions under which an action on a resource is authorized for a subject, such as time of access, location of access, or a compliance state.
+RAWA[^1]: Condities waaronder een verwerking op een resource is toegestaan voor een gebruiker, zoals de tijd van de verwerking, locatie van de verwerking, of het niveau van compliance.
 
 [Meer.](context)
 
-### Data minimalisatie
+### Dataminimalisatie
 
-[Meer.](data_minimalisatie)
+[Meer.](dataminimalisatie)
 
 ### Dataspaces
 

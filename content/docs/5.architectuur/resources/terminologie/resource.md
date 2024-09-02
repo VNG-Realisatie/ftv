@@ -1,3 +1,7 @@
+---
+title: 'Resource'
+---
+
 # Resource
 
 ## Woordenboek

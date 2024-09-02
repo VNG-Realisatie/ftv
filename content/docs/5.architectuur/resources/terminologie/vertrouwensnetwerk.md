@@ -1,3 +1,7 @@
+---
+title: 'Vertrouwensnetwerk'
+---
+
 # [Vertrouwens](../zero_trust)netwerk
 
 ## Woordenboek
