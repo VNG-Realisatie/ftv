@@ -1,29 +1,29 @@
-# Data minimalisatie
+# Dataminimalisatie
 
 ## Woordenboek
 
-- Engels: Data minimalisation
-- Nederlands: Data minimalisatie
+- Engels: Data minimization
+- Nederlands: Dataminimalisatie
 
 ### Merriam-Webster
 
-- Minimalisation[^1]
-  1.
+- Minimization[^1]
+  1. to reduce or keep to a minimum
 
 ### Cambridge
 
-- Minimalisation[^2]
-  1.
+- Minimization[^2]
+  1. the action of reducing something to the lowest possible level or amount
 
-### Dikke Van Dale
+### Web Woordenboek
 
-- Minimalisatie[^3]
-  1.
+- Dataminimalisatie[^3]
+  1. Dataminimalisatie houdt in dat bij het verzamelen en verwerken van persoonsgegevens niet meer gegevens mogen worden gebruikt dan nodig is om het doel waarvoor ze gebruikt zullen worden te bereiken
 
 ## Definitie voor FTV
 
 ## Referenties
 
-[^1]: Merriam-Webster, https://www.merriam-webster.com/dictionary/minimalisation [2 Sep. 2024].
-[^2]: Cambridge, https://dictionary.cambridge.org/dictionary/english/minimalisation [2 Sep. 2024].
-[^3]: Dikke van Dale, https://www.vandale.nl/gratis-woordenboek/nederlands/betekenis/minimalisatie [2 Sep. 2024].
+[^1]: Merriam-Webster, https://www.merriam-webster.com/dictionary/minimization [2 Sep. 2024].
+[^2]: Cambridge, https://dictionary.cambridge.org/dictionary/english/minimization [2 Sep. 2024].
+[^3]: Web Woordenboek, https://webwoordenboek.nl/kenniscentrum/wat-is-data-minimalisatie [2 Sep. 2024].

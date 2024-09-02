@@ -44,9 +44,9 @@ Ook de aanwezigheid of afwezigheid van een attribuut kan voor autorisatie gebrui
 
 [Meer.](attribuut)
 
-### Auditing
+### Audit
 
-[Meer.](auditing)
+[Meer.](audit)
 
 ### Authenticatie
 RAWA[^1]: Authenticatie is het proces om te bewijzen dat een gebruiker, welke middels een digitale identiteit om toegang verzoekt, de gerechtigede eigenaar van die identiteit is.
@@ -101,7 +101,7 @@ RAWA[^1]: Conditions under which an action on a resource is authorized for a sub
 
 ### Logging
 
-[Meer.](auditing)
+[Meer.](audit)
 
 ### Outway
 
