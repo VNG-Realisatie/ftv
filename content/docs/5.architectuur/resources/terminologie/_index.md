@@ -106,6 +106,10 @@ RAWA[^1]: Condities waaronder een verwerking op een resource is toegestaan voor 
 
 [Meer.](audit)
 
+### Ontologie
+
+[Meer.](ontologie)
+
 ### Outway
 
 [Meer.](gateway)
