@@ -5,8 +5,8 @@ weight: 90
 
 # ToDo
 
-- Terminologie
-- NIST attributes document
+- [Terminologie](/docs/5.architectuur/resources/terminologie) (WIP)
+- NIST attributes document -> samenvatting maken
 - Onderzoek of OPA een standaard is (I.E. probleem?)
-- Use cases [BRP](../usecases/brp)
+- Use cases [BRP](/docs/5.architectuur/usecases/brp) (1e opzet)
 - Use cases overig
