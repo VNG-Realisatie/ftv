@@ -10,3 +10,4 @@ weight: 90
 - Onderzoek of OPA een standaard is (I.E. probleem?)
 - Use cases [BRP](/docs/5.architectuur/usecases/brp) (1e opzet)
 - Use cases overig
+- performance OPA testen
