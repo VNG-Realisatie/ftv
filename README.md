@@ -8,6 +8,9 @@ https://federatieve-toegangsverlening-digilab-overheid-n-5d4b9badc9bcfa.gitlab.i
 
 ## Contact
 
+Alle informatie en resultaten zijn open source beschikbaar voor iedereen.
+Praat mee over FTV op ons [Mattermost](https://digilab.overheid.nl/chat/digilab/channels/federatieve-toegangsverlening) kanaal.
+
 Neem voor meer informatie contact op met:
 
 **Product owner**  

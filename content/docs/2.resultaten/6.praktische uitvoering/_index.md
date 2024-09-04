@@ -1,16 +1,16 @@
 ---
-Title: Migratiepad
+Title: Implementatie
 weight: 60
 ---
 
-# Migratiepad 
+# Implementatie 
 
 Implementatie van FTV, vanuit de situatie waar de meeste koppeling nu staan, gaat over twee veranderingen: PBAC en federatief werken.
 In een overgang naar FTV kunnen deze twee apart worden opgepakt, hetgeen de transitie makkelijker kan maken.
 
-## PBAC implementatieplan
+## PBAC stappenplan
 
-Voor de oimplementatie van PBAC kan het volgende stappenplan gevolgd worden:
+Voor de implementatie van PBAC kan het volgende stappenplan gevolgd worden:
 - Kiezen en inrichten van PBAC-software
 - Aanpassen van de bestaande koppelsoftware (gateway, applicatie of API) om PBAC aan te roepen, 
 en de beslissing daarvan op te volgen
@@ -33,7 +33,7 @@ Als er nu een aanroep wordt gedaan waarmee te veel gegevens worden verwerkt, dan
 een inhoudelijke aanpassing, die meer voeten in de aarde zal hebben dan alleen techniek. Ook zal er meer informatie
 met aanroepen meegegeven moeten worden, zodat zowel de PIP van de afnemer en de aanbieder kunnen regels kunnen valideren.
 
-## Federatief implementatieplan
+## Federatief stappenplan
 
 Federatief gaan werken heeft een ander stappenplan:
 - De organisatie moet zich kunnen vinden in de voorwaarden van het federatief stelsel. Daarbij komen rechten en plichten
@@ -46,11 +46,12 @@ geraadpleegd om verklaringen te verifiëren.
 
 ## Logging
 
-Hoewel geen onderdeel van toegangsverlening, gaat logging wel hand in hand omdat de verantwoording van de toegang in een 
-logboek dataverwerkingen moet komen.
+Hoewel geen onderdeel van toegangsverlening, gaat het wel hand in hand met logging omdat de verantwoording van de toegang 
+in een logboek dataverwerkingen moet komen.
 
 > TO DO
 
 ## FDS
 
+> Welke gemeenschappelijke verzieningen zouden we kunnen bieden?
 > TO DO
