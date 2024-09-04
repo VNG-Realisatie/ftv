@@ -9,5 +9,6 @@ weight: 90
 - NIST attributes document -> samenvatting maken
 - Onderzoek of OPA een standaard is (I.E. probleem?)
 - Use cases [BRP](/docs/5.architectuur/usecases/brp) (1e opzet)
+- Use cases Kadaster (WIP)
 - Use cases overig
 - performance OPA testen
