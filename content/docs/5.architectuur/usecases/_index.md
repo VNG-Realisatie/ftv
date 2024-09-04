@@ -1,6 +1,7 @@
 ---
-weight: 30
 title: 'Use cases'
+weight: 30
+bookCollapseSection: true
 ---
 
 # Use cases

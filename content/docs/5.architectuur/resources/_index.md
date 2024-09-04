@@ -1,4 +1,5 @@
 ---
+title: 'Resources'
 weight: 20
 bookCollapseSection: true
 ---
