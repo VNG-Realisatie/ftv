@@ -1,6 +1,5 @@
 ---
 title: 'DigiLevering'
-weights: 180
 ---
 
 # DigiLevering

@@ -1,5 +1,4 @@
 ---
-weight: 80
 title: 'eIDAS'
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: 'ReBAC'
-weight: 190
 ---
 
 # ReBAC - Relation Based Access Control

@@ -14,7 +14,7 @@ Wat wij vanuit het project beschrijven komt voort uit de informatie die tijdens 
 Het kan geregeld voorkomen dat het voor ons duidelijk is wat we beschreven hebben, maar voor een ander (totaal) niet.
 Om nu alles zo uitgebreid mogelijk te beschrijven heeft dan weer de keerzijde dat het misschien niet of nauwelijks gelezen wordt.
 
-Om dit te voorkomen willen we deze pagina, en onderliggende paginas, gebruiken we om zoveel mogelijk terminologie zo begrijpelijk mogelijk te beschrijven.
+Om dit te voorkomen willen we deze pagina, en onderliggende paginas, gebruiken, om zoveel mogelijk terminologie, zo begrijpelijk mogelijk te beschrijven.
 Tevens zullen we hier aangeven waarom voor een bepaalde term is gekozen.
 
 Op deze pagina worden de termen summier uitgelegd, en daar waar verduidelijking nodig lijkt, een link naar een verdieping van de term.
@@ -25,8 +25,12 @@ Mochten er toch nog vragen zijn, schroom niet om contact op te nemen via [de geb
 Diverse beschrijvingen zijn (voor een deel) uit andere projecten overgenomen, 
 zoals RAWA[^1] en Lock/Unlock[^2].
 Daar waar de overgenomen beschrijving in het Engels is, hebben we deze zo goed als mogelijk naar het Nederlands vertaald.
-Als we de overgenomen beschrijving iets anders invullen, om het duidelijker binnen het kader van Federatieve Toegansverlening te trekken,
+Als we de overgenomen beschrijving iets anders invullen, om het duidelijker binnen het kader van Federatieve Toegangsverlening te trekken,
 zullen we dat ook zo goed als mogelijk verdedigen.
+
+## Wie, wat, waar
+
+![Domeinen](/architecture/domeinen.png)
 
 ## Termen
 

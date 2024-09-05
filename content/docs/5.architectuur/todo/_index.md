@@ -12,3 +12,4 @@ weight: 90
 - Use cases Kadaster (WIP)
 - Use cases overig
 - performance OPA testen
+- voorbereiden "MijnServices" hackaton
