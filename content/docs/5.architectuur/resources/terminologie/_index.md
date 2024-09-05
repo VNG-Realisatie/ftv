@@ -14,7 +14,7 @@ Wat wij vanuit het project beschrijven komt voort uit de informatie die tijdens 
 Het kan geregeld voorkomen dat het voor ons duidelijk is wat we beschreven hebben, maar voor een ander (totaal) niet.
 Om nu alles zo uitgebreid mogelijk te beschrijven heeft dan weer de keerzijde dat het misschien niet of nauwelijks gelezen wordt.
 
-Om dit te voorkomen willen we deze pagina, en onderliggende paginas, gebruiken we om zoveel mogelijk terminologie zo begrijpelijk mogelijk te beschrijven.
+Om dit te voorkomen willen we deze pagina, en onderliggende paginas, gebruiken, om zoveel mogelijk terminologie, zo begrijpelijk mogelijk te beschrijven.
 Tevens zullen we hier aangeven waarom voor een bepaalde term is gekozen.
 
 Op deze pagina worden de termen summier uitgelegd, en daar waar verduidelijking nodig lijkt, een link naar een verdieping van de term.
