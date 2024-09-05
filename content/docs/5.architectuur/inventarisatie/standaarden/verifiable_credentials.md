@@ -1,8 +1,8 @@
 ---
-weight: 100
+title: 'Verifieerbare Credentials'
 ---
 
-# Verifiable Credentials
+# Verifieerbare Credentials
 
 ## Links
 - https://www.w3.org/TR/vc-data-model/

@@ -1,6 +1,5 @@
 ---
 title: 'ALEF'
-weight: 160
 ---
 
 # ALEF

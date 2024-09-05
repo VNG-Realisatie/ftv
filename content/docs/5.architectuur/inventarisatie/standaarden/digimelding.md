@@ -1,6 +1,5 @@
 ---
 title: 'DigiMelding'
-weights: 180
 ---
 
 # Digimelding

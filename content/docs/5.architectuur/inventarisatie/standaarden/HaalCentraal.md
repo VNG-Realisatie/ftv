@@ -1,8 +1,8 @@
 ---
-weight: 30
+title: 'HaalCentraal'
 ---
 
-# Haal Centraal
+# HaalCentraal
 
 ## Links
 - https://vng.nl/projecten/haal-centraal-gegevens-ophalen-bij-basisregistraties
