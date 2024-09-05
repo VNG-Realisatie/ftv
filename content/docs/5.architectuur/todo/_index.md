@@ -13,4 +13,3 @@ weight: 90
 - Use cases overig
 - performance OPA testen
 - voorbereiden "MijnServices" hackaton
-- onderzoek Themis - [XACML](/docs/5.architectuur/inventarisatie/standaarden/pbac) based Go implementatie (WIP)

@@ -25,8 +25,12 @@ Mochten er toch nog vragen zijn, schroom niet om contact op te nemen via [de geb
 Diverse beschrijvingen zijn (voor een deel) uit andere projecten overgenomen, 
 zoals RAWA[^1] en Lock/Unlock[^2].
 Daar waar de overgenomen beschrijving in het Engels is, hebben we deze zo goed als mogelijk naar het Nederlands vertaald.
-Als we de overgenomen beschrijving iets anders invullen, om het duidelijker binnen het kader van Federatieve Toegansverlening te trekken,
+Als we de overgenomen beschrijving iets anders invullen, om het duidelijker binnen het kader van Federatieve Toegangsverlening te trekken,
 zullen we dat ook zo goed als mogelijk verdedigen.
+
+## Wie, wat, waar
+
+![Domeinen](/architecture/domeinen.png)
 
 ## Termen
 
