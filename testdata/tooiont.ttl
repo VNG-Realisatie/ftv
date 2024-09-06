@@ -1,0 +1,1992 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geosparql: <http://www.opengis.net/ont/geosparql#> .
+@prefix language: <http://publications.europa.eu/resource/authority/language/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix tooiont: <https://identifier.overheid.nl/tooi/def/ont/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+
+skosxl:Label a rdfs:Class, sh:NodeShape ;
+  rdfs:subClassOf owl:Thing ;
+  sh:property tooiont:Label-context .
+
+tooiont:Afsplitsing a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Afsplitsing"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subClassOf tooiont:ExistentieleWijziging ;
+  sh:name "Afsplitsing"@nl ;
+  sh:property tooiont:Afsplitsing-generated ;
+  sh:property tooiont:Afsplitsing-used ;
+  skos:definition "Bij een afsplitsing worden delen van één of meerdere bestaande organisaties afgesplitst die verder gaan als één of meer nieuwe organisaties."@nl .
+
+tooiont:BestuurlijkeRuimte a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Bestuurlijke ruimte"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subClassOf geosparql:Feature ;
+  rdfs:subClassOf prov:Entity ;
+  sh:name "Bestuurlijke ruimte"@nl ;
+  sh:property tooiont:BestuurlijkeRuimte-hasGeometry ;
+  skos:definition "Een ruimte die bestuurlijke relevantie kent"@nl .
+
+tooiont:Betrokkenheid a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Betrokkenheid"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf prov:Influence ;
+  sh:name "Betrokkenheid"@nl ;
+  sh:property tooiont:Betrokkenheid-betrokkene ;
+  sh:property tooiont:Betrokkenheid-naamBetrokkene ;
+  sh:property tooiont:Betrokkenheid-soortBetrokkenheid ;
+  skos:definition "Betrokkenheid is een relatie tussen een informatieobject en een organisatie of persoon die invloed heeft gehad op het informatieobject, of die invloed van het informatieobject ondervonden heeft."@nl .
+
+tooiont:Bronhouderschap a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Bronhouderschap"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subClassOf prov:Entity ;
+  sh:property tooiont:Bronhouderschap-begindatum ;
+  sh:property tooiont:Bronhouderschap-bronhouder ;
+  sh:property tooiont:Bronhouderschap-einddatum ;
+  sh:property tooiont:Bronhouderschap-regeling ;
+  skos:definition "De relatie tussen een bronhouder en een gemeenschappelijke regeling"@nl .
+
+tooiont:CaribischOpenbaarLichaam a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Caribisch openbaar lichaam"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subClassOf tooiont:RegionaalOpenbaarLichaam ;
+  sh:name "CaribischOpenbaarLichaam"@nl ;
+  sh:property tooiont:CaribischOpenbaarLichaam-colcode ;
+  skos:definition "Een Caribisch openbaar lichaam is een territoriaal openbaar lichaam in het Caribische deel van Nederland"@nl .
+
+tooiont:DeelnameGR a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Deelname gemeenschappelijke regeling"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subClassOf prov:Entity ;
+  sh:property tooiont:DeelnameGR-begindatum ;
+  sh:property tooiont:DeelnameGR-deelnameAan ;
+  sh:property tooiont:DeelnameGR-deelnemer ;
+  sh:property tooiont:DeelnameGR-einddatum ;
+  sh:property tooiont:DeelnameGR-heeftJuridischeGrondslag ;
+  skos:definition "Een deelname van een overheidsorganisatie aan een gemeenschappelijke regeling"@nl .
+
+tooiont:Documenthandeling a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Documenthandeling"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subClassOf prov:Activity ;
+  sh:property tooiont:Documenthandeling-atTime ;
+  sh:property tooiont:Documenthandeling-date ;
+  sh:property tooiont:Documenthandeling-soortHandeling ;
+  sh:property tooiont:Documenthandeling-used ;
+  sh:property tooiont:Documenthandeling-wasAssociatedWith ;
+  skos:definition "Een handeling die een bestaand informatieobject van toestand doet veranderen, dan wel een nieuw informatieobject doet ontstaan"@nl ;
+  skos:scopeNote "Voorbeeld van een toestandswijziging: het document is ter inzage gelegd. Voorbeeld van een nieuw informatieobject doen ontstaan: het document is gewijzigd en er ontstaat een nieuwe versie van het document"@nl .
+
+tooiont:ExistentieleWijziging a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Existentiële wijziging"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subClassOf tooiont:Wijzigingsgebeurtenis ;
+  sh:name "ExistentieleWijziging"@nl ;
+  skos:definition "Een wijziging waarbij één of meerdere entiteiten begonnen of opgehouden zijn te bestaan"@nl .
+
+tooiont:GemeenschappelijkeRegeling a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Gemeenschappelijke regeling"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subClassOf tooiont:Informatieobject ;
+  sh:property tooiont:GemeenschappelijkeRegeling-soortGemeenschappelijkeRegeling ;
+  skos:definition "Een regeling uit hoofde van de Wgr of een internationaal verdrag, door middel waarvan twee of meer overheidsorganisaties bevoegdheden overdragen om krachten te bundelen"@nl .
+
+tooiont:Gemeente a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Gemeente"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subClassOf tooiont:RegionaalOpenbaarLichaam ;
+  sh:name "Gemeente"@nl ;
+  sh:property tooiont:Gemeente-gemeentecode ;
+  sh:property tooiont:Gemeente-ligtInProvincie ;
+  skos:definition "Een gemeente is het kleinste territoriaal openbaar lichaam met algemene bevoegdheden"@nl .
+
+tooiont:GrensoverschrijdendRegionaalOpenbaarLichaam a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Grensoverschrijdend regionaal openbaar lichaam"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subClassOf tooiont:RegionaalOpenbaarLichaam ;
+  rdfs:subClassOf tooiont:Samenwerkingsorganisatie ;
+  sh:name "Grensoverschrijdend regionaal openbaar lichaam"@nl ;
+  skos:definition "Een organisatie die in het leven is geroepen om een gemeenschappelijke regeling uit te voeren uit hoofde van een internationaal verdrag"@nl ;
+  skos:scopeNote "Een voorbeeld is Eurode, gevormd door de Nederlandse gemeente Kerkrade en Duitse gemeente 's-Hertogenrade (Herzogenrath). Grensoverschrijdende regionale openbare lichamen worden op dit moment nog niet vastgelegd in de organisatieregisters van KOOP"@nl .
+
+tooiont:Herschikking a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Herschikking"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subClassOf tooiont:ExistentieleWijziging ;
+  sh:name "Herschikking"@nl ;
+  sh:property tooiont:Herschikking-generated ;
+  sh:property tooiont:Herschikking-invalidated ;
+  sh:property tooiont:Herschikking-used ;
+  skos:definition "Bij een herschikking worden er één of meerdere organisaties opgeheven en worden er één of meerdere organisaties opgericht, en nul of meerdere bestaande organisaties zijn daarbij betrokken"@nl .
+
+tooiont:HistorischeVersie a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Historische versie"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subClassOf prov:Entity ;
+  sh:property tooiont:HistorischeVersie-einddatumHV ;
+  sh:property tooiont:HistorischeVersie-invalidatedAtTime ;
+  sh:property tooiont:HistorischeVersie-specializationOf ;
+  skos:definition "De toestand waarin een entiteit zich in heeft bevonden voordat deze wijzigde"@nl .
+
+tooiont:Informatieobject a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Informatieobject"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subClassOf dcat:Resource ;
+  rdfs:subClassOf prov:Entity ;
+  sh:property tooiont:Informatieobject-afkorting ;
+  sh:property tooiont:Informatieobject-aggregatiekenmerk ;
+  sh:property tooiont:Informatieobject-alternatieveTitel ;
+  sh:property tooiont:Informatieobject-citeertitel ;
+  sh:property tooiont:Informatieobject-creatiedatum ;
+  sh:property tooiont:Informatieobject-datumVervanging ;
+  sh:property tooiont:Informatieobject-documentsoort ;
+  sh:property tooiont:Informatieobject-format ;
+  sh:property tooiont:Informatieobject-gekwalificeerdeBetrokkenheid ;
+  sh:property tooiont:Informatieobject-generatedAtTime ;
+  sh:property tooiont:Informatieobject-heeftEffectgebied ;
+  sh:property tooiont:Informatieobject-heeftGrondslag ;
+  sh:property tooiont:Informatieobject-heeftGrondslagString ;
+  sh:property tooiont:Informatieobject-heeftJuridischeGrondslag ;
+  sh:property tooiont:Informatieobject-heeftRealisatie ;
+  sh:property tooiont:Informatieobject-heeftWerkingsgebied ;
+  sh:property tooiont:Informatieobject-identifier ;
+  sh:property tooiont:Informatieobject-isPartOf ;
+  sh:property tooiont:Informatieobject-keyword ;
+  sh:property tooiont:Informatieobject-language ;
+  sh:property tooiont:Informatieobject-naamOpsteller ;
+  sh:property tooiont:Informatieobject-officieleTitel ;
+  sh:property tooiont:Informatieobject-omschrijving ;
+  sh:property tooiont:Informatieobject-onderwerp ;
+  sh:property tooiont:Informatieobject-opsteller ;
+  sh:property tooiont:Informatieobject-peildatum ;
+  sh:property tooiont:Informatieobject-pid ;
+  sh:property tooiont:Informatieobject-publicatiedatum ;
+  sh:property tooiont:Informatieobject-publisher ;
+  sh:property tooiont:Informatieobject-qualifiedRelation ;
+  sh:property tooiont:Informatieobject-redenVervanging ;
+  sh:property tooiont:Informatieobject-replaces ;
+  sh:property tooiont:Informatieobject-soortBesluitendOrgaan ;
+  sh:property tooiont:Informatieobject-specializationOf ;
+  sh:property tooiont:Informatieobject-theme ;
+  sh:property tooiont:Informatieobject-titel ;
+  sh:property tooiont:Informatieobject-verantwoordelijke ;
+  sh:property tooiont:Informatieobject-verkorteTitel ;
+  sh:property tooiont:Informatieobject-verwijzingKort ;
+  sh:property tooiont:Informatieobject-verwijzingLang ;
+  sh:property tooiont:Informatieobject-wasRevisionOf ;
+  sh:property tooiont:Informatieobject-zichtdatum ;
+  skos:definition "Een resource waarvan de essentiële karakteristieken medegedeeld kunnen worden in een bericht"@nl ;
+  skos:scopeNote "Informatieobject is een subklasse van de categorie prov:Entitity 'An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary' en van de categorie dcat:Resource 'Resource published or curated by a single agent' — deze klasse '...carries properties common to all cataloged resources'."@nl .
+
+tooiont:JuridischeRuimte a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Juridische ruimte"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subClassOf tooiont:BestuurlijkeRuimte ;
+  sh:name "Juridische ruimte"@nl ;
+  skos:definition "Een bestuurlijke ruimte die het werkingsgebied of het effectgebied is van een informatieobject"@nl ;
+  skos:scopeNote "Deze klasse is ook een subklasse van de klasse Juridische ruimte in NEN 3610:2022. Deze laatste is gedefinieerd als een ruimte waar een juridisch instrument beleid of regelgeving toepast"@nl .
+
+tooiont:Ministerie a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Ministerie"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subClassOf tooiont:Overheidsorganisatie ;
+  sh:name "Ministerie"@nl ;
+  sh:property tooiont:Ministerie-ministeriecode ;
+  skos:definition "Een ministerie is een onderdeel van Rijksoverheid waar, onder verantwoordelijkheid van een minister, beleid wordt voorbereid en uitgevoerd op een specifiek beleidsterrein"@nl .
+
+tooiont:OfficielePublicatie a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Officiële publicatie"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subClassOf tooiont:Informatieobject ;
+  sh:property tooiont:OfficielePublicatie-opcode ;
+  sh:property tooiont:OfficielePublicatie-publicatieblad ;
+  sh:property tooiont:OfficielePublicatie-publicatiejaargang ;
+  sh:property tooiont:OfficielePublicatie-publicatienummer ;
+  sh:property tooiont:OfficielePublicatie-rubriek ;
+  skos:definition "Een document waarvan wettelijk is bepaald dat deze moet worden gepubliceerd in een van de publicatiebladen"@nl .
+
+tooiont:OpenbaarLichaamUitGemeenschappelijkeRegeling a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Openbaar lichaam uit gemeenschappelijke regeling"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subClassOf tooiont:RegionaalOpenbaarLichaam ;
+  rdfs:subClassOf tooiont:Samenwerkingsorganisatie ;
+  sh:name "Openbaar lichaam uit gemeenschappelijke regeling"@nl ;
+  skos:definition "Een organisatie die in het leven is geroepen om een gemeenschappelijke regeling uit te voeren uit hoofde van de Wet gemeenschappelijke regelingen (Wgr)"@nl .
+
+tooiont:Opheffing a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Opheffing"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subClassOf tooiont:ExistentieleWijziging ;
+  sh:name "Opheffing"@nl ;
+  sh:property tooiont:Opheffing-invalidated ;
+  skos:definition "Bij een opheffing worden één of meerdere organisaties opgeheven (geïnvalideerd)"@nl .
+
+tooiont:Oprichting a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Oprichting"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subClassOf tooiont:ExistentieleWijziging ;
+  sh:name "Oprichting"@nl ;
+  sh:property tooiont:Oprichting-generated ;
+  skos:definition "Bij een oprichting worden één of meerdere organisaties opgericht (gegenereerd)"@nl .
+
+tooiont:Opsplitsing a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Opsplitsing"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subClassOf tooiont:ExistentieleWijziging ;
+  sh:name "Opsplitsing"@nl ;
+  sh:property tooiont:Opsplitsing-generated ;
+  sh:property tooiont:Opsplitsing-invalidated ;
+  skos:definition "Bij een opsplitsing worden twee of meerdere organisaties opgericht al gevolg van de opheffing van een andere organisatie"@nl .
+
+tooiont:Overheidsorganisatie a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Overheidsorganisatie"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subClassOf org:FormalOrganization ;
+  rdfs:subClassOf prov:Agent ;
+  rdfs:subClassOf prov:Entity ;
+  rdfs:subClassOf prov:Organization ;
+  sh:property tooiont:Overheidsorganisatie-afkorting ;
+  sh:property tooiont:Overheidsorganisatie-alternatieveNaam ;
+  sh:property tooiont:Overheidsorganisatie-begindatum ;
+  sh:property tooiont:Overheidsorganisatie-einddatum ;
+  sh:property tooiont:Overheidsorganisatie-generatedAtTime ;
+  sh:property tooiont:Overheidsorganisatie-invalidatedAtTime ;
+  sh:property tooiont:Overheidsorganisatie-label ;
+  sh:property tooiont:Overheidsorganisatie-officieleNaamExclSoort ;
+  sh:property tooiont:Overheidsorganisatie-officieleNaamInclSoort ;
+  sh:property tooiont:Overheidsorganisatie-officieleNaamSorteer ;
+  sh:property tooiont:Overheidsorganisatie-organisatiecode ;
+  sh:property tooiont:Overheidsorganisatie-organisatiesoort ;
+  sh:property tooiont:Overheidsorganisatie-owmsId ;
+  sh:property tooiont:Overheidsorganisatie-voorkeursnaamExclSoort ;
+  sh:property tooiont:Overheidsorganisatie-voorkeursnaamInclSoort ;
+  sh:property tooiont:Overheidsorganisatie-voorkeursnaamSorteer ;
+  skos:definition "Een organisatie die namens de overheid taken uitvoert en onder het gezag en toezicht van de overheid valt"@nl .
+
+tooiont:Provincie a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Provincie"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subClassOf tooiont:RegionaalOpenbaarLichaam ;
+  sh:name "Provincie"@nl ;
+  sh:property tooiont:Provincie-provinciecode ;
+  skos:definition "Een provincie is een territoriaal openbaar lichaam met algemene bevoegdheden tussen gemeente en Rijk"@nl .
+
+tooiont:RegionaalOpenbaarLichaam a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Regionaal openbaar lichaam"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subClassOf tooiont:Overheidsorganisatie ;
+  sh:name "Rijk"@nl ;
+  sh:property tooiont:RegionaalOpenbaarLichaam-heeftBestuursgebied ;
+  skos:definition "Een regionaal openbaar lichaam is, in de bestuurlijke indeling van het Koninkrijk der Nederlanden, een overheid die wettelijk bepaalde taken uitvoert binnen een bepaald ruimtelijk gebied"@nl .
+
+tooiont:RegistratieveRuimte a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Registratieve ruimte"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subClassOf tooiont:BestuurlijkeRuimte ;
+  sh:name "Registratieve ruimte"@nl ;
+  skos:definition "Een bestuurlijke ruimte die het bestuursgebied is van een regionaal openbaar lichaam"@nl ;
+  skos:scopeNote "Deze klasse is ook een subklasse van de klasse Registratieve ruimte in NEN 3610:2022. Deze laatste is gedefinieerd als een op basis van wet- of regelgeving afgebakende ruimte die als eenheid geldt van politiek-bestuurlijke verantwoordelijkheid of voor bedrijfsvoering"@nl .
+
+tooiont:Rijk a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Rijk"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subClassOf tooiont:RegionaalOpenbaarLichaam ;
+  sh:name "Rijk"@nl ;
+  skos:definition "De klasse Rijk is de (singleton-) klasse van onderdelen van de Nederlandse overheid die wettelijke taken hebben op landelijk niveau: de 'centrale overheid'"@nl ;
+  skos:scopeNote "Van deze (singleton-) klasse bestaat slechts een enkele instantie, te weten oorg:oorg12345, met het label 'Rijksoverheid'"@nl .
+
+tooiont:SamengesteldInformatieobject a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Samengesteld informatieobject"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subClassOf tooiont:Informatieobject ;
+  sh:property tooiont:SamengesteldInformatieobject-soortSamengesteldInformatieobject ;
+  skos:definition "Een informatieobject dat andere informatieobjecten bevat"@nl .
+
+tooiont:Samenvoeging a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Samenvoeging"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subClassOf tooiont:ExistentieleWijziging ;
+  sh:name "Samenvoeging"@nl ;
+  sh:property tooiont:Samenvoeging-generated ;
+  sh:property tooiont:Samenvoeging-invalidated ;
+  skos:definition "Bij een samenvoeging ontstaat een nieuwe organisatie als gevolg van samenvoeging van twee of meer andere organisatie die ophouden te bestaan. De gegenereerde organisatie is de opvolger van de samengevoegde organisaties"@nl .
+
+tooiont:Samenwerkingsorganisatie a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Samenwerkingsorganisatie"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subClassOf tooiont:Overheidsorganisatie ;
+  sh:name "Samenwerkingsorganisatie"@nl ;
+  sh:property tooiont:Samenwerkingsorganisatie-organisatiesoort ;
+  sh:property tooiont:Samenwerkingsorganisatie-socode ;
+  skos:definition "Een organisatie die in het leven is geroepen om een gemeenschappelijke regeling uit te voeren in een publiekrechtelijke of privaatrechtelijke constructie"@nl .
+
+tooiont:Toestandswijziging a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Toestandswijziging"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subClassOf tooiont:Wijzigingsgebeurtenis ;
+  sh:name "Toestandswijziging"@nl ;
+  sh:property tooiont:Toestandswijziging-invalidated ;
+  sh:property tooiont:Toestandswijziging-used ;
+  skos:definition "Een wijziging waarbij de toestand van een entiteit veranderde, maar waarbij de identiteit de entiteit niet geraakt werd"@nl .
+
+tooiont:Uitbreiding a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Uitbreiding"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subClassOf tooiont:ExistentieleWijziging ;
+  sh:name "Uitbreiding" ;
+  sh:property tooiont:Uitbreiding-invalidated ;
+  sh:property tooiont:Uitbreiding-used ;
+  skos:definition "Bij een uitbreiding worden één of meerdere bestaande organisaties uitgebreid met één of meerdere andere organisatie, waarbij die andere organisaties ophouden zelfstandig te bestaan"@nl .
+
+tooiont:Waterschap a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Waterschap"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subClassOf tooiont:RegionaalOpenbaarLichaam ;
+  sh:name "Waterschap" ;
+  sh:property tooiont:Waterschap-waterschapscode ;
+  skos:definition "Een waterschap is een territoriaal openbaar lichaam dat uitsluitend bevoegd is met betrekking tot de waterhuishouding"@nl .
+
+tooiont:Wijzigingsgebeurtenis a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Wijzigingsgebeurtenis"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subClassOf prov:Activity ;
+  sh:name "Wijzigingsgebeurtenis"@nl ;
+  sh:property tooiont:Wijzigingsgebeurtenis-heeftJuridischeGrondslag ;
+  sh:property tooiont:Wijzigingsgebeurtenis-redenWijziging ;
+  sh:property tooiont:Wijzigingsgebeurtenis-tijdstipRegistratie ;
+  sh:property tooiont:Wijzigingsgebeurtenis-tijdstipWijziging ;
+  skos:definition "Een wijziging waarbij een entiteit (zoals een informatieobject of organisatie) van toestand is veranderd, dan wel begonnen of opgehouden is te bestaan."@nl .
+
+tooiont:Zbo a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Zelfstandig bestuursorgaan"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subClassOf tooiont:ZboOfZboCluster ;
+  sh:name "Zbo"@nl ;
+  sh:property tooiont:Zbo-hoortBijZboCluster ;
+  skos:definition "Een zelfstandig bestuursorgaan (zbo) is een bestuursorgaan van de centrale overheid dat niet direct onder het gezag van een minister valt"@nl .
+
+tooiont:ZboCluster a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Zbo-cluster"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subClassOf tooiont:ZboOfZboCluster ;
+  sh:name "ZboCluster"@nl ;
+  skos:definition "Een verzameling zelfstandige bestuursorganen die collectief wordt geregistreerd"@nl ;
+  skos:scopeNote """Een zbo-cluster kan worden beschreven met vrijwel alle properties die van toepassing zijn op een zbo.   Een cluster heeft bijvoorbeeld een zbo-code en een verantwoordelijk ministerie. Het kan verantwoordelijk zijn voor de inhoud van een publicatie. Ook wijzigingshistorie werkt als bij andere soorten overheidsorganisaties. Daarom definieert TOOI deze klasse als een subklasse van tooiont:ZboOfZboCluster.
+
+Clusters verschillen van andere organisaties in een aantal opzichten. Een cluster heeft bijvoorbeeld geen bestuur. In tegenstelling tot een 'normale'   zbo kan een cluster niet deel uitmaken van een ander cluster (en ook niet van zichzelf). Van sommige clusters zijn de leden als zodanig geregistreerd in het Zbo-Register. In andere gevallen is het cluster wel geregistreerd in het Zbo-Register, maar de leden niet. Dit betreft privaatrechtelijke organisaties   die een overheidstaak vervullen en als zodanig een zelfstandig bestuursorgaan   zijn. Voorbeelden zijn apk-garages en notarissen. De registratie van deze   zbo's vindt niet plaats in het Zbo-Register. In overheidsinformatie en metadata daarvan worden deze organisaties vaak collectief als cluster aangeduid."""@nl .
+
+tooiont:ZboOfZboCluster a rdfs:Class, sh:NodeShape ;
+  rdfs:label "Zbo of zbo-cluster"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subClassOf tooiont:Overheidsorganisatie ;
+  sh:name "ZboOfZboCluster"@nl ;
+  sh:property tooiont:ZboOfZboCluster-kaderwetVanToepassing ;
+  sh:property tooiont:ZboOfZboCluster-verantwoordelijkMinisterie ;
+  sh:property tooiont:ZboOfZboCluster-zbocode ;
+  skos:definition "Een zelfstandig bestuursorgaan of een verzameling zelfstandige bestuursorganen die collectief wordt geregistreerd"@nl .
+
+<https://identifier.overheid.nl/tooi/def/ont> a owl:Ontology ;
+  rdfs:label "TOOI - Thesaurus en Ontologie Overheidsinformatie"@nl ;
+  rdfs:comment "Ongeversioneerde variant"@nl ;
+  dcterms:description "Centraal in deze ontologie staan informatieobjecten en overheidsorganisaties"@nl ;
+  dcat:accessURL <https://standaarden.overheid.nl/tooi/downloads> ;
+  dcat:landingPage <https://standaarden.overheid.nl/tooi/doc/tooi-ontologie/> ;
+  dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
+  dcterms:language language:NLD ;
+  dcterms:licence <https://creativecommons.org/licenses/by/4.0/> ;
+  dcterms:modified "2024-06-18"^^xsd:date ;
+  dcterms:publisher <https://identifier.overheid.nl/tooi/id/oorg/oorg10117> ;
+  dcterms:title "TOOI - Thesaurus en Ontologie Overheidsinformatie"@nl ;
+  dcterms:type <http://publications.europa.eu/resource/authority/dataset-type/ONTOLOGY> ;
+  owl:imports dcterms: ;
+  owl:imports <http://purl.org/pav> ;
+  owl:imports <http://www.opengis.net/ont/geosparql> ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:imports <http://www.w3.org/2008/05/skos-xl> ;
+  owl:imports <http://www.w3.org/ns/adms> ;
+  owl:imports <http://www.w3.org/ns/dcat> ;
+  owl:imports org: ;
+  owl:imports prov: ;
+  owl:imports sh: ;
+  owl:imports foaf: ;
+  owl:versionInfo "v1.0 - 25 maart 2021 - Initiële versie"@nl ;
+  owl:versionInfo "v1.0.3 - 30 mei 2022 - Stabiele versie. Wijzigingen tbv PLOOI en ZboRegister. Imports toegevoegd, gekopieerde resources verwijderd. ###Toegevoegd: tooiont:pid, tooiont:Documenthandeling, tooiont:soortHandeling, tooiont:omschrijving, tooiont:SamengesteldInformatieobject, tooiont:aggregatiekenmerk, tooiont:soortSamengesteldInformatieobject, tooiont:publicatiedatum, tooiont:creatiedatum, tooiont:heeftRealisatie, tooiont:redenVervanging, tooiont:datumVervanging, tooiont:opsteller, tooiont:naamOpsteller, tooiont:Zbo, tooiont:ZboOfZboCluster, tooiont:ZboCluster, tooiont:hoortBijZboCluster, tooiont:Wijzigingsgebeurtenis, tooiont:redenWijziging. ###Aangepast: tooiont:onderwerp (sub van dcterms:description), tooiont:Informatieobject (sub van dcat:Resource en van prov:Entity), tooiont:verantwoordelijke (sub van dcterms:creator), tooiont:Overheidsorganisatie (sub van prov:Agent en prov:Organization), tooiont:zbocode (domein ZboOfZobCluster), tooiont:verantwoordelijkMinisterie (domein ZboOfZboCluster), tooiont:kaderwetVanToepassing (domein ZboOfZboCluster), tooiont:organisatiecode (domein gespecificeerd), einddatum (domein gespecificeerd), tooiont:afkorting (domein gespecificeerd), tooiont:tijdstipWijziging (domein Wijzigingsgebeurtenis), tooiont:tijdstipRegistratie (domein Wijzigingsgebeurtenis), tooiont:heeftGrondslag (domein Wijzigingsgebeurtenis), tooiont:heeftGrondslagString (domein Wijzigingsgebeurtenis), tooiont:ExistentieleWijziging (definitie aangepast, sub van Wijzigingsgebeurtenis), tooiont:Toestandswijziging (definitie aangepast, sub van Wijzigingsgebeurtenis), tooiont:HistorischeVersie (definitie gegeneraliseerd), tooiont:einddatum (definitie aangepast, domein aangepast (van organisatie naar prov:Entity)). ###Verwijderd: tooiont:heeftDeelnemer, tooiont: heeftBevoegdheidsgebied, tooiont:ZBO (vervangen door tooiont:Zbo), tooiont:zboSoort, tooiont:FormeleOrganisatiewijziging, tooiont:thema, tooiont:inhoudsindicatie."@nl ;
+  owl:versionInfo "v1.0.4 - 22 juni 2022 - Stabiele versie. Documentrelaties (L2) zijn toegevoegd. Tooiont is uitgebreid met de volgende resources: tooiont:Betrokkenheid, tooiont:gekwalificeerdeBetrokkenheid, tooiont:betrokkene, tooiont:soortBetrokkenheid, tooiont:naamBetrokkene. De definitie van de resource foaf:Agent is gekopieerd zodat de foaf-graaf niet geïmporteerd hoeft te worden."@nl ;
+  owl:versionInfo "v1.0.5 - 7 november 2022 - Metadata toegevoegd aan de ontologiegraaf"@nl ;
+  owl:versionInfo "v1.1.0 - 20 december 2022 - Omgezet naar SHACL en definities en toelichtingen toegevoegd aan alle (node- en property-) shapes"@nl ;
+  owl:versionInfo "v1.1.1 - 24 april 2023 - Missende propertyshapes toegevoegd. Missende sh:names toegevoegd aan propertyshapes.  Spelling tooiont:opcode verberbeterd en doorgevoerd. Modellering Samenwerkingsorganisaties en Gemeenschappelijke regelingen toegevoegd. Definitie aangepast van tooiont:Informatieobject-heeftGrondslag  en tooiont:Documenthandeling-soortHandeling. tooiont:Informatieobject-redenVervanging aangepast naar skos:Concept ipv xsd:string."@nl ;
+  owl:versionInfo "v1.1.2 - 29 juni 2023 - Definitie van ligtInProvincie aangescherpt"@nl ;
+  owl:versionInfo "v1.2.0 - 27 juli 2023 - Aanpassingen op kardinaliteit voor ExistentieleWijziging. Resources toegevoegd t.b.v. nieuwe structuur collectiegebaseerde conceptwaardelijsten (tooiont:context en tooiont:Groeperingsconcept)."@nl ;
+  owl:versionInfo "v1.3.0 - 26 oktober 2023 - Klassehiërarchie RegionaalOpenbaarLichaam ingevoerd. BestuurlijkeRuimte en geometrie toegevoegd, inclusief bijbehorende klassen en propertyshapes. Overbodige propertyshape verwijderd."@nl ;
+  owl:versionInfo "v1.3.1 - 16 januari 2024 - Propertyshapes hebben nu allemaal prefix tooiont; veranderd zijn adms:Identifier-creator, adms:Identifier-notation, adms:Identifier-schemaAgency, dcat:Relationship-relation en dcat:Relationship-hadRole. Feedback link naar GitLab. Ongedefinieerde propertyshape tooiont:OfficielePublicatie-publicatiedatum verwijderd."@nl ;
+  owl:versionInfo "v1.4.0 - 14 maart 2024 - Definities van de propertyshapes Bronhouderschap-, DeelnameGR-, HistorischeVersie-, en Overheidsorganisatie-einddatum verbeterd. Informatieobject-einddatum verwijderd. Definitie en omschrijving aangepast van tooiont:Informatieobject-heeftGrondslag en tooiont:Informatieobject-heeftGrondslagString. Toegevoegd: Informatieobject-heeftJuridischeGrondslag, Informatieobject-verwijzingKort, Informatieobject-verwijzingLang. Verwijderd: tooiont:OfficielePublicatie-datumInwerkingtreding; tooiont:OfficielePublicatie-datumUitwerkingtreding; tooiont:OfficielePublicatie-datumTerugwerkendeKracht (modellering niet conform uitgangspunten, traject nieuwe modellering ingezet);  Toegevoegd: HistorischeVersie-einddatumHV (voortaan te gebruiken ipv einddatum)."@nl ;
+  owl:versionInfo "v1.4.1 - 18 juni 2024 - Definities van (en documentatie voor) peildatum en zichtdatum verbeterd. Linkjes naar documentatieversies werkend gemaakt."@nl ;
+  pav:hasCurrentVersion <https://identifier.overheid.nl/tooi/def/ont-1.4.1> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/ont-1.0.5> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/ont-1.1.0> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/ont-1.1.1> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/ont-1.1.2> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/ont-1.2.0> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/ont-1.3.0> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/ont-1.3.1> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/ont-1.4.0> ;
+  pav:hasVersion <https://identifier.overheid.nl/tooi/def/ont-1.4.1> ;
+  pav:version "1.4.1" ;
+  vann:preferredNamespacePrefix "tooiont" ;
+  vann:preferredNamespaceUri tooiont: .
+
+geosparql:Geometry a owl:Class, sh:NodeShape .
+
+tooiont:Groeperingsconcept a owl:Class, sh:NodeShape ;
+  rdfs:label "Groeperingsconcept"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subClassOf skos:Concept ;
+  skos:definition "Een concept dat dient om andere concepten te groeperen voor een contextspecifiek doel"@nl ;
+  skos:scopeNote "Een groeperingsconcept mag doorgaans niet voorkomen in de metadata van een informatieobject of als waarde van een classificatieproperty"@nl .
+
+tooiont:afkorting a rdf:Property ;
+  rdfs:label "Afkorting"@nl ;
+  rdfs:isDefinedBy tooiont: .
+
+tooiont:aggregatiekenmerk a rdf:Property ;
+  rdfs:label "Aggregatiekenmerk"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:alternatieveNaam a rdf:Property ;
+  rdfs:label "Alternatieve naam"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:alternatieveTitel a rdf:Property ;
+  rdfs:label "Alternatieve titel"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subPropertyOf dcterms:title .
+
+tooiont:begindatum a rdf:Property ;
+  rdfs:label "Begindatum"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:betrokkene a rdf:Property ;
+  rdfs:label "Betrokkene"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:bronhouder a rdf:Property ;
+  rdfs:label "Bronhouder"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:citeertitel a rdf:Property ;
+  rdfs:label "Citeertitel"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subPropertyOf dcterms:title .
+
+tooiont:colcode a rdf:Property ;
+  rdfs:label "COL-code"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:context a rdf:Property ;
+  rdfs:label "Context"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:creatiedatum a rdf:Property ;
+  rdfs:label "Creatiedatum"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:datumVervanging a rdf:Property ;
+  rdfs:label "Datum vervanging"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:deelnameAan a rdf:Property ;
+  rdfs:label "Deelname aan"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:deelnemer a rdf:Property ;
+  rdfs:label "Deelnemer"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:documentsoort a rdf:Property ;
+  rdfs:label "Documentsoort"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:einddatum a rdf:Property ;
+  rdfs:label "Einddatum"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:einddatumHV a rdf:Property ;
+  rdfs:label "Einddatum historische versie"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:expandeert a rdf:Property ;
+  rdfs:label "Expandeert"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:gekwalificeerdeBetrokkenheid a rdf:Property ;
+  rdfs:label "Gekwalificeerde betrokkenheid"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:gemeentecode a rdf:Property ;
+  rdfs:label "Gemeente code"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  skos:definition "De gemeentecode. Dit is een nummer met vier cijfers, bijvoorbeeld '0023'"@nl .
+
+tooiont:heeftBestuursgebied a rdf:Property ;
+  rdfs:label "Heeft bestuursgebied"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:heeftEffectgebied a rdf:Property ;
+  rdfs:label "Heeft effectgebied"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:heeftGrondslag a rdf:Property ;
+  rdfs:label "Grondslag"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:heeftGrondslagString a rdf:Property ;
+  rdfs:label "Grondslag (tekstuele vorm)"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:heeftJuridischeGrondslag a rdf:Property ;
+  rdfs:label "Juridische grondslag"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:heeftRealisatie a rdf:Property ;
+  rdfs:label "Heeft realisatie"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:heeftWerkingsgebied a rdf:Property ;
+  rdfs:label "Heeft werkingsgebied"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:hoortBijZboCluster a rdf:Property ;
+  rdfs:label "Hoort bij Zbo-cluster"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:kaderwetVanToepassing a rdf:Property ;
+  rdfs:label "Kaderwet van toepassing"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:ligtInProvincie a rdf:Property ;
+  rdfs:label "Ligt in provincie"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:ministeriecode a rdf:Property ;
+  rdfs:label "Ministerie-code"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:naamBetrokkene a rdf:Property ;
+  rdfs:label "Naam betrokkene"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:naamOpsteller a rdf:Property ;
+  rdfs:label "Naam opsteller"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:officieleNaamExclSoort a rdf:Property ;
+  rdfs:label "Officiële naam exclusief soort"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:officieleNaamInclSoort a rdf:Property ;
+  rdfs:label "Officiële naam inclusief soort"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:officieleNaamSorteer a rdf:Property ;
+  rdfs:label "Officiële naam sorteer"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:officieleTitel a rdf:Property ;
+  rdfs:label "Officiële titel"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subPropertyOf dcterms:title .
+
+tooiont:omschrijving a rdf:Property ;
+  rdfs:label "Omschrijving"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:onderwerp a rdf:Property ;
+  rdfs:label "Onderwerp"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:opcode a rdf:Property ;
+  rdfs:label "opcode"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:opsteller a rdf:Property ;
+  rdfs:label "Opsteller"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subPropertyOf dcterms:creator .
+
+tooiont:organisatiecode a rdf:Property ;
+  rdfs:label "Organisatiecode"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:organisatiesoort a rdf:Property ;
+  rdfs:label "Organisatiesoort"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:owmsId a rdf:Property ;
+  rdfs:label "Owms ID"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:peildatum a rdf:Property ;
+  rdfs:label "peildatum"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:pid a rdf:Property ;
+  rdfs:label "PID"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subPropertyOf dcterms:identifier .
+
+tooiont:prefLabelVoorGroepen a rdf:Property ;
+  rdfs:label "Preflabel voor groepen"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:provinciecode a rdf:Property ;
+  rdfs:label "Provincie-code"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  skos:definition "De provinciecode. Dit is een nummer met twee cijfers, bijvoorbeeld '31'"@nl .
+
+tooiont:publicatieblad a rdf:Property ;
+  rdfs:label "Publicatieblad"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:publicatiedatum a rdf:Property ;
+  rdfs:label "Publicatiedatum"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:publicatiejaargang a rdf:Property ;
+  rdfs:label "Publicatiejaargang"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:publicatienummer a rdf:Property ;
+  rdfs:label "Publicatienummer"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:redenVervanging a rdf:Property ;
+  rdfs:label "Reden vervanging"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:redenWijziging a rdf:Property ;
+  rdfs:label "Reden wijziging"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:regeling a rdf:Property ;
+  rdfs:label "Regeling"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:rubriek a rdf:Property ;
+  rdfs:label "Rubriek"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:socode a rdf:Property ;
+  rdfs:label "so-code"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:soortBesluitendOrgaan a rdf:Property ;
+  rdfs:label "Soort besluitend orgaan"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:soortBetrokkenheid a rdf:Property ;
+  rdfs:label "Soort betrokkenheid"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:soortGemeenschappelijkeRegeling a rdf:Property ;
+  rdfs:label "Soort gemeenschappelijke regeling"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:soortHandeling a rdf:Property ;
+  rdfs:label "Soort handeling"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:soortSamengesteldInformatieobject a rdf:Property ;
+  rdfs:label "Soort samengesteld informatieobject"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:tijdstipRegistratie a rdf:Property ;
+  rdfs:label "Tijdstip registratie"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:tijdstipWijziging a rdf:Property ;
+  rdfs:label "Tijdstip wijziging"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:titel a rdf:Property ;
+  rdfs:label "Titel"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subPropertyOf dcterms:title .
+
+tooiont:verantwoordelijkMinisterie a rdf:Property ;
+  rdfs:label "Verantwoordelijk ministerie"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:verantwoordelijke a rdf:Property ;
+  rdfs:label "Verantwoordelijke"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subPropertyOf dcterms:creator .
+
+tooiont:verkorteTitel a rdf:Property ;
+  rdfs:label "Verkorte titel"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subPropertyOf dcterms:title .
+
+tooiont:verwijzingKort a rdf:Property ;
+  rdfs:label "Verwijzing kort"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:verwijzingLang a rdf:Property ;
+  rdfs:label "Verwijzing lang"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:voorkeursnaamExclSoort a rdf:Property ;
+  rdfs:label "Voorkeursnaam exclusief soort"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:voorkeursnaamInclSoort a rdf:Property ;
+  rdfs:label "Voorkeursnaam inclusief soort"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:voorkeursnaamSorteer a rdf:Property ;
+  rdfs:label "Voorkeursnaam sorteer"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:waterschapscode a rdf:Property ;
+  rdfs:label "Waterschaps-code"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:zbocode a rdf:Property ;
+  rdfs:label "Zbo-code"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+tooiont:zichtdatum a rdf:Property ;
+  rdfs:label "Zichtdatum"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> .
+
+adms:Identifier a sh:NodeShape ;
+  rdfs:subClassOf owl:Thing ;
+  sh:property tooiont:Identifier-creator ;
+  sh:property tooiont:Identifier-notation ;
+  sh:property tooiont:Identifier-schemeAgency ;
+  skos:definition "Een resource waarvan de stringwaarde, zoals uitgedrukt met behulp van skos:notation, gebruikt wordt om een object te identificeren"@nl .
+
+dcat:Relationship a sh:NodeShape ;
+  rdfs:subClassOf owl:Thing ;
+  sh:property tooiont:Relationship-hadRole ;
+  sh:property tooiont:Relationship-relation .
+
+dcat:Role a sh:NodeShape ;
+  rdfs:subClassOf owl:Thing .
+
+foaf:Agent a sh:NodeShape ;
+  rdfs:subClassOf owl:Thing .
+
+prov:Activity a sh:NodeShape ;
+  rdfs:subClassOf owl:Thing .
+
+prov:Agent a sh:NodeShape ;
+  rdfs:subClassOf owl:Thing .
+
+prov:Entity a sh:NodeShape ;
+  rdfs:subClassOf owl:Thing .
+
+prov:Organization a sh:NodeShape .
+
+skos:Collection a sh:NodeShape ;
+  rdfs:subClassOf owl:Thing ;
+  sh:property tooiont:Collection-expandeert ;
+  sh:property tooiont:Collection-prefLabelVoorGroepen .
+
+skos:Concept a sh:NodeShape ;
+  rdfs:subClassOf owl:Thing ;
+  sh:property tooiont:Concept-order ;
+  sh:property tooiont:Concept-prefLabelVoorGroepen .
+
+tooiont:Afsplitsing-generated a sh:PropertyShape ;
+  rdfs:label "Afsplitsing-generated"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class prov:Entity ;
+  sh:minCount 1 ;
+  sh:name "Gegenereerde entiteit afsplitsing"@nl ;
+  sh:path prov:generated ;
+  skos:definition "De entiteiten waarvan het bestaan een aanvang nam als gevolg van de afsplitsing"@nl .
+
+tooiont:Afsplitsing-used a sh:PropertyShape ;
+  rdfs:label "Afsplitsing-used"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class prov:Entity ;
+  sh:minCount 1 ;
+  sh:name "Betrokken entiteit afsplitsing"@nl ;
+  sh:path prov:used ;
+  skos:definition "De entiteiten die een rol hebben gespeeld bij de afsplitsing."@nl .
+
+tooiont:BestuurlijkeRuimte-hasGeometry a sh:PropertyShape ;
+  rdfs:label "BestuurlijkeRuimte-hasGeometry" ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class geosparql:Geometry ;
+  sh:minCount 1 ;
+  sh:name "Heeft geometrie"@nl ;
+  sh:path geosparql:hasGeometry ;
+  skos:definition "De geometrie van de fysieke ruimte die de bestuurlijke ruimte bestrijkt"@nl .
+
+tooiont:Betrokkenheid-betrokkene a sh:PropertyShape ;
+  rdfs:label "Betrokkenheid-betrokkene"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class foaf:Agent ;
+  sh:description "Deze property is verplicht als tooiont:naamBetrokkene niet gespecificeerd is en dient anders niet gebruikt te worden"@nl ;
+  sh:maxCount 1 ;
+  sh:path tooiont:betrokkene ;
+  skos:definition "De betrokken persoon of organisatie"@nl .
+
+tooiont:Betrokkenheid-naamBetrokkene a sh:PropertyShape ;
+  rdfs:label "Betrokkenheid-naamBetrokkene"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:string ;
+  sh:description "Deze property kan gebruikt worden voor gevallen waarin er geen URI gemunt kan worden voor de persoon of organisatie. Dit kan ook de naam zijn van bijvoorbeeld een café of een actiegroep. Deze property is verplicht als tooiont:betrokkene niet gespecificeerd is en dient anders niet gebruikt te worden"@nl ;
+  sh:maxCount 1 ;
+  sh:path tooiont:naamBetrokkene ;
+  skos:definition "De naam van de betrokken persoon of organisatie"@nl .
+
+tooiont:Betrokkenheid-soortBetrokkenheid a sh:PropertyShape ;
+  rdfs:label "Betrokkenheid-soortBetrokkenheid"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class dcat:Role ;
+  sh:description """De properties dcat:hadRole en prov:hadRole zijn niet bruikbaar wegens de betreffende domeindefinities.
+
+De concepten voor deze property zijn gedefinieerd in het conceptschema tooikern:betrokkenheid."""@nl ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+  sh:path tooiont:soortBetrokkenheid ;
+  skos:definition "De rol die de betrokkene had ten opzichte van het informatieobject."@nl .
+
+tooiont:Bronhouderschap-begindatum a sh:PropertyShape ;
+  rdfs:label "Bronhouderschap-begindatum"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:date ;
+  sh:maxCount 1 ;
+  sh:path tooiont:begindatum ;
+  skos:definition "De eerste dag waarop het bronhouderschap van kracht was."@nl .
+
+tooiont:Bronhouderschap-bronhouder a sh:PropertyShape ;
+  rdfs:label "Bronhouderschap-bronhouder"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class tooiont:Overheidsorganisatie ;
+  sh:maxCount 1 ;
+  sh:path tooiont:bronhouder ;
+  skos:definition "De bronhoudende overheidsorganisatie"@nl .
+
+tooiont:Bronhouderschap-einddatum a sh:PropertyShape ;
+  rdfs:label "Bronhouderschap-einddatum"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:date ;
+  sh:maxCount 1 ;
+  sh:path tooiont:einddatum ;
+  skos:definition "De laatste kalenderdag (inclusief) waarop het bronhouderschap van kracht was"@nl .
+
+tooiont:Bronhouderschap-regeling a sh:PropertyShape ;
+  rdfs:label "Bronhouderschap-regeling"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class tooiont:GemeenschappelijkeRegeling ;
+  sh:maxCount 1 ;
+  sh:path tooiont:regeling ;
+  skos:definition "De gemeenschappelijke regeling waar de overheidsorganisatie de bronhouder is"@nl .
+
+tooiont:CaribischOpenbaarLichaam-colcode a sh:PropertyShape ;
+  rdfs:label "CaribischOpenbaarLichaam-colcode"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:string ;
+  sh:maxCount 1 ;
+  sh:maxInclusive "99" ;
+  sh:minCount 1 ;
+  sh:minInclusive "00" ;
+  sh:path tooiont:colcode ;
+  skos:definition "De col-code (van een Caribisch openbaar lichaam). Dit is een nummer met twee cijfers, bijvoorbeeld '02'"@nl .
+
+tooiont:Collection-expandeert a sh:PropertyShape ;
+  rdfs:label "Collection-expandeert"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class skos:Concept ;
+  sh:name "Expandeert"@nl ;
+  sh:path tooiont:expandeert ;
+  skos:definition "Wordt gebruik bij een skos:Collection om aan te geven dat de collectie correspondeert met een concept. Meer in het bijzonder, vanuit gebruiksperspectief mag je het concept dat de waarde is van deze property als de 'broader' zien van de concepten in de collectie (maar alleen in de context van de collectie). Dit in tegenstelling tot een skos:Collection die alleen maar een groepering is"@nl .
+
+tooiont:Collection-prefLabelVoorGroepen a sh:PropertyShape ;
+  rdfs:label "Collection-prefLabelVoorGroepen"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:string ;
+  sh:name "Voorkeurslabel voor groepen"@nl ;
+  sh:path tooiont:prefLabelVoorGroepen ;
+  skos:definition "Het voorkeurslabel voor groepen individuals die het concept 'instantiëren' of gemetadateerd zijn met het concept."@nl .
+
+tooiont:Concept-order a sh:PropertyShape ;
+  rdfs:label "Concept-order"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:integer ;
+  sh:description """Hierbij gelden de volgende conventies:
+
+*    Als concept A een lagere waarde heeft dan concept B, dan komt A vóór B
+*    Als concept A geen waarde heeft en concept B wel, dan komt A vóór B
+*    Als concept A geen waarde heeft en concept B ook niet, dan geldt de alfabetische volgorde van preflabels
+
+Dit is relevant bij concepten met preflabels als "overige registermutaties". Terwijl in de meeste applicaties de specifiek genoemde registermutaties gewoon op alfabetische volgorde van preflabel gesorteerd dienen te worden, moet het concept "overige registermutaties" onderaan de lijst staan. In dergelijke gevallen geven we dit concept bijvoorbeeld de waarde "1010"^^xsd:integer, terwijl we geen waarde specificeren voor de andere concepten."""@nl ;
+  sh:name "Volgorde-indicatie"@nl ;
+  sh:path sh:order ;
+  skos:definition "Getal dat de sorteervolgorde van concepten aangeeft."@nl .
+
+tooiont:Concept-prefLabelVoorGroepen a sh:PropertyShape ;
+  rdfs:label "Concept-prefLabelVoorGroepen"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:string ;
+  sh:name "Voorkeurslabel voor groepen"@nl ;
+  sh:path tooiont:prefLabelVoorGroepen ;
+  skos:definition "Het voorkeurslabel voor groepen individuals die het concept 'instantiëren' of gemetadateerd zijn met het concept"@nl .
+
+tooiont:DeelnameGR-begindatum a sh:PropertyShape ;
+  rdfs:label "DeelnameGR-begindatum"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:date ;
+  sh:maxCount 1 ;
+  sh:path tooiont:begindatum ;
+  skos:definition "De eerste dag waarop de deelname van kracht was, inclusief"@nl .
+
+tooiont:DeelnameGR-deelnameAan a sh:PropertyShape ;
+  rdfs:label "DeelnameGR-deelnameAan"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class tooiont:GemeenschappelijkeRegeling ;
+  sh:maxCount 1 ;
+  sh:path tooiont:deelnameAan ;
+  skos:definition "De gemeenschappelijke regeling waaraan deelgenomen wordt"@nl .
+
+tooiont:DeelnameGR-deelnemer a sh:PropertyShape ;
+  rdfs:label "DeelnameGR-deelnemer"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class tooiont:Overheidsorganisatie ;
+  sh:maxCount 1 ;
+  sh:path tooiont:deelnemer ;
+  skos:definition "De deelnemende overheidsorganisatie"@nl .
+
+tooiont:DeelnameGR-einddatum a sh:PropertyShape ;
+  rdfs:label "DeelnameGR-einddatum"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:date ;
+  sh:maxCount 1 ;
+  sh:path tooiont:einddatum ;
+  skos:definition "De laatste kalenderdag (inclusief) waarop de deelname van kracht was"@nl .
+
+tooiont:DeelnameGR-heeftJuridischeGrondslag a sh:PropertyShape ;
+  rdfs:label "DeelnameGR-heeftJuridischeGrondslag"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class tooiont:Informatieobject ;
+  sh:path tooiont:heeftJuridischeGrondslag ;
+  skos:definition "Wet, regeling of besluit waaraan de deelname zijn rechtsgeldigheid ontleent"@nl .
+
+tooiont:Documenthandeling-atTime a sh:PropertyShape ;
+  rdfs:label "Documenthandeling-date"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:dateTime ;
+  sh:maxCount 1 ;
+  sh:name "Tijdstip handeling"@nl ;
+  sh:path prov:atTime ;
+  skos:definition "Het tijdstip van handeling. Wanneer zowel dcterms:date als prov:atTime zijn gespecificeerd, dan moet het datumgedeelte in de een overeenkomen met de ander"@nl .
+
+tooiont:Documenthandeling-date a sh:PropertyShape ;
+  rdfs:label "Documenthandeling-date"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:maxCount 1 ;
+  sh:name "Datum handeling"@nl ;
+  sh:or ( [
+    sh:datatype xsd:date ;
+  ] [
+    sh:datatype xsd:gYearMonth ;
+  ] [
+    sh:datatype xsd:gYear ;
+  ] ) ;
+  sh:path dcterms:date ;
+  skos:definition "De datum waarop handeling plaatsvond"@nl .
+
+tooiont:Documenthandeling-soortHandeling a sh:PropertyShape ;
+  rdfs:label "Documenthandeling-soortHandeling"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class skos:Concept ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+  sh:path tooiont:soortHandeling ;
+  skos:definition "De soort documenthandeling"@nl .
+
+tooiont:Documenthandeling-used a sh:PropertyShape ;
+  rdfs:label "Documenthandeling-used"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class tooiont:Informatieobject ;
+  sh:minCount 1 ;
+  sh:name "Informatieobject"@nl ;
+  sh:path prov:used ;
+  skos:definition "Het informatieobject of de informatieobjecten waar de handeling op uitgevoerd wordt"@nl .
+
+tooiont:Documenthandeling-wasAssociatedWith a sh:PropertyShape ;
+  rdfs:label "Documenthandeling-wasAssociatedWith"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class tooiont:Overheidsorganisatie ;
+  sh:maxCount 1 ;
+  sh:name "Uitgevoerd door"@nl ;
+  sh:path prov:wasAssociatedWith ;
+  skos:definition "De entiteit die de handeling heeft uitgevoerd of namens wie de handeling is uitgevoerd"@nl .
+
+tooiont:GemeenschappelijkeRegeling-soortGemeenschappelijkeRegeling a sh:PropertyShape ;
+  rdfs:label "GemeenschappelijkeRegeling-soortGemeenschappelijkeRegeling"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class skos:Concept ;
+  sh:description "De concepten voor deze indeling zijn gedefinieerd in het conceptschema tooikern:SoortGemeenschappelijkeRegeling"@nl ;
+  sh:path tooiont:soortGemeenschappelijkeRegeling ;
+  skos:definition "De soort regeling (regionaal, landelijk, grensoverschrijdend)"@nl .
+
+tooiont:Gemeente-gemeentecode a sh:PropertyShape ;
+  rdfs:label "Gemeente-gemeentecode"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:string ;
+  sh:maxCount 1 ;
+  sh:message "Een gemeentecode dient aanwezig te zijn. De gemeentecode is een nummer met vier cijfers, bijvoorbeeld '0023'"@nl ;
+  sh:minCount 1 ;
+  sh:path tooiont:gemeentecode ;
+  skos:definition "De gemeentecode. Dit is een nummer met vier cijfers, bijvoorbeeld \"0023\"."@nl .
+
+tooiont:Gemeente-ligtInProvincie a sh:PropertyShape ;
+  rdfs:label "Gemeente-ligtInProvincie"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class tooiont:Provincie ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+  sh:path tooiont:ligtInProvincie ;
+  skos:definition "De provincie waarin het bestuursgebied van de gemeente ligt"@nl .
+
+tooiont:Herschikking-generated a sh:PropertyShape ;
+  rdfs:label "Herschikking-generated"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class prov:Entity ;
+  sh:minCount 1 ;
+  sh:name "Gegenereerde entiteit herschikking"@nl ;
+  sh:path prov:generated ;
+  skos:definition "De entiteiten waarvan het bestaan een aanvang nam als gevolg van de herschikking"@nl .
+
+tooiont:Herschikking-invalidated a sh:PropertyShape ;
+  rdfs:label "Herschikking-invalidated"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class prov:Entity ;
+  sh:minCount 1 ;
+  sh:name "Opgeheven entiteit herschikking"@nl ;
+  sh:path prov:invalidated ;
+  skos:definition "De entiteiten die een rol hebben gespeeld bij de wijziging."@nl .
+
+tooiont:Herschikking-used a sh:PropertyShape ;
+  rdfs:label "Herschikking-used"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class prov:Entity ;
+  sh:name "Betrokken entiteit herschikking"@nl ;
+  sh:path prov:used ;
+  skos:definition "De entiteiten die als gevolg van de wijziging opgehouden zijn te bestaan."@nl .
+
+tooiont:HistorischeVersie-einddatumHV a sh:PropertyShape ;
+  rdfs:label "HistorischeVersie-einddatum"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:date ;
+  sh:maxCount 1 ;
+  sh:name "Einddatum van de historische versie" ;
+  sh:path tooiont:einddatumHV ;
+  skos:definition "De laatste kalenderdag (inclusief) waarop de historische versie (dus de oude toestand van de resource) van kracht was."@nl .
+
+tooiont:HistorischeVersie-invalidatedAtTime a sh:PropertyShape ;
+  rdfs:label "HistorischeVersie-invalidatedAtTime"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:dateTime ;
+  sh:maxCount 1 ;
+  sh:name "Tijdstip wijziging"@nl ;
+  sh:path prov:invalidatedAtTime ;
+  skos:definition "Het tijdstip dat de de toestand wijzigde in een andere toestand, en de toestand dus niet meer van kracht is."@nl .
+
+tooiont:HistorischeVersie-specializationOf a sh:PropertyShape ;
+  rdfs:label "HistorischeVersie-specializationOf"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class prov:Entity ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+  sh:name "Historische versie van"@nl ;
+  sh:path prov:specializationOf ;
+  skos:definition "De entiteit waar de historische versie een toestand van uitdrukt."@nl .
+
+tooiont:Identifier-creator a sh:PropertyShape ;
+  rdfs:label "Identifier-creator"@en ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class foaf:Agent ;
+  sh:name "Toegekend door"@nl ;
+  sh:nodeKind sh:IRI ;
+  sh:path dcterms:creator ;
+  skos:definition "De partij die de identifier heeft toegekend"@nl .
+
+tooiont:Identifier-notation a sh:PropertyShape ;
+  rdfs:label "Identifier-notation"@en ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:description """De waarde van deze property is een literal. Deze is bij voorkeur getypeerd. Dat kan in termen van een standaard RDF datatype, zoals in zoals in "231/mvo/24-9919"^^xsd:string en "https://doi.org/10.5281/zenodo.1486279"^^xsd:anyURI, of in termen van een "custom datatype".
+
+De identificerende literal hoeft niet globally unique te zijn, maar is wel uniek binnen het identificatieschema."""@nl ;
+  sh:name "Code"@nl ;
+  sh:path skos:notation ;
+  skos:definition "De literal die de resource uniek identificeert (uniciteit is gegarandeerd binnen het identificatieschema)"@nl .
+
+tooiont:Identifier-schemeAgency a sh:PropertyShape ;
+  rdfs:label "Identifier-schemeAgency"@en ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:string ;
+  sh:description "De naam van de toekenner kan vastgelegd worden als de identiteit van de toekenner niet uit te drukken valt in termen van een in een relevant dan wel bruikbaar register gemunte URI."@nl ;
+  sh:name "Naam toekenner"@nl ;
+  sh:path adms:schemeAgency ;
+  skos:definition "De naam van de partij die de identifier heeft toegekend"@nl .
+
+tooiont:Informatieobject-afkorting a sh:PropertyShape ;
+  rdfs:label "Informatieobject-afkorting"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:string ;
+  sh:path tooiont:afkorting ;
+  skos:definition "De afkorting van de titel van het informatieobject"@nl .
+
+tooiont:Informatieobject-aggregatiekenmerk a sh:PropertyShape ;
+  rdfs:label "Informatieobject-aggregatiekenmerk"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:string ;
+  sh:description "Het is aan de metadaterende partij om te zorgen dat de aangeleverde aggregatiekenmerken \"globally unique\" zijn. Een kenmerk als \"2021-135\" wordt afgeraden. De aggregatie als zodanig (een dossier, een zaak of een andere verzameling) wordt hierbij niet gemodelleerd en krijgt dan ook geen URI." ;
+  sh:path tooiont:aggregatiekenmerk ;
+  skos:definition "Het kenmerk op basis waarvan verschillende informatieobjecten gemarkeerd zijn als horende bij een dossier, zaak of andersoortige aggregatie"@nl .
+
+tooiont:Informatieobject-alternatieveTitel a sh:PropertyShape ;
+  rdfs:label "Informatieobject-alternatieveTitel"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:string ;
+  sh:path tooiont:alternatieveTitel ;
+  skos:definition "De alternatieve titel van het informatieobject"@nl .
+
+tooiont:Informatieobject-citeertitel a sh:PropertyShape ;
+  rdfs:label "Informatieobject-citeertitel"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:string ;
+  sh:path tooiont:citeertitel ;
+  skos:definition "De citeertitel is de wijze waarop een informatieobject, blijkens een bepaling in dat informatieobject zelf, wordt aangeduid (REP, citeertitel)"@nl .
+
+tooiont:Informatieobject-creatiedatum a sh:PropertyShape ;
+  rdfs:label "Informatieobject-creatiedatum"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subPropertyOf dcterms:created ;
+  sh:maxCount 1 ;
+  sh:or ( [
+    sh:datatype xsd:date ;
+  ] [
+    sh:datatype xsd:gYearMonth ;
+  ] [
+    sh:datatype xsd:gYear ;
+  ] ) ;
+  sh:path tooiont:creatiedatum ;
+  skos:definition "Datum waarop het informatieobject gemaakt is"@nl .
+
+tooiont:Informatieobject-datumVervanging a sh:PropertyShape ;
+  rdfs:label "Informatieobject-datumVervanging"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:date ;
+  sh:maxCount 1 ;
+  sh:path tooiont:datumVervanging ;
+  skos:definition "De datum waarop de vervanging ingegaan is"@nl .
+
+tooiont:Informatieobject-documentsoort a sh:PropertyShape ;
+  rdfs:label "Informatieobject-documentsoort"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class skos:Concept ;
+  sh:description """Deze property voorziet in de behoefte aan een fijnmazige maar eenvoudig toe te passen categorisering die voor meerdere doeleinden kan worden gebruikt. Daarom is de indeling niet volledig consistent. Er wordern meerdere categorisatiecriteria toegepast. Documentsoort kan bepaald zijn naar functie binnen een proces (bezwaarschrift, adviesdocument), naar de aard van de opsteller (document van burger, rechterlijk document), naar de aard van de gebruiker van het document (parlementair document), naar de manier van publicatie (gemeenteblad, staatscourant) — enzovoorts. Het scheiden van de verschillende indelingscriteria in verschillende properties levert te veel complexiteit op in het redactionele proces.
+
+Door de diversiteit in documentsoorten varieert het gebruik van dit metadata-element. Omdat we de mogelijke gebruikscontext van concepten binnen TOOI zoveel mogelijk buiten beschouwing laten maken we voor specifieke afnemers doorsneden van het conceptschema, waarbij de concepten desgewenst afnemer-specifieke labels kunnen krijgen en in een afnemerspecifieke hiërachie uitgeleverd kunnen worden.""" ;
+  sh:path tooiont:documentsoort ;
+  skos:definition "Het soort document waar het informatieobject toe behoort"@nl .
+
+tooiont:Informatieobject-format a sh:PropertyShape ;
+  rdfs:label "Informatieobject-format"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class skos:Concept ;
+  sh:description "De waarde van deze property is een concept uit het schema tooixtrn:file-type"@nl ;
+  sh:name "Format"@nl ;
+  sh:path dcterms:format ;
+  skos:definition "Het format (bijvoorbeeld XML, PDF, CSV) waarin het informatieobject zich manifesteert"@nl .
+
+tooiont:Informatieobject-gekwalificeerdeBetrokkenheid a sh:PropertyShape ;
+  rdfs:label "Informatieobject-gekwalificeerdeBetrokkenheid"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class tooiont:Betrokkenheid ;
+  sh:path tooiont:gekwalificeerdeBetrokkenheid ;
+  skos:definition "De nader gespecificeerde betrokkenheid horende bij het informatieobject"@nl .
+
+tooiont:Informatieobject-generatedAtTime a sh:PropertyShape ;
+  rdfs:label "Informatieobject-generatedAtTime"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:dateTime ;
+  sh:description "Als dcterms:created gespecificeerd is en prov:generatedAtTime ook, dan moet het datumgedeelte van de laatstgenoemde waarde gelijk zijn aan de creatiedatum."@nl ;
+  sh:name "Tijdstip aangemaakt"@nl ;
+  sh:path prov:generatedAtTime ;
+  skos:definition "Het tijdstip waarop het informatieobject is gegenereerd, waarna het bestaat."@nl .
+
+tooiont:Informatieobject-heeftEffectgebied a sh:PropertyShape ;
+  rdfs:label "Informatieobject-heeftEffectgebied Copy"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class tooiont:JuridischeRuimte ;
+  sh:description "Een voorbeeld is het effectgebied waar aardbevingsschade in Groningen toegeschreven kan worden aan door gasonttrekking veroorzaakte seismische activiteit"@nl ;
+  sh:name "Heeft effectgebied"@nl ;
+  sh:path tooiont:heeftEffectgebied ;
+  skos:definition "Het gebied waar een effect optreedt en dat als zodanig in een overheidsinformatieobject benoemd wordt"@nl .
+
+tooiont:Informatieobject-heeftGrondslag a sh:PropertyShape ;
+  rdfs:label "Informatieobject-heeftGrondslag"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:anyURI ;
+  sh:description """De validiteit van een informatieobject kan vele aspecten hebben. Er kunnen dan ook verschillende soorten grondslag onderscheiden worden: financiële grondslag, feitelijke grondslag, enz.
+
+Indien het gaat om een juridische grondslag dient de property tooiont:heeftJuridischeGrondslag gebruikt te worden."""@nl ;
+  sh:path tooiont:heeftGrondslag ;
+  skos:definition "De basis voor de validiteit van het informatieobject"@nl .
+
+tooiont:Informatieobject-heeftGrondslagString a sh:PropertyShape ;
+  rdfs:label "Informatieobject-heeftGrondslagString"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:string ;
+  sh:description "De waarde van deze property is een tekstuele verwijzing in de vorm van een string, niet een tooiont:Informatieobject. Het gebruik van deze property dient beperkt te blijven tot gevallen waarin het gebruik van een URI niet mogelijk is."@nl ;
+  sh:path tooiont:heeftGrondslagString ;
+  skos:definition "De basis voor de validiteit van het informatieobject, in de vorm van tekst. "@nl .
+
+tooiont:Informatieobject-heeftJuridischeGrondslag a sh:PropertyShape ;
+  rdfs:label "heeftJuridischeGrondslag"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class tooiont:Informatieobject ;
+  sh:description """De waarde van deze property is een rechtsgrond, geidentificeerd door een URI. De URI is bij voorkeur resolvable.
+
+Het register waarin de betreffende wet, regeling of besluit gehouden wordt geldt als de authentieke bron van metadata. Uitspraken over metadata van de rechtsgrond zullen daarom niet in het "aanroepende" document (c.q. de metadata daarvan) opgenomen worden, tenzij er om praktische redenen voor wordt gekozen om een aantal van deze uitspraken lokaal te kopiëren ("caching"). Denk hierbij aan de juiste tekstuele vorm van de verwijzing. De uitspraak dat de resource inderdaad een tooiont:Informatieobject is kan evenzo lokaal herhaald worden. Indien er in de lokale context geen aanleiding bestaat om een dergelijke uitspraak op te nemen dan zal de typering nog steeds afgeleid kunnen worden (inferencing obv SHACL). Dat geldt uiteraard niet voor niet-afleidbare uitspraken, zoals de tekstuele vorm van de verwijzing. Die zullen dan moeten worden opgehaald bij de bron."""@nl ;
+  sh:name "Juridische grondslag"@nl ;
+  sh:path tooiont:heeftJuridischeGrondslag ;
+  skos:definition "Wet, regeling of besluit waaraan het informatieobject zijn rechtsgeldigheid ontleent"@nl .
+
+tooiont:Informatieobject-heeftRealisatie a sh:PropertyShape ;
+  rdfs:label "Informatieobject-heeftRealisatie"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:anyURI ;
+  sh:description "Telkens als de URL die de waarde is van deze property wordt meegegeven in een http-request wordt er een realisatie geretourneerd. Met 'realisatie' wordt hetzelfde bedoeld als het FRBR-begrip 'Item'. Het is een fysiek exemplaar van het beschreven informatieobject (een manifestatie)"@nl ;
+  sh:maxCount 1 ;
+  sh:path tooiont:heeftRealisatie ;
+  skos:definition "Een realisatie van het informatieobject in de vorm van een fysiek bestand"@nl .
+
+tooiont:Informatieobject-heeftWerkingsgebied a sh:PropertyShape ;
+  rdfs:label "Informatieobject-heeftWerkingsgebied"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class tooiont:JuridischeRuimte ;
+  sh:name "Heeft werkingsgebied"@nl ;
+  sh:path tooiont:heeftWerkingsgebied ;
+  skos:definition "Het gebied waar een juridisch instrument of onderdeel daarvan van toepassing is"@nl .
+
+tooiont:Informatieobject-identifier a sh:PropertyShape ;
+  rdfs:label "Informatieobject-identifier"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class adms:Identifier ;
+  sh:name "Identifier"@nl ;
+  sh:path adms:identifier ;
+  skos:definition "Een alternatieve identifier"@nl .
+
+tooiont:Informatieobject-isPartOf a sh:PropertyShape ;
+  rdfs:label "Informatieobject-isPartOf"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class tooiont:SamengesteldInformatieobject ;
+  sh:maxCount 1 ;
+  sh:name "Maakt deel uit van"@nl ;
+  sh:path dcterms:isPartOf ;
+  skos:definition "Het samengesteld informatieobject (bijvoorbeeld dossier) waar het beschreven informatieobject deel van uitmaakt"@nl .
+
+tooiont:Informatieobject-keyword a sh:PropertyShape ;
+  rdfs:label "Informatieobject-keyword"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:string ;
+  sh:description "Het doel van deze property is om informatieobjecten met maximale flexibiliteit in te delen volgens een vrij, informeel en onbeheerd classificatieschema."@nl ;
+  sh:name "Trefwoord"@nl ;
+  sh:path dcat:keyword ;
+  skos:definition "Een term die kan fungeren als criterium voor groeperen van informatieobjecten, of als zoekterm voor indexeren"@nl .
+
+tooiont:Informatieobject-language a sh:PropertyShape ;
+  rdfs:label "Informatieobject-language"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class skos:Concept ;
+  sh:description "De waarde van deze property is een concept uit het schema tooixtrn:taal"@nl ;
+  sh:name "Taal"@nl ;
+  sh:path dcterms:language ;
+  skos:definition "De taal waarin het informatieobject is opgesteld (REP, taal)"@nl .
+
+tooiont:Informatieobject-naamOpsteller a sh:PropertyShape ;
+  rdfs:label "Informatieobject-naamOpsteller"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:string ;
+  sh:description "De naam van de opsteller kan vastgelegd worden als de identiteit van de opsteller niet uit te drukken valt in termen van een in een relevant dan wel bruikbaar register gemunte URI."@nl ;
+  sh:maxCount 1 ;
+  sh:path tooiont:naamOpsteller ;
+  skos:definition "De naam van de actor die het informatieobject opgesteld heeft"@nl .
+
+tooiont:Informatieobject-officieleTitel a sh:PropertyShape ;
+  rdfs:label "Informatieobject-officieleTitel"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:string ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+  sh:path tooiont:officieleTitel ;
+  skos:definition "De officiële titel van het informatieobject  (REP, officiële titel)"@nl .
+
+tooiont:Informatieobject-omschrijving a sh:PropertyShape ;
+  rdfs:label "Informatieobject-omschrijving"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subPropertyOf dcterms:description ;
+  sh:datatype xsd:string ;
+  sh:description "Het doel van deze property is om bij het presenteren van een beperkte selectie van informatieobjecten in meer detail aan te kunnen geven waar elk informatieobject over gaat, in de vorm van een samenvatting."@nl ;
+  sh:path tooiont:omschrijving ;
+  skos:definition "Een tekstuele beschrijving in enkele zinnen van het onderwerp van het informatieobject"@nl .
+
+tooiont:Informatieobject-onderwerp a sh:PropertyShape ;
+  rdfs:label "Informatieobject-onderwerp"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  rdfs:subPropertyOf dcterms:description ;
+  sh:datatype xsd:string ;
+  sh:description "Het doel van deze property is om bij het presenteren van grotere hoeveelheden informatieobjecten duidelijk en overzichtelijk aan te kunnen geven waar elk informatieobject in hoofdlijnen over gaat. De beschrijving van het onderwerp is specifiek en dus, in principe, voor elk informatieobject anders. Het gaat dus nadrukkelijk niet om een waarde uit een gesloten begrippenlijst (concept). Voor dat doel kan de property dcat:theme worden gebruikt."@nl ;
+  sh:path tooiont:onderwerp ;
+  skos:definition "Een tekstuele beschrijving in één of enkele woorden van datgene waar het informatieobject over gaat"@nl .
+
+tooiont:Informatieobject-opsteller a sh:PropertyShape ;
+  rdfs:label "Informatieobject-opsteller"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class foaf:Agent ;
+  sh:description """Er is geen algemene regel te geven voor welke actor als opsteller van een informatieobject beschouwd moet worden. Dit kan per collectie worden vastgesteld. Een vuistregel is dat als de verantwoordelijke voor de inhoud (tooiont:verantwoordelijke) en de opsteller dezelfde organisatie is, alleen de verantwoordelijke wordt vastgelegd.
+
+Voorbeelden:
+
+* Een gemeente publiceert een bouwvergunningsaanvraag, die is ingediend door een particulier. De gemeente is de verantwoordelijke; de particulier is de opsteller. Besloten wordt om alleen de verantwoordelijke vast te leggen
+
+* Een ministerie geeft een adviesbureau of universiteit opdracht een onderzoek uit te voeren en daarvan een rapport op te stellen. Het ministerie is de eindverantwoordelijke van het rapport en het bureau of universiteit de opsteller. Besloten wordt om zowel verantwoordelijke als maker apart vast te leggen
+
+* Een kenniscentrum publiceert op haar website documenten die door gemeenten zijn opgesteld. De gemeente is verantwoordelijke en maker van de documenten; besloten wordt om de gemeente alleen als verantwoordelijke vast te leggen."""@nl ;
+  sh:maxCount 1 ;
+  sh:path tooiont:opsteller ;
+  skos:definition "De actor die het informatieobject opgesteld heeft"@nl .
+
+tooiont:Informatieobject-peildatum a sh:PropertyShape ;
+  rdfs:label "Informatieobject-peildatum"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:date ;
+  sh:description "In de context van een TOOI-waardelijst betreft dit de datum waarop de beschreven toestand zich voordeed voor zover die op de zichtdatum bekend was"@nl ;
+  sh:maxCount 1 ;
+  sh:path tooiont:peildatum ;
+  skos:definition "De datum waarop een toestand zich voordeed"@nl .
+
+tooiont:Informatieobject-pid a sh:PropertyShape ;
+  rdfs:label "Informatieobject-pid"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:string ;
+  sh:description """De URI is globally unique en persistent.
+
+Merk op dat dit een relatie is van informatieobjecten naar URIs, waarbij je dus uitspraken krijgt als {<uri-x> tooiont:pid <uri-x>}. Dit is analoog aan "Cindy heet 'Cindy'", met het tweede voorkomen van "Cindy" tussen aanhalingstekens."""@nl ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+  sh:path tooiont:pid ;
+  skos:definition "De door KOOP toegekende persistente URI die het informatieobject denoteert"@nl .
+
+tooiont:Informatieobject-publicatiedatum a sh:PropertyShape ;
+  rdfs:label "Informatieobject-publicatiedatum"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:description "REP, publicatiedatum"@nl ;
+  sh:maxCount 1 ;
+  sh:or ( [
+    sh:datatype xsd:date ;
+  ] [
+    sh:datatype xsd:gYearMonth ;
+  ] [
+    sh:datatype xsd:gYear ;
+  ] ) ;
+  sh:path tooiont:publicatiedatum ;
+  skos:definition "Datum van publicatie"@nl .
+
+tooiont:Informatieobject-publisher a sh:PropertyShape ;
+  rdfs:label "Informatieobject-publisher"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class tooiont:Overheidsorganisatie ;
+  sh:description "Het gaat hier dus om de organisatie die verantwoordelijk is voor het publiceren. BZK (waar KOOP een afdeling van is) verzorgt voor veel publicaties de technische aspecten van het publiceren, maar doet dit vaak namens andere partijen. De gemeente die een officiële bekendmaking ter publicatie aan KOOP aanbiedt is de dcterms:publisher en ook de tooiont:verantwoordelijke. Deze twee properties kunnen ook verschillende waarden hebben, bijvoorbeeld als een gemeente een dossier publiceert met daarin een brief van de minister. In dat geval is de gemeente de dcterms:publisher terwijl de minister de tooiont:verantwoordelijke is. Beide properties zijn optioneel."@nl ;
+  sh:maxCount 1 ;
+  sh:name "Openbaar gemaakt door"@nl ;
+  sh:path dcterms:publisher ;
+  skos:definition "De entiteit die verantwoordelijk is voor het publiceren van het informatieobject, meer in het bijzonder de partij die de plicht heeft tot actieve openbaarmaking ervan"@nl .
+
+tooiont:Informatieobject-qualifiedRelation a sh:PropertyShape ;
+  rdfs:label "Informatieobject-qualifiedRelation"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class dcat:Relationship ;
+  sh:name "Relatie"@nl ;
+  sh:path dcat:qualifiedRelation ;
+  skos:definition "De relatie tussen een informatieobject en een nader gespecificeerde document-documentrelatie"@nl .
+
+tooiont:Informatieobject-redenVervanging a sh:PropertyShape ;
+  rdfs:label "Informatieobject-redenVervanging"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class skos:Concept ;
+  sh:description "De concepten voor deze property zijn gedefinieerd in het conceptschema tooikern:redenIntrekkingOfVervanging"@nl ;
+  sh:maxCount 1 ;
+  sh:path tooiont:redenVervanging ;
+  skos:definition "De reden dat het beschreven informatieobject een ander vervangen heeft"@nl .
+
+tooiont:Informatieobject-replaces a sh:PropertyShape ;
+  rdfs:label "Informatieobject-replaces"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class tooiont:Informatieobject ;
+  sh:name "Vervangt"@nl ;
+  sh:path dcterms:replaces ;
+  skos:definition "Het informatieobject dat wordt vervangen door het beschreven informatieobject"@nl .
+
+tooiont:Informatieobject-soortBesluitendOrgaan a sh:PropertyShape ;
+  rdfs:label "Informatieobject-soortBesluitendOrgaan"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class skos:Concept ;
+  sh:description "De concepten voor deze property zijn gedefinieerd in het conceptschema tooikern:bestuursorgaan. Voorbeelden zijn B&W en de gemeenteraad. (REP, vastgesteld door)"@nl ;
+  sh:path tooiont:soortBesluitendOrgaan ;
+  skos:definition "Het soort orgaan dat verantwoordelijk is voor het besluit dat de strekking is van het informatieobject (indien van toepassing)."@nl .
+
+tooiont:Informatieobject-specializationOf a sh:PropertyShape ;
+  rdfs:label "Informatieobject-specializationOf"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class tooiont:Informatieobject ;
+  sh:description "Voorbeelden zijn de relaties tussen een versie (expressie) en een werk, en tussen een manifestatie en een versie (expressie). Dit valt onder de meer algemene definitie in PROV-O. Die luidt als volgt (vertaald naar het Nederlands): \"Een prov:Entity die een specialisatie is van een andere deelt alle aspecten van de laatstgenoemde, en heeft daarenboven meer specifieke aspecten van hetzelfde ding als laatstgenoemde. Meer in het bijzonder, de levensloop van de entiteit waarvan een specialisatie wordt afgeleid omvat de levensloop van iedere specialisatie van deze entiteit. Voorbeelden zijn een tijdsperiode, een abstractie en een context gerelateerd aan de entiteit.\""@nl ;
+  sh:name "Versie van"@nl ;
+  sh:path prov:specializationOf ;
+  skos:definition "Het informatieobject waar dit informatieobject een meer specifieke vorm van van vertegenwoordigt"@nl .
+
+tooiont:Informatieobject-theme a sh:PropertyShape ;
+  rdfs:label "Informatieobject-theme"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class skos:Concept ;
+  sh:description """Het doel van deze property is om informatieobjecten in te delen volgens een voorgedefinieerd classificatieschema. De concepten in het bereik kunnen uit verschillende conceptschema's komen. Dit zal per documentcollectie verschillen. Voor instanties van de subklasse tooiont:OfficielePublicatie is de waarde beperkt tot thema's in de TOP-thesaurus: zie aldaar.
+
+De REP spreekt over onderwerp. Het is duidelijk dat het hier om een thematische aanduiding gaat waarbij de waarde van de property een voorgedefinieerd concept is. We houden hier vast aan de terminologie van Thema-indeling Overheidspublicaties (TOP) en gebruiken de termen thema (dcat:theme) en onderwerp (tooiont:onderwerp) overeenkomstig.
+
+(REP, onderwerp)"""@nl ;
+  sh:name "Thema"@nl ;
+  sh:path dcat:theme ;
+  skos:definition "Het thema waaronder het informatieobject valt, uit een voorgedefinieerde verzameling thema's"@nl .
+
+tooiont:Informatieobject-titel a sh:PropertyShape ;
+  rdfs:label "Informatieobject-titel"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:string ;
+  sh:path tooiont:titel ;
+  skos:definition "De titel van het informatieobject"@nl .
+
+tooiont:Informatieobject-verantwoordelijke a sh:PropertyShape ;
+  rdfs:label "Informatieobject-verantwoordelijke"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class tooiont:Overheidsorganisatie ;
+  sh:description """Zie ook tooiont:opsteller en tooiont:creatiedatum.
+
+Over het algemeen geldt dat als een derde partij geïnteresseerd is in de dcterms:creator van een informatieobject in een KOOP-collectie, het meestal de verantwoordelijke betreft: deze partij is in de context van overheidsinformatie voor de meeste doeleinden relevanter dan de opsteller van de informatie.
+
+(REP, verantwoordelijke)"""@nl ;
+  sh:maxCount 1 ;
+  sh:path tooiont:verantwoordelijke ;
+  skos:definition "Overheidsorganisatie die de wettelijke verantwoordelijkheid draagt voor de inhoud (strekking) van het informatieobject"@nl .
+
+tooiont:Informatieobject-verkorteTitel a sh:PropertyShape ;
+  rdfs:label "Informatieobject-verkorteTitel"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:string ;
+  sh:path tooiont:verkorteTitel ;
+  skos:definition "De verkorte titel van het informatieobject"@nl .
+
+tooiont:Informatieobject-verwijzingKort a sh:PropertyShape ;
+  rdfs:label "Informatieobject-verwijzingKort"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:string ;
+  sh:description "Bijvoorbeeld: \"art 257b Sv\""@nl ;
+  sh:maxCount 1 ;
+  sh:name "Verwijzing kort"@nl ;
+  sh:path tooiont:verwijzingKort ;
+  skos:definition "De verkorte aanduiding waarmee naar het informatieobject verwezen dient te worden"@nl .
+
+tooiont:Informatieobject-verwijzingLang a sh:PropertyShape ;
+  rdfs:label "Informatieobject-verwijzingLang"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:string ;
+  sh:description "Bijvoorbeeld: \"artikel 257b van het Wetboek van Strafrecht\""@nl ;
+  sh:maxCount 1 ;
+  sh:name "Verwijzing lang"@nl ;
+  sh:path tooiont:verwijzingLang ;
+  skos:definition "De lange aanduiding waarmee naar het informatieobject verwezen dient te worden"@nl .
+
+tooiont:Informatieobject-wasRevisionOf a sh:PropertyShape ;
+  rdfs:label "Informatieobject-wasRevisionOf"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class tooiont:Informatieobject ;
+  sh:description "De meer algemene definitie in PROV-O luidt als volgt. Een revisie is een derivatie waarbij het de resulterende entiteit (in de zin van prov:Entity) een gereviseerde versie is van een origineel. De implicatie hierbij is dat de resulterende entiteit substantieel inhoud bevat van het origineel"@nl ;
+  sh:name "Revisie van"@nl ;
+  sh:path prov:wasRevisionOf ;
+  skos:definition "Het informatieobject waar dit informatieobject een nieuwe, aangepaste versie van vertegenwoordigt"@nl .
+
+tooiont:Informatieobject-zichtdatum a sh:PropertyShape ;
+  rdfs:label "Informatieobject-zichtdatum"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:date ;
+  sh:description "In de context van een TOOI-waardelijst betreft dit de datum die bepaalt welke toestandsbeschrijving van toepassing was op de peildatum"@nl ;
+  sh:maxCount 1 ;
+  sh:path tooiont:zichtdatum ;
+  skos:definition "De datum van waaruit een toestand beschouwd wordt"@nl .
+
+tooiont:Label-context a sh:PropertyShape ;
+  rdfs:label "Label-context"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:anyURI ;
+  sh:description "Deze shape moet nog verbonden worden met de target: skosxl:Label"@nl ;
+  sh:name "Label-context"@nl ;
+  sh:path tooiont:context ;
+  skos:definition "URI van de waardelijst die de context vormt waarbinnen het label het voorkeurslabel is"@nl .
+
+tooiont:Ministerie-ministeriecode a sh:PropertyShape ;
+  rdfs:label "Ministerie-ministeriecode"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:string ;
+  sh:maxCount 1 ;
+  sh:maxInclusive "9999" ;
+  sh:minCount 1 ;
+  sh:minInclusive "0000" ;
+  sh:path tooiont:ministeriecode ;
+  skos:definition "De ministeriecode. Dit is een nummer met vier cijfers, bijvoorbeeld '1010'"@nl .
+
+tooiont:OfficielePublicatie-opcode a sh:PropertyShape ;
+  rdfs:label "OfficielePublicatie-opcode"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:string ;
+  sh:description "Nota bene: REP heeft daarnaast \"Bij elektronische bekendmaking wordt ook een URL opgenomen.\" In de huidige context fungeert de URI van de bekendmaking tevens als URL. In de metadata op officielebekendmakingen.nl heet deze overheidop.publicationIdentifier. In STOP is dit data:publicatieIdentifier" ;
+  sh:maxCount 1 ;
+  sh:path tooiont:opcode ;
+  skos:definition "De code waarmee volgens de gangbare coderingssystematiek een officiële publicatie uniek wordt aangeduid. Deze bestaat uit de afkorting voor het publicatieblad, de jaargang en het volgnummer, gescheiden door '-'. Bijvoorbeeld \"gmb-2020-25\""@nl .
+
+tooiont:OfficielePublicatie-publicatieblad a sh:PropertyShape ;
+  rdfs:label "OfficielePublicatie-publicatieblad"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class skos:Concept ;
+  sh:description "In de metadata op officielebekendmakingen.nl heet deze \"overheidop.publicationName\". In STOP is dit data:publicatieblad"@nl ;
+  sh:maxCount 1 ;
+  sh:path tooiont:publicatieblad ;
+  skos:definition "Het blad, gerepresenteerd door een concept uit het conceptschema tooikern:publicatieblad"@nl .
+
+tooiont:OfficielePublicatie-publicatiejaargang a sh:PropertyShape ;
+  rdfs:label "OfficielePublicatie-publicatiejaargang"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:gYear ;
+  sh:description "In de metadata op officielebekendmakingen.nl heet deze \"overheidop.jaargang\". In STOP is dit data:jaargang"@nl ;
+  sh:maxCount 1 ;
+  sh:path tooiont:publicatiejaargang ;
+  skos:definition "De jaargang van het blad"@nl .
+
+tooiont:OfficielePublicatie-publicatienummer a sh:PropertyShape ;
+  rdfs:label "OfficielePublicatie-publicatienummer"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:integer ;
+  sh:description "In de metadata op officielebekendmakingen.nl heet deze \"overheidop.publicationIssue\". In STOP is dit data:publicatienummer"@nl ;
+  sh:maxCount 1 ;
+  sh:path tooiont:publicatienummer ;
+  skos:definition "Het volgnummer binnen de jaargang van het blad"@nl .
+
+tooiont:OfficielePublicatie-rubriek a sh:PropertyShape ;
+  rdfs:label "OfficielePublicatie-rubriek"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class skos:Concept ;
+  sh:description "Het bereik is beperkt tot concepten in het conceptschema tooiwep:rubriek. Noot: In OWMS 4.0 heette het begrip rubriek nog \"informatietype\". De naam \"rubriek\" drukt de betekenis van de property beter uit."@nl ;
+  sh:path tooiont:rubriek ;
+  skos:definition "De soort publicatie, bijvoorbeeld algemeen verbindend voorschrift of beleidsregel. Dit veld bepaalt (onder meer) de rubrieksindeling op https://www.officielebekendmakingen.nl."@nl .
+
+tooiont:Opheffing-invalidated a sh:PropertyShape ;
+  rdfs:label "Opheffing-invalidated"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class prov:Entity ;
+  sh:minCount 1 ;
+  sh:name "Opgeheven entiteit"@nl ;
+  sh:path prov:invalidated ;
+  skos:definition "De entiteiten die als gevolg van opheffing opgehouden zijn te bestaan."@nl .
+
+tooiont:Oprichting-generated a sh:PropertyShape ;
+  rdfs:label "Oprichting-generated"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class prov:Entity ;
+  sh:minCount 1 ;
+  sh:name "Gegenereerde entiteit oprichting"@nl ;
+  sh:path prov:generated ;
+  skos:definition "De entiteiten waarvan het bestaan een aanvang nam als gevolg van de oprichting"@nl .
+
+tooiont:Opsplitsing-generated a sh:PropertyShape ;
+  rdfs:label "Opsplitsing-generated"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class prov:Entity ;
+  sh:minCount 2 ;
+  sh:name "Gegenereerde entiteit opsplitsing"@nl ;
+  sh:path prov:generated ;
+  skos:definition "De entiteiten waarvan het bestaan een aanvang nam als gevolg van de opsplitsing"@nl .
+
+tooiont:Opsplitsing-invalidated a sh:PropertyShape ;
+  rdfs:label "Opsplitsing-invalidated"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class prov:Entity ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+  sh:name "Opgeheven entiteit opsplitsing"@nl ;
+  sh:path prov:invalidated ;
+  skos:definition "De entiteiten die als gevolg van de opsplitsing opgehouden zijn te bestaan."@nl .
+
+tooiont:Overheidsorganisatie-afkorting a sh:PropertyShape ;
+  rdfs:label "Overheidsorganisatie-afkorting"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:string ;
+  sh:maxCount 1 ;
+  sh:path tooiont:afkorting ;
+  skos:definition "De afkorting van de naam van de resource"@nl .
+
+tooiont:Overheidsorganisatie-alternatieveNaam a sh:PropertyShape ;
+  rdfs:label "Overheidsorganisatie-alternatieveNaam"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:string ;
+  sh:path tooiont:alternatieveNaam ;
+  skos:definition "Een alternatieve naam waarmee de organisatie aangeduid is geworden in een officiële publicatie, niet zijnde de voorkeursnaam of officiële naam"@nl .
+
+tooiont:Overheidsorganisatie-begindatum a sh:PropertyShape ;
+  rdfs:label "Overheidsorganisatie-begindatum"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:date ;
+  sh:description "De waarde van deze property is gelijk aan de datum-component van prov:generatedAtTime van de organisatie."@nl ;
+  sh:maxCount 1 ;
+  sh:path tooiont:begindatum ;
+  skos:definition "De eerste kalenderdag waarop de organisatie bestond, inclusief"@nl .
+
+tooiont:Overheidsorganisatie-einddatum a sh:PropertyShape ;
+  rdfs:label "Overheidsorganisatie-einddatum"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:date ;
+  sh:description "De laatste kalenderdag (inclusief) waarop de organisatie nog bestond. De waarde is afleidbaar uit de waarde van prov:invalidatedAtTime"@nl ;
+  sh:maxCount 1 ;
+  sh:path tooiont:einddatum ;
+  skos:definition "De laatste kalenderdag (inclusief) waarop de overheidsorganisatie nog bestond."@nl .
+
+tooiont:Overheidsorganisatie-generatedAtTime a sh:PropertyShape ;
+  rdfs:label "Overheidsorganisatie-generatedAtTime"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:dateTime ;
+  sh:description """Indien de waarde van deze property gespecificeerd is én de existentiële wijziging waarbij de organisatie ophield te bestaan is geregistreerd, dan is deze waarde gelijk aan de waarde van tooiont:tijdstipWijziging van de betreffende instantie van tooiont:ExistentieleWijziging 
+
+Wanneer toegepast op tooiont:HistorischeVersie  heeft deze property een andere betekenis, zie aldaar.
+
+Indien niet gespecificeerd betekent dat dat de organisatie nog bestaat. De waarde kan op het moment van beschouwen nog in de toekomst liggen omdat organisatiewijzigingen ook voordat ze formeel ingaan in een register kunnen worden opgenomen."""@nl ;
+  sh:name "Tijdstip oprichting"@nl ;
+  sh:path prov:generatedAtTime ;
+  skos:definition "Het tijdstip waarop het formele bestaan van de organisatie begon"@nl .
+
+tooiont:Overheidsorganisatie-invalidatedAtTime a sh:PropertyShape ;
+  rdfs:label "Overheidsorganisatie-invalidatedAtTime"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:dateTime ;
+  sh:description """Indien de waarde van deze property gespecificeerd is én de existentiële wijziging waarbij de organisatie ophield te bestaan is geregistreerd, dan is deze waarde gelijk aan de waarde van tooiont:tijdstipWijziging van de betreffende instantie van tooiont:ExistentieleWijziging.
+
+Wanneer toegepast op tooiont:HistorischeVersie  (zie ook verderop) heeft deze property een andere betekenis, zie aldaar.
+
+Indien niet gespecificeerd betekent dat dat de organisatie nog bestaat. De waarde kan op het moment van beschouwen nog in de toekomst liggen omdat organisatiewijzigingen ook voordat ze formeel ingaan in het register kunnen worden opgenomen"""@nl ;
+  sh:name "Tijdstip opheffing"@nl ;
+  sh:path prov:invalidatedAtTime ;
+  skos:definition "Het tijdstip dat het formele bestaan van de organisatie eindigde"@nl .
+
+tooiont:Overheidsorganisatie-label a sh:PropertyShape ;
+  rdfs:label "Overheidsorganisatie-label"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:string ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+  sh:name "Label"@nl ;
+  sh:path rdfs:label ;
+  skos:definition "De voorkeursnaam van de organisatie"@nl .
+
+tooiont:Overheidsorganisatie-officieleNaamExclSoort a sh:PropertyShape ;
+  rdfs:label "Overheidsorganisatie-officieleNaamExclSoort"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:string ;
+  sh:maxCount 1 ;
+  sh:path tooiont:officieleNaamExclSoort ;
+  skos:definition "De officiële naam van de organisatie zonder soortaanduiding, bijvoorbeeld ''s-Gravenhage'"@nl .
+
+tooiont:Overheidsorganisatie-officieleNaamInclSoort a sh:PropertyShape ;
+  rdfs:label "Overheidsorganisatie-officieleNaamInclSoort"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:string ;
+  sh:maxCount 1 ;
+  sh:path tooiont:officieleNaamInclSoort ;
+  skos:definition "De officiële naam van de organisatie met soortaanduiding, bijvoorbeeld 'gemeente 's-Gravenhage'"@nl .
+
+tooiont:Overheidsorganisatie-officieleNaamSorteer a sh:PropertyShape ;
+  rdfs:label "Overheidsorganisatie-officieleNaamSorteer"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:string ;
+  sh:maxCount 1 ;
+  sh:path tooiont:officieleNaamSorteer ;
+  skos:definition "De officiële naam van de organisatie zoals te gebruiken voor het sorteren op alfabetische volgorde, bijvoorbeeld 'Gravenhage'"@nl .
+
+tooiont:Overheidsorganisatie-organisatiecode a sh:PropertyShape ;
+  rdfs:label "Overheidsorganisatie-organisatiecode"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:string ;
+  sh:description "Deze is uniek voor elke organisatie en fungeert bovendien als local name (gegeven de namespace-conventies binnen de registers)"@nl ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+  sh:path tooiont:organisatiecode ;
+  skos:definition "De organisatiecode"@nl .
+
+tooiont:Overheidsorganisatie-organisatiesoort a sh:PropertyShape ;
+  rdfs:label "Overheidsorganisatie-organisatiesoort"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class skos:Concept ;
+  sh:minCount 1 ;
+  sh:path tooiont:organisatiesoort ;
+  skos:definition "Het concept in tooikern dat staat voor de organisatiesoort"@nl .
+
+tooiont:Overheidsorganisatie-owmsId a sh:PropertyShape ;
+  rdfs:label "Overheidsorganisatie-owmsId"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:anyURI ;
+  sh:description "Organisaties hebben in TOOI nieuwe URIs gekregen, die verschillen van de OWMS-URIs."@nl ;
+  sh:maxCount 1 ;
+  sh:path tooiont:owmsId ;
+  skos:definition "De URI van de corresponderende resource in OWMS 4.0"@nl .
+
+tooiont:Overheidsorganisatie-voorkeursnaamExclSoort a sh:PropertyShape ;
+  rdfs:label "Overheidsorganisatie-voorkeursnaamExclSoort"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:string ;
+  sh:maxCount 1 ;
+  sh:path tooiont:voorkeursnaamExclSoort ;
+  skos:definition "De voorkeursnaam van de organisatie zonder soortaanduiding, bijvoorbeeld 'Den Haag'"@nl .
+
+tooiont:Overheidsorganisatie-voorkeursnaamInclSoort a sh:PropertyShape ;
+  rdfs:label "Overheidsorganisatie-voorkeursnaamInclSoort"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:string ;
+  sh:maxCount 1 ;
+  sh:path tooiont:voorkeursnaamInclSoort ;
+  skos:definition "De voorkeursnaam van de organisatie met soortaanduiding, bijvoorbeeld 'gemeente Den Haag'"@nl .
+
+tooiont:Overheidsorganisatie-voorkeursnaamSorteer a sh:PropertyShape ;
+  rdfs:label "Overheidsorganisatie-voorkeursnaamSorteer"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:string ;
+  sh:maxCount 1 ;
+  sh:path tooiont:voorkeursnaamSorteer ;
+  skos:definition "De voorkeursnaam van de organisatie zoals te gebruiken voor het sorteren op alfabetische volgorde, bijvoorbeeld 'Haag'"@nl .
+
+tooiont:Provincie-provinciecode a sh:PropertyShape ;
+  rdfs:label "Provincie-provinciecode"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:string ;
+  sh:maxCount 1 ;
+  sh:maxInclusive "99" ;
+  sh:message "Provinciecode dient aanwezig te zijn. De provinciecode is een nummer met twee cijfers, bijvoorbeeld '31'"@nl ;
+  sh:minCount 1 ;
+  sh:minInclusive "00" ;
+  sh:path tooiont:provinciecode ;
+  sh:resultSeverity sh:Violation ;
+  skos:definition "De provinciecode. Dit is een nummer met twee cijfers, bijvoorbeeld \"31\"."@nl .
+
+tooiont:RegionaalOpenbaarLichaam-heeftBestuursgebied a sh:PropertyShape ;
+  rdfs:label "RegionaalOpenbaarLichaam-heeftBestuursgebied"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class tooiont:BestuurlijkeRuimte ;
+  sh:minCount 1 ;
+  sh:name "Heeft bestuursgebied"@nl ;
+  sh:path tooiont:heeftBestuursgebied ;
+  skos:definition "Het gebied waarbinnen het regionaal openbaar lichaam taken uitvoert"@nl .
+
+tooiont:Relationship-hadRole a sh:PropertyShape ;
+  rdfs:label "Relationship-hadRole"@en ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class dcat:Role ;
+  sh:description "De concepten voor deze property zijn gedefinieerd in het conceptschema tooikern:documentrelatie"@nl ;
+  sh:name "Rol"@nl ;
+  sh:path dcat:hadRole ;
+  skos:definition "De rol die het gerelateerde informatieobject had ten opzichte van het beschreven informatieobject"@nl .
+
+tooiont:Relationship-relation a sh:PropertyShape ;
+  rdfs:label "Relationship-relation"@en ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class tooiont:Informatieobject ;
+  sh:name "Relatie met"@nl ;
+  sh:nodeKind sh:IRI ;
+  sh:path dcterms:relation ;
+  skos:definition "De relatie tussen een nader gespecificeerde document-documentrelatie en informatieobject"@nl .
+
+tooiont:SamengesteldInformatieobject-soortSamengesteldInformatieobject a sh:PropertyShape ;
+  rdfs:label "SamengesteldInformatieobject-soortSamengesteldInformatieobject"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class skos:Concept ;
+  sh:path tooiont:soortSamengesteldInformatieobject ;
+  skos:definition "De soort aggregatie, zoals aangeduid door het concept"@nl .
+
+tooiont:Samenvoeging-generated a sh:PropertyShape ;
+  rdfs:label "Samenvoeging-generated"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class prov:Entity ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+  sh:name "Gegenereerde entiteit"@nl ;
+  sh:path prov:generated ;
+  skos:definition "De entiteiten waarvan het bestaan een aanvang nam als gevolg van de samenvoeging"@nl .
+
+tooiont:Samenvoeging-invalidated a sh:PropertyShape ;
+  rdfs:label "Samenvoeging-invalidated"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class prov:Entity ;
+  sh:minCount 2 ;
+  sh:name "Opgeheven entiteit"@nl ;
+  sh:path prov:invalidated ;
+  skos:definition "De entiteiten die als gevolg van de wijziging opgehouden zijn te bestaan."@nl .
+
+tooiont:Samenwerkingsorganisatie-organisatiesoort a sh:PropertyShape ;
+  rdfs:label "Samenwerkingsorganisatie-organisatiesoort"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class skos:Concept ;
+  sh:datatype xsd:string ;
+  sh:description """De soort samenwerkingsorganisatie:
+
+* bedrijfsvoeringsorganisatie
+* gemeenschappelijk orgaan
+* openbaar lichaam
+* koepelorganisatie
+* grensoverschrijdende samenwerkingsorganisatie"""@nl ;
+  sh:maxCount 1 ;
+  sh:path tooiont:organisatiesoort ;
+  skos:definition "De code van de samenwerkingsorganisatie. Dit is een nummer met vier cijfers, bijvoorbeeld '0026'"@nl .
+
+tooiont:Samenwerkingsorganisatie-socode a sh:PropertyShape ;
+  rdfs:label "Samenwerkingsorganisatie-socode"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:string ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+  sh:path tooiont:socode ;
+  skos:definition "De code van de samenwerkingsorganisatie. Dit is een nummer met vier cijfers, bijvoorbeeld '0026'"@nl .
+
+tooiont:Toestandswijziging-invalidated a sh:PropertyShape ;
+  rdfs:label "Toestandswijziging-invalidated"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class tooiont:HistorischeVersie ;
+  sh:description "In de context van informatieobjecten gaat het hier vaak om een representatie van metadata. In de context van overheidsorganisaties gaat het om toestandswijzigingen zoals een naamswijziging, bijvoorbeeld bij een ministerie."@nl ;
+  sh:name "Opgeheven toestand"@nl ;
+  sh:path prov:invalidated ;
+  skos:definition "De historische versie van een gewijzigde entiteit, die de toestand representeert zoals die voorafgaand aan de wijziging van kracht was."@nl .
+
+tooiont:Toestandswijziging-used a sh:PropertyShape ;
+  rdfs:label "Toestandswijziging-used"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class prov:Entity ;
+  sh:name "Nieuwe toestand van"@nl ;
+  sh:path prov:used ;
+  skos:definition "De entiteit waarvan de toestand gewijzigd is."@nl .
+
+tooiont:Uitbreiding-invalidated a sh:PropertyShape ;
+  rdfs:label "Uitbreiding-invalidated"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class prov:Entity ;
+  sh:minCount 1 ;
+  sh:name "Opgeheven entiteit"@nl ;
+  sh:path prov:invalidated ;
+  skos:definition "De entiteiten die als gevolg van de wijziging opgehouden zijn te bestaan."@nl .
+
+tooiont:Uitbreiding-used a sh:PropertyShape ;
+  rdfs:label "Uitbreiding-used"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class prov:Entity ;
+  sh:minCount 1 ;
+  sh:name "Betrokken entiteit"@nl ;
+  sh:path prov:used ;
+  skos:definition "De entiteiten die een rol hebben gespeeld bij de wijziging."@nl .
+
+tooiont:Waterschap-waterschapscode a sh:PropertyShape ;
+  rdfs:label "Waterschap-waterschapscode"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:string ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+  sh:path tooiont:waterschapscode ;
+  skos:definition "De code van het waterschap. Dit is een nummer met vier cijfers, bijvoorbeeld '0636'"@nl .
+
+tooiont:Wijzigingsgebeurtenis-heeftJuridischeGrondslag a sh:PropertyShape ;
+  rdfs:label "Wijzigingsgebeurtenis-heeftJuridischeGrondslag"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype tooiont:Informatieobject ;
+  sh:path tooiont:heeftJuridischeGrondslag ;
+  skos:definition "Wet, regeling of besluit waaraan de wijziging zijn rechtsgeldigheid ontleent"@nl .
+
+tooiont:Wijzigingsgebeurtenis-redenWijziging a sh:PropertyShape ;
+  rdfs:label "Wijzigingsgebeurtenis-redenWijziging"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:string ;
+  sh:path tooiont:redenWijziging ;
+  skos:definition "De reden voor de wijziging"@nl .
+
+tooiont:Wijzigingsgebeurtenis-tijdstipRegistratie a sh:PropertyShape ;
+  rdfs:label "Wijzigingsgebeurtenis-tijdstipRegistratie"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:dateTime ;
+  sh:maxCount 1 ;
+  sh:path tooiont:tijdstipRegistratie ;
+  skos:definition "Datum en tijdstip waarop de wijziging is geregistreerd in het betreffende register"@nl .
+
+tooiont:Wijzigingsgebeurtenis-tijdstipWijziging a sh:PropertyShape ;
+  rdfs:label "Wijzigingsgebeurtenis-tijdstipWijziging"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:dateTime ;
+  sh:maxCount 1 ;
+  sh:path tooiont:tijdstipWijziging ;
+  skos:definition "Datum en tijdstip waarop de wijziging formeel is ingegaan"@nl .
+
+tooiont:Zbo-hoortBijZboCluster a sh:PropertyShape ;
+  rdfs:label "Zbo-hoortBijZboCluster"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class tooiont:ZboCluster ;
+  sh:maxCount 1 ;
+  sh:path tooiont:hoortBijZboCluster ;
+  skos:definition "Het cluster waartoe het zelfstandig bestuursorgaan behoort"@nl .
+
+tooiont:ZboOfZboCluster-kaderwetVanToepassing a sh:PropertyShape ;
+  rdfs:label "ZboOfZboCluster-kaderwetVanToepassing"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:string ;
+  sh:maxCount 1 ;
+  sh:path tooiont:kaderwetVanToepassing ;
+  skos:definition "Het antwoord op de vraag of de kaderwet op deze zbo of cluster van zbo's van toepassing is ('ja', 'nee', 'onbekend', of 'in voorbereiding')"@nl .
+
+tooiont:ZboOfZboCluster-verantwoordelijkMinisterie a sh:PropertyShape ;
+  rdfs:label "ZboOfZboCluster-verantwoordelijkMinisterie"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:class tooiont:Ministerie ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+  sh:path tooiont:verantwoordelijkMinisterie ;
+  skos:definition "Het ministerie dat verantwoordelijk is voor het beleid dat een zbo uitvoert en het toezicht daarop"@nl .
+
+tooiont:ZboOfZboCluster-zbocode a sh:PropertyShape ;
+  rdfs:label "ZboOfZboCluster-zbocode"@nl ;
+  rdfs:isDefinedBy <https://identifier.overheid.nl/tooi/def/ont> ;
+  sh:datatype xsd:string ;
+  sh:maxCount 1 ;
+  sh:minCount 1 ;
+  sh:path tooiont:zbocode ;
+  skos:definition "De code van de zbo of het zbo-cluster. Dit is een nummer met zes cijfers, bijvoorbeeld '001636'"@nl .
+
+
