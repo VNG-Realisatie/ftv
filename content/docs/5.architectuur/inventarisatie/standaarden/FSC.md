@@ -7,6 +7,8 @@ title: 'FSC'
 ## Links
 - https://nlx.io/
 - https://digilab.overheid.nl/projecten/federatieve-service-connectiviteit-fsc/
+- https://commonground.gitlab.io/standards/fsc/core/draft-fsc-core-00.html
+- https://commonground.gitlab.io/standards/fsc/logging/draft-fsc-logging-00.html
 - https://federatief.datastelsel.nl/kennisbank/fsc/
 - https://commonground.nl/page/view/736309a1-739a-47fc-abfd-67e71f1d9e59/consultatie-fsc
 - https://commonground.nl/page/view/272a6103-4c0a-46c3-a597-5d7199aca983/architectuur

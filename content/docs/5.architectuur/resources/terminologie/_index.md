@@ -5,7 +5,7 @@ bookCollapseSection: true
 
 # Terminologie
 
---- ***WERK IN UITVOERING (vullingsgraad: 35%)*** ---
+--- ***WERK IN UITVOERING (vullingsgraad: 45%)*** ---
 
 De communicatie in en rond een project is altijd een uitdaging.
 Wat voor de één duidelijk is, is voor de ander een groot vraagteken.
@@ -23,7 +23,7 @@ De reden hiervoor is dat we de pagina niet al te lang willen maken, en sommigen 
 Mochten er toch nog vragen zijn, schroom niet om contact op te nemen via [de gebruikelijke kanalen.](/docs/1.over_het_project/1.introductie)
 
 Diverse beschrijvingen zijn (voor een deel) uit andere projecten overgenomen, 
-zoals RAWA[^1] en Lock/Unlock[^2].
+zoals RAWA [^1] en Lock/Unlock [^2].
 Daar waar de overgenomen beschrijving in het Engels is, hebben we deze zo goed als mogelijk naar het Nederlands vertaald.
 Als we de overgenomen beschrijving iets anders invullen, om het duidelijker binnen het kader van Federatieve Toegangsverlening te trekken,
 zullen we dat ook zo goed als mogelijk verdedigen.
@@ -56,13 +56,13 @@ bij alle relevante organisaties die bij de verwerking betrokken waren.
 [Meer.](audit)
 
 ### Authenticatie
-RAWA[^1]: Authenticatie is het proces om te bewijzen dat een gebruiker, welke middels een digitale identiteit om toegang verzoekt, de gerechtigde eigenaar van die identiteit is.
+RAWA [^1]: Authenticatie is het proces om te bewijzen dat een gebruiker, welke middels een digitale identiteit om toegang verzoekt, de gerechtigde eigenaar van die identiteit is.
 Afhankelijk van de use-case, kan een 'identiteit' een natuurlijk persoon of niet-natuurlijk persoon zijn.
 
 [Meer.](authenticatie)
 
 ### Autorisatie
-RAWA[^1]: Het bepalen van de rechten van een gebruiker om functionaliteit te benaderen met een computer-systeem, en het niveau waartoe de toegang mag worden verleend.
+RAWA [^1]: Het bepalen van de rechten van een gebruiker om functionaliteit te benaderen met een computer-systeem, en het niveau waartoe de toegang mag worden verleend.
 Over het algemeen, zal een 'autoriteit' de toegang definiëren en toekennen, echter in sommige gevallen, wordt toegang verleend op basis van inherente rechten (bv. een patient krijgt toegang tot eigen gegevens).
 
 [Meer.](autorisatie)
@@ -74,7 +74,7 @@ Het is meestal een, al dan niet complexe, vergelijking van één of meer attribu
 [Meer.](autorisatieregel)
 
 ### Context
-RAWA[^1]: Condities waaronder een verwerking op een resource is toegestaan voor een gebruiker, zoals de tijd van de verwerking, locatie van de verwerking, of het niveau van compliance.
+RAWA [^1]: Condities waaronder een verwerking op een resource is toegestaan voor een gebruiker, zoals de tijd van de verwerking, locatie van de verwerking, of het niveau van compliance.
 
 [Meer.](context)
 
@@ -109,6 +109,8 @@ Zie ook [outway](#outway).
 [Meer.](gateway)
 
 ### Linked data
+Lock/Unlock [^2]: Linked data is een manier om data te structureren en te verbinden over het web en maakt gebruik van standaarden zoals URI's,
+RDF en ontologieën gedefinieerd in RDF zoals RDFS, OWL en SHACL.
 
 [Meer.](linked_data)
 
@@ -141,7 +143,7 @@ Een verzoek om een resource of functie te benaderen.
 
 [Meer.](verwerking)
 
-### Resource
+### Resource (NL: bron)
 Een adresseerbaar gegeven. Bv. een regel uit een database.
 
 [Meer.](resource)
@@ -189,100 +191,132 @@ Het principe om niets en niemand te vertrouwen, zonder dit goed to controleren.
 ## Afkortingen
 
 ### ABAC
-Attribute Based Access Control.
+*Attribute Based Access Control*
 
-Het verlenen van toegang middles het controleren of meegeleverde en bijgezochte attributen aan de voorwaarden van policies voldoen.
+RAWA [^2]: een patroon van toegangsverlening, die gebruik maakt van dynamische definities of permissies, op basis van informatie ("attributen", of "claims"), zoals functie, afdeling, of rol.
 
 [Meer.](abac)
 
 ### ACL
-RAWA[^1]: An Access Control List (ACL) is a definition around who or what are allowed or denied access to a resource.
-For example, a file share may have an Access Control List that allows Marketing Department users to read and write,
-IT Department users to read-only, and denies all other users' access.
+*Access Control List*
+
+RAWA[^1]: Een ACL is een definitie die aangeeft wie of wat toegang mag hebben of niet tot een [resource](#resource).
+Bv. een bestand kan aan een ACL gekoppeld zijn die medewerkers van de Marketing Afdeling toestemming geeft te lezen en te schrijven,
+de IT Afdeling alleen lezen, en alle anderen de toegang ontzegt.
 
 [Meer.](autorisatie)
 
 ### ADR
-Architecture Decision Records.
+*Architecture Decision Records*
 
 [Meer.](adr)
 
 ### API
-Application Programming Interface.
+*Application Programming Interface*
 
 [Meer.](api)
 
 ### IdP
-Identity Provider.
+*Identity Provider*
+
+RAWA [^1]: Een IdP Voert een dienst uit welke informatie over een gebruiker naar een applicatie kan sturen.
+Deze informatie wordt veelal vastgelegd in een gebruikersregister, 
+en een IdP zal deze information ophalen en omzetten in een formaat dat door Service Providers (SP, bv. applicaties) gebruikt kan worden.
+De OASIS organisatie, welke verantwoordelijk is voor de SAML-specificatie, definieert een IdP als
+"Een soort SP welke identiteitsinformatie vastlegt, onderhoud, en beheerd voor gebruikers,
+en biedt gebruikersauthenticatie aan voor andere SP's binnen een federatief stelsel, zoals bv. webbrowser profielen."
 
 [Meer.](oauth)
 
 ### JSON
-JavaScript Object Notation.
+*JavaScript Object Notation*
 
 [Meer.](json)
 
 ### OAuth
+*Open Authorization*
 
+RAWA [^1]: OAuth 2.0 is een open-source protocol, welke aanbieders (bv. applicaties) de mogelijkheid biedt om data te delen met afnemers,
+d.m.v. het faciliteren van de communicatie met een autorisatie service.
+deze data, in de vorm van verklaringen, wordt aan applicaties gegeven om informatie/data uit andere applicaties op te halen.
+De Autorisatie service is meestal de [Identity Provider (IdP)](#idp).
+The Authorization Server (AS) may provide authorization directly or indirectly. For example,
+the AS may supply attributes or profile data of the Resource Owner or provide access to data,
+that can later be used for authorization purposes, such as entitlements from an Identity Management or Governance Solution.
 
 [Meer.](oauth)
 
 ### OpenID
+Wikipedia [^3]: OpenID is een open standaard voor een gedecentraliseerd [authenticatie](#authenticatie) protocol dat door de non-profit OpenID Foundation [^4] onderhouden wordt.
+Het geeft gebruikers de mogelijkheid zich te authenticeren aan ondersteunende websites, middels een [identity provider (IDP)](#idp) service.
+Hierdoor wordt de noodzaak, voor webmasters, om een eigen login-systeem te onderhouden, geëlimineerd.
+Tevens geeft het gebruikers toegang tot vele ongerelateerde websites, zonder dat dit afzonderlijke naam/wachtwoord combinaties vereist.
 
 [Meer.](openid)
 
 ### PAC
-Policy As Code.
+*Policy As Code*
 
 [Meer.](pbac)
 
 ### PAP
-Policy Administration Point.
+*Policy Administration Point*
+
+Component van een [ABAC](#abac)- / [PBAC](#pbac)-systeem, welke verantwoordelijk is voor het vastleggen, onderhouden en opvragen van policies.
 
 [Meer.](pbac)
 
 ### PBAC
-Policy Based Access Control.
+*Policy Based Access Control*
+
+RAWA [^1]: een patroon van toegangsverlening gebaseerd op dynamische definities van toegang en attributen (zoals in [ABAC](#abac)),
+alsmede de context van de verwerking.
 
 [Meer.](autorisatie)
 
 ### PDP
-Policy Decision Point.
+*Policy Decision Point*
+
+Component van een [ABAC](#abac)- / [PBAC](#pbac)-systeem, welke verantwoordelijk is voor het uitvoeren van de [autorisatieregels](#autorisatieregel) in policies.
 
 [Meer.](pbac)
 
 ### PEP
-Policy Enforcement Point.
+*Policy Enforcement Point*
+
+Component van een [ABAC](#abac)- / [PBAC](#pbac)-systeem, welke verantwoordelijk is voor het verlenen van toegang op basis van een besluit van de [PDP](#pdp).
 
 [Meer.](pbac)
 
 ### PIP
-Policy Information Point.
+*Policy Information Point*
+
+Component van een [ABAC](#abac)- / [PBAC](#pbac)-systeem, welke verantwoordelijk is voor het omzetten, ophalen, vertalen en leveren van [attributen](#attribuut) voor de [PDP](#pdp).
 
 [Meer.](pbac)
 
 ### PBAM
-Policy Based Access Management.
+*Policy Based Access Management*
 
 [Meer.](pbam)
 
 ### RBAC
-Role Based Access Control.
+*Role Based Access Control*
 
 [Meer.](autorisatie)
 
 ### REST
-REpresentational State Transfer.
+*Representational State Transfer*
 
 [Meer.](api)
 
 ### SOAP
-Simple Object Access Protocol.
+*Simple Object Access Protocol*
 
 [Meer.](api)
 
 ### XML
-eXtensible Markup Language.
+*Extensible Markup Language*
 
 [Meer.](xml)
 
@@ -291,3 +325,7 @@ eXtensible Markup Language.
   https://vng-realisatie.github.io/RAWA/uitwerking/terminologie
 [^2]: Lock/Unlock glossary\
   https://kadaster-labs.github.io/lock-unlock-docs/achtergrond/glossary
+[^3]: Wikipedia\
+  https://en.wikipedia.org/wiki/OpenID
+[^4]" OpenID Foundation\
+  https://openid.net/
