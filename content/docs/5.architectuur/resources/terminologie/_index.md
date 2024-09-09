@@ -5,7 +5,7 @@ bookCollapseSection: true
 
 # Terminologie
 
---- ***WERK IN UITVOERING (vullingsgraad: 20%)*** ---
+--- ***WERK IN UITVOERING (vullingsgraad: 35%)*** ---
 
 De communicatie in en rond een project is altijd een uitdaging.
 Wat voor de één duidelijk is, is voor de ander een groot vraagteken.
@@ -14,7 +14,7 @@ Wat wij vanuit het project beschrijven komt voort uit de informatie die tijdens 
 Het kan geregeld voorkomen dat het voor ons duidelijk is wat we beschreven hebben, maar voor een ander (totaal) niet.
 Om nu alles zo uitgebreid mogelijk te beschrijven heeft dan weer de keerzijde dat het misschien niet of nauwelijks gelezen wordt.
 
-Om dit te voorkomen willen we deze pagina, en onderliggende paginas, gebruiken, om zoveel mogelijk terminologie, zo begrijpelijk mogelijk te beschrijven.
+Om dit te voorkomen willen we deze pagina, en onderliggende pagina's, gebruiken, om zoveel mogelijk terminologie, zo begrijpelijk mogelijk te beschrijven.
 Tevens zullen we hier aangeven waarom voor een bepaalde term is gekozen.
 
 Op deze pagina worden de termen summier uitgelegd, en daar waar verduidelijking nodig lijkt, een link naar een verdieping van de term.
@@ -56,8 +56,8 @@ bij alle relevante organisaties die bij de verwerking betrokken waren.
 [Meer.](audit)
 
 ### Authenticatie
-RAWA[^1]: Authenticatie is het proces om te bewijzen dat een gebruiker, welke middels een digitale identiteit om toegang verzoekt, de gerechtigede eigenaar van die identiteit is.
-Afhakelijk van de use-case, kan een 'identiteit' een natuurlijk persoon of niet-natuurlijk persoon zijn.
+RAWA[^1]: Authenticatie is het proces om te bewijzen dat een gebruiker, welke middels een digitale identiteit om toegang verzoekt, de gerechtigde eigenaar van die identiteit is.
+Afhankelijk van de use-case, kan een 'identiteit' een natuurlijk persoon of niet-natuurlijk persoon zijn.
 
 [Meer.](authenticatie)
 
@@ -79,18 +79,22 @@ RAWA[^1]: Condities waaronder een verwerking op een resource is toegestaan voor 
 [Meer.](context)
 
 ### Dataminimalisatie
+Het beperken van opgevraagde resources d.m.v. horizontale of verticale filtering. 
 
 [Meer.](dataminimalisatie)
 
-### Dataspaces
+### Data-spaces
 
 [Meer.](dataspaces)
 
 ### Federatief
+Een bond van samenwerkende organisaties met als doel het delen van resources en functies.
 
 [Meer.](federatief)
 
 ### Gateway
+Een software component welke gebruikt wordt om verbindingen van of naar een organisatie middels één punt te bundelen en beveiligen.
+Zie ook [inway](#inway) en [outway](#outway).
 
 [Meer.](gateway)
 
@@ -99,6 +103,8 @@ RAWA[^1]: Condities waaronder een verwerking op een resource is toegestaan voor 
 [Meer.](identificatie)
 
 ### Inway
+FSC: Een [gateway](#gateway) welke gebruikt wordt om verbindingen van andere organisaties middels één punt te bundelen en beveiligen.
+Zie ook [outway](#outway).
 
 [Meer.](gateway)
 
@@ -107,14 +113,18 @@ RAWA[^1]: Condities waaronder een verwerking op een resource is toegestaan voor 
 [Meer.](linked_data)
 
 ### Logging
+Logging is de technische term voor het vastleggen van verwerkingen in een logboek.
 
 [Meer.](audit)
 
 ### Ontologie
+Een beschrijving van zaken (dingen) en hun koppelingen.
 
 [Meer.](ontologie)
 
 ### Outway
+FSC: Een [gateway](#gateway) welke gebruikt wordt om verbindingen naar andere organisaties middels één punt te bundelen en beveiligen.
+Zie ook [inway](#inway).
 
 [Meer.](gateway)
 
@@ -127,14 +137,17 @@ Policy kent veel betekenissen:
 [Meer.](policy)
 
 ### Request
+Een verzoek om een resource of functie te benaderen.
 
 [Meer.](verwerking)
 
 ### Resource
+Een adresseerbaar gegeven. Bv. een regel uit een database.
 
 [Meer.](resource)
 
 ### Standaard
+Een algemeen aanvaarde set van regels en/of aanbevelingen voor een bepaald vakgebied.
 
 [Meer.](standaard)
 
@@ -145,14 +158,17 @@ Binnen dit project zullen we de term autorisatieregel gebruiken.
 [Meer.](autorisatieregel)
 
 ### Toegangsverlening
+Het verlenen van toegang tot een [resource](#resource) of functie.
 
 [Meer.](access_control)
 
 ### Usage Control
+Het bepalen van gebruiksregels en het controleren van de uitvoering ervan.
 
 [Meer.](usage_control)
 
 ### Verifieerbare verklaring
+Een verklaring dat iemand of iets daadwerkelijk is wie het zegt te zijn, wat middels een cryptografisch sterke manier te verifiëren is.
 
 [Meer.](verifieerbare_verklaring)
 
@@ -161,16 +177,21 @@ Binnen dit project zullen we de term autorisatieregel gebruiken.
 [Meer.](vertrouwensnetwerk)
 
 ### Verwerking
+Het opvragen of manipuleren van een [resource](#resource).
 
 [Meer.](verwerking)
 
 ### Zero Trust
+Het principe om niets en niemand te vertrouwen, zonder dit goed to controleren.
 
 [Meer.](zero_trust)
 
 ## Afkortingen
 
 ### ABAC
+Attribute Based Access Control.
+
+Het verlenen van toegang middles het controleren of meegeleverde en bijgezochte attributen aan de voorwaarden van policies voldoen.
 
 [Meer.](abac)
 
@@ -182,22 +203,27 @@ IT Department users to read-only, and denies all other users' access.
 [Meer.](autorisatie)
 
 ### ADR
+Architecture Decision Records.
 
 [Meer.](adr)
 
 ### API
+Application Programming Interface.
 
 [Meer.](api)
 
 ### IdP
+Identity Provider.
 
 [Meer.](oauth)
 
 ### JSON
+JavaScript Object Notation.
 
 [Meer.](json)
 
 ### OAuth
+
 
 [Meer.](oauth)
 
@@ -206,46 +232,57 @@ IT Department users to read-only, and denies all other users' access.
 [Meer.](openid)
 
 ### PAC
+Policy As Code.
 
 [Meer.](pbac)
 
 ### PAP
+Policy Administration Point.
 
 [Meer.](pbac)
 
 ### PBAC
+Policy Based Access Control.
 
 [Meer.](autorisatie)
 
 ### PDP
+Policy Decision Point.
 
 [Meer.](pbac)
 
 ### PEP
+Policy Enforcement Point.
 
 [Meer.](pbac)
 
 ### PIP
+Policy Information Point.
 
 [Meer.](pbac)
 
 ### PBAM
+Policy Based Access Management.
 
 [Meer.](pbam)
 
 ### RBAC
+Role Based Access Control.
 
 [Meer.](autorisatie)
 
 ### REST
+REpresentational State Transfer.
 
 [Meer.](api)
 
 ### SOAP
+Simple Object Access Protocol.
 
 [Meer.](api)
 
 ### XML
+eXtensible Markup Language.
 
 [Meer.](xml)
 

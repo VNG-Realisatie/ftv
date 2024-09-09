@@ -1,8 +1,8 @@
 ---
-title: 'Dataspaces'
+title: 'Data-spaces'
 ---
 
-# Dataspaces
+# Data-spaces
 
 ## Definitie voor FTV
 
