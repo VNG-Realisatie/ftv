@@ -56,7 +56,6 @@ https://github.com/alex-shpak/hugo-book
   {{- end -}}
 {{- end -}}
 
-// css
-{{ range .Site.Params.custom_css -}}
+{{- if .Site.Params.custom_css -}}
   <link rel="stylesheet" href="{{ . | absURL }}">
-{{- end }}
+{{- end -}}
