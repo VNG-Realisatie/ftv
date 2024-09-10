@@ -7,6 +7,8 @@ bookCollapseSection: true
 
 --- ***WERK IN UITVOERING (vullingsgraad: 45%)*** ---
 
+## Communicatie
+
 De communicatie in en rond een project is altijd een uitdaging.
 Wat voor de één duidelijk is, is voor de ander een groot vraagteken.
 
@@ -18,11 +20,11 @@ Om dit te voorkomen willen we deze pagina, en onderliggende pagina's, gebruiken,
 Tevens zullen we hier aangeven waarom voor een bepaalde term is gekozen.
 
 Op deze pagina worden de termen summier uitgelegd, en daar waar verduidelijking nodig lijkt, een link naar een verdieping van de term.
-De reden hiervoor is dat we de pagina niet al te lang willen maken, en sommigen aan de korte versie al voldoende hebben.
+De reden hiervoor is dat we de pagina niet te lang willen maken, en sommige lezers aan de korte versie al over voldoende uitleg beschikken.
 
 Mochten er toch nog vragen zijn, schroom niet om contact op te nemen via [de gebruikelijke kanalen.](/docs/1.over_het_project/1.introductie)
 
-Diverse beschrijvingen zijn (voor een deel) uit andere projecten overgenomen, 
+Diverse beschrijvingen zijn (voor een deel) uit andere projecten overgenomen,
 zoals RAWA [^1] en Lock/Unlock [^2].
 Daar waar de overgenomen beschrijving in het Engels is, hebben we deze zo goed als mogelijk naar het Nederlands vertaald.
 Als we de overgenomen beschrijving iets anders invullen, om het duidelijker binnen het kader van Federatieve Toegangsverlening te trekken,
@@ -37,7 +39,7 @@ zullen we dat ook zo goed als mogelijk verdedigen.
 ### Access Control
 Het controleren van wie toegang mag hebben tot data, systemen, services, resources, locaties.
 De 'Wie' kan zijn een gebruiker, een apparaat of ding, of een service.
-In het kader van dit project zullen we de term gebruiken als het verlenen van toegang tot een resource.\
+In het kader van dit project zullen we de term gebruiken als het verlenen van toegang tot een resource of functie.\
 [Meer.](access_control)
 
 ### Attribuut
@@ -73,7 +75,7 @@ zoals de tijd van de verwerking, locatie van de verwerking, of het niveau van co
 [Meer.](context)
 
 ### Dataminimalisatie
-Het beperken van opgevraagde resources d.m.v. horizontale of verticale filtering.\ 
+Het beperken van opgevraagde resources d.m.v. horizontale of verticale filtering.\
 [Meer.](dataminimalisatie)
 
 ### Data-spaces
@@ -135,12 +137,13 @@ Een algemeen aanvaarde set van regels en/of aanbevelingen voor een bepaald vakge
 [Meer.](standaard)
 
 ### Toegangsregel
-Toegangsregel is uitwisselbaar met autorisatieregel.
+Toegangsregel is uitwisselbaar met [autorisatieregel](#autorisatieregel).
 Binnen dit project zullen we de term autorisatieregel gebruiken.\
 [Meer.](autorisatieregel)
 
 ### Toegangsverlening
-Het verlenen van toegang tot een [resource](#resource) of functie.\
+Het verlenen van toegang tot een [resource](#resource) of functie.
+Zie ook het Engelse [Access Control](#access-control)\
 [Meer.](access_control)
 
 ### Usage Control
@@ -187,7 +190,7 @@ de IT Afdeling alleen lezen, en alle anderen de toegang ontzegt.\
 ### IdP
 *Identity Provider*\
 RAWA [^1]: Een IdP Voert een dienst uit welke informatie over een gebruiker naar een applicatie kan sturen.
-Deze informatie wordt veelal vastgelegd in een gebruikersregister, 
+Deze informatie wordt veelal vastgelegd in een gebruikersregister,
 en een IdP zal deze information ophalen en omzetten in een formaat dat door Service Providers (SP, bv. applicaties) gebruikt kan worden.
 De OASIS organisatie, welke verantwoordelijk is voor de SAML-specificatie, definieert een IdP als
 "Een soort SP welke identiteitsinformatie vastlegt, onderhoud, en beheerd voor gebruikers,
@@ -268,10 +271,10 @@ Component van een [ABAC](#abac)- / [PBAC](#pbac)-systeem, welke verantwoordelijk
 
 ## Referenties
 [^1]: RAWA terminologie\
-  https://vng-realisatie.github.io/RAWA/uitwerking/terminologie
+https://vng-realisatie.github.io/RAWA/uitwerking/terminologie
 [^2]: Lock/Unlock glossary\
-  https://kadaster-labs.github.io/lock-unlock-docs/achtergrond/glossary
+https://kadaster-labs.github.io/lock-unlock-docs/achtergrond/glossary
 [^3]: Wikipedia\
-  https://en.wikipedia.org/wiki/OpenID
+https://en.wikipedia.org/wiki/OpenID
 [^4]" OpenID Foundation\
-  https://openid.net/
+https://openid.net/
