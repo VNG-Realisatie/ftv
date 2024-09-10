@@ -2,4 +2,3 @@ baseURL = 'https://federatieve-toegangsverlening-digilab-overheid-n-5d4b9badc9bc
 languageCode = 'nl-nl'
 title = 'Federatieve Toegangsverlening'
 theme = "hugo-book"
-custom_css = 'css/custom.css'
