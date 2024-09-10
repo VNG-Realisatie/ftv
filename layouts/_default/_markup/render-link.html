@@ -1,1 +1,1 @@
-<a class="external" href="{{ .Destination | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if strings.HasPrefix .Destination "http" }} target="_blank"{{ end }}>{{ .Text }}{{ if strings.HasPrefix .Destination "http" }} <img src="images/external.png" width="14px">{{ end }}</a>
+<a class="external" href="{{ .Destination | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if strings.HasPrefix .Destination "http" }} target="_blank"{{ end }}>{{ .Text }}{{ if strings.HasPrefix .Destination "http" }} <img src="/images/external.png" width="14px">{{ end }}</a>
