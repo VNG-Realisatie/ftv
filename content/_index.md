@@ -8,8 +8,6 @@ weight: 10
 
 Dit is de site van het project Federatieve Toegangsverlening, afgekort FTV.
 
-De source van deze website is terug te vinden op [Gitlab.](https://gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening)
-
 ## Over het project
 FTV onderzoekt een **standaardmethodiek** om **toegang tot gegevens en functies** te regelen in een modern **federatief stelsel**.
 
@@ -28,10 +26,10 @@ Omdat FTV leeft in een wereld van heel wat begrippen, standaarden, projecten en 
 
 ## Contact
 
-Alle informatie en resultaten zijn als open-source beschikbaar voor iedereen.
-Praat mee over FTV op ons [Mattermost](https://digilab.overheid.nl/chat/digilab/channels/federatieve-toegangsverlening) kanaal.
-
-Neem voor meer informatie gerust contact op met:
+Alle informatie en resultaten zijn open source beschikbaar voor iedereen.
+- De bron van deze site is onze [Gitlab](https://gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening). Daarop is nog meer te vinden zoals broncode van softwareproducten.
+- Praat mee over FTV op ons [Mattermost](https://digilab.overheid.nl/chat/digilab/channels/federatieve-toegangsverlening) kanaal.
+- Neem voor meer informatie gerust contact op met:
 
 Marc de Boer  
 **Product owner**  

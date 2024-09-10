@@ -1,0 +1,7 @@
+.external {
+    background-image: url(https://www.digitaleoverheid.nl/wp-content/themes/ictuwp-theme-rijkshuisstijl/images/icon-external-link.svg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: .75em .75em;
+        padding-right: 1rem;
+}
