@@ -32,7 +32,7 @@ zullen we dat ook zo goed als mogelijk verdedigen.
 
 ## Wie, wat, waar
 
-[ ![](/architecture/domeinen.png) ](/architecture/domeinen.png)
+![domeinen](/architecture/domeinen.png)
 
 ## Termen
 

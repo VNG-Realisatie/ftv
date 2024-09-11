@@ -6,37 +6,6 @@ function is_imagelink(url) {
     var p = /([a-z\-_0-9\/\:\.]*\.(jpg|jpeg|png|gif))/i;
     return (url.match(p)) ? true : false;
 }
-function is_vimeolink(url,el) {
-    var id = false;
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-        if (xmlhttp.readyState == XMLHttpRequest.DONE) {   // XMLHttpRequest.DONE == 4
-            if (xmlhttp.status == 200) {
-                var response = JSON.parse(xmlhttp.responseText);
-                id = response.video_id;
-                console.log(id);
-                el.classList.add('lightbox-vimeo');
-                el.setAttribute('data-id',id);
-
-                el.addEventListener("click", function(event) {
-                    event.preventDefault();
-                    document.getElementById('lightbox').innerHTML = '<a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="videoWrapperContainer"><div class="videoWrapper"><iframe src="https://player.vimeo.com/video/'+el.getAttribute('data-id')+'/?autoplay=1&byline=0&title=0&portrait=0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>';
-                    document.getElementById('lightbox').style.display = 'block';
-
-                    setGallery(this);
-                });
-            }
-            else if (xmlhttp.status == 400) {
-                alert('There was an error 400');
-            }
-            else {
-                alert('something else other than 200 was returned');
-            }
-        }
-    };
-    xmlhttp.open("GET", 'https://vimeo.com/api/oembed.json?url='+url, true);
-    xmlhttp.send();
-}
 function setGallery(el) {
     var elements = document.body.querySelectorAll(".gallery");
     elements.forEach(element => {
