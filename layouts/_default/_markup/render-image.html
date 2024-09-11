@@ -1,16 +1,3 @@
-{{ $image := "" }}
-{{ if hasPrefix .Destination "/" }}
-    {{ $image = resources.Get .Destination }}
-{{ else }}
-    {{ if .Page.BundleType }}
-        {{ $image = .Page.Resources.GetMatch .Destination }}
-    {{ else }}
-        {{ $path := path.Join .Page.File.Dir .Destination }}
-        {{ $image = resources.Get $path }}
-    {{ end }}
-{{ end }}
-
-{{- $random := hash.XxHash .Destination }}
 <a href="{{ .Destination }}" title="{{ T "ClickToEnlarge" }}">
 
 {{- if .Page.Site.Params.BookPortableLinks -}}
