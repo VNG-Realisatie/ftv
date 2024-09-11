@@ -56,21 +56,21 @@ ze beschrijven ook diepere lagen van het [OSI-model](https://nl.wikipedia.org/wi
 FTV zal geen nieuwe koppelvlakstandaard voorstellen, maar alleen een nieuwe invulling van het aspect autorisatie daarbovenop.
 
 De volgende koppelstandaarden zijn relevant:
-- **Diginetwerk**. Een afsprakenstelsel op infrastructuurniveau dat een besloten netwerk realiseert voor de overheid (de transportlaag).
-- **Digikoppeling**. Een set van standaarden en afspraken over koppelvlakken die o.a. de encryptie regelt (de sessielaag). 
+- **[Diginetwerk](https://www.logius.nl/domeinen/infrastructuur/diginetwerk)**. Een afsprakenstelsel op infrastructuurniveau dat een besloten netwerk realiseert voor de overheid (de transportlaag).
+- **[Digikoppeling](https://www.logius.nl/domeinen/gegevensuitwisseling/digikoppeling/documentatie)**. Een set van standaarden en afspraken over koppelvlakken die o.a. de encryptie regelt (de sessielaag). 
   Digikoppeling omvat, bovenop een encryptielaag, de standaarden ebMS, WUS, REST en Grote Berichten, die elk een berichtenstandaard beschrijven (de applicatielaag).
   - WUS is een samentrekking van drie wat oudere standaarden: WSDL, UDDI en SOAP, en digikoppeling beschrijft de Nederlandse regels over het gebruik daarvan.
   - ebMS gaat over asynchroon uitwisselen met betrouwbare aflevering.
   - Grote Berichten gaat, zoals de naam al zegt, over het uitwisselen van grote berichten, en dan over WUS of ebMS2.
   - REST is een standaard die wereldwijd voor alle moderne API's gebruikt wordt. De beschrijving onder digikoppeling zegt meer over hoe de Nederlandse overheid REST toepast. 
-- **StUF**. Een standaard bovenop WUS die een XML-formaat voor berichtenuitwisseling beschrijft.
-- **HaalCentraal**. Een set van afspraken en standaarden bovenop Digikoppeling REST, specifiek voor basisregistraties.
+- **[StUF](https://standaarden.vng.nl/StUF-standaarden)**. Een standaard bovenop WUS die een XML-formaat voor berichtenuitwisseling beschrijft.
+- **[HaalCentraal](https://haalcentraal.pleio.nl/)**. Een set van afspraken en standaarden bovenop Digikoppeling REST, specifiek voor basisregistraties.
 
 Voor dit project stellen we dat ebMS2, WUS en Grote Berichten een oudere generatie zijn en niet als API's gezien worden 
 in onze terminologie. StUF, REST en HaalCentraal zijn wel in scope.
 
-Het is goed hier nog expliciet **FSC** te vermelden: de nieuwe koppelvlakstandaard die in het FDS programma ontwikkeld wordt.
-Daar zal de FTV oplossing sowieso in moeten passen. Er zijn echter nog geen productieimplementaties van FSC, en het valt daarom
+Het is goed hier nog expliciet **[FSC](https://gitlab.com/commonground/nlx/fsc-nlx)** te vermelden: de nieuwe koppelvlakstandaard die in het FDS programma ontwikkeld wordt.
+Daar zal de FTV oplossing sowieso in moeten passen. Er zijn echter nog geen productie-implementaties van FSC, en het valt daarom
 buiten de scope van deze inventarisatie.
 
 ### Autorisatie in de koppelvlakstandaarden
@@ -91,7 +91,7 @@ Ook hierin is geen autorisatiefunctionaliteit beschreven.
 Digikoppeling met REST is de huidige standaard voor basisregistratie-API's.
 HaalCentraal is een uitwerking daarvan met een gateway, IAM en logging.
 
-Er zijn een [viertal koppelingen](https://vng-realisatie.github.io/Haal-Centraal/aansluiten-op-apis)) gebouwd op HaalCentraal (WOZ, BAG, BRK en BRP). 
+Er zijn een [viertal koppelingen](https://vng-realisatie.github.io/Haal-Centraal/aansluiten-op-apis) gebouwd op HaalCentraal (WOZ, BAG, BRK en BRP). 
 Na [onderzoek](https://haalcentraal.pleio.nl/blog/view/f27ce9be-32c0-415b-89a6-5fff97956d3c/van-haal-centraal-naar-regie-op-apis) is gebleken dat nut en noodzaak onvoldoende herkend worden, waarna de ontwikkeling is stopgezet. 
 De opgeleverde koppelingen zijn nog in gebruik en daarom relevant voor dit onderzoek.
 
