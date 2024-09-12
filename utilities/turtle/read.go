@@ -40,9 +40,9 @@ func loadURI(g *rdf2go.Graph, uri string) error {
 
 	q.Header.Set("Accept", "text/turtle;q=1,application/ld+json;q=0.5")
 
-	r, err := client.Do(q)
-	if err != nil {
-		return err
+	r, err2 := client.Do(q)
+	if err2 != nil {
+		return err2
 	}
 
 	if r != nil {
@@ -52,7 +52,7 @@ func loadURI(g *rdf2go.Graph, uri string) error {
 		}
 	}
 
-	return fmt.Errorf("Could not fetch graph from %s - HTTP %d", uri, r.StatusCode)
+	return fmt.Errorf("could not fetch graph from %s - HTTP %d", uri, r.StatusCode)
 }
 
 func fixContentType(in string) string {

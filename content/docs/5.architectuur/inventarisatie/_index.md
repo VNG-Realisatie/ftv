@@ -13,3 +13,4 @@ type: 'docs'
 5. [Standaarden](standaarden)
 6. [Software leveranciers](software_leveranciers)
 7. [Projecten](projecten)
+8. [Libraries](libraries)
