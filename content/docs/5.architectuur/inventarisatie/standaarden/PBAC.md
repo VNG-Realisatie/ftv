@@ -56,7 +56,7 @@ title: 'Access Control'
 - https://www.openpolicyagent.org/docs/latest/
 - geen Wikipedia
 - open-source
-- ondersteunt extra attributen naast ja/nee; extra sleutels en waarden in de uitvoer JSON
+- ondersteunt extra attributen naast ja/nee; kan extra attributen aan de response toevoegen
 - pure Golang implementatie
 - https://github.com/open-policy-agent/opa
 - https://www.cncf.io/blog/2020/08/13/introducing-policy-as-code-the-open-policy-agent-opa/
@@ -66,6 +66,16 @@ title: 'Access Control'
 - https://www.topaz.sh/
 - https://github.com/fugue/Fregot
 - https://github.com/tmobile/magtape
+
+
+### Cerbos
+- https://github.com/cerbos/cerbos
+- https://docs.cerbos.dev/cerbos/latest/
+- open-source Golang
+- ABAC - PDP met database en file ondersteuning voor policies
+- policies in YAML geschreven
+- policies kunnen extra attributen aann de response toevoegen
+- commercieel bedrijf; verzamelt anonieme verbruiksdata
 
 
 ### Cedar - AWS
