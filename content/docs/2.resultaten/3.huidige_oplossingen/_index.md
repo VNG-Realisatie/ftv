@@ -27,30 +27,19 @@ Daarnaast zijn er voorgestelde oplossingen die niet uitgevoerd zijn,
 oplossingen buiten het stelsel, open API's, en oplossingen die niet met API's te maken hebben. 
 Die laten we buiten beschouwing.
 
-## 2. Methodieken van toegangsverlening
-Eerst kijken we naar de methodieken. Dan zijn werkwijzen, oftewel categorie&euml;n van oplossingen, niet concrete implementaties.
-Een gangbare indeling is:
-1. Lijsten van gebruikers ([ACL](https://en.wikipedia.org/wiki/Access-control_list))
-2. Rolgebaseerd ([RBAC](https://en.wikipedia.org/wiki/Role-based_access_control))
-3. Attribuutgebaseerd ([ABAC](https://en.wikipedia.org/wiki/Attribute-based_access_control))
-4. Policy-gebaseerd ([PBAC](/docs/5.architectuur/inventarisatie/standaarden/pbac))
-
-Er zijn al goede beschrijvingen en vergelijkingen beschikbaar:
-- Door het project FDS is een [ position paper](https://federatief.datastelsel.nl/kennisbank/pbac/) gemaakt 
-- Onder GEMMA is een [vergelijking](https://www.gemmaonline.nl/wiki/WMA_RBAC_ABAC_en_PBAC) gemaakt.
-
+## Gebruikte methodieken
 De gebruikte methodiek is aan de buitenkant, aan de API niet te zien.
 Neem als voorbeeld een REST API waar geen expliciete toegangsverleningsinformatie wordt meegegeven.
-De toegang zal dan zijn afgeleid uit de identificatie. De dienst kan dan een lijst van identiteiten 
+De toegang zal dan zijn afgeleid uit de identificatie. De dienst kan dan een lijst van identiteiten
 hebben, en als de identiteit op de lijst staat wordt volledige toegang verleend. Dan noemen
 we de methodiek Access Control List (ACL). Maar het kan ook zijn dat aan elke identiteit op de lijst
 weer een lijst van rollen is gekoppeld, waarmee een vorm van RBAC is bereikt. En het kan evengoed
 zijn dat de dienst per identiteit een lijst van attributen of toegangsregels heeft die intern uitgevoerd, en dus
-ABAC of PBAC genoemd mag worden. 
+ABAC of PBAC genoemd mag worden.
 
 We zullen daarom voor een inventarisatie direct bij de aanbieders en afnemers moeten informeren hoe het gerealiseerd is.
 
-## 3. Koppelvlakstandaarden
+## 2. Koppelvlakstandaarden
 Koppelvlakstandaarden bepalen methodieken van koppelen. Onder koppelen wordt veel meer verstaan dan toegangsverlening: 
 ze beschrijven ook diepere lagen van het [OSI-model](https://nl.wikipedia.org/wiki/OSI-model). 
 FTV zal geen nieuwe koppelvlakstandaard voorstellen, maar alleen een nieuwe invulling van het aspect autorisatie daarbovenop.
