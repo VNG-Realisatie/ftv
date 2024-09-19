@@ -52,7 +52,7 @@ title: 'Access Control'
 - https://www.w3.org/TR/odrl-model/
 
 
-### OPA
+### OPA / rego
 - https://www.openpolicyagent.org/docs/latest/
 - geen Wikipedia
 - open-source
@@ -68,7 +68,8 @@ title: 'Access Control'
 - https://github.com/tmobile/magtape
 
 
-### Cerbos
+### Cerbos / CEL
+- https://cel.dev/
 - https://github.com/cerbos/cerbos
 - https://docs.cerbos.dev/cerbos/latest/
 - open-source Golang
