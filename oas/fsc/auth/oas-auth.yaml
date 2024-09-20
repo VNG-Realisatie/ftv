@@ -1,0 +1,84 @@
+# Copyright © VNG Realisatie 2022
+# Licensed under the EUPL
+
+openapi: 3.0.0
+info:
+  description: |
+    The Outway has the option to configure a authorization service. Once configured, the requests going through the Outway will be authorized by this authorization service.
+    In order to enable communication between the Outway and their authorization service, each organization is required to implement the interface described in this specification on their authorization service.
+  version: "1.0.0"
+  title: Authorization
+paths:
+  /:
+    post:
+      summary: Authorization request
+      parameters:
+        - in: header
+          name: Proxy-Authorization
+          description: Request header contains the credentials to authenticate a user agent to the Outway. This header will be stripped
+          schema:
+            type: string
+      responses:
+        200:
+          description: The authorization request has been handled successfully. This does not mean the request is authorized, it means that the request has been processed successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AuthorizationResponse"
+      requestBody:
+        $ref: "#/components/requestBodies/AuthorizationRequest"
+components:
+  schemas:
+    AuthorizationRequest:
+      type: object
+      properties:
+        input:
+          type: object
+          properties:
+            headers:
+              type: object
+              additionalProperties:
+                type: array
+                items:
+                  type: string
+              description: Contains the HTTP-headers of the request made to the Outway
+            method:
+              type: string
+              description: the HTTP-method of the request made to the Outway
+            path:
+              type: string
+              description: path of the request to the Outway
+            query:
+              type: string
+              description: query parameters of the request to the Outway
+            outway_certificate_chain:
+              description: The x.509 certificate chain. The first entry in the array is the outway certificate; the other certificates can be used to verify this first certificate.
+              type: array
+              items:
+                description: Base64 encoded DER PKIX certificate value
+                type: string
+    AuthorizationResponse:
+      type: object
+      properties:
+        result:
+          $ref: "#/components/schemas/AuthorizationResponseData"
+    AuthorizationResponseData:
+      type: object
+      properties:
+        allowed:
+          type: boolean
+          description: true if the request is authorized. The Outway will continue to send the request to the targeted service. false when the authorization has failed for whatever reason. The Outway will return a 401 to the requesting client.
+        status:
+          type: object
+          properties:
+            reason:
+              type: string
+              description: reason why the request was not authorized
+  requestBodies:
+    AuthorizationRequest:
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/AuthorizationRequest"
+      description: The body of the request send to the authorization service
+      required: true
