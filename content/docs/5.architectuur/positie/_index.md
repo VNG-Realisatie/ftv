@@ -238,37 +238,42 @@ Er wordt reeds onderzoek gedaan om AI in te zetten voor toegangsverlening:
 
 ## PBAC matrix
 
-|                    | XACML                 | ODRL             | OPA/rego       | Cedar       |
-|--------------------|-----------------------|------------------|----------------|-------------|
-| type               | standaard             | standaard        | open           | open        |
-| organisatie        | OASIS [^1]            | W3C [^2]         | CNCF [^3]      | Amazon [^4] |
-| documentatie       | [^5]                  | [^6]             | [^7]           | [^8]        |
-| taal/formaat       | XML                   | Turtle,JSON,XML  | rego           | cedar       |
-| structuur          | gestructureerd        | gestructureerd   | open           | open        |
-| policy sleutel     | +subject              | uid              | id             | +principal  |
-|                    | +resource             |                  |                | +action     |
-|                    | +action               |                  |                | +resource   |
-| sinds              | 06-02-2003            | 19-09-2002       | 29-01-2021     | 29-06-2023  |
-| Github top project | 122 *                 | 32 *             | 9.6k *         | 4.5k *      |
-| - contributors     | 43                    | 13               | 447            | 53          |
-| extra output       | obligation            | permission       | JSON data      | geen        |
-|                    | advice                | duty             |                |             |
-|                    |                       | prohibition      |                |             |
-| samenstellen       | per policy            | per policy       | per policy     | per policy  |
-| beheer             | per policy            | per policy       | per policy     | per policy  |
-| engines            | Java [^9] [^10] [^11] | Javascript [^14] | Go [^17] [^18] | Rust [^20]  |
-|                    | .NET [^12]            | Java [^15] [^16] | WASM [^19]     | Go [^21]    |
-|                    | Rest API [^13]        |                  |                | Java [^22]  |
-| data entiteiten    | policy                | policy           | policy         | policy      |
-|                    | target                | asset            |                | principal   |
-|                    | rule                  | rule             |                | resource    |
-|                    | condition             | action           |                | session     |
-|                    | effect                | constraint       |                |             |
-|                    | obligation            | operand          |                |             |
-|                    | advice                | permission       |                |             |
-|                    |                       | duty             |                |             |
-|                    |                       | prohibition      |                |             |
-|                    |                       | party            |                |             |
+|                    | XACML                 | ODRL             | OPA            | Cedar       | Cerbos       |
+|--------------------|-----------------------|------------------|----------------|-------------|--------------|
+| type               | standaard             | standaard        | open           | open        | open         |
+| org                | OASIS [^1]            | W3C [^2]         | CNCF [^3]      | Amazon [^4] | Google [^23] |
+| docs               | [^5]                  | [^6]             | [^7]           | [^8]        | [^24]        |
+| taal/fmt           | XML                   | Turtle           | rego           | cedar       | cel          |
+|                    |                       | JSON             |                |             |              |
+|                    |                       | XML              |                |             |              |
+| structuur          | gestructureerd        | gestructureerd   | open           | open        | open         |
+| pol. sleutel       | +subject              | uid              | id             | +principal  | +principal   |
+|                    | +resource             |                  |                | +action     | +action      |
+|                    | +action               |                  |                | +resource   | +resource    |
+| sinds              | 06-02-2003            | 19-09-2002       | 29-01-2021     | 29-06-2023  | 20-08-2019   |
+| Github top project | 122 *                 | 32 *             | 9.6k *         | 4.5k *      | 3k *         |
+| - contr.           | 43                    | 13               | 447            | 53          | 31           |
+| extra output       | obligation            | permission       | JSON data      | geen        |              |
+|                    | advice                | duty             |                |             |              |
+|                    |                       | prohibition      |                |             |              |
+| bouwen             | per policy            | per policy       | per policy     | per policy  |              |
+| beheer             | per policy            | per policy       | per policy     | per policy  |              |
+| engines            | Java [^9] [^10] [^11] | Javascript [^14] | Go [^17] [^18] | Rust [^20]  | Go [^25]     |
+|                    | .NET [^12]            | Java [^15] [^16] | WASM [^19]     | Go [^21]    | Java [^26]   |
+|                    | Rest API [^13]        |                  |                | Java [^22]  | .NET [^27]   |
+|                    |                       |                  |                |             | PHP [^28]    |
+|                    |                       |                  |                |             | Python [^29] |
+|                    |                       |                  |                |             | Rust [^30]   |
+| data entiteiten    | policy                | policy           | policy         | policy      |              |
+|                    | target                | asset            |                | principal   |              |
+|                    | rule                  | rule             |                | resource    |              |
+|                    | condition             | action           |                | session     |              |
+|                    | effect                | constraint       |                |             |              |
+|                    | obligation            | operand          |                |             |              |
+|                    | advice                | permission       |                |             |              |
+|                    |                       | duty             |                |             |              |
+|                    |                       | prohibition      |                |             |              |
+|                    |                       | party            |                |             |              |
 
 [^1]: https://groups.oasis-open.org/communities/tc-community-home2?CommunityKey=67afe552-0921-49b7-9a85-018dc7d3ef1da
 [^2]: https://www.w3.org/
@@ -292,3 +297,11 @@ Er wordt reeds onderzoek gedaan om AI in te zetten voor toegangsverlening:
 [^20]: https://github.com/cedar-policy/cedar
 [^21]: https://github.com/cedar-policy/cedar-go
 [^22]: https://github.com/cedar-policy/cedar-java
+[^23]: https://google.com/
+[^24]: https://github.com/google/cel-spec/blob/master/doc/langdef.md
+[^25]: https://github.com/cerbos/cerbos-sdk-go
+[^26]: https://github.com/cerbos/cerbos-sdk-java
+[^27]: https://github.com/cerbos/cerbos-sdk-net
+[^28]: https://github.com/cerbos/cerbos-sdk-php
+[^29]: https://github.com/cerbos/cerbos-sdk-python
+[^30]: https://github.com/cerbos/cerbos-sdk-rust
