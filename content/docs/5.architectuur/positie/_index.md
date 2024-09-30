@@ -250,7 +250,7 @@ Er wordt reeds onderzoek gedaan om AI in te zetten voor toegangsverlening:
 | pol. sleutel       | +subject              | uid              | id             | +principal  | +principal   |
 |                    | +resource             |                  |                | +action     | +action      |
 |                    | +action               |                  |                | +resource   | +resource    |
-| sinds              | 06-02-2003            | 19-09-2002       | 29-01-2021     | 29-06-2023  | 20-08-2019   |
+| sinds              | 06-02-2003            | 19-09-2002       | 29-01-2021     | 29-06-2023  | 18-05-2021   |
 | Github top project | 122 *                 | 32 *             | 9.6k *         | 4.5k *      | 3k *         |
 | - contr.           | 43                    | 13               | 447            | 53          | 31           |
 | extra output       | obligation            | permission       | JSON data      | geen        |              |
@@ -264,7 +264,7 @@ Er wordt reeds onderzoek gedaan om AI in te zetten voor toegangsverlening:
 |                    |                       |                  |                |             | PHP [^28]    |
 |                    |                       |                  |                |             | Python [^29] |
 |                    |                       |                  |                |             | Rust [^30]   |
-| data entiteiten    | policy                | policy           | policy         | policy      |              |
+| data entiteiten    | policy                | policy           | policy         | policy      | policy       |
 |                    | target                | asset            |                | principal   |              |
 |                    | rule                  | rule             |                | resource    |              |
 |                    | condition             | action           |                | session     |              |
