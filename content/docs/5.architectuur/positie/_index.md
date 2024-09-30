@@ -243,14 +243,17 @@ Er wordt reeds onderzoek gedaan om AI in te zetten voor toegangsverlening:
 | type               | standaard             | standaard        | open           | open        |
 | organisatie        | OASIS [^1]            | W3C [^2]         | CNCF [^3]      | Amazon [^4] |
 | documentatie       | [^5]                  | [^6]             | [^7]           | [^8]        |
-| taal/formaat       | XML                   | JSON,XML,Turtle  | rego           | cedar       |
+| taal/formaat       | XML                   | Turtle,JSON,XML  | rego           | cedar       |
 | structuur          | gestructureerd        | gestructureerd   | open           | open        |
+| policy sleutel     | +subject              | uid              | id             | +principal  |
+|                    | +resource             |                  |                | +action     |
+|                    | +action               |                  |                | +resource   |
 | sinds              | 06-02-2003            | 19-09-2002       | 29-01-2021     | 29-06-2023  |
 | Github top project | 122 *                 | 32 *             | 9.6k *         | 4.5k *      |
 | - contributors     | 43                    | 13               | 447            | 53          |
 | extra output       | obligation            | permission       | JSON data      | geen        |
 |                    | advice                | duty             |                |             |
-|                    |                       | prohibitionm     |                |             |
+|                    |                       | prohibition      |                |             |
 | samenstellen       | per policy            | per policy       | per policy     | per policy  |
 | beheer             | per policy            | per policy       | per policy     | per policy  |
 | engines            | Java [^9] [^10] [^11] | Javascript [^14] | Go [^17] [^18] | Rust [^20]  |
