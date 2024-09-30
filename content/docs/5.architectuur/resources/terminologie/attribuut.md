@@ -45,6 +45,6 @@ de mogelijkheid om, attributen van diverse applicaties, om te vormen naar gestan
 
 ## Referenties
 
-[^1]: Merriam-Webster, https://www.merriam-webster.com/dictionary/attribute [2 Sep. 2024].
-[^2]: Cambridge, https://dictionary.cambridge.org/dictionary/english/attribute [2 Sep. 2024].
-[^3]: Dikke van Dale, https://www.vandale.nl/gratis-woordenboek/nederlands/betekenis/attribuut [2 Sep. 2024].
+[^1]: Merriam-Webster, https://www.merriam-webster.com/dictionary/attribute [2 Sep. 2024].\
+[^2]: Cambridge, https://dictionary.cambridge.org/dictionary/english/attribute [2 Sep. 2024].\
+[^3]: Dikke van Dale, https://www.vandale.nl/gratis-woordenboek/nederlands/betekenis/attribuut [2 Sep. 2024].\

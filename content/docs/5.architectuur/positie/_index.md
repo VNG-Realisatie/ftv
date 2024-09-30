@@ -8,8 +8,8 @@ Op deze pagina geven we een moment-opname weer van onze positie t.a.v. toegangsv
 
 Dit verhaal zal gedurende het project een veranderd karakter hebben, en zal daarom pas na verloop van tijd het complete plaatje bevatten.
 
-Omdat we nog gedeeltelijk in een inventarisatiserende fase verkeren, maar ook al in een orienterende fase,
-is er veel behoefte om deze ideeen en zienswijzen te delen en feedback te vergaren.
+Omdat we nog gedeeltelijk in de inventarisatiefase verkeren, maar ook al in een oriënterende fase,
+is er veel behoefte om deze ideeën en zienswijzen te delen en feedback te vergaren.
 Om dat in goede banen te leiden kan deze pagina als één van de uitgangspunten dienen om die discussies aan te gaan.
 
 ## Inventarisatie
@@ -51,9 +51,9 @@ Autorisatie kent twee belangrijke domeinen:
    Een stuk software dat op basis van de vastgelegde autorisatieregels de attributen van een verzoek controleert en toegang verleent of niet.
    De attributen van een verzoek zijn bv. de request headers, query parameters en de data in de request body.
    Hierbij kan opgemerkt worden dat het toegang verlenen niet alleen een wel of niet resultaat kan zijn,
-   maar het soms wenselijk is om ook extra filtering toe te passen op de bevraagde data, in horizontale en/of vertikale richting.
+   maar het soms wenselijk is om ook extra filtering toe te passen op de bevraagde data, in horizontale en/of verticale richting.
 
-Het verlenen van toegang is duidelijk het uitvoeren van de autorisatie, maar kan niet plaatsvinden zondar dat de autorisatieregels ergens zijn vastgelegd en bereikbaar zijn.
+Het verlenen van toegang is duidelijk het uitvoeren van de autorisatie, maar kan niet plaatsvinden zonder dat de autorisatieregels ergens zijn vastgelegd en bereikbaar zijn.
 
 Voor de uitvoering van de autorisatie gaan we uit van een geautomatiseerd systeem (een applicatie) dat toegang probeert te krijgen tot een ander geautomatiseerd systeem (een API).
 Nu wordt het uitvoeren van autorisatie nog vooral bij het aanbiedende systeem (de aanbieder) neergelegd.
@@ -61,7 +61,7 @@ Maar omdat niet alle autorisatieregels door de aanbieder uitgevoerd kunnen worde
 is het wenselijk om dit deels ook bij het afnemende systeem (de afnemer) neer te leggen.
 Beide partijen hebben hun verantwoordelijkheid hiervoor, en dienen dus hun deel van de autorisatie-taak uit te voeren.
 
-Hierbij kan aan de kant van de afnemer een persoon van een organisatie geidentificeerd worden die het verzoek gestart heeft.
+Hierbij kan aan de kant van de afnemer een persoon van een organisatie geïdentificeerd worden die het verzoek gestart heeft.
 Een kanttekening hierbij is dat er mogelijk ook automatische processen zijn die toegang vragen,
 welke echter niet aan een persoon gekoppeld zijn, maar wel aan de organisatie waar het proces plaats vindt.
 
@@ -80,7 +80,7 @@ In dat geval wordt de verantwoordelijkheid voor het uitvoeren van de data-autori
 
 In het kader van auditing zou het echter handig zijn als dit op dezelfde plek gebeurd.
 Het kan dan vooraf beter gecontroleerd worden of alle toegangsregels goed gedefinieerd zijn en een samenhangend geheel vormen.
-Men wil niet dat een auditer door zowel de applicatiecode als de losse autorisatieregels moet worstelen om de samenhang ervan te doorgronden om dit uiteindelijk te kunnen toetsen.
+Men wil niet dat een auditor door zowel de applicatiecode als de losse autorisatieregels moet worstelen om de samenhang ervan te doorgronden om dit uiteindelijk te kunnen toetsen.
 
 Ook technisch gezien is het veel handiger om alle autorisatie, die een afnemer of aanbieder moet uitvoeren, op één en dezelfde plek te hebben.
 Organisaties die veel verschillende applicaties gebruiken, hoeven het dan ook maar één keer te ontwikkelen, en niet voor iedere applicatie opnieuw.
@@ -100,7 +100,7 @@ Dit kan bijvoorbeeld zijn:
 - de tijd van het verzoek
 - het IP-adres van de gebruiker
 - het soort device dat gebruikt wordt
-- mogelijk het OS, soort browser, specifieke versies hiervan
+- mogelijk het besturingssysteem, soort browser, specifieke versies hiervan
 - de applicatie waaruit het verzoek voortkomt
 
 Bepaalde context is automatisch aanwezig in een request, of zijn er inherent aan verbonden.
@@ -112,9 +112,9 @@ De aanwezigheid en juistheid van contextgegevens is ook belangrijk voor de loggi
 
 ## Verifieerbare credentials
 Eerder werd al aangegeven dat verifieerbare credentials een deel van de attributen kunnen bevatten die voor het uitvoeren van autorisatie benodigd zijn.
-Het hebben van deze credentials (bv. in de vorm van OAuth claims) geeft aan dat autenticatie van de gebruiker succesvol heeft plaats gevonden.
-Vanuit het autenticateproces zijn de credentials van de gebruiker bepald, die aan kunnen geven welke verzoeks de gebruiker mag uitvoeren.
-De credentials zijn vastgelegde gegevens die te verifieren zijn.
+Het hebben van deze credentials (bv. in de vorm van OAuth claims) geeft aan dat authenticatie van de gebruiker succesvol heeft plaatsgevonden.
+Vanuit het authenticatieproces zijn de credentials van de gebruiker bepaald, die aan kunnen geven welke verzoeken de gebruiker mag uitvoeren.
+De credentials zijn vastgelegde gegevens die te controleren zijn.
 
 Maar het moet nog steeds gecontroleerd worden om daadwerkelijk de toegang te verlenen, en het zijn niet de enige gegevens die gecontroleerd moeten worden.
 
@@ -128,7 +128,7 @@ maar ook één of meerdere van de volgende condities:
 - of het kentekenbewijs in orde is
 - of de verzekeringspapieren nog kloppen
 - of het kenteken niet als gestolen is opgegeven
-- of de auto rijwaardig lijkt
+- of de auto rijvaardig lijkt
 - of er geen verboden voorwerpen in de auto aanwezig zijn
 - of de bestuurder niet onder (teveel) invloed van alcohol of drugs is
 - of de bestuurder geen rijontzegging opgelegd is
@@ -143,14 +143,14 @@ Middels logging van het verzoek met de codes van de uitgevoerde policy(ies) en d
 kan eenvoudig achteraf controle plaatsvinden of alles volgens de regels is verlopen.
 
 Omdat logging een flinke omvang aan kan nemen, is het noodzakelijk dat er voldoende kenmerken in iedere request aanwezig zijn, 
-zodat er gerichte selecties op de logregels plaats kunnen vinden. 
+zodat er gerichte selecties op de log-regels plaats kunnen vinden. 
 
 ## Federatief
 Het vastleggen van de autorisatieregels past in een federatief systeem.
 Er is overkoepelende wet- en regelgeving en beleidsregels die voor alle partijen gelden.
 Er zijn contractafspraken tussen partijen, waarbij er overlap is tussen de autorisatieregels die vanuit het contract opgesteld worden.
 Er zijn veel soortgelijke organisaties die dezelfde set toegangsregels moeten toepassen.
-Bv. gemeenten mogen alleen verzoeks op persoonsgegevens uitvoeren van personen die binnen de gemeentegrenzen wonen.
+Bv. gemeenten mogen alleen verzoeken op persoonsgegevens uitvoeren van personen die binnen de gemeentegrenzen wonen.
 
 Als iedere partij voor zichzelf alle toe te passen toegangsregels moet gaan opstellen en bijhouden, levert dat een veelvoud van hetzelfde werk op.
 
@@ -172,9 +172,9 @@ Een bevraging via API of via FDS is dan aan dezelfde autorisatieregels gebonden.
 Een federatief systeem ligt, zoals eerder beschreven, voor de hand.
 Maar het kan op vele verschillende technische manieren ingevuld worden.
 
-Vanuit dit federatieve systeem zou dan de autorisatie-onthologie van Lock-Unlock gevuld kunnen worden.
+Vanuit dit federatieve systeem zou dan de autorisatie-ontologie van Lock-Unlock gevuld kunnen worden.
 Ook de policies voor de diverse organisaties, t.b.v. toegangsverlening op API's, zouden hieruit gegenereerd kunnen worden.
-Het zou ook kunnen dat de autorisatie-onthologie van Lock-Unlock zelf het federatieve stelsel van autorisatieregels vormt,
+Het zou ook kunnen dat de autorisatie-ontologie van Lock-Unlock zelf het federatieve stelsel van autorisatieregels vormt,
 en dat hieruit de policies gegenereerd worden.
 
 Naast het vastleggen, is ook het vertalen van wet- en regelgeving naar technische regels een onderkende uitdaging.
@@ -194,9 +194,9 @@ Een belangrijke (nog te bepalen) factor hierin is, of de toegangsverlening puur 
 
 ## Technologie
 
-Voor het vastleggen en uitvoeren van autorisatie zijn verschillende standaarden, methodieken, implementaties en ideeen beschikbaar.
+Voor het vastleggen en uitvoeren van autorisatie zijn verschillende standaarden, methodieken, implementaties en ideeën beschikbaar.
 Hier geven we in het kort een overzicht van een aantal technieken, zodat de overeenkomsten en verschillen vergeleken kunnen worden.
-Tevens wordt de potentiele bruikbaarheid ervan binnen dit project aangegeven.
+Tevens wordt de mogelijke bruikbaarheid ervan binnen dit project aangegeven.
 
 ### ACL - Access Control Lists
 Relatief simpele en zeer grofmazige manier voor autorisatie en daardoor binnen dit project niet bruikbaar.
@@ -207,7 +207,7 @@ Moderner dan ACL, en iets minder grofmazig, maar nog steeds niet geschikt.
 ### ABAC/PBAC - Attribute/Policy Based Access Control
 ABAC en PBAC zijn namen voor dezelfde methodiek.
 PBAC is een vorm van ABAC. Technisch gezien doen beiden attributen matchen met een set autorisatieregels om toegang te verlenen of niet.
-Het wordt ook wel als Policy As Code (PAC) aangeduidt.
+Het wordt ook wel als Policy As Code (PAC) aangeduid.
 
 Er lijkt soms het misverstand te zijn dat ABAC en PBAC twee verschillende methodieken zijn.
 Het enige verschil dat mogelijk tot dit misverstand zou kunnen leiden, ligt wellicht in het soort policy taal en of deze taal al dan niet leesbaar is.
@@ -218,9 +218,9 @@ Het controleren van de policy gebeurd door een engine, die de gebruikte policy t
 
 Deze methodiek sluit zeer goed aan op de eisen die in dit project gesteld worden.
 
-### Autorisatie onthologie
+### Autorisatie ontologie
 Dit is een manier om de autorisatieregels, volgens een vast schema, in een database vast te leggen.
-Hierdoor kan het bv. als metadata binnen een federatief data stelsel beschikbaar gesteld worden (linked data), en gebruikt worden om data autorisatie te beheren en af te dwingen.
+Hierdoor kan dit bv. als metadata binnen een federatief data stelsel beschikbaar gesteld worden (linked data), en gebruikt worden om data autorisatie te beheren en af te dwingen.
 
 Deze methodiek is al via het [Lock-Unlock project](/docs/5.architectuur/inventarisatie/projecten/lock_unlock) voorgesteld voor het FDS.
 
@@ -233,5 +233,59 @@ Het zou voor dit project een welkome aanvulling kunnen zijn.
 
 ### AIAC - AI Access Control
 Er wordt reeds onderzoek gedaan om AI in te zetten voor toegangsverlening:
-- middels AI modellen de auditlog analyseren en afwijkingen ontdekken
+- middels AI modellen de audit-log analyseren en afwijkingen ontdekken
 - met generatieve AI een policy beheerder de mogelijkheid bieden om middels natuurlijke taal autorisatieregels vast te leggen
+
+## PBAC matrix
+
+|                    | XACML                 | ODRL             | OPA/rego       | Cedar       |
+|--------------------|-----------------------|------------------|----------------|-------------|
+| type               | standaard             | standaard        | open           | open        |
+| organisatie        | OASIS [^1]            | W3C [^2]         | CNCF [^3]      | Amazon [^4] |
+| documentatie       | [^5]                  | [^6]             | [^7]           | [^8]        |
+| taal/formaat       | XML                   | JSON,XML,Turtle  | rego           | cedar       |
+| structuur          | gestructureerd        | gestructureerd   | open           | open        |
+| sinds              | 06-02-2003            | 19-09-2002       | 29-01-2021     | 29-06-2023  |
+| Github top project | 122 *                 | 32 *             | 9.6k *         | 4.5k *      |
+| - contributors     | 43                    | 13               | 447            | 53          |
+| extra output       | obligation            | permission       | JSON data      | geen        |
+|                    | advice                | duty             |                |             |
+|                    |                       | prohibitionm     |                |             |
+| samenstellen       | per policy            | per policy       | per policy     | per policy  |
+| beheer             | per policy            | per policy       | per policy     | per policy  |
+| engines            | Java [^9] [^10] [^11] | Javascript [^14] | Go [^17] [^18] | Rust [^20]  |
+|                    | .NET [^12]            | Java [^15] [^16] | WASM [^19]     | Go [^21]    |
+|                    | Rest API [^13]        |                  |                | Java [^22]  |
+| data entiteiten    | policy                | policy           | policy         | policy      |
+|                    | target                | asset            |                | principal   |
+|                    | rule                  | rule             |                | resource    |
+|                    | condition             | action           |                | session     |
+|                    | effect                | constraint       |                |             |
+|                    | obligation            | operand          |                |             |
+|                    | advice                | permission       |                |             |
+|                    |                       | duty             |                |             |
+|                    |                       | prohibition      |                |             |
+|                    |                       | party            |                |             |
+
+[^1]: https://groups.oasis-open.org/communities/tc-community-home2?CommunityKey=67afe552-0921-49b7-9a85-018dc7d3ef1da
+[^2]: https://www.w3.org/
+[^3]: https://www.cncf.io/
+[^4]: https://aws.amazon.com/
+[^5]: https://docs.oasis-open.org/xacml/3.0/xacml-3.0-core-spec-os-en.html
+[^6]: https://www.w3.org/TR/odrl-model/
+[^7]: https://www.openpolicyagent.org/docs/latest/policy-reference/
+[^8]: https://docs.cedarpolicy.com/
+[^9]: https://github.com/authzforce/core/
+[^10]: http://www.openliberty.org/wiki/index.php/Main_Page#OpenAz
+[^11]: http://xacmlpdp.sourceforge.net/
+[^12]: http://mvpos.sourceforge.net/
+[^13]: https://github.com/authzforce/server
+[^14]: https://github.com/iptc/rightsml-dev/tree/master/rightsml-lib-js
+[^15]: http://oeg-upm.github.io/odrlapi/
+[^16]: https://github.com/xmljim/w3odrl21
+[^17]: https://github.com/open-policy-agent/opa
+[^18]: https://github.com/open-policy-agent/frameworks
+[^19]: https://github.com/open-policy-agent/npm-opa-wasm
+[^20]: https://github.com/cedar-policy/cedar
+[^21]: https://github.com/cedar-policy/cedar-go
+[^22]: https://github.com/cedar-policy/cedar-java
