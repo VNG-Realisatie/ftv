@@ -253,11 +253,11 @@ Er wordt reeds onderzoek gedaan om AI in te zetten voor toegangsverlening:
 | sinds              | 06-02-2003            | 19-09-2002       | 29-01-2021     | 29-06-2023  | 18-05-2021   |
 | Github top project | 122 *                 | 32 *             | 9.6k *         | 4.5k *      | 3k *         |
 | - contr.           | 43                    | 13               | 447            | 53          | 31           |
-| extra output       | obligation            | permission       | JSON data      | geen        |              |
+| extra output       | obligation            | permission       | JSON data      | geen        | ?            |
 |                    | advice                | duty             |                |             |              |
 |                    |                       | prohibition      |                |             |              |
-| bouwen             | per policy            | per policy       | per policy     | per policy  |              |
-| beheer             | per policy            | per policy       | per policy     | per policy  |              |
+| bouwen             | per policy            | per policy       | per policy     | per policy  | per policy   |
+| beheer             | per policy            | per policy       | per policy     | per policy  | per policy   |
 | engines            | Java [^9] [^10] [^11] | Javascript [^14] | Go [^17] [^18] | Rust [^20]  | Go [^25]     |
 |                    | .NET [^12]            | Java [^15] [^16] | WASM [^19]     | Go [^21]    | Java [^26]   |
 |                    | Rest API [^13]        |                  |                | Java [^22]  | .NET [^27]   |
