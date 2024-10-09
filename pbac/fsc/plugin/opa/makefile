@@ -7,8 +7,8 @@ GO_FILES := $(shell find . -name '*.go' | grep -v _test.go)
 
 all: test
 
-lint: ## lint all source code
-	@golint -set_exit_status ${PKG_LIST}
+lint: ## lint all source code (requires 'revive' to be installed!)
+	@revive -set_exit_status ${PKG_LIST}
 
 dep: ## upgrade all dependencies
 	@go get -u ./...
@@ -29,7 +29,7 @@ race: fmt ## run race detector
 cover: fmt ## run coverage report
 	@../../../../scripts/coverage.sh
 
-coverhtml: fmt ## run coverage report and display in browser (requires xdg-open)
+coverhtml: fmt ## run coverage report and display in browser (requires 'xdg-open' to be installed!)
 	@../../../../scripts/coverage.sh html
 	@xdg-open cover.html > /dev/null 2>&1
 
@@ -37,7 +37,8 @@ escape: fmt ## run escape analysis
 	@go build -gcflags "-m" ${PKG_LIST} 2>&1
 
 app: fmt ## build binaries
-	@go build -ldflags "-s -w" -o ../../../..bin/fsc-opa cmd/*.go
+	@mkdir -f ../../../../bin
+	@go build -ldflags "-s -w" -o ../../../../bin/fsc-opa cmd/*.go
 
 help:
 	@grep -h -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'

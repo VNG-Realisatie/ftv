@@ -2,7 +2,7 @@
 
 all: oas
 
-oas: ## create models for external OAS specs
+oas: ## create models for external OAS specs (requires 'oapi-codegen' to be installed!)
 	@./gen_oas.sh
 
 help:
