@@ -1,15 +1,10 @@
-//go:build tools
-// +build tools
-
 package main
 
 import (
 	"os"
 
-	_ "github.com/oapi-codegen/oapi-codegen/v2/cmd/oapi-codegen"
-
-	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/fsc/plugin/opa/internal/config"
-	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/fsc/plugin/opa/internal/server"
+	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/fsc/plugin/opa/config"
+	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/fsc/plugin/opa/server"
 )
 
 func main() {

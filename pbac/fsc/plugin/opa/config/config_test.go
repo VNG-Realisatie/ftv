@@ -1,9 +1,10 @@
 package config
 
 import (
-	"gitlab.com/gjuyn/go-config/config-ext/yaml"
 	"os"
 	"testing"
+
+	"gitlab.com/gjuyn/go-config/config-ext/yaml"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"

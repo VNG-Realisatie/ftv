@@ -10,25 +10,19 @@ import (
 	"github.com/stretchr/testify/require"
 	"gitlab.com/gjuyn/go-config/config"
 
-	cfg2 "gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/fsc/plugin/opa/internal/config"
+	cfg2 "gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/fsc/plugin/opa/config"
 )
 
-func TestPingBody(t *testing.T) {
-	t.Run("ping body", func(t *testing.T) {
-		assert.NotZero(t, len(pingResponse))
-	})
-}
-
-func TestPing(t *testing.T) {
-	t.Run("test ping", func(t *testing.T) {
+func TestHealth(t *testing.T) {
+	t.Run("test health", func(t *testing.T) {
 		cfg, _, err := cfg2.New(config.NoFlags())
 		require.NoError(t, err)
 		require.NotNil(t, cfg)
 
 		srv := fiber.New()
-		srv.Get("/ping", Ping)
+		srv.Get("/health", Health)
 
-		req := httptest.NewRequest("GET", "/ping", nil)
+		req := httptest.NewRequest("GET", "/health", nil)
 		resp, err2 := srv.Test(req, 1)
 
 		require.NoError(t, err2)
@@ -39,6 +33,6 @@ func TestPing(t *testing.T) {
 
 		b, err3 := io.ReadAll(resp.Body)
 		assert.NoError(t, err3)
-		assert.EqualValues(t, pingResponse, b)
+		assert.EqualValues(t, responseBody[200], b)
 	})
 }

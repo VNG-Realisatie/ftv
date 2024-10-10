@@ -1,9 +1,10 @@
 package handlers
 
 import (
-	"github.com/goccy/go-json"
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/utils"
+
+	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/utilities/convert"
 )
 
 // SendBasicResponse sends a basic response corresponding with the given status code.
@@ -11,6 +12,12 @@ import (
 func SendBasicResponse(req *fiber.Ctx, status int) error {
 	req.Set(fiber.HeaderContentType, fiber.MIMEApplicationJSON)
 	return req.Status(status).Send(responseBody[status])
+}
+
+// SendMessageResponse sends a basic response corresponding with the given status code.
+func SendMessageResponse(req *fiber.Ctx, status int, msg string) error {
+	req.Set(fiber.HeaderContentType, fiber.MIMEApplicationJSON)
+	return req.Status(status).JSON(&basicResponse{Message: msg})
 }
 
 type basicResponse struct {
@@ -33,7 +40,6 @@ var (
 
 func init() {
 	for _, status := range supportedStatus {
-		resp := basicResponse{Message: utils.StatusMessage(status)}
-		responseBody[status], _ = json.Marshal(resp)
+		responseBody[status] = convert.MustMarshall(&basicResponse{Message: utils.StatusMessage(status)})
 	}
 }

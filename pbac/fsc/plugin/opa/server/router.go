@@ -8,6 +8,6 @@ import (
 func (s *service) initRoutes() {
 	// API v1.
 	v1 := s.svc.Group("/v1")
-	v1.Get("/ping", handlers.Ping)
-	v1.Post("/auth", handlers.Auth)
+	v1.Get("/health", handlers.Health)
+	v1.Post("/auth", handlers.AuthHandler(s.cfg, s.logger))
 }
