@@ -25,11 +25,11 @@ func (l Language) String() string {
 	case ODRL:
 		return "ODRL"
 	case REGO:
-		return "Rego"
+		return "OPA/Rego"
 	case CEDAR:
 		return "Cedar"
 	case CERBOS:
-		return "Cerbos"
+		return "Cerbos/CEL"
 	default:
 		return "<unknown>"
 	}

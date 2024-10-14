@@ -9,7 +9,7 @@ import (
 
 const Version = "1.0.0"
 
-// NewController instantiates a new Cedar controller.
+// NewController instantiates a new Cerbos/CEL controller.
 func NewController(store string, recurse bool, logger *slog.Logger) pbac.Controller {
 	return &controller{
 		store:   store,
