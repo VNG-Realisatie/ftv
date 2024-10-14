@@ -6,6 +6,7 @@ use (
 	./mock-brp-public-tables-backend
 	./mock-brp-public-tables-data
 	./oas
-	./pbac/fsc/plugin/opa
+	./pbac/fsc/plugin/generic
+	./pbac/shared
 	./utilities
 )

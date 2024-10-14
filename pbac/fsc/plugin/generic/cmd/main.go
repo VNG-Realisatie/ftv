@@ -16,5 +16,7 @@ func main() {
 		}
 		panic(err)
 	}
+
+	logger.Info("configuration loaded successfully", "config", cfg)
 	server.Serve(cfg, logger)
 }
