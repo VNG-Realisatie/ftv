@@ -65,7 +65,7 @@ Een gebruiker mag alleen tijdens werktijd dataverwerkingen uitvoeren.
 - voor feestdagen is een jaarlijks veranderende lijst nodig (open API beschikbaar?).
 - voor vrije uren/vakantie is koppeling met HR-systeem nodig.
 
-### Bijzonderheden
+#### Bijzonderheden
 - Rekening houden met tijdzone (bv. voor overzeese organisaties; Caribisch Nederland)
 
 
