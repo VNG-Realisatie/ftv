@@ -9,5 +9,5 @@ weight: 90
 - NIST attributes document -> samenvatting maken
 - Use cases [BRP](/docs/5.architectuur/usecases/brp) (1e opzet)
 - Use cases [Kadaster](/docs/5.architectuur/usecases/kadaster) (WIP)
-- Use cases overig [Kadaster](/docs/5.architectuur/usecases/overzicht) (WIP)
+- Use cases [overig](/docs/5.architectuur/usecases/overzicht) (WIP)
 - Praktijktest (WIP)
