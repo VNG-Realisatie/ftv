@@ -12,8 +12,38 @@ Verzameling van mogelijke use-cases.
 ## Identificatie
 
 
-### Gebruiker
-Mag een gebruiker deze actie uitvoeren.
+### Natuurlijk persoon
+Mag een burger een bepaalde resource benaderen.
+
+#### Attributen
+- identity (DigiD of JWT met BSN) (*request*)
+- burger-ID (BSN) (*request*)
+- actie (CRUD) (*request*)
+- resource-id (*request*)
+- lijst toegestane combinaties (*PIP*)
+
+#### Condities
+- dient door afnemer gecontroleerd te worden.
+- policy keurt af als het BSN in DigiD/JWT niet overeenkomt met het BSN in de zoekopdracht.
+
+
+### Niet-natuurlijk persoon
+Mag een medewerker van een niet-natuurlijk persoon een bepaalde resource benaderen.
+
+#### Attributen
+- identity (eHerkenning KvK-nr) (*request*)
+- KvK-nr (*request*)
+- actie (CRUD) (*request*)
+- resource-id (*request*)
+- lijst toegestane combinaties (*PIP*)
+
+#### Condities
+- dient door afnemer gecontroleerd te worden.
+- policy keurt af als KvK-nr in eHerkenning niet overeenkomt met het KvK-nr in de zoekopdracht.
+
+
+### Medewerker
+Mag een medewerker een bepaalde resource benaderen.
 
 #### Attributen
 - identity (JWT-claim/-scope) (*request*)
@@ -26,8 +56,8 @@ Mag een gebruiker deze actie uitvoeren.
 - kan door aanbieder gecontroleerd worden als er een standaardisering is van de JWT-claims/-scopes (*niet wenselijk*).
 
 
-### Proces
-Mag een geautomatiseerd proces deze actie uitvoeren.
+### Geautomatiseerd proces
+Mag een geautomatiseerd proces een bepaalde resource benaderen.
 
 #### Attributen
 - identity (apikey?) (*request*)
@@ -44,7 +74,18 @@ Mag een geautomatiseerd proces deze actie uitvoeren.
 ## Doelbinding
 
 
-### **TODO**
+### Resource bescherming
+Het afschermen van resources welke niet benodigd zijn om een specifieke taak uit te voeren.
+
+#### Attributen
+- zaaktype (*request*)
+- taak (*request*)
+- resource-id (API) (*request*)
+- lijst toegestane combinaties (*PIP*)
+
+#### Condities
+- kan door afnemer gecontroleerd worden (*wenselijk*).
+- kan door aanbieder gecontroleerd worden als er een standaardisering is van zaaktypes en taken (*niet wenselijk*).
 
 ---------------------------------
 
@@ -188,6 +229,48 @@ Heeft iemand een inkomen boven of onder een vast bepaalde grenswaarde.
 - inkomen (*db*)
 
 #### Condities
-- aanbieder dient een API ter beschikking te stellen om dit te kunnen.
+- aanbieder dient een specifieke API ter beschikking te stellen om dit te kunnen.
 - afnemer dient de juiste API aan te roepen.
 - policy keurt af als de verkeerde API wordt aangeroepen.
+
+---------------------------------
+
+## Richting dataminimalisatie
+
+
+### Eigenaar van woning
+Voor een kapvergunning mag wel de eigenaar van de betreffende woning gecontroleerd worden, maar niet andere woningen van de eigenaar.
+
+#### Attributen
+- zaaktype (*request*)
+- taak (*request*)
+- adres (*request*)
+
+#### Condities
+- aanbieder dient een specifieke API ter beschikking te stellen om dit te kunnen.
+- afnemer dient de juiste API aan te roepen.
+- policy keurt af als de verkeerde API wordt aangeroepen, of adres dan wel eigenaar-id ontbreken in request.
+
+**of**
+
+- policy keurt af als adres ontbreekt in request; n.b. er mag niet op naam gezocht worden.
+
+
+### Eigenaar van voertuig
+Voor het controleren van rijbevoegdheid mag wel de eigenaar van het betreffende voertuig gecontroleerd worden, maar niet andere voertuigen van de eigenaar.
+
+#### Attributen
+- zaaktype (*request*)
+- taak (*request*)
+- voertuigkenteken (*request*)
+- eigenaar-id (BSN) (*request*)
+- resource-id (specifieke API) (*request*)
+
+#### Condities
+- aanbieder dient een specifieke API ter beschikking te stellen om dit te kunnen.
+- afnemer dient de juiste API aan te roepen.
+- policy keurt af als de verkeerde API wordt aangeroepen, of voertuigkenteken dan wel eigenaar-id ontbreken in request.
+
+**of**
+
+- policy keurt af als voertuigkenteken ontbreekt in request; n.b. er mag niet op naam gezocht worden.
