@@ -122,7 +122,7 @@ Een gebruiker mag alleen vanaf een toegestaan IP-adres dataverwerkingen uitvoere
 - kan alleen door afnemer gecontroleerd worden.
 
 
-### Browser, OS, versie
+### Browser, OS, (soort) apparaat, versie
 Vergelijkbaar met IP-adres.
 
 ---------------------------------
@@ -235,7 +235,7 @@ Heeft iemand een inkomen boven of onder een vast bepaalde grenswaarde.
 
 ---------------------------------
 
-## Richting dataminimalisatie
+## Richting beperken
 
 
 ### Eigenaar van woning
@@ -274,3 +274,30 @@ Voor het controleren van rijbevoegdheid mag wel de eigenaar van het betreffende 
 **of**
 
 - policy keurt af als voertuigkenteken ontbreekt in request; n.b. er mag niet op naam gezocht worden.
+
+---------------------------------
+
+## Misbruik
+
+
+### Opvragen gegevens van bekende Nederlander(s)
+Een gebruiker mag niet willekeurig gegevens opvragen, bv. om adressen van BN'ers door te verkopen.
+
+Dit is ook een vorm van [resource bescherming](#resource-bescherming).
+
+
+### Herhalen specifieke toets
+Een gebruiker mag niet, herhaaldelijk, in oplopende stappen, het inkomen (van dezelfde BSN) toetsen aan een ondergrens.
+Op den duur zal de bevraging een inschatting geven tussen welke grenzen het inkomen ligt.
+
+#### Attributen
+- identity (DigiD of JWT met BSN) (*request*)
+- burger-ID (BSN) (*request*)
+- actie (CRUD) (*request*)
+- resource-id (*request*)
+- lijst gevoelige combinaties van burger-id/actie/resource-id (*PIP*)
+- teller van gelijksoortige bevragingen (*PIP*)
+- maximum aantal gelijksoortige bevragingen van een gelijke combinatie (*PIP*)
+
+#### Condities
+- ergens zal per identity en per gevoelige combinatie een teller bijgehouden moeten worden (stateful)
