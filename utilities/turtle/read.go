@@ -4,9 +4,10 @@ import (
 	"fmt"
 	"io"
 	"net/http"
-	"strings"
 
 	"github.com/deiu/rdf2go"
+
+	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/utilities/convert"
 )
 
 // Load loads a turtle graph from the given input stream.
@@ -48,18 +49,11 @@ func loadURI(g *rdf2go.Graph, uri string) error {
 	if r != nil {
 		defer r.Body.Close()
 		if r.StatusCode == 200 {
-			return g.Parse(r.Body, fixContentType(r.Header.Get("Content-Type")))
+			return g.Parse(r.Body, convert.RemoveHeaderParameters(r.Header.Get("Content-Type")))
 		}
 	}
 
 	return fmt.Errorf("could not fetch graph from %s - HTTP %d", uri, r.StatusCode)
-}
-
-func fixContentType(in string) string {
-	if ix := strings.Index(in, ";"); ix > 0 {
-		return in[:ix]
-	}
-	return in
 }
 
 var (

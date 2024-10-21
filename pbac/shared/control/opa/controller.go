@@ -1,0 +1,34 @@
+package opa
+
+import (
+	"log/slog"
+	"path/filepath"
+
+	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/shared/control"
+	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/shared/pap"
+	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/shared/pip"
+	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/shared/types"
+)
+
+const Version = "1.0.0"
+
+// NewController instantiates a new OPA/Rego controller.
+func NewController(pip pip.PIP, store string, recurse bool, logger *slog.Logger) control.Controller {
+	if store != "" {
+		store, _ = filepath.Abs(filepath.Join(store, "cedar"))
+	}
+
+	c := &controller{
+		control.NewBase(types.REGO.String(), Version, logger),
+	}
+
+	c.SetPIP(pip)
+	c.SetPAP(pap.New(store, recurse, c.Logger(), c.policyEvent))
+
+	c.Logger().Info("pbac controller initialized", "controller", c.String())
+	return c
+}
+
+type controller struct {
+	control.Base
+}

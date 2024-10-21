@@ -6,22 +6,45 @@ import (
 	"log/slog"
 	"net/url"
 	"strings"
+	"time"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/google/uuid"
 
 	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/oas/fsc/auth"
 	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/fsc/plugin/opa/config"
-	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/shared/pbac"
-	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/shared/pbac/control"
+	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/shared/control"
+	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/shared/control/cedar"
+	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/shared/control/cerbos"
+	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/shared/control/opa"
+	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/shared/pip"
+	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/shared/types"
 	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/utilities/convert"
 )
 
 // AuthHandler instantiates an authorization endpoint handler.
 func AuthHandler(cfg *config.Config, logger *slog.Logger) fiber.Handler {
+	p := pip.New(cfg.PolicyStore, logger)
+
+	var c control.Controller
+	switch types.LanguageFromString(cfg.PolicyLanguage) {
+	case types.REGO:
+		c = opa.NewController(p, cfg.PolicyStore, cfg.PolicyStoreRecurse, logger)
+	case types.CERBOS:
+		c = cerbos.NewController(p, cfg.PolicyStore, cfg.PolicyStoreRecurse, logger)
+	case types.CEDAR:
+		c = cedar.NewController(p, cfg.PolicyStore, cfg.PolicyStoreRecurse, logger)
+	}
+
+	if c == nil {
+		logger.Error("unsupported policy language", "language", cfg.PolicyLanguage)
+		return nil
+	}
+
 	h := &authHandler{
 		cfg:        cfg,
 		logger:     logger,
-		controller: control.New(cfg, logger),
+		controller: c,
 	}
 	return h.run
 }
@@ -32,14 +55,15 @@ func (h *authHandler) run(fc *fiber.Ctx) error {
 		return err
 	}
 
-	resp, err2 := h.controller.Authorize(h.newAccessRequest(authReq))
+	req := h.newAccessRequest(authReq)
+	resp, err2 := h.controller.Authorize(req)
 	if err2 != nil {
 		status := fiber.StatusInternalServerError
 		h.logger.Error("authorization process failed", "status", status, "error", err2)
 		return SendMessageResponse(fc, status, "authorization process failed")
 	}
 
-	h.logger.Info("authorization processed", "allowed", resp.Allowed, "reason", resp.Message, "policy", resp.PolicyKey)
+	h.logger.Info("authorization processed", "regquest-uid", req.UID, "method", authReq.Input.Method, "path", authReq.Input.Path, "allowed", resp.Allowed, "reason", resp.Message, "policy", resp.PolicyKey)
 
 	out := auth.AuthorizationResponse{Result: &auth.AuthorizationResponseData{Allowed: &resp.Allowed}}
 	if !resp.Allowed {
@@ -54,10 +78,6 @@ func (h *authHandler) verifyRequest(fc *fiber.Ctx) (*auth.AuthorizationRequest, 
 		err := fmt.Errorf("unsupported policy language: %s", h.cfg.PolicyLanguage)
 		h.logger.Error("unsupported policy language", "status", status, "error", err)
 		return nil, SendMessageResponse(fc, status, "internal configuration error")
-	}
-
-	if len(fc.Request().Header.ContentType()) == 0 {
-		fc.Request().Header.Set("Content-Type", "application/json")
 	}
 
 	authReq := &auth.AuthorizationRequest{}
@@ -77,7 +97,7 @@ func (h *authHandler) verifyRequest(fc *fiber.Ctx) (*auth.AuthorizationRequest, 
 	return authReq, nil
 }
 
-func (h *authHandler) newAccessRequest(in *auth.AuthorizationRequest) *pbac.Request {
+func (h *authHandler) newAccessRequest(in *auth.AuthorizationRequest) *types.Request {
 	s1, s2 := convert.OpaqueString(in.Input.Path), convert.OpaqueString(in.Input.Query)
 
 	if !strings.HasPrefix(s1, "http") {
@@ -89,11 +109,13 @@ func (h *authHandler) newAccessRequest(in *auth.AuthorizationRequest) *pbac.Requ
 
 	u, _ := url.ParseRequestURI(s1)
 
-	req := &pbac.Request{
+	req := &types.Request{
+		UID: uuid.New(),
 		URL: u,
 		// Body:       strings.NewReader(convert.OpaqueString(authReq.Input.Body)),
 		Attributes: map[string]any{
-			"Method": convert.OpaqueString(in.Input.Method),
+			"http-method":  convert.OpaqueString(in.Input.Method),
+			"request-time": time.Now(),
 		},
 	}
 
@@ -101,7 +123,7 @@ func (h *authHandler) newAccessRequest(in *auth.AuthorizationRequest) *pbac.Requ
 		req.Headers = *in.Input.Headers
 	}
 	if in.Input.OutwayCertificateChain != nil {
-		req.Attributes["OutwayCertificateChain"] = *in.Input.OutwayCertificateChain
+		req.Attributes["outway-certificate-chain"] = *in.Input.OutwayCertificateChain
 	}
 
 	return req
@@ -110,5 +132,5 @@ func (h *authHandler) newAccessRequest(in *auth.AuthorizationRequest) *pbac.Requ
 type authHandler struct {
 	cfg        *config.Config
 	logger     *slog.Logger
-	controller pbac.Controller
+	controller control.Controller
 }

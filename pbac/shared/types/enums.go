@@ -1,11 +1,11 @@
-package pbac
+package types
 
 import "strings"
 
 // Language represents a policy language.
 type Language uint8
 
-// List of supported policy languages.
+// ListAllKeys of supported policy languages.
 const (
 	XACML Language = iota + 1
 	ODRL
@@ -43,7 +43,7 @@ func LanguageFromString(in string) Language {
 // Format represents the format for policy files.
 type Format uint8
 
-// List of supported policy file formats.
+// ListAllKeys of supported policy file formats.
 //
 // Note that not the policy language (Language) limits the choices for the file format of a policy.
 const (
