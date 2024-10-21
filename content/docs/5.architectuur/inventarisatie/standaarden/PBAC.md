@@ -12,6 +12,10 @@ title: 'Access Control'
 
 ### Access Control
 - https://en.wikipedia.org/wiki/Attribute-based_access_control
+- https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-95.pdf
+- https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-162.pdf
+- https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-205.pdf
+- https://nvlpubs.nist.gov/nistpubs/ir/2018/NIST.IR.8112.pdf
 - https://bok.idpro.org/article/id/42/
 - https://bok.idpro.org/article/id/61/
 - https://www.paloaltonetworks.com/cyberpedia/what-is-policy-as-code
