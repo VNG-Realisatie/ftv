@@ -28,5 +28,4 @@ title: 'XACML'
 - de communicatie tussen de PEP & PDP kan middels XML of JSON
 - is in januari 2014 uitgebreid beschreven in NIST SP 800-162; in die tijd als ABAC standaard
 - met de hand samenstellen van policies is zeer technisch werk
-- er zijn wel veel commerciële implementaties, met uitgebreide editors beschikbaar
-- is in principe wel om te zetten naar andere policy talen, echter alleen als het primaire functies gebruikt bevat
+- er zijn wel veel commerciële implementaties met uitgebreide editors beschikbaar
