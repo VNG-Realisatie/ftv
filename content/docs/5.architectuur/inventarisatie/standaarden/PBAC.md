@@ -33,61 +33,23 @@ title: 'Access Control'
 
 
 ### XACML
-- https://groups.oasis-open.org/communities/tc-community-home2?CommunityKey=67afe552-0921-49b7-9a85-018dc7d3ef1d
-- XML gebaseerd
-- XACML gebaseerde Golang implementatie beschikbaar (helaas dood project)
-- ondersteunt extra attributen naast ja/nee; onder de noemer 'obligation' / 'advice'
-- https://en.wikipedia.org/wiki/XACML
-- https://github.com/infobloxopen/themis (helaas dood project)
-- https://github.com/wso2/balana
-- https://code.google.com/archive/p/no-xacml/
+Zie [XACML](../xacml).
 
 
 ### ODRL
-- https://www.w3.org/2012/09/odrl/archive/odrl.net/index.html
-- geen (open-source) Golang implementatie
-- vooral gericht op DRM
-- ondersteunt extra attributen naast ja/nee; onder de noemer 'duty'
-- https://en.wikipedia.org/wiki/ODRL
-- https://www.w3.org/TR/odrl-model/
+Zie [ODRL](../odrl).
 
 
 ### OPA / rego
-- https://www.openpolicyagent.org/docs/latest/
-- geen Wikipedia
-- open-source
-- ondersteunt extra attributen naast ja/nee; kan extra attributen aan de response toevoegen
-- pure Golang implementatie
-- https://github.com/open-policy-agent/opa
-- https://www.cncf.io/blog/2020/08/13/introducing-policy-as-code-the-open-policy-agent-opa/
-- https://www.openpolicyagent.org/docs/latest/policy-performance/
-- https://github.com/permitio/opal
-- https://github.com/StyraInc/regal
-- https://www.topaz.sh/
-- https://github.com/fugue/Fregot
-- https://github.com/tmobile/magtape
+Zie [OPA](../opa).
 
 
 ### Cerbos / CEL
-- https://cel.dev/
-- https://github.com/cerbos/cerbos
-- https://docs.cerbos.dev/cerbos/latest/
-- open-source Golang
-- ABAC - PDP met database en file ondersteuning voor policies
-- policies in YAML geschreven
-- policies kunnen extra attributen aann de response toevoegen
-- commercieel bedrijf; verzamelt anonieme verbruiksdata
+Zie [Cerbos/CEL](../cerbos).
 
 
 ### Cedar - AWS
-- https://www.cedarpolicy.com/en
-- geen Wikipedia
-- open-source vanuit AWS
-- ondersteunt geen extra attributen, dus alleen ja/nee
-- pure Rust implementatie
-- https://github.com/cedar-policy/cedar
-- https://docs.cedarpolicy.com/
-- https://github.com/permitio/opal
+Zie [Cedar](../cedar).
 
 
 ### ALFA - Axiomatics
@@ -103,7 +65,7 @@ title: 'Access Control'
 - https://csrc.nist.gov/Projects/Policy-Machine
 - geen Wikipedia
 - geen (open-source) Golang implementatie
-- virtuele machine gebaseerd
+- virtuele-machine gebaseerd
 
 
 ### EPAL - IBM
@@ -116,13 +78,7 @@ title: 'Access Control'
 ### Sentinal - Hashicorp
 - https://developer.hashicorp.com/sentinel
 - niet open-source
-- gericht op hashicorp produkten
-
-
-### Verified Permissions - Amazon
-- https://aws.amazon.com/verified-permissions/
-- gebaseerd op Cedar 
-- https://aws.amazon.com/blogs/security/governance-at-scale-enforce-permissions-and-compliance-by-using-policy-as-code/
+- gericht op hashicorp producten
 
 
 ### Azure PAC - MS
@@ -134,7 +90,7 @@ title: 'Access Control'
 
 
 ## Observaties
-- XACML / ODRL lijken de oudste en wijdst verspreide opties te zijn.
-- XACML heeft een Golang implementatie; ODRL niet.
-- OPA / CEDAR zijn moderner en geimplementeerd in Golang / Rust.
-- XACML, ODRL en OPA kunnen extra attributen opleveren naast ja/nee; XACML noemt dit obligations, ODRL noemt het duties en OPA policies kunnen extra data aan de opgeleverde JSON meegeven.
+- XACML, ODRL lijken de oudste en wijdst verspreide opties te zijn.
+- XACML, ODRL hebben geen Golang implementatie.
+- OPA, CEDAR, CERBOS zijn moderner en geimplementeerd in Golang / Rust.
+- XACML, ODRL, OPA, CERBOS kunnen extra attributen opleveren naast ja/nee
