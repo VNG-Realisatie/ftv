@@ -243,10 +243,10 @@ Er wordt reeds onderzoek gedaan om AI in te zetten voor toegangsverlening:
 | type               | standaard             | standaard        | open           | open        | open         |
 | org                | OASIS [^1]            | W3C [^2]         | CNCF [^3]      | Amazon [^4] | Google [^23] |
 | docs               | [^5]                  | [^6]             | [^7]           | [^8]        | [^24]        |
-| taal/fmt           | XML                   | Turtle           | rego           | cedar       | cel          |
+| taal/fmt           | XML                   | Turtle           | rego           | cedar       | yaml+cel     |
 |                    |                       | JSON             |                |             |              |
 |                    |                       | XML              |                |             |              |
-| structuur          | gestructureerd        | gestructureerd   | open           | open        | open         |
+| gestructureerd     | ja                    | ja               | nee            | nee         | ja           |
 | pol. sleutel       | +subject              | uid              | id             | +principal  | +principal   |
 |                    | +resource             |                  |                | +action     | +action      |
 |                    | +action               |                  |                | +resource   | +resource    |
@@ -265,7 +265,7 @@ Er wordt reeds onderzoek gedaan om AI in te zetten voor toegangsverlening:
 |                    |                       |                  |                |             | Python [^29] |
 |                    |                       |                  |                |             | Rust [^30]   |
 | data entiteiten    | policy                | policy           | policy         | policy      | policy       |
-|                    | target                | asset            |                | principal   |              |
+|                    | target                | asset            |                | principal   | rule         |
 |                    | rule                  | rule             |                | resource    |              |
 |                    | condition             | action           |                | session     |              |
 |                    | effect                | constraint       |                |             |              |
