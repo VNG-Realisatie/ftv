@@ -6,20 +6,23 @@ package auth
 // AuthorizationRequest defines model for AuthorizationRequest.
 type AuthorizationRequest struct {
 	Input *struct {
+		// Body The HTTP request body as received by the Inway Base64 encoded
+		Body *string `json:"body,omitempty"`
+
 		// Headers Contains the HTTP-headers of the request made to the Outway
-		Headers *map[string][]string `json:"headers,omitempty"`
+		Headers map[string][]string `json:"headers"`
 
 		// Method the HTTP-method of the request made to the Outway
-		Method *string `json:"method,omitempty"`
+		Method string `json:"method"`
 
 		// OutwayCertificateChain The x.509 certificate chain. The first entry in the array is the outway certificate; the other certificates can be used to verify this first certificate.
-		OutwayCertificateChain *[]string `json:"outway_certificate_chain,omitempty"`
+		OutwayCertificateChain []string `json:"outway_certificate_chain"`
 
 		// Path path of the request to the Outway
-		Path *string `json:"path,omitempty"`
+		Path string `json:"path"`
 
 		// Query query parameters of the request to the Outway
-		Query *string `json:"query,omitempty"`
+		Query string `json:"query"`
 	} `json:"input,omitempty"`
 }
 

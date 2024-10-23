@@ -57,6 +57,15 @@ components:
               items:
                 description: Base64 encoded DER PKIX certificate value
                 type: string
+            body:
+              description: The HTTP request body as received by the Inway Base64 encoded
+              type: string
+          required:
+            - method
+            - path
+            - outway_certificate_chain
+            - headers
+            - query
     AuthorizationResponse:
       type: object
       properties:

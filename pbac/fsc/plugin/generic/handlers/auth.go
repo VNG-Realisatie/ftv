@@ -19,7 +19,6 @@ import (
 	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/shared/control/opa"
 	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/shared/pip"
 	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/shared/types"
-	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/utilities/convert"
 )
 
 // AuthHandler instantiates an authorization endpoint handler.
@@ -63,7 +62,7 @@ func (h *authHandler) run(fc *fiber.Ctx) error {
 		return SendMessageResponse(fc, status, "authorization process failed")
 	}
 
-	h.logger.Info("authorization processed", "regquest-uid", req.UID, "method", authReq.Input.Method, "path", authReq.Input.Path, "allowed", resp.Allowed, "reason", resp.Message, "policy", resp.PolicyKey)
+	h.logger.Info("authorization processed", "reguest-uid", req.UID, "method", authReq.Input.Method, "path", authReq.Input.Path, "allowed", resp.Allowed, "reason", resp.Message, "policy", resp.PolicyKey)
 
 	out := auth.AuthorizationResponse{Result: &auth.AuthorizationResponseData{Allowed: &resp.Allowed}}
 	if !resp.Allowed {
@@ -87,7 +86,7 @@ func (h *authHandler) verifyRequest(fc *fiber.Ctx) (*auth.AuthorizationRequest, 
 		return nil, SendMessageResponse(fc, status, "invalid input data")
 	}
 
-	if authReq.Input.Path == nil {
+	if authReq.Input.Path == "" {
 		status := fiber.StatusBadRequest
 		err := errors.New("input.path must be filled")
 		h.logger.Error("bad request", "status", status, "error", err)
@@ -98,7 +97,7 @@ func (h *authHandler) verifyRequest(fc *fiber.Ctx) (*auth.AuthorizationRequest, 
 }
 
 func (h *authHandler) newAccessRequest(in *auth.AuthorizationRequest) *types.Request {
-	s1, s2 := convert.OpaqueString(in.Input.Path), convert.OpaqueString(in.Input.Query)
+	s1, s2 := in.Input.Path, in.Input.Query
 
 	if !strings.HasPrefix(s1, "http") {
 		s1 = fmt.Sprintf("https://%s", s1)
@@ -114,16 +113,16 @@ func (h *authHandler) newAccessRequest(in *auth.AuthorizationRequest) *types.Req
 		URL: u,
 		// Body:       strings.NewReader(convert.OpaqueString(authReq.Input.Body)),
 		Attributes: map[string]any{
-			"http-method":  convert.OpaqueString(in.Input.Method),
+			"http-method":  in.Input.Method,
 			"request-time": time.Now(),
 		},
 	}
 
 	if in.Input.Headers != nil {
-		req.Headers = *in.Input.Headers
+		req.Headers = in.Input.Headers
 	}
 	if in.Input.OutwayCertificateChain != nil {
-		req.Attributes["outway-certificate-chain"] = *in.Input.OutwayCertificateChain
+		req.Attributes["outway-certificate-chain"] = in.Input.OutwayCertificateChain
 	}
 
 	return req
