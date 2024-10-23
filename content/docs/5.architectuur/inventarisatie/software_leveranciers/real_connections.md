@@ -1,5 +1,4 @@
 ---
-title: 'Real Connections'
 weight: 70
 ---
 

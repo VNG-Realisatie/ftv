@@ -1,5 +1,4 @@
 ---
-weight: 60
 title: 'Sonic Bee'
 ---
 

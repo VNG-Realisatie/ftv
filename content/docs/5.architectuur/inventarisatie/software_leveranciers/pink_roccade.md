@@ -1,5 +1,4 @@
 ---
-weight: 70
 title: 'Pink Roccade'
 ---
 

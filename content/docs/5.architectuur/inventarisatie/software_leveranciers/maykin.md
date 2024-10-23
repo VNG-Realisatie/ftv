@@ -1,5 +1,4 @@
 ---
-weight: 30
 title: 'Maykin'
 ---
 
