@@ -1,7 +1,7 @@
 package server
 
 import (
-	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/fsc/plugin/opa/handlers"
+	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/fsc/plugin/generic/handlers"
 )
 
 // initRoutes sets up the routing table for HTTP requests.

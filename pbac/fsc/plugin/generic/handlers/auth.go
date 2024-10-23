@@ -1,8 +1,11 @@
 package handlers
 
 import (
+	"bytes"
+	"encoding/base64"
 	"errors"
 	"fmt"
+	"io"
 	"log/slog"
 	"net/url"
 	"strings"
@@ -11,8 +14,10 @@ import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/google/uuid"
 
+	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/fsc/plugin/generic/config"
+	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/utilities/convert"
+
 	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/oas/fsc/auth"
-	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/fsc/plugin/opa/config"
 	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/shared/control"
 	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/shared/control/cedar"
 	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/shared/control/cerbos"
@@ -97,35 +102,34 @@ func (h *authHandler) verifyRequest(fc *fiber.Ctx) (*auth.AuthorizationRequest, 
 }
 
 func (h *authHandler) newAccessRequest(in *auth.AuthorizationRequest) *types.Request {
-	s1, s2 := in.Input.Path, in.Input.Query
-
-	if !strings.HasPrefix(s1, "http") {
-		s1 = fmt.Sprintf("https://%s", s1)
+	s := in.Input.Path
+	if !strings.HasPrefix(s, "http") {
+		s = fmt.Sprintf("https://%s", s)
 	}
-	if s2 != "" {
-		s1 = fmt.Sprintf("%s?%s", s1, s2)
+	if in.Input.Query != "" {
+		s = fmt.Sprintf("%s?%s", s, in.Input.Query)
 	}
 
-	u, _ := url.ParseRequestURI(s1)
+	u, _ := url.ParseRequestURI(s)
 
-	req := &types.Request{
-		UID: uuid.New(),
-		URL: u,
-		// Body:       strings.NewReader(convert.OpaqueString(authReq.Input.Body)),
+	var f io.Reader
+	if b := convert.OpaqueString(in.Input.Body); b != "" {
+		if d, err := base64.StdEncoding.DecodeString(b); err != nil {
+			f = bytes.NewBuffer(d)
+		}
+	}
+
+	return &types.Request{
+		UID:     uuid.New(),
+		URL:     u,
+		Body:    f,
+		Headers: in.Input.Headers,
 		Attributes: map[string]any{
-			"http-method":  in.Input.Method,
-			"request-time": time.Now(),
+			"http-method":              in.Input.Method,
+			"request-time":             time.Now().UTC(),
+			"outway-certificate-chain": in.Input.OutwayCertificateChain,
 		},
 	}
-
-	if in.Input.Headers != nil {
-		req.Headers = in.Input.Headers
-	}
-	if in.Input.OutwayCertificateChain != nil {
-		req.Attributes["outway-certificate-chain"] = in.Input.OutwayCertificateChain
-	}
-
-	return req
 }
 
 type authHandler struct {
