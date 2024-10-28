@@ -2,6 +2,7 @@ package handlers
 
 import (
 	"bytes"
+	"context"
 	"encoding/base64"
 	"errors"
 	"fmt"
@@ -14,46 +15,53 @@ import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/google/uuid"
 
-	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/fsc/plugin/generic/config"
-	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/utilities/convert"
-
 	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/oas/fsc/auth"
+	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/fsc/plugin/generic/config"
 	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/shared/control"
 	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/shared/control/cedar"
 	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/shared/control/cerbos"
 	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/shared/control/opa"
 	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/shared/pip"
 	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/shared/types"
+	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/utilities/convert"
 )
 
 // AuthHandler instantiates an authorization endpoint handler.
 func AuthHandler(cfg *config.Config, logger *slog.Logger) fiber.Handler {
-	p := pip.New(cfg.PolicyStore, logger)
-
-	var c control.Controller
-	switch types.LanguageFromString(cfg.PolicyLanguage) {
-	case types.REGO:
-		c = opa.NewController(p, cfg.PolicyStore, cfg.PolicyStoreRecurse, logger)
-	case types.CERBOS:
-		c = cerbos.NewController(p, cfg.PolicyStore, cfg.PolicyStoreRecurse, logger)
-	case types.CEDAR:
-		c = cedar.NewController(p, cfg.PolicyStore, cfg.PolicyStoreRecurse, logger)
-	}
-
+	c, err := newController(cfg, logger)
 	if c == nil {
-		logger.Error("unsupported policy language", "language", cfg.PolicyLanguage)
+		logger.Error("configuration error", "error", err)
 		return nil
 	}
 
-	h := &authHandler{
-		cfg:        cfg,
-		logger:     logger,
-		controller: c,
-	}
+	h := &authHandler{cfg: cfg, logger: logger, controller: c}
 	return h.run
 }
 
+func newController(cfg *config.Config, logger *slog.Logger) (control.Controller, error) {
+	switch types.LanguageFromString(cfg.PolicyLanguage) {
+	case types.REGO:
+		p := pip.New(cfg.PolicyStore, logger, nil)
+		return opa.NewController(p, cfg.PolicyStore, cfg.PolicyStoreRecurse, logger), nil
+	case types.CERBOS:
+		p := pip.New(cfg.PolicyStore, logger, nil)
+		return cerbos.NewController(p, cfg.PolicyStore, cfg.PolicyStoreRecurse, logger), nil
+	case types.CEDAR:
+		p := pip.New(cfg.PolicyStore, logger, cedar.NewAttributeBuilder(logger))
+		return cedar.NewController(p, cfg.PolicyStore, cfg.PolicyStoreRecurse, logger), nil
+	default:
+		return nil, fmt.Errorf("unsupported policy language '%s'", cfg.PolicyLanguage)
+	}
+}
+
 func (h *authHandler) run(fc *fiber.Ctx) error {
+	if h.logger.Enabled(context.Background(), slog.LevelDebug) {
+		started := time.Now()
+		defer func() {
+			h.logger.Debug("authorization hanbdler", "elapsed time", time.Since(started))
+		}()
+	}
+
 	authReq, err := h.verifyRequest(fc)
 	if authReq == nil {
 		return err
@@ -67,12 +75,14 @@ func (h *authHandler) run(fc *fiber.Ctx) error {
 		return SendMessageResponse(fc, status, "authorization process failed")
 	}
 
-	h.logger.Info("authorization processed", "reguest-uid", req.UID, "method", authReq.Input.Method, "path", authReq.Input.Path, "allowed", resp.Allowed, "reason", resp.Message, "policy", resp.PolicyKey)
-
 	out := auth.AuthorizationResponse{Result: &auth.AuthorizationResponseData{Allowed: &resp.Allowed}}
-	if !resp.Allowed {
-		out.Result.Status.Reason = &resp.Message
+	if !resp.Allowed && resp.Message != "" {
+		out.Result.Status = &struct {
+			Reason *string `json:"reason,omitempty"`
+		}{Reason: &resp.Message}
 	}
+
+	h.logger.Info("authorization processed", "request-uid", req.UID, "method", authReq.Input.Method, "path", authReq.Input.Path, "allowed", resp.Allowed, "reason", resp.Message, "policy", resp.PolicyKey)
 	return fc.JSON(&out)
 }
 
@@ -82,6 +92,10 @@ func (h *authHandler) verifyRequest(fc *fiber.Ctx) (*auth.AuthorizationRequest, 
 		err := fmt.Errorf("unsupported policy language: %s", h.cfg.PolicyLanguage)
 		h.logger.Error("unsupported policy language", "status", status, "error", err)
 		return nil, SendMessageResponse(fc, status, "internal configuration error")
+	}
+
+	if len(fc.Request().Header.ContentType()) == 0 {
+		fc.Request().Header.SetContentType("application/json")
 	}
 
 	authReq := &auth.AuthorizationRequest{}
@@ -120,13 +134,13 @@ func (h *authHandler) newAccessRequest(in *auth.AuthorizationRequest) *types.Req
 	}
 
 	return &types.Request{
-		UID:     uuid.New(),
-		URL:     u,
-		Body:    f,
-		Headers: in.Input.Headers,
+		UID:         uuid.New(),
+		URL:         u,
+		Method:      in.Input.Method,
+		RequestTime: time.Now().UTC(),
+		Body:        f,
+		Headers:     in.Input.Headers,
 		Attributes: map[string]any{
-			"http-method":              in.Input.Method,
-			"request-time":             time.Now().UTC(),
 			"outway-certificate-chain": in.Input.OutwayCertificateChain,
 		},
 	}

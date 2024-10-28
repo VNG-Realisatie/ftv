@@ -4,21 +4,24 @@ import (
 	"strings"
 
 	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/shared/types"
+	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/standards"
 )
 
-func (p *pip) processURL(req *types.Request, a types.Attributes) {
+func (p *pip) processURL(req *types.Request, a types.AttributeSet) {
 	s, _ := strings.CutSuffix(req.URL.Scheme, "//")
 	s, _ = strings.CutSuffix(s, ":")
 
-	q := make(map[string]string)
-	for k := range req.URL.Query() {
-		q[k] = strings.Join(req.URL.Query()[k], "\r")
+	inQ, outQ := req.URL.Query(), make(map[string]string)
+	for k := range inQ {
+		outQ[k] = strings.Join(inQ[k], "\r")
 	}
 
-	a.CreateAttribute("http", map[string]any{
-		"scheme": s,
-		"host":   req.URL.Host,
-		"path":   req.URL.RawPath,
-		"query":  q,
+	a.AddAttribute(standards.AttrHttp, map[string]any{
+		standards.AttrRequestTime: req.RequestTime,
+		standards.AttrMethod:      req.Method,
+		standards.AttrScheme:      s,
+		standards.AttrHost:        req.URL.Host,
+		standards.AttrPath:        req.URL.RawPath,
+		standards.AttrQuery:       outQ,
 	})
 }

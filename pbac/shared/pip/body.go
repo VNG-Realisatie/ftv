@@ -11,8 +11,12 @@ import (
 	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/utilities/convert"
 )
 
-func (p *pip) processBody(req *types.Request, a types.Attributes) {
-	ct := a.ReadAttribute("content-type").(string)
+func (p *pip) processBody(req *types.Request, a types.AttributeSet) {
+	if req.Body == nil {
+		return
+	}
+
+	ct := a.GetAttribute("content-type").(string)
 	if ct != "" {
 		ct = strings.ToLower(convert.RemoveHeaderParameters(ct))
 	} else {
@@ -29,7 +33,7 @@ func (p *pip) processBody(req *types.Request, a types.Attributes) {
 	}
 }
 
-type bodyParser func(body io.Reader, a types.Attributes) error
+type bodyParser func(body io.Reader, a types.AttributeSet) error
 
 var parsers = map[string]bodyParser{
 	"text/xml":              parseXML,
@@ -46,19 +50,19 @@ var parsers = map[string]bodyParser{
 	"application/geo+json":  parseJSON,
 }
 
-func parseXML(_ io.Reader, _ types.Attributes) error {
+func parseXML(_ io.Reader, _ types.AttributeSet) error {
 
 	// TODO: implement XML parser
 
 	return errors.New("XML parser not implemented")
 }
 
-func parseJSON(body io.Reader, a types.Attributes) error {
+func parseJSON(body io.Reader, a types.AttributeSet) error {
 	m := make(map[string]any)
 	if err := json.NewDecoder(body).Decode(&m); err != nil {
 		return err
 	}
 
-	a.CreateAttribute("body", m)
+	a.AddAttribute("body", m)
 	return nil
 }
