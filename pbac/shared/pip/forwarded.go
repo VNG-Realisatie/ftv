@@ -7,9 +7,10 @@ import (
 	"strings"
 
 	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/shared/types"
+	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/standards"
 )
 
-func (p *pip) processForwarded(fwd1, fwd2 string, a types.Attributes) {
+func (p *pip) processForwarded(fwd1, fwd2 string, a types.AttributeSet) {
 	list1, list2 := strings.Split(fwd1, ","), strings.Split(fwd2, ",")
 
 	if len(list1) < len(list2) {
@@ -25,13 +26,13 @@ func (p *pip) processForwarded(fwd1, fwd2 string, a types.Attributes) {
 	}
 }
 
-func (p *pip) processForwardedList(fwd []string, a types.Attributes) bool {
+func (p *pip) processForwardedList(fwd []string, a types.AttributeSet) bool {
 	for i := range fwd {
 		list := fwdRX.FindStringSubmatch(strings.TrimSpace(fwd[i]))
 		for j := 1; j < len(list); j++ {
 			if s := list[j]; len(s) > 0 {
 				if addr, err := netip.ParseAddr(s); err == nil && validIP(addr) {
-					a.CreateAttribute("client-ip", addr.String())
+					a.AddAttribute(standards.AttrClientIP, addr.String())
 					return true
 				}
 			}

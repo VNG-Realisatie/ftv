@@ -3,17 +3,20 @@ package types
 import (
 	"io"
 	"net/url"
+	"time"
 
 	"github.com/google/uuid"
 )
 
 // Request contains the details of an HTTP request required for access control.
 type Request struct {
-	UID        uuid.UUID           `json:"UID,omitempty"`
-	URL        *url.URL            `json:"URL,omitempty"`
-	Headers    map[string][]string `json:"headers,omitempty"`
-	Body       io.Reader           `json:"body,omitempty"`
-	Attributes map[string]any      `json:"attributes,omitempty"`
+	UID         uuid.UUID           `json:"UID,omitempty"`
+	URL         *url.URL            `json:"URL,omitempty"`
+	Method      string              `json:"method,omitempty"`
+	RequestTime time.Time           `json:"requestTime,omitempty"`
+	Headers     map[string][]string `json:"headers,omitempty"`
+	Body        io.Reader           `json:"body,omitempty"`
+	Attributes  map[string]any      `json:"attributes,omitempty"`
 }
 
 // Response contains the result of an access control request.

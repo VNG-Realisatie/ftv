@@ -8,5 +8,6 @@ use (
 	./oas
 	./pbac/fsc/plugin/generic
 	./pbac/shared
+	./pbac/standards
 	./utilities
 )

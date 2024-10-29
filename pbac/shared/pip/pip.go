@@ -11,21 +11,26 @@ import (
 
 // PIP represents the interface for a Policy Information Point.
 type PIP interface {
-	types.Attributes
-	CollectAttributesFromRequest(req *types.Request) types.Attributes
+	types.AttributeSet
+	CollectAttributesFromRequest(req *types.Request) types.AttributeSet
 }
 
 // New instantiates a new Policy Information Point.
-func New(store string, logger *slog.Logger) PIP {
+func New(store string, logger *slog.Logger, builder types.AttributesBuilder) PIP {
 	configStore := store
 	if configStore != "" {
 		configStore, _ = filepath.Abs(filepath.Join(configStore, "pip-config"))
 	}
 
+	if builder == nil {
+		builder = types.NewAttributes
+	}
+
 	p := &pip{
 		store:    configStore,
 		logger:   logger,
-		defaults: types.NewAttributes(),
+		builder:  builder,
+		defaults: builder(),
 	}
 
 	p.load()
@@ -38,10 +43,10 @@ func New(store string, logger *slog.Logger) PIP {
 // to collect a set of attributes to be used by the Policy Decision Point.
 //
 // The default attributes stored in the PIP will be collected first.
-// Attributes from the request will overwrite default attributes when the keys are equal.
-func (p *pip) CollectAttributesFromRequest(req *types.Request) types.Attributes {
-	a := types.NewAttributes(p.defaults)
-	a.CreateAttribute("request-time", time.Now())
+// AttributeSet from the request will overwrite default attributes when the keys are equal.
+func (p *pip) CollectAttributesFromRequest(req *types.Request) types.AttributeSet {
+	a := p.builder(p.defaults)
+	a.AddAttribute("request-time", time.Now().UTC())
 
 	p.processHeaders(req, a)
 	p.processURL(req, a)
@@ -49,54 +54,59 @@ func (p *pip) CollectAttributesFromRequest(req *types.Request) types.Attributes 
 
 	if len(req.Attributes) > 0 {
 		for k := range req.Attributes {
-			a.CreateAttribute(k, req.Attributes[k])
+			a.AddAttribute(k, req.Attributes[k])
 		}
 	}
 
 	if p.logger.Enabled(context.Background(), slog.LevelDebug) {
-		p.logger.Debug("attributes collected", "request-uid", req.UID, "attributes", a.GetAll())
+		kv := make(map[string]any)
+		a.Iterate(func(k string, v any) {
+			kv[k] = v
+		})
+		p.logger.Debug("attributes collected", "request-uid", req.UID, "attributes", kv)
 	}
 
 	return a
 }
 
-// CreateAttribute implements the Attributes interface.
+// AddAttribute implements the AttributeSet interface.
 //
-// USe this to add a default attribute to the PIP.
-func (p *pip) CreateAttribute(key string, value any) {
-	p.defaults.CreateAttribute(key, value)
+// Use this to add a default attribute to the PIP.
+func (p *pip) AddAttribute(key string, value any) {
+	p.defaults.AddAttribute(key, value)
 }
 
-// ReadAttribute implements the Attributes interface.
+// GetAttribute implements the AttributeSet interface.
 //
-// Use this to read a default attributes from the PIP.
-func (p *pip) ReadAttribute(key string) any {
-	return p.defaults.ReadAttribute(key)
+// Use this to read a default attribute from the PIP.
+func (p *pip) GetAttribute(key string) any {
+	return p.defaults.GetAttribute(key)
 }
 
-// UpdateAttribute implements the Attributes interface.
-//
-// Use this to replace a default attributes for the PIP.
-func (p *pip) UpdateAttribute(key string, value any) {
-	p.defaults.UpdateAttribute(key, value)
-}
-
-// DeleteAttribute implements the Attributes interface.
+// RemoveAttribute implements the AttributeSet interface.
 //
 // Use this to remove a default attribute from the PIP.
-func (p *pip) DeleteAttribute(key string) {
-	p.defaults.DeleteAttribute(key)
+func (p *pip) RemoveAttribute(key string) {
+	p.defaults.RemoveAttribute(key)
 }
 
-// GetAll implements the Attributes interface.
+// Iterate implements the AttributeSet interface.
 //
-// Use this to retrieve all default attributes from the PIP.
-func (p *pip) GetAll() map[string]any {
-	return p.defaults.GetAll()
+// Use this to iterate through all default attributes from the PIP.
+func (p *pip) Iterate(f types.AttributeIterator) {
+	p.defaults.Iterate(f)
+}
+
+// Merge implements the AttributeSet interface.
+//
+// Use this to merge an attribute set into the default attributes of the PIP.
+func (p *pip) Merge(in ...types.AttributeSet) {
+	p.defaults.Merge(in...)
 }
 
 type pip struct {
 	store    string
 	logger   *slog.Logger
-	defaults types.Attributes
+	builder  types.AttributesBuilder
+	defaults types.AttributeSet
 }

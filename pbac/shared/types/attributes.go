@@ -1,78 +1,82 @@
 package types
 
 import (
-	"maps"
 	"sync"
 )
 
-// Attributes represents the interface to work with a set of attributes.
-//
-// NOTE: Only the CRUD operations are safe for concurrent use by multiple go-routines.
-// The map returned by GetAll is not safe for concurrent use and must never be modified!
-type Attributes interface {
-	CreateAttribute(key string, value any)
-	ReadAttribute(key string) any
-	UpdateAttribute(key string, value any)
-	DeleteAttribute(key string)
-	GetAll() map[string]any
+// AttributesBuilder is the function prototype for creating a new set of attributes.
+type AttributesBuilder func(in ...AttributeSet) AttributeSet
+
+// AttributeIterator is the function prototype to iterate through a set of attributes.
+type AttributeIterator func(key string, value any)
+
+// AttributeSet represents the interface to work with a set of attributes.
+// An implementation must ensure that all functions must be safe for use with concurrent go-routines.
+type AttributeSet interface {
+	AddAttribute(key string, value any) // add or replace an attribute.
+	GetAttribute(key string) any        // retrieve an attribute.
+	RemoveAttribute(key string)         // remove an attribute.
+	Iterate(f AttributeIterator)        // iterate through all attributes.
+	Merge(in ...AttributeSet)           // merge the given attribute sets into this one.
 }
 
-// NewAttributes instantiates a new set of attributes.
+// NewAttributes instantiates a new standard set of attributes.
 //
 // The given attribute-sets will be copied into the returned new attribute-set.
 // If duplicate keys exist in the given sets, only the last value will remain in the result.
-func NewAttributes(in ...Attributes) Attributes {
-	out := &attributes{kvs: make(map[string]any, 32)}
+func NewAttributes(in ...AttributeSet) AttributeSet {
+	out := &attributes{set: make(map[string]any, 32)}
 	for i := range in {
-		maps.Copy(out.kvs, in[i].GetAll())
+		in[i].Iterate(func(key string, value any) {
+			out.set[key] = value
+		})
 	}
 	return out
 }
 
-// CreateAttribute adds an attribute to the set.
-//
-// If the key already exists in the set, it's value is overwritten.
-func (a *attributes) CreateAttribute(key string, value any) {
+// AddAttribute adds or replaces an attribute to the standard set.
+func (a *attributes) AddAttribute(key string, value any) {
 	a.mutex.Lock()
-	a.kvs[key] = value
+	a.set[key] = value
 	a.mutex.Unlock()
 }
 
-// ReadAttribute returns the value for the given key from the set.
-func (a *attributes) ReadAttribute(key string) any {
+// GetAttribute returns the value for the given key from the set if it exists.
+func (a *attributes) GetAttribute(key string) any {
 	a.mutex.RLock()
 	defer a.mutex.RUnlock()
-	return a.kvs[key]
+	return a.set[key]
 }
 
-// UpdateAttribute replaces the value for the corresponding key in the set.
-//
-// If the key doesn't exist, the key/value pair is added to the set.
-func (a *attributes) UpdateAttribute(key string, value any) {
+// RemoveAttribute removes the attribute with the given key from the set.
+func (a *attributes) RemoveAttribute(key string) {
 	a.mutex.Lock()
-	a.kvs[key] = value
+	delete(a.set, key)
 	a.mutex.Unlock()
 }
 
-// DeleteAttribute removes the attribute with the given key from the set.
-//
-// If the key doesn't exist in the set, this function does nothing.
-func (a *attributes) DeleteAttribute(key string) {
-	a.mutex.Lock()
-	delete(a.kvs, key)
-	a.mutex.Unlock()
+// Iterate iterates through the set and calls the given function for each attribute.
+func (a *attributes) Iterate(f AttributeIterator) {
+	a.mutex.RLock()
+	for k := range a.set {
+		f(k, a.set[k])
+	}
+	a.mutex.RUnlock()
 }
 
-// GetAll returns all attributes in the set.
-//
-// Note that the returned map is the original.
-// It is not safe to use across concurrent go-routines, and it is not permitted to make changes.
-// E.g. treat the map as read-only!
-func (a *attributes) GetAll() map[string]any {
-	return a.kvs
+// Merge merges the given attribute sets into this one.
+// Duplicate keys from the input sets will overwrite earlier values.
+func (a *attributes) Merge(in ...AttributeSet) {
+	a.mutex.Lock()
+	for i := range in {
+		in[i].Iterate(func(key string, value any) {
+			a.set[key] = value
+		})
+	}
+	a.mutex.Unlock()
 }
 
 type attributes struct {
-	kvs   map[string]any
+	set   map[string]any
 	mutex sync.RWMutex
 }
