@@ -14,9 +14,7 @@ const Version = "1.0.0"
 
 // NewController instantiates a new OPA/Rego controller.
 func NewController(pip pip.PIP, store string, recurse bool, logger *slog.Logger) control.Controller {
-	if store != "" {
-		store, _ = filepath.Abs(filepath.Join(store, "cedar"))
-	}
+	store, _ = filepath.Abs(store)
 
 	c := &controller{
 		control.NewBase(types.REGO.String(), Version, logger),

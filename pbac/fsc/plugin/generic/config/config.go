@@ -1,3 +1,4 @@
+// Package config handles the configurable options for the FSC Auth plugin.
 package config
 
 import (
@@ -26,12 +27,15 @@ type Config struct {
 	LogFormat          string        `yaml:"log.format,omitempty" env:"LOG_FORMAT" flag:"log-format" default:"json" desc:"Format to use when writing log data (json, text)"`
 	LogLevel           string        `yaml:"log.level,omitempty" env:"LOG_LEVEL" flag:"log-level" default:"info" desc:"Level for writing log data (debug, info, warn, error)"`
 	LogSource          bool          `yaml:"log.source,omitempty" env:"LOG_SOURCE" flag:"log-source" default:"true" desc:"Include source-location when writing log data"`
-	PolicyLanguage     string        `yaml:"policy.language,omitempty" env:"POLICY_LANGUAGE" flag:"policy-language,language" default:"CERBOS" desc:"Language to use for policies"`
-	PolicyStore        string        `yaml:"policy.store.path,omitempty" env:"POLICY_STORE" flag:"policy-store,store" desc:"Path where policy files are stored"`
-	PolicyStoreRecurse bool          `yaml:"policy.store.recurse,omitempty" env:"POLICY_STORE_RECURSE" flag:"policy-store-recurse,store-recurse" desc:"Search policy store recursively"`
+	PolicyLanguage     string        `yaml:"policies.language,omitempty" env:"POLICIES_LANGUAGE" flag:"policies-language,language" default:"CEDAR" desc:"Language used for policy files"`
+	PolicyStore        string        `yaml:"policies.store.path,omitempty" env:"POLICIES_STORE" flag:"policies-store" desc:"Path where policy files are stored"`
+	PolicyStoreRecurse bool          `yaml:"policies.store.recurse,omitempty" env:"POLICIES_STORE_RECURSE" flag:"policies-store-recurse" desc:"Search policy file storage recursively"`
+	PipStore           string        `yaml:"pip.store.path,omitempty" env:"PIP_STORE" flag:"pip-store" desc:"Path where PIP attribute files are stored"`
+	PipStoreRecurse    bool          `yaml:"pip.store.recurse,omitempty" env:"PIP_STORE_RECURSE" flag:"pip-store-recurse" desc:"Search PIP attribute file storage recursively"`
 }
 
 const (
+	// AppName defines the name and version of this application.
 	AppName   = "FSC-AUTH plugin 0.1"
 	envPrefix = "FSC_AUTH_"
 	cfg1      = "/etc/fsc-auth/default.conf"

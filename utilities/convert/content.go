@@ -2,7 +2,6 @@ package convert
 
 import (
 	"bytes"
-	"io"
 )
 
 // DefaultContentType is the default content-type; e.g. if all else fails.
@@ -38,24 +37,16 @@ func (c ContentType) String() string {
 // It does not verify the entire input to determine if it made the right deduction.
 //
 // See also: https://mimesniff.spec.whatwg.org/.
-func ContentSniffer(content io.Reader) string {
+func ContentSniffer(content []byte) string {
 	if content == nil {
 		return DefaultContentType
 	}
 
-	b := make([]byte, 1445)
-	n, err := content.Read(b)
-	if err != nil {
-		return DefaultContentType
-	}
-
-	b = b[:n]
 	for i := range cPatterns {
-		if bytes.HasPrefix(b, cPatterns[i]) {
+		if bytes.HasPrefix(content, cPatterns[i]) {
 			return cTypes[i].String()
 		}
 	}
-
 	return DefaultContentType
 }
 
