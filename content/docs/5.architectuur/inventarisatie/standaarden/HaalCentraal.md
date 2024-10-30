@@ -20,5 +20,5 @@ title: 'HaalCentraal'
 - BAG, BGT, BRK, BRP, HR, WOZ
 
 ## Observaties
-- HaalCentraal is een set APIs aan de kant van enkele basisregistraties. Het ondersteunt autenticatie & autorisatie, maar alleen aan de kant van de dataleveranciers.
+- HaalCentraal is een set APIs aan de kant van enkele basisregistraties. Het ondersteunt authenticatie & autorisatie, maar alleen aan de kant van de dataleveranciers.
 - HaalCentraal definieert alleen GET requests.

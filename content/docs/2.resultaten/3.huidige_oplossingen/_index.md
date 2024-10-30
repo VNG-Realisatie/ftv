@@ -53,7 +53,7 @@ De volgende koppelstandaarden zijn relevant:
   - Grote Berichten gaat, zoals de naam al zegt, over het uitwisselen van grote berichten, en dan over WUS of ebMS2.
   - REST is een standaard die wereldwijd voor alle moderne API's gebruikt wordt. De beschrijving onder digikoppeling zegt meer over hoe de Nederlandse overheid REST toepast. 
 - **[StUF](https://standaarden.vng.nl/StUF-standaarden)**. Een standaard bovenop WUS die een XML-formaat voor berichtenuitwisseling beschrijft.
-- **[HaalCentraal](https://haalcentraal.pleio.nl/)**. Een set van afspraken en standaarden bovenop Digikoppeling REST, specifiek voor basisregistraties.
+- **[HaalCentraal](/docs/5.architectuur/inventarisatie/standaarden/HaalCentraal)**. Een set van afspraken en standaarden bovenop Digikoppeling REST, specifiek voor basisregistraties.
 
 Voor dit project stellen we dat ebMS2, WUS en Grote Berichten een oudere generatie zijn en niet als API's gezien worden 
 in onze terminologie. StUF, REST en HaalCentraal zijn wel in scope.

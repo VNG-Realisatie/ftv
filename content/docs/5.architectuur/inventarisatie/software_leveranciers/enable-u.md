@@ -4,6 +4,10 @@ title: 'Enable-U'
 
 # Enable-U
 
+## Contact
+Mailcontact met Karl de Boer ProductManager (karl.deboer@enable-u.com) +31 (0) 6 29 58 25 67. Doorgezet naar Jascha Gregorowitsj. 
+
+
 ## Links
 - https://enable-u.nl/
 - https://www.softwarecatalogus.nl/leverancier/enable-u?tab=products
