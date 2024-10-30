@@ -16,6 +16,6 @@ title: 'AuthZEN'
 - The purpose of the AuthZEN WG is to provide standard mechanisms, protocols and formats to communicate authorization related information between components within one organization or across organizations, which may have been developed or sourced from different entities.
 
 ## Observaties
-- gestart in 2023; 3 meetings in 2023
-- communicatie via een mailing list
-- project bevindt zich in de beginfase, maar lijkt wel als doel te hebben om "one policy language to rule them all" te zijn
+- gestart in 2023; 3 meetings in 2023.
+- communicatie via een mailing list.
+- project bevindt zich in de beginfase, en heeft als doel een standaard te vormen voor de communicatie tussen PEP/PDP/PAP/PIP.
