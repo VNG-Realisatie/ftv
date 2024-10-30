@@ -1,12 +1,11 @@
+// Package handlers contains the HTTP request handlers for the FSC Auth plugin.
 package handlers
 
 import (
-	"bytes"
 	"context"
 	"encoding/base64"
 	"errors"
 	"fmt"
-	"io"
 	"log/slog"
 	"net/url"
 	"strings"
@@ -41,13 +40,13 @@ func AuthHandler(cfg *config.Config, logger *slog.Logger) fiber.Handler {
 func newController(cfg *config.Config, logger *slog.Logger) (control.Controller, error) {
 	switch types.LanguageFromString(cfg.PolicyLanguage) {
 	case types.REGO:
-		p := pip.New(cfg.PolicyStore, logger, nil)
+		p := pip.New(cfg.PipStore, cfg.PipStoreRecurse, logger, nil)
 		return opa.NewController(p, cfg.PolicyStore, cfg.PolicyStoreRecurse, logger), nil
 	case types.CERBOS:
-		p := pip.New(cfg.PolicyStore, logger, nil)
+		p := pip.New(cfg.PipStore, cfg.PipStoreRecurse, logger, nil)
 		return cerbos.NewController(p, cfg.PolicyStore, cfg.PolicyStoreRecurse, logger), nil
 	case types.CEDAR:
-		p := pip.New(cfg.PolicyStore, logger, cedar.NewAttributeBuilder(logger))
+		p := pip.New(cfg.PipStore, cfg.PipStoreRecurse, logger, cedar.NewAttributeBuilder(logger))
 		return cedar.NewController(p, cfg.PolicyStore, cfg.PolicyStoreRecurse, logger), nil
 	default:
 		return nil, fmt.Errorf("unsupported policy language '%s'", cfg.PolicyLanguage)
@@ -55,10 +54,10 @@ func newController(cfg *config.Config, logger *slog.Logger) (control.Controller,
 }
 
 func (h *authHandler) run(fc *fiber.Ctx) error {
-	if h.logger.Enabled(context.Background(), slog.LevelDebug) {
+	if h.logger.Enabled(context.TODO(), slog.LevelDebug) {
 		started := time.Now()
 		defer func() {
-			h.logger.Debug("authorization hanbdler", "elapsed time", time.Since(started))
+			h.logger.Debug("authorization handler", "elapsed time", time.Since(started).String())
 		}()
 	}
 
@@ -126,11 +125,9 @@ func (h *authHandler) newAccessRequest(in *auth.AuthorizationRequest) *types.Req
 
 	u, _ := url.ParseRequestURI(s)
 
-	var f io.Reader
+	var d []byte
 	if b := convert.OpaqueString(in.Input.Body); b != "" {
-		if d, err := base64.StdEncoding.DecodeString(b); err != nil {
-			f = bytes.NewBuffer(d)
-		}
+		d, _ = base64.StdEncoding.DecodeString(b)
 	}
 
 	return &types.Request{
@@ -138,7 +135,7 @@ func (h *authHandler) newAccessRequest(in *auth.AuthorizationRequest) *types.Req
 		URL:         u,
 		Method:      in.Input.Method,
 		RequestTime: time.Now().UTC(),
-		Body:        f,
+		Body:        d,
 		Headers:     in.Input.Headers,
 		Attributes: map[string]any{
 			"outway-certificate-chain": in.Input.OutwayCertificateChain,

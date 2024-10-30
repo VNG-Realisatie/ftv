@@ -1,6 +1,7 @@
 package pip
 
 import (
+	"bytes"
 	"errors"
 	"io"
 	"strings"
@@ -16,15 +17,15 @@ func (p *pip) processBody(req *types.Request, a types.AttributeSet) {
 		return
 	}
 
-	ct := a.GetAttribute("content-type").(string)
-	if ct != "" {
+	ct, ok := a.GetAttribute("content-type").(string)
+	if ok && ct != "" {
 		ct = strings.ToLower(convert.RemoveHeaderParameters(ct))
 	} else {
 		ct = convert.ContentSniffer(req.Body)
 	}
 
-	f, ok := parsers[ct]
-	if !ok {
+	f, ok2 := parsers[ct]
+	if !ok2 {
 		p.logger.Error("unsupported content-type", "request-uid", req.UID, "content-type", ct)
 	}
 
@@ -33,7 +34,7 @@ func (p *pip) processBody(req *types.Request, a types.AttributeSet) {
 	}
 }
 
-type bodyParser func(body io.Reader, a types.AttributeSet) error
+type bodyParser func(body []byte, a types.AttributeSet) error
 
 var parsers = map[string]bodyParser{
 	"text/xml":              parseXML,
@@ -50,16 +51,16 @@ var parsers = map[string]bodyParser{
 	"application/geo+json":  parseJSON,
 }
 
-func parseXML(_ io.Reader, _ types.AttributeSet) error {
+func parseXML(_ []byte, _ types.AttributeSet) error {
 
 	// TODO: implement XML parser
 
 	return errors.New("XML parser not implemented")
 }
 
-func parseJSON(body io.Reader, a types.AttributeSet) error {
+func parseJSON(body []byte, a types.AttributeSet) error {
 	m := make(map[string]any)
-	if err := json.NewDecoder(body).Decode(&m); err != nil {
+	if err := json.NewDecoder(bytes.NewBuffer(body)).Decode(&m); err != nil && err != io.EOF {
 		return err
 	}
 

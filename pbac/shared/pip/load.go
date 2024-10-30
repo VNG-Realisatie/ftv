@@ -1,7 +1,18 @@
 package pip
 
 func (p *pip) load() {
+	if p.attrStore != "" {
+		p.loadAttributes()
+	}
+	if p.entityStore != "" {
+		p.loadEntities()
+	}
+}
 
-	// TODO: load PIP configuration
+func (p *pip) loadAttributes() {
+
+}
+
+func (p *pip) loadEntities() {
 
 }

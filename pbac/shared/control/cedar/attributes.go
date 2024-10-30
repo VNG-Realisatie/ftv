@@ -104,21 +104,21 @@ func (a *attributes) valueToAny(v cedar.Value) any {
 	}
 }
 
-func (a *attributes) setToSlice(v cedar.Set) []any {
-	s := v.Slice()
+func (a *attributes) setToSlice(in cedar.Set) []any {
+	s := in.Slice()
 	if len(s) == 0 {
 		return nil
 	}
 
 	out := make([]any, len(s))
 	for i := range s {
-		out[i] = a.valueToAny(v.Slice()[i])
+		out[i] = a.valueToAny(s[i])
 	}
 	return out
 }
 
-func (a *attributes) recordToMap(v cedar.Record) map[string]any {
-	m := v.Map()
+func (a *attributes) recordToMap(in cedar.Record) map[string]any {
+	m := in.Map()
 	if len(m) == 0 {
 		return nil
 	}
@@ -155,6 +155,13 @@ func (a *attributes) anyToValue(in any) cedar.Value {
 		s := make([]cedar.Value, len(t))
 		for i := range t {
 			s[i] = cedar.String(t[i])
+		}
+		return cedar.NewSet(s)
+
+	case []any:
+		s := make([]cedar.Value, len(t))
+		for i := range t {
+			s[i] = a.anyToValue(t[i])
 		}
 		return cedar.NewSet(s)
 

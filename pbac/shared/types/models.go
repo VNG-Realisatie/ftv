@@ -1,7 +1,6 @@
 package types
 
 import (
-	"io"
 	"net/url"
 	"time"
 
@@ -15,7 +14,7 @@ type Request struct {
 	Method      string              `json:"method,omitempty"`
 	RequestTime time.Time           `json:"requestTime,omitempty"`
 	Headers     map[string][]string `json:"headers,omitempty"`
-	Body        io.Reader           `json:"body,omitempty"`
+	Body        []byte              `json:"body,omitempty"`
 	Attributes  map[string]any      `json:"attributes,omitempty"`
 }
 
@@ -24,7 +23,7 @@ type Response struct {
 	Allowed    bool           `json:"allowed,omitempty"`
 	Message    string         `json:"message,omitempty"`
 	NewURL     *url.URL       `json:"newURL,omitempty"`
-	NewBody    io.Reader      `json:"newBody,omitempty"`
+	NewBody    []byte         `json:"newBody,omitempty"`
 	Attributes map[string]any `json:"attributes,omitempty"`
 	PolicyKey  string         `json:"policyKey,omitempty"`
 	PolicyHash string         `json:"policyHash,omitempty"`

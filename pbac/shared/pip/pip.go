@@ -3,6 +3,7 @@ package pip
 import (
 	"context"
 	"log/slog"
+	"os"
 	"path/filepath"
 	"time"
 
@@ -16,10 +17,18 @@ type PIP interface {
 }
 
 // New instantiates a new Policy Information Point.
-func New(store string, logger *slog.Logger, builder types.AttributesBuilder) PIP {
-	configStore := store
-	if configStore != "" {
-		configStore, _ = filepath.Abs(filepath.Join(configStore, "pip-config"))
+func New(store string, recurse bool, logger *slog.Logger, builder types.AttributesBuilder) PIP {
+	attrStore, entityStore := store, store
+	if attrStore != "" {
+		attrStore, _ = filepath.Abs(filepath.Join(attrStore, "attributes"))
+		entityStore, _ = filepath.Abs(filepath.Join(entityStore, "entities"))
+
+		if !validPath(attrStore) {
+			attrStore = ""
+		}
+		if !validPath(entityStore) {
+			entityStore = ""
+		}
 	}
 
 	if builder == nil {
@@ -27,15 +36,24 @@ func New(store string, logger *slog.Logger, builder types.AttributesBuilder) PIP
 	}
 
 	p := &pip{
-		store:    configStore,
-		logger:   logger,
-		builder:  builder,
-		defaults: builder(),
+		recurse:     recurse,
+		attrStore:   attrStore,
+		entityStore: entityStore,
+		logger:      logger,
+		builder:     builder,
+		defaults:    builder(),
 	}
 
 	p.load()
 
-	p.logger.Info("pip initialized", "configuration", p.store)
+	if p.logger.Enabled(context.TODO(), slog.LevelDebug) {
+		kv := make(map[string]any)
+		p.defaults.Iterate(func(k string, v any) {
+			kv[k] = v
+		})
+		p.logger.Debug("pip initialized", "attributes", kv)
+	}
+	p.logger.Info("pip initialized", "attributeStore", p.attrStore, "entityStore", p.entityStore)
 	return p
 }
 
@@ -58,7 +76,7 @@ func (p *pip) CollectAttributesFromRequest(req *types.Request) types.AttributeSe
 		}
 	}
 
-	if p.logger.Enabled(context.Background(), slog.LevelDebug) {
+	if p.logger.Enabled(context.TODO(), slog.LevelDebug) {
 		kv := make(map[string]any)
 		a.Iterate(func(k string, v any) {
 			kv[k] = v
@@ -105,8 +123,15 @@ func (p *pip) Merge(in ...types.AttributeSet) {
 }
 
 type pip struct {
-	store    string
-	logger   *slog.Logger
-	builder  types.AttributesBuilder
-	defaults types.AttributeSet
+	recurse     bool
+	attrStore   string
+	entityStore string
+	logger      *slog.Logger
+	builder     types.AttributesBuilder
+	defaults    types.AttributeSet
+}
+
+func validPath(path string) bool {
+	_, err := os.Stat(path)
+	return err == nil
 }
