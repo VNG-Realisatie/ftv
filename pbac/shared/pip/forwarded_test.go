@@ -78,7 +78,7 @@ func TestForwardedList(t *testing.T) {
 
 	for _, tc := range testCases {
 		t.Run(tc.name, func(t *testing.T) {
-			a := types.NewAttributes()
+			a := types.NewAttributeSet()
 			require.NotNil(t, a)
 
 			p := pip{}
@@ -162,7 +162,7 @@ func TestForwarded(t *testing.T) {
 
 	for _, tc := range testCases {
 		t.Run(tc.name, func(t *testing.T) {
-			a := types.NewAttributes()
+			a := types.NewAttributeSet()
 			require.NotNil(t, a)
 
 			p := pip{}

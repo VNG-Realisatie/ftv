@@ -6,14 +6,15 @@ import (
 	"path/filepath"
 )
 
-func (c *cache) load() {
-	_ = filepath.WalkDir(c.path, func(path string, d fs.DirEntry, err error) error {
+// LoadFromStore loads all policies from the store.
+func (c *cache) LoadFromStore(path string, recurse bool) {
+	err := filepath.WalkDir(path, func(path string, d fs.DirEntry, err error) error {
 		if err != nil {
 			return err
 		}
 
 		if d.IsDir() {
-			if c.recurse {
+			if recurse {
 				return nil
 			}
 			return filepath.SkipDir
@@ -28,4 +29,8 @@ func (c *cache) load() {
 
 		return c.Create(d.Name(), f)
 	})
+
+	if err != nil {
+		c.logger.Error("pap: error loading policies", "path", path, "err", err)
+	}
 }

@@ -5,7 +5,6 @@ import (
 	"path/filepath"
 
 	"github.com/cedar-policy/cedar-go"
-	ctypes "github.com/cedar-policy/cedar-go/types"
 
 	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/shared/control"
 	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/shared/pap"
@@ -23,11 +22,18 @@ func NewController(pip pip.PIP, store string, recurse bool, logger *slog.Logger)
 	c := &controller{
 		Base:     control.NewBase(types.CEDAR.String(), Version, logger),
 		pdp:      cedar.NewPolicySet(),
-		entities: make(ctypes.Entities),
+		entities: make(cedar.Entities),
 	}
 
+	pip.IterateEntities(func(entity types.Entity) {
+		if wrapped, ok := entity.(*WrappedEntity); ok {
+			c.entities[wrapped.ce.UID] = wrapped.ce
+		}
+	})
+
 	c.SetPIP(pip)
-	c.SetPAP(pap.New(store, recurse, c.Logger(), c.policyEvent))
+	c.SetPAP(pap.New(c.Logger(), c.policyEvent))
+	c.PAP().LoadFromStore(store, recurse)
 
 	mod := "github.com/cedar-policy/cedar-go"
 	modVersion := module.GetModuleVersion(mod)
@@ -39,5 +45,5 @@ func NewController(pip pip.PIP, store string, recurse bool, logger *slog.Logger)
 type controller struct {
 	control.Base
 	pdp      *cedar.PolicySet
-	entities ctypes.Entities
+	entities cedar.Entities
 }

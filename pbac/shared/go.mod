@@ -8,6 +8,9 @@ require (
 	github.com/golang-jwt/jwt/v5 v5.2.1
 	github.com/google/uuid v1.6.0
 	github.com/stretchr/testify v1.9.0
+	gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/standards v0.0.0-20241031101911-b26e04571e09
+	gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/utilities v0.0.0-20241031101911-b26e04571e09
+	gopkg.in/yaml.v3 v3.0.1
 )
 
 require (
@@ -17,5 +20,4 @@ require (
 	github.com/rogpeppe/go-internal v1.13.1 // indirect
 	golang.org/x/exp v0.0.0-20241009180824-f66d83c29e7c // indirect
 	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c // indirect
-	gopkg.in/yaml.v3 v3.0.1 // indirect
 )

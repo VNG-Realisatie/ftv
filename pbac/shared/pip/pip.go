@@ -13,15 +13,22 @@ import (
 // PIP represents the interface for a Policy Information Point.
 type PIP interface {
 	types.AttributeSet
+	types.EntitySet
 	CollectAttributesFromRequest(req *types.Request) types.AttributeSet
 }
 
 // New instantiates a new Policy Information Point.
-func New(store string, recurse bool, logger *slog.Logger, builder types.AttributesBuilder) PIP {
-	attrStore, entityStore := store, store
-	if attrStore != "" {
-		attrStore, _ = filepath.Abs(filepath.Join(attrStore, "attributes"))
-		entityStore, _ = filepath.Abs(filepath.Join(entityStore, "entities"))
+//
+// The logger parameter must not be nil!
+//
+// If the newAttributes parameter is nil, the default attribute set builder will be used.
+// If the newEntities parameter is nil, the default entity set builder will be used.
+func New(store string, recurse bool, logger *slog.Logger, newAttributes types.AttributesBuilder, newEntities types.EntitiesBuilder) PIP {
+	var attrStore, entityStore string
+
+	if store != "" {
+		attrStore, _ = filepath.Abs(filepath.Join(store, "attributes"))
+		entityStore, _ = filepath.Abs(filepath.Join(store, "entities"))
 
 		if !validPath(attrStore) {
 			attrStore = ""
@@ -31,28 +38,46 @@ func New(store string, recurse bool, logger *slog.Logger, builder types.Attribut
 		}
 	}
 
-	if builder == nil {
-		builder = types.NewAttributes
+	if newAttributes == nil {
+		newAttributes = types.NewAttributeSet
+	}
+	if newEntities == nil {
+		newEntities = types.NewEntitySet
 	}
 
 	p := &pip{
-		recurse:     recurse,
-		attrStore:   attrStore,
-		entityStore: entityStore,
-		logger:      logger,
-		builder:     builder,
-		defaults:    builder(),
+		recurse:       recurse,
+		attrStore:     attrStore,
+		entityStore:   entityStore,
+		logger:        logger,
+		newAttributes: newAttributes,
+		attributes:    newAttributes(),
+		newEntities:   newEntities,
+		entities:      newEntities(),
 	}
 
 	p.load()
 
 	if p.logger.Enabled(context.TODO(), slog.LevelDebug) {
-		kv := make(map[string]any)
-		p.defaults.Iterate(func(k string, v any) {
-			kv[k] = v
+		kv1 := types.MapFromAttributes(p.attributes)
+
+		kv2 := make(map[string]any)
+		p.entities.IterateEntities(func(entity types.Entity) {
+			kv3 := types.MapFromAttributes(entity.Attributes())
+			kv2[entity.UID()] = struct {
+				UID        string         `json:"UID,omitempty"`
+				Attributes map[string]any `json:"attributes,omitempty"`
+				Parents    []string       `json:"parents,omitempty"`
+			}{
+				UID:        entity.UID(),
+				Attributes: kv3,
+				Parents:    entity.Parents(),
+			}
 		})
-		p.logger.Debug("pip initialized", "attributes", kv)
+
+		p.logger.Debug("pip initialized", "attributes", kv1, "entities", kv2)
 	}
+
 	p.logger.Info("pip initialized", "attributeStore", p.attrStore, "entityStore", p.entityStore)
 	return p
 }
@@ -63,7 +88,7 @@ func New(store string, recurse bool, logger *slog.Logger, builder types.Attribut
 // The default attributes stored in the PIP will be collected first.
 // AttributeSet from the request will overwrite default attributes when the keys are equal.
 func (p *pip) CollectAttributesFromRequest(req *types.Request) types.AttributeSet {
-	a := p.builder(p.defaults)
+	a := p.newAttributes(p.attributes)
 	a.AddAttribute("request-time", time.Now().UTC())
 
 	p.processHeaders(req, a)
@@ -78,7 +103,7 @@ func (p *pip) CollectAttributesFromRequest(req *types.Request) types.AttributeSe
 
 	if p.logger.Enabled(context.TODO(), slog.LevelDebug) {
 		kv := make(map[string]any)
-		a.Iterate(func(k string, v any) {
+		a.IterateAttributes(func(k string, v any) {
 			kv[k] = v
 		})
 		p.logger.Debug("attributes collected", "request-uid", req.UID, "attributes", kv)
@@ -91,44 +116,81 @@ func (p *pip) CollectAttributesFromRequest(req *types.Request) types.AttributeSe
 //
 // Use this to add a default attribute to the PIP.
 func (p *pip) AddAttribute(key string, value any) {
-	p.defaults.AddAttribute(key, value)
+	p.attributes.AddAttribute(key, value)
 }
 
 // GetAttribute implements the AttributeSet interface.
 //
 // Use this to read a default attribute from the PIP.
 func (p *pip) GetAttribute(key string) any {
-	return p.defaults.GetAttribute(key)
+	return p.attributes.GetAttribute(key)
 }
 
 // RemoveAttribute implements the AttributeSet interface.
 //
 // Use this to remove a default attribute from the PIP.
 func (p *pip) RemoveAttribute(key string) {
-	p.defaults.RemoveAttribute(key)
+	p.attributes.RemoveAttribute(key)
 }
 
-// Iterate implements the AttributeSet interface.
+// IterateAttributes implements the AttributeSet interface.
 //
 // Use this to iterate through all default attributes from the PIP.
-func (p *pip) Iterate(f types.AttributeIterator) {
-	p.defaults.Iterate(f)
+func (p *pip) IterateAttributes(f types.AttributeIterator) {
+	p.attributes.IterateAttributes(f)
 }
 
-// Merge implements the AttributeSet interface.
+// MergeAttributes implements the AttributeSet interface.
 //
 // Use this to merge an attribute set into the default attributes of the PIP.
-func (p *pip) Merge(in ...types.AttributeSet) {
-	p.defaults.Merge(in...)
+func (p *pip) MergeAttributes(in ...types.AttributeSet) {
+	p.attributes.MergeAttributes(in...)
+}
+
+// AddEntity implements the EntitySet interface.
+//
+// Use this to add an entity to the PIP.
+func (p *pip) AddEntity(entity types.Entity) {
+	p.entities.AddEntity(entity)
+}
+
+// GetEntity implements the EntitySet interface.
+//
+// Use this to read an entity from the PIP.
+func (p *pip) GetEntity(uid string) types.Entity {
+	return p.entities.GetEntity(uid)
+}
+
+// RemoveEntity implements the EntitySet interface.
+//
+// Use this to remove an entity from the PIP.
+func (p *pip) RemoveEntity(uid string) {
+	p.entities.RemoveEntity(uid)
+}
+
+// IterateEntities implements the EntitySet interface.
+//
+// Use this to iterate through all entities from the PIP.
+func (p *pip) IterateEntities(f types.EntityIterator) {
+	p.entities.IterateEntities(f)
+}
+
+// MergeEntities implements the EntitySet interface.
+//
+// Use this to merge an attribute set into the entities of the PIP.
+func (p *pip) MergeEntities(in ...types.EntitySet) {
+	p.entities.MergeEntities(in...)
 }
 
 type pip struct {
-	recurse     bool
-	attrStore   string
-	entityStore string
-	logger      *slog.Logger
-	builder     types.AttributesBuilder
-	defaults    types.AttributeSet
+	recurse       bool
+	attrStore     string
+	entityStore   string
+	logger        *slog.Logger
+	newAttributes types.AttributesBuilder
+	attributes    types.AttributeSet
+	newEntities   types.EntitiesBuilder
+	entities      types.EntitySet
 }
 
 func validPath(path string) bool {

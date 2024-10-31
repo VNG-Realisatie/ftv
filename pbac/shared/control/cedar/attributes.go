@@ -23,7 +23,7 @@ func NewAttributeBuilder(logger *slog.Logger) types.AttributesBuilder {
 func NewAttributeSet(logger *slog.Logger, in ...types.AttributeSet) types.AttributeSet {
 	a := &attributes{logger: logger, set: make(cedar.RecordMap)}
 	for i := range in {
-		a.Merge(in[i])
+		a.MergeAttributes(in[i])
 	}
 	return a
 }
@@ -49,8 +49,8 @@ func (a *attributes) RemoveAttribute(key string) {
 	a.mutex.Unlock()
 }
 
-// Iterate implements the AttributeSet interface.
-func (a *attributes) Iterate(f types.AttributeIterator) {
+// IterateAttributes implements the AttributeSet interface.
+func (a *attributes) IterateAttributes(f types.AttributeIterator) {
 	a.mutex.RLock()
 	for k := range a.set {
 		f(k.String(), a.valueToAny(a.set[k]))
@@ -58,8 +58,8 @@ func (a *attributes) Iterate(f types.AttributeIterator) {
 	a.mutex.RUnlock()
 }
 
-// Merge implements the AttributeSet interface.
-func (a *attributes) Merge(in ...types.AttributeSet) {
+// MergeAttributes implements the AttributeSet interface.
+func (a *attributes) MergeAttributes(in ...types.AttributeSet) {
 	a.mutex.Lock()
 	for i := range in {
 		if set, ok := in[i].(*attributes); ok {
@@ -67,7 +67,7 @@ func (a *attributes) Merge(in ...types.AttributeSet) {
 			maps.Copy(a.set, set.set)
 			set.mutex.RUnlock()
 		} else {
-			in[i].Iterate(func(key string, value any) {
+			in[i].IterateAttributes(func(key string, value any) {
 				a.set[cedar.String(key)] = a.anyToValue(value)
 			})
 		}
@@ -75,8 +75,8 @@ func (a *attributes) Merge(in ...types.AttributeSet) {
 	a.mutex.Unlock()
 }
 
-func (a *attributes) valueToAny(v cedar.Value) any {
-	switch t := v.(type) {
+func (a *attributes) valueToAny(in cedar.Value) any {
+	switch t := in.(type) {
 	case nil:
 		return nil
 	case cedar.String:

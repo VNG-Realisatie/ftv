@@ -21,7 +21,8 @@ func NewController(pip pip.PIP, store string, recurse bool, logger *slog.Logger)
 	}
 
 	c.SetPIP(pip)
-	c.SetPAP(pap.New(store, recurse, c.Logger(), c.policyEvent))
+	c.SetPAP(pap.New(c.Logger(), c.policyEvent))
+	c.PAP().LoadFromStore(store, recurse)
 
 	c.Logger().Info("pbac controller initialized", "controller", c.String())
 	return c

@@ -15,23 +15,18 @@ type PAP interface {
 	Update(key string, reader io.Reader) error
 	Delete(key string) error
 	ListAllKeys() []string
+	LoadFromStore(path string, recurse bool)
 }
 
 // New instantiates a new policy cache.
-func New(path string, recurse bool, logger *slog.Logger, events EventSink) PAP {
+func New(logger *slog.Logger, events EventSink) PAP {
 	c := &cache{
-		path:     path,
-		recurse:  recurse,
 		logger:   logger,
 		events:   events,
 		policies: make(map[string][]byte),
 	}
 
-	if c.path != "" {
-		c.load()
-	}
-
-	c.logger.Info("pap initialized", "policies", c.path, "recurse", c.recurse)
+	c.logger.Info("pap initialized")
 	return c
 }
 
@@ -57,14 +52,15 @@ func (c *cache) Create(key string, reader io.Reader) error {
 	return err
 }
 
-// Read retrieves a policy to the cache, or an error if it doesn't exist.
+// Read retrieves a policy from the cache, or an error if it doesn't exist.
 func (c *cache) Read(key string) (io.Reader, error) {
 	c.mutex.RLock()
 	defer c.mutex.RUnlock()
 
 	if data, ok := c.policies[key]; ok {
 		// we return a reader on a deep copy of the data, so changes in the cache do not affect it.
-		return bytes.NewBufferString(string(data)), nil
+		s := string(data)
+		return bytes.NewBufferString(s), nil
 	}
 
 	return nil, fmt.Errorf("cache policy '%s' not found", key)
@@ -124,8 +120,6 @@ func (c *cache) ListAllKeys() []string {
 }
 
 type cache struct {
-	path     string
-	recurse  bool
 	logger   *slog.Logger
 	policies map[string][]byte
 	events   EventSink

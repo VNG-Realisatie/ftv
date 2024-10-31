@@ -16,9 +16,11 @@ func (c *controller) policyEvent(t pap.EventType, key string) {
 			var policy cedar.Policy
 			if err = policy.UnmarshalCedar(d); err == nil {
 				c.pdp.Store(cedar.PolicyID(key), &policy)
+				c.Logger().Info("policy added/replaced", "controller", c.String(), "policy-key", key)
+			} else {
+				c.Logger().Error("error decoding policy", "controller", c.String(), "policy-key", key)
 			}
 		}
-		c.Logger().Info("policy added/replaced", "controller", c.String(), "policy-key", key)
 
 	case pap.PolicyDeleted:
 		c.pdp.Delete(cedar.PolicyID(key))
