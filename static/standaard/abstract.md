@@ -2,6 +2,5 @@ Dit document bevat een standaard voor toegangsverlening tot API's ten behoeve va
 
 Onder toegangsverlening wordt verstaan het beslissen tot het geheel of gedeeltelijk toestaan van verzoeken tot gegevensverwerking. 
 
-<p class="note" title="Authenticatie valt niet onder de standaard">
-Toegangsverlening gebeurt op basis van een reeds vastgesteld subject. Identificatie en authenticatie vallen dus <b>niet</b> onder deze standaard.
-</p>
+<p class="note" title="Relatie tot identificatie en authenticatie">
+In de context van deze standaard gebeurt toegangsverlening  op basis van een reeds vastgesteld subject. Voor identificatie en authenticatie kan verwezen worden naar [[OpenID NLGov]] en [[SAML]].</p>

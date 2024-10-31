@@ -28,11 +28,11 @@ Wanneer dit niet het geval is loopt de organisatie het risico dat de diverse vor
 
 ## Vastlegging voor verantwoording en detectie
 
-### Toegangsbeslissingenen zijn centraal beschikbaar
+### Toegangsbeslissingen zijn centraal beschikbaar
 
 Elke toegangsbeslissing dient centraal beschikbaar te zijn binnen de organisatie. Dit is vereist voor effectieve verantwoording van historisch verwerkingsverzoeken. 
 
-Dit ondersteunt ook effectieve beveilingsanalyse om misbruik te kunnen detecteren wanneer meerdere applicaties betrokken zijn.
+Dit ondersteunt ook effectieve beveilingsanalyse voor het detecteren van ongewenste toegang waarbij meerdere applicaties betrokken zijn.
 
 <p class="note" title="Preventie">
 Gecombineerd met de aanbeveling toegangsbeslissingen centraal uit te voeren biedt dit ook de mogelijkheid om verdachte verwerkingsverzoeken preventief te blokkeren.
@@ -81,7 +81,7 @@ Aanbieders moeten verstrekte gegevens beperken tot de minimale set van gegevens 
 
 ### Aanbieders kunnen aantonen welke gegevens aangeboden zijn
 
-Aanbieders dienen verzoeken af te wijzen die niet specificeren welke gegevens vereist zijn. Indien dat niet gebeurt moet aanbieder in staat zijn aan te tonen welke gegevens aan de afnemer aangeboden zijn.
+Indien de aanbieder verzoeken toe staat zonder specificatie van vereiste gegevens moet de aanbieder in staat zijn aan te tonen welke gegevens aan de afnemer aangeboden zijn.
 
 ### Aanbieders mogen alternatieve verwerkingsverzoeken voorstellen
 
