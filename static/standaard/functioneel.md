@@ -102,6 +102,12 @@ Indien de afnemer van gegevens deze elders in de keten hergebruikt dient de afne
 
 ### Aanbieders mogen autorisatieregels gedeeltelijk delegeren
 
-Aanbieders kunnen van een verwerkingsverzoek autorisaties slechts gedeeltelijk evalueren en verdere evaluatie delegeren aan een derde systeem.
+Indien mogelijk heeft het de voorkeur om alle toegangsregels voor een toegangsbeslissing gelijktijdig te valideren. Vanuit technische overwegingen kan dit echter onhaalbaar zijn.
 
-In dat geval <b>moet</b> de aanbieder zorgen dat de resterende autorisatieregels doorgegeven worden aan het gedelegeerde systeem én dat het gedelegeerde systeem deze autorisatieregels correct evalueert.
+Aanbieders mogen de toegangsregels van een verwerkingsverzoek gedeeltelijk evalueren en verdere evaluatie delegeren aan een derde systeem.
+
+In dat geval <b>moet</b> de aanbieder zorgen dat de resterende autorisatieregels doorgegeven worden aan het gedelegeerde systeem én dat het gedelegeerde systeem deze autorisatieregels correct evalueert en afdwingt.
+
+<p class="note" title="Filteren van (zoek-)resultaten">
+Het gebruik van gedeeltelijke evaluatie voor het filteren van (zoek-)resultaten wordt <b>afgeraden</b>. Hiervoor kan conform "Afnemers dienen vereiste gegevens te specificeren" de aanwezigheid van de juiste filters in het verwerkingsverzoek worden vereist.
+</p>
