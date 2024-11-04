@@ -22,6 +22,7 @@ import (
 	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/shared/control/opa"
 	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/shared/pip"
 	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/shared/types"
+	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/standards"
 	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/utilities/convert"
 )
 
@@ -138,7 +139,7 @@ func (h *authHandler) newAccessRequest(in *auth.AuthorizationRequest) *types.Req
 		Body:        d,
 		Headers:     in.Input.Headers,
 		Attributes: map[string]any{
-			"outway-certificate-chain": in.Input.OutwayCertificateChain,
+			standards.AttrOutwayCerts: in.Input.OutwayCertificateChain,
 		},
 	}
 }

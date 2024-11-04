@@ -26,7 +26,10 @@ func (c *controller) Authorize(req *types.Request) (*types.Response, error) {
 }
 
 func (c *controller) buildCedarRequest(req *types.Request) cedar.Request {
-	a := c.PIP().CollectAttributesFromRequest(req)
+	a, uri := c.PIP().CollectAttributesFromRequest(req)
+	if uri == "" {
+		uri = req.URL.String()
+	}
 
 	ca, ok := a.(*attributes)
 	if !ok {
@@ -39,7 +42,7 @@ func (c *controller) buildCedarRequest(req *types.Request) cedar.Request {
 	return cedar.Request{
 		Principal: cedar.NewEntityUID(p1, p2),
 		Action:    cedar.NewEntityUID(TypeAction, cedar.String(req.Method)),
-		Resource:  cedar.NewEntityUID(TypeResource, cedar.String(req.URL.String())),
+		Resource:  cedar.NewEntityUID(TypeService, cedar.String(uri)),
 		Context:   cedar.NewRecord(ca.set),
 	}
 }

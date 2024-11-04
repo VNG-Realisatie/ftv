@@ -7,31 +7,33 @@ import (
 	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/standards"
 )
 
-func (p *pip) processHeaders(req *types.Request, a types.AttributeSet) {
+func (p *pip) processHeaders(req *types.Request, a types.AttributeSet) string {
 	other := make(map[string]string)
 
-	var fwd1, fwd2 string
+	var newURI, fwd1, fwd2 string
 
 	for k := range req.Headers {
 		if list := req.Headers[k]; len(list) > 0 {
 			switch strings.ToLower(k) {
-			case "content-type":
+			case standards.AttrContentType:
 				a.AddAttribute(standards.AttrContentType, list[0])
-			case "authorization":
+			case standards.AttrAuthorization:
 				p.processAuth(req, list[0], a)
-			case "apikey", "api-key", "x-apikey", "x-api-key":
+			case standards.AttrFSCAuthorization:
+				newURI = p.processFSC(req, list[0], a)
+			case standards.AttrApiKey, "apikey", "x-apikey", "x-api-key":
 				a.AddAttribute(standards.AttrApiKey, list[0])
-			case "grondslag":
+			case standards.AttrGrondslag:
 				a.AddAttribute(standards.AttrGrondslag, list[0])
-			case "doelbinding":
+			case standards.AttrDoelbinding:
 				a.AddAttribute(standards.AttrDoelbinding, list[0])
-			case "zaaktype", "zaak-type":
+			case standards.AttrZaakType, "zaaktype":
 				a.AddAttribute(standards.AttrZaakType, list[0])
-			case "taak":
+			case standards.AttrTaak:
 				a.AddAttribute(standards.AttrTaak, list[0])
-			case "x-forwarded-for":
+			case standards.AttrXForwardedFor:
 				fwd1 = strings.Join(list, ",")
-			case "forwarded":
+			case standards.AttrForwarded:
 				fwd2 = strings.Join(list, ",")
 			default:
 				other[k] = strings.Join(list, ",")
@@ -44,4 +46,6 @@ func (p *pip) processHeaders(req *types.Request, a types.AttributeSet) {
 	}
 
 	a.AddAttribute(standards.AttrHeaders, other)
+
+	return newURI
 }
