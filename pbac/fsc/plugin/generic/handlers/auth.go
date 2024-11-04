@@ -40,13 +40,13 @@ func AuthHandler(cfg *config.Config, logger *slog.Logger) fiber.Handler {
 func newController(cfg *config.Config, logger *slog.Logger) (control.Controller, error) {
 	switch types.LanguageFromString(cfg.PolicyLanguage) {
 	case types.REGO:
-		p := pip.New(cfg.PipStore, cfg.PipStoreRecurse, logger, nil)
+		p := pip.New(cfg.PipStore, cfg.PipStoreRecurse, logger, nil, nil)
 		return opa.NewController(p, cfg.PolicyStore, cfg.PolicyStoreRecurse, logger), nil
 	case types.CERBOS:
-		p := pip.New(cfg.PipStore, cfg.PipStoreRecurse, logger, nil)
+		p := pip.New(cfg.PipStore, cfg.PipStoreRecurse, logger, nil, nil)
 		return cerbos.NewController(p, cfg.PolicyStore, cfg.PolicyStoreRecurse, logger), nil
 	case types.CEDAR:
-		p := pip.New(cfg.PipStore, cfg.PipStoreRecurse, logger, cedar.NewAttributeBuilder(logger))
+		p := pip.New(cfg.PipStore, cfg.PipStoreRecurse, logger, cedar.NewAttributeBuilder(logger), cedar.NewEntityBuilder(logger))
 		return cedar.NewController(p, cfg.PolicyStore, cfg.PolicyStoreRecurse, logger), nil
 	default:
 		return nil, fmt.Errorf("unsupported policy language '%s'", cfg.PolicyLanguage)
