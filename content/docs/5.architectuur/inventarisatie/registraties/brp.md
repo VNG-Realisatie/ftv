@@ -5,6 +5,12 @@ weight: 30
 
 # Basis Registratie Personen (RvIG)
 
+## Contact
+Cathy Dingemanse
+
+Marc gesprek en mailcontact gehad. De bevragingen die er nu zijn, waren de eerste [HaalCentraal](/docs/5.architectuur/inventarisatie/standaarden/HaalCentraal) REST API's, een project
+waar Cathy projectleider van was. 
+
 ## Links
 - https://publicaties.rvig.nl/Besluiten_en_modelautorisaties/Besluiten/BRP_besluiten
 - https://www.rvig.nl/lo-brp
