@@ -21,7 +21,7 @@ func (p *pip) processURL(req *types.Request, a types.AttributeSet) {
 		standards.AttrMethod:      req.Method,
 		standards.AttrScheme:      s,
 		standards.AttrHost:        req.URL.Host,
-		standards.AttrPath:        req.URL.RawPath,
+		standards.AttrPath:        req.URL.Path,
 		standards.AttrQuery:       outQ,
 	})
 }

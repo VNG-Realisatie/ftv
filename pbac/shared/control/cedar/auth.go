@@ -3,6 +3,7 @@ package cedar
 import (
 	"context"
 	"log/slog"
+	"time"
 
 	"github.com/cedar-policy/cedar-go"
 
@@ -15,11 +16,14 @@ func (c *controller) Authorize(req *types.Request) (*types.Response, error) {
 		c.Logger().Debug("authorization request", "controller", c.String(), "request-uid", req.UID)
 	}
 
+	started := time.Now()
 	decision, diagnostic := c.pdp.IsAuthorized(c.entities, c.buildCedarRequest(req))
+	duration := time.Since(started)
+
 	if !decision {
-		c.Logger().Error("authorization failed", "controller", c.String(), "request-uid", req.UID, "diagnostic", diagnostic)
-	} else if c.Logger().Enabled(context.TODO(), slog.LevelDebug) {
-		c.Logger().Debug("authorization granted", "controller", c.String(), "request-uid", req.UID)
+		c.Logger().Error("authorization failed", "controller", c.String(), "request-uid", req.UID, "diagnostic", diagnostic, "pdp elapsed", duration.String())
+	} else {
+		c.Logger().Debug("authorization granted", "controller", c.String(), "request-uid", req.UID, "pdp elapsed", duration.String())
 	}
 
 	return &types.Response{Allowed: bool(decision), Message: "not authorized"}, nil

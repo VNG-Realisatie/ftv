@@ -55,43 +55,68 @@ func newController(cfg *config.Config, logger *slog.Logger) (control.Controller,
 }
 
 func (h *authHandler) run(fc *fiber.Ctx) error {
-	if h.logger.Enabled(context.TODO(), slog.LevelDebug) {
-		started := time.Now()
+	started := time.Now()
+	out := auth.AuthorizationResponse{}
+	status := fiber.StatusInternalServerError
+
+	var authReq *auth.AuthorizationRequest
+	var req *types.Request
+	var resp *types.Response
+	var err error
+
+	if h.logger.Enabled(context.TODO(), slog.LevelInfo) {
 		defer func() {
-			h.logger.Debug("authorization handler", "elapsed time", time.Since(started).String())
+			args := make([]any, 0, 16)
+
+			if authReq != nil {
+				args = append(args, "method", authReq.Input.Method)
+			}
+			if req != nil {
+				args = append(args, "request-uid", req.UID)
+			}
+			if resp != nil {
+				args = append(args, "allowed", resp.Allowed, "policy", resp.PolicyKey)
+			}
+
+			var msg string
+			if err != nil {
+				msg = "authorization process failed"
+				args = append(args, "status", status, "error", err)
+			} else {
+				msg = "authorization processed successfully"
+			}
+
+			args = append(args, "elapsed time", time.Since(started).String())
+			h.logger.Info(msg, args...)
 		}()
 	}
 
-	authReq, err := h.verifyRequest(fc)
-	if authReq == nil {
-		return err
+	var msg string
+	authReq, status, msg, err = h.verifyRequest(fc)
+	if status != fiber.StatusOK {
+		return SendMessageResponse(fc, status, msg)
 	}
 
-	req := h.newAccessRequest(authReq)
-	resp, err2 := h.controller.Authorize(req)
-	if err2 != nil {
-		status := fiber.StatusInternalServerError
-		h.logger.Error("authorization process failed", "status", status, "error", err2)
+	req = h.newAccessRequest(authReq)
+	resp, err = h.controller.Authorize(req)
+	if err != nil {
+		status = fiber.StatusInternalServerError
 		return SendMessageResponse(fc, status, "authorization process failed")
 	}
 
-	out := auth.AuthorizationResponse{Result: &auth.AuthorizationResponseData{Allowed: &resp.Allowed}}
+	out.Result = &auth.AuthorizationResponseData{Allowed: &resp.Allowed}
 	if !resp.Allowed && resp.Message != "" {
 		out.Result.Status = &struct {
 			Reason *string `json:"reason,omitempty"`
 		}{Reason: &resp.Message}
 	}
 
-	h.logger.Info("authorization processed", "request-uid", req.UID, "method", authReq.Input.Method, "path", authReq.Input.Path, "allowed", resp.Allowed, "reason", resp.Message, "policy", resp.PolicyKey)
 	return fc.JSON(&out)
 }
 
-func (h *authHandler) verifyRequest(fc *fiber.Ctx) (*auth.AuthorizationRequest, error) {
+func (h *authHandler) verifyRequest(fc *fiber.Ctx) (*auth.AuthorizationRequest, int, string, error) {
 	if h.controller == nil {
-		status := fiber.StatusInternalServerError
-		err := fmt.Errorf("unsupported policy language: %s", h.cfg.PolicyLanguage)
-		h.logger.Error("unsupported policy language", "status", status, "error", err)
-		return nil, SendMessageResponse(fc, status, "internal configuration error")
+		return nil, fiber.StatusInternalServerError, "internal configuration error", fmt.Errorf("unsupported policy language: %s", h.cfg.PolicyLanguage)
 	}
 
 	if len(fc.Request().Header.ContentType()) == 0 {
@@ -100,19 +125,17 @@ func (h *authHandler) verifyRequest(fc *fiber.Ctx) (*auth.AuthorizationRequest, 
 
 	authReq := &auth.AuthorizationRequest{}
 	if err := fc.BodyParser(authReq); err != nil {
-		status := fiber.StatusBadRequest
-		h.logger.Error("bad request", "status", status, "error", err)
-		return nil, SendMessageResponse(fc, status, "invalid input data")
+		return nil, fiber.StatusBadRequest, "invalid input data", err
 	}
 
+	if authReq.Input.Method == "" {
+		return nil, fiber.StatusBadRequest, "invalid method", errors.New("input.method must be filled")
+	}
 	if authReq.Input.Path == "" {
-		status := fiber.StatusBadRequest
-		err := errors.New("input.path must be filled")
-		h.logger.Error("bad request", "status", status, "error", err)
-		return nil, SendMessageResponse(fc, status, "invalid path")
+		return nil, fiber.StatusBadRequest, "invalid path", errors.New("input.path must be filled")
 	}
 
-	return authReq, nil
+	return authReq, fiber.StatusOK, "", nil
 }
 
 func (h *authHandler) newAccessRequest(in *auth.AuthorizationRequest) *types.Request {
