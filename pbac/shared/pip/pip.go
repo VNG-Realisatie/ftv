@@ -1,7 +1,6 @@
 package pip
 
 import (
-	"context"
 	"log/slog"
 	"os"
 	"path/filepath"
@@ -58,7 +57,7 @@ func New(store string, recurse bool, logger *slog.Logger, newAttributes types.At
 
 	p.load()
 
-	if p.logger.Enabled(context.TODO(), slog.LevelDebug) {
+	if p.logger.Enabled(nil, slog.LevelDebug) {
 		kv1 := types.MapFromAttributes(p.attributes)
 
 		kv2 := make(map[string]any)
@@ -103,7 +102,7 @@ func (p *pip) CollectAttributesFromRequest(req *types.Request) (types.AttributeS
 		}
 	}
 
-	if p.logger.Enabled(context.TODO(), slog.LevelDebug) {
+	if p.logger.Enabled(nil, slog.LevelDebug) {
 		kv := make(map[string]any)
 		a.IterateAttributes(func(k string, v any) {
 			kv[k] = v

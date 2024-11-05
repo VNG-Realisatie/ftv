@@ -2,7 +2,6 @@
 package handlers
 
 import (
-	"context"
 	"encoding/base64"
 	"errors"
 	"fmt"
@@ -55,120 +54,138 @@ func newController(cfg *config.Config, logger *slog.Logger) (control.Controller,
 }
 
 func (h *authHandler) run(fc *fiber.Ctx) error {
-	started := time.Now()
-	out := auth.AuthorizationResponse{}
-	status := fiber.StatusInternalServerError
-
-	var authReq *auth.AuthorizationRequest
-	var req *types.Request
-	var resp *types.Response
-	var err error
-
-	if h.logger.Enabled(context.TODO(), slog.LevelInfo) {
-		defer func() {
-			args := make([]any, 0, 16)
-
-			if authReq != nil {
-				args = append(args, "method", authReq.Input.Method)
-			}
-			if req != nil {
-				args = append(args, "request-uid", req.UID)
-			}
-			if resp != nil {
-				args = append(args, "allowed", resp.Allowed, "policy", resp.PolicyKey)
-			}
-
-			var msg string
-			if err != nil {
-				msg = "authorization process failed"
-				args = append(args, "status", status, "error", err)
-			} else {
-				msg = "authorization processed successfully"
-			}
-
-			args = append(args, "elapsed time", time.Since(started).String())
-			h.logger.Info(msg, args...)
-		}()
+	p := &authProcess{
+		authHandler: *h,
+		fc:          fc,
+		status:      fiber.StatusInternalServerError,
+		started:     time.Now(),
 	}
 
-	var msg string
-	authReq, status, msg, err = h.verifyRequest(fc)
-	if status != fiber.StatusOK {
-		return SendMessageResponse(fc, status, msg)
+	if p.logger.Enabled(nil, slog.LevelInfo) {
+		defer p.log()
 	}
 
-	req = h.newAccessRequest(authReq)
-	resp, err = h.controller.Authorize(req)
-	if err != nil {
-		status = fiber.StatusInternalServerError
-		return SendMessageResponse(fc, status, "authorization process failed")
+	if p.controller == nil {
+		p.msg, p.err = "internal configuration error", fmt.Errorf("unsupported policy language: %s", p.cfg.PolicyLanguage)
+		return SendMessageResponse(fc, p.status, p.msg)
 	}
 
-	out.Result = &auth.AuthorizationResponseData{Allowed: &resp.Allowed}
-	if !resp.Allowed && resp.Message != "" {
-		out.Result.Status = &struct {
+	if p.verifyRequest(); p.status != fiber.StatusOK {
+		return SendMessageResponse(fc, p.status, p.msg)
+	}
+
+	p.newAccessRequest()
+
+	if p.resp, p.err = p.controller.Authorize(p.req); p.err != nil {
+		p.msg = "authorization process failed"
+		return SendMessageResponse(fc, p.status, p.msg)
+	}
+
+	p.out = &auth.AuthorizationResponse{Result: &auth.AuthorizationResponseData{Allowed: &p.resp.Allowed}}
+	if !p.resp.Allowed && p.resp.Message != "" {
+		p.out.Result.Status = &struct {
 			Reason *string `json:"reason,omitempty"`
-		}{Reason: &resp.Message}
+		}{Reason: &p.resp.Message}
 	}
 
-	return fc.JSON(&out)
+	return fc.JSON(p.out)
 }
 
-func (h *authHandler) verifyRequest(fc *fiber.Ctx) (*auth.AuthorizationRequest, int, string, error) {
-	if h.controller == nil {
-		return nil, fiber.StatusInternalServerError, "internal configuration error", fmt.Errorf("unsupported policy language: %s", h.cfg.PolicyLanguage)
+func (p *authProcess) verifyRequest() {
+	p.status = fiber.StatusBadRequest
+
+	if len(p.fc.Request().Header.ContentType()) == 0 {
+		p.fc.Request().Header.SetContentType("application/json")
 	}
 
-	if len(fc.Request().Header.ContentType()) == 0 {
-		fc.Request().Header.SetContentType("application/json")
+	p.authReq = &auth.AuthorizationRequest{}
+	if p.err = p.fc.BodyParser(p.authReq); p.err != nil {
+		p.msg = "invalid input data"
+		return
 	}
 
-	authReq := &auth.AuthorizationRequest{}
-	if err := fc.BodyParser(authReq); err != nil {
-		return nil, fiber.StatusBadRequest, "invalid input data", err
+	if p.authReq.Input.Method == "" {
+		p.msg, p.err = "invalid method", errors.New("input.method must be filled")
+		return
 	}
 
-	if authReq.Input.Method == "" {
-		return nil, fiber.StatusBadRequest, "invalid method", errors.New("input.method must be filled")
-	}
-	if authReq.Input.Path == "" {
-		return nil, fiber.StatusBadRequest, "invalid path", errors.New("input.path must be filled")
+	if p.authReq.Input.Path == "" {
+		p.msg, p.err = "invalid path", errors.New("input.path must be filled")
+		return
 	}
 
-	return authReq, fiber.StatusOK, "", nil
+	p.status = fiber.StatusOK
 }
 
-func (h *authHandler) newAccessRequest(in *auth.AuthorizationRequest) *types.Request {
-	s := in.Input.Path
+func (p *authProcess) newAccessRequest() {
+	s := p.authReq.Input.Path
 	if !strings.HasPrefix(s, "http") {
 		s = fmt.Sprintf("https://%s", s)
 	}
-	if in.Input.Query != "" {
-		s = fmt.Sprintf("%s?%s", s, in.Input.Query)
+	if p.authReq.Input.Query != "" {
+		s = fmt.Sprintf("%s?%s", s, p.authReq.Input.Query)
 	}
 
 	u, _ := url.ParseRequestURI(s)
 
 	var d []byte
-	if b := convert.OpaqueString(in.Input.Body); b != "" {
+	if b := convert.OpaqueString(p.authReq.Input.Body); b != "" {
 		d, _ = base64.StdEncoding.DecodeString(b)
 	}
 
-	return &types.Request{
+	p.req = &types.Request{
 		UID:         uuid.New(),
 		URL:         u,
-		Method:      in.Input.Method,
+		Method:      p.authReq.Input.Method,
 		RequestTime: time.Now().UTC(),
 		Body:        d,
-		Headers:     in.Input.Headers,
+		Headers:     p.authReq.Input.Headers,
 		Attributes: map[string]any{
-			standards.AttrOutwayCerts: in.Input.OutwayCertificateChain,
+			standards.AttrOutwayCerts: p.authReq.Input.OutwayCertificateChain,
 		},
 	}
+}
+
+func (p *authProcess) log() {
+	args := make([]any, 0, 16)
+
+	if p.authReq != nil {
+		args = append(args, "method", p.authReq.Input.Method)
+	}
+	if p.req != nil {
+		args = append(args, "request-uid", p.req.UID)
+	}
+	if p.resp != nil {
+		args = append(args, "allowed", p.resp.Allowed, "policy", p.resp.PolicyKey)
+	}
+
+	var msg string
+	if p.err != nil {
+		msg = "authorization process failed"
+		args = append(args, "status", p.status, "error", p.err)
+	} else {
+		msg = "authorization process successful"
+	}
+
+	args = append(args, "elapsed time", time.Since(p.started).String())
+	p.logger.Info(msg, args...)
 }
 
 type authHandler struct {
 	cfg        *config.Config
 	logger     *slog.Logger
 	controller control.Controller
+}
+
+type authProcess struct {
+	status  int
+	fc      *fiber.Ctx
+	authReq *auth.AuthorizationRequest
+	req     *types.Request
+	resp    *types.Response
+	out     *auth.AuthorizationResponse
+	started time.Time
+	err     error
+	msg     string
+	authHandler
 }
