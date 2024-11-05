@@ -11,7 +11,6 @@ Title: De context van FTV
 
 - [Data Bij de Bron](https://www.digitaleoverheid.nl/data-bij-de-bron/) 
   - Zie ook [Data bij de bron](../../5.architectuur/inventarisatie/wet_regelgeving/data_bij_de_bron)
-  - [bla](../../5.architectuur)
   - [Stappenplan introductie](https://realisatieibds.nl/attachment/entity/8654996c-81ff-4594-9bc0-d5c4943612a3), geschreven door FDS
 - [Regie op gegevens](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/regie-op-gegevens/) - Zie ook [Regie op gegevens](../../5.architectuur/inventarisatie/wet_regelgeving/regie_op_gegevens)
 - [Pas toe of leg uit](https://www.forumstandaardisatie.nl/pas-toe-leg-uit-beleid)
@@ -19,6 +18,7 @@ Title: De context van FTV
 ### Programma's
 - [IBDS](https://www.digitaleoverheid.nl/interbestuurlijke-datastrategie/) - Zie ook [IBDS](../../5.architectuur/inventarisatie/organisatorisch/ibds)
   - [Realisatie IBDS](https://realisatieibds.nl/)
+  - [Strategie als PDF](https://open.overheid.nl/documenten/ronl-bf2acf54-ad5f-4f32-afe2-0904a1d8e700/pdf)
 - FDS - Zie ook [FDS](../../5.architectuur/inventarisatie/standaarden/fds)
   - [Platform](https://federatief.datastelsel.nl/)
   - [FDS bij NORA](https://www.noraonline.nl/wiki/FDS_Basis_concept)
