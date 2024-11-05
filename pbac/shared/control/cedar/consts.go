@@ -8,5 +8,6 @@ const (
 	TypeInvalid   = "Invalid"
 	TypeJWT       = "JWT"
 	TypeResource  = "Resource"
+	TypeService   = "Service"
 	TypeZaak      = "Zaak"
 )

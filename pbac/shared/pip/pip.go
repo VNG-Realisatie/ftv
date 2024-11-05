@@ -14,7 +14,7 @@ import (
 type PIP interface {
 	types.AttributeSet
 	types.EntitySet
-	CollectAttributesFromRequest(req *types.Request) types.AttributeSet
+	CollectAttributesFromRequest(req *types.Request) (a types.AttributeSet, newURI string)
 }
 
 // New instantiates a new Policy Information Point.
@@ -87,11 +87,13 @@ func New(store string, recurse bool, logger *slog.Logger, newAttributes types.At
 //
 // The default attributes stored in the PIP will be collected first.
 // AttributeSet from the request will overwrite default attributes when the keys are equal.
-func (p *pip) CollectAttributesFromRequest(req *types.Request) types.AttributeSet {
+func (p *pip) CollectAttributesFromRequest(req *types.Request) (types.AttributeSet, string) {
 	a := p.newAttributes(p.attributes)
 	a.AddAttribute("request-time", time.Now().UTC())
 
-	p.processHeaders(req, a)
+	newURI := p.processHeaders(req, a)
+
+	// p.processCertificates(req, a)
 	p.processURL(req, a)
 	p.processBody(req, a)
 
@@ -109,7 +111,7 @@ func (p *pip) CollectAttributesFromRequest(req *types.Request) types.AttributeSe
 		p.logger.Debug("attributes collected", "request-uid", req.UID, "attributes", kv)
 	}
 
-	return a
+	return a, newURI
 }
 
 // AddAttribute implements the AttributeSet interface.

@@ -18,7 +18,7 @@ func (c *controller) policyEvent(t pap.EventType, key string) {
 				c.pdp.Store(cedar.PolicyID(key), &policy)
 				c.Logger().Info("policy added/replaced", "controller", c.String(), "policy-key", key)
 			} else {
-				c.Logger().Error("error decoding policy", "controller", c.String(), "policy-key", key)
+				c.Logger().Error("error decoding policy", "controller", c.String(), "policy-key", key, "error", err)
 			}
 		}
 
