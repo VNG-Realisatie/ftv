@@ -1,5 +1,5 @@
 PROJECT_NAME := "fsc-opa"
-PKG := "gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/fsc/plugin/opa/$(PROJECT_NAME)"
+PKG := "gitlab.com/digilab.overheid.nl/ecosystem/ftv/federatieve-toegangsverlening/pbac/fsc/plugin/opa/$(PROJECT_NAME)"
 PKG_LIST := $(shell go list ./...)
 GO_FILES := $(shell find . -name '*.go' | grep -v _test.go)
 

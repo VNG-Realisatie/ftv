@@ -1,4 +1,4 @@
-module gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/mock-brp-public-tables-api
+module gitlab.com/digilab.overheid.nl/ecosystem/ftv/federatieve-toegangsverlening/mock-brp-public-tables-api
 
 go 1.22.2
 

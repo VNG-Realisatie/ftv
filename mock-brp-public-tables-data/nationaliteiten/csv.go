@@ -5,7 +5,7 @@ import (
 	"io"
 	"strings"
 
-	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/utilities/csv"
+	"gitlab.com/digilab.overheid.nl/ecosystem/ftv/federatieve-toegangsverlening/utilities/csv"
 )
 
 // LoadFromCSV decodes the data from the given input stream in standard CSV format,

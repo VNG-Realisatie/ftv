@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"time"
 
-	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/shared/types"
+	"gitlab.com/digilab.overheid.nl/ecosystem/ftv/federatieve-toegangsverlening/pbac/shared/types"
 )
 
 // PIP represents the interface for a Policy Information Point.

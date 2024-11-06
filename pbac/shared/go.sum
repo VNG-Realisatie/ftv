@@ -24,10 +24,10 @@ github.com/rogpeppe/go-internal v1.13.1 h1:KvO1DLK/DRN07sQ1LQKScxyZJuNnedQ5/wKSR
 github.com/rogpeppe/go-internal v1.13.1/go.mod h1:uMEvuHeurkdAXX61udpOXGD/AzZDWNMNyH2VO9fmH0o=
 github.com/stretchr/testify v1.9.0 h1:HtqpIVDClZ4nwg75+f6Lvsy/wHu+3BoSGCbBAcpTsTg=
 github.com/stretchr/testify v1.9.0/go.mod h1:r2ic/lqez/lEtzL7wO/rwa5dbSLXVDPFyf8C91i36aY=
-gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/standards v0.0.0-20241031101911-b26e04571e09 h1:USe27AjWEBsdgn7Qv41Ugw+ZTUsN0xQdCGFaqHXQRGE=
-gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/standards v0.0.0-20241031101911-b26e04571e09/go.mod h1:ZX1f+1qxK+6mz+R4r7f7ZgylaqGZe11RiaFx6Mbrz4g=
-gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/utilities v0.0.0-20241031101911-b26e04571e09 h1:+xcDs2m1dF3+7cA3nhVt8TquvZmjU5p6Zp7c01J8BNo=
-gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/utilities v0.0.0-20241031101911-b26e04571e09/go.mod h1:Px0pY4lySuPIIER3ej+yqlRkZUMKTB/2wcPuVJmfBBg=
+gitlab.com/digilab.overheid.nl/ecosystem/ftv/federatieve-toegangsverlening/pbac/standards v0.0.0-20241031101911-b26e04571e09 h1:USe27AjWEBsdgn7Qv41Ugw+ZTUsN0xQdCGFaqHXQRGE=
+gitlab.com/digilab.overheid.nl/ecosystem/ftv/federatieve-toegangsverlening/pbac/standards v0.0.0-20241031101911-b26e04571e09/go.mod h1:ZX1f+1qxK+6mz+R4r7f7ZgylaqGZe11RiaFx6Mbrz4g=
+gitlab.com/digilab.overheid.nl/ecosystem/ftv/federatieve-toegangsverlening/utilities v0.0.0-20241031101911-b26e04571e09 h1:+xcDs2m1dF3+7cA3nhVt8TquvZmjU5p6Zp7c01J8BNo=
+gitlab.com/digilab.overheid.nl/ecosystem/ftv/federatieve-toegangsverlening/utilities v0.0.0-20241031101911-b26e04571e09/go.mod h1:Px0pY4lySuPIIER3ej+yqlRkZUMKTB/2wcPuVJmfBBg=
 golang.org/x/exp v0.0.0-20240222234643-814bf88cf225 h1:LfspQV/FYTatPTr/3HzIcmiUFH7PGP+OQ6mgDYo3yuQ=
 golang.org/x/exp v0.0.0-20240222234643-814bf88cf225/go.mod h1:CxmFvTBINI24O/j8iY7H1xHzx2i4OsyguNBmN/uPtqc=
 golang.org/x/exp v0.0.0-20241009180824-f66d83c29e7c h1:7dEasQXItcW1xKJ2+gg5VOiBnqWrJc+rq0DPKyvvdbY=

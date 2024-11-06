@@ -7,8 +7,8 @@ import (
 	"sort"
 	"strings"
 
-	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/cmd-brp-tb35/internal/maps"
-	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/mock-brp-public-tables-data/autorisatieregels"
+	"gitlab.com/digilab.overheid.nl/ecosystem/ftv/federatieve-toegangsverlening/cmd-brp-tb35/internal/maps"
+	"gitlab.com/digilab.overheid.nl/ecosystem/ftv/federatieve-toegangsverlening/mock-brp-public-tables-data/autorisatieregels"
 )
 
 func main() {

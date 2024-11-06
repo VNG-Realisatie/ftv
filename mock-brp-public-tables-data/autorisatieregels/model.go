@@ -6,8 +6,8 @@ import (
 	"time"
 	"unicode/utf8"
 
-	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/utilities/compare"
-	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/utilities/convert"
+	"gitlab.com/digilab.overheid.nl/ecosystem/ftv/federatieve-toegangsverlening/utilities/compare"
+	"gitlab.com/digilab.overheid.nl/ecosystem/ftv/federatieve-toegangsverlening/utilities/convert"
 )
 
 // AutorisatieRegel represents the data for an authorization rule as defined in table 35 of the BRP register.

@@ -7,7 +7,7 @@ import (
 
 	"github.com/deiu/rdf2go"
 
-	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/utilities/convert"
+	"gitlab.com/digilab.overheid.nl/ecosystem/ftv/federatieve-toegangsverlening/utilities/convert"
 )
 
 // Load loads a turtle graph from the given input stream.

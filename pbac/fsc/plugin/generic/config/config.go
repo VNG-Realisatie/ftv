@@ -9,7 +9,7 @@ import (
 	"gitlab.com/gjuyn/go-config/config"
 	"gitlab.com/gjuyn/go-config/config-ext/yaml"
 
-	slog2 "gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/utilities/slog"
+	slog2 "gitlab.com/digilab.overheid.nl/ecosystem/ftv/federatieve-toegangsverlening/utilities/slog"
 )
 
 // Config represents our configuration variables.

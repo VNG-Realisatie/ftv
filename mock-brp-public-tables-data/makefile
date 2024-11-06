@@ -1,5 +1,5 @@
 PROJECT_NAME := "mock-brp-public-tables-data"
-PKG := "gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/$(PROJECT_NAME)"
+PKG := "gitlab.com/digilab.overheid.nl/ecosystem/ftv/federatieve-toegangsverlening/$(PROJECT_NAME)"
 PKG_LIST := $(shell go list ./...)
 GO_FILES := $(shell find . -name '*.go' | grep -v _test.go)
 

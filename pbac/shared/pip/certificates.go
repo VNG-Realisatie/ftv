@@ -1,7 +1,7 @@
 package pip
 
 import (
-	"gitlab.com/digilab.overheid.nl/ecosystem/federatieve-toegangsverlening/pbac/shared/types"
+	"gitlab.com/digilab.overheid.nl/ecosystem/ftv/federatieve-toegangsverlening/pbac/shared/types"
 )
 
 func (p *pip) processCertificates(req *types.Request, a types.AttributeSet) {
