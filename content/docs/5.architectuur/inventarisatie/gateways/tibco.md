@@ -1,5 +1,4 @@
 ---
-weight: 20
 title: 'Tibco'
 ---
 
@@ -21,5 +20,5 @@ title: 'Tibco'
 
 ## Observaties
 - JAVA based.
-- ingebouwde policy engine (+ editor?)
-
+- ingebouwde policy engine (+ editor?).
+- de API gateway Mashery is overgenomen door [Boomi](boomi).
