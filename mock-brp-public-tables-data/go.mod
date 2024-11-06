@@ -4,7 +4,6 @@ go 1.22.2
 
 require (
 	github.com/stretchr/testify v1.9.0
-	gitlab.com/digilab.overheid.nl/ecosystem/ftv/federatieve-toegangsverlening/utilities v0.0.0-20240718131436-d8b6317f77cb
 )
 
 require (
