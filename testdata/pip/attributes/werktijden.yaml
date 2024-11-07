@@ -1,0 +1,20 @@
+- key: "werktijden"
+  value:
+    maandag:
+      begin: "09:00"
+      eind: "17:00"
+    dinsdag:
+      begin: "09:00"
+      eind: "17:00"
+    woensdag:
+      begin: "09:00"
+      eind: "17:00"
+    donderdag:
+      begin: "09:00"
+      eind: "17:00"
+    vrijdag:
+      begin: "09:00"
+      eind: "17:00"
+    zaterdag:
+      begin: "10:00"
+      eind: "14:00"

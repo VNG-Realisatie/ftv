@@ -5,7 +5,7 @@ import "strings"
 // Language represents a policy language.
 type Language uint8
 
-// ListAllKeys of supported policy languages.
+// List of supported policy languages.
 const (
 	XACML Language = iota + 1
 	ODRL
@@ -45,7 +45,7 @@ type Format uint8
 
 // ListAllKeys of supported policy file formats.
 //
-// Note that not the policy language (Language) limits the choices for the file format of a policy.
+// Note that the policy language (Language) limits the choices for the file format of a policy.
 const (
 	XML Format = iota + 1
 	RDFXML
@@ -105,7 +105,7 @@ func init() {
 	languages["opa-rego"] = REGO
 	languages["oparego"] = REGO
 	languages["cel"] = CERBOS
-	languages["cerbos/cel"] = CERBOS
+	languages["cerbos"] = CERBOS
 	languages["cerbos-cel"] = CERBOS
 	languages["cerboscel"] = CERBOS
 

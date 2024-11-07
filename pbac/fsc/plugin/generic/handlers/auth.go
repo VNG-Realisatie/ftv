@@ -133,11 +133,12 @@ func (p *authProcess) newAccessRequest() {
 		d, _ = base64.StdEncoding.DecodeString(b)
 	}
 
+	uid, now := uuid.New(), time.Now().UTC()
 	p.req = &types.Request{
-		UID:         uuid.New(),
+		UID:         &uid,
 		URL:         u,
 		Method:      p.authReq.Input.Method,
-		RequestTime: time.Now().UTC(),
+		RequestTime: &now,
 		Body:        d,
 		Headers:     p.authReq.Input.Headers,
 		Attributes: map[string]any{

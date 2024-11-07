@@ -9,10 +9,10 @@ import (
 
 // Request contains the details of an HTTP request required for access control.
 type Request struct {
-	UID         uuid.UUID           `json:"UID,omitempty"`
-	URL         *url.URL            `json:"URL,omitempty"`
+	UID         *uuid.UUID          `json:"uid,omitempty"`
+	URL         *url.URL            `json:"url,omitempty"`
 	Method      string              `json:"method,omitempty"`
-	RequestTime time.Time           `json:"requestTime,omitempty"`
+	RequestTime *time.Time          `json:"requestTime,omitempty"`
 	Headers     map[string][]string `json:"headers,omitempty"`
 	Body        []byte              `json:"body,omitempty"`
 	Attributes  map[string]any      `json:"attributes,omitempty"`

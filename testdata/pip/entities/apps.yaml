@@ -1,0 +1,8 @@
+- type: "App"
+  id: "App-1"
+  attributes:
+    code: "app1"
+    name: "App-1"
+    api-keys:
+      - "abcdefghij"
+      - "1234567890"

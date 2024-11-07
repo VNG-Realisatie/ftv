@@ -1,8 +1,8 @@
 package cedar
 
 import (
+	"bytes"
 	"fmt"
-	"strings"
 
 	"github.com/cedar-policy/cedar-go"
 
@@ -11,35 +11,39 @@ import (
 
 // DeterminePrincipal determines the type of principal and its primary key.
 func DeterminePrincipal(a *attributes) (cedar.EntityType, cedar.String) {
-	if zaak, ok := a.GetAttribute(standards.AttrZaakType).(string); ok && zaak != "" {
-		if taak, ok2 := a.GetAttribute(standards.AttrTaak).(string); ok2 && taak != "" {
-			zaak = fmt.Sprintf("%s-%s", zaak, taak)
+	if zaak, ok := a.GetAttribute(standards.AttrZaakType).(cedar.String); ok && zaak != "" {
+		if taak, ok2 := a.GetAttribute(standards.AttrTaak).(cedar.String); ok2 && taak != "" {
+			zaak = cedar.String(fmt.Sprintf("%s-%s", zaak, taak))
 		}
-		return TypeZaak, cedar.String(zaak)
+		return TypeZaak, zaak
 	}
 
-	if gs, ok := a.GetAttribute(standards.AttrGrondslag).(string); ok && gs != "" {
-		if doel, ok2 := a.GetAttribute(standards.AttrDoelbinding).(string); ok2 && doel != "" {
-			gs = fmt.Sprintf("%s-%s", gs, doel)
-		}
-		return TypeGrondslag, cedar.String(gs)
+	if doel, ok := a.GetAttribute(standards.AttrDoelbinding).(cedar.String); ok && doel != "" {
+		return TypeDoelbinding, doel
 	}
 
 	if jwt := a.GetAttribute(standards.AttrJWT); jwt != nil {
 		if a2, ok := jwt.(*attributes); ok {
-			if valid, ok2 := a2.GetAttribute(standards.AttrValid).(bool); ok2 && valid {
+			if valid, ok2 := a2.GetAttribute(standards.AttrValid).(cedar.Boolean); ok2 && bool(valid) {
 				switch t := a2.GetAttribute(standards.AttrClaims).(type) {
-				case string:
-					return TypeJWT, cedar.String(t)
-				case []string:
-					return TypeJWT, cedar.String(strings.Join(t, ","))
+				case cedar.String:
+					return TypeJWT, t
+
+				case []cedar.String:
+					out := bytes.Buffer{}
+					for i := range t {
+						out.WriteString(string(t[i]))
+						out.WriteByte(',')
+					}
+					out.Truncate(1)
+					return TypeJWT, cedar.String(out.String())
 				}
 			}
 		}
 	}
 
-	if apikey, ok := a.GetAttribute(standards.AttrApiKey).(string); ok && apikey != "" {
-		return TypeApp, cedar.String(apikey)
+	if apikey, ok := a.GetAttribute(standards.AttrApiKey).(cedar.String); ok && apikey != "" {
+		return TypeApp, apikey
 	}
 
 	return TypeInvalid, "invalid"

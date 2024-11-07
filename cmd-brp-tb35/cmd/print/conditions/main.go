@@ -12,7 +12,7 @@ import (
 )
 
 func main() {
-	path := "./test-data/Tabel35_Autorisatietabel.csv"
+	path := "../testdata/Tabel35_Autorisatietabel.csv"
 	f, err := os.Open(path)
 	if err != nil {
 		panic(err)

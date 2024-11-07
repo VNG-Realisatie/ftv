@@ -28,7 +28,7 @@ func TestOpaqueString(t *testing.T) {
 	}
 }
 
-func TestRemoveCharset(t *testing.T) {
+func TestRemoveHeaderParameters(t *testing.T) {
 	testCases := []struct {
 		name string
 		in   string

@@ -38,6 +38,19 @@ func TestLoadSimple(t *testing.T) {
 	})
 }
 
+func TestLoadSimpleError(t *testing.T) {
+	const data = `not really RDF`
+
+	t.Run("load simple error", func(t *testing.T) {
+		r := bytes.NewBufferString(data)
+		require.NotNil(t, r)
+
+		g, err := Load(r, "text/turtle")
+		require.Error(t, err)
+		require.Nil(t, g)
+	})
+}
+
 func TestLoadReal(t *testing.T) {
 	t.Run("load file", func(t *testing.T) {
 		r, err := os.Open("../../testdata/tooiont.ttl")
@@ -60,6 +73,20 @@ func TestLoadReal(t *testing.T) {
 	})
 }
 
+func TestLoadRealError(t *testing.T) {
+	t.Run("load file error", func(t *testing.T) {
+		r, err := os.Open("../../testdata/error.ttl")
+		require.NoError(t, err)
+		require.NotNil(t, r)
+
+		defer r.Close()
+
+		g, err2 := Load(r, "text/turtle")
+		require.Error(t, err2)
+		require.Nil(t, g)
+	})
+}
+
 func TestLoadURI(t *testing.T) {
 	const uri = `https://identifier.overheid.nl/tooi/def/ont.ttl`
 
@@ -75,5 +102,15 @@ func TestLoadURI(t *testing.T) {
 			s := term.String()
 			assert.NotEmpty(t, s)
 		}
+	})
+}
+
+func TestLoadURIError(t *testing.T) {
+	const uri = `https://identifier.overheid.nl/tooi/def/ont.txt`
+
+	t.Run("load uri error", func(t *testing.T) {
+		g, err := LoadFromURI(uri, true)
+		require.Error(t, err)
+		require.Nil(t, g)
 	})
 }
