@@ -2,7 +2,7 @@ package pip
 
 import (
 	"bytes"
-	"errors"
+	"encoding/xml"
 	"io"
 	"strings"
 
@@ -51,13 +51,6 @@ var parsers = map[string]bodyParser{
 	"application/geo+json":  parseJSON,
 }
 
-func parseXML(_ []byte, _ types.AttributeSet) error {
-
-	// TODO: implement XML parser
-
-	return errors.New("XML parser not implemented")
-}
-
 func parseJSON(body []byte, a types.AttributeSet) error {
 	m := make(map[string]any)
 	if err := json.NewDecoder(bytes.NewBuffer(body)).Decode(&m); err != nil && err != io.EOF {
@@ -66,4 +59,63 @@ func parseJSON(body []byte, a types.AttributeSet) error {
 
 	a.AddAttribute("body", m)
 	return nil
+}
+
+func parseXML(body []byte, a types.AttributeSet) error {
+	nodes := make([]xmlNode, 0)
+	if err := xml.Unmarshal(body, &nodes); err != nil {
+		return err
+	}
+
+	nodes2 := make([]map[string]any, len(nodes))
+	for i := range nodes {
+		node := nodes[i]
+		nodes2[i] = map[string]any{node.name(): node.toMap()}
+	}
+	a.AddAttribute("body", nodes2)
+
+	return nil
+}
+
+type xmlNode struct {
+	XMLName xml.Name
+	Attrs   []xml.Attr `xml:",any,attr"`
+	Data    string     `xml:",innerxml"`
+	Nodes   []xmlNode  `xml:",any"`
+}
+
+func (n *xmlNode) name() string {
+	return n.XMLName.Local
+}
+
+func (n *xmlNode) toMap() map[string]any {
+	attrs := make([]map[string]any, len(n.Attrs))
+	for i := range n.Attrs {
+		a := n.Attrs[i]
+		attrs[i] = map[string]any{a.Name.Local: a.Value}
+	}
+
+	nodes := make([]map[string]any, len(n.Nodes))
+	for i := range n.Nodes {
+		node := n.Nodes[i]
+		nodes[i] = map[string]any{node.name(): node.toMap()}
+	}
+
+	var cdata string
+	if len(n.Nodes) == 0 && len(n.Data) > 0 {
+		cdata = n.Data
+	}
+
+	return map[string]any{
+		"attributes": attrs,
+		"nodes":      nodes,
+		"cdata":      cdata,
+	}
+}
+
+// UnmarshalXML implements the xml.Unmarshaler interface.
+func (n *xmlNode) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
+	n.Attrs = start.Attr
+	type node xmlNode
+	return d.DecodeElement((*node)(n), &start)
 }
