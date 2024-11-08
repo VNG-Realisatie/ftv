@@ -24,7 +24,7 @@ func (p *pip) processBearer(req *types.Request, bearer string, a types.Attribute
 		if _, ok := token.Method.(*jwt.SigningMethodHMAC); !ok {
 			return nil, fmt.Errorf("unexpected signing method: %v", token.Header["alg"])
 		}
-		return []byte("secret"), nil
+		return []byte("secret1!"), nil
 	})
 	if err != nil {
 		p.logger.Error("failed to parse jwt token", "request-uid", req.UID, "error", err)
