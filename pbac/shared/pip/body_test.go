@@ -82,3 +82,30 @@ var xmlData3 = `<page>
        </text> 
      </revision> 
  </page>`
+
+func TestParseJSON(t *testing.T) {
+	testCases := []struct {
+		name    string
+		body    string
+		wantErr bool
+	}{
+		{name: "empty"},
+		{name: "bad json", body: `this is not [] json`, wantErr: true},
+		{name: "array", body: `["hello", "world", 123, true, "well"]`, wantErr: true},
+		{name: "object", body: `{"hello": "world", "int": 123, "bool": true}`},
+	}
+
+	for _, tc := range testCases {
+		t.Run(tc.name, func(t *testing.T) {
+			a := types.NewAttributeSet()
+			require.NotNil(t, a)
+
+			err := parseJSON([]byte(tc.body), a)
+			if tc.wantErr {
+				require.Error(t, err)
+			} else {
+				require.NoError(t, err)
+			}
+		})
+	}
+}

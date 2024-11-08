@@ -148,8 +148,6 @@ func (a *attributes) anyToValue(in any) cedar.Value {
 		return cedar.Decimal{Value: int64(math.Round(t * cedar.DecimalPrecision))}
 	case time.Time:
 		return cedar.FromStdTime(t)
-	case *time.Time:
-		return cedar.FromStdTime(*t)
 	case time.Duration:
 		return cedar.FromStdDuration(t)
 
