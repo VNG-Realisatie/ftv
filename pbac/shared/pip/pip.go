@@ -75,10 +75,11 @@ func New(store string, recurse bool, logger *slog.Logger, newAttributes types.At
 			}
 		})
 
-		p.logger.Debug("pip initialized", "attributes", kv1, "entities", kv2)
+		p.logger.Debug("pip initialized", "attributeStore", p.attrStore, "entityStore", p.entityStore, "attributes", kv1, "entities", kv2)
+	} else {
+		p.logger.Info("pip initialized", "attributeStore", p.attrStore, "entityStore", p.entityStore)
 	}
 
-	p.logger.Info("pip initialized", "attributeStore", p.attrStore, "entityStore", p.entityStore)
 	return p
 }
 

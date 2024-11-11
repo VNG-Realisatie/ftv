@@ -185,3 +185,32 @@ func TestAttributes_MergeAttributes(t *testing.T) {
 		})
 	}
 }
+
+func TestMapFromAttributes(t *testing.T) {
+	testCases := []struct {
+		name string
+		in   AttributeSet
+		want map[string]any
+	}{
+		{
+			name: "nil",
+		},
+		{
+			name: "empty",
+			in:   NewAttributeSet(),
+			want: map[string]any{},
+		},
+		{
+			name: "few attributes",
+			in:   NewAttributeSet(Attribute{Key: "hello", Value: "world"}, NewAttribute("int", 123)),
+			want: map[string]any{"hello": "world", "int": 123},
+		},
+	}
+
+	for _, tc := range testCases {
+		t.Run(tc.name, func(t *testing.T) {
+			got := MapFromAttributes(tc.in)
+			assert.EqualValues(t, tc.want, got)
+		})
+	}
+}

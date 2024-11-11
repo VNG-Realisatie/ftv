@@ -36,7 +36,7 @@ func TestLoadEntities(t *testing.T) {
 		},
 		{
 			name: "1 entity",
-			path: "../../../testdata/unittest/pip/ent/entity.yaml",
+			path: "../../../testdata/unittest/pip/entities/entity.yaml",
 			want: types.NewEntitySet(
 				types.NewEntity("App", "app1", types.NewAttributeSet(
 					types.NewAttribute("code", "app1"),
@@ -46,7 +46,7 @@ func TestLoadEntities(t *testing.T) {
 		},
 		{
 			name: "few entities",
-			path: "../../../testdata/unittest/pip/ent/entities.yaml",
+			path: "../../../testdata/unittest/pip/entities/entities.yaml",
 			want: types.NewEntitySet(
 				types.NewEntity("App", "app1", types.NewAttributeSet(
 					types.NewAttribute("code", "app1"),
@@ -121,14 +121,14 @@ func TestLoadAttributes(t *testing.T) {
 		},
 		{
 			name: "1 attribute",
-			path: "../../../testdata/unittest/pip/attr/attribute.yaml",
+			path: "../../../testdata/unittest/pip/attributes/attribute.yaml",
 			want: types.NewAttributeSet(
 				types.NewAttribute("maandag", 1),
 			),
 		},
 		{
 			name: "few attributes",
-			path: "../../../testdata/unittest/pip/attr/attributes.yaml",
+			path: "../../../testdata/unittest/pip/attributes/attributes.yaml",
 			want: types.NewAttributeSet(
 				types.NewAttribute("maandag", 1),
 				types.NewAttribute("dinsdag", 2),

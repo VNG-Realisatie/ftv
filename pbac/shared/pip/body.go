@@ -27,6 +27,7 @@ func (p *pip) processBody(req *types.Request, a types.AttributeSet) {
 	f, ok2 := parsers[ct]
 	if !ok2 {
 		p.logger.Error("unsupported content-type", "request-uid", req.UID, "content-type", ct)
+		return
 	}
 
 	if err := f(req.Body, a); err != nil {

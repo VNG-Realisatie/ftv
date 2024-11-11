@@ -56,8 +56,12 @@ var (
 )
 
 func init() {
-	// XML prefix.
+	// specific XML prefix.
 	cPatterns = append(cPatterns, []byte("<?xml"))
+	cTypes = append(cTypes, ApplicationXML)
+
+	// generic XML prefix.
+	cPatterns = append(cPatterns, []byte("<"))
 	cTypes = append(cTypes, ApplicationXML)
 
 	// JSON object prefix.
