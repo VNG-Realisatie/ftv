@@ -6,7 +6,7 @@ import (
 )
 
 // EntitiesBuilder is the function prototype for creating a new set of entities.
-type EntitiesBuilder func(in ...EntitySet) EntitySet
+type EntitiesBuilder func(in ...any) EntitySet
 
 // EntityIterator is the function prototype to iterate through a set of entities.
 type EntityIterator func(entity Entity)
@@ -73,15 +73,23 @@ type EntitySet interface {
 //
 // It matches the EntitiesBuilder function signature.
 //
-// The given entity-sets will be copied into the returned new attribute-set.
+// Input parameters should be of type Entity or EntitySet!
+// Other types of parameters are ignored.
+//
+// The given entities and/or entity-sets will be copied into the returned new attribute-set.
 // Duplicate keys from an input set will overwrite the previous value.
 // E.g. only the last value with the duplicate key will be retained.
-func NewEntitySet(in ...EntitySet) EntitySet {
+func NewEntitySet(in ...any) EntitySet {
 	out := &entities{set: make(map[string]Entity, 32)}
-	for i := range in {
-		in[i].IterateEntities(func(entity Entity) {
-			out.set[entity.UID()] = entity
-		})
+	for _, p := range in {
+		switch t := p.(type) {
+		case Entity:
+			out.set[t.UID()] = t
+		case EntitySet:
+			t.IterateEntities(func(entity Entity) {
+				out.set[entity.UID()] = entity
+			})
+		}
 	}
 	return out
 }

@@ -1,3 +1,4 @@
+// Package pip contains all logic for a functional component acting as the Policy Information Point.
 package pip
 
 import (

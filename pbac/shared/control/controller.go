@@ -1,3 +1,4 @@
+// Package control contains the base logic for a component acting as a Policy Decision Point.
 package control
 
 import (

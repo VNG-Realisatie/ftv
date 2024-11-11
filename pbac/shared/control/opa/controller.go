@@ -1,3 +1,5 @@
+// Package opa contains all logic for a functional component acting as the Policy Decision Point
+// using OPA/Rego as the policy language.
 package opa
 
 import (
@@ -10,6 +12,7 @@ import (
 	"gitlab.com/digilab.overheid.nl/ecosystem/ftv/federatieve-toegangsverlening/pbac/shared/types"
 )
 
+// Version defines the version of this OPA/Rego PDP.
 const Version = "1.0.0"
 
 // NewController instantiates a new OPA/Rego controller.

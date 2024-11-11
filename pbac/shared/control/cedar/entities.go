@@ -61,16 +61,21 @@ func (e *WrappedEntity) Parents() []string {
 
 // NewEntityBuilder returns the function prototype for building a new Cedar based entity set.
 func NewEntityBuilder(logger *slog.Logger) types.EntitiesBuilder {
-	return func(in ...types.EntitySet) types.EntitySet {
+	return func(in ...any) types.EntitySet {
 		return NewEntitySet(logger, in...)
 	}
 }
 
 // NewEntitySet instantiates a new Cedar based entity set.
-func NewEntitySet(logger *slog.Logger, in ...types.EntitySet) types.EntitySet {
+func NewEntitySet(logger *slog.Logger, in ...any) types.EntitySet {
 	a := &entities{logger: logger, set: make(cedar.Entities)}
-	for i := range in {
-		a.MergeEntities(in[i])
+	for _, p := range in {
+		switch t := p.(type) {
+		case types.Entity:
+			a.AddEntity(t)
+		case types.EntitySet:
+			a.MergeEntities(t)
+		}
 	}
 	return a
 }

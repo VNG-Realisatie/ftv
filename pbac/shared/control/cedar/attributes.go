@@ -14,16 +14,23 @@ import (
 
 // NewAttributeBuilder returns the function prototype for building a new Cedar based attribute set.
 func NewAttributeBuilder(logger *slog.Logger) types.AttributesBuilder {
-	return func(in ...types.AttributeSet) types.AttributeSet {
+	return func(in ...any) types.AttributeSet {
 		return NewAttributeSet(logger, in...)
 	}
 }
 
 // NewAttributeSet instantiates a new Cedar based attribute set.
-func NewAttributeSet(logger *slog.Logger, in ...types.AttributeSet) types.AttributeSet {
+func NewAttributeSet(logger *slog.Logger, in ...any) types.AttributeSet {
 	a := &attributes{logger: logger, set: make(cedar.RecordMap)}
-	for i := range in {
-		a.MergeAttributes(in[i])
+	for _, p := range in {
+		switch t := p.(type) {
+		case types.Attribute:
+			a.AddAttribute(t.Key, t.Value)
+		case *types.Attribute:
+			a.AddAttribute(t.Key, t.Value)
+		case types.AttributeSet:
+			a.MergeAttributes(t)
+		}
 	}
 	return a
 }

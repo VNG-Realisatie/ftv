@@ -10,7 +10,7 @@ import (
 func TestNewAttributeSet(t *testing.T) {
 	testCases := []struct {
 		name string
-		in   []AttributeSet
+		in   []any
 		want map[string]any
 	}{
 		{
@@ -19,15 +19,19 @@ func TestNewAttributeSet(t *testing.T) {
 		},
 		{
 			name: "one set",
-			in:   []AttributeSet{&attributes{set: map[string]any{"hello": "world", "int": 123}}},
+			in:   []any{&attributes{set: map[string]any{"hello": "world", "int": 123}}},
 			want: map[string]any{"hello": "world", "int": 123},
 		},
 		{
-			name: "few sets",
-			in: []AttributeSet{
+			name: "mixed input",
+			in: []any{
 				&attributes{set: map[string]any{"hello": "world", "int": 123}},
-				&attributes{set: map[string]any{"int": 456, "world": "hello"}},
+				12345,
+				NewAttribute("world", "hello"),
 				&attributes{set: map[string]any{"hello": "world2", "bool": true}},
+				true,
+				NewAttribute("int", 456),
+				nil,
 			},
 			want: map[string]any{"hello": "world2", "int": 456, "bool": true, "world": "hello"},
 		},

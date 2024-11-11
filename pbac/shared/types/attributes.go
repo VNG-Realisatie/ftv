@@ -4,8 +4,19 @@ import (
 	"sync"
 )
 
+// Attribute is a convenience type to represent a single attribute.
+type Attribute struct {
+	Key   string
+	Value any
+}
+
+// NewAttribute instantiates a new attribute.
+func NewAttribute(key string, value any) *Attribute {
+	return &Attribute{Key: key, Value: value}
+}
+
 // AttributesBuilder is the function prototype for creating a new set of attributes.
-type AttributesBuilder func(in ...AttributeSet) AttributeSet
+type AttributesBuilder func(in ...any) AttributeSet
 
 // AttributeIterator is the function prototype to iterate through a set of attributes.
 type AttributeIterator func(key string, value any)
@@ -28,12 +39,19 @@ type AttributeSet interface {
 // The given attribute sets will be copied into the returned new attribute set.
 // Duplicate keys from an input set will overwrite the previous value.
 // E.g. only the last value with the duplicate key will be retained.
-func NewAttributeSet(in ...AttributeSet) AttributeSet {
+func NewAttributeSet(in ...any) AttributeSet {
 	out := &attributes{set: make(map[string]any, 32)}
-	for i := range in {
-		in[i].IterateAttributes(func(key string, value any) {
-			out.set[key] = value
-		})
+	for _, p := range in {
+		switch t := p.(type) {
+		case Attribute:
+			out.set[t.Key] = t.Value
+		case *Attribute:
+			out.set[t.Key] = t.Value
+		case AttributeSet:
+			t.IterateAttributes(func(key string, value any) {
+				out.set[key] = value
+			})
+		}
 	}
 	return out
 }

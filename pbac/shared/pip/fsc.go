@@ -16,6 +16,8 @@ func (p *pip) processFSC(req *types.Request, auth string, a types.AttributeSet) 
 	if strings.HasPrefix(auth, "Bearer ") {
 		return p.processFSCBearer(req, auth[7:], a)
 	}
+
+	p.logger.Warn("unsupported authorization header", "request-uid", req.UID, "authorization", auth)
 	return ""
 }
 
@@ -67,13 +69,4 @@ func (p *pip) processFSCBearer(req *types.Request, bearer string, a types.Attrib
 	a.AddAttribute(standards.AttrFSC, m)
 
 	return newURI
-}
-
-type fscThumbprint string
-
-func (p fscThumbprint) Value() string {
-	return string(p)
-}
-func (p fscThumbprint) IsEqual(other fscThumbprint) bool {
-	return p.Value() == other.Value()
 }

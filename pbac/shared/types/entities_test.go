@@ -77,7 +77,7 @@ func TestNewEntitySet(t *testing.T) {
 
 	testCases := []struct {
 		name string
-		in   []EntitySet
+		in   []any
 		want map[string]Entity
 	}{
 		{
@@ -85,28 +85,29 @@ func TestNewEntitySet(t *testing.T) {
 		},
 		{
 			name: "one set",
-			in: []EntitySet{
+			in: []any{
 				&entities{set: map[string]Entity{e1.UID(): e1}},
 			},
 			want: map[string]Entity{e1.UID(): e1},
 		},
 		{
-			name: "few sets - no dupes",
-			in: []EntitySet{
-				&entities{set: map[string]Entity{e1.UID(): e1}},
-				&entities{set: map[string]Entity{e2.UID(): e2}},
-				&entities{set: map[string]Entity{e3.UID(): e3}},
+			name: "mixed input - no dupes",
+			in: []any{
+				&entities{set: map[string]Entity{e3.UID(): e3, e1.UID(): e1}},
+				e2,
+				12345,
 			},
 			want: map[string]Entity{e1.UID(): e1, e2.UID(): e2, e3.UID(): e3},
 		},
 		{
-			name: "few sets - 1 dupe",
-			in: []EntitySet{
-				&entities{set: map[string]Entity{e1.UID(): e1}},
-				&entities{set: map[string]Entity{e2.UID(): e2}},
-				&entities{set: map[string]Entity{e3.UID(): e3}},
-				&entities{set: map[string]Entity{e4.UID(): e4}},
-				&entities{set: map[string]Entity{dup2.UID(): dup2}},
+			name: "mixed input - 1 dupe",
+			in: []any{
+				e2,
+				&entities{set: map[string]Entity{e4.UID(): e4, e1.UID(): e1}},
+				e3,
+				12345,
+				dup2,
+				nil,
 			},
 			want: map[string]Entity{e1.UID(): e1, dup2.UID(): dup2, e3.UID(): e3, e4.UID(): e4},
 		},
@@ -154,7 +155,7 @@ func TestEntities_AddEntity(t *testing.T) {
 		},
 		{
 			name: "new key",
-			in:   NewEntitySet(&entities{set: map[string]Entity{e1.UID(): e1, e4.UID(): e4}}),
+			in:   NewEntitySet(e1, e4),
 			add:  e3,
 			want: map[string]Entity{e1.UID(): e1, e3.UID(): e3, e4.UID(): e4},
 		},
@@ -209,7 +210,7 @@ func TestEntities_RemoveEnmtity(t *testing.T) {
 		},
 		{
 			name: "hit",
-			in:   NewEntitySet(&entities{set: map[string]Entity{e2.UID(): e2, e3.UID(): e3}}),
+			in:   NewEntitySet(e2, e3),
 			key:  "entity::x2",
 			want: map[string]Entity{e3.UID(): e3},
 		},
@@ -253,18 +254,15 @@ func TestEntities_MergeEntities(t *testing.T) {
 		},
 		{
 			name:  "add one set",
-			in:    NewEntitySet(&entities{set: map[string]Entity{e1.UID(): e1, e4.UID(): e4}}),
-			merge: []EntitySet{NewEntitySet(&entities{set: map[string]Entity{e2.UID(): e2, e3.UID(): e3}})},
+			in:    NewEntitySet(e1, e4),
+			merge: []EntitySet{NewEntitySet(e2, e3)},
 			want:  map[string]Entity{e1.UID(): e1, e2.UID(): e2, e3.UID(): e3, e4.UID(): e4},
 		},
 		{
-			name: "add few sets",
-			in:   NewEntitySet(&entities{set: map[string]Entity{e1.UID(): e1, e4.UID(): e4}}),
-			merge: []EntitySet{
-				NewEntitySet(&entities{set: map[string]Entity{e5.UID(): e5, e3.UID(): e3}}),
-				NewEntitySet(&entities{set: map[string]Entity{e6.UID(): e6, e4.UID(): e4}}),
-			},
-			want: map[string]Entity{e1.UID(): e1, e3.UID(): e3, e4.UID(): e4, e5.UID(): e5, e6.UID(): e6},
+			name:  "add few sets",
+			in:    NewEntitySet(e1, e4),
+			merge: []EntitySet{NewEntitySet(e5, e3), NewEntitySet(e6, e4)},
+			want:  map[string]Entity{e1.UID(): e1, e3.UID(): e3, e4.UID(): e4, e5.UID(): e5, e6.UID(): e6},
 		},
 	}
 

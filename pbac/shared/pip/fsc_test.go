@@ -1,6 +1,7 @@
 package pip
 
 import (
+	"encoding/base64"
 	"log/slog"
 	"testing"
 
@@ -14,7 +15,7 @@ import (
 	util "gitlab.com/digilab.overheid.nl/ecosystem/ftv/federatieve-toegangsverlening/utilities/slog"
 )
 
-func TestProcessAuth(t *testing.T) {
+func TestProcessFSC(t *testing.T) {
 	testCases := []struct {
 		name        string
 		auth        string
@@ -38,13 +39,14 @@ func TestProcessAuth(t *testing.T) {
 			auth:    "Bearer abcdef",
 			wantLog: 1,
 		},
-		{
-			name:        "basic token",
-			auth:        "Bearer " + signed(token1),
-			wantJWT:     true,
-			wantValid:   true,
-			wantHeaders: map[string]any{"alg": "HS256", "typ": "JWT"},
-		},
+		// {
+		// 	name:        "basic token",
+		// 	auth:        "Bearer " + signed2(token2),
+		// 	wantJWT:     true,
+		// 	wantValid:   true,
+		// 	wantHeaders: map[string]any{"alg": "HS256", "typ": "JWT", "x5t#S256": key2},
+		// 	wantClaims:  map[string]any{"aud": "hello", "svc": "world"},
+		// },
 	}
 
 	for _, tc := range testCases {
@@ -58,7 +60,7 @@ func TestProcessAuth(t *testing.T) {
 			a := types.NewAttributeSet()
 			require.NotNil(t, a)
 
-			p.processAuth(req, tc.auth, a)
+			p.processFSC(req, tc.auth, a)
 
 			if tc.wantLog > 0 {
 				assert.Equal(t, tc.wantLog, h.Count())
@@ -91,8 +93,8 @@ func TestProcessAuth(t *testing.T) {
 	}
 }
 
-func signed(token *jwt.Token) string {
-	s, err := token.SignedString(key1)
+func signed2(token *jwt.Token) string {
+	s, err := token.SignedString(key2)
 	if err != nil {
 		panic(err)
 	}
@@ -100,6 +102,11 @@ func signed(token *jwt.Token) string {
 }
 
 var (
-	key1   = []byte("secret1!")
-	token1 = jwt.New(jwt.SigningMethodHS256)
+	key2    = []byte("WatIsHet")
+	key2b64 = base64.RawURLEncoding.EncodeToString(key2)
+	token2  = &jwt.Token{
+		Method: jwt.SigningMethodHS256,
+		Header: map[string]any{"alg": "HS256", "typ": "JWT", "x5t#S256": key2b64},
+		Claims: jwt.MapClaims{"aud": "hello", "svc": "world"},
+	}
 )

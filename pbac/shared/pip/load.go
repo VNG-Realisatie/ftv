@@ -20,19 +20,19 @@ func (p *pip) load() {
 }
 
 func (p *pip) iterateFolders(path string, recurse bool, f func(path string)) {
-	err := filepath.WalkDir(path, func(path string, d fs.DirEntry, err error) error {
+	err := filepath.WalkDir(path, func(path2 string, d fs.DirEntry, err error) error {
 		if err != nil {
 			return err
 		}
 
 		if d.IsDir() {
-			if recurse {
+			if recurse || path2 == path {
 				return nil
 			}
 			return filepath.SkipDir
 		}
 
-		f(path)
+		f(path2)
 		return nil
 	})
 

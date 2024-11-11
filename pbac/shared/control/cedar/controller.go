@@ -1,3 +1,5 @@
+// Package cedar contains all logic for a functional component acting as the Policy Decision Point,
+// using Cedar as the policy language.
 package cedar
 
 import (
@@ -13,6 +15,7 @@ import (
 	"gitlab.com/digilab.overheid.nl/ecosystem/ftv/federatieve-toegangsverlening/utilities/module"
 )
 
+// Version defines the version of this Cedar PDP.
 const Version = "1.0.0"
 
 // NewController instantiates a new Cedar controller.

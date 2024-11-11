@@ -1,3 +1,4 @@
+// Package standards defines key parameters according to the FTV Standard.
 package standards
 
 // List of standard attribute codes.
@@ -8,9 +9,9 @@ const (
 	AttrClientIP         = "client-ip"
 	AttrContentType      = "content-type"
 	AttrDoelbinding      = "doelbinding"
-	AttrForwarded        = "forwarded"
 	AttrFSC              = "fsc"
 	AttrFSCAuthorization = "fsc-authorization"
+	AttrForwarded        = "forwarded"
 	AttrGrondslag        = "grondslag"
 	AttrHeaders          = "headers"
 	AttrHost             = "host"

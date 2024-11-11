@@ -1,3 +1,4 @@
+// Package types contains generic definitions for working with policies.
 package types
 
 import (

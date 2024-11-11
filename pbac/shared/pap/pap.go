@@ -1,3 +1,4 @@
+// Package pap contains all logic for a functional component acting as the Policy Administration Point.
 package pap
 
 import (

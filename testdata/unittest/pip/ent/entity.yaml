@@ -1,0 +1,5 @@
+- type: "App"
+  id: "app1"
+  attributes:
+    code: "app1"
+    name: "App-1"

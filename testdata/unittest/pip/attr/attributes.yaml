@@ -1,0 +1,10 @@
+- key: "maandag"
+  value: 1
+- key: "dinsdag"
+  value: 2
+- key: "woensdag"
+  value: 3
+- key: "donderdag"
+  value: 4
+- key: "vrijdag"
+  value: 5
