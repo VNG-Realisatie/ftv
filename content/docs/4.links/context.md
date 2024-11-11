@@ -9,7 +9,7 @@ Title: De context van FTV
 
 ### Principes
 
-- [Data Bij de Bron](https://www.digitaleoverheid.nl/data-bij-de-bron/) 
+- [Data Bij de Bron](https://www.digitaleoverheid.nl/data-bij-de-bron/)
   - Zie ook [Data bij de bron](../../5.architectuur/inventarisatie/wet_regelgeving/data_bij_de_bron)
   - [Stappenplan introductie](https://realisatieibds.nl/attachment/entity/8654996c-81ff-4594-9bc0-d5c4943612a3), geschreven door FDS
 - [Regie op gegevens](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/regie-op-gegevens/) - Zie ook [Regie op gegevens](../../5.architectuur/inventarisatie/wet_regelgeving/regie_op_gegevens)
@@ -28,13 +28,13 @@ Title: De context van FTV
     - [FSC bij VNG](https://vng.nl/projecten/federatieve-service-connectiviteit-fsc)
     - [GitLab](https://gitlab.com/commonground/nlx/fsc-nlx)
   - [Poortwachter](https://federatief.datastelsel.nl/kennisbank/stelselfuncties/#poortwachter) - Zie ook [Poortwachter](../../5.architectuur/inventarisatie/standaarden/poortwachter)
-- [Rijks CIO](https://organisaties.overheid.nl/134864/directie_Chief_Information_Office-_Rijk_CIO-Rijk) 
-- [Open regels van de overheid](https://regels.overheid.nl/) 
+- [Rijks CIO](https://organisaties.overheid.nl/134864/directie_Chief_Information_Office-_Rijk_CIO-Rijk)
+- [Open regels van de overheid](https://regels.overheid.nl/)
 
 ### Architectuurstandaarden
 - [GDI](https://www.digitaleoverheid.nl/mido/generieke-digitale-infrastructuur-gdi/) - Zie ook [GDI](../../5.architectuur/inventarisatie/wet_regelgeving/gdi)
   - [MIDO](https://www.digitaleoverheid.nl/mido/)
-  
+
     Domeinen
     - Toegang
       - **[Domeinarchitectuur toegang](https://minbzk.github.io/gdi-toegang/content/views/Domeinarchitectuur%20toegang.html) Onze belangrijkste richtlijn** - Zie ook [Domeinarchitectuur toegang](../../5.architectuur/inventarisatie/wet_regelgeving/domeinarchitectuur-toegang)
@@ -50,6 +50,7 @@ Title: De context van FTV
     - Infrastructuur
       - [Diginetwerk](https://www.logius.nl/domeinen/infrastructuur/diginetwerk)
       - [Digikoppeling](https://www.logius.nl/domeinen/gegevensuitwisseling/digikoppeling/documentatie)
+        - [Autorisatie voor digikoppeling](https://gitdocumentatie.logius.nl/publicatie/dk/idauth/#autorisatie-0)
       - [NORA](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/nora/) - Zie ook [NORA](../../5.architectuur/inventarisatie/wet_regelgeving/nora)
         - [IAM bij NORA](https://www.noraonline.nl/wiki/Identity_%26_Access_Management_(IAM))
       - [Forum Standaardisatie](https://www.forumstandaardisatie.nl/)
