@@ -7,27 +7,26 @@ import (
 )
 
 // LoadFromStore loads all policies from the store.
-func (c *cache) LoadFromStore(path string, recurse bool) {
-	err := filepath.WalkDir(path, func(path string, d fs.DirEntry, err error) error {
+func (c *pap) LoadFromStore(path string, recurse bool) {
+	err := filepath.WalkDir(path, func(p string, d fs.DirEntry, err error) error {
 		if err != nil {
 			return err
 		}
 
 		if d.IsDir() {
-			if recurse {
+			if recurse || p == path {
 				return nil
 			}
 			return filepath.SkipDir
 		}
 
-		f, err2 := os.Open(path)
+		f, err2 := os.Open(p)
 		if err2 != nil {
 			return err2
 		}
 
 		defer f.Close()
-
-		return c.Create(d.Name(), f)
+		return c.Add(d.Name(), f)
 	})
 
 	if err != nil {

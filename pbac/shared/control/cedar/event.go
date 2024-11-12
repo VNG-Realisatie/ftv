@@ -8,10 +8,11 @@ import (
 	"gitlab.com/digilab.overheid.nl/ecosystem/ftv/federatieve-toegangsverlening/pbac/shared/pap"
 )
 
-func (c *controller) policyEvent(t pap.EventType, key string) {
+// Handle implements the EventSink interface.
+func (c *controller) Handle(t pap.EventType, key string) {
 	switch t {
-	case pap.PolicyCreated, pap.PolicyUpdated:
-		if f, err := c.PAP().Read(key); err == nil {
+	case pap.PolicyAdded, pap.PolicyReplaced:
+		if f, err := c.PAP().Get(key); err == nil {
 			d, _ := io.ReadAll(f)
 			var policy cedar.Policy
 			if err = policy.UnmarshalCedar(d); err == nil {
@@ -22,7 +23,7 @@ func (c *controller) policyEvent(t pap.EventType, key string) {
 			}
 		}
 
-	case pap.PolicyDeleted:
+	case pap.PolicyRemoved:
 		c.pdp.Delete(cedar.PolicyID(key))
 		c.Logger().Info("policy removed", "controller", c.String(), "policy-key", key)
 	}

@@ -5,7 +5,20 @@ type EventType uint8
 
 // ListAllKeys of possible PAP events.
 const (
-	PolicyCreated EventType = iota + 1
-	PolicyUpdated
-	PolicyDeleted
+	PolicyAdded EventType = iota + 1
+	PolicyReplaced
+	PolicyRemoved
 )
+
+func (e EventType) String() string {
+	switch e {
+	case PolicyAdded:
+		return "added"
+	case PolicyReplaced:
+		return "replaced"
+	case PolicyRemoved:
+		return "removed"
+	default:
+		return "<invalid>"
+	}
+}

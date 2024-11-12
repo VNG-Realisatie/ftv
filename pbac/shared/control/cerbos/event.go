@@ -4,7 +4,8 @@ import (
 	"gitlab.com/digilab.overheid.nl/ecosystem/ftv/federatieve-toegangsverlening/pbac/shared/pap"
 )
 
-func (c *controller) policyEvent(pap.EventType, string) {
+// Handle implements the EventSink interface.
+func (c *controller) Handle(pap.EventType, string) {
 
 	// TODO: process event
 

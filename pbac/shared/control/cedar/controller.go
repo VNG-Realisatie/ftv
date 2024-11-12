@@ -35,7 +35,7 @@ func NewController(pip pip.PIP, store string, recurse bool, logger *slog.Logger)
 	})
 
 	c.SetPIP(pip)
-	c.SetPAP(pap.New(c.Logger(), c.policyEvent))
+	c.SetPAP(pap.New(c.Logger(), c))
 	c.PAP().LoadFromStore(store, recurse)
 
 	mod := "github.com/cedar-policy/cedar-go"

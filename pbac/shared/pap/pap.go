@@ -6,22 +6,28 @@ import (
 	"fmt"
 	"io"
 	"log/slog"
+	"slices"
 	"sync"
 )
 
-// PAP represents the interface for storing and retrieving policies.
+// PAP represents the interface for caching and retrieving policies.
 type PAP interface {
-	Create(key string, reader io.Reader) error
-	Read(key string) (io.Reader, error)
-	Update(key string, reader io.Reader) error
-	Delete(key string) error
+	Add(key string, reader io.Reader) error
+	Replace(key string, reader io.Reader) error
+	Remove(key string) error
+	Get(key string) (io.Reader, error)
 	ListAllKeys() []string
 	LoadFromStore(path string, recurse bool)
 }
 
+// EventSink represents the interface for handling PAP events.
+type EventSink interface {
+	Handle(t EventType, key string)
+}
+
 // New instantiates a new policy cache.
 func New(logger *slog.Logger, events EventSink) PAP {
-	c := &cache{
+	c := &pap{
 		logger:   logger,
 		events:   events,
 		policies: make(map[string][]byte),
@@ -31,9 +37,16 @@ func New(logger *slog.Logger, events EventSink) PAP {
 	return c
 }
 
-// Create adds a policy to the cache.
-// An error is returned if the policy already exists.
-func (c *cache) Create(key string, reader io.Reader) error {
+// Add adds a policy to the cache.
+//
+// If the input reader is nil, the function returns duccessfully without doing anything.
+//
+// An error is returned if the policy key already exists.
+func (c *pap) Add(key string, reader io.Reader) error {
+	if reader == nil {
+		return nil
+	}
+
 	data, err := io.ReadAll(reader)
 	if err != nil {
 		return err
@@ -48,28 +61,21 @@ func (c *cache) Create(key string, reader io.Reader) error {
 	c.mutex.Unlock()
 
 	if err == nil && c.events != nil {
-		c.events(PolicyCreated, key)
+		c.events.Handle(PolicyAdded, key)
 	}
 	return err
 }
 
-// Read retrieves a policy from the cache, or an error if it doesn't exist.
-func (c *cache) Read(key string) (io.Reader, error) {
-	c.mutex.RLock()
-	defer c.mutex.RUnlock()
-
-	if data, ok := c.policies[key]; ok {
-		// we return a reader on a deep copy of the data, so changes in the cache do not affect it.
-		s := string(data)
-		return bytes.NewBufferString(s), nil
+// Replace modifies a policy in the cache with a newer version.
+//
+// If the input reader is nil, the function returns duccessfully without doing anything.
+//
+// An error is returned if the policy key doesn't exist.
+func (c *pap) Replace(key string, reader io.Reader) error {
+	if reader == nil {
+		return nil
 	}
 
-	return nil, fmt.Errorf("cache policy '%s' not found", key)
-}
-
-// Update modifies a policy in the cache with a newer version.
-// An error is returned if the policy does not exist.
-func (c *cache) Update(key string, reader io.Reader) error {
 	data, err := io.ReadAll(reader)
 	if err != nil {
 		return err
@@ -84,14 +90,15 @@ func (c *cache) Update(key string, reader io.Reader) error {
 	c.mutex.Unlock()
 
 	if err == nil && c.events != nil {
-		c.events(PolicyUpdated, key)
+		c.events.Handle(PolicyReplaced, key)
 	}
 	return err
 }
 
-// Delete removes a policy from the cache.
-// An error is returned if the policy does not exist.
-func (c *cache) Delete(key string) error {
+// Remove removes a policy from the cache.
+//
+// An error is returned if the policy key doesn't exist.
+func (c *pap) Remove(key string) error {
 	var err error
 
 	c.mutex.Lock()
@@ -103,13 +110,27 @@ func (c *cache) Delete(key string) error {
 	c.mutex.Unlock()
 
 	if err == nil && c.events != nil {
-		c.events(PolicyDeleted, key)
+		c.events.Handle(PolicyRemoved, key)
 	}
 	return err
 }
 
+// Get retrieves a policy from the cache, or an error if the policy key doesn't exist.
+func (c *pap) Get(key string) (io.Reader, error) {
+	c.mutex.RLock()
+	defer c.mutex.RUnlock()
+
+	if data, ok := c.policies[key]; ok {
+		// we return a reader on a deep copy of the data, so changes in the cache do not affect it.
+		s := string(data)
+		return bytes.NewBufferString(s), nil
+	}
+
+	return nil, fmt.Errorf("cache policy '%s' not found", key)
+}
+
 // ListAllKeys returns a list of all cached policy keys.
-func (c *cache) ListAllKeys() []string {
+func (c *pap) ListAllKeys() []string {
 	c.mutex.RLock()
 	defer c.mutex.RUnlock()
 
@@ -117,10 +138,12 @@ func (c *cache) ListAllKeys() []string {
 	for k := range c.policies {
 		out = append(out, k)
 	}
+
+	slices.Sort(out)
 	return out
 }
 
-type cache struct {
+type pap struct {
 	logger   *slog.Logger
 	policies map[string][]byte
 	events   EventSink
