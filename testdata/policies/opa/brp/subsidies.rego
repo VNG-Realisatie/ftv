@@ -1,4 +1,4 @@
-package doelbinding.burgerzaken
+package doelbinding.subsidies
 
 import rego.v1
 

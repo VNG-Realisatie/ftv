@@ -21,7 +21,6 @@ import (
 	"gitlab.com/digilab.overheid.nl/ecosystem/ftv/federatieve-toegangsverlening/pbac/shared/control/opa"
 	"gitlab.com/digilab.overheid.nl/ecosystem/ftv/federatieve-toegangsverlening/pbac/shared/pip"
 	"gitlab.com/digilab.overheid.nl/ecosystem/ftv/federatieve-toegangsverlening/pbac/shared/types"
-	"gitlab.com/digilab.overheid.nl/ecosystem/ftv/federatieve-toegangsverlening/pbac/standards"
 	"gitlab.com/digilab.overheid.nl/ecosystem/ftv/federatieve-toegangsverlening/utilities/convert"
 )
 
@@ -141,9 +140,7 @@ func (p *authProcess) newAccessRequest() {
 		RequestTime: &now,
 		Body:        d,
 		Headers:     p.authReq.Input.Headers,
-		Attributes: map[string]any{
-			standards.AttrOutwayCerts: p.authReq.Input.OutwayCertificateChain,
-		},
+		Attributes:  make(map[string]any),
 	}
 }
 
