@@ -88,16 +88,17 @@ TODO:
 
 ### Aanbieders dienen vereiste gegevens voor toegangsbeslissingen gestructureerd aan te bieden
 
-Indien gegevens op basis waarvan een toegangsbeslissing genomen dient te worden pas beschikbaar is bij het retourneren van gegevens voor een verwerkingsverzoek dient deze gestructureerd beschikbaar gemaakt te worden voor de evaluatie van autorisatieregels.
+In sommige gevallen kan de toegangsbeslissing alleen genomen worden op basis van de gegevens die het verwerkingsverzoek retourneert.
 
-Indien bijvoorbeeld in zoekresultaten persoonsgegevens van Politically Exposed Persons geretourneerd wordt en op basis hiervan een toegangsbeslissing genomen moet worden dan moet dit feit op gestructureerde wijze beschikbaar gemaakt worden voor de evaluatie endpoint. 
+Het is niet wenselijk dat tijdens de evaluatie van de toegangsbeslissing in de inhoud van het bericht gekeken moet worden. Dit vergroot gevoeligheidsproblematiek en is foutgevoelig indien de structuur wijzigt.
 
-Ook in dit voorbeld is het echter wenselijker om het wel of niet opnemen van PEP persoonsgegevens reeds in het verwerkingsverzoek te specificeren.
+In dat geval dient de aanbieder deze informatie gestructureerd beschikbaar te maken in de metadata van het bericht. 
+
+In het geval van een HTTP verzoek moet hiervoor de header ...TODO... gebruikt worden.
 
 TODO: 
 <ol>
-    <li>Herschrijven naar kort en bondigere variant</li>
-    <li>Evalueren of dit ooit echt nodig zal zijn</li>
+    <li>Evalueren of dit ooit echt gewenst is</li>
     <li>Relatie naar AuthZEN standaard opnemen</li>
 </ol> 
 
