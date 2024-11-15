@@ -12,12 +12,8 @@
 
 ## Beheer en inspectie van autorisatieregels
 
-### Autorisatieregels zijn laagdrempelig aanpasbaar
-Autorisatieregel dient consistent aangepast te worden aan de actuele situatie. Om dit te borgen dienen aanpassingen laagdrempelig mogelijk te zijn zonder lange doorlooptijden of complexe aanpassingen in applicaties te vereisen.
-
-
 ### Actuele autorisatieregels zijn centraal beschikbaar
-De actuele autorisatieregels, zoals actief in werking op een gegeven moment, dienen centraal beschikbaar te zijn ter validatie en controle.
+De actuele autorisatieregels, zoals actief in werking op een gegeven moment, dienen centraal beschikbaar te zijn voor zowel de aanbieder als afnemers.
 
 Documentatie van geïmplementeerde regels volstaat hiervoor niet gezien de mogelijkheid tot afwijking van implementatie en documentatie.
 
@@ -25,6 +21,12 @@ Documentatie van geïmplementeerde regels volstaat hiervoor niet gezien de mogel
 Voor effectieve validatie van autorisatieregels dient dit binnen een organisatie op uniforme wijze vastgelegd te worden.
 
 Wanneer dit niet het geval is loopt de organisatie het risico dat de diverse vormen van vastlegging niet gelijk geïnterpreteerd worden.
+
+### Afnemers kunnen autorisatieregels zelfstandig evalueren
+Het is mogelijk voor afnemers om verwerkingsverzoeken zelfstandig te evalueren op basis van de beschikbare autorisatieregels zonder dat zij daarvoor het verwerkingsverzoek ook echt in moeten dienen.
+
+### Autorisatieregels zijn laagdrempelig aanpasbaar
+Autorisatieregels dienen consistent aangepast te worden aan de actuele situatie. Om dit te borgen moeten aanpassingen laagdrempelig mogelijk  zijn zonder lange doorlooptijden of complexe aanpassingen in applicaties te vereisen.
 
 ## Vastlegging voor verantwoording en detectie
 
@@ -65,7 +67,7 @@ Indien vereist door de aanbieder kunnen afnemers de aanbieder inzicht bieden tot
 
 De exacte vereisten zullen door aanbieder als eis gesteld worden aan het verwerkingsverzoek. Daarin kan bijvoorbeeld de frequentie (op verzoek, periodiek of continu,) de bewaartermijn en de aanleiding tot verzoeken tot inzicht vastgelegd worden.
 
-## Gegevensminimalisatie
+## Gegevensminimalisatie (of: toegangsbeslissingen op basis van te verwerken gegevens)
 
 ### Afnemer dienen vereiste gegevens te specificeren
 
@@ -79,13 +81,37 @@ In het geval van GraphQL API's gebeurt dit automatisch in de specificatie van ee
 
 Aanbieders moeten verstrekte gegevens beperken tot de minimale set van gegevens waarvan zij weten dat de afnemer gerechtigd is deze te ontvangen.
 
-### Aanbieders kunnen aantonen welke gegevens aangeboden zijn
+TODO:
+<ol>
+    <li>Bevestig of dit gewenst is en/of dit in deze standaard betrokken moet worden</li>
+</ol>
+
+### Aanbieders dienen vereiste gegevens voor toegangsbeslissingen gestructureerd aan te bieden
+
+Indien gegevens op basis waarvan een toegangsbeslissing genomen dient te worden pas beschikbaar is bij het retourneren van gegevens voor een verwerkingsverzoek dient deze gestructureerd beschikbaar gemaakt te worden voor de evaluatie van autorisatieregels.
+
+Indien bijvoorbeeld in zoekresultaten persoonsgegevens van Politically Exposed Persons geretourneerd wordt en op basis hiervan een toegangsbeslissing genomen moet worden dan moet dit feit op gestructureerde wijze beschikbaar gemaakt worden voor de evaluatie endpoint. 
+
+Ook in dit voorbeld is het echter wenselijker om het wel of niet opnemen van PEP persoonsgegevens reeds in het verwerkingsverzoek te specificeren.
+
+TODO: 
+<ol>
+    <li>Herschrijven naar kort en bondigere variant</li>
+    <li>Evalueren of dit ooit echt nodig zal zijn</li>
+    <li>Relatie naar AuthZEN standaard opnemen</li>
+</ol> 
+
+
+### Aanbieders moeten aan kunnen tonen welke gegevens aangeboden zijn
 
 Indien de aanbieder verzoeken toe staat zonder specificatie van vereiste gegevens moet de aanbieder in staat zijn aan te tonen welke gegevens aan de afnemer aangeboden zijn.
 
 ### Aanbieders mogen alternatieve verwerkingsverzoeken voorstellen
 
 Aanbieders mogen in hun afwijzing suggesties bieden voor alternatieve verwerkingsverzoeken die wel toegestaan zijn. Dit kan afnemers ondersteunen in het gebruik van de API maar verhoogt mogelijk het risico dat meer gegevens aangevraagd worden dan vereist zijn voor de doelbinding.
+
+
+
 
 ## Borging van doelbinding en grondslag
 
