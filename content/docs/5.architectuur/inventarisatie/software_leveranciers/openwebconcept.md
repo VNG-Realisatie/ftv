@@ -4,6 +4,9 @@ title: 'Open Webconcept'
 
 # Open Webconcept
 
+## Contact
+Holger Peters, gemeente Buren, is een van de trekkers. 
+
 ## Links
 - https://openwebconcept.nl/
 

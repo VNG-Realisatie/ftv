@@ -13,7 +13,7 @@ FTV onderzoekt een **standaardmethodiek** om **toegang tot gegevens en functies*
 
 
 - Op [doelstellingen, context en scope](/docs/1.over_het_project/2.doelstellingen) is te lezen wat dat precies inhoudt (en wat het niet is).
-- Op [plan van aanpak](/docs/1.over_het_project/3.aanpak) staat hoe we dat aanpakken en wat van ons verwacht mag worden.
+- Op [plan van aanpak](/docs/1.over_het_project/3.aanpak1) staat hoe we dat aanpakken en wat van ons verwacht mag worden.
 
 ## Resultaten
 
