@@ -52,20 +52,6 @@ Indien vereist door de aanbieder kunnen afnemers de aanbieder inzicht bieden tot
 
 De exacte vereisten zullen door aanbieder als eis gesteld worden aan het verwerkingsverzoek. Daarin kan bijvoorbeeld de frequentie (op verzoek, periodiek of continu) en de bewaartermijn vastgelegd worden.
 
-## Verantwoording in verwerkingsketen
-
-### Aanbieders kunnen eisen stellen aan afnemers
-
-Aanbieders van gegevens kunnen alle gewenste eisen stellen aan verwerkingsverzoek. Deze kunnen van technische aard zijn zoals het stellen van maximale bewaartermijnen, maar ook van niet-technische aard zijn zoals het voldoen aan bepaalde certificaties of standaarden.
-
-### Afnemers kunnen bevestigen of aantonen aan eisen te voldoen
-
-Afnemers kunnen in een verwerkingsverzoek bevestigen of aantonen dat zij aan eisen van de aanbieder voldoen.
-
-### Aanbieder kan eisen via derde partijen valideren
-
-Aanbieders kan de validatie van het voldoen aan eisen voor verwerkingsverzoeken delegeren aan derde partijen.
-
 ## Gegevensminimalisatie (of: toegangsbeslissingen op basis van te verwerken gegevens)
 
 ### Afnemers dienen vereiste gegevens te specificeren
@@ -101,7 +87,6 @@ TODO:
     <li>Relatie naar AuthZEN standaard opnemen</li>
 </ol> 
 
-
 ### Aanbieders moeten aan kunnen tonen welke gegevens aangeboden zijn
 
 Indien de aanbieder verzoeken toe staat zonder specificatie van vereiste gegevens moet de aanbieder in staat zijn aan te tonen welke gegevens aan de afnemer aangeboden zijn.
@@ -109,19 +94,6 @@ Indien de aanbieder verzoeken toe staat zonder specificatie van vereiste gegeven
 ### Aanbieders mogen alternatieve verwerkingsverzoeken voorstellen
 
 Aanbieders mogen in hun afwijzing suggesties bieden voor alternatieve verwerkingsverzoeken die wel toegestaan zijn. Dit kan afnemers ondersteunen in het gebruik van de API, maar verhoogt mogelijk het risico dat meer gegevens aangevraagd worden dan vereist zijn voor de doelbinding.
-
-## Borging van doelbinding en grondslag
-
-### Afnemer dient de doelbinding of grondslag voor verwerkingsverzoeken te specificeren
-
-Afnemers dienen bij elk verwerkingsverzoek de doelbinding of grondslag voor verwerkingsverzoeken aan te geven. Hierbij kan verwezen worden naar het Register van Verwerkingsactiviteiten. De aanbieder dient te verifiëren of het verwerkingsverzoek is toegestaan voor de doelbinding.
-
-### Afnemers moet hiërarchie van doelbinding bijhouden bij verdere verwerking
-
-Indien de afnemer van gegevens deze elders in de keten hergebruikt dient de afnemer de hiërarchie van doelbinding te behouden. Indien een gemeente volledige toegang heeft tot een registratie om zijn taken uit te voeren en een geminimaliseerde set van deze gegevens beschikbaar maakt voor een interne verwerkingsactiviteit dienen beide doelbindingen opgenomen te worden.
-
-
-## Gedeeltelijke validatie
 
 ### Aanbieders mogen autorisatieregels gedeeltelijk delegeren
 
@@ -134,3 +106,27 @@ In dat geval <b>moet</b> de aanbieder zorgen dat de resterende autorisatieregels
 <p class="note" title="Filteren van (zoek-)resultaten">
 Het gebruik van gedeeltelijke evaluatie voor het filteren van (zoek-)resultaten wordt <b>afgeraden</b>. Hiervoor kan conform "Afnemers dienen vereiste gegevens te specificeren" de aanwezigheid van de juiste filters in het verwerkingsverzoek worden vereist.
 </p>
+
+## Verifieerbare verklaringen
+
+### Aanbieders kunnen eisen stellen aan afnemers
+
+Aanbieders van gegevens kunnen alle gewenste eisen stellen aan verwerkingsverzoek. Deze kunnen van technische aard zijn zoals het stellen van maximale bewaartermijnen, maar ook van niet-technische aard zijn zoals het voldoen aan bepaalde certificaties of standaarden.
+
+### Afnemers kunnen bevestigen of aantonen aan eisen te voldoen
+
+Afnemers kunnen in een verwerkingsverzoek bevestigen of aantonen dat zij aan eisen van de aanbieder voldoen.
+
+### Aanbieder kan eisen via derde partijen valideren
+
+Aanbieders kan de validatie van het voldoen aan eisen voor verwerkingsverzoeken delegeren aan derde partijen.
+
+## Borging van doelbinding en grondslag
+
+### Afnemer dient de doelbinding of grondslag voor verwerkingsverzoeken te specificeren
+
+Afnemers dienen bij elk verwerkingsverzoek de doelbinding of grondslag voor verwerkingsverzoeken aan te geven. Hierbij kan verwezen worden naar het Register van Verwerkingsactiviteiten. De aanbieder dient te verifiëren of het verwerkingsverzoek is toegestaan voor de doelbinding.
+
+### Afnemers moet hiërarchie van doelbinding bijhouden bij verdere verwerking
+
+Indien de afnemer van gegevens deze elders in de keten hergebruikt dient de afnemer de hiërarchie van doelbinding te behouden. Indien een gemeente volledige toegang heeft tot een registratie om zijn taken uit te voeren en een geminimaliseerde set van deze gegevens beschikbaar maakt voor een interne verwerkingsactiviteit dienen beide doelbindingen opgenomen te worden.
