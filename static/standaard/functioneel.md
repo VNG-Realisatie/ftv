@@ -26,7 +26,7 @@ Wanneer dit niet het geval is loopt de organisatie het risico dat de diverse vor
 Het is mogelijk voor afnemers om verwerkingsverzoeken zelfstandig te evalueren op basis van de beschikbare autorisatieregels zonder dat zij daarvoor het verwerkingsverzoek ook echt in moeten dienen.
 
 ### Autorisatieregels zijn laagdrempelig aanpasbaar
-Autorisatieregels dienen consistent aangepast te worden aan de actuele situatie. Om dit te borgen moeten aanpassingen laagdrempelig mogelijk  zijn zonder lange doorlooptijden of complexe aanpassingen in applicaties te vereisen.
+Autorisatieregels dienen consistent aangepast te worden aan de actuele situatie. Om dit te borgen moeten aanpassingen laagdrempelig mogelijk zijn zonder lange doorlooptijden of complexe aanpassingen in applicaties te vereisen.
 
 ## Vastlegging voor verantwoording en detectie
 
@@ -34,7 +34,7 @@ Autorisatieregels dienen consistent aangepast te worden aan de actuele situatie.
 
 Elke toegangsbeslissing dient centraal beschikbaar te zijn binnen de organisatie. Dit is vereist voor effectieve verantwoording van historisch verwerkingsverzoeken. 
 
-Dit ondersteunt ook effectieve beveilingsanalyse voor het detecteren van ongewenste toegang waarbij meerdere applicaties betrokken zijn.
+Dit ondersteunt ook effectieve beveiligingsanalyse voor het detecteren van ongewenste toegang waarbij meerdere applicaties betrokken zijn.
 
 <p class="note" title="Preventie">
 Gecombineerd met de aanbeveling toegangsbeslissingen centraal uit te voeren biedt dit ook de mogelijkheid om verdachte verwerkingsverzoeken preventief te blokkeren.
@@ -46,6 +46,11 @@ Alle gegevens die gebruikt worden in het maken van de toegangsbeslissingen diene
 
 Dit is vereist aangezien het veelal niet mogelijk is om te bepalen welke gegevens op een gegeven moment beschikbaar waren voor de toegangsbeslissing.  
 
+### Afnemers kunnen aanbieder inzicht in toegangsbeslissingen geven
+
+Indien vereist door de aanbieder kunnen afnemers de aanbieder inzicht bieden tot toegangsbeslissingen.
+
+De exacte vereisten zullen door aanbieder als eis gesteld worden aan het verwerkingsverzoek. Daarin kan bijvoorbeeld de frequentie (op verzoek, periodiek of continu) en de bewaartermijn vastgelegd worden.
 
 ## Verantwoording in verwerkingsketen
 
@@ -61,15 +66,9 @@ Afnemers kunnen in een verwerkingsverzoek bevestigen of aantonen dat zij aan eis
 
 Aanbieders kan de validatie van het voldoen aan eisen voor verwerkingsverzoeken delegeren aan derde partijen.
 
-### Afnemers kunnen aanbieder inzicht in toegangsbeslissingen geven
-
-Indien vereist door de aanbieder kunnen afnemers de aanbieder inzicht bieden tot toegangsbeslissingen. 
-
-De exacte vereisten zullen door aanbieder als eis gesteld worden aan het verwerkingsverzoek. Daarin kan bijvoorbeeld de frequentie (op verzoek, periodiek of continu,) de bewaartermijn en de aanleiding tot verzoeken tot inzicht vastgelegd worden.
-
 ## Gegevensminimalisatie (of: toegangsbeslissingen op basis van te verwerken gegevens)
 
-### Afnemer dienen vereiste gegevens te specificeren
+### Afnemers dienen vereiste gegevens te specificeren
 
 Afnemers dienen bij elk verwerkingsverzoek de minimale set van vereiste gegevens te specificeren. Hierdoor kan alleen op basis van het verwerkingsverzoek bepaald worden welke gegevens verstrekt werden.
 
@@ -109,20 +108,17 @@ Indien de aanbieder verzoeken toe staat zonder specificatie van vereiste gegeven
 
 ### Aanbieders mogen alternatieve verwerkingsverzoeken voorstellen
 
-Aanbieders mogen in hun afwijzing suggesties bieden voor alternatieve verwerkingsverzoeken die wel toegestaan zijn. Dit kan afnemers ondersteunen in het gebruik van de API maar verhoogt mogelijk het risico dat meer gegevens aangevraagd worden dan vereist zijn voor de doelbinding.
-
-
-
+Aanbieders mogen in hun afwijzing suggesties bieden voor alternatieve verwerkingsverzoeken die wel toegestaan zijn. Dit kan afnemers ondersteunen in het gebruik van de API, maar verhoogt mogelijk het risico dat meer gegevens aangevraagd worden dan vereist zijn voor de doelbinding.
 
 ## Borging van doelbinding en grondslag
 
 ### Afnemer dient de doelbinding of grondslag voor verwerkingsverzoeken te specificeren
 
-Afnemers dienen bij elk verwerkingsverzoek de doelbinding of grondslag voor verwerkingsverzoeken aan te geven. Hierbij kan verwezen worden naar het Register van Verwerkingsactiviteiten. De aanbieder dient te verifieren of de het verwerkingsverzoek toegestaan voor de doelbinding.
+Afnemers dienen bij elk verwerkingsverzoek de doelbinding of grondslag voor verwerkingsverzoeken aan te geven. Hierbij kan verwezen worden naar het Register van Verwerkingsactiviteiten. De aanbieder dient te verifiëren of het verwerkingsverzoek is toegestaan voor de doelbinding.
 
-### Afnemers moet hierarchie van doelbinding bijhouden bij verdere verwerking
+### Afnemers moet hiërarchie van doelbinding bijhouden bij verdere verwerking
 
-Indien de afnemer van gegevens deze elders in de keten hergebruikt dient de afnemer de hierarchie van doelbinding te behouden. Indien een gemeente volledige toegang heeft tot een registratie om zijn taken uit te voeren en een geminimaliseerde set van deze gegevens beschikbaar maakt voor een interne verwerkingsactiviteit dienen beide doelbindingen opgenomen te worden.
+Indien de afnemer van gegevens deze elders in de keten hergebruikt dient de afnemer de hiërarchie van doelbinding te behouden. Indien een gemeente volledige toegang heeft tot een registratie om zijn taken uit te voeren en een geminimaliseerde set van deze gegevens beschikbaar maakt voor een interne verwerkingsactiviteit dienen beide doelbindingen opgenomen te worden.
 
 
 ## Gedeeltelijke validatie
