@@ -5,7 +5,7 @@ weight: 50
 
 # Referentie-implementatie
 
-De referentie-implementatie is work-in-progress.
+**De referentie-implementatie is work-in-progress.**
 
 ## Uitgangspunten
 
@@ -37,10 +37,10 @@ De repository bevindt zich op [Gitlab](https://gitlab.com/digilab.overheid.nl/ec
 - /pbac/shared = herbruikbare PBAC modules
 - /pbac/shared/control = herbruikbare modules voor het aanroepen van een PDP
 - /pbac/shared/control/cedar = herbruikbare generieke wrapper voor Cedar PDP
-- /pbac/shared/control/cerbos = herbruikbare generieke wrapper voor Cerbos/CEL PDP (TODO)
-- /pbac/shared/control/odrl = herbruikbare generieke ODRL PDP module (TODO)
+- /pbac/shared/control/cerbos = herbruikbare generieke wrapper voor Cerbos/CEL PDP (**TODO**)
+- /pbac/shared/control/odrl = herbruikbare generieke ODRL PDP module (**TODO**)
 - /pbac/shared/control/opa = herbruikbare generieke wrapper voor OPA/Rego PDP
-- /pbac/shared/control/xacml = herbruikbare generieke XACML PDP module (TODO)
+- /pbac/shared/control/xacml = herbruikbare generieke XACML PDP module (**TODO**)
 - /pbac/shared/pap = herbruikbare generieke PAP
 - /pbac/shared/pip = herbruikbare generieke PIP
 - /pbac/shared/types = herbruikbare module met generieke models & enums
@@ -50,10 +50,10 @@ De repository bevindt zich op [Gitlab](https://gitlab.com/digilab.overheid.nl/ec
 - /testdata/pip = test attributen en entiteiten voor de generieke PIP
 - /testdata/policies = test policies
 - /testdata/policies/cedar = Cedar policies
-- /testdata/policies/cerbos = Cerbos/CEL policies (TODO)
-- /testdata/policies/odrl = ODRL policies (TODO)
+- /testdata/policies/cerbos = Cerbos/CEL policies (**TODO**)
+- /testdata/policies/odrl = ODRL policies (**TODO**)
 - /testdata/policies/opa = OPA/Rego policies
-- /testdata/policies/xacml = XACML policies (TODO)
+- /testdata/policies/xacml = XACML policies (**TODO**)
 - /testdata/unittest = test data voor unit tests
 - /utilities = herbruikbare generieke functies
 
@@ -84,7 +84,7 @@ Verzameling van herbruikbare PBAC-modules.
 ##### Controller - PDP (wrappers)
 [/pbac/shared/control](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie/-/tree/main/pbac/shared/control?ref_type=heads)
 
-Verzameling van PDP-wrappers (Cedar, OPA/Rego & TODO: Cerbos/CEL) en PDP-implementaties (TODO: ODRL & XACML).
+Verzameling van PDP-wrappers (Cedar, OPA/Rego & **TODO**: Cerbos/CEL) en PDP-implementaties (**TODO**: ODRL & XACML).
 
 Alle controllers worden geïmplementeerd middels een interface, zodat ze uitwisselbaar zijn.
 Een PEP die een PDP wil gebruiken hoeft dan alleen de interface te kennen, en kan, op basis van een configuratie parameter,
