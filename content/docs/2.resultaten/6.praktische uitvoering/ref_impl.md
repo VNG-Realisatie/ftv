@@ -84,17 +84,34 @@ Verzameling van herbruikbare PBAC-modules.
 ##### Controller - PDP (wrappers)
 [/pbac/shared/control](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie/-/tree/main/pbac/shared/control?ref_type=heads)
 
+Verzameling van PDP-wrappers (Cedar, OPA/Rego & TODO: Cerbos/CEL) en PDP-implementaties (TODO: ODRL & XACML).
+
+Alle controllers worden geïmplementeerd middels een interface, zodat ze uitwisselbaar zijn.
+Een PEP die een PDP wil gebruiken hoeft dan alleen de interface te kennen, en kan, op basis van een configuratie parameter,
+beslissen welk soort PDP (en bijhorende policy taal) het wil gebruiken.
+
 ##### PAP
 [/pbac/shared/pap](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie/-/tree/main/pbac/shared/pap?ref_type=heads)
+
+Een generieke PAP, die (op dit moment) policies uit het file-systeem op kan halen, en hiermee de PDP kan voeden. 
 
 ##### PIP
 [/pbac/shared/pip](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie/-/tree/main/pbac/shared/pip?ref_type=heads)
 
+Een generieke PIP, die (op dit moment) attributen en entities uit het file-systeem op kan halen, en hiermee de PDP kan voeden.
+Afhankelijk van het soort PDP, kunnen deze gegevens ook apart, tijdens iedere request, aan de PDP meegegeven worden.
+
 ##### Types
 [/pbac/shared/types](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie/-/tree/main/pbac/shared/types?ref_type=heads)
+
+Generieke structs, types en enums.
 
 #### Standards
 [/pbac/standards](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie/-/tree/main/pbac/standards?ref_type=heads)
 
+Constanten en modellen welke aan de FTV-standaard voldoen.
+
 ### Utilities
 [/utilities](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie/-/tree/main/utilities?ref_type=heads)
+
+Gevarieerd aanbod van simpele, generiek herbruikbare functies.
