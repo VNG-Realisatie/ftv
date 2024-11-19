@@ -32,7 +32,7 @@ De repository bevindt zich op [Gitlab](https://gitlab.com/digilab.overheid.nl/ec
 
 - /oas = OAS-specs & gegenereerde code
 - /oas/fsc/auth = FSC Autorisatie plugin API structures
-- /pbac = PBAC specific modulen
+- /pbac = PBAC gerelateerde modules
 - /pbac/fsc/plugin/generic = generieke FSC Autorisatie plugin service
 - /pbac/shared = herbruikbare PBAC modules
 - /pbac/shared/control = herbruikbare modules voor het aanroepen van een PDP
@@ -55,27 +55,46 @@ De repository bevindt zich op [Gitlab](https://gitlab.com/digilab.overheid.nl/ec
 - /testdata/policies/opa = OPA/Rego policies
 - /testdata/policies/xacml = XACML policies (TODO)
 - /testdata/unittest = test data voor unit tests
-- /utilities = verzameling ondersteunende modulen
+- /utilities = herbruikbare generieke functies
 
 ### OAS
+[/oas](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie/-/tree/main/oas?ref_type=heads)
 
 Externe OAS-specificaties worden middels een script uit een relevante git-repo opgehaald,
 en vervolgens met een code-generator naar request/response structs vertaald.
 
 ### PBAC
+[/pbac](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie/-/tree/main/pbac?ref_type=heads)
+
+Verzameling van alles wat PBAC gerelateerd is.
+PEP, PDP, PIP, PAP, en ondersteunende generieke modellen, types en enums.
 
 #### FSC plugin
+[/pbac/fsc/plugin/generic](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie/-/tree/main/pbac/fsc/plugin/generic?ref_type=heads)
 
-#### shared modules
+Een minimale service, gebaseerd op de FSC autorisatie-plugin API.
+De configuratie van de service bepaald welke policy taal gekozen wordt,
+en dus welke taal-specifieke PDP en policies gebruikt worden voor het autorisatieproces.
 
-##### controller - PDP (wrappers)
+#### Shared modules
+[/pbac/shared](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie/-/tree/main/pbac/shared?ref_type=heads)
+
+Verzameling van herbruikbare PBAC-modules.
+
+##### Controller - PDP (wrappers)
+[/pbac/shared/control](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie/-/tree/main/pbac/shared/control?ref_type=heads)
 
 ##### PAP
+[/pbac/shared/pap](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie/-/tree/main/pbac/shared/pap?ref_type=heads)
 
 ##### PIP
+[/pbac/shared/pip](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie/-/tree/main/pbac/shared/pip?ref_type=heads)
 
-##### types
+##### Types
+[/pbac/shared/types](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie/-/tree/main/pbac/shared/types?ref_type=heads)
 
-#### standards
+#### Standards
+[/pbac/standards](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie/-/tree/main/pbac/standards?ref_type=heads)
 
 ### Utilities
+[/utilities](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie/-/tree/main/utilities?ref_type=heads)
