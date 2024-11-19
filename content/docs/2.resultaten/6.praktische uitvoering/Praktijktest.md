@@ -22,9 +22,9 @@ Het doel is om een kwalitatief en kwantitatief de implementatie te beoordelen op
 
 We maken testopstellingen met de volgende elementen:
 - Een gebruikersapplicatie, van eenvoudig naar uitgebreid:
-    - Een aanroep vanuit een opdrachtregel (curl), 
-    - Een webapplicatie met een interface voor parameters en/of configuratie
-    - Geautomatiseerde tests die parameters en/of configuraties uit een bestand lezen en uitvoeren
+  - Een aanroep vanuit een opdrachtregel (curl)
+  - Geautomatiseerde tests die parameters en/of configuraties uit een bestand lezen en uitvoeren
+  - Een webapplicatie met een interface voor parameters en/of configuratie
 - Een connectiviteitslaag. Dat gaat ook van simpel rechtstreeks, naar uitgebreid met FSC
 - Een aantal diensten die aangeroepen worden, bv BRP, BRV, BAG en HR
 - Een of meerdere PBAC-implementaties die getest worden
