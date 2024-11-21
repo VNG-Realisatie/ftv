@@ -2,6 +2,20 @@
 
 # Doel
 
+Het verantwoord verlenen en verkrijgen van toegang tot overheidsgegevens is cruciaal voor het effectief aanpakken van complexe maatschappelijke uitdagingen.
+
+Deze standaard biedt aanbieders en afnemers gestandaardiseerde en transparante aanpak voor fijnmazige toegangsverlening. 
+
+Door eenduidige normen, eisen en aanbevelingen te introduceren, maakt de standaard het eenvoudiger om:
+
+<ul>
+  <li>Gegevens efficiënt en rechtmatig te verkrijgen</li>
+  <li>Duidelijkheid te geven over verwerkingsvoorwaarden</li>
+  <li>Risico's rond gegevensdeling beter te beheersen</li>
+</ul>
+
+----
+
 Het  verlenen van toegang tot verwerking van gegevens is een essentiele randvoorwaarde voor het verantwoord gebruik van overheidsgegevens.
 
 In tegenstelling tot identificatie en authenticatie is er nog geen normatieve Nederlandse standaard met betrekking tot fijnmazige toegangsverlening of autorisatie. 

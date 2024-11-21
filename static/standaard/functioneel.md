@@ -10,12 +10,26 @@
 
 <dfn>Autorisatieregel</dfn> Een technisch gespecificeerde regel op basis waarvan de toegangsbeslissing voor een verwerkingsverzoek genomen wordt.
 
-## Beheer en inspectie van autorisatieregels
+<dfn>Betrokkenen</dfn> De aanbieder, afnemers en toezichthouders die betrokken zijn bij de verwerking.
 
-### Actuele autorisatieregels zijn centraal beschikbaar
-De actuele autorisatieregels, zoals actief in werking op een gegeven moment, dienen centraal beschikbaar te zijn voor zowel de aanbieder als afnemers.
+## Beheer van autorisatieregels
 
+### Autorisatieregels zijn beschikbaar voor alle betrokkenen
+
+De autorisatieregels dienen, op basis van federatief model, beschikbaar gemaakt te worden voor alle betrokkenen.
+
+### Actuele en historische autorisatieregels zijn beschikbaar
+
+Zowel actuele autorisatieregels als historische autorisatieregels dienen beschikbaar te zijn.
+
+De actuele autorisatieregels zijn de regels die gebruikt zullen worden voor een verwerkingsverzoek dat op dit moment ingediend zou worden.
+
+De historische autorisatieregels zijn de regels die gebruikt zijn voor de verwerkingsverzoeken in het verleden. Voor elk historisch verwerkingsverzoek moeten de corresponderende autorisatieregels geïdentificeerd kunnen worden.
+ 
 Documentatie van geïmplementeerde regels volstaat hiervoor niet gezien de mogelijkheid tot afwijking van implementatie en documentatie.
+
+Moet: technische / formele historisering: wat is er echt gebeurd op moment X. Niet zoals het 'had moeten zijn o.b.v. vooruitschreidend inzicht'.  zoals actief in werking op een gegeven moment,
+Mag: materiele/formele historisering: wat had het moeten zijn; wat zal het worden
 
 ### Autorisatieregels zijn uniform vastgelegd
 Voor effectieve validatie van autorisatieregels dient dit binnen een organisatie op uniforme wijze vastgelegd te worden.
@@ -26,13 +40,13 @@ Wanneer dit niet het geval is loopt de organisatie het risico dat de diverse vor
 Het is mogelijk voor afnemers om verwerkingsverzoeken zelfstandig te evalueren op basis van de beschikbare autorisatieregels zonder dat zij daarvoor het verwerkingsverzoek ook echt in moeten dienen.
 
 ### Autorisatieregels zijn laagdrempelig aanpasbaar
-Autorisatieregels dienen consistent aangepast te worden aan de actuele situatie. Om dit te borgen moeten aanpassingen laagdrempelig mogelijk zijn zonder lange doorlooptijden of complexe aanpassingen in applicaties te vereisen.
+Autorisatieregel dient consistent aangepast te worden aan de actuele situatie. Om dit te borgen dienen aanpassingen laagdrempelig mogelijk te zijn zonder lange doorlooptijden of complexe aanpassingen in applicaties te vereisen.
 
-## Vastlegging voor verantwoording en detectie
+## Vastlegging en verantwoording van toegangsbeslissingen
 
-### Toegangsbeslissingen zijn centraal beschikbaar
+### Toegangsbeslissingen zijn beschikbaar voor alle betrokkenen
 
-Elke toegangsbeslissing dient centraal beschikbaar te zijn binnen de organisatie. Dit is vereist voor effectieve verantwoording van historisch verwerkingsverzoeken. 
+Elke toegangsbeslissing dient, op federatieve basis, beschikbaar te zijn voor de betrokkenen. Dit is vereist voor effectieve verantwoording van historisch verwerkingsverzoeken. 
 
 Dit ondersteunt ook effectieve beveiligingsanalyse voor het detecteren van ongewenste toegang waarbij meerdere applicaties betrokken zijn.
 
@@ -52,11 +66,25 @@ Indien vereist door de aanbieder kunnen afnemers de aanbieder inzicht bieden tot
 
 De exacte vereisten zullen door aanbieder als eis gesteld worden aan het verwerkingsverzoek. Daarin kan bijvoorbeeld de frequentie (op verzoek, periodiek of continu) en de bewaartermijn vastgelegd worden.
 
+TODO:
+
+<ul>
+<li>Gezien de verwoording van "Toegangsbeslissingen zijn beschikbaar voor alle betrokkenen" is dit mogelijk dubbel op.</li></ul>
+
+### Afnemers dienen de doelbinding voor verwerkingsverzoeken te specificeren
+
+Afnemers dienen bij elk verwerkingsverzoek de doelbinding voor verwerkingsverzoeken aan te geven. Hierbij kan verwezen worden naar het Register van Verwerkingsactiviteiten.
+
+TODO:
+<ul>
+<li>Stem af met o.a. Logboek Dataverwerkingen of dit inderdaad in Register van Verwerkingsactiviteiten opgenomen is?</li>
+</ul>
+
 ## Gegevensminimalisatie (of: toegangsbeslissingen op basis van te verwerken gegevens)
 
 ### Afnemers dienen vereiste gegevens te specificeren
 
-Afnemers dienen bij elk verwerkingsverzoek de minimale set van vereiste gegevens te specificeren. Hierdoor kan alleen op basis van het verwerkingsverzoek bepaald worden welke gegevens verstrekt werden.
+Afnemers dienen bij elk verwerkingsverzoek de set van vereiste gegevens te specificeren. Dit geldt voor zowel verticale als horizontale filtering. Hierdoor kan alleen op basis van het verwerkingsverzoek bepaald worden welke gegevens verstrekt werden.
 
 In het geval van REST API dient dit te gebeuren volgens de [Customization extensie](https://docs.geostandaarden.nl/api/API-Strategie-ext/#customization) van de [NLGov REST API Design Rules](https://gitdocumentatie.logius.nl/publicatie/api/adr/)
 
@@ -95,7 +123,11 @@ Indien de aanbieder verzoeken toe staat zonder specificatie van vereiste gegeven
 
 Aanbieders mogen in hun afwijzing suggesties bieden voor alternatieve verwerkingsverzoeken die wel toegestaan zijn. Dit kan afnemers ondersteunen in het gebruik van de API, maar verhoogt mogelijk het risico dat meer gegevens aangevraagd worden dan vereist zijn voor de doelbinding.
 
-### Aanbieders mogen autorisatieregels gedeeltelijk delegeren
+TODO:
+<ul>
+<li>Aanpassen naar Search API voorstel van AuthZEN</li></ul>
+
+### Autorisatieregels mogen gedeeltelijk gedelegeerd worden aan applicaties
 
 Indien mogelijk heeft het de voorkeur om alle toegangsregels voor een toegangsbeslissing gelijktijdig te valideren. Vanuit technische overwegingen kan dit echter onhaalbaar zijn.
 
@@ -120,13 +152,3 @@ Afnemers kunnen in een verwerkingsverzoek bevestigen of aantonen dat zij aan eis
 ### Aanbieder kan eisen via derde partijen valideren
 
 Aanbieders kan de validatie van het voldoen aan eisen voor verwerkingsverzoeken delegeren aan derde partijen.
-
-## Borging van doelbinding en grondslag
-
-### Afnemer dient de doelbinding of grondslag voor verwerkingsverzoeken te specificeren
-
-Afnemers dienen bij elk verwerkingsverzoek de doelbinding of grondslag voor verwerkingsverzoeken aan te geven. Hierbij kan verwezen worden naar het Register van Verwerkingsactiviteiten. De aanbieder dient te verifiëren of het verwerkingsverzoek is toegestaan voor de doelbinding.
-
-### Afnemers moet hiërarchie van doelbinding bijhouden bij verdere verwerking
-
-Indien de afnemer van gegevens deze elders in de keten hergebruikt dient de afnemer de hiërarchie van doelbinding te behouden. Indien een gemeente volledige toegang heeft tot een registratie om zijn taken uit te voeren en een geminimaliseerde set van deze gegevens beschikbaar maakt voor een interne verwerkingsactiviteit dienen beide doelbindingen opgenomen te worden.

@@ -13,7 +13,7 @@ let respecConfig = {
   previousPublishDate: null,
   previousMaturity: "WV",
   title: "Standaard voor Federatieve Toegangsverlening",
-  content: {"introductie": "introductie", "functioneel": "functioneel"},
+  content: {"introductie": "introductie", "functioneel": "functioneel", "informatiemodel": "informatiemodel"},
   editors:
     [
       // {
