@@ -2,7 +2,7 @@
 
 ## Definities
 
-<dfn>Gegevensverwerking</dfn> Een verzoek tot het inzien, zoeken, aanpassen, opslaan of verwijderen van gegevens.
+<dfn>Gegevensverwerking</dfn> Het inzien, zoeken, aanpassen, opslaan of verwijderen van gegevens.
 
 <dfn>Verwerkingsverzoek</dfn> Een verzoek tot verwerking van gegevens van de afnemer aan de aanbieder door middel van een API.
 
@@ -10,123 +10,148 @@
 
 <dfn>Autorisatieregel</dfn> Een technisch gespecificeerde regel op basis waarvan de toegangsbeslissing voor een verwerkingsverzoek genomen wordt.
 
-## Beheer en inspectie van autorisatieregels
+<dfn>Betrokkenen</dfn> De aanbieder, afnemers en toezichthouders die betrokken zijn bij de verwerking.
 
-### Actuele autorisatieregels zijn centraal beschikbaar
-De actuele autorisatieregels, zoals actief in werking op een gegeven moment, dienen centraal beschikbaar te zijn voor zowel de aanbieder als afnemers.
+<dfn>Verwerkende applicaties</dfn> De systemen, zowel bij aanbieder als afnemer, die verwerkingsverzoeken daadwerkelijk indienen, uitvoeren en ontvangen. 
 
-Documentatie van geïmplementeerde regels volstaat hiervoor niet gezien de mogelijkheid tot afwijking van implementatie en documentatie.
+## Beheer van autorisatieregels
 
-### Autorisatieregels zijn uniform vastgelegd
-Voor effectieve validatie van autorisatieregels dient dit binnen een organisatie op uniforme wijze vastgelegd te worden.
+### Autorisatieregels horen beschikbaar te zijn voor alle betrokkenen
+
+De autorisatieregels horen, op basis van federatief model, beschikbaar gemaakt te worden voor alle betrokkenen.
+
+### Actuele en historische autorisatieregels moeten beschikbaar zijn
+
+Zowel actuele autorisatieregels als historische autorisatieregels moeten beschikbaar zijn.
+
+De actuele autorisatieregels zijn de regels die gebruikt zullen worden voor een verwerkingsverzoek dat op dit moment ingediend zou worden.
+
+De historische autorisatieregels zijn de regels die gebruikt zijn voor de verwerkingsverzoeken in het verleden. Voor elk historisch verwerkingsverzoek moeten de corresponderende autorisatieregels geïdentificeerd kunnen worden.
+
+<p class="note" title="Documentatie volstaat niet">
+Het is van belang dat de autorisatieregels technisch eenduidig gedefinieerd zijn. Documentatie van geïmplementeerde regels volstaat hiervoor dus niet gezien de mogelijkheid tot verschillen tussen de implementatie en documentatie.
+</p>
+
+### Autorisatieregels horen uniform vastgelegd te worden
+Voor effectieve validatie van autorisatieregels hoort dit binnen een organisatie op uniforme wijze vastgelegd te worden.
 
 Wanneer dit niet het geval is loopt de organisatie het risico dat de diverse vormen van vastlegging niet gelijk geïnterpreteerd worden.
 
-### Afnemers kunnen autorisatieregels zelfstandig evalueren
-Het is mogelijk voor afnemers om verwerkingsverzoeken zelfstandig te evalueren op basis van de beschikbare autorisatieregels zonder dat zij daarvoor het verwerkingsverzoek ook echt in moeten dienen.
+### Betrokkenen moeten autorisatieregels zelfstandig kunnen evalueren
+Het moet mogelijk zijn voor betrokkenen om verwerkingsverzoeken zelfstandig te evalueren op basis van de beschikbare autorisatieregels zonder dat zij daarvoor het verwerkingsverzoek ook echt in moeten dienen.
 
-### Autorisatieregels zijn laagdrempelig aanpasbaar
-Autorisatieregels dienen consistent aangepast te worden aan de actuele situatie. Om dit te borgen moeten aanpassingen laagdrempelig mogelijk zijn zonder lange doorlooptijden of complexe aanpassingen in applicaties te vereisen.
+### Autorisatieregels horen laagdrempelig aanpasbaar te zijn
 
-## Vastlegging voor verantwoording en detectie
+Autorisatieregel horen consequent aangepast te worden aan de actuele situatie. Om dit te borgen horen aanpassingen laagdrempelig mogelijk te zijn zonder lange doorlooptijden of complexe aanpassingen in applicaties te vereisen.
 
-### Toegangsbeslissingen zijn centraal beschikbaar
+## Vastlegging en verantwoording van toegangsbeslissingen
 
-Elke toegangsbeslissing dient centraal beschikbaar te zijn binnen de organisatie. Dit is vereist voor effectieve verantwoording van historisch verwerkingsverzoeken. 
+### Historische toegangsbeslissingen horen beschikbaar te zijn voor betrokkenen
 
-Dit ondersteunt ook effectieve beveiligingsanalyse voor het detecteren van ongewenste toegang waarbij meerdere applicaties betrokken zijn.
+Elke historische toegangsbeslissing hoort beschikbaar gemaakt te kunnen worden voor de betrokkenen. Dit is vereist voor effectieve verantwoording van historisch verwerkingsverzoeken. 
 
-<p class="note" title="Preventie">
-Gecombineerd met de aanbeveling toegangsbeslissingen centraal uit te voeren biedt dit ook de mogelijkheid om verdachte verwerkingsverzoeken preventief te blokkeren.
+Dit kan op federatieve wijzen gebeuren waarbij historische toegangsbeslissingen proactief of op verzoek gedeeld kunnen worden met de relevante betrokkenen.
+
+<p class="note" title="Preventie en detectie">
+Deze werkwijze ondersteunt ook effectieve beveiligingsanalyse voor het detecteren van ongewenste toegang waarbij meerdere applicaties betrokken zijn.
 </p>
 
-### Toegangsbeslissingen kunnen verantwoord worden
+### Toegangsbeslissingen horen verantwoord te kunnen worden
 
-Alle gegevens die gebruikt worden in het maken van de toegangsbeslissingen dienen beschikbaar te zijn voor verantwoording. Alleen wanneer dit wettelijk niet toegestaan is of niet proportioneel gegeven de gevoeligheid van de gegevens kan hier van worden afgeweken.
+Alle gegevens die gebruikt worden in het maken van de toegangsbeslissingen horen beschikbaar te zijn voor verantwoording. Alleen wanneer dit wettelijk niet toegestaan is of niet proportioneel gegeven de gevoeligheid van de gegevens kan hier van worden afgeweken.
 
-Dit is vereist aangezien het veelal niet mogelijk is om te bepalen welke gegevens op een gegeven moment beschikbaar waren voor de toegangsbeslissing.  
+Dit is vereist aangezien het veelal niet mogelijk is om te bepalen welke gegevens op een gegeven moment beschikbaar waren voor de toegangsbeslissing.
 
-### Afnemers kunnen aanbieder inzicht in toegangsbeslissingen geven
+### Afnemers horen de doelbinding voor verwerkingsverzoeken te specificeren
 
-Indien vereist door de aanbieder kunnen afnemers de aanbieder inzicht bieden tot toegangsbeslissingen.
-
-De exacte vereisten zullen door aanbieder als eis gesteld worden aan het verwerkingsverzoek. Daarin kan bijvoorbeeld de frequentie (op verzoek, periodiek of continu) en de bewaartermijn vastgelegd worden.
-
-## Gegevensminimalisatie (of: toegangsbeslissingen op basis van te verwerken gegevens)
-
-### Afnemers dienen vereiste gegevens te specificeren
-
-Afnemers dienen bij elk verwerkingsverzoek de minimale set van vereiste gegevens te specificeren. Hierdoor kan alleen op basis van het verwerkingsverzoek bepaald worden welke gegevens verstrekt werden.
-
-In het geval van REST API dient dit te gebeuren volgens de [Customization extensie](https://docs.geostandaarden.nl/api/API-Strategie-ext/#customization) van de [NLGov REST API Design Rules](https://gitdocumentatie.logius.nl/publicatie/api/adr/)
-
-In het geval van GraphQL API's gebeurt dit automatisch in de specificatie van een GraphQL operatie.
-
-### Aanbieders moeten verstrekte gegevens beperken tot het minimum
-
-Aanbieders moeten verstrekte gegevens beperken tot de minimale set van gegevens waarvan zij weten dat de afnemer gerechtigd is deze te ontvangen.
+Afnemers horen bij elk verwerkingsverzoek de doelbinding voor verwerkingsverzoeken aan te geven. Hierbij kan verwezen worden naar het Register van Verwerkingsactiviteiten.
 
 TODO:
-<ol>
-    <li>Bevestig of dit gewenst is en/of dit in deze standaard betrokken moet worden</li>
-</ol>
+<ul>
+<li>Stem af met o.a. Logboek Dataverwerkingen of dit inderdaad in Register van Verwerkingsactiviteiten opgenomen is?</li>
+</ul>
 
-### Aanbieders dienen vereiste gegevens voor toegangsbeslissingen gestructureerd aan te bieden
+## Aanpassen van verwerkingsverzoeken
+
+### Verwerkingsverzoeken mogen niet inhoudelijk aangepast worden
+
+Autorisatieregels mogen verwerkingsverzoeken inhoudelijk niet aanpassen. Alleen metadata van het verzoek mag weggelaten of uitgebreid worden.
+
+Voor een HTTP verzoek betekent dit bijvoorbeeld dat:
+<ul>
+<li>een header toegevoegd mag worden; bijvoorbeeld om additionele vereisten (obligations) mee te gegeven vanuit de autorisatieregels</li>; 
+<li>een header weggelaten mag worden; bijvoorbeeld indien een authenticatie token gevoelige informatie bevat die niet vereist is voor onderliggende systemen</li>
+<li>een header uitgebreid mag worden; bijvoorbeeld door het toevoegen van het huidige verwerkende systeem aan een trace van Logboek Dataverwerkingen of door de PEP-host toe te voegen aan de `X-Forwarded-For' header.</li>
+<li>hostname en applicatie path aangepast mag worden; mits dit het gedrag van de onderliggende systemen niet beïnvloedt</li>
+</ul>
+
+### Autorisatieregels horen geen gebruik te maken van de inhoud van een antwoord
 
 In sommige gevallen kan de toegangsbeslissing alleen genomen worden op basis van de gegevens die het verwerkingsverzoek retourneert.
 
 Het is niet wenselijk dat tijdens de evaluatie van de toegangsbeslissing in de inhoud van het bericht gekeken moet worden. Dit vergroot gevoeligheidsproblematiek en is foutgevoelig indien de structuur wijzigt.
 
-In dat geval dient de aanbieder deze informatie gestructureerd beschikbaar te maken in de metadata van het bericht. 
+In dat geval hoort de deze informatie gestructureerd beschikbaar gemaakt te worden in de metadata van het antwoord.
 
-In het geval van een HTTP verzoek moet hiervoor de header ...TODO... gebruikt worden.
+In het geval van een HTTP verzoek mogen dus alleen status codes en headers daar voor gebruikt worden.
 
-TODO: 
-<ol>
-    <li>Evalueren of dit ooit echt gewenst is</li>
-    <li>Relatie naar AuthZEN standaard opnemen</li>
-</ol> 
+### Toegestane verwerkingsverzoeken mogen voorgesteld worden
 
-### Aanbieders moeten aan kunnen tonen welke gegevens aangeboden zijn
+Aanbieders en afnemers mogen een overzicht geven van toegestane verwerkingsverzoeken.
 
-Indien de aanbieder verzoeken toe staat zonder specificatie van vereiste gegevens moet de aanbieder in staat zijn aan te tonen welke gegevens aan de afnemer aangeboden zijn.
+Dit kan bijvoorbeeld gebeuren op basis van:
+<ul>
+<li>een standaard verzoek; bijvoorbeeld een voorgesteld "Mijn Zaken" verwerkingsverzoek wat alle zaken toont die toegewezen zijn aan de huidige gebruiker en niet langer dan 30 dagen geleden gesloten zijn.</li>
+<li>een afgewezen verzoek; bijvoorbeeld als te veel informatie gevraagd wordt een aangepast verzoek voorstellen dat alleen _toegestane_ velden opvraagt.</li>
+<li>een bepaalde context; bijvoorbeeld alle mogelijke toegestane verzoeken voor een gegeven gebruiker</li>
+</ul>
 
-### Aanbieders mogen alternatieve verwerkingsverzoeken voorstellen
-
-Aanbieders mogen in hun afwijzing suggesties bieden voor alternatieve verwerkingsverzoeken die wel toegestaan zijn. Dit kan afnemers ondersteunen in het gebruik van de API, maar verhoogt mogelijk het risico dat meer gegevens aangevraagd worden dan vereist zijn voor de doelbinding.
-
-### Aanbieders mogen autorisatieregels gedeeltelijk delegeren
-
-Indien mogelijk heeft het de voorkeur om alle toegangsregels voor een toegangsbeslissing gelijktijdig te valideren. Vanuit technische overwegingen kan dit echter onhaalbaar zijn.
-
-Aanbieders mogen de toegangsregels van een verwerkingsverzoek gedeeltelijk evalueren en verdere evaluatie delegeren aan een derde systeem.
-
-In dat geval <b>moet</b> de aanbieder zorgen dat de resterende autorisatieregels doorgegeven worden aan het gedelegeerde systeem én dat het gedelegeerde systeem deze autorisatieregels correct evalueert en afdwingt.
-
-<p class="note" title="Filteren van (zoek-)resultaten">
-Het gebruik van gedeeltelijke evaluatie voor het filteren van (zoek-)resultaten wordt <b>afgeraden</b>. Hiervoor kan conform "Afnemers dienen vereiste gegevens te specificeren" de aanwezigheid van de juiste filters in het verwerkingsverzoek worden vereist.
+<p class="note" title="Mogelijkheid en wenselijkheid">
+Niet alle verwerkingsverzoeken die mogelijk zijn, zijn ook wenselijk. Het voorstellen van verwerkingsverzoeken vergemakkelijkt het breder indienen van verwerkingsverzoeken. Daarom is het van belang dat een bewuste overweging gemaakt wordt of het voorstellen van de toegestane verzoeken gewenst is in de gegeven context.  
 </p>
 
-## Verifieerbare verklaringen
+### Applicaties mogen functionaliteit aanpassen op basis van de aanvrager
 
-### Aanbieders kunnen eisen stellen aan afnemers
+Applicaties mogen gegevens over de aanvrager ontvangen en op basis daarvan functionaliteit aanpassen.
 
-Aanbieders van gegevens kunnen alle gewenste eisen stellen aan verwerkingsverzoek. Deze kunnen van technische aard zijn zoals het stellen van maximale bewaartermijnen, maar ook van niet-technische aard zijn zoals het voldoen aan bepaalde certificaties of standaarden.
+Het is dus bijvoorbeeld toegestaan om een in een verwerkingsverzoek voor "Mijn Zaken" de gebruikersnaam uit een authenticatie token te gebruiken om alleen zijn of haar zaken te tonen.
 
-### Afnemers kunnen bevestigen of aantonen aan eisen te voldoen
+De verwachting is dat applicaties met het hoogste volwassenheidsniveau van toegangsverlening dit niet nodig zullen hebben.
 
-Afnemers kunnen in een verwerkingsverzoek bevestigen of aantonen dat zij aan eisen van de aanbieder voldoen.
+TODO
+<ul>
+<li>Is dit echt wenselijk vanuit principe? Het is vanuit praktisch oogpunt niet te voorkomen; maar dat kan ook als "should not" opgenomen worden in de standaard.</li>
+</ul>
 
-### Aanbieder kan eisen via derde partijen valideren
+## Additionele keten-vereisten
 
-Aanbieders kan de validatie van het voldoen aan eisen voor verwerkingsverzoeken delegeren aan derde partijen.
+### Autorisatieregels mogen vereisten opleggen aan verwerkende applicaties
 
-## Borging van doelbinding en grondslag
+Waar mogelijk heeft het de voorkeur om alle toegangsregels voor een toegangsbeslissing gelijktijdig te valideren. Het verzoek kan de geheel toegestaan of afgewezen worden.
 
-### Afnemer dient de doelbinding of grondslag voor verwerkingsverzoeken te specificeren
+Vanuit technische overwegingen is dit niet altijd haalbaar. In die gevallen *mogen* additionele vereisten opgelegd worden aan applicaties.
 
-Afnemers dienen bij elk verwerkingsverzoek de doelbinding of grondslag voor verwerkingsverzoeken aan te geven. Hierbij kan verwezen worden naar het Register van Verwerkingsactiviteiten. De aanbieder dient te verifiëren of het verwerkingsverzoek is toegestaan voor de doelbinding.
+Denk hierbij bijvoorbeeld aan:
+<ul>
+    <li>een /mijn-zaken endpoint dat vanuit de autorisatieregels beperkt wordt tot de zaken van de vragende gebruiker die niet langer dan 30 dagen geleden gesloten zijn</li>
+    <li>het niet cachen of opslaan van gegevens</li>
+    <li>het sturen van een notificatie</li>
+</ul>.
 
-### Afnemers moet hiërarchie van doelbinding bijhouden bij verdere verwerking
+<p class="note" title="Behoud van verantwoordelijkheid">
+De uitvoerder van de autorisatieregel blijft verantwoordelijk voor de uitvoering van het toegangsbeleid. De organisatie als geheel is dus verantwoordelijk dat de verwerkende applicatie de vereiste ook correct implementeert.
+</p>
 
-Indien de afnemer van gegevens deze elders in de keten hergebruikt dient de afnemer de hiërarchie van doelbinding te behouden. Indien een gemeente volledige toegang heeft tot een registratie om zijn taken uit te voeren en een geminimaliseerde set van deze gegevens beschikbaar maakt voor een interne verwerkingsactiviteit dienen beide doelbindingen opgenomen te worden.
+<p class="note" title="Vereisen van bevestiging">
+Soms is het risico dat een vereiste niet wordt uitgevoerd zeer groot. Dan kan het eerste verzoek beter afgewezen worden. De applicatie wordt dan gevraagd om een tweede verzoek in te dienen waarin de applicatie expliciet bevestigen te kunnen voldoen aan de vereiste.
+</p>
+
+### Eisen aan betrokkenen horen middels verifieerbare verklaringen opgelegd te worden
+
+Voor het opleggen van vereisten aan betrokkenen wordt gebruikt gemaakt van [[W3C Verifiable Credentials]].
+
+Denk hierbij bijvoorbeeld aan het vereisen dat de applicatie in het afgelopen een pen-test heeft doorlopen of dat de aanvragende organisatie ISO 27001 gecertificeerd is.
+
+<p class="note" title="Toestaan van meerdere issuers">
+De aanbieder kan kiezen om alleen zichzelf als issuer van de Verifiable Credential te accepteren. Het wordt echter aangeraden om, waar mogelijk, een netwerk van derde partijen te realiseren die de vereisten kunnen verifiëren.
+</p>
