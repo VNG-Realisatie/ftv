@@ -114,6 +114,12 @@ var organisationConfig = {
             authors: ["Jasper Roes", "Joost Farla"],
             date: "Maart 2024"
         },
+        "W3C Verifiable Credentials": {
+            href: "https://www.w3.org/TR/vc-data-model/",
+            title: "Verifiable Credentials Data Model v1.1",
+            authors: ["Manu Sporny", "Dave Longley", "David Chadwick"],
+            date: "3 maart 2022"
+        },
         "NL GOV Assurance profile for OAuth": {
             href: "https://gitdocumentatie.logius.nl/publicatie/api/oauth/",
             title: "NL GOV Assurance profile for OAuth 2.0",
