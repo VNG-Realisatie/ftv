@@ -8,13 +8,13 @@ Title: 20-11-'24 Gegevensminimalisatie
 
 ## Aanwezigen
 - Marc van Andel
-- Marc de Boer
+- Marc de Boer (FTV)
 - Joost Farla
-- Pim Gaemers
+- Pim Gaemers (FSC)
 - Eelco Hotting
-- Gerard Juijn
-- Eduard Renger
-- Michiel Trimpe
+- Gerard Juijn (FTV)
+- Eduard Renger (iStandaarden)
+- Michiel Trimpe (FTV)
 
 ## Agenda
 - Introductie
@@ -86,6 +86,34 @@ Er is besloten gegevensminimalisatie als term uit de standaard te verwijderen.
 
 Er is besloten om de volgende werkgroep te richten op het thema "Verantwoording". Michiel Trimpe zal met Eelco Hotting de kadering van dit onderwerp voorbereiden om de volgende werkgroep additionele sturing te geven.
 
-## Nabespreking
+## Nabespreking Mattermost 
 
 **Gerard Juijn** droeg het alternatief van een "Slimme PEP" aan die wel requests mag herschrijven. Dit werd door o.a. **Eelco Hotting** gezien als een component van de applicatie gezien. **Michiel Trimpe** benoemde dat dit in combinatie met een Search API ook gezien kan worden als een proxy die de 2 stappen (zoek het correcte verzoek op en voer het uit) in één actie uitvoert. Dat kan dus als een wrapper om om bestaande applicaties gezien worden indien die niet aangepast kunnen worden.  
+
+## Toevoeging per mail van Eduard Renger
+
+Na de werkgroep zijn de volgende antwoorden op 22 november per mail gegeven door een collega van Eduard Renger:
+
+- Mogen request query en body aangepast worden?
+  - Nee, Verzoeken mogen (en kunnen momenteel) niet worden aangepast. De PDP is een decision point en neemt besluiten volgens een grondslag. De PDP geeft zijn beslissing door aan de PEP.
+  - Door alleen validatie toe te passen is:
+    - Communicatie volledig transparant. Een resultaat is altijd volgens de vraag.
+    - Is de policy uitlegbaar.
+    - Zijn policies eenvoudiger te schrijven.
+    - Meerdere soorten vragen mogelijk omdat alleen de randvoorwaarden worden gecontroleerd.
+    - Mogelijkheid bieden aan gebruikers om complexe GraphQL vragen te stellen. Welke nog steeds blijven voldoen aan de grondslag.
+    - Verantwoordelijkheden in de keten duidelijk zijn.
+- Mogen request headers aangepast worden? En toegevoegd? En verwijderen?
+  - Nee, momenteel geen behoefte aan.
+- Mogen redirects naar toegestane verzoeken gegeven worden?
+  -  Dit vind ik vreemd, hierdoor krijg je een andere response dan waarvoor je een request doet. Mogelijk geeft dit technische problemen bij de gebruiker.
+- Mogen alternatieve toegestane verzoeken gesuggereerd worden?
+  -  Dit is onderdeel van onze foutafhandeling, in onze foutafhandeling wordt aangegeven wat er “mankeert” aan de vraag. Bijvoorbeeld: je vraagt veld “x” op waar je geen autorisatie op hebt of je vraag moet binnen een specifieke begintijd en eindtijd vallen.
+- Mogen antwoorden aangepast worden vanuit een policy?
+  -  Nee, op dit moment niet mogelijk en om meerdere redenen onwenselijk, bijvoorbeeld:
+  - Transparantie
+  - Uitlegbaarheid
+  - Privacy
+  - Verantwoordelijkheid(verwerker)
+- Mogen policies beslissingen nemen op basis van antwoorden? Mogen policies response bodies parsen om daar informatie uit te gebruiken?
+  - Ja/nee, validatie dient te gebeuren via een aparte validatie(policy) en niet op het resultaat van het verzoek. / Policy information Point (PIP)
