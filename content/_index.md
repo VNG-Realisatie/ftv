@@ -17,21 +17,18 @@ FTV onderzoekt een **standaardmethodiek** om **toegang tot gegevens en functies*
 
 ## Resultaten
 
-Het resultaat van ons werk tot nu toe is [hier](/docs/2.resultaten) te vinden.
-
-## Links
-
-Omdat FTV leeft in een wereld van begrippen, standaarden, projecten en programma's hebben we verzamelingen
-[links](/docs/4.links) aangelegd, als begrippenlijst.
+- Als eerste is een [onderzoek](/docs/2.onderzoek) gedaan naar de positie, attitude en technische status van toegangsverlening onder 
+de (toekomstige) deelnemers van FDS. Hieruit is een [voorstel](/docs/2.onderzoek/5.voorgestelde_oplossing) voor een methodiek gekomen.
+- Gaandeweg wordt aan de [standaard](/docs/3.standaard) gewerkt. Er is een [werkversie](/standaard) beschikbaar, en er wordt in [werkgroepen](/docs/3.standaard/1.werkgroepen) overlegd.
+- Tegelijk wordt een [referentieimplementatie](/docs/4.implementatie) geschreven, met een bijbehorende demonstratieomgeving.
 
 ## Contact
 
 Alle informatie en resultaten zijn open source beschikbaar voor iedereen.
-- De bron van deze site is onze [Gitlab](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/federatieve-toegangsverlening). Daarop is nog meer te vinden zoals broncode van softwareproducten.
+- De bron van deze site is onze [Gitlab](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/federatieve-toegangsverlening). 
 - Praat mee over FTV op ons [Mattermost](https://digilab.overheid.nl/chat/digilab/channels/federatieve-toegangsverlening) kanaal.
 - Neem voor meer informatie gerust contact op met:
 
-Marc de Boer  
-**Product owner**  
-[marc.deboer@vng.nl](mailto:marc.deboer@vng.nl)  
-06-14460350
+    Marc de Boer (product owner)  
+    [marc.deboer@vng.nl](mailto:marc.deboer@vng.nl)  
+    06-14460350

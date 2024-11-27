@@ -1,6 +1,6 @@
 ---
 Title: Implementatie
-weight: 60
+weight: 40
 ---
 
 # Implementatie 

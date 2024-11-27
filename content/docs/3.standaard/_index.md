@@ -1,6 +1,6 @@
 ---
 Title: Standaard
-weight: 70
+weight: 30
 ---
 
 # Standaard
