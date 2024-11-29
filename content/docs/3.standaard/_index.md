@@ -5,7 +5,7 @@ weight: 30
 
 # Standaard
 
-De lessen uit de implementatie en de consensus die bereikt wordt in de werkgroepen wordt vastgelegd in de [Standaard voor Federatieve Toegangsverlening](/standaard).
+De lessen uit de implementatie en de consensus die bereikt wordt in de werkgroepen wordt vastgelegd in de [Standaard voor Federatieve Toegangsverlening](https://ftv-standaard-2f223b.gitlab.io/).
 
 # Werkgroepen
 

@@ -4,9 +4,9 @@ Elke toegangsbeslissing wordt gemaakt op basis van de Principal, Actions, Resour
 
 ## Principal (Aanvrager)
 
-# Authenticatie en identificatie
+### Authenticatie en identificatie
 
-# Verifieerbare verklaringen
+### Verifieerbare verklaringen
 
 ## Action (Verwerkingsactiviteit)
 
@@ -20,8 +20,8 @@ De action bevat een verwijzing naar de doelbinding; mogelijk o.b.v. een verwijzi
 
 ## Resource
 
-## Context
+## Context 
 
-### Connectiviteit
+### Tijdstip
 
-### Tijd en locatie
+### Lokatie
