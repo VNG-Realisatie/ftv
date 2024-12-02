@@ -1,5 +1,5 @@
 ---
 Title: Werkgroepen
-weight: 70
+weight: 10
 bookCollapseSection: true
 ---
