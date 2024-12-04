@@ -24,7 +24,21 @@ Gesprek met Michiel en Marc 05.11
   - Portalen
   - Leveringen
 
-Vervolgafspraak, Sander plant
+Vervolggesprek Michiel en Marc 04.12
+- Sander Jager
+- Alfred Velthuis, IT arch
+- Gerard Hekkelman, adviseur. Zit in strategisch FDS overleg met Mike en Ronald
+
+- Volume is groot, 10 miljoen per dag, miljarden per jaar, 40.000 identiteiten. belang is groot. 'veel te verdedigen'
+- Werken vooral met Microsoft, aangevuld waar nodig. Layer7, Anogio. RBAC.
+- Hebben al actief gekeken naar PBAC. Bezwaar dat maakbaarheid laag
+- Willen vooral opruimen voordat/als er iets nieuws komt. Er is al heel veel, en het komt er alleen maar bij
+
+Zijn bezig met vernieuwing rondom access control, component IGA (Identity Governance & administration?). Er gaat in 
+februari een aanbesteding de markt op. We gaan kijken of onze specificatie en hun aanbesteding uitlijnen. 
+
+Vervolgafspraak de diepte in met Alfred, Michiel plant.
+
 ## Links
 - https://www.rdw.nl
 - https://www.rdw.nl/over-rdw/dienstverlening/betaald-toegang-tot-ongevoelige-kentekengegevens
