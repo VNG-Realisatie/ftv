@@ -7,6 +7,10 @@ weight: 50
 
 **De referentie-implementatie is work-in-progress.**
 
+## Repository
+
+De repository bevindt zich op [Gitlab](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie).
+
 ## Uitgangspunten
 
 - We proberen een redelijk assortiment use-cases uit te voeren
@@ -24,27 +28,23 @@ weight: 50
 - We bouwen zoveel mogelijk integratie-tests
 - We bouwen zoveel mogelijk benchmarks
 
-## Repository
-
-De repository bevindt zich op [Gitlab](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie).
-
 ### Structuur
 
 - /oas = OAS-specs & gegenereerde code
 - /oas/fsc/auth = FSC Autorisatie plugin API structures
 - /pbac = PBAC gerelateerde modules
+- /pbac/components = herbruikbare PBAC componenten
+- /pbac/components/pdp = herbruikbare componenten voor het aanroepen van een PDP
+- /pbac/components/pdp/cedar = herbruikbare generieke wrapper voor Cedar PDP
+- /pbac/components/pdp/opa = herbruikbare generieke wrapper voor OPA/Rego PDP
+- /pbac/components/pdp/openfga = herbruikbare generieke wrapper voor OpenFGA PDP (**WIP**)
+- /pbac/components/pdp/cerbos = herbruikbare generieke wrapper voor Cerbos/CEL PDP (**TODO**)
+- /pbac/components/pdp/odrl = herbruikbare generieke engine voor ODRL (**TODO**)
+- /pbac/components/pdp/xacml = herbruikbare generieke engine voor XACML (**TODO**)
+- /pbac/components/pap = herbruikbare generieke PAP
+- /pbac/components/pip = herbruikbare generieke PIP
+- /pbac/models = generieke PBAC definities
 - /pbac/fsc/plugin/generic = generieke FSC Autorisatie plugin service
-- /pbac/shared = herbruikbare PBAC modules
-- /pbac/shared/control = herbruikbare modules voor het aanroepen van een PDP
-- /pbac/shared/control/cedar = herbruikbare generieke wrapper voor Cedar PDP
-- /pbac/shared/control/cerbos = herbruikbare generieke wrapper voor Cerbos/CEL PDP (**TODO**)
-- /pbac/shared/control/odrl = herbruikbare generieke ODRL PDP module (**TODO**)
-- /pbac/shared/control/opa = herbruikbare generieke wrapper voor OPA/Rego PDP
-- /pbac/shared/control/xacml = herbruikbare generieke XACML PDP module (**TODO**)
-- /pbac/shared/pap = herbruikbare generieke PAP
-- /pbac/shared/pip = herbruikbare generieke PIP
-- /pbac/shared/types = herbruikbare module met generieke models & enums
-- /pbac/standards = definities gerelateerd aan de FTV-standaard
 - /scripts = diverse scripts
 - /testdata = test data
 - /testdata/pip = test attributen en entiteiten voor de generieke PIP
@@ -77,12 +77,12 @@ De configuratie van de service bepaald welke policy taal gekozen wordt,
 en dus welke taal-specifieke PDP en policies gebruikt worden voor het autorisatieproces.
 
 #### Shared modules
-[/pbac/shared](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie/-/tree/main/pbac/shared?ref_type=heads)
+[/pbac/components](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie/-/tree/main/pbac/components?ref_type=heads)
 
 Verzameling van herbruikbare PBAC-modules.
 
-##### Controller - PDP (wrappers)
-[/pbac/shared/control](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie/-/tree/main/pbac/shared/control?ref_type=heads)
+##### PDP - sdk wrappers
+[/pbac/components/pdp](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie/-/tree/main/pbac/components/pdp?ref_type=heads)
 
 Verzameling van PDP-wrappers (Cedar, OPA/Rego & **TODO**: Cerbos/CEL) en PDP-implementaties (**TODO**: ODRL & XACML).
 
@@ -91,23 +91,18 @@ Een PEP die een PDP wil gebruiken hoeft dan alleen de interface te kennen, en ka
 beslissen welk soort PDP (en bijhorende policy taal) het wil gebruiken.
 
 ##### PAP
-[/pbac/shared/pap](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie/-/tree/main/pbac/shared/pap?ref_type=heads)
+[/pbac/components/pap](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie/-/tree/main/pbac/components/pap?ref_type=heads)
 
 Een generieke PAP, die (op dit moment) policies uit het file-systeem op kan halen, en hiermee de PDP kan voeden. 
 
 ##### PIP
-[/pbac/shared/pip](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie/-/tree/main/pbac/shared/pip?ref_type=heads)
+[/pbac/components/pip](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie/-/tree/main/pbac/components/pip?ref_type=heads)
 
 Een generieke PIP, die (op dit moment) attributen en entities uit het file-systeem op kan halen, en hiermee de PDP kan voeden.
 Afhankelijk van het soort PDP, kunnen deze gegevens ook apart, tijdens iedere request, aan de PDP meegegeven worden.
 
-##### Types
-[/pbac/shared/types](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie/-/tree/main/pbac/shared/types?ref_type=heads)
-
-Generieke structs, types en enums.
-
-#### Standards
-[/pbac/standards](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie/-/tree/main/pbac/standards?ref_type=heads)
+#### Models
+[/pbac/models](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie/-/tree/main/pbac/models?ref_type=heads)
 
 Constanten en modellen welke aan de FTV-standaard voldoen.
 
