@@ -1,0 +1,27 @@
+:root {
+  --variable-collection-whites: rgba(255, 255, 255, 1);
+  --variable-collection-color: rgba(193, 206, 249, 1);
+  --rijkskleuren-grijstinten-cool-grey-900: rgba(16, 23, 41, 1);
+  --rijkskleuren-hoofdkleuren-geel: var(--rijkskleuren-geel-t100);
+  --rijkskleuren-geel-t100: rgba(249, 225, 30, 1);
+  --rijkskleuren-hoofdkleuren-lichtroze: var(--rijkskleuren-lichtroze-t100);
+  --rijkskleuren-hoofdkleuren-okergeel: var(--rijkskleuren-okergeel-t100);
+  --rijkskleuren-hoofdkleuren-olijfgroen: var(--rijkskleuren-olijfgroen-t100);
+  --rijkskleuren-hoofdkleuren-magenta: var(--rijkskleuren-magenta-t100);
+  --rijkskleuren-hoofdkleuren-helderblauw: var(--rijkskleuren-helderblauw-t100);
+  --rijkskleuren-hoofdkleuren-donkerroze: var(--rijkskleuren-donkerroze-t100);
+  --rijkskleuren-hoofdkleuren-blauwgroen: var(--rijkskleuren-blauwgroen-t100);
+  --rijkskleuren-hoofdkleuren-bruin: var(--rijkskleuren-bruin-t100);
+  --rijkskleuren-hoofdkleuren-rood: var(--rijkskleuren-rood-t100);
+  --rijkskleuren-hoofdkleuren-geeloranje: var(--rijkskleuren-geeloranje-t100);
+  --rijkskleuren-lichtroze-t100: rgba(240, 146, 205, 1);
+  --rijkskleuren-okergeel-t100: rgba(148, 113, 10, 1);
+  --rijkskleuren-olijfgroen-t100: rgba(119, 124, 0, 1);
+  --rijkskleuren-magenta-t100: rgba(169, 0, 97, 1);
+  --rijkskleuren-helderblauw-t100: rgba(0, 123, 199, 1);
+  --rijkskleuren-donkerroze-t100: rgba(202, 0, 93, 1);
+  --rijkskleuren-blauwgroen-t100: rgba(1, 104, 155, 1);
+  --rijkskleuren-bruin-t100: rgba(103, 51, 39, 1);
+  --rijkskleuren-rood-t100: rgba(213, 43, 30, 1);
+  --rijkskleuren-geeloranje-t100: rgba(255, 182, 18, 1);
+}
