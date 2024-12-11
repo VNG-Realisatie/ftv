@@ -27,24 +27,28 @@
 }
 
 
+
+/*ROsanswebtextbold.woff
+ROsanswebtextitalic.woff
+ROsanswebtextregular.woff
+
+ROserifwebregular.woff
+ROserifwebbold.woff
+ROserifwebitalic.woff
+*/
+
 @font-face {
-  font-family: RijksoverheidSans-Regular;
-  src: url(https://www.rijksoverheid.nl/webfiles/1733082435464/presentation/shared-ro/webfonts/RO-SansWebText-Regular.woff2);
+  font-family: RijksoverheidSansText-Regular;
+  src: url(fonts/ROsanswebtextregular.woff);
 }
 
 @font-face {
-  font-family: RijksoverheidSans-Bold;
-  src: url(https://www.rijksoverheid.nl/webfiles/1733082435464/presentation/shared-ro/webfonts/RO-SansWebText-Bold.woff2);
-}
-
-@font-face {
-  font-family: RijksoverheidSansText;
-  src: url(https://www.rijksoverheid.nl/webfiles/1733082435464/presentation/shared-ro/webfonts/RO-SerifWeb-Regular.woff2);
+  font-family: RijksoverheidSansText-Bold;
+  src: url(fonts/ROsanswebtextbold.woff);
 }
 
 @font-face {
   font-family: RijksoverheidSansText-Italic;
-  src: url(https://www.rijksoverheid.nl/webfiles/1733082435464/presentation/shared-ro/webfonts/RO-SerifWeb-Italic.woff2);
+  src: url(fonts/ROsanswebtextitalic.woff);
 }
-
 
