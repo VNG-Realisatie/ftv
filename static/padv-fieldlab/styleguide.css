@@ -38,12 +38,12 @@
 }
 
 @font-face {
-  font-family: RijksoverheidSerif;
+  font-family: RijksoverheidSansText;
   src: url(https://www.rijksoverheid.nl/webfiles/1733082435464/presentation/shared-ro/webfonts/RO-SerifWeb-Regular.woff2);
 }
 
 @font-face {
-  font-family: RijksoverheidSerif-Italic;
+  font-family: RijksoverheidSansText-Italic;
   src: url(https://www.rijksoverheid.nl/webfiles/1733082435464/presentation/shared-ro/webfonts/RO-SerifWeb-Italic.woff2);
 }
 
