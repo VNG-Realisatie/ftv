@@ -25,3 +25,26 @@
   --rijkskleuren-rood-t100: rgba(213, 43, 30, 1);
   --rijkskleuren-geeloranje-t100: rgba(255, 182, 18, 1);
 }
+
+
+@font-face {
+  font-family: RijksoverheidSans-Regular;
+  src: url(https://www.rijksoverheid.nl/webfiles/1733082435464/presentation/shared-ro/webfonts/RO-SansWebText-Regular.woff2);
+}
+
+@font-face {
+  font-family: RijksoverheidSans-Bold;
+  src: url(https://www.rijksoverheid.nl/webfiles/1733082435464/presentation/shared-ro/webfonts/RO-SansWebText-Bold.woff2);
+}
+
+@font-face {
+  font-family: RijksoverheidSerif;
+  src: url(https://www.rijksoverheid.nl/webfiles/1733082435464/presentation/shared-ro/webfonts/RO-SerifWeb-Regular.woff2);
+}
+
+@font-face {
+  font-family: RijksoverheidSerif-Italic;
+  src: url(https://www.rijksoverheid.nl/webfiles/1733082435464/presentation/shared-ro/webfonts/RO-SerifWeb-Italic.woff2);
+}
+
+
