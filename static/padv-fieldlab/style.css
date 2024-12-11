@@ -227,3 +227,7 @@ flex-wrap: wrap;
     font-size: large;
  }
 
+ a {
+    text-decoration: underline;
+ }
+
