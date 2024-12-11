@@ -1,4 +1,4 @@
-.a {
+.hero {
   display: flex;
   flex-direction: column;
   height: 420px;
@@ -9,389 +9,177 @@
   background-color: var(--rijkskleuren-grijstinten-cool-grey-900);
 }
 
-.a .frame {
+.hero .frame {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 5px 5px;
-  align-self: stretch;
+  //justify-content: space-between;
+  gap: 16px;
   width: 100%;
-  flex: 0 0 auto;
-  align-items: center;
-  position: relative;
 }
 
-.a .div-wrapper {
+.common-circle {
   display: flex;
   flex-direction: column;
-  width: 64px;
+  width:64px;
   height: 64px;
   justify-content: center;
   gap: 10px;
   padding: 11px 20px;
-  background-color: var(--rijkskleuren-hoofdkleuren-geel);
   border-radius: 32px;
+ //border-radius: 128px;
   align-items: center;
   position: relative;
+  font-size: 80%;
 }
 
-.a .text-wrapper {
+.text-common {
   position: relative;
   width: fit-content;
-  margin-top: -1.00px;
-  margin-left: -4.50px;
-  margin-right: -4.50px;
   font-family: "RijksoverheidSansHeading-Bold", Helvetica;
   font-weight: 700;
   color: var(--rijkskleuren-grijstinten-cool-grey-900);
   font-size: 64px;
-  letter-spacing: 0;
-  line-height: normal;
   white-space: nowrap;
 }
 
-.a .s-wrapper {
-  display: flex;
-  flex-direction: column;
-  width: 64px;
-  height: 64px;
-  justify-content: center;
-  gap: 10px;
-  padding: 11px 20px;
+.text-margins {
+  margin-top: -1px;
+}
+
+.hero .frame-fds {
+  background-color: var(--rijkskleuren-hoofdkleuren-geel);
+}
+
+.hero .frame-1{
+  background-color: var(--rijkskleuren-hoofdkleuren-geel);
+}
+
+.hero .frame-2{
   background-color: var(--rijkskleuren-hoofdkleuren-lichtroze);
-  border-radius: 32px;
-  align-items: center;
-  position: relative;
 }
 
-.a .s {
-  position: relative;
-  width: fit-content;
-  margin-top: -1.00px;
-  margin-left: -5.00px;
-  margin-right: -5.00px;
-  font-family: "RijksoverheidSansHeading-Bold", Helvetica;
-  font-weight: 700;
-  color: var(--rijkskleuren-grijstinten-cool-grey-900);
-  font-size: 64px;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
-}
-
-.a .div {
-  display: flex;
-  flex-direction: column;
-  width: 64px;
-  height: 64px;
-  justify-content: center;
-  gap: 10px;
-  padding: 11px 20px;
+.hero .frame-3 {
   background-color: var(--rijkskleuren-hoofdkleuren-okergeel);
-  border-radius: 32px;
-  align-items: center;
-  position: relative;
 }
 
-.a .s-2 {
-  margin-left: -7.00px;
-  margin-right: -7.00px;
-  position: relative;
-  width: fit-content;
-  margin-top: -1.00px;
-  font-family: "RijksoverheidSansHeading-Bold", Helvetica;
-  font-weight: 700;
-  color: var(--rijkskleuren-grijstinten-cool-grey-900);
-  font-size: 64px;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
-}
 
-.a .frame-2 {
-  display: flex;
-  flex-direction: column;
-  width: 64px;
-  height: 64px;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 11px 22px;
-  position: relative;
-  background-color: var(--rijkskleuren-hoofdkleuren-geel);
-  border-radius: 32px;
-}
-
-.a .component {
-  position: relative;
-  width: 49px;
-  height: 14px;
-  margin-left: -14.50px;
-  margin-right: -14.50px;
-}
-
-.a .frame-3 {
-  display: inline-flex;
-  justify-content: center;
-  padding: 0px 9px 0px 5px;
-  flex: 0 0 auto;
-  margin-left: -25.00px;
-  margin-right: -25.00px;
-  align-items: center;
-  position: relative;
-}
-
-.a .FTV {
-  position: relative;
-  width: 24px;
-  height: 24px;
-}
-
-.a .text-wrapper-2 {
-  position: relative;
-  width: fit-content;
-  font-family: "FONTSPRING DEMO - Noyh R-Bold", Helvetica;
-  font-weight: 700;
-  color: var(--rijkskleuren-grijstinten-cool-grey-900);
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
-}
-
-.a .frame-4 {
-  display: flex;
-  flex-direction: column;
-  width: 64px;
-  height: 64px;
-  justify-content: center;
-  gap: 10px;
-  padding: 11px 20px;
+.hero .frame-4 {
   background-color: var(--rijkskleuren-hoofdkleuren-olijfgroen);
-  border-radius: 32px;
-  align-items: center;
-  position: relative;
 }
 
-.a .s-3 {
-  margin-left: -9.00px;
-  margin-right: -9.00px;
-  position: relative;
-  width: fit-content;
-  margin-top: -1.00px;
-  font-family: "RijksoverheidSansHeading-Bold", Helvetica;
-  font-weight: 700;
-  color: var(--rijkskleuren-grijstinten-cool-grey-900);
-  font-size: 64px;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
-}
-
-.a .frame-5 {
-  display: flex;
-  flex-direction: column;
-  width: 64px;
-  height: 64px;
-  justify-content: center;
-  gap: 10px;
-  padding: 11px 20px;
+.hero .frame-5 {
   background-color: var(--rijkskleuren-hoofdkleuren-magenta);
-  border-radius: 32px;
-  align-items: center;
-  position: relative;
 }
 
-.a .frame-6 {
-  display: flex;
-  flex-direction: column;
-  width: 64px;
-  height: 64px;
-  justify-content: center;
-  gap: 10px;
-  padding: 11px 20px;
+.hero .frame-6 {
   background-color: var(--rijkskleuren-hoofdkleuren-helderblauw);
-  border-radius: 32px;
-  align-items: center;
-  position: relative;
 }
 
-.a .frame-7 {
-  display: flex;
-  flex-direction: column;
-  width: 64px;
-  height: 64px;
-  justify-content: center;
-  gap: 10px;
-  padding: 11px 20px;
+.hero .frame-7 {
   background-color: var(--rijkskleuren-hoofdkleuren-donkerroze);
-  border-radius: 32px;
-  align-items: center;
-  position: relative;
 }
 
-.a .frame-8 {
-  display: flex;
-  flex-direction: column;
-  width: 64px;
-  height: 64px;
-  justify-content: center;
-  gap: 10px;
-  padding: 11px 20px;
+.hero .frame-8 {
   background-color: var(--rijkskleuren-hoofdkleuren-blauwgroen);
-  border-radius: 32px;
-  align-items: center;
-  position: relative;
 }
 
-.a .s-4 {
-  margin-left: -6.50px;
-  margin-right: -6.50px;
-  position: relative;
-  width: fit-content;
-  margin-top: -1.00px;
-  font-family: "RijksoverheidSansHeading-Bold", Helvetica;
-  font-weight: 700;
-  color: var(--rijkskleuren-grijstinten-cool-grey-900);
-  font-size: 64px;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
-}
-
-.a .frame-9 {
-  display: flex;
-  flex-direction: column;
-  width: 64px;
-  height: 64px;
-  justify-content: center;
-  gap: 10px;
-  padding: 11px 20px;
+.hero .frame-9 {
   background-color: #c1cef9;
-  border-radius: 32px;
-  align-items: center;
-  position: relative;
 }
 
-.a .frame-10 {
-  display: flex;
-  flex-direction: column;
-  width: 64px;
-  height: 64px;
-  justify-content: center;
-  gap: 10px;
-  padding: 11px 20px;
+.hero .frame-10 {
   background-color: var(--rijkskleuren-hoofdkleuren-bruin);
-  border-radius: 32px;
-  align-items: center;
-  position: relative;
 }
 
-.a .s-5 {
-  margin-left: -3.50px;
-  margin-right: -3.50px;
-  position: relative;
-  width: fit-content;
-  margin-top: -1.00px;
-  font-family: "RijksoverheidSansHeading-Bold", Helvetica;
-  font-weight: 700;
-  color: var(--rijkskleuren-grijstinten-cool-grey-900);
-  font-size: 64px;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
+.hero .frame-11 {
+  background-color: var(--rijkskleuren-hoofdkleuren-geel);
 }
 
-.a .frame-11 {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3px;
-  padding: 0px 8px;
-  position: relative;
-  flex: 0 0 auto;
-  margin-left: -24.10px;
-  margin-right: -24.10px;
-}
-
-.a .subtract-wrapper {
-  display: flex;
-  width: 15.2px;
-  gap: 10px;
-  align-items: center;
-  position: relative;
-}
-
-.a .subtract {
-  position: relative;
-  width: 15.2px;
-  height: 18px;
-}
-
-.a .frame-12 {
-  display: flex;
-  flex-direction: column;
-  width: 64px;
-  height: 64px;
-  justify-content: center;
-  gap: 10px;
-  padding: 11px 20px;
+.hero .frame-12 {
   background-color: var(--rijkskleuren-hoofdkleuren-rood);
-  border-radius: 32px;
-  align-items: center;
-  position: relative;
 }
 
-.a .s-6 {
-  position: relative;
-  width: fit-content;
-  margin-top: -1.00px;
-  font-family: "RijksoverheidSansHeading-Bold", Helvetica;
-  font-weight: 700;
-  color: var(--rijkskleuren-grijstinten-cool-grey-900);
-  font-size: 64px;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
-}
-
-.a .fsc-wrapper {
-  display: flex;
-  flex-direction: column;
-  width: 64px;
-  height: 64px;
-  justify-content: center;
-  gap: 10px;
-  padding: 11px 22px;
-  background-color: var(--rijkskleuren-hoofdkleuren-geeloranje);
-  border-radius: 32px;
+.hero .fsc-wrapper {
   opacity: 0;
-  align-items: center;
-  position: relative;
+  background-color: var(--rijkskleuren-hoofdkleuren-geeloranje);
 }
 
-.a .fsc {
-  position: relative;
-  width: fit-content;
-  margin-top: -1.00px;
-  margin-left: -17.50px;
-  margin-right: -17.50px;
-  font-family: "RijksoverheidSansHeading-Regular", Helvetica;
-  font-weight: 400;
-  color: var(--rijkskleuren-grijstinten-cool-grey-900);
-  font-size: 40px;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
-}
-
-.a .p {
-  position: relative;
-  align-self: stretch;
+.hero .p {
   font-family: "RijksoverheidSansHeading-Bold", Helvetica;
   font-weight: 700;
   color: #ffffff;
   font-size: 24px;
-  letter-spacing: 0;
   line-height: 32px;
+  align-self: stretch;
 }
+
+.wrapper {
+  background: lightblue;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+article section {
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;}
+
+.plain, .content {
+    width: 80vw;
+   // max-width: 640px;
+    margin: 5em auto;
+    padding: 2em;
+    background-color: #c1cef9;
+
+    color: #000;
+    font-family: RijksoverheidSansText;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+}
+
+.intro {
+    width: 80vw;
+    margin: 5em auto;
+    padding: 2em;
+
+    color: #000;
+    font-family: RijksoverheidSansText;
+    font-size: 1.2em;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+
+.intro h2 h1, .plain h2 h1, .content h2 h1 {
+    font-family: RijksoverheidSansHeading;
+}
+
+.intro h2, .plain h2, .content h2  {
+    font-size: 2em;
+    font-weight: 800;
+    line-height: 100%;
+    margin-top: 1em;
+}
+
+.intro h1, .plain h1, .content h1 {
+    font-size: 2.4em;
+    font-weight: 800;
+    line-height: 3em;
+    margin-top: 2em;
+}
+
+.content article{
+display: flex;
+ flex: 1 30%;
+  flex: 2 30%;
+   flex: 3 30%;
+}
+
+.fallback h1{
+display: none;}
+
