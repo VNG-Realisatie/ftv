@@ -231,3 +231,10 @@ flex-wrap: wrap;
     text-decoration: underline;
  }
 
+ @  media only screen and (max-width: 1024px) {
+   /* For mobile phones: */
+   section {
+     width: 100%;
+   }
+ }
+
