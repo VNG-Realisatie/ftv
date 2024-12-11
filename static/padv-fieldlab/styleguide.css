@@ -38,17 +38,22 @@ ROserifwebitalic.woff
 */
 
 @font-face {
-  font-family: RijksoverheidSansText-Regular;
+  font-family: RijksoverheidSansText;
+  font-style: normal;
+  font-weight: 400;
   src: url(fonts/ROsanswebtextregular.woff);
 }
 
 @font-face {
-  font-family: RijksoverheidSansText-Bold;
+  font-family: RijksoverheidSansText;
+  font-style: normal;
+  font-weight: 700;
   src: url(fonts/ROsanswebtextbold.woff);
 }
 
 @font-face {
-  font-family: RijksoverheidSansText-Italic;
+  font-family: RijksoverheidSansText;
+  font-style: italic;
+  font-weight: 400;
   src: url(fonts/ROsanswebtextitalic.woff);
 }
-
