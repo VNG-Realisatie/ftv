@@ -7,6 +7,8 @@
   padding: 20px 10px;
   position: relative;
   background-color: var(--rijkskleuren-grijstinten-cool-grey-900);
+  width:330px;
+  margin:2em;
 }
 
 .hero .frame {
@@ -111,6 +113,7 @@
   font-size: 24px;
   line-height: 32px;
   align-self: stretch;
+  width:400px;
 }
 
 .wrapper {
@@ -126,11 +129,24 @@ display: flex;
 flex-wrap: wrap;
 flex-direction: column;}
 
+section {
+  margin:30px;
+  }
+
+section p {
+    padding-bottom:20px;
+}
+
+section h2 {
+    padding-bottom:20px;
+}
+
+
 .plain, .content {
     width: 80vw;
    // max-width: 640px;
     margin: 5em auto;
-    padding: 2em;
+    // padding: 2em;
     background-color: #c1cef9;
 
     color: #000;
@@ -144,7 +160,7 @@ flex-direction: column;}
 .intro {
     width: 80vw;
     margin: 5em auto;
-    padding: 2em;
+    // padding: 2em;
 
     color: #000;
     font-family: RijksoverheidSansText;
@@ -180,6 +196,16 @@ display: flex;
    flex: 3 30%;
 }
 
-.fallback h1{
-display: none;}
+.fallback h1 {
+    display: none;
+}
 
+.voeter {
+    color: #000;
+    font-family: RijksoverheidSansText;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 400;
+    font-color:#000;
+    line-height: 130%;
+ }
