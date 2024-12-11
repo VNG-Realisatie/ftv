@@ -7,6 +7,8 @@
   padding: 20px 10px;
   position: relative;
   background-color: var(--rijkskleuren-grijstinten-cool-grey-900);
+  width:350px;
+  margin:2em;
 }
 
 .hero .frame {
@@ -111,6 +113,7 @@
   font-size: 24px;
   line-height: 32px;
   align-self: stretch;
+  width:400px;
 }
 
 .wrapper {
