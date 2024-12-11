@@ -7,7 +7,7 @@
   padding: 20px 10px;
   position: relative;
   background-color: var(--rijkskleuren-grijstinten-cool-grey-900);
-  width:350px;
+  width:330px;
   margin:2em;
 }
 
@@ -196,16 +196,16 @@ display: flex;
    flex: 3 30%;
 }
 
-.fallback h1{
-display: none;}
+.fallback h1 {
+    display: none;
+}
 
 .voeter {
-  padding:1em;
-
     color: #000;
     font-family: RijksoverheidSansText;
     font-size: 1em;
     font-style: normal;
     font-weight: 400;
     font-color:#000;
-    line-height: 130%;}
+    line-height: 130%;
+ }
