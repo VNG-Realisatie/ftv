@@ -236,5 +236,9 @@ flex-wrap: wrap;
    section {
      width: 100%;
    }
+
+   body {
+    font-size:16px;
+   }
  }
 
