@@ -143,7 +143,7 @@ section h2 {
     width: 80vw;
    // max-width: 640px;
     margin: 5em auto;
-    padding: 2em;
+    // padding: 2em;
     background-color: #c1cef9;
 
     color: #000;
@@ -157,7 +157,7 @@ section h2 {
 .intro {
     width: 80vw;
     margin: 5em auto;
-    padding: 2em;
+    // padding: 2em;
 
     color: #000;
     font-family: RijksoverheidSansText;
@@ -196,3 +196,13 @@ display: flex;
 .fallback h1{
 display: none;}
 
+.voeter {
+  padding:1em;
+
+    color: #000;
+    font-family: RijksoverheidSansText;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 400;
+    font-color:#000;
+    line-height: 130%;}
