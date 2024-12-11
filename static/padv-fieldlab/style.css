@@ -126,6 +126,19 @@ display: flex;
 flex-wrap: wrap;
 flex-direction: column;}
 
+section {
+  margin:30px;
+  }
+
+section p {
+    padding-bottom:20px;
+}
+
+section h2 {
+    padding-bottom:20px;
+}
+
+
 .plain, .content {
     width: 80vw;
    // max-width: 640px;
