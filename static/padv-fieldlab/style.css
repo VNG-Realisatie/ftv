@@ -7,8 +7,12 @@
   padding: 20px 10px;
   position: relative;
   background-color: var(--rijkskleuren-grijstinten-cool-grey-900);
-  width:330px;
-  margin:2em;
+
+  margin-bottom:2em;
+
+    min-width:330px;
+     width:330px;
+//    width: 100wv;
 }
 
 .hero .frame {
@@ -27,12 +31,14 @@
   justify-content: center;
   gap: 10px;
   padding: 11px 20px;
+  padding-top: 22px;
   border-radius: 32px;
  //border-radius: 128px;
   align-items: center;
   position: relative;
   font-size: 80%;
 }
+
 
 .text-common {
   position: relative;
@@ -49,6 +55,7 @@
 }
 
 .hero .frame-fds {
+padding-top: 12px;
   background-color: var(--rijkskleuren-hoofdkleuren-geel);
 }
 
@@ -125,12 +132,14 @@
 }
 
 article section {
-display: flex;
-flex-wrap: wrap;
-flex-direction: column;}
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;}
 
 section {
   margin:30px;
+  width: 24%;
+  min-width: 240px;
   }
 
 section p {
@@ -146,6 +155,9 @@ section h2 {
     width: 80vw;
    // max-width: 640px;
     margin: 5em auto;
+    margin-top:0em;
+    margin-bottom:1em;
+    margin-bottom:1em;
     // padding: 2em;
     background-color: #c1cef9;
 
@@ -159,8 +171,10 @@ section h2 {
 
 .intro {
     width: 80vw;
-    margin: 5em auto;
-    // padding: 2em;
+    margin-top: 5em ;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
 
     color: #000;
     font-family: RijksoverheidSansText;
@@ -191,6 +205,7 @@ section h2 {
 
 .content article{
 display: flex;
+flex-wrap: wrap;
  flex: 1 30%;
   flex: 2 30%;
    flex: 3 30%;
@@ -200,12 +215,14 @@ display: flex;
     display: none;
 }
 
-.voeter {
+.voeter p {
     color: #000;
     font-family: RijksoverheidSansText;
-    font-size: 1em;
     font-style: normal;
-    font-weight: 400;
-    font-color:#000;
+    font-weight: 800;
     line-height: 130%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 5rem;
+    font-size: large;
  }
