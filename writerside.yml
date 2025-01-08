@@ -1,0 +1,7 @@
+directories:
+  - path: ./content
+    type: content
+  - path: ./static/images
+    type: assets
+url-mapping:
+  assets: /images  # Maps assets to the `/images` path for Hugo.
