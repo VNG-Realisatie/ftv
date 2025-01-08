@@ -12,7 +12,7 @@ De proefopstelling laat zien hoe FTV in de praktijk kan werken, door een aantal 
 Doel van dit stelsel is dat de gemeente bij kan houden welke laadpalen er zijn en wie de vergunning daarvoor heeft.
 Er mogen niet te veel laadpalen in een gebied zijn, voor de energievoorziening en de omgevingsregels. 
 
-![Proefopstelling zaaksysteem](/images/4.1laadpaal.jpg)
+![Proefopstelling zaaksysteem](/images/4.1laadpaal.png)
  
 ## Regels
 - De gemeente heeft per besluit toestemming van RvIG om in de BRP gegevens op te zoeken, en van de RDW om voertuigen in de BRV op te zoeken. Grondslag daarvoor is nummer 5, 'om een taak van algemeen belang uit te voeren'. Doelbinding is de registratie van laadpalen, waarvoor de gemeente een besluit heeft aangenomen.
@@ -33,11 +33,11 @@ Er mogen niet te veel laadpalen in een gebied zijn, voor de energievoorziening e
 
 De proefopstelling is een wel heel eenvoudig federatief datastelsel, als volgt:
 
-![Proefopstelling overzicht](/images/4.1proefopstelling_overzicht.jpg)
+![Proefopstelling overzicht](/images/4.1proefopstelling_overzicht.png)
 
 ## Opstelling zaaksysteem
 
-![Proefopstelling zaaksysteem](/images/4.1proefopstelling_zaaksysteem.jpg)
+![Proefopstelling zaaksysteem](/images/4.1proefopstelling_zaaksysteem.png)
 
 De opstelling heeft de volgende componenten:
 - Het zaaksysteem is een applicatie die zelf geen gegevens bijhoudt. Voor laadpalen kunnen aanvragen worden toegevoegd, goedgekeurd of afgekeurd.
@@ -52,6 +52,8 @@ De policies worden door een push-interface aan OPA doorgegeven: elke wijziging w
 
 ## Opstelling registratie laadpalen
 
+![Proefopstelling zaaksysteem](/images/4.1proefopstelling_registratielaadpalen.png)
+
 De registratie van laadpalen is voor deze opstelling heel simpel gehouden: er is alleen een lijst met palen, met velden:
  
 - Postcode
@@ -63,7 +65,7 @@ registratie als service door de gateway.
 
 ## Opstelling basisregistraties
 
-![Proefopstelling zaaksysteem](/images/4.1proefopstelling_stelsels.jpg)
+![Proefopstelling zaaksysteem](/images/4.1proefopstelling_stelsel.png)
 
 Er zijn twee registraties, BRP en BRV, met de volgende onderdelen:
 
