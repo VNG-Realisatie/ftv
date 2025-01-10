@@ -15,12 +15,21 @@ Er mogen niet te veel laadpalen in een gebied zijn, voor de energievoorziening e
 ![Proefopstelling zaaksysteem](/images/4.1laadpaal.png)
 
 ### Regels
-- De gemeente heeft per besluit toestemming van RvIG om in de BRP gegevens op te zoeken, en van de RDW om voertuigen in de BRV op te zoeken. Grondslag daarvoor is nummer 5, 'om een taak van algemeen belang uit te voeren'. Doelbinding is de registratie van laadpalen, waarvoor de gemeente een besluit heeft aangenomen.
-- De gemeente heeft ter dataminimalisatie vastgelegd dat voor laadpaalvergunningen een beperkte deelverzameling van persoons- en voertuiggegevens voldoende is:
-  - Persoonsgegevens: BSN, NAW en meerderjarigheid
-  - Voertuiggegevens: kenteken en uitstootklasse
-- Inzage in de vergunningen is toegestaan aan alle medewerkers van de afdeling burgerzaken
-- Voor het beheer van de vergunningen heeft de gemeente een opleiding gemaakt, en vereist voor aanpassingen aan de registratie dat het bijbehorende examen niet langer dan 1 jaar geleden met goed gevolg is afgelegd.
+- Zaaksysteem
+  - Doelbinding is de registratie van laadpalen, waarvoor de gemeente een besluit heeft aangenomen.
+  - De gemeente heeft ter dataminimalisatie vastgelegd dat voor laadpaalvergunningen een beperkte deelverzameling van persoons- en voertuiggegevens voldoende is:
+    - Persoonsgegevens: BSN, NAW en meerderjarigheid
+    - Voertuiggegevens: kenteken en uitstootklasse
+  - Inzage in de vergunningen is toegestaan aan alle medewerkers van de afdeling burgerzaken
+  - Voor het beheer van de vergunningen heeft de gemeente een opleiding gemaakt, en vereist voor aanpassingen aan de registratie dat het bijbehorende examen niet langer dan 1 jaar geleden met goed gevolg is afgelegd.
+
+- BRP:
+  - De gemeente heeft per besluit toestemming van RvIG om in de BRP gegevens op te zoeken.
+  - Grondslag daarvoor is nummer 5, 'om een taak van algemeen belang uit te voeren'
+  - De gemeente mag alleen ingezetenen van de eigen gemeente opzoeken
+- RDW
+  - De gemeente heeft per besluit toestemming van de RDW om voertuigen in de BRV op te zoeken. 
+  - Diplomatieke kentekens mogen niet opgezocht worden
 
 ## Opstelling
 
