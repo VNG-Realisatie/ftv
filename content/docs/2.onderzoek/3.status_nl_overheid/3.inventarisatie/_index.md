@@ -1,41 +1,42 @@
 ---
-weight: 20
+weight: 30
 title: "Inventarisatie"
 ---
 
-# Inventarisatie van huidige oplossingen
+# Inventarisatie 
 
-We verdelen de oplossingen in de volgende groepen:
-1. de aanbieders, de basisregistraties:
-- [Lijst van basisregistraties](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/10-basisregistraties/)
-- [Lijst van sectorregistraties](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/sectorregistraties/)
-- [DigiMelding](https://www.logius.nl/domeinen/gegevensuitwisseling/digimelding)
-2. de afnemers
-3. platforms
+Hieronder volgt een overzicht van de registraties, systemen en partijen waarnaar gekeken is. 
+Aangezien aan de buitenkant, aan een API, niet te zien is welke toegangsverlening gebruikt is, 
+komt de meeste informatie hier van gesprekken. Daarvan is hier verslag gedaan.
 
 ## 1. Aanbieders
+
 ### a. Basisregistraties
+
+Zie hier een complete [lijst van basisregistraties](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/10-basisregistraties/)
 
 | Registratie                                                                    | Houder          | Dienst                   | Koppelvlak   | 
 |--------------------------------------------------------------------------------|-----------------|--------------------------|--------------|
-| [BRP](../registraties/brp)                                                        | RvIG            | Personen                 | HaalCentraal |
-| [HR](../registraties/kvk)                                                         | KvK             | Handelsregister          | REST         |
-| [BAG](../registraties/bag)                                                        | Kadaster        | Adressen en Gebouwen     | REST         |
-| [BGT](../registraties/bgt)                                                     | Kadaster        | Grootschalige Topografie | REST         | 
-| [BRT](../registraties/brt)                                                        | Kadaster        | Topografie               | StUF         |
-| [BRK](../registraties/brk)                                                        | Kadaster        | Kadaster                 | REST         |
-| [WOZ](../registraties/woz)                                                        | Kadaster        | Waarde Onroerende Zaken  | HaalCentraal |
-| [BRV](../registraties/brv)                                                        | RDW             | Voertuigen               | HaalCentraal | 
-| [BRI](../registraties/bri)                                                        | Belastingdienst | Inkomen                  | Geen         |
-| [BRO](../registraties/bro)                                                        | TNO             | Ondergrond               | SOAP en REST | 
+| [BRP](registraties/brp)                                                     | RvIG            | Personen                 | HaalCentraal |
+| [HR](registraties/kvk)                                                      | KvK             | Handelsregister          | REST         |
+| [BAG](registraties/bag)                                                     | Kadaster        | Adressen en Gebouwen     | REST         |
+| [BGT](registraties/bgt)                                                     | Kadaster        | Grootschalige Topografie | REST         | 
+| [BRT](registraties/brt)                                                     | Kadaster        | Topografie               | StUF         |
+| [BRK](registraties/brk)                                                     | Kadaster        | Kadaster                 | REST         |
+| [WOZ](registraties/woz)                                                     | Kadaster        | Waarde Onroerende Zaken  | HaalCentraal |
+| [BRV](registraties/brv)                                                     | RDW             | Voertuigen               | HaalCentraal | 
+| [BRI](registraties/bri)                                                     | Belastingdienst | Inkomen                  | Geen         |
+| [BRO](registraties/bro)                                                     | TNO             | Ondergrond               | SOAP en REST | 
 | [Digimelding](https://www.logius.nl/domeinen/gegevensuitwisseling/digimelding) | Logius          | Digimelding              | SOAP         |  
 
 ### b. Sectorregistraties
 
+Zie hier een complete [lijst van sectorregistraties](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/sectorregistraties/)
+
 | Registratie | Houder                     |                                                                                          
 |-------------|----------------------------|
-| Rijexamens  | [CBR](../registraties/cbr) |      
-| ?           | [UWV](../registraties/uwv) |      
+| Rijexamens  | [CBR](registraties/cbr) |      
+| ?           | [UWV](registraties/uwv) |      
 
 
 
@@ -74,7 +75,7 @@ We verdelen de oplossingen in de volgende groepen:
 | [AWS](https://aws.amazon.com/verified-permissions/)  |             |  |
 | [Nextlabs](https://www.strata.io/)                   |             |  |
 
-## 4.Commerciële Gateway & API Management oplossingen
+## 5.Commerciële Gateway & API Management oplossingen
 
 | Naam  |Leverancier | Link  |
 |-------|-------------|--------|

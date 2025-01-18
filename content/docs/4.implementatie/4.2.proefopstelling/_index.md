@@ -72,7 +72,7 @@ registratie als service door de gateway.
 Er zijn twee registraties, BRP en BRV, met de volgende onderdelen:
 
 - Elk een eigen gateway. We kiezen twee verschillende leveranciers, om te laten zien dat deze uitwisselbaar zijn in het stelsel
-- Eenvoudige BRP en BRV services, met bijbehorende eenvoudige opslag. De
+- Eenvoudige BRP en BRV services, met bijbehorende eenvoudige opslag.
 - Elk een eigen LDV referentie om de uitgevoerde verwerkingen bij te houden. Aanroep is de verantwoordelijkheid van de service.
 - Elk een residual policy processor, die deelpolicies uitvoert die de afnemer niet kon uitvoeren. Er zijn ook hier twee verschillende
   gekozen, om twee alternatieve methodes te laten zien.
