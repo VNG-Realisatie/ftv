@@ -10,7 +10,7 @@ Tijdens het bouwen van de [referentie-implementatie](../../4.implementatie) zijn
 op het gebied van ABAC, PBAC en ReBAC beproefd.
 
 ## Cedar
-Afkomstig uit de AWS-keuken, maar wel [open-source]().
+Cedar is afkomstig uit de AWS-keuken, en als [open-source](https://www.cedarpolicy.com/en) beschikbaar gesteld.
 
 De Cedar policy-taal is (vooralsnog) relatief simpel.
 Het ondersteunt op dit moment nog geen residual policies,
@@ -19,7 +19,7 @@ en levert in principe alleen een ja/nee antwoord op.
 Het Cedar data-schema gaat uit van policies, attributen en entiteiten.
 Entiteiten worden gekenmerkt door een type (bv.: "gebruiker", "resource" of "applicatie")
 en een identificatie-code die uniek moet zijn voor het type entiteit.
-Opgemerkt kan worden dat deze kenmerken (type + ID) in de AuthZEN specificatie voor PEP/PDP-interactie
+Opgemerkt kan worden dat deze kenmerken (type + ID) in de [AuthZEN](https://openid.net/wg/authzen/) specificatie voor PEP/PDP-interactie
 zijn opgenomen als de sleutel-elementen voor subject en resource.
 
 Cedar kan als library of als container gebruikt worden.
@@ -31,7 +31,7 @@ dat een deel van de code herschreven moest worden om met een nieuwere versie van
 
 ## OPA en Rego
 OPA is in eerste instantie ontwikkeld door Styra.
-Een [open-source versie]() is in 20xx overgedragen aan het [CNCF]().
+Een [open-source versie](https://github.com/open-policy-agent/opa) is in 20xx overgedragen aan het [CNCF](https://www.cncf.io/projects/open-policy-agent-opa/).
 Deze versie is in 20xx op tot niveau van xxxx gepromoveerd, en zit daarmee op hetzelfde niveau als bv. Kubernetes.
 
 De Rego-taal welke OPA hanteert is relatief complex.
@@ -47,17 +47,17 @@ Het kan als library (vooralsnog) dan wel als container gebruikt worden.
 
 ## Cerbos
 Cerbos komt uit de keuken van Google.
-Het project is als open-source beschikbaar op [Github]().
+Het project is als open-source beschikbaar op [Github](https://github.com/cerbos/cerbos).
 
 De policy-taal is relatief eenvoudig.
-Voor expressies binnen policies wordt de [CEL]() taal gebruikt, welke ook uit de keuken van Google komt.
+Voor expressies binnen policies wordt de [CEL](https://cel.dev/) taal gebruikt, welke ook uit de keuken van Google komt.
 
 Cerbos policies kunnen in principe residual policies opleveren, als is dit niet geformaliseerd in de taal zelf.
 
 Cerbos is in Golang geschreven, maar kan door de interne opzet van de code alleen als container gebruikt worden.
 
 ## OpenFGA
-OpenFGA is een [open-source]() ReBAC implementatie welke is gebaseerd op het [Zanzibar]() project van Google.
+OpenFGA is een [open-source](https://openfga.dev/) ReBAC implementatie welke is gebaseerd op het [Zanzibar](https://zanzibar.academy/) project van Google.
 
 De policy-taal is zeer eenvoudig.
 Het principe van toegang is gebaseerd op het bestaan van de benodigde relaties.
