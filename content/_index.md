@@ -29,8 +29,8 @@ bepaalt en controleert. [Meer over de stelselfuncties](https://federatief.datast
 
 ## Status
 
-Een onderzoek naar de status van toegangsverlening in [techniek](/docs/2.onderzoek/2.status_techniek) en bij de [Nederlandse overheid](/docs/2.onderzoek/2.status_nl_overheid)  is afgerond.
-Daaruit is een [beschrijving van de methodiek](/docs/2.onderzoek/5.voorgestelde_oplossing) voortgekomen. 
+Een onderzoek naar de status van toegangsverlening in [techniek](/docs/2.onderzoek/2.status_techniek) en bij de [Nederlandse overheid](/docs/2.onderzoek/3.status_nl_overheid)  is afgerond.
+Daaruit is een [beschrijving van de methodiek](/docs/2.onderzoek/4.eisen_aan_de_oplossing) voortgekomen. 
 
 Op dit moment wordt er geschreven aan een [technische standaard](/standaard), en wordt er gebouwd aan een [referentie-implementatie](/docs/4.implementatie) en een proefopstelling.
 Het project is ook actief op zoek naar pilotprojecten.
