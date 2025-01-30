@@ -31,8 +31,8 @@ dat een deel van de code herschreven moest worden om met een nieuwere versie van
 
 ## OPA en Rego
 OPA is in eerste instantie ontwikkeld door Styra.
-Een [open-source versie](https://github.com/open-policy-agent/opa) is in 20xx overgedragen aan het [CNCF](https://www.cncf.io/projects/open-policy-agent-opa/).
-Deze versie is in 20xx op tot niveau van xxxx gepromoveerd, en zit daarmee op hetzelfde niveau als bv. Kubernetes.
+Een [open-source versie](https://github.com/open-policy-agent/opa) is in 2018 overgedragen aan het [CNCF](https://www.cncf.io/projects/open-policy-agent-opa/).
+Dit project is in 2021 tot het CNCF-niveau 'Graduated' gepromoveerd, en bevindt zich daarmee op hetzelfde niveau als bv. Kubernetes.
 
 De Rego-taal welke OPA hanteert is relatief complex.
 Het vormt eerder een mini-programmeertaal dan een taal voor het opstellen van toegangsregels.
@@ -52,7 +52,7 @@ Het project is als open-source beschikbaar op [Github](https://github.com/cerbos
 De policy-taal is relatief eenvoudig.
 Voor expressies binnen policies wordt de [CEL](https://cel.dev/) taal gebruikt, welke ook uit de keuken van Google komt.
 
-Cerbos policies kunnen in principe residual policies opleveren, als is dit niet geformaliseerd in de taal zelf.
+Cerbos policies kunnen in principe residual policies opleveren, al is dit niet geformaliseerd in de taal zelf.
 
 Cerbos is in Golang geschreven, maar kan door de interne opzet van de code alleen als container gebruikt worden.
 
@@ -61,8 +61,8 @@ OpenFGA is een [open-source](https://openfga.dev/) ReBAC implementatie welke is 
 
 De policy-taal is zeer eenvoudig.
 Het principe van toegang is gebaseerd op het bestaan van de benodigde relaties.
-Aan relaties kunnen wel optionele expressies toegevoegd worden, 
-waarmee data uit de context een rol kan spelen bij de beslissing (dus eigenlijk ReBAC+ABAC).
+Aan deze relatier-regels kunnen wel optionele expressies toegevoegd worden, 
+waarmee data uit de context een rol kan spelen bij de beslissing; het gedraagd zich dus in feite als ReBAC+ABAC.
 
 OpenFGA policies kunnen in principe residual policies opleveren, als is dit niet geformaliseerd in de taal zelf.
 
@@ -72,10 +72,10 @@ Het is in Golang geschreven.
 ## Conclusies
 Iedere beproefde techniek hanteert een eigen policy-taal, welke niet uitwisselbaar is met de andere talen.
 Indien policies (of generieke delen van policies) op federatief niveau vastgelegd dienen te worden,
-wordt het heel lastig als partijen een eigen keuze maken voor de policy-taal.
+wordt dit heel lastig als diverse partijen in hetzelfde stelsel een eigen keuze maken voor de policy-taal.
 
-De beproefde open-source implementaties bestaan eigenlijk alleen uid de PDP en een interne cache voor policies en data.
-Het ondersteunt niet het gebruik als aparte PAP of PIP.
+De beproefde open-source implementaties bestaan eigenlijk alleen uit de PDP en een interne cache voor policies en data.
+Het ondersteunt niet het gebruik als aparte PAP of PIP, waar de policies en data beheerd kunnen worden.
 
 Geen van de projecten bevat een makkelijk te hanteren hulpmiddel voor het opstellen van policies.
 Er zijn wel zogenaamde playgrounds beschikbaar, maar daar is nog steeds een gedegen kennis van de taal voor nodig.
