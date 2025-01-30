@@ -61,8 +61,8 @@ OpenFGA is een [open-source](https://openfga.dev/) ReBAC implementatie welke is 
 
 De policy-taal is zeer eenvoudig.
 Het principe van toegang is gebaseerd op het bestaan van de benodigde relaties.
-Aan deze relatier-regels kunnen wel optionele expressies toegevoegd worden, 
-waarmee data uit de context een rol kan spelen bij de beslissing; het gedraagd zich dus in feite als ReBAC+ABAC.
+Aan deze relatie-regels kunnen wel optionele expressies toegevoegd worden, 
+waarmee data uit de context een rol kan spelen bij de beslissing; het werkt dus in feite als ReBAC+ABAC.
 
 OpenFGA policies kunnen in principe residual policies opleveren, als is dit niet geformaliseerd in de taal zelf.
 
