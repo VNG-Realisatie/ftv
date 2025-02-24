@@ -4,21 +4,16 @@ bookCollapseSection: true
 title: "Status NL overheid"
 ---
 
-# Status van toegangsverlening bij de Nederlandse overheid
+# Status bij de Nederlandse overheid
 
-Om een beeld te krijgen van de staat van toegangsverlening is een inventarisatie gemaakt.
-
-## Scope
-
+Om een beeld te krijgen van de staat van toegangsverlening is een inventarisatie gemaakt. 
 We kijken naar een dwarsdoorsnede van de potentiële deelnemers aan het toekomstige FDS. Dat zijn de
-basisregistraties, de sectorale registraties, en alle systemen die daar gebruik van maken.
+basisregistraties, de sectorale registraties, en alle systemen die daar gebruik van maken. 
+De inventarisatie is verdeeld in:
 
-Er is [een kaart van stakeholders](1.stakeholders) gemaakt waarop de belangrijkste spelers geplaatst zijn.
+1. [De stakeholders](1.stakeholders) waarop de belangrijkste spelers geplaatst zijn.
+2. [Koppelvlakstandaarden](2.koppelvlakken)
+3. [Aanbieders](3.aanbieders)
+4. [Afnemers / implementatiepartners](4.afnemers)
+5. [Uitwisselingsplatforms](5.platforms)
 
-## Koppelvlakken
-
-We hebben gekeken naar de bestaande [koppelvlakstandaarden](2.koppelvlakken), om te zien wat deze in termen van toegangsverlening bieden.
-
-## Inventarisatie
-
-Vervolgens is [in detail gekeken](3.inventarisatie) naar status bij de belangrijkste spelers.

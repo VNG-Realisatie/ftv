@@ -9,7 +9,7 @@ weight: 40
 Implementatie van FTV, vanuit de situatie waar de meeste koppeling nu staan, gaat over twee veranderingen: PBAC en federatief werken.
 In een overgang naar FTV kunnen deze twee apart worden opgepakt, hetgeen de transitie makkelijker kan maken.
 
-## PBAC stappenplan
+## PBAC-stappenplan
 
 Voor de implementatie van PBAC kan het volgende stappenplan gevolgd worden:
 - Kiezen en inrichten van PBAC-software

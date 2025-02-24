@@ -7,47 +7,18 @@ title: "Status van de techniek"
 # Status van de techniek
 
 Toegangsverlening is bepaald niet nieuw; informatiesystemen hebben altijd al een vorm van toegangsbeperking afgedwongen.
-In de loop van de jaren is een aantal methodieken ontstaan. Dit zijn werkwijzen, oftewel categorie&euml;n van oplossingen, niet concrete implementaties. 
 
-Dit is de gangbare indeling:
+Waar identificatie en authenticate de afgelopen 10 jaar uitgekristalliseerd is tot een begrepen probleem met geaccepteerde oplossingen,
+bleef autorisatie lang achter. Maar autorisatie maakt nu een transformatie door. De schaalvergroting in gegevensuitwisseling, waarbij steeds meer partijen en
+systemen met elkaar verbonden moeten worden, maakt dat traditionele RBAC vanuit IAM, aangevuld met in de applicaties
+ingebouwde regels, niet meer voldoet. Het onderhoud van regels en beheer van gebruikers en rechten wordt in die opstelling ondoenlijk.
+Daarnaast vraagt het volwassen en gemeengoed worden van cloud native computing om moderne architectuur en distributiemethoden.
 
-![Verantwoordelijkheden diagram](/images/2.3.2methodieken.png)
+We onderzoeken hier de status van de technologie en markt door te kijken naar de volgende aspecten:
 
-1. Lijsten van gebruikers ([ACL](https://en.wikipedia.org/wiki/Access-control_list))
-2. Rolgebaseerd ([RBAC](https://en.wikipedia.org/wiki/Role-based_access_control))
-3. Attribuutgebaseerd ([ABAC](https://en.wikipedia.org/wiki/Attribute-based_access_control))
-4. Policy-gebaseerd ([PBAC](/docs/5.architectuur/inventarisatie/standaarden/pbac))
-5. Relatiegebaseerd [ReBAC](https://en.wikipedia.org/wiki/Relationship-based_access_control)
-
-## Vergelijking
-
-Er zijn eerder al goede beschrijvingen en vergelijkingen gemaakt:
-- Door het project FDS is een [ position paper](https://federatief.datastelsel.nl/kennisbank/pbac/) gemaakt
-- Onder GEMMA is een [vergelijking](https://www.gemmaonline.nl/wiki/WMA_RBAC_ABAC_en_PBAC) gemaakt.
-
-Het is duidelijk dat ACL en RBAC op de schaal en in filosofie van het FDS niet voldoen.
-
-Dan blijven ABAC, PBAC en ReBAC over. Deze lijken nogal op elkaar.
-- ABAC is al lang geleden bedacht en beschrijft de 'driepoot'-architectuur zoals in het plaatje boven.
-- De term PBAC kwam later en gebruikt het woord policy om te benadrukken dat het om apart staande beleidsregels gaat. Dit sloot ABAC niet uit. Volgens Wikipedia zijn ABAC en PBAC hetzelfde.
-- ReBAC op zijn beurt schuift relaties naar de voorgrond, maar in essentie zijn relaties een categorie van eigenschappen.
-
-Voor ons zit de essentie in de overeenkomsten:
-
-- Regels worden apart van broncode geschreven, en met dezelfde zorgvuldigheid beheerd als broncode ('**policy as code**') 
-- Regels zijn fijnmazig ('**fine grained access control**'), door gebruik te kunnen maken van eigenschappen van de vrager ('subject'), de vraag ('actie'), de context en het antwoord ('resource')
-- Regels worden **real-time** toegepast, dus niet alleen bij login. 
-
-## Externalized access management
-
-De term 'Externalized access management' kan als overkoepelend begrip gebruikt worden. De toegangscontrole is buiten de applicaties geplaatst,
-hetgeen belangrijke principes faciliteert:
-- '**Zero-trust**'. Controleer toegang op elke plek waar interactie tussen systemen plaatsvindt en er dus een risico op onrechtmatige toegang is. 
-- **Lokaal toegepast, gecentraliseerd beheerd**. Regels kunnen complex zijn en het beheer ervan vraagt kennis en tooling. Tegelijk moet toegang efficient bepaald
-worden om te voorkomen dat prestaties belemmerd worden. Door gedistribueerde systemen te gebruiken zijn beide tegelijk mogelijk.
-
-Onderstaande video beschrijft het veld.
-{{< youtube QBs4G2WUP7U >}}
+1. [methodieken](1.methodieken)
+2. [regeltalen](2.regeltalen)
+3. [standaarden](3.standaarden)
+4. [producten](4.producten) die in de markt te krijgen zijn
 
 
- 
