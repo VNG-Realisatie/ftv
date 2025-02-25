@@ -1,13 +1,15 @@
 ---
-weight: 20
-Title: Doelstellingen
+weight: 50
+Title: Over het project
 ---
 
-# Doelstellingen
+# Over het project
 
-FTV geeft invulling aan een vernieuwingsvoorstel van het GDI. De opdracht is:
+## Doelstellingen
 
-> ## Definieer een standaardmethodiek voor toegangsverlening tot API's
+Federatieve toegangsverlening geeft invulling aan een vernieuwingsvoorstel van het GDI. De opdracht is:
+
+>  **Definieer een standaardmethodiek voor toegangsverlening tot API's**
 
 Er bestaat nu een grote diversiteit aan oplossingen voor toegangsverlening. Dat geeft uitdagingen voor zowel afnemers als aanbieders.
 
@@ -20,11 +22,16 @@ De doelstellingen aan het project, en hoe een standaardmethodiek een oplossing v
 > 4. **Geeft richting aan het transitiepad naar de eindsituatie**. In de meerjarenvisie worden grote doelen gedefinieerd. Met een concrete invulling
 van een deel van de weg daarheen wordt de juiste richting ingezet naar die doelen.
 
+## Planning en status
+
+Het project is in juli 2024 gestart met [fase 1](3.fase1), die op 1 januari 2025 is afgerond. 
+[Fase 2](4.fase2) is op 1 januari 2025 en loop tot 31 december.
+
 ## Uitvoeringscontext
 
 ### Organisatie
 
-Subsidie voor dit project is verstrekt door BZK, en wordt uitgevoerd door [VNG Realisatie](https://vng.nl/artikelen/vng-realisatie). 
+Subsidie voor dit project is verstrekt door BZK, enhugo wordt uitgevoerd door [VNG Realisatie](https://vng.nl/artikelen/vng-realisatie). 
 Voor praktische uitvoering en ondersteuning is aansluiting bij [Digilab](https://digilab.overheid.nl/) gevonden.
 
 Qua organisatorische context valt dit onderwerp onder het programma [Realisatie IBDS](https://realisatieibds.nl/), en daarbinnen onder het [Federatieve datastelsel (FDS)](https://federatief.datastelsel.nl/).
@@ -55,7 +62,7 @@ Het is expliciet niet de bedoeling om een softwareproduct op te leveren dat in p
 
 Door het aspect ***toegangsverlening*** oftewel autorisatie uit te lichten worden expliciet andere aspecten zoals identificatie, authenticatie en encryptie buiten beschouwing gelaten.
 Vanzelfsprekend zijn dit wel cruciale aspecten, die ook spelen bij het uitwisselen van informatie over autorisatie,
-en daarmee voorwaardelijk aan verantwoordelijke gegevensuitwisseling als geheel, maar vallen buiten deze scope.
+en daarmee voorwaardelijk aan verantwoorde gegevensuitwisseling als geheel, maar vallen buiten deze scope.
 
 De toevoeging ***tot API's*** beperkt het project tot geautomatiseerde gegevensuitwisseling.
 Het gaat niet over autorisatie via een niet-digitaal medium en ook niet over interacties tussen mens en computer.

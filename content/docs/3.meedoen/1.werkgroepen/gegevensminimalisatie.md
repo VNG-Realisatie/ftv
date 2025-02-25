@@ -1,7 +1,7 @@
 ---
 bookCollapseSection: false
 weight: 10
-Title: 20-11-'24 Gegevensminimalisatie
+Title: 1.Gegevensminimalisatie
 ---
 
 # Werkgroep Gegevensminimalisatie (20 november 2024)

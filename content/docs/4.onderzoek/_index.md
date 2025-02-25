@@ -1,7 +1,7 @@
 ---
 Title: Onderzoek
 bookCollapseSection: true
-weight: 20
+weight: 40
 ---
 
 # Onderzoek
@@ -14,4 +14,6 @@ gedaan, waarvan de resultaten hier te vinden zijn.
 3. Vervolgens is een inventarisatie gemaakt van de [staat van toegangsverlening bij de Nederlandse overheid](3.status_nl_overheid).
 4. Vanuit die status en de toekomstvisie van de GDI zijn de  [eisen aan de toekomstige werkwijze](4.eisen_aan_de_oplossing) opgesteld.
 
-Het eindresultaat van het onderzoek heeft vervolgens richting gegeven aan de standaard en implementatie.
+[Lees hier de conclusies](5.conclusie) van het onderzoek samengevat.
+
+De resultaten van het onderzoek hebben vervolgens richting gegeven aan de gekozen oplossing.

@@ -12,11 +12,11 @@ Dit is de site van het project Federatieve Toegangsverlening, afgekort FTV.
 
 > FTV stelt een **standaardmethodiek** voor om **toegang tot gegevens en functies** te regelen in een modern **federatief stelsel**.
 
-Denk hierbij aan toegangsregels als: "_Inzage in het inkomen van een burger is toegestaan aan behandelaren van een lopende aanvraag huurtoeslag_". 
+Denk hierbij aan toegangsregels als: "_Inzage in het inkomen van een burger is toegestaan aan behandelaren van een lopende aanvraag huurtoeslag_".
 Deze regel gaat over de uitwisseling tussen de Dienst Toeslagen en de Belastingsdienst, beide deelnemers aan het federatief datastelsel, en beide
 partijen _en_ het stelsel spelen een rol in het toezicht houden op toegang. FTV beschrijft de technische standaard die toezicht uitvoerbaar, sterk en transparant maakt.
 
-In [werkgebied](/docs/2.onderzoek/1.werkgebied) is het onderwerp preciezer omschreven, en in [doelstellingen](/docs/1.over_het_project/2.doelstellingen) is meer te lezen over de opdracht en uitvoeringscontext.
+In [werkgebied](/docs/2.onderzoek/1.werkgebied) is het onderwerp preciezer omschreven, en in [over het project](/docs/5.over_het_project) is meer te lezen over de opdracht en uitvoeringscontext.
 
 ## Context
 
@@ -29,11 +29,12 @@ bepaalt en controleert. [Meer over de stelselfuncties](https://federatief.datast
 
 ## Status
 
-Een onderzoek naar de status van toegangsverlening in [techniek](/docs/2.onderzoek/2.status_techniek) en bij de [Nederlandse overheid](/docs/2.onderzoek/3.status_nl_overheid)  is afgerond.
-Daaruit is een [beschrijving van de methodiek](/docs/2.onderzoek/4.eisen_aan_de_oplossing) voortgekomen. 
+Een [onderzoek](/docs/2.onderzoek) naar de status van toegangsverlening in techniek en bij de Nederlandse overheid is afgerond.
+Daaruit is een [methodiek](/docs/1.methodiek) naar voren gekomen.
 
-Op dit moment wordt er geschreven aan een [technische standaard](/standaard), en wordt er gebouwd aan een [referentie-implementatie](/docs/4.implementatie) en een proefopstelling.
-Het project is ook actief op zoek naar pilotprojecten.
+Op dit moment wordt de eerste versie van de [technische standaard](/standaard) geschreven. 
+De eerste interface daarin wordt nu getest met FSC.
+Ook wordt er gebouwd aan een [referentie-implementatie](/docs/4.implementatie) en een proefopstelling.
 
 # Meedoen als...
 

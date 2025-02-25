@@ -1,7 +1,7 @@
 ---
 Title: Implementatie
 bookCollapseSection: true
-weight: 40
+weight: 20
 ---
 
 # Implementatie 
