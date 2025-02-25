@@ -1,11 +1,13 @@
 ---
 Title: Proefopstelling
-weight: 10
+weight: 30
 ---
 
 # Proefopstelling
 
-De proefopstelling laat zien hoe FTV in de praktijk kan werken, door een aantal use cases te realiseren.
+De proefopstelling laat zien hoe FTV in de praktijk kan werken, door een eenvoudig federatief datastelsel in te richten,
+waarvan in ieder geval de componenten rondom toegangsverlening compleet zijn. Door een aantal use cases te realiseren wordt
+de werking geïllustreerd.
 
 ## Onderwerp
 
