@@ -24,14 +24,15 @@ van een deel van de weg daarheen wordt de juiste richting ingezet naar die doele
 
 ## Planning en status
 
-Het project is in juli 2024 gestart met [fase 1](3.fase1), die op 1 januari 2025 is afgerond. 
-[Fase 2](4.fase2) is op 1 januari 2025 en loop tot 31 december.
+Het project is in juli 2024 gestart met [fase 1](3.fase1), en afgerond op 28 februari 2025. 
+
+[Fase 2](4.fase2) is op 1 maart gestart en zal tot 31 december 2025 lopen.
 
 ## Uitvoeringscontext
 
 ### Organisatie
 
-Subsidie voor dit project is verstrekt door BZK, enhugo wordt uitgevoerd door [VNG Realisatie](https://vng.nl/artikelen/vng-realisatie). 
+Subsidie voor dit project is verstrekt door de GDI, en wordt uitgevoerd door [VNG Realisatie](https://vng.nl/artikelen/vng-realisatie). 
 Voor praktische uitvoering en ondersteuning is aansluiting bij [Digilab](https://digilab.overheid.nl/) gevonden.
 
 Qua organisatorische context valt dit onderwerp onder het programma [Realisatie IBDS](https://realisatieibds.nl/), en daarbinnen onder het [Federatieve datastelsel (FDS)](https://federatief.datastelsel.nl/).
@@ -41,9 +42,8 @@ Secundair wordt gekeken of dezelfde of andere methodieken buiten het FDS inzetba
 
 ### Architectuur
 
-Als opdracht van BZK valt dit project onder de [MIDO](https://www.digitaleoverheid.nl/mido/) en de [IBDS](https://www.digitaleoverheid.nl/interbestuurlijke-datastrategie/), en is gehouden aan de architectuur-
-en andere principes van die stelsels. Dat is in brede zin de [GDI](https://www.digitaleoverheid.nl/mido/generieke-digitale-infrastructuur-gdi/),
-en in het bijzonder de domeinarchitecturen [Gegevensuitwisseling](https://minbzk.github.io/gdi-gegevensuitwisseling/content/views/Domeinarchitectuur%20gegevensuitwisseling.html) en [Toegang](https://minbzk.github.io/gdi-toegang/content/views/Domeinarchitectuur%20toegang.html).
+Als opdracht van de [GDI](https://www.digitaleoverheid.nl/mido/generieke-digitale-infrastructuur-gdi/) valt dit project onder de [MIDO](https://www.digitaleoverheid.nl/mido/) en de [IBDS](https://www.digitaleoverheid.nl/interbestuurlijke-datastrategie/), en is gehouden aan de architectuur-
+en andere principes van die stelsels. Daarin in het bijzonder de domeinarchitecturen [Gegevensuitwisseling](https://minbzk.github.io/gdi-gegevensuitwisseling/content/views/Domeinarchitectuur%20gegevensuitwisseling.html) en [Toegang](https://minbzk.github.io/gdi-toegang/content/views/Domeinarchitectuur%20toegang.html).
 
 In de architectuurplaat van FDS geeft FTV invulling aan een van de elementen van de stelselfunctie [Poortwachter](https://federatief.datastelsel.nl/kennisbank/stelselfuncties/#poortwachter).
 
