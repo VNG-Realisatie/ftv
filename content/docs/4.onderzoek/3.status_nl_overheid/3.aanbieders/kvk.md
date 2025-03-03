@@ -1,9 +1,8 @@
 ---
-title: 'HR - KvK'
-weight: 40
+title: 'HR'
 ---
 
-# HR - Kamer van Koophandel
+# Handelsregister - Kamer van Koophandel
 
 ## Links
 - https://developers.kvk.nl/nl/documentation
@@ -13,7 +12,3 @@ weight: 40
 - Wat zijn de voordelen van een KVK API?
   - Automatisch aanvullen: haal direct actuele informatie op uit het Handelsregister binnen je eigen CRM-systeem, website of financiële pakket. De gegevens worden automatisch aangevuld (prefill).
   - Controleren: controleer zakelijke klanten op KVK-nummer, adresgegevens, SBI en werkzame personen.
-
-## Observaties
-- .
-

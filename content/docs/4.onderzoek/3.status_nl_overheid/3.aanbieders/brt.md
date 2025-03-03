@@ -1,6 +1,5 @@
 ---
 title: BRT
-weight: 60
 ---
 
 # BRT (Kadaster)

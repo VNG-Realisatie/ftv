@@ -6,29 +6,30 @@ title: "Aanbieders"
 
 # Aanbieders 
 
-## 1. Basisregistraties
+De term 'aanbieders' gebruiken we hier voor de registers, of preciezer bronhouders die samen hun verwerkers 
+een API aanbieden om verwerkingen te doen op hun register.
 
-Zie hier een complete [lijst van basisregistraties](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/10-basisregistraties/)
+## 1. [Basisregistraties](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/)
 
 | Registratie                                                                    | Houder          | Dienst                   | Koppelvlak   | 
 |--------------------------------------------------------------------------------|-----------------|--------------------------|--------------|
-| [BRP](registraties/brp)                                                     | RvIG            | Personen                 | HaalCentraal |
-| [HR](registraties/kvk)                                                      | KvK             | Handelsregister          | REST         |
-| [BAG](registraties/bag)                                                     | Kadaster        | Adressen en Gebouwen     | REST         |
-| [BGT](registraties/bgt)                                                     | Kadaster        | Grootschalige Topografie | REST         | 
-| [BRT](registraties/brt)                                                     | Kadaster        | Topografie               | StUF         |
-| [BRK](registraties/brk)                                                     | Kadaster        | Kadaster                 | REST         |
-| [WOZ](registraties/woz)                                                     | Kadaster        | Waarde Onroerende Zaken  | HaalCentraal |
-| [BRV](registraties/brv)                                                     | RDW             | Voertuigen               | HaalCentraal | 
-| [BRI](registraties/bri)                                                     | Belastingdienst | Inkomen                  | Geen         |
-| [BRO](registraties/bro)                                                     | TNO             | Ondergrond               | SOAP en REST | 
+| [BRP](brp)                                                     | RvIG            | Personen                 | HaalCentraal |
+| [HR](kvk)                                                      | KvK             | Handelsregister          | REST         |
+| [BAG](bag)                                                     | Kadaster        | Adressen en Gebouwen     | REST         |
+| [BGT](bgt)                                                     | Kadaster        | Grootschalige Topografie | REST         | 
+| [BRT](brt)                                                     | Kadaster        | Topografie               | StUF         |
+| [BRK](brk)                                                     | Kadaster        | Kadaster                 | REST         |
+| [WOZ](woz)                                                     | Kadaster        | Waarde Onroerende Zaken  | HaalCentraal |
+| [BRV](brv)                                                     | RDW             | Voertuigen               | HaalCentraal | 
+| [BRI](bri)                                                     | Belastingdienst | Inkomen                  | Geen         |
+| [BRO](bro)                                                     | TNO             | Ondergrond               | SOAP en REST | 
 | [Digimelding](https://www.logius.nl/domeinen/gegevensuitwisseling/digimelding) | Logius          | Digimelding              | SOAP         |  
 
 ## 2. Sectorregistraties
 
-Zie hier een complete [lijst van sectorregistraties](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/sectorregistraties/)
+Zie hier een complete [lijst van sectorregistraties](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basissector)
 
 | Registratie | Houder                     |                                                                                          
 |-------------|----------------------------|
-| Rijexamens  | [CBR](registraties/cbr) |      
-| ?           | [UWV](registraties/uwv) |      
+| Rijexamens  | [CBR](cbr) |      
+| ?           | [UWV](uwv) |      

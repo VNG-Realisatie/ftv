@@ -1,15 +1,11 @@
 ---
 title: 'BRP'
-weight: 30
 ---
 
 # Basis Registratie Personen (RvIG)
 
 ## Contact
 Cathy Dingemanse
-
-Marc gesprek en mailcontact gehad. De bevragingen die er nu zijn, waren de eerste [HaalCentraal](/docs/5.architectuur/inventarisatie/standaarden/HaalCentraal) REST API's, een project
-waar Cathy projectleider van was. 
 
 ## Links
 - https://publicaties.rvig.nl/Besluiten_en_modelautorisaties/Besluiten/BRP_besluiten
@@ -21,9 +17,6 @@ waar Cathy projectleider van was.
 - https://www.rvig.nl/w172-lo-brp-toelichting-apis-fase-ii-informatievragen
 - https://brp-api.github.io/Haal-Centraal-BRP-bevragen/
 - https://brp-api.github.io/Haal-Centraal-BRP-bevragen/v2/redoc
-
-## Fragmenten
-- .
 
 ## Observaties
 - tabellen in de BRP dataset hebben unieke 2-cijferige numerieke codes toegekend. Bv. tabel 34 = landen, 35 = autorisatieregels.
@@ -52,3 +45,13 @@ waar Cathy projectleider van was.
 - zeer uitgebreid autorisatie model gebaseerd op organisaties, rollen, personen, regels, regel groeperingen, leveringscondities, etc.
 - er is alleen een aantal beschrijvende documenten beschikbaar gesteld, dus niet geschikt om use-cases uit samen te stellen
 - autorisatie model zou de basis kunnen vormen voor een federatieve verzameling van toegangsregels, maar dient mogelijk wel verder uitgebreid te worden
+
+# TMV
+
+## Links
+- Logisch Ontwerp BRP 2024 - 6.3 (PDF)
+
+## Fragmenten
+- TMV2.0 is een applicatie die beheerd wordt door RvIG. Met die applicatie beheert RvIG de (gegevens over) terugmeldingen. Afnemers (de terugmelders) moeten terugmeldingen doen aan Digimelding. Digimelding stuurt de meldingen betreffende de BRP door aan TMV2.0. In TMV2.0 kunnen gemeenten en RNI (de bijhouders) die terugmeldingen bekijken, afhandelen en de resultaten daarvan bijwerken. Terugmelders moeten via Digimelding de status van de terugmelding ophalen uit TMV2.0.
+- Op de website van Logius (http://www.logius.nl/diensten/digimelding) is de Digimeldingkoppelvlak-standaard beschreven [20].
+- Gemeenten en RNI (de bijhouders) kunnen voor het benaderen van TMV 2.0 gebruik maken van de van toepassing zijnde TMV 2.0-webservice zoals beschreven in de Handleiding Aansluiten TMV 2.0 of van het TMV 2.0-portaal. De handleiding wordt gepubliceerd op de website van RvIG.

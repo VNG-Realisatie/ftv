@@ -1,6 +1,5 @@
 ---
 title: 'BGT'
-weight: 100
 ---
 
 # BGT (Kadaster)

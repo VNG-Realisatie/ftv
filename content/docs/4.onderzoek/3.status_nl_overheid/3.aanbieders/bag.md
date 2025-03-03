@@ -1,6 +1,5 @@
 ---
 title: BAG
-weight: 50
 ---
 
 # BAG (Kadaster)

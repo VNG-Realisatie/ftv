@@ -1,6 +1,5 @@
 ---
 title: 'WOZ'
-weight: 90
 ---
 
 # WOZ (Kadaster)

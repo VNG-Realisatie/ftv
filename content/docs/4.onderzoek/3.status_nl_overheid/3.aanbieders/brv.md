@@ -1,6 +1,5 @@
 ---
-title: 'BRV (RDW)'
-weight: 80
+title: 'BRV'
 ---
 
 # BRV (RDW)
