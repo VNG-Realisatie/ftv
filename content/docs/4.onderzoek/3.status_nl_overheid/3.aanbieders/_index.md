@@ -27,9 +27,8 @@ een API aanbieden om verwerkingen te doen op hun register.
 
 ## 2. Sectorregistraties
 
-Zie hier een complete [lijst van sectorregistraties](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basissector)
+Zie hier een complete [lijst van sectorregistraties](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/sectorregistraties/)
 
 | Registratie | Houder                     |                                                                                          
 |-------------|----------------------------|
-| Rijexamens  | [CBR](cbr) |      
-| ?           | [UWV](uwv) |      
+| Rijexamens  | [CBR](cbr) |
