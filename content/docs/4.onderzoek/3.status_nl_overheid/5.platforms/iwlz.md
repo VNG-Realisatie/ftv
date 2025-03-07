@@ -13,7 +13,7 @@ Het actieprogramma iWlz heeft een eerste registratie in een netwerkmodel live, e
 In deze beide registraties is PBAC met OPA gebruikt om toegang te regelen. 
 Policies worden centraal geschreven, in een GitHub repository bewaard en daar live opgehaald door een Policy Retrieval Point (PRP).
 
-Zie ook [vecozo](vecozo) en [nuts](nuts)
+Zie ook [vecozo](vecozo.md) en [nuts](nuts.md)
 
 ## Contacten
 
