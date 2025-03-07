@@ -25,5 +25,6 @@ implementeren deze versie inmiddels.
 ## AuthZEN NL Gov
 
 De Nederlandse standaard is een uitbreiding op AuthZEN, en heeft daarom als volledige naam 
-**NLGov Assurance Profile for OpenID AuthZEN Authorization API** gekregen
+**NL
+Gov Assurance Profile for OpenID AuthZEN Authorization API** gekregen
 kortweg "AuthZEN NL Gov"

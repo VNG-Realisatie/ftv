@@ -16,7 +16,7 @@ Denk hierbij aan toegangsregels als: "_Inzage in het inkomen van een burger is t
 Deze regel gaat over de uitwisseling tussen de Dienst Toeslagen en de Belastingsdienst, beide deelnemers aan het federatief datastelsel, en beide
 partijen _en_ het stelsel spelen een rol in het toezicht houden op toegang. FTV beschrijft de technische standaard die toezicht uitvoerbaar, sterk en transparant maakt.
 
-In [werkgebied](/docs/2.onderzoek/1.werkgebied) is het onderwerp preciezer omschreven, en in [over het project](/docs/5.over_het_project) is meer te lezen over de opdracht en uitvoeringscontext.
+In [werkgebied](/docs/4.onderzoek/1.werkgebied) is het onderwerp preciezer omschreven, en in [over het project](/docs/5.over_het_project) is meer te lezen over de opdracht en uitvoeringscontext.
 
 ## Context
 
@@ -29,12 +29,12 @@ bepaalt en controleert. [Meer over de stelselfuncties](https://federatief.datast
 
 ## Status
 
-Een [onderzoek](/docs/2.onderzoek) naar de status van toegangsverlening in techniek en bij de Nederlandse overheid is afgerond.
+Een [onderzoek](/docs/4.onderzoek) naar de status van toegangsverlening in techniek en bij de Nederlandse overheid is afgerond.
 Daaruit is een [methodiek](/docs/1.methodiek) naar voren gekomen.
 
-Op dit moment wordt de eerste versie van de [technische standaard](/standaard) geschreven. 
+Op dit moment wordt de eerste versie van de [technische standaard](/docs/1.methodiek/2.standaard) geschreven. 
 De eerste interface daarin wordt nu getest met FSC.
-Ook wordt er gebouwd aan een [referentie-implementatie](/docs/4.implementatie) en een proefopstelling.
+Ook wordt er gebouwd aan een [referentie-implementatie](/docs/2.toepassen/2.referentieimplementatie) en een [proefopstelling](/docs/2.toepassen/4.proefopstelling).
 
 # Meedoen als...
 
