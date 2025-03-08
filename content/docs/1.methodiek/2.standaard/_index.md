@@ -29,5 +29,3 @@ Er is reeds gewerkt aan een document genaamd "[Standaard voor Federatieve Toegan
 Er worden nog een aantal toekomstige standaarden voorzien zoals
 - de interface voor het Policy Administration Point waarin toegangsbeleid beschikbaar gemaakt zal worden.
 - diverse extensies op de AuthZEN Authorization API zoals [API gateways](https://hackmd.io/@oidf-wg-authzen/apigateway) en SPARQL endpoints (zie [Lock/Unlock](https://kadaster-labs.github.io/lock-unlock-docs/).)
-
-Het is afhankelijk van de capaciteit binnen de FTV werkgroep of deze additionele standaarden in 2025 gerealiseerd kunnen worden.
