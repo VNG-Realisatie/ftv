@@ -13,35 +13,46 @@ Dit is de site van het project Federatieve Toegangsverlening, afgekort FTV.
 > FTV stelt een **standaardmethodiek** voor om **toegang tot gegevens en functies** te regelen in een modern **federatief stelsel**.
 
 Denk hierbij aan toegangsregels als: "_Inzage in het inkomen van een burger is toegestaan aan behandelaren van een lopende aanvraag huurtoeslag_".
-Deze regel gaat over de uitwisseling tussen de Dienst Toeslagen en de Belastingsdienst, beide deelnemers aan het federatief datastelsel, en beide
-partijen _en_ het stelsel spelen een rol in het toezicht houden op toegang. FTV beschrijft de technische standaard die toezicht uitvoerbaar, sterk en transparant maakt.
+Deze regel gaat over de uitwisseling tussen de Dienst Toeslagen en de Belastingsdienst, beide deelnemers aan het federatief datastelsel. Beide
+partijen _en_ het stelsel spelen een rol in het toezicht houden op toegang. FTV beschrijft een standaardwerkwijze die toezicht uitvoerbaar, sterk en transparant maakt.
 
-In [werkgebied](/docs/4.onderzoek/1.werkgebied) is het onderwerp preciezer omschreven, en in [over het project](/docs/5.over_het_project) is meer te lezen over de opdracht en uitvoeringscontext.
+De doelen van de standaardmethodiek zijn om toegangscontrole veiliger en fijnmaziger te maken, makkelijker te implementeren en leveranciersonafhankelijkheid te behouden.
 
-## Context
+In [werkgebied](/docs/4.onderzoek/1.werkgebied) is het onderwerp preciezer omschreven.
 
-Toegangsverlening, ook wel autorisatie, is een van de technische stelselfuncties in het [Federatief Datastelsel (FDS)](https://federatief.datastelsel.nl/). Dit zijn ze allemaal:
+### Context
+
+Toegangsverlening, ook wel autorisatie, is één van de technische stelselfuncties in het [Federatief Datastelsel (FDS)](https://federatief.datastelsel.nl/). Dit zijn ze allemaal:
 
 ![1.1stelselfuncties.png](/images/1.1stelselfuncties.png)
 
 Toegangsverlening is een aanvulling op o.a. connectiviteit dat zorgt voor een veilige verbinding, en identificatie en authenticatie dat de identiteit van deelnemers
 bepaalt en controleert. [Meer over de stelselfuncties](https://federatief.datastelsel.nl/kennisbank/stelselfuncties/).
 
-## Status
+In [over het project](/docs/5.over_het_project) is meer te lezen over de opdracht en uitvoeringscontext.
+
+## De methodiek
+
+De [methodiek](/docs/1.methodiek) wordt beschreven vanuit verschillende perspectieven:
+
+1. een functionele beschrijving, een landkaart van wat er bij toegangsverlening komt kijken. 
+2. een technische architectuur, waarin zowel de componenten van de toegangsoplossing als de plaatsing in het wijdere IT-landschap wordt geschetst.
+3. een technische standaard die beschrijft hoe de toegangsoplossing met de omgeving samenwerkt.
+
+Om [aan de slag te gaan](/docs/2.toepassen) met de methodiek bieden we een aantal praktische zaken, zoals een stappenplan, een referentieimplementie en een proefopstelling.
+
+### Status
 
 Een [onderzoek](/docs/4.onderzoek) naar de status van toegangsverlening in techniek en bij de Nederlandse overheid is afgerond.
-Daaruit is een [methodiek](/docs/1.methodiek) naar voren gekomen.
 
-Op dit moment wordt de eerste versie van de [technische standaard](/docs/1.methodiek/2.standaard) geschreven. 
-De eerste interface daarin wordt nu getest met FSC.
-Ook wordt er gebouwd aan een [referentie-implementatie](/docs/2.toepassen/2.referentieimplementatie) en een [proefopstelling](/docs/2.toepassen/4.proefopstelling).
+Op dit moment wordt aan de [technische standaard](/docs/1.methodiek/2.standaard) geschreven. De basis is gereed om ingebouwd te worden
+in, en dit wordt nu getest met de FDS connectiviteitsmodule, OpenFSC. Streven is de standaard op 1 juli 2025 aan te bieden voor plaatsing op de 'pas toe of leg uit' lijst.
 
-# Meedoen als...
+De referentieimplementate en proefopstelling zijn nog in een vroege fase.
 
-**Product owner of projectmanager**. Wat komt er voor bronhouders, afnemers en andere stelselsdeelnemers kijken als het gaat om toegangsverlening bij deelname aan het FDS?
+## Meedoen 
 
-**Ontwikkelaar of architect**. Technische informatie over het bouwen van goede toegangsverlening bij gegevensuitwisseling in jouw software. Dit gaat zowel over beveiliging van de eigen gegevens als
-het rechtmatig verkrijgen van gegevens van anderen.
+[Denk mee](/docs/3.meedoen) met ons door van gedachten te wisselen over de methodiek, individueel of door deel te nemen in de [werkgroep](/docs/3.meedown/werkgroep).
 
 ## Contact
 
