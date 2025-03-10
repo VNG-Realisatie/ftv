@@ -6,10 +6,10 @@ bookCollapseSection: true
 
 # Meedoen
 
-FTV is in wording en op zoek naar medestanders.
+FTV is in ontwikkeling en zoekt professionals die willen bijdragen aan een veilige en efficiënte toegang tot data binnen de overheid.
 
 ## Wat kan jij doen?
 
 - Bekijk de werkwijze en beoordeel hoe deze in jouw API-landschap past
-- Denk mee in de [werkgroepen](1.werkgroepen)
-- Experimenteer met de referentie-implementatie om inzicht te krijgen in de impact op je werk
+- Denk mee in de [werkgroep](1.werkgroep)
+- Experimenteer met de referentie-implementatie en ontdek de impact op jouw werk.om inzicht te krijgen in de impact op je werk

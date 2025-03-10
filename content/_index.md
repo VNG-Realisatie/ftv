@@ -6,11 +6,12 @@ weight: 10
 
 # {{< figure src="/images/ftv_logo.png" alt="logo" width="50" height="50" >}}Welkom
 
-Dit is de site van het project Federatieve Toegangsverlening, afgekort FTV.
+Dit is de site van het project Federatieve Toegangsverlening (FTV).
 
 ## Over FTV
 
-> FTV stelt een **standaardmethodiek** voor om **toegang tot gegevens en functies** te regelen in een modern **federatief stelsel**.
+> Het project FTV ontwikkelt een gestandaardiseerde aanpak voor veilige, verantwoorde en efficiënte toegang 
+> tot gegevens binnen het [Federatief Datastelsel (FDS)](https://realisatieibds.nl/page/view/564cc96c-115e-4e81-b5e6-01c99b1814ec/de-ontwikkeling-van-het-federatief-datastelsel)
 
 Denk hierbij aan toegangsregels als: "_Inzage in het inkomen van een burger is toegestaan aan behandelaren van een lopende aanvraag huurtoeslag_".
 Deze regel gaat over de uitwisseling tussen de Dienst Toeslagen en de Belastingsdienst, beide deelnemers aan het federatief datastelsel. Beide
@@ -22,7 +23,7 @@ In [werkgebied](/docs/4.onderzoek/1.werkgebied) is het onderwerp preciezer omsch
 
 ### Context
 
-Toegangsverlening, ook wel autorisatie, is één van de technische stelselfuncties in het [Federatief Datastelsel (FDS)](https://federatief.datastelsel.nl/). Dit zijn ze allemaal:
+Toegangsverlening, ook wel autorisatie, is een van de technische stelselfuncties in het [FDS](https://federatief.datastelsel.nl/). Dit zijn ze allemaal:
 
 ![1.1stelselfuncties.png](/images/1.1stelselfuncties.png)
 
@@ -33,13 +34,12 @@ In [over het project](/docs/5.over_het_project) is meer te lezen over de opdrach
 
 ## De methodiek
 
-De [methodiek](/docs/1.methodiek) wordt beschreven vanuit verschillende perspectieven:
+De [methodiek](/docs/1.methodiek) wordt beschreven vanuit twee perspectieven:
 
-1. een functionele beschrijving, een landkaart van wat er bij toegangsverlening komt kijken. 
 2. een technische architectuur, waarin zowel de componenten van de toegangsoplossing als de plaatsing in het wijdere IT-landschap wordt geschetst.
 3. een technische standaard die beschrijft hoe de toegangsoplossing met de omgeving samenwerkt.
 
-Om [aan de slag te gaan](/docs/2.toepassen) met de methodiek bieden we een aantal praktische zaken, zoals een stappenplan, een referentieimplementie en een proefopstelling.
+Om [aan de slag te gaan](/docs/2.toepassen) met de methodiek bieden we een aantal hulpmiddelen, zoals een stappenplan, een referentieimplementie en een proefopstelling.
 
 ### Status
 
@@ -52,7 +52,7 @@ De referentieimplementate en proefopstelling zijn nog in een vroege fase.
 
 ## Meedoen 
 
-[Denk mee](/docs/3.meedoen) met ons door van gedachten te wisselen over de methodiek, individueel of door deel te nemen in de [werkgroep](/docs/3.meedown/werkgroep).
+[Denk mee](/docs/3.meedoen) met ons door van gedachten te wisselen over de methodiek, individueel of door deel te nemen in de [werkgroep](/docs/3.meedoen/werkgroep).
 
 ## Contact
 

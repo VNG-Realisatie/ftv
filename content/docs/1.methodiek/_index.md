@@ -14,8 +14,7 @@ FTV biedt een gestandaardiseerde werkwijze voor het verantwoord verlenen van toe
 
 Dit maakt het mogelijk om op basis van **trust and verify** de verantwoordelijkheid bij de afnemer te leggen. Dat is waar deze juridisch over het algemeen ook ligt. Dit wordt daarmee ook gezien als één van de drie vereiste standaarden voor een effectief [Federatief Datastelsel] naast [Federated Service Connectivity](https://fsc-standaard.nl/) en [Logboek Dataverwerkingen](https://logius-standaarden.github.io/logboek-dataverwerkingen/).
 
-De methodiek wordt beschreven vanuit verschillende perspectieven:
+De methodiek wordt beschreven vanuit twee perspectieven:
 
-1. een [functionele beschrijving](1.functioneel), een landkaart van wat er bij toegangsverlening komt kijken
 2. een [technische architectuur](1.architectuur), waarin zowel de componenten van de toegangsoplossing als de plaatsing in het wijdere IT-landschap wordt geschetst.
 3. een [technische standaard](2.standaard) die beschrijft hoe de toegangsoplossing met de omgeving samenwerkt.
