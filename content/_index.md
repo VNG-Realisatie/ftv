@@ -52,7 +52,7 @@ De referentieimplementate en proefopstelling zijn nog in een vroege fase.
 
 ## Meedoen 
 
-[Denk mee](/docs/3.meedoen) met ons door van gedachten te wisselen over de methodiek, individueel of door deel te nemen in de [werkgroep](/docs/3.meedoen/werkgroep).
+[Denk mee](/docs/3.meedoen) met ons door van gedachten te wisselen over de methodiek, individueel of door deel te nemen in de [werkgroep](/docs/3.meedoen/1.werkgroep).
 
 ## Contact
 
