@@ -16,7 +16,7 @@ De AuthZEN standaard heeft reeds een Implementers Draft voor het standaardiseren
 
 De Nederlandse standaard is een uitbreiding op AuthZEN, en heeft daarom als volledige naam **NLGov Profile for OpenID AuthZEN Authorization API** gekregen; kortweg "AuthZEN NLGov"
 
-## FTV Logging
+## Toegangslogging
 
 De tweede standaard richt zich op het verantwoorden van toegangsverzoeken. Deze standaard maakt het mogelijk om historische toegangsverzoeken beschikbaar te maken. Hierbij gaat speciaal aandacht uit naar het voorkomen van ongewenste gegevensduplicatie ([data bij de bron](https://www.digitaleoverheid.nl/data-bij-de-bron/)) met behulp van [betrouwbare bronnen](https://website-digilab-overheid-nl-research-uit-betrouw-e1f39021ce924c.gitlab.io/).
 
