@@ -4,4 +4,4 @@ De lessen uit de implementatie en de consensus die bereikt wordt in de werkgroep
 
 # Werkgroepen
 
-- 20 november 2024: [Gegevensminimalisatie](/docs/2.resultaten/7.standaard/1.werkgroepen/gegevensminimalisatie)
+- 20 november 2024: [Gegevensminimalisatie](/ftv/docs/2.resultaten/7.standaard/1.werkgroepen/gegevensminimalisatie)
