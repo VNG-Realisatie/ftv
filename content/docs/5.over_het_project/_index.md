@@ -22,6 +22,8 @@ De doelstellingen aan het project, en hoe een standaardmethodiek een oplossing v
 > 4. **Geeft richting aan het transitiepad naar de eindsituatie**. In de meerjarenvisie worden grote doelen gedefinieerd. Met een concrete invulling
      van een deel van de weg daarheen wordt de juiste richting ingezet naar die doelen.
 
+Binnen dit gebied is de [scope](1.scope) verder afgebakend.
+
 ## Planning en status
 
 Het project is in juli 2024 gestart met [fase 1](3.fase1), en afgerond op 28 februari 2025.
@@ -48,4 +50,4 @@ en andere principes van die stelsels. Daarin in het bijzonder de domeinarchitect
 In de architectuurplaat van FDS geeft FTV invulling aan een van de elementen van de stelselfunctie [Poortwachter](https://federatief.datastelsel.nl/kennisbank/stelselfuncties/#poortwachter).
 
 De methodiek zal de eigenschap 'federatief' dragen, passend in het FDS. Dat wil zeggen dat de oplossing niet gecentraliseerd zal zijn rond een
-enkel vertrouwd punt, en ook niet in gescheiden silo's zal plaatsvinden, maar een collectief stelsel van afspraken zal zijn, een samenwerkingsverband.ß
+enkel vertrouwd punt, en ook niet in gescheiden silo's zal plaatsvinden, maar een collectief stelsel van afspraken zal zijn, een samenwerkingsverband.
