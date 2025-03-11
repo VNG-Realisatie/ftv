@@ -4,7 +4,7 @@ type: docs
 weight: 10
 ---
 
-# {{< figure src="/images/ftv_logo.png" alt="logo" width="50" height="50" >}}Welkom
+# {{< figure src="/ftv/images/ftv_logo.png" alt="logo" width="50" height="50" >}}Welkom
 
 Dit is de site van het project Federatieve Toegangsverlening (FTV).
 
@@ -37,7 +37,7 @@ FTV gaat alleen over toegangsverlening, ook wel autorisatie. Zie [scope](/ftv/do
 FTV kan op zich staan, maar past ook naadloos in het [Federatief Datastelsel (FDS)](https://federatief.datastelsel.nl/).
 Toegang is een van de technische [stelselfuncties](https://federatief.datastelsel.nl/kennisbank/stelselfuncties/) van het FDS. Dit zijn ze allemaal:
 
-![1.1stelselfuncties.png](/images/1.1stelselfuncties.png)
+![1.1stelselfuncties.png](/ftv/images/1.1stelselfuncties.png)
 
 In [over het project](/ftv/docs/5.over_het_project) is meer te lezen over de opdracht en uitvoeringscontext.
 
