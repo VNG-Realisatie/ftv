@@ -16,7 +16,7 @@ De AuthZEN standaard heeft reeds een Implementers Draft voor het standaardiseren
 
 De Nederlandse standaard is een uitbreiding op AuthZEN, en heeft daarom als volledige naam **NLGov Profile for OpenID AuthZEN Authorization API** gekregen; kortweg "AuthZEN NLGov"
 
-Er is reeds gewerkt aan een document genaamd "[Standaard voor Federatieve Toegangsverlening](https://ftv-standaard-2f223b.gitlab.io/)." Dit geeft momenteel het beste de voortgang van de standaardisering weer; echter zal deze nog verdeeld moeten worden over functionele aspecten van de gewenste architectuur, het NLGov profiel voor AuthZEN en de FTV Logging Standaard.
+De huidige werkversie is te vinden op "[Standaard voor Federatieve Toegangsverlening](https://ftv-standaard-2f223b.gitlab.io/).".
 
 ## Toegangslogging
 
