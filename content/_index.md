@@ -4,7 +4,7 @@ type: docs
 weight: 10
 ---
 
-# {{< figure src="/images/ftv_logo.png" alt="logo" width="50" height="50" >}}Welkom
+# {{< figure src="/ftv/images/ftv_logo.png" alt="logo" width="50" height="50" >}}Welkom
 
 Dit is de site van het project Federatieve Toegangsverlening (FTV).
 
@@ -25,7 +25,7 @@ In [werkgebied](/docs/4.onderzoek/1.werkgebied) is het onderwerp preciezer omsch
 
 Toegangsverlening, ook wel autorisatie, is een van de technische stelselfuncties in het [FDS](https://federatief.datastelsel.nl/). Dit zijn ze allemaal:
 
-![1.1stelselfuncties.png](/images/1.1stelselfuncties.png)
+![1.1stelselfuncties.png](/ftv/images/1.1stelselfuncties.png)
 
 Toegangsverlening is een aanvulling op o.a. connectiviteit dat zorgt voor een veilige verbinding, en identificatie en authenticatie dat de identiteit van deelnemers
 bepaalt en controleert. [Meer over de stelselfuncties](https://federatief.datastelsel.nl/kennisbank/stelselfuncties/).
