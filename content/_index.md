@@ -4,44 +4,54 @@ type: docs
 weight: 10
 ---
 
-# {{< figure src="/ftv/images/ftv_logo.png" alt="logo" width="50" height="50" >}}Welkom
+# {{< figure src="/images/ftv_logo.png" alt="logo" width="50" height="50" >}}Welkom
 
 Dit is de site van het project Federatieve Toegangsverlening (FTV).
 
-## Over FTV
+## Waar gaat toegangsverlening over?
 
-> Het project FTV ontwikkelt een gestandaardiseerde aanpak voor veilige, verantwoorde en efficiënte toegang 
-> tot gegevens binnen het [Federatief Datastelsel (FDS)](https://realisatieibds.nl/page/view/564cc96c-115e-4e81-b5e6-01c99b1814ec/de-ontwikkeling-van-het-federatief-datastelsel)
+> Het project FTV biedt een gestandaardiseerde aanpak voor veilige, verantwoorde en efficiënte toegang bij
+> gegevensuitwisseling tussen overheidsorganisaties.
 
-Denk hierbij aan toegangsregels als: "_Inzage in het inkomen van een burger is toegestaan aan behandelaren van een lopende aanvraag huurtoeslag_".
-Deze regel gaat over de uitwisseling tussen de Dienst Toeslagen en de Belastingsdienst, beide deelnemers aan het federatief datastelsel. Beide
-partijen _en_ het stelsel spelen een rol in het toezicht houden op toegang. FTV beschrijft een standaardwerkwijze die toezicht uitvoerbaar, sterk en transparant maakt.
+De doelen van de standaardmethodiek zijn onder andere om toegangsverlening veiliger en fijnmaziger te maken, makkelijker te implementeren en leveranciersonafhankelijkheid te behouden.
+Lees [hier](/ftv/docs/5.over_het_project) meer over de doelen.
 
-De doelen van de standaardmethodiek zijn om toegangscontrole veiliger en fijnmaziger te maken, makkelijker te implementeren en leveranciersonafhankelijkheid te behouden.
+### Een voorbeeld
 
-In [werkgebied](/ftv/docs/4.onderzoek/1.werkgebied) is het onderwerp preciezer omschreven.
+Denk bijvoorbeeld aan boetes voor rijden in een milieuzone. Campers van bewoners mogen wel de zone in, andere niet.
+De gemeente hangt camera's op voor kentekenherkenning, vraagt aan het RDW de categorie en emissieklasse van het voertuig
+en wie (BSN) het kenteken op naam heeft, en aan het RvIG in welke gemeente die persoon is ingeschreven.
 
-### Context
+Toegangsverlening gaat over het opstellen en handhaven van regels zoals:
 
-Toegangsverlening, ook wel autorisatie, is een van de technische stelselfuncties in het [FDS](https://federatief.datastelsel.nl/). Dit zijn ze allemaal:
+- kentekens opvragen bij RDW mogen alleen bepaalde gemeenten, op basis van het 'Besluit milieuzones'
+- als de emissieklasse al aangeeft dat het goed zit, vraag dan geen BSN op
+- wis direct alle gegevens die niet nodig zijn om een boete te innen
+- hou een logboek bij van al je opvragingen
 
-![1.1stelselfuncties.png](/ftv/images/1.1stelselfuncties.png)
+## Context
 
-Toegangsverlening is een aanvulling op o.a. connectiviteit dat zorgt voor een veilige verbinding, en identificatie en authenticatie dat de identiteit van deelnemers
-bepaalt en controleert. [Meer over de stelselfuncties](https://federatief.datastelsel.nl/kennisbank/stelselfuncties/).
+Bij gegevensuitwisseling komt nog veel meer kijken, zoals veilige verbindingen, indentificatie, authenticatie en goed gebruikersbeheer.
+FTV gaat alleen over toegangsverlening, ook wel autorisatie. Zie [scope](/ftv/docs/5.over_het_project/1.scope) voor verdere afbakening.
+
+FTV kan op zich staan, maar past ook naadloos in het [Federatief Datastelsel (FDS)](https://federatief.datastelsel.nl/).
+Toegang is een van de technische [stelselfuncties](https://federatief.datastelsel.nl/kennisbank/stelselfuncties/) van het FDS. Dit zijn ze allemaal:
+
+![1.1stelselfuncties.png](/images/1.1stelselfuncties.png)
 
 In [over het project](/ftv/docs/5.over_het_project) is meer te lezen over de opdracht en uitvoeringscontext.
 
 ## De methodiek
 
-De [methodiek](/ftv/docs/1.methodiek) wordt beschreven vanuit twee perspectieven:
+De voorgestelde [methodiek](/ftv/docs/1.methodiek) is er om toegangsverlening makkelijker te maken. Dit wordt beschreven vanuit drie perspectieven:
 
-2. een technische architectuur, waarin zowel de componenten van de toegangsoplossing als de plaatsing in het wijdere IT-landschap wordt geschetst.
-3. een technische standaard die beschrijft hoe de toegangsoplossing met de omgeving samenwerkt.
+1. functioneel
+2. architectuur, waarin zowel de componenten van de toegangsoplossing als de plaatsing in het wijdere IT-landschap wordt geschetst.
+3. een technische standaard die in detail beschrijft waar een oplossing aan moet voldoen.
 
 Om [aan de slag te gaan](/ftv/docs/2.toepassen) met de methodiek bieden we een aantal hulpmiddelen, zoals een stappenplan, een referentieimplementie en een proefopstelling.
 
-### Status
+## Status
 
 Een [onderzoek](/ftv/docs/4.onderzoek) naar de status van toegangsverlening in techniek en bij de Nederlandse overheid is afgerond.
 
@@ -50,7 +60,7 @@ in, en dit wordt nu getest met de FDS connectiviteitsmodule, OpenFSC. Streven is
 
 De referentieimplementate en proefopstelling zijn nog in een vroege fase.
 
-## Meedoen 
+## Meedoen
 
 [Denk mee](/ftv/docs/3.meedoen) met ons door van gedachten te wisselen over de methodiek, individueel of door deel te nemen in de [werkgroep](/ftv/docs/3.meedoen/1.werkgroep).
 

@@ -1,10 +1,10 @@
 ---
 weight: 40
 bookCollapseSection: true
-title: "Implementaties"
+title: "Producten"
 ---
 
-# Implementaties
+# Producten
 
 Toegangsverlening is een groeimarkt. Gedistribueerde architectuur met microservices, vertrouwensraamwerken en meer
 gegevensuitwisseling tussen partijen in het algemeen maken dat er een sterk toenemende vraag is naar praktische oplossingen.
