@@ -66,4 +66,5 @@ De referentieimplementate en proefopstelling zijn nog in een vroege fase.
 
 ## Contact
 
-Praat mee over FTV op ons [Mattermost](https://digilab.overheid.nl/chat/digilab/channels/federatieve-toegangsverlening) kanaal, vindt de broncode op [Gitlab](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/federatieve-toegangsverlening), of neem direct contact op met de product owner [Marc de Boer](mailto:marc.deboer@vng.nl).
+Praat mee over FTV op ons [Mattermost](https://digilab.overheid.nl/chat/digilab/channels/federatieve-toegangsverlening) kanaal, vindt de broncode op [Github](https://github.com/VNG-Realisatie/ftv), 
+of neem direct contact op met de product owner [Marc de Boer](mailto:marc.deboer@vng.nl).
