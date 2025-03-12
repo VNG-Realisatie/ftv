@@ -1,5 +1,6 @@
 ---
 weight: 50
+bookCollapseSection: true
 Title: Over het project
 ---
 

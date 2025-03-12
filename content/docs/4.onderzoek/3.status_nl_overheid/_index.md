@@ -16,4 +16,4 @@ De inventarisatie is verdeeld in:
 3. [Aanbieders](3.aanbieders)
 4. [Afnemers / implementatiepartners](4.afnemers)
 5. [Uitwisselingsplatforms](5.platforms)
-
+6. [Eerder gedaan onderzoek](6.eerder_onderzoek)
