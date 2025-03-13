@@ -26,7 +26,7 @@ of een boete op zijn plaats is.
 Toegangsverlening gaat over het opstellen en handhaven van regels zoals:
 
 - kentekens opvragen bij RDW mogen alleen bepaalde gemeenten, op basis van het 'Besluit milieuzones'
-- als de emissieklasse al aangeeft dat het goed zit (geen diesel), vraag dan geen BSN op
+- als de emissieklasse al aangeeft dat het goed zit (geen diesel, of geen camper), vraag dan geen BSN op
 - wis direct alle gegevens die niet nodig zijn om een boete te innen
 - hou een logboek bij van al je opvragingen
 
