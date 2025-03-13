@@ -6,21 +6,18 @@ title: "Methodiek"
 
 # Methodiek
 
-## Inleiding
+Als standaard methodiek voor verantwoorde toegangsverlenings is gekozen voor Externalized Access Management (EAM). In deze methodiek worden toegangsverzoeken, -beslissingen en -beleid op gestandaardiseerde wijze gemodelleerd zodat deze centraal beheerd kunnen worden.
 
-Het verlenen van toegang tot API's is een essentieel onderdeel van het verantwoord omgaan met gegevens. In tegenstelling tot identificatie en authenticatie is toegangsverlening (c.q. authorisatie) echter nog zeer beperkt gestandaardiseerd. Dit maakt het moeilijk toegangsbeleid en toegangsbeslissingen effectief te verantwoorden. 
+Drie bekende en veel voorkomende vormen van Externalized Acccess Management zijn Policy -, Attribute -, en Relation Based Access Control (PBAC, ABAC en ReBAC.)
 
-Daardoor moeten aanbieders kiezen tussen het *proberen* de rechtmatigheid van elk toegangsverzoek te controleren (**don't trust** but verify) of de afnemers te vertrouwen zonder verantwoording te kunnen vragen (trust but **don't verify**.)
+## Definities
+Om de methodiek te introduceren geven we eerst voor gangbare termen rondom EAM precieze [definities](1.definities).
 
-FTV biedt een gestandaardiseerde werkwijze voor het verantwoord verlenen van toegang tot gegevens. Dat maakt het mogelijk om toegangsverzoeken te verantwoorden zonder de rechtmatigheid van elk verzoek vooraf te hoeven bepalen.
+## Functioneel
+Daarna zetten we uiteen welke [functies](2.functioneel) een volwassen implementatie van EAM omvat. 
 
-Dit maakt het mogelijk om op basis van **trust and verify** de verantwoordelijkheid bij de afnemer te leggen. Dat is waar deze juridisch over het algemeen ook ligt. Dit wordt daarmee ook gezien als één van de drie vereiste standaarden voor een effectief [Federatief Datastelsel] naast [Federated Service Connectivity](https://fsc-standaard.nl/) en [Logboek Dataverwerkingen](https://logius-standaarden.github.io/logboek-dataverwerkingen/).
+## Architectuur
+In de [technische architectuur](3.architectuur) omschrijven we de gangbare componenten van de toegangsoplossing en plaatsen we deze in het wijdere IT-landschap. 
 
-## Beschrijving
-
-Eerst worden een aantal termen een precieze [definitie](1.definities) gegeven.
-Vervolgens wordt de methodiek beschreven vanuit drie perspectieven:
-
-1. [functioneel](2.functioneel)
-2. een [technische architectuur](3.architectuur), waarin zowel de componenten van de toegangsoplossing als de plaatsing in het wijdere IT-landschap wordt geschetst.
-3. een [technische standaard](2.standaard) die beschrijft hoe de toegangsoplossing met de omgeving samenwerkt.
+## Standaarden
+Tot slot definieren we [technische standaarden](4.standaarden) die standaard koppelvlakken tussen de componenten definieren.
