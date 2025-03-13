@@ -18,14 +18,15 @@ Lees [hier](/ftv/docs/5.over_het_project) meer over de doelen.
 
 ### Een voorbeeld
 
-Denk bijvoorbeeld aan boetes voor rijden in een milieuzone. Campers van bewoners mogen wel de zone in, andere niet.
-De gemeente hangt camera's op voor kentekenherkenning, vraagt aan het RDW de categorie en emissieklasse van het voertuig
-en wie (BSN) het kenteken op naam heeft, en aan het RvIG in welke gemeente die persoon is ingeschreven.
+Denk bijvoorbeeld aan boetes voor rijden in een milieuzone. Dieselcampers van bewoners mogen wel de zone in, van anderen niet.
+De gemeente hangt camera's op voor kentekenherkenning, vraagt bij het RDW de categorie en emissieklasse van elk passerend voertuig op,
+en op wiens BSN het kenteken staat. Ook vragen ze bij het RvIG op in welke gemeente die BSN is ingeschreven. De combinatie vertelt
+of een boete op zijn plaats is.
 
 Toegangsverlening gaat over het opstellen en handhaven van regels zoals:
 
 - kentekens opvragen bij RDW mogen alleen bepaalde gemeenten, op basis van het 'Besluit milieuzones'
-- als de emissieklasse al aangeeft dat het goed zit, vraag dan geen BSN op
+- als de emissieklasse al aangeeft dat het goed zit (geen diesel), vraag dan geen BSN op
 - wis direct alle gegevens die niet nodig zijn om een boete te innen
 - hou een logboek bij van al je opvragingen
 
