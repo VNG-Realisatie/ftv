@@ -1,6 +1,6 @@
 ---
 Title: Referentie-implementatie
-weight: 20
+weight: 30
 ---
 
 # Referentie-implementatie
