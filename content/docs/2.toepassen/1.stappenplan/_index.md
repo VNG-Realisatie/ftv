@@ -4,43 +4,57 @@ bookCollapseSection: true
 weight: 10
 ---
 
-# Stappenplan 
+# Stappenplan
 
-Implementatie van FTV, vanuit de situatie waar de meeste koppeling nu staan, gaat over twee veranderingen: PBAC en federatief werken.
-In een overgang naar FTV kunnen deze twee apart worden opgepakt, hetgeen de transitie makkelijker kan maken.
+Het opstellen en in productie brengen van regels hoeft niet ingewikkeld te zijn. Onderstaande stappen zijn een manier om
+het proces gestructureerd te doorlopen en in elke fase de juiste mensen te betrekken.
 
-## PBAC-stappenplan
+**1. Use case**
 
-Voor de implementatie van PBAC kan het volgende stappenplan gevolgd worden:
-- Kiezen en inrichten van PBAC-software
-- Aanpassen van de bestaande koppelsoftware (gateway, applicatie of API) om PBAC aan te roepen, 
-en de beslissing daarvan op te volgen
-- Identificeren van de toegangsregels die (zouden moeten) gelden
-- Testscenario's schrijven die het correct toepassen van de regels kunnen toetsen
-- In kaart brengen of en hoe de regels nu in de applicatie of API zijn ingebouwd
-- Ingebouwde regels noteren in de gekozen formele taal, en eventueel verwijderen uit code. Per regel kan met de testscenario's
-worden vastgesteld of dit correct is gebeurd.
+Formuleer eerst de use cases. Doe dit samen met alle stakeholders, zoals de applicatie/register-eigenaar, beveiligingsverantwoordelijke,
+beheerder en ontwikkelaar. Dit geeft een duidelijk afgebakende scope en meetbaar doel
 
-Veelal zal dit voor aanbieders en afnemers verschillend uitpakken. 
+**2. Requirements**
 
-**Aanbieders** hebben vaak al regels, en zullen die vervangen of verwijderen. 
-Regels die niet de verantwoordelijkheid zijn van de aanbieder kunnen verwijderd worden. Op voorwaarde natuurlijk
-dat de afspraken in het stelsel gemaakt zijn.
+Schrijf de eisen aan de oplossing uit, in een precieze vorm. Dit zijn de regels waaraan de gegevensuitwisseling gebonden
+zijn, dus die straks in de regelbestanden gaan komen. Door hier al te kiezen om in de regels de subject, actie, resource en context te
+benoemen wordt de
 
-**Afnemers** kunnen merken dat ze meer regels krijgen dan voorheen. Het identificeren van de regels kan discussie
-oproepen: meer verantwoordelijkheid betekent meer procedures en die verantwoordelijkheid beleggen bij medewerkers.
-Ook is het realistisch te verwachten dat de applicaties zelf aangepast moeten worden. 
-Als er nu een aanroep wordt gedaan waarmee te veel gegevens worden verwerkt, dan vergt terugbrengen daarvan
-een inhoudelijke aanpassing, die meer voeten in de aarde zal hebben dan alleen techniek. Ook zal er meer informatie
-met aanroepen meegegeven moeten worden, zodat zowel de PIP van de afnemer en de aanbieder kunnen regels kunnen valideren.
+Een voorbeeld: medewerkers (subject) mogen een zaak (resource) afsluiten (actie) als ze afdelingshoofd zijn en de zaakstatus
+'klaar om af te sluiten' is.
 
-## Federatief stappenplan
+**3. Attributen**
 
-Federatief gaan werken heeft een ander stappenplan:
-- De organisatie moet zich kunnen vinden in de voorwaarden van het federatief stelsel. Daarbij komen rechten en plichten
-kijken die nieuw zijn, en dat zal organisatorisch, beleidsmatig en juridisch gevolgen hebben.
-Denk hierbij ook aan het accepteren van een vertrouwde partij om verklaring mee te verifiëren.
-- Identificeren op basis van welke kenmerken (API keys, gebruikerscerticaten, rollen, etc) nu toegang verleend wordt
-- Voor deze kenmerken vervanging vinden in de vorm van verifieerbare verklaringen
-- Software aanpassen zodat de PIP/PDP de nodige informatie hebben, en dat de vertrouwde partijen kunnen worden
-geraadpleegd om verklaringen te verifiëren.
+In de requirements is nu direct te lezen welke attributen nodig zijn. In het voorbeeld is 'afdelingshoofd' een attribuut van het subject 'medewerker',
+en 'zaakstatus' een attribuut van de resource 'zaak'. Van elk attribuut moet bepaald worden of het beschikbaar is voor de beslismodule.
+Uit deze stap kan blijken dat er additionele koppelingen nodig zijn om de gegevens compleet te hebben.
+
+**4. Policies schrijven**
+
+Met de informatie uit bovenstaande stappen is het schrijven van de policies zelf rechttoe rechtaan geworden.
+Er is specialistische kennis nodig van de regeltaal en van de gegevensmodellen van subject, actie, resource en context,
+en dus zeker niet eenvoudig, maar specificaties en haalbaarheid is vooraf duidelijk.
+
+**5. Testen**
+
+Het opstellen van goede tests gaat vooral over het slim samenstellen van testdata. De data moet zoveel mogelijk voorkomende gevallen,
+zowel positief (mag) als positief (mag niet), afdekken. Dit is een taak van een business analist. Het inregelen van de tests
+is wat een ontwikkelaar zal doen door de testdata en verwachte uitkomsten in een systeem te plaatsen. Geautomatiseerd uitvoeren van de tests
+kan dan zo vaak uitgevoerd worden als nodig: na het opstellen of wijziging van de regel, maar ook na het aanpassen van andere
+regels of een verandering in de API's.
+
+**6. Inrichten van de infrastructuur**
+
+In deze stap wordt de gekozen beslismodule (PDP) neergezet (deployed) en aangesloten op de juiste toegangshekken (PEPs). Zie
+eventueel de sectie keuze software om te checken dat de gekozen componenten inderdaad bij elkaar passen en een compleet geheel vormen.
+
+De PEP kan deel uitmaken van een
+applicatie, een API, of een API-gateway. Zolang de component volgens de AuthZEN NL Gov standaard gebouwd is zal de aansluiting geen
+verdere programmeeractiviteit vergen. Het deployen van de PDP vergt kennis van de infrastructuur (cloud infra, helm, kubernetes).
+
+**7. Distributie van regels**
+
+In deze stap worden de regels van het centrale beheersysteem overgebracht naar de vaak veel beslissystemen in de infrastructuur.
+Het systeem weet aan de hand van de doelbinding welk systeem welke regels nodig heeft. De beslissystemen hebben zo alleen relevante regels en
+alleen de laatste versie en kunnen in dat vertrouwen beslissingen nemen. Dit is belangrijk voor goede prestaties: regels worden immers
+heel vaak uitgevoerd en maar zelden aangepast.
