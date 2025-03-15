@@ -56,7 +56,7 @@ Om [aan de slag te gaan](/ftv/docs/2.toepassen) met de methodiek bieden we een a
 
 Een [onderzoek](/ftv/docs/4.onderzoek) naar de status van toegangsverlening in techniek en bij de Nederlandse overheid is afgerond.
 
-Op dit moment wordt aan de [technische standaard](/ftv/docs/1.methodiek/2.standaard) geschreven. De basis is gereed om ingebouwd te worden , 
+Op dit moment wordt aan de [technische standaard](/ftv/docs/1.methodiek/4.standaarden) geschreven. De basis is gereed om ingebouwd te worden , 
 en dit wordt nu getest met de FDS connectiviteitsmodule, OpenFSC. Streven is de standaard op 1 juli 2025 aan te bieden voor plaatsing op de 'pas toe of leg uit' lijst.
 
 De referentieimplementate en proefopstelling zijn nog in een vroege fase.

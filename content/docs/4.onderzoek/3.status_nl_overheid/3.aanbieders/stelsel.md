@@ -8,8 +8,6 @@ weight: 10
 ## Links
 
 - https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/
-- https://stelselvanbasisregistraties.nl/home
-- https://stelselvanbasisregistraties.nl/about-system
 
 ## Fragmenten
 
