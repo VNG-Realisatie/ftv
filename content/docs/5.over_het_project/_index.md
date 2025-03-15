@@ -48,7 +48,7 @@ Secundair wordt gekeken of dezelfde of andere methodieken buiten het FDS inzetba
 Als opdracht van de [GDI](https://www.digitaleoverheid.nl/mido/generieke-digitale-infrastructuur-gdi/) valt dit project onder de [MIDO](https://www.digitaleoverheid.nl/mido/) en de [IBDS](https://www.digitaleoverheid.nl/interbestuurlijke-datastrategie/), en is gehouden aan de architectuur-
 en andere principes van die stelsels. Daarin in het bijzonder de domeinarchitecturen [Gegevensuitwisseling](https://minbzk.github.io/gdi-gegevensuitwisseling/content/views/Domeinarchitectuur%20gegevensuitwisseling.html) en [Toegang](https://minbzk.github.io/gdi-toegang/content/views/Domeinarchitectuur%20toegang.html).
 
-In de architectuurplaat van FDS geeft FTV invulling aan een van de elementen van de stelselfunctie [Poortwachter](https://federatief.datastelsel.nl/kennisbank/stelselfuncties/#poortwachter).
+In de architectuurplaat van FDS geeft FTV invulling aan een van de elementen van de stelselfunctie [Poortwachter](https://federatief.datastelsel.nl/kennisbank/poortwachter/).
 
 De methodiek zal de eigenschap 'federatief' dragen, passend in het FDS. Dat wil zeggen dat de oplossing niet gecentraliseerd zal zijn rond een
 enkel vertrouwd punt, en ook niet in gescheiden silo's zal plaatsvinden, maar een collectief stelsel van afspraken zal zijn, een samenwerkingsverband.
