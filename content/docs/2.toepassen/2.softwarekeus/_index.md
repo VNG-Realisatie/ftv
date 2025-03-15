@@ -35,5 +35,5 @@ Er is ook altijd de optie om zelf
 Vragen aan zelf:
 
 - Wie gaat het beheer doen, met wie is het logisch dat samen te doen?
-- Om hoeveel PDP's gaat het?
+- Om hoeveel PDP's gaat het? En hoeveel autorisatieverzoeken per maand?
 - Integreert het met mijn IAM oplossing?
