@@ -6,7 +6,7 @@ weight: 10
 
 # Stappenplan
 
-Het opstellen en in productie brengen van regels hoeft niet ingewikkeld te zijn. Onderstaande stappen zijn een manier om
+Het opstellen en in productie brengen van regels hoeft niet ingewikkeld te zijn. Onderstaande stappen kunnen helpen
 het proces gestructureerd te doorlopen en in elke fase de juiste mensen te betrekken.
 
 **1. Use case**

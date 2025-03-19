@@ -44,13 +44,11 @@ In [over het project](/ftv/docs/5.over_het_project) is meer te lezen over de opd
 
 ## De methodiek
 
-De voorgestelde [methodiek](/ftv/docs/1.methodiek) is er om toegangsverlening makkelijker te maken. Dit wordt beschreven vanuit drie perspectieven:
+De voorgestelde [methodiek](/ftv/docs/1.methodiek) is er om toegangsverlening beter te maken. 
+1. architectuur, waarin zowel de componenten van de toegangsoplossing als de plaatsing in het wijdere IT-landschap wordt geschetst.
+2. de technische standaarden die in detail beschrijven waar een oplossing aan moet voldoen.
 
-1. functioneel
-2. architectuur, waarin zowel de componenten van de toegangsoplossing als de plaatsing in het wijdere IT-landschap wordt geschetst.
-3. een technische standaard die in detail beschrijft waar een oplossing aan moet voldoen.
-
-Om [aan de slag te gaan](/ftv/docs/2.toepassen) met de methodiek bieden we een aantal hulpmiddelen, zoals een stappenplan, een referentieimplementie en een proefopstelling.
+Om [aan de slag te gaan](/ftv/docs/2.toepassen) met de methodiek bieden we een aantal hulpmiddelen, zoals een stappenplan, een referentie-implementatie en een proefopstelling.
 
 ## Status
 
