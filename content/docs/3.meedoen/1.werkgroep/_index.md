@@ -23,8 +23,7 @@ De tijdsinvestering stemmen we af tijdens de eerste bijeenkomst. We denken aan e
 
 ## Agenda
 
-- 25 maart
-Tijdens de eerste bijeenkomst verkennen we samen de opzet van de werkgroep en bepalen we de onderwerpen voor de aankomende bijeenkomsten.
+- [25 maart, kick off](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/679b73ea-08f5-4675-800f-36c86202918b/kick-off-werkgroep-federatieve-toegangsverlening-ftv). Tijdens de eerste bijeenkomst verkennen we samen de opzet van de werkgroep en bepalen we de onderwerpen voor de aankomende bijeenkomsten.
 - 8 april
 - 22 april
 - 6 mei
