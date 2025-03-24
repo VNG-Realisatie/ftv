@@ -6,9 +6,11 @@ title: "Methodiek"
 
 # Methodiek
 
-Als standaard methodiek voor verantwoorde toegangsverlening is gekozen voor Externalized Access Management (EAM). In deze methodiek worden toegangsverzoeken, -beslissingen en -beleid op gestandaardiseerde wijze gemodelleerd zodat deze centraal beheerd kunnen worden.
+Als standaard methodiek voor verantwoorde toegangsverlening is gekozen voor Externalized Access Management (EAM). 
+In deze methodiek worden toegangsverzoeken, -beslissingen en -beleid op gestandaardiseerde wijze gemodelleerd 
+en buiten de applicaties gebracht zodat deze centraal beheerd kunnen worden.
 
-Drie bekende en veel voorkomende vormen van Externalized Acccess Management zijn Policy -, Attribute -, en Relation Based Access Control (PBAC, ABAC en ReBAC.)
+Drie bekende en veel voorkomende vormen van Externalized Access Management zijn Policy -, Attribute -, en Relation Based Access Control (PBAC, ABAC en ReBAC.)
 
 ## Definities
 Om de methodiek te introduceren geven we eerst voor gangbare termen rondom EAM precieze [definities](1.definities).
