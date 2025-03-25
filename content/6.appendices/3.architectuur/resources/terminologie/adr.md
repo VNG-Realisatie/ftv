@@ -22,4 +22,4 @@ De ADR-records zijn in de Gitlab repository[^3] te vinden.
 
 [^1]: Cognitect, Michael Nygard: https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions
 [^2]: NLX/FSC: https://gitlab.com/commonground/nlx/adr
-[^3]: FTV Gitlab: https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/federatieve-toegangsverlening/-/tree/main/adr
+[^3]: FTV Gitlab: https://gitlab.com/digilab.overheid.nl/ecosystem{{< param baseDirectory >}}federatieve-toegangsverlening/-/tree/main/adr

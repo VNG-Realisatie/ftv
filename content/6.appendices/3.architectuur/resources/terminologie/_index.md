@@ -22,7 +22,7 @@ Tevens zullen we hier aangeven waarom voor een bepaalde term is gekozen.
 Op deze pagina worden de termen summier uitgelegd, en daar waar verduidelijking nodig lijkt, een link naar een verdieping van de term.
 De reden hiervoor is dat we de pagina niet te lang willen maken, en sommige lezers aan de korte versie al over voldoende uitleg beschikken.
 
-Mochten er toch nog vragen zijn, schroom niet om contact op te nemen via [de gebruikelijke kanalen.](/ftv/docs/1.over_het_project/1.introductie)
+Mochten er toch nog vragen zijn, schroom niet om contact op te nemen via [de gebruikelijke kanalen.]({{< param baseDirectory >}}docs/1.over_het_project/1.introductie)
 
 Diverse beschrijvingen zijn (voor een deel) uit andere projecten overgenomen,
 zoals RAWA [^1] en Lock/Unlock [^2].

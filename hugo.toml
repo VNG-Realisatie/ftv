@@ -1,4 +1,8 @@
-# baseURL = 'https://vng-realisatie.github.io/ftv'
+# baseURL = 'http://localhost:1313'
 languageCode = 'nl-nl'
 title = 'Federatieve Toegangsverlening'
 theme = "hugo-book"
+
+[params]
+    baseDirectory = '/'
+#  baseDirectory = '{{< param baseDirectory >}}'

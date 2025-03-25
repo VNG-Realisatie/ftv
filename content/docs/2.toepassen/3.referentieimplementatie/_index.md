@@ -9,7 +9,7 @@ weight: 30
 
 ## Repository
 
-De repository bevindt zich op [Gitlab](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie).
+De repository bevindt zich op [Gitlab](https://gitlab.com/digilab.overheid.nl/ecosystem{{< param baseDirectory >}}ftv-implementatie).
 
 ## Uitgangspunten
 
@@ -58,31 +58,31 @@ De repository bevindt zich op [Gitlab](https://gitlab.com/digilab.overheid.nl/ec
 - /utilities = herbruikbare generieke functies
 
 ### OAS
-[/oas](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie/-/tree/main/oas?ref_type=heads)
+[/oas](https://gitlab.com/digilab.overheid.nl/ecosystem{{< param baseDirectory >}}ftv-implementatie/-/tree/main/oas?ref_type=heads)
 
 Externe OAS-specificaties worden middels een script uit een relevante git-repo opgehaald,
 en vervolgens met een code-generator naar request/response structs vertaald.
 
 ### PBAC
-[/pbac](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie/-/tree/main/pbac?ref_type=heads)
+[/pbac](https://gitlab.com/digilab.overheid.nl/ecosystem{{< param baseDirectory >}}ftv-implementatie/-/tree/main/pbac?ref_type=heads)
 
 Verzameling van alles wat PBAC gerelateerd is.
 PEP, PDP, PIP, PAP, en ondersteunende generieke modellen, types en enums.
 
 #### FSC plugin
-[/pbac/fsc/plugin/generic](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie/-/tree/main/pbac/fsc/plugin/generic?ref_type=heads)
+[/pbac/fsc/plugin/generic](https://gitlab.com/digilab.overheid.nl/ecosystem{{< param baseDirectory >}}ftv-implementatie/-/tree/main/pbac/fsc/plugin/generic?ref_type=heads)
 
 Een minimale service, gebaseerd op de FSC autorisatie-plugin API.
 De configuratie van de service bepaald welke policy taal gekozen wordt,
 en dus welke taal-specifieke PDP en policies gebruikt worden voor het autorisatieproces.
 
 #### Shared modules
-[/pbac/components](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie/-/tree/main/pbac/components?ref_type=heads)
+[/pbac/components](https://gitlab.com/digilab.overheid.nl/ecosystem{{< param baseDirectory >}}ftv-implementatie/-/tree/main/pbac/components?ref_type=heads)
 
 Verzameling van herbruikbare PBAC-modules.
 
 ##### PDP - sdk wrappers
-[/pbac/components/pdp](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie/-/tree/main/pbac/components/pdp?ref_type=heads)
+[/pbac/components/pdp](https://gitlab.com/digilab.overheid.nl/ecosystem{{< param baseDirectory >}}ftv-implementatie/-/tree/main/pbac/components/pdp?ref_type=heads)
 
 Verzameling van PDP-wrappers (Cedar, OPA/Rego & **TODO**: Cerbos/CEL) en PDP-implementaties (**TODO**: ODRL & XACML).
 
@@ -91,22 +91,22 @@ Een PEP die een PDP wil gebruiken hoeft dan alleen de interface te kennen, en ka
 beslissen welk soort PDP (en bijhorende policy taal) het wil gebruiken.
 
 ##### PAP
-[/pbac/components/pap](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie/-/tree/main/pbac/components/pap?ref_type=heads)
+[/pbac/components/pap](https://gitlab.com/digilab.overheid.nl/ecosystem{{< param baseDirectory >}}ftv-implementatie/-/tree/main/pbac/components/pap?ref_type=heads)
 
 Een generieke PAP, die (op dit moment) policies uit het file-systeem op kan halen, en hiermee de PDP kan voeden. 
 
 ##### PIP
-[/pbac/components/pip](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie/-/tree/main/pbac/components/pip?ref_type=heads)
+[/pbac/components/pip](https://gitlab.com/digilab.overheid.nl/ecosystem{{< param baseDirectory >}}ftv-implementatie/-/tree/main/pbac/components/pip?ref_type=heads)
 
 Een generieke PIP, die (op dit moment) attributen en entities uit het file-systeem op kan halen, en hiermee de PDP kan voeden.
 Afhankelijk van het soort PDP, kunnen deze gegevens ook apart, tijdens iedere request, aan de PDP meegegeven worden.
 
 #### Models
-[/pbac/models](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie/-/tree/main/pbac/models?ref_type=heads)
+[/pbac/models](https://gitlab.com/digilab.overheid.nl/ecosystem{{< param baseDirectory >}}ftv-implementatie/-/tree/main/pbac/models?ref_type=heads)
 
 Constanten en modellen welke aan de FTV-standaard voldoen.
 
 ### Utilities
-[/utilities](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/ftv-implementatie/-/tree/main/utilities?ref_type=heads)
+[/utilities](https://gitlab.com/digilab.overheid.nl/ecosystem{{< param baseDirectory >}}ftv-implementatie/-/tree/main/utilities?ref_type=heads)
 
 Gevarieerd aanbod van simpele, generiek herbruikbare functies.

@@ -4,7 +4,7 @@ title: '2024-10-22'
 
 # 22-okt-2024 - De Toekomst Van Federatieve Toegang
 
-[Presentatie](/ftv/documents/Technisch_Spoor_20241022.pdf)
+[Presentatie]({{< param baseDirectory >}}documents/Technisch_Spoor_20241022.pdf)
 
 ## Notities MvA
 - In het technische spoor hebben we geprobeerd om de verschillende standaarden die er zijn te verzamelen en te bespreken. Voorbereid door Marc van Andel en Gerard Juijn hebben we de volgende standaarden besproken, met speciale dank aan Maarten Kollenstart voor zijn toelichting op ODRL:
