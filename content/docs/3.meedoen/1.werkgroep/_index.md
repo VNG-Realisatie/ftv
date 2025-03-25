@@ -35,3 +35,4 @@ De tijdsinvestering stemmen we af tijdens de eerste bijeenkomst. We denken aan e
 ## Notulen van eerdere bijeenkomsten
 
 - 20 november 2024: [Gegevensminimalisatie](gegevensminimalisatie)
+- 25 maart 2025: [Kick-off Werkgroep Federatieve Toegangsverlening](kick-off)
