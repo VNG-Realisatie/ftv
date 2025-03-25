@@ -19,11 +19,11 @@ De proefopstelling is een wel heel eenvoudig federatief datastelsel, als volgt:
 
 De stippellijn geeft de grens aan tussen de gemeentescope en het stelsel
 
-![Proefopstelling overzicht](/ftv/images/4.1proefopstelling_overzicht.png)
+![Proefopstelling overzicht]({{< param baseDirectory >}}images/4.1proefopstelling_overzicht.png)
 
 ### Opstelling zaaksysteem
 
-![Proefopstelling zaaksysteem](/ftv/images/4.1proefopstelling_zaaksysteem.png)
+![Proefopstelling zaaksysteem]({{< param baseDirectory >}}images/4.1proefopstelling_zaaksysteem.png)
 
 Het zaaksysteem heeft de volgende componenten:
 - De zaak-applicatie zelf. 
@@ -38,7 +38,7 @@ Het zaaksysteem heeft de volgende componenten:
 
 ### Opstelling basisregistraties
 
-![Proefopstelling zaaksysteem](/ftv/images/4.1proefopstelling_stelsel.png)
+![Proefopstelling zaaksysteem]({{< param baseDirectory >}}images/4.1proefopstelling_stelsel.png)
 
 Er zijn twee registraties, BRP en BRV, met de volgende onderdelen:
 

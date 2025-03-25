@@ -1,6 +1,6 @@
 # ADR
 
-Architecture Decision Records (ADR's) for the [Federatieve Toegangsverlening project](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/federatieve-toegangsverlening).
+Architecture Decision Records (ADR's) for the [Federatieve Toegangsverlening project](https://gitlab.com/digilab.overheid.nl/ecosystem{{< param baseDirectory >}}federatieve-toegangsverlening).
 
 Background information regarding ADR's in general can be found on the [ADR Github organization](https://adr.github.io/)
 

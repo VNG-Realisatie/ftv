@@ -17,8 +17,8 @@ We hebben gezien dat er al heel veel geschreven is over autorisatie en toegangsv
 We zijn al vele richtlijnen op het gebied van autorisatie tegengekomen.
 We hebben al diverse projecten gezien op dit gebied, waarbij verschillende aspecten en/of mogelijkheden aan de tand zijn gevoeld.
 
-Hiervoor hebben we een aantal lijsten van links[[1]](/ftv/docs/4.links)[[2]](/ftv/docs/5.architectuur/inventarisatie) samengesteld.
-In de [architectuur links](/ftv/docs/5.architectuur/inventarisatie) zijn zoveel mogelijk fragmenten van de diverse websites en projecten
+Hiervoor hebben we een aantal lijsten van links[[1]]({{< param baseDirectory >}}docs/4.links)[[2]]({{< param baseDirectory >}}docs/5.architectuur/inventarisatie) samengesteld.
+In de [architectuur links]({{< param baseDirectory >}}docs/5.architectuur/inventarisatie) zijn zoveel mogelijk fragmenten van de diverse websites en projecten
 (waar die een raakvlak hebben met of iets vertellen over autorisatie) verzameld, en zijn hier en daar ook observaties vastgelegd.
 
 Omdat er ook steeds weer nieuwe informatie opduikt en aangedragen wordt, heeft ook dit een veranderend karakter,
@@ -158,11 +158,11 @@ Het ligt dus voor de hand dat er een federatief stelsel is waarin dit eenduidig 
 Hier ligt echter wel een behoorlijk ingewikkelde taak, en is zeker verder onderzoek benodigd.
 
 ## Raakvlak met FDS
-Het [Federatief Data Stelsel](/ftv/docs/5.architectuur/inventarisatie/standaarden/fds) zal dezelfde autorisatieregels moeten hanteren als welke benodigd zijn voor het beveiligen van API's.
-Hiervoor is in het [Lock-Unlock project](/ftv/docs/5.architectuur/inventarisatie/projecten/lock_unlock) al een heleboel voorbereidend werk gedaan.
+Het [Federatief Data Stelsel]({{< param baseDirectory >}}docs/5.architectuur/inventarisatie/standaarden/fds) zal dezelfde autorisatieregels moeten hanteren als welke benodigd zijn voor het beveiligen van API's.
+Hiervoor is in het [Lock-Unlock project]({{< param baseDirectory >}}docs/5.architectuur/inventarisatie/projecten/lock_unlock) al een heleboel voorbereidend werk gedaan.
 Uit het project komen diverse voorstellen naar voren, maar ook nog een hoop aandachtspunten voor verder onderzoek.
 
-Het raakvlak zit vanuit ons project gezien bij het onderdeel van de [poortwachter](/ftv/docs/5.architectuur/inventarisatie/standaarden/poortwachter).
+Het raakvlak zit vanuit ons project gezien bij het onderdeel van de [poortwachter]({{< param baseDirectory >}}docs/5.architectuur/inventarisatie/standaarden/poortwachter).
 Beiden krijgen te maken met autorisatieregels die vanuit dezelfde wet- en regelgeving, beleidsregels en contractafspraken opgesteld en beheerd dienen te worden.
 Beiden zouden dus voor het vastleggen van de autorisatieregels van hetzelfde federatieve systeem gebruik moeten maken.
 Dit voorkomt dubbel werk met het beheer, en dwingt tevens uniformiteit af.
@@ -178,14 +178,14 @@ Het zou ook kunnen dat de autorisatie-ontologie van Lock-Unlock zelf het federat
 en dat hieruit de policies gegenereerd worden.
 
 Naast het vastleggen, is ook het vertalen van wet- en regelgeving naar technische regels een onderkende uitdaging.
-Op dit gebied zijn wel wat (voorzichtige) stappen gezet. Zie [Regelbeheer](/ftv/docs/5.architectuur/inventarisatie/wet_regelgeving/regelbeheer).
+Op dit gebied zijn wel wat (voorzichtige) stappen gezet. Zie [Regelbeheer]({{< param baseDirectory >}}docs/5.architectuur/inventarisatie/wet_regelgeving/regelbeheer).
 Echter, dit lijkt, op een enkel project na, in een vrij prematuur stadium te verkeren.
 
 Op al deze vlakken zal meer onderzoek nodig zijn.
 
 ## Uitvoeren van autorisatie
-Het uitvoeren van autorisatie is in diverse [projecten](/ftv/docs/5.architectuur/inventarisatie/projecten/projects) al (voor een deel) uitgetest.
-De meeste wegen leiden hier naar Policy Based Access Control ([PBAC](/ftv/docs/5.architectuur/inventarisatie/standaarden/pbac)) 
+Het uitvoeren van autorisatie is in diverse [projecten]({{< param baseDirectory >}}docs/5.architectuur/inventarisatie/projecten/projects) al (voor een deel) uitgetest.
+De meeste wegen leiden hier naar Policy Based Access Control ([PBAC]({{< param baseDirectory >}}docs/5.architectuur/inventarisatie/standaarden/pbac)) 
 ook wel als Policy As Code (PAC) en een vorm van Attribute Based Access Control (ABAC).
 
 Vanuit dit project lijkt het vooralsnog wenselijk om hier op voort te borduren.
@@ -222,7 +222,7 @@ Deze methodiek sluit zeer goed aan op de eisen die in dit project gesteld worden
 Dit is een manier om de autorisatieregels, volgens een vast schema, in een database vast te leggen.
 Hierdoor kan dit bv. als metadata binnen een federatief data stelsel beschikbaar gesteld worden (linked data), en gebruikt worden om data autorisatie te beheren en af te dwingen.
 
-Deze methodiek is al via het [Lock-Unlock project](/ftv/docs/5.architectuur/inventarisatie/projecten/lock_unlock) voorgesteld voor het FDS.
+Deze methodiek is al via het [Lock-Unlock project]({{< param baseDirectory >}}docs/5.architectuur/inventarisatie/projecten/lock_unlock) voorgesteld voor het FDS.
 
 ### ReBAC - Relation Based Access Control
 Deze methodiek legt relaties vast tussen verschillende objecten (resources) en kan gebruikt worden om (op een hoog niveau) bepaalde autorisatie toe te passen.
