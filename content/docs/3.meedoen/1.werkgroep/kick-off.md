@@ -117,4 +117,5 @@ Aangedragen onderwerpen (meeste stemmen eerst):
 
 **Gerard van der Hoeven**: Kennisdelen. Misschien nuttig om een deepdive te doen in een andere standaard (iSHARE) om te zien wat er al bestaat.
 
-
+Conclusie:
+In de eerste sessie zullen we de voorgestelde referentiearchitectuur introduceren en bespreken. Team FTV bereidt hier een presentatie voor. 
