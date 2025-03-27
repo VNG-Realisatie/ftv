@@ -1,7 +1,7 @@
 ---
 bookCollapseSection: false
 weight: 10
-Title: 2.Kick-off Sessie
+Title: 2. Kick-off Sessie
 draft: true
 ---
 
@@ -61,18 +61,18 @@ Volgende besluiten genomen na stemming:
 - Dinsdagochtend van 10:00 tot 11:00
 
 ## Onderwerpen
-Door de deelnemers zijn op het onderwerpen aangedragen voor de toekomstige werkgroepen. Door iedereen is gestemd op de onderwerpen.
+De deelnemers hebben onderwerpen voorgesteld voor toekomstige werkgroepen. Daarna heeft iedereen gestemd op deze onderwerpen.
 
 Aangedragen onderwerpen (meeste stemmen eerst):
 - Gebruik van attesteringen via verifiable credentials (eIDAS2) (6 stemmen)
-- relatie met API Design Rules (6 stemmen)
+- Relatie met API Design Rules (6 stemmen)
 - NLGov profiel voor AuthZEN (5 stemmen)
 - Relatie met open authenticatie (Oauth / OIDC) (5 stemmen)
 - Tracing en decision log (4 stemmen)
 - Niet alleen REST APIs  maar breder
 (gRPC, GraphQL, SPARQL, etc, etc) (4 stemmen)
-- werken vanuit juridisch kader (kader als handvat) (3 stemmen)
-- relatie met data(space) connectors (3 stemmen)
+- Werken vanuit juridisch kader (kader als handvat) (3 stemmen)
+- Relatie met data(space) connectors (3 stemmen)
 - Aansluiten / benutten bestaande markt standaarden en ontwikkelingen ( iSHARE) (3 stemmen)
 - Europese ontwikkelingen op dit vlak ( Trusted Data Trasnactions, JTC25, Eclipse Dataspace Working Group) (2 stemmen)
 - Inpassen in Europese (2 stemmen)
@@ -102,7 +102,7 @@ Aangedragen onderwerpen (meeste stemmen eerst):
 
 **Renee Kint**: Waarom? Er zijn al standaarden, waarom dan een nieuwe standaard?
 
-**Michiel Trimpe**: Doel is 1 of meerdere standaarden introduceren binnen de overheid. Werkgroep is breder dan alleen AuthZen.
+**Michiel Trimpe**: Doel is één of meerdere. standaarden introduceren binnen de overheid. Werkgroep is breder dan alleen AuthZen.
 
 **Danny Greefhorst**: Ik geinteresseerd in algemene policies die gestandaardiseerd kunnen worden. Ook standaardisaties op functioneel/inhoudelijk vlak.
 
