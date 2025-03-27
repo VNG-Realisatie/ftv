@@ -4,7 +4,7 @@
 Deze Gitlab omgeving hoort bij het project Federatieve Toegangsverlening. 
 
 De documentatie hier is het best te lezen op deze locatie:<br>
-https://federatieve-toegangsverlening-digilab-overheid-n-5d4b9badc9bcfa.gitlab.io/
+https://vng-realisatie.github.io/ftv/
 
 ## Contact
 
