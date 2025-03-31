@@ -12,11 +12,8 @@ en buiten de applicaties gebracht zodat deze centraal beheerd kunnen worden.
 
 Drie bekende en veel voorkomende vormen van Externalized Access Management zijn Policy -, Attribute -, en Relation Based Access Control (PBAC, ABAC en ReBAC.)
 
-## Definities
-Om de methodiek te introduceren geven we eerst voor gangbare termen rondom EAM precieze [definities](1.definities).
-
 ## Architectuur
-In de [technische architectuur](3.architectuur) omschrijven we de gangbare componenten van de toegangsoplossing en plaatsen we deze in het wijdere IT-landschap. 
+In de [technische architectuursectie](3.architectuur) omschrijven we de gangbare componenten van de toegangsoplossing en plaatsen we deze in het wijdere IT-landschap. 
 
 ## Standaarden
-Tot slot definiëren we [technische standaarden](4.standaarden) die standaard koppelvlakken tussen de componenten beschrijven.
+De [technische standaarden](4.standaarden) beschrijven in detail hoe de componenten zich moeten gedragen.
