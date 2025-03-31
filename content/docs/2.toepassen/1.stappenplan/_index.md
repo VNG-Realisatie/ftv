@@ -14,13 +14,16 @@ het proces gestructureerd te doorlopen en in elke fase de juiste mensen te betre
 Formuleer eerst de use cases. Doe dit samen met alle stakeholders, zoals de applicatie/register-eigenaar, beveiligingsverantwoordelijke,
 beheerder en ontwikkelaar. Dit geeft een duidelijk afgebakende scope en meetbaar doel.
 
+Als voorbeeld kunnen we naar de beoordeling en afhandeling van toeslagaanvragen kijken. Beschrijf in de use case welke taken
+door wie uitgevoerd moeten kunnen worden om de toegang daarbij goed te regelen.
+
 **2. Requirements**
 
 Schrijf de eisen aan de oplossing uit, in een precieze vorm. Dit zijn de regels waaraan de gegevensuitwisseling gebonden
-zijn, dus die straks in de regelbestanden gaan komen. Door hier al te kiezen om in de regels de subject, actie, resource en context te
-benoemen wordt het schrijven later eenduidig en overzichtelijk.
+zijn, dus die straks in de regelbestanden gaan komen. Door de regels nu al in termen van subject, actie, resource en context uit te
+drukken wordt het schrijven later eenduidig en overzichtelijk.
 
-Een voorbeeld: baliemedewerkers (subject) mogen een huurtoeslagzaak (resource) afsluiten (actie) als ze afdelingshoofd zijn en de zaakstatus
+Een voorbeeld: zaakbehandeleren (subject) mogen een huurtoeslagzaak (resource) afsluiten (actie) als ze afdelingshoofd zijn en de zaakstatus
 'klaar om af te sluiten' is.
 
 **3. Attributen**
