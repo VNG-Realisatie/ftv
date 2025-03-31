@@ -4,35 +4,34 @@ type: docs
 weight: 10
 ---
 
-# {{< figure src="{{< param baseDirectory >}}images/ftv_logo.png" alt="logo" width="50" height="50" >}}Welkom
+# {{< figure src="/ftv/images/ftv_logo.png" alt="logo" width="50" height="50" >}}Federatieve Toegangsverlening
 
-Dit is de site van het project Federatieve Toegangsverlening (FTV).
+Omdat we in de toekomst ook op een veilige en transparante wijze toegang tot gegevens willen beheren,
+gebaseerd op duidelijke afspraken.
 
-## Waar gaat toegangsverlening over?
+## Waarom FTV?
 
-> Het project FTV biedt een gestandaardiseerde aanpak voor veilige, verantwoorde en efficiënte toegang bij
-> gegevensuitwisseling tussen overheidsorganisaties.
+### Schaalvergroting
 
-De doelen van de standaardmethodiek zijn onder andere om toegangsverlening veiliger en fijnmaziger te maken, makkelijker te implementeren en leveranciersonafhankelijkheid te behouden.
-Lees [hier]({{< param baseDirectory >}}docs/5.over_het_project) meer over de doelen.
+Er worden meer gegevens uitgewisseld dan ooit, over organisatie- en landsgrenzen heen.
+Hoe houden we dat beheersbaar?
 
-### Een voorbeeld
+### Traceerbaarheid
 
-Denk bijvoorbeeld aan boetes voor rijden in een milieuzone. Dieselcampers van bewoners mogen wel de zone in, van anderen niet.
-De gemeente hangt camera's op voor kentekenherkenning, vraagt bij het RDW de categorie en emissieklasse van elk passerend voertuig op,
-en op wiens BSN het kenteken staat. Ook vragen ze bij het RvIG op in welke gemeente die BSN is ingeschreven. De combinatie vertelt
-of een boete op zijn plaats is.
+Altijd inzicht wie wanneer toegang had, wat veiligheid en compliance waarborgt.
 
-Toegangsverlening gaat over het opstellen en handhaven van regels zoals:
+### Leveranciersonafhankelijk
 
-- kentekens opvragen bij RDW mogen alleen bepaalde gemeenten, op basis van het 'Besluit milieuzones'
-- als de emissieklasse al aangeeft dat het goed zit (geen diesel, of geen camper), vraag dan geen BSN op
-- wis direct alle gegevens die niet nodig zijn om een boete te innen
-- hou een logboek bij van al je opvragingen
+Open standaarden voorkomen vendor lock-in en bieden keuzevrijheid in leveranciers.
+
+## Voorbeeldcasus
+
+Het handhaven van milieuzones gebeurt tegenwoordig automatisch. En de regels veranderen regelmatig: de eisen worden
+strenger. Hoe doe je dat flexibel en respecteer je de privacy?
 
 ## Context
 
-Bij gegevensuitwisseling komt nog veel meer kijken, zoals veilige verbindingen, indentificatie, authenticatie en goed gebruikersbeheer.
+Bij gegevensuitwisseling komt nog veel meer kijken, zoals veilige verbindingen, identificatie, authenticatie en goed gebruikersbeheer.
 FTV gaat alleen over toegangsverlening, ook wel autorisatie. Zie [scope]({{< param baseDirectory >}}docs/5.over_het_project/1.scope) voor verdere afbakening.
 
 FTV kan op zich staan, maar past ook naadloos in het [Federatief Datastelsel (FDS)](https://federatief.datastelsel.nl/).
