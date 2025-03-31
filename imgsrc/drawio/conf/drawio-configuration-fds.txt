@@ -1,0 +1,44 @@
+{
+  "customColorSchemes": [
+    [
+      { "fill": "#154273", "stroke": "none" },
+      { "fill": "#01689b", "stroke": "none" },
+      { "fill": "#007bc7", "stroke": "none" },
+      { "fill": "#8fcae7", "stroke": "none" },
+      { "fill": "#39870c", "stroke": "none" },
+      { "fill": "#275937", "stroke": "none" },
+      { "fill": "#76d2b6", "stroke": "none" },
+      { "fill": "#777c00", "stroke": "none" },
+      { "fill": "#42145f", "stroke": "none" },
+      { "fill": "#a90061", "stroke": "none" },
+      { "fill": "#ca005d", "stroke": "none" },
+      { "fill": "#f092cd", "stroke": "none" },
+      { "fill": "#d52b1e", "stroke": "none" },
+      { "fill": "#e17000", "stroke": "none" },
+      { "fill": "#f9e11e", "stroke": "none" },
+      { "fill": "#ffb612", "stroke": "none" },
+      { "fill": "#94710a", "stroke": "none" },
+      { "fill": "#673327", "stroke": "none" }
+    ]
+  ],
+  "presetColors": [
+    "154273",
+    "01689b",
+    "007bc7",
+    "8fcae7",
+    "39870c",
+    "275937",
+    "76d2b6",
+    "777c00",
+    "42145f",
+    "a90061",
+    "ca005d",
+    "f092cd",
+    "d52b1e",
+    "e17000",
+    "f9e11e",
+    "ffb612",
+    "94710a",
+    "673327"
+  ]
+}
