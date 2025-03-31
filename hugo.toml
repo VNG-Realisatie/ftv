@@ -4,5 +4,5 @@ title = 'Federatieve Toegangsverlening'
 theme = "hugo-book"
 
 [params]
-    baseDirectory = '/'
+    baseDirectory = '/ftv/'
 #  baseDirectory = '{{< param baseDirectory >}}'
