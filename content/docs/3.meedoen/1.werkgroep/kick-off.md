@@ -43,7 +43,7 @@ Title: 2. Kick-off Sessie
 
 **Waar doen we dit voor?**
 
-Er is momenteel geen standaard methodiek voor fijnmazige toegangsverlening waardoor het, zowel binnen als tussen organisaties, beperkt mogelijk is om toegangsverlening te overzien en beheren.
+Er is momenteel geen overheidsstandaard voor fijnmazige toegangsverlening waardoor het, zowel binnen als tussen organisaties, beperkt mogelijk is om toegangsverlening te overzien en beheren.
 
 **Wat willen we bereiken?**
 
@@ -65,7 +65,7 @@ De deelnemers hebben onderwerpen voorgesteld voor toekomstige werkgroepen. Daarn
 Aangedragen onderwerpen (meeste stemmen eerst):
 - Gebruik van attesteringen via verifiable credentials (eIDAS2) (6 stemmen)
 - Relatie met API Design Rules (6 stemmen)
-- NLGov profiel voor AuthZEN (5 stemmen)
+- NL Gov profiel voor AuthZEN (5 stemmen)
 - Relatie met open authenticatie (Oauth / OIDC) (5 stemmen)
 - Tracing en decision log (4 stemmen)
 - Niet alleen REST APIs  maar breder
@@ -99,22 +99,22 @@ Aangedragen onderwerpen (meeste stemmen eerst):
 
 ## Vervolgstappen
 
-**Renee Kint**: Waarom? Er zijn al standaarden, waarom dan een nieuwe standaard?
+**René Kint**: Waarom? Er zijn al standaarden, waarom dan een nieuwe standaard?
 
-**Michiel Trimpe**: Doel is één of meerdere. standaarden introduceren binnen de overheid. Werkgroep is breder dan alleen AuthZen.
+**Michiel Trimpe**: Doel is één of meerdere. standaarden introduceren binnen de overheid. Werkgroep is breder dan alleen AuthZEN.
 
-**Danny Greefhorst**: Ik geinteresseerd in algemene policies die gestandaardiseerd kunnen worden. Ook standaardisaties op functioneel/inhoudelijk vlak.
+**Danny Greefhorst**: Ik geïnteresseerd in algemene policies die gestandaardiseerd kunnen worden. Ook standaardisaties op functioneel/inhoudelijk vlak.
 
-**Gerard van der Hoeven**: Kennisdelen is belangrijk, vanuit iSHARE is er al kennis beschikbaar. Waarom doen we dit en wat is de behoefte? iSHARE is al een standaard.
+**Gerard van der Hoeven**: Kennisdelen is belangrijk, vanuit iShare is er al kennis beschikbaar. Waarom doen we dit en wat is de behoefte? iShare is al een standaard.
 
-**Marc de Boer**: Doel is schaalbaarheid, vendor onafhankelijke standaard te hebben.
+**Marc de Boer**: Doel is schaalbaarheid en een vendor onafhankelijke standaard te hebben.
 
 ## Onderwerpen 1e sessie
-**Rene Kint**: Ik ben geinteresseerd in referentie architectuur.  Waarom doen we policy based?
+**René Kint**: Ik ben geïnteresseerd in referentie architectuur.  Waarom doen we policy based?
 
 **Marc de Boer**: 1e sessie gebruiken om te kijken waar we zijn en waar we naar toe willen.
 
-**Gerard van der Hoeven**: Kennisdelen. Misschien nuttig om een deepdive te doen in een andere standaard (iSHARE) om te zien wat er al bestaat.
+**Gerard van der Hoeven**: Kennisdelen. Misschien nuttig om een deep-dive te doen in een andere standaard (iShare) om te zien wat er al bestaat.
 
 **Conclusie:**
 In de eerste sessie zullen we de voorgestelde referentiearchitectuur introduceren en bespreken. Team FTV bereidt hier een presentatie voor. 
