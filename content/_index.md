@@ -16,6 +16,11 @@ gebaseerd op duidelijke afspraken.
 Er worden meer gegevens uitgewisseld dan ooit, over organisatie- en landsgrenzen heen.
 Hoe houden we dat beheersbaar?
 
+### Flexibiliteit
+
+Regels veranderen, en de toegangsverlening moet mee kunnen komen. Liefst zonder software aanpassingen,
+maar wel gecontroleerd.
+
 ### Traceerbaarheid
 
 Altijd inzicht wie wanneer toegang had, wat veiligheid en compliance waarborgt.
@@ -24,10 +29,20 @@ Altijd inzicht wie wanneer toegang had, wat veiligheid en compliance waarborgt.
 
 Open standaarden voorkomen vendor lock-in en bieden keuzevrijheid in leveranciers.
 
-## Voorbeeldcasus
+[Lees meer over het waarom van FTV](1.waarom_ftv)
+
+## Voorbeelden
+
+### Campers in de milieuzone
 
 Het handhaven van milieuzones gebeurt tegenwoordig automatisch. En de regels veranderen regelmatig: de eisen worden
-strenger. Hoe doe je dat flexibel en respecteer je de privacy?
+strenger. Hoe doe je dat flexibel en respecteer je de privacy? [Lees verder](2.voorbeeldcasus).
+
+### Huurtoeslag
+
+Het berekenen van huurtoeslag vraagt veel gegevens uit verschillende bronnen, waaronder nogal wat persoonlijke
+gegevens over woonsituatie en inkomen. Daarom wordt elke aanvraag privé gehouden tussen de burger en de beoordelaar.
+[Lees verder](2a.voorbeeldcasus).
 
 ## Context
 
