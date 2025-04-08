@@ -11,6 +11,8 @@ gebaseerd op duidelijke afspraken.
 
 ## Waarom FTV?
 
+Dit zijn de belangrijkste voordelen van moderne toegangsverlening op een rij:
+
 ### Schaalvergroting
 
 Er worden meer gegevens uitgewisseld dan ooit, over organisatie- en landsgrenzen heen.
@@ -29,9 +31,11 @@ Altijd inzicht wie wanneer toegang had, wat veiligheid en compliance waarborgt.
 
 Open standaarden voorkomen vendor lock-in en bieden keuzevrijheid in leveranciers.
 
-[Lees meer over het waarom van FTV](1.waarom_ftv)
+[Meer weten over de voordelen van FTV?](1.waarom_ftv)
 
-## Voorbeelden
+## Hoe werkt het als FTV is geïmplementeerd?
+
+Een paar voorbeelden van hoe de voordelen van FTV tot betere uitwisseling leiden.
 
 ### Campers in de milieuzone
 
@@ -43,6 +47,19 @@ strenger. Hoe doe je dat flexibel en respecteer je de privacy? [Lees verder](2.v
 Het berekenen van huurtoeslag vraagt veel gegevens uit verschillende bronnen, waaronder nogal wat persoonlijke
 gegevens over woonsituatie en inkomen. Daarom wordt elke aanvraag privé gehouden tussen de burger en de beoordelaar.
 [Lees verder](2a.voorbeeldcasus).
+
+### Nieuws en activiteiten
+
+**Nieuws**
+
+- AuthZEN ingebouwd in OpenFDS
+- Kick-off werkgroep FTV onder grote belangstelling
+- AuthZEN op de Gartner IAM conferentie in Londen
+
+**Activiteiten**
+
+- Dinsdag 20 april, 10:00: werkgroep. Onderwerp van de dag: de juridische scope
+- Donderdag 22 april, 12:00: inloopspreekuur FTV
 
 ## Context
 
