@@ -9,23 +9,23 @@ Title: 3. Introductie EAM
 ## Aanwezigen
 - Marc de Boer (FTV)
 - Gideon Zegwaard (FDS)
-- Elske Derks
-- Frank Terpstra
-- Rens Kievit
+- Elske Derks (MinBZK)
+- Frank Terpstra (Geonovum)
+- Rens Kievit (Rijk)
 - Gerard Juijn (FTV)
 - Maikel Hofman (FTV)
 - Michiel Trimpe (FTV)
 - Karin Hiralal (FTV)
-- Nico Spijkers 
-- Gerard van der Hoeven (iSHARE)
-- Martin van der Plas (Logi)
+- Nico Spijkers (MinBZK)
+- Gerard van der Hoeven (iShare)
+- Martin van der Plas (Logius)
 - Stas Mironov (Logius)
 - Remo van Rest (ZIN)
-- Wouter Diephuis
-- Around Quanjer
-- Rene Kint
+- Wouter Diephuis (MinBZK)
+- Around Quanjer (VNG)
+- Rene Kint (Zicht op Nederland)
 - Ronald Koster (FSC)
-- Rob Klaver (IDEMIA)
+- Rob Klaver (Idemia)
 
 ## Agenda
 - Introductie Externalized Authorization Management

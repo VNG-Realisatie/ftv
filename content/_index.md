@@ -39,14 +39,14 @@ Een paar voorbeelden van hoe de voordelen van FTV tot betere uitwisseling leiden
 
 ### Campers in de milieuzone
 
-{{< figure src="/images/camper-milieuzone.webp" alt="camper" width="200" height="132" >}}
+{{< figure src="/ftv/images/camper-milieuzone.webp" alt="camper" width="200" height="132" >}}
 
 Het handhaven van milieuzones gebeurt tegenwoordig automatisch. En de regels veranderen regelmatig: de eisen worden
 strenger. Hoe doe je dat flexibel en respecteer je de privacy? [Lees verder](2.voorbeeldcasus).
 
 ### Huurtoeslag
 
-{{< figure src="/images/huurtoeslag.webp" alt="camper" width="200" height="132" >}}
+{{< figure src="/ftv/images/huurtoeslag.webp" alt="camper" width="200" height="132" >}}
 
 Het berekenen van huurtoeslag vraagt veel gegevens uit verschillende bronnen, waaronder nogal wat persoonlijke
 gegevens over woonsituatie en inkomen. Daarom wordt elke aanvraag privé gehouden tussen de burger en de beoordelaar.
@@ -81,3 +81,10 @@ Wij werken graag samen met de toekomstige gebruikers om te zorgen dat ons werk e
 en werken ook actief mee bij aanbestedingen en realisatie.
 
 ## Betrokken partijen
+
+- Ministerie van Binnenlandse Zaken
+- Geonovum
+- Logius
+- Zorginstituut Nederland
+- Idemia
+- Kadaster
