@@ -7,29 +7,29 @@ Title: 2. Kick-off Sessie
 # Kick-Off Werkgroep Federatieve Toegangsverlening (25 maart 2025)
 
 ## Aanwezigen
-- Marc van Andel
+- Marc van Andel (Kadaster)
 - Marc de Boer (FTV)
 - Gideon Zegwaard (FDS)
 - Pim Gaemers (FSC)
 - Gerard Juijn (FTV)
 - Maikel Hofman (FTV)
 - Michiel Trimpe (FTV)
-- Nico Spijkers
+- Nico Spijkers (MinBZK)
 - Gerard van der Hoeven (iSHARE)
-- Danny Greefhorst
-- Elske Derks
-- Martin van der Plas
+- Danny Greefhorst (ArchiXL)
+- Elske Derks (MinBZK)
+- Martin van der Plas (Logius)
 - Stas Mironov (Logius)
-- Remo van Rest
-- Igor van Haren
-- Wouter Diephuis
-- Around Quanjer
-- René Hietkamp
-- Martin Borgman
-- Rene Kint
+- Remo van Rest (Zorginstituut Nederland)
+- Igor van Haren (Vecozo)
+- Wouter Diephuis (MinBZK)
+- Around Quanjer (VNG)
+- René Hietkamp (Zorginstituut Nederland)
+- Martin Borgman (Kadaster)
+- Rene Kint (Zicht op Nederland)
 - Ronald Koster (FSC)
-- Laura Rijnaarts
-- Rob Klaver
+- Laura Rijnaarts (MinBZK)
+- Rob Klaver (Idemia)
 
 ## Agenda
 - Kick-off
