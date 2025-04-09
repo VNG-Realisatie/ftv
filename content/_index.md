@@ -39,10 +39,14 @@ Een paar voorbeelden van hoe de voordelen van FTV tot betere uitwisseling leiden
 
 ### Campers in de milieuzone
 
+{{< figure src="/images/camper-milieuzone.webp" alt="camper" width="200" height="132" >}}
+
 Het handhaven van milieuzones gebeurt tegenwoordig automatisch. En de regels veranderen regelmatig: de eisen worden
 strenger. Hoe doe je dat flexibel en respecteer je de privacy? [Lees verder](2.voorbeeldcasus).
 
 ### Huurtoeslag
+
+{{< figure src="/images/huurtoeslag.webp" alt="camper" width="200" height="132" >}}
 
 Het berekenen van huurtoeslag vraagt veel gegevens uit verschillende bronnen, waaronder nogal wat persoonlijke
 gegevens over woonsituatie en inkomen. Daarom wordt elke aanvraag privé gehouden tussen de burger en de beoordelaar.
@@ -52,49 +56,28 @@ gegevens over woonsituatie en inkomen. Daarom wordt elke aanvraag privé gehoude
 
 **Nieuws**
 
-- AuthZEN ingebouwd in OpenFDS
-- Kick-off werkgroep FTV onder grote belangstelling
-- AuthZEN op de Gartner IAM conferentie in Londen
+- [AuthZEN ingebouwd in OpenFDS](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/blog/view/158bab79-30a5-4853-8a39-8b448b00755b/authzen-nu-ingebouwd-in-openfsc)
+- [Kick-off werkgroep FTV onder grote belangstelling](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/blog/view/1320d1ad-d68f-4dc1-97d4-ebde7242e292/werkgroep-federatieve-toegangsverlening-van-start-samenwerken-aan-veilige-en-verantwoorde-toegang-tot-data)
+- [AuthZEN op de Gartner IAM conferentie in Londen](https://openid.net/wp-content/uploads/2025/04/AuthZEN-Gartner-IAM-2025-London.pdf)
 
 **Activiteiten**
 
-- Dinsdag 20 april, 10:00: werkgroep. Onderwerp van de dag: de juridische scope
-- Donderdag 22 april, 12:00: inloopspreekuur FTV
+- Dinsdag 20 april, 10:00. dev.loer en online. Werkgroep #2. Onderwerp van de dag: de juridische scope
+- Donderdag 22 april, 12:00 online. [Inloopspreekuur FTV](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/8cbfc0d6-3c63-4cf5-a616-8056f44d5a01/uitnodiging-inloopspreekuur-standaarden-federatief-datastelsel-deel-3)
 
-## Context
+### Praat mee
 
-Bij gegevensuitwisseling komt nog veel meer kijken, zoals veilige verbindingen, identificatie, authenticatie en goed gebruikersbeheer.
-FTV gaat alleen over toegangsverlening, ook wel autorisatie. Zie [scope]({{< param baseDirectory >}}docs/5.over_het_project/1.scope) voor verdere afbakening.
+Meld je aan op Mattermost en praat mee over ons project! Mattermost is een open source communicatieplatform
+waar je in real-time kunt samenwerken en ideeen uitwisselen. Wil je meedoen? 
+Ga naar [ons kanaal](https://digilab.overheid.nl/chat/digilab/channels/federatieve-toegangsverlening) kanaal) in je browser of download de app, meld je gratis aan en sluit
+je direct aan bij de community.We kijken ernaar uit om je stem te horen!
 
-FTV kan op zich staan, maar past ook naadloos in het [Federatief Datastelsel (FDS)](https://federatief.datastelsel.nl/).
-Toegang is een van de technische [stelselfuncties](https://federatief.datastelsel.nl/kennisbank/stelselfuncties/) van het FDS. Dit zijn ze allemaal:
+![Praat mee]({{< param baseDirectory >}}images/praatmee.png)
 
-![1.1stelselfuncties.png]({{< param baseDirectory >}}images/1.1stelselfuncties.png)
+## Wie doen al mee?
 
-In [over het project]({{< param baseDirectory >}}docs/5.over_het_project) is meer te lezen over de opdracht en uitvoeringscontext.
+Het succes van een standaard staat en valt natuurlijk met hoe goed hij gebruikt wordt. 
+Wij werken graag samen met de toekomstige gebruikers om te zorgen dat ons werk echt toepasbaar is, 
+en werken ook actief mee bij aanbestedingen en realisatie.
 
-## De methodiek
-
-De voorgestelde [methodiek]({{< param baseDirectory >}}docs/1.methodiek) is er om toegangsverlening beter te maken. 
-1. architectuur, waarin zowel de componenten van de toegangsoplossing als de plaatsing in het wijdere IT-landschap wordt geschetst.
-2. de technische standaarden die in detail beschrijven waar een oplossing aan moet voldoen.
-
-Om [aan de slag te gaan]({{< param baseDirectory >}}docs/2.toepassen) met de methodiek bieden we een aantal hulpmiddelen, zoals een stappenplan, een referentie-implementatie en een proefopstelling.
-
-## Status
-
-Een [onderzoek]({{< param baseDirectory >}}docs/4.onderzoek) naar de status van toegangsverlening in techniek en bij de Nederlandse overheid is afgerond.
-
-Op dit moment wordt aan de [technische standaard]({{< param baseDirectory >}}docs/1.methodiek/4.standaarden) geschreven. De basis is gereed om ingebouwd te worden , 
-en dit wordt nu getest met de FDS connectiviteitsmodule, OpenFSC. Streven is de standaard op 1 juli 2025 aan te bieden voor plaatsing op de 'pas toe of leg uit' lijst.
-
-De referentieimplementate en proefopstelling zijn nog in een vroege fase.
-
-## Meedoen
-
-[Denk mee]({{< param baseDirectory >}}docs/3.meedoen) met ons door van gedachten te wisselen over de methodiek, individueel of door deel te nemen in de [werkgroep]({{< param baseDirectory >}}docs/3.meedoen/1.werkgroep).
-
-## Contact
-
-Praat mee over FTV op ons [Mattermost](https://digilab.overheid.nl/chat/digilab/channels/federatieve-toegangsverlening) kanaal, vindt de broncode op [Github](https://github.com/VNG-Realisatie/ftv), 
-of neem direct contact op met de product owner [Marc de Boer](mailto:marc.deboer@vng.nl).
+## Betrokken partijen
