@@ -19,7 +19,7 @@ Title: 2. Kick-off Sessie
 - Danny Greefhorst
 - Elske Derks
 - Martin van der Plas
-- Stas Mironov
+- Stas Mironov (Logius)
 - Remo van Rest
 - Igor van Haren
 - Wouter Diephuis
