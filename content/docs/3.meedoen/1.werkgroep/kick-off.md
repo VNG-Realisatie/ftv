@@ -26,7 +26,7 @@ Title: 2. Kick-off Sessie
 - Around Quanjer (VNG)
 - René Hietkamp (Zorginstituut Nederland)
 - Martin Borgman (Kadaster)
-- Rene Kint (Zicht op Nederland)
+- René Kint (Zicht op Nederland)
 - Ronald Koster (FSC)
 - Laura Rijnaarts (MinBZK)
 - Rob Klaver (Idemia)
