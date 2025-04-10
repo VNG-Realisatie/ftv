@@ -4,6 +4,9 @@
     --font-sans: Fira Sans, Arial, Verdana, sans-serif;
 }
 
+:root {
+    --utrecht-page-footer-background-color: oklch(0.57 0.1475 246.59)
+}
 
 .rhc-header-4 {
     color: var(--color-white);
