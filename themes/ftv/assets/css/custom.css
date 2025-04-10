@@ -1,0 +1,22 @@
+@theme {
+    --color-ftv-green: rgba(57, 135, 12, 1);
+    --color-rhc-primary: var(--rhc-color-primary-500, #154273);
+    --font-sans: Fira Sans, Arial, Verdana, sans-serif;
+}
+
+
+.rhc-header-4 {
+    color: var(--color-white);
+    font-weight: bold;
+    font-size: 24px;
+    font-family: var(--font-sans), sans-serif;
+    vertical-align: middle;
+}
+
+.rhc-header-5 {
+    color: var(--color-white);
+    font-weight: normal;
+    font-size: 20px;
+    font-family: var(--font-sans), sans-serif;
+    vertical-align: middle;
+}

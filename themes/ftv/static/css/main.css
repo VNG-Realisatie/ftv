@@ -2,12 +2,21 @@
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
-    --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-sans: Fira Sans, Arial, Verdana, sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-white: #fff;
+    --spacing: 0.25rem;
+    --container-sm: 24rem;
+    --container-md: 28rem;
+    --container-lg: 32rem;
+    --container-xl: 36rem;
+    --container-3xl: 48rem;
+    --container-7xl: 80rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --color-ftv-green: rgba(57, 135, 12, 1);
+    --color-rhc-primary: var(--rhc-color-primary-500, #154273);
   }
 }
 @layer base {
@@ -156,8 +165,104 @@
   }
 }
 @layer utilities {
+  .row-span-2 {
+    grid-row: span 2 / span 2;
+  }
+  .mx-auto {
+    margin-inline: auto;
+  }
+  .ml-2 {
+    margin-left: calc(var(--spacing) * 2);
+  }
+  .ml-25 {
+    margin-left: calc(var(--spacing) * 25);
+  }
   .block {
     display: block;
+  }
+  .flex {
+    display: flex;
+  }
+  .grid {
+    display: grid;
+  }
+  .w-3 {
+    width: calc(var(--spacing) * 3);
+  }
+  .w-7xl {
+    width: var(--container-7xl);
+  }
+  .w-10 {
+    width: calc(var(--spacing) * 10);
+  }
+  .w-15 {
+    width: calc(var(--spacing) * 15);
+  }
+  .w-20 {
+    width: calc(var(--spacing) * 20);
+  }
+  .w-40 {
+    width: calc(var(--spacing) * 40);
+  }
+  .max-w-3xl {
+    max-width: var(--container-3xl);
+  }
+  .max-w-24 {
+    max-width: calc(var(--spacing) * 24);
+  }
+  .max-w-lg {
+    max-width: var(--container-lg);
+  }
+  .max-w-md {
+    max-width: var(--container-md);
+  }
+  .max-w-sm {
+    max-width: var(--container-sm);
+  }
+  .max-w-xl {
+    max-width: var(--container-xl);
+  }
+  .grow {
+    flex-grow: 1;
+  }
+  .auto-cols-auto {
+    grid-auto-columns: auto;
+  }
+  .auto-cols-min {
+    grid-auto-columns: min-content;
+  }
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .grid-cols-\[auto\,1fr\] {
+    grid-template-columns: auto,1fr;
+  }
+  .grid-rows-1 {
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+  }
+  .grid-rows-2 {
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+  }
+  .flex-row {
+    flex-direction: row;
+  }
+  .content-center {
+    align-content: center;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .bg-ftv-green {
+    background-color: var(--color-ftv-green);
+  }
+  .bg-rhc-primary {
+    background-color: var(--color-rhc-primary);
+  }
+  .p-1 {
+    padding: calc(var(--spacing) * 1);
   }
 }
 .rhc-theme {
@@ -11890,4 +11995,18 @@
 }
 .rhc-margin-block-end-wrapper .utrecht-unordered-list:has(+.utrecht-unordered-list) {
   --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+}
+.rhc-header-4 {
+  color: var(--color-white);
+  font-weight: bold;
+  font-size: 24px;
+  font-family: var(--font-sans), sans-serif;
+  vertical-align: middle;
+}
+.rhc-header-5 {
+  color: var(--color-white);
+  font-weight: normal;
+  font-size: 20px;
+  font-family: var(--font-sans), sans-serif;
+  vertical-align: middle;
 }
