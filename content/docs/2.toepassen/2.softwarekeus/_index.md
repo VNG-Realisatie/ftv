@@ -41,7 +41,26 @@ een verdienmodel zijn.
 - Self hosting opties
 - Prijs
 
-Vragen aan zelf:
+## Vragen aan leverancier
+
+- How do you support policy authoring for various audiences such as business users, developers, maintainers, security, etc.?
+- Which components of the product can be deployed on-prem, in the cloud or as SaaS? In case of cloud or SaaS solutions, how do you ensure sensitive data can remain within the boundaries of the organization?
+- Which Policy Enforcement Points are supported and what functionality do they have? Also in terms of residual policy/obligations.
+- What support do you have for defining organization and application specific information models of the subject, action, resource and context of requests?
+- How is decentralized self-service policy management handled? Are project or workspace scopes supported? Can these be nested or is it a flat structure? Is access to policy management functinoality also configurable by policy?
+- How do you handle separation of duties and approval workflows for policy authoring?
+- How do you handle deployment of policies and changes to policies? How is this integrated in deployment workflows for DevOps teams? How is it integrated for maintenance teams without deployment pipelines?
+- How do you enable reuse of definitions and logic between policies?
+- How do you support 'unit testing' for policies to document behaviour end prevent regressions?
+- Does the audit log allow for replay of historical decisions against new policy versinos? How do you address data duplication and sensitive data in your audit log? 
+- Do you allow for import from - and export to other policy languages? Which languages are supported? Is it one-way or bidirectional? Is it fully supported or only a subset of the language?
+- To what degree do you support data authorization? Do you support residual policy for masking, anonymisation, filtering etc.?
+- To what degree is the product based on open standards? Both in terms of open-source and open-governance. (Zie [BOMOS](https://www.logius.nl/onze-dienstverlening/domeinen/infrastructuur/bomos)) 
+- Do you support Policy Orchestration Points (POPs) to provision policies to systems that don't support Externalized Authorization? For which systems do you offer POPs?
+- Do you support dynamic generation of authorization tokens, such as OAuth Rich Authorization Requests, based on policy?
+
+
+## Vragen aan eigen organisatie
 
 - Wie gaat het beheer doen, met wie is het logisch dat samen te doen?
 - Om hoeveel PDP's gaat het? En hoeveel autorisatieverzoeken per maand?
