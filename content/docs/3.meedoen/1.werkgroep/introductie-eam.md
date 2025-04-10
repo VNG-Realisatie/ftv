@@ -34,7 +34,7 @@ Title: 3. Introductie EAM
 
 ## Introductie Externalized Authorization Management
 
-Michiel Trimpe gaf een [presentatie](/documents/08042024%20-%20Introductie%20EAM.pptx) over Externalized Authorization Management. Dit is de Engelse term voor het architectuurpatroon dat Federatieve Toegangsverlening wil standaardiseren.
+Michiel Trimpe gaf een [presentatie]({{< param baseDirectory >}}documents/08042024%20-%20Introductie%20EAM.pptx) over Externalized Authorization Management. Dit is de Engelse term voor het architectuurpatroon dat Federatieve Toegangsverlening wil standaardiseren.
 
 Tijdens de presentatie zijn de volgende opmerkingen gemaakt:
 - *Martin van der Plas*: Bij inkoop van applicaties is de opzet van toegang tot applicaties vaak een problematisch aspect omdat applicaties goedkoper aangeboden kunnen worden wanneer daar minder in geïnvesteerd wordt.
