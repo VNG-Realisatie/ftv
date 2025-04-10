@@ -6,8 +6,7 @@ weight: 10
 
 # {{< figure src="/ftv/images/ftv_logo.png" alt="logo" width="50" height="50" >}}Federatieve Toegangsverlening
 
-Omdat we in de toekomst ook op een veilige en transparante wijze toegang tot gegevens willen beheren,
-gebaseerd op duidelijke afspraken.
+De standaard voor veilige en controleerbare toegang tot gegevens, nu én in de toekomst
 
 ## Waarom FTV?
 
@@ -15,41 +14,39 @@ Dit zijn de belangrijkste voordelen van moderne toegangsverlening op een rij:
 
 ### Schaalvergroting
 
-Er worden meer gegevens uitgewisseld dan ooit, over organisatie- en landsgrenzen heen.
-Hoe houden we dat beheersbaar?
+Overheden delen steeds meer gegevens , ook over grenzen heen. FTV zorgt dat toegang tot die gegevens veilig en beheersbaar blijft.
 
 ### Flexibiliteit
 
-Regels veranderen, en de toegangsverlening moet mee kunnen komen. Liefst zonder software aanpassingen,
-maar wel gecontroleerd.
+Wetten en afspraken veranderen. Met FTV kunnen toegangsregels eenvoudig worden aangepast, zonder aanpassingen in software.
 
 ### Traceerbaarheid
 
-Altijd inzicht wie wanneer toegang had, wat veiligheid en compliance waarborgt.
+FTV legt vast wie wanneer toegang had. Dat maakt controleerbaar of het gebruik rechtmatig was.
 
 ### Leveranciersonafhankelijk
 
 Open standaarden voorkomen vendor lock-in en bieden keuzevrijheid in leveranciers.
 
-[Meer weten over de voordelen van FTV?](1.waarom_ftv)
+[Lees verder over de voordelen van FTV](1.waarom_ftv)
 
-## Hoe werkt het als FTV is geïmplementeerd?
+## FTV toegepast: voorbeelden uit de praktijk
 
 Een paar voorbeelden van hoe de voordelen van FTV tot betere uitwisseling leiden.
 
 ### Campers in de milieuzone
 
-{{< figure src="/ftv/images/camper-milieuzone.webp" alt="camper" width="200" height="132" >}}
+{{< figure src="/ftv/images/camper-milieuzone.webp" alt="camper op stadsplein" width="200" height="132" >}}
 
-Het handhaven van milieuzones gebeurt tegenwoordig automatisch. En de regels veranderen regelmatig: de eisen worden
-strenger. Hoe doe je dat flexibel en respecteer je de privacy? [Lees verder](2.voorbeeldcasus).
+Gemeenten handhaven milieuzones steeds vaker met kentekenherkenning. FTV zorgt voor flexibiliteit mét respect voor privacy.
+[Lees verder](2.voorbeeldcasus).
 
 ### Huurtoeslag
 
-{{< figure src="/ftv/images/huurtoeslag.webp" alt="camper" width="200" height="132" >}}
+{{< figure src="/ftv/images/huurtoeslag.webp" alt="stockfoto van huizen en geld" width="200" height="132" >}}
 
-Het berekenen van huurtoeslag vraagt veel gegevens uit verschillende bronnen, waaronder nogal wat persoonlijke
-gegevens over woonsituatie en inkomen. Daarom wordt elke aanvraag privé gehouden tussen de burger en de beoordelaar.
+Voor het berekenen van huurtoeslag zijn gegevens uit verschillende bronnen nodig, waaronder persoonlijke gegevens over woonsituatie en inkomen. 
+Daarom worden alle aanvragen vertrouwelijk behandeld. Alleen een toegewezen beoordelaar krijgt toegang tot deze gegevens.
 [Lees verder](2a.voorbeeldcasus).
 
 ### Nieuws en activiteiten
@@ -67,20 +64,13 @@ gegevens over woonsituatie en inkomen. Daarom wordt elke aanvraag privé gehoude
 
 ### Praat mee
 
-Meld je aan op Mattermost en praat mee over ons project! Mattermost is een open source communicatieplatform
-waar je in real-time kunt samenwerken en ideeen uitwisselen. Wil je meedoen? 
-Ga naar [ons kanaal](https://digilab.overheid.nl/chat/digilab/channels/federatieve-toegangsverlening) kanaal) in je browser of download de app, meld je gratis aan en sluit
-je direct aan bij de community.We kijken ernaar uit om je stem te horen!
+Op Mattermost komen IT-specialisten samen om ideeën uit te wisselen en mee te denken over FTV. 
+Aanmelden kan eenvoudig viaGa naar [ons kanaal](https://digilab.overheid.nl/chat/digilab/channels/federatieve-toegangsverlening). Sluit
+je aan bij de community. Iedere reactie helpt om samen verder te komen.
 
 ![Praat mee]({{< param baseDirectory >}}images/praatmee.png)
 
 ## Wie doen al mee?
-
-Het succes van een standaard staat en valt natuurlijk met hoe goed hij gebruikt wordt. 
-Wij werken graag samen met de toekomstige gebruikers om te zorgen dat ons werk echt toepasbaar is, 
-en werken ook actief mee bij aanbestedingen en realisatie.
-
-## Betrokken partijen
 
 - Ministerie van Binnenlandse Zaken
 - Geonovum
@@ -88,3 +78,5 @@ en werken ook actief mee bij aanbestedingen en realisatie.
 - Zorginstituut Nederland
 - Idemia
 - Kadaster
+
+[Ook meedoen?](docs/3.meedoen)
