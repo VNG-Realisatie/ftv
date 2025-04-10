@@ -23,7 +23,7 @@ Title: 3. Introductie EAM
 - Remo van Rest (ZIN)
 - Wouter Diephuis (MinBZK)
 - Around Quanjer (VNG)
-- Rene Kint (Zicht op Nederland)
+- René Kint (Zicht op Nederland)
 - Ronald Koster (FSC)
 - Rob Klaver (Idemia)
 
@@ -36,7 +36,7 @@ Title: 3. Introductie EAM
 
 Michiel Trimpe gaf een [presentatie](/documents/08042024%20-%20Introductie%20EAM.pptx) over Externalized Authorization Management. Dit is de Engelse term voor het architectuurpatroon dat Federatieve Toegangsverlening wil standaardiseren.
 
-Tijdens de presentatie zijn de volgende opmerking gemaakt:
+Tijdens de presentatie zijn de volgende opmerkingen gemaakt:
 - *Martin van der Plas*: Bij inkoop van applicaties is de opzet van toegang tot applicaties vaak een problematisch aspect omdat applicaties goedkoper aangeboden kunnen worden wanneer daar minder in geïnvesteerd wordt.
 
   *Michiel Trimpe*: Dat komt overeen met wat Externalized Authorization Management voorstelt. Neem het beheer van toegangsbeleid niet op in tenders en dwing alleen af dat de informatie om toegangsbeslissingen te kunnen nemen door de applicatie beschikbaar gemaakt wordt.
@@ -45,13 +45,13 @@ Tijdens de presentatie zijn de volgende opmerking gemaakt:
 
   *Michiel Trimpe*: De verantwoordelijkheid voor beheer wil je nog steeds op de beste plek neerleggen; zoals bij het DevOps team van de applicatie. Maar wel als beheersactiviteit en centraal beheerd.
 
-- *Rene Kint, Martin van der Plas*: Is het mogelijk om Engelse termen te gebruiken? 
+- *René Kint, Martin van der Plas*: Is het mogelijk om Engelse termen te gebruiken? 
 
   *Gideon Zegwaard*: Waar we precies willen zijn adopteer de gangbare Engelse termen. Wanneer je meer uit wil leggen kan de transitie naar het Nederlands gemaakt worden. 
 
   **Beslissing**: Team FTV zal Engelse termen adopteren waar mogelijk. De standaard, het NLGov profiel op AuthZEN, zal ook in het Engels geschreven worden.
 
-- *Rene Kint*: We hebben niet besproken waarom we dit (EAM) zouden willen? 
+- *René Kint*: We hebben niet besproken waarom we dit (EAM) zouden willen? 
 
   *Michiel Trimpe*: Het doel van de presentatie is voor de werkgroep om het domein van Federatieve Toegangsverlening te bepalen. Er zal een andere presentatie komen met de beargumentatie.
 
@@ -63,17 +63,17 @@ Tijdens de presentatie zijn de volgende opmerking gemaakt:
 
   *Michiel Trimpe*: Vanuit FTV zien we dat als de informatiemodellering van het Subject die wij, als overheid, op orde moeten willen krijgen. 
 
-  *Rene Kint*: Hoe we het subject willen gaan coderen en checken is een patroon dat we goed moeten doordekken voor veel use-cases. 
+  *René Kint*: Hoe we het subject willen gaan coderen en checken is een patroon dat we goed moeten doordenken voor veel use-cases. 
 
- - *Michiel Trimpe, Gideon Zegwaard, Rene Kint, Martin van der Plas* brengen diverse voorbeelden naar voren binnen de justitiele keten, zorgketen, transport en machtiging waar dit een belangrijk aspect is.
+  *Michiel Trimpe, Gideon Zegwaard, René Kint, Martin van der Plas* brengen diverse voorbeelden naar voren binnen de justitiële keten, zorgketen, transport en machtiging waar dit een belangrijk aspect is.
 
-- *Martin van der Plas* in eHerkenning is 'Afgewezen, tenzij' (step-up acties) makkelijk, maar in het geval van machtiging is dit moeilijker. 
+- *Martin van der Plas* voor eHerkenning is 'Afgewezen, tenzij' (step-up acties) makkelijk. In het geval van machtiging is dit moeilijker. 
 
-  *Michiel Trimpe*: In een ideale wereld is 'Afgewezen, tenzij' de procedure die je moet doorlopen om alsnog toegang verleend te krijgen. Dit kan dus ook een formulier of een verwijzing naar regels.overheid.nl zijn. Hogere eHerkenning niveau's zijn een subset daarvan die de applicatie automatisch kan implementeren voor de gebruiker.
+  *Michiel Trimpe*: In een ideale wereld is 'Afgewezen, tenzij' de procedure die je moet doorlopen om alsnog toegang verleend te krijgen. Dit kan dus ook een formulier of een verwijzing naar regels.overheid.nl zijn. In sommige gevallen, zoals een hoger eHerkenning niveau, kan de applicatie aan de kant van de aanvrager dit automatisch afhandelen voor de gebruiker.
 
-- *Rene Kint*: Contracten zijn hier nog niet genoemd. 
+- *René Kint*: Contracten zijn hier nog niet genoemd. 
 
-  *Michiel Trimpe*: FTV gaat niet over contracten. Vanuit FTV gezien kan een contract de resource in een verzoek zijn; waarbij het dus bijvoorbeeld geaccepteerd of afgewezen kan worden. Als een verzoek plaats vindt onder voorwaarde van een contract dan is het contract onderdeel van de 'context' van het verzoek. Het gebruik van de contracten in toegangsbeleid is aan organisatie en/of FDS zelf om in te vullen.
+  *Michiel Trimpe*: FTV gaat niet over contracten. Vanuit FTV gezien kan een contract de resource in een verzoek zijn; waarbij het dus bijvoorbeeld geaccepteerd of afgewezen kan worden. Als een verzoek plaatsvindt onder voorwaarde van een contract dan is het contract onderdeel van de 'context' van het verzoek. Het gebruik van de contracten in toegangsbeleid is aan organisatie en/of FDS zelf om in te vullen.
 
 - *Gideon Zegwaard*: Je hebt beleid dat vanuit de applicatie ontwikkelaar/leverancier bepaald wordt en beleid dat vanuit de organisatie bepaald wordt. Dat zal ergens bij elkaar moeten komen. 
 
@@ -81,27 +81,27 @@ Tijdens de presentatie zijn de volgende opmerking gemaakt:
 
 - *Martin van der Plas*: Hoe ga je om met self-service? Gebruikers die zelf rechten aanvragen om toegang tot een applicatie te krijgen. 
 
-  *Gideon Zegwaard*: Applicaties definieren rollen en als je die koppelt aan de functie die je hebt kan je het automatisch uitrollen. 
+  *Gideon Zegwaard*: Applicaties definiëren rollen en als je die koppelt aan de functie die je hebt kun je het automatisch uitrollen. 
 
-  *Michiel Trimpe*: We noemen nog steeds vaak rollen; maar binnen EAM je het om vanuit toegangsbeleid. Wie zou toegang moeten hebben? Alle medewerkers met uitzondering van medewerkers met dit attribuut. 
+  *Michiel Trimpe*: We noemen nog steeds vaak rollen. Binnen EAM draai je het om en begin je van het toegangsbeleid. "Wie zou toegang moeten hebben?" "Alle medewerkers met uitzondering van medewerkers met dit attribuut."
 
-  *Gideon Zegwaard:* Je kan dus op basis van attributen, bijv. kenmerken in je HR systeem, toegang geven.
+  *Gideon Zegwaard:* Je kunt dus op basis van attributen, bijv. kenmerken in je HR systeem, toegang geven.
 
 # Bepaling scope en werkwijze
 
-- *Michiel Trimpe*: We stellen voor om de volgende interfaces te standaardiseren: tussen PEP en PDP, het informatiemodel van het toegangsverzoek, de step-up acties en residual policies.
+- *Michiel Trimpe*: We stellen voor om de volgende interfaces te standaardiseren: tussen PEP en PDP, het informatiemodel van het toegangsverzoek, de step-up acties en residual policies ("Toegestaan, mits", cq. restbeleid.)
 
-- *Gideon Zegwaard*: Is de PAP al gestandaardiseerd? Het liefst wil je iets hebben waarin alle policies en de verschillende talen in kan zien. Dat je niet afdwingt hoe je de policy uitdrukt. 
+- *Gideon Zegwaard*: Is de PAP al gestandaardiseerd? Het liefst wil je iets hebben waarin je alle policies in kunt zien in de verschillende talen waarin ze geschreven zijn. Dat je niet afdwingt hoe je de policy uitdrukt. 
 
   *Michiel Trimpe*: Dit zal niet internationaal gestandaardiseerd kunnen worden. Dat zou dus een Nederlandse standaard worden. 
 
   **Beslissing**: Standaardisering van de PAP wordt opgenomen in de FTV scope.
 
-- *Martin van der Plas*: Waar zitten hier de gebruikersinterfaces voor beheer? Kunnen we dat standaardiseren. 
+- *Martin van der Plas*: Waar zitten hier de gebruikersinterfaces voor beheer? Kunnen we dat standaardiseren?
 
-  *Michiel Trimpe*: Er is te veel diversiteit in PAP's om de beheersinterfaces te kunnen standaardiseren. De leveranciers van PAP's en PDP's zijn hier mee bezig maar er is nog geen zicht op wanneer en of dit mogelijk is. Tot die tijd zal de interface tussen de PAP en PDP ook proprietary zijn. 
+  *Michiel Trimpe*: Er is te veel diversiteit in PAP's om de beheersinterfaces te kunnen standaardiseren. De leveranciers van PAP's en PDP's zijn hiermee bezig maar er is nog geen zicht op wanneer en óf dit mogelijk is. Tot die tijd zal de interface tussen de PAP en PDP meestal ook proprietary zijn. 
 
-  **Beslissing**: De standaardisatie voor de PAP zal zich beperken tot het bieden van *inzicht* en de policies. Deze interface zal *naast* de proprietary interface tussen PAP en PDP staan.
+  **Beslissing**: De standaardisatie voor de PAP zal zich beperken tot het bieden van *inzicht* en de policies. Deze interface zal *naast* de (proprietary) interface tussen PAP en PDP bestaan.
 
 # Agenda volgende werkgroep.
 
@@ -111,12 +111,12 @@ Tijdens de presentatie zijn de volgende opmerking gemaakt:
 
   **Beslissing**: Dit wordt volgende sessie besproken.
 
-- *Gerard van der Hoeven*: Deze sessie wilden we kennis delen. Dat is nu voornamelijk vanuit het team zelf gedaan. We zouden de volgende sessie extern kennis te delen. Wat is er al en wat zijn er voor andere opties. 
+- *Gerard van der Hoeven*: Deze sessie wilden we kennis delen. Dat is nu voornamelijk vanuit het team zelf gedaan. We zouden de volgende sessie extern kennis kunnen delen. Wat is er al en wat zijn er voor andere opties? 
 
   *Michiel Trimpe*: We hebben in de andere onderwerpen hierover ook de relatie met OAuth, API Design Rules en Verifiable Credentials. 
 
   *Martin van der Plas*: Kunnen we ook kijken welke abstracte bouwstenen er gebruikt worden? Identity Providers, DigiD, eHerkenning, Authorization Servers. 
 
-  *Gideon Zegwaard*: Laten we dan ook het bouwblokkenmodel van DSCC er bij pakken. 
+  *Gideon Zegwaard*: Laten we dan ook het bouwblokkenmodel van DSCC erbij pakken. 
 
   **Beslissing**: We gaan de relatie met andere standaarden en standaard componenten bespreken. 
