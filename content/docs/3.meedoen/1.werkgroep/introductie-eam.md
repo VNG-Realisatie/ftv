@@ -65,11 +65,11 @@ Tijdens de presentatie zijn de volgende opmerkingen gemaakt:
 
   *René Kint*: Hoe we het subject willen gaan coderen en checken is een patroon dat we goed moeten doordenken voor veel use-cases. 
 
- - *Michiel Trimpe, Gideon Zegwaard, René Kint, Martin van der Plas* brengen diverse voorbeelden naar voren binnen de justitiële keten, zorgketen, transport en machtiging waar dit een belangrijk aspect is.
+  *Michiel Trimpe, Gideon Zegwaard, René Kint, Martin van der Plas* brengen diverse voorbeelden naar voren binnen de justitiële keten, zorgketen, transport en machtiging waar dit een belangrijk aspect is.
 
-- *Martin van der Plas* in eHerkenning is 'Afgewezen, tenzij' (step-up acties) makkelijk. In het geval van machtiging is dit moeilijker. 
+- *Martin van der Plas* voor eHerkenning is 'Afgewezen, tenzij' (step-up acties) makkelijk. In het geval van machtiging is dit moeilijker. 
 
-  *Michiel Trimpe*: In een ideale wereld is 'Afgewezen, tenzij' de procedure die je moet doorlopen om alsnog toegang verleend te krijgen. Dit kan dus ook een formulier of een verwijzing naar regels.overheid.nl zijn. Hogere eHerkenning niveaus zijn een subset daarvan die de applicatie automatisch kan implementeren voor de gebruiker.
+  *Michiel Trimpe*: In een ideale wereld is 'Afgewezen, tenzij' de procedure die je moet doorlopen om alsnog toegang verleend te krijgen. Dit kan dus ook een formulier of een verwijzing naar regels.overheid.nl zijn. In sommige gevallen, zoals een hoger eHerkenning niveau, kan de applicatie aan de kant van de aanvrager dit automatisch afhandelen voor de gebruiker.
 
 - *René Kint*: Contracten zijn hier nog niet genoemd. 
 
@@ -83,13 +83,13 @@ Tijdens de presentatie zijn de volgende opmerkingen gemaakt:
 
   *Gideon Zegwaard*: Applicaties definiëren rollen en als je die koppelt aan de functie die je hebt kun je het automatisch uitrollen. 
 
-  *Michiel Trimpe*: We noemen nog steeds vaak rollen; maar binnen EAM draai je het om en begin je van het toegangsbeleid. Wie zou toegang moeten hebben? Alle medewerkers met uitzondering van medewerkers met dit attribuut. 
+  *Michiel Trimpe*: We noemen nog steeds vaak rollen. Binnen EAM draai je het om en begin je van het toegangsbeleid. "Wie zou toegang moeten hebben?" "Alle medewerkers met uitzondering van medewerkers met dit attribuut."
 
   *Gideon Zegwaard:* Je kunt dus op basis van attributen, bijv. kenmerken in je HR systeem, toegang geven.
 
 # Bepaling scope en werkwijze
 
-- *Michiel Trimpe*: We stellen voor om de volgende interfaces te standaardiseren: tussen PEP en PDP, het informatiemodel van het toegangsverzoek, de step-up acties en residual policies.
+- *Michiel Trimpe*: We stellen voor om de volgende interfaces te standaardiseren: tussen PEP en PDP, het informatiemodel van het toegangsverzoek, de step-up acties en residual policies ("Toegestaan, mits", cq. restbeleid.)
 
 - *Gideon Zegwaard*: Is de PAP al gestandaardiseerd? Het liefst wil je iets hebben waarin je alle policies in kunt zien in de verschillende talen waarin ze geschreven zijn. Dat je niet afdwingt hoe je de policy uitdrukt. 
 
@@ -99,9 +99,9 @@ Tijdens de presentatie zijn de volgende opmerkingen gemaakt:
 
 - *Martin van der Plas*: Waar zitten hier de gebruikersinterfaces voor beheer? Kunnen we dat standaardiseren?
 
-  *Michiel Trimpe*: Er is te veel diversiteit in PAP's om de beheersinterfaces te kunnen standaardiseren. De leveranciers van PAP's en PDP's zijn hiermee bezig maar er is nog geen zicht op wanneer en of dit mogelijk is. Tot die tijd zal de interface tussen de PAP en PDP ook proprietary zijn. 
+  *Michiel Trimpe*: Er is te veel diversiteit in PAP's om de beheersinterfaces te kunnen standaardiseren. De leveranciers van PAP's en PDP's zijn hiermee bezig maar er is nog geen zicht op wanneer en óf dit mogelijk is. Tot die tijd zal de interface tussen de PAP en PDP meestal ook proprietary zijn. 
 
-  **Beslissing**: De standaardisatie voor de PAP zal zich beperken tot het bieden van *inzicht* en de policies. Deze interface zal *naast* de proprietary interface tussen PAP en PDP staan.
+  **Beslissing**: De standaardisatie voor de PAP zal zich beperken tot het bieden van *inzicht* en de policies. Deze interface zal *naast* de (proprietary) interface tussen PAP en PDP bestaan.
 
 # Agenda volgende werkgroep.
 
