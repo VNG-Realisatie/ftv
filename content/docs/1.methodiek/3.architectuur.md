@@ -5,83 +5,64 @@ title: "Architectuur"
 
 # Architectuur 
 
-Als architectuur heeft FTV gekozen voor het patroon van Externalized Access Management. Dit omvat onder andere architectuurpatronen zoals PBAC, ABAC en ReBAC.
+FTV introduceert Externalized Access Management (EAM) als standaard methodiek voor toegangsverlening. Dit omvat onder andere architectuurpatronen zoals PBAC, ABAC en ReBAC.
 
-Hieronder beschrijven we hoe deze architectuur er in federatieve context uit ziet, beginnend vanaf een generiek koppelvlak.
+## Huidige situatie
 
-## Generieke architectuur van een koppelvlak
+Momenteel zijn zowel de toegangslogica als de informatie voor het maken van toegangsbeslissingen (beslisgegevens) vaak versnipperd over het IT-landschap. 
 
-In generieke zin is de architectuur van elke API-koppeling te beschrijven in onderstaand diagram:
+![Huidige situatie]({{< param baseDirectory >}}images/1.3.huidige_situatie.png)
 
-![Generieke architectuur digikoppeling]({{< param baseDirectory >}}images/architectuur_digikoppeling.png)
+Dit veroorzaakt een grote diversiteit van talen, configuraties, build en deployment processen voor toegangslogica. Dat maakt het moeilijk om toegangsbeleid centraal te overzien, laat staan dit verantwoord te beheren. 
 
-Links zien we de afnemer, het systeem dat om gegevensverwerking vraagt, en rechts de aanbieder, die de dienst levert.
-'Verwerking' bedoelen we hier in de brede [AVG](https://www.autoriteitpersoonsgegevens.nl/themas/basis-avg/privacy-en-persoonsgegevens/verwerken-van-persoonsgegevens) zin: dat kan opvragen van gegevens zijn, maar ook aanpassen of verwijderen daarvan.
+Voor de beslisgegevens worden ook diverse bronnen gebruikt. Deze hebben vaak geen historie of logging waardoor beslissingen achteraf niet meer verantwoord kunnen. 
 
-Beide kanten hebben in principe dezelfde componenten.
-Beide kanten hebben een API-gateway waarmee de andere kant gevonden en de verbinding beveiligd kan worden. 
-Bij de beveiliging hoort in de overheidssituatie altijd een OIN PKI-certificaat. 
-Daarnaast is er een vorm van identificatie en authenticatie: het vaststellen en verifiëren van de identiteit van de vrager. 
-Dit kan ingebouwd zijn in de applicatie/API, in de gateway, of elders. 
+## Nieuwe situatie
 
-Verschillend is dat links het functionele blok als applicatie benoemd wordt, en rechts als een API. Dit om duidelijk
-te maken dat er een verschil zit in functie: de afnemer vraagt om verwerking, de aanbieder verwerkt. 
-Beide zijn echter volwaardige softwarecomponenten waar allerlei functionaliteit ingebouwd kunnen zijn. De API zal soms op een
-eenvoudig doorgeefluik lijken, en soms gegevens uit verschillende bronnen halen en toegevoegde waarde bieden
-door te combineren, berekenen, minimaliseren, etc.
+In een EAM stellen componenten op gestandaardiseerde wijze toegangsverzoeken en worden vereiste beslisgegevens op een uniforme en herleidbare wijze verzameld.
 
-## Generieke architectuur van een federatief koppelvlak
+![Nieuwe situatie]({{< param baseDirectory >}}images/1.3.nieuwe_situatie.png)
 
-In het FDS is de architectuur uitgebreider:
+Hierdoor wordt toegangslogica centraal inzichtelijk en beheersbaar en kunnen historische beslissingen verantwoord worden.
 
-![Architectuur federatieve koppeling]({{< param baseDirectory >}}images/architectuur_federatieve_koppeling.png)
+## EAM architectuur Nederlandse overheid
 
-De volgende componenten zijn erbij gekomen:
+Voor gebruik door de Nederlandse overheid stelt FTV de volgende architectuur voor.
 
-FTV:
+![Standaard componenten]({{< param baseDirectory >}}images/1.3.standaard_componenten.png)
 
-- Toegangsverlening: het onderwerp van deze methodiek, een vorm van bepalen wat inhoudelijk mag qua diensten en gegevens. 
-- Toegangslog: een log van de genomen toegangsbeslissingen.
+- Het Policy Enforcement Point (**PEP**) vat een ontvangen verzoek samen in een toegangsverzoek en zorgt dat de ontvangen toegangsbeslissing correct uitgevoerd wordt (enforcement.)
+- Het Policy Decision Point (**PDP**) ontvangt het toegangsverzoek en neemt een toegangsbeslissing op basis van het toegangsbeleid en additionele informatie.
+- Het Policy Access Point (**PAP**) beheert het toegangsbeleid en maakt deze beschikbaar aan de PDP.
+- Het Policy Information Point (**PIP**) haalt additionele informatie op wanneer dat nodig is voor het maken van de toegangsbeslissing. 
+- Betrouwbare bronnen met ondersteuning voor historie kunnen direct door de PIP bevraagd worden. Deze informatie hoeft dan niet gelogd te worden voor verantwoording.
+- Om historische toegangsbeslissingen te kunnen verantwoorden moet informatie uit andere bronnen gelogd worden.
 
-FSC:
+## Informatiemodel van toegangsverzoeken
 
-- Federatieve Service Connectiviteit (FSC), de transactiecomponent in het FDS.
-- Transactielog: een log van de transacties op het transportniveau. Dit zijn gegevens zoals tijdstip, certificaat, ip adres
-van het aanvragend systeem, etc. De inhoud van het bericht zelf wordt hier niet in meegenomen. 
+Eén van de belangrijkste aspecten van de meerwaarde van Externalized Access Management is het modelleren van het informatiemodel voor toegangsverzoeken. 
 
-LDV:
+Binnen Externalized Access Management worden hiervoor vier basis entiteiten gedefinieerd:
 
-- Logboek dataverwerkingen: een log op verwerkingenniveau waarin juist wel de inhoud van het bericht centraal staat, en daarbij gegevens
-zoals de grondslag van de verwerking bewaard blijven. 
+![Entiteiten informatiemodel]({{< param baseDirectory >}}images/1.3.informatiemodel.png)
 
-Deze blokken zijn bewust niet met pijlen verbonden, omdat het aanroepen van toegang en logboek dataverwerkingen zowel kan plaatsvinden vanaf
-de applicatie als vanaf de gateway.
+1. Subject. De aanvrager van het verzoek. 
+2. Action. De gegevensverwerking die aangevraagd wordt.
+3. Resource. De gegevens of het object waar de gegevensverwerking op uitgevoerd moet worden.
+4. Context. De bredere omgeving waarin het gegevensverzoek gedaan is. Zoals de tijd bijvoorbeeld. 
 
-## Generieke architectuur van EAM-toegangsverlening
+Binnen deze basis entiteiten kan elke organisatie zijn eigen informatiemodel definieren met behulp van [Metamodel Informatiemodellering (MIM)](https://www.geonovum.nl/geo-standaarden/metamodel-informatiemodellering-mim).
 
-Een EAM-oplossing heeft de volgende generieke architectuur:
+## EAM in een federatief stelsel
 
-![EAM]({{< param baseDirectory >}}images/architectuur_eam.png)
+In een federatief stelsel worden toegangsregels op [logisch niveau](https://docs.geostandaarden.nl/mim/mim/#beschouwingsniveau-3-logisch-informatie-of-gegevensmodel) gedefinieerd. Deze worden dan per organisatie vertaald naar [technisch niveau](https://docs.geostandaarden.nl/mim/mim/#beschouwingsniveau-3-logisch-informatie-of-gegevensmodel).
 
-- Toegangsverlening start als de Policy Enforcement Point (**PEP**) wordt aangesproken, door de applicatie, API of gateway. Beiden hebben de mogelijkheid om een transactie
-door te laten gaan of te blokkeren, en daarmee af te dwingen dat de toegangsbeslissing gehonoreerd wordt. In de FDS-architectuur
-is gekozen om FSC de aanroep te laten doen, door de gateway dus.
-- Het Policy Decision Point (**PDP**) wordt gevraagd om de beslissing te nemen. Daarvoor gebruikt het policies uit de PAP en attributen uit de PIP.
-- Het Policy Access Point (**PAP**) haalt de policies op die geëvalueerd moeten worden. De policies moeten 'buiten' de software zijn opgeslagen, 
-op een plek die bereikbaar is voor mensen en systemen van buiten zodat audits gedaan kunnen worden.
-- Het Policy Information Point (**PIP**) haalt op verzoek van de PDP waarden van attributen op. Deze kunnen komen uit:
-    1. De vrager, of subject. Dit is de identiteit in brede zin, waaronder ook rollen en verklaringen vallen;
-  2. De vraag, of actie. Dit zijn de gekozen dienst of API en de parameters die zijn meegegeven;
-  3. Het antwoord, of object. Het kan zijn dat er een eigenschap van de gevraagde data van invloed is op de toegang. Als er bijvoorbeeld gegevens van personen gevraagd worden waar in principe recht op is, maar dat er in de populatie bijzondere personen zitten die afgeschermd zijn.
-  3. De context. Dit zijn aller veranderlijke aspecten, zoals tijd, geolocatie, gebruikt apparaat, authenticatiesterkte, eerdere verzoeken, etc. 
+![Federatieve toegangsregels]({{< param baseDirectory >}}images/1.3.federatieve_toegangsregels.png)
 
-## Federatief EAM
+Zo kunnen organisaties zelf een EAM implementatie kiezen en toch voldoen aan de regels van een federatief stelsel..
 
-![Federatief EAM]({{< param baseDirectory >}}images/architectuur_federatief_eam.png)
+Verder kunnen met behulp van gestandaardiseerde API's toegangsregels en historische toegangsbeslissingen worden ingezien bij deelnemers aan het federatieve stelsel. 
 
-Dit plaatje toont een federatieve EAM-oplossing, met als extra elementen:
-- Beide kanten implementeren EAM. Het is niet noodzakelijk dat ze dezelfde implementatie daarvoor kiezen.
-- Beide kanten delen dezelfde toegangsregels. In een federatief stelsel ligt het voor de hand daar een gedistribueerde oplossing voor te kiezen.
-Dit in tegenstelling tot losse systemen die handmatig synchroon gehouden moeten worden, en ook in tegenstelling tot 
-één enkele database waarbij een enkel kritisch systeem zou ontstaan.
+![Federatieve EAM]({{< param baseDirectory >}}images/1.3.federatieve_verantwoording.png)
 
+De toegangsregels voor de inzage API's kunnen binnen het stelsel afgesproken worden of door organisaties individueel bepaald worden.
