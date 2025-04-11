@@ -2,10 +2,33 @@
     --color-ftv-green: rgba(57, 135, 12, 1);
     --color-rhc-primary: var(--rhc-color-primary-500, #154273);
     --font-sans: Fira Sans, Arial, Verdana, sans-serif;
+    --color-hero: oklch(0.82 0.1685 79);
+    --color-rhc-geel-400: var(--rhc-color-geel-400, #FAE856)
 }
 
-:root {
-    --utrecht-page-footer-background-color: oklch(0.57 0.1475 246.59)
+.ftv-theme {
+
+}
+
+.ftv-hero-paragraph {
+    color: var(--color-white);
+    font-size: 20px;
+    line-height: 100%;
+}
+
+.utrecht-paragraph-small {
+    color: var(--color-rhc-primary);
+    font-size: 14px;
+    line-height: 150%;
+    font-weight: 400;
+}
+
+.rhc-header-3 {
+    color: var(--color-white);
+    font-weight: 700;
+    font-size: 32px;
+    font-family: var(--font-sans), sans-serif;
+    vertical-align: middle;
 }
 
 .rhc-header-4 {

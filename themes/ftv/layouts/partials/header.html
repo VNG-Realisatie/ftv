@@ -1,51 +1,20 @@
-<div class="flex bg-rhc-primary">
-    <div class="flow flex-row ml-25">
+<div class="flex bg-rhc-primary h-[90px]">
+    <div class="grid grid-cols-[70px_auto] grid-rows-1 ml-25">
         <div class="content-center w-15 p-1">
-            <img class="mx-auto" src="beeldmerk iii.svg" alt="FTV Beeldmerk" />
+            <img class="mx-auto w-45px" src="beeldmerk iii.svg" alt="FTV Beeldmerk" />
         </div>
-        <div>
+        <div class="content-center">
             <h4 class="rhc-header-4">
-                Federatieve toegangsverlening
+                {{ .Site.Title }}
             </h4>
             <h5 class="rhc-header-5">
-                Standaard voor vertrouwde toegang  binnen het Federatief Datastelsel
+                {{ .Site.Params.subtitle }}
             </h5>
         </div>
     </div>
 </div>
-<div class="grow min-h-16px bg-ftv-green">
- &nbsp;
-</div>
-<div class="rhc-nav-bar__container">
-    <nav class="rhc-nav-bar">
-        <ul class="rhc-nav-bar__list">
-            <li class="rhc-nav-bar__item" id="first-link">
-                <a class="nl-link rhc-link rhc-nav-bar__link" href="/">
-                    <span class="rhc-nav-bar__label">Home</span>
-                </a>
-            </li>
-            <li class="rhc-nav-bar__item" id="second-link">
-                <a class="nl-link rhc-link rhc-nav-bar__link" href="/">
-                    <span class="rhc-nav-bar__label">Methodiek</span>
-                </a>
-            </li>
-            <li class="rhc-nav-bar__item" id="third-link">
-                <a class="nl-link rhc-link rhc-nav-bar__link" href="/">
-                    <span class="rhc-nav-bar__label">Toepassen</span>
-                </a>
-            </li>
-            <li class="rhc-nav-bar__item" id="meedoen-link">
-                <a class="nl-link rhc-link rhc-nav-bar__link" href="/">
-                    <span class="rhc-nav-bar__label">Meedoen</span>
-                </a>
-            </li>
-            <li class="rhc-nav-bar__item" id="onderzoek-link">
-                <a class="nl-link rhc-link rhc-nav-bar__link" href="/">
-                    <span class="rhc-nav-bar__label">Onderzoek</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
+<div class="grow h-[16px] bg-ftv-green">
+
 </div>
 
-{{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+{{ partial "menu.html" }}

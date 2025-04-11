@@ -4,6 +4,6 @@ title = 'Federatieve Toegangsverlening'
 theme = "ftv"
 
 [params]
-#    baseDirectory = '/ftv/'
+    subtitle = 'Standaard voor vertrouwde toegang binnen het Federatief Datastelsel'
     baseDirectory = '/'
-#  baseDirectory = '{{< param baseDirectory >}}'
+    
