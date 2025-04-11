@@ -1,0 +1,13 @@
+{{ define "main" }}
+  {{ partial "hero.html" . }}
+  {{ partial "voordelen.html" . }}
+  {{ partial "praktijk_voorbeelden.html" . }}
+  {{ partial "nieuws.html" . }}
+  {{ partial "praat-mee.html" . }}
+  {{ partial "wie-doen-mee.html" . }}
+ <!-- {{ .Content }} -->
+  <!-- {{ range site.RegularPages }}
+    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+    {{ .Summary }}
+  {{ end }} -->
+{{ end }}
