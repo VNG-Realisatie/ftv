@@ -7,11 +7,11 @@ Title: 1.Gegevensminimalisatie
 # Werkgroep Gegevensminimalisatie (20 november 2024)
 
 ## Aanwezigen
-- Marc van Andel
+- Marc van Andel (Kadaster)
 - Marc de Boer (FTV)
-- Joost Farla
+- Joost Farla (IMX)
 - Pim Gaemers (FSC)
-- Eelco Hotting
+- Eelco Hotting (Digilab)
 - Gerard Juijn (FTV)
 - Eduard Renger (iStandaarden)
 - Michiel Trimpe (FTV)

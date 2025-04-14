@@ -72,11 +72,12 @@ je aan bij de community. Iedere reactie helpt om samen verder te komen.
 
 ## Wie doen al mee?
 
-- Ministerie van Binnenlandse Zaken
 - Geonovum
-- Logius
-- Zorginstituut Nederland
 - Idemia
 - Kadaster
+- Logius
+- Ministerie van Binnenlandse Zaken
+- Vereniging Nederlandse Gemeenten (VNG)
+- Zorginstituut Nederland
 
 [Ook meedoen?](docs/3.meedoen)
