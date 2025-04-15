@@ -3,11 +3,8 @@
     --color-rhc-primary: var(--rhc-color-primary-500, #154273);
     --font-sans: Fira Sans, Arial, Verdana, sans-serif;
     --color-hero: oklch(0.82 0.1685 79);
-    --color-rhc-geel-400: var(--rhc-color-geel-400, #FAE856)
-}
-
-.ftv-theme {
-
+    --color-rhc-geel-400: var(--rhc-color-geel-400, #FAE856);
+    --color-ftv-azure: #007BC7;
 }
 
 .ftv-hero-paragraph {
@@ -44,5 +41,14 @@
     font-weight: normal;
     font-size: 20px;
     font-family: var(--font-sans), sans-serif;
+    vertical-align: middle;
+}
+
+.ftv-footer-title {
+    font-weight: 300;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 34px;
+    letter-spacing: 0;
     vertical-align: middle;
 }

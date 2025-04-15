@@ -3,15 +3,13 @@
 <head>
   {{ partial "head.html" . }}
 </head>
-<body class="mx-auto w-7xl grid grid-cols-1 rhc-theme">
+<body class="mx-auto w-7xl grid grid-cols-1">
   <header>
     {{ partial "header.html" . }}
   </header>
   <main>
     {{ block "main" . }}{{ end }}
   </main>
-  <footer>
     {{ partial "footer.html" . }}
-  </footer>
 </body>
 </html>
