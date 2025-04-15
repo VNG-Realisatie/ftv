@@ -14,7 +14,7 @@ Dit zijn de belangrijkste voordelen van moderne toegangsverlening op een rij:
 
 ### Schaalvergroting
 
-Overheden delen steeds meer gegevens , ook over grenzen heen. FTV zorgt dat toegang tot die gegevens veilig en beheersbaar blijft.
+Overheden delen steeds meer gegevens, ook over grenzen heen. FTV zorgt dat toegang tot die gegevens veilig en beheersbaar blijft.
 
 ### Flexibiliteit
 
@@ -32,8 +32,6 @@ Open standaarden voorkomen vendor lock-in en bieden keuzevrijheid in leverancier
 
 ## FTV toegepast: voorbeelden uit de praktijk
 
-Een paar voorbeelden van hoe de voordelen van FTV tot betere uitwisseling leiden.
-
 ### Campers in de milieuzone
 
 {{< figure src="/ftv/images/camper-milieuzone.webp" alt="camper op stadsplein" width="200" height="132" >}}
@@ -45,9 +43,8 @@ Gemeenten handhaven milieuzones steeds vaker met kentekenherkenning. FTV zorgt v
 
 {{< figure src="/ftv/images/huurtoeslag.webp" alt="stockfoto van huizen en geld" width="200" height="132" >}}
 
-Voor het berekenen van huurtoeslag zijn gegevens uit verschillende bronnen nodig, waaronder persoonlijke gegevens over woonsituatie en inkomen. 
-Daarom worden alle aanvragen vertrouwelijk behandeld. Alleen een toegewezen beoordelaar krijgt toegang tot deze gegevens.
-[Lees verder](2a.voorbeeldcasus).
+Voor de beoordeling van een huuraanslag worden persoonlijke gegevens uitgewisseld. 
+FTV zorgt ervoor dat alleen bevoegde medewerkers toegang krijgen tot die gegevens. [Lees verder](2a.voorbeeldcasus).
 
 ### Nieuws en activiteiten
 
@@ -64,9 +61,8 @@ Daarom worden alle aanvragen vertrouwelijk behandeld. Alleen een toegewezen beoo
 
 ### Praat mee
 
-Op Mattermost komen IT-specialisten samen om ideeën uit te wisselen en mee te denken over FTV. 
-Aanmelden kan eenvoudig viaGa naar [ons kanaal](https://digilab.overheid.nl/chat/digilab/channels/federatieve-toegangsverlening). Sluit
-je aan bij de community. Iedere reactie helpt om samen verder te komen.
+IT-specialisten denken op Mattermost mee over FTV. Heb je ideeën of vragen?
+Sluit je aan via [ons kanaal](https://digilab.overheid.nl/chat/digilab/channels/federatieve-toegangsverlening). Elke bijdrage helpt om FTV beter te maken.
 
 ![Praat mee]({{< param baseDirectory >}}images/praatmee.png)
 
