@@ -1,0 +1,11 @@
+name = 'FTV'
+description = 'Hugo theme for the FTV website'
+
+# Taxonomy terms
+tags = ['blog', 'company']
+features = ['some', 'awesome', 'features']
+
+# If the theme has a single author
+[author]
+  name = 'Maikel Hofman'
+  homepage = ''

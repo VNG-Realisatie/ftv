@@ -1,8 +1,11 @@
 # baseURL = 'http://localhost:1313'
 languageCode = 'nl-nl'
 title = 'Federatieve Toegangsverlening'
-theme = "hugo-book"
+theme = "ftv"
 
 [params]
-    baseDirectory = '/ftv/'
-#  baseDirectory = '{{< param baseDirectory >}}'
+    subtitle = 'Standaard voor vertrouwde toegang binnen het Federatief Datastelsel'
+    baseDirectory = '/'
+    [params.footer]
+        title = 'Standaard voor vertrouwde toegang  binnen het Federatief Datastelsel'
+    
