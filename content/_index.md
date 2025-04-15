@@ -56,8 +56,8 @@ FTV zorgt ervoor dat alleen bevoegde medewerkers toegang krijgen tot die gegeven
 
 **Activiteiten**
 
-- Dinsdag 20 april, 10:00. dev.loer en online. Werkgroep #2. Onderwerp van de dag: de juridische scope
-- Donderdag 22 april, 12:00 online. [Inloopspreekuur FTV](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/8cbfc0d6-3c63-4cf5-a616-8056f44d5a01/uitnodiging-inloopspreekuur-standaarden-federatief-datastelsel-deel-3)
+- Dinsdag 22 april, 10:00. dev.loer en online. Werkgroep #2. Onderwerp van de dag: de juridische scope
+- Dinsdag 22 april, 12:00 online. [Inloopspreekuur FTV](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/8cbfc0d6-3c63-4cf5-a616-8056f44d5a01/uitnodiging-inloopspreekuur-standaarden-federatief-datastelsel-deel-3)
 
 ### Praat mee
 
