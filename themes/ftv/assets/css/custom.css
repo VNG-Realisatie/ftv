@@ -5,6 +5,7 @@
     --color-hero: oklch(0.82 0.1685 79);
     --color-rhc-geel-400: var(--rhc-color-geel-400, #FAE856);
     --color-ftv-azure: #007BC7;
+    --color-ftv-info: #E1EEF8;
 }
 
 .ftv-hero-paragraph {
