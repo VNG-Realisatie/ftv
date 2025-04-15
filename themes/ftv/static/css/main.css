@@ -178,38 +178,11 @@
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
-  .ml-12 {
-    margin-left: calc(var(--spacing) * 12);
-  }
   .ml-25 {
     margin-left: calc(var(--spacing) * 25);
   }
-  .ml-120 {
-    margin-left: calc(var(--spacing) * 120);
-  }
-  .ml-\[2rem\] {
-    margin-left: 2rem;
-  }
-  .ml-\[10rem\] {
-    margin-left: 10rem;
-  }
-  .ml-\[12px\] {
-    margin-left: 12px;
-  }
-  .ml-\[12rem\] {
-    margin-left: 12rem;
-  }
-  .ml-\[120px\] {
-    margin-left: 120px;
-  }
   .ml-\[180px\] {
     margin-left: 180px;
-  }
-  .ml-\[190px\] {
-    margin-left: 190px;
-  }
-  .ml-\[200px\] {
-    margin-left: 200px;
   }
   .block {
     display: block;
