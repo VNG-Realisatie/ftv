@@ -15,7 +15,7 @@ EAM-methodes (Externalized Authorization Management) zijn in opkomst.  Maar er i
 
 ## Open of closed source
 
-Elke EAM-oplossing draait om de beslismodule: de PDP. Daaromheen zitten modules voor beheer, zoals voor schrijven, testen, distributie en monitoring. De meeste PDPs zijn open source r en vaak licentievrij. De andere modules worden commercieel aangeboden, als uitbestede dienst (SaaS) of voor eigen beheer(on-premises). Vaak zit hier een duidelijke freemium strategie achter: door een goede gratis open source PDP aan te bieden, hoopt de leverancier een klant aan de eigen policytaal te binden waarna de overstap naar betaalde EAM een logische weg is.
+Elke EAM-oplossing draait om de beslismodule: de PDP. Daaromheen zitten modules voor beheer, zoals voor schrijven, testen, distributie en monitoring en standaard integraties met bestaande applicaties (PEP's). De meeste PDPs zijn open source en vaak licentievrij. De andere modules worden commercieel aangeboden, als uitbestede dienst (SaaS) of voor eigen beheer(on-premises). Vaak zit hier een duidelijke freemium strategie achter: door een goede gratis open source PDP aan te bieden, hoopt de leverancier een klant aan de eigen policytaal te binden waarna de overstap naar betaalde EAM een logische weg is.
 
 ## Zelfbouw of uitbesteden
 
@@ -33,6 +33,10 @@ De juiste softwarekeuze hangt af van meer dan alleen techniek. Belangrijke punte
 - **PDP en standaardisering**
 
   Is de gekozen PDP volwassen en voldoet deze aan de AuthZEN NL Gov-standaard?
+- **Integratie met bestaande applicaties**
+
+  Voor welke applicaties biedt de leverancier standaard PEPs om beslissingen af te dwingen? 
+
 - **Functionele kwaliteit**
 
   Hoe goed werken de onderdelen voor schrijven, testen, distributie en monitoring?
@@ -58,4 +62,5 @@ Niet alleen de leverancier, ook de eigen organisatie moet goed voorbereid zijn. 
 
 - Wie gaat het beheer doen en  met wie wordt daarbij samengewerkt?
 - Om hoeveel PDP’s gaat het? En om hoeveel autorisatieverzoeken per maand?
+- Binnen welke applicaties moeten beslissingen afgedwongen worden (PEPs)?
 - Integreert de gekozen oplossing het met de bestaande IAM-oplossing?
