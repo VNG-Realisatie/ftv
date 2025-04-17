@@ -1,6 +1,7 @@
 ---
 title: Waarom FTV?
 weight: 20
+type: 'chapter'
 ---
 
 # Waarom FTV?
@@ -11,7 +12,7 @@ Steeds meer organisaties delen steeds meer gegevens, ook over landsgrenzen heen.
 Bij elke uitwisseling horen weer nieuwe regels. 
 De huidige methodes zoals rolgebaseerde rechten en in applicaties ingebouwde regels zijn bij deze schaalvergroting niet meer hanteerbaar.
 
-FTV werkt met gestandaardiseerde toegangsregels  die buiten de applicaties beheerd worden. 
+FTV werkt met gestandaardiseerde toegangsregels die buiten de applicaties beheerd worden. 
 Met FTV kunnen organisaties toegangsregels eenvoudig toepassen in groeiende samenwerkingen, over domeinen en systemen heen.
 
 

@@ -204,6 +204,9 @@
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
+  .mr-10 {
+    margin-right: calc(var(--spacing) * 10);
+  }
   .mb-6 {
     margin-bottom: calc(var(--spacing) * 6);
   }
