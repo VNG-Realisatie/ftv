@@ -7,5 +7,5 @@ theme = "ftv"
     subtitle = 'Standaard voor vertrouwde toegang binnen het Federatief Datastelsel'
     baseDirectory = '/'
     [params.footer]
-        title = 'Standaard voor vertrouwde toegang  binnen het Federatief Datastelsel'
+        title = 'Standaard voor vertrouwde toegang binnen het Federatief Datastelsel'
     
