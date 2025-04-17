@@ -1,0 +1,13 @@
+<div class="bg-rhc-donkerbruin-100">
+    <div class="py-8 max-w-5xl mx-auto">
+        <h1 class="nl-heading nl-heading--level-1 rhc-heading">{{ .Get "title" }}</h1>
+        {{ $paragraphs := split .Inner "\n\n" }}
+            {{ range $paragraphs }}
+            {{ if ne (trim . " ") "" }}
+                <p class="utrecht-paragraph--lead pt-2">
+                    {{ . | $.Page.RenderString }}
+                </p>
+            {{ end }}
+        {{ end }}
+    </div>
+</div>
