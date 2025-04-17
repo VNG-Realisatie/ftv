@@ -6,7 +6,6 @@
     --font-sans: Fira Sans, Arial, Verdana, sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-amber-500: oklch(76.9% 0.188 70.08);
     --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-black: #000;
     --color-white: #fff;
@@ -22,6 +21,7 @@
     --color-rhc-geel-400: var(--rhc-color-geel-400, #FAE856);
     --color-ftv-info: #E1EEF8;
     --color-rhc-donkerbruin-100: var(--rhc-color-donkerbruin-100, #D1C2BE);
+    --color-rhc-color-oranje-200: var(--rhc-color-oranje-200, #F1BE8C);
   }
 }
 @layer base {
@@ -332,6 +332,9 @@
   }
   .bg-hero {
     background-color: var(--color-hero);
+  }
+  .bg-rhc-color-oranje-200 {
+    background-color: var(--color-rhc-color-oranje-200);
   }
   .bg-rhc-donkerbruin-100 {
     background-color: var(--color-rhc-donkerbruin-100);

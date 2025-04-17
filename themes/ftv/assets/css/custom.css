@@ -7,6 +7,7 @@
     --color-ftv-azure: #007BC7;
     --color-ftv-info: #E1EEF8;
     --color-rhc-donkerbruin-100: var(--rhc-color-donkerbruin-100, #D1C2BE);
+    --color-rhc-color-oranje-200: var(--rhc-color-oranje-200, #F1BE8C);
 }
 
 .ftv-hero-paragraph {

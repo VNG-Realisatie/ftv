@@ -1,4 +1,4 @@
-<div class="bg-rhc-donkerbruin-100">
+<div class="{{ if eq (.Get "bg") "orange" }}bg-rhc-color-oranje-200{{ else }}bg-rhc-donkerbruin-100{{ end }}">
     <div class="py-8 max-w-5xl mx-auto">
         <h1 class="nl-heading nl-heading--level-1 rhc-heading">{{ .Get "title" }}</h1>
         {{ $paragraphs := split .Inner "\n\n" }}

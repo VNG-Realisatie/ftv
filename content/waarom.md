@@ -3,7 +3,7 @@ title: Waarom FTV?
 weight: 20
 type: 'chapter'
 ---
-{{< chapter/header title="Waarom FTV?" >}}
+{{< chapter/header title="Waarom FTV?" bg="orange">}}
 Lorem ipsum dolor sit amet consectetur. Commodo ipsum tellus sem mauris a diam nibh. Nec ipsum euismod feugiat egestas consectetur lacus egestas lectus varius. Id elementum blandit sed quis morbi lectus viverra. Duis lacus turpis sollicitudin vel adipiscing arcu. Laoreet sed sit eget quis id lectus consequat est. Tortor pharetra eu sit nisl ipsum hac. Pretium pulvinar neque accumsan bibendum eget nullam id.
 {{< /chapter/header >}}
 
@@ -28,6 +28,7 @@ Hierdoor kunnen regels flexibel worden aangepast en in een volwaardig beheerspro
 Het is wettelijk verplicht om in een vertrouwensnetwerk achteraf verantwoording te kunnen afleggen over genomen toegangsbeslissingen.
 Deze verantwoording naar wederpartijen en de toezichthouder komt naast het logboek dataverwerkingen, dat verantwoording aan burgers aflegt.
 FTV bevat een standaard die de werking en gegevens voor een goede logging beschrijft.
+
 Daarnaast bewaart FTV de volledige geschiedenis van toegangsregels.
 Zo kan altijd achterhaald worden welke regels op welk moment golden.
 Dit maakt verantwoording gemakkelijker, transparanter en betrouwbaarder.
