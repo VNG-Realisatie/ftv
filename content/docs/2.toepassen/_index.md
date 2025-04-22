@@ -6,13 +6,58 @@ weight: 20
 
 # Toepassen 
 
-Je ziet het nut en de noodzaak van standaardisering, wat nu? Bij het gaan toepassen van de voorgestelde werkwijze komt nogal wat kijken. 
-In deze sectie bieden we een aantal handreikingen om te komen tot een goed werkende en beheersbare oplossing.
+Het invoeren van de FTV-standaard begint met een goede voorbereiding. Denk aan het maken van afspraken over het beheer en het testen van een oplossing in een proefopstelling. Als ondersteuning zijn praktische handreikingen beschikbaar. Ze geven inzicht in keuzes die gemaakt moeten worden, de stappen richting implementatie en technische mogelijkheden.
 
-1. [Functionele beschrijving](2.functioneel). De functies en taken die komen kijken bij toegangsverlening.
-2. [Stappenplan](1.stappenplan). Hoe kom je in zeven stappen komen van een use case tot een correct werkende regel?
-2. [Softwarekeus](2.softwarekeus). Er is nogal wat te kiezen aan PDP, PIP en PAP. Wat heb je nodig, en welke leverancier kies je of doe het toch zelf?
-3. [Referentie-implementatie](3.referentieimplementatie). Dit is een door dit team gebouwde oplossing, eenvoudig maar volledig. Het laat zien hoe een EAM oplossing eruit 
-kan zien, en kan als basis voor een eigen implementatie dienen.
-4. [Proefopstelling](4.proefopstelling). Dit is een compleet mini-FDS waarin een aantal use cases zijn uitgewerkt. Deze kan je zelf ook lokaal draaien
-en experimenten op uitvoeren.
+Federatieve toegangsverlening raakt meerdere onderdelen van een organisatie. Daarom zijn de handreikingen op deze pagina gericht op verschillende doelgroepen.
+
+## Voor bestuurders
+
+Een goed werkende FTV-implementatie vraagt om duidelijke keuzes, afspraken en draagvlak. Deze handreikingen helpen om de juiste afwegingen te maken en zicht te houden op het geheel.
+
+1. **Functionele beschrijving**. 
+
+    Hoe zien de taken rondom FTV eruit en wie is waarvoor verantwoordelijk?
+
+    [Bekijk het overzicht van functies en rollen](2.functioneel) 
+
+## Voor IT-managers
+
+FTV raakt meerdere onderdelen van de IT-infrastructuur. Denk aan softwarekeuzes, rolverdelingen en beheerprocessen. De handreikingen ondersteunen bij het maken van haalbare, schaalbare en toekomstbestendige keuzes.
+
+1. **Functionele beschrijving**.
+
+   Hoe zien de taken rondom FTV eruit en wie is waarvoor verantwoordelijk?
+
+   [Bekijk het overzicht van functies en rollen](2.functioneel)
+
+2. **Stappenplan**
+
+    Hoe kom je van een use case tot een goed werkende toegangsregel? 
+
+    [Doorloop het 7-stappenplan](1.stappenplan)
+
+3. **Softwarekeuze** 
+
+    Er is nogal wat te kiezen aan PDP, PIP en PAP. Wat heb je nodig? En welke leverancier past het best? Of is het beter om zelf iets te bouwen?
+   
+    [Lees de checklist Softwarekeuze](2.softwarekeus)
+
+## Voor ontwikkelaars
+
+Een goede technische basis begint met praktijkvoorbeelden en inzicht in de opbouw van toegangsregels. De handreikingen bieden concrete tools om te testen, te leren en te bouwen.
+
+1. **OpenFTV** 
+
+    OpenFTV is onze referentie-implementatie. Dit is een door het FTV-team gebouwde oplossing, eenvoudig maar volledig. Het laat zien hoe een EAM-oplossing eruit kan zien, en kan als basis voor een eigen implementatie dienen.
+
+    [Gebruik de referentie-implementatie als startpunt](3.referentieimplementatie)
+
+4. **Proefopstelling**
+
+    Een mini-FDS met uitgewerkte use cases is ideaal om lokaal te testen en mee te experimenteren.
+   
+    [Bekijk de proefopstelling en ontdek wat werkt](4.proefopstelling)
+
+## Voor juristen
+
+Goede toegangsverlening vraagt om heldere afspraken over rollen en bevoegdheden. Ook moeten juridische kaders en beleid vertaald worden naar toegangsregels die technisch toepasbaar zijn.

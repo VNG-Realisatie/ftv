@@ -5,44 +5,65 @@ weight: 20
 
 # Softwarekeus
 
+Een passende softwarekeuze is belangrijk voor een werkende FTV-oplossing. De markt is in beweging en de verschillen tussen producten zijn groot. Van open source tot commerciële pakketten, van zelf bouwen tot volledig uitbesteden: er zijn meerdere routes mogelijk. Welke keuze past, hangt af van de situatie, de technische wensen en de manier waarop het beheer wordt ingericht.
+
 ## Verdeelde markt
 
-Toegangsverlening heeft de laatste jaren meer aandacht gekregen. Vooral door het gemeengoed worden van cloud
-infrastructuur en daarbij passende gedistribueerde architectuur is de voorheen gebruikelijke werkwijze niet meer houdbaar gebleken.
-Maatwerk regels, ingebouwd in software is slecht onderhoudbaar, en RBAC oplossingen zijn door 'role explosion' niet
-beheersbaar op grote schaal.
+Toegangsverlening krijgt steeds meer aandacht. Door de overstap naar cloud en gedistribueerde architecturen is de vroegere werkwijze niet meer houdbaar. Maatwerk regels, ingebouwd in software, zijn slecht te onderhouden. RBAC oplossingen zijn door ‘role explosion’ niet beheersbaar op grote schaal.
 
-De al veel langer bestaande EAM methodiek geniet nu de aandacht en het marktaandeel groeit. Er is echter geen enkel product of policytaal
-die de overhand heeft, en er is geen overkoepelende standaard. De grote leveranciers van cloud infrastructuur hebben hun eigen
-oplossing, en daarnaast zijn er tientallen nieuwe en bestaanden IAM bedrijven in de markt gestapt.
+EAM-methodes (Externalized Authorization Management) zijn in opkomst. Maar er is (nog) geen standaardoplossing. De grote leveranciers van cloud infrastructuur hebben hun eigen oplossing, en daarnaast zijn er tientallen EAM-bedrijven in de markt gestapt.
 
 ## Open of closed source
 
-Elke EAM oplossing heeft als kern de beslismodule, de PDP. Daaromheen zijn er beheersmodule voor schrijven, testen, distributie en monitoring.
-De meeste PDPs zijn als open source beschikbaar en vaak ook licentievrij. De modules daaromheen worden commercieel aangeboden, vaak naar keus als
-uitbestede dienst (SaaS) of om zelf te beheren (on-premises). Er zit hier een duidelijke freemium strategie aan: door een goede gratis
-open source PDP aan ontwikkelaars aan te bieden hoopt men een klant aan de eigen policytaal te binden en de overstap naar betaalde EAM 
-als makkelijkste weg te bieden.
+Elke EAM-oplossing draait om de beslismodule: de PDP. Daaromheen zitten modules voor beheer, zoals voor schrijven, testen, distributie en monitoring en standaard integraties met bestaande applicaties (PEP's). De meeste PDPs zijn open source en vaak ook licentievrij. De andere modules worden commercieel aangeboden, als uitbestede dienst (SaaS) of voor eigen beheer(on-premises). Vaak zit hier een duidelijke freemium strategie achter: door een goede gratis open source PDP aan te bieden, hoopt de leverancier een klant aan de eigen policytaal te binden waarna de overstap naar betaalde EAM een logische weg is.
 
-## Zelfbouw
+## Zelfbouw of uitbesteden
 
-Er is ook altijd de optie om zelf de software te realiseren. Er zijn libraries zoals Casbin in vrijwel elke programmeertaal
-beschikbaar die de kern van ABAC/PBAC bieden. Het is wel goed om te beseffen dat het de beheersaspecten zijn die al snel
-uitgroeien tot grote klussen met veel integratie en beveiligingsaspecten. Er zijn goede redenen dat commerciele PAP's 
-een verdienmodel zijn.
+ Een andere optie is zelf software ontwikkelen. Er zijn libraries in vrijwel elke programmeertaal beschikbaar die de kern van ABAC/PBAC bieden.
 
-## Criteria
+ Zelfbouw geeft maximale vrijheid, maar brengt ook risico’s. Vooral het beheer, de integratie en de beveiliging vragen veel tijd en kennis.
 
-- Policytaal
-- PDP volwassenheid; AuthZEN compliance
-- Kwaliteit van elk van de functionele features
-- Mogelijkheid om datamodellen te gebruiken bij policy schrijven
-- Cloud hosting platform opties
-- Self hosting opties
-- Prijs
+## Criteria voor keuze
 
-Vragen aan zelf:
+De juiste softwarekeuze hangt af van meer dan alleen techniek. Belangrijke punten om mee te nemen in de afweging zijn
 
-- Wie gaat het beheer doen, met wie is het logisch dat samen te doen?
-- Om hoeveel PDP's gaat het? En hoeveel autorisatieverzoeken per maand?
-- Integreert het met mijn IAM oplossing?
+- **Policytaal**
+
+  Hoe krachtig en leesbaar is de policytaal? Past deze bij de werkwijze van de organisatie?
+- **PDP en standaardisering**
+
+  Is de gekozen PDP volwassen en voldoet deze aan de AuthZEN NL Gov-standaard?
+- **Integratie met bestaande applicaties**
+
+  Voor welke applicaties biedt de leverancier standaard PEPs om beslissingen af te dwingen? 
+
+- **Functionele kwaliteit**
+
+  Hoe goed werken de onderdelen voor schrijven, testen, distributie en monitoring?
+- 
+- **Gebruik van datamodellen**
+
+  Ondersteunt de oplossing het gebruik van eigen modellen voor subject, action, resource en context?
+
+- **Hostingopties**
+
+  Kan de software in de cloud draaien, in eigen omgeving ('on-premises') of allebei?
+
+- **Kosten**
+
+  Wat zijn de licentiekosten en wat betekent dat voor schaalbaarheid en beheer?
+
+## Vragen aan leverancier
+
+Bij het kiezen van software voor FTV is het belangrijk om de juiste vragen te stellen aan leveranciers. Denk aan onderwerpen als beheer, integratie, policytaal en dataveiligheid.
+
+In deze [checklist](vragen) staan voorbeeldvragen, in het Engels, die helpen om oplossingen goed te beoordelen.
+
+## Vragen aan eigen organisatie
+
+Niet alleen de leverancier, ook de eigen organisatie moet goed voorbereid zijn. Denk vooraf na over inrichting, beheer en schaalbaarheid.
+
+- Wie gaat het beheer doen en  met wie wordt daarbij samengewerkt?
+- Om hoeveel PDP’s gaat het? En om hoeveel autorisatieverzoeken per maand?
+- Binnen welke applicaties moeten beslissingen afgedwongen worden (PEPs)?
+- Integreert de gekozen oplossing het met de bestaande IAM-oplossing?
