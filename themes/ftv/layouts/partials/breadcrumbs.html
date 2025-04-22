@@ -1,0 +1,67 @@
+{{ if not .IsHome }}
+<nav aria-label="Breadcrumb" class="h-[62px] content-center utrecht-breadcrumb-nav utrecht-breadcrumb-nav--html-ol">
+    <div class="max-w-5xl mx-auto">
+        <ol class="utrecht-breadcrumb-nav__list utrecht-breadcrumb-nav__list--html-ol">
+            <li class="utrecht-breadcrumb-nav__item">
+                <a class="utrecht-link utrecht-link--html-a utrecht-breadcrumb-nav__link"
+                   href="{{ .Site.Home.RelPermalink }}">
+                    <span class="utrecht-breadcrumb-nav__text">Home</span>
+                </a>
+            </li>
+
+            {{ range .Ancestors }}
+                {{ if not .IsHome }}
+                    <li class="utrecht-breadcrumb-nav__separator utrecht-breadcrumb-nav__separator--html-li"
+                        style="display: var(--_utrecht-breadcrumb-nav-separator-display, block);">
+                            <span class="utrecht-icon" role="presentation" aria-hidden="true">
+                            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="tabler-icon tabler-icon-chevron-right"
+                            >
+                            <path d="M9 6l6 6l-6 6"></path>
+                            </svg>
+                        </span>
+                    </li>
+                    <li class="utrecht-breadcrumb-nav__item">
+                        <a class="utrecht-link utrecht-link--html-a utrecht-breadcrumb-nav__link"
+                           href="{{ .RelPermalink }}">
+                            <span class="utrecht-breadcrumb-nav__text">{{ .Title }}</span>
+                        </a>
+                    </li>
+                {{ end }}
+            {{ end }}
+
+            <li class="utrecht-breadcrumb-nav__separator utrecht-breadcrumb-nav__separator--html-li"
+                style="display: var(--_utrecht-breadcrumb-nav-separator-display, block);">
+                        <span class="utrecht-icon" role="presentation" aria-hidden="true">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="tabler-icon tabler-icon-chevron-right"
+                        >
+                        <path d="M9 6l6 6l-6 6"></path>
+                    </svg>
+                  </span>
+            </li>
+            <li class="utrecht-breadcrumb-nav__item">
+                <span class="utrecht-link utrecht-link--html-a utrecht-breadcrumb-nav__link">{{ .Title }}</span>
+            </li>
+        </ol>
+    </div>
+</nav>
+{{ end }}
