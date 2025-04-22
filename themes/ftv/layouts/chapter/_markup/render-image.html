@@ -1,0 +1,4 @@
+<img src="{{ .Destination | safeURL }}" class="utrecht-img utrecht-img--photo my-6 mx-auto"
+     {{- with .PlainText }} alt="{{ . }}"{{ end -}}
+     {{- with .Title }} title="{{ . }}"{{ end -}}
+>
