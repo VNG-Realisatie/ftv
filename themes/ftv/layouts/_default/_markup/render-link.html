@@ -1,0 +1,6 @@
+<a href="{{ .Destination | safeURL }}"
+   {{- with .Title }} title="{{ . }}"{{ end -}}
+   class="nl-link rhc-link"
+>
+    {{- with .Text }}{{ . }}{{ end -}}
+</a>
