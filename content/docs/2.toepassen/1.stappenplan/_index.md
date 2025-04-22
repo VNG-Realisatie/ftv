@@ -1,6 +1,5 @@
 ---
 Title: Stappenplan
-bookCollapseSection: true
 weight: 10
 ---
 

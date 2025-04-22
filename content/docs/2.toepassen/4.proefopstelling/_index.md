@@ -1,5 +1,6 @@
 ---
 Title: Proefopstelling
+bookCollapseSection: true
 weight: 40
 ---
 
