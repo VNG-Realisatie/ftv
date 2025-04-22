@@ -11,7 +11,6 @@
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-5xl: 64rem;
-    --container-7xl: 80rem;
     --radius-2xl: 1rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
@@ -242,9 +241,6 @@
   .min-h-\[212px\] {
     min-height: 212px;
   }
-  .w-7xl {
-    width: var(--container-7xl);
-  }
   .w-15 {
     width: calc(var(--spacing) * 15);
   }
@@ -260,17 +256,29 @@
   .w-\[1024px\] {
     width: 1024px;
   }
+  .w-\[1440px\] {
+    width: 1440px;
+  }
   .w-full {
     width: 100%;
   }
   .max-w-5xl {
     max-width: var(--container-5xl);
   }
+  .max-w-\[157px\] {
+    max-width: 157px;
+  }
+  .max-w-\[870px\] {
+    max-width: 870px;
+  }
   .min-w-\[240px\] {
     min-width: 240px;
   }
   .grow {
     flex-grow: 1;
+  }
+  .transform {
+    transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
   }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -301,6 +309,9 @@
   }
   .justify-between {
     justify-content: space-between;
+  }
+  .justify-center {
+    justify-content: center;
   }
   .gap-2\.5 {
     gap: calc(var(--spacing) * 2.5);
@@ -10932,7 +10943,7 @@
   --rhc-navigation-list-item-padding-block: 0.75rem;
   --rhc-navigation-list-item-padding-inline: 1rem;
   --rhc-nav-bar-border-block-end-width: 1px;
-  --rhc-nav-bar-max-inline-size: 1280px;
+  --rhc-nav-bar-max-inline-size: 1440px;
   --rhc-nav-bar-padding-inline: 1rem;
   --rhc-nav-bar-container-inline-size: 100%;
   --rhc-nav-bar-content-column-gap: 1rem;
@@ -12200,6 +12211,31 @@
   letter-spacing: 0;
   vertical-align: middle;
 }
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: rotateX(0);
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: rotateY(0);
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: rotateZ(0);
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: skewX(0);
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: skewY(0);
+}
 @property --tw-border-style {
   syntax: "*";
   inherits: false;
@@ -12331,6 +12367,11 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-rotate-x: rotateX(0);
+      --tw-rotate-y: rotateY(0);
+      --tw-rotate-z: rotateZ(0);
+      --tw-skew-x: skewX(0);
+      --tw-skew-y: skewY(0);
       --tw-border-style: solid;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;

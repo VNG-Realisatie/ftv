@@ -1,13 +1,20 @@
 <div class="{{ if eq (.Get "bg") "orange" }}bg-rhc-color-oranje-200{{ else }}bg-rhc-donkerbruin-100{{ end }}">
     <div class="py-8 max-w-5xl mx-auto">
-        <h1 class="nl-heading nl-heading--level-1 rhc-heading">{{ .Get "title" }}</h1>
-        {{ $paragraphs := split .Inner "\n\n" }}
-            {{ range $paragraphs }}
-            {{ if ne (trim . " ") "" }}
-                <p class="utrecht-paragraph--lead pt-2">
-                    {{ . | $.Page.RenderString }}
-                </p>
-            {{ end }}
-        {{ end }}
+        <div class="flex">
+            <div class="max-w-[870px]">
+                <h1 class="nl-heading nl-heading--level-1 rhc-heading">{{ .Get "title" }}</h1>
+                {{ $paragraphs := split .Inner "\n\n" }}
+                    {{ range $paragraphs }}
+                    {{ if ne (trim . " ") "" }}
+                        <p class="utrecht-paragraph--lead pt-2">
+                            {{ . | $.Page.RenderString }}
+                        </p>
+                    {{ end }}
+                {{ end }}
+            </div>
+            <div class="max-w-[157px] place-content-center justify-center mx-auto">
+                <img src="/images/api-icon.svg">
+            </div>
+        </div>
     </div>
 </div>
