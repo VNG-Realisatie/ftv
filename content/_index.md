@@ -46,18 +46,17 @@ Gemeenten handhaven milieuzones steeds vaker met kentekenherkenning. FTV zorgt v
 Voor de beoordeling van een huuraanslag worden persoonlijke gegevens uitgewisseld. 
 FTV zorgt ervoor dat alleen bevoegde medewerkers toegang krijgen tot die gegevens. [Lees verder](2a.voorbeeldcasus).
 
-## Nieuws en activiteiten
+## Actueel
 
 **Nieuws**
 
-- [AuthZEN ingebouwd in OpenFSC](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/blog/view/158bab79-30a5-4853-8a39-8b448b00755b/authzen-nu-ingebouwd-in-openfsc)
-- [Kick-off werkgroep FTV onder grote belangstelling](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/blog/view/1320d1ad-d68f-4dc1-97d4-ebde7242e292/werkgroep-federatieve-toegangsverlening-van-start-samenwerken-aan-veilige-en-verantwoorde-toegang-tot-data)
+- [AuthZEN ingebouwd in OpenFSC](docs/5.actueel/nieuws/20250408AuthZENinOpenFSC)
+- [Kick-off werkgroep FTV onder grote belangstelling](docs/5.actueel/nieuws/20250408WerkgroepVanStart)
 - [AuthZEN op de Gartner IAM conferentie in Londen](https://openid.net/wp-content/uploads/2025/04/AuthZEN-Gartner-IAM-2025-London.pdf)
 
 **Activiteiten**
 
-- Dinsdag 22 april, 10:00. dev.loer en online. Werkgroep #2. Onderwerp van de dag: de juridische scope
-- Dinsdag 22 april, 12:00 online. [Inloopspreekuur FTV](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/8cbfc0d6-3c63-4cf5-a616-8056f44d5a01/uitnodiging-inloopspreekuur-standaarden-federatief-datastelsel-deel-3)
+- [Dinsdag 6 mei , 10:00. dev.loer en online. Werkgroep #3](docs/5.actueel/activiteiten/20250422Werkgroep3)
 
 ## Doe mee
 
