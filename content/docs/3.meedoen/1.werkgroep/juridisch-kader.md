@@ -1,7 +1,7 @@
 ---
 bookCollapseSection: false
 weight: 10
-Title: 3. Juridisch kader
+Title: 4. Juridisch kader
 ---
 
 # Juridisch kader (22 april 2025)
@@ -26,8 +26,8 @@ Title: 3. Juridisch kader
 
 ## Agenda
 - Relatie EAM en OAuth
-- Presentatie Beleids-juridische verantwoording FTV (Wouter Diepenhuis)
-- Presentatie Juridische Structuur iShare (Gerard van de Hoeven)
+- Presentatie Beleids-juridische verantwoording FTV (Wouter Diephuis)
+- Presentatie Juridische Structuur iShare (Gerard van der Hoeven)
 
 ## Bijlages
 
