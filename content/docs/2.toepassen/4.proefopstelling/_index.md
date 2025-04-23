@@ -6,52 +6,73 @@ weight: 40
 
 # Proefopstelling
 
-De proefopstelling laat zien hoe FTV in de praktijk kan werken, door een eenvoudig federatief datastelsel in te richten,
-waarvan in ieder geval de componenten rondom toegangsverlening compleet zijn. Door een aantal use cases te realiseren wordt
-de werking geïllustreerd.
+De proefopstelling laat zien hoe FTV in de praktijk kan werken.. Daarvoor is een eenvoudig, maar werkend federatief datastelsel ingericht. De componenten rondom toegangsverlening zijn in deze opstelling volledig uitgewerkt.  
 
-## Opstelling
+Benieuwd hoe een concrete use case er in deze proefopstelling uitziet? Lees dan verder bij: het aanvragen van laadpaalvergunningen.
 
-De proefopstelling is een wel heel eenvoudig federatief datastelsel, als volgt:
-- Een zaaksysteem voor gemeentemedewerkers
-- Een of meer registraties
-- De BRP
-- De BRV
+## Overzicht opstelling
 
-De stippellijn geeft de grens aan tussen de gemeentescope en het stelsel
+De proefopstelling is een eenvoudig federatief datastelsel met als onderdelen:
 
-![Proefopstelling overzicht]({{< param baseDirectory >}}images/4.1proefopstelling_overzicht.png)
+- Een zaaksysteem voor gemeentemedewerkers 
+- Een of meer gemeentelijke registraties 
+- De Basisregistratie Personen (BRP)
+- De Basisregistratie Voertuigen (BRV)
 
-### Opstelling zaaksysteem
+De stippellijn geeft de grens aan tussen de scope van de gemeente en die van het stelsel.
 
-![Proefopstelling zaaksysteem]({{< param baseDirectory >}}images/4.1proefopstelling_zaaksysteem.png)
+![Proefopstelling overzicht]({{< param baseDirectory >}}diagrams/proefopstelling-overzicht.svg)
 
-Het zaaksysteem heeft de volgende componenten:
-- De zaak-applicatie zelf. 
-- Omdat het systeem persoonsgegevens verwerkt (personen en voertuigen opzoekt) moet het een logboek dataverwerkingen bijhouden. Hier wordt de LDV referentie-implementatie gebruikt
-- Om te communiceren met registraties, zowel binnen als buiten de gemeente, is er een gateway. We kiezen hier voor de referentie-implementatie van FSC.
-  De gateway heeft een Policy Enforcement Point (PEP) die elke verbinding op toegang laat controleren.
-- Als Policy Decision Point (PDP) kiezen we Open Policy Agent (OPA)
-- Als Policy Administration Point (PAP) kiezen we de FTV referentie. Deze gebruikt het bestandssysteem voor de opslag van policies.
-  Er is een command line interface (CLI) om policies toe te voegen, bij te werken en te verwijderen
-  De policies worden door een push-interface aan OPA doorgegeven: elke wijziging wordt direct doorgegeven.
-- Als PIP wordt de FTV referentie gebruikt.
+## Opstelling zaaksysteem
 
-### Opstelling basisregistraties
+![Proefopstelling zaaksysteem]({{< param baseDirectory >}}diagrams/proefopstelling-zaaksysteem.svg)
 
-![Proefopstelling zaaksysteem]({{< param baseDirectory >}}images/4.1proefopstelling_stelsel.png)
+Het zaaksysteem heeft de volgende onderdelen:
+- **De zaak-applicatie.**
+    
+    De applicatie waarmee medewerkers zaken afhandelen.
 
-Er zijn twee registraties, BRP en BRV, met de volgende onderdelen:
+- **Logging (LDV)**
 
-- Elk een eigen gateway. We kiezen twee verschillende leveranciers, om te laten zien dat deze uitwisselbaar zijn in het stelsel
-- Eenvoudige BRP en BRV services, met bijbehorende eenvoudige opslag.
-- Elk een eigen LDV referentie om de uitgevoerde verwerkingen bij te houden. Aanroep is de verantwoordelijkheid van de service.
-- Elk een residual policy processor, die deelpolicies uitvoert die de afnemer niet kon uitvoeren. Er zijn ook hier twee verschillende
-  gekozen, om twee alternatieve methodes te laten zien.
+    Omdat het systeem persoonsgegevens verwerkt (personen en voertuigen opzoekt) moet het een logboek dataverwerkingen bijhouden. Hier wordt de referentie-implementatie van Logboek Dataverwering (LDV) gebruikt
 
-De registraties delen een toegangsverleningssysteem.
-Dit is voor het gemak van de proefopstelling, normaliter zal dat niet het geval zijn.
-De onderdelen zijn herkenbaar als dezelfde als aan de zaaksysteem kant, maar dan:
+- **Gateway (FSC)**
 
+    Om te communiceren met registraties, zowel binnen als buiten de gemeente, is er een gateway. Hier wordt de referentie-implementatie van Federatieve Service Connectiviteit (OpenFSC) gebruikt. Deze heeft een Policy Enforcement Point (PEP) die elke verbinding op toegang laat controleren.
+
+- **Policy Decision Point (PDP)**
+
+    Hier is gekozen voor Open Policy Agent (OPA), die bepaalt of toegang wordt verleend op basis van ingestelde regels.
+
+- **Policy Administration Point (PAP)**
+
+    De FTV-referentie wordt gebruikt als PAP. e. Deze gebruikt het bestandssysteem voor de opslag van policies. Er is een command line interface (CLI) om policies toe te voegen, bij te werken en te verwijderen De policies worden door een push-interface aan OPA doorgegeven: elke wijziging wordt direct doorgegeven.
+
+- **Policy Information Point (PIP)**
+
+    Als PIP wordt de FTV referentie gebruikt.
+
+## Opstelling basisregistraties
+
+![Proefopstelling stelsel]({{< param baseDirectory >}}diagrams/proefopstelling-stelsel.svg)
+
+Er zijn twee registraties: BRP en BRV. Ze bevatten allebei de volgende onderdelen:
+
+- **Gateway** 
+    
+    Elke registratie heeft een eigen gateway. Er zijn twee verschillende leveranciers gekozen om aan te tonen dat gateways uitwisselbaar zijn binnen het stelsel.
+
+- **Service**
+
+    Eenvoudige BRP en BRV services, met bijbehorende eenvoudige opslag.
+
+- **Logging (LDV)**
+
+    Elke registratie maakt gebruik van een eigen LDV-referentie voor het bijhouden van de uitgevoerde verwerkingen. Aanroep is de verantwoordelijkheid van de service. loggen van dataverwerkingen. De aanroep is de verantwoordelijkheid van de service.
+
+- Elk een **residual policy processor (RPP)**, die deelpolicies uitvoert die de afnemer niet kon uitvoeren. Er zijn ook hier twee verschillende gekozen, om twee alternatieve methodes te laten zien. 
+De RPP verwerkt deelpolicies die de afnemer niet zelfstandig kon uitvoeren. Ook hier zijn twee verschillende oplossingen gekozen om alternatieven te laten zien.
+
+De registraties delen in deze proefopstelling één toegangsverleningssysteem. In de praktijk  zal dat niet het geval zijn. De onderdelen zijn herkenbaar als dezelfde als aan de zaaksysteem kant, maar dan:
 - Cerbos als PDP
 - Git als opslag, met Gitlab als interface, zowel de service naar de PDP als de web applicatie voor policy beheer.
