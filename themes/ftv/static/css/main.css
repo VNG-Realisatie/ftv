@@ -235,8 +235,17 @@
   .h-\[62px\] {
     height: 62px;
   }
+  .h-\[72px\] {
+    height: 72px;
+  }
   .h-\[90px\] {
     height: 90px;
+  }
+  .h-\[100px\] {
+    height: 100px;
+  }
+  .h-\[150px\] {
+    height: 150px;
   }
   .h-\[183px\] {
     height: 183px;
@@ -249,6 +258,9 @@
   }
   .w-15 {
     width: calc(var(--spacing) * 15);
+  }
+  .w-\[72px\] {
+    width: 72px;
   }
   .w-\[96px\] {
     width: 96px;
@@ -377,8 +389,14 @@
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
   }
+  .px-6 {
+    padding-inline: calc(var(--spacing) * 6);
+  }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
+  }
+  .py-6 {
+    padding-block: calc(var(--spacing) * 6);
   }
   .py-8 {
     padding-block: calc(var(--spacing) * 8);
@@ -12242,7 +12260,7 @@
   list-style-type: disc;
 }
 .section > ol {
-  color: var(--utrecht-ordered-list-color);
+  color: var(--utrecht-paragraph-color, var(--utrecht-document-color, inherit));
   font-weight: var(--utrecht-ordered-list-font-weight);
   line-height: var(--utrecht-ordered-list-line-height);
   margin-block-end: var(--utrecht-ordered-list-margin-block-end);

@@ -1,1 +1,29 @@
-<img src="nieuws.png" alt="nieuws">
+<div class="w-[1024px] mx-auto grid grid-cols-1 my-10">
+    <div class="py-6">
+        <h3 class="nl-heading nl-heading--level-3 rhc-heading">Nieuws en activiteiten</h3>
+        <p class="utrecht-paragraph text-rhc-primary">Hier moet nog wat tekst komen</p>
+    </div>
+    <div class="flex justify-between px-6 gap-2.5 h-[150px]">
+        {{ $data := dict }}
+        {{ $path := "data/agenda.yaml" }}
+        {{ with resources.Get $path }}
+            {{ with . | transform.Unmarshal }}
+                {{ $data = . }}
+            {{ end }}
+        {{ else }}
+            {{ errorf "Unable to load %q" $path }}
+        {{ end }}
+        {{ range $data }}
+            <div class="h-[100px] grid grid-cols-2">
+                <div>
+                    <div class="w-[72px] h-[72px] border">
+                        12 feb
+                    </div>
+                </div>
+                <div class="py-6">
+                    <h3 class="nl-heading nl-heading--level-3 rhc-heading">{{ .titel }}</h3>
+                </div>
+            </div>
+        {{ end }}
+    </div>
+</div>
