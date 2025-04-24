@@ -1,7 +1,7 @@
 ---
 bookCollapseSection: false
 weight: 10
-Title: 1.Gegevensminimalisatie
+Title: 1. Pilot
 ---
 
 # Werkgroep Gegevensminimalisatie (20 november 2024)

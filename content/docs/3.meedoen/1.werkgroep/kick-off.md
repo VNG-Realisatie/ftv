@@ -1,7 +1,7 @@
 ---
 bookCollapseSection: false
 weight: 10
-Title: 2. Kick-off Sessie
+Title: 2. Kick-off
 ---
 
 # Kick-Off Werkgroep Federatieve Toegangsverlening (25 maart 2025)

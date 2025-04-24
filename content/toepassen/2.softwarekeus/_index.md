@@ -40,7 +40,7 @@ De juiste softwarekeuze hangt af van meer dan alleen techniek. Belangrijke punte
 - **Functionele kwaliteit**
 
   Hoe goed werken de onderdelen voor schrijven, testen, distributie en monitoring?
-- 
+
 - **Gebruik van datamodellen**
 
   Ondersteunt de oplossing het gebruik van eigen modellen voor subject, action, resource en context?

@@ -6,10 +6,40 @@ bookCollapseSection: true
 
 # Meedoen
 
-FTV is in ontwikkeling en zoekt professionals die willen bijdragen aan een veilige en efficiënte toegang tot data binnen de overheid.
+**FTV is in ontwikkeling en zoekt professionals die willen bijdragen aan een veilige en efficiënte toegang tot data binnen de overheid.**
+
+FTV werkt aan veilige en efficiënte toegang tot data binnen de overheid. Jouw ervaring is waardevol om dit goed te laten aansluiten op de praktijk.
 
 ## Wat kan jij doen?
 
-- Bekijk de werkwijze en beoordeel hoe deze in jouw API-landschap past
-- Denk mee in de [werkgroep](1.werkgroep)
-- Experimenteer met de referentie-implementatie en ontdek de impact op jouw werk.om inzicht te krijgen in de impact op je werk
+**Bekijk de werkwijze**
+
+Lees [hoe FTV werkt](/docs/1.methodiek) en bekijk hoe dit in jouw API-landschap past
+
+**Denk mee in de werkgroep**
+
+De [werkgroep](1.werkgroep) praat over de opzet, keuzes en doorontwikkeling van de standaardisering. Ook bespreken we waar gebruikers in de praktijk tegenaan lopen.
+
+**Ga aan de slag met de referentie-implementatie**
+
+Wil je ervaren wat FTV betekent voor jouw organisatie? Experimenteer dan met de [referentie-implementatie](/docs/2.toepassen/3.referentieimplementatie).
+
+**Praat mee**
+
+IT-specialisten denken op Mattermost mee over FTV. Heb je ideeën of vragen? Sluit je aan via [ons kanaal](https://digilab.overheid.nl/chat/digilab/channels/federatieve-toegangsverlening).
+
+## Wie doen er al mee?
+
+- VNG
+- Ministerie van Binnenlandse Zaken
+- Logius
+- Geonovum
+- Kadaster
+- Zorginstituut Nederland
+- NUTS
+- Vecozo
+- ACM
+- RvIG
+- Gemeente Rotterdam
+- Idemia
+- iSHARE

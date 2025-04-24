@@ -92,7 +92,7 @@ Tijdens de presentatie zijn de volgende opmerkingen gemaakt:
 
   *Gideon Zegwaard:* Je kunt dus op basis van attributen, bijv. kenmerken in je HR systeem, toegang geven.
 
-# Bepaling scope en werkwijze
+## Bepaling scope en werkwijze
 
 - *Michiel Trimpe*: We stellen voor om de volgende interfaces te standaardiseren: tussen PEP en PDP, het informatiemodel van het toegangsverzoek, de step-up acties en residual policies ("Toegestaan, mits", cq. restbeleid.)
 
@@ -108,7 +108,7 @@ Tijdens de presentatie zijn de volgende opmerkingen gemaakt:
 
   **Beslissing**: De standaardisatie voor de PAP zal zich beperken tot het bieden van *inzicht* en de policies. Deze interface zal *naast* de (proprietary) interface tussen PAP en PDP bestaan.
 
-# Agenda volgende werkgroep.
+## Agenda volgende werkgroep.
 
 - *Wouter Diephuis*: Wij kijken vanuit beleidsjuridische blik naar het project. Het gaat veel over de operationele invulling. Hoe regelen we de borging naar de behoeftes van de organisatie en de wet- en regelgeving. Veel antwoorden op de vragen die besproken zijn liggen in wet- en regelgeving besloten. 
 
