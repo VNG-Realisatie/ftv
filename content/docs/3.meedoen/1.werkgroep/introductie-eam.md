@@ -22,7 +22,7 @@ Title: 3. Introductie EAM
 - Stas Mironov (Logius)
 - Remo van Rest (ZIN)
 - Wouter Diephuis (MinBZK)
-- Around Quanjer (VNG)
+- Arnoud Quanjer (VNG)
 - René Kint (Zicht op Nederland)
 - Ronald Koster (FSC)
 - Rob Klaver (Idemia)
@@ -32,7 +32,7 @@ Title: 3. Introductie EAM
 - Bepaling scope en werkwijze 
 - Agenda volgende werkgroep
 
-## Bijlages
+## Bijlagen
 
 - [Opname](https://github.com/VNG-Realisatie/ftv/raw/refs/heads/main/static/videos/20250408-introductie-eam.mp4)
 - [Presentatie Introductie EAM]({{< param baseDirectory >}}documents/20250408-introductie-eam.pptx)
