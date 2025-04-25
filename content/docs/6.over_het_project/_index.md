@@ -60,14 +60,14 @@ Toegang is op zijn beurt een van de technische [stelselfuncties](https://federat
 
 ![1.1De stelselfuncties in het FDS]({{< param baseDirectory >}}images/1.1stelselfuncties.png)
 
-FTV vervult dus een rol in het FDS. Daarnaast is FTV ook prima inzetbaar als werkzijze in andere stelsels en 
+FTV vervult dus een rol in het FDS. Daarnaast is FTV ook prima inzetbaar als werkwijze in andere stelsels en 
 ook los van stelsels, bijvoorbeeld bij Zaakgericht Werken.
 
-## Planning en status
+## Planning
 
 * 1 juli 2024: Start project
-* 1 oktober 2024: afronding onderzoek naar EAM methodieken
-* 1 november 2024: start bouw OpenFTV
+* 1 oktober 2024: afronding onderzoek naar EAM-methodieken
+* 1 november 2024: start van de bouw van OpenFTV
 * 15 november 2024: afronding onderzoek naar de status van EAM bij de overheid
 * 1 december 2024: start schrijven van de standaard
 * 1 februari 2025: aansluiting bij AuthZEN
@@ -79,4 +79,3 @@ ook los van stelsels, bijvoorbeeld bij Zaakgericht Werken.
 Meer details staan in rapportages. De subsidies zijn (tot nu toe) in twee fases verstrekt, en de rapportages zijn daarom ook in die twee fases verdeeld. 
 Fase 1 is in juli 2024 gestart met [fase 1](3.fase1), en afgerond op 1 april 2025.
 [Fase 2](4.fase2) is aansluitend gestart en zal tot 31 december 2025 lopen.
-
