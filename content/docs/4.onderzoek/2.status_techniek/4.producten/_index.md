@@ -29,7 +29,7 @@ Een kanttekening is wel dat toegangsregels geschreven in al deze talen lastig zi
 
 Een tweede kanttekening is dat deze implementaties allemaal losse policy engines zijn: in principe alleen een PDP. Een complete oplossing omvat echt ook beheer. Testen, versiebeheer, distributie, monitoring en auditing zijn belangrijke taken die een PDP niet oplost.
 
-### Commerciële implementaties
+## Closed source
 
 In het commerciële domein zijn completere oplossingen beschikbaar. Een goede recente inventarisatie van de markt is [deze](https://www.kuppingercole.com/research/lc80819/policy-based-access-management) van KuppingerCole.
 Wij hebben in dit onderzoek een aantal partijen benaderd en om informatie en demonstratie gevraagd. Hier kort onze bevindingen.
