@@ -24,11 +24,10 @@ De proefopstelling is een eenvoudig federatief datastelsel met als onderdelen:
 
 ## Opstelling Gemeente
 
-Bij de gemeente staat
+De opstelling bij de gemeente kunnen we verder detailleren als volgt:
 
 ![Proefopstelling zaaksysteem]({{< param baseDirectory >}}diagrams/proefopstelling-zaaksysteem.svg)
 
-Het zaaksysteem heeft de volgende onderdelen:
 - **De zaak-applicatie**
     
     De applicatie waarmee medewerkers zaken afhandelen.
@@ -57,6 +56,8 @@ Het zaaksysteem heeft de volgende onderdelen:
 
 ![Proefopstelling stelsel]({{< param baseDirectory >}}diagrams/proefopstelling-stelsel.svg)
 
+### Registraties
+
 Er zijn twee registraties: BRP en BRV. Ze bevatten allebei de volgende onderdelen:
 
 - **Gateway** 
@@ -76,8 +77,9 @@ Er zijn twee registraties: BRP en BRV. Ze bevatten allebei de volgende onderdele
     Elk een RRP, die deelpolicies uitvoert die de afnemer niet kon uitvoeren. Er zijn ook hier twee verschillende gekozen, om twee alternatieve methodes te laten zien.
     Elk een RRP, die deelpolicies uitvoert die de afnemer niet kon uitvoeren. Er zijn ook hier twee verschillende gekozen, om twee alternatieve methodes te laten zien.
 
-Het toegangsverleningssysteem
+### Gedeeld EAM
 
-De registraties delen in deze proefopstelling één toegangsverleningssysteem. In de praktijk  zal dat niet het geval zijn. De onderdelen zijn herkenbaar als dezelfde als aan de zaaksysteem kant, maar dan:
-- Cerbos als PDP
-- Git als opslag, met Gitlab als interface, zowel de service naar de PDP als de web applicatie voor policy beheer.
+De registraties delen in deze proefopstelling voor de eenvoud één toegangsverleningssysteem; in de praktijk zal dat meestal niet het geval zijn. De onderdelen zijn herkenbaar als dezelfde als bij de gemeente, maar dan:
+- Cerbos als **PDP**
+- Git als **PAP**, met Gitlab als interface, zowel de service naar de PDP als de web applicatie voor policy beheer.
+- OpenFTV als **PIP**
