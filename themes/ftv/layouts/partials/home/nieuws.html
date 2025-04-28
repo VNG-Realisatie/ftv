@@ -14,7 +14,6 @@
     "Dec" "dec"
 }}
 
-
 <div class="w-[1024px] mx-auto grid grid-cols-1 my-10">
     <div class="py-6">
         <h3 class="nl-heading nl-heading--level-3 rhc-heading">Nieuws en activiteiten</h3>
@@ -30,7 +29,7 @@
         {{ else }}
             {{ errorf "Unable to load %q" $path }}
         {{ end }}
-        {{ range $data }}
+        {{ range first 3 (sort $data "datum" "asc") }}
             <div class="h-[100px] flex">
                 <div class="w-[72px] text-center">
                     <div class="w-[72px] h-[72px] border mx-auto flex flex-col border-b-rhc-primary">
