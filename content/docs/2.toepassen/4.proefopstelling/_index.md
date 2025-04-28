@@ -14,16 +14,17 @@ Benieuwd hoe een concrete use case er in deze proefopstelling uitziet? Lees dan 
 
 De proefopstelling is een eenvoudig federatief datastelsel met als onderdelen:
 
-- Een zaaksysteem voor gemeentemedewerkers 
-- Een of meer gemeentelijke registraties 
-- De Basisregistratie Personen (BRP)
-- De Basisregistratie Voertuigen (BRV)
-
-De stippellijn geeft de grens aan tussen de scope van de gemeente en die van het stelsel.
+- Bij de gemeente:
+  - Een zaaksysteem voor gemeentemedewerkers 
+  - Een of meer gemeentelijke registraties 
+- De Basisregistratie Personen (BRP), een service van de Rijksdient voor Identiteitsgevens (RvIG)
+- De Basisregistratie Voertuigen (BRV), een service van de Rijksdienst voor het Wegverkeer (RDW)
 
 ![Proefopstelling overzicht]({{< param baseDirectory >}}diagrams/proefopstelling-overzicht.svg)
 
-## Opstelling zaaksysteem
+## Opstelling Gemeente
+
+Bij de gemeente staat
 
 ![Proefopstelling zaaksysteem]({{< param baseDirectory >}}diagrams/proefopstelling-zaaksysteem.svg)
 
