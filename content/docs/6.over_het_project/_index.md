@@ -43,7 +43,7 @@ De doelstellingen aan het project, en hoe een standaardmethodiek een oplossing v
 > 4. **Geeft richting aan het transitiepad naar de eindsituatie**. In de meerjarenvisie worden grote doelen gedefinieerd. Met een concrete invulling
      van een deel van de weg daarheen wordt de juiste richting ingezet naar die doelen.
 
-Binnen dit gebied is de [scope](1.scope) verder afgebakend.
+Omdat dit nog een erg brede omschrijving is, is binnen dit gebied de [scope verder afgebakend](1.scope).
 
 ## De opdrachtnemer, team FTV
 
