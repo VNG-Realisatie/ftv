@@ -350,6 +350,9 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-b-rhc-primary {
+    border-bottom-color: var(--color-rhc-primary);
+  }
   .bg-ftv-green {
     background-color: var(--color-ftv-green);
   }
@@ -418,6 +421,9 @@
   }
   .pb-4 {
     padding-bottom: calc(var(--spacing) * 4);
+  }
+  .text-center {
+    text-align: center;
   }
   .break-normal {
     overflow-wrap: normal;
