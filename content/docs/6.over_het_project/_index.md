@@ -47,10 +47,6 @@ Fase 1 is afgerond met het besluit om aan te sluiten bij de OpenID AuthZEN-stand
 **Fase 2 april 2025 – december 2025**
 
 In fase 2 richt het project zich op het voorstellen, uitwerken en positioneren van een standaard voor toegangsverlening via API’s. Daarbij hoort het ontwikkelen van een referentie-implementatie, het uitvoeren van pilots en het creëren van draagvlak binnen en buiten de overheid. Cruciale randvoorwaarden zijn samenwerking binnen de federatieve context (zoals met FDS en FSC), goede juridische afspraken en het overwinnen van de technische en organisatorische complexiteit.
-Mijlpalen in fase 2 zijn:
-•	1 juni 2025: AuthZEN NL GOV 1.0 naar consultatie
-•	1 augustus: Logboek toegangsverlening naar consultatie
-•	1 september: AuthZEN NL GOV 1.1 naar consultatie, met ‘nee, tenzij’
 
 ## Tijdlijn
 
