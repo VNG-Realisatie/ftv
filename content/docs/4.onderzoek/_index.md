@@ -6,6 +6,10 @@ weight: 40
 
 # Onderzoek
 
+Voorafgaand aan de opstelling van een standaard voor Federatieve Toegangsverlening (FTV) en het definiëren van een werkwijze is een uitgebreid onderzoek gedaan. Op basis van dit onderzoek zijn de eisen opgesteld voor de standaard.
+
+## Onderzoek
+
 Het onderzoek bestond uit twee delen.
 
 1.	Technische analyse
@@ -16,7 +20,7 @@ De huidige stand van techniek rondom toegangsverlening is in kaart gebracht. Daa
 
 Er is onderzocht hoe toegangsverlening op dit moment binnen de Nederlandse overheid is georganiseerd. Uit het onderzoek blijkt dat toegangsverlening binnen de Nederlandse overheid nog weinig gestandaardiseerd is.
       
-# Eisen
+## Eisen
 
 Tijdens het onderzoek zijn de eisen opgesteld voor de nieuwe standaard voor toegangsverlening. Er is gekeken naar vier belangrijke punten:
  
