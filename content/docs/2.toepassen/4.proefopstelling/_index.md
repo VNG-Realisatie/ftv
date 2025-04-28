@@ -8,7 +8,7 @@ weight: 40
 
 De proefopstelling laat zien hoe FTV in de praktijk kan werken.. Daarvoor is een eenvoudig, maar werkend federatief datastelsel ingericht. De componenten rondom toegangsverlening zijn in deze opstelling volledig uitgewerkt.  
 
-Benieuwd hoe een concrete use case er in deze proefopstelling uitziet? Lees dan verder bij: het aanvragen van laadpaalvergunningen.
+Benieuwd hoe een concrete use case er in deze proefopstelling uitziet? Lees dan verder bij: [het aanvragen van laadpaalvergunningen](2.laadpalen).
 
 ## Overzicht opstelling
 
@@ -28,7 +28,7 @@ De stippellijn geeft de grens aan tussen de scope van de gemeente en die van het
 ![Proefopstelling zaaksysteem]({{< param baseDirectory >}}diagrams/proefopstelling-zaaksysteem.svg)
 
 Het zaaksysteem heeft de volgende onderdelen:
-- **De zaak-applicatie.**
+- **De zaak-applicatie**
     
     De applicatie waarmee medewerkers zaken afhandelen.
 
@@ -66,12 +66,16 @@ Er zijn twee registraties: BRP en BRV. Ze bevatten allebei de volgende onderdele
 
     Eenvoudige BRP en BRV services, met bijbehorende eenvoudige opslag.
 
-- **Logging (LDV)**
+- **Logging**
 
-    Elke registratie maakt gebruik van een eigen LDV-referentie voor het bijhouden van de uitgevoerde verwerkingen. Aanroep is de verantwoordelijkheid van de service. loggen van dataverwerkingen. De aanroep is de verantwoordelijkheid van de service.
+    Elke registratie maakt gebruik van een eigen logboek voor het bijhouden van de uitgevoerde verwerkingen.De aanroep is de verantwoordelijkheid van de service.
 
-- Elk een **residual policy processor (RPP)**, die deelpolicies uitvoert die de afnemer niet kon uitvoeren. Er zijn ook hier twee verschillende gekozen, om twee alternatieve methodes te laten zien. 
-De RPP verwerkt deelpolicies die de afnemer niet zelfstandig kon uitvoeren. Ook hier zijn twee verschillende oplossingen gekozen om alternatieven te laten zien.
+- **Residual policy processor (RPP)**
+
+    Elk een RRP, die deelpolicies uitvoert die de afnemer niet kon uitvoeren. Er zijn ook hier twee verschillende gekozen, om twee alternatieve methodes te laten zien.
+    Elk een RRP, die deelpolicies uitvoert die de afnemer niet kon uitvoeren. Er zijn ook hier twee verschillende gekozen, om twee alternatieve methodes te laten zien.
+
+Het toegangsverleningssysteem
 
 De registraties delen in deze proefopstelling één toegangsverleningssysteem. In de praktijk  zal dat niet het geval zijn. De onderdelen zijn herkenbaar als dezelfde als aan de zaaksysteem kant, maar dan:
 - Cerbos als PDP
