@@ -1,6 +1,7 @@
 ---
 Title: Softwarekeus
 weight: 20
+type: 'chapter'
 ---
 
 # Softwarekeus

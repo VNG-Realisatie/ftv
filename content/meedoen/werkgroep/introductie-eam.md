@@ -1,6 +1,5 @@
 ---
-bookCollapseSection: false
-weight: 10
+type: 'chapter'
 Title: 3. Introductie EAM
 ---
 

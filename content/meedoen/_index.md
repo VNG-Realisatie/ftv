@@ -1,24 +1,24 @@
 ---
 Title: Meedoen
 weight: 30
-bookCollapseSection: true
+type: 'chapter'
 ---
 
-# Meedoen
-
+{{< chapter/header title="Meedoen" bg="brown">}}
 **FTV is in ontwikkeling en zoekt professionals die willen bijdragen aan een veilige en efficiënte toegang tot data binnen de overheid.**
 
 FTV werkt aan veilige en efficiënte toegang tot data binnen de overheid. Jouw ervaring is waardevol om dit goed te laten aansluiten op de praktijk.
+{{< /chapter/header >}}
 
-## Wat kan jij doen?
+{{< chapter/section title="Wat kan jij doen" >}}
 
 **Bekijk de werkwijze**
 
-Lees [hoe FTV werkt](/docs/1.methodiek) en bekijk hoe dit in jouw API-landschap past
+Lees [hoe FTV werkt](/methodiek) en bekijk hoe dit in jouw API-landschap past
 
 **Denk mee in de werkgroep**
 
-De [werkgroep](1.werkgroep) praat over de opzet, keuzes en doorontwikkeling van de standaardisering. Ook bespreken we waar gebruikers in de praktijk tegenaan lopen.
+De [werkgroep](/meedoen/werkgroep) praat over de opzet, keuzes en doorontwikkeling van de standaardisering. Ook bespreken we waar gebruikers in de praktijk tegenaan lopen.
 
 **Ga aan de slag met de referentie-implementatie**
 
@@ -28,8 +28,9 @@ Wil je ervaren wat FTV betekent voor jouw organisatie? Experimenteer dan met de 
 
 IT-specialisten denken op Mattermost mee over FTV. Heb je ideeën of vragen? Sluit je aan via [ons kanaal](https://digilab.overheid.nl/chat/digilab/channels/federatieve-toegangsverlening).
 
-## Wie doen er al mee?
+{{< /chapter/section >}}
 
+{{< chapter/section title="Wie doen er al mee" >}}
 - VNG
 - Ministerie van Binnenlandse Zaken
 - Logius
@@ -43,3 +44,4 @@ IT-specialisten denken op Mattermost mee over FTV. Heb je ideeën of vragen? Slu
 - Gemeente Rotterdam
 - Idemia
 - iSHARE
+{{< /chapter/section >}}

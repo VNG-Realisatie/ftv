@@ -76,4 +76,4 @@ Sluit je aan via [ons kanaal](https://digilab.overheid.nl/chat/digilab/channels/
 - VNG
 - Zorginstituut Nederland
 
-[Ook meedoen?](docs/3.meedoen)
+[Ook meedoen?](meedoen)

@@ -100,3 +100,7 @@
     list-style-type: decimal;
     font-size: var(--utrecht-paragraph-font-size, var(--utrecht-document-font-size, inherit));
 }
+
+.section > h3, h4, h5, h6 {
+    padding-top: 0.5em;
+}

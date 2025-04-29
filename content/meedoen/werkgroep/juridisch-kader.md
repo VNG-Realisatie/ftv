@@ -1,6 +1,5 @@
 ---
-bookCollapseSection: false
-weight: 10
+type: 'chapter'
 Title: 4. Juridisch kader
 ---
 
