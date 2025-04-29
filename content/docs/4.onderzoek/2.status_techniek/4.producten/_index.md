@@ -20,6 +20,7 @@ Het begrip 'grootste' is relatief: waar Amazon Verified Permissions waarschijnli
 - [Cerbos](https://www.cerbos.dev/), de PBAC oplossing van Google, gebruik makend van CEL.
 - [Open Policy Agent (OPA)](https://www.openpolicyagent.org/) is de engine van Styra, de bedenker van Rego.
 - [OpenFGA](https://openfga.dev/) is gebaseerd op Zanzibar, het ReBAC project van Google.
+- [KeyCloak](https://www.keycloak.org/docs/latest/authorization_services/index.html) Open source platform
 
 Van XACML en Rego zijn geen stabiele moderne open source implementaties.
 
@@ -34,8 +35,15 @@ Een tweede kanttekening is dat deze implementaties allemaal losse policy engines
 In het commerciële domein zijn completere oplossingen beschikbaar. Een goede recente inventarisatie van de markt is [deze](https://www.kuppingercole.com/research/lc80819/policy-based-access-management) van KuppingerCole.
 Wij hebben in dit onderzoek een aantal partijen benaderd en om informatie en demonstratie gevraagd. Hier kort onze bevindingen.
 
-- [Styra DAS](2.styra)
-- [PlainID](3.plainid)
-- [Axiomatics](4.axiomatics)
-- PingID
+| Leverancier                                                                        | Gesproken | Meer informatie                                                  |
+|------------------------------------------------------------------------------------|-----------|------------------------------------------------------------------|
+| [Styra](2.styra)                                                                   | Ja        | [Brochure]({{< param baseDirectory >}}documents/styra.pdf)       |
+| [PlainID](3.plainid)                                                               | Ja        | [Brochure]({{< param baseDirectory >}}documents/plainid.pdf)     |
+| [Axiomatics](4.axiomatics)                                                         | Ja        | [Brochure]({{< param baseDirectory >}}documents/axiomatics.pdf)  |
+| [PingID](https://www.pingidentity.com/en/platform/capabilities/authorization.html) | Ja        | [Brochure]({{< param baseDirectory >}}documents/pingid.pdf)      |
+| [NextLabs](https://www.nextlabs.com/products/cloudaz-policy-platform/)             | Ja        | [Brochure]({{< param baseDirectory >}}documents/nextlabs.pdf)    |
+| [Thales](https://cpl.thalesgroup.com/access-management/externalized-authorization)                                                                             | Ja        | [Brochure]({{< param baseDirectory >}}documents/thales.pdf)      |
+| [Immuta](https://www.immuta.com/)                                                                             | Ja        | [Link](https://www.immuta.com/product/policy-entitlement-engine/) |
+| [Okta](https://www.okta.com/)                                                                               | Ja        |                                                                  |
+| Poort8 Noodlebar                                                                   | Ja        |                                                                  |
 
