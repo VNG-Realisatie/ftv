@@ -6,4 +6,4 @@ bookCollapseSection: true
 
 # Overzicht toekomstige activiteiten
 
-- [22 april: werkgroep 3](20250422Werkgroep3)
+- [22 april: werkgroep 3](20250422werkgroep3)
