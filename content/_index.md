@@ -50,14 +50,14 @@ FTV zorgt ervoor dat alleen bevoegde medewerkers toegang krijgen tot die gegeven
 
 **Nieuws**
 
-- [AuthZEN ingebouwd in OpenFSC](docs/actueel/nieuws/20250408AuthZENinOpenFSC)
-- [Kick-off werkgroep FTV onder grote belangstelling](docs/actueel/nieuws/20250408WerkgroepVanStart)
+- [AuthZEN ingebouwd in OpenFSC]({{< param baseDirectory >}}docs/actueel/nieuws/20250408AuthZENinOpenFSC)
+- [Kick-off werkgroep FTV onder grote belangstelling]({{< param baseDirectory >}}docs/actueel/nieuws/20250408WerkgroepVanStart)
 - [AuthZEN op de Gartner IAM conferentie in Londen](https://openid.net/wp-content/uploads/2025/04/AuthZEN-Gartner-IAM-2025-London.pdf)
-- [](docs/actueel/nieuws/20250422Inloopspreekuur)
+- [Inloopspreekuur leidt tot waardevol gesprek]({{< param baseDirectory >}}docs/actueel/nieuws/20250422Inloopspreekuur)
 
 **Activiteiten**
 
-- [Dinsdag 6 mei , 10:00. dev.loer en online. Werkgroep #3](docs/actueel/activiteiten/20250422Werkgroep3)
+- [Dinsdag 6 mei , 10:00. dev.loer en online. Werkgroep #3]({{< param baseDirectory >}}docs/actueel/activiteiten/20250422Werkgroep3)
 
 ## Doe mee
 
@@ -77,4 +77,4 @@ Sluit je aan via [ons kanaal](https://digilab.overheid.nl/chat/digilab/channels/
 - VNG
 - Zorginstituut Nederland
 
-[Ook meedoen?](docs/meedoen)
+[Ook meedoen?]({{< param baseDirectory >}}docs/meedoen)

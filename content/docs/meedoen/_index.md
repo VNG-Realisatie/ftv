@@ -22,7 +22,7 @@ De [werkgroep](werkgroep) praat over de opzet, keuzes en doorontwikkeling van de
 
 **Ga aan de slag met OpenFTV**
 
-Wil je ervaren wat FTV betekent voor jouw organisatie? Experimenteer dan met de [OpenFTV](/docs/toepassen/openftv).
+Wil je ervaren wat FTV betekent voor jouw organisatie? Experimenteer dan met [OpenFTV](/docs/toepassen/openftv).
 
 **Praat mee**
 
