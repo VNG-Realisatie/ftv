@@ -8,7 +8,7 @@ bookCollapseSection: true
 
 - [8 april: AuthZEN nu ingebouwd in OpenFSC](20250408AuthZENinOpenFSC)
 - [8 april: Werkgroep Federatieve Toegangsverlening van start](20250408WerkgroepVanStart)
-- [22 april: Inloopspreekuur FTV](20250422Inloopspreekuur) 
+- [22 april: Inloopspreekuur FTV leidt tot waardevol gesprek](20250422Inloopspreekuur) 
 
 # Ontvang elke twee weken het FTV-nieuws
 

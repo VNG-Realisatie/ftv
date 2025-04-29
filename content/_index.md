@@ -53,7 +53,7 @@ FTV zorgt ervoor dat alleen bevoegde medewerkers toegang krijgen tot die gegeven
 - [AuthZEN ingebouwd in OpenFSC](docs/5.actueel/nieuws/20250408AuthZENinOpenFSC)
 - [Kick-off werkgroep FTV onder grote belangstelling](docs/5.actueel/nieuws/20250408WerkgroepVanStart)
 - [AuthZEN op de Gartner IAM conferentie in Londen](https://openid.net/wp-content/uploads/2025/04/AuthZEN-Gartner-IAM-2025-London.pdf)
-- [Inloopspreekuur FTV leidt tot waardevol gesprek!](docs/5.actueel/nieuws/20250422Inloopspreekuur)
+- [](docs/5.actueel/nieuws/20250422Inloopspreekuur)
 
 **Activiteiten**
 
