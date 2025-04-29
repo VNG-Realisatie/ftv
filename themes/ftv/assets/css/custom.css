@@ -11,6 +11,7 @@
     --color-rhc-donkerbruin-100: var(--rhc-color-donkerbruin-100, #D1C2BE);
     --color-rhc-color-oranje-200: var(--rhc-color-oranje-200, #F1BE8C);
     --color-rhc-color-mosgroen-50: var(--rhc-color-mosgroen-50, #EBEBD9);
+    --color-rhc-color-grijs-50: #F8FAFC;
 }
 
 .ftv-hero-paragraph {

@@ -1,0 +1,25 @@
+- naam: "Digilab"
+  link: "https://digilab.overheid.nl/"
+  size: 128
+  alt_text: "Digilab"
+  logo: "logos/digilab.svg"
+- naam: "Geonovum"
+  link: "https://www.geonovum.nl/"
+  size: 128
+  alt_text: "Geonovum"
+  logo: "logos/geonovum.svg"
+- naam: "Rijksoverheid"
+  link: "https://www.rijksoverheid.nl/"
+  size: 224
+  alt_text: "Rijksoverheid"
+  logo: "logos/rijkslint.png"
+- naam: "Ministerie van Binnenlandse Zaken en Koninkrijksrelaties"
+  link: "https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties"
+  size: 224
+  alt_text: "Ministerie van Binnenlandse Zaken en Koninkrijksrelaties"
+  logo: "logos/min-az.png"
+- naam: "Zorginstituut Nederland"
+  link: "https://www.zorginstituutnederland.nl/"
+  size: 224
+  alt_text: "https://www.zorginstituutnederland.nl/"
+  logo: "logos/zorginstituut.png"

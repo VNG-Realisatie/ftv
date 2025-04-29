@@ -1,118 +1,43 @@
-<div class="w-[1024px] mx-auto grid grid-cols-1 my-10">
-    <div class="my-2.5">
-        <h2 class="nl-heading nl-heading--level-2 rhc-heading py-2">Wie doen al mee?</h2>
-        <p class="utrecht-paragraph text-rhc-primary">We komen regelmatig bij elkaar. Om kennis te delen, etc..</p>
+<div class="w-full bg-rhc-color-grijs-50 py-6">
+    <div class="w-[1024px] mx-auto grid grid-cols-1 my-10">
+        <div class="my-2.5">
+            <h2 class="nl-heading nl-heading--level-2 rhc-heading py-2">Wie doen al mee?</h2>
+            <p class="utrecht-paragraph text-rhc-primary">We komen regelmatig bij elkaar. Om kennis te delen, etc..</p>
+        </div>
     </div>
-    <div class="my-2.5">
-        <h3 class="nl-heading nl-heading--level-3 rhc-heading py-2">Betrokken partijen</h3>
-        <p class="utrecht-paragraph text-rhc-primary">De volgende organisaties zijn betrokken bij het tot stand komen van de FTV Standaard.</p>
-        
-        <ul role="list" class="utrecht-link-list utrecht-link-list--html-ul pt-4">
-            <li class="utrecht-link-list__item">
-                <a href="#" class="utrecht-link utrecht-link--html-a utrecht-link-list__link">
-                            <span class="utrecht-icon" role="presentation" aria-hidden="true">
-                                <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="tabler-icon tabler-icon-chevron-right"
-                                >
-                  <path d="M9 6l6 6l-6 6"></path>
-                </svg>
-                            </span>
-                    <span class="utrecht-link-list__link-text">RDW</span>
-                </a>
-            </li>
-            <li class="utrecht-link-list__item">
-                <a  href="#"    class="utrecht-link utrecht-link--html-a utrecht-link-list__link">
-                            <span class="utrecht-icon" role="presentation" aria-hidden="true">
-                <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="tabler-icon tabler-icon-chevron-right"
-                >
-                  <path d="M9 6l6 6l-6 6"></path>
-                </svg>
-              </span>
-                    <span class="utrecht-link-list__link-text">Kadaster</span>
-                </a>
-            </li>
-            <li class="utrecht-link-list__item">
-                <a  href="#" class="utrecht-link utrecht-link--html-a utrecht-link-list__link">
-                            <span class="utrecht-icon" role="presentation" aria-hidden="true">
-                                <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="tabler-icon tabler-icon-chevron-right"
-                                >
-                  <path d="M9 6l6 6l-6 6"></path>
-                </svg>
-                            </span>
-                    <span class="utrecht-link-list__link-text">Geo</span>
-                </a>
-            </li>
-            <li class="utrecht-link-list__item">
-                <a  href="#" class="utrecht-link utrecht-link--html-a utrecht-link-list__link">
-                            <span class="utrecht-icon" role="presentation" aria-hidden="true">
-                                <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="tabler-icon tabler-icon-chevron-right"
-                                >
-                  <path d="M9 6l6 6l-6 6"></path>
-                </svg>
-                            </span>
-                    <span class="utrecht-link-list__link-text">VNG</span>
-                </a>
-            </li>
-            <li class="utrecht-link-list__item">
-                <a  href="#" class="utrecht-link utrecht-link--html-a utrecht-link-list__link">
-                            <span class="utrecht-icon" role="presentation" aria-hidden="true">
-                                <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="tabler-icon tabler-icon-chevron-right"
-                                >
-                  <path d="M9 6l6 6l-6 6"></path>
-                </svg>
-                            </span>
-                    <span class="utrecht-link-list__link-text">Gemeente Rotterdam</span>
-                </a>
-            </li>
-        </ul>
+    <div class="my-2.5 swiper swiperWieDoenMee bg-rhc-color-grijs-50">
+        <div class="swiper-wrapper flex h-[240px]">
+            {{ $data := dict }}
+            {{ $path := "data/wie_doen_mee.yaml" }}
+            {{ with resources.Get $path }}
+                {{ with . | transform.Unmarshal }}
+                    {{ $data = . }}
+                {{ end }}
+            {{ else }}
+                {{ errorf "Unable to load %q" $path }}
+            {{ end }}
+
+            {{ range $data }}
+                <div class="swiper-slide w-[320px] bg-white py-2.5" style="height: 240px">
+                    <a href="{{ .link }}" target="_blank" rel="noopener noreferrer">
+                        <img src="{{ .logo }}" width="{{ .size }}" alt="{{ .alt_text }}"
+                             class="m-auto h-full object-contain">
+                    </a>
+                </div>
+            {{ end }}
+        </div>
     </div>
+    <script>
+        var swiperWie = new Swiper(".swiperWieDoenMee", {
+            slidesPerView: 4,
+            autoHeight: true,
+            height: 240,
+            spaceBetween: 10,
+            pagination: {
+                el: ".swiper-pagination-wie",
+                clickable: true,
+            },
+            loop: true,
+        });
+    </script>
 </div>
