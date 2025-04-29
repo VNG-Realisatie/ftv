@@ -30,7 +30,7 @@
             {{ errorf "Unable to load %q" $path }}
         {{ end }}
         {{ range first 3 (sort $data "datum" "asc") }}
-            <a href="{{ .link }}">
+        <a href="{{ .link }}" target="_blank" rel="noopener noreferrer">
                 <div class="h-[100px] flex">
                     <div class="w-[72px] text-center">
                         <div class="w-[72px] h-[72px] border mx-auto flex flex-col border-b-rhc-primary">
