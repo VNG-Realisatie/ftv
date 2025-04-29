@@ -26,7 +26,7 @@ De doelstellingen van het project zijn:
 4.	Ondersteunen van het transitiepad van de generieke Digitale Infrastructuur.
 
 ## Scope
-De opdracht voor het project is om een standaardmethodiek voor toegangsverlening tot API’s te definiëren, niet om software te bouwen. De focus ligt op toegangsverlening (autorisatie) en niet op identificatie, authenticatie of encryptie. De scope beperkt zich tot geautomatiseerde gegevensuitwisseling via API’s tussen systemen, met nadruk op toepassing binnen de Nederlandse overheid. [Lees meer over de afbakening van de scope van het project](1.scope).
+De opdracht voor het project is om een standaardmethodiek voor toegangsverlening tot API’s te definiëren, niet om software te bouwen. De focus ligt op toegangsverlening (autorisatie) en niet op identificatie, authenticatie of encryptie. De scope beperkt zich tot geautomatiseerde gegevensuitwisseling via API’s tussen systemen, met nadruk op toepassing binnen de Nederlandse overheid. [Lees meer over de afbakening van de scope van het project](scope).
 
 ## Uitvoering
 
@@ -61,7 +61,7 @@ In fase 2 richt het project zich op het voorstellen, uitwerken en positioneren v
 * 1 september: AuthZEN NL GOV 1.1 naar consultatie, met ‘nee, tenzij’
 * 31 december: 1.0 in beheer bij Logius
 
-Meer weten? Lees de rapportages [fase 1](3.fase1) en [Fase 2](4.fase2)
+Meer weten? Lees de rapportages [fase 1](fase1) en [Fase 2](fase2)
 
 ## Relatie met andere projecten en programma’s
 

@@ -28,7 +28,7 @@ FTV legt vast wie wanneer toegang had. Dat maakt controleerbaar of het gebruik r
 
 Open standaarden voorkomen vendor lock-in en bieden keuzevrijheid in leveranciers.
 
-[Lees verder over de voordelen van FTV](1.waarom_ftv)
+[Lees verder over de voordelen van FTV](waarom_ftv)
 
 ## FTV toegepast: voorbeelden uit de praktijk
 
@@ -37,27 +37,27 @@ Open standaarden voorkomen vendor lock-in en bieden keuzevrijheid in leverancier
 {{< figure src="/ftv/images/camper-milieuzone.webp" alt="camper op stadsplein" width="200" height="132" >}}
 
 Gemeenten handhaven milieuzones steeds vaker met kentekenherkenning. FTV zorgt voor flexibiliteit mét respect voor privacy.
-[Lees verder](2.voorbeeldcasus).
+[Lees verder](voorbeeld-campers).
 
 ### Huurtoeslag
 
 {{< figure src="/ftv/images/huurtoeslag.webp" alt="stockfoto van huizen en geld" width="200" height="132" >}}
 
 Voor de beoordeling van een huuraanslag worden persoonlijke gegevens uitgewisseld. 
-FTV zorgt ervoor dat alleen bevoegde medewerkers toegang krijgen tot die gegevens. [Lees verder](2a.voorbeeldcasus).
+FTV zorgt ervoor dat alleen bevoegde medewerkers toegang krijgen tot die gegevens. [Lees verder](voorbeeld-huurtoeslag).
 
 ## Actueel
 
 **Nieuws**
 
-- [AuthZEN ingebouwd in OpenFSC](docs/5.actueel/nieuws/20250408AuthZENinOpenFSC)
-- [Kick-off werkgroep FTV onder grote belangstelling](docs/5.actueel/nieuws/20250408WerkgroepVanStart)
+- [AuthZEN ingebouwd in OpenFSC](docs/actueel/nieuws/20250408AuthZENinOpenFSC)
+- [Kick-off werkgroep FTV onder grote belangstelling](docs/actueel/nieuws/20250408WerkgroepVanStart)
 - [AuthZEN op de Gartner IAM conferentie in Londen](https://openid.net/wp-content/uploads/2025/04/AuthZEN-Gartner-IAM-2025-London.pdf)
-- [](docs/5.actueel/nieuws/20250422Inloopspreekuur)
+- [](docs/actueel/nieuws/20250422Inloopspreekuur)
 
 **Activiteiten**
 
-- [Dinsdag 6 mei , 10:00. dev.loer en online. Werkgroep #3](docs/5.actueel/activiteiten/20250422Werkgroep3)
+- [Dinsdag 6 mei , 10:00. dev.loer en online. Werkgroep #3](docs/actueel/activiteiten/20250422Werkgroep3)
 
 ## Doe mee
 
@@ -77,4 +77,4 @@ Sluit je aan via [ons kanaal](https://digilab.overheid.nl/chat/digilab/channels/
 - VNG
 - Zorginstituut Nederland
 
-[Ook meedoen?](docs/3.meedoen)
+[Ook meedoen?](docs/meedoen)

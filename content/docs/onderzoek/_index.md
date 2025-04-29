@@ -30,7 +30,7 @@ Tijdens het onderzoek zijn de eisen opgesteld voor de nieuwe standaard voor toeg
 - De samenhang met linked data: hoe de standaard aansluit op nieuwe manieren van gegevensuitwisseling.
 
 Meer weten?
-- [Onderzoek naar huidige status techniek](2.status_techniek)
-- [Inventarisatie staat toegangsverlening Nederlandse overheid](3.status_nl_overheid)
-- [Eisen aan toekomstige toegangsverlening](4.eisen_aan_de_oplossing)
-- [Samenvatting conclusies onderzoek](5.conclusie)
+- [Onderzoek naar huidige status techniek](status_techniek)
+- [Inventarisatie staat toegangsverlening Nederlandse overheid](status_nl_overheid)
+- [Eisen aan toekomstige toegangsverlening](eisen_aan_de_oplossing)
+- [Samenvatting conclusies onderzoek](conclusie)

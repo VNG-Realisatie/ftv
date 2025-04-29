@@ -8,7 +8,7 @@ weight: 40
 
 De proefopstelling laat zien hoe FTV in de praktijk kan werken.. Daarvoor is een eenvoudig, maar werkend federatief datastelsel ingericht. De componenten rondom toegangsverlening zijn in deze opstelling volledig uitgewerkt.  
 
-Benieuwd hoe een concrete use case er in deze proefopstelling uitziet? Lees dan verder bij: [het aanvragen van laadpaalvergunningen](2.laadpalen).
+Benieuwd hoe een concrete use case er in deze proefopstelling uitziet? Lees dan verder bij: [het aanvragen van laadpaalvergunningen](laadpalen).
 
 ## Overzicht opstelling
 

@@ -18,7 +18,7 @@ Een goed werkende FTV-implementatie vraagt om duidelijke keuzes, afspraken en dr
 
     Hoe zien de taken rondom FTV eruit en wie is waarvoor verantwoordelijk?
 
-    [Bekijk het overzicht van functies en rollen](2.functioneel) 
+    [Bekijk het overzicht van functies en rollen](functioneel) 
 
 ## Voor IT-managers
 
@@ -28,19 +28,19 @@ FTV raakt meerdere onderdelen van de IT-infrastructuur. Denk aan softwarekeuzes,
 
    Hoe zien de taken rondom FTV eruit en wie is waarvoor verantwoordelijk?
 
-   [Bekijk het overzicht van functies en rollen](2.functioneel)
+   [Bekijk het overzicht van functies en rollen](functioneel)
 
 2. **Stappenplan**
 
     Hoe kom je van een use case tot een goed werkende toegangsregel? 
 
-    [Doorloop het 7-stappenplan](1.stappenplan)
+    [Doorloop het 7-stappenplan](stappenplan)
 
 3. **Softwarekeuze** 
 
     Er is nogal wat te kiezen aan PDP, PIP en PAP. Wat heb je nodig? En welke leverancier past het best? Of is het beter om zelf iets te bouwen?
    
-    [Lees de checklist Softwarekeuze](2.softwarekeus)
+    [Lees de checklist Softwarekeuze](softwarekeus)
 
 ## Voor ontwikkelaars
 
@@ -56,7 +56,7 @@ Een goede technische basis begint met praktijkvoorbeelden en inzicht in de opbou
 
     Een mini-FDS met uitgewerkte use cases is ideaal om lokaal te testen en mee te experimenteren.
    
-    [Bekijk de proefopstelling en ontdek wat werkt](4.proefopstelling)
+    [Bekijk de proefopstelling en ontdek wat werkt](proefopstelling)
 
 ## Voor juristen
 

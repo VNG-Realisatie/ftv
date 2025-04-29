@@ -16,9 +16,9 @@ Daarnaast vraagt het volwassen en gemeengoed worden van cloud native computing o
 
 We onderzoeken hier de status van de technologie en markt door te kijken naar de volgende aspecten:
 
-1. [methodieken](1.methodieken)
-2. [regeltalen](2.regeltalen)
-3. [standaarden](3.standaarden)
-4. [producten](4.producten) die in de markt te krijgen zijn
+1. [methodieken](methodieken)
+2. [regeltalen](regeltalen)
+3. [standaarden](standaarden)
+4. [producten](producten) die in de markt te krijgen zijn
 
 

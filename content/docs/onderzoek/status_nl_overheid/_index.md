@@ -11,9 +11,9 @@ We kijken naar een dwarsdoorsnede van de potentiële deelnemers aan het toekomst
 basisregistraties, de sectorale registraties, en alle systemen die daar gebruik van maken. 
 De inventarisatie is verdeeld in:
 
-1. [De stakeholders](1.stakeholders) waarop de belangrijkste spelers geplaatst zijn.
-2. [Koppelvlakstandaarden](2.koppelvlakken)
-3. [Aanbieders](3.aanbieders)
-4. [Afnemers / implementatiepartners](4.afnemers)
-5. [Datastelsels](5.platforms)
-6. [Eerder gedaan onderzoek](6.eerder_onderzoek)
+1. [De stakeholders](stakeholders) waarop de belangrijkste spelers geplaatst zijn.
+2. [Koppelvlakstandaarden](koppelvlakken)
+3. [Aanbieders](aanbieders)
+4. [Afnemers / implementatiepartners](afnemers)
+5. [Datastelsels](platforms)
+6. [Eerder gedaan onderzoek](eerder_onderzoek)

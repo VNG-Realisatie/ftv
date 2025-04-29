@@ -19,9 +19,9 @@ en buiten de applicaties gebracht zodat deze centraal beheerd kunnen worden.
 EAM is een overkoepelend begrip waaronder bekende termen zoals 
 Policy -, Attribute -, en Relation Based Access Control (PBAC, ABAC en ReBAC) vallen.
 
-In de [technische architectuursectie](3.architectuur) omschrijven we de gangbare componenten van de toegangsoplossing en plaatsen we deze in het wijdere IT-landschap. 
+In de [technische architectuursectie](architectuur) omschrijven we de gangbare componenten van de toegangsoplossing en plaatsen we deze in het wijdere IT-landschap. 
 
 ## Standaarden
 
-De [technische standaarden](4.standaarden) beschrijven in detail van een aantal componenten interfaces hoe die 
+De [technische standaarden](standaarden) beschrijven in detail van een aantal componenten interfaces hoe die 
 zich moeten gedragen om goed bij elkaar aan te sluiten.

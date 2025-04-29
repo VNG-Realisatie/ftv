@@ -24,7 +24,7 @@ Het begrip 'grootste' is relatief: waar Amazon Verified Permissions waarschijnli
 
 Van XACML en Rego zijn geen stabiele moderne open source implementaties.
 
-Elk van deze opties is getest in het project. Zie een overzicht [hier](1.opensource) de resultaten. Alle implementaties zijn in principe geschikt bevonden als PDP. Daarnaast is zelfbouw ook altijd mogelijk zolang dat onder overheids-open source-voorwaarden gebeurt.
+Elk van deze opties is getest in het project. Zie een overzicht [hier](opensource) de resultaten. Alle implementaties zijn in principe geschikt bevonden als PDP. Daarnaast is zelfbouw ook altijd mogelijk zolang dat onder overheids-open source-voorwaarden gebeurt.
 
 Een kanttekening is wel dat toegangsregels geschreven in al deze talen lastig zijn te lezen en te schrijven. Een van onze doelen is echter dat mensenogen ze moeten kunnen controleren en aanpassen, en dan niet alleen programmeurs. Geen van de bovengenoemde implementaties biedt een oplossing die dit significant eenvoudiger maakt. 
 
@@ -37,9 +37,9 @@ Wij hebben in dit onderzoek een aantal partijen benaderd en om informatie en dem
 
 | Leverancier                                                                        | Gesproken | Meer informatie                                                  |
 |------------------------------------------------------------------------------------|-----------|------------------------------------------------------------------|
-| [Styra](2.styra)                                                                   | Ja        | [Brochure]({{< param baseDirectory >}}documents/styra.pdf)       |
-| [PlainID](3.plainid)                                                               | Ja        | [Brochure]({{< param baseDirectory >}}documents/plainid.pdf)     |
-| [Axiomatics](4.axiomatics)                                                         | Ja        | [Brochure]({{< param baseDirectory >}}documents/axiomatics.pdf)  |
+| [Styra](styra)                                                                   | Ja        | [Brochure]({{< param baseDirectory >}}documents/styra.pdf)       |
+| [PlainID](plainid)                                                               | Ja        | [Brochure]({{< param baseDirectory >}}documents/plainid.pdf)     |
+| [Axiomatics](axiomatics)                                                         | Ja        | [Brochure]({{< param baseDirectory >}}documents/axiomatics.pdf)  |
 | [PingID](https://www.pingidentity.com/en/platform/capabilities/authorization.html) | Ja        | [Brochure]({{< param baseDirectory >}}documents/pingid.pdf)      |
 | [NextLabs](https://www.nextlabs.com/products/cloudaz-policy-platform/)             | Ja        | [Brochure]({{< param baseDirectory >}}documents/nextlabs.pdf)    |
 | [Thales](https://cpl.thalesgroup.com/access-management/externalized-authorization)                                                                             | Ja        | [Brochure]({{< param baseDirectory >}}documents/thales.pdf)      |

@@ -74,7 +74,7 @@ Het samenstellen van die testdata is een taak voor een businessanalist. Een ontw
 
 #### Stap 6: Richt de infrastructuur in
 
-In deze stap wordt de gekozen beslismodule (PDP) neergezet (deployed) en aangesloten op de juiste toegangshekken (PEPs).  Check vooraf of de gekozen componenten goed op elkaar aansluiten. Zie ook de checklist bij [Softwarekeuze](../2.softwarekeus).
+In deze stap wordt de gekozen beslismodule (PDP) neergezet (deployed) en aangesloten op de juiste toegangshekken (PEPs).  Check vooraf of de gekozen componenten goed op elkaar aansluiten. Zie ook de checklist bij [Softwarekeuze](../softwarekeus).
 
 De PEP kan deel uitmaken van een applicatie, een API, of een API-gateway. Zolang de component volgens de AuthZEN NL Gov standaard gebouwd is, is er weinig extra programmeerwerk nodig voor de aansluiting.
 Het deployen van de PDP vergt kennis van de infrastructuur (cloud infra, helm, kubernetes).
