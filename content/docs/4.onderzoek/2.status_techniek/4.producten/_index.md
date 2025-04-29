@@ -37,4 +37,5 @@ Wij hebben in dit onderzoek een aantal partijen benaderd en om informatie en dem
 - [Styra DAS](2.styra)
 - [PlainID](3.plainid)
 - [Axiomatics](4.axiomatics)
+- PingID
 

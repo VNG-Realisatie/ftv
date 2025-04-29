@@ -42,15 +42,15 @@ De opstelling bij de gemeente kunnen we verder detailleren als volgt:
 
 - **Policy Decision Point (PDP)**
 
-    Hier is gekozen voor Open Policy Agent (OPA), die bepaalt of toegang wordt verleend op basis van ingestelde regels.
+    Hier is gekozen voor Cedar, die bepaalt of toegang wordt verleend op basis van ingestelde regels.
 
 - **Policy Administration Point (PAP)**
 
-    De FTV-referentie wordt gebruikt als PAP. e. Deze gebruikt het bestandssysteem voor de opslag van policies. Er is een command line interface (CLI) om policies toe te voegen, bij te werken en te verwijderen De policies worden door een push-interface aan OPA doorgegeven: elke wijziging wordt direct doorgegeven.
+    De FTV-referentie wordt gebruikt als PAP. Deze gebruikt het bestandssysteem voor de opslag van policies. Er is een command line interface (CLI) om policies toe te voegen, bij te werken en te verwijderen De policies worden door een push-interface aan OPA doorgegeven: elke wijziging wordt direct doorgegeven.
 
 - **Policy Information Point (PIP)**
 
-    Als PIP wordt de FTV referentie gebruikt.
+    Als PIP wordt de FTV-referentie gebruikt.
 
 ## Opstelling basisregistraties
 
