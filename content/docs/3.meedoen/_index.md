@@ -20,9 +20,9 @@ Lees [hoe FTV werkt](/docs/1.methodiek) en bekijk hoe dit in jouw API-landschap 
 
 De [werkgroep](1.werkgroep) praat over de opzet, keuzes en doorontwikkeling van de standaardisering. Ook bespreken we waar gebruikers in de praktijk tegenaan lopen.
 
-**Ga aan de slag met de referentie-implementatie**
+**Ga aan de slag met OpenFTV**
 
-Wil je ervaren wat FTV betekent voor jouw organisatie? Experimenteer dan met de [referentie-implementatie](/docs/2.toepassen/3.referentieimplementatie).
+Wil je ervaren wat FTV betekent voor jouw organisatie? Experimenteer dan met de [OpenFTV](/docs/2.toepassen/openftv).
 
 **Praat mee**
 

@@ -50,7 +50,7 @@ Een goede technische basis begint met praktijkvoorbeelden en inzicht in de opbou
 
     OpenFTV is onze referentie-implementatie. Dit is een door het FTV-team gebouwde oplossing, eenvoudig maar volledig. Het laat zien hoe een EAM-oplossing eruit kan zien, en kan als basis voor een eigen implementatie dienen.
 
-    [Gebruik de referentie-implementatie als startpunt](3.referentieimplementatie)
+    [Gebruik OpenFTV als startpunt](openftv)
 
 4. **Proefopstelling**
 
