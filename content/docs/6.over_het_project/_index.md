@@ -6,49 +6,65 @@ Title: Over het project
 
 # Over het project
 
-## Doelstellingen
+![Banner van de GDI]({{< param baseDirectory >}}images/gdi.webp)
 
-Federatieve toegangsverlening geeft invulling aan een vernieuwingsvoorstel van het GDI. De opdracht is:
+**Het project Federatieve Toegangsverlening (FTV) richt zich op het ontwikkelen van een standaard werkwijze voor toegangsverlening bij het uitwisselen van gegevens tussen overheidsorganisaties. Het project is een initiatief van de Generieke Digitale Infrastructuur (GDI) en sluit aan op bredere programma’s zoals het Federatief Datastelsel (FDS) en de Interbestuurlijke Datastrategie (IBDS).**
+
+## Opdracht
+
+De opdracht aan het project FTV is:
 
 >  **Definieer een standaardmethodiek voor toegangsverlening tot API's**
 
-Er bestaat nu een grote diversiteit aan oplossingen voor toegangsverlening. Dat geeft uitdagingen voor zowel afnemers als aanbieders.
+## Doelstellingen
 
-De doelstellingen aan het project, en hoe een standaardmethodiek een oplossing voor de uitdagingen kan zijn, luiden als volgt:
+De doelstellingen van het project zijn:
 
-> 1. **Verbeterde technische interoperabiliteit**. API's en hun afnemers zullen beter op elkaar aansluiten als ze dezelfde methodiek gebruiken.
-> 2. **Verlaging van de beheerslast**. E&eacute;n enkele methodiek meerdere malen toepassen levert op termijn besparingen in ontwerp, realisatie en beheer.
-> 3. **Verhoging van in controle zijn op toegangsbeslissingen**. Door beleid gestandaardiseerd te implementeren wordt het eenvoudiger de juiste toepassing
-     ervan te verifiëren en te monitoren.
-> 4. **Geeft richting aan het transitiepad naar de eindsituatie**. In de meerjarenvisie worden grote doelen gedefinieerd. Met een concrete invulling
-     van een deel van de weg daarheen wordt de juiste richting ingezet naar die doelen.
+1.	Ontwikkelen van een standaard voor toegangsverlening waarmee API’s en hun afnemers beter op elkaar aansluiten.
+2.	Verminderen van de beheerslast door hergebruik van een uniforme techniek..
+3.	De controle op toegangsbeslissingen verbeteren door beleid gestandaardiseerd te implementeren.
+4.	Ondersteunen van het transitiepad van de generieke Digitale Infrastructuur.
 
-Binnen dit gebied is de [scope](1.scope) verder afgebakend.
+## Scope
+De opdracht voor het project is om een standaardmethodiek voor toegangsverlening tot API’s te definiëren, niet om software te bouwen. De focus ligt op toegangsverlening (autorisatie) en niet op identificatie, authenticatie of encryptie. De scope beperkt zich tot geautomatiseerde gegevensuitwisseling via API’s tussen systemen, met nadruk op toepassing binnen de Nederlandse overheid. [Lees meer over de afbakening van de scope van het project](1.scope).
 
-## Planning en status
+## Uitvoering
 
-Het project is in juli 2024 gestart met [fase 1](3.fase1), en afgerond op 28 februari 2025.
+Het Ministerie van Binnenlandse Zaken (MinBZK) verstrekt de subsidie voor het project.
+[VNG Realisatie](https://vng.nl/artikelen/vng-realisatie) voert het project uit in opdracht van MinBZK.
+Voor praktische uitvoering en ondersteuning werkt project FTV samen met [Digilab](https://digilab.overheid.nl/).
 
-[Fase 2](4.fase2) is op 1 maart gestart en zal tot 31 december 2025 lopen.
+## Planning
 
-## Uitvoeringscontext
+Het project is opgedeeld in twee fases.
 
-### Organisatie
+**Fase 1: juli 2024 – april 2025**
 
-Subsidie voor dit project is verstrekt door de GDI, en wordt uitgevoerd door [VNG Realisatie](https://vng.nl/artikelen/vng-realisatie).
-Voor praktische uitvoering en ondersteuning is aansluiting bij [Digilab](https://digilab.overheid.nl/) gevonden.
+Fase 1 had als doel om de basis te leggen voor een standaardmethodiek voor toegangsverlening, door het in kaart brengen van stakeholders, bestaande oplossingen, moderne methodieken en het voorbereiden van fase 2.
+Tijdens deze fase is onderzoek gedaan, gewerkt aan community vorming en is een eerste versie van de standaard en een referentie-implementatie ontwikkeld.
+Fase 1 is afgerond met het besluit om aan te sluiten bij de OpenID AuthZEN-standaard en daar een Nederlands profiel (NL Gov) op te maken.
 
-Qua organisatorische context valt dit onderwerp onder het programma [Realisatie IBDS](https://realisatieibds.nl/), en daarbinnen onder het [Federatieve datastelsel (FDS)](https://federatief.datastelsel.nl/).
+**Fase 2 april 2025 – december 2025**
 
-Het primaire doelgebied is daarmee het FDS te voorzien van het aspect toegangsverlening.
-Secundair wordt gekeken of dezelfde of andere methodieken buiten het FDS inzetbaar zijn.
+In fase 2 richt het project zich op het voorstellen, uitwerken en positioneren van een standaard voor toegangsverlening via API’s. Daarbij hoort het ontwikkelen van een referentie-implementatie, het uitvoeren van pilots en het creëren van draagvlak binnen en buiten de overheid. Cruciale randvoorwaarden zijn samenwerking binnen de federatieve context (zoals met FDS en FSC), goede juridische afspraken en het overwinnen van de technische en organisatorische complexiteit.
 
-### Architectuur
+## Tijdlijn
 
-Als opdracht van de [GDI](https://www.digitaleoverheid.nl/mido/generieke-digitale-infrastructuur-gdi/) valt dit project onder de [MIDO](https://www.digitaleoverheid.nl/mido/) en de [IBDS](https://www.digitaleoverheid.nl/interbestuurlijke-datastrategie/), en is gehouden aan de architectuur-
-en andere principes van die stelsels. Daarin in het bijzonder de domeinarchitecturen [Gegevensuitwisseling](https://minbzk.github.io/gdi-gegevensuitwisseling/content/views/Domeinarchitectuur%20gegevensuitwisseling.html) en [Toegang](https://minbzk.github.io/gdi-toegang/content/views/Domeinarchitectuur%20toegang.html).
+* 1 juli 2024: Start project
+* 1 oktober 2024: afronding onderzoek naar EAM-methodieken
+* 1 november 2024: start van de bouw van OpenFTV
+* 15 november 2024: afronding onderzoek naar de status van EAM bij de overheid
+* 1 december 2024: start schrijven van de standaard
+* 1 februari 2025: aansluiting bij AuthZEN
+* 1 juni 2025:  AuthZEN NL GOV 1.0 naar consultatie
+* 1 augustus: Logboek toegangsverlening naar consultatie
+* 1 september: AuthZEN NL GOV 1.1 naar consultatie, met ‘nee, tenzij’
+* 31 december: 1.0 in beheer bij Logius
 
-In de architectuurplaat van FDS geeft FTV invulling aan een van de elementen van de stelselfunctie [Poortwachter](https://federatief.datastelsel.nl/kennisbank/poortwachter/).
+Meer weten? Lees de rapportages [fase 1](3.fase1) en [Fase 2](4.fase2)
 
-De methodiek zal de eigenschap 'federatief' dragen, passend in het FDS. Dat wil zeggen dat de oplossing niet gecentraliseerd zal zijn rond een
-enkel vertrouwd punt, en ook niet in gescheiden silo's zal plaatsvinden, maar een collectief stelsel van afspraken zal zijn, een samenwerkingsverband.
+## Relatie met andere projecten en programma’s
+
+De toekomstvisie op gegevensuitwisseling binnen de overheid is vastgelegd in de [Interbestuurlijke Datastrategie (IBDS)](https://www.digitaleoverheid.nl/interbestuurlijke-datastrategie/) . Deze strategie wordt uitgevoerd via het [programma Realisatie IBDS](https://realisatieibds.nl/), waarvan het Federatief Datastelsel (FDS) de technische invulling is. Binnen het FDS is toegang een van de technische stelselfuncties.
+
+FTV is een standaard binnen het FDS. Ook daarbuiten is FTV inzetbaar als werkwijze in andere stelsels en los van stelsels, bijvoorbeeld bij Zaakgericht Werken.

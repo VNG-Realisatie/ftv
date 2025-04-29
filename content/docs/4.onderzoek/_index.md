@@ -6,13 +6,31 @@ weight: 40
 
 # Onderzoek
 
-Voorafgaand aan de opstelling van een standaard en het definiëren van een werkwijze is een uitgebreid onderzoek
-gedaan, waarvan de resultaten hier te vinden zijn.
+Voorafgaand aan de opstelling van een standaard voor Federatieve Toegangsverlening (FTV) en het definiëren van een werkwijze is een uitgebreid onderzoek gedaan. Op basis van dit onderzoek zijn de eisen opgesteld voor de standaard.
 
-2. Eerst is de [huidige status van de techniek](2.status_techniek) rondom toegangsverlening in kaart gebracht.
-3. Vervolgens is een inventarisatie gemaakt van de [staat van toegangsverlening bij de Nederlandse overheid](3.status_nl_overheid).
-4. Vanuit die status en de toekomstvisie van de GDI zijn de  [eisen aan de toekomstige werkwijze](4.eisen_aan_de_oplossing) opgesteld.
+## Onderzoek
 
-[Lees hier de conclusies](5.conclusie) van het onderzoek samengevat.
+Het onderzoek bestond uit twee delen.
 
-De resultaten van het onderzoek hebben vervolgens richting gegeven aan de gekozen oplossing.
+1.	Technische analyse
+
+De huidige stand van techniek rondom toegangsverlening is in kaart gebracht. Daarbij is gekeken naar bestaande methodieken, standaarden en producten in binnen- en buitenland. Uit het onderzoek komt naar voren dat Externalized Access Management (EAM) de meest geschikte aanpak is voor FTV.
+
+2. Inventarisatie bij de overheid
+
+Er is onderzocht hoe toegangsverlening op dit moment binnen de Nederlandse overheid is georganiseerd. Uit het onderzoek blijkt dat toegangsverlening binnen de Nederlandse overheid nog weinig gestandaardiseerd is.
+      
+## Eisen
+
+Tijdens het onderzoek zijn de eisen opgesteld voor de nieuwe standaard voor toegangsverlening. Er is gekeken naar vier belangrijke punten:
+ 
+- De visie van de Generieke Digitale Infrastructuur (GDI): welke richting de overheid op wil met digitale voorzieningen. 
+- De beperkingen van de huidige oplossingen: welke problemen er nu zijn. 
+- De elementen die nodig zijn om te verbeteren: wat er nodig is voor een toekomstvaste aanpak. 
+- De samenhang met linked data: hoe de standaard aansluit op nieuwe manieren van gegevensuitwisseling.
+
+Meer weten?
+- [Onderzoek naar huidige status techniek](2.status_techniek)
+- [Inventarisatie staat toegangsverlening Nederlandse overheid](3.status_nl_overheid)
+- [Eisen aan toekomstige toegangsverlening](4.eisen_aan_de_oplossing)
+- [Samenvatting conclusies onderzoek](5.conclusie)

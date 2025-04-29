@@ -23,7 +23,7 @@ Title: 2. Kick-off
 - Remo van Rest (Zorginstituut Nederland)
 - Igor van Haren (Vecozo)
 - Wouter Diephuis (MinBZK)
-- Around Quanjer (VNG)
+- Arnoud Quanjer (VNG)
 - René Hietkamp (Zorginstituut Nederland)
 - Martin Borgman (Kadaster)
 - René Kint (Zicht op Nederland)
