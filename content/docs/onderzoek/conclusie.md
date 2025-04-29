@@ -35,7 +35,7 @@ Voor een totaaloplossing zit de uitdaging vooral in schaalbaar en gedistribueerd
 Hiervoor zijn commerciële producten beschikbaar. Vaak zijn deze om een open source PDP gebouwd, zijn als het ware een freemium.
 
 Lopende het project wordt door FTV een eigen inventarisatie gedaan. Dit gebeurt door eigen tests, en vooral door gesprekken met de leveranciers zelf. Er wordt specifiek gekeken naar toegangsverlening, zowel runtime als beheer, en koppelingen naar aanpalende systemen zoals IAM worden. 
-[Het resultaat](/docs/toepassen/softwarekeus) zal geen koopadvies worden, maar een handreiking over hoe tot een keus te komen. 
+[Het resultaat]({{< param baseDirectory >}}docs/toepassen/softwarekeus) zal geen koopadvies worden, maar een handreiking over hoe tot een keus te komen. 
 
 ## 2. Status bij de Nederlands overheid
 
