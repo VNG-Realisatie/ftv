@@ -85,7 +85,7 @@ OAuth en EAM richten zich dus op verschillende aspecten en kunnen elkaar goed aa
 
 ## Juridische Structuur iSHARE (Gerard van der Hoeven)
 
-*Gerard van der Hoeven* geeft een [presentatie]({{< param baseDirectory >}}documents/20250422-juridische-structuur-iSHARE.pptx) over de juridische structuur van iSHARE. De essentie is Your Data Your Choice. Een framework waarbij data rechthebbenden bepalen wat er gebeurt met hun data en wanneer op gefedereerde en gedistribueerde wijze. 
+*Gerard van der Hoeven* geeft een [presentatie]({{< param baseDirectory >}}documents/20250422-juridische-structuur-ishare.pptx) over de juridische structuur van iSHARE. De essentie is Your Data Your Choice. Een framework waarbij data rechthebbenden bepalen wat er gebeurt met hun data en wanneer op gefedereerde en gedistribueerde wijze. 
 
 - *Marc de Boer*: Welke overlap en verschillen zien we tussen de twee presentaties over het juridisch aspect?
   

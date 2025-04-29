@@ -14,15 +14,15 @@ FTV werkt aan veilige en efficiënte toegang tot data binnen de overheid. Jouw e
 
 **Bekijk de werkwijze**
 
-Lees [hoe FTV werkt](/docs/methodiek) en bekijk hoe dit in jouw API-landschap past
+Lees [hoe FTV werkt]({{< param baseDirectory >}}docs/methodiek) en bekijk hoe dit in jouw API-landschap past
 
 **Denk mee in de werkgroep**
 
-De [werkgroep](werkgroep) praat over de opzet, keuzes en doorontwikkeling van de standaardisering. Ook bespreken we waar gebruikers in de praktijk tegenaan lopen.
+De [werkgroep]({{< param baseDirectory >}}docs/meedoen/werkgroep) praat over de opzet, keuzes en doorontwikkeling van de standaardisering. Ook bespreken we waar gebruikers in de praktijk tegenaan lopen.
 
 **Ga aan de slag met OpenFTV**
 
-Wil je ervaren wat FTV betekent voor jouw organisatie? Experimenteer dan met [OpenFTV](/docs/toepassen/openftv).
+Wil je ervaren wat FTV betekent voor jouw organisatie? Experimenteer dan met [OpenFTV]({{< param baseDirectory >}}docs/toepassen/openftv).
 
 **Praat mee**
 
