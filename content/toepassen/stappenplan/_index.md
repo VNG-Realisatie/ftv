@@ -1,11 +1,9 @@
 ---
 Title: Stappenplan
-weight: 10
+type: 'chapter'
 ---
-
-# Stappenplan
-
-Het opstellen van toegangsregels vraagt om samenwerking tussen verschillende rollen. 
+{{< chapter/section title="Stappenplan" >}}
+Het opstellen van toegangsregels vraagt om samenwerking tussen verschillende rollen.
 Juristen, ontwikkelaars en IT-architecten kijken ieder vanuit hun eigen perspectief naar wat nodig is.
 Door de stappen te volgen ontstaat een set regels die klopt: juridisch, functioneel én technisch.
 
@@ -27,9 +25,9 @@ Juristen zijn betrokken bij het formuleren van de use case en het vastleggen van
 
 Vanaf stap 2 is de rol van developers essentieel. Zij bouwen, testen en implementeren de toegangsregels. Denk aan het schrijven van policies, het samenstellen van testdata en het inrichten van infrastructuur en distributie. Het stappenplan biedt een duidelijke structuur om technisch solide en onderhoudbare oplossingen op te leveren.
 
+{{< /chapter/section >}}
 
-## Het stappenplan
-
+{{< chapter/section title="Het stappenplan" >}}
 #### 1. Use case
 
 Formuleer eerst de use cases. Doe dit samen met alle stakeholders, zoals de applicatie/register-eigenaar, beveiligingsverantwoordelijke, beheerder en ontwikkelaar. Zo ontstaat een duidelijk afgebakend doel: wie moet welke taak kunnen uitvoeren en wanneer?
@@ -83,3 +81,4 @@ Het deployen van de PDP vergt kennis van de infrastructuur (cloud infra, helm, k
 
 Regels worden centraal beheerd, maar moeten terechtkomen bij alle systemen die ze gebruiken. De infrastructuur bepaalt op basis van doelbinding welke regels waar nodig zijn.
 De beslissystemen krijgen zo alleen relevante regels en altijd de nieuwste versie. Dit is belangrijk voor goede prestaties: regels worden  vaak uitgevoerd, en veel minder vaak aangepast.
+{{< /chapter/section >}}

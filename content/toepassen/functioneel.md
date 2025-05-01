@@ -1,26 +1,28 @@
 ---
 Title: Functioneel
-weight: 5
+type: 'chapter'
 ---
-
+{{< chapter/section title="" >}}
 # Functioneel
 
-Voor een goed werkende FTV-oplossing zijn afspraken nodig over beheer en uitvoering (runtime). 
+Voor een goed werkende FTV-oplossing zijn afspraken nodig over beheer en uitvoering (runtime).
 Wat komt er kijken bij het toepassen en beheren van toegangsregels?
+{{< /chapter/section >}}
 
-## 1. Tijdens gebruik (runtime)
+{{< chapter/section title="1. Tijdens gebruik (runtime)" >}}
 
 Zodra toegang wordt gevraagd, voert de software automatisch taken uit om de regels voor verwerking toe te passen.
 
-- **Beslissingen afdwingen**. Zorgen dat genomen beslissingen ook gegarandeerd nageleefd worden. 
+- **Beslissingen afdwingen**. Zorgen dat genomen beslissingen ook gegarandeerd nageleefd worden.
 - **Beslissingen nemen**. Uitrekenen of het verzoek gehonoreerd, voorwaardelijk gehonoreerd of afgewezen moet worden. Dit gebeurt op basis van informatie (over subject, action, resource en context) en de beschikbare regels.
 - **Beslissingen loggen**. Vastleggen welke beslissingen zijn genomen, met de juiste hoeveelheid informatie om later verantwoording af te leggen en de juistheid van beslissingen te controleren.
 
 Deze functies draaien bij elk verwerkingsverzoek. Daarom moeten ze snel afgehandeld kunnen worden.
 
-![Functioneel]({{< param baseDirectory >}}images/functioneel.svg)
+{{< img-url "images/functioneel.svg" "Functioneel" >}}
+{{< /chapter/section >}}
 
-## 2. Beheer
+{{< chapter/section title="2. Beheer" >}}
 
 De beheersfuncties zijn voor het opstellen en onderhouden van regels.
 
@@ -55,3 +57,4 @@ Goed beheer begint met inzicht in hoe de toegang in de praktijk functioneert. De
 #### Verantwoording
 
 Bij een vermoeden van fraude of tijdens een audit, moet het systeem inzicht geven in alle relevante informatie over een of meerdere toegangsbeslissingen.
+{{< /chapter/section >}}

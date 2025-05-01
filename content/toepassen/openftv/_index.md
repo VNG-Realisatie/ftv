@@ -1,9 +1,9 @@
 ---
 Title: OpenFTV
-bookCollapseSection: true
-weight: 30
+type: 'chapter'
 ---
 
+{{< chapter/section title="" >}}
 # OpenFTV
 
 FTV is een toepassing van Externalized Authorization Management (EAM),
@@ -11,9 +11,9 @@ een methode om toegangsregels buiten applicaties te beheren.
 Om te laten zien hoe dat werkt, is een technische voorbeeldoplossing beschikbaar: de referentie-implementatie. Deze heeft de naam OpenFTV gekregen.
 Deze is open source, gebaseerd op internationale standaarden en bedoeld voor iedereen die FTV wil toepassen,
 testen of verder ontwikkelen.
+{{< /chapter/section >}}
 
-## Over OpenFTV
-
+{{< chapter/section title="Over OpenFTV" >}}
 ### EAM in de praktijk
 De referentie-implementatie maakt inzichtelijk hoe EAM werkt in de praktijk:
 de toegangsbeslissing vindt plaats buiten de applicatie, op basis van extern beheerde regels.
@@ -21,8 +21,9 @@ FTV is in OpenFTV uitgewerkt als concreet voorbeeld en technisch getest op werki
 
 ### Open source
 OpenFTV is open source en gratis bruikbaar.
+{{< /chapter/section >}}
 
-## Aan de slag met OpenFTV
+{{< chapter/section title="Aan de slag met OpenFTV" >}}
 
 ### Code
 De code is geschreven in Golang en vrij beschikbaar via GitLab.
@@ -40,7 +41,7 @@ De code is geschreven in Golang en vrij beschikbaar via GitLab.
 - Voor de opslag van policies en attributen kan het DevOps-team kiezen uit verschillende key/value-stores of bijvoorbeeld een relationele database zoals Postgres.
 - Ook de policy-taal is flexibel: op dit moment ondersteunt OpenFTV
   [Rego (OPA)](https://www.openpolicyagent.org/docs/latest/policy-language/),
-  [Cedar (Amazon-AWS)](https://www.cedarpolicy.com/en), 
+  [Cedar (Amazon-AWS)](https://www.cedarpolicy.com/en),
   [Cerbos (Google)](https://docs.cerbos.dev/cerbos/latest/policies/)
   en [OpenFGA](https://openfga.dev/docs/fga).
 
@@ -70,3 +71,4 @@ Met een gratis GitLab-account is het mogelijk om mee te ontwikkelen, feedback te
 de voortgang te volgen en de code vrij te gebruiken.
 
 https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/open-ftv
+{{< /chapter/section >}}

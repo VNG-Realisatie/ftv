@@ -1,31 +1,31 @@
 ---
 Title: Use case laadpalen
-weight: 20
+type: 'chapter'
 ---
-
+{{< chapter/section title="" >}}
 # Use case: laadpalen
-
-## Onderwerp
-
+{{< /chapter/section >}}
+{{< chapter/section title="Onderwerp" >}}
 In deze use case gaan gemeenten bijhouden welke laadpalen er zijn en wie de vergunning daarvoor heeft.
 Er mogen niet te veel laadpalen in een gebied zijn, voor de energievoorziening en de omgevingsregels.
 
-![Proefopstelling zaaksysteem]({{< param baseDirectory >}}images/4.1laadpaal.png)
+{{< img-url "images/4.1laadpaal.png" "Proefopstelling zaaksysteem" >}}
 
 Het zaaksysteem wordt daarvoor ingericht met een zaaktype 'laadpaalvergunning' en een registratie van laadpalen.
 Voor zaaktype laadpaalvergunningen kunnen aanvragen worden toegevoegd, goedgekeurd of afgekeurd.
+{{< /chapter/section >}}
 
-## Opstelling
-
-![Proefopstelling zaaksysteem]({{< param baseDirectory >}}diagrams/usecase-opstelling.svg)
+{{< chapter/section title="Opstelling" >}}
+{{< img-url "diagrams/usecase-opstelling.svg" "Proefopstelling zaaksysteem" >}}
 
 De registratie van laadpalen is voor deze opstelling heel simpel gehouden: 
 - er is alleen een lijst met laadpalen
 - met de velden postcode, huisnummer en kenteken.
 - er zit geen toegangscontrole op de service zelf: de medewerkersautorisatie wordt door het zaaksysteem gedaan, en de toegang tot de
 registratie als service door de gateway.
+  {{< /chapter/section >}}
 
-## Regels
+{{< chapter/section title="Regels" >}}
 - Zaaksysteem
     - Doelbinding is de registratie van laadpalen, waarvoor de gemeente een besluit heeft aangenomen.
     - De gemeente heeft ter dataminimalisatie vastgelegd dat voor laadpaalvergunningen een beperkte deelverzameling van persoons- en voertuiggegevens voldoende is:
@@ -41,9 +41,8 @@ registratie als service door de gateway.
 - RDW
     - De gemeente heeft per besluit toestemming van de RDW om voertuigen in de BRV op te zoeken.
     - Diplomatieke kentekens mogen niet opgezocht worden
-
-## Scenario 1: vergunning aanvragen
-
+{{< /chapter/section >}}
+{{< chapter/section title="Scenario 1: vergunning aanvragen" >}}
 - Een burger kan een laadpaalvergunning aanvragen. Daarvoor zijn naam, postcode en huisnummer nodig. Een medewerker maakt in het zaaksysteem een zaak met zaaktype 'Aanvragen laadpaal' aan met die gegevens.
 - Het zaaksysteem zoekt in de BRP op postcode en huisnummer, en vindt de BSN(s).
 - Vervolgens zoekt het systeem de gevonden BSNs op in de BRV de voertuigen die op de persoon geregistreerd staan.
@@ -101,4 +100,4 @@ Anders wordt de vergunning afgewezen met een passende melding.
 | Jerry     | 1000 AA  | 4          | Geen ingezetene gevonden                   |
 | Jerry     | 1000 AA  | 5          | Geen toestemming om voertuig in te zien    |
 | Jerry     | 2000 AA  | 1          | Niet ingezetene van eigen gemeente         |
-
+{{< /chapter/section >}}

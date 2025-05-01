@@ -33,13 +33,13 @@ FTV raakt meerdere onderdelen van de IT-infrastructuur. Denk aan softwarekeuzes,
 
    Hoe kom je van een use case tot een goed werkende toegangsregel?
 
-   [Doorloop het 7-stappenplan](1.stappenplan)
+   [Doorloop het 7-stappenplan](stappenplan)
 
 3. **Softwarekeuze**
 
    Er is nogal wat te kiezen aan PDP, PIP en PAP. Wat heb je nodig? En welke leverancier past het best? Of is het beter om zelf iets te bouwen?
 
-   [Lees de checklist Softwarekeuze](2.softwarekeus)
+   [Lees de checklist Softwarekeuze](softwarekeus)
 {{< /chapter/section >}}
 
 {{< chapter/section title="Voor ontwikkelaars" >}}
@@ -49,13 +49,13 @@ Een goede technische basis begint met praktijkvoorbeelden en inzicht in de opbou
 
    OpenFTV is onze referentie-implementatie. Dit is een door het FTV-team gebouwde oplossing, eenvoudig maar volledig. Het laat zien hoe een EAM-oplossing eruit kan zien, en kan als basis voor een eigen implementatie dienen.
 
-   [Gebruik de referentie-implementatie als startpunt](3.referentieimplementatie)
+   [Gebruik de OpenFTV als startpunt](openftv)
 
 4. **Proefopstelling**
 
    Een mini-FDS met uitgewerkte use cases is ideaal om lokaal te testen en mee te experimenteren.
 
-   [Bekijk de proefopstelling en ontdek wat werkt](4.proefopstelling)
+   [Bekijk de proefopstelling en ontdek wat werkt](proefopstelling)
 {{< /chapter/section >}}
 {{< chapter/section title="Voor juristen" >}}
    Goede toegangsverlening vraagt om heldere afspraken over rollen en bevoegdheden. Ook moeten juridische kaders en beleid vertaald worden naar toegangsregels die technisch toepasbaar zijn.
