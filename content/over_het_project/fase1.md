@@ -1,24 +1,28 @@
 ---
 Title: Fase 1
-weight: 30
+type: 'chapter'
 ---
 
+{{< chapter/section title="" >}}
 # Fase 1
+{{< /chapter/section >}}
 
-## Doelstellingen
 
+{{< chapter/section title="Doelstellingen" >}}
 De beoogde resultaten van fase 1 zijn, zoals vastgelegd in de subsidie:
 
-> 1.	In kaart brengen van de stakeholders
-> 2.	Inventarisatie van de huidig (meest voorkomende) geïmplementeerde oplossingen
-> 3.	Onderzoek mogelijke moderne oplossingen passend bij API’s
-> 4.	Plan van Aanpak fase 2
-> 5.	Agendering van een besluit voor in gang zetten Fase 2 op programmeringstafel Gegevensuitwisseling / Toegang
+1.	In kaart brengen van de stakeholders
+2.	Inventarisatie van de huidig (meest voorkomende) geïmplementeerde oplossingen
+3.	Onderzoek mogelijke moderne oplossingen passend bij API’s
+4.	Plan van Aanpak fase 2
+5.	Agendering van een besluit voor in gang zetten Fase 2 op programmeringstafel Gegevensuitwisseling / Toegang
 
 **Het einddoel van fase 1 was dat er een goed beschreven en geteste methodiek aan de programmeringstafel toegang
 besproken is, en daar positief advies voor, en richting aan, fase 2 gegeven wordt.**
 
-## Activiteiten
+{{< /chapter/section >}}
+
+{{< chapter/section title="Activiteiten" >}}
 
 Het project beoogt een standaard voor te stellen. Zowel het verkrijgen van een status als standaard
 als de adoptie ervan vergen veel communicatie. Een belangrijk deel van de aanpak richt zich daarom op
@@ -44,13 +48,16 @@ De projectactiviteiten zijn ingedeeld volgens de bovengenoemde doelstellingen:
    van concrete technische verkenning worden de mogelijkheden overwogen. Resultaat hiervan is ook expliciet het laten
    zien dat de voorgestelde oplossing(en) correct en haalbaar zijn.
 6. Het uitvoeren van een proef samen met een implementatiepartner is een optie; het valt nog te bezien of hier ruimte
-   voor is qua tijd en of er goede use cases en partners gevonden kunnen worden. 
+   voor is qua tijd en of er goede use cases en partners gevonden kunnen worden.
 7. Houden van bijeenkomsten waarin de meest relevante en inspirerende resultaten tot nu toe gedeeld worden,
-   en eenieder vragen te reflecteren en mee te praten. 
+   en eenieder vragen te reflecteren en mee te praten.
 8. Regelmatige afstemming van tussenresultaten en uitdaging bij de voornaamste klankborden: FDS, overlegtafels en
    Digilab
 
-## Risico's
+{{< /chapter/section >}}
+
+
+{{< chapter/section title="Risico's" >}}
 
 Het voorstellen van een standaard en het verkrijgen van adoptie daarvan is niet eenvoudig. Hier de belangrijkste
 risico's die we a priori zien.
@@ -91,27 +98,32 @@ risico's die we a priori zien.
      en het gebruik daarvan te implementeren, en daarmee een risico lopen dat dat niet goed gebeurt. Er is een kans dat niet meegewerkt
      wordt om dat risico te vermijden.
 
-## Planning en status
+{{< /chapter/section >}}
 
-![planning]({{< param baseDirectory >}}images/planningfase1.png)
+{{< chapter/section title="Planning en status" >}}
 
-Fase 1 was origineel gepland voor heel 2024. Door een late start 1 juli was het budget nog niet geheel benut op de einddatum. 
+{{< img-url "images/planningfase1.png" "planning" >}}
+
+Fase 1 was origineel gepland voor heel 2024. Door een late start 1 juli was het budget nog niet geheel benut op de einddatum.
 Daarom is fase 1 met 2 maanden verlengd. Aan de resultaten zijn als gevolg al een eerste versie van de standaard en de
 referentie-implementatie toegevoegd.
 
-## Resultaten
-
+{{< /chapter/section >}}
+{{< chapter/section title="Resultaten" >}}
 Dit zijn resultaten van fase 1, die allemaal op deze site te vinden zijn:
+
+
+
 
 ### Onderzoek
 
 Qua stakeholders:
-- Deze zijn in kaart gebracht 
-- Er is contact gemaakt met de belangrijkste stakeholders, en uitleg gegeven over het project en de toekomstige standaard 
+- Deze zijn in kaart gebracht
+- Er is contact gemaakt met de belangrijkste stakeholders, en uitleg gegeven over het project en de toekomstige standaard
 - Er is een eerste werkgroep gehouden
 
 De inventarisatie bij de Nederlandse overheid is afgerond met als onderzoeksgebieden:
-- Hoe toegang nu geregeld is 
+- Hoe toegang nu geregeld is
 - Waar al adoptie van PBAC is
 - Welke eerdere onderzoeken gedaan zijn
 
@@ -122,5 +134,6 @@ Bij de inventarisatie van de markt is gekeken naar:
 
 ### Standaard
 
-Er is een keus gemaakt om bij OpenID AuthZEN aan te sluiten. Een [eerste versie van het NL Gov profiel daarop](https://ftv-standaard-2f223b.gitlab.io/) is vrijwel 
+Er is een keus gemaakt om bij OpenID AuthZEN aan te sluiten. Een [eerste versie van het NL Gov profiel daarop](https://ftv-standaard-2f223b.gitlab.io/) is vrijwel
 afgerond.
+{{< /chapter/section >}}

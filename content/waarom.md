@@ -3,7 +3,7 @@ title: Waarom FTV?
 weight: 20
 type: 'chapter'
 ---
-{{< chapter/header title="Waarom FTV?" bg="orange">}}
+{{< chapter/header title="Waarom FTV?" bg="brown">}}
 Lorem ipsum dolor sit amet consectetur. Commodo ipsum tellus sem mauris a diam nibh. Nec ipsum euismod feugiat egestas consectetur lacus egestas lectus varius. Id elementum blandit sed quis morbi lectus viverra. Duis lacus turpis sollicitudin vel adipiscing arcu. Laoreet sed sit eget quis id lectus consequat est. Tortor pharetra eu sit nisl ipsum hac. Pretium pulvinar neque accumsan bibendum eget nullam id.
 {{< /chapter/header >}}
 

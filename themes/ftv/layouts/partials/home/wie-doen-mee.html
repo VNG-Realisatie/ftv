@@ -1,11 +1,11 @@
 <div class="w-full bg-rhc-color-grijs-50 py-6">
     <div class="w-[1024px] mx-auto grid grid-cols-1 my-10">
         <div class="my-2.5">
-            <h2 class="nl-heading nl-heading--level-2 rhc-heading py-2">Wie doen al mee?</h2>
-            <p class="utrecht-paragraph text-rhc-primary">We komen regelmatig bij elkaar. Om kennis te delen, etc..</p>
+            <h2 class="nl-heading nl-heading--level-2 rhc-heading pb-2">Wie doen al mee?</h2>
+            <p class="utrecht-paragraph text-rhc-primary"></p>
         </div>
     </div>
-    <div class="my-2.5 swiper swiperWieDoenMee bg-rhc-color-grijs-50">
+    <div class="w-[1024px] my-2.5 swiper swiperWieDoenMee bg-rhc-color-grijs-50">
         <div class="swiper-wrapper flex h-[240px]">
             {{ $data := dict }}
             {{ $path := "data/wie_doen_mee.yaml" }}
@@ -26,7 +26,11 @@
                 </div>
             {{ end }}
         </div>
+        <div class="w-[1024px] swiper-pagination-wie mt-4 mx-auto flex justify-center">
+
+        </div>
     </div>
+
     <script>
         var swiperWie = new Swiper(".swiperWieDoenMee", {
             slidesPerView: 4,
