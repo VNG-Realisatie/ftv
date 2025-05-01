@@ -18,7 +18,6 @@
     --color-rhc-primary: var(--rhc-color-primary-500, #154273);
     --color-hero: oklch(0.82 0.1685 79);
     --color-rhc-geel-400: var(--rhc-color-geel-400, #FAE856);
-    --color-ftv-info: #E1EEF8;
     --color-rhc-donkerbruin-100: var(--rhc-color-donkerbruin-100, #D1C2BE);
     --color-rhc-color-oranje-200: var(--rhc-color-oranje-200, #F1BE8C);
     --color-rhc-color-mosgroen-50: var(--rhc-color-mosgroen-50, #EBEBD9);
@@ -222,8 +221,8 @@
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
-  .mb-6 {
-    margin-bottom: calc(var(--spacing) * 6);
+  .mt-6 {
+    margin-top: calc(var(--spacing) * 6);
   }
   .ml-25 {
     margin-left: calc(var(--spacing) * 25);
@@ -261,6 +260,9 @@
   .h-\[100px\] {
     height: 100px;
   }
+  .h-\[120px\] {
+    height: 120px;
+  }
   .h-\[150px\] {
     height: 150px;
   }
@@ -284,9 +286,6 @@
   }
   .w-\[72px\] {
     width: 72px;
-  }
-  .w-\[96px\] {
-    width: 96px;
   }
   .w-\[319px\] {
     width: 319px;
@@ -390,9 +389,6 @@
   }
   .bg-ftv-green {
     background-color: var(--color-ftv-green);
-  }
-  .bg-ftv-info {
-    background-color: var(--color-ftv-info);
   }
   .bg-hero {
     background-color: var(--color-hero);
