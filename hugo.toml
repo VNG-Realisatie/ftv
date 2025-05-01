@@ -1,7 +1,7 @@
-# baseURL = 'http://localhost:1313'
 languageCode = 'nl-nl'
 title = 'Federatieve Toegangsverlening'
 theme = "ftv"
+baseURL = "https://vng-realisatie.github.io/ftv/"
 
 [params]
     subtitle = 'Standaard voor vertrouwde toegang binnen het Federatief Datastelsel'
