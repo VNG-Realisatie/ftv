@@ -22,6 +22,7 @@
     --color-rhc-color-oranje-200: var(--rhc-color-oranje-200, #F1BE8C);
     --color-rhc-color-mosgroen-50: var(--rhc-color-mosgroen-50, #EBEBD9);
     --color-rhc-color-grijs-50: #F8FAFC;
+    --color-rhc-color-lintblauw-50: #B8C6D5;
   }
 }
 @layer base {
@@ -218,14 +219,8 @@
   .mt-2\.5 {
     margin-top: calc(var(--spacing) * 2.5);
   }
-  .mt-3 {
-    margin-top: calc(var(--spacing) * 3);
-  }
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
-  }
-  .mt-6 {
-    margin-top: calc(var(--spacing) * 6);
   }
   .ml-25 {
     margin-left: calc(var(--spacing) * 25);
@@ -398,6 +393,9 @@
   }
   .bg-rhc-color-grijs-50 {
     background-color: var(--color-rhc-color-grijs-50);
+  }
+  .bg-rhc-color-lintblauw-50 {
+    background-color: var(--color-rhc-color-lintblauw-50);
   }
   .bg-rhc-color-mosgroen-50 {
     background-color: var(--color-rhc-color-mosgroen-50);

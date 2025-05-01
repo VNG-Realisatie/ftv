@@ -1,4 +1,4 @@
-<div class="{{ if eq (.Get "bg") "orange" }}bg-rhc-color-oranje-200{{ else }}bg-rhc-donkerbruin-100{{ end }}">
+<div class="{{ if eq (.Get "bg") "orange" }}bg-rhc-color-oranje-200{{ else if eq (.Get "bg") "blue" }}bg-rhc-color-lintblauw-50{{ else }}bg-rhc-donkerbruin-100{{ end }}">
     <div class="py-8 max-w-5xl mx-auto">
         <div class="flex">
             <div class="max-w-[870px]">
