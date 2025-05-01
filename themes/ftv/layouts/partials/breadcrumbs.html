@@ -9,7 +9,7 @@
                 </a>
             </li>
 
-            {{ range .Ancestors }}
+            {{ range .Ancestors.Reverse }}
                 {{ if not .IsHome }}
                     <li class="utrecht-breadcrumb-nav__separator utrecht-breadcrumb-nav__separator--html-li"
                         style="display: var(--_utrecht-breadcrumb-nav-separator-display, block);">

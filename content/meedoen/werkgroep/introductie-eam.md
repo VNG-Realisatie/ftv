@@ -36,7 +36,7 @@ Title: 3. Introductie EAM
 
 {{< chapter/section title="Bijlagen" >}}
 - [Opname](https://github.com/VNG-Realisatie/ftv/raw/refs/heads/main/static/videos/20250408-introductie-eam.mp4)
-- [Presentatie Introductie EAM]({{< param baseDirectory >}}documents/20250408-introductie-eam.pptx)
+- [Presentatie Introductie EAM](/ftv/documents/20250408-introductie-eam.pptx)
 {{< /chapter/section >}}
 
 {{< chapter/section title="Introductie Externalized Authorization Management" >}}
