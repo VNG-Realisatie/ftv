@@ -118,3 +118,7 @@
     color: black;
     letter-spacing: 0;
 }
+
+.swiperWieDoenMee > .swiper-wrapper {
+    transition-timing-function: linear;
+}

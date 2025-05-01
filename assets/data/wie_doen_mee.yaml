@@ -23,3 +23,8 @@
   size: 224
   alt_text: "https://www.zorginstituutnederland.nl/"
   logo: "logos/zorginstituut.png"
+- naam: "Autoriteit Consument en Markt"
+  link: "https://www.acm.nl/"
+  size: 224
+  alt_text: "https://www.acm.nl/"
+  logo: "logos/acm.svg"
