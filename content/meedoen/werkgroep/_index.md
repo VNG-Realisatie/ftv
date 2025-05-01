@@ -48,8 +48,8 @@ Data voor de bijeenkomsten vanaf augustus volgen later dit jaar.
 
 ### Notulen
 
-- 20 november 2024: Pilot Gegevensminimalisatie ([Notulen](gegevensminimalisatie)).
-- [25 maart 2025](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/679b73ea-08f5-4675-800f-36c86202918b/kick-off-werkgroep-federatieve-toegangsverlening-ftv): Kick-off Werkgroep Federatieve Toegangsverlening ([Notulen](kick-off))
-- [8 april](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/0b029295-0f50-4834-bb8e-3e7bd3e5c16e/werkgroep-federatieve-toegangsverlening-introductie-externalized-authorization-architectuur): Introductie Externalized Authorization Management architectuur ([Notulen](introductie-eam))
-- [22 april](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/b909e6f2-eb9d-404d-8bf0-ea77c30e603b/werkgroep-federatieve-toegangsverlening-juridisch-kader-gerelateerde-standaarden): Juridisch Kader ([Notulen](juridisch-kader))
+- 20 november 2024: Pilot Gegevensminimalisatie ([Notulen]({{% relref "gegevensminimalisatie" %}})).
+- [25 maart 2025](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/679b73ea-08f5-4675-800f-36c86202918b/kick-off-werkgroep-federatieve-toegangsverlening-ftv): Kick-off Werkgroep Federatieve Toegangsverlening ([Notulen]({{% relref "kick-off" %}}))
+- [8 april](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/0b029295-0f50-4834-bb8e-3e7bd3e5c16e/werkgroep-federatieve-toegangsverlening-introductie-externalized-authorization-architectuur): Introductie Externalized Authorization Management architectuur ([Notulen]({{% relref "introductie-eam" %}}))
+- [22 april](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/b909e6f2-eb9d-404d-8bf0-ea77c30e603b/werkgroep-federatieve-toegangsverlening-juridisch-kader-gerelateerde-standaarden): Juridisch Kader ([Notulen]({{% relref "juridisch-kader" %}}))
 {{< /chapter/section >}}

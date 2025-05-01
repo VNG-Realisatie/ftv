@@ -5,7 +5,7 @@ type: 'chapter'
 ---
 
 {{< chapter/header title="Meedoen" bg="brown">}}
-**FTV is in ontwikkeling en zoekt professionals die willen bijdragen aan een veilige en efficiënte toegang tot data binnen de overheid.**
+FTV is in ontwikkeling en zoekt professionals die willen bijdragen aan een veilige en efficiënte toegang tot data binnen de overheid.
 
 FTV werkt aan veilige en efficiënte toegang tot data binnen de overheid. Jouw ervaring is waardevol om dit goed te laten aansluiten op de praktijk.
 {{< /chapter/header >}}
@@ -14,19 +14,11 @@ FTV werkt aan veilige en efficiënte toegang tot data binnen de overheid. Jouw e
 
 **Bekijk de werkwijze**
 
-<<<<<<<< HEAD:content/meedoen/_index.md
-Lees [hoe FTV werkt](/methodiek) en bekijk hoe dit in jouw API-landschap past
+Lees [hoe FTV werkt]({{< relref "methodiek" >}}) en bekijk hoe dit in jouw API-landschap past
 
 **Denk mee in de werkgroep**
 
-De [werkgroep](/meedoen/werkgroep) praat over de opzet, keuzes en doorontwikkeling van de standaardisering. Ook bespreken we waar gebruikers in de praktijk tegenaan lopen.
-========
-Lees [hoe FTV werkt]({{< param baseDirectory >}}docs/methodiek) en bekijk hoe dit in jouw API-landschap past
-
-**Denk mee in de werkgroep**
-
-De [werkgroep]({{< param baseDirectory >}}docs/meedoen/werkgroep) praat over de opzet, keuzes en doorontwikkeling van de standaardisering. Ook bespreken we waar gebruikers in de praktijk tegenaan lopen.
->>>>>>>> main:content/docs/meedoen/_index.md
+De [werkgroep]({{< relref "meedoen/werkgroep" >}}) praat over de opzet, keuzes en doorontwikkeling van de standaardisering. Ook bespreken we waar gebruikers in de praktijk tegenaan lopen.
 
 **Ga aan de slag met OpenFTV**
 

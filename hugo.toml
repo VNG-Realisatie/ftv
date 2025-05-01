@@ -3,6 +3,10 @@ title = 'Federatieve Toegangsverlening'
 theme = "ftv"
 baseURL = "https://vng-realisatie.github.io/ftv/"
 
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            unsafe = true
 [params]
     subtitle = 'Standaard voor vertrouwde toegang binnen het Federatief Datastelsel'
     baseDirectory = '/'

@@ -1,4 +1,3 @@
----
 type: 'chapter'
 title: "Architectuur"
 ---
@@ -9,7 +8,7 @@ FTV introduceert Externalized Access Management (EAM) als standaard methodiek vo
 {{< chapter/section title="Huidige situatie" >}}
 Momenteel zijn zowel de toegangslogica als de informatie voor het maken van toegangsbeslissingen (beslisgegevens) vaak versnipperd over het IT-landschap.
 
-![Huidige situatie]({{< param baseDirectory >}}images/1.3.huidige_situatie.png)
+{{< img-url "images/1.3.huidige_situatie.png" "Huidige situatie" >}}
 
 Dit veroorzaakt een grote diversiteit van talen, configuraties, build en deployment processen voor toegangslogica. Dat maakt het moeilijk om toegangsbeleid centraal te overzien, laat staan dit verantwoord te beheren.
 
@@ -20,7 +19,7 @@ Voor de beslisgegevens worden ook diverse bronnen gebruikt. Deze hebben vaak gee
 {{< chapter/section title="Nieuwe situatie" >}}
 In een EAM stellen componenten op gestandaardiseerde wijze toegangsverzoeken en worden vereiste beslisgegevens op een uniforme en herleidbare wijze verzameld.
 
-![Nieuwe situatie]({{< param baseDirectory >}}images/1.3.nieuwe_situatie.png)
+{{< img-url "images/1.3.nieuwe_situatie.png" "Nieuwe situatie" >}}
 
 Hierdoor wordt toegangslogica centraal inzichtelijk en beheersbaar en kunnen historische beslissingen verantwoord worden.
 {{< /chapter/section >}}
@@ -28,7 +27,7 @@ Hierdoor wordt toegangslogica centraal inzichtelijk en beheersbaar en kunnen his
 {{< chapter/section title="EAM architectuur Nederlandse overheid" >}}
 Voor gebruik door de Nederlandse overheid stelt FTV de volgende architectuur voor.
 
-![Standaard componenten]({{< param baseDirectory >}}images/1.3.standaard_componenten.png)
+{{< img-url "images/1.3.standaard_componenten.png" "Standaard componenten" >}}
 
 - Het Policy Enforcement Point (**PEP**) vat een ontvangen verzoek samen in een toegangsverzoek en zorgt dat de ontvangen toegangsbeslissing correct uitgevoerd wordt (enforcement.)
 - Het Policy Decision Point (**PDP**) ontvangt het toegangsverzoek en neemt een toegangsbeslissing op basis van het toegangsbeleid en additionele informatie.
@@ -43,7 +42,7 @@ Eén van de belangrijkste aspecten van de meerwaarde van Externalized Access Man
 
 Binnen Externalized Access Management worden hiervoor vier basis entiteiten gedefinieerd:
 
-![Entiteiten informatiemodel]({{< param baseDirectory >}}images/1.3.informatiemodel.png)
+{{< img-url "images/1.3.informatiemodel.png" "Entiteiten informatiemodel" >}}
 
 1. Subject. De aanvrager van het verzoek.
 2. Action. De gegevensverwerking die aangevraagd wordt.
@@ -56,14 +55,13 @@ Binnen deze basis entiteiten kan elke organisatie zijn eigen informatiemodel def
 {{< chapter/section title="EAM in een federatief stelsel" >}}
 In een federatief stelsel worden toegangsregels op [logisch niveau](https://docs.geostandaarden.nl/mim/mim/#beschouwingsniveau-3-logisch-informatie-of-gegevensmodel) gedefinieerd. Deze worden dan per organisatie vertaald naar [technisch niveau](https://docs.geostandaarden.nl/mim/mim/#beschouwingsniveau-3-logisch-informatie-of-gegevensmodel).
 
-![Federatieve toegangsregels]({{< param baseDirectory >}}images/1.3.federatieve_toegangsregels.png)
+{{< img-url "images/1.3.federatieve_toegangsregels.png" "Federatieve toegangsregels" >}}
 
 Zo kunnen organisaties zelf een EAM implementatie kiezen en toch voldoen aan de regels van een federatief stelsel..
 
 Verder kunnen met behulp van gestandaardiseerde API's toegangsregels en historische toegangsbeslissingen worden ingezien bij deelnemers aan het federatieve stelsel.
 
-![Federatieve EAM]({{< param baseDirectory >}}images/1.3.federatieve_verantwoording.png)
+{{< img-url "images/1.3.federatieve_verantwoording.png" "Federatieve EAM" >}}
 
 De toegangsregels voor de inzage API's kunnen binnen het stelsel afgesproken worden of door organisaties individueel bepaald worden.
 {{< /chapter/section >}}
-

@@ -1,0 +1,3 @@
+{{ $path := .Get 0 }}
+{{ $alt := .Get 1 | default "" }}
+<img src="{{ .Site.BaseURL }}{{ $path }}" alt="{{ $alt }} " class="utrecht-img utrecht-img--photo my-6 mx-auto">
