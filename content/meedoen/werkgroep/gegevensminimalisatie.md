@@ -2,10 +2,11 @@
 type: 'chapter'
 Title: 1. Pilot
 ---
-
+{{< chapter/section title="" >}}
 # Werkgroep Gegevensminimalisatie (20 november 2024)
+{{< /chapter/section >}}
 
-## Aanwezigen
+{{< chapter/section title="Aanwezigen" >}}
 - Marc van Andel (Kadaster)
 - Marc de Boer (FTV)
 - Joost Farla (IMX)
@@ -14,19 +15,20 @@ Title: 1. Pilot
 - Gerard Juijn (FTV)
 - Eduard Renger (iStandaarden)
 - Michiel Trimpe (FTV)
+{{< /chapter/section >}}
 
-## Agenda
+{{< chapter/section title="Agenda" >}}
 - Introductie
 - Benaming
 - Vragen en domein
 - Vervolg proces
+{{< /chapter/section >}}
 
-## Introductie
-
+{{< chapter/section title="Introductie" >}}
 Het kader van het project en de ontwikkelen standaard werd geïntroduceerd door Marc de Boer.
+{{< /chapter/section >}}
 
-## Vragen en domein
-
+{{< chapter/section title="Vragen en domein" >}}
 ### Vragen
 
 Ter introductie legde Michiel Trimpe de volgende vragen neer om het domein van de vraag duidelijk te maken:
@@ -71,25 +73,30 @@ In de discussie zijn de volgende antwoorden gegeven.
   - **Allen**: Ja
 - Mag het response body aangepast worden? 
   - **Allen**: Nee
+{{< /chapter/section >}}
 
-## Benaming
-
+{{< chapter/section title="Benaming" >}}
 De benaming van het onderwerp als "gegevensminimalisatie" werd door o.a. Edward van Gelderen als problematisch ervaren aangezien dit ongewenst breed geïnterpreteerd kon worden.
 
 In de werkgroep is benoemd dat gegevensminimalisatie eerder een use-case is of een symptoom van een onderliggend probleem. Toegangsverlening betreft uiteindelijk gewoon de beslissing of een verzoek mag of niet. (**Marc van Andel**, **Eelco Hotting**)
 De zorgen m.b.t. het precies opvragen van gewenste velden (**Gerard Juijn**) gaat vooral over het ondersteunen van clients bij het bepalen van toegestane verzoeken gegeven mogelijk complex autorisatiebeleid. Dit is vergelijkbaar met een frontend applicatie die autorisatie logica moet dupliceren om de gebruiker geen functionaliteit aan te bieden die de backend niet toe zal staan. (**Michiel Trimpe**.)
 
 Er is besloten gegevensminimalisatie als term uit de standaard te verwijderen.
+{{< /chapter/section >}}
 
-## Vervolg proces
-
+{{< chapter/section title="Vervolg proces" >}}
 Er is besloten om de volgende werkgroep te richten op het thema "Verantwoording". Michiel Trimpe zal met Eelco Hotting de kadering van dit onderwerp voorbereiden om de volgende werkgroep additionele sturing te geven.
+{{< /chapter/section >}}
 
-## Nabespreking Mattermost 
+{{< chapter/section title="Nabespreking Mattermost" >}}
+**Gerard Juijn** droeg het alternatief van een "Slimme PEP" aan die wel requests mag herschrijven. Dit werd door o.a. **Eelco Hotting** gezien als een component van de applicatie gezien. **Michiel Trimpe** benoemde dat dit in combinatie met een Search API ook gezien kan worden als een proxy die de 2 stappen (zoek het correcte verzoek op en voer het uit) in één actie uitvoert. Dat kan dus als een wrapper om om bestaande applicaties gezien worden indien die niet aangepast kunnen worden.
+{{< /chapter/section >}}
 
-**Gerard Juijn** droeg het alternatief van een "Slimme PEP" aan die wel requests mag herschrijven. Dit werd door o.a. **Eelco Hotting** gezien als een component van de applicatie gezien. **Michiel Trimpe** benoemde dat dit in combinatie met een Search API ook gezien kan worden als een proxy die de 2 stappen (zoek het correcte verzoek op en voer het uit) in één actie uitvoert. Dat kan dus als een wrapper om om bestaande applicaties gezien worden indien die niet aangepast kunnen worden.  
+{{< chapter/section title="Nabespreking Mattermost" >}}
 
-## Toevoeging per mail van Eduard Renger
+{{< /chapter/section >}}
+
+{{< chapter/section title="Toevoeging per mail van Eduard Renger" >}}
 
 Na de werkgroep zijn de volgende antwoorden op 22 november per mail gegeven door een collega van Eduard Renger:
 
@@ -116,3 +123,4 @@ Na de werkgroep zijn de volgende antwoorden op 22 november per mail gegeven door
   - Verantwoordelijkheid(verwerker)
 - Mogen policies beslissingen nemen op basis van antwoorden? Mogen policies response bodies parsen om daar informatie uit te gebruiken?
   - Ja/nee, validatie dient te gebeuren via een aparte validatie(policy) en niet op het resultaat van het verzoek. / Policy information Point (PIP)
+{{< /chapter/section >}}
