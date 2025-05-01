@@ -1,7 +1,6 @@
 ---
 Title: Onderzoek
-bookCollapseSection: true
-weight: 40
+type: 'chapter'
 ---
 
 # Onderzoek

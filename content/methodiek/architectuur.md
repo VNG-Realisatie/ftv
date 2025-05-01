@@ -1,3 +1,4 @@
+---
 type: 'chapter'
 title: "Architectuur"
 ---
