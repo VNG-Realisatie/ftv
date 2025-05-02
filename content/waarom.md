@@ -4,7 +4,7 @@ weight: 20
 type: 'chapter'
 ---
 {{< chapter/header title="Waarom FTV?" bg="brown">}}
-Lorem ipsum dolor sit amet consectetur. Commodo ipsum tellus sem mauris a diam nibh. Nec ipsum euismod feugiat egestas consectetur lacus egestas lectus varius. Id elementum blandit sed quis morbi lectus viverra. Duis lacus turpis sollicitudin vel adipiscing arcu. Laoreet sed sit eget quis id lectus consequat est. Tortor pharetra eu sit nisl ipsum hac. Pretium pulvinar neque accumsan bibendum eget nullam id.
+Steeds meer organisaties delen steeds meer gegevens, ook over landsgrenzen heen. Bij elke uitwisseling komen weer nieuwe regels. De huidige methodes zoals rolgebaseerde rechten en in applicaties ingebouwde regels zijn bij de schaalvergroting niet meer hanteerbaar.
 {{< /chapter/header >}}
 
 {{< chapter/section title="Schaalvergroting" >}}
@@ -15,7 +15,6 @@ De huidige methodes zoals rolgebaseerde rechten en in applicaties ingebouwde reg
 FTV werkt met gestandaardiseerde toegangsregels die buiten de applicaties beheerd worden. 
 Met FTV kunnen organisaties toegangsregels eenvoudig toepassen in groeiende samenwerkingen, over domeinen en systemen heen.
 {{< /chapter/section >}}
-
 
 {{< chapter/section title=Flexibiliteit >}}
 Als regels veranderen, dan moet dat vlot en correct aangepast kunnen worden in de toegangsverlening.
