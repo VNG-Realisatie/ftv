@@ -1,15 +1,13 @@
 ---
-weight: 30
+type: "chapter"
 title: "Elementen van de oplossing"
 ---
-
-# Elementen van de oplossingsrichting
-
+{{< chapter/section title="Elementen van de oplossingsrichting" level="1">}}
 We beschrijven hier de elementen van een moderne oplossingsrichting, en bekijken van elk of die tegemoet komt aan
 de richtlijnen en/of de bezwaren.
+{{< /chapter/section >}}
 
-## 1. Vertrouwensraamwerken
-
+{{< chapter/section title="1. Vertrouwensraamwerken" >}}
 Een denkwijze die past bij de toekomstvisie en adresseren van de bezwaren is het concept van een vertrouwensraamwerk of trust framework.
 
 Kern van een vertrouwensraamwerk is een set van afspraken waarin de rechten en plichten van aanbieders en afnemers is vastgelegd. 
@@ -64,3 +62,4 @@ EAM is een verzamelnaam van methodieken voor toegangsverlening die een aantal el
 Bezwaar 5 wordt geadresseerd door een überhaupt een standaard te hebben, die formele status heeft bij de NL overheid.
 
 Aan richtlijn 2, het zero trust principe, zal in de implementatie zelf tegemoet gekomen moeten worden.
+{{< /chapter/section >}}

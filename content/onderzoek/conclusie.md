@@ -1,12 +1,12 @@
 ---
 Title: Conclusie
-weight: 50
+type: 'chapter'
 ---
-
+{{< chapter/section title="" >}}
 # Conclusie
+{{< /chapter/section >}}
 
-## 1. Status van de techniek
-
+{{< chapter/section title="1. Status van de techniek" >}}
 ### Methodieken
 
 De architectuur **Externalized Authorization Management (EAM)** is de meest geschikte keus voor FTV.
@@ -35,10 +35,10 @@ Voor een totaaloplossing zit de uitdaging vooral in schaalbaar en gedistribueerd
 Hiervoor zijn commerciële producten beschikbaar. Vaak zijn deze om een open source PDP gebouwd, zijn als het ware een freemium.
 
 Lopende het project wordt door FTV een eigen inventarisatie gedaan. Dit gebeurt door eigen tests, en vooral door gesprekken met de leveranciers zelf. Er wordt specifiek gekeken naar toegangsverlening, zowel runtime als beheer, en koppelingen naar aanpalende systemen zoals IAM worden. 
-[Het resultaat]({{< param baseDirectory >}}docs/toepassen/softwarekeus) zal geen koopadvies worden, maar een handreiking over hoe tot een keus te komen. 
+[Het resultaat]({{< param baseDirectory >}}docs/toepassen/softwarekeus) zal geen koopadvies worden, maar een handreiking over hoe tot een keus te komen.
+{{< /chapter/section >}}
 
-## 2. Status bij de Nederlands overheid
-
+{{< chapter/section title="2. Status bij de Nederlands overheid" >}}
 ### Koppelvlakstandaarden
 
 **De bestaande koppelvlakstandaarden bieden geen van allen invulling aan toegangsverlening**, maar vormen ook geen belemmering. Een nieuwe standaard zou prima aan de bestaande koppelvlakken kunnen worden toegevoegd. Dit is dan ook het streven van FTV.
@@ -54,3 +54,4 @@ De meeste systemen van afnemers hebben toegangverlening erkend als belangrijk en
 ### Datastelsels
 
 Er zijn een aantal sectorspecifieke en ketenintegratievoorzieningen die heel goed functioneren. Toegangsverlening is daarin vaak al goed meegenomen, ook met EAM.
+{{< /chapter/section >}}

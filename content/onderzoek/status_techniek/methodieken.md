@@ -1,15 +1,12 @@
 ---
-weight: 10
-bookCollapseSection: true
+type: 'chapter'
 title: "Methodieken"
 ---
-
-# Methodieken
-
-In de loop van de jaren is een aantal methodieken ontstaan. Dit zijn werkwijzen, oftewel categorie&euml;n van oplossingen, niet concrete implementaties. 
+{{< chapter/section title="Methodieken" >}}
+In de loop van de jaren is een aantal methodieken ontstaan. Dit zijn werkwijzen, oftewel categorie&euml;n van oplossingen, niet concrete implementaties.
 Dit is de gangbare indeling van methodieken:
 
-![Verantwoordelijkheden diagram]({{< param baseDirectory >}}images/2.3.2methodieken.png)
+{{< img-url "images/2.3.2methodieken.png" "Verantwoordelijkheden diagram" >}}
 
 1. Lijsten van gebruikers ([ACL](https://en.wikipedia.org/wiki/Access-control_list))
 2. Rolgebaseerd ([RBAC](https://en.wikipedia.org/wiki/Role-based_access_control))
@@ -18,9 +15,9 @@ Dit is de gangbare indeling van methodieken:
 5. Relatiegebaseerd [ReBAC](https://en.wikipedia.org/wiki/Relationship-based_access_control)
 
 We beschrijven de methodieken hier niet; volg de links voor meer information.
+{{< /chapter/section >}}
 
-## Vergelijking
-
+{{< chapter/section title="Vergelijking" >}}
 Er zijn eerder al goede beschrijvingen en vergelijkingen gemaakt:
 - Door het project FDS is een [ position paper](https://federatief.datastelsel.nl/kennisbank/pbac/) gemaakt
 - Onder GEMMA is een [vergelijking](https://www.gemmaonline.nl/wiki/WMA_RBAC_ABAC_en_PBAC) gemaakt.
@@ -38,9 +35,9 @@ De essentie zit in de overeenkomsten:
 - Regels worden apart van broncode geschreven, en met dezelfde zorgvuldigheid beheerd als broncode ('**policy as code**') 
 - Regels zijn fijnmazig ('**fine grained access control**'), door gebruik te kunnen maken van eigenschappen van de vrager ('subject'), de vraag ('actie'), de context en het antwoord ('resource')
 - Regels worden **real-time** toegepast, dus niet alleen tijdens authenticatie.
+{{< /chapter/section >}}
 
-## Externalized access management
-
+{{< chapter/section title="Externalized access management" >}}
 De term 'Externalized access management' kan als overkoepelend begrip gebruikt worden. De toegangscontrole is buiten de applicaties geplaatst,
 hetgeen de volgende voor ons belangrijke principes faciliteert:
 - '**Zero-trust**'. Controleer toegang op elke plek waar interactie tussen systemen plaatsvindt en er dus een risico op onrechtmatige toegang is. 
@@ -49,6 +46,5 @@ worden om te voorkomen dat prestaties belemmerd worden. Door gedistribueerde sys
 
 Onderstaande video beschrijft het veld.
 {{< youtube QBs4G2WUP7U >}}
-
-
+{{< /chapter/section >}}
  

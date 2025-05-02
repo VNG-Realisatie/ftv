@@ -1,11 +1,10 @@
 ---
 weight: 30
 bookCollapseSection: true
+type: 'chapter'
 title: "Aanbieders"
 ---
-
-# Aanbieders 
-
+{{< chapter/section title="Aanbieders" >}}
 De term 'aanbieders' gebruiken we hier voor de registers, of preciezer bronhouders, die samen hun verwerkers 
 een API aanbieden om verwerkingen te doen op hun register.
 
@@ -34,3 +33,4 @@ Van de totale [lijst van sectorregistraties](https://www.digitaleoverheid.nl/ove
 | Registratie | Houder | EAM? |
 |-------------|--------|------|
 | Rijexamens  | CBR    | Nee  |
+{{< /chapter/section >}}

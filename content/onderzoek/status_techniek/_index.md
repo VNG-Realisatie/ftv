@@ -1,11 +1,8 @@
 ---
-weight: 20
-bookCollapseSection: true
+type: 'chapter'
 title: "Status van de techniek"
 ---
-
-# Status van de techniek
-
+{{< chapter/section title="Status van de techniek" >}}
 Toegangsverlening is bepaald niet nieuw; informatiesystemen hebben altijd al een vorm van toegangsbeperking afgedwongen.
 
 Waar identificatie en authenticatie de afgelopen 10 jaar uitgekristalliseerd zijn tot begrepen vraagstukken met geaccepteerde oplossingen,
@@ -20,5 +17,6 @@ We onderzoeken hier de status van de technologie en markt door te kijken naar de
 2. [regeltalen](regeltalen)
 3. [standaarden](standaarden)
 4. [producten](producten) die in de markt te krijgen zijn
+{{< /chapter/section >}}
 
 

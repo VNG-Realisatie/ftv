@@ -1,10 +1,9 @@
 ---
-weight: 20
+type: 'chapter'
 title: "Styra"
 ---
 
-# Styra
-
+{{< chapter/section title="Styra" level="1" >}}
 Styra is de maker van OPA. De open source en licentievrije PDP is populair, verreweg de meest gedownloade PDP.
 
 Voor gebruik op schaal in een gedistribueerde systemen is een verbeterde PDP genaamd Enterprise OPA beschikbaar,
@@ -29,3 +28,4 @@ Prijzen voor beide samen is (februari 2025):
 - Saas: vanaf '10-pakket' voor $50k per maand
 
 Zie ook Styra's eigen [rapport]({{< param baseDirectory >}}documents/styra.pdf).
+{{< /chapter/section >}}

@@ -1,10 +1,8 @@
 ---
-weight: 40
+type: 'chapter'
 title: "Axiomatics"
 ---
-
-# Axiomatics
-
+{{< chapter/section title="Axiomatics" level="1" >}}
 - Axiomatics heeft een sterke focus op standaarden. Ze zijn mede-ontwikkelaar geweest van XACML, ALFA en nu ook AuthZEN.
 - Heeft een sterke focus op het samenwerken tussen tech en non-tech users door het bieden van een GUI voor policy creation én een code-based view die goed samen werkt.
 - Ze ondersteunen ook token-based authorization waarbij je bij de PDP op kan vragen welke acties/claims beschikbaar zijn en dat in short-lived tokens mee kan geven (en dus bijv. compatibel met OAuth Rich Authentication Requests)
@@ -15,4 +13,5 @@ title: "Axiomatics"
 - In tegenstelling tot PlainID werkt Axiomatics volledig on-prem en heeft het geen SaaS ondersteuning.
 - Ze hebben ondersteuning voor een gedetailleerd audit-log. De view daarop is simpel/beperkt en het wordt aangeraden die middels een SIEM te ontsluiten.
 
-Zie ook het Axiomatics rapport '[state of authorization]({{< param baseDirectory >}}documents/axiomatics.pdf)'.
+Zie ook het Axiomatics rapport '[state of authorization](/ftv/documents/axiomatics.pdf)'.
+{{< /chapter/section >}}

@@ -1,10 +1,9 @@
 ---
-weight: 30
+type: 'chapter'
 title: "PlainID"
 ---
 
-# PlainID
-
+{{< chapter/section title="PlainID" >}}
 PlainID heeft een [presentatie]({{< param baseDirectory >}}documents/plainid.pdf) en demo gegeven.
 
 ![plainid]({{< param baseDirectory >}}images/plainid.png)
@@ -19,3 +18,4 @@ Ten opzichte van Styra onderscheidt PlainID zich op een aantal vlakken.
 - Voor deployment van de policies worden de bestaande Git deployment pipelines van de organisatie gebruikt. Als ik het goed begrijp kan PlainID dus gezien worden als een 'editor' die synchroniseert met onderliggende Git-repositories.
 
 Zie ook de [PlainID brochure]({{< param baseDirectory >}}documents/plainid.pdf).
+{{< /chapter/section >}}

@@ -1,11 +1,9 @@
 ---
 weight: 50
-bookCollapseSection: true
+type: 'chapter'
 title: "Datastelsels"
 ---
-
-# Datastelsels
-
+{{< chapter/section title="Datastelsels" level="1" >}}
 Er bestaan al een heel aantal datastelsels. Deze zijn ingericht voor een specifiek domein, en bevatten vaak ook
 domeinspecifieke kennis. Dit in tegenstelling tot FDS en FTV, die generieke standaarden en functionaliteiten biedt.
 Hieronder inventarisatie van de bestaande datastelsels en de door hen gekozen methodiek van toegangsverlening.
@@ -23,5 +21,4 @@ Hieronder inventarisatie van de bestaande datastelsels en de door hen gekozen me
 | [iWlz](https://www.istandaarden.nl/iwlz)                                                                     | Zorginstituut Nederland (ZIN)                          | Ja, OPA.                                                                                                   |
 | [Datastelsel verduurzaming utiliteit (DVU) ](https://www.platformduurzamehuisvesting.nl/dvu/)                                                                 | Platform Duurzame Huisvesting                          | via iSHARE                                                                                                 |
 |  [SURFconext](https://servicedesk.surf.nl/wiki/spaces/WIKI/pages/117179235/SURFconext)                                                                                                                                                             | [Stichting SURF](https://www.surf.nl/)                                         | [Ja](https://servicedesk.surf.nl/wiki/spaces/IAM/pages/128910055/Autorisatieregels)                                                                                                         |
-
-
+{{< /chapter/section >}}

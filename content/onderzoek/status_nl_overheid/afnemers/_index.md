@@ -1,11 +1,10 @@
 ---
 weight: 40
 bookCollapseSection: true
+type: 'chapter'
 title: "Afnemers"
 ---
-
-# Afnemers
-
+{{< chapter/section title="Afnemers" >}}
 Onder afnemers verstaan we de partijen die verwerkingen doen op de registers van de aanbieders. Dat zijn alle partijen die gegevens nodig hebben voor
 informatievoorziening of besluitvorming, zoals een dienst toeslagen. En ook de organisaties die gegevens aanleveren, zoals een gemeente die een verhuizing registreert.
 
@@ -29,3 +28,4 @@ Een aantal gemeenten gaan ook zelf aan de slag met EAM. Hieronder een overzicht 
 | Utrecht          | Zaakgericht Werken | In ontwikkeling  |
 | Den Haag         |                    |                  |
 | Rotterdam        |                    |                  |
+{{< /chapter/section >}}

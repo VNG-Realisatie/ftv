@@ -22,7 +22,7 @@ De [werkgroep]({{< relref "meedoen/werkgroep" >}}) praat over de opzet, keuzes e
 
 **Ga aan de slag met OpenFTV**
 
-Wil je ervaren wat FTV betekent voor jouw organisatie? Experimenteer dan met [OpenFTV]({{< param baseDirectory >}}docs/toepassen/openftv).
+Wil je ervaren wat FTV betekent voor jouw organisatie? Experimenteer dan met [OpenFTV](/ftv/toepassen/openftv).
 
 **Praat mee**
 

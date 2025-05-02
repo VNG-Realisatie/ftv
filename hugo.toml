@@ -9,7 +9,8 @@ baseURL = "https://vng-realisatie.github.io/ftv/"
             unsafe = true
 [params]
     subtitle = 'Standaard voor vertrouwde toegang binnen het Federatief Datastelsel'
-    baseDirectory = '/'
+    baseDirectory = '/ftv/'
     [params.footer]
         title = 'Standaard voor vertrouwde toegang binnen het Federatief Datastelsel'
-    
+    [params.hero]
+        subtitle = 'Omdat we in de toekomst ook op een veilige en gecontroleerde wijze toegang tot gegevens willen beheren, gebaseerd op duidelijke afspraken.'
