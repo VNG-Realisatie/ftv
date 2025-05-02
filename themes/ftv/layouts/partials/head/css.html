@@ -2,7 +2,7 @@
   <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/main.css">
   <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/swiper-bundle.min.css">
 {{- else }}
-  {{- with . | minify | fingerprint }}
+  {{- with . }}
     <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/main.css" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/swiper-bundle.min.css" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
   {{- end }}
