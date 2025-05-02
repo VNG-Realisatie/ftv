@@ -1,0 +1,58 @@
+{{/* Define the mapping from English to Dutch month abbreviations */}}
+{{ $months := dict
+    "Jan" "jan"
+    "Feb" "feb"
+    "Mar" "mrt"
+    "Apr" "apr"
+    "May" "mei"
+    "Jun" "jun"
+    "Jul" "jul"
+    "Aug" "aug"
+    "Sep" "sep"
+    "Oct" "okt"
+    "Nov" "nov"
+    "Dec" "dec"
+}}
+
+<div class="w-[1024px] mx-auto grid grid-cols-1 my-10">
+    <div class="py-6">
+        <h2 class="nl-heading nl-heading--level-2 rhc-heading">Actueel</h2>
+        <p class="utrecht-paragraph text-rhc-primary">Hier moet nog wat tekst komen</p>
+    </div>
+    <div class="flex justify-between px-6 gap-2.5 h-[150px]">
+        {{ $data := dict }}
+        {{ $path := "data/agenda.yaml" }}
+        {{ with resources.Get $path }}
+            {{ with . | transform.Unmarshal }}
+                {{ $data = . }}
+            {{ end }}
+        {{ else }}
+            {{ errorf "Unable to load %q" $path }}
+        {{ end }}
+        {{ range first 3 (sort $data "datum" "asc") }}
+        <a href="{{ .link }}" target="_blank" rel="noopener noreferrer">
+                <div class="h-[100px] flex">
+                    <div class="w-[72px] text-center">
+                        <div class="w-[72px] h-[72px] border mx-auto flex flex-col border-b-rhc-primary">
+                            <span class="nl-heading nl-heading--level-3 rhc-heading">{{ dateFormat "02" .datum }}</span>
+                            {{ $engMonth := dateFormat "Jan" .datum }}
+                            {{ $nlMonth := index $months $engMonth | default $engMonth }}
+                            <span class="utrecht-paragraph--small">{{ $nlMonth }}</span>
+                        </div>
+                    </div>
+                    <div class="px-6">
+                        <h3 class="nl-heading nl-heading--level-3 rhc-heading">{{ .titel }}</h3>
+                        <div class="utrecht-paragraph--small flex flex-row gap-2.5 my-2.5">
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-clock-hour-8"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 12l-3 2" /><path d="M12 7v5" /></svg>
+                            <span>10:00 - 11:00</span>
+                        </div>
+                        <div class="utrecht-paragraph--small flex flex-row gap-2.5">
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-map-pin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" /></svg>
+                            <span>De vloer / Digilab</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        {{ end }}
+    </div>
+</div>

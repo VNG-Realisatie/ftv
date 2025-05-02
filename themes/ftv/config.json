@@ -1,0 +1,13 @@
+{
+  "source": ["assets/css/tokens/**/*.json"],
+  "platforms": {
+    "scss": {
+      "transformGroup": "css",
+      "buildPath": "assets/css/",
+      "files": [{
+        "destination": "ftv-design-token.css",
+        "format": "css/variables"
+      }]
+    }
+  }
+}

@@ -1,0 +1,38 @@
+<div class="w-full bg-rhc-color-mosgroen-50 py-6">
+    <div class="w-[1024px] mx-auto flex flex-col gap-2.5 swiper swiperHoe">
+        <div class="w-full">
+            <h4 class="nl-heading nl-heading--level-4 rhc-heading">Hoe werkt het als FTV geimplementeerd is?</h4>
+        </div>
+        <div id="carousel" class="swiper-wrapper w-full mt-2.5 flex">
+            <div class="swiper-slide py-6 w-[480px] flex gap-2.5 flex-col">
+                <img src="images/Tax authorities office building.png" alt="Belastingkantoor" />
+                <p class="hoe-werkt-het-paragraph mt-2.5">
+                    Een Nederlandse gemeente kan via FTV veilig en gecontroleerd gegevens delen met zowel de Belastingdienst als een Europese belastingautoriteit, zonder voor elke partij aparte systemen of contracten te hoeven beheren.
+                </p>
+            </div>
+            <div class="swiper-slide p-6 w-[480px] flex gap-2.5 flex-col">
+                <img src="images/student loans investigation.png" alt="Belastingkantoor" />
+                <p class="hoe-werkt-het-paragraph mt-2.5">
+                    DUO kan via FTV geverifieerde onderwijsgegevens delen met ministeries voor beleidsdoeleinden, zonder dat deze instanties rechtstreeks toegang krijgen tot de studentendossiers.
+                </p>
+            </div>
+            <div class="swiper-slide p-6 w-[480px] flex gap-2.5 flex-col">
+                <img src="images/Gemeentehuis in Haarlem.png" alt="Belastingkantoor" />
+                <p class="hoe-werkt-het-paragraph mt-2.5">
+                    Een gemeente kan via FTV veilig inkomensgegevens van inwoners opvragen bij de Belastingdienst voor het beoordelen van kwijtschelding van gemeentelijke belastingen, zonder aparte systemen en koppelingen.
+                </p>
+            </div>
+        </div>
+        <div class="swiper-pagination mt-2.5"></div>
+    </div>
+    <script>
+        var swiper = new Swiper(".swiperHoe", {
+            slidesPerView: 2,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+</div>

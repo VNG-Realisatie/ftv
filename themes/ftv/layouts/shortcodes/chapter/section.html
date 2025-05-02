@@ -1,0 +1,17 @@
+<div class="py-2 w-[1024px] mx-auto">
+    {{ $level := .Get "level" | default 2 }}
+    {{ if or (lt (int $level) 1) (gt (int $level) 6) }}
+        {{ $level = 2 }}
+    {{ end }}
+
+    <h{{ $level }} class="nl-heading nl-heading--level-{{ $level }} rhc-heading">{{ .Get "title" }}</h{{ $level }}>
+    <div class="section">
+        {{ $content := .Inner | $.Page.RenderString }}
+        {{ $hasP := findRE "<p\\s" $content }}
+        {{ if $hasP }}
+            {{ $content | safeHTML }}
+        {{ else }}
+            <p class="utrecht-paragraph pt-2">{{ $content | safeHTML }}</p>
+        {{ end }}
+    </div>
+</div>

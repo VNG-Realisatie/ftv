@@ -1,0 +1,20 @@
+<div class="flex bg-rhc-primary h-[90px]">
+    <div class="grid grid-cols-[70px_auto] grid-rows-1 ml-25">
+        <div class="content-center w-15 p-1">
+            <img class="mx-auto w-45px" src="{{ relURL "beeldmerk iii.svg" }}" alt="FTV Beeldmerk" />
+        </div>
+        <div class="content-center">
+            <p class="rhc-header-4">
+                {{ .Site.Title }}
+            </p>
+            <p class="rhc-header-5">
+                {{ .Site.Params.subtitle }}
+            </p>
+        </div>
+    </div>
+</div>
+<div class="grow h-[16px] bg-ftv-green">
+
+</div>
+
+{{ partial "menu.html" }}

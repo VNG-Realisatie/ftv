@@ -1,0 +1,65 @@
+- naam: "Digilab"
+  link: "https://digilab.overheid.nl/"
+  size: 128
+  alt_text: "Digilab"
+  logo: "logos/digilab.svg"
+- naam: "Geonovum"
+  link: "https://www.geonovum.nl/"
+  size: 128
+  alt_text: "Geonovum"
+  logo: "logos/geonovum.svg"
+- naam: "Rijksoverheid"
+  link: "https://www.rijksoverheid.nl/"
+  size: 224
+  alt_text: "Rijksoverheid"
+  logo: "logos/rijkslint.png"
+- naam: "Ministerie van Binnenlandse Zaken en Koninkrijksrelaties"
+  link: "https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties"
+  size: 224
+  alt_text: "Ministerie van Binnenlandse Zaken en Koninkrijksrelaties"
+  logo: "logos/min-az.png"
+- naam: "Zorginstituut Nederland"
+  link: "https://www.zorginstituutnederland.nl/"
+  size: 224
+  alt_text: "https://www.zorginstituutnederland.nl/"
+  logo: "logos/zorginstituut.png"
+- naam: "Autoriteit Consument en Markt"
+  link: "https://www.acm.nl/"
+  size: 128
+  alt_text: "https://www.acm.nl/"
+  logo: "logos/acm.svg"
+- naam: "Nuts"
+  link: "https://nuts.nl/"
+  size: 128
+  alt_text: "Stichting Nuts"
+  logo: "logos/nuts.svg"
+- naam: "Van én voor de zorg"
+  link: "https://www.vecozo.nl/"
+  size: 128
+  alt_text: "VECOZO: Van én voor de zorg"
+  logo: "logos/vecozo.svg"
+- naam: "ArchiXL"
+  link: "https://www.archixl.nl/"
+  size: 128
+  alt_text: "ArchiXL"
+  logo: "logos/archixl.svg"
+- naam: "iSHARE"
+  link: "https://ishare.eu/"
+  size: 128
+  alt_text: "iSHARE"
+  logo: "logos/ishare.svg"
+- naam: "Zicht op Nederland"
+  link: "https://zichtopnl.nl/"
+  size: 224
+  alt_text: "Zicht op Nederland"
+  logo: "logos/zon.svg"
+- naam: "VNG"
+  link: "https://vng.nl/"
+  size: 128
+  alt_text: "Vereniging van Nederlandse Gemeenten"
+  logo: "logos/vng.svg"
+- naam: "IDEMIA"
+  link: "https://www.idemia.com/"
+  size: 128
+  alt_text: "IDEMIA"
+  logo: "logos/idemia.svg"
