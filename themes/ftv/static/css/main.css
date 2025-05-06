@@ -22746,6 +22746,7 @@
   margin-block-start: var(--utrecht-unordered-list-item-margin-block-start);
   padding-inline-start: var(--utrecht-unordered-list-item-padding-inline-start);
   list-style-type: disc;
+  line-height: var(--utrecht-unordered-list-line-height);
 }
 .section > ol {
   color: var(--utrecht-paragraph-color, var(--utrecht-document-color, inherit));
@@ -22760,6 +22761,7 @@
   padding-inline-start: var(--utrecht-ordered-list-item-padding-inline-start);
   list-style-type: decimal;
   font-size: var(--utrecht-paragraph-font-size, var(--utrecht-document-font-size, inherit));
+  line-height: var(--utrecht-ordered-list-line-height);
 }
 .section > h3, h4, h5, h6 {
   padding-top: 0.5em;
