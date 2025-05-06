@@ -28,7 +28,7 @@ Vanaf stap 2 is de rol van developers essentieel. Zij bouwen, testen en implemen
 {{< /chapter/section >}}
 
 {{< chapter/section title="Het stappenplan" >}}
-#### Stap 1. Use case
+#### Stap 1. Formuleer de use case
 
 Formuleer eerst de use cases. Doe dit samen met alle stakeholders, zoals de applicatie/register-eigenaar, beveiligingsverantwoordelijke, beheerder en ontwikkelaar. Zo ontstaat een duidelijk afgebakend doel: wie moet welke taak kunnen uitvoeren en wanneer?
 
@@ -49,7 +49,7 @@ Door de regels nu al in deze termen te omschrijven van subject, actie, resource 
 
 Bijvoorbeeld: een zaakbehandelaar (subject) mag een huurtoeslagzaak (resource) afsluiten (actie) als hij (of zij) afdelingshoofd is en de zaakstatus ‘klaar om af te sluiten’ is (context).
 
-#### Stap 3. Bepaal de Attributen
+#### Stap 3. Bepaal de attributen
 
 In stap 2 zijn de eisen voor toegang beschreven. In stap 3 stap volgt de inventarisatie de attributen die nodig zijn om die eisen uit te voeren.
 
@@ -60,24 +60,24 @@ Voorbeeld:
 
 Bepaal per attribuut of de informatie beschikbaar is voor de beslismodule. Soms zijn extra koppelingen nodig om de gegevens op te halen.
 
-#### Stap 4. Policies schrijven
+#### Stap 4. Schrijf de policies
 
 Als de use case, requirements en attributen beschreven zijn, is duidelijk wat er in de policies moet komen.
 Voor deze technische vertaling van de eerdere stappen naar taken die de software moet uitvoeren, is specialistische kennis nodig, bijvoorbeeld van de regeltaal en van de gegevensmodellen van subject, actie, resource en context. Zijn de specificaties goed uitgewerkt? Dan is vooraf al duidelijk of de policies technisch haalbaar zijn.
 
-#### Stap 5. Test van de toegangsregels
+#### Stap 5. Test de toegangsregels
 
 Goede tests beginnen met slimme testdata. De testset moet zoveel mogelijk situaties afdekken: gevallen waarin toegang wél toegestaan is en situaties waarin dat niet zo is.
 Het samenstellen van die testdata is een taak voor een businessanalist. Een ontwikkelaar zet de testdata en verwachte uitkomsten in een systeem. Daarna is het mogelijk om de tests automatisch uit te voeren, zo vaak als nodig. Bijvoorbeeld na het opstellen of wijziging van de regel, na aanpassingen in andere regels die invloed  hebben of bij een verandering in de API’s.
 
-#### Stap 6: Richt de infrastructuur in
+#### Stap 6. Richt de infrastructuur in
 
 In deze stap wordt de gekozen beslismodule (PDP) neergezet (deployed) en aangesloten op de juiste toegangshekken (PEPs).  Check vooraf of de gekozen componenten goed op elkaar aansluiten. Zie ook de checklist bij [Softwarekeuze](../softwarekeus).
 
 De PEP kan deel uitmaken van een applicatie, een API, of een API-gateway. Zolang de component volgens de AuthZEN NL Gov standaard gebouwd is, is er weinig extra programmeerwerk nodig voor de aansluiting.
 Het deployen van de PDP vergt kennis van de infrastructuur (cloud infra, helm, kubernetes).
 
-#### Stap 7: Zorg voor distributie van regels
+#### Stap 7. Zorg voor distributie van regels
 
 Regels worden centraal beheerd, maar moeten terechtkomen bij alle systemen die ze gebruiken. De infrastructuur bepaalt op basis van doelbinding welke regels waar nodig zijn.
 De beslissystemen krijgen zo alleen relevante regels en altijd de nieuwste versie. Dit is belangrijk voor goede prestaties: regels worden vaak uitgevoerd en veel minder vaak aangepast.
