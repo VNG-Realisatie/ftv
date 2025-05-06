@@ -28,14 +28,14 @@ Vanaf stap 2 is de rol van developers essentieel. Zij bouwen, testen en implemen
 {{< /chapter/section >}}
 
 {{< chapter/section title="Het stappenplan" >}}
-#### 1. Use case
+#### Stap 1. Use case
 
 Formuleer eerst de use cases. Doe dit samen met alle stakeholders, zoals de applicatie/register-eigenaar, beveiligingsverantwoordelijke, beheerder en ontwikkelaar. Zo ontstaat een duidelijk afgebakend doel: wie moet welke taak kunnen uitvoeren en wanneer?
 
 Voorbeeld: Bij het beoordelen van een aanvraag voor huurtoeslag haalt een medewerker persoonsgegevens op uit verschillende bronnen. Niet elke medewerker mag dat: alleen degene die de aanvraag behandelt én bevoegd is voor het bedrag, mag de gegevens bekijken.
 
 
-#### 2. Beschrijf de requirements
+#### Stap 2. Beschrijf de requirements
 
 Omschrijf welke eisen (requirements) gelden voor toegang tot gegevens.Dit zijn de regels waaraan de gegevensuitwisseling gebonden is, dus die straks in de regelbestanden gaan komen. Deze eisen worden straks in de toegangsregels verwerkt.
 Gebruik bij de omschrijving de termen:
@@ -49,7 +49,7 @@ Door de regels nu al in deze termen te omschrijven van subject, actie, resource 
 
 Bijvoorbeeld: een zaakbehandelaar (subject) mag een huurtoeslagzaak (resource) afsluiten (actie) als hij (of zij) afdelingshoofd is en de zaakstatus ‘klaar om af te sluiten’ is (context).
 
-#### 3. Bepaal de Attributen
+#### Stap 3. Bepaal de Attributen
 
 In stap 2 zijn de eisen voor toegang beschreven. In stap 3 stap volgt de inventarisatie de attributen die nodig zijn om die eisen uit te voeren.
 
@@ -60,7 +60,7 @@ Voorbeeld:
 
 Bepaal per attribuut of de informatie beschikbaar is voor de beslismodule. Soms zijn extra koppelingen nodig om de gegevens op te halen.
 
-#### 4. Policies schrijven
+#### Stap 4. Policies schrijven
 
 Als de use case, requirements en attributen beschreven zijn, is duidelijk wat er in de policies moet komen.
 Voor deze technische vertaling van de eerdere stappen naar taken die de software moet uitvoeren, is specialistische kennis nodig, bijvoorbeeld van de regeltaal en van de gegevensmodellen van subject, actie, resource en context. Zijn de specificaties goed uitgewerkt? Dan is vooraf al duidelijk of de policies technisch haalbaar zijn.
