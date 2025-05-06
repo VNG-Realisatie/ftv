@@ -32,14 +32,14 @@ Vanaf stap 2 is de rol van developers essentieel. Zij bouwen, testen en implemen
 {{< chapter/section title="Het stappenplan" >}}
 #### Stap 1. Formuleer de use case
 
-Formuleer eerst de use cases. Doe dit samen met alle stakeholders, zoals de applicatie/register-eigenaar, beveiligingsverantwoordelijke, beheerder en ontwikkelaar. Zo ontstaat een duidelijk afgebakend doel: wie moet welke taak kunnen uitvoeren en wanneer?
+Formuleer eerst de use case. Doe dit samen met alle stakeholders, zoals de applicatie/register-eigenaar, beveiligingsverantwoordelijke, beheerder en ontwikkelaar. Zo ontstaat een duidelijk afgebakend doel: wie moet welke taak kunnen uitvoeren en wanneer?
 
 Voorbeeld: Bij het beoordelen van een aanvraag voor huurtoeslag haalt een medewerker persoonsgegevens op uit verschillende bronnen. Niet elke medewerker mag dat: alleen degene die de aanvraag behandelt én bevoegd is voor het bedrag, mag de gegevens bekijken.
 
 
 #### Stap 2. Beschrijf de requirements
 
-Omschrijf welke eisen (requirements) gelden voor toegang tot gegevens.Dit zijn de regels waaraan de gegevensuitwisseling gebonden is, dus die straks in de regelbestanden gaan komen. Deze eisen worden straks in de toegangsregels verwerkt.
+Omschrijf welke eisen (requirements) gelden voor toegang tot gegevens. Deze eisen worden straks in de toegangsregels verwerkt.
 Gebruik bij de omschrijving de termen:
 
 1.	subject (wie vraagt toegang)
@@ -47,17 +47,17 @@ Gebruik bij de omschrijving de termen:
 3.	resource (waar gaat het om)
 4.	context (onder welke omstandigheden)
 
-Door de regels nu al in deze termen te omschrijven van subject, actie, resource en context uit te drukken, wordt het schrijven later eenduidig en overzichtelijk.
+Door de regels nu al in deze termen uit te drukken, wordt het schrijven later eenduidig en overzichtelijk.
 
-Bijvoorbeeld: een zaakbehandelaar (subject) mag een huurtoeslagzaak (resource) afsluiten (actie) als hij (of zij) afdelingshoofd is en de zaakstatus ‘klaar om af te sluiten’ is (context).
+Voorbeeld: een zaakbehandelaar (subject) mag een huurtoeslagzaak (resource) afsluiten (actie) als hij (of zij) afdelingshoofd is en de zaakstatus ‘klaar om af te sluiten’ is (context).
 
 #### Stap 3. Bepaal de attributen
 
-In stap 2 zijn de eisen voor toegang beschreven. In stap 3 stap volgt de inventarisatie de attributen die nodig zijn om die eisen uit te voeren.
+In stap 2 zijn de eisen voor toegang beschreven. In stap 3 stap volgt de inventarisatie van de attributen die nodig zijn om die eisen uit te voeren.
 
 Voorbeeld:
 
-1. ‘Aafdelingshoofd’  is een attribuut van het subject ‘medewerker’
+1. ‘Afdelingshoofd’ is een attribuut van het subject ‘medewerker’
 2. ‘Zaakstatus’ is een attribuut van de resource ‘zaak’
 
 Bepaal per attribuut of de informatie beschikbaar is voor de beslismodule. Soms zijn extra koppelingen nodig om de gegevens op te halen.
@@ -65,7 +65,7 @@ Bepaal per attribuut of de informatie beschikbaar is voor de beslismodule. Soms 
 #### Stap 4. Schrijf de policies
 
 Als de use case, requirements en attributen beschreven zijn, is duidelijk wat er in de policies moet komen.
-Voor deze technische vertaling van de eerdere stappen naar taken die de software moet uitvoeren, is specialistische kennis nodig, bijvoorbeeld van de regeltaal en van de gegevensmodellen van subject, actie, resource en context. Zijn de specificaties goed uitgewerkt? Dan is vooraf al duidelijk of de policies technisch haalbaar zijn.
+Voor deze technische vertaling van de eerdere stappen naar taken die de software moet uitvoeren, is specialistische kennis nodig. Bijvoorbeeld van de regeltaal en van de gegevensmodellen van subject, actie, resource en context. Zijn de specificaties goed uitgewerkt? Dan is vooraf al duidelijk of de policies technisch haalbaar zijn.
 
 #### Stap 5. Test de toegangsregels
 
@@ -76,7 +76,7 @@ Het samenstellen van die testdata is een taak voor een businessanalist. Een ontw
 
 In deze stap wordt de gekozen beslismodule (PDP) neergezet (deployed) en aangesloten op de juiste toegangshekken (PEPs).  Check vooraf of de gekozen componenten goed op elkaar aansluiten. Zie ook de checklist bij [Softwarekeuze](../softwarekeus).
 
-De PEP kan deel uitmaken van een applicatie, een API, of een API-gateway. Zolang de component volgens de AuthZEN NL Gov standaard gebouwd is, is er weinig extra programmeerwerk nodig voor de aansluiting.
+De PEP kan deel uitmaken van een applicatie, een API, of een API-gateway. Als de component is gebouwd volgens de AuthZEN NL Gov standaard, is er weinig extra programmeerwerk nodig voor de aansluiting.
 Het deployen van de PDP vergt kennis van de infrastructuur (cloud infra, helm, kubernetes).
 
 #### Stap 7. Zorg voor distributie van regels
