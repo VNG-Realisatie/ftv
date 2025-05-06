@@ -3,13 +3,11 @@ type: 'chapter'
 title: "Regeltalen"
 ---
 {{< chapter/section title="Regeltalen" level="1" >}}
-ABAC/PBAC/ReBac (oftewel) EAM zoals eerder beschreven is een methodiek, een brede beschrijving van een manier van werken, en laat veel vrij over de verdere invulling.
-Een van de invullingen die gegeven moet worden is hoe regels opgesteld worden.
-Toegangsregels moeten door mensen geschreven, beheerd en gelezen kunnen worden, en uitgevoerd kunnen
-worden door machines. Daar is een rechtenexpressietaal (Engels: [Rights Expression Language](https://en.wikipedia.org/wiki/Rights_Expression_Language) of REL) voor nodig.
+ABAC/PBAC/ReBac (oftewel) EAM zoals eerder beschreven is een methodiek, een brede beschrijving van een manier van werken, en laat veel vrij over de verdere invulling. Een van de invullingen die gegeven moet worden is hoe regels opgesteld worden.
 
-De programmatuur die toegangsbeslissingen kan nemen op basis van de regels wordt een policy engine of ook wel zero trust engine genoemd.
-Deze moet passen in de architectuur en infrastructuur van de applicatie of dienst.
+Toegangsregels moeten door mensen geschreven, beheerd en gelezen kunnen worden, en uitgevoerd kunnen worden door machines. Daar is een rechtenexpressietaal (Engels: [Rights Expression Language](https://en.wikipedia.org/wiki/Rights_Expression_Language) of REL) voor nodig.
+
+De programmatuur die toegangsbeslissingen kan nemen op basis van de regels wordt een policy engine of ook wel zero trust engine genoemd. Deze moet passen in de architectuur en infrastructuur van de applicatie of dienst.
 {{< /chapter/section >}}
 
 {{< chapter/section title="Een voorkeur voor 'open'" >}}

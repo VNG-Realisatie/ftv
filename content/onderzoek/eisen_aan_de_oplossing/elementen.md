@@ -3,8 +3,7 @@ type: "chapter"
 title: "Elementen van de oplossing"
 ---
 {{< chapter/section title="Elementen van de oplossingsrichting" level="1">}}
-We beschrijven hier de elementen van een moderne oplossingsrichting, en bekijken van elk of die tegemoet komt aan
-de richtlijnen en/of de bezwaren.
+We beschrijven hier de elementen van een moderne oplossingsrichting, en bekijken van elk of die tegemoet komt aan de richtlijnen en/of de bezwaren.
 {{< /chapter/section >}}
 
 {{< chapter/section title="1. Vertrouwensraamwerken" >}}
@@ -21,7 +20,9 @@ Vertrouwde derde partijen geven certificaten uit, waarmee aanbieders de identite
 ook als ze de afnemer niet a priori kennen. In deze opzet is het niet nodig voor elke afnemer-aanbieder een vooraf 
 vastgelegd contract te hebben. Dit scheelt in beheerslast bij schaalvergroting, en komt daarmee tegemoet aan bezwaar 2 (bewerkelijk).
 
-### Verifieerbare verklaringen
+{{< /chapter/section >}}
+
+{{< chapter/section title="Verifieerbare verklaringen" level="3">}}
 
 Het gebruik van verifieerbare verklaringen (richtlijn 3) past in vertrouwensraamwerken.
 
@@ -30,7 +31,7 @@ en bepaalt de aanbieder aan de hand van die combinatie de regels. De regels word
 Dit vereist dat aanbieder en afnemer dezelfde aanduiding gebruiken voor subject, dus dezelfde lijsten met personen en rollen.
 Partijen moeten elkaar dus kennen voordat gegevens uitgewisseld kunnen worden.
 
-![2.2wallet.png]({{< param baseDirectory >}}images/2.2verklaringen.png)
+{{< img-url "images/2.2verklaringen.png" "Diagram verklaringen" >}}
 
 In een federatief stelsel werkt dit net anders. De afnemer haalt vooraf zogenaamde verifieerbare verklaringen op. 
 Deze verklaringen worden afgegeven door een door het stelsel vertrouwde derde partij. De afnemer stuurt de verklaring
@@ -41,7 +42,9 @@ de persoon te kennen. Ook dit komt tegemoet aan bezwaar 2 (bewerkelijk).
 Let op dat certificaten en verklaring niet hetzelfde zijn, maar elkaar aanvullen. Certificaten gaan over controleerbare
 identiteit, en verklaringen over bevoegdheid. Zoals op een rijbewijs de pasfoto enerzijds en de aantekening 'B' anderzijds.
 
-### 2. Mens én machineleesbare toegangsregels
+{{< /chapter/section >}}
+
+{{< chapter/section title="2. Mens én machineleesbare toegangsregels" level="2">}}
 
 Door toegangsregels vast te leggen in een gestandaardiseerd formaat buiten de applicatie-code 
 wordt het makkelijker om het beleid aan te passen, omdat er geen applicatie-code aangepast hoeft te worden.
@@ -51,13 +54,17 @@ wordt de flexibiliteit en verifieerbaarheid beter.
 
 Deze regels komen daarmee tegemoet aan bezwaren 3 (flexibiliteit) en 4 (verifieerbaarheid).
 
-### 3.Externalized access management
+{{< /chapter/section >}}
+
+{{< chapter/section title="3.Externalized access management" level="2">}}
 
 EAM is een verzamelnaam van methodieken voor toegangsverlening die een aantal elementen combineert, waaronder:
 - Toegangsregels worden in aparte machine-uitvoerbare bestanden vastgelegd, dat tegemoet komt aan bezwaren 3 (flexibiliteit) en 4 (verifieerbaarheid) en richtlijn 4 (automatisering contractering).
 - De context (locatie, tijd, etc.) kan worden gebruikt in toegangsregels, richtlijn 1 (contextuele toegangscontrole).
+  
+{{< /chapter/section >}}
 
-### 4. Een standaardmethodiek vastleggen en uitleggen
+{{< chapter/section title="4. Een standaardmethodiek vastleggen en uitleggen" level="2">}}
 
 Bezwaar 5 wordt geadresseerd door een überhaupt een standaard te hebben, die formele status heeft bij de NL overheid.
 

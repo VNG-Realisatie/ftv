@@ -1,5 +1,6 @@
 ---
 title: "Eisen aan de oplossing"
+type: 'chapter'
 ---
 {{< chapter/section title="Eisen aan de oplossing" level="1" >}}
 Om te komen tot een toekomstvaste oplossingsrichting kijken we naar de volgende richtlijen:

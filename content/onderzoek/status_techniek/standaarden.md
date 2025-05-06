@@ -1,4 +1,5 @@
 ---
+type: 'chapter'
 weight: 30
 title: "Standaarden"
 ---
