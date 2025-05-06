@@ -15,7 +15,7 @@ Een goede toegangsoplossing begint bij duidelijke keuzes. In stap 1 wordt bepaal
 
 ### Voor IT-managers
 
-Van use case tot distributie: IT-managers en architecten zijn betrokken bij alle stappen in dit plan. Denk aan het vertalen van beleid naar eisen, het inrichten van beheerprocessen, en het bewaken van samenhang tussen componenten. Het stappenplan helpt om technisch én organisatorisch grip te houden op het geheel.
+Van use case tot distributie: IT-managers en architecten zijn betrokken bij alle stappen in dit plan. Denk aan het vertalen van beleid naar eisen, het inrichten van beheerprocessen en het bewaken van samenhang tussen componenten. Het stappenplan helpt om technisch én organisatorisch grip te houden op het geheel.
 
 ### Voor juristen
 
