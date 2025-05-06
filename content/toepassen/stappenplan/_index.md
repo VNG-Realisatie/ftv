@@ -80,5 +80,5 @@ Het deployen van de PDP vergt kennis van de infrastructuur (cloud infra, helm, k
 #### Stap 7: Zorg voor distributie van regels
 
 Regels worden centraal beheerd, maar moeten terechtkomen bij alle systemen die ze gebruiken. De infrastructuur bepaalt op basis van doelbinding welke regels waar nodig zijn.
-De beslissystemen krijgen zo alleen relevante regels en altijd de nieuwste versie. Dit is belangrijk voor goede prestaties: regels worden  vaak uitgevoerd, en veel minder vaak aangepast.
+De beslissystemen krijgen zo alleen relevante regels en altijd de nieuwste versie. Dit is belangrijk voor goede prestaties: regels worden vaak uitgevoerd en veel minder vaak aangepast.
 {{< /chapter/section >}}
