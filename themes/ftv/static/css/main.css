@@ -251,8 +251,14 @@
   .table {
     display: table;
   }
+  .h-\[14px\] {
+    height: 14px;
+  }
   .h-\[16px\] {
     height: 16px;
+  }
+  .h-\[18px\] {
+    height: 18px;
   }
   .h-\[38px\] {
     height: 38px;
@@ -292,6 +298,12 @@
   }
   .w-15 {
     width: calc(var(--spacing) * 15);
+  }
+  .w-\[14px\] {
+    width: 14px;
+  }
+  .w-\[18px\] {
+    width: 18px;
   }
   .w-\[72px\] {
     width: 72px;
