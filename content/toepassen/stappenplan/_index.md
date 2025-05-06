@@ -4,7 +4,7 @@ type: 'chapter'
 ---
 {{< chapter/section title="Stappenplan" >}}
 Het opstellen van toegangsregels vraagt om samenwerking tussen verschillende rollen.
-Juristen, ontwikkelaars en IT-architecten kijken ieder vanuit hun eigen perspectief naar wat nodig is.
+Bestuudersm juristen, IT-architecten en developers kijken ieder vanuit hun eigen perspectief naar wat nodig is.
 Door de stappen te volgen ontstaat een set regels die klopt: juridisch, functioneel én technisch.
 
 Dit stappenplan beschrijft zeven stappen om van een use case tot een goed werkende en uitvoerbare toegangsregel te komen. Het helpt om het proces gestructureerd aan te pakken en in elke fase de juiste keuzes te maken en de juiste rollen te betrekken.
