@@ -13,13 +13,15 @@ Dit stappenplan beschrijft zeven stappen om van een use case tot een goed werken
 
 Een goede toegangsoplossing begint bij duidelijke keuzes. In stap 1 wordt bepaald wie toegang nodig heeft tot welke gegevens en onder welke voorwaarden. Dit vraagt om heldere afspraken, draagvlak en een afbakening van verantwoordelijkheden. Zo ontstaat een stevige basis voor de technische uitwerking van FTV.
 
+### Voor juristen
+
+Juristen zijn betrokken bij het formuleren van de use case en het vastleggen van de voorwaarden (requirements). Daarmee wordt duidelijk wie toegang mag krijgen, op basis van welk wetsartikel dat mag en onder welke omstandigheden. Daarna wordt deze input technisch uitgewerkt.
+
+
 ### Voor IT-managers
 
 Van use case tot distributie: IT-managers en architecten zijn betrokken bij alle stappen in dit plan. Denk aan het vertalen van beleid naar eisen, het inrichten van beheerprocessen en het bewaken van samenhang tussen componenten. Het stappenplan helpt om technisch én organisatorisch grip te houden op het geheel.
 
-### Voor juristen
-
-Juristen zijn betrokken bij het formuleren van de use case en het vastleggen van de voorwaarden (requirements). Daarmee wordt duidelijk wie toegang mag krijgen, op basis van welk wetsartikel dat mag en onder welke omstandigheden. Daarna wordt deze input technisch uitgewerkt.
 
 ### Voor developers
 
