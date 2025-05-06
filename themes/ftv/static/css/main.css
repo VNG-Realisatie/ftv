@@ -22,6 +22,7 @@
     --color-rhc-color-oranje-200: var(--rhc-color-oranje-200, #F1BE8C);
     --color-rhc-color-mosgroen-50: var(--rhc-color-mosgroen-50, #EBEBD9);
     --color-rhc-color-grijs-50: #F8FAFC;
+    --color-rhc-color-grijs-200: #E2E8F0;
     --color-rhc-color-lintblauw-50: #B8C6D5;
   }
 }
@@ -393,6 +394,9 @@
   }
   .bg-rhc-color-grijs-50 {
     background-color: var(--color-rhc-color-grijs-50);
+  }
+  .bg-rhc-color-grijs-200 {
+    background-color: var(--color-rhc-color-grijs-200);
   }
   .bg-rhc-color-lintblauw-50 {
     background-color: var(--color-rhc-color-lintblauw-50);
