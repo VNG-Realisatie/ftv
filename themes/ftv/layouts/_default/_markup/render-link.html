@@ -1,4 +1,4 @@
 <a class="external nl-link rhc-link" href="{{ .Destination | safeURL }}" {{ with .Title}} title="{{ . }}" {{ end }}
    {{ if strings.HasPrefix .Destination "http" }} target="_blank"{{ end }}>{{ .Text }}{{ if strings.HasPrefix .Destination "http" }}
-    <img src="/ftv/images/external.svg" class="w-[18px] h-[18px] my-auto">{{ end }}
+    <img src="/ftv/images/external.svg" class="w-[18px] h-[18px] my-auto" >{{ end }}
 </a>
