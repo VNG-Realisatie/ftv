@@ -9,7 +9,7 @@ Het project Federatieve Toegangsverlening (FTV) richt zich op het ontwikkelen va
 {{< chapter/section title="Opdracht" >}}
 De opdracht aan het project FTV is:
 
->  **Definieer een standaardmethodiek voor toegangsverlening tot API's**
+>  Definieer een standaardmethodiek voor toegangsverlening tot API's
 
 {{< /chapter/section >}}
 
