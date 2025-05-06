@@ -56,7 +56,7 @@ In stap 2 zijn de eisen voor toegang beschreven. In stap 3 stap volgt de inventa
 Voorbeeld:
 
 1. ‘Aafdelingshoofd’  is een attribuut van het subject ‘medewerker’
-2. ‘Zzaakstatus’ is een attribuut van de resource ‘zaak’
+2. ‘Zaakstatus’ is een attribuut van de resource ‘zaak’
 
 Bepaal per attribuut of de informatie beschikbaar is voor de beslismodule. Soms zijn extra koppelingen nodig om de gegevens op te halen.
 
