@@ -1,17 +1,18 @@
 ---
+type: 'chapter'
 title: Voorbeeld milieuzone
 weight: 20
 ---
 
-# FTV in de praktijk
-
-## Handhaving milieuzone met kentekenherkenning
+{{< chapter/section title="FTV in de praktijk - Handhaving milieuzone met kentekenherkenning">}}
 
 Niet elk voertuig mag een milieuzone inrijden. Of een voertuig toegang heeft, hangt af van de regels. 
 Zo mogen bijvoorbeeld alleen dieselcampers van bewoners de milieuzone in, die van anderen niet. 
 De gemeente gebruikt camera’s en databronnen om te controleren of een voertuig terecht toegang heeft.
 
-### Wat gebeurt er?
+{{< /chapter/section >}}
+
+{{< chapter/section title="Wat gebeurt er?">}}
 
 Camera’s registreren een kenteken bij de milieuzone. De gemeente vraagt
 vervolgens gegevens op bij:
@@ -24,7 +25,9 @@ vervolgens gegevens op bij:
   
 De combinatie van de gegevens bepaalt of er een boete volgt.
 
-### Wat zijn de toegangsregels?
+{{< /chapter/section >}}
+
+{{< chapter/section title="Wat zijn de toegangsregels?">}}
 
 FTV gaat over toegangsregels. In dit geval zijn dat bijvoorbeeld:
 
@@ -35,7 +38,9 @@ FTV gaat over toegangsregels. In dit geval zijn dat bijvoorbeeld:
 - Wis direct alle gegevens die niet nodig zijn voor het innen van een boete.
 - Houd een logboek bij van alle opvragingen.
 
-### Wat regelt FTV? ###
+{{< /chapter/section >}}
+
+{{< chapter/section title="Wat regelt FTV?">}}
 
 Alle partijen, hier de gemeentes, RDW en RvIG, hebben eigen software voor gegevensuitwisseling. 
 En dus ook eigen systemen om toegang te controleren. Die autonomie is belangrijk en blijft behouden. 
@@ -43,7 +48,9 @@ Tegelijkertijd is het niet efficiënt als elke organisatie zelf gaat uitzoeken h
 FTV schrijft een methodiek voor waarbij de regels op een standaardmanier opgeschreven, beheerd en gelogd worden.
 De verschillende systemen voeren de regels alleen uit. Ook dat gebeurt op een standaardmanier.
 
-De voordelen:
+{{< /chapter/section >}}
+
+{{< chapter/section title="De voordelen">}}
 
 - **Schaalbaar**. Als een nieuwe gemeente aansluit, dan zijn de regels direct duidelijk en inzetbaar. Zonder hoge kosten, en zonder impact op RDW of RvIG.
 - **Flexibel**. Als de regels veranderen, bijvoorbeeld oudere campers op benzine gaan ook onder de regeling vallen, dan is een centrale
@@ -52,3 +59,4 @@ aanpassing voldoende.
 en gegevens beschikbaar als onderbouwing. Alles volgens AVG en andere privacyrichtlijnen.
 - **Onafhankelijk**. Hetzelfde systeem is inzetbaar voor de uitwisseling met RDW en RvIG. Ontwikkelaars en beheerders hoeven maar met een systeem te leren werken.
 
+{{< /chapter/section >}}

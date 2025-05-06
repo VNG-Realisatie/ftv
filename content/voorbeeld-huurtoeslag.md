@@ -1,14 +1,15 @@
 ---
+type: 'chapter'
 title: Voorbeeld huurtoeslag
 weight: 20
 ---
 
-# FTV in de praktijk: huurtoeslag aanvragen
-
+{{< chapter/section title="FTV in de praktijk - huurtoeslag aanvragen">}}
 Niet iedereen kan zelfstandig passende woonruimte betalen. 
 Daarom ondersteunt de overheid mensen met een lager inkomen via huurtoeslag.
+{{< /chapter/section >}}
 
-### Wat gebeurt er?
+{{< chapter/section title="Wat gebeurt er?" >}}
 
 Een burger doet een aanvraag voor huurtoeslag. Een medewerker van de Dienst Toeslagen beoordeelt vervolgens of deze persoon recht heeft op de huurtoeslag. Daarvoor haalt de medewerker gegevens op bij verschillende bronnen:
 
@@ -19,7 +20,9 @@ Een burger doet een aanvraag voor huurtoeslag. Een medewerker van de Dienst Toes
 
 Op basis van deze gegevens bepaalt de medewerker of de burger recht heeft op huurtoeslag.
 
-### Wat zijn de regels?
+{{< /chapter/section >}}
+
+{{< chapter/section title="Wat zijn de regels?" >}}
 
 Bij het beoordelen van een aanvraag is specialistische kennis nodig. Dienst Toeslagen kan daarom specifieke toegansgregels opstellen, bijvoorbeeld:
 
@@ -29,7 +32,9 @@ Bij het beoordelen van een aanvraag is specialistische kennis nodig. Dienst Toes
 - Niet-persoonlijke gegevens worden bijgehouden in een logboek. Persoonlijke informatie blijft alleen opgeslagen in BRP en BRI.
 Het inkomen en de inschrijving worden in het BRI respectievelijk BRP bewaard en zijn altijd weer beschikbaar.
 
-### Wat regelt FTV? ###
+{{< /chapter/section >}}
+
+{{< chapter/section title="Wat regelt FTV?" >}}
 
 - Voor de beoordeling moet het toeslagbedrag vergeleken worden met de bevoegdheid van de beoordelaar. Met een alleen rolgebaseerd 
 systeem kan dit niet. Immers, elke aanvraag kan weer een ander bedrag zijn.
@@ -39,9 +44,13 @@ Daarvoor is geen apart systeem met aparte beheerskennis per applicatie nodig.
 Ook over meerdere toeslagsystemen heen.
 - In geval van hoge werkdruk, ziekte of uit dienst gaan moeten zaken overgedragen worden. Ook dat kan centraal.
 
-### De voordelen ###
+{{< /chapter/section >}}
 
-- Schaalbaar: Nieuwe medewerkers of organisaties kunnen eenvoudig aansluiten zonder extra systemen.
-- Flexibel: Aanpassingen in bevoegdheden en regels kunnen centraal worden geregeld.
-- Traceerbaar: Eerdere beoordelingen zijn altijd inzichtelijk voor controles achteraf.
-- Toekomstbestendig: Klaar voor internationale afspraken en Europese regelgeving.
+{{< chapter/section title="De voordelen" >}}
+
+- **Schaalbaar**: Nieuwe medewerkers of organisaties kunnen eenvoudig aansluiten zonder extra systemen.
+- **Flexibel**: Aanpassingen in bevoegdheden en regels kunnen centraal worden geregeld.
+- **Traceerbaar**: Eerdere beoordelingen zijn altijd inzichtelijk voor controles achteraf.
+- **Toekomstbestendig**: Klaar voor internationale afspraken en Europese regelgeving.
+
+{{< /chapter/section >}}
