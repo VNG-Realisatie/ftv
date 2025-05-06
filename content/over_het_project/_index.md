@@ -3,7 +3,7 @@ Title: Over het project
 type: 'chapter'
 ---
 {{< chapter/header title="Over het project" bg="orange" icon="images/api-icon.svg">}}
-Het project Federatieve Toegangsverlening (FTV) richt zich op het ontwikkelen van een standaard werkwijze voor toegangsverlening bij het uitwisselen van gegevens tussen overheidsorganisaties. Het project is een initiatief van de Generieke Digitale Infrastructuur (GDI) en sluit aan op bredere programma’s zoals het Federatief Datastelsel (FDS) en de Interbestuurlijke Datastrategie (IBDS).
+Het project Federatieve Toegangsverlening (FTV) richt zich op het ontwikkelen van een standaardwerkwijze voor toegangsverlening bij het uitwisselen van gegevens tussen overheidsorganisaties. Het project is een initiatief van de Generieke Digitale Infrastructuur (GDI) en sluit aan op bredere programma’s zoals het Federatief Datastelsel (FDS) en de Interbestuurlijke Datastrategie (IBDS).
 {{< /chapter/header >}}
 
 {{< chapter/section title="Opdracht" >}}
@@ -17,19 +17,24 @@ De opdracht aan het project FTV is:
 De doelstellingen van het project zijn:
 
 1.	Ontwikkelen van een standaard voor toegangsverlening waarmee API’s en hun afnemers beter op elkaar aansluiten.
-2.	Verminderen van de beheerslast door hergebruik van een uniforme techniek..
+2.	Verminderen van de beheerslast door hergebruik van een uniforme techniek.
 3.	De controle op toegangsbeslissingen verbeteren door beleid gestandaardiseerd te implementeren.
 4.	Ondersteunen van het transitiepad van de generieke Digitale Infrastructuur.
 {{< /chapter/section >}}
 
 {{< chapter/section title="Scope" >}}
-De opdracht voor het project is om een standaardmethodiek voor toegangsverlening tot API’s te definiëren, niet om software te bouwen. De focus ligt op toegangsverlening (autorisatie) en niet op identificatie, authenticatie of encryptie. De scope beperkt zich tot geautomatiseerde gegevensuitwisseling via API’s tussen systemen, met nadruk op toepassing binnen de Nederlandse overheid. [Lees meer over de afbakening van de scope van het project](scope).
+We beperken onze scope in hoofdlijnen als:
+
+- De opdracht voor het project is om een standaardmethodiek voor toegangsverlening tot API’s te definiëren, niet om software te bouwen. 
+- De focus ligt op toegangsverlening (autorisatie) en niet op identificatie, authenticatie of encryptie. 
+- Het gaat hier primair om geautomatiseerde gegevensuitwisseling via API’s tussen systemen, in tegenstelling tot mens-systeem interfaces.
+- En het toepassingsgebied is uitwisseling tussen Nederlandse overheidsorganisaties. 
+
+[Lees meer over de afbakening van de scope](scope).
 {{< /chapter/section >}}
 
 {{< chapter/section title="Uitvoering" >}}
-Het Ministerie van Binnenlandse Zaken (MinBZK) verstrekt de subsidie voor het project.
-[VNG Realisatie](https://vng.nl/artikelen/vng-realisatie) voert het project uit in opdracht van MinBZK.
-Voor praktische uitvoering en ondersteuning werkt project FTV samen met [Digilab](https://digilab.overheid.nl/).
+Het Ministerie van Binnenlandse Zaken (MinBZK) verstrekt de subsidie voor het project. [VNG Realisatie](https://vng.nl/artikelen/vng-realisatie) voert het project uit in opdracht van MinBZK. Voor praktische uitvoering en ondersteuning werkt project FTV samen met [Digilab](https://digilab.overheid.nl/).
 {{< /chapter/section >}}
 
 {{< chapter/section title="Planning" >}}

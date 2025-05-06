@@ -11,7 +11,7 @@ De originele opdracht is vrij breed geformuleerd:
 Om dat beter af te kaderen lichten we een aantal woorden uit de opdracht eruit.
 {{< /chapter/section >}}
 
-{{< chapter/section title="Definiëren, niet coderen" >}}
+{{< chapter/section title="Definiëren, niet coderen" level="3">}}
 ***Definieer*** wil zeggen dat er methodiek wordt voorgesteld, en niet per se gerealiseerd.
 Een goede beschrijving van de methode, een breed begrip en draagvlak, en uiteindelijk ook adoptie ervan, dat is het primaire doel.
 Er zullen ook tastbare technische resultaten zijn, om aan te tonen dat de methodiek haalbaar, schaalbaar en veilig is.
@@ -19,13 +19,13 @@ Daarnaast zal een referentie-implementatie gemaakt worden als educatief instrume
 Het is echter expliciet niet de bedoeling om een softwareproduct op te leveren dat in productie genomen kan worden.
 {{< /chapter/section >}}
 
-{{< chapter/section title="Toegangsverlening, niet identificatie of autorisatie" >}}
+{{< chapter/section title="Toegangsverlening, niet identificatie of autorisatie" level="3">}}
 Door het aspect ***toegangsverlening***, oftewel autorisatie, uit te lichten worden expliciet andere aspecten zoals
 identificatie (wie ben jij), authenticatie (bewijs dat) en encryptie (versleutelen als beveiliging tegen afluisteren) buiten beschouwing gelaten.
 Vanzelfsprekend zijn dit wel cruciale aspecten, en daarmee voorwaardelijk aan verantwoorde gegevensuitwisseling als geheel, maar vallen buiten deze scope.
 {{< /chapter/section >}}
 
-{{< chapter/section title="Tot API's" >}}
+{{< chapter/section title="Tot API's"  level="3">}}
 De toevoeging ***tot API's*** beperkt het project tot geautomatiseerde gegevensuitwisseling.
 Het gaat niet over autorisatie via een niet-digitaal medium en ook niet over interacties tussen mens en computer.
 
