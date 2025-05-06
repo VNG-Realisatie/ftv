@@ -5,12 +5,10 @@ type: 'chapter'
 
 {{< chapter/header title="Toepassen" bg="brown">}}
 Het invoeren van de FTV-standaard begint met een goede voorbereiding. Denk aan het maken van afspraken over het beheer en het testen van een oplossing in een proefopstelling. Als ondersteuning zijn praktische handreikingen beschikbaar. Ze geven inzicht in keuzes die gemaakt moeten worden, de stappen richting implementatie en technische mogelijkheden.
-
-Federatieve toegangsverlening raakt meerdere onderdelen van een organisatie. Daarom zijn de handreikingen op deze pagina gericht op verschillende doelgroepen.
 {{< /chapter/header >}}
 
 {{< chapter/section title="Voor bestuurders" >}}
-Een goed werkende FTV-implementatie vraagt om duidelijke keuzes, afspraken en draagvlak. Deze handreikingen helpen om de juiste afwegingen te maken en zicht te houden op het geheel.
+Federatieve toegangsverlening raakt meerdere onderdelen van een organisatie. Daarom zijn de handreikingen op deze pagina gericht op verschillende doelgroepen. Een goed werkende FTV-implementatie vraagt om duidelijke keuzes, afspraken en draagvlak. Deze handreikingen helpen om de juiste afwegingen te maken en zicht te houden op het geheel.
 
 1. **Functionele beschrijving**.
 
