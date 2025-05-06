@@ -23,7 +23,7 @@ Juristen zijn betrokken bij het formuleren van de use case en het vastleggen van
 
 ### Voor developers
 
-Vanaf stap 2 is de rol van developers essentieel. Zij bouwen, testen en implementeren de toegangsregels. Denk aan het schrijven van policies, het samenstellen van testdata en het inrichten van infrastructuur en distributie. Het stappenplan biedt een duidelijke structuur om technisch solide en onderhoudbare oplossingen op te leveren.
+Vanaf stap 2 is de rol van developers essentieel. Zij bouwen, testen en implementeren de toegangsregels. Denk aan het schrijven van policies, het samenstellen van testdata en het inrichten van infrastructuur en distributie. Het stappenplan biedt een duidelijke structuur om technisch solide en makkelijk te onderhouden oplossingen op te leveren.
 
 {{< /chapter/section >}}
 
