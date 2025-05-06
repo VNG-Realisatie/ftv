@@ -3,7 +3,7 @@ Title: Toepassen
 type: 'chapter'
 ---
 
-{{< chapter/header title="Toepassen" bg="brown">}}
+{{< chapter/header title="Toepassen" bg="brown" icon="images/api-icon.svg">}}
 Het invoeren van de FTV-standaard begint met een goede voorbereiding. Denk aan het maken van afspraken over het beheer en het testen van een oplossing in een proefopstelling. Als ondersteuning zijn praktische handreikingen beschikbaar. Ze geven inzicht in keuzes die gemaakt moeten worden, de stappen richting implementatie en technische mogelijkheden.
 {{< /chapter/header >}}
 

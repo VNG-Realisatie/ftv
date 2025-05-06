@@ -4,7 +4,7 @@ weight: 30
 type: 'chapter'
 ---
 
-{{< chapter/header title="Meedoen" bg="brown">}}
+{{< chapter/header title="Meedoen" bg="brown" icon="images/api-icon.svg">}}
 FTV is in ontwikkeling en zoekt professionals die willen bijdragen aan een veilige en efficiënte toegang tot data binnen de overheid.
 
 FTV werkt aan veilige en efficiënte toegang tot data binnen de overheid. Jouw ervaring is waardevol om dit goed te laten aansluiten op de praktijk.

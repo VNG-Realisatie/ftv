@@ -3,7 +3,7 @@ Title: Onderzoek
 type: 'chapter'
 ---
 
-{{< chapter/header title="Onderzoek" bg="brown" >}}
+{{< chapter/header title="Onderzoek" bg="brown" icon="images/api-icon.svg">}}
 Voorafgaand aan de opstelling van een standaard voor Federatieve Toegangsverlening (FTV) en het definiëren van een werkwijze is een uitgebreid onderzoek gedaan. Op basis van dit onderzoek zijn de eisen opgesteld voor de standaard.
 {{< /chapter/header >}}
 

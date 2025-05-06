@@ -12,9 +12,11 @@
                     {{ end }}
                 {{ end }}
             </div>
+            {{ if and (.Get "icon") (ne (.Get "icon") "") }}
             <div class="max-w-[157px] place-content-center justify-center mx-auto">
-                <img src="{{ relURL "images/api-icon.svg"}}">
+                <img src="{{ relURL (.Get "icon") }}">
             </div>
+            {{ end }}
         </div>
     </div>
 </div>

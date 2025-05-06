@@ -3,7 +3,7 @@ type: 'chapter'
 title: "Methodiek"
 ---
 
-{{< chapter/header title="Methodiek" bg="blue">}}
+{{< chapter/header title="Methodiek" bg="blue" icon="images/api-icon.svg">}}
 De kern van het project is de gekozen methodiek, oftewel de voorgestelde werkwijze. De methodiek beschrijft vanuit technisch en functioneel perspectief hoe een oplossing voor toegang eruit moet zien om de voordelen van FTV te behalen.
 {{< /chapter/header >}}
 
