@@ -9,7 +9,6 @@
     --color-gray-50: oklch(98.5% 0.002 247.839);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-500: oklch(55.1% 0.027 264.364);
-    --color-gray-800: oklch(27.8% 0.033 256.848);
     --color-gray-900: oklch(21% 0.034 264.665);
     --color-black: #000;
     --color-white: #fff;
@@ -566,16 +565,6 @@
   }
   .backface-hidden {
     backface-visibility: hidden;
-  }
-  .dark\:border-gray-500 {
-    @media (prefers-color-scheme: dark) {
-      border-color: var(--color-gray-500);
-    }
-  }
-  .dark\:bg-gray-800 {
-    @media (prefers-color-scheme: dark) {
-      background-color: var(--color-gray-800);
-    }
   }
   .dark\:text-white {
     @media (prefers-color-scheme: dark) {
@@ -22819,6 +22808,21 @@
   list-style-type: decimal;
   font-size: var(--utrecht-paragraph-font-size, var(--utrecht-document-font-size, inherit));
   line-height: var(--utrecht-ordered-list-line-height);
+}
+.section > ol > li > ul {
+  color: var(--utrecht-paragraph-color, var(--utrecht-document-color, inherit));
+  font-family: var(--utrecht-unordered-list-font-family);
+  font-size: var(--utrecht-unordered-list-font-size);
+  font-weight: var(--utrecht-unordered-list-font-weight);
+  line-height: var(--utrecht-unordered-list-line-height);
+  padding-inline-start: var(--utrecht-unordered-list-padding-inline-start);
+}
+.section > ol > li > ul > li {
+  margin-block-end: var(--utrecht-unordered-list-item-margin-block-end);
+  margin-block-start: var(--utrecht-unordered-list-item-margin-block-start);
+  padding-inline-start: var(--utrecht-unordered-list-item-padding-inline-start);
+  list-style-type: disc;
+  line-height: var(--utrecht-unordered-list-line-height);
 }
 .section > h3, h4, h5, h6 {
   padding-top: 0.5em;
