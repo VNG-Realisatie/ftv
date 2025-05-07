@@ -11,13 +11,13 @@ Een passende softwarekeuze is belangrijk voor een werkende FTV-oplossing. De mar
 {{< /chapter/section >}}
 
 {{< chapter/section title="Verdeelde markt" >}}
-Toegangsverlening krijgt steeds meer aandacht. Door de overstap naar cloud en gedistribueerde architecturen is de vroegere werkwijze niet meer houdbaar. Maatwerk regels, ingebouwd in software, zijn slecht te onderhouden. RBAC oplossingen zijn door ‘role explosion’ niet beheersbaar op grote schaal.
+Toegangsverlening krijgt steeds meer aandacht. Door de overstap naar cloud en gedistribueerde architecturen is de vroegere werkwijze niet meer houdbaar. Maatwerk regels, ingebouwd in software, zijn slecht te onderhouden. RBAC-oplossingen zijn door ‘role explosion’ niet beheersbaar op grote schaal.
 
-EAM-methodes (Externalized Authorization Management) zijn in opkomst. Maar er is (nog) geen standaardoplossing. De grote leveranciers van cloud infrastructuur hebben hun eigen oplossing, en daarnaast zijn er tientallen EAM-bedrijven in de markt gestapt.
+EAM-methodes (Externalized Authorization Management) zijn in opkomst. Maar er is (nog) geen standaardoplossing. De grote leveranciers van cloudinfrastructuur hebben hun eigen oplossing en daarnaast zijn er tientallen EAM-bedrijven in de markt gestapt.
 {{< /chapter/section >}}
 
 {{< chapter/section title="Open of closed source" >}}
-Elke EAM-oplossing draait om de beslismodule: de PDP. Daaromheen zitten modules voor beheer, zoals voor schrijven, testen, distributie en monitoring en standaard integraties met bestaande applicaties (PEP's). De meeste PDPs zijn open source en vaak ook licentievrij. De andere modules worden commercieel aangeboden, als uitbestede dienst (SaaS) of voor eigen beheer(on-premises). Vaak zit hier een duidelijke freemium strategie achter: door een goede gratis open source PDP aan te bieden, hoopt de leverancier een klant aan de eigen policytaal te binden waarna de overstap naar betaalde EAM een logische weg is.
+Elke EAM-oplossing draait om de beslismodule: de PDP. Daaromheen zitten modules voor beheer, zoals voor schrijven, testen, distributie en monitoring en standaard integraties met bestaande applicaties (PEP's). De meeste PDPs zijn open source en vaak ook licentievrij. De andere modules worden commercieel aangeboden, als uitbestede dienst (SaaS) of voor eigen beheer (on-premises). Vaak zit hier een duidelijke freemiumstrategie achter: door een goede gratis open source PDP aan te bieden, hoopt de leverancier een klant aan de eigen policytaal te binden waarna de overstap naar betaalde EAM een logische weg is.
 {{< /chapter/section >}}
 
 {{< chapter/section title="Zelfbouw of uitbesteden" >}}
@@ -28,7 +28,7 @@ Zelfbouw geeft maximale vrijheid, maar brengt ook risico’s. Vooral het beheer,
 
 {{< chapter/section title="Criteria voor keuze" >}}
 
-De juiste softwarekeuze hangt af van meer dan alleen techniek. Belangrijke punten om mee te nemen in de afweging zijn
+De juiste softwarekeuze hangt af van meer dan alleen techniek. Belangrijke punten om mee te nemen in de afweging zijn:
 
 - **Policytaal**
 

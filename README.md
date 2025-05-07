@@ -24,3 +24,14 @@ Gebruik voor het lokaal draaien van de site het volgende commando:
 ```bash
 hugo server --baseURL "http://localhost:1313/ftv/" --appendPort=false
 ```
+
+Het thema voor de website is te vinden in de map `themes/ftv`. Het thema is gebouwd met:
+
+- [Tailwind CSS](http://www.tailwindcss.com)
+- [Rijkshuisstijl Community](https://rijkshuisstijl-community.vercel.app/)
+
+Om het uiteindelijke CSS bestand te genereren kan je het volgende commando gebruiken vanuit de theme folder.
+
+```shell
+npm run watch
+```
