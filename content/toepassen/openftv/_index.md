@@ -8,7 +8,7 @@ type: 'chapter'
 
 FTV is een toepassing van Externalized Authorization Management (EAM),
 een methode om toegangsregels buiten applicaties te beheren.
-Om te laten zien hoe dat werkt, is een technische voorbeeldoplossing beschikbaar: de referentie-implementatie. Deze heeft de naam OpenFTV gekregen.
+Om te laten zien hoe dat werkt, is een technische voorbeeldoplossing beschikbaar: de referentie-implementatie OpenFTV. 
 Deze is open source, gebaseerd op internationale standaarden en bedoeld voor iedereen die FTV wil toepassen,
 testen of verder ontwikkelen.
 {{< /chapter/section >}}
