@@ -10,11 +10,11 @@ FTV is in ontwikkeling en zoekt professionals die willen bijdragen aan een veili
 FTV werkt aan veilige en efficiënte toegang tot data binnen de overheid. Jouw ervaring is waardevol om dit goed te laten aansluiten op de praktijk.
 {{< /chapter/header >}}
 
-{{< chapter/section title="Wat kan jij doen" >}}
+{{< chapter/section title="Wat kan jij doen?" >}}
 
 **Bekijk de werkwijze**
 
-Lees [hoe FTV werkt]({{< relref "methodiek" >}}) en bekijk hoe dit in jouw API-landschap past
+Lees [hoe FTV werkt]({{< relref "methodiek" >}}) en bekijk hoe dit in jouw API-landschap past.
 
 **Denk mee in de werkgroep**
 

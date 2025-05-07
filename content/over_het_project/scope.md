@@ -33,7 +33,7 @@ Ook beperkt ***tot API's*** de scope tot uitwisseling waarbij minstens twee door
 Autorisatie binnen een applicatie of dienst, of die niet via API's verloopt heeft wel een grote overlap in methode en techniek,
 maar is niet het doel hier.
 
-Daarnaast richten we ons op overheidsorganisaties. De methodiek en techniek zullen niet altijd specifiek voor de overheid zijn,
+Daarnaast richten we ons op ***overheidsorganisaties***. De methodiek en techniek zullen niet altijd specifiek voor de overheid zijn,
 maar onze keuzes zullen in lijn moeten zijn met de overheidsrichtlijnen, en we streven naar brede adoptie bij de Nederlandse
 overheid.
 {{< /chapter/section >}}

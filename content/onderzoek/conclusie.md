@@ -8,7 +8,6 @@ type: 'chapter'
 
 {{< chapter/section title="1. Status van de techniek" level="3">}}
 
-
 {{< /chapter/section >}}
 
 {{< chapter/section title="Methodieken" level="4">}}
