@@ -1,6 +1,7 @@
 ---
 type: 'chapter'
 Title: AuthZEN in OpenFSC
+date: '2025-04-08'
 ---
 
 {{< chapter/section title="AuthZEN nu ingebouwd in OpenFSC" >}}
