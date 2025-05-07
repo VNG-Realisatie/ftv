@@ -5,7 +5,7 @@ type: 'chapter'
 {{< chapter/section title="" >}}
 # Proefopstelling
 
-De proefopstelling laat zien hoe FTV in de praktijk kan werken.. Daarvoor is een eenvoudig, maar werkend federatief datastelsel ingericht. De componenten rondom toegangsverlening zijn in deze opstelling volledig uitgewerkt.
+De proefopstelling laat zien hoe FTV in de praktijk kan werken. Daarvoor is een eenvoudig, maar werkend federatief datastelsel ingericht. De componenten rondom toegangsverlening zijn in deze opstelling volledig uitgewerkt.
 
 Benieuwd hoe een concrete use case er in deze proefopstelling uitziet? Lees dan verder bij: [het aanvragen van laadpaalvergunningen](laadpalen).
 {{< /chapter/section >}}
@@ -32,7 +32,7 @@ De opstelling bij de gemeente kunnen we verder detailleren als volgt:
 
 - **Logging (LDV)**
 
-  Omdat het systeem persoonsgegevens verwerkt (personen en voertuigen opzoekt) moet het een logboek dataverwerkingen bijhouden. Hier wordt de referentie-implementatie van Logboek Dataverwering (LDV) gebruikt
+  Omdat het systeem persoonsgegevens verwerkt (personen en voertuigen opzoekt) moet het een logboek dataverwerkingen bijhouden. Hier wordt de referentie-implementatie van Logboek Dataverwerking (LDV) gebruikt
 
 - **Gateway (FSC)**
 
