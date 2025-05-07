@@ -13,11 +13,11 @@ FTV is in ontwikkeling en zoekt professionals die willen bijdragen aan een veili
 
 **Bekijk de werkwijze**
 
-Lees [hoe FTV werkt]({{< relref "methodiek" >}})  en bekijk hoe dit in jouw API-landschap past.
+Lees [hoe FTV werkt]({{< relref "methodiek" >}}) en bekijk hoe dit in jouw API-landschap past.
 
 **Denk mee in de werkgroep**
 
-De [werkgroep]({{< relref "meedoen/werkgroep" >}})  praat over de opzet, keuzes en doorontwikkeling van de standaardisering. Ook bespreken we waar gebruikers in de praktijk tegenaan lopen.
+De [werkgroep]({{< relref "meedoen/werkgroep" >}}) praat over de opzet, keuzes en doorontwikkeling van de standaardisering. Ook bespreken we waar gebruikers in de praktijk tegenaan lopen.
 
 **Ga aan de slag met OpenFTV**
 
