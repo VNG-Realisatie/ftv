@@ -40,7 +40,7 @@ Door de historie van regels op te slaan, is het mogelijk achteraf te zien welke 
 
 #### Testen
 
-Opstellen van regels is in alle talen best lastig. Bovendien is het overzien van de gevolgen van aanpassingen op de hele set regels handmatig meestal niet te doen. Daarom is het nodig een testfaciliteit te hebben, waar een regelset tegen een dataset gehouden kan worden en duidelijk gemaakt wordt wat de gevolgen van wijzigingen zullen zijn op beslissingen. Het opstellen van regels in elke taal is complex. Het is bovendien lastig om handmatig te overzien wat de gevolgen van een wijziging zijn voor de hele set. Daarom is een testfaciliteit nodig. Daarmee kan een regelset worden getest tegen een dataset, zodat zichtbaar wordt welke invloed wijzigingen hebben op beslissingen.
+Het opstellen van regels in elke taal is complex. Het is bovendien lastig om handmatig te overzien wat de gevolgen van een wijziging zijn voor de hele set. Daarom is een testfaciliteit nodig. Daarmee kan een regelset worden getest tegen een dataset, zodat zichtbaar wordt welke invloed wijzigingen hebben op beslissingen.
 
 #### Workflow
 
@@ -52,9 +52,9 @@ Vaak beheert een centraal team de regels, terwijl de uitvoering ervan decentraal
 
 #### Monitoring
 
-Goed beheer begint met inzicht in hoe de toegang in de praktijk functioneert. Denk aan de beschikbaarheid van runtime-omgevingen en aan statistieken over het aantal aanvragen en beslissingen. Zo kan gemonitord of er bijvoorbeeld onverwacht veel aanvragen of afwijzingen zijn. Dat kan wijzen op pogingen tot ongeoorloofde toegang.
+Goed beheer begint met inzicht in hoe de toegang in de praktijk functioneert. Denk aan de beschikbaarheid van runtime-omgevingen en aan statistieken over het aantal aanvragen en beslissingen. Zo kan gemonitord worden of er bijvoorbeeld onverwacht veel aanvragen of afwijzingen zijn. Dat kan wijzen op pogingen tot ongeoorloofde toegang.
 
 #### Verantwoording
 
-Bij een vermoeden van fraude of tijdens een audit, moet het systeem inzicht geven in alle relevante informatie over een of meerdere toegangsbeslissingen.
+Bij een vermoeden van fraude of tijdens een audit moet het systeem inzicht geven in alle relevante informatie over een of meerdere toegangsbeslissingen.
 {{< /chapter/section >}}
