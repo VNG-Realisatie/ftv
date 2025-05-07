@@ -11,7 +11,7 @@ De werkgroep Federatieve Toegangsverlening ontwikkelt standaarden en beleidskade
 {{< chapter/section title="Meedoen" >}}
 ### Waarom deze werkgroep?
 
-Er is nog geen standaard voor fijnmazige toegangsverlening. Daardoor is het lastig om binnen en tussen organisaties overzicht te houden op wie toegang heeft tot welke gegevens.
+Er is nog geen standaard voor fijnmazige toegangsverlening. Dat maakt het lastig om binnen en tussen organisaties overzicht te houden op wie toegang heeft tot welke gegevens.
 
 De werkgroep ontwikkelt daarom een samenhangend geheel van afspraken en standaarden, bedoeld om aan te bieden aan Forum Standaardisatie, GDI, MIDO en GEMMA.
 
@@ -19,10 +19,10 @@ De werkgroep ontwikkelt daarom een samenhangend geheel van afspraken en standaar
 
 We zoeken professionals die:
 
-- betrokken zijn bij de uitvoering van overheidstaken als beleid, IT of data-uitwisseling
-- willen meedenken én actief willen bijdragen aan concrete standaarden en oplossingen die de gegevensuitwisseling binnen de overheid verbeteren.
-- expertise of interesse hebben in fijnmazige toegangsverlening met technieken zoals Externalized Authorization Management (EAM) en Policy Based Access Control (PBAC).
-- kunnen bijdragen aan de juridisch en beleidsmatig aspecten van toegangsverlening
+- betrokken zijn bij de uitvoering van overheidstaken als beleid, IT of data-uitwisseling;
+- willen meedenken én actief willen bijdragen aan concrete standaarden en oplossingen die de gegevensuitwisseling binnen de overheid verbeteren;
+- expertise of interesse hebben in fijnmazige toegangsverlening met technieken zoals Externalized Authorization Management (EAM) en Policy Based Access Control (PBAC);
+- kunnen bijdragen aan de juridisch en beleidsmatig aspecten van toegangsverlening.
 {{< /chapter/section >}}
 
 {{< chapter/section title="Aanmelden" >}}
