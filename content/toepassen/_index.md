@@ -11,9 +11,6 @@ Het invoeren van de FTV-standaard begint met een goede voorbereiding. Denk aan h
 Federatieve toegangsverlening raakt meerdere onderdelen van een organisatie. Daarom zijn de handreikingen op deze pagina gericht op verschillende doelgroepen. 
 {{< /chapter/section >}}
 
-{{< chapter/section title="Voor juristen" >}}
-   Goede toegangsverlening vraagt om heldere afspraken over rollen en bevoegdheden. Ook moeten juridische kaders en beleid vertaald worden naar toegangsregels die technisch toepasbaar zijn.
-{{< /chapter/section >}}
 
 {{< chapter/section title="Voor bestuurders" >}}
 Een goed werkende FTV-implementatie vraagt om duidelijke keuzes, afspraken en draagvlak. Deze handreikingen helpen om de juiste afwegingen te maken en zicht te houden op het geheel.
@@ -24,6 +21,10 @@ Een goed werkende FTV-implementatie vraagt om duidelijke keuzes, afspraken en dr
 
    [Bekijk het overzicht van functies en rollen](functioneel)
 
+{{< /chapter/section >}}
+
+{{< chapter/section title="Voor juristen" >}}
+   Goede toegangsverlening vraagt om heldere afspraken over rollen en bevoegdheden. Ook moeten juridische kaders en beleid vertaald worden naar toegangsregels die technisch toepasbaar zijn.
 {{< /chapter/section >}}
 
 {{< chapter/section title="Voor IT-managers" >}}
