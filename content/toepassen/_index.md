@@ -11,6 +11,10 @@ Het invoeren van de FTV-standaard begint met een goede voorbereiding. Denk aan h
 Federatieve toegangsverlening raakt meerdere onderdelen van een organisatie. Daarom zijn de handreikingen op deze pagina gericht op verschillende doelgroepen. 
 {{< /chapter/section >}}
 
+{{< chapter/section title="Voor juristen" >}}
+   Goede toegangsverlening vraagt om heldere afspraken over rollen en bevoegdheden. Ook moeten juridische kaders en beleid vertaald worden naar toegangsregels die technisch toepasbaar zijn.
+{{< /chapter/section >}}
+
 {{< chapter/section title="Voor bestuurders" >}}
 Een goed werkende FTV-implementatie vraagt om duidelijke keuzes, afspraken en draagvlak. Deze handreikingen helpen om de juiste afwegingen te maken en zicht te houden op het geheel.
 
@@ -49,7 +53,7 @@ Een goede technische basis begint met praktijkvoorbeelden en inzicht in de opbou
 
 1. **OpenFTV**
 
-   OpenFTV is onze referentie-implementatie. Dit is een door het FTV-team gebouwde oplossing, eenvoudig maar volledig. Het laat zien hoe een EAM-oplossing eruit kan zien, en kan als basis voor een eigen implementatie dienen.
+   OpenFTV is de referentie-implementatie. Dit is een door het FTV-team gebouwde oplossing, eenvoudig maar volledig. Het laat zien hoe een EAM-oplossing eruit kan zien en kan als basis voor een eigen implementatie dienen.
 
    [Gebruik de OpenFTV als startpunt](openftv)
 
@@ -59,6 +63,4 @@ Een goede technische basis begint met praktijkvoorbeelden en inzicht in de opbou
 
    [Bekijk de proefopstelling en ontdek wat werkt](proefopstelling)
 {{< /chapter/section >}}
-{{< chapter/section title="Voor juristen" >}}
-   Goede toegangsverlening vraagt om heldere afspraken over rollen en bevoegdheden. Ook moeten juridische kaders en beleid vertaald worden naar toegangsregels die technisch toepasbaar zijn.
-{{< /chapter/section >}}
+
