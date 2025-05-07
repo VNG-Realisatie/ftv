@@ -38,7 +38,7 @@ IT-specialisten denken op Mattermost mee over FTV. Heb je ideeën of vragen? Slu
 - Zorginstituut Nederland
 - NUTS
 - Vecozo
-- ACM
+- Autoriteit Consument & Markt
 - RvIG
 - Gemeente Rotterdam
 - Idemia
