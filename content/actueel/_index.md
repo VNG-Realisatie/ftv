@@ -4,9 +4,9 @@ type: 'chapter'
 ---
 
 {{< chapter/section title="" >}}
-# Overzicht actueel
+# FTV actueel
 
-Ga naar:
+Ga direct naar:
 - [Nieuws](nieuws)
 - [Activiteiten](activiteiten)
 {{< /chapter/section >}}

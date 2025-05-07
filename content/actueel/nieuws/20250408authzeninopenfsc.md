@@ -1,8 +1,9 @@
 ---
+type: 'chapter'
 Title: AuthZEN in OpenFSC
 ---
 
-# AuthZEN nu ingebouwd in OpenFSC
+{{< chapter/section title="AuthZEN nu ingebouwd in OpenFSC" >}}
 
 _8 apr 2025_
 
@@ -10,10 +11,16 @@ _8 apr 2025_
 
 Het project Federatieve Toegangsverlening (FTV) heeft meegewerkt aan de totstandkoming van deze internationale standaard voor het regelen van autorisaties. De Open ID Foundation presenteerde AuthZEN Interop op de Gartner Identity & Access Management Summit op 24 en 25 maart in Londen. Inmiddels hebben zeven grote leveranciers van API Gateways de standaard al ingebouwd in hun systemen.
 
-#### Voordeel AuthZEN
+
+{{< /chapter/section >}}
+
+{{< chapter/section title="Voordeel AuthZEN" level="4">}}
 
 AuthZEN maakt communicatie mogelijk tussen gateways en autorisatiediensten (PDP’s), zelfs als ze van verschillende leveranciers zijn. Organisaties zijn hierdoor niet meer afhankelijk van één leverancier en besparen zo kosten bij implementatie en overstap naar een andere leverancier.
 
-#### Samenwerking binnen het FDS
+{{< /chapter/section >}}
+
+{{< chapter/section title="Samenwerking binnen het FDS" level="4">}}
 
 De inbouw van AuthZEN in OpenFSC is verzorgd door Pim Gaemers (FSC) en Gerard Juijn (FTV).
+{{< /chapter/section >}}
