@@ -7,18 +7,17 @@ type: 'chapter'
 {{< chapter/header title="Meedoen" bg="brown" icon="images/api-icon.svg">}}
 FTV is in ontwikkeling en zoekt professionals die willen bijdragen aan een veilige en efficiënte toegang tot data binnen de overheid.
 
-FTV werkt aan veilige en efficiënte toegang tot data binnen de overheid. Jouw ervaring is waardevol om dit goed te laten aansluiten op de praktijk.
 {{< /chapter/header >}}
 
 {{< chapter/section title="Wat kan jij doen?" >}}
 
 **Bekijk de werkwijze**
 
-Lees [hoe FTV werkt]({{< relref "methodiek" >}}) en bekijk hoe dit in jouw API-landschap past.
+Lees [hoe FTV werkt] ({{< relref "methodiek" >}}) en bekijk hoe dit in jouw API-landschap past.
 
 **Denk mee in de werkgroep**
 
-De [werkgroep]({{< relref "meedoen/werkgroep" >}}) praat over de opzet, keuzes en doorontwikkeling van de standaardisering. Ook bespreken we waar gebruikers in de praktijk tegenaan lopen.
+De [werkgroep] ({{< relref "meedoen/werkgroep" >}}) praat over de opzet, keuzes en doorontwikkeling van de standaardisering. Ook bespreken we waar gebruikers in de praktijk tegenaan lopen.
 
 **Ga aan de slag met OpenFTV**
 
@@ -31,7 +30,7 @@ IT-specialisten denken op Mattermost mee over FTV. Heb je ideeën of vragen? Slu
 {{< /chapter/section >}}
 
 {{< chapter/section title="Wie doen er al mee" >}}
-- VNG
+- Vereniging Nederlandse Gemeenten
 - Ministerie van Binnenlandse Zaken
 - Logius
 - Geonovum
