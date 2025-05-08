@@ -7,6 +7,7 @@ type: 'chapter'
 - [8 april: AuthZEN nu ingebouwd in OpenFSC](20250408authzeninopenfsc)
 - [8 april: Werkgroep Federatieve Toegangsverlening van start](20250408werkgroepvanstart)
 - [22 april: Inloopspreekuur FTV leidt tot waardevol gesprek](20250422inloopspreekuur)
+- [6 mei: Werkgroep logboeken](20250506logboek)
 {{< /chapter/section >}}
 
 {{< chapter/section title="Ontvang elke twee weken het FTV-nieuws" level="3">}}
@@ -25,4 +26,7 @@ Je kunt eerdere nieuwsbrieven teruglezen.
 - FTV Update #1 – 23 april 2025
 
   [Download (pdf)](/ftv/documents/ftv-update-1.pdf)
+- - FTV Update #2 – 8 mei 2025
+
+  [Download (pdf)](/ftv/documents/ftv-update-2.pdf)
 {{< /chapter/section >}}
