@@ -37,7 +37,6 @@ Aanmelden voor alle bijeenkomsten van de werkgroep kan via mail bij [michiel.tri
 De werkgroep vindt elke twee weken plaats op **dinsdag van 10:00 tot 11:00**. Deelname kan online of fysiek op dev.loer (bij Digilab), Catharijnesingel 55, 3511 GD Utrecht (5e verdieping, Trindeborch gebouw)
 
 Data komende werkgroepen:
-- [dinsdag 6 mei](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/6db6d44f-3769-4784-aa21-58b7aa8b5461/werkgroep-federatieve-toegangsverlening-verdieping-logboek-toegangsverlening)
 - [dinsdag 20 mei](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/62448d84-d2fc-4505-91ad-c35bb70a20f8/werkgroep-federatieve-toegangsverlening)
 - [dinsdag 3 juni](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/9e22f713-29fd-4149-bf82-7f5c517e0d61/werkgroep-federatieve-toegangsverlening)
 - dinsdag 17 juni
@@ -52,4 +51,5 @@ Data voor de bijeenkomsten vanaf augustus volgen later dit jaar.
 - [25 maart 2025](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/679b73ea-08f5-4675-800f-36c86202918b/kick-off-werkgroep-federatieve-toegangsverlening-ftv): Kick-off Werkgroep Federatieve Toegangsverlening ([Notulen]({{% relref "kick-off" %}}))
 - [8 april](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/0b029295-0f50-4834-bb8e-3e7bd3e5c16e/werkgroep-federatieve-toegangsverlening-introductie-externalized-authorization-architectuur): Introductie Externalized Authorization Management architectuur ([Notulen]({{% relref "introductie-eam" %}}))
 - [22 april](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/b909e6f2-eb9d-404d-8bf0-ea77c30e603b/werkgroep-federatieve-toegangsverlening-juridisch-kader-gerelateerde-standaarden): Juridisch Kader ([Notulen]({{% relref "juridisch-kader" %}}))
+- [dinsdag 6 mei](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/6db6d44f-3769-4784-aa21-58b7aa8b5461/werkgroep-federatieve-toegangsverlening-verdieping-logboek-toegangsverlening): Verdieping en Logboek Toegangsverlening ([Notulen]({{% relref "verdieping-en-logboek" %}}))
 {{< /chapter/section >}}
