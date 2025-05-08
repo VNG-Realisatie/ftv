@@ -1,0 +1,11 @@
+<div class="py-2 lg:w-[1024px] w-3xl mx-auto">
+    {{ $level := .Get "level" | default 2 }}
+    {{ if or (lt (int $level) 1) (gt (int $level) 6) }}
+    {{ $level = 2 }}
+    {{ end }}
+
+    <h{{ $level }} class="nl-heading nl-heading--level-{{ $level }} rhc-heading">{{ .Get "title" }}</h{{ $level }}>
+    <div class="section">
+        <!-- Haal content op uit de nieuws sectie  -->
+    </div>
+</div>
