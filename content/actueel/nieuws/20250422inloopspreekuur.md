@@ -1,12 +1,12 @@
 ---
 type: 'chapter'
 Title: Inloopspreekuur
+date: '2025-04-22'
 ---
 
-{{< chapter/section title="FDS-inloopspreekuur FTV leidt tot waardevol gesprek!" >}}
-
-_22 april 2025_
-
+{{< nieuws/header title="FDS-inloopspreekuur FTV leidt tot waardevol gesprek!" >}}
+{{< /nieuws/header >}}
+{{< chapter/section >}}
 Is er al een idee over het toepassingsgebied van FTV? Hoe sluit FTV aan op Europese initiatieven zoals Simpl? Is er ook een federatieve PEP-setting?
 
 Deze vragen (en nog meer!!) kwamen aan bod tijdens het inloopspreekuur van het Federatieve Datastelsel. Dit inloopspreekuur stond geheel in het teken van federatieve toegangsverlening.
