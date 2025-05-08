@@ -31,7 +31,7 @@
         {{ else }}
         {{ errorf "Unable to load %q" $path }}
         {{ end }}
-        {{ range first 3 (sort $data "datum" "asc") }}
+        {{ range first 3 (sort $data "datum" "desc") }}
         <a href="{{ .link }}">
             <div class="h-[100px] w-[315px] flex">
                 <div class="w-[72px] text-center">
@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 <div class="px-6">
-                    <div class="utrecht-paragraph--small flex flex-row gap-2.5 my-2.5">{{ .titel }}</div>
+                    <div class="utrecht-paragraph--small flex flex-row gap-2.5">{{ .titel }}</div>
                 </div>
             </div>
         </a>
@@ -71,15 +71,15 @@
             {{ end }}
         {{ end }}
         
-           {{ $sortedData := sort $filteredData "datum" "asc" }}
-           {{ $itemsCount := len $sortedData }}
-           {{ $itemsToShow := 3 }}
-              {{ $itemsToDisplay := $itemsCount }}
-              {{ if gt $itemsCount $itemsToShow }}
-                  {{ $itemsToDisplay = $itemsToShow }}
-              {{ end }}
+       {{ $sortedData := sort $filteredData "datum" "asc" }}
+       {{ $itemsCount := len $sortedData }}
+       {{ $itemsToShow := 3 }}
+          {{ $itemsToDisplay := $itemsCount }}
+          {{ if gt $itemsCount $itemsToShow }}
+              {{ $itemsToDisplay = $itemsToShow }}
+          {{ end }}
 
-              {{ range first $itemsToDisplay $sortedData }}
+          {{ range first $itemsToDisplay $sortedData }}
            <a href="{{ .link }}" target="_blank" rel="noopener noreferrer">
                    <div class="h-[100px] w-[315px] flex">
                        <div class="w-[72px] text-center">
