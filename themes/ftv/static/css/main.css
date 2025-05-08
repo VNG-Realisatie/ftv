@@ -309,6 +309,9 @@
   .w-\[72px\] {
     width: 72px;
   }
+  .w-\[315px\] {
+    width: 315px;
+  }
   .w-\[319px\] {
     width: 319px;
   }
@@ -542,6 +545,9 @@
   }
   .underline {
     text-decoration-line: underline;
+  }
+  .opacity-30 {
+    opacity: 30%;
   }
   .inset-shadow-sm {
     --tw-inset-shadow: inset 0 2px 4px var(--tw-inset-shadow-color, rgb(0 0 0 / 0.05));
