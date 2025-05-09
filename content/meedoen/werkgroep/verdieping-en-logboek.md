@@ -55,11 +55,11 @@ Title: 5. Verdieping en Logboek Toegangsverlening
 
 {{< chapter/section title="Aanpak verdieping onderwerpen" >}}
 
-*Michiel Trimpe* heeft een Miro bord voorbereid met een overzicht van de mogelijke onderwerpen om dieper op in te gaan. Het voorstel is om subwerkgroepen te introduceren in de gezamenlijke werkgroep. De introductie van het juridisch kader in de voorgaande werkgroep wordt gezien als de kick-off van die subwerkgroep. De subwerkgroepen kunnen dan buiten de werkgroep om voortgang boeken en zullen dit terug rapporteren aan de bredere werkgroep.
+*Michiel Trimpe* heeft een [Miro bord]({{< param baseDirectory >}}documents/20250506-verdieping-miro.pdf) voorbereid met een overzicht van de mogelijke onderwerpen om dieper op in te gaan. Het voorstel is om subwerkgroepen te introduceren in de gezamenlijke werkgroep. De introductie van het juridisch kader in de voorgaande werkgroep wordt gezien als de kick-off van die subwerkgroep. De subwerkgroepen kunnen dan buiten de werkgroep om voortgang boeken en zullen dit terug rapporteren aan de bredere werkgroep.
 
 **Beslissing**: Er zal gewerkt worden met subwerkgroepen op verschillende onderwerpen.
 
-Hierna konden alle deelnemers zich in het Miro bord aanmelden voor onderwerpen ter verdieping en nieuwe onderwerpen aandragen. Zie de bijlage voor het resultaat hiervan.
+Hierna konden alle deelnemers zich in het [Miro bord]({{< param baseDirectory >}}documents/20250506-verdieping-miro.pdf) aanmelden voor onderwerpen ter verdieping en nieuwe onderwerpen aandragen. Zie de bijlage voor het resultaat hiervan.
 
 - *Frank Terpstra*: Zal er ook een begrippenkader rondom toegangsverlening nodig zijn? Wil je met Linked Data kunnen zeggen waar de definitie staat van het begrip dat je toe wilt passen. Dan kan NL-SBB opgenomen worden voor de relatie met begrippenkaders. 
 
