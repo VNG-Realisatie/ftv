@@ -1,12 +1,4 @@
 ---
 Title: Actueel
-type: 'chapter'
+type: 'actueel'
 ---
-
-{{< chapter/section title="" >}}
-# FTV actueel
-
-Ga direct naar:
-- [Nieuws](nieuws)
-- [Activiteiten](activiteiten)
-{{< /chapter/section >}}
