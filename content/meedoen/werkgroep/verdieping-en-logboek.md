@@ -63,15 +63,15 @@ Hierna konden alle deelnemers zich in het [Miro bord]({{< param baseDirectory >}
 
 - *Frank Terpstra*: Zal er ook een begrippenkader rondom toegangsverlening nodig zijn? Wil je met Linked Data kunnen zeggen waar de definitie staat van het begrip dat je toe wilt passen. Dan kan NL-SBB opgenomen worden voor de relatie met begrippenkaders. 
 
-  *Michiel Trimpe* laten we dat opnemen bij de onderwerpen.
+  *Michiel Trimpe*: Laten we dat opnemen bij de onderwerpen.
 
-- *Gideon Zegwaard* Hoe bedoel je hier het informatiemodel?
+- *Gideon Zegwaard*: Hoe bedoel je hier het informatiemodel?
 
-  *Michiel Trimpe* Dit betreft het informatiemodel van de toegangsverzoeken. Hoe modelleer je het subject, de resource, action en context.
+  *Michiel Trimpe*: Dit betreft het informatiemodel van de toegangsverzoeken. Hoe modelleer je het subject, de resource, action en context.
 
-  *Gideon Zegwaard* je kan bij toegangsverlening ook het informatiemodel beperken en afnemers tot een beperkt deel van het informatiemodel toegang verlenen.
+  *Gideon Zegwaard*: Je kan bij toegangsverlening ook het informatiemodel beperken en afnemers tot een beperkt deel van het informatiemodel toegang verlenen.
 
-  *Michiel Trimpe* Dit valt voornamelijk onder contracten en policies en hoe je toegang tot een beperkt deel van het informatiemodel daar definieert.
+  *Michiel Trimpe*: Dit valt voornamelijk onder contracten en policies en hoe je toegang tot een beperkt deel van het informatiemodel daar definieert.
 
 - *Gideon Zegwaard*: Voor bijvoorbeeld SPARQL en GraphQL wil je in beide gevallen toegang inperken. Wil je niet een soort van kapstok hebben waarop je de toegang definieert en waaronder je verschillende inperkingsvormen en -semantieken kunt toepassen.
 
@@ -79,7 +79,7 @@ Hierna konden alle deelnemers zich in het [Miro bord]({{< param baseDirectory >}
 
 - *Gideon Zegwaard*: Zijn de Eclipse Data Components niet meer een toolkit om data spaces op te zetten? Wat ik heb gezien, richt zich vooral op het downloaden van datasets.
 
-  *Gerard van der Hoeven*: Dat is niet speciek zo. API's worden ook ondersteund.
+  *Gerard van der Hoeven*: Dat is niet specifiek zo. APIs worden ook ondersteund.
 
   *Michiel Trimpe*: We zullen het aspect van data spaces als geheel behandelen; met Gideon en Gerard als contactpersonen daarvoor.
 
@@ -95,26 +95,26 @@ Hierna konden alle deelnemers zich in het [Miro bord]({{< param baseDirectory >}
 
 -  *Michiel Trimpe* introduceert het Logboek Toegangsverlening aan de hand van het diagram op het [Miro bord]({{< param baseDirectory >}}documents/20250506-logboek-miro.pdf). Waar de AuthZEN standaard invulling geeft aan verantwoor*de* toegangsverlening, geeft het Logboek Toegangsverlening invulling aan verantwoord*ing* van toegangsverlening. Hier wordt informatie over alle historische verleende toegangsbeslissingen in opgenomen. 
 
-- *Marc van Andel*: betreft het alleen verleende of ook afgewezen beslissingen? 
+- *Marc van Andel*: Betreft het alleen verleende of ook afgewezen beslissingen? 
 
   *Michiel Trimpe*: Het bevat ook afgewezen beslissingen.
 
   Logboek Toegangsverzoeken wordt als naam voorgesteld.
 
-- *Michiel Trimpe* legt uit dat Logboek Toegangsverzoek relatief veel gevoelige informatie bevatten. Dit in vergelijking met FSC waarbij er alleen metadata opgeslagen wordt en Logboek Dataverwerking waarbij alle data toegangkelijk dient te zijn voor de burger die het betreft. 
-Een aandachtspunt hierbij is ook dat je gevoelige niet onnodig wil dupliceren. Stel dat je op basis van een gegeven BSN een beslissing maakt met behulp van gegevens uit de BRP, dan wil je liever alleen het BSN opslaan en niet alle gebruikte BRP-gegevens.
+- *Michiel Trimpe* legt uit dat Logboek Toegangsverzoek relatief veel gevoelige informatie bevatten. Dit in vergelijking met FSC waarbij er alleen metadata opgeslagen wordt en Logboek Dataverwerking waarbij alle data toegangelijk dient te zijn voor de burger die het betreft. 
+Een aandachtspunt hierbij is ook dat je gevoelige informatie niet onnodig wil dupliceren. Stel dat je op basis van een gegeven BSN een beslissing maakt met behulp van gegevens uit de BRP, dan wil je liever alleen het BSN opslaan en niet alle gebruikte BRP-gegevens.
   
   *Gideon Zegwaard*: Je kan die informatie ook buiten de log houden en alleen de verwijzing opnemen.
 
   *Michiel Trimpe*: Inderdaad. Maar hoe ga je dan om met de historische verwijzing en hoe doe je dat als je geen betrouwbare bron met historisering hebt?
 
-- *Michiel Trimpe* legt uit welke gegevens de verschillende EAM componenten bieden om in het log op te slaan. Binnen de PIP zijn er twee patronen: een push-verrijking waarbij de data gedupliceerd wordt in de PIP om performant aanwezig te zijn, en een pull-verrijking waarbij op het moment van de beslissing een verzoek gedaan wordt.
+- *Michiel Trimpe* legt uit welke gegevens de verschillende EAM-componenten bieden om in het log op te slaan. Binnen de PIP zijn er twee patronen: een push-verrijking waarbij de data gedupliceerd wordt in de PIP om performant aanwezig te zijn, en een pull-verrijking waarbij op het moment van de beslissing een verzoek gedaan wordt.
    
    *Gideon Zegwaard*: Dit zijn meer de technische constructen.
 
    *Michien Trimpe*: Inderdaad. Het zijn logisch gezien beide 'de PIP.' In het geval van pull heeft de PIP wel de mogelijkheid om zelf historische versionering toe te voegen.
 
-- *Jos Hezemans*: Deze informatie zit toch al in de subject die je binnenkrijgt bij de PEP?
+- *Jos Hezemans*: Deze informatie zit toch al in de subject dat je binnenkrijgt bij de PEP?
 
   *Gideon Zegwaard*: Het kan zijn dat er in het verzoek al een claim meegestuurd wordt die aangeeft dat de gebruiker het recht heeft. Het kan ook zijn dat je alleen een user id krijgt en dat je zelf nog op moet zoeken welke rol deze heeft. Dat is vooral een vraag over hoe je je systeem technisch inricht.
 
@@ -126,13 +126,13 @@ Een aandachtspunt hierbij is ook dat je gevoelige niet onnodig wil dupliceren. S
 
   *Hans Hendrikman*: En het contract beschrijft de afspraak. Zoals de autorisatietabel bijvoorbeeld.
 
-- *Michiel Trimpe* Een ander aspect van het Logboek is dat je inzicht wil bieden in je logboek. Anders heeft het geen waarde.
+- *Michiel Trimpe*: Een ander aspect van het Logboek is dat je inzicht wil bieden in je logboek. Anders heeft het geen waarde.
 
-  *Gideon Zegwaard* En wie mogen inzicht hebben en onder welke voorwaarde.
+  *Gideon Zegwaard*: En wie mogen inzicht hebben en onder welke voorwaarden?
   
   *Jos Hezemans*: Dat zal voor een deel ook juridisch bepaald zijn.
 
-  *Gideon Zegwaard* Het gebruik bepaalt ook wat je op wil nemen; want je wilt niet meer opnemen dan waar een beoogd gebruik voor is.
+  *Gideon Zegwaard*: Het gebruik bepaalt ook wat je op wil nemen, want je wilt niet meer opnemen dan waar een beoogd gebruik voor is.
 
 - *Jos Hezemans*: Dit wordt niet gebruikt voor het analyseren van patronen in toegangsverzoeken om de resilience te verbeteren?
 
@@ -171,5 +171,5 @@ Een aandachtspunt hierbij is ook dat je gevoelige niet onnodig wil dupliceren. S
 
 {{< chapter/section title="Keuze volgend onderwerp" >}}
 
-**Beslissing** Op basis van het aantal deelnemers wordt als volgend onderwerp "policies" gekozen. 
+**Beslissing**: Op basis van het aantal deelnemers wordt als volgend onderwerp "policies" gekozen. 
 {{< /chapter/section >}}
