@@ -1,3 +1,5 @@
+<link href="/ftv/pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/ftv/pagefind/pagefind-ui.js"></script>
 <div class="flex bg-rhc-primary h-[90px]">
     <div class="grid grid-cols-[70px_auto] grid-rows-1 ml-25">
         <div class="content-center w-15 p-1">
@@ -11,6 +13,12 @@
                 {{ .Site.Params.subtitle }}
             </p>
         </div>
+        <div id="search"></div>
+        <script>
+            window.addEventListener('DOMContentLoaded', (event) => {
+                new PagefindUI({ element: "#search", showSubResults: true });
+            });
+        </script>
     </div>
 </div>
 <div class="grow h-[16px] bg-ftv-green">
