@@ -401,6 +401,9 @@
   .gap-10 {
     gap: calc(var(--spacing) * 10);
   }
+  .gap-x-6 {
+    column-gap: calc(var(--spacing) * 6);
+  }
   .rounded-tr-2xl {
     border-top-right-radius: var(--radius-2xl);
   }
