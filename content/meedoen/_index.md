@@ -5,7 +5,7 @@ type: 'chapter'
 ---
 
 {{< chapter/header title="Meedoen" bg="brown" icon="images/api-icon.svg">}}
-FTV is in ontwikkeling en zoekt professionals die willen bijdragen aan een veilige en efficiënte toegang tot data binnen de overheid.
+Het project Federatieve Toegangsverlening (FTV) zoekt professionals die willen bijdragen aan een veilige en efficiënte toegang tot data binnen de overheid.
 
 {{< /chapter/header >}}
 
@@ -30,16 +30,16 @@ IT-specialisten denken op Mattermost mee over FTV. Heb je ideeën of vragen? Slu
 {{< /chapter/section >}}
 
 {{< chapter/section title="Wie doen er al mee" >}}
-- Vereniging Nederlandse Gemeenten
-- Ministerie van Binnenlandse Zaken
+- Vereniging Nederlandse Gemeenten (VNG)
+- Ministerie van Binnenlandse Zaken (BZK)
 - Logius
 - Geonovum
 - Kadaster
 - Zorginstituut Nederland
 - NUTS
 - Vecozo
-- Autoriteit Consument & Markt
-- RvIG
+- Autoriteit Consument & Markt (ACM)
+- Rijksdienst voor Identiteitsgegevens (RvIG)
 - Gemeente Rotterdam
 - Idemia
 - iSHARE
