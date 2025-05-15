@@ -249,9 +249,6 @@
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
   }
-  .mb-8 {
-    margin-bottom: calc(var(--spacing) * 8);
-  }
   .ml-25 {
     margin-left: calc(var(--spacing) * 25);
   }
