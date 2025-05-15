@@ -43,7 +43,7 @@ Voor een totaaloplossing zit de uitdaging vooral in schaalbaar en gedistribueerd
 
 Lopende het project wordt door FTV een eigen marktonderzoek van commerciële oplossingen gedaan. Dit gebeurt door eigen tests, en vooral door gesprekken met de leveranciers zelf. Er wordt specifiek gekeken naar toegangsverlening, zowel runtime als beheer, en koppelingen naar aanpalende systemen zoals IAM worden. 
 
-[Het resultaat]({{< param baseDirectory >}}docs/toepassen/softwarekeus) zal geen koopadvies worden, maar een handreiking over hoe tot een keus te komen.
+[Het resultaat]({{< param baseDirectory >}}toepassen/softwarekeus) zal geen koopadvies worden, maar een handreiking over hoe tot een keus te komen.
 {{< /chapter/section >}}
 
 {{< chapter/section title="2. Status bij de Nederlands overheid" >}}

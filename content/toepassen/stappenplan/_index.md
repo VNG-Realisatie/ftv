@@ -4,14 +4,14 @@ type: 'chapter'
 ---
 {{< chapter/section title="Stappenplan" >}}
 Het opstellen van toegangsregels vraagt om samenwerking tussen verschillende rollen.
-Bestuudersm juristen, IT-architecten en developers kijken ieder vanuit hun eigen perspectief naar wat nodig is.
+Bestuuders, juristen, IT-architecten en developers kijken ieder vanuit hun eigen perspectief naar wat nodig is.
 Door de stappen te volgen, ontstaat een set regels die klopt: juridisch, functioneel én technisch.
 
 Dit stappenplan beschrijft zeven stappen om van een use case tot een goed werkende en uitvoerbare toegangsregel te komen. Het helpt om het proces gestructureerd aan te pakken en in elke fase de juiste keuzes te maken en de juiste rollen te betrekken.
 
 ### Voor bestuurders
 
-Een goede toegangsoplossing begint bij duidelijke keuzes. In stap 1 wordt bepaald wie toegang nodig heeft tot welke gegevens en onder welke voorwaarden. Dit vraagt om heldere afspraken, draagvlak en een afbakening van verantwoordelijkheden. Zo ontstaat een stevige basis voor de technische uitwerking van FTV.
+Een goede toegangsoplossing begint bij duidelijke keuzes. In stap 1 wordt bepaald wie toegang nodig heeft tot welke gegevens en onder welke voorwaarden. Dit vraagt om heldere afspraken, draagvlak en een afbakening van verantwoordelijkheden. Zo ontstaat een stevige basis voor de technische uitwerking van Federatieve Toegangsverlening (FTV).
 
 ### Voor juristen
 
@@ -49,11 +49,11 @@ Gebruik bij de omschrijving de termen:
 
 Door de regels nu al in deze termen uit te drukken, wordt het schrijven later eenduidig en overzichtelijk.
 
-Voorbeeld: een zaakbehandelaar (subject) mag een huurtoeslagzaak (resource) afsluiten (actie) als hij (of zij) afdelingshoofd is en de zaakstatus ‘klaar om af te sluiten’ is (context).
+Voorbeeld: een zaakbehandelaar (subject) mag een huurtoeslagzaak (resource) afsluiten (actie) als de zaakbehandelaar afdelingshoofd is en de zaakstatus ‘klaar om af te sluiten’ is (context).
 
 #### Stap 3. Bepaal de attributen
 
-In stap 2 zijn de eisen voor toegang beschreven. In stap 3 stap volgt de inventarisatie van de attributen die nodig zijn om die eisen uit te voeren.
+In stap 2 zijn de eisen voor toegang beschreven. In stap 3 volgt de inventarisatie van de attributen die nodig zijn om die eisen uit te voeren.
 
 Voorbeeld:
 
@@ -70,14 +70,14 @@ Voor deze technische vertaling van de eerdere stappen naar taken die de software
 #### Stap 5. Test de toegangsregels
 
 Goede tests beginnen met slimme testdata. De testset moet zoveel mogelijk situaties afdekken: gevallen waarin toegang wél toegestaan is en situaties waarin dat niet zo is.
-Het samenstellen van die testdata is een taak voor een businessanalist. Een ontwikkelaar zet de testdata en verwachte uitkomsten in een systeem. Daarna is het mogelijk om de tests automatisch uit te voeren, zo vaak als nodig. Bijvoorbeeld na het opstellen of wijziging van de regel, na aanpassingen in andere regels die invloed  hebben of bij een verandering in de API’s.
+Het samenstellen van die testdata is een taak voor een businessanalist. Een ontwikkelaar zet de testdata en verwachte uitkomsten in een systeem. Daarna is het mogelijk om de tests automatisch uit te voeren, zo vaak als nodig. Bijvoorbeeld na het opstellen of wijziging van de regel, na aanpassingen in andere regels die invloed  hebben of bij een verandering in de APIs.
 
 #### Stap 6. Richt de infrastructuur in
 
-In deze stap wordt de gekozen beslismodule (PDP) neergezet (deployed) en aangesloten op de juiste toegangshekken (PEPs).  Check vooraf of de gekozen componenten goed op elkaar aansluiten. Zie ook de checklist bij [Softwarekeuze](../softwarekeus).
+In deze stap wordt de gekozen beslismodule (Policy Decision Point, PDP) neergezet en aangesloten op de juiste toegangshekken (Policy Enforcement Points, PEPs).  Check vooraf of de gekozen componenten goed op elkaar aansluiten. Zie ook de checklist bij [Softwarekeuze](../softwarekeus).
 
-De PEP kan deel uitmaken van een applicatie, een API, of een API-gateway. Als de component is gebouwd volgens de AuthZEN NL Gov standaard, is er weinig extra programmeerwerk nodig voor de aansluiting.
-Het deployen van de PDP vergt kennis van de infrastructuur (cloud infra, helm, kubernetes).
+De PEP kan deel uitmaken van een applicatie, een API, of een API-gateway. Als de component is gebouwd volgens de AuthZEN NL Gov-standaard, is er weinig extra programmeerwerk nodig voor de aansluiting.
+Het neerzetten (deployen) van de PDP vergt kennis van de infrastructuur (cloud infra, helm, kubernetes).
 
 #### Stap 7. Zorg voor distributie van regels
 
