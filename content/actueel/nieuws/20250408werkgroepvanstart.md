@@ -1,6 +1,6 @@
 ---
 type: 'nieuws'
-Title: Werkgroep van start
+Title: Werkgroep Federatieve Toegangsverlening van start
 date: '2025-04-08'
 summary: "Op 25 maart vond de eerste bijeenkomst plaats van de werkgroep Federatieve Toegangsverlening (FTV). Het enthousiasme was groot: meer dan twintig deelnemers waren aanwezig bij deze kick-off." 
 ---

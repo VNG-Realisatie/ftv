@@ -1,6 +1,6 @@
 ---
 type: 'nieuws'
-Title: AuthZEN in OpenFSC
+Title: AuthZEN nu ingebouwd in OpenFSC
 date: '2025-04-08'
 summary: "Sinds begin april is AuthZEN ingebouwd in OpenFSC (Federatieve Service Connectiviteit), de gateway van het Federatief Datastelsel (FDS). Organisaties die werken met Open FSC gebruiken nu AuthZEN om de toegang tot gegevens te regelen."
 ---
