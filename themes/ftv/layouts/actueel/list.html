@@ -19,36 +19,40 @@
             <div>
                 <h2 class="nl-heading nl-heading--level-2 rhc-heading">Nieuws</h2>
             </div>
-            <div class="w-full mt-8">
-                <div class="w-full">
-                    <a href="/ftv/actueel/nieuws-bericht-1" class="external nl-link rhc-link">
-                        <h1 class="nl-heading nl-heading--level-3 rhc-heading">Nieuws bericht 1</h1>
-                    </a>
-                    <p class="utrecht-paragraph pt-2">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod, libero nec congue egestas, enim elit tincidunt augue, at egestas massa ante nec augue.
-                    </p>
-                    <div>
-                        <div class="w-max flex flex-row py-2.5">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                 class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-week">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"/>
-                                <path d="M16 3v4"/>
-                                <path d="M8 3v4"/>
-                                <path d="M4 11h16"/>
-                                <path d="M7 14h.013"/>
-                                <path d="M10.01 14h.005"/>
-                                <path d="M13.01 14h.005"/>
-                                <path d="M16.015 14h.005"/>
-                                <path d="M13.015 17h.005"/>
-                                <path d="M7.01 17h.005"/>
-                                <path d="M10.01 17h.005"/>
-                            </svg>
-                            <p class="utrecht-paragraph text-lg pl-1">{{ dateFormat "02 Jan 2006" "2025-04-08" }}</p>
+            <div class="w-full mt-8 flex flex-col gap-4">
+                {{ $newsPages := where (where site.Pages "Section" "actueel") "Type" "nieuws" }}
+                {{ $sortedPages := sort $newsPages "Date" "desc" }}
+                {{ range $sortedPages }}
+                    <div class="w-full mb-8">
+                        <a href="{{ .Permalink }}" class="external nl-link rhc-link">
+                            <h1 class="nl-heading nl-heading--level-3 rhc-heading">{{ .Title }}</h1>
+                        </a>
+                        <p class="utrecht-paragraph pt-2">
+                            {{ if .Summary }}{{ .Summary }}{{ else }}{{ .Content | plainify | truncate 200 }}{{ end }}
+                        </p>
+                        <div>
+                            <div class="w-max flex flex-row py-2.5">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                     class="icon icon-tabler icons-tabler-outline icon-tabler-calendar-week">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"/>
+                                    <path d="M16 3v4"/>
+                                    <path d="M8 3v4"/>
+                                    <path d="M4 11h16"/>
+                                    <path d="M7 14h.013"/>
+                                    <path d="M10.01 14h.005"/>
+                                    <path d="M13.01 14h.005"/>
+                                    <path d="M16.015 14h.005"/>
+                                    <path d="M13.015 17h.005"/>
+                                    <path d="M7.01 17h.005"/>
+                                    <path d="M10.01 17h.005"/>
+                                </svg>
+                                <p class="utrecht-paragraph text-lg pl-1">{{ dateFormat "02 Jan 2006" .Date }}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                {{ end }}
             </div>
         </div>
         <div class="w-1/3">

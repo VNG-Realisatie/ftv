@@ -1,7 +1,8 @@
 ---
-type: 'chapter'
+type: 'nieuws'
 Title: Inloopspreekuur
 date: '2025-04-22'
+summary: "Benieuwd naar de antwoorden (en andere vragen)? Lees het verslag op de [website Realisatie IBDS](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/blog/view/68b34b4a-f51c-461e-ac89-a183acf38924/inloopspreekuur-federatieve-toegangsverlening-ftv-leidt-tot-een-waardevol-gesprek)."
 ---
 
 {{< nieuws/header title="FDS-inloopspreekuur FTV leidt tot waardevol gesprek!" >}}
