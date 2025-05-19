@@ -4,7 +4,7 @@ type: 'chapter'
 ---
 
 {{< chapter/header title="Onderzoek" bg="brown" icon="images/api-icon.svg">}}
-Voorafgaand aan het definiëren van een werkwijze en het opstellen van de standaarden is uitgebreid onderzoek gedaan. Op basis van dit onderzoek zijn tevens de eisen opgesteld voor de totaaloplossing. De onderzoeksresultaten zijn in deze sectie samengevat.
+Voorafgaand aan het definiëren van een werkwijze en het opstellen van de standaarden is uitgebreid onderzoek gedaan. Op basis van dit onderzoek zijn de eisen opgesteld voor de totaaloplossing. De onderzoeksresultaten zijn in deze sectie samengevat.
 {{< /chapter/header >}}
 
 {{< chapter/section title="Onderzoeksopzet" >}}
