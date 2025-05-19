@@ -4,7 +4,8 @@ type: 'chapter'
 ---
 {{< chapter/section title="Vragen aan leverancier" >}}
 
-Bij het benaderen van leveranciers van EAM software raden wij aan de onderstaande vragen te stellen:
+Bij het benaderen van leveranciers van Externalized Authorization Management (EAM)- software raden wij aan de onderstaande vragen te stellen:
+
 
 - How do you support policy authoring for various audiences such as business users, developers, maintainers, security, etc.?
 - Which components of the product can be deployed on-premises, in the cloud or as SaaS? In case of cloud or SaaS solutions, how do you ensure sensitive data can remain within the boundaries of the organization? And also for cloud or SaaS, is it possible to host under European privacy laws?
