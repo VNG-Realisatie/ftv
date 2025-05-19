@@ -4,7 +4,7 @@ type: 'chapter'
 ---
 
 {{< chapter/header title="Toepassen" bg="brown" icon="images/api-icon.svg">}}
-Het invoeren van de FTV-standaard begint met een goede voorbereiding. Denk aan het maken van afspraken over het beheer en het testen van een oplossing in een proefopstelling. Als ondersteuning zijn praktische handreikingen beschikbaar. Ze geven inzicht in keuzes die gemaakt moeten worden, de stappen richting implementatie en technische mogelijkheden.
+Het invoeren van de standaard Federatieve Toegangsverlening (FTV) begint met een goede voorbereiding. Denk aan het maken van afspraken over het beheer en het testen van een oplossing in een proefopstelling. Als ondersteuning zijn praktische handreikingen beschikbaar. Ze geven inzicht in keuzes die gemaakt moeten worden, de stappen richting implementatie en de technische mogelijkheden.
 {{< /chapter/header >}}
 
 {{< chapter/section title="" >}}
@@ -15,7 +15,7 @@ Federatieve toegangsverlening raakt meerdere onderdelen van een organisatie. Daa
 {{< chapter/section title="Voor bestuurders" >}}
 Een goed werkende FTV-implementatie vraagt om duidelijke keuzes, afspraken en draagvlak. Deze handreikingen helpen om de juiste afwegingen te maken en zicht te houden op het geheel.
 
-1. **Functionele beschrijving**.
+1. **Functionele beschrijving**
 
    Hoe zien de taken rondom FTV eruit en wie is waarvoor verantwoordelijk?
 
@@ -30,7 +30,7 @@ Een goed werkende FTV-implementatie vraagt om duidelijke keuzes, afspraken en dr
 {{< chapter/section title="Voor IT-managers" >}}
 FTV raakt meerdere onderdelen van de IT-infrastructuur. Denk aan softwarekeuzes, rolverdelingen en beheerprocessen. De handreikingen ondersteunen bij het maken van haalbare, schaalbare en toekomstbestendige keuzes.
 
-1. **Functionele beschrijving**.
+1. **Functionele beschrijving**
 
    Hoe zien de taken rondom FTV eruit en wie is waarvoor verantwoordelijk?
 
@@ -44,7 +44,7 @@ FTV raakt meerdere onderdelen van de IT-infrastructuur. Denk aan softwarekeuzes,
 
 3. **Softwarekeuze**
 
-   Er is nogal wat te kiezen aan PDP, PIP en PAP. Wat heb je nodig? En welke leverancier past het best? Of is het beter om zelf iets te bouwen?
+   Er is veel te kiezen op het gebeid van Policy Decision Point (PDP), Policy Information Point (PIP) en Policy Administration Point (PAP) Wat heb je nodig? En welke leverancier past het best? Of is het beter om zelf iets te bouwen?
 
    [Lees de checklist Softwarekeuze](softwarekeus)
 {{< /chapter/section >}}
@@ -54,7 +54,7 @@ Een goede technische basis begint met praktijkvoorbeelden en inzicht in de opbou
 
 1. **OpenFTV**
 
-   OpenFTV is de referentie-implementatie. Dit is een door het FTV-team gebouwde oplossing, eenvoudig maar volledig. Het laat zien hoe een EAM-oplossing eruit kan zien en kan als basis voor een eigen implementatie dienen.
+   OpenFTV is de referentie-implementatie. Dit is een door het FTV-team gebouwde oplossing: eenvoudig maar volledig. Het laat zien hoe een EAM-oplossing eruit kan zien en kan als basis voor een eigen implementatie dienen.
 
    [Gebruik de OpenFTV als startpunt](openftv)
 
