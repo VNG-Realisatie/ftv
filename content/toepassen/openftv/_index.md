@@ -6,10 +6,10 @@ type: 'chapter'
 {{< chapter/section title="" >}}
 # OpenFTV
 
-FTV is een toepassing van Externalized Authorization Management (EAM),
+Federatieve toegangsverlening (FTV) TV is een toepassing van Externalized Authorization Management (EAM),
 een methode om toegangsregels buiten applicaties te beheren.
 Om te laten zien hoe dat werkt, is een technische voorbeeldoplossing beschikbaar: de referentie-implementatie OpenFTV. 
-Deze is open source, gebaseerd op internationale standaarden en bedoeld voor iedereen die FTV wil toepassen,
+Deze implementatie is open source, gebaseerd op internationale standaarden en bedoeld voor iedereen die FTV wil toepassen,
 testen of verder ontwikkelen.
 {{< /chapter/section >}}
 
@@ -32,7 +32,7 @@ De code is geschreven in Golang en vrij beschikbaar via GitLab.
 - EAM is gebaseerd op Attribute Based Access Control (ABAC) en bouwt voort op moderne modellen
   zoals Policy Based Access Control (PBAC) en Relation Based Access Control (ReBAC).
 - Het ABAC-model, zoals beschreven door [NIST](https://csrc.nist.gov/pubs/sp/800/162/upd2/final), verdeelt toegangsbeslissingen over vier componenten:
-  PEP (Policy Enforcement Point), PDP (Decision Point), PAP (Administration Point) en PIP (Information Point).
+  PEP (Policy Enforcement Point), PDP (Policy Decision Point), PAP (Policy Administration Point) en PIP (Policy Information Point).
   De communicatie tussen deze onderdelen volgt de AuthZEN-standaard.
 
 ### Modulair en flexibel
@@ -56,13 +56,13 @@ De code is geschreven in Golang en vrij beschikbaar via GitLab.
   Omdat policies en data vaak door dezelfde gebruikers worden beheerd, is er ook een Manager-service die de PAP en PIP combineert.
 - Voor oudere versies van OpenFSC is een aparte autorisatie-plugin beschikbaar die als PDP fungeert.
 - Developers kunnen deze services direct inzetten voor een werkende EAM-implementatie. Wie liever zelf bouwt,
-  kan de losse modules gebruiken om een of meer EAM-componenten zelf samen te stellen.
+  kan de losse modules gebruiken om éénn of meer EAM-componenten zelf samen te stellen.
 - Gateways en andere systemen kunnen met standaard AuthZEN-profielen eenvoudig aansluiten op de generieke PDP-service.
 - Ook eigen componenten die in Golang zijn geschreven, kunnen gebruikmaken van de generieke PEP-module.
   Zo hoeven ontwikkelteams niet opnieuw te beginnen bij het bouwen van EAM-functionaliteit.
 
 ### Test
-- Elke module is voorzien van uitgebreide unit-tests met gemiddeld meer dan 90% code coverage.
+- Elke module is voorzien van uitgebreide unit-tests met een code coverage van meer dan 90%.
 - Regressies worden zo vroeg en efficiënt mogelijk gedetecteerd.
 - De testvoorzieningen zijn volledig opgenomen in de CI/CD-pipelines.
 
