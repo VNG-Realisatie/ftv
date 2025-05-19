@@ -11,10 +11,10 @@ Voorafgaand aan het definiëren van een werkwijze en het opstellen van de standa
 
 Het onderzoek bestond uit twee delen.
 
-1.	**Technische analyse**
+1.	**Technische analyse**.
 De huidige stand van techniek rondom toegangsverlening is in kaart gebracht. Daarbij is gekeken naar bestaande methodieken, standaarden en producten in binnen- en buitenland.
 
-2. **Inventarisatie bij de overheid**
+2. **Inventarisatie bij de overheid**.
 Er is onderzocht hoe toegangsverlening op dit moment binnen de Nederlandse overheid is georganiseerd.
 
 {{< /chapter/section >}}
