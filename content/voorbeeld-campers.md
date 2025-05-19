@@ -4,7 +4,7 @@ title: Voorbeeld milieuzone
 weight: 20
 ---
 
-{{< chapter/section title="FTV in de praktijk - Handhaving milieuzone met kentekenherkenning">}}
+{{< chapter/section title="FTV in de praktijk - Campers in de milieuzone">}}
 
 Niet elk voertuig mag een milieuzone inrijden. Of een voertuig toegang heeft, hangt af van de regels. 
 Zo mogen bijvoorbeeld alleen dieselcampers van bewoners de milieuzone in, die van anderen niet. 
@@ -31,18 +31,18 @@ De combinatie van de gegevens bepaalt of er een boete volgt.
 
 FTV gaat over toegangsregels. In dit geval zijn dat bijvoorbeeld:
 
-- Alleen gemeenten die een ‘Besluit milieuzones’ hebben aangenomen, mogen deze gegevens opvragen
-- Het opvragen bij RDW en RvIG mag alleen gebeuren vanaf een computer van zo'n gemeente
-- Vraag alleen de woonplaats op als uit de categorie en emissieklasse blijkt dat het om een dieselcamper gaat
-- Vraag alleen de persoonsgegevens op als blijkt dat een boete uitgeschreven moet worden
-- Wis direct alle gegevens die niet nodig zijn voor het innen van een boete.
-- Houd een logboek bij van alle opvragingen.
+- Alleen gemeenten die een ‘Besluit milieuzones’ hebben aangenomen, mogen deze gegevens opvragen.
+- Het opvragen bij RDW en RvIG mag alleen gebeuren vanaf een computer van zo'n gemeente.
+- De woonplaats mag alleen wordn opgevraagd als uit de categorie en emissieklasse blijkt dat het om een dieselcamper gaat.
+- Persoonsgegevens mogen alleen worden opgevraagd als blijkt dat een boete uitgeschreven moet worden.
+- Alle gegevens die niet nodig zijn voor het innen van een boete, moeten direct worden gewist.
+- Er moet een logboek worden bijgehouden van alle opvragingen.
 
 {{< /chapter/section >}}
 
 {{< chapter/section title="Wat regelt FTV?">}}
 
-Alle partijen, hier de gemeentes, RDW en RvIG, hebben eigen software voor gegevensuitwisseling. 
+Alle partijen, hier de gemeenten, RDW en RvIG, hebben eigen software voor gegevensuitwisseling. 
 En dus ook eigen systemen om toegang te controleren. Die autonomie is belangrijk en blijft behouden. 
 Tegelijkertijd is het niet efficiënt als elke organisatie zelf gaat uitzoeken hoe de regels ingebouwd en gecontroleerd moeten worden.  
 FTV schrijft een methodiek voor waarbij de regels op een standaardmanier opgeschreven, beheerd en gelogd worden.
