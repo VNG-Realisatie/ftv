@@ -4,7 +4,7 @@ type: 'chapter'
 ---
 
 {{< chapter/section title="Werkgroep" >}}
-De werkgroep Federatieve Toegangsverlening ontwikkelt standaarden en beleidskaders voor fijnmazige toegangsverlening. De werkgroep vindt elke twee weken plaats. Deelname kan fysiek en online.
+De werkgroep Federatieve Toegangsverlening (FTV) ontwikkelt standaarden en beleidskaders voor fijnmazige toegangsverlening. De werkgroep vindt elke twee weken plaats. Deelname kan fysiek en online.
 
 {{< /chapter/section >}}
 
@@ -28,13 +28,13 @@ We zoeken professionals die:
 {{< chapter/section title="Aanmelden" >}}
 Aanmelden voor individuele bijeenkomsten kan via de [agenda van het FDS](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events) op Realisatie IBDS.
 
-Aanmelden voor alle bijeenkomsten van de werkgroep kan via mail bij [michiel.trimpe@vng.nl](mailto:michiel.trimpe@vng.nl).
+Aanmelden voor alle bijeenkomsten van de werkgroep kan via mail bij [ftv@vng.nl](mailto:ftv@vng.nl).
 {{< /chapter/section >}}
 
 {{< chapter/section title="Planning en Notulen" >}}
 ### Planning
 
-De werkgroep vindt elke twee weken plaats op **dinsdag van 10:00 tot 11:00**. Deelname kan online of fysiek op dev.loer (bij Digilab), Catharijnesingel 55, 3511 GD Utrecht (5e verdieping, Trindeborch gebouw)
+De werkgroep vindt elke twee weken plaats op **dinsdag van 10:00 tot 11:00**. Deelname kan online of fysiek op Dev.loer (bij Digilab), Catharijnesingel 55, 3511 GD Utrecht (5e verdieping, Trindeborch gebouw)
 
 Data komende werkgroepen:
 - [dinsdag 20 mei](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/62448d84-d2fc-4505-91ad-c35bb70a20f8/werkgroep-federatieve-toegangsverlening)
