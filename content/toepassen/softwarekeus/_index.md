@@ -21,7 +21,9 @@ Elke EAM-oplossing draait om de beslismodule: de Policy Decision Point (PDP). Da
 {{< /chapter/section >}}
 
 {{< chapter/section title="Zelfbouw of uitbesteden" >}}
-Een andere optie is zelf software ontwikkelen. Er zijn libraries in vrijwel elke programmeertaal beschikbaar die de kern van ABAC/PBAC bieden.
+Een andere optie is zelf software ontwikkelen. Er zijn libraries in vrijwel elke programmeertaal beschikbaar die de kern van Attribute Based Access Control (ABAC)/ Policy Based Access Control (PBAC) 
+bieden.
+
 
 Zelfbouw geeft maximale vrijheid, maar brengt ook risico’s. Vooral het beheer, de integratie en de beveiliging vragen veel tijd en kennis.
 {{< /chapter/section >}}
