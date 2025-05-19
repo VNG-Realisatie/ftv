@@ -25,7 +25,7 @@ Title: 1. Pilot
 {{< /chapter/section >}}
 
 {{< chapter/section title="Introductie" >}}
-Het kader van het project en de ontwikkelen standaard werd geïntroduceerd door Marc de Boer.
+Het kader van het project en de te ontwikkelen standaard werd geïntroduceerd door Marc de Boer.
 {{< /chapter/section >}}
 
 {{< chapter/section title="Vragen en domein" >}}
@@ -56,11 +56,11 @@ In de discussie zijn de volgende antwoorden gegeven.
   - **Marc van Andel**: Ja
   - **Eduard Renger, Pim Gaemers, Joost Farla**: Nee
 - Mogen request query en body aangepast worden?
-  - **Pim Gaemers**: Dit heeft als nadeel dat de afnemers op de 'onjuiste' manier verzoeken blijven doen. Het is ook minder transparant wat voor antwoord er gegeven worden.
+  - **Pim Gaemers**: Dit heeft als nadeel dat de afnemers op de 'onjuiste' manier verzoeken blijven doen. Het is ook minder transparant wat voor antwoord er gegeven wordt.
   - **Eelco Hotting**: In verschillende toepassingen kunnen verschillende keuzes gemaakt worden. In een open vraag zoals in Lock/Unlock is het wel logisch (exploratief en browsend verkennen) \[Dit betrof het automatisch aanpassen van verzoeken om zoveel mogelijk beschikbare gegevens te bevragen\]. Voor rigide transactionele processen is het wel logisch. Daar zou de standaard zich ook op moeten richten.
     Verantwoording is ook belangrijk aspect aangezien dat moeilijker wordt wanneer aanpassingen mogelijk zijn?
   - **Gerard Juijn**: Dit maakt het voor afnemende applicaties erg moeilijk om steeds aangepast te moeten worden om de 'juiste' verzoeken te versturen. 
-  - **Joost Farla, Marc van Andel, Eelco Hotting, Pim Gaemers**: Je wil niet dat een endpoint zoals 'mijn-zaken' naar verplicht omgezet moet worden naar een endpoint als 'zaken?assigned=GebruikerX'.
+  - **Joost Farla, Marc van Andel, Eelco Hotting, Pim Gaemers**: Je wil niet dat een endpoint zoals 'mijn-zaken' verplicht omgezet moet worden naar een endpoint als 'zaken?assigned=GebruikerX'.
   - **Michiel Trimpe**: Er kan ook op basis van redirects van de ene naar de andere endpoint verwezen worden.
 - Mogen request headers aangepast worden? 
   - **Marc van Andel**: In principe niet.
@@ -71,7 +71,7 @@ In de discussie zijn de volgende antwoorden gegeven.
 - Mogen request headers verwijderd worden?
   - **Marc van Andel**: Je wil soms authenticatie tokens niet doorgeven aan achterliggende systemen.
   - **Allen**: Ja
-- Mag het response body aangepast worden? 
+- Mag de response body aangepast worden? 
   - **Allen**: Nee
 {{< /chapter/section >}}
 
@@ -79,7 +79,7 @@ In de discussie zijn de volgende antwoorden gegeven.
 De benaming van het onderwerp als "gegevensminimalisatie" werd door o.a. Edward van Gelderen als problematisch ervaren aangezien dit ongewenst breed geïnterpreteerd kon worden.
 
 In de werkgroep is benoemd dat gegevensminimalisatie eerder een use-case is of een symptoom van een onderliggend probleem. Toegangsverlening betreft uiteindelijk gewoon de beslissing of een verzoek mag of niet. (**Marc van Andel**, **Eelco Hotting**)
-De zorgen m.b.t. het precies opvragen van gewenste velden (**Gerard Juijn**) gaat vooral over het ondersteunen van clients bij het bepalen van toegestane verzoeken gegeven mogelijk complex autorisatiebeleid. Dit is vergelijkbaar met een frontend applicatie die autorisatie logica moet dupliceren om de gebruiker geen functionaliteit aan te bieden die de backend niet toe zal staan. (**Michiel Trimpe**.)
+De zorgen met betrekking tot het precies opvragen van gewenste velden (**Gerard Juijn**) gaat vooral over het ondersteunen van clients bij het bepalen van toegestane verzoeken gegeven mogelijk complex autorisatiebeleid. Dit is vergelijkbaar met een frontend applicatie die autorisatie logica moet dupliceren om de gebruiker geen functionaliteit aan te bieden die de backend niet toe zal staan. (**Michiel Trimpe**)
 
 Er is besloten gegevensminimalisatie als term uit de standaard te verwijderen.
 {{< /chapter/section >}}
@@ -89,7 +89,7 @@ Er is besloten om de volgende werkgroep te richten op het thema "Verantwoording"
 {{< /chapter/section >}}
 
 {{< chapter/section title="Nabespreking Mattermost" >}}
-**Gerard Juijn** droeg het alternatief van een "Slimme PEP" aan die wel requests mag herschrijven. Dit werd door o.a. **Eelco Hotting** gezien als een component van de applicatie gezien. **Michiel Trimpe** benoemde dat dit in combinatie met een Search API ook gezien kan worden als een proxy die de 2 stappen (zoek het correcte verzoek op en voer het uit) in één actie uitvoert. Dat kan dus als een wrapper om om bestaande applicaties gezien worden indien die niet aangepast kunnen worden.
+**Gerard Juijn** droeg het alternatief van een "Slimme PEP" aan die wel requests mag herschrijven. Dit werd door o.a. **Eelco Hotting** gezien als een component van de applicatie gezien. **Michiel Trimpe** benoemde dat dit in combinatie met een Search API ook gezien kan worden als een proxy die de 2 stappen (zoek het correcte verzoek op en voer het uit) in één actie uitvoert. Dat kan dus als een wrapper om bestaande applicaties gezien worden indien die niet aangepast kunnen worden.
 {{< /chapter/section >}}
 
 {{< chapter/section title="Nabespreking Mattermost" >}}
@@ -101,7 +101,7 @@ Er is besloten om de volgende werkgroep te richten op het thema "Verantwoording"
 Na de werkgroep zijn de volgende antwoorden op 22 november per mail gegeven door een collega van Eduard Renger:
 
 - Mogen request query en body aangepast worden?
-  - Nee, Verzoeken mogen (en kunnen momenteel) niet worden aangepast. De PDP is een decision point en neemt besluiten volgens een grondslag. De PDP geeft zijn beslissing door aan de PEP.
+  - Nee, Verzoeken mogen (en kunnen momenteel) niet worden aangepast. De Policy Decesion Point (PDP) neemt besluiten volgens een grondslag. De PDP geeft zijn beslissing door aan de Policy Enforcemant Point (PEP).
   - Door alleen validatie toe te passen is:
     - Communicatie volledig transparant. Een resultaat is altijd volgens de vraag.
     - Is de policy uitlegbaar.
