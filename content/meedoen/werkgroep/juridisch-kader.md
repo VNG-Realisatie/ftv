@@ -26,8 +26,8 @@ Title: 4. Juridisch kader
 {{< /chapter/section >}}
 
 {{< chapter/section title="Agenda" >}}
-- Relatie EAM en OAuth
-- Presentatie Beleids-juridische verantwoording FTV (Wouter Diephuis)
+- Relatie Externalized Authorization Management (EAM) en OAuth
+- Presentatie Beleids-juridische verantwoording Federatieve Toegangsverlening (FTV) (Wouter Diephuis)
 - Presentatie Juridische Structuur iSHARE (Gerard van der Hoeven)
 - Planning volgende werkgroepen
 {{< /chapter/section >}}
@@ -47,7 +47,7 @@ OAuth is een manier om informatie geauthenticeerd beschikbaar te maken door midd
 - scopes/rollen: een lijst van waarden (strings) die de rollen van de aanvrager omschrijven
 - authorization_details: een JSON object met instructies over autorisatie.
 
-Dit gebeurt primair tijdens authenticatie en het token wordt meegestuurd met de requests. Hierdoor kan er slechts een beperkte hoeveelheid autorisatie meegestuurd worden en heeft dit beperkte actualiteit (ten tijde van authenticatie.)
+Dit gebeurt primair tijdens authenticatie en het token wordt meegestuurd met de requests. Hierdoor kan er slechts een beperkte hoeveelheid autorisatie meegestuurd worden en heeft dit beperkte actualiteit (ten tijde van authenticatie).
 
 EAM is een manier om toegangsbeleid te centraliseren. EAM kan dus gebruikt worden voor:
 - het bepalen van OAuth scopes/rollen en authorization_details;
@@ -58,13 +58,13 @@ OAuth en EAM richten zich dus op verschillende aspecten en kunnen elkaar goed aa
 {{< /chapter/section >}}
 
 {{< chapter/section title="Beleids-juridische verantwoording (Wouter Diephuis)" >}}
-*Wouter Diephuis* gaf een [presentatie]({{< param baseDirectory >}}documents/20250422-beleids-juridische-verantwoording.pptx) over Beleids-juridische verantwoording bij federatieve toegangsverlening.
+*Wouter Diephuis* gaf een [presentatie]({{< param baseDirectory >}}documents/20250422-beleids-juridische-verantwoording.pptx) over beleids-juridische verantwoording bij federatieve toegangsverlening.
 
-- *Marc van Andel*: In hoeverre schiet het logboek dataverwerkingen tekort in de verantwoording?
+- *Marc van Andel*: In hoeverre schiet het Logboek Dataverwerkingen (LDV) tekort in de verantwoording?
 
-  *Wouter Diephuis*: Dat schiet niet tekort. Het Logboek Dataverwerkingen zorgt ervoor dat vastgelegd wordt welke handelingen verricht worden. De vervolgvraag is vastleggen wie dat heeft gedaan en of diegene daartoe bevoegd is. Het is daarbij dus aanvullend.
+  *Wouter Diephuis*: Dat schiet niet tekort. Het LDV zorgt ervoor dat vastgelegd wordt welke handelingen verricht worden. De vervolgvraag is vastleggen wie dat heeft gedaan en of diegene daartoe bevoegd is. Het is daarbij dus aanvullend.
 
-  *Marc de Boer*: Logboek Dataverwerking is voor verantwoording naar de burger. Logboek Toegangsverlening is voor verantwoording naar een stelsel toe.
+  *Marc de Boer*: LDV is voor verantwoording naar de burger. Logboek Toegangsverlening is voor verantwoording naar een stelsel toe.
 
 - *René Kint*: (Slide #5) De private sector mag alles tenzij verboden. De overheid mag niks tenzij toegestaan. Hoe werken de kaders tussen publieke en private sectoren?
 
@@ -82,7 +82,7 @@ OAuth en EAM richten zich dus op verschillende aspecten en kunnen elkaar goed aa
 
 - *René Kint* vraagt of er een definitie is van een keten.
 
-  Die is er niet maar het is wel belangrijk om verwerkingen te kunnen volgen over de keten heen. De organisatie is zelf nog steeds verantwoordelijk voor zijn stuk van de keten. Het volgen/koppelen van verwerkingen over de keten is in het Logboek Dataverwerkingen al gestandaardiseerd. Voor Logboek Dataverwerkingen is ook al een [juridisch beleidskader](https://logius-standaarden.github.io/logboek-dataverwerkingen_Juridisch-beleidskader/) opgesteld.
+  Die is er niet maar het is wel belangrijk om verwerkingen te kunnen volgen over de keten heen. De organisatie is zelf nog steeds verantwoordelijk voor zijn stuk van de keten. Het volgen/koppelen van verwerkingen over de keten is in het LDV al gestandaardiseerd. Voor LDV is ook al een [juridisch beleidskader](https://logius-standaarden.github.io/logboek-dataverwerkingen_Juridisch-beleidskader/) opgesteld.
 {{< /chapter/section >}}
 
 
