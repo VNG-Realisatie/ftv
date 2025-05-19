@@ -5,7 +5,7 @@ type: 'chapter'
 {{< chapter/section title="" >}}
 # Functioneel
 
-Voor een goed werkende FTV-oplossing zijn afspraken nodig over beheer en uitvoering (runtime).
+Voor een goed werkende oplossing voor Federatieve Toegangsverlening zijn afspraken nodig over beheer en uitvoering (runtime).
 Wat komt er kijken bij het toepassen en beheren van toegangsregels?
 {{< /chapter/section >}}
 
@@ -13,9 +13,9 @@ Wat komt er kijken bij het toepassen en beheren van toegangsregels?
 
 Zodra toegang wordt gevraagd, voert de software automatisch taken uit om de regels voor verwerking toe te passen.
 
-- **Beslissingen afdwingen**. Zorgen dat genomen beslissingen ook gegarandeerd nageleefd worden.
-- **Beslissingen nemen**. Uitrekenen of het verzoek gehonoreerd, voorwaardelijk gehonoreerd of afgewezen moet worden. Dit gebeurt op basis van informatie (over subject, action, resource en context) en de beschikbare regels.
-- **Beslissingen loggen**. Vastleggen welke beslissingen zijn genomen, met de juiste hoeveelheid informatie om later verantwoording af te leggen en de juistheid van beslissingen te controleren.
+- **Beslissingen afdwingen**: zorgen dat genomen beslissingen ook gegarandeerd nageleefd worden.
+- **Beslissingen nemen**: uitrekenen of het verzoek gehonoreerd, voorwaardelijk gehonoreerd of afgewezen moet worden. Dit gebeurt op basis van informatie (over subject, action, resource en context) en de beschikbare regels.
+- **Beslissingen loggen**: vastleggen welke beslissingen zijn genomen, met de juiste hoeveelheid informatie om later verantwoording af te leggen en de juistheid van beslissingen te controleren.
 
 Deze functies draaien bij elk verwerkingsverzoek. Daarom moeten ze snel afgehandeld kunnen worden.
 
@@ -24,11 +24,11 @@ Deze functies draaien bij elk verwerkingsverzoek. Daarom moeten ze snel afgehand
 
 {{< chapter/section title="2. Beheer" >}}
 
-De beheersfuncties zijn voor het opstellen en onderhouden van regels.
+De beheersfuncties worden gebruikt voor het opstellen en onderhouden van regels.
 
 #### Beveiliging
 
-Het beheer van toegangsregels vraagt om goede beveiliging. Een gedeeld of apart IAM-systeem regelt de toegang voor beheerders, met rollen, rechten en policies.
+Het beheer van toegangsregels vraagt om goede beveiliging. Een gedeeld of apart systeem voor identiteits- en toegangsbeheer (Identity and Access Management , IAM) regelt de toegang voor beheerders, met rollen, rechten en policies.
 
 #### Regels opstellen
 
@@ -56,5 +56,5 @@ Goed beheer begint met inzicht in hoe de toegang in de praktijk functioneert. De
 
 #### Verantwoording
 
-Bij een vermoeden van fraude of tijdens een audit moet het systeem inzicht geven in alle relevante informatie over een of meerdere toegangsbeslissingen.
+Bij een vermoeden van fraude of tijdens een audit moet het systeem inzicht geven in alle relevante informatie over een of meer toegangsbeslissingen.
 {{< /chapter/section >}}
