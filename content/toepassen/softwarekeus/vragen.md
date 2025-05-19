@@ -10,6 +10,7 @@ Bij het benaderen van leveranciers van EAM software raden wij aan de onderstaand
 - Which components of the product can be deployed on-premises, in the cloud or as SaaS? In case of cloud or SaaS solutions, how do you ensure sensitive data can remain within the boundaries of the organization? And also for cloud or SaaS, is it possible to host under European privacy laws?
 - Which Policy Enforcement Points are supported and what functionality do they have? Also in terms of residual policy/obligations.
 - What support do you have for defining organization and application specific information models of the subject, action, resource and context of requests?
+- What kind of Policy Information Points do you support? And how is this integrated with the information models?
 - How is decentralized self-service policy management handled? Are project or workspace scopes supported? Can these be nested or is it a flat structure? Is access to policy management functionality also configurable by policy?
 - How do you handle separation of duties and approval workflows for policy authoring?
 - How do you handle deployment of policies and changes to policies? How is this integrated in deployment workflows for DevOps teams? How is it integrated for maintenance teams without deployment pipelines?
