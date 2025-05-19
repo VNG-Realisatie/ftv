@@ -49,7 +49,7 @@ Title: 5. Verdieping en Logboek Toegangsverlening
 
 {{< chapter/section title="Welkom" >}}
 
-*Jos Hezemans*, *Hans Hendrikman*, *Rens Kievit*, *Igor Haren* en *Nico Spijkers* introduceren zich aan de groep.
+*Jos Hezemans*, *Hans Hendrikman*, *Rens Kievit*, *Igor van Haren* en *Nico Spijkers* introduceren zich aan de groep.
 
 {{< /chapter/section >}}
 
@@ -67,7 +67,7 @@ Hierna konden alle deelnemers zich in het [Miro bord]({{< param baseDirectory >}
 
 - *Gideon Zegwaard*: Hoe bedoel je hier het informatiemodel?
 
-  *Michiel Trimpe*: Dit betreft het informatiemodel van de toegangsverzoeken. Hoe modelleer je het subject, de resource, action en context.
+  *Michiel Trimpe*: Dit betreft het informatiemodel van de toegangsverzoeken. Hoe modelleer je het subject, de resource, de action en de context.
 
   *Gideon Zegwaard*: Je kan bij toegangsverlening ook het informatiemodel beperken en afnemers tot een beperkt deel van het informatiemodel toegang verlenen.
 
@@ -75,7 +75,7 @@ Hierna konden alle deelnemers zich in het [Miro bord]({{< param baseDirectory >}
 
 - *Gideon Zegwaard*: Voor bijvoorbeeld SPARQL en GraphQL wil je in beide gevallen toegang inperken. Wil je niet een soort van kapstok hebben waarop je de toegang definieert en waaronder je verschillende inperkingsvormen en -semantieken kunt toepassen.
 
-  *Michiel Trimpe* Dat valt onder het aspect van policies en het onderscheid tussen logische policies die het beleid definieren en technische policies die het per ontsluitingsvorm afdwingen. Dit zal ik toevoegen aan de onderwerpen daar.
+  *Michiel Trimpe* Dat valt onder het aspect van policies en het onderscheid tussen logische policies die het beleid definiëren en technische policies die het per ontsluitingsvorm afdwingen. Dit zal ik toevoegen aan de onderwerpen daar.
 
 - *Gideon Zegwaard*: Zijn de Eclipse Data Components niet meer een toolkit om data spaces op te zetten? Wat ik heb gezien, richt zich vooral op het downloaden van datasets.
 
@@ -101,7 +101,7 @@ Hierna konden alle deelnemers zich in het [Miro bord]({{< param baseDirectory >}
 
   Logboek Toegangsverzoeken wordt als naam voorgesteld.
 
-- *Michiel Trimpe* legt uit dat Logboek Toegangsverzoek relatief veel gevoelige informatie bevatten. Dit in vergelijking met FSC waarbij er alleen metadata opgeslagen wordt en Logboek Dataverwerking waarbij alle data toegangelijk dient te zijn voor de burger die het betreft. 
+- *Michiel Trimpe* legt uit dat Logboek Toegangsverzoek relatief veel gevoelige informatie bevat. Dit in vergelijking met FSC waarbij er alleen metadata opgeslagen wordt en Logboek Dataverwerking waarbij alle data toegangelijk dient te zijn voor de burger die het betreft. 
 Een aandachtspunt hierbij is ook dat je gevoelige informatie niet onnodig wil dupliceren. Stel dat je op basis van een gegeven BSN een beslissing maakt met behulp van gegevens uit de BRP, dan wil je liever alleen het BSN opslaan en niet alle gebruikte BRP-gegevens.
   
   *Gideon Zegwaard*: Je kan die informatie ook buiten de log houden en alleen de verwijzing opnemen.
@@ -114,7 +114,7 @@ Een aandachtspunt hierbij is ook dat je gevoelige informatie niet onnodig wil du
 
    *Michien Trimpe*: Inderdaad. Het zijn logisch gezien beide 'de PIP.' In het geval van pull heeft de PIP wel de mogelijkheid om zelf historische versionering toe te voegen.
 
-- *Jos Hezemans*: Deze informatie zit toch al in de subject dat je binnenkrijgt bij de PEP?
+- *Jos Hezemans*: Deze informatie zit toch al in het subject dat je binnenkrijgt bij de PEP?
 
   *Gideon Zegwaard*: Het kan zijn dat er in het verzoek al een claim meegestuurd wordt die aangeeft dat de gebruiker het recht heeft. Het kan ook zijn dat je alleen een user id krijgt en dat je zelf nog op moet zoeken welke rol deze heeft. Dat is vooral een vraag over hoe je je systeem technisch inricht.
 
