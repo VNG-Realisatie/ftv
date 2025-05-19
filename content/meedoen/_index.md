@@ -9,11 +9,11 @@ Het project Federatieve Toegangsverlening (FTV) zoekt professionals die willen b
 
 {{< /chapter/header >}}
 
-{{< chapter/section title="Wat kan jij doen?" >}}
+{{< chapter/section title="Wat kan je doen?" >}}
 
 **Bekijk de werkwijze**
 
-Lees [hoe FTV werkt](../methodiek) en bekijk hoe dit in jouw API-landschap past.
+Lees [hoe FTV werkt](../methodiek) en ontdek of het past in jouw API-landschap.
 
 **Denk mee in de werkgroep**
 
@@ -25,11 +25,11 @@ Wil je ervaren wat FTV betekent voor jouw organisatie? Experimenteer dan met [Op
 
 **Praat mee**
 
-IT-specialisten denken op Mattermost mee over FTV. Heb je ideeën of vragen? Sluit je aan via [ons kanaal](https://digilab.overheid.nl/chat/digilab/channels/federatieve-toegangsverlening).
+IT-specialisten denken via Mattermost mee over FTV. Heb je ideeën of vragen? Sluit je aan via [ het FTV Mattermost-kanaal](https://digilab.overheid.nl/chat/digilab/channels/federatieve-toegangsverlening).
 
 {{< /chapter/section >}}
 
-{{< chapter/section title="Wie doen er al mee" >}}
+{{< chapter/section title="Wie doen er al mee?" >}}
 - Vereniging Nederlandse Gemeenten (VNG)
 - Ministerie van Binnenlandse Zaken (BZK)
 - Logius
