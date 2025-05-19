@@ -24,7 +24,7 @@ Op basis van deze gegevens bepaalt de medewerker of de burger recht heeft op huu
 
 {{< chapter/section title="Wat zijn de regels?" >}}
 
-Bij het beoordelen van een aanvraag is specialistische kennis nodig. Dienst Toeslagen kan daarom specifieke toegansgregels opstellen, bijvoorbeeld:
+Bij het beoordelen van een aanvraag is specialistische kennis nodig. Dienst Toeslagen kan daarom specifieke toegangsregels opstellen, bijvoorbeeld:
 
 - De beoordelaar moet bevoegd zijn voor de specifieke regeling waar de aanvraag voor is.
 - Iedere aanvraag heeft één beoordelaar. Alleen die persoon mag de aanvraag bekijken en afhandelen.
@@ -36,13 +36,13 @@ Het inkomen en de inschrijving worden in het BRI respectievelijk BRP bewaard en 
 
 {{< chapter/section title="Wat regelt FTV?" >}}
 
-- Voor de beoordeling moet het toeslagbedrag vergeleken worden met de bevoegdheid van de beoordelaar. Met een alleen rolgebaseerd 
+- Voor de beoordeling moet het toeslagbedrag vergeleken worden met de bevoegdheid van de beoordelaar. Met alleen een rolgebaseerd 
 systeem kan dit niet. Immers, elke aanvraag kan weer een ander bedrag zijn.
 - Het beheer van de gegevens van de beoordelaar, zoals het maximumbedrag, kan centraal gebeuren, door een applicatiebeheerder.
 Daarvoor is geen apart systeem met aparte beheerskennis per applicatie nodig.
 - Ook bij ziekte of vertrek van een medewerker zijn verantwoordelijkheden makkelijk over te dragen naar een andere beoordelaar.
 Ook over meerdere toeslagsystemen heen.
-- In geval van hoge werkdruk, ziekte of uit dienst gaan moeten zaken overgedragen worden. Ook dat kan centraal.
+- In geval van hoge werkdruk, ziekte of wanneer iemand uit dienst gaat, moeten zaken overgedragen worden. Ook dat kan centraal.
 
 {{< /chapter/section >}}
 
