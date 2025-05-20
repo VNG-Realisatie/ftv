@@ -1,5 +1,5 @@
 <div class="w-full bg-rhc-color-mosgroen-50 py-6">
-    <div class="w-[1024px] mx-auto flex flex-col gap-2.5 swiper swiperHoe">
+    <div class="w-3xl lg:w-5xl mx-auto flex flex-col gap-2.5 swiper swiperHoe">
         <div class="w-full">
             <h2 class="nl-heading nl-heading--level-2 rhc-heading">Voorbeelden uit de praktijk</h2>
         </div>
@@ -35,12 +35,18 @@
     </div>
     <script>
         var swiper = new Swiper(".swiperHoe", {
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 30,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
             },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                }
+            }
         });
     </script>
 </div>
