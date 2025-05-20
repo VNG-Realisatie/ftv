@@ -12,6 +12,7 @@
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --container-xl: 36rem;
     --container-3xl: 48rem;
     --container-5xl: 64rem;
     --text-lg: 1.125rem;
@@ -345,6 +346,9 @@
   }
   .w-max {
     width: max-content;
+  }
+  .w-xl {
+    width: var(--container-xl);
   }
   .max-w-5xl {
     max-width: var(--container-5xl);
