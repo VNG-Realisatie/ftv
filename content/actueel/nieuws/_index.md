@@ -15,9 +15,8 @@ type: 'chapter'
 De nieuwsbrief geeft je elke twee weken een update over het project Federatieve Toegangsverlening (FTV). Hierin lees je het laatste nieuws, ontwikkelingen in de werkgroep en praktische informatie voor organisaties die met FTV aan de slag willen. Denk bijvoorbeeld aan updates over techniek, beleid en wetgeving.
 {{< /chapter/section >}}
 
-{{< chapter/section title="Aanmelden" level="3">}}
-Wil je de nieuwsbrief automatisch in je mailbox ontvangen? Meld je aan via:
-michiel.trimpe@vng.nl
+{{< chapter/section title="Aan- en afmelden" level="3">}}
+Wil je de nieuwsbrief automatisch in je mailbox ontvangen? Of juist niet meer? Meld je aan of af door een mail te sturen naar [ftv@vng.nl](mailto:ftv@vng.nl).
 {{< /chapter/section >}}
 
 {{< chapter/section title="Archief" level="3">}}
