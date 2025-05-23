@@ -37,10 +37,10 @@ Aanmelden voor alle bijeenkomsten van de werkgroep kan via mail bij [ftv@vng.nl]
 De werkgroep vindt elke twee weken plaats op **dinsdag van 10:00 tot 11:00**. Deelname kan online of fysiek op Dev.loer (bij Digilab), Catharijnesingel 55, 3511 GD Utrecht (5e verdieping, Trindeborch gebouw)
 
 Data komende werkgroepen:
-- [dinsdag 3 juni](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/9e22f713-29fd-4149-bf82-7f5c517e0d61/werkgroep-federatieve-toegangsverlening)
-- dinsdag 17 juni
-- dinsdag 1 juli
-- dinsdag 15 juli
+- [dinsdag 3 juni](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/9e22f713-29fd-4149-bf82-7f5c517e0d61/werkgroep-federatieve-toegangsverlening-nlgov-authzen)
+- [dinsdag 17 juni](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/b33b2387-0764-400f-a245-49a31c1859e5/werkgroep-federatieve-toegangsverlening-sparql-graphql-en-linked-data)
+- [dinsdag 1 juli](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/3a2f79a8-e4ed-4a6b-aa52-1d88f2498e7f/werkgroep-federatieve-toegangsverlening)
+- [dinsdag 15 juli](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/9e60e28e-66b4-4114-92b4-29dc8e7baac7/werkgroep-federatieve-toegangsverlening)
 
 Data voor de bijeenkomsten vanaf augustus volgen later dit jaar.
 
