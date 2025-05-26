@@ -18,17 +18,17 @@ De doelstellingen van het project zijn:
 
 1.	Ontwikkelen van een standaard voor toegangsverlening waarmee API’s en hun afnemers beter op elkaar aansluiten.
 2.	Verminderen van de beheerslast door hergebruik van een uniforme techniek.
-3.	De controle op toegangsbeslissingen verbeteren door beleid gestandaardiseerd te implementeren.
+3.	Verbetering van de controle op toegangsbeslissingen door beleid gestandaardiseerd te implementeren.
 4.	Ondersteunen van het transitiepad van de generieke Digitale Infrastructuur.
 {{< /chapter/section >}}
 
 {{< chapter/section title="Scope" >}}
-We beperken onze scope in hoofdlijnen als:
+De scope van het project ia als volgt afgebakend:
 
-- De opdracht voor het project is om een standaardmethodiek voor toegangsverlening tot API’s te definiëren, niet om software te bouwen. 
+- De opdracht voor het project is om een standaardmethodiek voor toegangsverlening tot APIs te definiëren, niet om software te bouwen. 
 - De focus ligt op toegangsverlening (autorisatie) en niet op identificatie, authenticatie of encryptie. 
-- Het gaat hier primair om geautomatiseerde gegevensuitwisseling via API’s tussen systemen, in tegenstelling tot mens-systeem interfaces.
-- En het toepassingsgebied is uitwisseling tussen Nederlandse overheidsorganisaties. 
+- Het gaat hier primair om geautomatiseerde gegevensuitwisseling via APIs tussen systemen, in tegenstelling tot mens-systeem interfaces.
+- Het toepassingsgebied is uitwisseling tussen Nederlandse overheidsorganisaties. 
 
 [Lees meer over de afbakening van de scope](scope).
 {{< /chapter/section >}}
@@ -60,15 +60,15 @@ In fase 2 richt het project zich op het voorstellen, uitwerken en positioneren v
 * 1 december 2024: start schrijven van de standaard
 * 1 februari 2025: aansluiting bij AuthZEN
 * 1 juni 2025:  AuthZEN NL GOV 1.0 naar consultatie
-* 1 augustus: Logboek toegangsverlening naar consultatie
-* 1 september: AuthZEN NL GOV 1.1 naar consultatie, met ‘nee, tenzij’
-* 31 december: 1.0 in beheer bij Logius
+* 1 augustus 2025: Logboek Toegangsverlening naar consultatie
+* 1 september 2025: AuthZEN NL GOV 1.1 naar consultatie, met ‘nee, tenzij’
+* 31 december 2025: 1.0 in beheer bij Logius
 
-Meer weten? Lees de rapportages [fase 1](fase1) en [Fase 2](fase2)
+Meer weten? Lees de rapportages [Fase 1](fase1) en [Fase 2](fase2)
 {{< /chapter/section >}}
 
 {{< chapter/section title="Relatie met andere projecten en programma’s" >}}
-De toekomstvisie op gegevensuitwisseling binnen de overheid is vastgelegd in de [Interbestuurlijke Datastrategie (IBDS)](https://www.digitaleoverheid.nl/interbestuurlijke-datastrategie/) . Deze strategie wordt uitgevoerd via het [programma Realisatie IBDS](https://realisatieibds.nl/), waarvan het Federatief Datastelsel (FDS) de technische invulling is. Binnen het FDS is toegang een van de technische stelselfuncties.
+De toekomstvisie op gegevensuitwisseling binnen de overheid is vastgelegd in de [Interbestuurlijke Datastrategie (IBDS)](https://www.digitaleoverheid.nl/interbestuurlijke-datastrategie/).  Deze strategie wordt uitgevoerd via het [programma Realisatie IBDS](https://realisatieibds.nl/), waarvan het FDS de technische invulling is. Binnen het FDS is toegang een van de technische stelselfuncties.
 
 FTV is een standaard binnen het FDS. Ook daarbuiten is FTV inzetbaar als werkwijze in andere stelsels en los van stelsels, bijvoorbeeld bij Zaakgericht Werken.
 {{< /chapter/section >}}
