@@ -33,11 +33,11 @@ Title: 6. Policies
 {{< /chapter/section >}}
 
 {{< chapter/section title="Agenda" >}}
-- Welkom & kennismaking (5 min)
-- Updates van subwerkgroepen (10 min)
-- Introductie (stelsel-) policies door Gideon Zegwaard (30 min)
-- Workshop Register Toegangsbeleid (10 min)
-- Acties en onderwerp volgende werkgroep (5 min)
+- Welkom & kennismaking 
+- Updates van subwerkgroepen 
+- Introductie (stelsel-) policies door Gideon Zegwaard 
+- Workshop Register Toegangsbeleid 
+- Acties en onderwerp volgende werkgroep 
 {{< /chapter/section >}}
 
 {{< chapter/section title="Bijlages" >}} 
@@ -50,13 +50,13 @@ Title: 6. Policies
 {{< chapter/section title="Welkom & kennismaking" >}}
 De volgende nieuwe deelnemers introduceren zich:
 - Hans Schevers, R&D Manager bij BIM Connected en werkzaam bij Kadaster en heeft gewerkt aan Lock-Unlock.
-- Lexi Rowland, Data Science team bij Kadaster. Werkzaam aan de knowledge graphs en werkt aan een PhD bij Universiteit Twente over "Security & Privacy Awareness in Virtual Knowledge Graphs" 
+- Lexi Rowland, Data Science team bij Kadaster. Werkzaam aan de knowledge graphs en werkt aan een PhD bij Universiteit Twente over 'Security & Privacy Awareness in Virtual Knowledge Graphs'.
 - Guus van der Meer, Vecozo. Werkt aan het netwerkmodel iWlz en vervangt Igor van Haren tijdens zijn vakantie.
 {{< /chapter/section >}}
 
 {{< chapter/section title="Updates van subwerkgroepen" >}}
 
-De subwerkgroep Juridisch Kader komt overmorgen (22 mei) samen op het ministerie van BZK in Den Haag onder leiding van Wouter en Elske. Alle werkgroep deelnemers worden uitgenodigd. Rens Kievit geeft aan ook deel te willen nemen.
+De subwerkgroep Juridisch Kader komt 22 mei 2025 samen op het Ministerie van BZK in Den Haag onder leiding van Wouter en Elske. Alle werkgroep deelnemers worden uitgenodigd. Rens Kievit geeft aan ook deel te willen nemen.
 
 De subwerkgroep Logboek Toegangsbeslissingen (Guus, Maikel en Michiel) heeft gewerkt aan het opzetten van de hoofdstukstructuur en een eerste versie van [het specificatiedocument](https://vng-realisatie.github.io/logboek-toegangsbeslissingen) gebouwd. 
 
@@ -79,7 +79,7 @@ Gideon Zegwaard deelt de presentatie [Toegang in FDS]({{< param baseDirectory >}
 
 - *Martin van der Plas*: Hoe worden hier keuzes in gemaakt en vastgelegd? Het kan handig zijn om keuzes zoals gebruik van JSON en XML aan te raden en hetzelfde geldt voor uitwisselingsprotocollen.
 
-  *Gideon Zegwaard*: Daar gaat deze werkgroep over, als het gaat over toegang middels policies. Hier kunnen we beslissen wat handig is en wat we op welk niveau vast willen leggen. Je kan bijvoorbeeld op NLGov niveau iets aanraden maar dit in het FDS profiel daarop verplichten.
+  *Gideon Zegwaard*: Daar gaat deze werkgroep over, als het gaat over toegang middels policies. Hier kunnen we beslissen wat handig is en wat we op welk niveau vast willen leggen. Je kan bijvoorbeeld op NLGov niveau iets aanraden, maar dit in het FDS profiel daarop verplichten.
 
 - *René Kint*: Zijn er ook specifieke policies nodig voor eventmechanismes? 
 
@@ -87,7 +87,7 @@ Gideon Zegwaard deelt de presentatie [Toegang in FDS]({{< param baseDirectory >}
 
   *Martin van der Plas*: Vandaar ook mijn vraag; want als je protocollen als AMQP of MQTT kiest wordt het lastiger dan wanneer je standaardiseert op HTTP calls.
 
-  *Michiel Trimpe*: In de brede AuthZEN standaard kan je elke call instrumenteren, maar dwing je dus ook minder af. In de FDS profielen daarop kunnen we inderdaad aannames maken die de complexiteit versimpelen.
+  *Michiel Trimpe*: In de brede AuthZEN standaard kan je elke call instrumenteren, maar dwing je dus ook minder af. In de FDS-profielen daarop kunnen we inderdaad aannames maken die de complexiteit versimpelen.
 
 Vragen na de presentatie:
 
