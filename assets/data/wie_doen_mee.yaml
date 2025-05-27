@@ -8,11 +8,6 @@
   size: 128
   alt_text: "Geonovum"
   logo: "logos/geonovum.svg"
-- naam: "Rijksoverheid"
-  link: "https://www.rijksoverheid.nl/"
-  size: 224
-  alt_text: "Rijksoverheid"
-  logo: "logos/rijkslint.png"
 - naam: "Ministerie van Binnenlandse Zaken en Koninkrijksrelaties"
   link: "https://www.rijksoverheid.nl/ministeries/ministerie-van-binnenlandse-zaken-en-koninkrijksrelaties"
   size: 224
@@ -58,8 +53,23 @@
   size: 128
   alt_text: "Vereniging van Nederlandse Gemeenten"
   logo: "logos/vng.svg"
-- naam: "IDEMIA"
+- naam: "Idemia"
   link: "https://www.idemia.com/"
   size: 128
-  alt_text: "IDEMIA"
+  alt_text: "Idemia"
   logo: "logos/idemia.svg"
+- naam: "Kadaster"
+  link: "https://www.kadaster.nl/"
+  size: 128
+  alt_text: "Kadaster"
+  logo: "logos/kadaster.png"
+- naam: "Rijksdienst voor Identiteitgegevens"
+  link: "https:/rvig.nl/"
+  size: 128
+  alt_text: "Rijksdienst voor Identiteitgegevens"
+  logo: "logos/rvig.png"
+- naam: "Gemeente Rotterdam"
+  link: "https://www.idemia.com/"
+  size: 128
+  alt_text: "Gemeente Rotterdam"
+  logo: "logos/rotterdam.png"

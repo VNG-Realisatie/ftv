@@ -12,7 +12,7 @@ De gemeente gebruikt camera’s en databronnen om te controleren of een voertuig
 
 {{< /chapter/section >}}
 
-{{< chapter/section title="Wat gebeurt er?">}}
+{{< chapter/section title="Wat gebeurt er?" level="3">}}
 
 Camera’s registreren een kenteken bij de milieuzone. De gemeente vraagt
 vervolgens gegevens op bij:
@@ -27,20 +27,20 @@ De combinatie van de gegevens bepaalt of er een boete volgt.
 
 {{< /chapter/section >}}
 
-{{< chapter/section title="Wat zijn de toegangsregels?">}}
+{{< chapter/section title="Wat zijn de toegangsregels?" level="3">}}
 
 FTV gaat over toegangsregels. In dit geval zijn dat bijvoorbeeld:
 
 - Alleen gemeenten die een ‘Besluit milieuzones’ hebben aangenomen, mogen deze gegevens opvragen.
 - Het opvragen bij RDW en RvIG mag alleen gebeuren vanaf een computer van zo'n gemeente.
-- De woonplaats mag alleen wordn opgevraagd als uit de categorie en emissieklasse blijkt dat het om een dieselcamper gaat.
+- De woonplaats mag alleen worden opgevraagd als uit de categorie en emissieklasse blijkt dat het om een dieselcamper gaat.
 - Persoonsgegevens mogen alleen worden opgevraagd als blijkt dat een boete uitgeschreven moet worden.
 - Alle gegevens die niet nodig zijn voor het innen van een boete, moeten direct worden gewist.
 - Er moet een logboek worden bijgehouden van alle opvragingen.
 
 {{< /chapter/section >}}
 
-{{< chapter/section title="Wat regelt FTV?">}}
+{{< chapter/section title="Wat regelt FTV?" level="3">}}
 
 Alle partijen, hier de gemeenten, RDW en RvIG, hebben eigen software voor gegevensuitwisseling. 
 En dus ook eigen systemen om toegang te controleren. Die autonomie is belangrijk en blijft behouden. 

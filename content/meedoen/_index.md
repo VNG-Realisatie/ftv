@@ -30,17 +30,20 @@ IT-specialisten denken via Mattermost mee over FTV. Heb je ideeën of vragen? Sl
 {{< /chapter/section >}}
 
 {{< chapter/section title="Wie doen er al mee?" >}}
-- Vereniging Nederlandse Gemeenten (VNG)
-- Ministerie van Binnenlandse Zaken (BZK)
-- Logius
+- Digilab
 - Geonovum
-- Kadaster
+- Ministerie van Binnenlandse Zaken (BZK)
 - Zorginstituut Nederland
-- NUTS
-- Vecozo
 - Autoriteit Consument & Markt (ACM)
+- NUTS
+- Logius
+- Vecozo
+- ArchiXL
+- iSHARE
+- Zicht op Nederland
+- Vereniging Nederlandse Gemeenten (VNG)
+- Idemia
+- Kadaster
 - Rijksdienst voor Identiteitsgegevens (RvIG)
 - Gemeente Rotterdam
-- Idemia
-- iSHARE
 {{< /chapter/section >}}
