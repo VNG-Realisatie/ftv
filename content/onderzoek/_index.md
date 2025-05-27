@@ -4,7 +4,7 @@ type: 'chapter'
 ---
 
 {{< chapter/header title="Onderzoek" bg="brown" icon="images/api-icon.svg">}}
-Voorafgaand aan het definiëren van een werkwijze en het opstellen van de standaarden is uitgebreid onderzoek gedaan. Op basis van dit onderzoek zijn de eisen opgesteld voor de totaaloplossing. De onderzoeksresultaten zijn in deze sectie samengevat.
+Voorafgaand aan het definiëren van een werkwijze en het opstellen van de standaarden is uitgebreid onderzoek gedaan. Op basis van dit onderzoek zijn de eisen opgesteld voor de totaaloplossing. De samenvatting van de onderzoeksresultaten staan hieronder.
 {{< /chapter/header >}}
 
 {{< chapter/section title="Onderzoeksopzet" >}}
@@ -22,10 +22,10 @@ Er is onderzocht hoe toegangsverlening op dit moment binnen de Nederlandse overh
 {{< chapter/section title="Eisen" level="3">}}
 Gaandeweg het onderzoek zijn de eisen opgesteld voor de nieuwe standaard voor toegangsverlening. Er is gekeken naar vier belangrijke punten:
 
-- De visie van de Generieke Digitale Infrastructuur (GDI): welke richting de overheid op wil met digitale voorzieningen.
-- De beperkingen van de huidige oplossingen: welke problemen er nu zijn.
-- De elementen die nodig zijn om te verbeteren: wat er nodig is voor een toekomstvaste aanpak.
-- De samenhang met linked data: hoe de standaard aansluit op nieuwe manieren van gegevensuitwisseling.
+- De visie van de Generieke Digitale Infrastructuur (GDI): welke richting wil de overheid op met digitale voorzieningen?
+- De beperkingen van de huidige oplossingen: welke problemen zijn der nu?
+- De elementen die nodig zijn om te verbeteren: wat is er nodig voor een toekomstvaste aanpak>
+- De samenhang met linked data: hoe sluit de standaard aan op nieuwe manieren van gegevensuitwisseling?
 
 {{< /chapter/section >}}
 
