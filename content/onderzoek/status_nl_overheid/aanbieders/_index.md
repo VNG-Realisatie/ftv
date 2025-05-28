@@ -5,8 +5,7 @@ type: 'chapter'
 title: "Aanbieders"
 ---
 {{< chapter/section title="Aanbieders" >}}
-De term 'aanbieders' gebruiken we hier voor de registers, of preciezer bronhouders, die samen hun verwerkers 
-een API aanbieden om verwerkingen te doen op hun register.
+De term aanbieders verwijst hier naar de registers, of preciezer: de bronhouders, die samen met hun verwerkers een API aanbieden om verwerkingen op hun register mogelijk te maken.
 
 Met elk van deze registers zijn gesprekken gevoerd; de details zijn op aanvraag beschikbaar.
 
@@ -28,7 +27,7 @@ Met elk van deze registers zijn gesprekken gevoerd; de details zijn op aanvraag 
 
 ## 2. Sectorregistraties
 
-Van de totale [lijst van sectorregistraties](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/sectorregistraties/) zijn er maar een paar bekeken.
+Van de totale [lijst van sectorregistraties](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/sectorregistraties/) zijn er een paar bekeken.
 
 | Registratie | Houder | EAM? |
 |-------------|--------|------|
