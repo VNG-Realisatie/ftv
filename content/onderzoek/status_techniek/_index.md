@@ -18,7 +18,7 @@ Daarnaast vraagt het volwassen en gemeengoed worden van cloud native computing o
 
 {{< chapter/section title="Onderzoek per aspect" level="3" >}}
 
-We onderzoeken hier de status van de technologie en markt door te kijken naar de volgende aspecten:
+Om de status van de technologie en markt te bepalen, is gekeken naar de volgende punten:
 
 1. [methodieken](methodieken)
 2. [regeltalen](regeltalen)
