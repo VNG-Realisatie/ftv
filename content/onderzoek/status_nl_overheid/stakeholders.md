@@ -2,7 +2,7 @@
 weight: 10
 Title: Stakeholders
 ---
-{{< chapter/section title="Stakeholder kaart" level="1">}}
+{{< chapter/section title="Stakeholders" level="1">}}
 Op onderstaande kaart zijn de stakeholders uitgezet.
 
 ![Kaart van stakeholders]({{< param baseDirectory >}}images/stakeholder_map.png)
