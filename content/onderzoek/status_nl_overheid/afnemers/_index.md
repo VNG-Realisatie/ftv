@@ -5,11 +5,9 @@ type: 'chapter'
 title: "Afnemers"
 ---
 {{< chapter/section title="Afnemers" >}}
-Onder afnemers verstaan we de partijen die verwerkingen doen op de registers van de aanbieders. Dat zijn alle partijen die gegevens nodig hebben voor
-informatievoorziening of besluitvorming, zoals een dienst toeslagen. En ook de organisaties die gegevens aanleveren, zoals een gemeente die een verhuizing registreert.
+De term aanbieders verwijst hier naar de registers, of preciezer: de bronhouders, die samen met hun verwerkers een API aanbieden om verwerkingen op hun register mogelijk te maken. Dat zijn alle partijen die gegevens nodig hebben voor informatievoorziening of besluitvorming, zoals een dienst Toeslagen. En de organisaties die gegevens aanleveren, zoals een gemeente die een verhuizing registreert.
 
-Afnemers gebruiken hiervoor software die ze door een leverancier laten leveren en onderhouden. We maken hier een lijst van veelgebruikte leveranciers en wat
-ze te bieden hebben aan EMA, en niet een lijst van afnemers.
+Afnemers gebruiken hiervoor software die ze door een leverancier laten leveren en onderhouden. In dit overzicht staan veelgebruikte leveranciers en wat zij bieden op het gebied van EAM.
 
 | Leverancier      | Systeem  | Toegang met EAM?                                                                                                                                |  
 |------------------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------|
