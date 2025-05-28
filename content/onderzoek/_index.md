@@ -23,8 +23,8 @@ Er is onderzocht hoe toegangsverlening op dit moment binnen de Nederlandse overh
 Gaandeweg het onderzoek zijn de eisen opgesteld voor de nieuwe standaard voor toegangsverlening. Er is gekeken naar vier belangrijke punten:
 
 - De visie van de Generieke Digitale Infrastructuur (GDI): welke richting wil de overheid op met digitale voorzieningen?
-- De beperkingen van de huidige oplossingen: welke problemen zijn der nu?
-- De elementen die nodig zijn om te verbeteren: wat is er nodig voor een toekomstvaste aanpak>
+- De beperkingen van de huidige oplossingen: welke problemen zijn de nu?
+- De elementen die nodig zijn om te verbeteren: wat is er nodig voor een toekomstvaste aanpak?
 - De samenhang met linked data: hoe sluit de standaard aan op nieuwe manieren van gegevensuitwisseling?
 
 {{< /chapter/section >}}
