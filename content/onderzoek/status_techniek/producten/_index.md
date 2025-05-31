@@ -5,9 +5,9 @@ title: "Producten"
 
 {{< chapter/section title="Producten" level="1" >}}
 
-Toegangsverlening is een groeimarkt. Gedistribueerde architectuur met microservices en in het algemeen toenemende gegevensuitwisseling maken dat er een sterk toenemende vraag is naar praktische oplossingen. 	Commerciële partijen zien dat implementatie technisch en organisatorisch lastig is en springen daarop in. Er zijn gesloten implementaties van open standaarden gekomen, open implementaties zijn gesloten, en er worden betaalde diensten en extensies op open implementaties geboden.
+Toegangsverlening is een groeimarkt. Gedistribueerde architectuur met microservices en in het algemeen toenemende gegevensuitwisseling maken dat er een sterk toenemende vraag is naar praktische oplossingen. 	Commerciële partijen zien dat implementatie technisch en organisatorisch lastig is en springen daarop in. Er zijn gesloten implementaties van open standaarden gekomen, open implementaties zijn gesloten en er worden betaalde diensten en extensies op open implementaties geboden.
  
-Hier volgt een inventarisatie van de beschikbare producten verdeel in open en gesloten source.
+Hier volgt een inventarisatie van de beschikbare producten verdeeld in open en gesloten source.
 {{< /chapter/section >}}
 
 
@@ -16,14 +16,14 @@ Er zijn veel implementaties beschikbaar. Voor de test is gekozen voor de partije
 Dit zijn de geteste implementatie met de daarbij behorende regeltalen:
 
 - [Amazon Verified Permissions](https://aws.amazon.com/verified-permissions/) is de policy engine van Amazon en gebruikt de taal Cedar.
-- [Cerbos](https://www.cerbos.dev/), de Policy Bases Access Control (PBAC)-oplossing van Google maakt gebruik van CEL.
+- [Cerbos](https://www.cerbos.dev/) is de Policy Bases Access Control (PBAC)-oplossing van Google en maakt gebruik van CEL.
 - [Open Policy Agent (OPA)](https://www.openpolicyagent.org/) is de engine van Styra de bedenker van Rego.
-- [OpenFGA](https://openfga.dev/) is gebaseerd op Zanzibar, het Relationship Based Access Control-project van Google.
-- [KeyCloak](https://www.keycloak.org/docs/latest/authorization_services/index.html) open source platform.
+- [OpenFGA](https://openfga.dev/) is gebaseerd op Zanzibar, het Relationship Based Access Control (ReBAC)-project van Google.
+- [KeyCloak](https://www.keycloak.org/docs/latest/authorization_services/index.html), een open source platform.
 
 Van XACML en Rego zijn geen stabiele moderne open source implementaties.
 
-Elk van deze opties is getest in het project. Zie een overzicht [hier](opensource) van de resultaten. Alle implementaties zijn in principe geschikt bevonden als Policy Decicion Point (PDP). Daarnaast is zelfbouw ook altijd mogelijk zolang dit gebeurt onder de open source-voorwaarden van de overheid.
+Elk van deze opties is getest in het project. Zie het [overzicht van de resultaten](opensource). Alle implementaties zijn in principe geschikt bevonden als Policy Decicion Point (PDP). Daarnaast is zelfbouw ook altijd mogelijk zolang dit gebeurt onder de open source-voorwaarden van de overheid.
 
 Een eerste kanttekening is wel dat toegangsregels geschreven in al deze talen lastig zijn te lezen en te schrijven. Een van onze doelen is echter dat mensenogen ze moeten kunnen controleren en aanpassen, en dan niet alleen programmeurs. Geen van de bovengenoemde implementaties biedt een oplossing die dit significant eenvoudiger maakt.
 
@@ -31,8 +31,8 @@ Een tweede kanttekening is dat deze implementaties allemaal losse policy engines
 {{< /chapter/section >}}
 
 {{< chapter/section title="Closed source" >}}
-In het commerciële domein zijn completere oplossingen beschikbaar. Een goede recente inventarisatie van de markt is [deze](https://www.kuppingercole.com/research/lc80819/policy-based-access-management) van KuppingerCole.
-	Voor dit onderzoek zijn verschillende partijen benaderd met het verzoek om informatie en een demonstratie. Hieronder volgt een korte samenvatting van de bevindingen.
+In het commerciële domein zijn completere oplossingen beschikbaar. Een goede recente inventarisatie van de markt is [de inventarisatie van KuppingerCole](https://www.kuppingercole.com/research/lc80819/policy-based-access-management).
+Voor dit onderzoek zijn verschillende partijen benaderd met het verzoek om informatie en een demonstratie. Hieronder volgt een korte samenvatting van de bevindingen.
 
 | Leverancier                                                                        | Gesproken | Meer informatie                                                  |
 |------------------------------------------------------------------------------------|-----------|------------------------------------------------------------------|
