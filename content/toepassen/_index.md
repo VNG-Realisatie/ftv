@@ -44,7 +44,7 @@ FTV raakt meerdere onderdelen van de IT-infrastructuur. Denk aan softwarekeuzes,
 
 3. **Softwarekeuze**
 
-   Er is veel te kiezen op het gebeid van Policy Decision Point (PDP), Policy Information Point (PIP) en Policy Administration Point (PAP) Wat heb je nodig? En welke leverancier past het best? Of is het beter om zelf iets te bouwen?
+   Er is veel te kiezen op het gebied van Policy Decision Point (PDP), Policy Information Point (PIP) en Policy Administration Point (PAP) Wat heb je nodig? En welke leverancier past het best? Of is het beter om zelf iets te bouwen?
 
    [Lees de checklist Softwarekeuze](softwarekeus)
 {{< /chapter/section >}}
@@ -60,7 +60,7 @@ Een goede technische basis begint met praktijkvoorbeelden en inzicht in de opbou
 
 4. **Proefopstelling**
 
-   Een mini-FDS met uitgewerkte use cases is ideaal om lokaal te testen en mee te experimenteren.
+   Een mini-Federatief Datastelsel (FDS) met uitgewerkte use cases is ideaal om lokaal te testen en mee te experimenteren.
 
    [Bekijk de proefopstelling en ontdek wat werkt](proefopstelling)
 {{< /chapter/section >}}
