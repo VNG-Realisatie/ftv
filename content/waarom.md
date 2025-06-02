@@ -14,7 +14,7 @@ aanpak voor toegangsverlening nodig.
 Als meer organisaties gegevens met elkaar uitwisselen, neemt ook het aantal regels en afspraken over die uitwisseling toe. Elke koppeling vraagt om afstemming: wie krijgt toegang tot welke gegevens, onder welke voorwaarden?
 De huidige methodes zoals rolgebaseerde rechten en in applicaties ingebouwde regels zijn bij deze schaalvergroting niet meer hanteerbaar.
 
-FTV werkt met gestandaardiseerde toegangsregels die buiten de applicaties beheerd worden. 
+Federatieve Toegangsverlening (FTV) werkt met gestandaardiseerde toegangsregels die buiten de applicaties beheerd worden. 
 Met FTV kunnen organisaties toegangsregels eenvoudig toepassen in groeiende samenwerkingen, over domeinen en systemen heen.
 {{< /chapter/section >}}
 
@@ -39,6 +39,6 @@ Dit maakt verantwoording gemakkelijker, transparanter en betrouwbaarder.
 Organisaties kopen meestal de software voor toegangsverlening in.
 Soms ontstaat de wens of noodzaak om van leverancier te veranderen.
 Bijvoorbeeld door nieuwe eisen van de organisatie, gewijzigde voorwaarden bij de leverancier of veranderingen in de maatschappij en politiek.
-FTV maakt zo’n overstap eenvoudiger omdat het een erkende, open standaarden gebruikt.
+FTV maakt zo’n overstap eenvoudiger omdat het erkende, open standaarden gebruikt.
 Deze standaarden zijn in beheer bij de overheid, waardoor continuïteit gegarandeerd is.
 {{< /chapter/section >}}
