@@ -4,7 +4,7 @@ title: Voorbeeld milieuzone
 weight: 20
 ---
 
-{{< chapter/section title="FTV in de praktijk - Campers in de milieuzone">}}
+{{< chapter/section title="Uit de praktijk - Campers in de milieuzone">}}
 
 Niet elk voertuig mag een milieuzone inrijden. Of een voertuig toegang heeft, hangt af van de regels. 
 Zo mogen bijvoorbeeld alleen dieselcampers van bewoners de milieuzone in, die van anderen niet. 
@@ -29,7 +29,7 @@ De combinatie van de gegevens bepaalt of er een boete volgt.
 
 {{< chapter/section title="Wat zijn de toegangsregels?" level="3">}}
 
-FTV gaat over toegangsregels. In dit geval zijn dat bijvoorbeeld:
+Federatieve Toegangsverlening (FTV) gaat over toegangsregels. In dit geval zijn dat bijvoorbeeld:
 
 - Alleen gemeenten die een ‘Besluit milieuzones’ hebben aangenomen, mogen deze gegevens opvragen.
 - Het opvragen bij RDW en RvIG mag alleen gebeuren vanaf een computer van zo'n gemeente.
@@ -56,7 +56,7 @@ De verschillende systemen voeren de regels alleen uit. Ook dat gebeurt op een st
 - **Flexibel**. Als de regels veranderen, bijvoorbeeld oudere campers op benzine gaan ook onder de regeling vallen, dan is een centrale
 aanpassing voldoende.
 - **Traceerbaar**. Als later navraag gedaan wordt over waarom een auto eerder wel of niet is beboet, dan is de historie van regels 
-en gegevens beschikbaar als onderbouwing. Alles volgens AVG en andere privacyrichtlijnen.
+en gegevens beschikbaar als onderbouwing. Alles gebeurt volgens AVG en andere privacyrichtlijnen.
 - **Onafhankelijk**. Hetzelfde systeem is inzetbaar voor de uitwisseling met RDW en RvIG. Ontwikkelaars en beheerders hoeven maar met een systeem te leren werken.
 
 {{< /chapter/section >}}
