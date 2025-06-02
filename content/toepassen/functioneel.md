@@ -5,7 +5,7 @@ type: 'chapter'
 {{< chapter/section title="" >}}
 # Functioneel
 
-Voor een goed werkende oplossing voor Federatieve Toegangsverlening zijn afspraken nodig over beheer en uitvoering (runtime).
+Voor een goed werkende oplossing voor Federatieve Toegangsverlening (FTV) zijn afspraken nodig over beheer en uitvoering (runtime).
 Wat komt er kijken bij het toepassen en beheren van toegangsregels?
 {{< /chapter/section >}}
 
