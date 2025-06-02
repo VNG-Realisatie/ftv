@@ -6,7 +6,7 @@ type: 'chapter'
 {{< chapter/section title="" >}}
 # OpenFTV
 
-Federatieve toegangsverlening (FTV) TV is een toepassing van Externalized Authorization Management (EAM),
+Federatieve toegangsverlening (FTV) is een toepassing van Externalized Authorization Management (EAM),
 een methode om toegangsregels buiten applicaties te beheren.
 Om te laten zien hoe dat werkt, is een technische voorbeeldoplossing beschikbaar: de referentie-implementatie OpenFTV. 
 Deze implementatie is open source, gebaseerd op internationale standaarden en bedoeld voor iedereen die FTV wil toepassen,
