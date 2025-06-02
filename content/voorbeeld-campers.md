@@ -57,6 +57,6 @@ De verschillende systemen voeren de regels alleen uit. Ook dat gebeurt op een st
 aanpassing voldoende.
 - **Traceerbaar**. Als later navraag gedaan wordt over waarom een auto eerder wel of niet is beboet, dan is de historie van regels 
 en gegevens beschikbaar als onderbouwing. Alles gebeurt volgens AVG en andere privacyrichtlijnen.
-- **Onafhankelijk**. Hetzelfde systeem is inzetbaar voor de uitwisseling met RDW en RvIG. Ontwikkelaars en beheerders hoeven maar met een systeem te leren werken.
+- **Leveranciersonafhankelijk**. Hetzelfde systeem is inzetbaar voor de uitwisseling met RDW en RvIG. Ontwikkelaars en beheerders hoeven maar met een systeem te leren werken.
 
 {{< /chapter/section >}}
