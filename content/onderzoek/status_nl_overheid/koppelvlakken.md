@@ -19,10 +19,10 @@ Digikoppeling omvat (boven op een encryptielaag) de standaarden ebMS, WUS, REST 
 - **[FSC](https://gitlab.com/commonground/nlx/fsc-nlx)**. Een recente koppelvlakstandaard die in het programma Federatief Datastelsel (FDS) ontwikkeld is.
 
 Voor dit project stellen we dat ebMS2, WUS en Grote Berichten een oudere generatie zijn en niet als APIs gezien worden
-in onze terminologie. StUF, REST, HaalCentraal en FSC zijn wel in scope.
+in onze terminologie. StUF, REST, HaalCentraal en Federatieve Service Connectiviteit (FSC) zijn wel in scope.
 {{< /chapter/section >}}
 {{< chapter/section title="Autorisatie in de koppelvlakstandaarden" >}}
-### Stuf
+### StUf
 
 [StUF](https://standaarden.vng.nl/StUF-standaarden) is een oudere generatie die niet meer wordt doorontwikkeld, maar nog wel volop in gebruik is.
 Qua autorisatie is in de generieke onderlaag van StUF ruimte voorzien om 4 gegevens mee te geven van zowel de afzender als de ontvanger:
@@ -43,7 +43,7 @@ anders dan de grofmazigste in de vorm van authenticatie.
 
 [HaalCentraal](https://haalcentraal.pleio.nl/) is een verder uitwerking van REST met een volledige architectuur inclusief gateway, IAM en logging.
 Er zijn een [viertal koppelingen](https://vng-realisatie.github.io/Haal-Centraal/aansluiten-op-apis) gebouwd op HaalCentraal (WOZ, BAG, BRK en BRP), maar na onderzoek is 
-besloten dat nut en noodzaak onvoldoende herkend worden, De ontwikkeling is stopgezet. 
+besloten dat nut en noodzaak onvoldoende herkend worden. De ontwikkeling is stopgezet. 
 De opgeleverde koppelingen zijn nog in gebruik en daarom relevant voor dit onderzoek.
 
 HaalCentraal heeft in de koppelvlakstandaard een minimale voorziening voor toegangsverlening: er is een API-key voorgeschreven.
@@ -53,5 +53,5 @@ Daarmee kunnen implementaties zelf aan de slag.
 
 [Federatieve Service Connectiviteit (FSC)](https://commonground.nl/page/view/736309a1-739a-47fc-abfd-67e71f1d9e59/consultatie-fsc) is het nieuwste profiel in Digikoppeling, speciaal ontwikkeld voor federatief werken.
 In de [FSC standaard](https://commonground.gitlab.io/standards/fsc/core/draft-fsc-core-00.html) wordt toegansverlening niet beschreven, maar in de referentie-implementatie is een plek ingeruimd voor toekomstige
-Policy Bases Access Control (PBAC)-oplossingen. FTV wordt in nauwe samenwerking met FSC ontwikkeld worden zodat deze naadloos gaan aansluiten.
+Policy Bases Access Control (PBAC)-oplossingen. FTV wordt in nauwe samenwerking met FSC ontwikkeld zodat deze naadloos gaan aansluiten.
 {{< /chapter/section >}}
