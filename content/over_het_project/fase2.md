@@ -8,6 +8,7 @@ type: 'chapter'
 
 {{< chapter/section title="Doelstellingen" >}}
 Projectfase 2 heeft de volgende doelen met de daarbij behorende werkzaamheden:
+
 **Een standaard voorstellen door middel van:**
 •	Het schrijven en openbaar publiceren van de voorgestelde standaard in OAS-formaat.
 •	Het periodiek bijeenbrengen van een werkgroep voor co-creatie.
