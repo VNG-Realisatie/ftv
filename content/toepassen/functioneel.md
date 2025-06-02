@@ -32,7 +32,7 @@ Het beheer van toegangsregels vraagt om goede beveiliging. Een gedeeld of apart 
 
 #### Regels opstellen
 
-Regels kunnen worden gemaakt, aangepast of verwijderd. Dat kan met een uitgebreide editor die is afgestemd op de policytaal of met een eenvoudige oplossing die alleen bestanden aanneemt.
+Regels kunnen gemaakt, aangepast of verwijderd worden. Dat kan met een uitgebreide editor die is afgestemd op de policytaal of met een eenvoudige oplossing die alleen bestanden aanneemt.
 
 #### Versiebeheer
 
