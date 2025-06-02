@@ -52,11 +52,11 @@ De verschillende systemen voeren de regels alleen uit. Ook dat gebeurt op een st
 
 {{< chapter/section title="De voordelen">}}
 
-- **Schaalbaar**. Als een nieuwe gemeente aansluit, dan zijn de regels direct duidelijk en inzetbaar. Zonder hoge kosten, en zonder impact op RDW of RvIG.
+- **Schaalbaar**. Als een nieuwe gemeente aansluit, dan zijn de regels direct duidelijk en inzetbaar. Zonder hoge kosten en zonder impact op RDW of RvIG.
 - **Flexibel**. Als de regels veranderen, bijvoorbeeld oudere campers op benzine gaan ook onder de regeling vallen, dan is een centrale
 aanpassing voldoende.
 - **Traceerbaar**. Als later navraag gedaan wordt over waarom een auto eerder wel of niet is beboet, dan is de historie van regels 
 en gegevens beschikbaar als onderbouwing. Alles gebeurt volgens AVG en andere privacyrichtlijnen.
-- **Onafhankelijk**. Hetzelfde systeem is inzetbaar voor de uitwisseling met RDW en RvIG. Ontwikkelaars en beheerders hoeven maar met een systeem te leren werken.
+- **Leveranciersonafhankelijk**. Hetzelfde systeem is inzetbaar voor de uitwisseling met RDW en RvIG. Ontwikkelaars en beheerders hoeven maar met een systeem te leren werken.
 
 {{< /chapter/section >}}
