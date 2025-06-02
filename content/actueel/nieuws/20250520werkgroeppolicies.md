@@ -34,5 +34,5 @@ Op de agenda staat dan de kick-off van de subwerkgroep AuthZen NL Gov.
 {{< /chapter/section >}}
 
 {{< chapter/section title="Ook meedoen?" level="4">}}
-Meer weten of meedenken? Sluit je dan aan bij de werkgroep. Kijk op de [website van FTV](/ftv/) voor meer informatie.
+Meer weten of meedenken? Sluit je dan aan bij de werkgroep. Kijk op [deze website](/ftv/) voor meer informatie.
 {{< /chapter/section >}}
