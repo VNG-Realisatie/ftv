@@ -10,7 +10,7 @@ Toegangsverlening is bepaald niet nieuw; informatiesystemen hebben altijd al een
 
 Waar identificatie en authenticatie de afgelopen 10 jaar uitgekristalliseerd zijn tot begrepen vraagstukken met geaccepteerde oplossingen,
 bleef autorisatie lang achter. Maar autorisatie maakt nu een transformatie door. De schaalvergroting in gegevensuitwisseling, waarbij steeds meer partijen en
-systemen met elkaar verbonden moeten worden, maakt dat traditionele RBAC vanuit IAM, aangevuld met in de applicaties
+systemen met elkaar verbonden moeten worden, maakt dat traditionele Role-Based Access Control (RBAC) vanuit Identity Access Management (IAM), aangevuld met in de applicaties
 ingebouwde regels, niet meer voldoet. Het onderhoud van regels en beheer van gebruikers en rechten wordt in die opstelling ondoenlijk.
 Daarnaast vraagt het volwassen en gemeengoed worden van cloud native computing om moderne architectuur en distributiemethoden.
 
