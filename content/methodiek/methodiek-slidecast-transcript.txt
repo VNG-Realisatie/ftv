@@ -1,0 +1,40 @@
+1.
+De FTV methode in vogelvlucht
+
+2.
+FTV werkt op basis van Externalized Authorization Management EAM.
+De basisgedachte is het scheiden van verantwoordelijkheden.
+Regels worden van code gescheiden in policies, en het beheer van policies wordt losgekoppeld van het handhaven ervan.
+
+3.
+Drie belangrijke kenmerken van EAM zijn:
+Fijnmazig.
+Grofmazige autorisatie werkt op basis van gebruikers en rollen, bijvoorbeeld met OAuth scopes
+Middelmazige autorisatie beslist daarnaast ook op basis van de actie, bijvoorbeeld met  OpenAPI routes
+EAM maakt fijnmazige autorisatie mogelijk. Daarbij telt alles mee: wie iets vraagt, wat er gevraagd wordt en de context – zoals tijd, locatie of reden van het verzoek.
+
+Policy-as-code
+Bij EAM staan toegangsregels staan niet  in de applicatiecode, maar in policies. Dat maakt het beheer makkelijker. Voor workflow, versiebeheer en rechten geldt dezelfde zorgvuldigheid als bij het werken met broncode.
+
+Real-time
+Toegangsregels worden niet alleen tijdens login uitgevoerd, maar op elk moment wanneer toegang gevraagd wordt (zero trust) en op elke plek in de keten waar toegang gevraagd wordt (defense in depth).
+
+4.
+In de fysieke architectuur zien we dit terug. In dit voorbeeld haalt een client een token op bij de Identity Provider en benadert via de API Gateway twee applicaties. Elke applicatie voert zijn eigen toegangscontrole uit (lokale autorisatie). De policies staan op een aparte plek (centraal beheer).
+
+5.
+De PxP-architectuur laat zien hoe dit werkt:
+Het verzoek wordt onderschept door het Policy Enforcement Point, het PEP.
+Het PEP stuurt het verzoek naar het Policy Decision Point, het PDP.
+Het PDP neemt de beslissing op basis van drie bronnen:
+het verzoek zelf, de beleidsregels uit het Policy Administration Point (PAP), en aanvullende gegevens uit het Policy Information Point (PIP)
+
+6.
+Om  PxP echt uitwisselbaar te maken, werkt FTV aan drie standaarden:
+De interface tussen PEP en PDP: gestandaardiseerd in AuthZEN.
+Het autorisatieregister, dat eisen stelt aan hoe policies opgeslagen worden
+En het Logboek Toegangsbeslissingen legt vast welke beslissingen genomen zijn
+
+7.
+Kijk voor alle details over de standaarden op de FTV site
+vng-realisatie.github.io/ftv/

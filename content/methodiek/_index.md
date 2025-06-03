@@ -12,9 +12,17 @@ De term voor de gekozen methodiek is Externalized Authorization Management (EAM,
 In deze methodiek worden toegangsverzoeken, -beslissingen en -beleid op gestandaardiseerde wijze gemodelleerd
 en buiten de applicaties gebracht zodat deze centraal beheerd kunnen worden.
 
+{{< /chapter/header >}}
+
+{{< chapter/section title="EAM in vogelvlucht" level="3">}}
+
+Een overzicht van EAM in 2:30.
+
 <video width="640" height="480" controls>
   <source src="methodiek-slidecast.mp4" type="video/mp4">
 </video>
+
+<a href="methodiek-slidecast-transcript.txt" download>Transcript downloaden</a>
 
 {{< /chapter/header >}}
 
