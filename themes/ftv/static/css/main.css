@@ -13,7 +13,6 @@
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-xl: 36rem;
-    --container-2xl: 42rem;
     --container-3xl: 48rem;
     --container-5xl: 64rem;
     --text-lg: 1.125rem;
@@ -308,9 +307,6 @@
   }
   .w-2\/3 {
     width: calc(2/3 * 100%);
-  }
-  .w-2xl {
-    width: var(--container-2xl);
   }
   .w-3xl {
     width: var(--container-3xl);
@@ -642,11 +638,6 @@
   .lg\:w-\[1024px\] {
     @media (width >= 64rem) {
       width: 1024px;
-    }
-  }
-  .lg\:w-full {
-    @media (width >= 64rem) {
-      width: 100%;
     }
   }
   .lg\:grid-cols-4 {
@@ -12525,6 +12516,18 @@
 }
 .swiperWieDoenMee > .swiper-wrapper {
   transition-timing-function: linear;
+}
+.section-navigation {
+  float: left;
+  border: 1px solid;
+  width: 200px;
+  height: 60px;
+  text-align: center;
+  margin-right: 50px;
+  line-height: 60px;
+}
+.section-navigation-selected {
+  font-weight: bold;
 }
 @property --tw-rotate-x {
   syntax: "*";
