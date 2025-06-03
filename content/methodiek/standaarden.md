@@ -1,37 +1,95 @@
 ---
-Title: Standaarden
+Title: De FTV-standaarden
 type: 'chapter'
 ---
 
-{{< chapter/section title="Standaarden" >}}
-Om toegangsverlening te beheren waar meerdere applicaties, afdelingen en organisaties bij betrokken zijn, is standaardisering essentieel.
+{{< chapter/header bg="gray">}}
 
-Federatieve Toegangsverlening (FTV) ontwikkelt hiervoor waar mogelijk Nederlandse profielen op reeds bestaande (internationale) standaarden.
+### In deze sectie
 
-Voor het verantwoorden van historische beslissingen tussen organisaties binnen het Federatief Datastelsel (FDS) zal een Nederlandse standaard ontwikkeld worden.
+<div class="utrecht-paragraph pt-1 section-navigation">
+   <p>
+      <a href="../">De EAM principes</a>
+   </p>
+</div>
+<div class="section-navigation-selected utrecht-paragraph pt-1 section-navigation">
+   <p>
+      De FTV-standaarden
+   </p>
+</div>
+<div class="utrecht-paragraph pt-1 section-navigation">
+   <p>
+      <a href="../federatief">Federatief EAM</a>
+   </p>
+</div>
+
+{{< /chapter/header >}}
+
+{{< chapter/section title="De FTV-standaarden" >}}
+Standaardisatie is bij uitstek het middel om aansluiting en uitwisseling tussen systemen te vergemakkelijken. [Open standaarden](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/open-standaarden/) hebben daarbij de sterke voorkeur, alsmede het voortbouwen op bestaande internationale standaarden.
+
+Het project FTV werkt aan drie standaarden:
+
+1. AuthZEN
+2. Logboek toegangsbeslissingen
+3. Register toegangsbeleid
+
+![Schema van de drie FTV-standaarden](../methodiek-3-standaarden.png)
+
 {{< /chapter/section >}}
 
-{{< chapter/section title="NLGov profile for OpenID AuthZEN Authorization API." >}}
-De [OpenID AuthZEN Authorization API](https://openid.net/wg/authzen/) is een initiatief van de OpenID foundation waarin meerdere grote leveranciers van External Authorization Management (EAM) APIs rondom toegangsverlening standaardiseren.
+{{< chapter/section title="1. AuthZEN" level="3">}}
 
-De AuthZEN standaard heeft reeds een Implementers Draft voor het standaardiseren van toegangsverzoeken (de interface tussen de PEP en PDP.) Deze zal midden 2025 aangeboden worden ter consultatie. Diverse commerciële toegangsverleningsproducten en API-gateways implementeren deze versie inmiddels.
+De [AuthZEN Authorization API](https://openid.net/wg/authzen/) is een initiatief van de OpenID foundation, bekend van OpenID Connect. De belangrijkste  leveranciers van PDP's en API gateways werken hier samen aan een autorisatiestandaard.
 
-De Nederlandse standaard is een uitbreiding op AuthZEN en heeft daarom als volledige naam **NLGov Profile for OpenID AuthZEN Authorization API** gekregen; kortweg "AuthZEN NL Gov"
+![logo-openid.png](/ftv/images/logo-openid.png)
+
+Het eerste gebied dat AuthZEN heeft uitgewerkt is de interface tussen PEP en PDP. Dat zijn de soort vragen die gesteld kunnen worden aan de PDP, en de antwoorden daarop. 
+
+{{< /chapter/section >}}
+
+{{< chapter/section title="Informatiemodel" level="4">}}
+
+Als basis is eerst een informatiemodel uitgewerkt. Dat beschrijft de velden die in een verzoek moeten of kunnen staan, en hun mogelijke waarden. In de PxP-architectuur zijn deze vier onderdelen benoemd:
+
+![1.3.informatiemodel.png](/ftv/images/1.3.informatiemodel.png)
+
+1. Subject. De aanvrager. Dit kan een persoon of organisatie zijn.
+2. Action. De verwerking die gevraagd wordt. Denk hierbij bijvoorbeeld1 aan inzien, aanpassen, verwijderen of verstrekken.
+3. Resource. De gegevens verwerking op uitgevoerd moet worden.
+4. Context. De situatie / omgeving waarin het gegevensverzoek gedaan is. Dit kan gaan over de verbinding, de huidige tijd, de locatie van het subject en meer.
+
+In [hoofdstuk 5 van de AuthZEN specificatie](https://openid.net/specs/authorization-api-1_0-03.html#name-information-model) zijn alle details te vinden.
+
+{{< /chapter/section >}}
+
+{{< chapter/section title="APIs" level="4">}}
+
+AuthZEN 1.0 definieert de volgende APIs:
+
+- [Access Evaluation](https://openid.net/specs/authorization-api-1_0-03.html#name-access-evaluation-api). Een enkelvoudige vraag om toegang. Dat is een verzoek met Subject, Action en Resource ingevuld, en optioneel de Context. Het antwoord is in ieder geval een 'ja' of 'nee', en optioneel een onderbouwing van de beslissing.
+- [Access Evaluations](https://openid.net/specs/authorization-api-1_0-03.html#name-access-evaluations-api). Hiermee kunnen meerdere aanvragen in een verzoek gedaan worden. Dit kan de afhandeling efficienter maken. Er is ook de optie om eisen dat alle verzoeken geldig moeten zijn of dat een genoeg is.
+- [Search APIs](https://openid.net/specs/authorization-api-1_0-03.html#name-subject-search-api). Hiermee wordt gezocht naar opties door telkens Subject, Action of Resource weg te laten. Het ontbreken van een Subject bijvoorbeeld geeft aan dat de vrager wil weten welke Subjecten toegestaan zijn. Als de vragen een bestand en de actie 'inzien' meegeeft, dan vertelt de API welke Subjecten het bestand mogen lezen. En als de Action weggelaten wordt dan is de vraag: 'welke acties mag deze gebruiker op dit bestand uitvoeren?'.
+
+{{< /chapter/section >}}
+
+{{< chapter/section title="Status" level="4">}}
+
+De AuthZEN standaard versie 1.0 is een Implementers Draft voor het standaardiseren van toegangsverzoeken (de interface tussen de PEP en PDP.) Deze zal midden 2025 aangeboden worden ter consultatie. Diverse commerciële toegangsverleningsproducten en API-gateways implementeren deze versie inmiddels.
+
+{{< /chapter/section >}}
+
+{{< chapter/section title="AuthZEN NL Gov" level="4">}}
+
+De Nederlandse standaard is een uitbreiding op AuthZEN en heeft als volledige naam **NLGov Profile for OpenID AuthZEN Authorization API** gekregen; kortweg "AuthZEN NL Gov". Er wordt momenteel door de werkgroep FTV gewerkt aan de gewenste invulling daarvan.
 
 De huidige werkversie is te vinden op "[Standaard voor Federatieve Toegangsverlening](https://ftv-standaard-2f223b.gitlab.io/).".
 {{< /chapter/section >}}
 
-{{< chapter/section title="Logboek Toegangsverlening" >}}
+{{< chapter/section title="2. Logboek Toegangsverlening" level="3">}}
 Het Logboek Toegangsverlening richt zich op het verantwoorden van toegangsverzoeken. Met behulp van de standaard kunnen historische toegangsverzoeken uniform beschikbaar gemaakt worden. Hierbij gaat speciaal aandacht uit naar het voorkomen van ongewenste gegevensduplicatie ([data bij de bron](https://www.digitaleoverheid.nl/data-bij-de-bron/)) met behulp van [betrouwbare bronnen](https://website-digilab-overheid-nl-research-uit-betrouw-e1f39021ce924c.gitlab.io/) en integratie met het [Logboek Dataverwerkingen](https://logius-standaarden.github.io/logboek-dataverwerkingen/) en [FSC - Logging](https://commonground.gitlab.io/standards/fsc/logging/draft-fsc-logging-00.html).
 {{< /chapter/section >}}
 
-
-{{< chapter/section title="Toekomstige standaarden" >}}
-Binnen de OpenID AuthZEN werkgroep worden nog een aantal toekomstige standaarden voorzien. Wanneer deze beschikbaar komen, zullen deze ook opgenomen worden in de standaarden.
-Momenteel zijn de volgende koppelvlakken en extensies reeds gepland:
-- de interface voor het Policy Administration Point waarin toegangsbeleid beschikbaar gemaakt zal worden.
-- [REST API Gateway profiel](https://hackmd.io/@oidf-wg-authzen/apigateway) op de AuthZEN Authorization API
-
-Binnen de werkgroepen kunnen ook additionele extensies gedefinieerd worden en aangedragen aan de AuthZEN werkgroep. Mogelijke kandidaten hiervoor zijn:
-- SPARQL endpoints (zie [Lock/Unlock](https://kadaster-labs.github.io/lock-unlock-docs/).)
+{{< chapter/section title="3. Register toegangsbeleid" level="3">}}
+Het Register Toegangsbeleid gaat definieren welke eisen er aan een PAP gesteld worden. Denk hierbij aan dat de versies van policies over tijd bewaard blijven en de metadata die die een policy moet en mag hebben.
 {{< /chapter/section >}}

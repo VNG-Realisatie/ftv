@@ -7,14 +7,35 @@ title: "Methodiek"
 De kern van het project is de gekozen methodiek, oftewel de voorgestelde werkwijze. De methodiek beschrijft vanuit technisch en functioneel perspectief hoe een oplossing voor toegang eruit moet zien om de voordelen van Federatieve Toegangsverlening (FTV) te behalen.
 {{< /chapter/header >}}
 
-{{< chapter/section title="Externalized Authorization Management" >}}
-De term voor de gekozen methodiek is Externalized Authorization Management (EAM, soms ook wel Externalized Access Management).
-In deze methodiek worden toegangsverzoeken, -beslissingen en -beleid op gestandaardiseerde wijze gemodelleerd
-en buiten de applicaties gebracht zodat deze centraal beheerd kunnen worden.
+{{< chapter/header bg="gray">}}
+
+### In deze sectie
+
+<div class="section-navigation-selected utrecht-paragraph pt-1 section-navigation">
+   <p>
+      De EAM principes
+   </p>
+</div>
+<div class="utrecht-paragraph pt-1 section-navigation">
+   <p>
+      <a href="standaarden">De FTV-standaarden</a>
+   </p>
+</div>
+<div class="utrecht-paragraph pt-1 section-navigation">
+   <p>
+      <a href="federatief">Federatief EAM</a>
+   </p>
+</div>
 
 {{< /chapter/header >}}
 
-{{< chapter/section title="EAM in vogelvlucht" level="3">}}
+
+{{< chapter/section title="Externalized Authorization Management (EAM)" >}}
+De term voor de gekozen methodiek is Externalized Authorization Management (soms ook wel Externalized Access Management).
+In deze methodiek worden toegangsverzoeken, -beslissingen en -beleid op gestandaardiseerde wijze gemodelleerd
+en buiten de applicaties gebracht zodat deze centraal beheerd kunnen worden.
+
+**EAM in vogelvlucht**
 
 Een overzicht van EAM in 2:30.
 
@@ -87,12 +108,12 @@ De flow van informatie volgt de nummers, als volgt:
 
 De principes van EAM en de PxP architectuur geven goede richtlijnen voor implementatie. Om het doelen van uitwisselbaarheid te behalen is echter meer detail nodig. En daarnaast wordt het doel van traceerbaarheid niet geadresseerd door deze principes. In FTV werken we daarom aan een drietal standaarden:
 
-![img.png](methodiek-3-standaarden.png)
+![Schema van de drie FTV-standaarden](methodiek-3-standaarden.png)
 
-1. De wijze waarop de PEP het toegangsverzoek stelt en de wijze waarop de PDP het antwoord geeft. Kern daarvan is een informatiemodel. Er is gekozen voor de AuthZEN standaard als basis.
-2. De eisen die gesteld worden aan het PAP zodat policies goed opgeslagen en opgehaald worden, inclusief versiebeheer. We noemen dit het Register Toegangsbeleid.
-3. Een logboek waarin genomen toegangsbeslissingen worden bijgehouden.
+1. **AuthZEN**. De wijze waarop de PEP het toegangsverzoek stelt en de wijze waarop de PDP het antwoord geeft. Kern daarvan is een informatiemodel. Er is gekozen voor de AuthZEN standaard als basis.
+2. **Register toegangsbeleid**. Dit gaat over de eisen die gesteld worden aan het PAP zodat policies goed opgeslagen en opgehaald worden, inclusief versiebeheer.
+3. **Logboek toegangsbeslissingen**. Een logboek waarin genomen toegangsbeslissingen worden bijgehouden.
 
-In de volgende secties zullen deze standaarden een voor een worden behandeld.
+[Deze standaarden](standaarden) zijn op de volgende pagina verder uitgewerkt.
 
 {{< /chapter/section >}}
