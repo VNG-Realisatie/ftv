@@ -13,7 +13,7 @@ In deze methodiek worden toegangsverzoeken, -beslissingen en -beleid op gestanda
 en buiten de applicaties gebracht zodat deze centraal beheerd kunnen worden.
 
 <video width="640" height="480" controls>
-  <source src="methodiek-slidecase.mp4" type="video/mp4">
+  <source src="methodiek-slidecast.mp4" type="video/mp4">
 </video>
 
 {{< /chapter/header >}}
