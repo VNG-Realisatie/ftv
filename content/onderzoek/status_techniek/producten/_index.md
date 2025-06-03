@@ -32,18 +32,19 @@ Een tweede kanttekening is dat deze implementaties allemaal losse policy engines
 
 {{< chapter/section title="Closed source" >}}
 In het commerciële domein zijn completere oplossingen beschikbaar. Een goede recente inventarisatie van de markt is [de inventarisatie van KuppingerCole](https://www.kuppingercole.com/research/lc80819/policy-based-access-management).
-Voor dit onderzoek zijn verschillende partijen benaderd met het verzoek om informatie en een demonstratie. Hieronder volgt een korte samenvatting van de bevindingen.
 
-| Leverancier                                                                        | Gesproken | Meer informatie                                                  |
-|------------------------------------------------------------------------------------|-----------|------------------------------------------------------------------|
-| [Styra](styra)                                                                   | Ja        | [Brochure]({{< param baseDirectory >}}documents/styra.pdf)       |
-| [PlainID](plainid)                                                               | Ja        | [Brochure]({{< param baseDirectory >}}documents/plainid.pdf)     |
-| [Axiomatics](axiomatics)                                                         | Ja        | [Brochure]({{< param baseDirectory >}}documents/axiomatics.pdf)  |
-| [PingID](https://www.pingidentity.com/en/platform/capabilities/authorization.html) | Ja        | [Brochure]({{< param baseDirectory >}}documents/pingid.pdf)      |
-| [NextLabs](https://www.nextlabs.com/products/cloudaz-policy-platform/)             | Ja        | [Brochure]({{< param baseDirectory >}}documents/nextlabs.pdf)    |
-| [Thales](https://cpl.thalesgroup.com/access-management/externalized-authorization)                                                                             | Ja        | [Brochure]({{< param baseDirectory >}}documents/thales.pdf)      |
-| [Immuta](https://www.immuta.com/)                                                                             | Ja        | [Link](https://www.immuta.com/product/policy-entitlement-engine/) |
-| [Okta](https://www.okta.com/)                                                                               | Ja        |                                                                  |
-| Poort8 Noodlebar                                                                   | Ja        |                                                                  |
+Voor dit onderzoek zijn verschillende partijen benaderd met het verzoek om informatie en een demonstratie. In onderstaande tabel een overzicht van de partijen. [Benader ons](mailto:ftv@vng.nl) gerust voor meer informatie over de gevoerde gesprekken. 
+
+| Leverancier                                                                        | Meer informatie                                                   |
+|------------------------------------------------------------------------------------|-------------------------------------------------------------------|
+| [Styra](styra)                                                                     | [Brochure]({{< param baseDirectory >}}documents/styra.pdf)        |
+| [PlainID](plainid)                                                                 | [Brochure]({{< param baseDirectory >}}documents/plainid.pdf)      |
+| [Axiomatics](axiomatics)                                                           | [Brochure]({{< param baseDirectory >}}documents/axiomatics.pdf)   |
+| [PingID](https://www.pingidentity.com/en/platform/capabilities/authorization.html) | [Brochure]({{< param baseDirectory >}}documents/pingid.pdf)       |
+| [NextLabs](https://www.nextlabs.com/products/cloudaz-policy-platform/)             | [Brochure]({{< param baseDirectory >}}documents/nextlabs.pdf)     |
+| [Thales](https://cpl.thalesgroup.com/access-management/externalized-authorization) | [Brochure]({{< param baseDirectory >}}documents/thales.pdf)       |
+| [Immuta](https://www.immuta.com/)                                                  | [Link](https://www.immuta.com/product/policy-entitlement-engine/) |
+| [Okta](https://www.okta.com/)                                                      | https://www.okta.com/products/customer-identity/                  |
+| https://www.poort8.nl/                                                             | https://www.poort8.nl/                                            |
 
 {{< /chapter/section >}}

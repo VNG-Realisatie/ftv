@@ -23,7 +23,7 @@ De doelstellingen van het project zijn:
 {{< /chapter/section >}}
 
 {{< chapter/section title="Scope" >}}
-De scope van het project ia als volgt afgebakend:
+De scope van het project is als volgt afgebakend:
 
 - De opdracht voor het project is om een standaardmethodiek voor toegangsverlening tot APIs te definiëren, niet om software te bouwen. 
 - De focus ligt op toegangsverlening (autorisatie) en niet op identificatie, authenticatie of encryptie. 

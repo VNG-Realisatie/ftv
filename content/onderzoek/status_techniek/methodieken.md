@@ -25,7 +25,7 @@ Het is duidelijk dat ACL en RBAC op de schaal en in de filosofie van het FDS nie
 
 Dan blijven ABAC, PBAC en ReBAC over. Deze lijken nogal op elkaar.
 - De term ABAC is al lang geleden bedacht in het kader van XACML en de 'driepoot'-architectuur zoals in het plaatje boven.
-- De term PBAC kwam later en gebruikt het woord policy om te benadrukken dat het om in aparte bestanden geplaatste beleidsregels (policies) gaat. Dit werd in XACML echter ook al gedaan, in XML-bestanden. Volgens Wikipedia  zijn ABAC en PBAC daarom ook hetzelfde.
+- De term PBAC kwam later en gebruikt het woord policy om te benadrukken dat het om in aparte bestanden geplaatste beleidsregels (policies) gaat. Dit werd in XACML echter ook al gedaan, in XML-bestanden. Volgens [Wikipedia](https://en.wikipedia.org/wiki/Attribute-based_access_control) zijn ABAC en PBAC daarom ook hetzelfde.
 - ReBAC op zijn beurt schuift relaties naar de voorgrond. Maar in essentie zijn relaties een categorie van eigenschappen, niet een nieuw concept.
 
 De essentie van deze drie methodieken zit in de volgenden overeenkomsten:
@@ -43,6 +43,7 @@ worden om te voorkomen dat prestaties belemmerd worden. Door gedistribueerde sys
 
 Onderstaande video toont het veld.
 
-{{< /chapter/section >}}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QBs4G2WUP7U?si=CALnZ-582uDPCmug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-{{< youtube QBs4G2WUP7U >}}
+
+{{< /chapter/section >}}

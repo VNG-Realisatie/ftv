@@ -106,25 +106,24 @@ Daarom is fase 1 met 2 maanden verlengd. Dankzij deze verlenging konden aan de r
 
 {{< /chapter/section >}}
 {{< chapter/section title="Resultaten" >}}
-Dit zijn resultaten van fase 1, die allemaal op deze site te vinden zijn:
-
-
-
+Dit zijn resultaten van fase 1:
 
 ### Onderzoek
 
-**Stakeholders**
+**[Stakeholders](/ftv/onderzoek/status_nl_overheid/stakeholders)**
 - Er is een inventarisatie gemaakt van de stakeholders.
 - Er is contact gemaakt met de belangrijkste stakeholders, en uitleg gegeven over het project en de toekomstige standaard.
 - De werkgroep Federatieve Toegangsverlening (FTV) is van start gegaan.
 
-**Inventarisatie bij de Nederlandse overheid**
+**[Inventarisatie bij de Nederlandse overheid](/ftv/onderzoek/status_nl_overheid/)**
+
 De inventarisatie is afgerond en richtte zich op drie onderzoeksgebieden:
 - Hoe toegang nu geregeld is
 - Waar al adoptie is van Policy Based Access Control (PBAC)
 - Welke eerdere onderzoeken gedaan zijn
 
-**Inventarisatie van de markt**
+**[Inventarisatie van de markt](/ftv/onderzoek/status_techniek/producten)**
+
 Er is gekeken naar:
 - Beschikbare producten, open source en commercieel. Gesprekken met de commerciële aanbieders zullen nog doorlopen.
 - Staat van zaken in Europees verband

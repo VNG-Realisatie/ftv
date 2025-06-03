@@ -7,9 +7,11 @@ title: "Aanbieders"
 {{< chapter/section title="Aanbieders" >}}
 De term aanbieders verwijst hier naar de registers, of preciezer: de bronhouders, die samen met hun verwerkers een API aanbieden om verwerkingen op hun register mogelijk te maken.
 
-Met elk van deze registers zijn gesprekken gevoerd. De details zijn op aanvraag beschikbaar.
+Met elk van deze registers zijn gesprekken gevoerd. De details zijn op [aanvraag](mailto:ftv@vng.nl) beschikbaar.
 
-## 1. [Basisregistraties](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/)
+### 1. Basisregistraties
+
+[Overzicht van basisregistraties](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/)
 
 | Registratie                                     | Bronhouder      | Koppelvlak   | Toegang met EAM? |
 |-------------------------------------------------|-----------------|--------------|------------------|
@@ -25,11 +27,12 @@ Met elk van deze registers zijn gesprekken gevoerd. De details zijn op aanvraag 
 | Basisregistratie ondergrond (BRO)               | TNO             | SOAP en REST | Nee              |
 | Digimelding                                     | Logius          | SOAP         | Nee              |
 
-## 2. Sectorregistraties
+### 2. Sectorregistraties
 
-Van de totale [lijst van sectorregistraties](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/sectorregistraties/) zijn er een paar bekeken.
+Van de totale [lijst van sectorregistraties](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/stelsel-van-basisregistraties/sectorregistraties/) is bekeken:
 
-| Registratie | Houder | EAM? |
-|-------------|--------|------|
-| Rijexamens  | CBR    | Nee  |
+| Registratie | Bronhouder | Toegang met EAM? |
+|-------------|------------|------|
+| Rijexamens  | CBR        | Nee  |
+
 {{< /chapter/section >}}

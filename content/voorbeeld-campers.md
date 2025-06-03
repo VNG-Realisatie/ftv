@@ -14,14 +14,10 @@ De gemeente gebruikt camera’s en databronnen om te controleren of een voertuig
 
 {{< chapter/section title="Wat gebeurt er?" level="3">}}
 
-Camera’s registreren een kenteken bij de milieuzone. De gemeente vraagt
-vervolgens gegevens op bij:
+Camera’s registreren een kenteken bij de milieuzone. De gemeente vraagt vervolgens gegevens op bij:
 
-- de Rijksdienst voor het Wegverkeer (RDW): welke categorie en
-  emissieklasse heeft het voertuig en wat is het BSN van de
-  kentekenhouder?
-- de Rijksdienst voor Identiteitsgegevens (RvIG): in welke gemeente is de
-  kentekenhouder ingeschreven?
+- de Rijksdienst voor het Wegverkeer (RDW): welke categorie en emissieklasse heeft het voertuig en wat is het BSN van de kentekenhouder?
+- de Rijksdienst voor Identiteitsgegevens (RvIG): in welke gemeente is de kentekenhouder ingeschreven?
   
 De combinatie van de gegevens bepaalt of er een boete volgt.
 
@@ -50,7 +46,7 @@ De verschillende systemen voeren de regels alleen uit. Ook dat gebeurt op een st
 
 {{< /chapter/section >}}
 
-{{< chapter/section title="De voordelen">}}
+{{< chapter/section title="De voordelen" level="3">}}
 
 - **Schaalbaar**. Als een nieuwe gemeente aansluit, dan zijn de regels direct duidelijk en inzetbaar. Zonder hoge kosten en zonder impact op RDW of RvIG.
 - **Flexibel**. Als de regels veranderen, bijvoorbeeld oudere campers op benzine gaan ook onder de regeling vallen, dan is een centrale

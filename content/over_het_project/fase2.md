@@ -11,7 +11,7 @@ Projectfase 2 heeft de volgende doelen met de daarbij behorende werkzaamheden:
 
 **Een standaard voorstellen door middel van:**
 
-  - Het schrijven en openbaar publiceren van de voorgestelde standaard in OAS-formaat.
+  - Het schrijven en openbaar publiceren van de voorgestelde standaard in [OpenAPI Specification (OAS)](https://swagger.io/specification/)-formaat.
   -	Het periodiek bijeenbrengen van een werkgroep voor co-creatie.
   -	Het organiseren van reviewrondes om inbreng op te halen bij stakeholders zoals bronhouders, implementatiepartners, belangengroepen, Logius, Generieke Digitale Infrastructuur (GDI) en meer.
   - Het verkrijgen van status via architectuurtafels en bij Logius via Forum Standaardisatie.
