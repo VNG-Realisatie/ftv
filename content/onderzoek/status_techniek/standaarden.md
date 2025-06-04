@@ -5,9 +5,7 @@ title: "Standaarden"
 ---
 
 {{< chapter/section title="Bestaande standaarden" level="2" >}}
-In dit project zijn we op zoek naar een standaard die er voor zorgt dat de interoperabiliteit verbeterd
-wordt en de leveranciersafhankelijkheid afneemt. Dat wil zeggen dat systemen die dezelfde standaard implementeren onderling
-uitwisselbaar zijn, zonder significante aanpassingen aan de rest van het landschap.
+In dit project staat het ontwikkelen van een standaard centraal die de interoperabiliteit verbetert en de afhankelijkheid van leveranciers vermindert. Dat wil zeggen dat systemen die dezelfde standaard implementeren onderling uitwisselbaar zijn, zonder significante aanpassingen aan de rest van het landschap.
 Daarvoor is het nodig dat de in- en uitgaande interfaces van een Externalized Authorization Management (EAM)-oplossing zijn bepaald.
 
 De eerder beschreven regeltalen zijn geen complete standaarden voor de EAM-manier van werken,
