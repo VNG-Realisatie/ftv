@@ -8,16 +8,9 @@ Op onderstaande kaart zijn de stakeholders uitgezet.
 ![Kaart van stakeholders]({{< param baseDirectory >}}images/stakeholder_map.png)
 {{< /chapter/section >}}
 
-{{< chapter/section title="Leeswijzer" >}}
-De horizontale as gaat over interesse.
-Aan de rechterkant geplaatste stakeholders hebben meer interesse in het onderwerp FTV dan de links geplaatste.
-Dat kan zijn omdat ze belang hebben bij de resultaten, maar ook dat ze het onderwerp een warm hart toedragen vanuit hun eigen doelstellingen.
+{{< chapter/section title="Toelichting" >}}
+De horizontale as geeft aan hoeveel interesse een stakeholder heeft in FTV. Bijvoorbeeld omdat het onderwerp wel of niet aansluit bij de eigen doelen of omdat de stakeholder belang heeft bij de uitkomst.
+De verticale as laat zien hoeveel invloed een stakeholder heeft. Bijvoorbeeld doordat de stakeholder meewerkt of het onderwerp kan agenderen. 
 
-De verticale as gaat over invloed.
-Boven het midden geplaatste stakeholders kunnen meer invloed uitoefenen op de resultaten.
-Dat kan zijn omdat ze concreet meewerken aan de resultaten, omdat ze autoriteit zijn, of bijvoorbeeld omdat ze het onderwerp kunnen agenderen.
-
-**Let op**:
-Hoe ver een stakeholder naar links/rechts of boven/beneden staat geeft niet per se weer hoeveel invloed dan wel interesse er is;
-de plaatsing is een praktisch gevolg van de vormgeving.
+De plaatsing  van de stakeholders in het schema is niet absoluut en bedoeld om het speelveld overzichtelijk te maken.
 {{< /chapter/section >}}
