@@ -9,7 +9,7 @@ Niet iedereen kan zelfstandig passende woonruimte betalen.
 Daarom ondersteunt de overheid mensen met een lager inkomen via huurtoeslag.
 {{< /chapter/section >}}
 
-{{< chapter/section title="Wat gebeurt er?" >}}
+{{< chapter/section title="Wat gebeurt er?" level="3">}}
 
 Een burger doet een aanvraag voor huurtoeslag. Een medewerker van de Dienst Toeslagen beoordeelt vervolgens of deze persoon recht heeft op de huurtoeslag. Daarvoor haalt de medewerker gegevens op bij verschillende bronnen:
 
