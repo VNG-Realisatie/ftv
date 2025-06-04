@@ -22,7 +22,7 @@ Op basis van deze gegevens bepaalt de medewerker of de burger recht heeft op huu
 
 {{< /chapter/section >}}
 
-{{< chapter/section title="Wat zijn de regels?" >}}
+{{< chapter/section title="Wat zijn de regels?" level="3">}}
 
 Bij het beoordelen van een aanvraag is specialistische kennis nodig. Dienst Toeslagen kan daarom specifieke toegangsregels opstellen, bijvoorbeeld:
 
@@ -34,7 +34,7 @@ Het inkomen en de inschrijving worden in het BRI respectievelijk BRP bewaard en 
 
 {{< /chapter/section >}}
 
-{{< chapter/section title="Wat regelt FTV?" >}}
+{{< chapter/section title="Wat regelt FTV?" level="3">}}
 
 - Voor de beoordeling moet het toeslagbedrag vergeleken worden met de bevoegdheid van de beoordelaar. Met alleen een rolgebaseerd 
 systeem kan dit niet. Immers, elke aanvraag kan weer een ander bedrag zijn.
@@ -46,7 +46,7 @@ Ook over meerdere toeslagsystemen heen.
 
 {{< /chapter/section >}}
 
-{{< chapter/section title="De voordelen" level="3" >}}
+{{< chapter/section title="De voordelen" level="3">}}
 
 - **Schaalbaar**: Nieuwe medewerkers of organisaties kunnen eenvoudig aansluiten zonder extra systemen.
 - **Flexibel**: Aanpassingen in bevoegdheden en regels kunnen centraal worden geregeld.
