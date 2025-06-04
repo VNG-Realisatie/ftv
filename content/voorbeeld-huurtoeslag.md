@@ -46,7 +46,7 @@ Ook over meerdere toeslagsystemen heen.
 
 {{< /chapter/section >}}
 
-{{< chapter/section title="De voordelen level=3" >}}
+{{< chapter/section title="De voordelen" level="3" >}}
 
 - **Schaalbaar**: Nieuwe medewerkers of organisaties kunnen eenvoudig aansluiten zonder extra systemen.
 - **Flexibel**: Aanpassingen in bevoegdheden en regels kunnen centraal worden geregeld.
