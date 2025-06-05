@@ -5,8 +5,6 @@ type: 'chapter'
 
 {{< chapter/header bg="gray">}}
 
-### In deze sectie
-
 <div class="utrecht-paragraph pt-1 section-navigation">
    <p>
       <a href="../">De EAM principes</a>

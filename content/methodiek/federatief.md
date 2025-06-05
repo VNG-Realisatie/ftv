@@ -5,8 +5,6 @@ type: 'chapter'
 
 {{< chapter/header bg="gray">}}
 
-### In deze sectie
-
 <div class="utrecht-paragraph pt-1 section-navigation">
    <p>
       <a href="../">De EAM principes</a>
@@ -31,7 +29,7 @@ In een federatief stelsel worden toegangsregels op [logisch niveau](https://docs
 
 {{< img-url "images/1.3.federatieve_toegangsregels.png" "Federatieve toegangsregels" >}}
 
-Zo kunnen organisaties zelf een EAM implementatie kiezen en toch voldoen aan de regels van een federatief stelsel..
+Zo kunnen organisaties zelf een EAM implementatie kiezen en toch voldoen aan de regels van een federatief stelsel.
 
 Verder kunnen met behulp van gestandaardiseerde API's toegangsregels en historische toegangsbeslissingen worden ingezien bij deelnemers aan het federatieve stelsel.
 
