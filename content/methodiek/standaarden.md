@@ -86,7 +86,9 @@ De huidige werkversie is te vinden op "[Standaard voor Federatieve Toegangsverle
 
 {{< chapter/section title="En OAUth dan?" level="4">}}
 
-OAuth gaat primair over delegatie: een applicatie toestemming geven om jouw credentials te gebruiken om toegang tot een andere applicatie te verkrijgen, zonder de credentials zelf te delen. Met scopes zijn daaraan beperkte rechten te koppelen ('lees bestanden'). Dat is een vorm van grofmazige autorisatie. AuthZEN gaat verder: fijnmazige autorisatie, op elk moment, op elke plek. Het OAuth token kan gebruikt worden als een van de attributen in AuthZEN policies.
+OAuth gaat primair over delegatie: een applicatie toestemming geven om jouw credentials te gebruiken om toegang tot een andere applicatie te verkrijgen, zonder de credentials zelf te delen. Met scopes zijn daaraan beperkte rechten te koppelen ('lees bestanden'). Dat is een vorm van grofmazige autorisatie. 
+
+AuthZEN gaat verder: fijnmazige autorisatie, op elk moment, op elke plek. Het OAuth token kan gebruikt worden als een van de attributen in AuthZEN policies.
 
 {{< /chapter/section >}}
 

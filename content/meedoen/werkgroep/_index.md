@@ -3,19 +3,27 @@ Title: Werkgroep
 type: 'chapter'
 ---
 
+{{< chapter/header bg="gray">}}
+
+<div class="utrecht-paragraph pt-1 section-navigation">
+   <p>
+      <a href="../">Wat kun je doen?</a>
+   </p>
+</div>
+<div class="section-navigation-selected utrecht-paragraph pt-1 section-navigation">
+   <p>
+      Werkgroep
+   </p>
+</div>
+
+{{< /chapter/header >}}
+
 {{< chapter/section title="Werkgroep" >}}
 De werkgroep Federatieve Toegangsverlening (FTV) ontwikkelt standaarden en beleidskaders voor fijnmazige toegangsverlening. De werkgroep vindt elke twee weken plaats. Deelname kan fysiek en online.
 
 {{< /chapter/section >}}
 
-{{< chapter/section title="Meedoen" >}}
-### Waarom deze werkgroep?
-
-Er is nog geen overheidsstandaard voor fijnmazige toegangsverlening. Dat maakt het lastig om binnen en tussen organisaties overzicht te houden op wie toegang heeft tot welke gegevens.
-
-De werkgroep ontwikkelt daarom een samenhangend geheel van afspraken en standaarden, bedoeld om aan te bieden aan Forum Standaardisatie, GDI, MIDO en GEMMA.
-
-### Wie kunnen bijdragen?
+{{< chapter/section title="Voor wie is werkgroep?" level="3">}}
 
 We zoeken professionals die:
 
@@ -25,13 +33,13 @@ We zoeken professionals die:
 - kunnen bijdragen aan de juridisch en beleidsmatig aspecten van toegangsverlening.
 {{< /chapter/section >}}
 
-{{< chapter/section title="Aanmelden" >}}
+{{< chapter/section title="Aanmelden"  level="3">}}
 Aanmelden voor individuele bijeenkomsten kan via de [agenda van het FDS](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events) op Realisatie IBDS.
 
 Aanmelden voor alle bijeenkomsten van de werkgroep kan via mail bij [ftv@vng.nl](mailto:ftv@vng.nl).
 {{< /chapter/section >}}
 
-{{< chapter/section title="Planning en Notulen" >}}
+{{< chapter/section title="Planning en Notulen"  level="2">}}
 ### Planning
 
 De werkgroep vindt elke twee weken plaats op **dinsdag van 10:00 tot 11:00**. Deelname kan online of fysiek op Dev.loer (bij Digilab), Catharijnesingel 55, 3511 GD Utrecht (5e verdieping, Trindeborch gebouw)

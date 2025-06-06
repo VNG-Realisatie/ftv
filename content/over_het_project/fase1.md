@@ -3,12 +3,32 @@ Title: Fase 1
 type: 'chapter'
 ---
 
-{{< chapter/section title="" >}}
-# Fase 1
+{{< chapter/header bg="orange">}}
+
+<div class="utrecht-paragraph pt-1 section-navigation">
+   <p>
+      <a href="../">Opdracht</a>
+   </p>
+</div>
+<div class="section-navigation-selected utrecht-paragraph pt-1 section-navigation">
+   <p>
+      Fase 1
+   </p>
+</div>
+<div class="utrecht-paragraph pt-1 section-navigation">
+   <p>
+      <a href="../fase2">Fase 2</a>
+   </p>
+</div>
+
+{{< /chapter/header >}}
+
+{{< chapter/section title="Fase 1" >}}
+
 {{< /chapter/section >}}
 
 
-{{< chapter/section title="Doelstellingen" >}}
+{{< chapter/section title="Doelstellingen" level="3">}}
 De beoogde resultaten van fase 1 zijn, zoals vastgelegd in de subsidie:
 
 1.	Een overzicht van de stakeholders
@@ -21,7 +41,7 @@ De beoogde resultaten van fase 1 zijn, zoals vastgelegd in de subsidie:
 
 {{< /chapter/section >}}
 
-{{< chapter/section title="Activiteiten" >}}
+{{< chapter/section title="Activiteiten" level="3">}}
 
 Het project beoogt een standaard voor te stellen. Zowel het verkrijgen van een status als standaard
 als de adoptie ervan vergen veel communicatie. Een belangrijk deel van de aanpak richt zich daarom op
@@ -55,7 +75,7 @@ De projectactiviteiten zijn ingedeeld volgens de bovengenoemde doelstellingen:
 {{< /chapter/section >}}
 
 
-{{< chapter/section title="Risico's" >}}
+{{< chapter/section title="Risico's" level="3">}}
 
 Het voorstellen van een standaard en het verkrijgen van adoptie daarvan is niet eenvoudig. Dit zijn de belangrijkste risico’s die vooraf zijn geïdentificeerd.
 
@@ -97,7 +117,7 @@ Het voorstellen van een standaard en het verkrijgen van adoptie daarvan is niet 
 
 {{< /chapter/section >}}
 
-{{< chapter/section title="Planning en status" >}}
+{{< chapter/section title="Planning en status" level="3">}}
 
 {{< img-url "images/planningfase1.png" "planning" >}}
 
@@ -131,6 +151,5 @@ Er is gekeken naar:
 
 ### Standaard
 
-Er is een keus gemaakt om bij OpenID AuthZEN aan te sluiten. Een [eerste versie van het NL Gov profiel daarop](https://ftv-standaard-2f223b.gitlab.io/) is vrijwel
-afgerond.
+Er is een keus gemaakt om bij OpenID AuthZEN aan te sluiten. 
 {{< /chapter/section >}}

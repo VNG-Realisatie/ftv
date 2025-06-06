@@ -2,9 +2,29 @@
 Title: Conclusie
 type: 'chapter'
 ---
+{{< chapter/header bg="gray">}}
+
+<div class="utrecht-paragraph pt-1 section-navigation">
+   <p>
+      <a href="../status_techniek">Status techniek</a>
+   </p>
+</div>
+<div class="utrecht-paragraph pt-1 section-navigation">
+   <p>
+      <a href="../status_nl_overheid">Status overheid</a>
+   </p>
+</div>
+<div class="section-navigation-selected utrecht-paragraph pt-1 section-navigation">
+   <p>
+      Conclusie
+   </p>
+</div>
+
+{{< /chapter/header >}}
+
 {{< chapter/section title="Conclusie" >}}
 
-{{< /chapter/section >}}
+{{< /chapter/section >}}    
 
 {{< chapter/section title="1. Status van de techniek" level="3">}}
 

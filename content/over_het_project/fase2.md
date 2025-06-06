@@ -2,11 +2,32 @@
 Title: Fase 2
 type: 'chapter'
 ---
-{{< chapter/section title="" >}}
-# Fase 2
+
+{{< chapter/header bg="orange">}}
+
+<div class="utrecht-paragraph pt-1 section-navigation">
+   <p>
+      <a href="../">Opdracht</a>
+   </p>
+</div>
+<div class="utrecht-paragraph pt-1 section-navigation">
+   <p>
+      <a href="../fase1">Fase 1</a>
+   </p>
+</div>
+<div class="section-navigation-selected utrecht-paragraph pt-1 section-navigation">
+   <p>
+      Fase 2
+   </p>
+</div>
+
+{{< /chapter/header >}}
+
+{{< chapter/section title="Fase 2" >}}
+
 {{< /chapter/section >}}
 
-{{< chapter/section title="Doelstellingen" >}}
+{{< chapter/section title="Doelstellingen" level="3">}}
 Projectfase 2 heeft de volgende doelen met de daarbij behorende werkzaamheden:
 
 **Een standaard voorstellen door middel van:**
@@ -40,7 +61,7 @@ Projectfase 2 heeft de volgende doelen met de daarbij behorende werkzaamheden:
 De governance over het project verloopt inhoudelijk en organisatorisch via Interbestuurlijke Datastrategie (BDS) en FDS.
 {{< /chapter/section >}}
 
-{{< chapter/section title="Randvoorwaarden en risico’s" >}}
+{{< chapter/section title="Randvoorwaarden en risico’s" level="3">}}
 
 ### Inbedding in federatieve context
 
@@ -60,7 +81,7 @@ quo te handhaven ('het gaat nu toch ook goed').
 
 {{< /chapter/section >}}
 
-{{< chapter/section title="Planning en status" >}}
+{{< chapter/section title="Planning en status" level="3">}}
 {{< img-url "images/planningfase2.png" "planning" >}}
 Fase 2 is op 1 april 2025 begonnen. Resultaten worden hier gedeeld.
 {{< /chapter/section >}}

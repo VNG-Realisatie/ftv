@@ -9,6 +9,21 @@ Het project Federatieve Toegangsverlening (FTV) zoekt professionals die willen b
 
 {{< /chapter/header >}}
 
+{{< chapter/header bg="gray">}}
+
+<div class="section-navigation-selected utrecht-paragraph pt-1 section-navigation">
+   <p>
+      Wat kun je doen?
+   </p>
+</div>
+<div class="utrecht-paragraph pt-1 section-navigation">
+   <p>
+      <a href="werkgroep">Werkgroep</a>
+   </p>
+</div>
+
+{{< /chapter/header >}}
+
 {{< chapter/section title="Wat kan je doen?" >}}
 
 **Bekijk de werkwijze**

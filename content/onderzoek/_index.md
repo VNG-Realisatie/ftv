@@ -3,6 +3,26 @@ Title: Onderzoek
 type: 'chapter'
 ---
 
+{{< chapter/header bg="gray">}}
+
+<div class="section-navigation-selected utrecht-paragraph pt-1 section-navigation">
+   <p>
+      <a href="status_techniek">Status techniek</a>
+   </p>
+</div>
+<div class="utrecht-paragraph pt-1 section-navigation">
+   <p>
+      <a href="status_nl_overheid">Status overheid</a>
+   </p>
+</div>
+<div class="utrecht-paragraph pt-1 section-navigation">
+   <p>
+      <a href="conclusie.md">Conclusie</a>
+   </p>
+</div>
+
+{{< /chapter/header >}}
+
 {{< chapter/header title="Onderzoek" bg="brown" icon="images/api-icon.svg">}}
 Voorafgaand aan het definiëren van een werkwijze en het opstellen van de standaarden is uitgebreid onderzoek gedaan. Op basis van dit onderzoek zijn de eisen opgesteld voor de totaaloplossing. De samenvatting van de onderzoeksresultaten staan hieronder.
 {{< /chapter/header >}}

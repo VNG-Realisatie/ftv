@@ -2,8 +2,29 @@
 type: 'chapter'
 title: "Status van de techniek"
 ---
+{{< chapter/header bg="gray">}}
+
+<div class="section-navigation-selected utrecht-paragraph pt-1 section-navigation">
+   <p>
+      Status techniek
+   </p>
+</div>
+<div class="utrecht-paragraph pt-1 section-navigation">
+   <p>
+      <a href="../status_nl_overheid">Status overheid</a>
+   </p>
+</div>
+<div class="utrecht-paragraph pt-1 section-navigation">
+   <p>
+      <a href="../conclusie">Conclusie</a>
+   </p>
+</div>
+
+{{< /chapter/header >}}
+
 {{< chapter/section title="Status van de techniek" >}}
 {{< /chapter/section >}}
+
 
 {{< chapter/section title="Toegangverlening wordt volwassen" level="3" >}}
 Toegangsverlening is bepaald niet nieuw; informatiesystemen hebben altijd al een vorm van toegangsbeperking afgedwongen.

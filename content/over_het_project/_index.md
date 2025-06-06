@@ -2,8 +2,29 @@
 Title: Over het project
 type: 'chapter'
 ---
+
 {{< chapter/header title="Over het project" bg="orange" icon="images/api-icon.svg">}}
 Het project Federatieve Toegangsverlening (FTV) richt zich op het ontwikkelen van een standaardwerkwijze voor toegangsverlening bij het uitwisselen van gegevens tussen overheidsorganisaties. Het project is een initiatief van de Generieke Digitale Infrastructuur (GDI) en sluit aan op bredere programma’s zoals het Federatief Datastelsel (FDS) en de Interbestuurlijke Datastrategie (IBDS).
+{{< /chapter/header >}}
+
+{{< chapter/header bg="orange">}}
+
+<div class="section-navigation-selected utrecht-paragraph pt-1 section-navigation">
+   <p>
+      Opdracht
+   </p>
+</div>
+<div class="utrecht-paragraph pt-1 section-navigation">
+   <p>
+      <a href="fase1">Fase 1</a>
+   </p>
+</div>
+<div class="utrecht-paragraph pt-1 section-navigation">
+   <p>
+      <a href="fase2">Fase 2</a>
+   </p>
+</div>
+
 {{< /chapter/header >}}
 
 {{< chapter/section title="Opdracht" >}}
@@ -13,7 +34,7 @@ De opdracht aan het project FTV is:
 
 {{< /chapter/section >}}
 
-{{< chapter/section title="Doelstellingen" >}}
+{{< chapter/section title="Doelstellingen" level="3" >}}
 De doelstellingen van het project zijn:
 
 1.	Ontwikkelen van een standaard voor toegangsverlening waarmee APIs en hun afnemers beter op elkaar aansluiten.
@@ -22,7 +43,7 @@ De doelstellingen van het project zijn:
 4.	Ondersteunen van het transitiepad van de Generieke Digitale Infrastructuur (GDI).
 {{< /chapter/section >}}
 
-{{< chapter/section title="Scope" >}}
+{{< chapter/section title="Scope" level="3">}}
 De scope van het project is als volgt afgebakend:
 
 - De opdracht voor het project is om een standaardmethodiek voor toegangsverlening tot APIs te definiëren, niet om software te bouwen. 
@@ -33,11 +54,11 @@ De scope van het project is als volgt afgebakend:
 [Lees meer over de afbakening van de scope](scope).
 {{< /chapter/section >}}
 
-{{< chapter/section title="Uitvoering" >}}
+{{< chapter/section title="Uitvoering" level="3">}}
 Het Ministerie van Binnenlandse Zaken (MinBZK) verstrekt de subsidie voor het project. [VNG Realisatie](https://vng.nl/artikelen/vng-realisatie) voert het project uit in opdracht van MinBZK. Voor praktische uitvoering en ondersteuning werkt het project FTV samen met [Digilab](https://digilab.overheid.nl/).
 {{< /chapter/section >}}
 
-{{< chapter/section title="Planning" >}}
+{{< chapter/section title="Planning" level="3">}}
 Het project is opgedeeld in twee fases.
 
 **Fase 1: juli 2024 – april 2025**
@@ -52,7 +73,7 @@ In fase 2 richt het project zich op het voorstellen, uitwerken en positioneren v
 
 {{< /chapter/section >}}
 
-{{< chapter/section title="Tijdlijn" >}}
+{{< chapter/section title="Tijdlijn" level="3">}}
 * 1 juli 2024: start project
 * 1 oktober 2024: afronding onderzoek naar EAM-methodieken
 * 1 november 2024: start van de bouw van OpenFTV
@@ -67,7 +88,7 @@ In fase 2 richt het project zich op het voorstellen, uitwerken en positioneren v
 Meer weten? Lees de rapportages [Fase 1](fase1) en [Fase 2](fase2)
 {{< /chapter/section >}}
 
-{{< chapter/section title="Relatie met andere projecten en programma’s" >}}
+{{< chapter/section title="Relatie met andere projecten en programma’s" level="3">}}
 De toekomstvisie op gegevensuitwisseling binnen de overheid is vastgelegd in de [Interbestuurlijke Datastrategie (IBDS)](https://www.digitaleoverheid.nl/interbestuurlijke-datastrategie/).  Deze strategie wordt uitgevoerd via het [programma Realisatie IBDS](https://realisatieibds.nl/), waarvan het FDS de technische invulling is. Binnen het FDS is toegang een van de technische stelselfuncties.
 
 FTV is een standaard binnen het FDS. Ook daarbuiten is FTV inzetbaar als werkwijze in andere stelsels en los van stelsels, bijvoorbeeld bij Zaakgericht Werken.
