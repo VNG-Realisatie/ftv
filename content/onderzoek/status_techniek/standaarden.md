@@ -9,7 +9,7 @@ In dit project staat het ontwikkelen van een standaard centraal die de interoper
 Daarvoor is het nodig dat de in- en uitgaande interfaces van een Externalized Authorization Management (EAM)-oplossing zijn bepaald.
 
 De eerder beschreven regeltalen zijn geen complete standaarden voor de EAM-manier van werken,
-maar beschrijven hooguit een deel van het Policy Administration Point (PAP). Er zijn echter wel initiatieven om tot een complete te standaard te komen.
+maar beschrijven hooguit een deel van het Policy Administration Point (PAP). Er zijn echter wel initiatieven om tot een complete standaard te komen.
 
 Dit zijn de belangrijkste:
 {{< /chapter/section >}}
@@ -23,13 +23,13 @@ open standaard. De groep werkt verder aan uitbreiding met de interface tussen he
 {{< chapter/section title="Europese standaarden" level="3">}}
 De Europese datastrategie is de originele aanjager van het hele federatieve werken. De Nederlandse Interbestuurlijke Datastrategie (IBDS) komt daar ook uit voort.
 
-Naast de initiatieven in de lidstaten zijn er ook een aantal initiatieven die onder de EU-vlag aan de slag zijn gegaan:
+Naast de initiatieven in de lidstaten zijn er ook een aantal initiatieven onder de EU-vlag:
 
-- De [International Data Spaces Association (IDSA)](https://internationaldataspaces.org/) werkt aan een serie standaarden waarvan [IDSA Usage Control Language](https://international-data-spaces-association.github.io/DataspaceConnector/Documentation/v5/UsageControl) specifiek gaat over toegangsverlening. Daarnaast wordt er aan een voorziening gewerkt: de [IDS connector](https://international-data-spaces-association.github.io/DataspaceConnector/Introduction). 
-- Op soortgelijke wijze is [Gaia-X Federated Data Infrastructure (GFDI)](https://gaia-x.eu/) een architectuur en set standaarden.
-De [Gaia-X Federation (GXFS)](https://www.gxfs.eu/) is een set van dataspace-specifieke implementaties van GFDI . 
-- Vanuit de Europese Unie is het programma [Smart Middleware Platform (Simpl)](https://simpl-programme.ec.europa.eu/) gestart, dat een complete infrastructuur beoogt te realiseren, gebaseerd op de IDSA standaarden en geïntegreerd met GXFS. 
-- Dan is er nog de Eclipse Foundation die een grote rol als facilitator speelt van het werk van IDSA, Gaia-X, en Simpl.
+- De [**International Data Spaces Association (IDSA)**](https://internationaldataspaces.org/) werkt aan een serie standaarden waarvan [IDSA Usage Control Language](https://international-data-spaces-association.github.io/DataspaceConnector/Documentation/v5/UsageControl) specifiek gaat over toegangsverlening. Daarnaast wordt er aan een voorziening gewerkt: de [IDS connector](https://international-data-spaces-association.github.io/DataspaceConnector/Introduction). 
+- Op soortgelijke wijze beschrijft [**Gaia-X** Federated Data Infrastructure (GFDI)](https://gaia-x.eu/) een architectuur en een set standaarden.
+De [Gaia-X Federation (GXFS)](https://www.gxfs.eu/) is een set van data-space-specifieke implementaties van GFDI . 
+- Vanuit de Europese Unie is het programma [**Smart Middleware Platform (Simpl)**](https://simpl-programme.ec.europa.eu/) gestart, dat een complete infrastructuur beoogt te realiseren, gebaseerd op de IDSA standaarden en geïntegreerd met GXFS. 
+- En dan is er nog de Eclipse Foundation die een grote rol speelt als facilitator en coordinator van het werk van IDSA, Gaia-X, en Simpl.
 
 Het collectief heeft nog weinig concrete resultaten opgeleverd. Het project Federatieve Toegangsverlening (FTV) houdt de ontwikkelingen in de gaten, maar neemt niet actief deel.
 {{< /chapter/section >}}
@@ -43,6 +43,8 @@ de [CEN-CENELEC JTC25](https://www.nen.nl/nieuws/data-verzamelen-opslaan-en-uitw
 [iSHARE](https://ishare.eu/) is een standaard voor gegevensuitwisseling die van origine uit de transportsector komt, met betrokkenheid van het Ministerie van Infrastructuur en Waterstaat (MinIenW). [Toegangsverlening met EAM is onderdeel van de standaard](https://trustbok.ishare.eu/apply-ishare/authorisation). De principes van iSHARE en FTV zijn vrijwel in lijn, waardoor samenwerking voor de hand ligt. iSHARE zelf is een open standaard, maar wordt bestuurd door iSHARE foundation, een niet-open governance-structuur.
 
 Verschillende initiatieven gebruiken iSHARE al in productie. Deze gaan vooral over de transportsector, maar ook bij een aantal overheidsinitiatieven (DSGO, DVU).
+
+FTV en iSHARE werken samen aan twee afgestemde sets van standaarden, en beide zijn lid van de AuthZEN werkgroep.
 {{< /chapter/section >}}
 
 {{< chapter/section title="Fast Healthcare Interoperability Resources (FHIR)" level="3">}}

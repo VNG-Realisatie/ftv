@@ -69,13 +69,11 @@ De drie belangrijkste kenmerken van EAM zijn:
 3. **Policy as code**. De policies worden beheerd met dezelfde zorgvuldigheid als broncode. Er wordt versiebeheer gebruikt, zodat de historie bekend en teruggegaan kan worden naar vorige versies. Er is workflow zodat bijvoorbeeld schrijven, controleren en vrijgeven van policies aparte taken zijn. En er is toegangscontrole op de policies zelf.
 3. **Real time**. Policies worden niet alleen tijdens login uitgevoerd, maar op elk moment wanneer toegang gevraagd wordt (zero trust) en op elke plek in de keten waar toegang gevraagd wordt (defense in depth).
 
-EAM is een overkoepelend begrip waaronder bekende termen zoals Policy -, Attribute -, en Relationship Based Access Control (PBAC, ABAC en ReBAC) vallen.
-
 {{< /chapter/header >}}
 
 {{< chapter/section title="Gedistribueerd model" level="3">}}
 
-![img.png](methodiek-gedistribueerd.png)
+![Een diagram van toegang in een gedistribueerd systeem](methodiek-gedistribueerd.png)
 
 In de fysieke architectuur zien we de scheiding van verantwoordelijkheden terug. In dit voorbeeld haalt een client een token op bij de Identity Provider en benadert via de API-Gateway twee applicaties.
 
@@ -90,7 +88,7 @@ In de [technische architectuursectie](architectuur) omschrijven we de gangbare c
 
 Welke verantwoordelijkheden precies gescheiden moeten worden is al meer dan 20 jaar geleden bedacht als onderdeel van de XACML autorisatiestandaard. Deze standaard bevat nog veel meer, waaronder een XML-gebaseerde policy-taal. Hoewel XML goeddeels uit de gratie is gevallen, zijn de basisverantwoordelijkheden algemeen geaccepteerd in de zogenaamde PxP-architectuur.
 
-![img.png](methodiek-pxp-architectuur.png)
+![Diagram van de PxP-architectuur](methodiek-pxp-architectuur.png)
 
 De flow van informatie volgt de nummers, als volgt:
 
@@ -102,6 +100,20 @@ De flow van informatie volgt de nummers, als volgt:
 6. Als de beslissing positief is gaat het verzoek door naar de verwerking
 7. Het antwoord, zijnde hetzij de gewenste verwerking, hetzij een afwijzing, gaat terug naar de aanvrager.
 {{< /chapter/section >}}
+
+{{< chapter/section title="PBAC, ABAC of ReBAC?" level="3">}}
+
+EAM is een overkoepelend begrip waaronder Policy-, Attribute-, en Relationship Based Access Control (PBAC, ABAC en ReBAC) vallen.
+
+**ABAC** en **PBAC** zijn in essentie hetzelfde. ABAC is de originele term, en werd gezien als uitgaand van een vaste set attributen, niet geharmoniseerd over de organisatie heen. De term PBAC werd later geïntroduceerd om nadruk te leggen op policies op organisatie-niveau die lokaal vertaald kunnen worden naar een flexibele set aan attributen. Ondertussen ondersteunen veel ABAC-oplossingen ook dynamische/virtuele attributen en worden die ook op organisatie-niveau geharmoniseerd, en is er geen echt verschil meer.
+
+**ReBAC** introduceert autorisatie op basis van relaties: tussen subject en object ligt een relatie die de actie voorstelt. In een voorbeeld: een gebruiker heeft een 'lees'-relatie met een specifiek bestand, en mag daarom het bestand lezen. Deze manier van werken past goed bij rechten verlenen aan bestanden en mappenstructuur. In essentie zijn de relaties een nieuw soort attribuut, en daarmee is ReBAC een uitbreiding op ABAC.
+
+Omdat ABAC, PBAC en ReBAC geen duidelijk onderscheid bieden, kiest FTV voor EAM als paraplu-term. Het advies is om bij het kiezen van een softwareproduct primair te kijken naar de gewenste policies en werkwijzen, en dan een product te kiezen dat daar ondersteuning voor biedt. 
+
+Wel essentieel is het onderscheid met Role Based Access Control (**RBAC**). Dat gaat alleen uit van gebruikers(groepen) en rollen tijdens authenticatie, en schiet daarmee te kort in fijnmazigheid en flexibiliteit als enige oplossing. RBAC heeft vaak een goede plek naast EAM, de twee vullen elkaar goed aan.
+
+{{< /chapter/header >}}
 
 {{< chapter/section title="Standaardisatie" >}}
 

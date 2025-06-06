@@ -50,7 +50,7 @@ Het eerste gebied dat AuthZEN heeft uitgewerkt is de interface tussen PEP en PDP
 
 Als basis is eerst een informatiemodel uitgewerkt. Dat beschrijft de velden die in een verzoek moeten of kunnen staan, en hun mogelijke waarden. In de PxP-architectuur zijn deze vier onderdelen benoemd:
 
-![1.3.informatiemodel.png](/ftv/images/1.3.informatiemodel.png)
+![diagram s-a-r-c](../methodiek-sarc.png)
 
 1. Subject. De aanvrager. Dit kan een persoon of organisatie zijn.
 2. Action. De verwerking die gevraagd wordt. Denk hierbij bijvoorbeeld1 aan inzien, aanpassen, verwijderen of verstrekken.
@@ -84,6 +84,12 @@ De Nederlandse standaard is een uitbreiding op AuthZEN en heeft als volledige na
 De huidige werkversie is te vinden op "[Standaard voor Federatieve Toegangsverlening](https://ftv-standaard-2f223b.gitlab.io/).".
 {{< /chapter/section >}}
 
+{{< chapter/section title="En OAUth dan?" level="4">}}
+
+OAuth gaat primair over delegatie: een applicatie toestemming geven om jouw credentials te gebruiken om toegang tot een andere applicatie te verkrijgen, zonder de credentials zelf te delen. Met scopes zijn daaraan beperkte rechten te koppelen ('lees bestanden'). Dat is een vorm van grofmazige autorisatie. AuthZEN gaat verder: fijnmazige autorisatie, op elk moment, op elke plek. Het OAuth token kan gebruikt worden als een van de attributen in AuthZEN policies.
+
+{{< /chapter/section >}}
+
 {{< chapter/section title="2. Logboek Toegangsverlening" level="3">}}
 Het Logboek Toegangsverlening richt zich op het verantwoorden van toegangsverzoeken. Met behulp van de standaard kunnen historische toegangsverzoeken uniform beschikbaar gemaakt worden. Hierbij gaat speciaal aandacht uit naar het voorkomen van ongewenste gegevensduplicatie ([data bij de bron](https://www.digitaleoverheid.nl/data-bij-de-bron/)) met behulp van [betrouwbare bronnen](https://website-digilab-overheid-nl-research-uit-betrouw-e1f39021ce924c.gitlab.io/) en integratie met het [Logboek Dataverwerkingen](https://logius-standaarden.github.io/logboek-dataverwerkingen/) en [FSC - Logging](https://commonground.gitlab.io/standards/fsc/logging/draft-fsc-logging-00.html).
 {{< /chapter/section >}}
@@ -91,3 +97,8 @@ Het Logboek Toegangsverlening richt zich op het verantwoorden van toegangsverzoe
 {{< chapter/section title="3. Register toegangsbeleid" level="3">}}
 Het Register Toegangsbeleid gaat definieren welke eisen er aan een PAP gesteld worden. Denk hierbij aan dat de versies van policies over tijd bewaard blijven en de metadata die die een policy moet en mag hebben.
 {{< /chapter/section >}}
+
+{{< chapter/section title="Andere standaarden" level="2">}}
+FTV is bepaald niet het enige project dat werkt aan standaardisatie van toegang. Vind hier [een overzicht van de belangrijkste](/ftv/onderzoek/status_techniek/standaarden/).
+{{< /chapter/section >}}
+
