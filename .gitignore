@@ -9,6 +9,6 @@ cover.html
 /local/
 /imgsrc/rijkshuisstijl_iconen/unzipped
 node_modules/
-*.drawio.bkp
-*.drawio.dtmp
+*.bkp
+*.dtmp
 ~*.pptx
