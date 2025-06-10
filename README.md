@@ -35,3 +35,4 @@ Om het uiteindelijke CSS bestand te genereren kan je het volgende commando gebru
 ```shell
 npm run watch
 ```
+
