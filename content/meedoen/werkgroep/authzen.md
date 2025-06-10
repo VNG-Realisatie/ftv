@@ -85,7 +85,7 @@ Er zijn geen nieuwe deelnemers.
   
   *Michiel Trimpe* bevestigt dit en geeft aan dat dit ook niet in AuthZEN zelf opgenomen zal worden. Hoe deze metadatering wel toe te voegen aan AuthZEN zal een van de belangrijkste punten in het NL Gov-profiel op AuthZEN worden.
 
-  *Gideon Zegwaard* geeft aan dat als je voor type identifiers bijvoorbeeld IRIs gebruikt, je direct meer context om te bepalen wat het betekent.
+  *Gideon Zegwaard* geeft aan dat als je voor type identifiers bijvoorbeeld IRIs gebruikt, je direct meer context krijgt om te bepalen wat het betekent.
 
   *Michiel Trimpe* zegt dat dat inderdaad een beslissing is die we hier kunnen en willen maken. Of de identifiers URIs, URNs of reverse dot notation moet zijn bijvoorbeeld.
 
