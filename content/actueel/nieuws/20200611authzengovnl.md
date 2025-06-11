@@ -31,5 +31,5 @@ Kijk voor aanmelden op de [website](https://realisatieibds.nl/groups/view/0056c9
 {{< /chapter/section >}}
 
 {{< chapter/section title="Ook meedoen?" level="4">}}
-Meer weten of meedenken? Sluit je dan aan bij de werkgroep. Kijk op [deze website](/ftv/) voor meer informatie.
+Meer weten of meedenken? Sluit je dan aan bij de werkgroep. Kijk op [deze website](/ftv/meedoen/werkgroep/) voor meer informatie.
 {{< /chapter/section >}}
