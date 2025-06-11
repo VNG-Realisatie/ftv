@@ -73,7 +73,9 @@ AuthZEN 1.0 definieert de volgende APIs:
 
 {{< chapter/section title="Status" level="4">}}
 
-De AuthZEN standaard versie 1.0 is een Implementers Draft voor het standaardiseren van toegangsverzoeken (de interface tussen de PEP en PDP.) Deze zal midden 2025 aangeboden worden ter consultatie. Diverse commerciële toegangsverleningsproducten en API-gateways implementeren deze versie inmiddels.
+De [AuthZEN standaard versie 1.0](https://openid.net/specs/authorization-api-1_0-01.html) heeft nu de status Implementers Draft. Daarin zit een informatiemodel zoals boven beschreven en de 3 APIs. Deze versie zal midden 2025 aangeboden worden ter consultatie. 
+
+Diverse commerciële toegangsverleningsproducten en API-gateways implementeren deze versie inmiddels. De [AuthZEN interop](https://authzen-interop.net/) laat zien welke partijen dat zijn, en legt uit wat dat precies inhoudt.
 
 {{< /chapter/section >}}
 
@@ -86,12 +88,17 @@ De huidige werkversie is te vinden op "[Standaard voor Federatieve Toegangsverle
 
 {{< chapter/section title="En OAuth dan?" level="4">}}
 
-Open Authorisation (OAuth) is een bestaande open standaard voor autorisatie. Waarom nu dan nog een standaard? Het antwoord is dat AuthZEN een stuk reikwijdte toevoegt aan autorisatie.
+[Open Authorisation (OAuth)](https://en.wikipedia.org/wiki/OAuth) is een bestaande open standaard voor autorisatie. Waarom nu dan nog een standaard? Het antwoord is dat AuthZEN een stuk reikwijdte toevoegt, bovenop OAuth.
 
-OAuth gaat primair over delegatie: een applicatie toestemming geven om jouw credentials te gebruiken om toegang tot een andere applicatie te verkrijgen, zonder de credentials zelf te delen. Met scopes zijn daaraan beperkte rechten te koppelen ('lees bestanden'). Dat is een vorm van grofmazige autorisatie. 
+OAuth gaat primair over delegatie: een applicatie toestemming geven om jouw credentials te gebruiken om toegang tot een andere applicatie te verkrijgen. En dat zonder de credentials zelf te delen. Met OAuth scopes zijn daar ook op beperkte rechten aan te koppelen (bijvoorbeeld toestemming voor het 'lezen van bestanden'). Dat is een vorm van grofmazige autorisatie. 
 
-AuthZEN gaat verder: fijnmazige autorisatie, op elk moment, op elke plek. Het OAuth token kan gebruikt worden als een van de attributen in AuthZEN policies.
+[AuthZEN gaat verder](https://en.wikipedia.org/wiki/OAuth#OAuth_and_XACML): fijnmazige autorisatie, op elk moment, op elke plek. OAuth en AuthZEN kunnen elkaar aanvullen: het OAuth token kan gebruikt worden als een van de attributen in AuthZEN policies.
 
+{{< /chapter/section >}}
+
+
+{{< chapter/section title="Zijn er alternatieven?" level="4">}}
+FTV is niet het enige project dat werkt aan standaardisatie van toegang. Vind hier [een overzicht van de belangrijkste projecten](/ftv/onderzoek/status_techniek/standaarden/).
 {{< /chapter/section >}}
 
 {{< chapter/section title="2. Logboek Toegangsverlening" level="3">}}
@@ -99,10 +106,7 @@ Het Logboek Toegangsverlening richt zich op het verantwoorden van toegangsverzoe
 {{< /chapter/section >}}
 
 {{< chapter/section title="3. Register toegangsbeleid" level="3">}}
-Het Register Toegangsbeleid gaat definieren welke eisen er aan een PAP gesteld worden. Denk hierbij aan dat de versies van policies over tijd bewaard blijven en de metadata die die een policy moet en mag hebben.
+Het Register Toegangsbeleid gaat definiëren welke eisen er aan een PAP gesteld worden. Denk hierbij aan dat de versies van policies over tijd bewaard blijven en de metadata die die een policy moet en mag hebben.
 {{< /chapter/section >}}
 
-{{< chapter/section title="Andere standaarden" level="2">}}
-FTV is bepaald niet het enige project dat werkt aan standaardisatie van toegang. Vind hier [een overzicht van de belangrijkste](/ftv/onderzoek/status_techniek/standaarden/).
-{{< /chapter/section >}}
 
