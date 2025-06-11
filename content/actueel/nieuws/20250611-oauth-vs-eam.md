@@ -2,11 +2,11 @@
 type: 'nieuws'
 Title: "Autorisatie in OAuth vs EAM: hetzelde of toch niet?"
 date: '2025-06-11'
-summary: "Binnen Identity and Access Management (IAM) is \"autorisatie\" een sleutelbegrip. Maar spreken we altijd over hetzelfde concept? Wanneer we autorisatie in `OAuth 2.0` relateren aan `Externalized Authorization Management (EAM)` of `Fine Grained Authorization (FGA)`, verwijst het woord \"autorisatie\" naar verschillende dingen: het zelfstandig naamwoord en het werkwoord."
+summary: "Binnen Identity and Access Management (IAM) is \"autorisatie\" een sleutelbegrip. Maar is autorisatie in OAuth wel hetzelfde als autorisatie in Externalized Authorization Management (EAM)?"
 ---
 
-{{< nieuws/header title="OAuth versus EAM: twee kanten van dezelfde medaille?" >}}
-Binnen Identity and Access Management (IAM) is "autorisatie" een sleutelbegrip. Maar spreken we altijd over hetzelfde concept? Wanneer we autorisatie in `OAuth 2.0` relateren aan `Externalized Authorization Management (EAM)` of `Fine Grained Authorization (FGA)`, verwijst het woord "autorisatie" naar verschillende dingen: het zelfstandig naamwoord en het werkwoord. 
+{{< nieuws/header title="Autorisatie in OAuth vs EAM: hetzelde of toch niet?" >}}
+Binnen Identity and Access Management (IAM) is "autorisatie" een sleutelbegrip. Maar betekent dit wel altijd hetzelfde?  Wanneer we autorisatie in `OAuth 2.0` relateren aan `Externalized Authorization Management (EAM)` verwijst het woord "autorisatie" naar verschillende dingen: het zelfstandig naamwoord en het werkwoord. 
 {{< /nieuws/header >}}
 
 {{< chapter/section title="OAuth 2.0: Gedelegeerde Autorisaties voor Applicaties">}}
@@ -23,20 +23,20 @@ De kerncomponenten hierbij zijn:
 {{< chapter/section title="Externalized Authorization Management (EAM): Real-time toegangsbeslissingen">}}
 Hoewel OAuth `scopes` de algemene permissies van de *applicatie* definiëren, zijn ze doorgaans te algemeen om te bepalen wat een *specifieke gebruiker* mag doen met een *specifiek resource-exemplaar* onder *specifieke, dynamische omstandigheden* binnen de `resource server` zelf. [1, 2]
 
-Dit is waar `Externalized Authorization Management (EAM)` systemen, die vaak gebruikmaken van modellen zoals Attribute-, Policy en Relationship-based Access Control (ABAC, PBAC, ReBAC), een rol spelen. EAM legt de nadruk op het architectuurpatroon waarbij de toegangsbeslissing buiten de applicatie wordt geplaatst – een aanpak die *[OpenID AuthZEN](/methodiek/standaarden/)* standaardiseert door de interfaces tussen deze componenten te specificeren. 
+Dit is waar `Externalized Authorization Management (EAM)` systemen, die vaak gebruikmaken van modellen zoals Attribute-, Policy en Relationship-based Access Control (ABAC, PBAC, ReBAC), een rol spelen. De paraplu-term EAM legt de nadruk op het architectuurpatroon waarbij de toegangsbeslissing buiten de applicatie wordt geplaatst – een aanpak die *[OpenID AuthZEN](/methodiek/standaarden/)* standaardiseert door de interfaces tussen applicaties en EAM oplossingen te specificeren. 
 
-`EAM` is dus het **proces** van het real-time nemen van contextbewuste beslissingen op het moment dat een subject (gebruiker of service) een actie probeert uit te voeren op een resource. Dit is autorisatie als een **actie** of een proces (een werkwoord).
+Bij `EAM` gaat autorisatie dus om het **proces** van het real-time nemen van contextbewuste beslissingen op het moment dat een subject (gebruiker of service) een actie probeert uit te voeren op een resource. Dit is autorisatie als een **actie** of een proces (een werkwoord).
 {{< /chapter/section >}}
 
-{{< chapter/section title="Het cruciale onderscheid: Gedelegeerde toestemming versus dynamische handhaving">}}
+{{< chapter/section title="Gedelegeerde rechten versus dynamische handhaving">}}
 | Kenmerk | `OAuth 2.0` (Gedelegeerde autorisatie) | `Externalized Authorization Management (EAM)` |
 | :--------------------------- | :---------------------------------------------------------------------- | :-------------------------------------------------------------------------------- |
-| **Primaire Focus** | Toestemming verlenen aan de *`client application`* namens een gebruiker. | `Real-time` beslissen of een *subject* een specifieke *actie* mag uitvoeren op een *resource*`. |
+| **Primaire Focus** | Rechten verlenen aan de *`client application`* namens een gebruiker. | `Real-time` beslissen of een *subject* een specifieke *actie* mag uitvoeren op een *resource*`. |
 | **Granulariteit** | Grofmazig (via `scopes` die algemene permissies definiëren). | Fijnmazig (via policies die attributen en context evalueren). |
 | **Basis van Beslissing** | Gebruikerstoestemming voor aangevraagde `scopes`. | Policies die attributen van subject, resource, actie en omgeving evalueren. |
 | **Timing van Beslissing** | Voornamelijk bij aanvang van delegatie (uitgifte `token`). | `Real-time`, voor elk relevant toegangsverzoek. |
 | **Kernmechanisme** | `Access Tokens`, `Refresh Tokens`, `Scopes`. | `Policies`, `Attributes`, `PEP`, `PDP`, `PIP`, `PAP`. |
-| **Architectonisch Patroon** | Delegatie van autoriteit. | Externalisatie van autorisatielogica. |
+| **Architectonisch Patroon** | Delegatie van rechten. | Externalisatie van autorisatielogica. |
 {{< /chapter/section >}}
 
 {{< chapter/section title="Samenwerking: Een gelaagde beveiligingsstrategie">}}
