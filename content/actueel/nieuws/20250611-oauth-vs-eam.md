@@ -1,6 +1,6 @@
 ---
 type: 'nieuws'
-Title: "OAuth vs EAM: twee kanten van dezelfde medaille?"
+Title: "Autorisatie in OAuth vs EAM: hetzelde of toch niet?"
 date: '2025-06-11'
 summary: "Binnen Identity and Access Management (IAM) is \"autorisatie\" een sleutelbegrip. Maar spreken we altijd over hetzelfde concept? Wanneer we autorisatie in `OAuth 2.0` relateren aan `Externalized Authorization Management (EAM)` of `Fine Grained Authorization (FGA)`, verwijst het woord \"autorisatie\" naar verschillende dingen: het zelfstandig naamwoord en het werkwoord."
 ---
