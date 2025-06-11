@@ -35,8 +35,8 @@ De essentie van deze drie methodieken zit in de volgenden overeenkomsten:
 - Regels worden **real-time** toegepast, dus niet alleen tijdens authenticatie.
 {{< /chapter/section >}}
 
-{{< chapter/section title="Externalized Access Management" level="3">}}
-De term Externalized Access Management (EAM) kan als overkoepelend begrip gebruikt worden. De toegangscontrole is buiten de applicaties geplaatst, waardoor de volgende belangrijke principes mogelijk worden gemaakt:
+{{< chapter/section title="Externalized Authorization Management" level="3">}}
+De term Externalized Authorization Management (EAM) kan als overkoepelend begrip gebruikt worden. De toegangscontrole is buiten de applicaties geplaatst, waardoor de volgende belangrijke principes mogelijk worden gemaakt:
 - **Zero-trust**. Controleer toegang op elke plek waar interactie tussen systemen plaatsvindt en er dus een risico op onrechtmatige toegang is. 
 - **Centraal beheerd, lokaal toegepast**. Regels kunnen complex zijn en het beheer ervan vraagt kennis en tooling. Tegelijk moet toegang efficiënt bepaald
 worden om te voorkomen dat prestaties belemmerd worden. Door gedistribueerde systemen te gebruiken, zijn beide tegelijk mogelijk.
