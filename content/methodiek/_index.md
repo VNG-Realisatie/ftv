@@ -39,7 +39,7 @@ en buiten de applicaties gebracht zodat deze centraal beheerd kunnen worden.
 Een overzicht van EAM in 2:30.
 
 <video width="640" height="480" controls>
-  <source src="methodiek-slidecast.mp4" type="video/mp4">
+  <source src="https://github.com/VNG-Realisatie/ftv/raw/refs/heads/main/content/methodiek/methodiek-slidecast.mp4" type="video/mp4">
 </video>
 
 <a href="methodiek-slidecast-transcript.txt" download>Transcript downloaden</a>
