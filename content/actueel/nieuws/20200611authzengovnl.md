@@ -22,7 +22,7 @@ De subwerkgroep Juridisch Kader is eind mei van start gegaan. De eerste bijeenko
 
 Kijk op de FTV-webste voor:
 - de [notulen](/ftv/meedoen/werkgroep/authzen/) van de werkgroep FTV
-- de [notulen](https://vng-realisatie.github.io/ftv/meedoen/werkgroep/juridisch-kader-sub1/) van de subwerkgroep
+- de [notulen](/ftv/meedoen/werkgroep/juridisch-kader-sub1/) van de subwerkgroep
 {{< /chapter/section >}}
 
 {{< chapter/section title="Volgende bijeenkomst" level="4">}}
