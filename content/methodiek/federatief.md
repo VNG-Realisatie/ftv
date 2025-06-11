@@ -12,7 +12,7 @@ type: 'chapter'
 </div>
 <div class="utrecht-paragraph pt-1 section-navigation">
    <p>
-      <a href="../standaarden">Standaarden</a> 
+      <a href="../standaarden">De FTV-Standaarden</a> 
    </p>
 </div>
 <div class="section-navigation-selected utrecht-paragraph pt-1 section-navigation">

@@ -40,7 +40,7 @@ Het project FTV werkt aan drie standaarden:
 
 De [AuthZEN Authorization API](https://openid.net/wg/authzen/) is een initiatief van de OpenID foundation, bekend van OpenID Connect. De belangrijkste  leveranciers van PDP's en API gateways werken hier samen aan een autorisatiestandaard.
 
-![logo-openid.png](/ftv/images/logo-openid.png)
+![Het OpenID logo](/ftv/images/logo-openid.png)
 
 Het eerste gebied dat AuthZEN heeft uitgewerkt is de interface tussen PEP en PDP. Dat zijn de soort vragen die gesteld kunnen worden aan de PDP, en de antwoorden daarop. 
 
@@ -84,7 +84,9 @@ De Nederlandse standaard is een uitbreiding op AuthZEN en heeft als volledige na
 De huidige werkversie is te vinden op "[Standaard voor Federatieve Toegangsverlening](https://ftv-standaard-2f223b.gitlab.io/).".
 {{< /chapter/section >}}
 
-{{< chapter/section title="En OAUth dan?" level="4">}}
+{{< chapter/section title="En OAuth dan?" level="4">}}
+
+Open Authorisation (OAuth) is een bestaande open standaard voor autorisatie. Waarom nu dan nog een standaard? Het antwoord is dat AuthZEN een stuk reikwijdte toevoegt aan autorisatie.
 
 OAuth gaat primair over delegatie: een applicatie toestemming geven om jouw credentials te gebruiken om toegang tot een andere applicatie te verkrijgen, zonder de credentials zelf te delen. Met scopes zijn daaraan beperkte rechten te koppelen ('lees bestanden'). Dat is een vorm van grofmazige autorisatie. 
 
