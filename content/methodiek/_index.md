@@ -94,7 +94,7 @@ De flow van informatie volgt de nummers, als volgt:
 
 1. Het Policy Enforcement Point (**PEP**) onderschept een verwerkingsverzoek en handhaaft (enforced) daarmee de toegang op de verwerking 
 2. Het PEP stuurt een verzoek aan het Policy Decision Point (**PDP**), een beslissing te nemen.
-3. Het Policy Access Point (**PAP**) voorziet het PDP van de policies
+3. Het Policy Administration Point (**PAP**) voorziet het PDP van de policies
 4. Het Policy Information Point (**PIP**) haalt additionele informatie op wanneer dat nodig is voor het maken van de toegangsbeslissing.
 5. Het PDP communiceert terug welke beslissing genomen is
 6. Als de beslissing positief is gaat het verzoek door naar de verwerking
