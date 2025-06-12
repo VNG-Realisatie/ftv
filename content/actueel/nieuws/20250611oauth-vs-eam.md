@@ -33,7 +33,7 @@ Hiermee wordt de traditionele login dus gezien als de *autorisatie* dat de appli
 {{< chapter/section title="Autoriseren van toegangsverzoeken met EAM">}}
 EAM werkt fundamenteel anders dan OAuth 2.0. In plaats van vooraf verleende toestemming, draait EAM om toegangsbeslissingen die real-time worden genomen op basis van beleidsregels en context. Bij EAM worden autorisatieregels niet in de applicatiecode opgenomen, maar centraal opgeslagen en beheerd. Dit maakt het mogelijk om beheer en uitvoering te scheiden.
 
-EAM maakt gebruik van modellen zoals Attribute-, Policy en Relationship-based Access Control (ABAC, PBAC, ReBAC). Deze modellen maken het mogelijk om toegangsbeslissingen te baseren op kenmerken van de gebruiker, beleidsregels of relaties met het betreffende gegeven.
+EAM maakt gebruik van modellen zoals Attribute-, Policy en Relationship-based Access Control (ABAC, PBAC, ReBAC). Deze modellen maken het mogelijk om toegangsbeslissingen te baseren op kenmerken en relaties van de gebruikeren en beleidsregels.
 
 EAM maakt dus fijnmazige autorisatie mogelijk. Daarbij wordt elke toegangsbeslissing real-time genomen, op basis van:
 - kenmerken van de gebruiker
