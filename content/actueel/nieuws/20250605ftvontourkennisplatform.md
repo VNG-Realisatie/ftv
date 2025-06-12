@@ -1,11 +1,11 @@
 ---
 type: 'nieuws'
-Title: "FTV on tour: Kennisplatform APIs Geonovum"
-date: '2025-05-28'
+Title: "FTV on Tour: Kennisplatform APIs Geonovum"
+date: '2025-06-05'
 summary: "Michiel Trimpe, architect bij FTV, gaf op 5 juni een presenatie bij het Kennisplatform APIs van Geonovum."
 ---
 
-{{< nieuws/header title="FTV on tour: Kennisplatform APIs van Geonovum" >}}
+{{< nieuws/header title="FTV on Tour: Kennisplatform APIs van Geonovum" >}}
  
 {{< /nieuws/header >}}
 
@@ -15,7 +15,8 @@ Het ontwikkelen van een breed toepasbare standaard vraagt om afstemming met best
 Donderdag 5 juni was Michiel Trimpe aanwezig bij het Kennisplatform APIs van Geonovum. Daar gaf hij de presentatie ‘Slimme toegangsverlening zonder lock-in: FTV en OpenID AuthZEN’. 
 
 Veel aanwezigen waren nog niet bekend met het onderwerp. Een korte terugblik op de ontstaansgeschiedenis hielp om het belang van de methodiek van FTV te verduidelijken.
-FTV werkt op basis van Externalized Authorization Management (EAM). Bij EAM worden toegangsverzoeken, -beslissingen en -beleid losgetrokken van de applicatie, zodat ze centraal beheerd kunnen worden.
+FTV werkt op basis van Externalized Authorization Management (EAM). 
+Bij EAM worden toegangsverzoeken, -beslissingen en -beleid losgetrokken van de applicatie, zodat ze centraal beheerd kunnen worden.
 Voor API-ontwikkelaars betekent dit dat ze zich minder bezig hoeven te houden met complexe en foutgevoelige toegangslogica. 
 Bij deze bijeenkomst waren ook organisaties die EAM al actief opnemen in hun architectuur. Het uitwisselen van ervaringen met EAM leverde waardevolle inzichten op. 
 FTV helpt ontwikkelaars om toegangsverlening eenvoudiger, veiliger en flexibeler toe te passen.

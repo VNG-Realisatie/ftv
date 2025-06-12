@@ -1,11 +1,11 @@
 ---
 type: 'nieuws'
-Title: "FTV on tour: Expertgroep IAM van NORA"
+Title: "FTV on Tour: Expertgroep IAM van NORA"
 date: '2025-05-28'
 summary: "Michiel Trimpe, architect bij FTV, gaf op 28 mei een presentatie over AuthZEN en FTV bij de Expertgroep IAM (Identity & Access Management) van NORA."
 ---
 
-{{< nieuws/header title="FTV on tour: Expertgroep IAM van NORA" >}}
+{{< nieuws/header title="FTV on Tour: Expertgroep IAM van NORA" >}}
  
 {{< /nieuws/header >}}
 
