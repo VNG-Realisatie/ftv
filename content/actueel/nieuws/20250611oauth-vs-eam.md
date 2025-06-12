@@ -1,48 +1,63 @@
 ---
 type: 'nieuws'
-Title: "Autorisatie in OAuth vs EAM: hetzelde of toch niet?"
+Title: Het verschil tussen autorisatie in OAuth, OpenID Connect en EAM
 date: '2025-06-11'
-summary: "Binnen Identity and Access Management (IAM) is \"autorisatie\" een sleutelbegrip. Maar is autorisatie in OAuth wel hetzelfde als autorisatie in Externalized Authorization Management (EAM)?"
+summary: "Binnen IAM is autorisatie een sleutelbegrip maar betekent het niet altijd hetzelfde. De autorisaties van OAuth zijn niet hetzelfde als het autoriseren van Externalized Authorization Management (EAM)."
 ---
 
-{{< nieuws/header title="Autorisatie in OAuth vs EAM: hetzelde of toch niet?" >}}
-Binnen Identity and Access Management (IAM) is "autorisatie" een sleutelbegrip. Maar betekent dit wel altijd hetzelfde?  Wanneer we autorisatie in `OAuth 2.0` relateren aan `Externalized Authorization Management (EAM)` verwijst het woord "autorisatie" naar verschillende dingen: het zelfstandig naamwoord en het werkwoord. 
+{{< nieuws/header title="Het verschil tussen autorisatie in OAuth en EAM" >}}
+Binnen  Identity and Access Management (IAM) is autorisatie, of toegangsverlening, een sleutelbegrip. Maar het betekent niet in elke context hetzelfde. De autorisaties van OAuth zijn niet hetzelfde als het autoriseren van Externalized Authorization Management (EAM).
 {{< /nieuws/header >}}
 
-{{< chapter/section title="OAuth 2.0: Gedelegeerde Autorisaties voor Applicaties">}}
-`OAuth 2.0` is fundamenteel een framework voor **gedelegeerde autorisatie**. Het stelt een gebruiker in staat om een externe applicatie beperkte toegang te verlenen tot hun `resources` (gehost op een `resource server`) zonder hun primaire inloggegevens te hoeven delen. 
-
-De kerncomponenten hierbij zijn:
-
-* **`Access Tokens`**: Dit zijn de digitale bewijzen die de `client application` gebruikt om toegang tot `resources` te vragen. Ze vertegenwoordigen de specifieke, vaak tijdelijke, toestemming die is verleend.
-* **`Scopes`**: Deze definiëren de *omvang* van de toegang die de `client application` aanvraagt (bijvoorbeeld `read_profile` of `write_calendar`). [4, 2] De gebruiker geeft expliciet toestemming voor deze `scopes`.
-
-`OAuth` beantwoordt dus de vraag: "Heeft *deze applicatie* toestemming gekregen van de gebruiker om namens hen bepaalde acties uit te voeren of toegang te krijgen tot bepaalde data?" Het draait om het delegeren van rechten aan een applicatie. Men kan dit zien als autorisatie als een **resultaat** of een verkregen recht (een zelfstandig naamwoord). 
+{{< chapter/section>}}
+In OAuth 2.0 verwijst autorisatie bijvoorbeeld naar een vooraf verleende toestemming: een autorisatie. Bij Externalized Authorization Management (EAM) gaat het juist om het beslissen op het moment: het proces van autoriseren. Dat subtiele verschil heeft grote gevolgen voor de manier waarop toegang wordt 
+geregeld in digitale systemen. Zeker wanneer meerdere organisaties samenwerken en verantwoordelijkheden zorgvuldig gescheiden moeten blijven.
 {{< /chapter/section >}}
 
-{{< chapter/section title="Externalized Authorization Management (EAM): Real-time toegangsbeslissingen">}}
-Hoewel OAuth `scopes` de algemene permissies van de *applicatie* definiëren, zijn ze doorgaans te algemeen om te bepalen wat een *specifieke gebruiker* mag doen met een *specifiek resource-exemplaar* onder *specifieke, dynamische omstandigheden* binnen de `resource server` zelf. [1, 2]
+{{< chapter/section title="Delegeren van autorisaties met OAuth">}}
+OAuth is een framework voor **gedelegeerde autorisatie**. Het maakt het mogelijk dat een applicatie namens een gebruiker toegang krijgt tot gegevens die zijn opgeslagen in een andere applicatie, de *resource server*.)
 
-Dit is waar `Externalized Authorization Management (EAM)` systemen, die vaak gebruikmaken van modellen zoals Attribute-, Policy en Relationship-based Access Control (ABAC, PBAC, ReBAC), een rol spelen. De paraplu-term EAM legt de nadruk op het architectuurpatroon waarbij de toegangsbeslissing buiten de applicatie wordt geplaatst – een aanpak die *[OpenID AuthZEN](/methodiek/standaarden/)* standaardiseert door de interfaces tussen applicaties en EAM oplossingen te specificeren. 
+*Bijvoorbeeld: Een medewerker van de gemeente (de gebruiker) verleent toestemming aan het zaaksysteem (de applicatie) om afspraken in te plannen in zijn Outlook kalender (de resource server). Deze toestemming wordt vaak bij het inloggen verpakt in een access token met scopes die de rijkweidte van de toestemming aangeven, zoals alleen aanmaken of ook verwijderen. Dit token is een digitaal bewijs dat de applicatie namens de gebruiker toegang mag vragen.*
 
-Bij `EAM` gaat autorisatie dus om het **proces** van het real-time nemen van contextbewuste beslissingen op het moment dat een subject (gebruiker of service) een actie probeert uit te voeren op een resource. Dit is autorisatie als een **actie** of een proces (een werkwoord).
+OAuth geeft dus antwoord op de vraag: "Heeft *deze applicatie* toestemming gekregen van de gebruiker om namens hen bepaalde acties uit te voeren of toegang te krijgen tot bepaalde data?" Autorisatie is bij OAuth 2.0 een gegeven: een vooraf verleend recht, vastgelegd in een token met scopes. De *resource server* controleert het token en beoordeelt of het verzoek binnen de toegestane scopes valt.
 {{< /chapter/section >}}
 
-{{< chapter/section title="Gedelegeerde rechten versus dynamische handhaving">}}
-| Kenmerk | `OAuth 2.0` (Gedelegeerde autorisatie) | `Externalized Authorization Management (EAM)` |
-| :--------------------------- | :---------------------------------------------------------------------- | :-------------------------------------------------------------------------------- |
-| **Primaire Focus** | Rechten verlenen aan de *`client application`* namens een gebruiker. | `Real-time` beslissen of een *subject* een specifieke *actie* mag uitvoeren op een *resource*`. |
-| **Granulariteit** | Grofmazig (via `scopes` die algemene permissies definiëren). | Fijnmazig (via policies die attributen en context evalueren). |
-| **Basis van Beslissing** | Gebruikerstoestemming voor aangevraagde `scopes`. | Policies die attributen van subject, resource, actie en omgeving evalueren. |
-| **Timing van Beslissing** | Voornamelijk bij aanvang van delegatie (uitgifte `token`). | `Real-time`, voor elk relevant toegangsverzoek. |
-| **Kernmechanisme** | `Access Tokens`, `Refresh Tokens`, `Scopes`. | `Policies`, `Attributes`, `PEP`, `PDP`, `PIP`, `PAP`. |
-| **Architectonisch Patroon** | Delegatie van rechten. | Externalisatie van autorisatielogica. |
+{{< chapter/section title="Authenticatie met OpenID Connect">}}
+OAuth wordt vaak gecombineerd met OpenID Connect om ook authenticatie en identificatie mogelijk te maken. Hierbij wordt OAuth gebruikt om namens de gebruiker de applicatie (Relying Party) te *autoriseren* om de *identificatie token* van de OpenID Provider te ontvangen. 
+
+*Bijvoorbeeld: Een medewerker van de gemeente geeft de planningsapplicatie (Relying Party) toestemming tot de 'openid' scope bij Microsoft EntraID (de cloud login van Microsoft.) De planningsapplicatie ontvangt geauthenticeerde gebruikergegevens zonder dat hij login gegevens van de gebruiker weet.*
+
+Hiermee wordt de traditionele login dus gezien als de *autorisatie* dat de applicatie de gebruiker *mag* identificeren.
+{{< /chapter/section >}}
+
+{{< chapter/section title="Autoriseren van toegangsverzoeken met EAM">}}
+EAM werkt fundamenteel anders dan OAuth 2.0. In plaats van vooraf verleende toestemming, draait EAM om toegangsbeslissingen die real-time worden genomen op basis van beleidsregels en context. Bij EAM worden autorisatieregels niet in de applicatiecode opgenomen, maar centraal opgeslagen en beheerd. Dit maakt het mogelijk om beheer en uitvoering te scheiden.
+
+EAM maakt gebruik van modellen zoals Attribute-, Policy en Relationship-based Access Control (ABAC, PBAC, ReBAC). Deze modellen maken het mogelijk om toegangsbeslissingen te baseren op kenmerken van de gebruiker, beleidsregels of relaties met het betreffende gegeven.
+
+EAM maakt dus fijnmazige autorisatie mogelijk. Daarbij wordt elke toegangsbeslissing real-time genomen, op basis van:
+- kenmerken van de gebruiker
+- beleidsregels
+- context
+
+In plaats van een vooraf verleend recht, is autorisatie hier een proces: een 
+concrete beslissing op het moment van handelen. De communicatie tussen 
+applicaties en EAM-componenten is gestandaardiseerd via [OpenID AuthZEN](/methodiek/standaarden/) 
+door de interfaces tussen applicaties en EAM-oplossingen te specificeren.
 {{< /chapter/section >}}
 
 {{< chapter/section title="Samenwerking: Een gelaagde beveiligingsstrategie">}}
-OAuth en EAM zijn geen concurrenten, maar partners die elkaar versterken in een gelaagd beveiligingsmodel.
+Het is een veelvoorkomende misvatting dat complexe toegangsregels volledig in OAuth kunnen worden ondergebracht. In de praktijk blijkt dat scopes daarvoor niet toereikend zijn en het leidt vaak tot een wildgroei aan scopes (scopes explosion) of tot te ruime toegang.
 
-Het is een veelvoorkomend misverstand om te proberen gedetailleerde, dynamische en contextspecifieke autorisatielogica volledig binnen OAuth scopes te implementeren. Dit leidt vaak tot een wildgroei aan scopes ("scope explosion") of tot te ruime permissies. OAuth informeert de `resource server` dat de *applicatie* gemachtigd is om een bepaald *type* verzoek te doen; EAM bepaalt vervolgens of de *geauthenticeerde gebruiker* die via die applicatie handelt, daadwerkelijk gerechtigd is om die *specifieke operatie* op die *specifieke data* op dat *exacte moment* uit te voeren.
+OAuth laat de resource server weten dat een applicatie namens een gebruiker een bepaald type verzoek mag doen. Maar het bepaalt niet of die specifieke handeling op dat specifieke moment is toegestaan. EAM voegt daar 
+een extra laag aan toe: het controleert per handeling, per gegeven en op basis van context of toegang werkelijk mag worden verleend.
 
-OAuth beheert de "voordeur" voor applicaties, terwijl EAM-systemen (met `AuthZEN` als standaard voor communicatie) de specifieke acties binnen die deur controleren. Deze gelaagde aanpak is fundamenteel voor het bouwen van veilige, flexibele en schaalbare systemen die voldoen aan de complexe autorisatie-eisen van moderne applicatielandschappen.
+*OAuth beheert de ‘voordeur’ voor applicaties, terwijl EAM-systemen - met AuthZEN als standaard voor communicatie - de specifieke acties achter de voordeur controleren.*
+
+OAuth en EAM zijn dus geen concurrerende oplossingen, maar vullen elkaar aan. Samen vormen ze een gelaagde beveiligingsstrategie, onmisbaar voor het ontwikkelen van veilige, flexibele en schaalbare systemen die voldoen aan de complexe autorisatie-eisen van moderne applicatielandschappen.
+{{< /chapter/section >}}
+
+
+{{< chapter/section title="Authenticeren met OpenID Connect">}}
+OAuth wordt ook vaak gecombineerd met OpenID Connect om *authenticatie* mogelijk te maken. Hierbij wordt OAuth gebruikt om namens de gebruiker de applicatie te *autoriseren* om de *identificatie* bij de OpenID Provider op te halen. Hiermee wordt de traditionele login dus weergegeven als de 'autorisatie' waarmee de applicatie de gebruiker mag 'authenticeren' en identificeren.
 {{< /chapter/section >}}

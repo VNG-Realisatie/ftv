@@ -2,7 +2,7 @@
 type: 'nieuws'
 Title: "FTV on Tour: Kennisplatform APIs Geonovum"
 date: '2025-06-05'
-summary: "Michiel Trimpe, architect bij FTV, gaf op 5 juni een presenatie bij het Kennisplatform APIs van Geonovum."
+summary: "Michiel Trimpe, architect bij FTV, gaf op 5 juni een presentatie bij het Kennisplatform APIs van Geonovum."
 ---
 
 {{< nieuws/header title="FTV on Tour: Kennisplatform APIs van Geonovum" >}}
