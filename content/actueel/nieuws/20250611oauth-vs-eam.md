@@ -56,8 +56,3 @@ een extra laag aan toe: het controleert per handeling, per gegeven en op basis v
 
 OAuth en EAM zijn dus geen concurrerende oplossingen, maar vullen elkaar aan. Samen vormen ze een gelaagde beveiligingsstrategie, onmisbaar voor het ontwikkelen van veilige, flexibele en schaalbare systemen die voldoen aan de complexe autorisatie-eisen van moderne applicatielandschappen.
 {{< /chapter/section >}}
-
-
-{{< chapter/section title="Authenticeren met OpenID Connect">}}
-OAuth wordt ook vaak gecombineerd met OpenID Connect om *authenticatie* mogelijk te maken. Hierbij wordt OAuth gebruikt om namens de gebruiker de applicatie te *autoriseren* om de *identificatie* bij de OpenID Provider op te halen. Hiermee wordt de traditionele login dus weergegeven als de 'autorisatie' waarmee de applicatie de gebruiker mag 'authenticeren' en identificeren.
-{{< /chapter/section >}}
