@@ -2,10 +2,10 @@
 type: 'nieuws'
 Title: Het verschil tussen autorisatie in OAuth, OpenID Connect en EAM
 date: '2025-06-11'
-summary: "Binnen IAM is autorisatie een sleutelbegrip maar betekent het niet altijd hetzelfde. De autorisaties van OAuth zijn niet hetzelfde als het autoriseren van Externalized Authorization Management (EAM)."
+summary: "Binnen IAM is autorisatie een sleutelbegrip maar betekent het niet altijd hetzelfde. De autorisaties van OAuth en OpenID Connect zijn niet hetzelfde als het autoriseren van Externalized Authorization Management (EAM)."
 ---
 
-{{< nieuws/header title="Het verschil tussen autorisatie in OAuth en EAM" >}}
+{{< nieuws/header title="Het verschil tussen autorisatie in OAuth, OpenID Connect en EAM" >}}
 Binnen  Identity and Access Management (IAM) is autorisatie, of toegangsverlening, een sleutelbegrip. Maar het betekent niet in elke context hetzelfde. De autorisaties van OAuth zijn niet hetzelfde als het autoriseren van Externalized Authorization Management (EAM).
 {{< /nieuws/header >}}
 
