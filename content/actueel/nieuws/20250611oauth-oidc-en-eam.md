@@ -15,9 +15,9 @@ geregeld in digitale systemen. Zeker wanneer meerdere organisaties samenwerken e
 {{< /chapter/section >}}
 
 {{< chapter/section title="Delegeren van autorisaties met OAuth">}}
-OAuth is een framework voor **gedelegeerde autorisatie**. Het maakt het mogelijk dat een applicatie namens een gebruiker toegang krijgt tot gegevens die zijn opgeslagen in een andere applicatie, de *resource server*.)
+OAuth is een framework voor **gedelegeerde autorisatie**. Het maakt het mogelijk dat een applicatie namens een gebruiker toegang krijgt tot gegevens die zijn opgeslagen in een andere applicatie, de *resource server*.
 
-*Bijvoorbeeld: Een medewerker van de gemeente (de gebruiker) verleent toestemming aan het zaaksysteem (de applicatie) om afspraken in te plannen in zijn Outlook kalender (de resource server). Deze toestemming wordt vaak bij het inloggen verpakt in een access token met scopes die de rijkweidte van de toestemming aangeven, zoals alleen aanmaken of ook verwijderen. Dit token is een digitaal bewijs dat de applicatie namens de gebruiker toegang mag vragen.*
+*Bijvoorbeeld: Een medewerker van de gemeente (de gebruiker) verleent toestemming aan het zaaksysteem (de applicatie) om afspraken in te plannen in zijn Outlook kalender (de resource server). Deze toestemming wordt vaak bij het inloggen verpakt in een access token met scopes die de reikwijdte van de toestemming aangeven, zoals alleen aanmaken of ook verwijderen. Dit token is een digitaal bewijs dat de applicatie namens de gebruiker toegang mag vragen.*
 
 OAuth geeft dus antwoord op de vraag: "Heeft *deze applicatie* toestemming gekregen van de gebruiker om namens hen bepaalde acties uit te voeren of toegang te krijgen tot bepaalde data?" Autorisatie is bij OAuth 2.0 een gegeven: een vooraf verleend recht, vastgelegd in een token met scopes. De *resource server* controleert het token en beoordeelt of het verzoek binnen de toegestane scopes valt.
 {{< /chapter/section >}}
