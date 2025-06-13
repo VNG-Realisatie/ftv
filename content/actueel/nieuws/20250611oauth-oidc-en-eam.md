@@ -27,7 +27,7 @@ OAuth wordt vaak gecombineerd met OpenID Connect om ook authenticatie en identif
 
 *Bijvoorbeeld: Een medewerker van de gemeente geeft de planningsapplicatie (Relying Party) toestemming tot de 'openid' scope bij Microsoft EntraID (de cloud login van Microsoft.) De planningsapplicatie ontvangt geauthenticeerde gebruikergegevens zonder dat hij login gegevens van de gebruiker weet.*
 
-Hiermee wordt de traditionele login dus gezien als de *autorisatie* dat de applicatie de gebruiker *mag* identificeren.
+Hiermee wordt de traditionele login dus gezien als de *autorisatie* dat de applicatie de identificatiegegevens van de gebruiker *mag* ontvangen (in een ID Token in JWT formaat) en opvragen (bij het UserInfo endpoint.)
 {{< /chapter/section >}}
 
 {{< chapter/section title="Autoriseren van toegangsverzoeken met EAM">}}
