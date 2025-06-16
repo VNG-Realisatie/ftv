@@ -16,8 +16,8 @@ Er zijn veel implementaties beschikbaar. Voor de test is gekozen voor de partije
 Dit zijn de geteste implementatie met de daarbij behorende regeltalen:
 
 - [Amazon Verified Permissions](https://aws.amazon.com/verified-permissions/) is de policy engine van Amazon en gebruikt de taal Cedar.
-- [Cerbos](https://www.cerbos.dev/) is de Policy Bases Access Control (PBAC)-oplossing van Google en maakt gebruik van CEL.
-- [OPA](https://www.openpolicyagent.org/) is de engine van Styra de bedenker van Rego.
+- [Cerbos](https://www.cerbos.dev/) is de Policy Based Access Control (PBAC)-oplossing van Google en maakt gebruik van CEL.
+- [OPA](https://www.openpolicyagent.org/) is de engine van Styra, de bedenker van Rego.
 - [OpenFGA](https://openfga.dev/) is gebaseerd op Zanzibar, het Relationship Based Access Control (ReBAC)-project van Google.
 - [KeyCloak](https://www.keycloak.org/docs/latest/authorization_services/index.html), een open source platform.
 
