@@ -32,10 +32,11 @@ type: 'chapter'
 
 {{< chapter/section title="Methodieken" level="4">}}
 
-De architectuur **Externalized Authorization Management (EAM)** is de meest geschikte keus voor FTV.
-EAM het voldoet aan de eisen van flexibiliteit en schaalbaarheid. 
+De architectuur **Externalized Authorization Management (EAM)** is de meest geschikte keus voor Federatieve Toegangsverlening (FTV).
+EAM voldoet aan de eisen van flexibiliteit en schaalbaarheid. 
 
-PBAC/ABAC en ReBAC vallen beiden onder EAM. Een keus maken tussen die twee opties is op dit moment niet zinvol.
+Policy-Based Access Control (PBAC), Attribute-Based Access Control (ABAC) en Relationship-Based Access Control (ReBAC) zijn verschillende vormen van Externalized Authorization Management (EAM).
+Een keuze tussen deze vormen is op dit moment niet zinvol.
 
 {{< /chapter/section >}}
 
@@ -57,11 +58,11 @@ De enige open standaard die nu daadwerkelijk toepasbaar is en voet aan de grond 
 
 {{< chapter/section title="Producten" level="4">}}
 
-Van de gratis open source producten hebben we er een aantal getest en zijn in principe allen geschikt. Het zijn echter alleen deelvoorzieningen waarmee regels runtime toegepast kunnen worden (PDP's). 
+Van de gratis open source producten zijn er een aantal getest en zijn in principe allen geschikt. Het zijn echter alleen deelvoorzieningen waarmee regels runtime toegepast kunnen worden (Policy Decision points, PDPs). 
 
 Voor een totaaloplossing zit de uitdaging vooral in schaalbaar en gedistribueerd beheer en operatie. Hiervoor zijn commerciële producten beschikbaar. Vaak zijn deze om een open source PDP gebouwd, zijn als het ware een freemium.
 
-Lopende het project wordt door FTV een eigen marktonderzoek van commerciële oplossingen gedaan. Dit gebeurt door eigen tests, en vooral door gesprekken met de leveranciers zelf. Er wordt specifiek gekeken naar toegangsverlening, zowel runtime als beheer, en koppelingen naar aanpalende systemen zoals IAM worden. 
+Lopende het project wordt door FTV een eigen marktonderzoek van commerciële oplossingen gedaan. Dit gebeurt door eigen tests en vooral door gesprekken met de leveranciers zelf. Er wordt specifiek gekeken naar toegangsverlening, zowel runtime als beheer. Koppelingen naar aanpalende systemen zoals Identity and Access Management (IAM) worden meegenomen. 
 
 [Het resultaat]({{< param baseDirectory >}}toepassen/softwarekeus) zal geen koopadvies worden, maar een handreiking over hoe tot een keus te komen.
 {{< /chapter/section >}}
@@ -83,7 +84,7 @@ Van de aanbieders heeft alleen de BRP een serieuze vorm van toegangsverlening. D
 
 {{< chapter/section title="Afnemers" level="4">}}
 
-De meeste systemen van afnemers hebben toegangverlening erkend als belangrijk en lastig. De oplossingen zijn heel divers maar over het algemeen RBAC of ad hoc maatwerk. Bij leveranciers van zaaksystemen zoals Maykin en DImpact zijn wel stappen gezet richting PBAC. Het succes daarvan staat of valt bij de beheersbaarheid op schaal.
+De meeste systemen van afnemers hebben toegangsverlening erkend als belangrijk en lastig. De oplossingen zijn heel divers maar over het algemeen RBAC of ad hoc maatwerk. Bij leveranciers van zaaksystemen zoals Maykin en DImpact zijn wel stappen gezet richting PBAC. Het succes daarvan staat of valt bij de beheersbaarheid op schaal.
 {{< /chapter/section >}}
 
 {{< chapter/section title="Datastelsel" level="4">}}
