@@ -24,7 +24,7 @@ type: 'chapter'
 {{< /chapter/header >}}
 
 {{< chapter/header title="Onderzoek" bg="brown" icon="images/api-icon.svg">}}
-Voorafgaand aan het definiëren van een werkwijze en het opstellen van de standaarden is uitgebreid onderzoek gedaan. Op basis van dit onderzoek zijn de eisen opgesteld voor de totaaloplossing. De samenvatting van de onderzoeksresultaten staan hieronder.
+Voorafgaand aan het definiëren van een werkwijze en het opstellen van de standaarden is uitgebreid onderzoek gedaan. Op basis van dit onderzoek zijn de eisen opgesteld voor de totaaloplossing. De samenvatting van de onderzoeksresultaten staat hieronder.
 {{< /chapter/header >}}
 
 {{< chapter/section title="Onderzoeksopzet" >}}
@@ -52,7 +52,7 @@ Gaandeweg het onderzoek zijn de eisen opgesteld voor de nieuwe standaard voor to
 {{< chapter/section title="Meer weten?" level="3">}}
 
 - [Onderzoek naar huidige status techniek](status_techniek)
-- [Inventarisatie staat toegangsverlening Nederlandse overheid](status_nl_overheid)
+- [Inventarisatie van de staat van toegangsverlening Nederlandse overheid](status_nl_overheid)
 - [Eisen aan toekomstige toegangsverlening](eisen_aan_de_oplossing)
 - [Conclusie](conclusie)
 {{< /chapter/section >}}
