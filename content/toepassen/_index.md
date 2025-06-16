@@ -13,7 +13,7 @@ Federatieve toegangsverlening raakt meerdere onderdelen van een organisatie. Daa
 
 
 {{< chapter/section title="Voor bestuurders" >}}
-Een goed werkende FTV-implementatie vraagt om duidelijke keuzes, afspraken en draagvlak. Deze handreikingen helpen om de juiste afwegingen te maken en zicht te houden op het geheel.
+Een goed werkende FTV-implementatie vraagt om duidelijke keuzes, afspraken en draagvlak. Deze handreiking helpt om de juiste afwegingen te maken en zicht te houden op het geheel.
 
 1. **Functionele beschrijving**
 
@@ -25,6 +25,19 @@ Een goed werkende FTV-implementatie vraagt om duidelijke keuzes, afspraken en dr
 
 {{< chapter/section title="Voor juristen" >}}
    Goede toegangsverlening vraagt om heldere afspraken over rollen en bevoegdheden. Ook moeten juridische kaders en beleid vertaald worden naar toegangsregels die technisch toepasbaar zijn.
+
+   1. **Functionele beschrijving**
+
+   Hoe zien de taken rondom FTV eruit en wie is waarvoor verantwoordelijk?
+
+   [Bekijk het overzicht van functies en rollen](functioneel)
+
+   2. **Stappenplan**
+
+   Hoe kom je van een use case tot een goed werkende toegangsregel?
+
+   [Doorloop het stappenplan](stappenplan)
+
 {{< /chapter/section >}}
 
 {{< chapter/section title="Voor IT-managers" >}}
@@ -40,7 +53,7 @@ FTV raakt meerdere onderdelen van de IT-infrastructuur. Denk aan softwarekeuzes,
 
    Hoe kom je van een use case tot een goed werkende toegangsregel?
 
-   [Doorloop het 7-stappenplan](stappenplan)
+   [Doorloop het stappenplan](stappenplan)
 
 3. **Softwarekeuze**
 
