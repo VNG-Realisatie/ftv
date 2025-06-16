@@ -17,7 +17,7 @@ EAM-methodes (Externalized Authorization Management) zijn in opkomst. Maar er is
 {{< /chapter/section >}}
 
 {{< chapter/section title="Open of closed source" >}}
-Elke EAM-oplossing draait om de beslismodule: de Policy Decision Point (PDP). Daaromheen zitten modules voor beheer, zoals voor schrijven, testen, distributie en monitoring en standaard integraties met bestaande applicaties (PEPs). De meeste PDPs zijn open source en vaak ook licentievrij. De andere modules worden commercieel aangeboden, als uitbestede dienst (SaaS) of voor eigen beheer (on-premises). Vaak zit hier een duidelijke freemiumstrategie achter: door een goede gratis open source PDP aan te bieden, hoopt de leverancier een klant aan de eigen policytaal te binden waarna de overstap naar betaalde EAM een logische weg is.
+Elke EAM-oplossing draait om de beslismodule: de Policy Decision Point (PDP). Daaromheen zitten modules voor beheer, zoals voor schrijven, testen, distributie, monitoring en standaard integraties met bestaande applicaties (Policy Enforcement Points, PEPs). De meeste PDPs zijn open source en vaak ook licentievrij. De andere modules worden commercieel aangeboden, als uitbestede dienst (SaaS) of voor eigen beheer (on-premises). Vaak zit hier een duidelijke freemiumstrategie achter: door een goede gratis open source PDP aan te bieden, hoopt de leverancier een klant aan de eigen policytaal te binden waarna de overstap naar betaalde EAM een logische weg is.
 {{< /chapter/section >}}
 
 {{< chapter/section title="Zelfbouw of uitbesteden" >}}
@@ -71,5 +71,5 @@ Niet alleen de leverancier, ook de eigen organisatie moet goed voorbereid zijn. 
 - Wie gaat het beheer doen en  met wie wordt daarbij samengewerkt?
 - Om hoeveel PDPs gaat het? En om hoeveel autorisatieverzoeken per maand?
 - Binnen welke applicaties moeten beslissingen afgedwongen worden (PEPs)?
-- Integreert de gekozen oplossing met de bestaande IAM-oplossing?
+- Integreert de gekozen oplossing met de bestaande oplossing voor Identity and Access Management (IAM)?
 {{< /chapter/section >}}
