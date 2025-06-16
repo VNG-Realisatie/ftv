@@ -23,18 +23,18 @@ De werkgroep Federatieve Toegangsverlening (FTV) ontwikkelt standaarden en belei
 
 {{< /chapter/section >}}
 
-{{< chapter/section title="Voor wie is werkgroep?" level="3">}}
+{{< chapter/section title="Voor wie is de werkgroep?" level="3">}}
 
 We zoeken professionals die:
 
 - betrokken zijn bij de uitvoering van overheidstaken als beleid, IT of data-uitwisseling;
 - willen meedenken én actief willen bijdragen aan concrete standaarden en oplossingen die de gegevensuitwisseling binnen de overheid verbeteren;
 - expertise of interesse hebben in fijnmazige toegangsverlening met technieken zoals Externalized Authorization Management (EAM) en Policy Based Access Control (PBAC);
-- kunnen bijdragen aan de juridisch en beleidsmatig aspecten van toegangsverlening.
+- kunnen bijdragen aan de juridische en beleidsmatige aspecten van toegangsverlening.
 {{< /chapter/section >}}
 
 {{< chapter/section title="Aanmelden"  level="3">}}
-Aanmelden voor individuele bijeenkomsten kan via de [agenda van het FDS](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events) op Realisatie IBDS.
+Aanmelden voor individuele bijeenkomsten kan via de [agenda van het FDS](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events).
 
 Aanmelden voor alle bijeenkomsten van de werkgroep kan via mail bij [ftv@vng.nl](mailto:ftv@vng.nl).
 {{< /chapter/section >}}
