@@ -39,7 +39,7 @@ De code is geschreven in Golang en vrij beschikbaar via GitLab.
 - De GitLab-repository is opgezet als een mono-repo met losse modules die afzonderlijk of in combinatie te gebruiken zijn.
 - Elke module is grotendeels configureerbaar en zo flexibel mogelijk ingericht.
 - Voor de opslag van policies en attributen kan het DevOps-team kiezen uit verschillende key/value-stores of bijvoorbeeld een relationele database zoals Postgres.
-- Ook de policy-taal is flexibel: op dit moment ondersteunt OpenFTV
+- Ook de policytaal is flexibel: op dit moment ondersteunt OpenFTV
   [Rego (OPA)](https://www.openpolicyagent.org/docs/latest/policy-language/),
   [Cedar (Amazon-AWS)](https://www.cedarpolicy.com/en),
   [Cerbos (Google)](https://docs.cerbos.dev/cerbos/latest/policies/)
@@ -56,7 +56,7 @@ De code is geschreven in Golang en vrij beschikbaar via GitLab.
   Omdat policies en data vaak door dezelfde gebruikers worden beheerd, is er ook een Manager-service die de PAP en PIP combineert.
 - Voor oudere versies van OpenFSC is een aparte autorisatie-plugin beschikbaar die als PDP fungeert.
 - Developers kunnen deze services direct inzetten voor een werkende EAM-implementatie. Wie liever zelf bouwt,
-  kan de losse modules gebruiken om éénn of meer EAM-componenten zelf samen te stellen.
+  kan de losse modules gebruiken om één of meer EAM-componenten zelf samen te stellen.
 - Gateways en andere systemen kunnen met standaard AuthZEN-profielen eenvoudig aansluiten op de generieke PDP-service.
 - Ook eigen componenten die in Golang zijn geschreven, kunnen gebruikmaken van de generieke PEP-module.
   Zo hoeven ontwikkelteams niet opnieuw te beginnen bij het bouwen van EAM-functionaliteit.
