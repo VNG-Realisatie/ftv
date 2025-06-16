@@ -49,7 +49,7 @@ Gebruik bij de omschrijving de termen:
 
 Door de regels nu al in deze termen uit te drukken, wordt het schrijven later eenduidig en overzichtelijk.
 
-Voorbeeld: een zaakbehandelaar (subject) mag een huurtoeslagzaak (resource) afsluiten (actie) als de zaakbehandelaar afdelingshoofd is en de zaakstatus ‘klaar om af te sluiten’ is (context).
+Voorbeeld: een zaakbehandelaar (subject) mag een huurtoeslagzaak (resource) afsluiten (action) als de zaakbehandelaar afdelingshoofd is en de zaakstatus ‘klaar om af te sluiten’ is (context).
 
 #### Stap 3. Bepaal de attributen
 
@@ -76,7 +76,7 @@ Het samenstellen van die testdata is een taak voor een businessanalist. Een ontw
 
 In deze stap wordt de gekozen beslismodule (Policy Decision Point, PDP) neergezet en aangesloten op de juiste toegangshekken (Policy Enforcement Points, PEPs).  Check vooraf of de gekozen componenten goed op elkaar aansluiten. Zie ook de checklist bij [Softwarekeuze](../softwarekeus).
 
-De PEP kan deel uitmaken van een applicatie, een API (Application Programmers Interface), of een API-gateway. Als de component is gebouwd volgens de AuthZEN NL Gov-standaard, is er weinig extra programmeerwerk nodig voor de aansluiting.
+De PEP kan deel uitmaken van een applicatie, een API (Application Programming Interface), of een API-gateway. Als de component is gebouwd volgens de AuthZEN NL Gov-standaard, is er weinig extra programmeerwerk nodig voor de aansluiting.
 Het neerzetten (deployen) van de PDP vergt kennis van de infrastructuur (cloud infra, Helm, Kubernetes).
 
 #### Stap 7. Zorg voor distributie van regels
