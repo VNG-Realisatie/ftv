@@ -55,9 +55,9 @@ Data voor de bijeenkomsten vanaf augustus volgen later dit jaar.
 
 #### Werkgroep FTV
 
-- dinsdag 3 juni: AuthZEN  ([Notulen]({{% relref "authzen" %}}))
-- dinsdag 20 mei: Policies ([Notulen]({{% relref "policies" %}}))
-- dinsdag 6 mei: Verdieping en Logboek Toegangsverlening ([Notulen]({{% relref "verdieping-en-logboek" %}}))
+- 3 juni: AuthZEN  ([Notulen]({{% relref "authzen" %}}))
+- 20 mei: Policies ([Notulen]({{% relref "policies" %}}))
+- 6 mei: Verdieping en Logboek Toegangsverlening ([Notulen]({{% relref "verdieping-en-logboek" %}}))
 - 22 april: Juridisch Kader ([Notulen]({{% relref "juridisch-kader" %}}))
 - 8 april: Introductie Externalized Authorization Management architectuur ([Notulen]({{% relref "introductie-eam" %}}))
 - 25 maart 2025: Kick-off Werkgroep Federatieve Toegangsverlening ([Notulen]({{% relref "kick-off" %}}))
