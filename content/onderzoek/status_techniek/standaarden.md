@@ -27,9 +27,9 @@ Naast de initiatieven in de lidstaten zijn er ook een aantal initiatieven onder 
 
 - De [**International Data Spaces Association (IDSA)**](https://internationaldataspaces.org/) werkt aan een serie standaarden waarvan [IDSA Usage Control Language](https://international-data-spaces-association.github.io/DataspaceConnector/Documentation/v5/UsageControl) specifiek gaat over toegangsverlening. Daarnaast wordt er aan een voorziening gewerkt: de [IDS connector](https://international-data-spaces-association.github.io/DataspaceConnector/Introduction). 
 - Op soortgelijke wijze beschrijft [**Gaia-X** Federated Data Infrastructure (GFDI)](https://gaia-x.eu/) een architectuur en een set standaarden.
-De [Gaia-X Federation (GXFS)](https://www.gxfs.eu/) is een set van data-space-specifieke implementaties van GFDI . 
+De [Gaia-X Federation (GXFS)](https://www.gxfs.eu/) is een set van data-space-specifieke implementaties van GFDI. 
 - Vanuit de Europese Unie is het programma [**Smart Middleware Platform (Simpl)**](https://simpl-programme.ec.europa.eu/) gestart, dat een complete infrastructuur beoogt te realiseren, gebaseerd op de IDSA standaarden en geïntegreerd met GXFS. 
-- En dan is er nog de Eclipse Foundation die een grote rol speelt als facilitator en coordinator van het werk van IDSA, Gaia-X, en Simpl.
+- En dan is er nog de Eclipse Foundation die een grote rol speelt als facilitator en coördinator van het werk van IDSA, Gaia-X, en Simpl.
 
 Het collectief heeft nog weinig concrete resultaten opgeleverd. Het project Federatieve Toegangsverlening (FTV) houdt de ontwikkelingen in de gaten, maar neemt niet actief deel.
 {{< /chapter/section >}}
