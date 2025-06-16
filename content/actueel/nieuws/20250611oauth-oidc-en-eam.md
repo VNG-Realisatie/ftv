@@ -56,5 +56,5 @@ Hiermee wordt de traditionele login dus gezien als de *autorisatie* dat de appli
 {{< chapter/section title="Meer weten?" level="3">}}
 Lees meer over [EAM](/methodiek/), de methodiek van Federatieve Toegangsverlening
 Of bekijk de korte uitleg in de [slidecast](/methodiek/) van 2,5 minuut
-
+{{< /chapter/section >}}
 
