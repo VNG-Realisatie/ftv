@@ -14,7 +14,7 @@ FTV is een vrij complex en abstract probleem, en er worden heel wat begrippen en
 > 
 > Daarom gebruiken we vaak Nederlands, soms Engels en zelfs soms beide.
 
-- **Application Programmers Interface (API)**. Software waarmee gegevens en/of verwerkingen beschikbaar kunnen worden gesteld aan externe systemen of gebruikers. [Wikipedia](https://nl.wikipedia.org/wiki/Application_programming_interface).
+- **Application Programming Interface (API)**. Software waarmee gegevens en/of verwerkingen beschikbaar kunnen worden gesteld aan externe systemen of gebruikers. [Wikipedia](https://nl.wikipedia.org/wiki/Application_programming_interface).
 - **Externalized Authorization Management (EAM)**. Paraplubegrip voor methodieken die toegang buiten applicaties brengen. [Link](/ftv/methodiek)
 - **Federatief Datastelsel (FDS)**. Het vertrouwensnetwerk van de Nederlandse overheid, en een programma van de [Interbestuurlijke Datastrategie (IBDS)](https://realisatieibds.nl/). [Link](https://realisatieibds.nl/page/view/564cc96c-115e-4e81-b5e6-01c99b1814ec/de-ontwikkeling-van-het-federatief-datastelsel)
 - **Generieke Digitale Infrastructuur (GDI)**. De verzameling van afspraken(stelsels), standaarden en voorzieningen die alle publieke dienstverleners gebruiken voor hun digitale dienstverlening aan burgers en ondernemers. [Link](https://www.digitaleoverheid.nl/mido/generieke-digitale-infrastructuur-gdi/)
