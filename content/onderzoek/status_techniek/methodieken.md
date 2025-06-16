@@ -28,7 +28,7 @@ Dan blijven ABAC, PBAC en ReBAC over. Deze lijken nogal op elkaar.
 - De term PBAC kwam later en gebruikt het woord policy om te benadrukken dat het om in aparte bestanden geplaatste beleidsregels (policies) gaat. Dit werd in XACML echter ook al gedaan, in XML-bestanden. Volgens [Wikipedia](https://en.wikipedia.org/wiki/Attribute-based_access_control) zijn ABAC en PBAC daarom ook hetzelfde.
 - ReBAC op zijn beurt schuift relaties naar de voorgrond. Maar in essentie zijn relaties een categorie van eigenschappen, niet een nieuw concept.
 
-De essentie van deze drie methodieken zit in de volgenden overeenkomsten:
+De essentie van deze drie methodieken zit in de volgende overeenkomsten:
 
 - Regels worden apart van broncode geschreven en met dezelfde zorgvuldigheid beheerd als broncode (**policy as code**).
 - Regels zijn fijnmazig (**fine grained access control**), door gebruik te kunnen maken van eigenschappen van de vrager (subject), de vraag (actie), de context en het antwoord (resource).
