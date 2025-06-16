@@ -57,7 +57,7 @@ FTV raakt meerdere onderdelen van de IT-infrastructuur. Denk aan softwarekeuzes,
 
 3. **Softwarekeuze**
 
-   Er is veel te kiezen op het gebied van Policy Decision Point (PDP), Policy Information Point (PIP) en Policy Administration Point (PAP) Wat heb je nodig? En welke leverancier past het best? Of is het beter om zelf iets te bouwen?
+   Er is veel te kiezen op het gebied van Policy Decision Point (PDP), Policy Information Point (PIP) en Policy Administration Point (PAP). Wat heb je nodig? En welke leverancier past het best? Of is het beter om zelf iets te bouwen?
 
    [Lees de checklist Softwarekeuze](softwarekeus)
 {{< /chapter/section >}}
@@ -67,7 +67,7 @@ Een goede technische basis begint met praktijkvoorbeelden en inzicht in de opbou
 
 1. **OpenFTV**
 
-   OpenFTV is de referentie-implementatie. Dit is een door het FTV-team gebouwde oplossing: eenvoudig maar volledig. Het laat zien hoe een EAM-oplossing eruit kan zien en kan als basis voor een eigen implementatie dienen.
+   OpenFTV is de referentie-implementatie. Dit is een door het FTV-team gebouwde oplossing: eenvoudig maar volledig. Het laat zien hoe een oplossing voor Externalized Authorization Management (EAM) eruit kan zien en kan als basis voor een eigen implementatie dienen.
 
    [Gebruik de OpenFTV als startpunt](openftv)
 
