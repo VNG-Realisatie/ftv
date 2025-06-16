@@ -24,7 +24,7 @@ Het project Federatieve Toegangsverlening (FTV) zoekt professionals die willen b
 
 {{< /chapter/header >}}
 
-{{< chapter/section title="Wat kan je doen?" >}}
+{{< chapter/section title="Wat kun je doen?" >}}
 
 **Bekijk de werkwijze**
 
