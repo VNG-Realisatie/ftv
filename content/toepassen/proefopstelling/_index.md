@@ -16,13 +16,13 @@ De proefopstelling is een eenvoudig federatief datastelsel met als onderdelen:
 - Bij de gemeente:
   - Een zaaksysteem voor gemeentemedewerkers
   - Een of meer gemeentelijke registraties
-- De Basisregistratie Personen (BRP), een service van de Rijksdienst voor Identiteitsgevens (RvIG)
+- De Basisregistratie Personen (BRP), een service van de Rijksdienst voor Identiteitsgegevens (RvIG)
 - De Basisregistratie Voertuigen (BRV), een service van de Rijksdienst voor het Wegverkeer (RDW)
 
 {{< img-url "diagrams/proefopstelling-overzicht.svg" "Proefopstelling overzicht" >}}
 {{< /chapter/section >}}
 
-{{< chapter/section title="Opstelling Gemeente" >}}
+{{< chapter/section title="Opstelling gemeente" >}}
 De opstelling bij de gemeente kunnen we verder detailleren als volgt:
 {{< img-url "diagrams/proefopstelling-zaaksysteem.svg" "Proefopstelling zaaksysteem" >}}
 
