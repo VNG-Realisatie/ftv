@@ -44,7 +44,7 @@ De opstelling bij de gemeente kunnen we verder detailleren als volgt:
 
 - **Policy Administration Point (PAP)**
 
-  De FTV-referentie wordt gebruikt als PAP. Deze gebruikt het bestandssysteem voor de opslag van policies. Er is een command line interface (CLI) om policies toe te voegen, bij te werken en te verwijderen. De policies worden door een push-interface aan OPA doorgegeven: elke wijziging wordt direct doorgegeven.
+  De FTV-referentie wordt gebruikt als PAP. Deze gebruikt het bestandssysteem voor de opslag van policies. Er is een command line interface (CLI) om policies toe te voegen, bij te werken en te verwijderen. De policies worden door een push-interface aan OPA (Open Policy Agent) doorgegeven: elke wijziging wordt direct doorgegeven.
 
 - **Policy Information Point (PIP)**
 
