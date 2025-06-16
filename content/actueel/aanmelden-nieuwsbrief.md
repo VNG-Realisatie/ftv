@@ -4,11 +4,7 @@ type: 'chapter'
 ---
 {{< chapter/section title="Aanmelden voor de nieuwsbrief" >}}
 
-Tweewekelijkse nieuwsbief met nieuws en ontwikkelingen van het project Federatieve Toegangsverlening.
-{{< /chapter/section >}}
+Wil je op de hoogte blijven van alle ontwikkelingen rond FTV? Meld je dan aan voor de FTV Update, de tweewekelijkse nieuwsbrief van het project Federatieve Toegangsverlening (FTV). Van updates uit werkgroepen tot projectactiviteiten en nieuws over relevante ontwikkelingen in het werkveld: je mist niets!
+Meld je aan via aan via [ftv@vng.nl](mailto:ftv@vng.nl).
 
-
-{{< chapter/section title="Aanmelden" level="3">}}
-
-Wil jij elke twee weken nieuws van het project FTV in je mailbox? Meld je aan via [ftv@vng.nl](mailto:ftv@vng.nl).
 {{< /chapter/section >}}
