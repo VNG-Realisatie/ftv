@@ -51,6 +51,6 @@ Ook over meerdere toeslagsystemen heen.
 - **Schaalbaar**: Nieuwe medewerkers of organisaties kunnen eenvoudig aansluiten zonder extra systemen.
 - **Flexibel**: Aanpassingen in bevoegdheden en regels kunnen centraal worden geregeld.
 - **Traceerbaar**: Eerdere beoordelingen zijn altijd inzichtelijk voor controles achteraf.
-- **Toekomstbestendig**: Klaar voor internationale afspraken en Europese regelgeving.
+- **Leveranciersonafhankelijk**: Eén centrale aanpak, ongeacht welk systeem wordt gebruikt.
 
 {{< /chapter/section >}}
