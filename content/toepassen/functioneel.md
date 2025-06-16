@@ -28,7 +28,7 @@ De beheersfuncties worden gebruikt voor het opstellen en onderhouden van regels.
 
 #### Beveiliging
 
-Het beheer van toegangsregels vraagt om goede beveiliging. Een gedeeld of apart systeem voor identiteits- en toegangsbeheer (Identity and Access Management , IAM) regelt de toegang voor beheerders, met rollen, rechten en policies.
+Het beheer van toegangsregels vraagt om goede beveiliging. Een gedeeld of apart systeem voor identiteits- en toegangsbeheer (Identity and Access Management, IAM) regelt de toegang voor beheerders, met rollen, rechten en policies.
 
 #### Regels opstellen
 
