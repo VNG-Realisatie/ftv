@@ -3,10 +3,59 @@ Title: Toepassen
 type: 'chapter'
 ---
 
-{{< chapter/header title="Toepassen" bg="brown" icon="images/api-icon.svg">}}
+{{< chapter/header title="Toepassen" bg="brown" icon="images/sectie-toepassen.svg">}}
 Het invoeren van de standaard Federatieve Toegangsverlening (FTV) begint met een goede voorbereiding. Denk aan het maken van afspraken over het beheer en het testen van een oplossing in een proefopstelling. Als ondersteuning zijn praktische handreikingen beschikbaar. Ze geven inzicht in keuzes die gemaakt moeten worden, de stappen richting implementatie en de technische mogelijkheden.
 {{< /chapter/header >}}
 
+{{< chapter/header bg="lightbrown">}}
+
+### In deze sectie
+
+<div class="section-home-box">
+    <a href="functioneel">
+        <h2>
+            Functies en rollen
+        </h2>
+        <p>
+           .
+        </p>
+    </a>
+</div>
+
+<div class="section-home-box">
+    <a href="stappenplan">
+        <h2>
+            Stappenplan
+        </h2>
+        <p>
+            .
+        </p>
+    </a>
+</div>
+
+<div class="section-home-box">
+    <a href="openftv">
+        <h2>
+            OpenFTV
+        </h2>
+        <p>
+            .
+        </p>
+    </a>
+</div>
+
+<div class="section-home-box">
+    <a href="proefopstelling">
+        <h2>
+            Proefopstelling
+        </h2>
+        <p>
+            .
+        </p>
+    </a>
+</div>
+
+{{< /chapter/header >}}
 {{< chapter/section title="" >}}
 Federatieve toegangsverlening raakt meerdere onderdelen van een organisatie. Daarom zijn de handreikingen op deze pagina gericht op verschillende doelgroepen. 
 {{< /chapter/section >}}

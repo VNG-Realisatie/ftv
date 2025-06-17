@@ -2,23 +2,27 @@
 type: 'chapter'
 title: "Status van de techniek"
 ---
-{{< chapter/header bg="gray">}}
+{{< chapter/header title="Onderzoek" bg="blue">}}
 
-<div class="section-navigation-selected utrecht-paragraph pt-1 section-navigation">
+<div class="sub-navigation-tab-selected utrecht-paragraph pt-1 sub-navigation-tab">
    <p>
-      Status techniek
+      <a href="../status_techniek">Status techniek</a> 
    </p>
 </div>
-<div class="utrecht-paragraph pt-1 section-navigation">
+<div class="utrecht-paragraph pt-1 sub-navigation-tab">
    <p>
       <a href="../status_nl_overheid">Status overheid</a>
    </p>
 </div>
-<div class="utrecht-paragraph pt-1 section-navigation">
+<div class="utrecht-paragraph pt-1 sub-navigation-tab">
+   <p>
+      <a href="../eisen_aan_de_oplossing">Eisen</a>
+   </p>
+</div><div class="utrecht-paragraph pt-1 sub-navigation-tab">
    <p>
       <a href="../conclusie">Conclusie</a>
    </p>
-</div>
+</div> 
 
 {{< /chapter/header >}}
 

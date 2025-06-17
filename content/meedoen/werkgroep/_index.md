@@ -3,16 +3,16 @@ Title: Werkgroep
 type: 'chapter'
 ---
 
-{{< chapter/header bg="gray">}}
+{{< chapter/header title="Over het project" bg="orange">}}
 
-<div class="utrecht-paragraph pt-1 section-navigation">
+<div class="utrecht-paragraph pt-1 sub-navigation-tab">
    <p>
-      <a href="../">Wat kun je doen?</a>
+      <a href="../wat_kun_je_doen">Wat kun je doen?</a> 
    </p>
 </div>
-<div class="section-navigation-selected utrecht-paragraph pt-1 section-navigation">
+<div class="sub-navigation-tab-selected utrecht-paragraph pt-1 sub-navigation-tab">
    <p>
-      Werkgroep
+      <a href="../Werkgroep">Werkgroep</a>
    </p>
 </div>
 

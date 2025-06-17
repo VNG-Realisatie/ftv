@@ -2,7 +2,33 @@
 title: "Eisen aan de oplossing"
 type: 'chapter'
 ---
-{{< chapter/section title="Eisen aan de oplossing" level="1" >}}
+
+{{< chapter/header title="Onderzoek" bg="blue">}}
+
+<div class="utrecht-paragraph pt-1 sub-navigation-tab">
+   <p>
+      <a href="../status_techniek">Status techniek</a> 
+   </p>
+</div>
+<div class="utrecht-paragraph pt-1 sub-navigation-tab">
+   <p>
+      <a href="../status_nl_overheid">Status overheid</a>
+   </p>
+</div>
+<div class="sub-navigation-tab-selected utrecht-paragraph pt-1 sub-navigation-tab">
+   <p>
+      <a href="../eisen_aan_de_oplossing">Eisen</a>
+   </p>
+</div><div class="utrecht-paragraph pt-1 sub-navigation-tab">
+   <p>
+      <a href="../conclusie">Conclusie</a>
+   </p>
+</div> 
+
+{{< /chapter/header >}}
+
+{{< chapter/section title="Eisen aan de oplossing" bg="blue">}}
+
 Om te komen tot een toekomstvaste oplossingsrichting kijken we naar de volgende richtlijen:
 1. [De toekomstvisie](toekomstvisie): de GDI, de architectuur waaraan we gehouden zijn, schetst een toekomstvisie waarin de oplossing moet passen
 2. [De bezwaren](bezwaren): wat er niet goed gaat in de huidige oplossingen

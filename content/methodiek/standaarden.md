@@ -3,23 +3,23 @@ Title: De FTV-standaarden
 type: 'chapter'
 ---
 
-{{< chapter/header bg="gray">}}
+{{< chapter/header title="Methodiek" bg="green">}}
 
-<div class="utrecht-paragraph pt-1 section-navigation">
+<div class="utrecht-paragraph pt-1 sub-navigation-tab">
    <p>
-      <a href="../">De EAM principes</a>
+      <a href="../principes">De EAM principes</a> 
    </p>
 </div>
-<div class="section-navigation-selected utrecht-paragraph pt-1 section-navigation">
+<div class="sub-navigation-tab-selected utrecht-paragraph pt-1 sub-navigation-tab">
    <p>
       De FTV-standaarden
    </p>
 </div>
-<div class="utrecht-paragraph pt-1 section-navigation">
+<div class="utrecht-paragraph pt-1 sub-navigation-tab">
    <p>
       <a href="../federatief">Federatief EAM</a>
    </p>
-</div>
+</div> 
 
 {{< /chapter/header >}}
 
@@ -53,7 +53,7 @@ Als basis is eerst een informatiemodel uitgewerkt. Dat beschrijft de velden die 
 ![diagram s-a-r-c](../methodiek-sarc.png)
 
 1. Subject. De aanvrager. Dit kan een persoon of organisatie zijn.
-2. Action. De verwerking die gevraagd wordt. Denk hierbij bijvoorbeeld1 aan inzien, aanpassen, verwijderen of verstrekken.
+2. Action. De verwerking die gevraagd wordt. Denk hierbij bijvoorbeeld aan inzien, aanpassen, verwijderen of verstrekken.
 3. Resource. De gegevens verwerking op uitgevoerd moet worden.
 4. Context. De situatie / omgeving waarin het gegevensverzoek gedaan is. Dit kan gaan over de verbinding, de huidige tijd, de locatie van het subject en meer.
 
@@ -90,9 +90,11 @@ De huidige werkversie is te vinden op "[Standaard voor Federatieve Toegangsverle
 
 [Open Authorisation (OAuth)](https://en.wikipedia.org/wiki/OAuth) is een bestaande open standaard voor autorisatie. Waarom nu dan nog een standaard? Het antwoord is dat AuthZEN een stuk reikwijdte toevoegt, bovenop OAuth.
 
-OAuth gaat primair over delegatie: een applicatie toestemming geven om jouw credentials te gebruiken om toegang tot een andere applicatie te verkrijgen. En dat zonder de credentials zelf te delen. Met OAuth scopes zijn daar ook op beperkte rechten aan te koppelen (bijvoorbeeld toestemming voor het 'lezen van bestanden'). Dat is een vorm van grofmazige autorisatie. 
+OAuth gaat primair over delegatie: een applicatie toestemming geven om namens een gebruiker toegang tot een andere applicatie te verkrijgen. En dat zonder de credentials zelf te delen. Met OAuth scopes zijn daar ook op beperkte rechten aan te koppelen (bijvoorbeeld toestemming voor het 'lezen van bestanden'). Dat is een vorm van grofmazige autorisatie. 
 
 [AuthZEN gaat verder](https://en.wikipedia.org/wiki/OAuth#OAuth_and_XACML): fijnmazige autorisatie, op elk moment, op elke plek. OAuth en AuthZEN kunnen elkaar aanvullen: het OAuth token kan gebruikt worden als een van de attributen in AuthZEN policies.
+
+In [dit artikel](/ftv/actueel/nieuws/20250611oauth-oidc-en-eam/) lees je meer over OAuth en AuthZEN.
 
 {{< /chapter/section >}}
 

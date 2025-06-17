@@ -1,25 +1,25 @@
 ---
-Title: Federatief
+Title: Federatief EAM
 type: 'chapter'
 ---
 
-{{< chapter/header bg="gray">}}
+{{< chapter/header title="Methodiek" bg="green">}}
 
-<div class="utrecht-paragraph pt-1 section-navigation">
+<div class="utrecht-paragraph pt-1 sub-navigation-tab">
    <p>
-      <a href="../">De EAM principes</a>
+      <a href="../principes">De EAM principes</a> 
    </p>
 </div>
-<div class="utrecht-paragraph pt-1 section-navigation">
+<div class="utrecht-paragraph pt-1 sub-navigation-tab">
    <p>
-      <a href="../standaarden">De FTV-Standaarden</a> 
+      <a href="../standaarden">De FTV-standaarden</a>
    </p>
 </div>
-<div class="section-navigation-selected utrecht-paragraph pt-1 section-navigation">
+<div class="sub-navigation-tab-selected utrecht-paragraph pt-1 sub-navigation-tab">
    <p>
       Federatief EAM
    </p>
-</div>
+</div> 
 
 {{< /chapter/header >}}
 
