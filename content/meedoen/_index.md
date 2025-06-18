@@ -11,27 +11,26 @@ Het project Federatieve Toegangsverlening (FTV) zoekt professionals die willen b
 {{< chapter/header bg="lightorange">}}
 
 ### In deze sectie
-
-<div class="section-home-box">
-    <a href="wat_kun_je_doen">
-        <h2>
-            Wat kun je doen?
-        </h2>
-        <p>
-            Dit zijn de opties om meer te leren en bij te dragen aan federatieve toegangsverlening.
-        </p>
-    </a>
+<div class="section-home-wrapper">
+    <div class="section-home-box">
+        <a href="wat_kun_je_doen">
+            <h2>
+                Wat kun je doen?
+            </h2>
+            <p>
+                Dit zijn de opties om meer te leren en bij te dragen aan federatieve toegangsverlening.
+            </p>
+        </a>
+    </div>
+    <div class="section-home-box">
+        <a href="werkgroep">
+            <h2>
+                Werkgroep
+            </h2>
+            <p>
+                Eens in de twee weken komt een groep geïnteresseerden bijeen.
+            </p>
+        </a>
+    </div>
 </div>
-
-<div class="section-home-box">
-    <a href="werkgroep">
-        <h2>
-            Werkgroep
-        </h2>
-        <p>
-            Eens in de twee weken komt een groep geïnteresseerden bijeen.
-        </p>
-    </a>
-</div>
-
 {{< /chapter/header >}}

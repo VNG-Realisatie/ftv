@@ -1,5 +1,5 @@
 ---
-Title: Meedoen
+Title: Wat kun je doen?
 weight: 30
 type: 'chapter'
 ---

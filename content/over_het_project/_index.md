@@ -11,48 +11,46 @@ Het project Federatieve Toegangsverlening (FTV) richt zich op het ontwikkelen va
 
 ### In deze sectie
 
-<div class="section-home-box">
-    <a href="opdracht">
-        <h2>
-            De opdracht
-        </h2>
-        <p>
-           .
-        </p>
-    </a>
+<div class="section-home-wrapper">
+    <div class="section-home-box">
+        <a href="opdracht">
+            <h2>
+                De opdracht
+            </h2>
+            <p>
+               .
+            </p>
+        </a>
+    </div>
+    <div class="section-home-box">
+        <a href="scope">
+            <h2>
+                Scope
+            </h2>
+            <p>
+                .
+            </p>
+        </a>
+    </div>
+    <div class="section-home-box">
+        <a href="fase1">
+            <h2>
+                Fase 1
+            </h2>
+            <p>
+                .
+            </p>
+        </a>
+    </div>
+    <div class="section-home-box">
+        <a href="fase2">
+            <h2>
+                Fase 2
+            </h2>
+            <p>
+                .
+            </p>
+        </a>
+    </div>
 </div>
-
-<div class="section-home-box">
-    <a href="scope">
-        <h2>
-            Scope
-        </h2>
-        <p>
-            .
-        </p>
-    </a>
-</div>
-
-<div class="section-home-box">
-    <a href="fase1">
-        <h2>
-            Fase 1
-        </h2>
-        <p>
-            .
-        </p>
-    </a>
-</div>
-
-<div class="section-home-box">
-    <a href="fase2">
-        <h2>
-            Fase 2
-        </h2>
-        <p>
-            .
-        </p>
-    </a>
-</div>
-
 {{< /chapter/header >}}

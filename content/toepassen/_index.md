@@ -10,49 +10,50 @@ Het invoeren van de standaard Federatieve Toegangsverlening (FTV) begint met een
 {{< chapter/header bg="lightbrown">}}
 
 ### In deze sectie
-
-<div class="section-home-box">
-    <a href="functioneel">
-        <h2>
-            Functies en rollen
-        </h2>
-        <p>
-           .
-        </p>
-    </a>
-</div>
-
-<div class="section-home-box">
-    <a href="stappenplan">
-        <h2>
-            Stappenplan
-        </h2>
-        <p>
-            .
-        </p>
-    </a>
-</div>
-
-<div class="section-home-box">
-    <a href="openftv">
-        <h2>
-            OpenFTV
-        </h2>
-        <p>
-            .
-        </p>
-    </a>
-</div>
-
-<div class="section-home-box">
-    <a href="proefopstelling">
-        <h2>
-            Proefopstelling
-        </h2>
-        <p>
-            .
-        </p>
-    </a>
+<div class="section-home-wrapper">
+   <div class="section-home-box">
+       <a href="functioneel">
+           <h2>
+               Functies en rollen
+           </h2>
+           <p>
+              Hoe zien de taken rondom FTV eruit en wie is waarvoor verantwoordelijk?
+           </p>
+       </a>
+   </div>
+   
+   <div class="section-home-box">
+       <a href="stappenplan">
+           <h2>
+               Stappenplan
+           </h2>
+           <p>
+               Hoe kom je van een use case tot een goed werkende toegangsregel?
+           </p>
+       </a>
+   </div>
+   
+   <div class="section-home-box">
+       <a href="openftv">
+           <h2>
+               OpenFTV
+           </h2>
+           <p>
+               OpenFTV is de referentie-implementatie.
+           </p>
+       </a>
+   </div>
+   
+   <div class="section-home-box">
+       <a href="proefopstelling">
+           <h2>
+               Proefopstelling
+           </h2>
+           <p>
+               Een mini-Federatief Datastelsel (FDS) met uitgewerkte use cases is ideaal om lokaal te testen en mee te experimenteren.
+           </p>
+       </a>
+   </div>
 </div>
 
 {{< /chapter/header >}}

@@ -7,7 +7,7 @@ type: 'chapter'
 
 <div class="utrecht-paragraph pt-1 sub-navigation-tab">
    <p>
-      <a href="../principes">De EAM principes</a> 
+      <a href="../principes">De principes van EAM</a> 
    </p>
 </div>
 <div class="sub-navigation-tab-selected utrecht-paragraph pt-1 sub-navigation-tab">

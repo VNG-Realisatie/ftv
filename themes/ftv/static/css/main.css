@@ -38,7 +38,6 @@
     --color-rhc-color-grijs-200: #E2E8F0;
     --color-rhc-color-blauw-50: #BCDFF0;
     --color-rhc-color-blauw-25: #EEF7FB;
-    --color-rhc-color-lintblauw-50: #BCDFF0;
     --color-rhc-color-geel-300: #FDD370;
     --color-rhc-color-geel-50: #FFF4DB;
     --color-rhc-color-mintgroen-100: #D6F2E9;
@@ -12547,12 +12546,13 @@
   transition-timing-function: linear;
 }
 .section-home-box {
-  float: left;
-  background: white;
-  margin: 20px;
+  display: ;
   width: 250px;
-  height: auto;
+  margin: 20px;
   padding: 20px;
+  background: white;
+  height: auto;
+  float: left;
 }
 .section-home-box h2 {
   font-weight: bold;

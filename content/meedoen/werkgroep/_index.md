@@ -3,7 +3,7 @@ Title: Werkgroep
 type: 'chapter'
 ---
 
-{{< chapter/header title="Over het project" bg="orange">}}
+{{< chapter/header title="Meedoen" bg="orange">}}
 
 <div class="utrecht-paragraph pt-1 sub-navigation-tab">
    <p>

@@ -1,13 +1,13 @@
 ---
 type: 'chapter'
-title: "De EAM principes"
+title: "De principes van EAM"
 ---
 
 {{< chapter/header title="Methodiek" bg="green">}}
 
 <div class="sub-navigation-tab-selected utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-mosgroen-50">
    <p>
-      De EAM principes
+      De principes van EAM
    </p>
 </div>
 <div class="utrecht-paragraph pt-1 sub-navigation-tab">
@@ -23,7 +23,23 @@ title: "De EAM principes"
 
 {{< /chapter/header >}}
 
-# De EAM principes
+{{< chapter/section title="De principes van EAM">}}
+
+De term voor de gekozen methodiek is Externalized Authorization Management (soms ook wel Externalized Access Management).
+In deze methodiek worden toegangsverzoeken, -beslissingen en -beleid op gestandaardiseerde wijze gemodelleerd
+en buiten de applicaties gebracht zodat deze centraal beheerd kunnen worden.
+
+**EAM in vogelvlucht**
+
+Een overzicht van EAM in 2:30.
+
+<video width="640" height="480" controls>
+  <source src="https://github.com/VNG-Realisatie/ftv/raw/refs/heads/main/content/methodiek/methodiek-slidecast.mp4" type="video/mp4">
+</video>
+
+<a href="methodiek-slidecast-transcript.txt" download>Transcript downloaden</a>
+
+{{< /chapter/header >}}
 
 {{< chapter/section title="Separation of concerns" level="3">}}
 

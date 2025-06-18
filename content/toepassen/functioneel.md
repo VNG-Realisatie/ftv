@@ -5,25 +5,27 @@ type: 'chapter'
 
 {{< chapter/header title="Toepassen" bg="brown">}}
 
-<div class="sub-navigation-tab-selected utrecht-paragraph pt-1 sub-navigation-tab">
-   <p>
-      <a href="../functioneel">Functies en rollen</a> 
-   </p>
-</div>
-<div class="utrecht-paragraph pt-1 sub-navigation-tab">
-   <p>
-      <a href="../stappenplan">Stappenplan</a>
-   </p>
-</div>
-<div class="utrecht-paragraph pt-1 sub-navigation-tab">
-   <p>
-      <a href="../openftv">OpenFTV</a> 
-   </p>
-</div>
-<div class="utrecht-paragraph pt-1 sub-navigation-tab">
-   <p>
-      <a href="../proefopstelling">Proefopstelling</a>
-   </p>
+<div class="sub-navigation-wrapper">
+    <div class="sub-navigation-tab-selected utrecht-paragraph pt-1 sub-navigation-tab">
+       <p>
+          <a href="../functioneel">Functies en rollen</a> 
+       </p>
+    </div>
+    <div class="utrecht-paragraph pt-1 sub-navigation-tab">
+       <p>
+          <a href="../stappenplan">Stappenplan</a>
+       </p>
+    </div>
+    <div class="utrecht-paragraph pt-1 sub-navigation-tab">
+       <p>
+          <a href="../openftv">OpenFTV</a> 
+       </p>
+    </div>
+    <div class="utrecht-paragraph pt-1 sub-navigation-tab">
+       <p>
+          <a href="../proefopstelling">Proefopstelling</a>
+       </p>
+    </div>
 </div>
 {{< /chapter/header >}}
 

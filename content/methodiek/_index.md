@@ -13,37 +13,37 @@ De kern van het project is de gekozen methodiek, oftewel de voorgestelde werkwij
 
 ### In deze sectie
 
-<div class="section-home-box">
-    <a href="principes">
-        <h2>
-            De EAM principes
-        </h2>
-        <p>
-            De basisprincipes van Externalized Authorization Management (EAM)
-        </p>
-    </a>
-</div>
-
-<div class="section-home-box">
-    <a href="standaarden">
-       <h2>
-          De FTV-standaarden
-       </h2>
-        <p>
-            Hoe FTV de principes van EAM invulling geeft met 3 standaarden
-        </p>
-    </a>
-</div>
-
-<div class="section-home-box">
-    <a href="federatief">
-       <h2>
-          Federatief EAM
-       </h2>
-        <p>
-            Hoe de principes van EAM ingezet kunnen worden in een federatief datastelsel
-        </p>
-    </a>
+<div class="section-home-wrapper">
+    <div class="section-home-box">
+        <a href="principes">
+            <h2>
+                De principes van EAM
+            </h2>
+            <p>
+                De basisprincipes van Externalized Authorization Management (EAM)
+            </p>
+        </a>
+    </div>
+    <div class="section-home-box">
+        <a href="standaarden">
+           <h2>
+              De FTV-standaarden
+           </h2>
+            <p>
+                Hoe FTV de principes van EAM invulling geeft met 3 standaarden
+            </p>
+        </a>
+    </div>
+    <div class="section-home-box">
+        <a href="federatief">
+           <h2>
+              Federatief EAM
+           </h2>
+            <p>
+                Hoe de principes van EAM ingezet kunnen worden in een federatief datastelsel
+            </p>
+        </a>
+    </div>
 </div>
 
 
