@@ -12568,6 +12568,27 @@
 .sub-navigation-tab-selected {
   background: #EFEADA;
 }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid;
+}
+th {
+  background-color: #04AA6D;
+  color: white;
+}
+td, th {
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  padding: 5px;
+  font-family: var(--utrecht-paragraph-font-family, var(--utrecht-document-font-family, inherit));
+  font-size: var(--utrecht-paragraph-font-size, var(--utrecht-document-font-size, inherit));
+  font-weight: var(--utrecht-paragraph-font-weight, inherit);
+  line-height: var(--utrecht-paragraph-line-height, var(--utrecht-document-line-height, inherit));
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
 @property --tw-rotate-x {
   syntax: "*";
   inherits: false;
