@@ -18,7 +18,7 @@ Het project Federatieve Toegangsverlening (FTV) richt zich op het ontwikkelen va
                 De opdracht
             </h2>
             <p>
-               .
+               Een overzicht van de opdracht die vanuit de GDI verstrekt is; het uitgangspunt van FTV.
             </p>
         </a>
     </div>
@@ -28,7 +28,7 @@ Het project Federatieve Toegangsverlening (FTV) richt zich op het ontwikkelen va
                 Scope
             </h2>
             <p>
-                .
+                De brede opdracht is verder uitgewerkt om te komen tot een haalbare scope.
             </p>
         </a>
     </div>
@@ -38,7 +38,7 @@ Het project Federatieve Toegangsverlening (FTV) richt zich op het ontwikkelen va
                 Fase 1
             </h2>
             <p>
-                .
+                De eerste fase onderzocht of, en zo ja waar, standaarden zinvol zijn, en of er al geschikte standaarden bestaan.
             </p>
         </a>
     </div>
@@ -48,7 +48,7 @@ Het project Federatieve Toegangsverlening (FTV) richt zich op het ontwikkelen va
                 Fase 2
             </h2>
             <p>
-                .
+                De tweede fase gaat over het opstellen van standaarden en die geaccepteerd en indien mogelijk gebruikt te laten worden.
             </p>
         </a>
     </div>
