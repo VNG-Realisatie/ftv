@@ -2,8 +2,31 @@
 type: 'chapter'
 Title: Scope
 ---
-{{< chapter/section title="" >}}
-# Scope
+{{< chapter/header title="Over het project" bg="yellow">}}
+
+<div class="utrecht-paragraph pt-1 sub-navigation-tab">
+   <p>
+      <a href="../opdracht">Opdracht</a> 
+   </p>
+</div>
+<div class="sub-navigation-tab-selected utrecht-paragraph pt-1 sub-navigation-tab">
+   <p>
+      <a href="../scope">Scope</a>
+   </p>
+</div>
+<div class="utrecht-paragraph pt-1 sub-navigation-tab">
+   <p>
+      <a href="../fase1">Fase 1</a> 
+   </p>
+</div>
+<div class="utrecht-paragraph pt-1 sub-navigation-tab">
+   <p>
+      <a href="../fase2">Fase 2</a>
+   </p>
+</div>
+{{< /chapter/header >}}
+
+{{< chapter/section title="Scope" >}}
 De originele opdracht is vrij breed geformuleerd:
 
 >  **Definieer een standaardmethodiek voor toegangsverlening tot APIs.**

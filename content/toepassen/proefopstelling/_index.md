@@ -2,15 +2,39 @@
 Title: Proefopstelling
 type: 'chapter'
 ---
-{{< chapter/section title="" >}}
-# Proefopstelling
+
+{{< chapter/header title="Toepassen" bg="brown">}}
+
+<div class="utrecht-paragraph pt-1 sub-navigation-tab">
+   <p>
+      <a href="../functioneel">Functies en rollen</a> 
+   </p>
+</div>
+<div class="utrecht-paragraph pt-1 sub-navigation-tab">
+   <p>
+      <a href="../stappenplan">Stappenplan</a>
+   </p>
+</div>
+<div class="utrecht-paragraph pt-1 sub-navigation-tab">
+   <p>
+      <a href="../openftv">OpenFTV</a> 
+   </p>
+</div>
+<div class="sub-navigation-tab-selected utrecht-paragraph pt-1 sub-navigation-tab">
+   <p>
+      <a href="../proefopstelling">Proefopstelling</a>
+   </p>
+</div>
+{{< /chapter/header >}}
+
+{{< chapter/section title="Proefopstelling" >}}
 
 De proefopstelling laat zien hoe Federatieve Toegangsverlening (FTV) in de praktijk kan werken. Daarvoor is een eenvoudig en werkend federatief datastelsel ingericht. De componenten rondom toegangsverlening zijn in deze opstelling volledig uitgewerkt.
 
 Benieuwd hoe een concrete use case er in deze proefopstelling uitziet? Lees dan verder bij [het aanvragen van laadpaalvergunningen](laadpalen).
 {{< /chapter/section >}}
 
-{{< chapter/section title="Overzicht opstelling" >}}
+{{< chapter/section title="Overzicht opstelling" level="3">}}
 De proefopstelling is een eenvoudig federatief datastelsel met als onderdelen:
 
 - Bij de gemeente:
@@ -22,7 +46,7 @@ De proefopstelling is een eenvoudig federatief datastelsel met als onderdelen:
 {{< img-url "diagrams/proefopstelling-overzicht.svg" "Proefopstelling overzicht" >}}
 {{< /chapter/section >}}
 
-{{< chapter/section title="Opstelling gemeente" >}}
+{{< chapter/section title="Opstelling gemeente"  level="3">}}
 De opstelling bij de gemeente kunnen we verder detailleren als volgt:
 {{< img-url "diagrams/proefopstelling-zaaksysteem.svg" "Proefopstelling zaaksysteem" >}}
 
@@ -52,10 +76,11 @@ De opstelling bij de gemeente kunnen we verder detailleren als volgt:
 
 {{< /chapter/section >}}
 
-{{< chapter/section title="Opstelling basisregistraties" >}}
+{{< chapter/section title="Opstelling basisregistraties"  level="3">}}
 {{< img-url "diagrams/proefopstelling-stelsel.svg" "Proefopstelling stelsel" >}}
+{{< /chapter/section >}}
 
-### Registraties
+{{< chapter/section title="Registraties" level="4">}}
 
 Er zijn twee registraties: BRP en BRV. Ze bevatten allebei de volgende onderdelen:
 
@@ -75,7 +100,8 @@ Er zijn twee registraties: BRP en BRV. Ze bevatten allebei de volgende onderdele
 
   Elk een RPP, die deelpolicies toepast die de afnemer niet kon uitvoeren. Er zijn ook hier twee verschillende gekozen, om twee alternatieve methodes te laten zien.
 
-### Gedeeld EAM
+{{< /chapter/section >}}
+{{< chapter/section title="Gedeeld EAM" level="4">}}
 
 De registraties delen in deze proefopstelling voor de eenvoud één toegangsverleningssysteem. In de praktijk zal dat meestal niet het geval zijn. De onderdelen zijn herkenbaar als dezelfde als bij de gemeente, maar dan:
 - Cerbos als **PDP**

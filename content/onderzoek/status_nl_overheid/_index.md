@@ -3,28 +3,32 @@ type: 'chapter'
 title: "Status NL overheid"
 ---
 
-{{< chapter/header bg="gray">}}
+{{< chapter/header title="Onderzoek" bg="blue">}}
 
-<div class="utrecht-paragraph pt-1 section-navigation">
+<div class="utrecht-paragraph pt-1 sub-navigation-tab">
    <p>
-      <a href="../status_techniek">Status techniek</a>
+      <a href="../status_techniek">Status techniek</a> 
    </p>
 </div>
-<div class="section-navigation-selected utrecht-paragraph pt-1 section-navigation">
+<div class="sub-navigation-tab-selected utrecht-paragraph pt-1 sub-navigation-tab">
    <p>
-      Status overheid
+      <a href="../status_nl_overheid">Status overheid</a>
    </p>
 </div>
-<div class="utrecht-paragraph pt-1 section-navigation">
+<div class="utrecht-paragraph pt-1 sub-navigation-tab">
+   <p>
+      <a href="../eisen_aan_de_oplossing">Eisen</a>
+   </p>
+</div><div class="utrecht-paragraph pt-1 sub-navigation-tab">
    <p>
       <a href="../conclusie">Conclusie</a>
    </p>
-</div>
+</div> 
 
 {{< /chapter/header >}}
 
 
-{{< chapter/section title="Status bij de Nederlandse overheid" level="1">}}
+{{< chapter/section title="Status bij de Nederlandse overheid">}}
 Om een beeld te krijgen van de staat van toegangsverlening is een inventarisatie gemaakt.
 Er is gekeken naar een dwardoorsnede van de potentiële deelnemers aan het toekomstige Federatieve Datastelsel (FDS). Dat zijn de
 basisregistraties, de sectorale registraties en alle systemen die daar gebruik van maken.

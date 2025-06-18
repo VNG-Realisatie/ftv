@@ -2,6 +2,30 @@
 Title: Stappenplan
 type: 'chapter'
 ---
+{{< chapter/header title="Toepassen" bg="brown">}}
+
+<div class="utrecht-paragraph pt-1 sub-navigation-tab">
+   <p>
+      <a href="../functioneel">Functies en rollen</a> 
+   </p>
+</div>
+<div class="sub-navigation-tab-selected utrecht-paragraph pt-1 sub-navigation-tab">
+   <p>
+      <a href="../stappenplan">Stappenplan</a>
+   </p>
+</div>
+<div class="utrecht-paragraph pt-1 sub-navigation-tab">
+   <p>
+      <a href="../openftv">OpenFTV</a> 
+   </p>
+</div>
+<div class="utrecht-paragraph pt-1 sub-navigation-tab">
+   <p>
+      <a href="../proefopstelling">Proefopstelling</a>
+   </p>
+</div>
+{{< /chapter/header >}}
+
 {{< chapter/section title="Stappenplan" >}}
 Het opstellen van toegangsregels vraagt om samenwerking tussen verschillende rollen.
 Bestuurders, juristen, IT-architecten en developers kijken vanuit hun eigen perspectief naar wat nodig is.

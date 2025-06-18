@@ -8,12 +8,22 @@
     --color-rhc-geel-400: var(--rhc-color-geel-400, #FAE856);
     --color-ftv-azure: #007BC7;
     --color-ftv-info: #E1EEF8;
-    --color-rhc-donkerbruin-100: var(--rhc-color-donkerbruin-100, #D1C2BE);
-    --color-rhc-color-oranje-200: var(--rhc-color-oranje-200, #F1BE8C);
-    --color-rhc-color-mosgroen-50: var(--rhc-color-mosgroen-50, #EBEBD9);
-    --color-rhc-color-grijs-50: #F8FAFC;
+    --color-rhc-color-donkerbruin-100: #D1C2BE;
+    --color-rhc-color-donkerbruin-50: #F0EBEA;
+    --color-rhc-color-oranje-200: #F1BE8C;
+    --color-rhc-color-oranje-100: #F6D6B6;
+    --color-rhc-color-groen-50: #A5C991;
+    --color-rhc-color-groen-25: #E1EDDB;
+    --color-rhc-color-mosgroen-50: #EBEBD9;
+    --color-rhc-color-mosgroen-25: #E1EDDB;
     --color-rhc-color-grijs-200: #E2E8F0;
-    --color-rhc-color-lintblauw-50: #B8C6D5;
+    --color-rhc-color-grijs-50: #F8FAFC;
+    --color-rhc-color-blauw-50: #BCDFF0;
+    --color-rhc-color-blauw-25: #EEF7FB;
+    --color-rhc-color-lintblauw-50: #BCDFF0;
+    --color-rhc-color-lintblauw-25: #EEF7FB;
+    --color-rhc-color-geel-300: #FDD370;
+    --color-rhc-color-geel-50: #FFF4DB;
     --color-rhc-color-mintgroen-100: #D6F2E9;
 }
 
@@ -144,7 +154,31 @@
     transition-timing-function: linear;
 }
 
-.section-navigation {
+ /* Section home page */
+
+ .section-home-wrapper {
+ }
+
+.section-home-box {
+    display:;
+    width: 250px;
+    margin:20px;
+    padding: 20px;
+    background: white;
+    height: auto;
+    float:left;
+}
+
+.section-home-box h2 {
+    font-weight:bold;
+}
+
+/* Sub navigation within section */
+
+.sub-navigation-wrapper {
+}
+
+.sub-navigation-tab {
    float: left;
    border: none;
    width: 200px;
@@ -153,6 +187,6 @@
    line-height:60px;
 }
 
-.section-navigation-selected {
+.sub-navigation-tab-selected {
    background: #EFEADA;
-  }
+ }

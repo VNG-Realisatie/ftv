@@ -2,14 +2,40 @@
 Title: Functioneel
 type: 'chapter'
 ---
-{{< chapter/section title="" >}}
-# Functioneel
+
+{{< chapter/header title="Toepassen" bg="brown">}}
+
+<div class="sub-navigation-wrapper">
+    <div class="sub-navigation-tab-selected utrecht-paragraph pt-1 sub-navigation-tab">
+       <p>
+          <a href="../functioneel">Functies en rollen</a> 
+       </p>
+    </div>
+    <div class="utrecht-paragraph pt-1 sub-navigation-tab">
+       <p>
+          <a href="../stappenplan">Stappenplan</a>
+       </p>
+    </div>
+    <div class="utrecht-paragraph pt-1 sub-navigation-tab">
+       <p>
+          <a href="../openftv">OpenFTV</a> 
+       </p>
+    </div>
+    <div class="utrecht-paragraph pt-1 sub-navigation-tab">
+       <p>
+          <a href="../proefopstelling">Proefopstelling</a>
+       </p>
+    </div>
+</div>
+{{< /chapter/header >}}
+
+{{< chapter/section title="Functioneel" >}}
 
 Voor een goed werkende oplossing voor Federatieve Toegangsverlening (FTV) zijn afspraken nodig over beheer en uitvoering (runtime).
 Wat komt er kijken bij het toepassen en beheren van toegangsregels?
 {{< /chapter/section >}}
 
-{{< chapter/section title="1. Tijdens gebruik (runtime)" >}}
+{{< chapter/section title="1. Tijdens gebruik (runtime)" level="3" >}}
 
 Zodra toegang wordt gevraagd, voert de software automatisch taken uit om de regels voor verwerking toe te passen.
 
@@ -22,7 +48,7 @@ Deze functies draaien bij elk verwerkingsverzoek. Daarom moeten ze snel afgehand
 {{< img-url "images/functioneel.svg" "Functioneel" >}}
 {{< /chapter/section >}}
 
-{{< chapter/section title="2. Beheer" >}}
+{{< chapter/section title="2. Beheer"  level="3" >}}
 
 De beheersfuncties worden gebruikt voor het opstellen en onderhouden van regels.
 

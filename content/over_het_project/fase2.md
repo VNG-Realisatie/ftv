@@ -3,25 +3,29 @@ Title: Fase 2
 type: 'chapter'
 ---
 
-{{< chapter/header bg="orange">}}
+{{< chapter/header title="Over het project" bg="yellow">}}
 
-<div class="utrecht-paragraph pt-1 section-navigation">
+<div class="utrecht-paragraph pt-1 sub-navigation-tab">
    <p>
-      <a href="../">Opdracht</a>
+      <a href="../opdracht">Opdracht</a> 
    </p>
 </div>
-<div class="utrecht-paragraph pt-1 section-navigation">
+<div class="utrecht-paragraph pt-1 sub-navigation-tab">
    <p>
-      <a href="../fase1">Fase 1</a>
+      <a href="../scope">Scope</a>
    </p>
 </div>
-<div class="section-navigation-selected utrecht-paragraph pt-1 section-navigation">
+<div class="utrecht-paragraph pt-1 sub-navigation-tab">
    <p>
-      Fase 2
+      <a href="../fase1">Fase 1</a> 
    </p>
 </div>
-
-{{< /chapter/header >}}
+<div class="sub-navigation-tab-selected utrecht-paragraph pt-1 sub-navigation-tab">
+   <p>
+      <a href="../fase2">Fase 2</a>
+   </p>
+</div>
+{{< /chapter/header >}} 
 
 {{< chapter/section title="Fase 2" >}}
 
