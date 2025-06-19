@@ -7,7 +7,7 @@ summary: "Op dinsdag 17 juni verdiepte de werkgroep Federatieve Toegangsverlenin
 
 {{< nieuws/header title="Werkgroep over linked data " >}}
 Op dinsdag 17 juni verdiepte de werkgroep Federatieve Toegangsverlening (FTV) zich in het thema linked data aan de hand van twee praktijkvoorbeelden.
-De presentaties riepen vragen op over de rol van AuthZEN en de aansluiting op linked data. Ook gaven drie subwerkgroepen een update.  
+De presentaties riepen vragen op over de rol van AuthZEN en de aansluiting op linked data. Ook gaven twee subwerkgroepen een update.  
 {{< /nieuws/header >}}
 
 {{< chapter/section title="Fijnmazige autorisatie in de zorg" level="3">}}
@@ -43,5 +43,5 @@ Kijk voor aanmelden op de [website van IBDS](https://realisatieibds.nl/groups/vi
 {{< /chapter/section >}}
 
 {{< chapter/section title="Ook meedoen??" level="3">}}
-Meer weten of meedenken? Sluit je dan aan bij de [werkgroep](/ftv/meedoen/werkgroep/0.
+Meer weten of meedenken? Sluit je dan aan bij de [werkgroep](/ftv/meedoen/werkgroep/).
 {{< /chapter/section >}}
