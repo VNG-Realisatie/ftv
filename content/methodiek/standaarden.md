@@ -5,6 +5,7 @@ type: 'chapter'
 
 {{< chapter/header title="Methodiek" bg="green">}}
 
+<div class="sub-navigation-wrapper" role="navigation">
 <div class="utrecht-paragraph pt-1 sub-navigation-tab">
    <p>
       <a href="../principes">De principes van EAM</a> 
@@ -20,6 +21,7 @@ type: 'chapter'
       <a href="../federatief">Federatief EAM</a>
    </p>
 </div> 
+</div>
 
 {{< /chapter/header >}}
 

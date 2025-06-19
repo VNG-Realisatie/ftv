@@ -12541,12 +12541,15 @@
   font-weight: 400;
   color: black;
   letter-spacing: 0;
+  color: var(--utrecht-paragraph-color);
 }
 .swiperWieDoenMee > .swiper-wrapper {
   transition-timing-function: linear;
 }
+.section-box-banner {
+  margin-top: -10px;
+}
 .section-home-box {
-  display: ;
   width: 250px;
   margin: 20px;
   padding: 20px;
@@ -12556,6 +12559,14 @@
 }
 .section-home-box h2 {
   font-weight: bold;
+  text-decoration: underline;
+}
+.section-home-box p {
+  font-size: 18px;
+}
+.sub-navigation-wrapper {
+  position: relative;
+  bottom: -32px;
 }
 .sub-navigation-tab {
   float: left;
@@ -12564,30 +12575,32 @@
   height: 60px;
   text-align: center;
   line-height: 60px;
+  text-decoration: underline;
 }
 .sub-navigation-tab-selected {
   background: #EFEADA;
+  font-weight: bold;
+  text-decoration: none;
 }
 table {
   width: 100%;
   border-collapse: collapse;
-  border: 1px solid;
+  margin-top: 20px;
 }
 th {
-  background-color: #04AA6D;
-  color: white;
+  font-weight: bold;
+  border-bottom: 2px solid #888;
+}
+td {
+  border-bottom: 1px solid #ddd;
 }
 td, th {
   text-align: left;
-  border-bottom: 1px solid #ddd;
   padding: 5px;
   font-family: var(--utrecht-paragraph-font-family, var(--utrecht-document-font-family, inherit));
   font-size: var(--utrecht-paragraph-font-size, var(--utrecht-document-font-size, inherit));
   font-weight: var(--utrecht-paragraph-font-weight, inherit);
   line-height: var(--utrecht-paragraph-line-height, var(--utrecht-document-line-height, inherit));
-}
-tr:nth-child(even) {
-  background-color: #f2f2f2;
 }
 @property --tw-rotate-x {
   syntax: "*";

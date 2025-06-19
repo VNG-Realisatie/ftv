@@ -4,7 +4,7 @@ title: "Status NL overheid"
 ---
 
 {{< chapter/header title="Onderzoek" bg="blue">}}
-
+<div class="sub-navigation-wrapper">
 <div class="utrecht-paragraph pt-1 sub-navigation-tab">
    <p>
       <a href="../status_techniek">Status techniek</a> 
@@ -24,6 +24,7 @@ title: "Status NL overheid"
       <a href="../conclusie">Conclusie</a>
    </p>
 </div> 
+</div>
 
 {{< /chapter/header >}}
 

@@ -7,16 +7,16 @@ type: 'chapter'
 Het invoeren van de standaard Federatieve Toegangsverlening (FTV) begint met een goede voorbereiding. Denk aan het maken van afspraken over het beheer en het testen van een oplossing in een proefopstelling. Als ondersteuning zijn praktische handreikingen beschikbaar. Ze geven inzicht in keuzes die gemaakt moeten worden, de stappen richting implementatie en de technische mogelijkheden.
 {{< /chapter/header >}}
 
-{{< chapter/header bg="lightbrown">}}
+{{< chapter/header bg="lightbrown" customclass="section-box-banner">}}
 
 ### In deze sectie
-<div class="section-home-wrapper">
+<div class="section-home-wrapper" role="navigation">
    <div class="section-home-box">
        <a href="functioneel">
-           <h2>
+           <h2 class="nl-heading nl-heading--level-4 rhc-heading">
                Functies en rollen
            </h2>
-           <p>
+           <p class="utrecht-paragraph">
               Hoe zien de taken rondom FTV eruit en wie is waarvoor verantwoordelijk?
            </p>
        </a>
@@ -24,10 +24,10 @@ Het invoeren van de standaard Federatieve Toegangsverlening (FTV) begint met een
    
    <div class="section-home-box">
        <a href="stappenplan">
-           <h2>
+           <h2 class="nl-heading nl-heading--level-4 rhc-heading">
                Stappenplan
            </h2>
-           <p>
+           <p class="utrecht-paragraph">
                Hoe kom je van een use case tot een goed werkende toegangsregel?
            </p>
        </a>
@@ -35,10 +35,10 @@ Het invoeren van de standaard Federatieve Toegangsverlening (FTV) begint met een
    
    <div class="section-home-box">
        <a href="openftv">
-           <h2>
+           <h2 class="nl-heading nl-heading--level-4 rhc-heading">
                OpenFTV
            </h2>
-           <p>
+           <p class="utrecht-paragraph">
                OpenFTV is de referentie-implementatie.
            </p>
        </a>
@@ -46,10 +46,10 @@ Het invoeren van de standaard Federatieve Toegangsverlening (FTV) begint met een
    
    <div class="section-home-box">
        <a href="proefopstelling">
-           <h2>
+           <h2 class="nl-heading nl-heading--level-4 rhc-heading">
                Proefopstelling
            </h2>
-           <p>
+           <p class="utrecht-paragraph">
                Een mini-Federatief Datastelsel (FDS) met uitgewerkte use cases is ideaal om lokaal te testen en mee te experimenteren.
            </p>
        </a>

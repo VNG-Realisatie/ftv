@@ -5,6 +5,7 @@ type: 'chapter'
 
 {{< chapter/header title="Toepassen" bg="brown">}}
 
+<div class="sub-navigation-wrapper">
 <div class="utrecht-paragraph pt-1 sub-navigation-tab">
    <p>
       <a href="../functioneel">Functies en rollen</a> 
@@ -26,6 +27,7 @@ type: 'chapter'
    </p>
 </div>
 {{< /chapter/header >}}
+</div>
 
 {{< chapter/section title="Proefopstelling" >}}
 

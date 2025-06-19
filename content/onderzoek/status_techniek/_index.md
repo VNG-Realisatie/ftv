@@ -3,7 +3,7 @@ type: 'chapter'
 title: "Status van de techniek"
 ---
 {{< chapter/header title="Onderzoek" bg="blue">}}
-
+<div class="sub-navigation-wrapper">
 <div class="sub-navigation-tab-selected utrecht-paragraph pt-1 sub-navigation-tab">
    <p>
       <a href="../status_techniek">Status techniek</a> 
@@ -23,6 +23,7 @@ title: "Status van de techniek"
       <a href="../conclusie">Conclusie</a>
    </p>
 </div> 
+</div>
 
 {{< /chapter/header >}}
 

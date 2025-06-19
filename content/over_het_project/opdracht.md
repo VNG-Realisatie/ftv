@@ -4,7 +4,7 @@ type: 'chapter'
 ---
 
 {{< chapter/header title="Over het project" bg="yellow">}}
-
+<div class="sub-navigation-wrapper">
 <div class="sub-navigation-tab-selected utrecht-paragraph pt-1 sub-navigation-tab">
    <p>
       <a href="../opdracht">Opdracht</a> 
@@ -24,6 +24,7 @@ type: 'chapter'
    <p>
       <a href="../fase2">Fase 2</a>
    </p>
+</div>
 </div>
 {{< /chapter/header >}}
 

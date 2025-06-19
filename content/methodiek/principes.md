@@ -5,6 +5,7 @@ title: "De principes van EAM"
 
 {{< chapter/header title="Methodiek" bg="green">}}
 
+<div class="sub-navigation-wrapper">
 <div class="sub-navigation-tab-selected utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-mosgroen-50">
    <p>
       De principes van EAM
@@ -20,6 +21,7 @@ title: "De principes van EAM"
       <a href="../federatief">Federatief EAM</a> 
    </p>
 </div> 
+</div>
 
 {{< /chapter/header >}}
 

@@ -6,6 +6,7 @@ type: 'chapter'
 
 {{< chapter/header title="Meedoen" bg="orange">}}
 
+<div class="sub-navigation-wrapper">
 <div class="sub-navigation-tab-selected utrecht-paragraph pt-1 sub-navigation-tab">
    <p>
       <a href="../wat_kun_je_doen">Wat kun je doen?</a> 
@@ -15,6 +16,7 @@ type: 'chapter'
    <p>
       <a href="../werkgroep">Werkgroep</a>
    </p>
+</div>
 </div>
 
 {{< /chapter/header >}}

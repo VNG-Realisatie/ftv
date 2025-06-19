@@ -1,5 +1,5 @@
 ---
-Title: Functioneel
+Title: Functies en rollen
 type: 'chapter'
 ---
 
@@ -29,7 +29,7 @@ type: 'chapter'
 </div>
 {{< /chapter/header >}}
 
-{{< chapter/section title="Functioneel" >}}
+{{< chapter/section title="Functies en rollen" >}}
 
 Voor een goed werkende oplossing voor Federatieve Toegangsverlening (FTV) zijn afspraken nodig over beheer en uitvoering (runtime).
 Wat komt er kijken bij het toepassen en beheren van toegangsregels?
