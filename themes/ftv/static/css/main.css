@@ -12571,14 +12571,15 @@
 .sub-navigation-tab {
   float: left;
   border: none;
-  width: 200px;
   height: 60px;
+  padding: 0 40px 0 40px;
+  margin-right: 10px;
   text-align: center;
   line-height: 60px;
   text-decoration: underline;
 }
 .sub-navigation-tab-selected {
-  background: #EFEADA;
+  background: white;
   font-weight: bold;
   text-decoration: none;
 }

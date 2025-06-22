@@ -4,7 +4,7 @@ Title: Scope
 ---
 {{< chapter/header title="Over het project" bg="yellow">}}
 <div class="sub-navigation-wrapper">
-<div class="utrecht-paragraph pt-1 sub-navigation-tab">
+<div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-geel-50">
    <p>
       <a href="../opdracht">Opdracht</a> 
    </p>
@@ -14,12 +14,12 @@ Title: Scope
       <a href="../scope">Scope</a>
    </p>
 </div>
-<div class="utrecht-paragraph pt-1 sub-navigation-tab">
+<div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-geel-50">
    <p>
       <a href="../fase1">Fase 1</a> 
    </p>
 </div>
-<div class="utrecht-paragraph pt-1 sub-navigation-tab">
+<div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-geel-50">
    <p>
       <a href="../fase2">Fase 2</a>
    </p>

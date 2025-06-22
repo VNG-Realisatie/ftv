@@ -6,12 +6,12 @@ type: 'chapter'
 {{< chapter/header title="Onderzoek" bg="blue">}}
 
 <div class="sub-navigation-wrapper">
-<div class="utrecht-paragraph pt-1 sub-navigation-tab">
+<div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-blauw-25">
    <p>
       <a href="../status_techniek">Status techniek</a> 
    </p>
 </div>
-<div class="utrecht-paragraph pt-1 sub-navigation-tab">
+<div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-blauw-25">
    <p>
       <a href="../status_nl_overheid">Status overheid</a>
    </p>
@@ -20,7 +20,7 @@ type: 'chapter'
    <p>
       <a href="../eisen_aan_de_oplossing">Eisen</a>
    </p>
-</div><div class="utrecht-paragraph pt-1 sub-navigation-tab">
+</div><div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-blauw-25">
    <p>
       <a href="../conclusie">Conclusie</a>
    </p>

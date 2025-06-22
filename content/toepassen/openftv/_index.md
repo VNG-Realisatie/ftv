@@ -6,12 +6,12 @@ type: 'chapter'
 {{< chapter/header title="Toepassen" bg="brown">}}
 
 <div class="sub-navigation-wrapper">
-<div class="utrecht-paragraph pt-1 sub-navigation-tab">
+<div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-donkerbruin-50">
    <p>
       <a href="../functioneel">Functies en rollen</a> 
    </p>
 </div>
-<div class="utrecht-paragraph pt-1 sub-navigation-tab">
+<div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-donkerbruin-50">
    <p>
       <a href="../stappenplan">Stappenplan</a>
    </p>
@@ -21,7 +21,7 @@ type: 'chapter'
       <a href="../openftv">OpenFTV</a> 
    </p>
 </div>
-<div class="utrecht-paragraph pt-1 sub-navigation-tab">
+<div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-donkerbruin-50">
    <p>
       <a href="../proefopstelling">Proefopstelling</a>
    </p>

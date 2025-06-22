@@ -6,7 +6,7 @@ type: 'chapter'
 {{< chapter/header title="Methodiek" bg="green">}}
 
 <div class="sub-navigation-wrapper" role="navigation">
-<div class="utrecht-paragraph pt-1 sub-navigation-tab">
+<div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-groen-25">
    <p>
       <a href="../principes">De principes van EAM</a> 
    </p>
@@ -16,7 +16,7 @@ type: 'chapter'
       De FTV-standaarden
    </p>
 </div>
-<div class="utrecht-paragraph pt-1 sub-navigation-tab">
+<div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-groen-25">
    <p>
       <a href="../federatief">Federatief EAM</a>
    </p>

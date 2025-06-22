@@ -12,7 +12,7 @@ type: 'chapter'
       <a href="../wat_kun_je_doen">Wat kun je doen?</a> 
    </p>
 </div>
-<div class="utrecht-paragraph pt-1 sub-navigation-tab">
+<div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-oranje-100">
    <p>
       <a href="../werkgroep">Werkgroep</a>
    </p>

@@ -6,12 +6,12 @@ type: 'chapter'
 {{< chapter/header title="Methodiek" bg="green">}}
 
 <div class="sub-navigation-wrapper">
-<div class="utrecht-paragraph pt-1 sub-navigation-tab">
+<div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-groen-25">
    <p>
       <a href="../principes">De principes van EAM</a> 
    </p>
 </div>
-<div class="utrecht-paragraph pt-1 sub-navigation-tab">
+<div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-groen-25">
    <p>
       <a href="../standaarden">De FTV-standaarden</a>
    </p>
