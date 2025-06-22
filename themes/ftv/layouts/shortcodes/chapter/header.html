@@ -14,7 +14,7 @@
             </div>
             {{ if and (.Get "icon") (ne (.Get "icon") "") }}
             <div class="max-w-[157px] place-content-center justify-center mx-auto">
-                <img src="{{ relURL (.Get "icon") }}">
+                <img src="{{ relURL (.Get "icon") role="presentation" }}">
             </div>
             {{ end }}
         </div>
