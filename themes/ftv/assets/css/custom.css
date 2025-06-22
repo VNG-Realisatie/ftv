@@ -237,4 +237,20 @@ td, th {
   font-weight: var(--utrecht-paragraph-font-weight, inherit);
   line-height: var(--utrecht-paragraph-line-height, var(--utrecht-document-line-height, inherit));
 }
-/* ftv-paragraph */
+
+/* Eerste link in elke pagina, voor toegangkelijkheid */
+
+.skip-to-main-content-link {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 1em;
+  background-color: black;
+  color: white;
+  opacity: 0;
+}
+.skip-to-main-content-link:focus {
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+}
