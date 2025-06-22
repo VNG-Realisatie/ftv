@@ -30,15 +30,15 @@ Standaardisatie is bij uitstek het middel om aansluiting en uitwisseling tussen 
 
 Het project FTV werkt aan drie standaarden:
 
-1. AuthZEN
-2. Logboek toegangsbeslissingen
-3. Register toegangsbeleid
+1. [AuthZEN](#authzen)
+2. [Logboek toegangsbeslissingen](#logboek)
+3. [Register toegangsbeleid](#register)
 
 ![Schema van de drie FTV-standaarden](../methodiek-3-standaarden.png)
 
 {{< /chapter/section >}}
 
-{{< chapter/section title="1. AuthZEN" level="3">}}
+{{< chapter/section title="1. AuthZEN" level="3" id="authzen">}}
 
 De [AuthZEN Authorization API](https://openid.net/wg/authzen/) is een initiatief van de OpenID foundation, bekend van OpenID Connect. De belangrijkste  leveranciers van PDP's en API gateways werken hier samen aan een autorisatiestandaard.
 
@@ -105,11 +105,11 @@ In [dit artikel](/ftv/actueel/nieuws/20250611oauth-oidc-en-eam/) lees je meer ov
 FTV is niet het enige project dat werkt aan standaardisatie van toegang. Vind hier [een overzicht van de belangrijkste projecten](/ftv/onderzoek/status_techniek/standaarden/).
 {{< /chapter/section >}}
 
-{{< chapter/section title="2. Logboek Toegangsverlening" level="3">}}
+{{< chapter/section title="2. Logboek Toegangsverlening" id="logboek" level="3">}}
 Het Logboek Toegangsverlening richt zich op het verantwoorden van toegangsverzoeken. Met behulp van de standaard kunnen historische toegangsverzoeken uniform beschikbaar gemaakt worden. Hierbij gaat speciaal aandacht uit naar het voorkomen van ongewenste gegevensduplicatie ([data bij de bron](https://www.digitaleoverheid.nl/data-bij-de-bron/)) met behulp van [betrouwbare bronnen](https://website-digilab-overheid-nl-research-uit-betrouw-e1f39021ce924c.gitlab.io/) en integratie met het [Logboek Dataverwerkingen](https://logius-standaarden.github.io/logboek-dataverwerkingen/) en [FSC - Logging](https://commonground.gitlab.io/standards/fsc/logging/draft-fsc-logging-00.html).
 {{< /chapter/section >}}
 
-{{< chapter/section title="3. Register toegangsbeleid" level="3">}}
+{{< chapter/section title="3. Register toegangsbeleid" id="register" level="3">}}
 Het Register Toegangsbeleid gaat definiëren welke eisen er aan een PAP gesteld worden. Denk hierbij aan dat de versies van policies over tijd bewaard blijven en de metadata die die een policy moet en mag hebben.
 {{< /chapter/section >}}
 

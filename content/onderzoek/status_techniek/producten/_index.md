@@ -11,7 +11,7 @@ Hier volgt een inventarisatie van de beschikbare producten verdeeld in open en g
 {{< /chapter/section >}}
 
 
-{{< chapter/section title="Open source" >}} 
+{{< chapter/section title="Open source" id="open" >}} 
 Er zijn veel implementaties beschikbaar. Voor de test is gekozen voor de partijen die opvallen als ‘grootste’. Dat begrip is relatief: Amazon Verified Permissions is waarschijnlijk het grootst in aantal transacties, omdat het toegang tot AWS regelt. Open Source Agent (OPA) daarentegen is leidend in aantal downloads en implementaties.
 Dit zijn de geteste implementatie met de daarbij behorende regeltalen:
 
@@ -30,7 +30,7 @@ Een eerste kanttekening is wel dat toegangsregels geschreven in al deze talen la
 Een tweede kanttekening is dat deze implementaties allemaal losse policy engines zijn: in principe alleen een PDP. Een complete oplossing omvat echt ook beheer. Testen, versiebeheer, distributie, monitoring en auditing zijn belangrijke taken die een PDP niet oplost.
 {{< /chapter/section >}}
 
-{{< chapter/section title="Closed source" >}}
+{{< chapter/section title="Closed source" id="closed">}}
 In het commerciële domein zijn completere oplossingen beschikbaar. Een goede recente inventarisatie van de markt is [de inventarisatie van KuppingerCole](https://www.kuppingercole.com/research/lc80819/policy-based-access-management).
 
 Voor dit onderzoek zijn verschillende partijen benaderd met het verzoek om informatie en een demonstratie. In onderstaande tabel een overzicht van de partijen. [Benader ons](mailto:ftv@vng.nl) gerust voor meer informatie over de gevoerde gesprekken. 

@@ -40,6 +40,6 @@ De inventarisatie bestaat uit:
 2. [Koppelvlakstandaarden](koppelvlakken)
 3. [Aanbieders](aanbieders)
 4. [Afnemers / implementatiepartners](afnemers)
-5. [Datastelsels](platforms)
+5. [Datastelsels](datastelsels)
 6. [Bestaand onderzoek](eerder_onderzoek)
 {{< /chapter/section >}}
