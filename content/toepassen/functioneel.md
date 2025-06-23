@@ -37,50 +37,50 @@ Wat komt er kijken bij het toepassen en beheren van toegangsregels?
 
 {{< chapter/section title="1. Tijdens gebruik (runtime)" level="3" >}}
 
-Zodra toegang wordt gevraagd, voert de software automatisch taken uit om de regels voor verwerking toe te passen.
+Runtime functies zijn die functies die tijdens het normale gebruik worden uitgevoerd. Dit is het volledig geautomatiseerd proces zoals het bij elk verzoek tot verwerking worden uitgevoerd. Deze zullen erg snel moeten worden uitgevoerd, omdat ze op het kritieke pad van elke verzoek liggen.
 
-- **Beslissingen afdwingen**: zorgen dat genomen beslissingen ook gegarandeerd nageleefd worden.
-- **Beslissingen nemen**: uitrekenen of het verzoek gehonoreerd, voorwaardelijk gehonoreerd of afgewezen moet worden. Dit gebeurt op basis van informatie (over subject, action, resource en context) en de beschikbare regels.
-- **Beslissingen loggen**: vastleggen welke beslissingen zijn genomen, met de juiste hoeveelheid informatie om later verantwoording af te leggen en de juistheid van beslissingen te controleren.
+- **Beslissingen afdwingen**: het onderscheppen van elk verzoek, en zorgen dat genomen beslissingen ook gegarandeerd nageleefd worden.
+- **Beslissingen nemen**: het uitrekenen of het verzoek gehonoreerd, voorwaardelijk gehonoreerd of afgewezen moet worden. Dit gebeurt op basis van de vrager, de vraag, het onderwerp en de omgeving (subject, action, resource en context) en de beschikbare regels. 
+- **Beslissingen loggen**: het vastleggen welke beslissingen zijn genomen. Van belang is om hierbij de juiste hoeveelheid informatie vast te leggen. Enerzijds voldoende om later verantwoording af te leggen en de juistheid van beslissingen te controleren. Anders niet meer dan nodig om te privacy te respecteren.
 
-Deze functies draaien bij elk verwerkingsverzoek. Daarom moeten ze snel afgehandeld kunnen worden.
+{{< img-url "diagrams/functies-en-rollen.svg" "Overzicht functies en rollen in EAM" >}}
 
-{{< img-url "images/functioneel.svg" "Functioneel" >}}
 {{< /chapter/section >}}
 
 {{< chapter/section title="2. Beheer"  level="3" >}}
 
-De beheersfuncties worden gebruikt voor het opstellen en onderhouden van regels.
+De beheersfuncties worden gebruikt om het beleid courant te houden en het hele proces van beheer eromheen in goede banen te leiden. Deze functies zijn voor de beheerders, op verschillende niveaus zoals technisch en functioneel. Hier ligt de nadruk op correctheid en gebruikersvriendelijkheid, en minder op de snelheid.
 
 #### Beveiliging
 
-Het beheer van toegangsregels vraagt om goede beveiliging. Een gedeeld of apart systeem voor identiteits- en toegangsbeheer (Identity and Access Management, IAM) regelt de toegang voor beheerders, met rollen, rechten en policies.
+Het beheer van de toegangsregels heeft zelf ook goede beveiliging nodig. Hiermee wordt de toegang voor beheerders bepaald, met rollen, rechten en policies. Dit kan hetzelfde systeem zijn als het beveiligt, of een apart systeem.
 
 #### Regels opstellen
 
-Regels kunnen gemaakt, aangepast of verwijderd worden. Dat kan met een uitgebreide editor die is afgestemd op de policytaal of met een eenvoudige oplossing die alleen bestanden aanneemt.
+Regels moeten gemaakt, aangepast of verwijderd kunnen worden. Dat kan verschillende niveaus van complexiteit zijn: van een uitgebreide editor die is afgestemd op de policytaal tot een eenvoudige oplossing die alleen bestanden aanneemt.
 
 #### Versiebeheer
 
-Door de historie van regels op te slaan, is het mogelijk achteraf te zien welke regels wanneer golden. Ook kunnen wijzigingen teruggedraaid worden.
+Regels moeten goed opgeslagen worden. En door niet alleen de laatste versies maar ook de historie van regels op te slaan, is het mogelijk achteraf te zien welke regels wanneer golden. Ook kunnen dan wijzigingen teruggedraaid worden.
 
 #### Testen
 
-Het opstellen van regels in elke taal is complex. Het is bovendien lastig om handmatig te overzien wat de gevolgen van een wijziging zijn voor de hele set. Daarom is een testfaciliteit nodig. Daarmee kan een regelset worden getest tegen een dataset, zodat zichtbaar wordt welke invloed wijzigingen hebben op beslissingen.
+Het opstellen van regels in elke taal is complex. Het is bovendien lastig te overzien wat de gevolgen van een kleine wijziging zijn voor de hele set. Daarom is een testfaciliteit nodig. Daarmee kan een regelset worden getest tegen een dataset, zodat zichtbaar wordt welke invloed wijzigingen hebben op beslissingen.
 
 #### Workflow
 
-Goed beheer vraagt om samenwerking. Verschillende mensen moeten een rol kunnen vervullen, zoals het schrijven, testen en goedkeuren van regels.
+Goed beheer vraagt om samenwerking. De verschillende taken, zoals het schrijven, testen en goedkeuren van regels, worden vaak door verschillende mensen uitgevoerd, uit veiligheidsoverwegingen. Dat proces wordt door workflow geregeld.
 
 #### Distributie
 
-Vaak beheert een centraal team de regels, terwijl de uitvoering ervan decentraal en geautomatiseerd plaatsvindt. Een goed distributiemechanisme zorgt ervoor dat elk systeem precies de juiste versie ontvangt.
+Vaak beheert een centraal beheerteam de regels, terwijl de uitvoering ervan decentraal en geautomatiseerd plaatsvindt. Een goed distributiemechanisme zorgt ervoor dat elk systeem precies de juiste regels in de juiste versie ontvangt.
 
 #### Monitoring
 
-Goed beheer begint met inzicht in hoe de toegang in de praktijk functioneert. Denk aan de beschikbaarheid van runtime-omgevingen en aan statistieken over het aantal aanvragen en beslissingen. Zo kan gemonitord worden of er bijvoorbeeld onverwacht veel aanvragen of afwijzingen zijn. Dat kan wijzen op pogingen tot ongeoorloofde toegang.
+Goed beheer vraagt om inzicht in hoe de toegang in de praktijk functioneert. Denk aan de beschikbaarheid van runtime-omgevingen en aan statistieken over het aantal aanvragen en beslissingen. Zo kan gemonitord worden of er bijvoorbeeld onverwacht veel aanvragen of afwijzingen zijn. Dat kan wijzen op pogingen tot ongeoorloofde toegang.
 
 #### Verantwoording
 
-Bij een vermoeden van fraude of tijdens een audit moet het systeem inzicht geven in alle relevante informatie over een of meer toegangsbeslissingen.
+Bij een vermoeden van fraude of tijdens een audit moet het systeem inzicht geven in alle relevante informatie over een of meer toegangsbeslissingen. Hierin komen onder andere versiebeheer en logging samen.
+
 {{< /chapter/section >}}
