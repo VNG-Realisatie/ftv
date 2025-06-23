@@ -2,7 +2,7 @@
     <div class="py-8 max-w-5xl mx-auto">
         <div class="flex">
             <div class="max-w-[870px]">
-                <h1 class="nl-heading nl-heading--level-1 rhc-heading">{{ .Get "title" }}</h1>
+                <h1 class="nl-heading nl-heading--level-1 rhc-heading" id="{{.Get "id"}}">{{ .Get "title" }}</h1>
                 {{ $paragraphs := split .Inner "\n\n" }}
                     {{ range $paragraphs }}
                     {{ if ne (trim . " ") "" }}
