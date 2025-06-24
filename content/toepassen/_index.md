@@ -83,7 +83,7 @@ Goede toegangsverlening vraagt om heldere afspraken over rollen en bevoegdheden.
 Hoe zien de taken rondom FTV eruit en wie is waarvoor verantwoordelijk?
 {{< /chapter/accordion >}}
 
-{{< chapter/accordion title="Voor juristen" customclass="bg-rhc-color-mintgroen-100" >}}
+{{< chapter/accordion title="Voor juristen" customclass="bg-rhc-color-groen-50" >}}
 
    Goede toegangsverlening vraagt om heldere afspraken over rollen en bevoegdheden. Ook moeten juridische kaders en beleid vertaald worden naar toegangsregels die technisch toepasbaar zijn.
 
@@ -101,7 +101,7 @@ Hoe zien de taken rondom FTV eruit en wie is waarvoor verantwoordelijk?
 
 {{< /chapter/accordion >}}
 
-{{< chapter/accordion title="Voor IT-managers" customclass="bg-rhc-color-blauw-25" >}}
+{{< chapter/accordion title="Voor IT-managers" customclass="bg-rhc-color-blauw-50" >}}
 
 FTV raakt meerdere onderdelen van de IT-infrastructuur. Denk aan softwarekeuzes, rolverdelingen en beheerprocessen. De handreikingen ondersteunen bij het maken van haalbare, schaalbare en toekomstbestendige keuzes.
 
@@ -124,7 +124,7 @@ FTV raakt meerdere onderdelen van de IT-infrastructuur. Denk aan softwarekeuzes,
    [Lees de checklist Softwarekeuze](softwarekeus)
 {{< /chapter/accordion >}}
 
-{{< chapter/accordion title="Voor ontwikkelaars" customclass="bg-rhc-color-geel-50" lastaccordion="true">}}
+{{< chapter/accordion title="Voor ontwikkelaars" customclass="bg-rhc-color-geel-300" lastaccordion="true">}}
 
 Een goede technische basis begint met praktijkvoorbeelden en inzicht in de opbouw van toegangsregels. De handreikingen bieden concrete tools om te testen, te leren en te bouwen.
 

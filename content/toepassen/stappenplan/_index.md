@@ -42,19 +42,19 @@ Een goede toegangsoplossing begint bij duidelijke keuzes. In stap 1 wordt bepaal
 
 {{< /chapter/accordion >}}
 
-{{< chapter/accordion title="Voor juristen" customclass="bg-rhc-color-mintgroen-100" >}}
+{{< chapter/accordion title="Voor juristen" customclass="bg-rhc-color-groen-50" >}}
 
 Juristen zijn betrokken bij het formuleren van de use case en het vastleggen van de eisen (requirements). Daarmee wordt duidelijk wie toegang mag krijgen, op basis van welk wetsartikel dat mag en onder welke omstandigheden. Daarna wordt deze input technisch uitgewerkt.
 
 {{< /chapter/accordion >}}
 
-{{< chapter/accordion title="Voor IT-managers" customclass="bg-rhc-color-blauw-25" >}}
+{{< chapter/accordion title="Voor IT-managers" customclass="bg-rhc-color-blauw-50" >}}
 
 Van use case tot distributie: IT-managers en architecten zijn betrokken bij alle stappen in dit plan. Denk aan het vertalen van beleid naar eisen, het inrichten van beheerprocessen en het bewaken van samenhang tussen componenten. Het stappenplan helpt om technisch én organisatorisch grip te houden op het geheel.
 
 {{< /chapter/accordion >}}
 
-{{< chapter/accordion title="Voor ontwikkelaars" customclass="bg-rhc-color-geel-50" lastaccordion="true">}}
+{{< chapter/accordion title="Voor ontwikkelaars" customclass="bg-rhc-color-geel-300" lastaccordion="true">}}
 
 Vanaf stap 2 is de rol van developers essentieel. Zij bouwen, testen en implementeren de toegangsregels. Denk aan het schrijven van policies, het samenstellen van testdata en het inrichten van infrastructuur en distributie. Het stappenplan biedt een duidelijke structuur om technisch solide en makkelijk te onderhouden oplossingen op te leveren.
 

@@ -15,16 +15,14 @@
             &nbsp;
         </div>
         <div class="accordion-content section">
-<!--            <p class="utrecht-paragraph--lead">-->
-                {{ $paragraphs := split .Inner "\n\n" }}
-                {{ range $paragraphs }}
-                    {{ if ne (trim . " ") "" }}
-                        <p class="utrecht-paragraph--lead pt-2">
-                            {{ . | $.Page.RenderString }}
-                        </p>
-                    {{ end }}
+            {{ $paragraphs := split .Inner "\n\n" }}
+            {{ range $paragraphs }}
+                {{ if ne (trim . " ") "" }}
+                    <p class="utrecht-paragraph--lead pt-2">
+                        {{ . | $.Page.RenderString }}
+                    </p>
                 {{ end }}
-           <!-- </p>-->
+            {{ end }}
         </div>
         {{ if and (.Get "lastaccordion") (ne (.Get "lastaccordion") "") }}
         <script>
@@ -37,11 +35,11 @@
               coll[i].addEventListener("click", function() {
                 this.classList.toggle("active");
                 var content = this.nextElementSibling;
-                if (content.style.display === "block") {
-                  content.style.display = "none";
-                } else {
-                  content.style.display = "block";
-                }
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
               });
             }
             </script>
