@@ -28,7 +28,7 @@ Het invoeren van de standaard Federatieve Toegangsverlening (FTV) begint met een
                Stappenplan
            </h2>
            <p class="utrecht-paragraph">
-               Hoe kom je van een use case tot een goed werkende toegangsregel?
+               Hoe kom je in 7 stappen van een use case tot een goed werkende toegangsregel?
            </p>
        </a>
    </div>
@@ -39,7 +39,7 @@ Het invoeren van de standaard Federatieve Toegangsverlening (FTV) begint met een
                OpenFTV
            </h2>
            <p class="utrecht-paragraph">
-               OpenFTV is de referentie-implementatie.
+               Een eenvoudige maar complete referentie-implementatie van een EAM oplossing.
            </p>
        </a>
    </div>

@@ -18,7 +18,7 @@ Voorafgaand aan het definiëren van een werkwijze en het opstellen van de standa
                 Technische analyse
             </h2>
             <p class="utrecht-paragraph">
-                De huidige stand van techniek rondom toegangsverlening is in kaart gebracht. Daarbij is gekeken naar bestaande methodieken, standaarden en producten in binnen- en buitenland.
+                De huidige stand van techniek in het veld van toegangsverlening is in kaart gebracht. 
             </p>
         </a>
     </div>
@@ -38,7 +38,7 @@ Voorafgaand aan het definiëren van een werkwijze en het opstellen van de standa
               Eisen aan de oplossing
            </h2>
             <p class="utrecht-paragraph">
-               Gaandeweg het onderzoek zijn de eisen opgesteld door te kijken naar de overheidsstrategie, de huidige uitdagingen en de benodigde elementen.
+               De eisen aan een oplossing naar aanleiding van de overheidsstrategie en de huidige uitdagingen.
             </p>
         </a>
     </div>

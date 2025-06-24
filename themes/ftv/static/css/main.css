@@ -12642,7 +12642,6 @@ td, th {
   margin: 0 10px 0 10px;
 }
 .accordion-body {
-  width: 999px;
   float: left;
   max-height: 0;
   overflow: hidden;

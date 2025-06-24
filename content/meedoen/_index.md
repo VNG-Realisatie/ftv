@@ -28,7 +28,7 @@ Het project Federatieve Toegangsverlening (FTV) zoekt professionals die willen b
                 Werkgroep
             </h2>
             <p class="utrecht-paragraph">
-                Eens in de twee weken komt een groep geïnteresseerden bijeen.
+                Eens in de twee weken komt een groep geïnteresseerden bijeen. Wees welkom.
             </p>
         </a>
     </div>

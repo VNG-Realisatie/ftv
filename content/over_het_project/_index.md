@@ -38,7 +38,7 @@ Het project Federatieve Toegangsverlening (FTV) richt zich op het ontwikkelen va
                 Fase 1
             </h2>
             <p class="utrecht-paragraph">
-                De eerste fase onderzocht of, en zo ja waar, standaarden zinvol zijn, en of er al geschikte standaarden bestaan.
+                Fase 1 onderzocht waar standaardisering zinvol is, en of er al geschikte standaarden bestaan.
             </p>
         </a>
     </div>
