@@ -1,0 +1,84 @@
+<!--<div class="w-[1024px] mx-auto grid grid-cols-2 my-10 bg-rhc-color-donkerbruin-50">
+    <div>
+        <h3 class="nl-heading nl-heading--level-3 rhc-heading">Praat mee</h3>
+        <p class="utrecht-paragraph text-rhc-primary">
+            IT-specialisten denken op Mattermost mee over FTV. Heb je ideeën of vragen?
+            Sluit je aan via <a class="nl-link rhc-link" href="https://digilab.overheid.nl/chat/digilab/channels/federatieve-toegangsverlening">ons kanaal<img src="/ftv/images/external.svg" aria-hidden="true" alt="externe link" class="w-[18px] h-[18px] my-auto"></a>.
+            Elke bijdrage helpt om FTV beter te maken.
+        </p>
+    </div>
+    <div>
+        <img src="images/home-meedoen.png" alt="Praat mee" role="presentation">
+    </div>
+</div>
+-->
+<div class="w-full bg-rhc-color-oranje-100 py-6">
+    <div class="w-3xl lg:w-5xl mx-auto flex flex-col gap-2.5">
+        <div class="sw-full mt-2.5 flex">
+            <div class="px-6 w-[480px] flex gap-2.5 flex-col">
+                    <h2 class="nl-heading nl-heading--level-2 rhc-heading">Praat mee</h2>
+                    <p class="hoe-werkt-het-paragraph mt-2.5">
+                        Meedenken? Kom bij de tweewekelijkse <a class="nl-link rhc-link" href="/ftv/meedoen/werkgroep">werkgroep FTV</a> .
+                    </p>
+                    <p class="hoe-werkt-het-paragraph mt-2.5">
+                        Heb je nu ideeën of vragen?
+                        Sluit je aan bij <a class="nl-link rhc-link" href="https://digilab.overheid.nl/chat/digilab/channels/federatieve-toegangsverlening">ons Mattermost-kanaal<img src="/ftv/images/external.svg" aria-hidden="true" alt="externe link" class="w-[18px] h-[18px] my-auto"></a>.
+                        Elke bijdrage helpt om FTV beter te maken.
+                    </p>
+                    <a href="/ftv/meedoen" class="utrecht-button  utrecht-button--secondary-action">
+                        Meedoen
+                        <img src="images/button-icon-meedoen.svg">
+                    </a>
+            </div>
+            <div class="py-6 w-[480px] flex gap-2.5 flex-col">
+                <img src="images/home-meedoen.png" alt="3 mensen op een tandem" role="presentation" width="480"/>
+            </div>
+        </div>
+        <div class="my-2.5 mt-2.5 px-6">
+            <h3 class="nl-heading nl-heading--level-3 rhc-heading pb-2">Wie doen al mee?</h3>
+            <p class="utrecht-paragraph text-rhc-primary"></p>
+        </div>
+        <div class="w-[1024px] my-2.5 swiper swiperWieDoenMee bg-rhc-color-grijs-200">
+            <div class="swiper-wrapper flex h-[240px]">
+                {{ $data := dict }}
+                {{ $path := "data/wie_doen_mee.yaml" }}
+                {{ with resources.Get $path }}
+                {{ with . | transform.Unmarshal }}
+                {{ $data = . }}
+                {{ end }}
+                {{ else }}
+                {{ errorf "Unable to load %q" $path }}
+                {{ end }}
+
+                {{ range $data }}
+                <div class="swiper-slide w-[320px] bg-white py-2.5" style="height: 240px">
+                    <a href="{{ .link }}" target="_blank" rel="noopener noreferrer">
+                        <img src="{{ .logo }}" width="{{ .size }}" alt="{{ .alt_text }}"
+                             class="m-auto h-full object-contain">
+                    </a>
+                </div>
+                {{ end }}
+            </div>
+            <div class="w-[1024px] swiper-pagination-wie mt-4 mx-auto flex justify-center">
+
+            </div>
+        </div>
+
+        <script>
+            var swiperWie = new Swiper(".swiperWieDoenMee", {
+                slidesPerView: 4,
+                speed:5000,
+                autoHeight: true,
+                direction: 'horizontal',
+                autoplay: {delay: 0},
+                height: 240,
+                spaceBetween: 10,
+                pagination: {
+                    el: ".swiper-pagination-wie",
+                    clickable: true,
+                },
+                loop: true,
+            });
+        </script>
+    </div>
+</div>

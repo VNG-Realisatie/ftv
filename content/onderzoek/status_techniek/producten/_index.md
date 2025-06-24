@@ -10,7 +10,6 @@ Toegangsverlening is een groeimarkt. Gedistribueerde architectuur met microservi
 Hier volgt een inventarisatie van de beschikbare producten verdeeld in open en closed source.
 {{< /chapter/section >}}
 
-
 {{< chapter/section title="Open source" id="open" >}} 
 Er zijn veel implementaties beschikbaar. Voor de test is gekozen voor de partijen die opvallen als ‘grootste’. Dat begrip is relatief: Amazon Verified Permissions is waarschijnlijk het grootst in aantal transacties, omdat het toegang tot AWS regelt. Open Source Agent (OPA) daarentegen is leidend in aantal downloads en implementaties.
 Dit zijn de geteste implementatie met de daarbij behorende regeltalen:
