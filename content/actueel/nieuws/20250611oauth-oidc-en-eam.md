@@ -31,7 +31,7 @@ In tegenstelling tot de relatief grofmazige autorisatie van OAuth-scopes maakt E
 - beleidsregels
 - context
 
-In plaats van een vooraf verleend recht, is autorisatie hier een proces: een concrete beslissing op het moment van handelen. De communicatie tussen applicaties en EAM-componenten is gestandaardiseerd via [OpenID AuthZEN](/methodiek/standaarden/) door de interfaces tussen applicaties en EAM-oplossingen te specificeren.
+In plaats van een vooraf verleend recht, is autorisatie hier een proces: een concrete beslissing op het moment van handelen. De communicatie tussen applicaties en EAM-componenten is gestandaardiseerd via [OpenID AuthZEN](/ftv/methodiek/standaarden/#authzen) door de interfaces tussen applicaties en EAM-oplossingen te specificeren.
 {{< /chapter/section >}}
 
 {{< chapter/section title="Samenwerking: een gelaagde beveiligingsstrategie" level="3">}}
@@ -54,7 +54,8 @@ Hiermee wordt de traditionele login dus gezien als de *autorisatie* dat de appli
 {{< /chapter/section >}}
 
 {{< chapter/section title="Meer weten?" level="3">}}
-Lees meer over [EAM](/methodiek/), de methodiek van Federatieve Toegangsverlening
-Of bekijk de korte uitleg in de [slidecast](/methodiek/) van 2,5 minuut
+Lees meer over [EAM](/ftv/methodiek/), de methodiek van Federatieve Toegangsverlening
+
+Of bekijk de korte uitleg in de [slidecast](/ftv/methodiek/principes/) van 2,5 minuut
 {{< /chapter/section >}}
 
