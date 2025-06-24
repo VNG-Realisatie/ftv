@@ -12535,7 +12535,7 @@
   padding-top: 0.5em;
 }
 .hoe-werkt-het-paragraph {
-  font-family: "Fira Sans Condensed", sans-serif;
+  font-family: "Fira Sans", sans-serif;
   font-size: 20px;
   line-height: 150%;
   font-weight: 400;
@@ -12617,6 +12617,10 @@ td, th {
   left: 50%;
   transform: translateX(-50%);
   opacity: 1;
+}
+.nieuwsitem h2 {
+  font-weight: bold;
+  text-decoration: underline;
 }
 @property --tw-rotate-x {
   syntax: "*";

@@ -142,7 +142,7 @@
 }
 
 .hoe-werkt-het-paragraph {
-    font-family: "Fira Sans Condensed", sans-serif;
+    font-family: "Fira Sans", sans-serif;
     font-size: 20px;
     line-height: 150%;
     font-weight: 400;
@@ -239,7 +239,7 @@ td, th {
   line-height: var(--utrecht-paragraph-line-height, var(--utrecht-document-line-height, inherit));
 }
 
-/* Eerste link in elke pagina, voor toegangkelijkheid */
+/* Eerste link in elke pagina, voor toegankelijkheid */
 
 .skip-to-main-content-link {
   position: absolute;
@@ -254,4 +254,10 @@ td, th {
   left: 50%;
   transform: translateX(-50%);
   opacity: 1;
+}
+
+/* Nieuws op de homepage */
+.nieuwsitem h2 {
+   font-weight:bold;
+   text-decoration:underline;
 }
