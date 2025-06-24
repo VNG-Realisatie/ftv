@@ -7,7 +7,7 @@ title: "Producten"
 
 Toegangsverlening is een groeimarkt. Gedistribueerde architectuur met microservices en in het algemeen toenemende gegevensuitwisseling maken dat er een sterk toenemende vraag is naar praktische oplossingen. Commerciële partijen zien dat implementatie technisch en organisatorisch lastig is en springen daarop in. Er zijn gesloten implementaties van open standaarden gekomen, open implementaties zijn gesloten en er worden betaalde diensten en extensies op open implementaties geboden.
  
-Hier volgt een inventarisatie van de beschikbare producten verdeeld in open en gesloten source.
+Hier volgt een inventarisatie van de beschikbare producten verdeeld in open en closed source.
 {{< /chapter/section >}}
 
 

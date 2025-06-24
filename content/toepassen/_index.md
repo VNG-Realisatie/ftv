@@ -54,6 +54,18 @@ Het invoeren van de standaard Federatieve Toegangsverlening (FTV) begint met een
            </p>
        </a>
    </div>
+
+   <div class="section-home-box">
+       <a href="softwarekeus">
+           <h2 class="nl-heading nl-heading--level-4 rhc-heading">
+               Softwarekeuze
+           </h2>
+           <p class="utrecht-paragraph">
+               Welke software kies ik voor EAM, die past in mijn IT-landschap en ambities?
+           </p>
+       </a>
+   </div>
+
 </div>
 
 {{< /chapter/header >}}
