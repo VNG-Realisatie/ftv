@@ -25,6 +25,7 @@
     --color-rhc-color-geel-300: #FDD370;
     --color-rhc-color-geel-50: #FFF4DB;
     --color-rhc-color-mintgroen-100: #D6F2E9;
+    --color-rhc-color-roze-100: #FBDEF0;
 }
 
 .ftv-hero-paragraph {
@@ -260,4 +261,47 @@ td, th {
 .nieuwsitem h2 {
    font-weight:bold;
    text-decoration:underline;
+}
+
+/* Doelgroepen accordeon */
+.accordion-header {
+    float:left;
+    width: 900px;
+    cursor: pointer;
+}
+
+.accordion-header::after {
+  content: "";
+  clear: both;
+}
+
+.accordion-sidebar-color {
+    width: 16px;
+    float: left;
+    margin: 0 10px 0 10px;
+}
+
+.accordion-sidebar-icon {
+    width: 24px;
+    float: left;
+    margin: 0 10px 0 10px;
+}
+
+.accordion-body {
+    width:999px;
+    float:left;
+    display:none;
+}
+
+.accordion-content {
+    overflow: auto;
+    padding-left: 48px;
+ }
+
+.accordion-content .section {
+    float:left;
+}
+
+.accordion-header h4 {
+    padding-top:0px;
 }

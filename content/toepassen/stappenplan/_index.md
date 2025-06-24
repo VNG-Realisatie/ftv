@@ -34,26 +34,31 @@ Bestuurders, juristen, IT-architecten en developers kijken vanuit hun eigen pers
 Door de stappen te volgen, ontstaat een set regels die juridisch, functioneel én technisch klopt.
 
 Dit stappenplan beschrijft zeven stappen om van een use case tot een goed werkende en uitvoerbare toegangsregel te komen. Het helpt om het proces gestructureerd aan te pakken en in elke fase de juiste keuzes te maken en de juiste rollen te betrekken.
+{{< /chapter/section >}}
 
-### Voor bestuurders
+{{< chapter/accordion title="Voor bestuurders" customclass="bg-rhc-color-oranje-100" >}}
 
 Een goede toegangsoplossing begint bij duidelijke keuzes. In stap 1 wordt bepaald wie toegang nodig heeft tot welke gegevens en onder welke voorwaarden. Dit vraagt om heldere afspraken, draagvlak en een afbakening van verantwoordelijkheden. Zo ontstaat een stevige basis voor de technische uitwerking van Federatieve Toegangsverlening (FTV).
 
-### Voor juristen
+{{< /chapter/accordion >}}
+
+{{< chapter/accordion title="Voor juristen" customclass="bg-rhc-color-mintgroen-100" >}}
 
 Juristen zijn betrokken bij het formuleren van de use case en het vastleggen van de eisen (requirements). Daarmee wordt duidelijk wie toegang mag krijgen, op basis van welk wetsartikel dat mag en onder welke omstandigheden. Daarna wordt deze input technisch uitgewerkt.
 
+{{< /chapter/accordion >}}
 
-### Voor IT-managers
+{{< chapter/accordion title="Voor IT-managers" customclass="bg-rhc-color-blauw-25" >}}
 
 Van use case tot distributie: IT-managers en architecten zijn betrokken bij alle stappen in dit plan. Denk aan het vertalen van beleid naar eisen, het inrichten van beheerprocessen en het bewaken van samenhang tussen componenten. Het stappenplan helpt om technisch én organisatorisch grip te houden op het geheel.
 
+{{< /chapter/accordion >}}
 
-### Voor developers
+{{< chapter/accordion title="Voor ontwikkelaars" customclass="bg-rhc-color-geel-50" lastaccordion="true">}}
 
 Vanaf stap 2 is de rol van developers essentieel. Zij bouwen, testen en implementeren de toegangsregels. Denk aan het schrijven van policies, het samenstellen van testdata en het inrichten van infrastructuur en distributie. Het stappenplan biedt een duidelijke structuur om technisch solide en makkelijk te onderhouden oplossingen op te leveren.
 
-{{< /chapter/section >}}
+{{< /chapter/accordion >}}
 
 {{< chapter/section title="Het stappenplan" >}}
 #### Stap 1. Formuleer de use case

@@ -69,23 +69,22 @@ Het invoeren van de standaard Federatieve Toegangsverlening (FTV) begint met een
 </div>
 
 {{< /chapter/header >}}
+
 {{< chapter/section title="" >}}
 Federatieve toegangsverlening raakt meerdere onderdelen van een organisatie. Daarom zijn de handreikingen op deze pagina gericht op verschillende doelgroepen. 
 {{< /chapter/section >}}
 
+{{< chapter/accordion title="Voor bestuurders" customclass="bg-rhc-color-oranje-100" >}}
 
-{{< chapter/section title="Voor bestuurders" >}}
-Een goed werkende FTV-implementatie vraagt om duidelijke keuzes, afspraken en draagvlak. Deze handreiking helpt om de juiste afwegingen te maken en zicht te houden op het geheel.
+Goede toegangsverlening vraagt om heldere afspraken over rollen en bevoegdheden. Ook moeten juridische kaders en beleid vertaald worden naar toegangsregels die technisch toepasbaar zijn.
 
 1. **Functionele beschrijving**
 
-   Hoe zien de taken rondom FTV eruit en wie is waarvoor verantwoordelijk?
+Hoe zien de taken rondom FTV eruit en wie is waarvoor verantwoordelijk?
+{{< /chapter/accordion >}}
 
-   [Bekijk het overzicht van functies en rollen](functioneel)
+{{< chapter/accordion title="Voor juristen" customclass="bg-rhc-color-mintgroen-100" >}}
 
-{{< /chapter/section >}}
-
-{{< chapter/section title="Voor juristen" >}}
    Goede toegangsverlening vraagt om heldere afspraken over rollen en bevoegdheden. Ook moeten juridische kaders en beleid vertaald worden naar toegangsregels die technisch toepasbaar zijn.
 
    1. **Functionele beschrijving**
@@ -100,9 +99,10 @@ Een goed werkende FTV-implementatie vraagt om duidelijke keuzes, afspraken en dr
 
    [Doorloop het stappenplan](stappenplan)
 
-{{< /chapter/section >}}
+{{< /chapter/accordion >}}
 
-{{< chapter/section title="Voor IT-managers" >}}
+{{< chapter/accordion title="Voor IT-managers" customclass="bg-rhc-color-blauw-25" >}}
+
 FTV raakt meerdere onderdelen van de IT-infrastructuur. Denk aan softwarekeuzes, rolverdelingen en beheerprocessen. De handreikingen ondersteunen bij het maken van haalbare, schaalbare en toekomstbestendige keuzes.
 
 1. **Functionele beschrijving**
@@ -122,9 +122,10 @@ FTV raakt meerdere onderdelen van de IT-infrastructuur. Denk aan softwarekeuzes,
    Er is veel te kiezen op het gebied van Policy Decision Point (PDP), Policy Information Point (PIP) en Policy Administration Point (PAP). Wat heb je nodig? En welke leverancier past het best? Of is het beter om zelf iets te bouwen?
 
    [Lees de checklist Softwarekeuze](softwarekeus)
-{{< /chapter/section >}}
+{{< /chapter/accordion >}}
 
-{{< chapter/section title="Voor ontwikkelaars" >}}
+{{< chapter/accordion title="Voor ontwikkelaars" customclass="bg-rhc-color-geel-50" lastaccordion="true">}}
+
 Een goede technische basis begint met praktijkvoorbeelden en inzicht in de opbouw van toegangsregels. De handreikingen bieden concrete tools om te testen, te leren en te bouwen.
 
 1. **OpenFTV**
@@ -138,5 +139,4 @@ Een goede technische basis begint met praktijkvoorbeelden en inzicht in de opbou
    Een mini-Federatief Datastelsel (FDS) met uitgewerkte use cases is ideaal om lokaal te testen en mee te experimenteren.
 
    [Bekijk de proefopstelling en ontdek wat werkt](proefopstelling)
-{{< /chapter/section >}}
-
+{{< /chapter/accordion >}}

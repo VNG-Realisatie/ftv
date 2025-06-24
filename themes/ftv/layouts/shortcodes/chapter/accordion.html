@@ -1,0 +1,50 @@
+<div class="py-2 lg:w-[1024px] w-3xl mx-auto">
+    <div type="button" class="accordion-header collapsible">
+        <div class="accordion-sidebar-color {{ .Get "customclass" }}">
+            <p>&nbsp;</p>
+        </div>
+        <div>
+            <div class="accordion-sidebar-icon">
+                <img src="/ftv/images/accordion-vinkje.svg">
+            </div>
+            <h4 class="nl-heading nl-heading--level-4 rhc-heading">{{ .Get "title" }}</h4>
+        </div>
+    </div>
+    <div class="accordion-body section">
+        <div class="accordion-sidebar-color {{ .Get "customclass" }}">
+            &nbsp;
+        </div>
+        <div class="accordion-content section">
+<!--            <p class="utrecht-paragraph--lead">-->
+                {{ $paragraphs := split .Inner "\n\n" }}
+                {{ range $paragraphs }}
+                    {{ if ne (trim . " ") "" }}
+                        <p class="utrecht-paragraph--lead pt-2">
+                            {{ . | $.Page.RenderString }}
+                        </p>
+                    {{ end }}
+                {{ end }}
+           <!-- </p>-->
+        </div>
+        {{ if and (.Get "lastaccordion") (ne (.Get "lastaccordion") "") }}
+        <script>
+
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                  content.style.display = "none";
+                } else {
+                  content.style.display = "block";
+                }
+              });
+            }
+            </script>
+        {{ end }}
+    </div>
+</div>

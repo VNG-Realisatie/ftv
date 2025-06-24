@@ -12622,6 +12622,40 @@ td, th {
   font-weight: bold;
   text-decoration: underline;
 }
+.accordion-header {
+  float: left;
+  width: 900px;
+  cursor: pointer;
+}
+.accordion-header::after {
+  content: "";
+  clear: both;
+}
+.accordion-sidebar-color {
+  width: 16px;
+  float: left;
+  margin: 0 10px 0 10px;
+}
+.accordion-sidebar-icon {
+  width: 24px;
+  float: left;
+  margin: 0 10px 0 10px;
+}
+.accordion-body {
+  width: 999px;
+  float: left;
+  display: none;
+}
+.accordion-content {
+  overflow: auto;
+  padding-left: 48px;
+}
+.accordion-content .section {
+  float: left;
+}
+.accordion-header h4 {
+  padding-top: 0px;
+}
 @property --tw-rotate-x {
   syntax: "*";
   inherits: false;
