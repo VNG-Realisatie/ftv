@@ -42,6 +42,8 @@ De volgende bijeenkomst is op dinsdag 1 juli van 10:00 tot 11:00 uur. Op de agen
 Kijk voor aanmelden op de [website van IBDS](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/3a2f79a8-e4ed-4a6b-aa52-1d88f2498e7f/werkgroep-federatieve-toegangsverlening). 
 {{< /chapter/section >}}
 
-{{< chapter/section title="Ook meedoen??" level="3">}}
-Meer weten of meedenken? Sluit je dan aan bij de [werkgroep](/ftv/meedoen/werkgroep/).
+{{< chapter/section title="Meer weten of meedoen?" level="3">}}
+Wil je meer weten? Kijk dan op de FTV-webste voor de [notulen](/ftv/meedoen/werkgroep/linked-data/) van de werkgroep.
+
+Wil je ook meedenken? Sluit je dan aan bij de [werkgroep](/ftv/meedoen/werkgroep/).
 {{< /chapter/section >}}
