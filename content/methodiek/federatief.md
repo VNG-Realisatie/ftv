@@ -1,30 +1,32 @@
 ---
-Title: Federatief
+Title: Federatief EAM
 type: 'chapter'
 ---
 
-{{< chapter/header bg="gray">}}
+{{< chapter/header title="Methodiek" bg="green">}}
 
-<div class="utrecht-paragraph pt-1 section-navigation">
+<div class="sub-navigation-wrapper">
+<div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-groen-25">
    <p>
-      <a href="../">De EAM principes</a>
+      <a href="../principes">De principes van EAM</a> 
    </p>
 </div>
-<div class="utrecht-paragraph pt-1 section-navigation">
+<div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-groen-25">
    <p>
-      <a href="../standaarden">Standaarden</a> 
+      <a href="../standaarden">De FTV-standaarden</a>
    </p>
 </div>
-<div class="section-navigation-selected utrecht-paragraph pt-1 section-navigation">
+<div class="sub-navigation-tab-selected utrecht-paragraph pt-1 sub-navigation-tab">
    <p>
       Federatief EAM
    </p>
+</div>
 </div>
 
 {{< /chapter/header >}}
 
 
-{{< chapter/section title="EAM in een federatief stelsel" >}}
+{{< chapter/section title="Federatief EAM" >}}
 In een federatief stelsel worden toegangsregels op [logisch niveau](https://docs.geostandaarden.nl/mim/mim/#beschouwingsniveau-3-logisch-informatie-of-gegevensmodel) gedefinieerd. Deze worden dan per organisatie vertaald naar [technisch niveau](https://docs.geostandaarden.nl/mim/mim/#beschouwingsniveau-3-logisch-informatie-of-gegevensmodel).
 
 {{< img-url "images/1.3.federatieve_toegangsregels.png" "Federatieve toegangsregels" >}}

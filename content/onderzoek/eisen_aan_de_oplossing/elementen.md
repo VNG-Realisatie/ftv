@@ -56,7 +56,7 @@ Deze regels komen daarmee tegemoet aan bezwaren 3 (flexibiliteit) en 4 (verifiee
 
 {{< /chapter/section >}}
 
-{{< chapter/section title="3.Externalized access management" level="2">}}
+{{< chapter/section title="3.Externalized Authorization Management" level="2">}}
 
 EAM is een verzamelnaam van methodieken voor toegangsverlening die een aantal elementen combineert, waaronder:
 - Toegangsregels worden in aparte machine-uitvoerbare bestanden vastgelegd, dat tegemoet komt aan bezwaren 3 (flexibiliteit) en 4 (verifieerbaarheid) en richtlijn 4 (automatisering contractering).

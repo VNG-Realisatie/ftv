@@ -28,15 +28,15 @@ Dan blijven ABAC, PBAC en ReBAC over. Deze lijken nogal op elkaar.
 - De term PBAC kwam later en gebruikt het woord policy om te benadrukken dat het om in aparte bestanden geplaatste beleidsregels (policies) gaat. Dit werd in XACML echter ook al gedaan, in XML-bestanden. Volgens [Wikipedia](https://en.wikipedia.org/wiki/Attribute-based_access_control) zijn ABAC en PBAC daarom ook hetzelfde.
 - ReBAC op zijn beurt schuift relaties naar de voorgrond. Maar in essentie zijn relaties een categorie van eigenschappen, niet een nieuw concept.
 
-De essentie van deze drie methodieken zit in de volgenden overeenkomsten:
+De essentie van deze drie methodieken zit in de volgende overeenkomsten:
 
 - Regels worden apart van broncode geschreven en met dezelfde zorgvuldigheid beheerd als broncode (**policy as code**).
 - Regels zijn fijnmazig (**fine grained access control**), door gebruik te kunnen maken van eigenschappen van de vrager (subject), de vraag (actie), de context en het antwoord (resource).
 - Regels worden **real-time** toegepast, dus niet alleen tijdens authenticatie.
 {{< /chapter/section >}}
 
-{{< chapter/section title="Externalized Access Management" level="3">}}
-De term Externalized Access Management (EAM) kan als overkoepelend begrip gebruikt worden. De toegangscontrole is buiten de applicaties geplaatst, waardoor de volgende belangrijke principes mogelijk worden gemaakt:
+{{< chapter/section title="Externalized Authorization Management" level="3">}}
+De term Externalized Authorization Management (EAM) kan als overkoepelend begrip gebruikt worden. De toegangscontrole is buiten de applicaties geplaatst, waardoor de volgende belangrijke principes mogelijk worden gemaakt:
 - **Zero-trust**. Controleer toegang op elke plek waar interactie tussen systemen plaatsvindt en er dus een risico op onrechtmatige toegang is. 
 - **Centraal beheerd, lokaal toegepast**. Regels kunnen complex zijn en het beheer ervan vraagt kennis en tooling. Tegelijk moet toegang efficiënt bepaald
 worden om te voorkomen dat prestaties belemmerd worden. Door gedistribueerde systemen te gebruiken, zijn beide tegelijk mogelijk.

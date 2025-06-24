@@ -2,6 +2,32 @@
 Title: Stappenplan
 type: 'chapter'
 ---
+{{< chapter/header title="Toepassen" bg="brown">}}
+
+<div class="sub-navigation-wrapper">
+<div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-donkerbruin-50">
+   <p>
+      <a href="../functioneel">Functies en rollen</a> 
+   </p>
+</div>
+<div class="sub-navigation-tab-selected utrecht-paragraph pt-1 sub-navigation-tab">
+   <p>
+      <a href="../stappenplan">Stappenplan</a>
+   </p>
+</div>
+<div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-donkerbruin-50">
+   <p>
+      <a href="../openftv">OpenFTV</a> 
+   </p>
+</div>
+<div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-donkerbruin-50">
+   <p>
+      <a href="../proefopstelling">Proefopstelling</a>
+   </p>
+</div>
+{{< /chapter/header >}}
+</div>
+
 {{< chapter/section title="Stappenplan" >}}
 Het opstellen van toegangsregels vraagt om samenwerking tussen verschillende rollen.
 Bestuurders, juristen, IT-architecten en developers kijken vanuit hun eigen perspectief naar wat nodig is.
@@ -15,7 +41,7 @@ Een goede toegangsoplossing begint bij duidelijke keuzes. In stap 1 wordt bepaal
 
 ### Voor juristen
 
-Juristen zijn betrokken bij het formuleren van de use case en het vastleggen van de voorwaarden (requirements). Daarmee wordt duidelijk wie toegang mag krijgen, op basis van welk wetsartikel dat mag en onder welke omstandigheden. Daarna wordt deze input technisch uitgewerkt.
+Juristen zijn betrokken bij het formuleren van de use case en het vastleggen van de eisen (requirements). Daarmee wordt duidelijk wie toegang mag krijgen, op basis van welk wetsartikel dat mag en onder welke omstandigheden. Daarna wordt deze input technisch uitgewerkt.
 
 
 ### Voor IT-managers
@@ -49,7 +75,7 @@ Gebruik bij de omschrijving de termen:
 
 Door de regels nu al in deze termen uit te drukken, wordt het schrijven later eenduidig en overzichtelijk.
 
-Voorbeeld: een zaakbehandelaar (subject) mag een huurtoeslagzaak (resource) afsluiten (actie) als de zaakbehandelaar afdelingshoofd is en de zaakstatus ‘klaar om af te sluiten’ is (context).
+Voorbeeld: een zaakbehandelaar (subject) mag een huurtoeslagzaak (resource) afsluiten (action) als de zaakbehandelaar afdelingshoofd is en de zaakstatus ‘klaar om af te sluiten’ is (context).
 
 #### Stap 3. Bepaal de attributen
 
@@ -76,7 +102,7 @@ Het samenstellen van die testdata is een taak voor een businessanalist. Een ontw
 
 In deze stap wordt de gekozen beslismodule (Policy Decision Point, PDP) neergezet en aangesloten op de juiste toegangshekken (Policy Enforcement Points, PEPs).  Check vooraf of de gekozen componenten goed op elkaar aansluiten. Zie ook de checklist bij [Softwarekeuze](../softwarekeus).
 
-De PEP kan deel uitmaken van een applicatie, een API, of een API-gateway. Als de component is gebouwd volgens de AuthZEN NL Gov-standaard, is er weinig extra programmeerwerk nodig voor de aansluiting.
+De PEP kan deel uitmaken van een applicatie, een API (Application Programming Interface), of een API-gateway. Als de component is gebouwd volgens de AuthZEN NL Gov-standaard, is er weinig extra programmeerwerk nodig voor de aansluiting.
 Het neerzetten (deployen) van de PDP vergt kennis van de infrastructuur (cloud infra, Helm, Kubernetes).
 
 #### Stap 7. Zorg voor distributie van regels

@@ -8,12 +8,22 @@
     --color-rhc-geel-400: var(--rhc-color-geel-400, #FAE856);
     --color-ftv-azure: #007BC7;
     --color-ftv-info: #E1EEF8;
-    --color-rhc-donkerbruin-100: var(--rhc-color-donkerbruin-100, #D1C2BE);
-    --color-rhc-color-oranje-200: var(--rhc-color-oranje-200, #F1BE8C);
-    --color-rhc-color-mosgroen-50: var(--rhc-color-mosgroen-50, #EBEBD9);
-    --color-rhc-color-grijs-50: #F8FAFC;
+    --color-rhc-color-donkerbruin-100: #D1C2BE;
+    --color-rhc-color-donkerbruin-50: #F0EBEA;
+    --color-rhc-color-oranje-200: #F1BE8C;
+    --color-rhc-color-oranje-100: #F6D6B6;
+    --color-rhc-color-groen-50: #A5C991;
+    --color-rhc-color-groen-25: #E1EDDB;
+    --color-rhc-color-mosgroen-50: #EBEBD9;
+    --color-rhc-color-mosgroen-25: #E1EDDB;
     --color-rhc-color-grijs-200: #E2E8F0;
-    --color-rhc-color-lintblauw-50: #B8C6D5;
+    --color-rhc-color-grijs-50: #F8FAFC;
+    --color-rhc-color-blauw-50: #BCDFF0;
+    --color-rhc-color-blauw-25: #EEF7FB;
+    --color-rhc-color-lintblauw-50: #BCDFF0;
+    --color-rhc-color-lintblauw-25: #EEF7FB;
+    --color-rhc-color-geel-300: #FDD370;
+    --color-rhc-color-geel-50: #FFF4DB;
     --color-rhc-color-mintgroen-100: #D6F2E9;
 }
 
@@ -132,27 +142,122 @@
 }
 
 .hoe-werkt-het-paragraph {
-    font-family: "Fira Sans Condensed", sans-serif;
+    font-family: "Fira Sans", sans-serif;
     font-size: 20px;
     line-height: 150%;
     font-weight: 400;
     color: black;
     letter-spacing: 0;
+    color:var(--utrecht-paragraph-color);
 }
 
 .swiperWieDoenMee > .swiper-wrapper {
     transition-timing-function: linear;
 }
 
-.section-navigation {
-   float: left;
-   border: none;
-   width: 200px;
-   height: 60px;
-   text-align: center;
-   line-height:60px;
+ /* Section home page */
+
+
+.section-box-banner {
+    margin-top:-10px;
+
 }
 
-.section-navigation-selected {
-   background: #EFEADA;
+ .section-home-wrapper {
+ }
+
+ .section-home-wrapper a {
+
+ }
+
+.section-home-box {
+    width: 250px;
+    margin:20px;
+    padding: 20px;
+    background: white;
+    height: auto;
+    float:left;
+    box-shadow: 0 4px 4px 0 rgb(0 0 0 / 0.25);
+}
+
+.section-home-box h2 {
+    font-weight:bold;
+    text-decoration:underline;
+}
+
+.section-home-box p {
+    font-size:18px;
+}
+
+/* Sub navigation within section */
+
+.sub-navigation-wrapper {
+    position:relative;
+    bottom:-32px;
+}
+
+.sub-navigation-tab {
+   float: left;
+   border: none;
+   height: 60px;
+   padding: 0 40px 0 40px;
+   margin-right:10px;
+   text-align: center;
+   line-height:60px;
+   text-decoration:underline;
+}
+
+.sub-navigation-tab-selected {
+   background: white;
+   font-weight:bold;
+   text-decoration:none;
+ }
+
+/* Generic tables */
+
+table {
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+th {
+    font-weight:bold;
+    border-bottom: 2px solid #888;
   }
+
+td {
+  border-bottom: 1px solid #ddd;
+}
+
+td, th {
+  text-align: left;
+  padding:5px;
+  font-family: var(--utrecht-paragraph-font-family, var(--utrecht-document-font-family, inherit));
+  font-size: var(--utrecht-paragraph-font-size, var(--utrecht-document-font-size, inherit));
+  font-weight: var(--utrecht-paragraph-font-weight, inherit);
+  line-height: var(--utrecht-paragraph-line-height, var(--utrecht-document-line-height, inherit));
+}
+
+/* Eerste link in elke pagina, voor toegankelijkheid */
+
+.skip-to-main-content-link {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 1em;
+  background-color: black;
+  color: white;
+  opacity: 0;
+}
+.skip-to-main-content-link:focus {
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+}
+
+/* Nieuws op de homepage */
+.nieuwsitem h2 {
+   font-weight:bold;
+   text-decoration:underline;
+}

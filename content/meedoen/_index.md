@@ -1,49 +1,36 @@
 ---
 Title: Meedoen
-weight: 30
 type: 'chapter'
 ---
 
-{{< chapter/header title="Meedoen" bg="brown" icon="images/api-icon.svg">}}
+{{< chapter/header title="Meedoen" bg="orange" icon="images/sectie-meedoen.svg">}}
 Het project Federatieve Toegangsverlening (FTV) zoekt professionals die willen bijdragen aan een veilige en efficiënte toegang tot data binnen de overheid.
-
 {{< /chapter/header >}}
 
-{{< chapter/section title="Wat kan je doen?" >}}
+{{< chapter/header bg="lightorange" customclass="section-box-banner">}}
 
-**Bekijk de werkwijze**
+### In deze sectie
 
-Lees [hoe FTV werkt](../methodiek) en ontdek of het past in jouw API-landschap.
-
-**Denk mee in de werkgroep**
-
-De [werkgroep](werkgroep) praat over de opzet, keuzes en doorontwikkeling van de standaardisering. Ook bespreken we waar gebruikers in de praktijk tegenaan lopen.
-
-**Ga aan de slag met OpenFTV**
-
-Wil je ervaren wat FTV betekent voor jouw organisatie? Experimenteer dan met [OpenFTV](../toepassen/openftv).
-
-**Praat mee**
-
-IT-specialisten denken via Mattermost mee over FTV. Heb je ideeën of vragen? Sluit je aan via [ het FTV Mattermost-kanaal](https://digilab.overheid.nl/chat/digilab/channels/federatieve-toegangsverlening).
-
-{{< /chapter/section >}}
-
-{{< chapter/section title="Wie doen er al mee?" >}}
-- Digilab
-- Geonovum
-- Ministerie van Binnenlandse Zaken (BZK)
-- Zorginstituut Nederland
-- Autoriteit Consument & Markt (ACM)
-- NUTS
-- Logius
-- Vecozo
-- ArchiXL
-- iSHARE
-- Zicht op Nederland
-- Vereniging Nederlandse Gemeenten (VNG)
-- Idemia
-- Kadaster
-- Rijksdienst voor Identiteitsgegevens (RvIG)
-- Gemeente Rotterdam
-{{< /chapter/section >}}
+<div class="section-home-wrapper" role="navigation">
+    <div class="section-home-box">
+        <a href="wat_kun_je_doen">
+            <h2 class="nl-heading nl-heading--level-4 rhc-heading">
+                Wat kun je doen?
+            </h2>
+            <p class="utrecht-paragraph">
+                Dit zijn de opties om meer te leren en bij te dragen aan federatieve toegangsverlening.
+            </p>
+        </a>
+    </div>
+    <div class="section-home-box">
+        <a href="werkgroep">
+            <h2 class="nl-heading nl-heading--level-4 rhc-heading">
+                Werkgroep
+            </h2>
+            <p class="utrecht-paragraph">
+                Eens in de twee weken komt een groep geïnteresseerden bijeen.
+            </p>
+        </a>
+    </div>
+</div>
+{{< /chapter/header >}}
