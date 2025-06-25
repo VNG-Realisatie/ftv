@@ -25,15 +25,15 @@ type: 'chapter'
 
 **Bekijk de werkwijze**
 
-Lees [hoe FTV werkt](../methodiek) en ontdek of het past in jouw API-landschap.
+Lees [hoe FTV werkt](/ftv/methodiek) en ontdek of het past in jouw API-landschap.
 
 **Denk mee in de werkgroep**
 
-De [werkgroep](werkgroep) praat over de opzet, keuzes en doorontwikkeling van de standaardisering. Ook bespreken we waar gebruikers in de praktijk tegenaan lopen.
+De [werkgroep](/ftv/meedoen/werkgroep) praat over de opzet, keuzes en doorontwikkeling van de standaardisering. Ook bespreken we waar gebruikers in de praktijk tegenaan lopen.
 
 **Ga aan de slag met OpenFTV**
 
-Wil je ervaren wat FTV betekent voor jouw organisatie? Experimenteer dan met [OpenFTV](../toepassen/openftv).
+Wil je ervaren wat FTV betekent voor jouw organisatie? Experimenteer dan met [OpenFTV](/ftv/toepassen/openftv).
 
 **Praat mee**
 
