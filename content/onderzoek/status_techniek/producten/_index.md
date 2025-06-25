@@ -20,7 +20,7 @@ Dit zijn de geteste implementatie met de daarbij behorende regeltalen:
 - [OpenFGA](https://openfga.dev/) is gebaseerd op Zanzibar, het Relationship Based Access Control (ReBAC)-project van Google.
 - [KeyCloak](https://www.keycloak.org/docs/latest/authorization_services/index.html), een open source platform.
 
-Van XACML en Rego zijn geen stabiele moderne open source implementaties.
+Van XACML zijn geen stabiele moderne open source implementaties.
 
 Elk van deze opties is getest in het project. Zie het [overzicht van de resultaten](opensource). Alle implementaties zijn in principe geschikt bevonden als Policy Decision Point (PDP). Daarnaast is zelfbouw ook altijd mogelijk zolang dit gebeurt onder de open source-voorwaarden van de overheid.
 
@@ -44,6 +44,12 @@ Voor dit onderzoek zijn verschillende partijen benaderd met het verzoek om infor
 | [Thales](https://cpl.thalesgroup.com/access-management/externalized-authorization) | [Brochure]({{< param baseDirectory >}}documents/thales.pdf)       |
 | [Immuta](https://www.immuta.com/)                                                  | [Link](https://www.immuta.com/product/policy-entitlement-engine/) |
 | [Okta](https://www.okta.com/)                                                      | https://www.okta.com/products/customer-identity/                  |
-| https://www.poort8.nl/                                                             | https://www.poort8.nl/                                            |
+| [Poort 8](https://www.poort8.nl/)                                                  | https://www.poort8.nl/                                            |
+
+{{< /chapter/section >}}
+
+{{< chapter/section title="AuthZEN compliance" >}}
+
+Als 
 
 {{< /chapter/section >}}
