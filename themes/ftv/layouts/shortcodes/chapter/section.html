@@ -1,4 +1,4 @@
-<div class="py-2 lg:w-[1024px] w-3xl mx-auto">
+<div class="py-2 lg:w-[1024px] w-3xl mx-auto" id="{{.Get "id"}}">
     {{ $level := .Get "level" | default 2 }}
     {{ if or (lt (int $level) 1) (gt (int $level) 6) }}
         {{ $level = 2 }}

@@ -48,7 +48,7 @@ Het eerste gebied dat AuthZEN heeft uitgewerkt is de interface tussen PEP en PDP
 
 {{< /chapter/section >}}
 
-{{< chapter/section title="Informatiemodel" level="4">}}
+{{< chapter/section title="Informatiemodel" level="4" id="informatiemodel">}}
 
 Als basis is eerst een informatiemodel uitgewerkt. Dat beschrijft de velden die in een verzoek moeten of kunnen staan, en hun mogelijke waarden. In de PxP-architectuur zijn deze vier onderdelen benoemd:
 

@@ -37,10 +37,10 @@ Wat komt er kijken bij het toepassen en beheren van toegangsregels?
 
 {{< chapter/section title="1. Tijdens gebruik (runtime)" level="3" >}}
 
-Runtime functies zijn die functies die tijdens het normale gebruik worden uitgevoerd. Dit is het volledig geautomatiseerd proces zoals het bij elk verzoek tot verwerking worden uitgevoerd. Deze zullen erg snel moeten worden uitgevoerd, omdat ze op het kritieke pad van elke verzoek liggen.
+Runtime functies zijn die functies die tijdens het normale gebruik worden uitgevoerd. Dit is het volledig geautomatiseerde proces zoals het bij elk verzoek tot verwerking wordt uitgevoerd. Deze zullen erg snel moeten worden uitgevoerd, omdat ze op het kritieke pad van elk verzoek liggen.
 
 - **Beslissingen afdwingen**: het onderscheppen van elk verzoek, en zorgen dat genomen beslissingen ook gegarandeerd nageleefd worden.
-- **Beslissingen nemen**: het uitrekenen of het verzoek gehonoreerd, voorwaardelijk gehonoreerd of afgewezen moet worden. Dit gebeurt op basis van de vrager, de vraag, het onderwerp en de omgeving (subject, action, resource en context) en de beschikbare regels. 
+- **Beslissingen nemen**: het bepalen of het verzoek gehonoreerd, voorwaardelijk gehonoreerd of afgewezen moet worden. Dit gebeurt op basis van de vrager, de vraag, het onderwerp en de omgeving ([subject, action, resource en context](/ftv/methodiek/standaarden#informatiemodel)) en de beschikbare regels. 
 - **Beslissingen loggen**: het vastleggen welke beslissingen zijn genomen. Van belang is om hierbij de juiste hoeveelheid informatie vast te leggen. Enerzijds voldoende om later verantwoording af te leggen en de juistheid van beslissingen te controleren. Anders niet meer dan nodig om te privacy te respecteren.
 
 {{< img-url "diagrams/functies-en-rollen.svg" "Overzicht functies en rollen in EAM" >}}

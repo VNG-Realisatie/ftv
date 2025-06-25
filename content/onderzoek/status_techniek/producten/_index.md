@@ -26,7 +26,7 @@ Elk van deze opties is getest in het project. Zie het [overzicht van de resultat
 
 Een eerste kanttekening is wel dat toegangsregels geschreven in al deze talen lastig zijn te lezen en te schrijven. Een van de doelen is echter dat mensenogen ze moeten kunnen controleren en aanpassen, en dan niet alleen programmeurs. Geen van de bovengenoemde implementaties biedt een oplossing die dit significant eenvoudiger maakt.
 
-Een tweede kanttekening is dat deze implementaties allemaal losse policy engines zijn: in principe alleen een PDP. Een complete oplossing omvat echt ook beheer. Testen, versiebeheer, distributie, monitoring en auditing zijn belangrijke taken die een PDP niet oplost.
+Een tweede kanttekening is dat deze implementaties allemaal losse policy engines zijn: in principe alleen een PDP. Een complete oplossing omvat echt ook [beheer](/ftv/toepassen/functioneel). Testen, versiebeheer, distributie, monitoring en auditing zijn belangrijke taken die een PDP niet oplost.
 {{< /chapter/section >}}
 
 {{< chapter/section title="Closed source" id="closed" level="3">}}
