@@ -13,6 +13,7 @@
     <div class="accordion-body section">
         <div class="accordion-sidebar-color {{ .Get "customclass" }}">
             &nbsp;
+        <br>
         </div>
         <div class="accordion-content section">
             {{ $paragraphs := split .Inner "\n\n" }}
@@ -35,11 +36,11 @@
               coll[i].addEventListener("click", function() {
                 this.classList.toggle("active");
                 var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    }
+                if (content.style.maxHeight){
+                  content.style.maxHeight = null;
+                } else {
+                  content.style.maxHeight = content.scrollHeight + "px";
+                }
               });
             }
             </script>

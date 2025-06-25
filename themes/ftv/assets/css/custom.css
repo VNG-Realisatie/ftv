@@ -268,11 +268,18 @@ td, th {
     float:left;
     width: 900px;
     cursor: pointer;
+    display: flex;
+    max-height:100%;
 }
 
 .accordion-header::after {
   content: "";
   clear: both;
+}
+
+.accordion-header h4 {
+    padding-top:0px;
+    width:800px;
 }
 
 .accordion-sidebar-color {
@@ -285,13 +292,14 @@ td, th {
     width: 24px;
     float: left;
     margin: 0 10px 0 10px;
+    align-items: stretch;
 }
 
 .accordion-body {
     float:left;
-    max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+    max-height:0;
 }
 
 .accordion-content {
@@ -301,8 +309,4 @@ td, th {
 
 .accordion-content .section {
     float:left;
-}
-
-.accordion-header h4 {
-    padding-top:0px;
 }
