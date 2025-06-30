@@ -10,12 +10,12 @@
             <h4 class="nl-heading nl-heading--level-4 rhc-heading">{{ .Get "title" }}</h4>
         </div>
     </div>
-    <div class="accordion-body section">
-        <div class="accordion-sidebar-color {{ .Get "customclass" }}">
+    <div class="accordion-body section flex">
+        <div class="accordion-sidebar-color w-[16px] {{ .Get "customclass" }}">
             &nbsp;
         <br>
         </div>
-        <div class="accordion-content section">
+        <div class="accordion-content section no-scrollbar w-[1008px]">
             {{ $paragraphs := split .Inner "\n\n" }}
             {{ range $paragraphs }}
                 {{ if ne (trim . " ") "" }}
@@ -39,7 +39,7 @@
                 if (content.style.maxHeight){
                   content.style.maxHeight = null;
                 } else {
-                  content.style.maxHeight = content.scrollHeight + "px";
+                  content.style.maxHeight = "100%";
                 }
               });
             }

@@ -28,6 +28,10 @@
     --color-rhc-color-roze-100: #FBDEF0;
 }
 
+@utility no-scrollbar {
+    @apply [scrollbar-width:none] [&::-webkit-scrollbar]:hidden;
+}
+
 .ftv-hero-paragraph {
     color: var(--color-white);
     font-size: 20px;
@@ -285,7 +289,7 @@ td, th {
 .accordion-sidebar-color {
     width: 16px;
     float: left;
-    margin: 0 10px 0 10px;
+    margin: 0 0 0 10px;
 }
 
 .accordion-sidebar-icon {

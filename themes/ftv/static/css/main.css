@@ -252,6 +252,12 @@
   .ml-25 {
     margin-left: calc(var(--spacing) * 25);
   }
+  .no-scrollbar {
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
   .block {
     display: block;
   }
@@ -321,6 +327,9 @@
   .w-15 {
     width: calc(var(--spacing) * 15);
   }
+  .w-\[16px\] {
+    width: 16px;
+  }
   .w-\[18px\] {
     width: 18px;
   }
@@ -344,6 +353,9 @@
   }
   .w-\[654px\] {
     width: 654px;
+  }
+  .w-\[1008px\] {
+    width: 1008px;
   }
   .w-\[1024px\] {
     width: 1024px;
@@ -12640,7 +12652,7 @@ td, th {
 .accordion-sidebar-color {
   width: 16px;
   float: left;
-  margin: 0 10px 0 10px;
+  margin: 0 0 0 10px;
 }
 .accordion-sidebar-icon {
   width: 24px;
