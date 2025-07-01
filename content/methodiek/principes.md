@@ -13,12 +13,17 @@ title: "De principes van EAM"
 </div>
 <div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-groen-25">
    <p>
-      <a href="../standaarden">De FTV-standaarden</a>
+      <a href="../authzen-nlgov">AuthZEN NLGov</a>
    </p>
 </div>
 <div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-groen-25">
    <p>
-      <a href="../federatief">Federatief EAM</a> 
+      <a href="../logboek-toegangsbeslissingen">Logboek Toegangsbeslissingen</a>
+   </p>
+</div> 
+<div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-groen-25">
+   <p>
+      <a href="../register-toegangsbeleid">Register Toegangsbeleid</a>
    </p>
 </div> 
 </div>
@@ -118,10 +123,8 @@ De principes van EAM en de PxP architectuur geven goede richtlijnen voor impleme
 
 ![Schema van de drie FTV-standaarden](../methodiek-3-standaarden.png)
 
-1. **AuthZEN**. De wijze waarop de PEP het toegangsverzoek stelt en de wijze waarop de PDP het antwoord geeft. Kern daarvan is een informatiemodel. Er is gekozen voor de AuthZEN standaard als basis.
-2. **Register toegangsbeleid**. Dit gaat over de eisen die gesteld worden aan het PAP zodat policies goed opgeslagen en opgehaald worden, inclusief versiebeheer.
-3. **Logboek toegangsbeslissingen**. Een logboek waarin genomen toegangsbeslissingen worden bijgehouden.
-
-[Deze standaarden](../standaarden) zijn op de volgende pagina verder uitgewerkt.
+1. **[AuthZEN](../authzen-nlgov)**. De wijze waarop de PEP het toegangsverzoek stelt en de wijze waarop de PDP het antwoord geeft. Kern daarvan is een informatiemodel. Er is gekozen voor de AuthZEN standaard als basis.
+2. **[Logboek toegangsbeslissingen](../logboek-toegangsbeslissingen)**. Een logboek waarin genomen toegangsbeslissingen worden bijgehouden.
+3. **[Register toegangsbeleid](../register-toegangsbeleid)**. Dit gaat over de eisen die gesteld worden aan het PAP zodat policies goed opgeslagen en opgehaald worden, inclusief versiebeheer.
 
 {{< /chapter/section >}}
