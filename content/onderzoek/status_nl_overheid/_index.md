@@ -30,9 +30,7 @@ title: "Status NL overheid"
 
 
 {{< chapter/section title="Status bij de Nederlandse overheid">}}
-Om een beeld te krijgen van de staat van toegangsverlening is een inventarisatie gemaakt.
-Er is gekeken naar een dwardoorsnede van de potentiële deelnemers aan het toekomstige Federatieve Datastelsel (FDS). Dat zijn de
-basisregistraties, de sectorale registraties en alle systemen die daar gebruik van maken.
+Om inzicht te krijgen in de huidige situatie rond toegangsverlening, is een inventarisatie gedaan. Daarbij is gekeken naar een dwarsdoorsnede van organisaties die in de toekomst kunnen meedoen aan het Federatief Datastelsel (FDS). Dat zijn bijvoorbeeld basisregistraties, sectorale registraties en systemen die daarop aansluiten.
 
 De inventarisatie bestaat uit:
 
