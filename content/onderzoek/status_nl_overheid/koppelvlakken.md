@@ -8,18 +8,28 @@ Koppelvlakstandaarden beschrijven hoe systemen met elkaar koppelen. Dat gaat ver
 Federatieve Toegangsverlening (FTV) stelt geen nieuwe koppelvlakstandaard voorstellen, maar een nieuwe invulling van het aspect autorisatie daarbovenop.
 
 De volgende koppelstandaarden zijn relevant:
-- **[Digikoppeling](https://www.logius.nl/domeinen/gegevensuitwisseling/digikoppeling/documentatie)**. Een set van standaarden en afspraken over koppelvlakken die o.a. de encryptie regelt (de sessielaag).
-Digikoppeling omvat (boven op een encryptielaag) de standaarden ebMS, WUS, REST en Grote Berichten, die elk een berichtenstandaard beschrijven (de applicatielaag).
-  - WUS is een samentrekking van drie wat oudere standaarden: WSDL, UDDI en SOAP. Digikoppeling beschrijft de Nederlandse regels over het gebruik daarvan.
-  - ebMS gaat over asynchroon uitwisselen met betrouwbare aflevering.
-  - Grote Berichten gaat over het uitwisselen van grote berichten en dan over WUS of ebMS2.
-  - REST is een standaard die wereldwijd voor alle moderne APIs gebruikt wordt. De beschrijving onder Digikoppeling zegt meer over hoe de Nederlandse overheid REST toepast.
-- **[StUF](https://standaarden.vng.nl/StUF-standaarden)**. Een standaard bovenop WUS die een XML-formaat voor berichtenuitwisseling beschrijft.
-- **[HaalCentraal](https://vng-realisatie.github.io/Haal-Centraal/)**. Een set van afspraken en standaarden bovenop Digikoppeling REST, specifiek voor basisregistraties.
-- **[FSC](https://gitlab.com/commonground/nlx/fsc-nlx)**. Een recente koppelvlakstandaard die in het programma Federatief Datastelsel (FDS) ontwikkeld is.
 
-Voor dit project stellen we dat ebMS2, WUS en Grote Berichten een oudere generatie zijn en niet als APIs gezien worden
-in onze terminologie. StUF, REST, HaalCentraal en Federatieve Service Connectiviteit (FSC) zijn wel in scope.
+### Digikoppeling
+
+**[Digikoppeling](https://www.logius.nl/domeinen/gegevensuitwisseling/digikoppeling/documentatie)** is een set van standaarden en afspraken over koppelvlakken die o.a. de encryptie regelt (de sessielaag).
+Digikoppeling omvat (boven op een encryptielaag) de standaarden ebMS, WUS, REST en Grote Berichten, die elk een berichtenstandaard beschrijven (de applicatielaag).
+- WUS is een samentrekking van drie wat oudere standaarden: WSDL, UDDI en SOAP. Digikoppeling beschrijft de Nederlandse regels over het gebruik daarvan.
+- ebMS gaat over asynchroon uitwisselen met betrouwbare aflevering.
+- Grote Berichten gaat over het uitwisselen van grote berichten en dan over WUS of ebMS2.
+- REST is een standaard die wereldwijd voor alle moderne APIs gebruikt wordt. De beschrijving onder Digikoppeling zegt meer over hoe de Nederlandse overheid REST toepast.
+
+### StUF
+
+**[StUF](https://standaarden.vng.nl/StUF-standaarden)** is een standaard bovenop WUS die een XML-formaat voor berichtenuitwisseling beschrijft.
+
+### HaalCentraal
+
+**[HaalCentraal](https://vng-realisatie.github.io/Haal-Centraal/)** is een set van afspraken en standaarden bovenop Digikoppeling REST, specifiek voor basisregistraties.
+
+### FSC
+**[FSC](https://gitlab.com/commonground/nlx/fsc-nlx)** is een recent ontwikkelde koppelvlakstandaard die in het programma Federatief Datastelsel (FDS) ontwikkeld is.
+
+ebMS2, WUS en Grote Berichten worden binnen dit project beschouwd als standaarden van een oudere generatie en niet als APIs. StUF, REST, HaalCentraal en Federatieve Service Connectiviteit (FSC) zijn wel in scope.
 {{< /chapter/section >}}
 {{< chapter/section title="Autorisatie in de koppelvlakstandaarden" >}}
 ### StUf
