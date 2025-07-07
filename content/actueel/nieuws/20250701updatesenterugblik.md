@@ -14,7 +14,7 @@ Tijdens deze meeting gaven de subwerkgroepen een update en blikten de deelnemers
 De subwerkgroep Juridisch Kader heeft de scope van het juridische kader vastgesteld.
 Dit kader zal gelden voor toepassingen binnen de overheid. De subwerkgroep werkt nu aan een structuur die in een volgende sessie wordt besproken.
 
-De  subwerkgroep Logboek Toegangsbeslissing publiceerde een werkversie van de standaard.
+De subwerkgroep Authorization Decision Log (voorheen: Logboek Toegangsbeslissing) publiceerde een werkversie van de standaard.
 Deze versie is beschikbaar voor review. De Nederlandse teksten worden nog (verder) vertaald naar het Engels, conform de afspraak voor technische documentatie.
 De scope van dit logboek sluit aan bij die van logboek Dataverwerkingen: de interface maakt inzien en opslaan mogelijk, maar niet het beheer.
 
