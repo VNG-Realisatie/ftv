@@ -54,6 +54,7 @@ Data voor de volgende bijeenkomsten vanaf september volgen na de zomervakantie.
 
 #### Werkgroep FTV
 
+- 1 juli: Evaluatie ([Notulen]({{% relref "evaluatie" %}}))
 - 17 juni: Linked Data ([Notulen]({{% relref "linked-data" %}}))
 - 3 juni: AuthZEN  ([Notulen]({{% relref "authzen" %}}))
 - 20 mei: Policies ([Notulen]({{% relref "policies" %}}))
