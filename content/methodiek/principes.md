@@ -8,22 +8,22 @@ title: "De principes van EAM"
 <div class="sub-navigation-wrapper">
 <div class="sub-navigation-tab-selected utrecht-paragraph pt-1 sub-navigation-tab">
    <p>
-      De principes van EAM
+      De principes
    </p>
 </div>
 <div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-groen-25">
    <p>
-      <a href="../authzen-nlgov">AuthZEN NLGov</a>
+      <a href="../authzen-nlgov">AuthZEN</a>
    </p>
 </div>
 <div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-groen-25">
    <p>
-      <a href="../logboek-toegangsbeslissingen">Logboek Toegangsbeslissingen</a>
+      <a href="../logboek-toegangsbeslissingen">Logboek</a>
    </p>
 </div> 
 <div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-groen-25">
    <p>
-      <a href="../register-toegangsbeleid">Register Toegangsbeleid</a>
+      <a href="../register-toegangsbeleid">Register toegangsbeleid</a>
    </p>
 </div> 
 </div>
