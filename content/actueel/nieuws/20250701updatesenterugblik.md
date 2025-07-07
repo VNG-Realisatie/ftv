@@ -2,7 +2,7 @@
 type: 'nieuws'
 Title: Werkgroep FTV updates en terugblik 
 date: '2025-07-01'
-summary: "Op dinsdag 1 juli gaven de subewerkgroepen een update en blikte de werkgroep Federatieve Toegangsverlening (FTV) terug."
+summary: "Op dinsdag 1 juli gaven de subwerkgroepen een update en blikte de werkgroep Federatieve Toegangsverlening (FTV) terug."
 ---
 
 {{< nieuws/header title="Werkgroep: updates en terugblik" >}}
@@ -10,7 +10,7 @@ Op dinsdag 1 juli kwam de werkgroep Federatieve Toegangsverlening (FTV) bijeen v
 Tijdens deze meeting gaven de subwerkgroepen een update en blikten de deelnemers terug op de werkwijze en voortgang van de werkgroep gedurende de afgelopen vier maanden.  
 {{< /nieuws/header >}}
 
-{{< chapter/section title="Update subewrkgroepen" level="3">}}
+{{< chapter/section title="Update subwerkgroepen" level="3">}}
 De subwerkgroep Juridisch Kader heeft de scope van het juridische kader vastgesteld.
 Dit kader zal gelden voor toepassingen binnen de overheid. De subwerkgroep werkt nu aan een structuur die in een volgende sessie wordt besproken.
 
