@@ -1,6 +1,6 @@
 ---
 type: 'nieuws'
-Title: Werkgroep FTV: updates en terugblik 
+Title: Werkgroep FTV updates en terugblik 
 date: '2025-07-01'
 summary: "Op dinsdag 1 juli gaven de subewerkgroepen een update en blikte de werkgroep Federatieve Toegangsverlening (FTV) terug."
 ---
