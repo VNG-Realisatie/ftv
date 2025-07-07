@@ -33,7 +33,7 @@ Michiel Trimpe (architect FTV) zal dit voorstel bespreken met de AuthZEN werkgro
 
 {{< chapter/section title="Updates uit de subwerkgroepen" level="3">}}
 De werkgroep kreeg korte terugkoppelingen van twee subwerkgroepen: 
--	**Decision Log** (voorheen: Logboek Toegangsverlening) werkt aan de verdere uitwerking van de standaard, waarbij Engels de voertaal is. De documentatie wordt vertaald en gepubliceerd op een aparte website. Binnen de werkgroep is discussie over het al dan niet verbreden van de scope naar Europees of internationaal niveau. Michiel Trimpe zal dit onderwerp inbrengen bij de werkgroep AuthZEN van de OpenID Foundation. 
+-	**Authorization Decision Log** (voorheen: Logboek Toegangsverlening) werkt aan de verdere uitwerking van de standaard, waarbij Engels de voertaal is. De documentatie wordt vertaald en gepubliceerd op een aparte website. Binnen de werkgroep is discussie over het al dan niet verbreden van de scope naar Europees of internationaal niveau. Michiel Trimpe zal dit onderwerp inbrengen bij de werkgroep AuthZEN van de OpenID Foundation. 
 - **AuthZEN NL Gov-profiel** heeft gesproken over de opbouw van het NL Gov profiel in de internationale standaard. Het voorstel is om te werken met een kopie met aanpassingen. Met behulp van tooling kan een delta getoond worden die zichtbaar maakt welke onderdelen voor Nederland worden aangepast of aangevuld. 
 {{< /chapter/section >}}
 
