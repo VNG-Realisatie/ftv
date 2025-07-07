@@ -65,7 +65,6 @@ De subwerkgroep AuthZEN NLGov deelt de eerste versie van [AuthZEN NLGov](https:/
 *Gerard van der Hoeven* geeft aan dat AuthZEN niet voor inter-organisatorisch gebruik bedoeld is terwijl iSHARE dat wel heeft. De structuur die iSHARE nu gebruikt voor policies is rudimentair. iSHARE heeft door de jaren heen allerlei doorontwikkelingen gedaan op policy structuren. Daar valt juist heel veel van te gebruiken. Zeker als er cross-organisatorisch ook juridische dekking voor moet zijn. Daar zitten stevige verschillen in en AuthZEN gebruiken en er stukken aanbouwen die ontbrekken is opnieuw ontwikkelen.
 
 *Michiel Trimpe* geeft aan dat AuthZEN gekozen is omdat het een initiatief is van een groep van Policy Decision Point leveranciers. Die leveranciers bemerkten dat het inderdaad moeilijk was om policies tussen leveranciers te standaardiseren. Ze hebben toen gekozen om een klein stuk 'consensus af te pellen.' Dit was dat iedereen het er mee eens was dat toegangsverzoeken en -beslissingen daarop goed gemodelleerd moeten kunnen worden en dat ze dit allen delen. Dat is dus ook alles wat AuthZEN zegt en we zien dus ook geen reden waarom dit niet samen kan gaan met iSHARE.
-
 {{< /chapter/section >}}
 
 {{< chapter/section title="Evaluatie" >}}
