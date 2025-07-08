@@ -7,30 +7,14 @@ Title: 9. Evaluatie
 
 {{< /chapter/section >}}
 
-{{< chapter/section title="Aanwezigen" >}}
-- ...
-- ..
-- .
-{{< /chapter/section >}}
-
 {{< chapter/section title="Agenda" >}}
 - Welkom 
 - Update subwerkgroepen
 - Evaluatie
 {{< /chapter/section >}}
 
-{{< chapter/section title="Bijlages" >}} 
-- [Opname](https://github.com/VNG-Realisatie/ftv/raw/refs/heads/main/static/videos/20250601-evaluatie.mp4)
-{{< /chapter/section >}}
+{{< chapter/section title="Planning" >}}
+In verband met ziekte zijn de notulen nog niet beschikbaar. 
 
-{{< chapter/section title="Welkom" >}}
-
-{{< /chapter/section >}}
-
-{{< chapter/section title="Update subwerkgroepen" >}}
-
-{{< /chapter/section >}}
-
-{{< chapter/section title="Evaluatie" >}}
-
+Naar verwachting komen deze op 9 juli 2025 beschikbaar.
 {{< /chapter/section >}}
