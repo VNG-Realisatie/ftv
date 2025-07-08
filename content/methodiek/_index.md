@@ -16,20 +16,20 @@ De kern van het project is de gekozen methodiek, oftewel de voorgestelde werkwij
     <div class="section-home-box">
         <a href="principes">
             <h2 class="nl-heading nl-heading--level-4 rhc-heading">
-                De principes van EAM
+                De principes
             </h2>
             <p class="utrecht-paragraph">
-                De basisprincipes van Externalized Authorization Management (EAM)
+                De basisprincipes van Externalized Authorization Management (EAM) uitgelegd
             </p>
         </a>
     </div>
     <div class="section-home-box">
         <a href="authzen-nlgov">
            <h2 class="nl-heading nl-heading--level-4 rhc-heading">
-              AuthZEN NLGov
+              AuthZEN
            </h2>
             <p class="utrecht-paragraph">
-                Het Nederlands profiel op de OpenID standaard voor EAM
+                De gekozen OpenID standaard voor toegangsverlening, en het Nederlandse overheidsprofiel daarop
             </p>
         </a>
     </div>
@@ -39,7 +39,7 @@ De kern van het project is de gekozen methodiek, oftewel de voorgestelde werkwij
               Logboek Toegangs- beslissingen
            </h2>
             <p class="utrecht-paragraph">
-                Verantwoording van toegangsverlening op basis van AuthZEN
+                De standaard voor verantwoording van genomen beslissingen
             </p>
         </a>
     </div>
@@ -49,7 +49,7 @@ De kern van het project is de gekozen methodiek, oftewel de voorgestelde werkwij
               Register Toegangsbeleid
            </h2>
             <p class="utrecht-paragraph">
-                Wederzijds inzicht bieden in toegangsbeleid.
+                Een standaard voor opslag en inzage in toegangsbeleid
             </p>
         </a>
     </div>
@@ -61,9 +61,9 @@ FTV kiest voor het architectuurpatroon van [Externalized Authorization Managemen
 
 Standaardisatie is bij uitstek het middel om aansluiting en uitwisseling tussen systemen te vergemakkelijken. [Open standaarden](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/open-standaarden/) hebben daarbij de sterke voorkeur, alsmede het voortbouwen op bestaande internationale standaarden.
 
-Daarvoor werkt FTV aan het [AuthZEN NLGov profiel](authzen-nlgov). Een Nederlands profiel op de internationale OpenID standaard genaamd AuthZEN die het EAM architectuurpatroon standaardiseert.
+Daarvoor werkt FTV aan het [AuthZEN NLGov profiel](authzen-nlgov). Een Nederlands profiel op de internationale OpenID standaard [AuthZEN](https://openid.net/wg/authzen/) die het EAM-architectuurpatroon standaardiseert.
 
-Om het mogelijk te maken om verleende toegangsbeslissingen te verantwoorden werkt FTV ook aan het [Logboek Toegangsbeslissingen](logboek-toegangsbeslissingen) (Decision Log.) Deze gebruikt het AuthZEN informatiemodel om historische beslissingen te kunnen verantwoorden zonder onnodig beslisgegevens te dupliceren.
+Om het mogelijk te maken om verleende toegangsbeslissingen te verantwoorden werkt FTV ook aan het [Logboek Toegangsbeslissingen](logboek-toegangsbeslissingen) (Authorization Decision Log). Deze gebruikt het AuthZEN informatiemodel om historische beslissingen te kunnen verantwoorden zonder onnodig beslisgegevens te dupliceren.
 
-Om organistaties, afdelingen en deelnemers aan (federatieve) stelsels inzicht te bieden in wederzijds toegangsbeleid zal FTV in 2026 ook de standaard [Register Toegangsbeleid](register-toegangsbeleid) ontwikkelen.
+Om organitaties, afdelingen en deelnemers aan (federatieve) stelsels inzicht te bieden in wederzijds toegangsbeleid zal FTV in 2026 ook de standaard [Register Toegangsbeleid](register-toegangsbeleid) ontwikkelen.
 {{< /chapter/section >}}
