@@ -4,7 +4,7 @@ type: 'chapter'
 ---
 
 {{< chapter/header title="Over het project" bg="yellow" icon="images/sectie-over.svg">}}
-Het project Federatieve Toegangsverlening (FTV) richt zich op het ontwikkelen van een standaardwerkwijze voor toegangsverlening bij het uitwisselen van gegevens tussen overheidsorganisaties. Het project is een initiatief van de Generieke Digitale Infrastructuur (GDI) en sluit aan op bredere programma’s zoals het Federatief Datastelsel (FDS) en de Interbestuurlijke Datastrategie (IBDS).
+Het project Federatieve Toegangsverlening (FTV) ontwikkelt een standaardwerkwijze voor toegangsverlening bij het uitwisselen van gegevens tussen overheidsorganisaties. Het project is een initiatief van de Generieke Digitale Infrastructuur (GDI) en sluit aan bij bredere programma’s, zoals het Federatief Datastelsel (FDS) en de Interbestuurlijke Datastrategie (IBDS).
 {{< /chapter/header >}}
 
 {{< chapter/header bg="lightyellow" customclass="section-box-banner">}}
@@ -18,7 +18,7 @@ Het project Federatieve Toegangsverlening (FTV) richt zich op het ontwikkelen va
                 De opdracht
             </h2>
             <p>
-               Een overzicht van de opdracht die vanuit de GDI verstrekt is; het uitgangspunt van FTV.
+               Omschrijving van doel, scope en planning van het project.
             </p>
         </a>
     </div>
