@@ -36,13 +36,17 @@ De [AuthZEN Authorization API](https://openid.net/wg/authzen/) is een initiatief
 
 ![Het OpenID logo](/ftv/images/logo-openid.png)
 
+{{< /chapter/header >}}
+
+{{< chapter/section title="Over AuthZEN" level="3">}}
+
 AuthZEN gaat uit van de PxP architectuur, en bekijkt stap voor stap welke gebieden zinvol en haalbaar gestandaardiseerd kunnen worden. 
 
 Het eerste gebied dat AuthZEN heeft uitgewerkt is de interface tussen PEP en PDP. Dat zijn de soort vragen die gesteld kunnen worden aan de PDP, en de antwoorden daarop. 
 
 {{< /chapter/header >}}
 
-{{< chapter/section title="Informatiemodel" level="3" id="informatiemodel">}}
+{{< chapter/section title="Informatiemodel" level="4" id="informatiemodel">}}
 
 Als basis is eerst een informatiemodel uitgewerkt. Dat beschrijft de velden die in een verzoek moeten of kunnen staan, en hun mogelijke waarden. In de PxP-architectuur zijn deze vier onderdelen benoemd:
 
@@ -57,7 +61,7 @@ In [hoofdstuk 5 van de AuthZEN specificatie](https://openid.net/specs/authorizat
 
 {{< /chapter/section >}}
 
-{{< chapter/section title="APIs" level="3">}}
+{{< chapter/section title="APIs" level="4">}}
 
 AuthZEN 1.0 definieert vervolgens aan aantal APIs die gebruik maken van het informatiemodel:
 
@@ -67,7 +71,7 @@ AuthZEN 1.0 definieert vervolgens aan aantal APIs die gebruik maken van het info
 
 {{< /chapter/section >}}
 
-{{< chapter/section title="Status" level="3">}}
+{{< chapter/section title="Status" level="4">}}
 
 De [AuthZEN standaard versie 1.0](https://openid.net/specs/authorization-api-1_0-01.html) heeft nu de status Implementers Draft. Daarin zit een informatiemodel zoals boven beschreven en de 3 APIs. Deze versie zal midden 2025 aangeboden worden ter consultatie. 
 
@@ -75,7 +79,11 @@ Diverse commerciële toegangsverleningsproducten en API-gateways implementeren d
 
 {{< /chapter/section >}}
 
-{{< chapter/section title="AuthZEN NL Gov" level="3">}}
+{{< chapter/section title="Profielen" level="3">}}
+
+{{< /chapter/section >}}
+
+{{< chapter/section title="AuthZEN NL Gov" level="4">}}
 
 Voor de Nederlandse overheid wordt een profiel bovenop AuthZEN ontwikkeld. Deze heeft als volledige naam NLGov Profile for OpenID AuthZEN Authorization API. Hierin worden de noodzakelijke toevoegingen opgenomen die de Nederlandse wet, de digitale strategie en de regels van het FDS van toegang vragen.
 
@@ -85,7 +93,20 @@ Na acceptatie door de werkgroep zal deze aangeboden worden bij Logius voor behee
 
 {{< /chapter/section >}}
 
-{{< chapter/section title="En OAuth dan?" level="3">}}
+{{< chapter/section title="API Gateway profiel" level="4">}}
+
+Een PEP kan grofweg op twee logische plekken zitten: in een applicatie/API of in een API Gateway. Als de PEP in een applicatie of API zit dan is het aan de ontwikkelaars om het informatiemodel te vullen vanuit de code. Zij weten waar de informatie vandaan komt en schrijven uit welk veld waar moet. 
+
+Het is ook een optie om dat juist niet te doen en de aanroep te onderscheppen in de API Gateway. Dit kan zijn vanuit een bewuste keus om dat deel ook te externaliseren, maar kan ook zijn om een bestaande applicatie of API niet aan te hoeven passen. Bijvoorbeeld omdat deze ouder is en geen ontwikkelteam meer van is, of dat het een extern systeem betreft waarvan aanpassen niet mogelijk is. Dan kan het HTTP-verzoek afgevangen worden, en de attributen daaruit in het informatiemodel te zetten. Ook hier is een standaard op zijn plaats. AuthZEN schrijft hiervoor het [AuthZEN REST API Gateway profiel](https://hackmd.io/@oidf-wg-authzen/apigateway). Dit profiel is nog een voorstel. Het streven is dit aan versie 1.1 toe te voegen.
+
+{{< /chapter/section >}}
+
+
+{{< chapter/section title="Zijn er alternatieven?" level="3">}}
+FTV is niet het enige project dat werkt aan standaardisatie van toegang. Vind hier [een overzicht van de belangrijkste projecten](/ftv/onderzoek/status_techniek/standaarden/). Dit overzicht is gemaakt in het kader van het vooronderzoek van het project.
+{{< /chapter/section >}}
+
+{{< chapter/section title="En OAuth dan?" level="4">}}
 
 [Open Authorisation (OAuth)](https://en.wikipedia.org/wiki/OAuth) is een bestaande open standaard voor autorisatie. Waarom nu dan nog een standaard? Het antwoord is dat AuthZEN een stuk reikwijdte toevoegt, bovenop OAuth.
 
@@ -97,8 +118,5 @@ In [dit artikel](/ftv/actueel/nieuws/20250611oauth-oidc-en-eam/) lees je meer ov
 
 {{< /chapter/section >}}
 
-{{< chapter/section title="Zijn er alternatieven?" level="4">}}
-FTV is niet het enige project dat werkt aan standaardisatie van toegang. Vind hier [een overzicht van de belangrijkste projecten](/ftv/onderzoek/status_techniek/standaarden/). Dit overzicht is gemaakt in het kader van het vooronderzoek van het project.
-{{< /chapter/section >}}
 
 
