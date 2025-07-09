@@ -35,7 +35,7 @@ type: 'chapter'
 {{< chapter/section title="Doelstellingen" level="3">}}
 Projectfase 2 heeft de volgende doelen met de daarbij behorende werkzaamheden:
 
-**Een standaard voorstellen door middel van:**
+**Een standaard voorstellen door:**
 
   - Het schrijven en openbaar publiceren van de voorgestelde standaard in [OpenAPI Specification (OAS)](https://swagger.io/specification/)-formaat;
   - Het periodiek bijeenbrengen van een werkgroep voor co-creatie;
@@ -68,7 +68,7 @@ De governance over het project verloopt inhoudelijk en organisatorisch via Inter
 
 {{< chapter/section title="Randvoorwaarden en risico’s" level="3">}}
 
-### Inbedding in federatieve context
+**Inbedding in federatieve context**
 
 FTV zal op zichzelf minder tractie hebben dan in de juiste context. Toegangsverlening is bij de meeste registraties en afnemers nu al geregeld, zij het met de nodige moeite en in sommige opzichten niet correct. Zonder de drijvende kracht van IBDS en FDS zal de adoptie waarschijnlijk achterblijven. Daarom is het cruciaal dat FTV wordt meegenomen in projecten zoals de Proof of Concepts van FDS.
 Ook is aansluiting bij, en wederzijdse medewerking van FSC en LDV essentieel om een complete oplossing te bieden.
