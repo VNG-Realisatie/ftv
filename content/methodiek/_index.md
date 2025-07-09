@@ -11,7 +11,7 @@ De kern van het project is de gekozen methodiek, oftewel de voorgestelde werkwij
 
 {{< chapter/header bg="lightgreen" customclass="section-box-banner">}}
 
-### In deze sectie
+### Lees verder
 <div class="section-home-wrapper" role="navigation">
     <div class="section-home-box">
         <a href="principes">
