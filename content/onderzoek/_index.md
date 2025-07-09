@@ -4,12 +4,12 @@ type: 'chapter'
 ---
 
 {{< chapter/header title="Onderzoek" bg="blue" icon="images/sectie-onderzoek.svg">}}
-Voorafgaand aan het definiëren van een werkwijze en het opstellen van de standaarden is uitgebreid onderzoek gedaan. Op basis van dit onderzoek zijn de eisen opgesteld voor de totaaloplossing. De samenvatting van de onderzoeksresultaten staat hieronder.
+Voorafgaand aan het definiëren van een werkwijze en het opstellen van de standaarden is uitgebreid onderzoek gedaan. Op basis van dit onderzoek zijn de eisen opgesteld voor de totaaloplossing.
 {{< /chapter/header >}}
 
 {{< chapter/header bg="lightblue" customclass="section-box-banner">}}
 
-### In deze sectie
+### Lees verder
 
 <div class="section-home-wrapper" role="navigation">
     <div class="section-home-box">
@@ -18,7 +18,7 @@ Voorafgaand aan het definiëren van een werkwijze en het opstellen van de standa
                 Technische analyse
             </h2>
             <p class="utrecht-paragraph">
-                De huidige stand van techniek in het veld van toegangsverlening is in kaart gebracht. 
+                Analyse van methoden, standaarden en producten voor moderne toegangsverlening. 
             </p>
         </a>
     </div>
@@ -28,7 +28,7 @@ Voorafgaand aan het definiëren van een werkwijze en het opstellen van de standa
               Inventarisatie bij de overheid
            </h2>
             <p class="utrecht-paragraph">
-               Er is onderzocht hoe toegangsverlening op dit moment binnen de Nederlandse overheid is georganiseerd.
+               Onderzoek naar hoe toegangsverlening nu is ingericht binnen de Nederlandse overheid.
             </p>
         </a>
     </div>
@@ -38,7 +38,7 @@ Voorafgaand aan het definiëren van een werkwijze en het opstellen van de standa
               Eisen aan de oplossing
            </h2>
             <p class="utrecht-paragraph">
-               De eisen aan een oplossing naar aanleiding van de overheidsstrategie en de huidige uitdagingen.
+               Omschrijving van eisen, oplossende elementen en wensen voor Federatieve Toegangsverlening (FTV).
             </p>
         </a>
     </div>
@@ -48,7 +48,7 @@ Voorafgaand aan het definiëren van een werkwijze en het opstellen van de standa
               Conclusie
            </h2>
             <p class="utrecht-paragraph">
-                Een samenvatting van de belangrijkste constateringen
+                Samenvatting van technische inzichten en kansen voor adoptie van FTV.
             </p>
         </a>
     </div>
