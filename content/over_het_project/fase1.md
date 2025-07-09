@@ -36,11 +36,11 @@ type: 'chapter'
 {{< chapter/section title="Doelstellingen" level="3">}}
 De beoogde resultaten van fase 1 zijn, zoals vastgelegd in de subsidie:
 
-1.	Een overzicht van de stakeholders
-2.	Inventarisatie van de huidige (meest voorkomende) geïmplementeerde oplossingen
-3.	Onderzoek naar mogelijke moderne oplossingen passend bij APIs
-4.	Plan van Aanpak fase 2
-5.	Agendering van een besluit voor het in gang zetten van fase 2 op programmeringstafel Gegevensuitwisseling / Toegang
+1.	Een overzicht van de stakeholders.
+2.	Inventarisatie van de meest voorkomende huidige geïmplementeerde oplossingen.
+3.	Onderzoek naar mogelijke moderne oplossingen passend bij APIs.
+4.	Plan van Aanpak fase 2.
+5.	Agendering van een besluit voor het in gang zetten van fase 2 op programmeringstafel Gegevensuitwisseling / Toegang.
 
 **In april 2025 is fase 1 afgerond. De methodiek is besproken aan de programmeringstafel toegang. Dit heeft geleid tot een positief advies en duidelijke richting voor fase 2.**
 
@@ -48,7 +48,7 @@ De beoogde resultaten van fase 1 zijn, zoals vastgelegd in de subsidie:
 
 {{< chapter/section title="Activiteiten" level="3">}}
 
-Het project beoogt een standaard voor te stellen. Zowel het verkrijgen van een status als standaard
+Het project Federatieve Toegangsverlening (FTV) beoogt een standaard voor te stellen. Zowel het verkrijgen van een status als standaard
 als de adoptie ervan vergen veel communicatie. Een belangrijk deel van de aanpak richt zich daarom op
 het verkennen van het terrein, het contact maken met de spelers en het bijeen brengen van een
 diverse community. Beleidsmakers, aanbieders en afnemers van gegevens, implementatiepartners en technische
@@ -85,14 +85,14 @@ De projectactiviteiten zijn ingedeeld volgens de bovengenoemde doelstellingen:
 Het voorstellen van een standaard en het verkrijgen van adoptie daarvan is niet eenvoudig. Dit zijn de belangrijkste risico’s die vooraf zijn geïdentificeerd.
 
 1. **Complexiteit.**
-   Gegevensuitwisseling is een complex gebied. Veel lagen van techniek, standaarden en producten, veel belangen en behoeftes.
-   Toegangsverlening is daar een onderdeel van dat raakt aan zowel techniek als inhoud, waardoor uitvoering en bestuur
+   Gegevensuitwisseling is een complex gebied. Er zijn veel lagen van techniek, standaarden en producten en er spelen veel belangen en behoeftes.
+   Toegangsverlening raakt aan zowel techniek als inhoud, waardoor uitvoering en bestuur
    betrokken moeten zijn. Dit is een belangrijke reden waarom praktische uitvoering tot nu toe federatief niet ver gekomen is,
    ondanks technische mogelijkheden en organisatorische bereidheid.
 
    Een standaard kan de complexiteit in beeld brengen en een deel van de complexiteit wegnemen. Zeker als er
    bouwstenen en/of voorzieningen geboden worden. Daarnaast zullen de eerste wegbereiders laten zien wat er mogelijk is
-   en een positief voorbeeld van adoptie laten zien.
+   en als positief voorbeeld van adoptie dienen.
 
 2. **Weerstand tegen verandering bij aanbieders en afnemers.**
    Nu zijn aanbiedende partijen vrij om toegangsverlening te implementeren zoals zij dat het beste achten. Dat hebben zij in de praktijk ook gedaan.
@@ -117,7 +117,7 @@ Het voorstellen van een standaard en het verkrijgen van adoptie daarvan is niet 
 
    - Aanbieders (of eigenlijk bronhouders) geven een taak uit handen en daarmee een stuk controle. Dat kan op weerstand stuiten.
    - Afnemers moeten meer verantwoording gaan afleggen. Ze zullen verplicht worden om verifieerbare verklaringen aan te vragen
-     en het gebruik daarvan te implementeren, en daarmee een risico lopen dat dat niet goed gebeurt. Er is een kans dat niet meegewerkt
+     en het gebruik daarvan te implementeren, en daarmee een risico lopen dat dit niet goed gebeurt. Er is een kans dat niet meegewerkt
      wordt om dat risico te vermijden.
 
 {{< /chapter/section >}}
@@ -126,8 +126,8 @@ Het voorstellen van een standaard en het verkrijgen van adoptie daarvan is niet 
 
 {{< img-url "images/planningfase1.png" "planning" >}}
 
-Fase 1 was oorsponkelijk gepland voor heel 2024. Door een late start op 1 juli was het budget nog niet geheel benut op de einddatum.
-Daarom is fase 1 met 2 maanden verlengd. Dankzij deze verlenging konden aan de resultaten een eerste versie van de standaard en een referentie-implementatie worden toegevoegd.
+Fase 1 was oorspronkelijk gepland voor heel 2024. Door een late start op 1 juli was het budget nog niet geheel benut op de einddatum.
+Daarom is fase 1 met twee maanden verlengd. Dankzij deze verlenging konden aan de resultaten een eerste versie van de standaard en een referentie-implementatie worden toegevoegd.
 
 {{< /chapter/section >}}
 {{< chapter/section title="Resultaten" >}}
@@ -138,7 +138,7 @@ Dit zijn resultaten van fase 1:
 **[Stakeholders](/ftv/onderzoek/status_nl_overheid/stakeholders)**
 - Er is een inventarisatie gemaakt van de stakeholders.
 - Er is contact gemaakt met de belangrijkste stakeholders, en uitleg gegeven over het project en de toekomstige standaard.
-- De werkgroep Federatieve Toegangsverlening (FTV) is van start gegaan.
+- De werkgroep FTV is van start gegaan.
 
 **[Inventarisatie bij de Nederlandse overheid](/ftv/onderzoek/status_nl_overheid/)**
 
