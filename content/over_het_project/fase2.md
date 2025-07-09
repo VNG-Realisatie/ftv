@@ -37,41 +37,41 @@ Projectfase 2 heeft de volgende doelen met de daarbij behorende werkzaamheden:
 
 **Een standaard voorstellen door middel van:**
 
-  - Het schrijven en openbaar publiceren van de voorgestelde standaard in [OpenAPI Specification (OAS)](https://swagger.io/specification/)-formaat.
-  -	Het periodiek bijeenbrengen van een werkgroep voor co-creatie.
-  -	Het organiseren van reviewrondes om inbreng op te halen bij stakeholders zoals bronhouders, implementatiepartners, belangengroepen, Logius, Generieke Digitale Infrastructuur (GDI) en meer.
+  - Het schrijven en openbaar publiceren van de voorgestelde standaard in [OpenAPI Specification (OAS)](https://swagger.io/specification/)-formaat;
+  - Het periodiek bijeenbrengen van een werkgroep voor co-creatie;
+  - Het organiseren van reviewrondes om inbreng op te halen bij stakeholders zoals bronhouders, implementatiepartners, belangengroepen, Logius, Generieke Digitale Infrastructuur (GDI) en meer;
   - Het verkrijgen van status via architectuurtafels en bij Logius via Forum Standaardisatie.
 
 **Draagvlak voor de standaard verkrijgen door:** 
 
-  -	Steun te verkrijgen van gezaghebbende partijen.
-  -	Een community op te zetten om voortgang en successen te communiceren en het gesprek te faciliteren.
+  -	Steun te verkrijgen van gezaghebbende partijen;
+  -	Een community op te zetten om voortgang en successen te communiceren en het gesprek te faciliteren;
   -	Twee grotere bijeenkomsten te organiseren vanuit DigiLab.
 
 **Positionering van de standaard door:**
 
-  - Aansluiting te maken en houden bij aanpalende projecten, zoals Federatief Datastelsel (FDS) met Federatieve Service Connectiviteit (FSC) en Logboek Dataverwerkingen (LDV) en internationale standaarden, zoals AuthZEN, IDSA, iShare en NEN.
+  - Aansluiting te maken en houden bij aanpalende projecten, zoals het Federatief Datastelsel (FDS) met Federatieve Service Connectiviteit (FSC) en Logboek Dataverwerkingen (LDV) en internationale standaarden, zoals AuthZEN, IDSA, iShare en NEN.
 
-**Bewijslast te leveren van het nut en de haalbaarheid van de standaard door:** 
+**Bewijslast leveren van het nut en de haalbaarheid van de standaard door:** 
 
-  - Een referentie-implementatie te maken en actief aan te bieden.
-  - Een proefopstelling te beschrijven en realiseren waarmee de praktische uitvoerbaarheid getoond wordt.
-  - Minstens twee pilot projecten te doen.
+  - Een referentie-implementatie te maken en actief aan te bieden;
+  - Een proefopstelling te beschrijven en realiseren waarmee de praktische uitvoerbaarheid getoond wordt;
+  - Minstens twee pilotprojecten te doen.
 
 **Implementatie faciliteren door:** 
 
-  - Ondersteuning te bieden aan projecten.
+  - Ondersteuning te bieden aan projecten;
   - Stappenplannen te bieden voor ontwerp, implementatie, test en uitrol van implementaties.
 
-De governance over het project verloopt inhoudelijk en organisatorisch via Interbestuurlijke Datastrategie (BDS) en FDS.
+De governance over het project verloopt inhoudelijk en organisatorisch via Interbestuurlijke Datastrategie (IBDS) en het FDS.
 {{< /chapter/section >}}
 
 {{< chapter/section title="Randvoorwaarden en risico’s" level="3">}}
 
 ### Inbedding in federatieve context
 
-FTV zal op zichzelf staand minder tractie hebben dan in de juiste context. Toegangsverlening is bij de meeste registraties en afnemers nu al geregeld, zij het met de nodige moeite en in sommige opzichten niet correct. Zonder de drijvende kracht van IBDS en FDS zal de adoptie waarschijnlijk achterblijven. Daarom is het cruciaal dat FTV wordt meegenomen in projecten zoals de PoC’s van FDS.
-Ook is aansluiting bij, en wederzijdse medewerking van, FSC en LDV essentieel om een complete oplossing te bieden.
+FTV zal op zichzelf minder tractie hebben dan in de juiste context. Toegangsverlening is bij de meeste registraties en afnemers nu al geregeld, zij het met de nodige moeite en in sommige opzichten niet correct. Zonder de drijvende kracht van IBDS en FDS zal de adoptie waarschijnlijk achterblijven. Daarom is het cruciaal dat FTV wordt meegenomen in projecten zoals de Proof of Concepts van FDS.
+Ook is aansluiting bij, en wederzijdse medewerking van FSC en LDV essentieel om een complete oplossing te bieden.
 
 ### Juridische en organisatorische context
 
@@ -88,7 +88,7 @@ quo te handhaven ('het gaat nu toch ook goed').
 
 {{< chapter/section title="Planning en status" level="3">}}
 {{< img-url "images/planningfase2.png" "planning" >}}
-Fase 2 is op 1 april 2025 begonnen. Resultaten worden hier gedeeld.
+Fase 2 is op 1 april 2025 begonnen. Op deze pagina worden de resultaten gedeeld zodra ze beschikbaar zijn.
 {{< /chapter/section >}}
 
 
