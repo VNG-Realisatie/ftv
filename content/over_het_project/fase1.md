@@ -40,7 +40,7 @@ De beoogde resultaten van fase 1 zijn, zoals vastgelegd in de subsidie:
 2.	Inventarisatie van de meest voorkomende huidige geïmplementeerde oplossingen.
 3.	Onderzoek naar mogelijke moderne oplossingen passend bij APIs.
 4.	Plan van Aanpak fase 2.
-5.	Agendering van een besluit voor het in gang zetten van fase 2 op programmeringstafel Gegevensuitwisseling / Toegang.
+5.	Agendering van een besluit voor het in gang zetten van fase 2 op programmeringstafel Gegevensuitwisseling/Toegang.
 
 **In april 2025 is fase 1 afgerond. De methodiek is besproken aan de programmeringstafel toegang. Dit heeft geleid tot een positief advies en duidelijke richting voor fase 2.**
 
