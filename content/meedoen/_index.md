@@ -9,7 +9,7 @@ Het project Federatieve Toegangsverlening (FTV) zoekt professionals die willen b
 
 {{< chapter/header bg="lightorange" customclass="section-box-banner">}}
 
-### In deze sectie
+### Lees verder
 
 <div class="section-home-wrapper" role="navigation">
     <div class="section-home-box">
