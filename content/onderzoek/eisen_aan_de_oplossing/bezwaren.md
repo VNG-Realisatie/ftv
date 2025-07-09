@@ -3,17 +3,17 @@ type: "chapter"
 title: "Bezwaren"
 ---
 {{< chapter/section title="Bezwaren van de bestaande oplossingen" level="1" >}}
-Onderstaand staan de grootste bezwaren die er tegen de huidige werkwijzen zijn beschreven.
+Het project Federatieve Toegangsverlening (FTV) heeft de bezwaren tegen de huidige werkwijzen geinventariseerd. De belangrijkste zijn:
 
 1. **Juridisch onjuist.**
-   In veel gevallen wordt toegangsverlening nu bepaald en gecontroleerd door de aanbieder. Er wordt van tevoren per dienst per afnemer een contract gesloten. Vervolgens vraagt de afnemer naar behoefte op, en toetst de aanbieder elke vraag aan het contract.
+   Nu bepaalt en controleert de aanbieder in veel gevallen de toegangsverlening. Vooraf wordt per dienst en per afnemer een contract gesloten. Vervolgens vraagt de afnemer naar behoefte op, en toetst de aanbieder elke vraag aan het contract.
 
    Dit is juridisch niet juist: de afnemer moet verantwoording afleggen aan een bestuursorgaan over verantwoord datagebruik, niet de aanbieder. De aanbieder mag erop vertrouwen dat afnemers hun verantwoordelijkheid kennen en nemen.
 
-   En dit is niet altijd praktisch uitvoerbaar, omdat toegang afhankelijk kan zijn van eigenschappen die alleen afnemer kent, zoals eigenschappen van de aanvragende medewerker. De aanbieder kan en wil niet op de hoogte zijn van details van elke afnemer.
+   Dit is niet altijd praktisch uitvoerbaar, omdat toegang afhankelijk kan zijn van eigenschappen die alleen de afnemer kent, zoals eigenschappen van de aanvragende medewerker. De aanbieder kan en wil niet op de hoogte zijn van details van elke afnemer.
 
 2. **Bewerkelijk.**
-   Als er veel afnemers zijn, zijn er ook veel contracten. Die vragen veel beheerinspanning, van ICT en ook van juridische afdelingen. Dit is onevenredig veel werk bij de aanbieder. Dat is niet per se rechtvaardig, omdat afnemers meestal meer baat hebben bij de dienst dan de aanbieders.
+   Veel afnemers betekent ook veel contracten. Die vragen tijd en aandacht van zowel ICT als juridische afdelingen. De beheerlast ligt grotendeels bij de aanbieder, terwijl de afnemer meestal meer profijt heeft van de dienst.
 
 3. **Beperkte flexibiliteit.**
    De regels worden over het algemeen vastgelegd in code. Aanpassingen van code vraagt relatief veel inspanning en doorlooptijd.
@@ -24,8 +24,8 @@ Onderstaand staan de grootste bezwaren die er tegen de huidige werkwijzen zijn b
 5. **Beperkte standaardisatie.**
    Omdat er geen breed gedragen standaardmethode is voor toegangsverlening hebben de meeste aanbieders een eigen methode gekozen, veelal ook zelf bedacht. Dat heeft voor de hand liggende nadelen:
 
-   - ieder doet het denk- en bouwwerk voor zich, dat kost tijd en geld
-   - het kost meer moeite elkaar te begrijpen
-   - afnemers moeten voor elke aanbieder weer zo goed als van voren af aan beginnen
+   - iedere aanbieder bedenkt en bouwt zijn eigen oplossing: dat kost tijd en geld;
+   - het kost meer moeite elkaar te begrijpen;
+   - afnemers moeten voor elke aanbieder weer zo goed als van voren af aan beginnen.
 
 {{< /chapter/section >}}
