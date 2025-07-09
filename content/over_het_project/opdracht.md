@@ -52,7 +52,7 @@ De scope van het project is als volgt afgebakend:
 - Het gaat hier primair om geautomatiseerde gegevensuitwisseling via APIs tussen systemen, in tegenstelling tot mens-systeem interfaces;
 - Het toepassingsgebied is uitwisseling tussen Nederlandse overheidsorganisaties. 
 
-[Lees meer over de afbakening van de scope](scope).
+[Lees meer over de afbakening van de scope](/ftv/over_het_project/scope/).
 {{< /chapter/section >}}
 
 {{< chapter/section title="Uitvoering" level="3">}}
@@ -86,7 +86,7 @@ In fase 2 richt het project zich op het voorstellen, uitwerken en positioneren v
 * 1 september 2025: AuthZEN NL GOV 1.1 naar consultatie, met ‘nee, tenzij’
 * 31 december 2025: 1.0 in beheer bij Logius
 
-Meer weten? Lees de rapportages [Fase 1](fase1) en [Fase 2](fase2)
+Meer weten? Lees de rapportages [Fase 1](/ftv/over_het_project/fase1/) en [Fase 2](/ftv/over_het_project/fase2/)
 {{< /chapter/section >}}
 
 {{< chapter/section title="Relatie met andere projecten en programma’s" level="3">}}
