@@ -73,12 +73,12 @@ De governance over het project verloopt inhoudelijk en organisatorisch via Inter
 FTV zal op zichzelf minder tractie hebben dan in de juiste context. Toegangsverlening is bij de meeste registraties en afnemers nu al geregeld, zij het met de nodige moeite en in sommige opzichten niet correct. Zonder de drijvende kracht van IBDS en FDS zal de adoptie waarschijnlijk achterblijven. Daarom is het cruciaal dat FTV wordt meegenomen in projecten zoals de Proof of Concepts van FDS.
 Ook is aansluiting bij, en wederzijdse medewerking van FSC en LDV essentieel om een complete oplossing te bieden.
 
-### Juridische en organisatorische context
+**Juridische en organisatorische context**
 
 FTV biedt een standaard en implementatierichtlijnen voor toegangsverlening, maar stelt niet de regels zelf op. Voor projecten kan een ‘kip-ei’-situatie ontstaan: er moeten eerst duidelijke regels en afspraken zijn voordat deze geïmplementeerd kunnen worden, maar tegelijkertijd is er een implementatie nodig om die regels in onder te brengen.
 Federatieve toegangsverlening kan pas zinvol worden gerealiseerd als er eerst goede, juridisch sluitende en breed gedragen stelselafspraken zijn.
 
-### Complexiteit van techniek en samenwerking
+**Complexiteit van techniek en samenwerking**
 
 Goede FTV vereist functioneren van de andere stelselfuncties, een complexe architectuur en een zeker niveau van samenwerking
 tussen de deelnemers aan het stelsel. Organisaties kunnen hier tegenop zien en er bestaat de kans dat men besluit de status
