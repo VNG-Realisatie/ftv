@@ -37,3 +37,6 @@ Denk hierbij aan dat alle versies van policies over tijd bewaard blijven en de m
 
 Een goed PAP zorgt dat policies begrijpelijk, uitlegbaar en traceerbaar zijn. Met een goede standaard zullen policies ook uitwisselbaar kunnen zijn tussen deelnemers. Dit zijn belangrijke voorwaarden voor het FDS als vertrouwensraamwerk.
 {{< /chapter/section >}}
+
+{{< chapter/nextprevious  bg="bg-rhc-color-groen-25" previouslink="../logboek-toegangsbeslissingen" previoustitle="Logboek" >}}
+{{< /chapter/nextprevious >}}

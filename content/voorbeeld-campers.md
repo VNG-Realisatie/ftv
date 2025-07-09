@@ -56,3 +56,6 @@ en gegevens beschikbaar als onderbouwing. Alles gebeurt volgens AVG en andere pr
 - **Leveranciersonafhankelijk**. Hetzelfde systeem is inzetbaar voor de uitwisseling met RDW en RvIG. Ontwikkelaars en beheerders hoeven maar met een systeem te leren werken.
 
 {{< /chapter/section >}}
+
+{{< chapter/nextprevious bg="bg-rhc-color-donkerbruin-50" nextlink="/ftv/voorbeeld-huurtoeslag" nexttitle="Voorbeeld huurtoeslag">}}
+{{< /chapter/nextprevious >}}

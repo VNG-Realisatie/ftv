@@ -1,0 +1,35 @@
+<div class="section-home-wrapper next-previous-wrapper {{.Get "bg"}} py-2 lg:w-[1024px] w-3xl mx-auto">
+
+    {{ if and (.Get "previouslink") (ne (.Get "previouslink") "") }}
+        <div class="section-home-box next-previous-box-left">
+            <a href="{{.Get "previouslink"}}" role="navigation">
+                <h2 class="nl-heading nl-heading--level-5 rhc-heading" id="{{.Get "id"}}">< Vorig artikel</h2>
+            </a>
+            <p>
+                {{ .Get "previoustitle" }}
+            </p>
+        </div>
+    {{ end }}
+
+    {{ if and (.Get "nextlink") (ne (.Get "nextlink") "") }}
+    <div class="section-home-box next-previous-box-right">
+        <a href="{{.Get "nextlink"}}" role="navigation">
+        <h2 class="nl-heading nl-heading--level-5 rhc-heading" id="{{.Get "id"}}">Volgend artikel ></h2>
+        </a>
+        <p>
+            {{ .Get "nexttitle" }}
+        </p>
+    </div>
+    {{ end }}
+
+
+            {{ $content := .Inner | $.Page.RenderString }}
+            {{ $hasP := findRE "<p\\s" $content }}
+            {{ if $hasP }}
+            {{ $content | safeHTML }}
+            {{ else }}
+            <p class="utrecht-paragraph pt-2">{{ $content | safeHTML }}</p>
+            {{ end }}
+
+
+</div>

@@ -118,5 +118,6 @@ In [dit artikel](/ftv/actueel/nieuws/20250611oauth-oidc-en-eam/) lees je meer ov
 
 {{< /chapter/section >}}
 
-
+{{< chapter/nextprevious  bg="bg-rhc-color-groen-25" previouslink="../principes" previoustitle="Principes" nextlink="../logboek-toegangsbeslissingen" nexttitle="Logboek">}}
+{{< /chapter/nextprevious >}}
 

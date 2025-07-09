@@ -54,3 +54,6 @@ Ook over meerdere toeslagsystemen heen.
 - **Leveranciersonafhankelijk**: Eén centrale aanpak, ongeacht welk systeem wordt gebruikt.
 
 {{< /chapter/section >}}
+
+{{< chapter/nextprevious  bg="bg-rhc-color-donkerbruin-50" previouslink="/ftv/voorbeeld-campers" previoustitle="Voorbeeld milieuzone">}}
+{{< /chapter/nextprevious >}}

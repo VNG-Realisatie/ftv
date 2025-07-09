@@ -314,3 +314,31 @@ td, th {
 .accordion-content .section {
     float:left;
 }
+
+/* Volgende/vorige artikel */
+
+.next-previous-wrapper {
+    display:flex;
+    justify-content: center;
+}
+
+.next-previous-box-right {
+    text-align:right;
+    padding-left:50px;
+    width:30%;
+}
+
+.next-previous-box-left {
+    padding-right:50px;
+    width:30%;
+}
+
+.next-previous-box-left p {
+    margin-left:16px;
+    margin-top:8px;
+}
+
+.next-previous-box-right p {
+    margin-right:16px;
+    margin-top:8px;
+}

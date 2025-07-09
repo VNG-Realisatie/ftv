@@ -128,3 +128,6 @@ De principes van EAM en de PxP architectuur geven goede richtlijnen voor impleme
 3. **[Register toegangsbeleid](../register-toegangsbeleid)**. Dit gaat over de eisen die gesteld worden aan het PAP zodat policies goed opgeslagen en opgehaald worden, inclusief versiebeheer.
 
 {{< /chapter/section >}}
+
+{{< chapter/nextprevious  bg="bg-rhc-color-groen-25" nextlink="../authzen-nlgov" nexttitle="AuthZEN">}}
+{{< /chapter/nextprevious >}}

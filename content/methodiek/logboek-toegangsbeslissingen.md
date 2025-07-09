@@ -37,3 +37,6 @@ Hierbij gaat speciaal aandacht uit naar het voorkomen van ongewenste gegevensdup
 
 De FTV werkgroep ontwikkelt momenteel de [werkversie van de standaard](https://github.com/VNG-Realisatie/authorization-decision-log).
 {{< /chapter/section >}}
+
+{{< chapter/nextprevious  bg="bg-rhc-color-groen-25" previouslink="../authzen-nlgov" previoustitle="AuthZEN" nextlink="../register-toegangsbeleid" nexttitle="Register toegangsbeleid">}}
+{{< /chapter/nextprevious >}}
