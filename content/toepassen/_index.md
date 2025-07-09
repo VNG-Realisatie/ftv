@@ -9,7 +9,7 @@ Het invoeren van de standaard Federatieve Toegangsverlening (FTV) begint met een
 
 {{< chapter/header bg="lightbrown" customclass="section-box-banner">}}
 
-### In deze sectie
+### Lees verder
 <div class="section-home-wrapper" role="navigation">
    <div class="section-home-box">
        <a href="functioneel">
