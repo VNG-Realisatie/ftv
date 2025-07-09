@@ -28,7 +28,7 @@ Title: Scope
 {{< /chapter/header >}}
 
 {{< chapter/section title="Scope" >}}
-De originele opdracht is vrij breed geformuleerd:
+De originele opdracht is breed geformuleerd:
 
 >  **Definieer een standaardmethodiek voor toegangsverlening tot APIs.**
 
@@ -37,9 +37,9 @@ Voor een scherpere afbakening van de opdracht volgt een toelichting op enkele ge
 
 {{< chapter/section title="Definiëren, niet coderen" level="3">}}
 ***Definieer*** wil zeggen dat er methodiek wordt voorgesteld en niet per se gerealiseerd.
-Het primaire doel is een goede beschrijving van de methode, een breed begrip en draagvlak, en uiteindelijk ook adoptie ervan.
+Het primaire doel is een goede beschrijving van de methode, een breed begrip en draagvlak en uiteindelijk ook adoptie ervan.
 Er zullen ook tastbare technische resultaten zijn om aan te tonen dat de methodiek haalbaar, schaalbaar en veilig is.
-Daarnaast zal een referentie-implementatie gemaakt worden als educatief instrument en als half-fabricaat.
+Daarnaast wordt een referentie-implementatie ontwikkeld als educatief instrument en als halffabricaat.
 Het is echter expliciet niet de bedoeling om een softwareproduct op te leveren dat in productie genomen kan worden.
 {{< /chapter/section >}}
 
