@@ -9,7 +9,7 @@ Het project Federatieve Toegangsverlening (FTV) ontwikkelt een standaardwerkwijz
 
 {{< chapter/header bg="lightyellow" customclass="section-box-banner">}}
 
-### In deze sectie
+### Lees verder
 
 <div class="section-home-wrapper">
     <div class="section-home-box">
@@ -18,7 +18,7 @@ Het project Federatieve Toegangsverlening (FTV) ontwikkelt een standaardwerkwijz
                 De opdracht
             </h2>
             <p>
-               Omschrijving van doel, scope en planning van het project.
+               Omschrijving van het doel, de cope en de planning van het project.
             </p>
         </a>
     </div>
@@ -28,7 +28,7 @@ Het project Federatieve Toegangsverlening (FTV) ontwikkelt een standaardwerkwijz
                 Scope
             </h2>
             <p class="utrecht-paragraph">
-                De brede opdracht is verder uitgewerkt om te komen tot een haalbare scope.
+                Afbakening van de opdracht en toelichting op wat wel en niet binnen het project valt.
             </p>
         </a>
     </div>
@@ -38,7 +38,7 @@ Het project Federatieve Toegangsverlening (FTV) ontwikkelt een standaardwerkwijz
                 Fase 1
             </h2>
             <p class="utrecht-paragraph">
-                Fase 1 onderzocht waar standaardisering zinvol is, en of er al geschikte standaarden bestaan.
+                Inventarisatie van bestaande standaarden en verkenning van mogelijkheden voor standaardisering.
             </p>
         </a>
     </div>
@@ -48,7 +48,7 @@ Het project Federatieve Toegangsverlening (FTV) ontwikkelt een standaardwerkwijz
                 Fase 2
             </h2>
             <p class="utrecht-paragraph">
-                De tweede fase gaat over het opstellen van standaarden en die geaccepteerd en indien mogelijk gebruikt te laten worden.
+                Opstellen van standaarden en toewerken naar acceptatie en gebruik.
             </p>
         </a>
     </div>
