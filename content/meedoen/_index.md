@@ -4,7 +4,7 @@ type: 'chapter'
 ---
 
 {{< chapter/header title="Meedoen" bg="orange" icon="images/sectie-meedoen.svg">}}
-Het project Federatieve Toegangsverlening (FTV) zoekt professionals die willen bijdragen aan een veilige en efficiënte toegang tot data binnen de overheid.
+Federatieve Toegansverlening (FTV) wordt ontwikkeld in samenspraak met verschillende experts van diverse (overheids)organisaties. Samen bouwen we aan veilige en betrouwbare toegangsverlening gebaseerd op duidelijke afspraken. 
 {{< /chapter/header >}}
 
 {{< chapter/header bg="lightorange" customclass="section-box-banner">}}
@@ -15,10 +15,10 @@ Het project Federatieve Toegangsverlening (FTV) zoekt professionals die willen b
     <div class="section-home-box">
         <a href="wat_kun_je_doen">
             <h2 class="nl-heading nl-heading--level-4 rhc-heading">
-                Wat kun je doen?
+                Bijdragen aan FTV
             </h2>
             <p class="utrecht-paragraph">
-                Dit zijn de opties om meer te leren en bij te dragen aan federatieve toegangsverlening.
+                Ontdek hoe verschillende organisaties meewerken aan de ontwikkeling van FTV. Denk mee, experimenteer met OpenFTV of deel praktijkervaringen via Mattermost.
             </p>
         </a>
     </div>
@@ -28,7 +28,9 @@ Het project Federatieve Toegangsverlening (FTV) zoekt professionals die willen b
                 Werkgroep
             </h2>
             <p class="utrecht-paragraph">
-                Eens in de twee weken komt een groep geïnteresseerden bijeen. Wees welkom.
+                Professionals uit beleid, IT en juridische hoek denken mee over de standaard voor toegangsverlening. De werkgroep komt tweewekelijks bijeen, fysiek én online.
+
+
             </p>
         </a>
     </div>
