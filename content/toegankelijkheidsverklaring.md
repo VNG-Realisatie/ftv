@@ -4,7 +4,7 @@ type: 'chapter'
 ---
 {{< chapter/header title="Toegankelijkheidsverklaring" bg="brown">}}
 
-FTV wil dat iedereen deze website kan gebruiken. Komt u toch een pagina tegen die niet toegankelijk is? Dan kunt u dit aan ons melden.
+Het project Federatieve Toegangsverlening (FTV) wil dat iedereen deze website kan gebruiken. Kom je toch een pagina tegen die niet toegankelijk is? Dan kan je dit melden.
 
 {{< /chapter/header >}}
 
@@ -18,7 +18,7 @@ Wij borgen een goede toegankelijkheid van onze website door diverse maatregelen 
 
 {{< chapter/section title="Problemen met toegankelijkheid melden" level="3">}}
 
-Heeft u vragen of opmerkingen? Of wilt u een pagina gebruiken die niet toegankelijk blijkt? Neem dan contact op met [ftv@vng.nl](mailto:ftv@vng.nl).
+Heb je vragen of opmerkingen? Of wil je een melding doen van een niet-toegankelijke pagina? Neem dan contact op met [ftv@vng.nl](mailto:ftv@vng.nl).
 
 {{< /chapter/header >}}
 
