@@ -4,7 +4,7 @@ type: 'chapter'
 ---
 
 {{< chapter/header title="Toepassen" bg="brown" icon="images/sectie-toepassen.svg">}}
-Het invoeren van de standaard Federatieve Toegangsverlening (FTV) begint met een goede voorbereiding. Denk aan het maken van afspraken over het beheer en het testen van een oplossing in een proefopstelling. Als ondersteuning zijn praktische handreikingen beschikbaar. Ze geven inzicht in keuzes die gemaakt moeten worden, de stappen richting implementatie en de technische mogelijkheden.
+Het toepassen van Federatieve Toegangsverlening (FTV) begint met een goede voorbereiding. Denk aan het maken van afspraken over het beheer en het testen van een oplossing in een proefopstelling. Als ondersteuning zijn praktische handreikingen beschikbaar. Ze geven inzicht in keuzes die gemaakt moeten worden, de stappen richting implementatie en de technische mogelijkheden.
 {{< /chapter/header >}}
 
 {{< chapter/header bg="lightbrown" customclass="section-box-banner">}}
@@ -17,7 +17,7 @@ Het invoeren van de standaard Federatieve Toegangsverlening (FTV) begint met een
                Functies en rollen
            </h2>
            <p class="utrecht-paragraph">
-              Hoe zien de taken rondom FTV eruit en wie is waarvoor verantwoordelijk?
+              Een overzicht van de belangrijkste functies en rollen bij het toepassen van FTV.
            </p>
        </a>
    </div>
@@ -28,7 +28,7 @@ Het invoeren van de standaard Federatieve Toegangsverlening (FTV) begint met een
                Stappenplan
            </h2>
            <p class="utrecht-paragraph">
-               Hoe kom je in 7 stappen van een use case tot een goed werkende toegangsregel?
+               Van use case tot goed werkende toegangsregels in zeven overzichtelijke stappen.
            </p>
        </a>
    </div>
@@ -39,7 +39,7 @@ Het invoeren van de standaard Federatieve Toegangsverlening (FTV) begint met een
                OpenFTV
            </h2>
            <p class="utrecht-paragraph">
-               Een eenvoudige maar complete referentie-implementatie van een EAM oplossing.
+               Een eenvoudige maar complete referentie-implementatie van een EAM-oplossing.
            </p>
        </a>
    </div>
@@ -50,7 +50,7 @@ Het invoeren van de standaard Federatieve Toegangsverlening (FTV) begint met een
                Proefopstelling
            </h2>
            <p class="utrecht-paragraph">
-               Een mini-Federatief Datastelsel (FDS) met uitgewerkte use cases is ideaal om lokaal te testen en mee te experimenteren.
+               Een mini-Federatief Datastelsel (FDS) met uitgewerkte use cases om lokaal te testen en mee te experimenteren.
            </p>
        </a>
    </div>
@@ -61,7 +61,7 @@ Het invoeren van de standaard Federatieve Toegangsverlening (FTV) begint met een
                Softwarekeuze
            </h2>
            <p class="utrecht-paragraph">
-               Welke software kies ik voor EAM, die past in mijn IT-landschap en ambities?
+               Aandachtspunten voor het selecteren van de juiste software.
            </p>
        </a>
    </div>
