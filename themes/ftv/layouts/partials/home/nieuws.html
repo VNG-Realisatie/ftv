@@ -14,14 +14,14 @@
     "Dec" "dec"
 }}
 
-<div class="w-[1024px] mx-auto grid grid-cols-1 my-10">
+<div class="mx-auto grid grid-cols-1 my-10">
     <div class="py-6">
         <h2 class="nl-heading nl-heading--level-2 rhc-heading">Actueel</h2>
     </div>
     <div class="py-6">
         <h3 class="nl-heading nl-heading--level-4 rhc-heading">Nieuws</h3>
     </div>
-    <div class="flex justify-between gap-2.5">
+    <div class="flex justify-between gap-2.5 flex-wrap">
         {{ $data := dict }}
         {{ $path := "data/nieuws.yaml" }}
         {{ with resources.Get $path }}

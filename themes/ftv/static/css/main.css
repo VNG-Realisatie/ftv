@@ -411,6 +411,9 @@
   .flex-row {
     flex-direction: row;
   }
+  .flex-wrap {
+    flex-wrap: wrap;
+  }
   .place-content-center {
     place-content: center;
   }
