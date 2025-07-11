@@ -81,6 +81,8 @@ Goede toegangsverlening vraagt om heldere afspraken over rollen en bevoegdheden.
 1. **Functionele beschrijving**
 
 Hoe zien de taken rondom FTV eruit en wie is waarvoor verantwoordelijk?
+
+[Bekijk het overzicht van functies en rollen](functioneel)
 {{< /chapter/accordion >}}
 
 {{< chapter/accordion title="Voor juristen" customclass="bg-rhc-color-groen-50" >}}
