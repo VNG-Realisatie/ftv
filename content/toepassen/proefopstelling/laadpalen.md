@@ -38,6 +38,7 @@ registratie als service door de gateway.
     - De gemeente heeft per besluit toestemming van RvIG om in de BRP gegevens op te zoeken.
     - Grondslag daarvoor is nummer 5, 'om een taak van algemeen belang uit te voeren'
     - De gemeente mag alleen ingezetenen van de eigen gemeente opzoeken
+
 - RDW
     - De gemeente heeft per besluit toestemming van de RDW om voertuigen in de BRV op te zoeken.
     - Diplomatieke kentekens mogen niet opgezocht worden
@@ -63,41 +64,46 @@ Anders wordt de vergunning afgewezen met een passende melding.
 
 #### Laadpalen
 
-| Kenteken | Postcode | Huisnummer  |
-|----------|----------|-------------|
-|          |          |             |
+| Postcode | Huisnummer |
+|----------|------------|
+| 1111AA   | 1          |
 
 #### BRP
 
-| BSN | Postcode | Huisnummer | Gemeente van Inschrijving |
-|-----|----------|------------|---------------------------|
-| 100 | 1000 AA  | 1          | 001                       |
-| 200 | 1000 AA  | 1          | 001                       |
-| 300 | 1000 AA  | 2          | 001                       |
-| 400 | 1000 AA  | 3          | 001                       |
-| 500 | 1000 AA  | 5          | 001                       |
-| 600 | 2000 AA  | 1          | 002                       |
+| BSN       | Postcode | Huisnummer | Gemeente van Inschrijving |
+|-----------|----------|------------|---------------------------|
+| 999990251 | 1111AA   | 1          | 001                       |
+| 999990263 | 1111BB   | 2          | 001                       |
+| 999990275 | 1111CC   | 3          | 001                       |
+| 999990287 | 1111DD   | 4          | 001                       |
+| 999990299 | 1111EE   | 5          | 001                       |
+| 999990305 | 1111FF   | 6          | 001                       |
+| 999990317 | 1111GG   | 7          | 001                       |
+| 999990329 | 1111HH   | 8          | 001                       |
+| 999990330 | 1111II   | 9          | 001                       |
+| 999990342 | 2222JJ   | 101        | 002                       |
 
 #### BRV
 
-| Kenteken  | BSN | Uitstootklasse | Diplomatiek kenteken |
-|-----------|-----|----------------|----------------------|
-| 12-12-12  | 200 | E              | Nee                  |
-| 34-34-34  | 300 | B              | Nee                  |
-| 56-56-56- | 500 | E              | Ja                   |
-|           |     |                |                      |
+| Kenteken | BSN       | Uitstootklasse | Diplomatiek kenteken |
+|----------|-----------|----------------|----------------------|
+| 12-12-12 | 999990263 | E              | Nee                  |
+| 34-34-34 | 999990275 | B              | Nee                  |
+| 56-56-56 | 999990299 | E              | Ja                   |
 
 ### Testgevallen
 
 | Gebruiker | Postcode | Huisnummer | Resultaat                                  |
 |-----------|----------|------------|--------------------------------------------|
-| Rick      | 1000 AA  | 1          | Rick niet geautoriseerd vanwege afdeling   |
-| Morty     | 1000 AA  | 1          | Morty niet geautoriseerd vanwege opleiding |
-| Beth      | 1000 AA  | 1          | Beth niet geautoriseerd vanwege opleiding  |
-| Jerry     | 1000 AA  | 1          | Toegekend                                  |
-| Jerry     | 1000 AA  | 2          | Niet toegekend vanwege uitstootklasse      |
-| Jerry     | 1000 AA  | 3          | Geen voertuig gevonden                     |
-| Jerry     | 1000 AA  | 4          | Geen ingezetene gevonden                   |
-| Jerry     | 1000 AA  | 5          | Geen toestemming om voertuig in te zien    |
-| Jerry     | 2000 AA  | 1          | Niet ingezetene van eigen gemeente         |
+| Rick      | 1111AA   | 1          | Rick niet geautoriseerd vanwege afdeling   |
+| Morty     | 1111AA   | 1          | Morty niet geautoriseerd vanwege opleiding |
+| Beth      | 1111AA   | 1          | Beth niet geautoriseerd vanwege opleiding  |
+| Jerry     | 1111AA   | 1          | Reeds laadpaal aanwezig                    |
+| Jerry     | 1111BB   | 2          | Toegekend                                  |
+| Jerry     | 1111CC   | 3          | Niet toegekend vanwege uitstootklasse      |
+| Jerry     | 1111DD   | 4          | Geen voertuig gevonden                     |
+| Jerry     | 1111EE   | 5          | Geen toestemming om voertuig in te zien    |
+| Jerry     | 1111FF   | 11         | Geen ingezetene gevonden                   |
+| Jerry     | 2222JJ   | 101        | Geen ingezetene gevonden (andere gemeente) |
+
 {{< /chapter/section >}}
