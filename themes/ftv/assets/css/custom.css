@@ -34,7 +34,7 @@
 
 .ftv-hero-paragraph {
     color: var(--color-white);
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 100%;
 }
 
@@ -48,7 +48,7 @@
 .rhc-header-3 {
     color: var(--color-white);
     font-weight: 700;
-    font-size: 32px;
+    font-size: 2.0rem;
     font-family: var(--font-sans), sans-serif;
     vertical-align: middle;
 }
@@ -56,7 +56,7 @@
 .rhc-header-4 {
     color: var(--color-white);
     font-weight: bold;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: var(--font-sans), sans-serif;
     vertical-align: middle;
 }
@@ -64,7 +64,7 @@
 .rhc-header-5 {
     color: var(--color-white);
     font-weight: normal;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-family: var(--font-sans), sans-serif;
     vertical-align: middle;
 }
@@ -72,7 +72,7 @@
 .ftv-footer-title {
     font-weight: 300;
     font-style: italic;
-    font-size: 16px;
+    font-size: 1.0rem
     line-height: 34px;
     letter-spacing: 0;
     vertical-align: middle;
@@ -165,14 +165,12 @@
 
 .section-box-banner {
     margin-top:-10px;
-
 }
 
  .section-home-wrapper {
  }
 
  .section-home-wrapper a {
-
  }
 
 .section-home-box {
