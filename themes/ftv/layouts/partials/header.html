@@ -1,11 +1,11 @@
 <a href="#main-content" class="skip-to-main-content-link">Ga naar inhoud</a>
-<div class="flex bg-rhc-primary h-[90px]">
-    <div class="grid grid-cols-[70px_auto] grid-rows-1 ml-25">
+<div class="flex bg-rhc-primary h-[60px] lg:h-[90px]">
+    <div class="grid grid-cols-[70px_auto] grid-rows-1 px-6 lg:ml-25">
         <div class="content-center w-15 p-1">
             <img class="mx-auto w-45px" src="{{ relURL "ftv-logo-diap.svg" }}" alt="FTV Beeldmerk" />
         </div>
         <div class="content-center">
-            <p role="heading" class="rhc-header-4">
+            <p role="heading" class="rhc-header-5 lg:rhc-header-4 w-[180px] lg:w-[300px]">
                 {{ .Site.Title }}
             </p>
             <p role="heading" class="rhc-header-5 hidden lg:block">
@@ -13,9 +13,9 @@
             </p>
         </div>
     </div>
+    {{ partial "mobilemenu.html" }}
 </div>
 <div class="grow h-[16px] bg-ftv-green">
-
 </div>
 
 {{ partial "menu.html" }}

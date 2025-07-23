@@ -192,9 +192,6 @@
   .\@container {
     container-type: inline-size;
   }
-  .invisible {
-    visibility: hidden;
-  }
   .visible {
     visibility: visible;
   }
@@ -252,9 +249,6 @@
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
   }
-  .ml-25 {
-    margin-left: calc(var(--spacing) * 25);
-  }
   .no-scrollbar {
     scrollbar-width: none;
     &::-webkit-scrollbar {
@@ -285,14 +279,14 @@
   .h-\[38px\] {
     height: 38px;
   }
+  .h-\[60px\] {
+    height: 60px;
+  }
   .h-\[62px\] {
     height: 62px;
   }
   .h-\[72px\] {
     height: 72px;
-  }
-  .h-\[90px\] {
-    height: 90px;
   }
   .h-\[100px\] {
     height: 100px;
@@ -339,6 +333,9 @@
   .w-\[72px\] {
     width: 72px;
   }
+  .w-\[180px\] {
+    width: 180px;
+  }
   .w-\[315px\] {
     width: 315px;
   }
@@ -348,17 +345,11 @@
   .w-\[320px\] {
     width: 320px;
   }
-  .w-\[400px\] {
-    width: 400px;
-  }
   .w-\[422px\] {
     width: 422px;
   }
   .w-\[480px\] {
     width: 480px;
-  }
-  .w-\[536px\] {
-    width: 536px;
   }
   .w-\[1008px\] {
     width: 1008px;
@@ -674,16 +665,6 @@
       width: 400px;
     }
   }
-  .lg\:invisible {
-    @media (width >= 64rem) {
-      visibility: hidden;
-    }
-  }
-  .lg\:visible {
-    @media (width >= 64rem) {
-      visibility: visible;
-    }
-  }
   .lg\:mx-auto {
     @media (width >= 64rem) {
       margin-inline: auto;
@@ -692,6 +673,11 @@
   .lg\:my-6 {
     @media (width >= 64rem) {
       margin-block: calc(var(--spacing) * 6);
+    }
+  }
+  .lg\:ml-25 {
+    @media (width >= 64rem) {
+      margin-left: calc(var(--spacing) * 25);
     }
   }
   .lg\:block {
@@ -709,14 +695,19 @@
       display: none;
     }
   }
+  .lg\:h-\[90px\] {
+    @media (width >= 64rem) {
+      height: 90px;
+    }
+  }
   .lg\:w-5xl {
     @media (width >= 64rem) {
       width: var(--container-5xl);
     }
   }
-  .lg\:w-\[400px\] {
+  .lg\:w-\[300px\] {
     @media (width >= 64rem) {
-      width: 400px;
+      width: 300px;
     }
   }
   .lg\:w-\[654px\] {
@@ -12746,6 +12737,39 @@ td, th {
 .next-previous-box-right p {
   margin-right: 16px;
   margin-top: 8px;
+}
+.mobilemenu {
+  padding: 1.5rem 2rem;
+  color: #fff;
+}
+.mobilemenucheckbtn {
+  font-size: 1.25rem;
+  color: white;
+  cursor: pointer;
+}
+#check {
+  display: none;
+}
+#check:checked ~ .nav-mobile {
+  display: block;
+}
+.nav-mobile {
+  position: absolute;
+  top: 5.5rem;
+  right: 0;
+  z-index: 1;
+  width: 200px;
+  display: none;
+  background-color: var(--color-rhc-primary);
+  font-size: 1.25rem;
+}
+.nav-mobile a {
+  color: #fff;
+  padding: 1rem 1.5rem;
+  display: block;
+}
+.menutitle {
+  color: white;
 }
 @property --tw-rotate-x {
   syntax: "*";
