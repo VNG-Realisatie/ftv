@@ -31,6 +31,7 @@
 @utility no-scrollbar {
     @apply [scrollbar-width:none] [&::-webkit-scrollbar]:hidden;
 }
+
 @layer components {
     .rhc-header-3 {
         color: var(--color-white);

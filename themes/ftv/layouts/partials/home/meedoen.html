@@ -24,8 +24,8 @@
             <h3 class="nl-heading nl-heading--level-3 rhc-heading pb-2">Wie doen al mee?</h3>
             <p class="utrecht-paragraph text-rhc-primary"></p>
         </div>
-        <div class="lg:w-5xl my-2.5 swiper swiperWieDoenMee">
-            <div class="swiper-wrapper flex h-[240px]">
+        <div class="w-xl lg:w-5xl mx-auto my-2.5 swiperWieDoenMee relative overflow-hidden">
+            <div class="swiper-wrapper flex h-[120px] lg:h-[240px]">
                 {{ $data := dict }}
                 {{ $path := "data/wie_doen_mee.yaml" }}
                 {{ with resources.Get $path }}
@@ -37,7 +37,7 @@
                 {{ end }}
 
                 {{ range $data }}
-                <div class="swiper-slide w-[320px] bg-white py-2.5" style="height: 240px">
+                <div class="swiper-slide w-[120px] lg:w-[320px] bg-white py-2.5 px-2.5" style="height: 120px">
                     <a href="{{ .link }}" target="_blank" rel="noopener noreferrer">
                         <img src="{{ .logo }}" width="{{ .size }}" alt="{{ .alt_text }}"
                              class="m-auto h-full object-contain">
@@ -54,16 +54,21 @@
             var swiperWie = new Swiper(".swiperWieDoenMee", {
                 slidesPerView: 4,
                 speed:5000,
-                autoHeight: true,
+                autoheight: true,
                 direction: 'horizontal',
                 autoplay: {delay: 0},
-                height: 240,
                 spaceBetween: 10,
+                height: 120,
                 pagination: {
                     el: ".swiper-pagination-wie",
                     clickable: true,
                 },
                 loop: true,
+                breakpoints: {
+                    1024: {
+                        height: 240,
+                    }
+                }
             });
         </script>
     </div>

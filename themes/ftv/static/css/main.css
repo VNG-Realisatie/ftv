@@ -12,6 +12,8 @@
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --container-md: 28rem;
+    --container-lg: 32rem;
     --container-xl: 36rem;
     --container-3xl: 48rem;
     --container-5xl: 64rem;
@@ -197,6 +199,9 @@
   .visible {
     visibility: visible;
   }
+  .relative {
+    position: relative;
+  }
   .static {
     position: static;
   }
@@ -220,6 +225,9 @@
   }
   .m-auto {
     margin: auto;
+  }
+  .mx-2\.5 {
+    margin-inline: calc(var(--spacing) * 2.5);
   }
   .mx-auto {
     margin-inline: auto;
@@ -250,6 +258,9 @@
   }
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
+  }
+  .mr-2 {
+    margin-right: calc(var(--spacing) * 2);
   }
   .no-scrollbar {
     scrollbar-width: none;
@@ -293,6 +304,9 @@
   .h-\[100px\] {
     height: 100px;
   }
+  .h-\[120px\] {
+    height: 120px;
+  }
   .h-\[150px\] {
     height: 150px;
   }
@@ -329,6 +343,12 @@
   .w-\[72px\] {
     width: 72px;
   }
+  .w-\[100px\] {
+    width: 100px;
+  }
+  .w-\[120px\] {
+    width: 120px;
+  }
   .w-\[180px\] {
     width: 180px;
   }
@@ -353,8 +373,14 @@
   .w-full {
     width: 100%;
   }
+  .w-lg {
+    width: var(--container-lg);
+  }
   .w-max {
     width: max-content;
+  }
+  .w-md {
+    width: var(--container-md);
   }
   .w-xl {
     width: var(--container-xl);
@@ -435,6 +461,9 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+  }
+  .overflow-hidden {
+    overflow: hidden;
   }
   .rounded-tr-2xl {
     border-top-right-radius: var(--radius-2xl);
@@ -543,6 +572,9 @@
   }
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
+  }
+  .px-2\.5 {
+    padding-inline: calc(var(--spacing) * 2.5);
   }
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
@@ -658,6 +690,11 @@
       margin-inline: auto;
     }
   }
+  .lg\:my-2\.5 {
+    @media (width >= 64rem) {
+      margin-block: calc(var(--spacing) * 2.5);
+    }
+  }
   .lg\:mr-\[16px\] {
     @media (width >= 64rem) {
       margin-right: 16px;
@@ -698,6 +735,11 @@
       height: 120px;
     }
   }
+  .lg\:h-\[240px\] {
+    @media (width >= 64rem) {
+      height: 240px;
+    }
+  }
   .lg\:min-h-\[212px\] {
     @media (width >= 64rem) {
       min-height: 212px;
@@ -711,6 +753,11 @@
   .lg\:w-\[319px\] {
     @media (width >= 64rem) {
       width: 319px;
+    }
+  }
+  .lg\:w-\[320px\] {
+    @media (width >= 64rem) {
+      width: 320px;
     }
   }
   .lg\:w-\[400px\] {
