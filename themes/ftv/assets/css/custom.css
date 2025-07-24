@@ -148,7 +148,7 @@
 
 .hoe-werkt-het-paragraph {
     font-family: "Fira Sans", sans-serif;
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 150%;
     font-weight: 400;
     color: black;
@@ -189,7 +189,7 @@
 }
 
 .section-home-box p {
-    font-size:18px;
+    font-size:1.25rem;
 }
 
 /* Sub navigation within section */
@@ -322,22 +322,18 @@ td, th {
 
 .next-previous-box-right {
     text-align:right;
-    padding-left:50px;
     width:30%;
 }
 
 .next-previous-box-left {
-    padding-right:50px;
     width:30%;
 }
 
 .next-previous-box-left p {
-    margin-left:16px;
     margin-top:8px;
 }
 
 .next-previous-box-right p {
-    margin-right:16px;
     margin-top:8px;
 }
 
