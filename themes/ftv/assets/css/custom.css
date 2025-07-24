@@ -31,6 +31,39 @@
 @utility no-scrollbar {
     @apply [scrollbar-width:none] [&::-webkit-scrollbar]:hidden;
 }
+@layer components {
+    .rhc-header-3 {
+        color: var(--color-white);
+        font-weight: 700;
+        font-size: 2.0rem;
+        font-family: var(--font-sans), sans-serif;
+        vertical-align: middle;
+    }
+
+    .rhc-header-4 {
+        color: var(--color-white);
+        font-weight: bold;
+        font-size: 1.5rem;
+        font-family: var(--font-sans), sans-serif;
+        vertical-align: middle;
+    }
+
+    .rhc-header-5 {
+        color: var(--color-white);
+        font-weight: normal;
+        font-size: 1.25rem;
+        font-family: var(--font-sans), sans-serif;
+        vertical-align: middle;
+    }
+
+    .lg\:rhc-header-4 {
+        color: var(--color-white);
+        font-weight: bold;
+        font-size: 1.5rem;
+        font-family: var(--font-sans), sans-serif;
+        vertical-align: middle;
+    }
+}
 
 .ftv-hero-paragraph {
     color: var(--color-white);
@@ -45,34 +78,10 @@
     font-weight: 400;
 }
 
-.rhc-header-3 {
-    color: var(--color-white);
-    font-weight: 700;
-    font-size: 2.0rem;
-    font-family: var(--font-sans), sans-serif;
-    vertical-align: middle;
-}
-
-.rhc-header-4 {
-    color: var(--color-white);
-    font-weight: bold;
-    font-size: 1.5rem;
-    font-family: var(--font-sans), sans-serif;
-    vertical-align: middle;
-}
-
-.rhc-header-5 {
-    color: var(--color-white);
-    font-weight: normal;
-    font-size: 1.25rem;
-    font-family: var(--font-sans), sans-serif;
-    vertical-align: middle;
-}
-
 .ftv-footer-title {
     font-weight: 300;
     font-style: italic;
-    font-size: 1.0rem
+    font-size: 1.0rem;
     line-height: 34px;
     letter-spacing: 0;
     vertical-align: middle;
