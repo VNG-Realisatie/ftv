@@ -1,7 +1,7 @@
 <div class="w-full bg-rhc-color-oranje-100 py-6">
     <div class="w-3xl lg:w-5xl mx-auto flex flex-col gap-2.5">
         <div class="sw-full mt-2.5 lg:flex">
-            <div class="px-6 w-[480px] flex gap-2.5 flex-col">
+            <div class="px-6 w-[360px] lg:w-[480px] flex gap-2.5 flex-col">
                     <h2 class="nl-heading nl-heading--level-2 rhc-heading">Praat mee</h2>
                     <p class="hoe-werkt-het-paragraph mt-2.5">
                         Meedenken? Kom bij de tweewekelijkse <a class="nl-link rhc-link" href="/ftv/meedoen/werkgroep">werkgroep FTV</a> .
@@ -16,7 +16,7 @@
                         <img src="images/button-icon-meedoen.svg">
                     </a>
             </div>
-            <div class="py-6 w-[480px] flex gap-2.5 flex-col">
+            <div class="py-6 w-[360px] lg:w-[480px] flex gap-2.5 flex-col">
                 <img src="images/home-meedoen.png" alt="3 mensen op een tandem" role="presentation"/>
             </div>
         </div>
@@ -24,7 +24,7 @@
             <h3 class="nl-heading nl-heading--level-3 rhc-heading pb-2">Wie doen al mee?</h3>
             <p class="utrecht-paragraph text-rhc-primary"></p>
         </div>
-        <div class="w-3xl lg:w-5xl my-2.5 swiper swiperWieDoenMee">
+        <div class="lg:w-5xl my-2.5 swiper swiperWieDoenMee">
             <div class="swiper-wrapper flex h-[240px]">
                 {{ $data := dict }}
                 {{ $path := "data/wie_doen_mee.yaml" }}
