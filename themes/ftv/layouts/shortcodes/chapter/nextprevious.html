@@ -3,7 +3,7 @@
     {{ if and (.Get "previouslink") (ne (.Get "previouslink") "") }}
         <div class="section-home-box next-previous-box-left lg:pl-[50px]">
             <a href="{{.Get "previouslink"}}" role="navigation">
-                <h2 class="nl-heading nl-heading--level-5 rhc-heading" id="{{.Get "id"}}">< Vorig artikel</h2>
+                <h2 class="nl-heading nl-heading--level-5 rhc-heading" id="{{.Get "id"}}"><&nbsp;Vorig artikel</h2>
             </a>
             <p class="lg:mr-[16px]">
                 {{ .Get "previoustitle" }}
@@ -14,7 +14,7 @@
     {{ if and (.Get "nextlink") (ne (.Get "nextlink") "") }}
     <div class="section-home-box next-previous-box-right lg:pr-[50px]">
         <a href="{{.Get "nextlink"}}" role="navigation">
-        <h2 class="nl-heading nl-heading--level-5 rhc-heading" id="{{.Get "id"}}">Volgend artikel ></h2>
+        <h2 class="nl-heading nl-heading--level-5 rhc-heading" id="{{.Get "id"}}">Volgend artikel&nbsp;></h2>
         </a>
         <p class="lg:ml-[16px]">
             {{ .Get "nexttitle" }}

@@ -220,6 +220,18 @@
    text-decoration:underline;
 }
 
+@media (max-width: 768px) {
+    .sub-navigation-tab {
+       height: 40px;
+       line-height:40px;
+       padding: 0 20px 0 20px;
+       margin-top:5px;
+    }
+    .sub-navigation-wrapper {
+        bottom:0px;
+    }
+}
+
 .sub-navigation-tab-selected {
    background: white;
    font-weight:bold;
@@ -332,11 +344,11 @@ td, th {
 
 .next-previous-box-right {
     text-align:right;
-    width:30%;
+    width:42%;
 }
 
 .next-previous-box-left {
-    width:30%;
+    width:42%;
 }
 
 .next-previous-box-left p {
