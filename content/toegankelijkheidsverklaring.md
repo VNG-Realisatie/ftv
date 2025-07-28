@@ -10,9 +10,9 @@ Het project Federatieve Toegangsverlening (FTV) wil dat iedereen deze website ka
 
 {{< chapter/section title="Wat is een toegankelijke website?" level="3">}}
 
-Een toegankelijke website is voor alle doelgroepen beter te gebruiken. Daarom staat in het Tijdelijk besluit digitale toegankelijkheid overheid dat overheidssites moeten voldoen aan toegankelijkheidseisen zoals vastgelegd in EN 301 549/WCAG 2.1 en daarover verantwoording moeten afleggen in een gepubliceerde toegankelijkheidsverklaring.
+Een toegankelijke website is voor iedereen beter te gebruiken. Ook mensen met een beperking kunnen dan informatie vinden, begrijpen en gebruiken. Daarom moeten overheidssites voldoen aan toegankelijkheidseisen, zoals vastgelegd in de norm EN 301 549 (WCAG 2.1). Organisaties zijn verplicht daarover openheid te geven, bijvoorbeeld via een toegankelijkheidsverklaring.
 
-Wij borgen een goede toegankelijkheid van onze website door diverse maatregelen binnen onze (dagelijkse) processen.
+Deze website is zo ingericht dat hij voor zoveel mogelijk mensen bruikbaar is. Denk aan het gebruik van duidelijke taal, overzichtelijke koppen en goede kleurcontrasten.
 
 {{< /chapter/section >}}
 
