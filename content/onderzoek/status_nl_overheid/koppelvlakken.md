@@ -57,7 +57,7 @@ besloten dat nut en noodzaak onvoldoende herkend worden. De ontwikkeling is stop
 De opgeleverde koppelingen zijn nog in gebruik en daarom relevant voor dit onderzoek.
 
 HaalCentraal heeft in de koppelvlakstandaard een minimale voorziening voor toegangsverlening: er is een API-key voorgeschreven.
-Daarmee kunnen implementaties zelf aan de slag. 
+Daarmee kunnen organisaties zelf aan de slag. 
 
 ### FSC
 
