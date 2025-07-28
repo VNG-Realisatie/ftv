@@ -5,9 +5,10 @@ type: 'chapter'
 title: "Afnemers"
 ---
 {{< chapter/section title="Afnemers" >}}
-De term aanbieders verwijst hier naar de registers, of preciezer: de bronhouders, die samen met hun verwerkers een API aanbieden om verwerkingen op hun register mogelijk te maken. Dat zijn alle partijen die gegevens nodig hebben voor informatievoorziening of besluitvorming, zoals een dienst Toeslagen. En de organisaties die gegevens aanleveren, zoals een gemeente die een verhuizing registreert.
+Afnemers zijn partijen die gegevens nodig hebben voor informatievoorziening of besluitvorming, zoals de dienst Toeslagen. Ook organisaties die zelf gegevens aanleveren, zoals een gemeente die een verhuizing registreert, kunnen optreden als afnemer.
 
-Afnemers gebruiken hiervoor software die ze door een leverancier laten leveren en onderhouden. In dit overzicht staan veelgebruikte leveranciers en wat zij bieden op het gebied van EAM.
+Afnemers gebruiken hiervoor software die ze door een leverancier laten leveren en onderhouden. In dit overzicht staan veelgebruikte leveranciers en wat zij bieden op het gebied van Externalized Authorization Management (EAM).
+
 
 | Leverancier      | Systeem  | Toegang met EAM?                                                                                                                                |  
 |------------------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------|
