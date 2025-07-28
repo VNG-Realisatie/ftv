@@ -16,7 +16,7 @@ Federatieve Toegangsverlening (FTV) is een technisch onderwerp. Er worden veel b
   
 - **Externalized Authorization Management (EAM)**. Paraplubegrip voor methodieken die toegang buiten applicaties brengen. Lees meer [op deze website](/ftv/methodiek)
   
-- **Federatief Datastelsel (FDS)**. Het vertrouwensnetwerk van de Nederlandse overheid en een programma van de Interbestuurlijke Datastrategie (IBDS). Lees meer op de [IBDS-webiste] (https://realisatieibds.nl/page/view/564cc96c-115e-4e81-b5e6-01c99b1814ec/de-ontwikkeling-van-het-federatief-datastelsel)
+- **Federatief Datastelsel (FDS)**. Het vertrouwensnetwerk van de Nederlandse overheid en een programma van de Interbestuurlijke Datastrategie (IBDS). Lees meer op de [IBDS-webiste](https://realisatieibds.nl/page/view/564cc96c-115e-4e81-b5e6-01c99b1814ec/de-ontwikkeling-van-het-federatief-datastelsel)
   
 - **Generieke Digitale Infrastructuur (GDI)**. De verzameling van afspraken(stelsels), standaarden en voorzieningen die alle publieke dienstverleners gebruiken voor hun digitale dienstverlening aan burgers en ondernemers. Lees meer op [de website van de digitale overheid](https://www.digitaleoverheid.nl/mido/generieke-digitale-infrastructuur-gdi/)
   
