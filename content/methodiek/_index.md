@@ -36,7 +36,7 @@ De kern van het project is de gekozen methodiek, oftewel de voorgestelde werkwij
     <div class="section-home-box">
         <a href="logboek-toegangsbeslissingen">
            <h2 class="nl-heading nl-heading--level-4 rhc-heading">
-              Logboek Toegangs- beslissingen
+              Authorization Decision Log
            </h2>
             <p class="utrecht-paragraph">
                 De standaard voor verantwoording van genomen beslissingen
