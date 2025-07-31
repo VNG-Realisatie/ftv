@@ -30,12 +30,16 @@ type: 'chapter'
 
 {{< /chapter/header >}}
 
-{{< chapter/section title="Logboek Toegangsbeslissingen">}}
-Het Logboek Toegangsbeslissingen is er voor het vastleggen van genomen toegangsbeslissingen. Het is een verantwoordingsinstrument: achteraf kan hiermee bij audits aangetoond worden welke beslissingen waarom zijn genomen. Het uniform beschikbaar hebben van de verzoeken, de regels en de gegevens die geleid hebben tot de beslissing is daarbij cruciaal.
+{{< chapter/section title="Authorization Decision Log">}}
+Het Authorization Decision Log (Logboek Toegangsbeslissingen) legt vast welke toegangsbeslissingen zijn genomen. Het maakt die beslissingen traceerbaar en is daarmee een belangrijk verantwoordingsinstrument. Bij audits bijvoorbeeld kan achteraf worden aangetoond welke beslissing wanneer is genomen op basis van welke regels en gegevens.
 
-Hierbij gaat speciaal aandacht uit naar het voorkomen van ongewenste gegevensduplicatie ([data bij de bron](https://www.digitaleoverheid.nl/data-bij-de-bron/)) met behulp van [betrouwbare bronnen](https://website-digilab-overheid-nl-research-uit-betrouw-e1f39021ce924c.gitlab.io/) en integratie met het [Logboek Dataverwerkingen](https://logius-standaarden.github.io/logboek-dataverwerkingen/) en [FSC - Logging](https://commonground.gitlab.io/standards/fsc/logging/draft-fsc-logging-00.html).
+Voor verantwoording is het essentieel dat de onderliggende verzoeken, regels en gegevens op een uniforme en toegankelijke manier beschikbaar zijn. Het logboek gebruikt daarom het AuthZEN-informatiemodel als basis en volgt het principe van [data bij de bron](https://www.digitaleoverheid.nl/data-bij-de-bron/). In plaats van gegevens te kopiëren, verwijst het logboek naar [betrouwbare bronnen](https://website-digilab-overheid-nl-research-uit-betrouw-e1f39021ce924c.gitlab.io/) waar de gebruikte informatie is vastgeled. Dit voorkomt onnodige gegevensduplicatie en maakt het logboek transparanter en beter beheersbaar. 
 
-De FTV werkgroep ontwikkelt momenteel de [werkversie van de standaard](https://github.com/VNG-Realisatie/authorization-decision-log).
+De standaard is bedoeld voor de toegangsverlening tussen overheidsorganisaties. Daarom is er samenhang met andere standaarden van het Federatief Datastelsel (FDS) zoals het [Logboek Dataverwerkingen](https://logius-standaarden.github.io/logboek-dataverwerkingen/) en het logboek Federatieve Service Connectiviteit [FSC - Logging](https://commonground.gitlab.io/standards/fsc/logging/draft-fsc-logging-00.html).
+
+De FTV-werkgroep is medio 2025 gestart met de ontwikkeling van de [werkversie van de standaard](https://github.com/VNG-Realisatie/authorization-decision-log).
+
+
 {{< /chapter/section >}}
 
 {{< chapter/nextprevious  bg="bg-rhc-color-groen-25" previouslink="../authzen-nlgov" previoustitle="AuthZEN" nextlink="../register-toegangsbeleid" nexttitle="Register toegangsbeleid">}}
