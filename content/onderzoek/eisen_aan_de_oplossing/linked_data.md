@@ -25,7 +25,7 @@ niveau door meerdere aanroepen naar APIs te bundelen. Bijvoorbeeld de vraag: Hoe
 zijn gevestigd op een perceel van minder dan 100m2? Hiervoor moeten het handelsregister en de Basisregistratie Adressen en Gebouwen (BAG) geraadpleegd worden. 
 
 Hiervoor kan een nieuwe API, of eigenlijk een nieuwe dienst, gemaakt worden die twee vragen combineert tot één.
-Een dienst hoeft met linked data niet van te voren gericht te zijn op specifieke vragen, maar kan vrije vragen beantwoorden
+Een dienst hoeft met linked data niet vooraf gericht te zijn op specifieke vragen, maar kan vrije vragen beantwoorden
 op basis van het datamodel en de zoekmethodes als GraphQL. Zo wordt analyse en onderzoek beter mogelijk.
 {{< /chapter/section >}}
 {{< chapter/section title="Toegangsverlening en linked data" >}}
@@ -54,7 +54,7 @@ Het project [lock/unlock](https://kadaster-labs.github.io/lock-unlock-docs/) zoc
 {{< /chapter/section >}}
 
 {{< chapter/section title="Kanttekeningen" >}}
-Hoewel linked data een logische weg voorwaarts is in federatieve data, maar maakt vooralsnog geen onderdeel uit van het project.
+Hoewel linked data een logische weg voorwaarts is in federatieve data, maakt het vooralsnog geen onderdeel uit van het project.
 De redenen zijn:
 
 1. Linked data is nog geen gemeengoed in het landschap van het Federatieve Datastelsel (FDS) en het is ook niet zeker dat het overal gaat komen. 
