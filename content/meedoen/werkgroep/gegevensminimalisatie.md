@@ -101,7 +101,7 @@ Er is besloten om de volgende werkgroep te richten op het thema "Verantwoording"
 Na de werkgroep zijn de volgende antwoorden op 22 november per mail gegeven door een collega van Eduard Renger:
 
 - Mogen request query en body aangepast worden?
-  - Nee, Verzoeken mogen (en kunnen momenteel) niet worden aangepast. De Policy Decesion Point (PDP) neemt besluiten volgens een grondslag. De PDP geeft zijn beslissing door aan de Policy Enforcemant Point (PEP).
+  - Nee, Verzoeken mogen (en kunnen momenteel) niet worden aangepast. De Policy Decision Point (PDP) neemt besluiten volgens een grondslag. De PDP geeft zijn beslissing door aan de Policy Enforcement Point (PEP).
   - Door alleen validatie toe te passen is:
     - Communicatie volledig transparant. Een resultaat is altijd volgens de vraag.
     - Is de policy uitlegbaar.
