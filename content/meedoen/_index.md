@@ -4,7 +4,7 @@ type: 'chapter'
 ---
 
 {{< chapter/header title="Meedoen" bg="orange" icon="images/sectie-meedoen.svg">}}
-Federatieve Toegansverlening (FTV) wordt ontwikkeld in samenspraak met verschillende experts van diverse (overheids)organisaties. Samen bouwen we aan veilige en betrouwbare toegangsverlening gebaseerd op duidelijke afspraken. 
+Federatieve Toegangsverlening (FTV) wordt ontwikkeld in samenspraak met verschillende experts van diverse (overheids)organisaties. Samen bouwen we aan veilige en betrouwbare toegangsverlening gebaseerd op duidelijke afspraken. 
 {{< /chapter/header >}}
 
 {{< chapter/header bg="lightorange" customclass="section-box-banner">}}
