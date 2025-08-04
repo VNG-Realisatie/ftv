@@ -8,13 +8,13 @@ Policy Based Access Control (PBAC)/ Externalized Authorization Management (EAM) 
 {{< /chapter/section >}}
 
 {{< chapter/section title="RAWA" >}}
-De VNG heeft namens Common Ground in het project [ReferentieArchitectuur Werken met APIs (RAWA)](https://vng-realisatie.github.io/RAWA/), de architectuurpatronen benoemd en in de GEMMA opgenomen.
+De VNG heeft namens Common Ground in het project [ReferentieArchitectuur Werken met APIs (RAWA)](https://vng-realisatie.github.io/RAWA/) de architectuurpatronen benoemd en in de GEMMA opgenomen.
 Daar zijn Attribute Based Access Control (ABAC) en PBAC genoemd. Er is toen echter niet een keuze voor een product of een standaard gemaakt.
 
 Er is een proef gedaan samen met partner [SonicBee](https://www.sonicbee.eu/zero-trust-architecture-for-common-ground/) bij de gemeente Den Haag.
-Daar is de OPA als Policy Decision Point (PDP) aangesloten op het OpenZaak systeem van Maykin.
+Daar is de OPA als Policy Decision Point (PDP) aangesloten op het OpenZaak-systeem van Maykin.
 Dit was een technisch geslaagde proef waarbij de software als geheel draaiende is gekregen. Uitdagingen waren er ook:
-- Schrijven en beheren van de policies bleek te complex om door de gemeente zelf uit te voeren
+- Schrijven en beheren van de policies bleken te complex om door de gemeente zelf uit te voeren
 - Door policies ook de dataminimalisatie te laten doen, werd er te veel data overgedragen van aanbieder naar afnemer. Dat was meer dan toegestaan onder de AVG en leidde tot praktische problemen met de prestaties.
   
 
