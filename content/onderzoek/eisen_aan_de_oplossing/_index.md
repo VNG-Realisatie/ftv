@@ -36,9 +36,11 @@ Om tot een toekomstbestendige oplossing te komen, zijn twee eisen geformuleerd. 
 ### Eisen
 
 [Toekomstvisie](toekomstvisie)
+
 Federatieve Toegangsverlening (FTV) is een overheidsinitiatief en valt daarmee onder de Generieke Digitale Infrastructuur (GDI). De oplossing moet passen binnen deze architectuur en bijdragen aan de langetermijnvisie van de GDI.
 
 [Bezwaren](bezwaren)
+
 In de huidige oplossingen doen zich verschillende knelpunten voor. Denk aan omslachtig beheer, gebrekkige schaalbaarheid en beperkte herbruikbaarheid. De oplossing moet bijdragen aan het oplossen van deze knelpunten.
 
 ### Elementen
