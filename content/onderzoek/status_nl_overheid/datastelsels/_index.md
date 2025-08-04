@@ -5,7 +5,7 @@ title: "Datastelsels"
 ---
 {{< chapter/section title="Datastelsels" level="1" >}}
 Er bestaan al meerdere datastelsels. Deze zijn ingericht voor een specifiek domein en bevatten vaak ook
-domeinspecifieke kennis. Dit in tegenstelling tot Federatieve Datastelsel (FDS) en Federatieve Toegangsverlening (FTV), die generieke standaarden en functionaliteiten bieden.
+domeinspecifieke kennis. Dit in tegenstelling tot het Federatieve Datastelsel (FDS) en Federatieve Toegangsverlening (FTV), die generieke standaarden en functionaliteiten bieden.
 Hieronder staat een inventarisatie van de bestaande datastelsels en de toegangsverleningsmethodiek die daarbij is toegepast.
 
 | Naam                                                                                                         | Houder                                                 | Toegang met EAM?                                                                                           |
