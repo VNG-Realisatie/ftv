@@ -2,7 +2,7 @@
 type: 'chapter'
 Title: 4. Juridisch kader
 ---
-{{< chapter/section title="Juridisch kader (22 april 2025)" >}}
+{{< chapter/section title="Juridisch Kader (22 april 2025)" >}}
 
 {{< /chapter/section >}}
 
