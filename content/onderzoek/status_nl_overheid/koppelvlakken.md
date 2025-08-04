@@ -63,5 +63,5 @@ Daarmee kunnen organisaties zelf aan de slag.
 
 [Federatieve Service Connectiviteit (FSC)](https://commonground.nl/page/view/736309a1-739a-47fc-abfd-67e71f1d9e59/consultatie-fsc) is het nieuwste profiel in Digikoppeling, speciaal ontwikkeld voor federatief werken.
 In de [FSC standaard](https://commonground.gitlab.io/standards/fsc/core/draft-fsc-core-00.html) wordt toegangsverlening niet beschreven, maar in de referentie-implementatie is een plek ingeruimd voor toekomstige
-Policy Bases Access Control (PBAC)-oplossingen. FTV wordt in nauwe samenwerking met FSC ontwikkeld zodat deze naadloos gaan aansluiten.
+Policy Based Access Control (PBAC)-oplossingen. FTV wordt in nauwe samenwerking met FSC ontwikkeld zodat deze naadloos gaan aansluiten.
 {{< /chapter/section >}}
