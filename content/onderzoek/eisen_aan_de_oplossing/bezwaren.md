@@ -3,7 +3,7 @@ type: "chapter"
 title: "Bezwaren"
 ---
 {{< chapter/section title="Bezwaren van de bestaande oplossingen" level="1" >}}
-Het project Federatieve Toegangsverlening (FTV) heeft de bezwaren tegen de huidige werkwijzen geinventariseerd. De belangrijkste zijn:
+Het project Federatieve Toegangsverlening (FTV) heeft de bezwaren tegen de huidige werkwijzen geïnventariseerd. De belangrijkste zijn:
 
 1. **Juridisch onjuist.**
    Nu bepaalt en controleert de aanbieder in veel gevallen de toegangsverlening. Vooraf wordt per dienst en per afnemer een contract gesloten. Vervolgens vraagt de afnemer naar behoefte op, en toetst de aanbieder elke vraag aan het contract.
@@ -16,7 +16,7 @@ Het project Federatieve Toegangsverlening (FTV) heeft de bezwaren tegen de huidi
    Veel afnemers betekent ook veel contracten. Die vragen tijd en aandacht van zowel ICT als juridische afdelingen. De beheerlast ligt grotendeels bij de aanbieder, terwijl de afnemer meestal meer profijt heeft van de dienst.
 
 3. **Beperkte flexibiliteit.**
-   De regels worden over het algemeen vastgelegd in code. Aanpassingen van code vraagt relatief veel inspanning en doorlooptijd.
+   De regels worden over het algemeen vastgelegd in code. Aanpassingen van code vragen relatief veel inspanning en doorlooptijd.
 
 4. **Beperkte verifieerbaarheid.**
    Regels die in code zijn vastgelegd, of regels die op een niet-gestandaardiseerde wijze zijn vastgelegd, zijn lastig te controleren. Ze zitten 'verstopt' in code die alleen ontwikkelaars kunnen inzien, of in bestanden die veel kennis vergen om te begrijpen.
