@@ -11,7 +11,7 @@ Title: Subwerkgroep Juridisch kader - bijeenkomst 1
 - Jasper Schut, Elske Derks en Wouter Diephuis, juristen bij BZK
 - Nico Spijkers, beleidsmedewerker bij VRO - Zicht op Nederland
 - Rens Kievit, PhD student BZK – ODI
-- Allert de Zeeuw, Belastingsdienst, beheerder van BRI
+- Allert de Zeeuw, Belastingdienst, beheerder van BRI
 - Marc de Boer, PO van FTV
 
 {{< /chapter/section >}}
