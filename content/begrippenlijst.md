@@ -31,11 +31,11 @@ Federatieve Toegangsverlening (FTV) is een technisch onderwerp. Er worden veel b
 
 - **Policies**, ook wel regels of beleid. Een term voor een set voorschriften die samen bepalen wat wel en niet mag. Bij FTV gaat het om bestanden waarin de regels in een technisch formele taal uitgeschreven zijn.
   
-- **Policy/Attribute Based Access control (PBAC/ABAC)**. Methode van toegangsverlening waarbij regels vastgelegd zijn in policies (bestanden) en gebruik maken van attributen (kenmerken). PBAC en ABAC zijn twee namen voor hetzelfde principe. Lees meer op [Wikipedia](https://en.wikipedia.org/wiki/Attribute-based_access_control)
+- **Policy/Attribute Based Access Control (PBAC/ABAC)**. Methode van toegangsverlening waarbij regels vastgelegd zijn in policies (bestanden) en gebruik maken van attributen (kenmerken). PBAC en ABAC zijn twee namen voor hetzelfde principe. Lees meer op [Wikipedia](https://en.wikipedia.org/wiki/Attribute-based_access_control)
   
 - **Relationship Based Access Control (ReBAC)**. Methode van toegangsverlening waarbij de toegang is gebaseerd op relaties tussen subject en object. Primair geschikt voor rechten tot hiërarchische bestandssystemen. Lees meer op [Wikipedia](https://en.wikipedia.org/wiki/Relationship-based_access_control)
   
-- **Role Based Access control (RBAC)**. Methode van toegangsverlening waarbij rechten via rollen/groepen aan gebruikers zijn toegekend. Alleen kenmerken van de gebruiker worden gebruikt om toegang te bepalen. Lees meer op [Wikipedia](https://nl.wikipedia.org/wiki/Role-based_access_control)
+- **Role Based Access Control (RBAC)**. Methode van toegangsverlening waarbij rechten via rollen/groepen aan gebruikers zijn toegekend. Alleen kenmerken van de gebruiker worden gebruikt om toegang te bepalen. Lees meer op [Wikipedia](https://nl.wikipedia.org/wiki/Role-based_access_control)
   
 - **XACML**. De eerste standaard voor toegangsverlening. Deze omvat een architectuur, een informatiemodel en een policytaal. Lees meer op [Wikipedia](https://en.wikipedia.org/wiki/XACML)
   
