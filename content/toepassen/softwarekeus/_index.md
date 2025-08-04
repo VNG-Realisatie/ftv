@@ -19,7 +19,7 @@ FTV heeft een beperkte [verkenning](/ftv/onderzoek/status_techniek/producten) va
 {{< /chapter/section >}}
 
 {{< chapter/section title="Open of closed source" level="3">}}
-Elke EAM-oplossing draait om de beslismodule: de Policy Decision Point (PDP). Daaromheen zitten modules voor beheer, zoals voor schrijven, testen, distributie, monitoring en standaard integraties met bestaande applicaties (Policy Enforcement Points, PEPs). Vind hier [een beschrijving van alle functies](/ftv/toepassen/functioneel). 
+Elke EAM-oplossing draait om de beslismodule: de Policy Decision Point (PDP). Daaromheen zitten modules voor beheer, zoals voor schrijven, testen, distributie, monitoring en standaard integraties met bestaande applicaties (Policy Enforcement Points, PEPs). Lees [een beschrijving van alle functies](/ftv/toepassen/functioneel) voor meer informatie. 
 
 De meeste PDPs zijn open source en vaak ook licentievrij. De andere modules worden commercieel aangeboden, als uitbestede dienst (SaaS) of voor eigen beheer (on-premises). Vaak zit hier een duidelijke freemiumstrategie achter: door een goede gratis open source PDP aan te bieden, hoopt de leverancier een klant aan de eigen policytaal te binden waarna de overstap naar die specifieke betaalde EAM de makkelijke weg is.
 {{< /chapter/section >}}
