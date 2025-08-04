@@ -64,7 +64,7 @@ Data voor de volgende bijeenkomsten vanaf september volgen na de zomervakantie.
 - 25 maart 2025: Kick-off Werkgroep Federatieve Toegangsverlening ([Notulen]({{% relref "kick-off" %}}))
 - 20 november 2024: Pilot Gegevensminimalisatie ([Notulen]({{% relref "gegevensminimalisatie" %}})).
 
-#### Subwerkgroep juridisch kader
+#### Subwerkgroep Juridisch Kader
 
 - donderdag 22 mei: Bijeenkomst 1 ([Notulen]({{% relref "juridisch-kader-sub1" %}}))
 
