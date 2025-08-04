@@ -41,7 +41,7 @@ IT-specialisten denken via Mattermost mee over FTV. Heb je ideeën of vragen? Sl
 
 {{< /chapter/section >}}
 
-{{< chapter/section title="Wie doen er al mee?" >}}
+{{< chapter/section title="Wie doet er al mee?" >}}
 - Digilab
 - Geonovum
 - Ministerie van Binnenlandse Zaken (BZK)
