@@ -45,21 +45,21 @@ De architectuur van **[Externalized Authorization Management (EAM)](/ftv/methodi
 EAM voldoet aan de eisen van flexibiliteit en schaalbaarheid. 
 
 Policy-Based Access Control (PBAC), Attribute-Based Access Control (ABAC) en Relationship-Based Access Control (ReBAC) zijn verschillende vormen van Externalized Authorization Management (EAM).
-Er hoeft geen keus gemaakt te worden hiertussen, om dat de meeste systemen allen ondersteunen en ze elkaar kunnen aanvullen.
+Er hoeft geen keus gemaakt te worden hiertussen, omdat de meeste systemen allen ondersteunen en ze elkaar kunnen aanvullen.
 
 {{< /chapter/section >}}
 
 {{< chapter/section title="Regeltalen" level="4">}}
 
-Er zijn veel [regeltalen](/ftv/onderzoek/status_techniek/regeltalen), waarvan er niet één intrinsiek beter is, of een groter marktaandeel heeft. Ze willen allen grotendeels hetzelfde en ontlenen hun bestaansrecht voornamelijk aan het product waaraan ze gekoppeld zijn. 
+Er zijn veel [regeltalen](/ftv/onderzoek/status_techniek/regeltalen), waarvan er niet één intrinsiek beter is of een groter marktaandeel heeft. Ze willen allen grotendeels hetzelfde en ontlenen hun bestaansrecht voornamelijk aan het product waaraan ze gekoppeld zijn. 
 
-**FTV zal vooralsnog geen keus maken**. In plaats daarvan wordt gekeken of op termijn een sterkste naar voren komt of een overkoepelende taal of mechanisme ontstaat.
+**FTV zal vooralsnog geen keus maken**. In plaats daarvan wordt gekeken of op termijn de sterkste naar voren komt of een overkoepelende taal of mechanisme ontstaat.
 
 {{< /chapter/section >}}
 
 {{< chapter/section title="Standaarden" level="4">}}
 
-Er zijn pogingen gedaan producten tot standaard te verheffen en daarnaast een aantal meer onafhankelijke initiatieven. De enige open standaard voor EAM die nu daadwerkelijk toepasbaar is en voet aan de grond heeft bij de grote spelers is [AuthZEN](/ftv/methodiek/standaarden#authzen) van de OpenID foundation.
+Er zijn pogingen gedaan producten tot standaard te verheffen en daarnaast een aantal meer onafhankelijke initiatieven. De enige open standaard voor EAM die nu daadwerkelijk toepasbaar is en voet aan de grond heeft bij de grote spelers is [AuthZEN](/ftv/methodiek/standaarden#authzen) van de OpenID Foundation.
 
 **FTV sluit zich bij AuthZEN aan**, en specificeert een profiel en/of extensies daarbovenop voor de Nederlandse overheid. 
 
@@ -76,7 +76,7 @@ Dit zijn echter alleen deelvoorzieningen waarmee regels runtime toegepast kunnen
 Lopende het project wordt door FTV een marktonderzoek van [commerciële oplossingen](/ftv/onderzoek/status_techniek/producten#closed) gedaan. Dit gebeurt door eigen tests en vooral door gesprekken met de leveranciers zelf. Er wordt gekeken naar compleetheid, adoptie van standaarden en koppelingen naar aanpalende systemen zoals Identity and Access Management (IAM). [Het resultaat van het onderzoek]({{< param baseDirectory >}}toepassen/softwarekeus) zal geen koopadvies worden, maar een handreiking over hoe tot een keus te komen.
 {{< /chapter/section >}}
 
-{{< chapter/section title="2. Status bij de Nederlands overheid" >}}
+{{< chapter/section title="2. Status bij de Nederlandse overheid" >}}
 
 {{< /chapter/section >}}
 
@@ -88,14 +88,14 @@ De bestaande [koppelvlakstandaarden](/ftv/onderzoek/status_nl_overheid/koppelvla
 
 {{< chapter/section title="Aanbieders" level="4">}}
 
-Van de [aanbieders](/ftv/onderzoek/status_nl_overheid/aanbieders/) heeft alleen de BRP een serieuze vorm van toegangsverlening. Dit is een zelfgebouwde oplossing die gelijkenissen met PBAC heeft. Het is op zich niet vreemd dat er weinig gedaan is, omdat aanbieders vaak weinig complexe regels hebben, die liggen eerder bij de afnemers.
+Van de [aanbieders](/ftv/onderzoek/status_nl_overheid/aanbieders/) heeft alleen de BRP een serieuze vorm van toegangsverlening. Dit is een zelfgebouwde oplossing die gelijkenissen met PBAC heeft. Het is op zich niet vreemd dat er weinig gedaan is, omdat aanbieders vaak weinig complexe regels hebben. Deze liggen eerder bij de afnemers.
 {{< /chapter/section >}}
 
 {{< chapter/section title="Afnemers" level="4">}}
 
 De meeste systemen van [afnemers](/ftv/onderzoek/status_nl_overheid/afnemers/) hebben toegangsverlening erkend als belangrijk en lastig. De oplossingen zijn heel divers maar over het algemeen RBAC of ad hoc maatwerk. Bij leveranciers van zaaksystemen zoals Maykin en Dimpact zijn wel stappen gezet richting PBAC. 
 
-Het succes daarvan staat of valt bij de beheersbaarheid op schaal. Tot nu toe zijn traagheid en de complexiteit van de policies nog struikelblokken.
+Het succes daarvan staat of valt met de beheersbaarheid op schaal. Tot nu toe zijn traagheid en de complexiteit van de policies nog struikelblokken.
 {{< /chapter/section >}}
 
 {{< chapter/section title="Datastelsels" level="4">}}
