@@ -101,7 +101,7 @@ Vragen na de presentatie:
 
 - *Martin van der Plas*: Zijn er mechanismes om een policy te ondertekenen of de echtheid kan waarmerken zodat je zeker weet dat als je die policy implementeert je ook de correcte policy hebt? Of wordt dat vrijgelaten zodat elke organisatie zelf een interpretatie moet doen van de functionele policy in een technische configuratie.
 
-  *Michiel Trimpe*: Dat is wel de fall-back waar we waarschijnlijk op uitkomen. Mogelijk kunnen we stelselpolicies echt technisch definieren; maar dat hangt af van de hoeveelheid aannames en beperkingen we af kunnen dwingen.
+  *Michiel Trimpe*: Dat is wel de fall-back waar we waarschijnlijk op uitkomen. Mogelijk kunnen we stelselpolicies echt technisch definiëren, maar dat hangt af van de hoeveelheid aannames en beperkingen we af kunnen dwingen.
 
   *Martin van der Plas*: Het doet me ook denken aan de Verifiable Credentials standaard.
 
