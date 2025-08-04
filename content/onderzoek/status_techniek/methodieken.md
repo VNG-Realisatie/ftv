@@ -11,7 +11,7 @@ Dit is de gangbare indeling:
 1. Lijsten van gebruikers: [Access Control Lists (ACL)](https://en.wikipedia.org/wiki/Access-control_list)
 2. Rolgebaseerd: [Role Based Access Control (RBAC)](https://en.wikipedia.org/wiki/Role-based_access_control)
 3. Attribuutgebaseerd: [Attribute Based Access Control (ABAC)](https://en.wikipedia.org/wiki/Attribute-based_access_control)
-4. Policy-gebaseerd: [Policy Based Access Control (PBAC)](https://en.wikipedia.org/wiki/Attribute-based_access_control)
+4. Policygebaseerd: [Policy Based Access Control (PBAC)](https://en.wikipedia.org/wiki/Attribute-based_access_control)
 5. Relatiegebaseerd: [Relationship Based Access Control (ReBAC)](https://en.wikipedia.org/wiki/Relationship-based_access_control)
 
 {{< /chapter/section >}}
@@ -41,7 +41,7 @@ De term Externalized Authorization Management (EAM) kan als overkoepelend begrip
 - **Centraal beheerd, lokaal toegepast**. Regels kunnen complex zijn en het beheer ervan vraagt kennis en tooling. Tegelijk moet toegang efficiënt bepaald
 worden om te voorkomen dat prestaties belemmerd worden. Door gedistribueerde systemen te gebruiken, zijn beide tegelijk mogelijk.
 
-Onderstaande video toont het veld.
+Onderstaande video laat zien hoe het speelveld van EAM eruitziet.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QBs4G2WUP7U?si=CALnZ-582uDPCmug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
