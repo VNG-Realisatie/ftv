@@ -22,7 +22,7 @@ Merk op dat open source nog niet wil zeggen dat de software gratis is. Aan hosti
 Dit zijn de bekendste talen voor het vastleggen van toegangsregels met bijbehorende open implementaties:
 
 - [XACML](https://en.wikipedia.org/wiki/XACML) was de eerste open source standaard, onder beheer bij OASIS.
-  Het beschrijft de algemeen aanvaarde architectuur van een PBAC-oplossing in Policy Enforcement Point (PEP), Policy Decision Point (PDP),Policy Administration Point (PAP) en Policy Information Point (PIP).
+  Het beschrijft de algemeen aanvaarde architectuur van een PBAC-oplossing in Policy Enforcement Point (PEP), Policy Decision Point (PDP), Policy Administration Point (PAP) en Policy Information Point (PIP).
 
   Daarnaast bevat XACML een op XML-gebaseerde regeltaal; met bijna 300 functies is deze heel compleet.
   Regels in XML kennen ook nadelen: het is niet eenvoudig te schrijven en te lezen en de verwerking presteert vaak niet goed. Als alternatief is er [ALFA](https://en.wikipedia.org/wiki/Abbreviated_Language_for_Authorization), een verkorte notatie van XACML, ontwikkeld door Axiomatics en gedoneerd aan OASIS. ALFA is echter nog niet als standaard geaccepteerd en de enige implementatie is die van Axiomatics zelf.
