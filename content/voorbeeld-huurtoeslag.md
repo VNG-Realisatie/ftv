@@ -13,7 +13,7 @@ Daarom ondersteunt de overheid mensen met een lager inkomen via huurtoeslag.
 
 Een burger doet een aanvraag voor huurtoeslag. Een medewerker van de Dienst Toeslagen beoordeelt vervolgens of deze persoon recht heeft op de huurtoeslag. Daarvoor haalt de medewerker gegevens op bij verschillende bronnen:
 
-- Inschrijving in het Basisregister Personen (BRP).
+- Inschrijving in de Basisregistratie Personen (BRP).
 - Inkomen van de afgelopen jaren uit de Basisregistratie Inkomen (BRI) van de Belastingdienst.
 - Eerdere beslissingen over huurtoeslagen.
 - De huurprijs van de woning via het puntensysteem, gebaseerd op WOZ-waarde, energielabel en het woonoppervlak.
