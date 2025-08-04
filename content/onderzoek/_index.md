@@ -15,7 +15,7 @@ Voorafgaand aan het definiëren van een werkwijze en het opstellen van de standa
     <div class="section-home-box">
         <a href="status_techniek">
             <h2 class="nl-heading nl-heading--level-4 rhc-heading">
-                Technische analyse
+                Status techniek
             </h2>
             <p class="utrecht-paragraph">
                 Analyse van methoden, standaarden en producten voor moderne toegangsverlening. 
