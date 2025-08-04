@@ -5,7 +5,9 @@ title: "Methodiek"
 
 {{< chapter/header title="Methodiek" bg="green" icon="images/sectie-methodiek.svg">}}
 
-De kern van het project is de gekozen methodiek, oftewel de voorgestelde werkwijze. De methodiek beschrijft vanuit technisch en functioneel perspectief hoe een oplossing voor toegang eruit moet zien om de voordelen van Federatieve Toegangsverlening (FTV) te behalen.
+Federatieve Toegangsverlening (FTV) volgt het architectuurpatroon van Externalized Authorization Management (EAM). Daarbij staan toegangsregels niet in de applicatie zelf, maar worden ze extern beheerd. Deze methode maakt toegangsverlening beter schaalbaar, flexibeler, traceerbaar en leveranciersonafhankelijk.
+
+FTV bouwt voort op internationale en open standaarden.
 
 {{< /chapter/header >}}
 
@@ -19,7 +21,7 @@ De kern van het project is de gekozen methodiek, oftewel de voorgestelde werkwij
                 De principes
             </h2>
             <p class="utrecht-paragraph">
-                De basisprincipes van Externalized Authorization Management (EAM) uitgelegd
+                Toelichting op de uitgangspunten van Externalized Authorization Management (EAM).
             </p>
         </a>
     </div>
@@ -36,7 +38,7 @@ De kern van het project is de gekozen methodiek, oftewel de voorgestelde werkwij
     <div class="section-home-box">
         <a href="logboek-toegangsbeslissingen">
            <h2 class="nl-heading nl-heading--level-4 rhc-heading">
-              Authorization Decision Log
+              Logboek Toegangs-beslissingen (Authorization Decision Log)
            </h2>
             <p class="utrecht-paragraph">
                 De standaard voor verantwoording van genomen beslissingen
@@ -56,7 +58,10 @@ De kern van het project is de gekozen methodiek, oftewel de voorgestelde werkwij
 </div>
 {{< /chapter/header >}}
 
+<!---
+
 {{< chapter/section title="FTV-methodiek" >}}
+
 FTV kiest voor het architectuurpatroon van [Externalized Authorization Management](principes) (EAM) voor toegangsverlening. 
 
 Standaardisatie is bij uitstek het middel om aansluiting en uitwisseling tussen systemen te vergemakkelijken. [Open standaarden](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/open-standaarden/) hebben daarbij de sterke voorkeur, alsmede het voortbouwen op bestaande internationale standaarden.
@@ -65,5 +70,6 @@ Daarvoor werkt FTV aan het [AuthZEN NLGov profiel](authzen-nlgov). Een Nederland
 
 Om het mogelijk te maken om verleende toegangsbeslissingen te verantwoorden werkt FTV ook aan het [Logboek Toegangsbeslissingen](logboek-toegangsbeslissingen) (Authorization Decision Log). Deze gebruikt het AuthZEN informatiemodel om historische beslissingen te kunnen verantwoorden zonder onnodig beslisgegevens te dupliceren.
 
-Om organitaties, afdelingen en deelnemers aan (federatieve) stelsels inzicht te bieden in wederzijds toegangsbeleid zal FTV in 2026 ook de standaard [Register Toegangsbeleid](register-toegangsbeleid) ontwikkelen.
+Om organisaties, afdelingen en deelnemers aan (federatieve) stelsels inzicht te bieden in wederzijds toegangsbeleid zal FTV in 2026 ook de standaard [Register Toegangsbeleid](register-toegangsbeleid) ontwikkelen.
 {{< /chapter/section >}}
+--->
