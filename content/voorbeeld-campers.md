@@ -30,7 +30,7 @@ Federatieve Toegangsverlening (FTV) gaat over toegangsregels. In dit geval zijn 
 - Alleen gemeenten die een ‘Besluit milieuzones’ hebben aangenomen, mogen deze gegevens opvragen.
 - Het opvragen bij RDW en RvIG mag alleen gebeuren vanaf een computer van zo'n gemeente.
 - De woonplaats mag alleen worden opgevraagd als uit de categorie en emissieklasse blijkt dat het om een dieselcamper gaat.
-- Persoonsgegevens mogen alleen worden opgevraagd als blijkt dat een boete uitgeschreven moet worden.
+- Persoonsgegevens mogen alleen worden opgevraagd als blijkt dat een boete moet worden uitgeschreven.
 - Alle gegevens die niet nodig zijn voor het innen van een boete, moeten direct worden gewist.
 - Er moet een logboek worden bijgehouden van alle opvragingen.
 
