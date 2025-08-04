@@ -105,7 +105,7 @@ Er zijn twee registraties: BRP en BRV. Ze bevatten allebei de volgende onderdele
 {{< /chapter/section >}}
 {{< chapter/section title="Gedeeld EAM" level="4">}}
 
-De registraties delen in deze proefopstelling voor de eenvoud één toegangsverleningssysteem. In de praktijk zal dat meestal niet het geval zijn. De onderdelen zijn herkenbaar als dezelfde als bij de gemeente, maar dan:
+De registraties delen in deze proefopstelling voor de eenvoud één toegangsverleningsysteem. In de praktijk zal dat meestal niet het geval zijn. De onderdelen zijn herkenbaar als dezelfde als bij de gemeente, maar dan:
 - Cerbos als **PDP**
 - Git als **PAP**, met GitLab als interface, zowel de service naar de PDP als de webapplicatie voor policybeheer.
 - OpenFTV als **PIP**
