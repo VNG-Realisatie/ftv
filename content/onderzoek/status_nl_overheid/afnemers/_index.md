@@ -20,7 +20,7 @@ Afnemers gebruiken hiervoor software die ze door een leverancier laten leveren e
 | Pink Roccade     |          |                                                                                                                                                 |
 | SonicBee         |          |                                                                                                                                                 |
 
-Een aantal gemeenten gaan ook zelf aan de slag met EAM. Hieronder een overzicht van de initiatieven.
+Een aantal gemeenten gaat ook zelf aan de slag met EAM. Hieronder een overzicht van de initiatieven.
 
 | Gemeente         | Systeem            | Toegang met EAM? |  
 |------------------|--------------------|------------------|
