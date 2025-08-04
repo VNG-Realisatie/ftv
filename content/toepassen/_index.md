@@ -71,7 +71,7 @@ Het toepassen van Federatieve Toegangsverlening (FTV) begint met een goede voorb
 {{< /chapter/header >}}
 
 {{< chapter/section title="" >}}
-Federatieve toegangsverlening raakt meerdere onderdelen van een organisatie. Daarom zijn de handreikingen op deze pagina gericht op verschillende doelgroepen. 
+Federatieve Toegangsverlening raakt meerdere onderdelen van een organisatie. Daarom zijn de handreikingen op deze pagina gericht op verschillende doelgroepen. 
 {{< /chapter/section >}}
 
 {{< chapter/accordion title="Voor bestuurders" customclass="bg-rhc-color-oranje-100" >}}
