@@ -41,7 +41,7 @@ Runtime functies zijn die functies die tijdens het normale gebruik worden uitgev
 
 - **Beslissingen afdwingen**: het onderscheppen van elk verzoek, en zorgen dat genomen beslissingen ook gegarandeerd nageleefd worden.
 - **Beslissingen nemen**: het bepalen of het verzoek gehonoreerd, voorwaardelijk gehonoreerd of afgewezen moet worden. Dit gebeurt op basis van de vrager, de vraag, het onderwerp en de omgeving ([subject, action, resource en context](/ftv/methodiek/standaarden#informatiemodel)) en de beschikbare regels. 
-- **Beslissingen loggen**: het vastleggen welke beslissingen zijn genomen. Van belang is om hierbij de juiste hoeveelheid informatie vast te leggen. Enerzijds voldoende om later verantwoording af te leggen en de juistheid van beslissingen te controleren. Anders niet meer dan nodig om te privacy te respecteren.
+- **Beslissingen loggen**: het vastleggen welke beslissingen zijn genomen. Van belang is om hierbij de juiste hoeveelheid informatie vast te leggen. Enerzijds voldoende om later verantwoording af te leggen en de juistheid van beslissingen te controleren. Anders niet meer dan nodig om de privacy te respecteren.
 
 {{< img-url "diagrams/functies-en-rollen.svg" "Overzicht functies en rollen in EAM" >}}
 
