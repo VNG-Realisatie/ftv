@@ -40,7 +40,7 @@ De beoogde resultaten van fase 1 zijn, zoals vastgelegd in de subsidie:
 2.	Inventarisatie van de meest voorkomende huidige geïmplementeerde oplossingen.
 3.	Onderzoek naar mogelijke moderne oplossingen passend bij APIs.
 4.	Plan van Aanpak fase 2.
-5.	Agendering van een besluit voor het in gang zetten van fase 2 op programmeringstafel Gegevensuitwisseling/Toegang.
+5.	Agendering van een besluit voor het in gang zetten van fase 2 op de programmeringstafel Gegevensuitwisseling/Toegang.
 
 **In april 2025 is fase 1 afgerond. De methodiek is besproken aan de programmeringstafel toegang. Dit heeft geleid tot een positief advies en duidelijke richting voor fase 2.**
 
@@ -53,7 +53,7 @@ als de adoptie ervan vergen veel communicatie. Een belangrijk deel van de aanpak
 het verkennen van het terrein, het contact maken met de spelers en het bijeen brengen van een
 diverse community. Beleidsmakers, aanbieders en afnemers van gegevens, implementatiepartners en technische
 visionairs zijn allemaal essentieel voor het slagen. Het project zal deze community faciliteren, de
-discussie begeleiden en de resultaten vastleggen en agenderen. Dit is iets anders dan
+discussie begeleiden, de resultaten vastleggen en agenderen. Dit is iets anders dan
 de beste oplossing menen te hebben en die aan zoveel mogelijk partijen op te leggen.
 
 Ook is het van belang dat de juiste balans gevonden wordt tussen beschrijven, uitleggen en uitdragen
@@ -64,7 +64,7 @@ De projectactiviteiten zijn ingedeeld volgens de bovengenoemde doelstellingen:
 
 1. Initiatie: inlezen in de materie, verkennen van het speelveld, leggen van eerste contacten.
 2. Zichtbaarheid: inrichten van een onlineomgeving waarin het project met alle resultaten en overwegingen publiek gemaakt wordt.
-3. Maken van de stakeholder kaart en verifiëren van de correctheid daarvan bij de betrokkenen. Naast kennis voor het
+3. Maken van de stakeholderkaart en verifiëren van de correctheid daarvan bij de betrokkenen. Naast kennis voor het
    project wordt hiermee vooral zichtbaarheid en contact bereikt.
 4. Inventariseren van de huidige werkwijzen, inclusief analyse van voor- en nadelen, en attitude ten opzichte van dit initiatief.
    Ook hiermee wordt breder contact en begrip nagestreefd, naast inhoudelijke kennis en inspiratie.
