@@ -36,8 +36,8 @@ Voor een scherpere afbakening van de opdracht volgt een toelichting op enkele ge
 {{< /chapter/section >}}
 
 {{< chapter/section title="Definiëren, niet coderen" level="3">}}
-***Definieer*** wil zeggen dat er methodiek wordt voorgesteld en niet per se gerealiseerd.
-Het primaire doel is een goede beschrijving van de methode, een breed begrip en draagvlak en uiteindelijk ook adoptie ervan.
+***Definieer*** wil zeggen dat er een methodiek wordt voorgesteld en niet per se gerealiseerd.
+Het primaire doel is een goede beschrijving van de methode, een breed begrip, draagvlak en uiteindelijk ook adoptie ervan.
 Er zullen ook tastbare technische resultaten zijn om aan te tonen dat de methodiek haalbaar, schaalbaar en veilig is.
 Daarnaast wordt een referentie-implementatie ontwikkeld als educatief instrument en als halffabricaat.
 Het is echter expliciet niet de bedoeling om een softwareproduct op te leveren dat in productie genomen kan worden.
@@ -53,7 +53,7 @@ Vanzelfsprekend zijn dit wel cruciale aspecten. Ze zijn voorwaardelijk aan veran
 De toevoeging ***tot APIs*** beperkt het project tot geautomatiseerde gegevensuitwisseling.
 Het gaat niet over autorisatie via een niet-digitaal medium en ook niet over interacties tussen mens en computer.
 
-Ook beperkt ***tot APIs*** de scope tot uitwisseling waarbij minstens twee door APIs verbonden systemen betrokken zijn.
+Deze toevoeging ***tot APIs*** beperkt de scope ook tot uitwisseling waarbij minstens twee door APIs verbonden systemen betrokken zijn.
 Autorisatie binnen een applicatie of dienst, of die niet via APIs verloopt, heeft wel een grote overlap in methode en techniek,
 maar is niet het doel hier.
 
