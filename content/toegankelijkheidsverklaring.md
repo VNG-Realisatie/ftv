@@ -4,7 +4,7 @@ type: 'chapter'
 ---
 {{< chapter/header title="Toegankelijkheidsverklaring" bg="brown">}}
 
-Het project Federatieve Toegangsverlening (FTV) wil dat iedereen deze website kan gebruiken. Kom je toch een pagina tegen die niet toegankelijk is? Dan kan je dit melden.
+Het project Federatieve Toegangsverlening (FTV) wil dat iedereen deze website kan gebruiken. Kom je toch een pagina tegen die niet toegankelijk is? Dan kun je dit melden.
 
 {{< /chapter/header >}}
 
