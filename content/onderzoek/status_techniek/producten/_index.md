@@ -12,13 +12,13 @@ Hier volgt een inventarisatie van de beschikbare producten verdeeld in open en c
 
 {{< chapter/section title="Open source" id="open" level="3">}} 
 Er zijn veel implementaties beschikbaar. Voor de test is gekozen voor de partijen die opvallen als ‘grootste’. Dat begrip is relatief: Amazon Verified Permissions is waarschijnlijk het grootst in aantal transacties, omdat het toegang tot AWS regelt. Open Source Agent (OPA) daarentegen is leidend in aantal downloads en implementaties.
-Dit zijn de geteste implementatie met de daarbij behorende regeltalen:
+Dit zijn de geteste implementaties met de daarbij behorende regeltalen:
 
 - [Amazon Verified Permissions](https://aws.amazon.com/verified-permissions/) is de policy engine van Amazon en gebruikt de taal Cedar.
 - [Cerbos](https://www.cerbos.dev/) is de Policy Based Access Control (PBAC)-oplossing van Google en maakt gebruik van CEL.
 - [OPA](https://www.openpolicyagent.org/) is de engine van Styra, de bedenker van Rego.
 - [OpenFGA](https://openfga.dev/) is gebaseerd op Zanzibar, het Relationship Based Access Control (ReBAC)-project van Google.
-- [KeyCloak](https://www.keycloak.org/docs/latest/authorization_services/index.html), een open source platform.
+- [Keycloak](https://www.keycloak.org/docs/latest/authorization_services/index.html), een open source platform.
 
 Van XACML zijn geen stabiele moderne open source implementaties.
 
@@ -32,7 +32,7 @@ Een tweede kanttekening is dat deze implementaties allemaal losse policy engines
 {{< chapter/section title="Closed source" id="closed" level="3">}}
 In het commerciële domein zijn completere oplossingen beschikbaar. Een goede recente inventarisatie van de markt is [de inventarisatie van KuppingerCole](https://www.kuppingercole.com/research/lc80819/policy-based-access-management).
 
-Voor dit onderzoek zijn verschillende partijen benaderd met het verzoek om informatie en een demonstratie. In onderstaande tabel een overzicht van de partijen. [Benader ons](mailto:ftv@vng.nl) gerust voor meer informatie over de gevoerde gesprekken. 
+Voor dit onderzoek zijn verschillende partijen benaderd met het verzoek om informatie en een demonstratie. In onderstaande tabel een overzicht van de partijen. Neem [contact](mailto:ftv@vng.nl) op voor meer informatie over de gevoerde gesprekken. 
 
 | Leverancier                                                                        | Meer informatie                                                   |
 |------------------------------------------------------------------------------------|-------------------------------------------------------------------|
