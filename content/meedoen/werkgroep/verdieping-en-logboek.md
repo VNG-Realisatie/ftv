@@ -101,7 +101,7 @@ Hierna konden alle deelnemers zich in het [Miro bord]({{< param baseDirectory >}
 
   Logboek Toegangsverzoeken wordt als naam voorgesteld.
 
-- *Michiel Trimpe* legt uit dat Logboek Toegangsverzoek relatief veel gevoelige informatie bevat. Dit in vergelijking met FSC waarbij er alleen metadata opgeslagen wordt en Logboek Dataverwerking waarbij alle data toegangelijk dient te zijn voor de burger die het betreft. 
+- *Michiel Trimpe* legt uit dat Logboek Toegangsverzoek relatief veel gevoelige informatie bevat. Dit in vergelijking met FSC waarbij er alleen metadata opgeslagen wordt en Logboek Dataverwerking waarbij alle data toegankelijk dient te zijn voor de burger die het betreft. 
 Een aandachtspunt hierbij is ook dat je gevoelige informatie niet onnodig wil dupliceren. Stel dat je op basis van een gegeven BSN een beslissing maakt met behulp van gegevens uit de BRP, dan wil je liever alleen het BSN opslaan en niet alle gebruikte BRP-gegevens.
   
   *Gideon Zegwaard*: Je kan die informatie ook buiten de log houden en alleen de verwijzing opnemen.
