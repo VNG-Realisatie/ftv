@@ -65,7 +65,7 @@ Het project is opgedeeld in twee fases.
 **Fase 1: juli 2024 – april 2025**
 
 Fase 1 had als doel om de basis te leggen voor een standaardmethodiek voor toegangsverlening, door het in kaart brengen van stakeholders, bestaande oplossingen, moderne methodieken en het voorbereiden van fase 2.
-Tijdens deze fase is onderzoek gedaan, gewerkt aan community vorming en is een eerste versie van de standaard en een referentie-implementatie ontwikkeld.
+Tijdens deze fase is onderzoek gedaan, gewerkt aan communityvorming en is een eerste versie van de standaard en een referentie-implementatie ontwikkeld.
 Fase 1 is afgerond met het besluit om aan te sluiten bij de OpenID AuthZEN-standaard en daar een Nederlands profiel (NL Gov) op te maken.
 
 **Fase 2: april 2025 – december 2025**
