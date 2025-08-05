@@ -12,7 +12,7 @@ type: 'chapter'
 </div>
 <div class="sub-navigation-tab-selected utrecht-paragraph pt-1 sub-navigation-tab">
    <p>
-      <a href="../Werkgroep">Werkgroep</a>
+      <a href="../werkgroep">Werkgroep</a>
    </p>
 </div>
 </div>
