@@ -10,6 +10,8 @@ Niet elk voertuig mag een milieuzone inrijden. Of een voertuig toegang heeft, ha
 Zo mogen bijvoorbeeld alleen dieselcampers van bewoners de milieuzone in, die van anderen niet. 
 De gemeente gebruikt camera’s en databronnen om te controleren of een voertuig terecht toegang heeft.
 
+Dit voorbeeld laat zien hoe FTV in de praktijk kan werken.
+
 {{< /chapter/section >}}
 
 {{< chapter/section title="Wat gebeurt er?" level="3">}}
