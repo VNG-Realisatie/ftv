@@ -31,7 +31,7 @@ type: 'chapter'
 {{< /chapter/header >}}
 
 {{< chapter/section title="Register toegangsbeleid">}}
-Het Register Toegangsbeleid gaat definiëren aan welke eisen de opslag van toegangsbeleid moet voldoen. In termen van de PxP-architectuur gaat het om het Policy Administration Point (PAP).
+Het Register Toegangsbeleid legt vast aan welke eisen de opslag van toegangsbeleid moet voldoen. In termen van de PxP-architectuur gaat het om het Policy Administration Point (PAP).
 
 Zo moeten bijvoorbeeld alle versies van policies over tijd bewaard blijven. Ook wordt vastgelegd welke metadata een policy moet en mag hebben.
 
