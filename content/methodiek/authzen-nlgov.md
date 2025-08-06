@@ -32,7 +32,7 @@ type: 'chapter'
 
 {{< chapter/section title="AuthZEN">}}
 
-De [AuthZEN Authorization API](https://openid.net/wg/authzen/) is een initiatief van de OpenID foundation, bekend van OpenID Connect. De belangrijkste leveranciers van Policy Decision Points (PDPs) en API gateways werken hier samen aan een autorisatiestandaard.
+De [AuthZEN Authorization API](https://openid.net/wg/authzen/) is een initiatief van de OpenID Foundation, bekend van OpenID Connect. De belangrijkste leveranciers van Policy Decision Points (PDPs) en API gateways werken hier samen aan een autorisatiestandaard.
 
 ![Het OpenID logo](/ftv/images/logo-openid.png)
 
