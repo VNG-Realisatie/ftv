@@ -58,7 +58,7 @@ In de PxP-architectuur zijn deze vier velden benoemd:
 3. Resource. De gegevens waarop de verwerking uitgevoerd wordt.
 4. Context. De situatie/ omgeving waarin het gegevensverzoek gedaan is. Dit kan gaan over de verbinding, de huidige tijd, de locatie van het subject en meer.
 
-In [hoofdstuk 5 van de AuthZEN specificatie](https://openid.net/specs/authorization-api-1_0-03.html#name-information-model) zijn alle details van het informatiemodel te vinden.
+In hoofdstuk 5 van de [AuthZEN specificatie](https://openid.net/specs/authorization-api-1_0-03.html#name-information-model) zijn alle details van het informatiemodel te vinden.
 
 {{< /chapter/section >}}
 
