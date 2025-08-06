@@ -28,7 +28,8 @@ Federatieve Toegangsverlening (FTV) wordt ontwikkeld in samenspraak met verschil
                 Werkgroep
             </h2>
             <p class="utrecht-paragraph">
-                Professionals uit beleid, IT en juridische hoek denken mee over de standaard voor toegangsverlening. De werkgroep komt tweewekelijks bijeen, fysiek én online.
+                Professionals uit beleid, IT en juridische hoek denken mee over de standaard voor toegangsverlening. De werkgroep komt tweewekelijks bijeen, fysiek én online.     
+                
 
 
             
