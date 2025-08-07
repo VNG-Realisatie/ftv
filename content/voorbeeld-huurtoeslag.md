@@ -7,6 +7,8 @@ weight: 20
 {{< chapter/section title="Uit de praktijk - huurtoeslag aanvragen">}}
 Niet iedereen kan zelfstandig passende woonruimte betalen. 
 Daarom ondersteunt de overheid mensen met een lager inkomen via huurtoeslag.
+
+Dit voorbeeld laat zien hoe FTV in de praktijk kan werken.
 {{< /chapter/section >}}
 
 {{< chapter/section title="Wat gebeurt er?" level="3">}}

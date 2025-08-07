@@ -5,7 +5,7 @@ title: "Methodiek"
 
 {{< chapter/header title="Methodiek" bg="green" icon="images/sectie-methodiek.svg">}}
 
-Federatieve Toegangsverlening (FTV) volgt het architectuurpatroon van Externalized Authorization Management (EAM). Daarbij staan toegangsregels niet in de applicatie zelf, maar worden ze extern beheerd. Deze methode maakt toegangsverlening beter schaalbaar, flexibeler, traceerbaar en leveranciersonafhankelijk.
+Federatieve Toegangsverlening (FTV) volgt het architectuurpatroon van Externalized Authorization Management (EAM). Daarbij staan toegangsregels niet in de applicatie zelf, maar worden ze extern beheerd. Dankzij deze methode is toegangsverlening schaalbaar, flexibel, traceerbaar en onafhankelijk van leveranciers.
 
 FTV bouwt voort op internationale en open standaarden.
 
@@ -21,7 +21,7 @@ FTV bouwt voort op internationale en open standaarden.
                 De principes
             </h2>
             <p class="utrecht-paragraph">
-                Toelichting op de uitgangspunten van Externalized Authorization Management (EAM).
+                Toelichting op de uitgangspunten van Externalized Authorization Management (EAM).                                                                                   
             </p>
         </a>
     </div>
@@ -38,7 +38,7 @@ FTV bouwt voort op internationale en open standaarden.
     <div class="section-home-box">
         <a href="logboek-toegangsbeslissingen">
            <h2 class="nl-heading nl-heading--level-4 rhc-heading">
-              Logboek Toegangs-beslissingen (Authorization Decision Log)
+              Authorization Decision Log
            </h2>
             <p class="utrecht-paragraph">
                 De standaard voor verantwoording van genomen beslissingen
