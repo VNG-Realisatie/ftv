@@ -21,7 +21,7 @@ FTV bouwt voort op internationale en open standaarden.
                 De principes
             </h2>
             <p class="utrecht-paragraph">
-                Toelichting op de uitgangspunten van Externalized Authorization Management (EAM).                                                                                   
+                Toelichting op de uitgangspunten van Externalized Authorization Management (EAM).<br><br>
             </p>
         </a>
     </div>
@@ -31,7 +31,7 @@ FTV bouwt voort op internationale en open standaarden.
               AuthZEN
            </h2>
             <p class="utrecht-paragraph">
-                De gekozen OpenID standaard voor toegangsverlening, en het Nederlandse overheidsprofiel daarop
+                De gekozen OpenID standaard voor toegangsverlening, en het Nederlandse overheidsprofiel daarop.
             </p>
         </a>
     </div>
@@ -41,7 +41,7 @@ FTV bouwt voort op internationale en open standaarden.
               Authorization Decision Log
            </h2>
             <p class="utrecht-paragraph">
-                De standaard voor verantwoording van genomen beslissingen
+                De standaard voor verantwoording van genomen beslissingen.<br><br><br>
             </p>
         </a>
     </div>
@@ -51,7 +51,7 @@ FTV bouwt voort op internationale en open standaarden.
               Register Toegangsbeleid
            </h2>
             <p class="utrecht-paragraph">
-                Een standaard voor opslag en inzage in toegangsbeleid
+                Een standaard voor opslag en inzage in toegangsbeleid.
             </p>
         </a>
     </div>

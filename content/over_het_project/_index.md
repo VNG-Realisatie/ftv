@@ -18,7 +18,7 @@ Het project Federatieve Toegangsverlening (FTV) ontwikkelt een standaardwerkwijz
                 De opdracht
             </h2>
             <p>
-               Omschrijving van het doel, de scope en de planning van het project.
+               Omschrijving van het doel, de scope en de planning van het project.<br><br><br>
             </p>
         </a>
     </div>
@@ -28,7 +28,7 @@ Het project Federatieve Toegangsverlening (FTV) ontwikkelt een standaardwerkwijz
                 Scope
             </h2>
             <p class="utrecht-paragraph">
-                Afbakening van de opdracht en toelichting op wat wel en niet binnen het project valt.
+                Afbakening van de opdracht en toelichting op wat wel en niet binnen het project valt.<br><br>
             </p>
         </a>
     </div>

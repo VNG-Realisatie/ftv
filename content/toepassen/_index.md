@@ -17,7 +17,7 @@ Het toepassen van Federatieve Toegangsverlening (FTV) begint met een goede voorb
                Functies en rollen
            </h2>
            <p class="utrecht-paragraph">
-              Een overzicht van de belangrijkste functies en rollen bij het toepassen van FTV.
+              Een overzicht van de belangrijkste functies en rollen bij het toepassen van FTV.<br><br>
            </p>
        </a>
    </div>
@@ -39,7 +39,7 @@ Het toepassen van Federatieve Toegangsverlening (FTV) begint met een goede voorb
                OpenFTV
            </h2>
            <p class="utrecht-paragraph">
-               Een eenvoudige maar complete referentie-implementatie van een EAM-oplossing.
+               Een eenvoudige maar complete referentie-implementatie van een EAM-oplossing.<br><br>
            </p>
        </a>
    </div>
@@ -61,7 +61,7 @@ Het toepassen van Federatieve Toegangsverlening (FTV) begint met een goede voorb
                Softwarekeuze
            </h2>
            <p class="utrecht-paragraph">
-               Aandachtspunten voor het selecteren van de juiste software.
+               Aandachtspunten voor het selecteren van de juiste software.<br><br><br><br>
            </p>
        </a>
    </div>

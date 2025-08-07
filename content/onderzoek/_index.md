@@ -18,7 +18,7 @@ Voorafgaand aan het definiëren van een werkwijze en het opstellen van de standa
                 Status techniek
             </h2>
             <p class="utrecht-paragraph">
-                Analyse van methoden, standaarden en producten voor moderne toegangsverlening. 
+                Analyse van methoden, standaarden en producten voor moderne toegangsverlening. <br><br>
             </p>
         </a>
     </div>
@@ -28,7 +28,7 @@ Voorafgaand aan het definiëren van een werkwijze en het opstellen van de standa
               Inventarisatie bij de overheid
            </h2>
             <p class="utrecht-paragraph">
-               Onderzoek naar hoe toegangsverlening nu is ingericht binnen de Nederlandse overheid.
+               Onderzoek naar hoe toegangsverlening nu is ingericht binnen de Nederlandse overheid.<br><br><br>
             </p>
         </a>
     </div>
