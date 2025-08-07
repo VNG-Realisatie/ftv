@@ -89,7 +89,7 @@ De [technische architectuursectie](../architectuur) beschrijft onderdelen van de
 
 De verantwoordelijkheden binnen toegangsverlening zijn ruim twintig jaar geleden al uitgewerkt in de XACML-standaard voor autorisatie. Deze standaard introduceerde onder andere een policytaal gebaseerd op XML. Hoewel XML inmiddels minder vaak wordt gebruikt, zijn de onderliggende principes nog steeds relevant. Ze vormen de basis van de PxP-architectuur, waarin verantwoordelijkheden helder van elkaar zijn gescheiden.
 
-![Diagram van de PxP-architectuur](../methodiek-pxp-architectuur.png)
+![Diagram van de PxP-architectuur](/ftv/diagrams/methodiek-pxp.svg)
 
 De flow van informatie volgt de nummers op de afbeelding:
 
@@ -124,7 +124,7 @@ Wel essentieel is het onderscheid met Role Based Access Control (RBAC). Dat gaat
 
 De principes van Externalized Authorization Management (EAM) en de PxP-architectuur bieden een goede basis voor de implementatie. Maar om systemen goed met elkaar te laten samenwerken, zijn meer details nodig. Ook het aspect van traceerbaarheid  wordt in EAM en de PxP-architectuur niet geadresseerd. Daarom ontwikkelt Federatieve Toegangsverlening (FTV) drie standaarden:
 
-![Schema van de drie FTV-standaarden](../methodiek-3-standaarden.png)
+![Schema van de drie FTV-standaarden](/ftv/diagrams/methodiek-pxp-standaardisatie.svg)
 
 1. **[AuthZEN](../authzen-nlgov)**. Deze standaard omschrijft hoe een toegangsverzoek via dede PEP wordt gedaan en hoe het antwoord van dede PDP wordt teruggegeven. FTV gebruikt deAuthZEN-standaard als basis.
 2. **[Logboek toegangsbeslissingen](../logboek-toegangsbeslissingen)**. Een standaard voor het bijhouden van genomen toegangsbeslissingen.
