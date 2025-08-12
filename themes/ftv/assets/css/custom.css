@@ -228,7 +228,7 @@
        margin-top:5px;
     }
     .sub-navigation-wrapper {
-        bottom:0px;
+        bottom:-25px;
     }
 }
 
@@ -344,12 +344,21 @@ td, th {
 
 .next-previous-box-right {
     text-align:right;
-    width:42%;
+    width: 42%;
 }
 
 .next-previous-box-left {
-    width:42%;
+    width: 42%;
 }
+
+@media (max-width: 768px) {
+    .next-previous-box-right, .next-previous-box-left {
+        width: 150px;
+        padding: 10px;
+        margin: 10px;
+    }
+}
+
 
 .next-previous-box-left p {
     margin-top:8px;
