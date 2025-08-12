@@ -1,8 +1,9 @@
 ---
+type: 'chapter'
 weight: 10
 Title: Stakeholders
 ---
-{{< chapter/section title="Stakeholders" level="1">}}
+{{< chapter/section title="Stakeholders">}}
 Deze afbeelding laat zien welke stakeholders betrokken zijn en hoe ze zich tot elkaar verhouden.
 
 ![Stakeholderkaart]({{< param baseDirectory >}}images/stakeholder_map.png)
