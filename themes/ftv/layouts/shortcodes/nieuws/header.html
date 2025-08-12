@@ -1,21 +1,21 @@
 {{ $months := dict
-    "Jan" "jan"
-    "Feb" "feb"
-    "Mar" "mrt"
-    "Apr" "apr"
+    "Jan" "januari"
+    "Feb" "februari"
+    "Mar" "maart"
+    "Apr" "april"
     "May" "mei"
-    "Jun" "jun"
-    "Jul" "jul"
-    "Aug" "aug"
-    "Sep" "sep"
-    "Oct" "okt"
-    "Nov" "nov"
-    "Dec" "dec"
+    "Jun" "juni"
+    "Jul" "juli"
+    "Aug" "augustus"
+    "Sep" "september"
+    "Oct" "oktober"
+    "Nov" "november"
+    "Dec" "december"
 }}
 
-<div class="py-2 lg:w-[1024px] px-6 mx-auto">
+<div class="py-2 lg:w-[1024px] px-6 mx-auto lg:px-0">
     <div class="flex">
-        <div class="max-w-[870px]">
+        <div class="">
             <h1 class="nl-heading nl-heading--level-2 rhc-heading">{{ .Get "title" }}</h1>
 
             {{ if .Page.Date }}
@@ -36,7 +36,9 @@
                         <path d="M7.01 17h.005"/>
                         <path d="M10.01 17h.005"/>
                     </svg>
-                    <p class="utrecht-paragraph text-lg pl-1">{{ dateFormat "02 Jan 2006" .Page.Date }}</p>
+                    {{ $engMonth := dateFormat "Jan" .Page.Date }}
+                    {{ $nlMonth := index $months $engMonth | default $engMonth }}
+                    <p class="utrecht-paragraph text-lg pl-1">{{ dateFormat "02" .Page.Date }} {{ $nlMonth }} {{ dateFormat "2006" .Page.Date }}</p>
                 </div>
             {{ end }}
 

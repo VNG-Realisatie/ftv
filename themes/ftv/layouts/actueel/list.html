@@ -53,7 +53,9 @@
                                     <path d="M7.01 17h.005"/>
                                     <path d="M10.01 17h.005"/>
                                 </svg>
-                                <p class="utrecht-paragraph text-lg pl-1">{{ dateFormat "02 Jan 2006" .Date }}</p>
+                                {{ $engMonth := dateFormat "Jan" .Date }}
+                                {{ $nlMonth := index $months $engMonth | default $engMonth }}
+                                <p class="utrecht-paragraph text-lg pl-1">{{ dateFormat "02" .Date }} {{ $nlMonth }} {{ dateFormat "2006" .Date }}</p>
                             </div>
                         </div>
                     </div>
