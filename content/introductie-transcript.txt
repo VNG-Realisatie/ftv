@@ -1,0 +1,25 @@
+Steeds meer organisaties delen gegevens. Binnen hun eigen netwerk, met andere organisaties en zelfs over landsgrenzen heen.
+Elke keer gelden andere regels: wie mag wat zien, wanneer en onder welke voorwaarden?
+
+Nu zitten die regels nu vaak verstopt in applicaties.
+Dat maakt het lastig om met veel verschillende partijen samen te werken, of regels aan te passen als de wetgeving verandert.
+
+Federatieve Toegangsverlening, of FTV, werkt anders.
+
+FTV werkt op basis van Externalized Authorization Management.
+
+Bij FTV staan de toegangsregels niet meer in de applicatie.
+Ze worden op een centrale plek opgeslagen en beheerd.
+Zo zijn beheer en uitvoering altijd gescheiden.
+
+FTV heeft 4 grote voordelen.
+
+FTV is schaalbaar: nieuwe organisaties en systemen kunnen eenvoudig en snel aansluiten.
+
+FTV maakt toegangsverlening traceerbaar. Er wordt vastgelegd wie toegang had tot welke gegevens, wanneer en waarom. Zo is verantwoording altijd mogelijk.
+
+FTV is flexibel: toegangsregels kunnen eenvoudig worden aangepast, zonder de software te wijzigen.
+
+FTV zorgt voor leveranciersonafhankelijkheid. Het is een open standaard die in beheer is bij de overheid.
+
+Meer weten? Kijk op onze website!
