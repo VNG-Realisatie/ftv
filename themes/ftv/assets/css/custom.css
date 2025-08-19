@@ -118,6 +118,15 @@
     line-height: var(--utrecht-unordered-list-line-height);
 }
 
+.section > ul > li > ul > li {
+    margin-block-end: var(--utrecht-unordered-list-item-margin-block-end);
+    margin-block-start: var(--utrecht-unordered-list-item-margin-block-start);
+    padding-inline-start: var(--utrecht-unordered-list-item-padding-inline-start);
+    list-style-type: circle;
+    line-height: var(--utrecht-unordered-list-line-height);
+    list-style-position: inside;
+}
+
 .section > ol {
     color: var(--utrecht-paragraph-color, var(--utrecht-document-color, inherit));
     font-weight: var(--utrecht-ordered-list-font-weight);
