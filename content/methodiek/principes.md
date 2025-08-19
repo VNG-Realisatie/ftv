@@ -50,7 +50,7 @@ Een overzicht van EAM in 2:30.
 
 ![Drie iconen van die concerns](../methodiek_soc.png)
 
-De kern van EAM is het scheiden van verantwoordelijkheden (separation of concerns). Regels staan los van de applicatiecode in zogenoemde policies. Het beheer van de policies is gescheiden van het handhaven ervan.
+De kern van EAM is het scheiden van verantwoordelijkheden (separation of concerns). Regels staan los van de applicatiecode in zogenoemde policies. En het beheer van de policies is gescheiden van het handhaven ervan.
 
 {{< /chapter/header >}}
 
@@ -75,17 +75,17 @@ Policies worden niet alleen tijdens login uitgevoerd, maar op elk moment wanneer
 
 {{< /chapter/header >}}
 
-{{< chapter/section title="Gedistribueerd model" level="3">}}
+{{< chapter/section title="Lokale handhaving, centraal beheer" level="3">}}
 
-![Een diagram van toegang in een gedistribueerd systeem](../methodiek-gedistribueerd.png)
+In een architectuurplaat zijn de gescheiden verantwoordelijkheden goed zichtbaar.
 
-In de fysieke architectuur zijn de gescheiden verantwoordelijkheden goed zichtbaar. In dit voorbeeld haalt een client een token op bij de Identity Provider en benadert via de API-Gateway twee applicaties.
+![Een diagram van toegang in een gedistribueerd systeem](/ftv/diagrams/methodiek-gedistribueerd.svg)
 
-Toegangscontrole vindt plaats op elke plek in het systeem. Per plek worden alleen de toegangsregels geëvalueerd die daar van toepassing zijn.
+In dit voorbeeld zien we links een gegevensuitwisseling. Een client haalt een token op bij de Identity Provider en benadert via de API-Gateway twee applicaties. Toegangscontrole vindt plaats op elke plek in het systeem. In de client, in de identity provider, de gateway en nogmaals in elk van de applicaties. Op elke plek worden alleen de toegangsregels geëvalueerd die daar van toepassing zijn.
 
-De policies worden centraal beheerd: ze worden daar opgesteld, gecontroleerd en voorzien van versiebeheer. Zodra een wijziging van kracht is, gaat de juiste versie automatisch naar de plek waar deze nodig is.
+Rechts zien we het beheer en de opslag van de policies, centraal. Policies worden daar opgesteld, gecontroleerd en voorzien van versiebeheer. Zodra een wijziging van kracht moet zijn, gaat de juiste versie van de policy automatisch naar de plekken waar deze gehandhaafd moet worden.
 
-De [technische architectuursectie](../architectuur) beschrijft onderdelen van de toegangsoplossing en laat zien hoe die passen in het bredere IT-landschap.
+De verantwoordelijkheden die onder handhaving en beheer vallen zijn verder uitgewerkt in de [functionele beschrijving](/ftv/toepassen/functioneel).
 
 {{< /chapter/section >}}
 

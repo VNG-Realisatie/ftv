@@ -1,5 +1,5 @@
 ---
-Title: Functies en rollen
+Title: Functieoverzicht
 type: 'chapter'
 ---
 
@@ -8,7 +8,7 @@ type: 'chapter'
 <div class="sub-navigation-wrapper">
     <div class="sub-navigation-tab-selected utrecht-paragraph pt-1 sub-navigation-tab">
        <p>
-          <a href="../functioneel">Functies en rollen</a> 
+          <a href="../functioneel">Functieoverzicht</a> 
        </p>
     </div>
     <div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-donkerbruin-50">
@@ -29,19 +29,21 @@ type: 'chapter'
 </div>
 {{< /chapter/header >}}
 
-{{< chapter/section title="Functies en rollen" >}}
+{{< chapter/section title="Functieoverzicht" >}}
 
-Voor een goed werkende oplossing voor Federatieve Toegangsverlening (FTV) zijn afspraken nodig over beheer en uitvoering (runtime).
+Voor een goed werkende oplossing voor Federatieve Toegangsverlening (FTV) zijn afspraken nodig over beheer en handhaving.
 Wat komt er kijken bij het toepassen en beheren van toegangsregels?
 {{< /chapter/section >}}
 
-{{< chapter/section title="1. Tijdens gebruik (runtime)" level="3" >}}
+{{< chapter/section title="1. Handhaving" level="3" >}}
 
-Runtime functies zijn die functies die tijdens het normale gebruik worden uitgevoerd. Dit is het volledig geautomatiseerde proces zoals het bij elk verzoek tot verwerking wordt uitgevoerd. Deze zullen erg snel moeten worden uitgevoerd, omdat ze op het kritieke pad van elk verzoek liggen.
+Onder handhaving vallen die functies die tijdens het normale gebruik van een applicatie worden uitgevoerd. Dit is het volledig geautomatiseerde proces zoals het bij elk verzoek tot verwerking wordt uitgevoerd. Deze zullen erg snel moeten worden uitgevoerd, omdat ze op het kritieke pad van elk verzoek liggen.
+
+Dit zijn:
 
 - **Beslissingen afdwingen**: het onderscheppen van elk verzoek, en zorgen dat genomen beslissingen ook gegarandeerd nageleefd worden.
 - **Beslissingen nemen**: het bepalen of het verzoek gehonoreerd, voorwaardelijk gehonoreerd of afgewezen moet worden. Dit gebeurt op basis van de vrager, de vraag, het onderwerp en de omgeving ([subject, action, resource en context](/ftv/methodiek/standaarden#informatiemodel)) en de beschikbare regels. 
-- **Beslissingen loggen**: het vastleggen welke beslissingen zijn genomen. Van belang is om hierbij de juiste hoeveelheid informatie vast te leggen. Enerzijds voldoende om later verantwoording af te leggen en de juistheid van beslissingen te controleren. Anders niet meer dan nodig om de privacy te respecteren.
+- **Beslissingen loggen**: het vastleggen welke beslissingen zijn genomen. Van belang is om hierbij de juiste hoeveelheid informatie vast te leggen. Enerzijds voldoende om later verantwoording af te leggen en de juistheid van beslissingen te controleren. En anderzijds niet meer dan strikt noodzakelijk, zodat de privacy gerespecteerd blijft.
 
 {{< img-url "diagrams/functies-en-rollen.svg" "Overzicht functies en rollen in EAM" >}}
 
@@ -49,7 +51,9 @@ Runtime functies zijn die functies die tijdens het normale gebruik worden uitgev
 
 {{< chapter/section title="2. Beheer"  level="3" >}}
 
-De beheersfuncties worden gebruikt om het beleid courant te houden en het hele proces van beheer eromheen in goede banen te leiden. Deze functies zijn voor de beheerders, op verschillende niveaus zoals technisch en functioneel. Hier ligt de nadruk op correctheid en gebruikersvriendelijkheid, en minder op de snelheid.
+De beheerfuncties worden gebruikt om het beleid courant te houden en het hele proces van beheer eromheen in goede banen te leiden. Deze functies zijn voor beheerders, zowel technisch en functioneel. Hier ligt de nadruk op overzicht en correctheid, en minder op de snelheid.
+
+
 
 #### Beveiliging
 
@@ -82,5 +86,13 @@ Goed beheer vraagt om inzicht in hoe de toegang in de praktijk functioneert. Den
 #### Verantwoording
 
 Bij een vermoeden van fraude of tijdens een audit moet het systeem inzicht geven in alle relevante informatie over een of meer toegangsbeslissingen. Hierin komen onder andere versiebeheer en logging samen.
+
+{{< /chapter/section >}}
+
+{{< chapter/section title="Authorization Management Platforms" id="amp">}}
+
+Hoe groter de schaal van de uitwisseling, hoe belangrijker het beheer wordt. Waar met een losse applicatie het nog te doen is om beheer in de applicatie zelf te doen, is bij meerdere verbonden systemen centraal beheer nodig. Denk hierbij aan grote bedrijven met een landschap van applicaties, of een vertrouwensnetwerk zoals het Federatief Datastelsel. 
+
+Grote bedrijven hebben deze problematiek al langer, en softwareleveranciers bieden hiervoor complete systemen aan. Authorization Management Platform (AMP) is een relatief nieuwe term voor deze systemen. Onder andere [Gartner](https://www.gartner.com/en/documents/6826834) signaleert de opkomst van AMP's als een belangrijke trend.
 
 {{< /chapter/section >}}

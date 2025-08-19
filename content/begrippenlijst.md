@@ -13,6 +13,8 @@ Federatieve Toegangsverlening (FTV) is een technisch onderwerp. Er worden veel b
 > FTV is een project van de Nederlandse overheid. Daarom gebruiken we in principe Nederlandse termen. Toch zijn sommige begrippen zo ingeburgerd in het Engels dat een vertaling alleen maar verwarring zou geven. In deze lijst staan daarom Nederlandse én Engelse termen door elkaar.
 
 - **Application Programming Interface (API)**. Software waarmee gegevens en/of verwerkingen beschikbaar kunnen worden gesteld aan externe systemen of gebruikers. Lees meer op [Wikipedia](https://nl.wikipedia.org/wiki/Application_programming_interface).
+
+- **Authorization Management Platform (AMP)**. Een systeem voor het beheer van toegangsregels op grote schaal. Lees meer [op deze website](/ftv/toepassen/functioneel#amp). 
   
 - **Externalized Authorization Management (EAM)**. Paraplubegrip voor methodieken die toegang buiten applicaties brengen. Lees meer [op deze website](/ftv/methodiek/principes).
   

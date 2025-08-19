@@ -7,7 +7,7 @@ type: 'chapter'
 <div class="sub-navigation-wrapper">
 <div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-donkerbruin-50">
    <p>
-      <a href="../functioneel">Functies en rollen</a> 
+      <a href="../functioneel">Functieoverzicht</a> 
    </p>
 </div>
 <div class="sub-navigation-tab-selected utrecht-paragraph pt-1 sub-navigation-tab">

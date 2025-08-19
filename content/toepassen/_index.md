@@ -14,10 +14,10 @@ Het toepassen van Federatieve Toegangsverlening (FTV) begint met een goede voorb
    <div class="section-home-box">
        <a href="functioneel">
            <h2 class="nl-heading nl-heading--level-4 rhc-heading">
-               Functies en rollen
+               Functieoverzicht
            </h2>
            <p class="utrecht-paragraph">
-              Een overzicht van de belangrijkste functies en rollen bij het toepassen van FTV.<br><br>
+              Een overzicht van de belangrijkste functies die komen kijken bij het toepassen van FTV.<br><br>
            </p>
        </a>
    </div>
