@@ -4,7 +4,7 @@ title: "Toekomstvisie"
 ---
 {{< chapter/section title="De toekomstvisie " >}}
 
-Federatieve Toegangsverlening (FTV) is een overheidsbreed initiatief en valt onder de Generieke Digitale Infrastructuur (GDI). Twee domeinarchitecturen daarvan zijn in het bijzonder relevant, namelijk die van [toegang](https://minbzk.github.io/gdi-toegang/content/views/Domeinarchitectuur%20toegang.html) en van [gegevensuitwisseling](https://minbzk.github.io/gdi-gegevensuitwisseling/content/views/Domeinarchitectuur%20gegevensuitwisseling.html).
+Federatieve Toegangsverlening (FTV) is een overheidsbreed initiatief en valt onder de Generieke Digitale Infrastructuur (GDI). Twee domeinarchitecturen daarvan zijn in het bijzonder relevant, namelijk die van [toegang](https://minbzk.github.io/gdi-toegang/content/views/Domeinarchitectuur%20toegang.html) en van [gegevensuitwisseling](https://minbzk.github.io/gdi-gegevensuitwisseling/2.0/Domeinarchitectuur%20Gegevensuitwisseling%202.0.pdf).
 
 Dit zijn de relevante ontwikkelingen rondom toegangsverlening die vanuit de GDI zijn gesignaleerd:
 1. **[Contextuele toegangscontrole](https://minbzk.github.io/gdi-toegang/content/elements/id-7f4dc8e8532147a7bcaa8b5846799154.html)**: maak gebruik van gegevens uit de context, zoals locatie, apparaat, tijd etc. om toegangsverlening dynamisch te maken.

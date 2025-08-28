@@ -100,7 +100,7 @@ Het succes daarvan staat of valt met de beheersbaarheid op schaal. Tot nu toe zi
 
 {{< chapter/section title="Datastelsels" level="4">}}
 
-Er zijn een aantal [sectorspecifieke en ketenintegratievoorzieningen](/ftv/onderzoek/status_nl_overheid/platforms/) die goed functioneren. Toegangsverlening is daarin vaak goed meegenomen, ook met EAM. Deze stelsels hebben ook de grootste noodzaak gezien de schaal van uitwisseling en diversiteit van deelnemers.
+Er zijn een aantal [sectorspecifieke en ketenintegratievoorzieningen](/ftv/onderzoek/status_nl_overheid/datastelsels/) die goed functioneren. Toegangsverlening is daarin vaak goed meegenomen, ook met EAM. Deze stelsels hebben ook de grootste noodzaak gezien de schaal van uitwisseling en diversiteit van deelnemers.
 
 Deze stelsels zijn een kansrijke plek voor FTV om de eerste adoptie te verkrijgen.
 {{< /chapter/section >}}
