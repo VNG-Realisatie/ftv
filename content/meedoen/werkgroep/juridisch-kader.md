@@ -36,7 +36,7 @@ Title: 4. Juridisch kader
 - [Opname](https://github.com/VNG-Realisatie/ftv/raw/refs/heads/main/static/videos/20250422-juridisch-kader.mp4)
 - [Diagram relatie EAM en OAuth](/ftv/documents/20250422-relatie-eam-oauth.pdf)
 - [Presentatie Beleids-juridische verantwoording FTV](/ftv/documents/20250422-beleids-juridische-verantwoording.pptx)
-- [Presentatie Juridische Structuur iSHARE](/ftv/documents/20250422-juridische-structuur-iShare.pptx)
+- [Presentatie Juridische Structuur iSHARE](/ftv/documents/20250422-juridische-structuur-ishare.pptx)
 {{< /chapter/section >}}
 
 {{< chapter/section title="Relatie EAM en OAuth " >}}
