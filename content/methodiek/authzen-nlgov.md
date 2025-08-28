@@ -82,9 +82,11 @@ Diverse commerciële toegangsverleningsproducten en API-gateways implementeren d
 
 {{< chapter/section title="Profielen" level="3">}}
 
+De AuthZEN standaard beschrijft de basis die op elke uitwisseling van toepassing is. Daarbovenop kunnen er voor meer specifieke situatie aanvullende afspraken vastgelegd worden in een zogenaamd profiel. 
+
 {{< /chapter/section >}}
 
-{{< chapter/section title="AuthZEN NL Gov" level="4">}}
+{{< chapter/section title="AuthZEN NL Gov" id="nlgov" level="4">}}
 
 Voor de Nederlandse overheid ontwikkelt FTV een profiel bovenop AuthZEN: het NLGov Profile for OpenID AuthZEN Authorization API. Dit profiel bevat de aanvullingen die nodig zijn om te voldoen aan de Nederlandse wetgeving, de digitale strategie en regels van het Federatieve Datastelsel (FDS).
 
@@ -98,7 +100,7 @@ Na acceptatie door de werkgroep zal het profiel aangeboden worden aan Logius voo
 
 Een PEP kan grofweg op twee logische plekken zitten: in een applicatie/API of in een API Gateway. Als de PEP in een applicatie of API zit, dan is het aan de ontwikkelaars om het informatiemodel te vullen vanuit de code. Zij weten waar de informatie vandaan komt en geven aan welk veld waar moet. 
 
-Een andere optie is om de aanroep te onderscheppen in de API Gateway. Dit kan zijn vanuit een bewuste keus om dat deel ook te externaliseren, maar ook om een bestaande applicatie of API niet aan te hoeven passen. Bijvoorbeeld omdat deze ouder is en er geen ontwikkelteam meer voor is, of dat het een extern systeem is dat niet meer kan worden aangepast.De API Gateway vangt dan het HTTP-verzoek af en vult het informatiemodel met gegevens uit de aanvraag.Ook hier is een standaard op zijn plaats. AuthZEN schrijft hiervoor het [AuthZEN REST API Gateway profiel](https://hackmd.io/@oidf-wg-authzen/apigateway). Dit profiel is nog een voorstel. Het streven is dit aan versie 1.1 toe te voegen.
+Een andere optie is om de aanroep te onderscheppen in de API Gateway. Dit kan zijn vanuit een bewuste keus om dat deel ook te externaliseren, maar ook om een bestaande applicatie of API niet aan te hoeven passen. Bijvoorbeeld omdat deze ouder is en er geen ontwikkelteam meer voor is, of dat het een extern systeem is dat niet meer kan worden aangepast. De API-gateway vangt dan het HTTP-verzoek af en vult het informatiemodel met gegevens uit de aanvraag. Ook hier is een standaard op zijn plaats. AuthZEN schrijft hiervoor het [AuthZEN REST API Gateway profiel](https://hackmd.io/@oidf-wg-authzen/apigateway). Dit profiel is nog een voorstel. Het streven is dit aan versie 1.1 toe te voegen.
 
 {{< /chapter/section >}}
 
