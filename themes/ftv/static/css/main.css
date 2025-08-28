@@ -12864,6 +12864,9 @@ td, th {
 .menutitle {
   color: white;
 }
+.downloadtranscript {
+  text-decoration: underline;
+}
 @property --tw-rotate-x {
   syntax: "*";
   inherits: false;

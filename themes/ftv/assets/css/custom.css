@@ -416,3 +416,7 @@ td, th {
 .menutitle {
     color:white;
 }
+
+.downloadtranscript {
+    text-decoration: underline;
+}
