@@ -1,5 +1,5 @@
 ---
-Title: Logboek Toegangsbeslissingen
+Title: Authorization Decision Log
 type: 'chapter'
 ---
 
@@ -31,15 +31,32 @@ type: 'chapter'
 {{< /chapter/header >}}
 
 {{< chapter/section title="Authorization Decision Log">}}
-Het Authorization Decision Log (Logboek Toegangsbeslissingen) legt vast welke toegangsbeslissingen zijn genomen. Het maakt die beslissingen traceerbaar en is daarmee een belangrijk verantwoordingsinstrument. Bij audits bijvoorbeeld kan achteraf worden aangetoond welke beslissing wanneer is genomen op basis van welke regels en gegevens.
 
-Voor verantwoording is het essentieel dat de onderliggende verzoeken, regels en gegevens op een uniforme en toegankelijke manier beschikbaar zijn. Het logboek gebruikt daarom het AuthZEN-informatiemodel als basis en volgt het principe van [data bij de bron](https://www.digitaleoverheid.nl/data-bij-de-bron/). In plaats van gegevens te kopiëren, verwijst het logboek naar [betrouwbare bronnen](https://website-digilab-overheid-nl-research-uit-betrouw-e1f39021ce924c.gitlab.io/) waar de gebruikte informatie is vastgelegd. Dit voorkomt onnodige gegevensduplicatie en maakt het logboek transparanter en beter beheersbaar. 
+### Doel
 
-### Samenhang
-De standaard is bedoeld voor de toegangsverlening tussen overheidsorganisaties. Daarom is er samenhang met andere standaarden van het Federatief Datastelsel (FDS) zoals het [Logboek Dataverwerkingen](https://logius-standaarden.github.io/logboek-dataverwerkingen/) en het logboek Federatieve Service Connectiviteit [FSC-Logging](https://commonground.gitlab.io/standards/fsc/logging/draft-fsc-logging-00.html).
+Het Authorization Decision Log (Logboek Toegangsbeslissingen) legt vast welke toegangsbeslissingen zijn genomen. Het maakt die beslissingen traceerbaar en is daarmee een belangrijk verantwoordingsinstrument. Bij audits kan achteraf worden aangetoond welke beslissing wanneer is genomen op basis van welke regels en gegevens. En daarmee vastgesteld kan worden of de beslissing terecht was.
 
-### Planning
-De FTV-werkgroep is medio 2025 gestart met de ontwikkeling van de [werkversie van de standaard](https://github.com/VNG-Realisatie/authorization-decision-log).
+### Een standaard
+
+Er is nog geen open standaard voor het vastleggen van toegangsbeslissingen. Daarom stelt FTV deze zelf op.
+
+De standaard beschrijft hoe een opdracht tot het opslaan van een toegangsbeslissing eruit moet zien. Het logboek gebruikt daarom het AuthZEN-informatiemodel als basis. Belangrijk is welke gegevens er verplicht zijn en welke optioneel. 
+
+De standaard legt niet vast hoe het log daadwerkelijk deze gegevens op moet slaan. Daarvoor zijn er al veel goede oplossingen beschikbaar, ook open source. Ook legt de standaard niet vast hoe opgeslagen beslissingen beveiligd, teruggelezen en opgeruimd worden. Deze zaken zal elke implementatie zelf invullen.
+
+### Dataminimalisatie 
+
+Om goed verantwoording af te kunnen leggen is het nodig dat de verzoeken, regels en gegevens die aan de beslissing ten grondslag hebben gelegen beschikbaar zijn. Tegelijkertijd moeten er niet meer gegevens opgeslagen worden dan strikt noodzakelijk.
+
+Hier geldt het principe van [data bij de bron](https://www.digitaleoverheid.nl/data-bij-de-bron/). In plaats van gegevens te kopiëren, verwijst het logboek naar [betrouwbare bronnen](https://website-digilab-overheid-nl-research-uit-betrouw-e1f39021ce924c.gitlab.io/) waar de gebruikte informatie is vastgelegd. Dit voorkomt onnodige gegevensduplicatie en maakt het logboek transparanter en beter beheersbaar. Een van de belangrijke voorwaarde voor een betrouwbare bron is dat de historische gegevens bewaard blijven.
+
+### Logging in het FDS
+Toegangsbeslissingen zijn deel van het grotere proces van gegevensuitwisseling. Om een compleet beeld te hebben van de uitwisseling in het Federatief Datastelsel (FDS) zijn er ook het [Logboek Dataverwerkingen](https://logius-standaarden.github.io/logboek-dataverwerkingen/) en het logboek Federatieve Service Connectiviteit [FSC-Logging](https://commonground.gitlab.io/standards/fsc/logging/draft-fsc-logging-00.html). 
+
+Deze drie zijn met elkaar verbonden door een zogenaamde trace.
+
+### Status
+De huidige [werkversie van de standaard](https://vng-realisatie.github.io/authorization-decision-log/) is ter consultatie aangeboden aan de eigen werkgroep. Na het verwerken van de opmerkingen zal er een openbare consultatie volgden.
 
 
 {{< /chapter/section >}}
