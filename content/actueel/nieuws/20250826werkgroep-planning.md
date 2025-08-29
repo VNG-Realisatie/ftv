@@ -7,7 +7,9 @@ summary: "Werkgroep FTV: planning"
 
 {{< nieuws/header title="Werkgroep FTV: planning" >}}
 
-De werkgroep Federatieve Toegansgverlening (FTV) kwam op dinsdag 26 augustus bijeen voor de eerste bijeenkomst na de zomervakantie. Op de agenda stond een update van de subwerkgroepen, de resultaten van de eerste reviewronde van de AuthZEN Gov NL standaard en de planning van de werkgroep voor de komende maanden.{{< /nieuws/header >}}
+De werkgroep Federatieve Toegansgverlening (FTV) kwam op dinsdag 26 augustus bijeen voor de eerste bijeenkomst na de zomervakantie. Op de agenda stond een update van de subwerkgroepen, de resultaten van de eerste reviewronde van de AuthZEN Gov NL standaard en de planning van de werkgroep voor de komende maanden.
+
+{{< /nieuws/header >}}
 
 {{< chapter/section title="Voortgang subwerkgroepen" level="3">}}
 
