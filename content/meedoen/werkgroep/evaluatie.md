@@ -35,6 +35,7 @@ Title: 9. Evaluatie
 
 {{< chapter/section title="Bijlages" >}} 
 - [Opname](https://github.com/VNG-Realisatie/ftv/raw/refs/heads/main/static/videos/20250701-evaluatie.mp4)
+- [Evaluatie Miro bord]({{< param baseDirectory >}}documents/20250826-evaluatie-miro.pdf)
 {{< /chapter/section >}}
 
 {{< chapter/section title="Welkom" >}}
