@@ -19,7 +19,10 @@ de zorg in de toekomst efficiënt én betaalbaar te houden.
 
 {{< chapter/section title="" level="3">}}
 
-Informatiestandaarden spelen in de Wet langdurige zorg (Wlz) een cruciale rol: ze maken de administratieve afhandeling van indicaties en declaraties mogelijk. Tot voor kort wisselden partijen in de Wlz alleen gegevens uit via berichtenverkeer. Dat ging als volgt: Het Centrum Indicatiestelling Zorg (CIZ) beslist of iemand recht heeft op zorg volgens de Wlz en legt dat vast in een indicatiebesluit. Het CIZ raadpleegt ook de Basisregistratie Personen (BRP) om persoonsgegevens te controleren en voegt die toe aan het indicatiebesluit (het zogenaamde IO-31-bericht). Het bericht gaat naar het zorgkantoor, dat op basis van de indicatiegegevens bemiddelt naar een geschikte zorgaanbieder. Deze zorgaanbieder ontvangt dan een toewijzing zorgbericht (AW33) dat naast de toewijzingsgegevens ook weer de indicatiegegevens bevat. De zorgaanbieder stuurt op zijn beurt weer berichten terug naar het zorgkantoor, bijvoorbeeld declaraties of verantwoordingsinformatie over de status van de zorglevering.
+Informatiestandaarden spelen in de Wet langdurige zorg (Wlz) een cruciale rol: ze maken de administratieve afhandeling van indicaties en declaraties mogelijk. Tot voor kort wisselden partijen in de Wlz alleen gegevens uit via berichtenverkeer. Dat ging als volgt: 
+- Het Centrum Indicatiestelling Zorg (CIZ) beslist of iemand recht heeft op zorg volgens de Wlz en legt dat vast in een indicatiebesluit. Het CIZ raadpleegt ook de Basisregistratie Personen (BRP) om persoonsgegevens te controleren en voegt die toe aan het indicatiebesluit (het zogenaamde IO-31-bericht).
+- Het bericht gaat naar het zorgkantoor, dat op basis van de indicatiegegevens bemiddelt naar een geschikte zorgaanbieder.
+- Deze zorgaanbieder ontvangt dan een toewijzing zorgbericht (AW33) dat naast de toewijzingsgegevens ook weer de indicatiegegevens bevat. De zorgaanbieder stuurt op zijn beurt weer berichten terug naar het zorgkantoor, bijvoorbeeld declaraties of verantwoordingsinformatie over de status van de zorglevering.
 
 {{< /chapter/section >}}
 
