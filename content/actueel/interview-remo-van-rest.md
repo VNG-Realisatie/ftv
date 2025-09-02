@@ -47,7 +47,7 @@ Die overgang naar een netwerkmodel brengt vragen over toegangsverlening
 met zich mee: wie mag welke gegevens zien en onder welke voorwaarden?  Voor
 de Wlz is al een autorisatie- en authenticatiemodel gebouwd en in productie. Remo: “Dat werkt
 prima en willen we graag generiek maken. Voor andere stelsels, zoals de Wet
-Maatschappelijke Ondersteuning (WMO) spelen weer andere organisaties een
+maatschappelijke ondersteuning (Wmo) spelen weer andere organisaties een
 rol waaronder gemeenten. Je wilt niet voor elk stelsel een eigen oplossing
 bedenken, want dat maakt het nodeloos complex en kostbaar. Het is veel
 slimmer om één generiek model te ontwikkelen dat overal bruikbaar is.”
