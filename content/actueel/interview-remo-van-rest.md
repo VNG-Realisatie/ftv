@@ -1,7 +1,7 @@
 ---
 type: 'nieuws'
 Title: 'Interview met Remo van Rest'
-date: '2025-08-26'
+date: '2025-08-28'
 summary: "Van berichten naar registers: federatieve toegang in de zorg"
 ---
 
