@@ -10,10 +10,11 @@ Hans Schevers is data scientist bij het Kadaster en denkt mee met de werkgroep F
 Hij legt uit waarom. “Ik ben enthousiast over Linked Data en wil onderzoeken hoe federatieve toegangsverlening kan bijdragen aan de verdere ontwikkeling ervan binnen het Kadaster.”
 {{< /nieuws/header >}}
 
-Het Kadaster beheert een brede verzameling gegevens: van woningen, eigendom, percelen en wegen (uit de Basisregistratie Grootschalige Topografie, de BGT) tot ondergrondse kabels en leidingen.
-Dat levert een schat aan informatie op die aan betekenis wint wanneer die in samenhang met andere gegevens beschikbaar is. 
-
+ 
 {{< chapter/section title="Praktische toepassing" level="3">}}
+Het Kadaster beheert een brede verzameling gegevens: van woningen, eigendom, percelen en wegen (uit de Basisregistratie Grootschalige Topografie, de BGT) tot ondergrondse kabels en leidingen.
+Dat levert een schat aan informatie op die aan betekenis wint wanneer die in samenhang met andere gegevens beschikbaar is.
+
 Hans licht toe: “Met Linked Data kun je bijvoorbeeld gegevens van het Kadaster over gebouwen, koppelen met data van het CBS  en die van de Rijksdienst voor het Cultureel Erfgoed.
 Zo krijg je met één uitvraag een completer beeld van een wijk: van de kenmerken van de huizen tot de demografische context en zelfs de cultuurhistorische waarde.
 Koppel die data aan energie- en gedragsgegevens en je kunt bijvoorbeeld campagnes voor energiebesparing veel preciezer richten.”
