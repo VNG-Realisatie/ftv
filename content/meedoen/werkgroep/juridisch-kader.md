@@ -40,7 +40,7 @@ Title: 4. Juridisch kader
 {{< /chapter/section >}}
 
 {{< chapter/section title="Relatie EAM en OAuth " >}}
-*Michiel Trimpe* presenteerde een [diagram](documents/20250422-relatie-eam-oauth.pdf) dat de relatie uitlegde.
+*Michiel Trimpe* presenteerde een [diagram](/ftv/documents/20250422-relatie-eam-oauth.pdf) dat de relatie uitlegde.
 
 OAuth is een manier om informatie geauthenticeerd beschikbaar te maken door middel van tokens. OAuth kan informatie bieden over:
 - identiteit: informatie over de identiteit van de aanvrager
