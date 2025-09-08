@@ -28,7 +28,7 @@ De planning is dat vanaf 1 oktober de openbare consultatieronde start via Logius
 
 De werkgroep heeft, op basis van de evaluatie eind juni en eerdere suggesties, gekozen welke onderwerpen vanaf 9 september aan bod komen. Dat zijn oa  aandachtspunten uit de reviewrondes, de samenhang met Linked Data en een deep dive iSHARE. De werkgroep komt dit jaar nog acht keer bij elkaar.
 
-[Lees meer in de notulen.](linkielink)
+[Lees meer in de notulen.](https://vng-realisatie.github.io/ftv/meedoen/werkgroep/planning-najaar/)
 
 {{< /chapter/section >}}
 
@@ -36,7 +36,7 @@ De werkgroep heeft, op basis van de evaluatie eind juni en eerdere suggesties, g
 
 De volgende bijeenkomst is op dinsdag 9 september van 10:00 tot 11:00 uur. Op de agenda staat  de reikwijdte FTV-standaarden.
 
-Kijk voor aanmelden op de [website van IBDS](nogeenlink).
+Kijk voor aanmelden op de [website van IBDS](https://realisatieibds.nl/events/view/9840b6d9-2f39-49e7-8a8e-e37a465616e0/werkgroep-federatieve-toegangsverlening-reikwijdte-en-rebac).
 
 {{< /chapter/section >}}
 
