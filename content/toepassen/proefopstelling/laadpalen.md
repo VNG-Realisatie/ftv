@@ -16,6 +16,7 @@ Voor zaaktype laadpaalvergunningen kunnen aanvragen worden toegevoegd, goedgekeu
 {{< /chapter/section >}}
 
 {{< chapter/section title="Opstelling" >}}
+
 {{< img-url "diagrams/usecase-opstelling.svg" "Proefopstelling zaaksysteem" >}}
 
 De registratie van laadpalen is voor deze opstelling heel simpel gehouden: 
@@ -23,9 +24,11 @@ De registratie van laadpalen is voor deze opstelling heel simpel gehouden:
 - met de velden postcode, huisnummer en kenteken.
 - er zit geen toegangscontrole op de service zelf: de medewerkersautorisatie wordt door het zaaksysteem gedaan, en de toegang tot de
 registratie als service door de gateway.
-  {{< /chapter/section >}}
+
+{{< /chapter/section >}}
 
 {{< chapter/section title="Regels" >}}
+
 - Zaaksysteem
     - Doelbinding is de registratie van laadpalen, waarvoor de gemeente een besluit heeft aangenomen.
     - De gemeente heeft ter dataminimalisatie vastgelegd dat voor laadpaalvergunningen een beperkte deelverzameling van persoons- en voertuiggegevens voldoende is:
@@ -42,8 +45,15 @@ registratie als service door de gateway.
 - RDW
     - De gemeente heeft per besluit toestemming van de RDW om voertuigen in de BRV op te zoeken.
     - Diplomatieke kentekens mogen niet opgezocht worden
+
 {{< /chapter/section >}}
-{{< chapter/section title="Scenario 1: vergunning aanvragen" >}}
+
+{{< chapter/section title="Scenarios" level="3">}}
+
+{{< /chapter/section >}}
+
+{{< chapter/section title="Scenario 1: vergunning aanvragen (handhaving)" level="4">}}
+
 - Een burger kan een laadpaalvergunning aanvragen. Daarvoor zijn naam, postcode en huisnummer nodig. Een medewerker maakt in het zaaksysteem een zaak met zaaktype 'Aanvragen laadpaal' aan met die gegevens.
 - Het zaaksysteem zoekt in de BRP op postcode en huisnummer, en vindt de BSN(s).
 - Vervolgens zoekt het systeem de gevonden BSNs op in de BRV de voertuigen die op de persoon geregistreerd staan.
@@ -51,16 +61,53 @@ registratie als service door de gateway.
 
 Anders wordt de vergunning afgewezen met een passende melding.
 
-### Testdata
+#### Testgevallen
+
+| Gebruiker | Postcode | Huisnummer | Resultaat                                  |
+|-----------|----------|------------|--------------------------------------------|
+| Rick      | 1111AA   | 1          | Rick niet geautoriseerd vanwege afdeling   |
+| Morty     | 1111AA   | 1          | Morty niet geautoriseerd vanwege opleiding |
+| Beth      | 1111AA   | 1          | Beth niet geautoriseerd vanwege opleiding  |
+| Jerry     | 1111AA   | 1          | Reeds laadpaal aanwezig                    |
+| Jerry     | 1111BB   | 2          | Toegekend                                  |
+| Jerry     | 1111CC   | 3          | Niet toegekend vanwege uitstootklasse      |
+| Jerry     | 1111DD   | 4          | Geen voertuig gevonden                     |
+| Jerry     | 1111EE   | 5          | Geen toestemming om voertuig in te zien    |
+| Jerry     | 1111FF   | 11         | Geen ingezetene gevonden                   |
+| Jerry     | 2222JJ   | 101        | Geen ingezetene gevonden (andere gemeente) |
+
+{{< /chapter/section >}}
+
+{{< chapter/section title="Scenario 2: diplomatieke kentekens toelaten (beheer)" level="4" >}}
+
+In de gemeente zijn een aantal diplomatieke voertuigen gekomen, en het is niet meer houdbaar dat daar geen laadpaal op aangevraagd kan worden. Tegelijk wil de gemeente de identiteit van de diplomaten blijven beschermen.
+
+Daarom wordt besloten dat vergunningen voor diplomatieke voertuigen alleen door de gemeentesecretaris ingevoerd mogen worden. De concrete regel is 
+- Diplomatieke kentekens mogen alleen opgezocht worden als de afdeling van de gebruiker 'Gemeentesecretaris' zijn.
+
+Het scenario is dat in het beheersysteem de regel wordt veranderd en de wijziging actief wordt gemaakt.
+
+#### Testgevallen
+
+| Gebruiker | Ingangsdatum  | Resultaat                                    |
+|-----------|---------------|----------------------------------------------|
+| Morty     |               | Morty mag geen regels aanpassen              |
+| Rick      | volgende week | Lukt                                         |
+| Rick      | vorige week   | Ingangsdatum mag niet in het verleden liggen |
+
+{{< /chapter/section >}}
+
+{{< chapter/section title="Testdata" level="4">}}
 
 #### Gebruikers zaaksysteem
 
-| Gebruiker | Afdeling     | Laadpaalopleiding | Gemeente |
-|-----------|--------------|-------------------|----------|
-| Rick      | Secretariaat |                   | 001      |
-| Morty     | Burgerzaken  |                   | 001      |
-| Beth      | Burgerzaken  | 01-01-2024        | 001      |
-| Jerry     | Burgerzaken  | 01-01-2025        | 001      |
+| Gebruiker | Afdeling           | Laadpaalopleiding | Gemeente |
+|-----------|--------------------|-------------------|----------|
+| Rick      | Beheerder          |                   | 001      |
+| Morty     | Burgerzaken        |                   | 001      |
+| Beth      | Burgerzaken        | 01-01-2024        | 001      |
+| Jerry     | Burgerzaken        | 01-01-2025        | 001      |
+| Diane     | Gemeentesecretaris | 01-06-2025        | 001      |
 
 #### Laadpalen
 
@@ -91,19 +138,5 @@ Anders wordt de vergunning afgewezen met een passende melding.
 | 34-34-34 | 999990275 | B              | Nee                  |
 | 56-56-56 | 999990299 | E              | Ja                   |
 
-### Testgevallen
-
-| Gebruiker | Postcode | Huisnummer | Resultaat                                  |
-|-----------|----------|------------|--------------------------------------------|
-| Rick      | 1111AA   | 1          | Rick niet geautoriseerd vanwege afdeling   |
-| Morty     | 1111AA   | 1          | Morty niet geautoriseerd vanwege opleiding |
-| Beth      | 1111AA   | 1          | Beth niet geautoriseerd vanwege opleiding  |
-| Jerry     | 1111AA   | 1          | Reeds laadpaal aanwezig                    |
-| Jerry     | 1111BB   | 2          | Toegekend                                  |
-| Jerry     | 1111CC   | 3          | Niet toegekend vanwege uitstootklasse      |
-| Jerry     | 1111DD   | 4          | Geen voertuig gevonden                     |
-| Jerry     | 1111EE   | 5          | Geen toestemming om voertuig in te zien    |
-| Jerry     | 1111FF   | 11         | Geen ingezetene gevonden                   |
-| Jerry     | 2222JJ   | 101        | Geen ingezetene gevonden (andere gemeente) |
 
 {{< /chapter/section >}}
