@@ -25,7 +25,7 @@ Koppel die data aan energie- en gedragsgegevens en je kunt bijvoorbeeld campagne
 {{< chapter/section title="Internationale open standaard" level="3">}}
 Veel gegevens van het Kadaster zijn al beschikbaar als Linked Data. Het Kadaster gebruikt daarvoor een internationale, open standaard die data uniform beschrijft en verbindt (denk aan de RDF en SPARQL).
 Daardoor zijn de gegevens van het Kadaster zowel onderling als met die van andere organisaties te koppelen, mits dezelfde standaard wordt gebruikt.
-Het Kadaster heeft inmiddels een flink aantal datasets via Linked Data ontsloten, de zogenaamde Kadaster Knowledhe Graph die voor iedereen toegankelijk is.
+Het Kadaster heeft inmiddels een flink aantal datasets via Linked Data ontsloten, de zogenaamde Kadaster Knowledge Graph die voor iedereen toegankelijk is.
   
 {{< /chapter/section >}}
 
