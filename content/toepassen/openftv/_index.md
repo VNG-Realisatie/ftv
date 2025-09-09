@@ -6,49 +6,45 @@ type: 'chapter'
 {{< chapter/header title="Toepassen" bg="brown">}}
 
 <div class="sub-navigation-wrapper">
-<div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-donkerbruin-50">
-   <p>
-      <a href="../functioneel">Functieoverzicht</a> 
-   </p>
+    <div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-donkerbruin-50">
+       <p>
+          <a href="../implementatie">Implementatie</a> 
+       </p>
+    </div>
+    <div class="utrecht-paragraph pt-1 sub-navigation-tab sub-navigation-tab-selected">
+       <p>
+          <a href="../openftv">OpenFTV</a>
+       </p>
+    </div>
+    <div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-donkerbruin-50">
+       <p>
+          <a href="../proefopstelling">Proefopstelling</a> 
+       </p>
+    </div>
+    <div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-donkerbruin-50">
+       <p>
+          <a href="../demonstratie">Demonstratie</a>
+       </p>
+    </div>
 </div>
-<div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-donkerbruin-50">
-   <p>
-      <a href="../stappenplan">Stappenplan</a>
-   </p>
-</div>
-<div class="sub-navigation-tab-selected utrecht-paragraph pt-1 sub-navigation-tab">
-   <p>
-      <a href="../openftv">OpenFTV</a> 
-   </p>
-</div>
-<div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-donkerbruin-50">
-   <p>
-      <a href="../proefopstelling">Proefopstelling</a>
-   </p>
-</div>
+
 {{< /chapter/header >}}
-</div>
 
 {{< chapter/section title="OpenFTV" >}}
 
-Federatieve toegangsverlening (FTV) is een toepassing van Externalized Authorization Management (EAM),
-een methode om toegangsregels buiten applicaties te beheren.
-Om te laten zien hoe dat werkt, is een technische voorbeeldoplossing beschikbaar: de referentie-implementatie OpenFTV. 
-Deze implementatie is open source, gebaseerd op internationale standaarden en bedoeld voor iedereen die FTV wil toepassen,
-testen of verder ontwikkelen.
-{{< /chapter/section >}}
+Federatieve toegangsverlening (FTV) is een toepassing van Externalized Authorization Management (EAM), een methode om toegangsregels buiten applicaties te beheren. Om te laten zien hoe dat werkt, is een technische voorbeeldoplossing beschikbaar: de referentie-implementatie OpenFTV. Deze implementatie is open source, gebaseerd op internationale standaarden en bedoeld voor iedereen die FTV wil toepassen, testen of verder ontwikkelen.
 
-{{< chapter/section title="Over OpenFTV" level="3">}}
-#### EAM in de praktijk
-De referentie-implementatie maakt inzichtelijk hoe EAM werkt in de praktijk:
-de toegangsbeslissing vindt plaats buiten de applicatie, op basis van extern beheerde regels.
-FTV is in OpenFTV uitgewerkt als concreet voorbeeld en technisch getest op werking en betrouwbaarheid.
+De referentie-implementatie maakt inzichtelijk hoe EAM werkt in de praktijk: de toegangsbeslissing vindt plaats buiten de applicatie, op basis van extern beheerde regels. FTV is in OpenFTV uitgewerkt als concreet voorbeeld en technisch getest op werking en betrouwbaarheid.
 
-#### Open source
-OpenFTV is open source en gratis bruikbaar.
+> **OpenFTV is niet bedoeld voor productiesituaties**. OpenFTV wordt ontwikkeld vanuit het project FTV. Dat project eindigt, en er is nog geen beheer gepland voor daarna. 
+> De verwachting is dat op termijn voldoende van de bestaande EAM-producten aan AuthZEN NL Gov zullen gaan voldoen. OpenFTV zal wel beschikbaar blijven voor experimenten.  
+
 {{< /chapter/section >}}
 
 {{< chapter/section title="Aan de slag met OpenFTV" level="3" >}}
+
+#### Open source
+OpenFTV is open source en gratis bruikbaar.
 
 #### Code
 De code is geschreven in Golang en vrij beschikbaar via GitLab.

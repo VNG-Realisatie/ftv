@@ -1,9 +1,37 @@
 ---
-Title: Use case laadpalen
+Title: Demonstratie
 type: 'chapter'
 ---
-{{< chapter/section title="" >}}
-# Use case: laadpalen
+
+{{< chapter/header title="Toepassen" bg="brown">}}
+
+<div class="sub-navigation-wrapper">
+    <div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-donkerbruin-50">
+       <p>
+          <a href="../implementatie">Implementatie</a> 
+       </p>
+    </div>
+    <div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-donkerbruin-50">
+       <p>
+          <a href="../openftv">OpenFTV</a>
+       </p>
+    </div>
+    <div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-donkerbruin-50">
+       <p>
+          <a href="../proefopstelling">Proefopstelling</a> 
+       </p>
+    </div>
+    <div class="utrecht-paragraph pt-1 sub-navigation-tab  sub-navigation-tab-selected">
+       <p>
+          <a href="">Demonstratie</a>
+       </p>
+    </div>
+</div>
+
+{{< /chapter/header >}}
+
+{{< chapter/section title="Demonstratie" >}}
+
 {{< /chapter/section >}}
 {{< chapter/section title="Onderwerp" >}}
 In deze use case gaan gemeenten bijhouden welke laadpalen er zijn en wie de vergunning daarvoor heeft.
@@ -19,11 +47,11 @@ Voor zaaktype laadpaalvergunningen kunnen aanvragen worden toegevoegd, goedgekeu
 
 {{< img-url "diagrams/usecase-opstelling.svg" "Proefopstelling zaaksysteem" >}}
 
-De registratie van laadpalen is voor deze opstelling heel simpel gehouden: 
+De registratie van laadpalen is voor deze opstelling heel simpel gehouden:
 - er is alleen een lijst met laadpalen
 - met de velden postcode, huisnummer en kenteken.
 - er zit geen toegangscontrole op de service zelf: de medewerkersautorisatie wordt door het zaaksysteem gedaan, en de toegang tot de
-registratie als service door de gateway.
+  registratie als service door de gateway.
 
 {{< /chapter/section >}}
 
@@ -82,7 +110,7 @@ Anders wordt de vergunning afgewezen met een passende melding.
 
 In de gemeente zijn een aantal diplomatieke voertuigen gekomen, en het is niet meer houdbaar dat daar geen laadpaal op aangevraagd kan worden. Tegelijk wil de gemeente de identiteit van de diplomaten blijven beschermen.
 
-Daarom wordt besloten dat vergunningen voor diplomatieke voertuigen alleen door de gemeentesecretaris ingevoerd mogen worden. De concrete regel is 
+Daarom wordt besloten dat vergunningen voor diplomatieke voertuigen alleen door de gemeentesecretaris ingevoerd mogen worden. De concrete regel is
 - Diplomatieke kentekens mogen alleen opgezocht worden als de afdeling van de gebruiker 'Gemeentesecretaris' zijn.
 
 Het scenario is dat in het beheersysteem de regel wordt veranderd en de wijziging actief wordt gemaakt.

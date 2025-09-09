@@ -6,34 +6,35 @@ type: 'chapter'
 {{< chapter/header title="Toepassen" bg="brown">}}
 
 <div class="sub-navigation-wrapper">
-<div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-donkerbruin-50">
-   <p>
-      <a href="../functioneel">Functieoverzicht</a> 
-   </p>
+    <div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-donkerbruin-50">
+       <p>
+          <a href="../implementatie">Implementatie</a> 
+       </p>
+    </div>
+    <div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-donkerbruin-50">
+       <p>
+          <a href="../openftv">OpenFTV</a>
+       </p>
+    </div>
+    <div class="utrecht-paragraph pt-1 sub-navigation-tab sub-navigation-tab-selected">
+       <p>
+          <a href="../proefopstelling">Proefopstelling</a> 
+       </p>
+    </div>
+    <div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-donkerbruin-50">
+       <p>
+          <a href="../demonstratie">Demonstratie</a>
+       </p>
+    </div>
 </div>
-<div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-donkerbruin-50">
-   <p>
-      <a href="../stappenplan">Stappenplan</a>
-   </p>
-</div>
-<div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-donkerbruin-50">
-   <p>
-      <a href="../openftv">OpenFTV</a> 
-   </p>
-</div>
-<div class="sub-navigation-tab-selected utrecht-paragraph pt-1 sub-navigation-tab">
-   <p>
-      <a href="../proefopstelling">Proefopstelling</a>
-   </p>
-</div>
+
 {{< /chapter/header >}}
-</div>
 
 {{< chapter/section title="Proefopstelling" >}}
 
 De proefopstelling laat zien hoe Federatieve Toegangsverlening (FTV) in de praktijk kan werken. Daarvoor is een eenvoudig en werkend federatief datastelsel ingericht. De componenten rondom toegangsverlening zijn in deze opstelling volledig uitgewerkt.
 
-Benieuwd hoe een concrete use case er in deze proefopstelling uitziet? Lees dan verder bij [het aanvragen van laadpaalvergunningen](laadpalen).
+Benieuwd hoe een concrete use case er in deze proefopstelling uitziet? Lees dan verder bij [het aanvragen van laadpaalvergunningen](../demonstratie).
 {{< /chapter/section >}}
 
 {{< chapter/section title="Overzicht opstelling" level="3">}}

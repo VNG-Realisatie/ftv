@@ -1,35 +1,12 @@
 ---
-Title: Functieoverzicht
+Title: Functioneel overzicht
 type: 'chapter'
 ---
 
-{{< chapter/header title="Toepassen" bg="brown">}}
+{{< chapter/nextprevious  bg="bg-rhc-color-donkerbruin-50" nextlink="../stappenplan" nexttitle="Regels opstellen">}}
+{{< /chapter/nextprevious >}}
 
-<div class="sub-navigation-wrapper">
-    <div class="sub-navigation-tab-selected utrecht-paragraph pt-1 sub-navigation-tab">
-       <p>
-          <a href="../functioneel">Functieoverzicht</a> 
-       </p>
-    </div>
-    <div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-donkerbruin-50">
-       <p>
-          <a href="../stappenplan">Stappenplan</a>
-       </p>
-    </div>
-    <div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-donkerbruin-50">
-       <p>
-          <a href="../openftv">OpenFTV</a> 
-       </p>
-    </div>
-    <div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-donkerbruin-50">
-       <p>
-          <a href="../proefopstelling">Proefopstelling</a>
-       </p>
-    </div>
-</div>
-{{< /chapter/header >}}
-
-{{< chapter/section title="Functieoverzicht" >}}
+{{< chapter/section title="Functioneel overzicht" >}}
 
 Voor een goed werkende oplossing voor Federatieve Toegangsverlening (FTV) zijn afspraken nodig over beheer en handhaving.
 Wat komt er kijken bij het toepassen en beheren van toegangsregels?
@@ -96,3 +73,6 @@ Hoe groter de schaal van de uitwisseling, hoe belangrijker het beheer wordt. Waa
 Grote bedrijven hebben deze problematiek al langer, en softwareleveranciers bieden hiervoor complete systemen aan. Authorization Management Platform (AMP) is een relatief nieuwe term voor deze systemen. Onder andere [Gartner](https://www.gartner.com/en/documents/6826834) signaleert de opkomst van AMP's als een belangrijke trend.
 
 {{< /chapter/section >}}
+
+{{< chapter/nextprevious  bg="bg-rhc-color-donkerbruin-50" nextlink="../stappenplan" nexttitle="Regels opstellen">}}
+{{< /chapter/nextprevious >}}

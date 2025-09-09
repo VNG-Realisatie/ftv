@@ -4,8 +4,10 @@ weight: 20
 type: 'chapter'
 ---
 
-{{< chapter/section title="" >}}
-# Softwarekeuze
+{{< chapter/nextprevious  bg="bg-rhc-color-donkerbruin-50" previouslink="../stappenplan" previoustitle="Regels opstellen" >}}
+{{< /chapter/nextprevious >}}
+
+{{< chapter/section title="Softwarekeuze" >}}
 
 Een passende softwarekeuze is belangrijk voor een werkende oplossing voor Federatieve Toegangsverlening (FTV). De markt is in beweging en de verschillen tussen producten zijn groot. Van open source tot commerciële pakketten, van zelf bouwen tot volledig uitbesteden: er zijn meerdere routes mogelijk. Welke keuze past, hangt af van de situatie, de technische wensen en de manier waarop het beheer wordt ingericht.
 {{< /chapter/section >}}

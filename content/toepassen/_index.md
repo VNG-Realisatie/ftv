@@ -9,30 +9,17 @@ Het toepassen van Federatieve Toegangsverlening (FTV) begint met een goede voorb
 
 {{< chapter/header bg="lightbrown" customclass="section-box-banner">}}
 
-### Lees verder
 <div class="section-home-wrapper" role="navigation">
    <div class="section-home-box">
-       <a href="functioneel">
+       <a href="implementatie">
            <h2 class="nl-heading nl-heading--level-4 rhc-heading">
-               Functieoverzicht
+               Implementatie
            </h2>
            <p class="utrecht-paragraph">
-              Een overzicht van de belangrijkste functies die komen kijken bij het toepassen van FTV.<br><br>
+              Wat er allemaal komt kijken bij het toepassen van FTV: architectuur, software en regels opstellen.
            </p>
        </a>
    </div>
-   
-   <div class="section-home-box">
-       <a href="stappenplan">
-           <h2 class="nl-heading nl-heading--level-4 rhc-heading">
-               Stappenplan
-           </h2>
-           <p class="utrecht-paragraph">
-               Van use case tot goed werkende toegangsregels in zeven overzichtelijke stappen.
-           </p>
-       </a>
-   </div>
-   
    <div class="section-home-box">
        <a href="openftv">
            <h2 class="nl-heading nl-heading--level-4 rhc-heading">
@@ -43,29 +30,26 @@ Het toepassen van Federatieve Toegangsverlening (FTV) begint met een goede voorb
            </p>
        </a>
    </div>
-   
    <div class="section-home-box">
        <a href="proefopstelling">
            <h2 class="nl-heading nl-heading--level-4 rhc-heading">
                Proefopstelling
            </h2>
            <p class="utrecht-paragraph">
-               Een mini-Federatief Datastelsel (FDS) met uitgewerkte use cases om lokaal te testen en mee te experimenteren.
+               Een mini-Federatief Datastelsel (FDS) met uitgewerkte use cases om lokaal mee te experimenteren.
            </p>
        </a>
    </div>
-
    <div class="section-home-box">
-       <a href="softwarekeus">
+       <a href="demonstratie">
            <h2 class="nl-heading nl-heading--level-4 rhc-heading">
-               Softwarekeuze
+               Demo
            </h2>
            <p class="utrecht-paragraph">
-               Aandachtspunten voor het selecteren van de juiste software.<br><br><br><br>
+               De proefopstelling komt tot leven in een use case rondom laadpalen voor elektrische auto's.
            </p>
        </a>
    </div>
-
 </div>
 
 {{< /chapter/header >}}
@@ -82,7 +66,7 @@ Goede toegangsverlening vraagt om heldere afspraken over rollen en bevoegdheden.
 
 Hoe zien de taken rondom FTV eruit en wie is waarvoor verantwoordelijk?
 
-[Bekijk het overzicht van functies en rollen](functioneel)
+[Bekijk het overzicht van functies en rollen](implementatie/functioneel.md)
 {{< /chapter/accordion >}}
 
 {{< chapter/accordion title="Voor juristen" customclass="bg-rhc-color-groen-50" >}}
@@ -93,13 +77,13 @@ Hoe zien de taken rondom FTV eruit en wie is waarvoor verantwoordelijk?
 
    Hoe zien de taken rondom FTV eruit en wie is waarvoor verantwoordelijk?
 
-   [Bekijk het overzicht van functies en rollen](functioneel)
+   [Bekijk het overzicht van functies en rollen](implementatie/functioneel.md)
 
    2. **Stappenplan**
 
    Hoe kom je van een use case tot een goed werkende toegangsregel?
 
-   [Doorloop het stappenplan](stappenplan)
+   [Doorloop het stappenplan](implementatie/stappenplan)
 
 {{< /chapter/accordion >}}
 
@@ -111,19 +95,19 @@ FTV raakt meerdere onderdelen van de IT-infrastructuur. Denk aan softwarekeuzes,
 
    Hoe zien de taken rondom FTV eruit en wie is waarvoor verantwoordelijk?
 
-   [Bekijk het overzicht van functies en rollen](functioneel)
+   [Bekijk het overzicht van functies en rollen](implementatie/functioneel.md)
 
 2. **Stappenplan**
 
    Hoe kom je van een use case tot een goed werkende toegangsregel?
 
-   [Doorloop het stappenplan](stappenplan)
+   [Doorloop het stappenplan](implementatie/stappenplan)
 
 3. **Softwarekeuze**
 
    Er is veel te kiezen op het gebied van Policy Decision Point (PDP), Policy Information Point (PIP) en Policy Administration Point (PAP). Wat heb je nodig? En welke leverancier past het best? Of is het beter om zelf iets te bouwen?
 
-   [Lees de checklist Softwarekeuze](softwarekeus)
+   [Lees de checklist Softwarekeuze](implementatie/softwarekeus)
 {{< /chapter/accordion >}}
 
 {{< chapter/accordion title="Voor ontwikkelaars" customclass="bg-rhc-color-geel-300" lastaccordion="true">}}

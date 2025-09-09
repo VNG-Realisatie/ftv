@@ -1,34 +1,12 @@
 ---
-Title: Stappenplan
+Title: Regels opstellen
 type: 'chapter'
 ---
-{{< chapter/header title="Toepassen" bg="brown">}}
 
-<div class="sub-navigation-wrapper">
-<div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-donkerbruin-50">
-   <p>
-      <a href="../functioneel">Functieoverzicht</a> 
-   </p>
-</div>
-<div class="sub-navigation-tab-selected utrecht-paragraph pt-1 sub-navigation-tab">
-   <p>
-      <a href="../stappenplan">Stappenplan</a>
-   </p>
-</div>
-<div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-donkerbruin-50">
-   <p>
-      <a href="../openftv">OpenFTV</a> 
-   </p>
-</div>
-<div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-donkerbruin-50">
-   <p>
-      <a href="../proefopstelling">Proefopstelling</a>
-   </p>
-</div>
-{{< /chapter/header >}}
-</div>
+{{< chapter/nextprevious  bg="bg-rhc-color-donkerbruin-50" previouslink="../functioneel" previoustitle="Functioneel overzicht" nextlink="../softwarekeus" nexttitle="Softwarekeus">}}
+{{< /chapter/nextprevious >}}
 
-{{< chapter/section title="Stappenplan" >}}
+{{< chapter/section title="Regels opstellen" >}}
 Het opstellen van toegangsregels vraagt om samenwerking tussen verschillende rollen.
 Bestuurders, juristen, IT-architecten en developers kijken vanuit hun eigen perspectief naar wat nodig is.
 Door de stappen te volgen, ontstaat een set regels die juridisch, functioneel én technisch klopt.
@@ -115,3 +93,6 @@ Het neerzetten (deployen) van de PDP vergt kennis van de infrastructuur (cloud i
 Regels worden centraal beheerd, maar moeten terechtkomen bij alle systemen die ze gebruiken. De infrastructuur bepaalt op basis van doelbinding welke regels waar nodig zijn.
 De beslissystemen krijgen zo alleen relevante regels en altijd de nieuwste versie. Dit is belangrijk voor goede prestaties: regels worden vaak uitgevoerd en veel minder vaak aangepast.
 {{< /chapter/section >}}
+
+{{< chapter/nextprevious  bg="bg-rhc-color-donkerbruin-50" previouslink="../functioneel" previoustitle="Functioneel overzicht" nextlink="../softwarekeus" nexttitle="Softwarekeus">}}
+{{< /chapter/nextprevious >}}
