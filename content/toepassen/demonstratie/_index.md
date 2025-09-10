@@ -45,12 +45,15 @@ Voor zaaktype laadpaalvergunningen kunnen aanvragen worden toegevoegd, goedgekeu
 
 {{< chapter/section title="Opstelling" >}}
 
+De basis is de [proefopstelling](../proefopstelling). Daar voegen we een registratie aan toe, namelijk die van laadpalen. Daarvoor wordt een database gebruikt met een bijpassende service waarmee laadpalen kunnen worden toegevoegd.
+
 {{< img-url "diagrams/usecase-opstelling.svg" "Proefopstelling zaaksysteem" >}}
 
-De registratie van laadpalen is voor deze opstelling heel simpel gehouden:
-- er is alleen een lijst met laadpalen
-- met de velden postcode, huisnummer en kenteken.
-- er zit geen toegangscontrole op de service zelf: de medewerkersautorisatie wordt door het zaaksysteem gedaan, en de toegang tot de
+De gegevens die we bijhouden zijn voor deze opstelling heel simpel gehouden:
+- Een lijst met laadpalen
+- Van elke laadpaal de postcode, huisnummer en kenteken.
+- De service heeft maar een ingang: met de bovengenoemde 3 gegevens een laadpaal toevoegen. Controle op geldige postcodes, huisnummers en kentekens doen we niet. Dat er maar 1 laadpaal per adres mag zijn controleert het zaaksysteem.
+- Er zit geen toegangscontrole op de service zelf: de medewerkersautorisatie wordt door het zaaksysteem gedaan, en de toegang tot de
   registratie als service door de gateway.
 
 {{< /chapter/section >}}
@@ -64,12 +67,10 @@ De registratie van laadpalen is voor deze opstelling heel simpel gehouden:
         - Voertuiggegevens: kenteken en uitstootklasse
     - Inzage in de vergunningen is toegestaan aan alle medewerkers van de afdeling burgerzaken
     - Voor het beheer van de vergunningen heeft de gemeente een opleiding gemaakt, en vereist voor aanpassingen aan de registratie dat het bijbehorende examen niet langer dan 1 jaar geleden met goed gevolg is afgelegd.
-
 - BRP:
     - De gemeente heeft per besluit toestemming van RvIG om in de BRP gegevens op te zoeken.
     - Grondslag daarvoor is nummer 5, 'om een taak van algemeen belang uit te voeren'
     - De gemeente mag alleen ingezetenen van de eigen gemeente opzoeken
-
 - RDW
     - De gemeente heeft per besluit toestemming van de RDW om voertuigen in de BRV op te zoeken.
     - Diplomatieke kentekens mogen niet opgezocht worden

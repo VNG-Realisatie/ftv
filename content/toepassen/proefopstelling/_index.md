@@ -34,17 +34,19 @@ type: 'chapter'
 
 De proefopstelling laat zien hoe Federatieve Toegangsverlening (FTV) in de praktijk kan werken. Daarvoor is een eenvoudig en werkend federatief datastelsel ingericht. De componenten rondom toegangsverlening zijn in deze opstelling volledig uitgewerkt.
 
-Benieuwd hoe een concrete use case er in deze proefopstelling uitziet? Lees dan verder bij [het aanvragen van laadpaalvergunningen](../demonstratie).
+Benieuwd hoe een concrete use case er in deze proefopstelling uitziet? Lees dan de [demonstratie laadpaalvergunningen](../demonstratie).
 {{< /chapter/section >}}
 
 {{< chapter/section title="Overzicht opstelling" level="3">}}
 De proefopstelling is een eenvoudig federatief datastelsel met als onderdelen:
 
-- Bij de gemeente:
+- Bij een gemeente:
   - Een zaaksysteem voor gemeentemedewerkers
   - Een of meer gemeentelijke registraties
 - De Basisregistratie Personen (BRP), een service van de Rijksdienst voor Identiteitsgegevens (RvIG)
 - De Basisregistratie Voertuigen (BRV), een service van de Rijksdienst voor het Wegverkeer (RDW)
+
+We laten hier nog in het midden wat voor zaken het zaaksysteem behandelt, dat kan in use cases ingevuld worden. 
 
 {{< img-url "diagrams/proefopstelling-overzicht.svg" "Proefopstelling overzicht" >}}
 {{< /chapter/section >}}
@@ -53,9 +55,13 @@ De proefopstelling is een eenvoudig federatief datastelsel met als onderdelen:
 De opstelling bij de gemeente kunnen we verder detailleren als volgt:
 {{< img-url "diagrams/proefopstelling-zaaksysteem.svg" "Proefopstelling zaaksysteem" >}}
 
-- **De zaak-applicatie**
+- **Het zaaksysteem**
 
-  De applicatie waarmee medewerkers zaken afhandelen.
+  De applicatie waarmee medewerkers zaken invoeren en afhandelen.
+
+- **Gemeentelijke registraties**
+
+  Een of meerdere lokale registraties, waarin de gemeente gegevens opslaat over de eigen zaken.
 
 - **Logging (LDV)**
 
@@ -67,15 +73,15 @@ De opstelling bij de gemeente kunnen we verder detailleren als volgt:
 
 - **Policy Decision Point (PDP)**
 
-  Hier is gekozen voor Cedar, die bepaalt of toegang wordt verleend op basis van ingestelde regels.
+  Het component dat bepaalt of toegang wordt verleend, op basis van ingestelde regels. Hier is gekozen voor Cedar, een open source PDP van Amazon.
 
 - **Policy Administration Point (PAP)**
 
-  De FTV-referentie wordt gebruikt als PAP. Deze gebruikt het bestandssysteem voor de opslag van policies. Er is een command line interface (CLI) om policies toe te voegen, bij te werken en te verwijderen. De policies worden door een push-interface aan OPA (Open Policy Agent) doorgegeven: elke wijziging wordt direct doorgegeven.
+  De FTV referentieimplementatie OpenFTV wordt gebruikt als PAP. Deze gebruikt het bestandssysteem voor de opslag van policies. Er is een command line interface (CLI) om policies toe te voegen, bij te werken en te verwijderen. De policies worden door een push-interface aan de PDP gegeven.
 
 - **Policy Information Point (PIP)**
 
-  Als PIP wordt de FTV-referentie gebruikt.
+  Als PIP wordt ook OpenFTV gebruikt, en ook het bestandssyteem voor opslag.
 
 {{< /chapter/section >}}
 
@@ -109,5 +115,8 @@ Er zijn twee registraties: BRP en BRV. Ze bevatten allebei de volgende onderdele
 De registraties delen in deze proefopstelling voor de eenvoud één toegangsverleningsysteem. In de praktijk zal dat meestal niet het geval zijn. De onderdelen zijn herkenbaar als dezelfde als bij de gemeente, maar dan:
 - Cerbos als **PDP**
 - Git als **PAP**, met GitLab als interface, zowel de service naar de PDP als de webapplicatie voor policybeheer.
-- OpenFTV als **PIP**
+
 {{< /chapter/section >}}
+
+{{< chapter/nextprevious  bg="bg-rhc-color-donkerbruin-50" nextlink="../demonstratie" nexttitle="Demonstratie">}}
+{{< /chapter/nextprevious >}}
