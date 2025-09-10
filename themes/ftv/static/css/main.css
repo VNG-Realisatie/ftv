@@ -12636,6 +12636,11 @@
   line-height: var(--utrecht-unordered-list-line-height);
   list-style-position: inside;
 }
+.section > ul > li > ul > li > ul > li {
+  padding-inline-start: calc(var(--utrecht-unordered-list-item-padding-inline-start)*4);
+  list-style-type: disc;
+  list-style-position: inside;
+}
 .section > ol {
   color: var(--utrecht-paragraph-color, var(--utrecht-document-color, inherit));
   font-weight: var(--utrecht-ordered-list-font-weight);
