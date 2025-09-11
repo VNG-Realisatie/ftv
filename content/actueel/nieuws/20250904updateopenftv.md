@@ -22,7 +22,8 @@ Deze release bouwt voort op de verbeteringen uit 1.4.0 en bevat onder andere uit
 {{< /chapter/section >}}
 
 {{< chapter/section title="Meer weten?" level="3">}}
-De nieuwe code en verse container images zijn te vinden op de [Gitlab repository van OpenFTV](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/open-ftv).
+- De nieuwe code en verse container images zijn te vinden op de [Gitlab repository van OpenFTV](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/open-ftv).
+- Check [Nieuwe release Open FTV (1.4.0)](https://vng-realisatie.github.io/ftv/actueel/nieuws/20250826updateopenftv/) voor informatie over de vorige release.
  
 {{< /chapter/section >}}
 
