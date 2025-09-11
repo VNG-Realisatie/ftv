@@ -114,15 +114,39 @@ In de gemeente zijn een aantal diplomatieke voertuigen gekomen, en het is niet m
 Daarom wordt besloten dat vergunningen voor diplomatieke voertuigen alleen door de gemeentesecretaris ingevoerd mogen worden. De concrete regel is
 - Diplomatieke kentekens mogen alleen opgezocht worden als de afdeling van de gebruiker 'Gemeentesecretaris' zijn.
 
-Het scenario is dat in het beheersysteem de regel wordt veranderd en de wijziging actief wordt gemaakt.
+Het scenario is dat in het beheersysteem de regel wordt veranderd en de wijziging actief wordt gemaakt. Dit zijn de concrete stappen:
+
+**Beheer**
+
+- Gebruiker meldt zich aan op de OpenFTV beheersinterface
+- Zoek de BRV regel die gaat over diplomatieke kentekens
+- Verwijder de regel
+- Maak een nieuwe gemeenteregel conform bovenstaande tekst
+- Publiceer beide regels:
+    - Eerste keer met ingangsdatum in de toekomst, dan lukt het nog steeds niet
+    - Tweede keer met ingangsdatum vandaag, dan lukt het de gemeentesecretaris wel
+- Zet de testdata terug, draai de regel terug, dan lukt het niet meer
+
+**Handhaving**
+
+- Vraag vergunning aan; zie testgevallen onder.
 
 #### Testgevallen
 
-| Gebruiker | Ingangsdatum  | Resultaat                                    |
-|-----------|---------------|----------------------------------------------|
-| Morty     |               | Morty mag geen regels aanpassen              |
-| Rick      | volgende week | Lukt                                         |
-| Rick      | vorige week   | Ingangsdatum mag niet in het verleden liggen |
+**Beheer**
+
+| Gebruiker | Ingangsdatum | Resultaat                                    |
+|-----------|--------------|----------------------------------------------|
+| Morty     |              | Morty mag geen regels aanpassen              |
+| Rick      | vorige week  | Ingangsdatum mag niet in het verleden liggen |
+| Rick      | vandaag      | Lukt                                         |
+
+**Handhaving**
+
+| Gebruiker | Postcode | Huisnummer | Resultaat                                   |
+|-----------|----------|------------|---------------------------------------------|
+| Jerry     | 1111EE   | 5          | Niet toegekend vanwege diplomatiek kenteken |
+| Diane     | 1111EE   | 5          | Lukt                                        |
 
 {{< /chapter/section >}}
 
