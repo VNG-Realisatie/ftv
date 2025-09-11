@@ -1,8 +1,8 @@
 ---
 type: 'nieuws'
-Title: 'Interview met Remo van Rest'
+Title: 'Van berichten naar registers: federatieve toegang in de zorg'
 date: '2025-08-28'
-summary: "Van berichten naar registers: federatieve toegang in de zorg"
+summary: "Interview met remo van Rest van Zorginstituut Nederland over federatieve toegang in de zorg"
 ---
 
 {{< nieuws/header title="Van berichten naar registers: federatieve toegang in de zorg" >}}
@@ -75,6 +75,13 @@ gegevens. Zo kunnen partijen beter samenwerken en kan de cliënt zelf
 meekijken in zijn gegevens. Federatieve toegangsverlening is geen
 wondermiddel dat alle uitdagingen in de zorg oplost, maar wel een cruciale
 bouwsteen. Zoals Remo het samenvat: “Het is superrelevant.”
+
+{{< /chapter/section >}}
+
+{{< chapter/section title="Meer interviews" level="3">}}
+
+Benieuwd naar andere verhalen uit de praktijk? Lees
+- ["Het gaat niet om applicaties, het gaat om data”](https://vng-realisatie.github.io/ftv/actueel/nieuws/20250908interviewkadaster/), een interview met Hans Schevers van het Kadaster over Linked Data
 
 {{< /chapter/section >}}
 
