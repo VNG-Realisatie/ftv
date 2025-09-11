@@ -41,7 +41,7 @@ Er zijn geen nieuwe werkgroepleden.
 {{< chapter/section title="Update subwerkgroepen incl. planning consultatie" >}}
 **Subwerkgroep AuthZEN**
 
-*Michiel Trimpe*: Voor de interne consultatie zijn er geen additionele punten meer ontvangen. De punten die eerder werden aangegeven, worden met de werkgroep verder uitgewerkt. Dat zijn de reikwijdte, de informatie modellering en verwijzing naar het register voor grondslag en doelbinding (OF: gebruik van Logboek Dataverwerkingen voor verwizjingen naar algoritme en verwerkingsregister). De openbare consultatie loopt via Logius.
+*Michiel Trimpe*: Voor de interne consultatie zijn er geen additionele punten meer ontvangen. De punten die eerder werden aangegeven, worden met de werkgroep verder uitgewerkt. Dat zijn de reikwijdte, de informatie modellering en verwijzingen naar registers voor grondslag en doelbinding. De openbare consultatie loopt via Logius.
 
 **Subwerkgroep Juridisch Kader**
 
