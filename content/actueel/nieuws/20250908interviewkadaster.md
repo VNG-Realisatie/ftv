@@ -50,5 +50,6 @@ Dat zou een grote stap vooruit zijn. Niet omdat de systemen meer kunnen, maar om
 - https://labs.test.kadaster.nl/kkg/demonstrator/
 - https://labs.kadaster.nl/   (Kadaster Datascience team website)
 
-
+Benieuwd naar andere verhalen uit de praktijk? Lees:
+[Van berichten naar registers](https://vng-realisatie.github.io/ftv/actueel/interview-remo-van-rest/), een interview met Remo Van Rest van Zorginstituut Nederland over federatieve toegang in de zorg.
 {{< /chapter/section >}}
