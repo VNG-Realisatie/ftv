@@ -12,7 +12,7 @@ Dat is essentieel voor verantwoording en audits: achteraf is inzichtelijk welke 
 
 {{< /nieuws/header >}}
 
-{{< chapter/section title="Gebaseerd op AuthZEN/informatiemodel" level="3">}}
+{{< chapter/section title="Gebaseerd op AuthZEN-informatiemodel" level="3">}}
 De standaard is gebaseerd op het AuthZEN-informatiemodel en beschrijft welke gegevens verplicht of optioneel moeten worden vastgelegd.
 Met de consultatie nodigt de projectgroep FTV collega’s en betrokken organisaties uit om mee te kijken en feedback te geven, zodat we samen tot een gedragen open standaard komen.
 
