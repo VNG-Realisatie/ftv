@@ -71,6 +71,7 @@ Vanwege de beperkte opkomst lijkt het niet gepast om hier een beslissing over te
 
 {{< chapter/section title="Relationship Based Access Control" >}}
 Tot slot geeft *Gerard Juijn* (projectgroep FTV) een presentatie over ReBAC: Relation Based Access Control zoals uitgewerkt in OpenFGA. Deze is gebaseerd is op het Zanzibar-project van Google.
+[Presentatie ReBAC](/ftv/documents/20250909-rebac.odp)
 
 De werkgroep concludeert dat ReBAC een krachtige methode is voor snelle evaluaties van relationele structuren. Een nadeel is dat er voor de toegangsverlening deze relationele data gerepliceerd moet worden naar alle Policy Enforcement Points. Aangezien deze over de hele IT infrastructuur verspreid zijn kunnen gevoelige gegevens slechts met zeer grote zorg voor ReBAC gebruikt worden. ReBAC is dus vooral geschikt voor het snel evalueren van relaties op basis van openbare of licht gevoelige data.
 
