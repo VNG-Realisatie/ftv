@@ -41,7 +41,7 @@ Er zijn geen nieuwe werkgroepleden.
 {{< chapter/section title="Update subwerkgroepen incl. planning consultatie" >}}
 **Subwerkgroep AuthZEN**
 
-*Michiel Trimpe*: Voor de interne consultatie zijn er geen additionele punten meer ontvangen. De punten die eerder werden aangegeven, worden met de werkgroep verder uitgewerkt. Dat zijn de reikwijdte, de informatie modellering en verwijzingen naar registers voor grondslag en doelbinding. De openbare consultatie loopt via Logius.
+*Michiel Trimpe*: Voor de interne consultatie zijn er geen additionele punten meer ontvangen. De punten die eerder werden aangegeven, worden met de werkgroep verder uitgewerkt. Dat zijn de reikwijdte, de informatiemodellering en verwijzingen naar registers voor grondslag en doelbinding. De openbare consultatie loopt via Logius.
 
 **Subwerkgroep Juridisch Kader**
 
@@ -72,7 +72,7 @@ Vanwege de beperkte opkomst lijkt het niet gepast om hier een beslissing over te
 {{< chapter/section title="Relationship Based Access Control" >}}
 Tot slot geeft *Gerard Juijn* (projectgroep FTV) een presentatie over ReBAC: Relation Based Access Control zoals uitgewerkt in OpenFGA. Deze is gebaseerd is op het Zanzibar-project van Google.
 
-De werkgroep concludeert dat ReBAC een krachtige methode is voor snelle evaluaties van relationele structuren. Een nadeel is dat er voor de toegangsverlening deze relationele data gerepliceerd moet worden naar alle Policy Enforcement Points. Aangezien deze over de hele IT infrastructuur verspreid zijn kunnen gevoelige gegevens slechts met zeer grote zorg voor ReBAC gebruikt worden. ReBAC is dus vooral geschikt voor het snel evalueren van relaties op basis van openbare of lichtgevoelige data.
+De werkgroep concludeert dat ReBAC een krachtige methode is voor snelle evaluaties van relationele structuren. Een nadeel is dat er voor de toegangsverlening deze relationele data gerepliceerd moet worden naar alle Policy Enforcement Points. Aangezien deze over de hele IT infrastructuur verspreid zijn kunnen gevoelige gegevens slechts met zeer grote zorg voor ReBAC gebruikt worden. ReBAC is dus vooral geschikt voor het snel evalueren van relaties op basis van openbare of licht gevoelige data.
 
 *Gerard Juijn* en *Michiel Trimpe* zullen namens FTV een artikel hierover schrijven voor de FTV-website. 
 {{< /chapter/section >}}
