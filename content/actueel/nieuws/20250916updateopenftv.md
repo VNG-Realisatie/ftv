@@ -18,7 +18,7 @@ Deze release bouwt voort op de verbeteringen uit 1.4.1 en bevat onder andere tag
 - Mock data-service images met geïntegreerde data voor Vlierdam, RDW en RvIG.
 - Bijgewerkte READMEs.
 - OpenFGA presentatie.
--Latest logo.
+- Latest logo.
 
  
 {{< /chapter/section >}}
