@@ -18,10 +18,13 @@ Wil je de nieuwsbrief automatisch in je mailbox ontvangen? Of juist niet meer? M
 {{< chapter/section title="Archief" level="3">}}
 Je kunt eerdere nieuwsbrieven teruglezen.
 
-- FTV Update #1 – 23 april 2025
+- [FTV Update #8 – 16 september 2025](/ftv/nieuwsbrief/update8.html)
+- [FTV Update #7 – 2 september 2025](/ftv/nieuwsbrief/update7.html)
+- [FTV Update #6 – 8 juli 2025](/ftv/nieuwsbrief/update6.html)
+- [FTV Update #5 – 24 juni 2025](/ftv/nieuwsbrief/update5.html)
+- [FTV Update #4 – 10 juni 2025](/ftv/nieuwsbrief/update4.html)
+- [FTV Update #3 – 27 mei 2025](/ftv/nieuwsbrief/update3.html)
+- [FTV Update #2 – 7 mei 2025](/ftv/nieuwsbrief/update2.html)
+- [FTV Update #1 – 23 april 2025](/ftv/nieuwsbrief/update1.html)
 
-  [Download (pdf)](/ftv/documents/ftv-update-1.pdf)
-- - FTV Update #2 – 8 mei 2025
-
-  [Download (pdf)](/ftv/documents/ftv-update-2.pdf)
 {{< /chapter/section >}}
