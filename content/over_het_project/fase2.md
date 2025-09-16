@@ -87,8 +87,9 @@ quo te handhaven ('het gaat nu toch ook goed').
 {{< /chapter/section >}}
 
 {{< chapter/section title="Planning en status" level="3">}}
+
 {{< img-url "images/planningfase2.png" "planning" >}}
-Fase 2 is op 1 april 2025 begonnen. Op deze pagina worden de resultaten gedeeld zodra ze beschikbaar zijn.
+
 {{< /chapter/section >}}
 
 
