@@ -6,7 +6,7 @@ Title: Stakeholders
 {{< chapter/section title="Stakeholders">}}
 Deze afbeelding laat zien welke stakeholders betrokken zijn en hoe ze zich tot elkaar verhouden.
 
-![Stakeholderkaart]({{< param baseDirectory >}}images/stakeholder_map.png)
+![Stakeholderkaart]({{< param baseDirectory >}}images/stakeholder_map.jpeg)
 {{< /chapter/section >}}
 
 {{< chapter/section title="Wat laat de afbeelding zien?" >}}
