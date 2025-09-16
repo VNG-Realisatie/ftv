@@ -32,9 +32,9 @@ type: 'chapter'
 
 {{< chapter/section title="Implementatie" >}}
 
-Voor een goed werkende oplossing voor Federatieve Toegangsverlening (FTV) zijn afspraken nodig over beheer en handhaving. Wat komt er kijken bij het toepassen en beheren van toegangsregels?
+Voor een goed werkende oplossing voor Federatieve Toegangsverlening (FTV) zijn afspraken nodig over beheer en handhaving. 
 
-In deze sectie gaan we in op drie belangrijk aspecten:
+De implementatie van toegangsregels vraagt aandacht voor meerdere aspecten:
 
 1. [Functioneel overzicht](./functioneel). Een beschrijving van de functies die nodig zijn om een compleet EAM-systeem te laten functioneren. Dit kan helpen om te controleren dat alle essentiële functies belegd zijn.
 2. [Regels opstellen](./stappenplan). Het opstellen van toegangsregels is meer dan het uitschrijven ervan in de juiste technische taal. Zoals juridische dekking, informeren van de betrokkenen en het testen van het effect van de regels.
