@@ -81,9 +81,8 @@ In fase 2 richt het project zich op het voorstellen, uitwerken en positioneren v
 * 15 november 2024: afronding onderzoek naar de status van EAM bij de overheid
 * 1 december 2024: start schrijven van de standaard
 * 1 februari 2025: aansluiting bij AuthZEN
-* 1 juni 2025:  AuthZEN NL GOV 1.0 naar consultatie
-* 1 augustus 2025: Authorization Decision Log (voorheen Logboek Toegangsverlening) naar consultatie
-* 1 september 2025: AuthZEN NL GOV 1.1 naar consultatie, met ‘nee, tenzij’
+* 1 augustus 2025:  AuthZEN NL GOV 1.0 naar consultatie
+* 1 september 2025: Authorization Decision Log (voorheen Logboek Toegangsverlening) naar consultatie
 * 31 december 2025: 1.0 in beheer bij Logius
 
 Meer weten? Lees de rapportages over [Fase 1](/ftv/over_het_project/fase1/) en [Fase 2](/ftv/over_het_project/fase2/)
