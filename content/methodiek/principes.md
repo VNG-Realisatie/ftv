@@ -126,7 +126,7 @@ Wel essentieel is het onderscheid met Role Based Access Control (RBAC). Dat gaat
 
 {{< /chapter/header >}}
 
-{{< chapter/section title="Standaardisatie" >}}
+{{< chapter/section title="Standaardisatie" id="standaardisatie">}}
 
 De principes van Externalized Authorization Management (EAM) en de PxP-architectuur bieden een goede basis voor de implementatie. Maar om systemen goed met elkaar te laten samenwerken, zijn meer details nodig. Ook het aspect van traceerbaarheid wordt in EAM en de PxP-architectuur niet geadresseerd. Daarom ontwikkelt FTV drie standaarden:
 
