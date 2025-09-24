@@ -66,7 +66,7 @@ Goede toegangsverlening vraagt om heldere afspraken over rollen en bevoegdheden.
 
 Hoe zien de taken rondom FTV eruit en wie is waarvoor verantwoordelijk?
 
-[Bekijk het overzicht van functies en rollen](implementatie/functioneel.md)
+[Bekijk het overzicht van functies en rollen](implementatie/functioneel)
 {{< /chapter/accordion >}}
 
 {{< chapter/accordion title="Voor juristen" customclass="bg-rhc-color-groen-50" >}}
@@ -77,7 +77,7 @@ Hoe zien de taken rondom FTV eruit en wie is waarvoor verantwoordelijk?
 
    Hoe zien de taken rondom FTV eruit en wie is waarvoor verantwoordelijk?
 
-   [Bekijk het overzicht van functies en rollen](implementatie/functioneel.md)
+   [Bekijk het overzicht van functies en rollen](implementatie/functioneel)
 
    2. **Stappenplan**
 
@@ -95,7 +95,7 @@ FTV raakt meerdere onderdelen van de IT-infrastructuur. Denk aan softwarekeuzes,
 
    Hoe zien de taken rondom FTV eruit en wie is waarvoor verantwoordelijk?
 
-   [Bekijk het overzicht van functies en rollen](implementatie/functioneel.md)
+   [Bekijk het overzicht van functies en rollen](implementatie/functioneel)
 
 2. **Stappenplan**
 
