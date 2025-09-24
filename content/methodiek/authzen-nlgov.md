@@ -74,7 +74,7 @@ AuthZEN 1.0 definieert een aantal APIs die gebruik maken van het informatiemodel
 
 {{< chapter/section title="Status" level="4">}}
 
-De [AuthZEN standaard versie 1.0](https://openid.net/specs/authorization-api-1_0-01.html) heeft nu de status Implementers Draft. Deze versie bevat een informatiemodel zoals boven beschreven en de drie APIs. Deze versie zal medio 2025 aangeboden worden ter consultatie. 
+De [AuthZEN standaard versie 1.0](https://openid.net/specs/authorization-api-1_0-01.html) heeft nu de status Implementers Draft. Deze versie bevat een informatiemodel zoals boven beschreven en de drie APIs. Deze versie zal eind 2025 aangeboden worden ter consultatie. 
 
 Diverse commerciële toegangsverleningsproducten en API-gateways implementeren deze versie inmiddels. De [AuthZEN interop](https://authzen-interop.net/) laat zien welke partijen dat zijn, en legt uit welk niveau van commitment elke leverancier toezegt.
 
@@ -90,9 +90,7 @@ De AuthZEN standaard beschrijft de basis die op elke uitwisseling van toepassing
 
 Voor de Nederlandse overheid ontwikkelt FTV een profiel bovenop AuthZEN: het NLGov Profile for OpenID AuthZEN Authorization API. Dit profiel bevat de aanvullingen die nodig zijn om te voldoen aan de Nederlandse wetgeving, de digitale strategie en regels van het Federatieve Datastelsel (FDS).
 
-De FTV werkgroep heeft [een release kandidaat van het profiel](https://vng-realisatie.github.io/authzen-nlgov/) gepubliceerd. Deze wordt nu door de FTV-werkgroep beoordeeld.
-
-Na acceptatie door de werkgroep zal het profiel aangeboden worden aan Logius voor beheer en voor opname in de domeinarchitectuur Gegevensuitwisseling binnen de Generieke Digitale Infrastructuur.
+De FTV werkgroep heeft [een release kandidaat van het profiel](https://vng-realisatie.github.io/authzen-nlgov/) goedgekeurd. De vervolgstappen zijn openbare consultatie, in beheername bij Logius, en opname in de domeinarchitectuur Gegevensuitwisseling binnen de Generieke Digitale Infrastructuur. Dit zal zeker tot eind 2025 duren.
 
 {{< /chapter/section >}}
 
