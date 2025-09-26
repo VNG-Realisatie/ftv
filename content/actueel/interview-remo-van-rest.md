@@ -81,7 +81,8 @@ bouwsteen. Zoals Remo het samenvat: “Het is superrelevant.”
 {{< chapter/section title="Meer interviews" level="3">}}
 
 Benieuwd naar andere verhalen uit de praktijk? Lees
-- ["Het gaat niet om applicaties, het gaat om data”](https://vng-realisatie.github.io/ftv/actueel/nieuws/20250908interviewkadaster/), een interview met Hans Schevers van het Kadaster over Linked Data
+- ["Het gaat niet om applicaties, het gaat om data”](https://vng-realisatie.github.io/ftv/actueel/nieuws/20250908interviewkadaster/), een interview met Hans Schevers van het Kadaster over Linked Data en toegangsverlening.
+- [Zonder standaarden geen Federatief Datastelsel](https://vng-realisatie.github.io/ftv/actueel/nieuws/20250922interviewgideonzegwaard/), een interview met Gideon Zegwaard, IBDS, over het belang van standaarden in een federatief stelsel.
 
 {{< /chapter/section >}}
 
