@@ -46,14 +46,13 @@ Aanmelden voor alle bijeenkomsten van de werkgroep kan via mail bij [ftv@vng.nl]
 De werkgroep vindt elke twee weken plaats op **dinsdag van 10:00 tot 11:00**. Deelname kan online of fysiek op Dev.loer (bij Digilab), Catharijnesingel 55, 3511 GD Utrecht (5e verdieping, Trindeborch gebouw)
 
 Data komende werkgroepen:
-- [dinsdag 23 september: Informatiemodellering en Linked Data](https://realisatieibds.nl/events/view/b3859fd0-1322-49a4-b038-af4c97b4db8d/werkgroep-federatieve-toegangsverlening-informatiemodellering-en-linked-data)
 - [dinsdag 7 oktober: iSHARE, Data Spaces en JTC-25](https://realisatieibds.nl/events/view/7d5851ac-c456-45b7-887f-72db9a7c10b7/werkgroep-federatieve-toegangsverlening-ishare-data-spaces-en-jtc-25)
-- [dinsdag 21 oktober: Verwerkingsregisters & Register Toegangsbeleid]https://realisatieibds.nl/events/view/e6907cd1-d5e5-4c1c-bbdc-223ad3fffe56/werkgroep-federatieve-toegangsverlening-verwerkingsregisters-register-toegangsbeleid
+- [dinsdag 21 oktober: Verwerkingsregisters & Register Toegangsbeleid](https://realisatieibds.nl/events/view/e6907cd1-d5e5-4c1c-bbdc-223ad3fffe56/werkgroep-federatieve-toegangsverlening-verwerkingsregisters-register-toegangsbeleid)
 
 ### Notulen
 
 #### Werkgroep FTV
-
+- 23 september: Reijkwijdte en Informatiemodellering & Linked Data ([Notulen]({{% relref "reikwijdte-en-informatiemodellering" %}}))
 - 9 september: Reikwijdte en ReBAC ([Notulen]({{% relref "reikwijdte-en-rebac" %}}))
 - 26 augustus: Planning najaar 2025 ([Notulen]({{% relref "planning-najaar" %}}))
 - 1 juli: Evaluatie ([Notulen]({{% relref "evaluatie" %}}))
