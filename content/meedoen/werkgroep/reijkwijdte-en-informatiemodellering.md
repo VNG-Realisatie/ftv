@@ -36,7 +36,7 @@ Title: 12. Reikwijdte en Informatiemodellering
 {{< /chapter/section >}}
 
 {{< chapter/section title="Bijlagen" >}}
-- [Opname]
+Opname
 {{< /chapter/section >}}
 
 {{< chapter/section title="Welkom & kennismaking" >}}
