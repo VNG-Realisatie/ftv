@@ -52,8 +52,8 @@ Data komende werkgroepen:
 ### Notulen
 
 #### Werkgroep FTV
-- 23 september: Reijkwijdte en Informatiemodellering & Linked Data ([Notulen]({{% relref "reikwijdte-en-informatiemodellering" %}}))
-- 9 september: Reikwijdte en ReBAC ([Notulen]({{% relref "reikwijdte-en-rebac" %}}))
+- 23 september: Reijkwijdte en Informatiemodellering & Linked Data
+-  9 september: Reikwijdte en ReBAC ([Notulen]({{% relref "reikwijdte-en-rebac" %}}))
 - 26 augustus: Planning najaar 2025 ([Notulen]({{% relref "planning-najaar" %}}))
 - 1 juli: Evaluatie ([Notulen]({{% relref "evaluatie" %}}))
 - 17 juni: Linked Data ([Notulen]({{% relref "linked-data" %}}))
