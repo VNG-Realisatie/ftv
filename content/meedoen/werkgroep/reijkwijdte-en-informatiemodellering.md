@@ -1,7 +1,7 @@
 
 ---
 type: 'chapter'
-Title: 12. Reikwijdte en Informatiemlodellering
+Title: 12. Reikwijdte en Informatiemodellering
 ---
 {{< chapter/section title="" >}}
 # Reikwijdte en Informatiemlodellering (23 september 2025)
