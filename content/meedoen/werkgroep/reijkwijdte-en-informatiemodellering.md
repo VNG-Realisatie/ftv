@@ -31,7 +31,7 @@ Title: 12. Reikwijdte en Informatiemodellering
 - Welkom & kennismaking (5m)
 - Update subwerkgroepen (10m)
 - Reikwijdte van FTV-standaarden (15m)
-- Informatoemodellering (25m)
+- Informatiemodellering (25m)
 - Afronding (5m)
 {{< /chapter/section >}}
 
@@ -80,6 +80,7 @@ In de discussie komt naar voren dat de voorgestelde reikwijdte relatief dwingend
 *Marc de Boer* benadrukt dat leveranciersonafhankelijkheid óók een belangrijk doel is van de standaard, los van federatief gebruik. Het is de vraag of dat voldoende grond is voor een verplichte opname.
 
 Conclusie
+
 De werkgroep vindt dat het huidige voorstel om AuthZEN direct verplicht te stellen mogelijk te zwaar is.
 Forum Standaardisatie wordt gezien als vooral gericht is op interoperabiliteit tussen organisaties. Het verplichte karakter sluit mogelijk niet goed aan bij dat perspectief.
 In de huidige praktijk wordt AuthZEN daar nog maar beperkt voor ingezet. Wanneer de standaard specifiek wordt gekoppeld aan het federatieve gebruik voor verantwoording en interoperabiliteit, kan een verplichting op termijn wél passend zijn. Voor nu lijkt het verstandiger om te starten met opname op de lijst van aanbevolen standaarden en pas later, bij bredere toepassing, de stap naar de verplichte lijst te zetten.
@@ -87,6 +88,7 @@ In de huidige praktijk wordt AuthZEN daar nog maar beperkt voor ingezet. Wanneer
 *Noot: Gideon Zegwaard kon niet aanwezig zijn en gaf aan hier een ander perspectief op te hebben. Er is besloten de reikwijdte ook voor volgende werkgroep weer te agenderen.*
 
 Besluit 
+
 Het is van belang om Forum Standaardisatie over de reikwijdte te raadplegen. Het perspectief van de over de focus op interoperabiliteit tussen organisaties kan dan getoetst worden. Het FTV-team bereidt een gesprek voor. Daarnaast zal in de volgende werkgroep zal de reikwijdte ook weer geagendeerd worden.
 
 
@@ -111,6 +113,7 @@ De discussie richt zich op de vraag naar welk niveau verwezen moet worden en of 
 Iedereen ziet dat LD een krachtige manier is om data aan elkaar te linken, maar de dekkingsgraad en implementatiegraad van LD is nog niet optimaal. Het is wel goed om vanuit de overheid wel te blijven sturen op het aanbevelen van LD.
 
 Conclusie
+
 - Elk AuthZEN-verzoek zou een URL moeten (should) bevatten die verwijst naar de documentatie van het gebruikte informatiemodel. Er wordt aanbevolen (recommended) om hiervoor MIM te gebruiken.
 - Het wordt aanbevolen (recommended) om LD-identifiers te gebruiken voor type identifiers.
 - Het wordt aanbevolen om het verzoek middels JSON-LD aan Linked Data modellen te koppelen.
