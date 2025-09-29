@@ -16,7 +16,7 @@ De bijeenkomst van de werkgroep FTV op 23 september stond in het teken van de re
 De interne consultatie is gestart. Er is nog geen feedback ontvangen. Werkgroepleden worden uitgenodigd hun reactie te geven.
 
 *Juridisch Kader*
-De uitwerking door BKZ kost meer tijd dan verwacht maar er is het volste vertrouwen in een tijdige afronding van het concept voor het juridisch kader.
+De uitwerking kost meer tijd dan verwacht maar er is het volste vertrouwen in een tijdige afronding van het concept voor het juridisch kader.
 De subwerkgroep neemt ook de vraag mee hoe mandaat, delegatie en machtigen een plek krijgen binnen toegangsverlening.
   
 {{< /chapter/section >}}
