@@ -2,7 +2,7 @@
 type: 'nieuws'
 Title: “Werkgroep over reijkwijdte en informatiemodellering”
 date: '2025-09-26'
-summary: "op 23 september sprak de werkgroep over reijkwijdte en informatiemodellering."
+summary: "op 23 september sprak de werkgroep over reikwijdte en informatiemodellering."
 ---
 
 {{< nieuws/header title="“Reijkwijdte en informatiemodellering”" >}}
@@ -23,7 +23,7 @@ De subwerkgroep neemt ook de vraag mee hoe mandaat, delegatie en machtigen een p
 
 {{< chapter/section title="Reikwijdte AuthZEN" level="3">}}
 De werkgroep besprak het voorstel om AuthZEN op te nemen in ‘pas toe of leg uit’-lijst van Forum Standaardisatie. De vraag is of de standaard meteen verplicht moet worden of eerst als aanbeveling wordt aangeboden.
-Forum Standaardisatie stelt de reikwijdte vast. Er wordt contact opgenomen met Forum Standaardisatie om hierover van gedachten te wisselen. In de volgende werkgroep komt dit onderwerp opnieuw terug.
+Forum Standaardisatie stelt de reikwijdte vast. Er wordt contact opgenomen met Forum Standaardisatie om hierover van gedachten te wisselen. In de volgende werkgroep komt dit onderwerp terug.
   
 {{< /chapter/section >}}
 
@@ -42,7 +42,7 @@ Kijk voor meer informatie en aanmelding op de [IBDS-website](https://realisatiei
 
 
 {{< chapter/section title="Meer weten?" level="3">}}
-Lees de [notulen](https://vng-realisatie.github.io/ftv/meedoen/werkgroep/reikwijdte-en-informatiemodellering/ voor een volledig overzicht van de discussie).
+Lees de [notulen](https://vng-realisatie.github.io/ftv/meedoen/werkgroep/reikwijdte-en-informatiemodellering/) voor een volledig overzicht van de discussie.
 
 
 {{< /chapter/section >}}
