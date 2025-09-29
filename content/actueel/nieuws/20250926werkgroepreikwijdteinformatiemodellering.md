@@ -1,6 +1,6 @@
 ---
 type: 'nieuws'
-Title: “Werkgroep over reikwijdte en informatiemodellering”
+Title: Werkgroep over reikwijdte en informatiemodellering
 date: '2025-09-26'
 summary: "Op 23 september sprak de werkgroep over reikwijdte en informatiemodellering."
 ---
