@@ -2,7 +2,7 @@
 type: 'nieuws'
 Title: “Werkgroep over reijkwijdte en informatiemodellering”
 date: '2025-09-26'
-summary: "op 23 september sprak de werkgroep over reikwijdte en informatiemodellering."
+summary: "Op 23 september sprak de werkgroep over reikwijdte en informatiemodellering."
 ---
 
 {{< nieuws/header title="“Reijkwijdte en informatiemodellering”" >}}
