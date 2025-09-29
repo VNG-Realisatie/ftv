@@ -1,6 +1,6 @@
 ---
 type: 'nieuws'
-Title: “AuthZEN Gov NL in Common Ground register”
+Title: AuthZEN Gov NL in Common Ground register
 date: '2025-09-29'
 summary: "Sinds 22 september staat de AuthZEN Gov NL standaard als concept in het CGTS-register."
 ---
