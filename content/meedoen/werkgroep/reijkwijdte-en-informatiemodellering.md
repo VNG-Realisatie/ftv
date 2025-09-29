@@ -128,7 +128,7 @@ Tot slot merkt *Danny Greefhorst* op dat er nog geen standaard voor policy-talen
 
 {{< chapter/section title="Volgende werkgroep" >}}
 
-Voor de volgende werkgroep staat de verwijzing naar registers op de agenda. *Frank Terpstra* verzorgt een presentatie over de aanpak van LDV. * Michiel Trimpe* bereidt een presentatie voor over registertoegangsbeleid.
+Voor de volgende werkgroep staat reijkwijdte nogmaals op de agenda. Ook bespreekt de weekgroep de onderwerpen verwerkingsngsregisters & register toegangsbeleid. *Frank Terpstra* verzorgt een presentatie over de aanpak van LDV. * Michiel Trimpe* bereidt een presentatie voor over registertoegangsbeleid.
 Donderdag 25 september komt een deel van de weekgroep bijeen om te werken aan de MIM-modellering van het AuthZEN-model samen met Geonovum.
 
 
