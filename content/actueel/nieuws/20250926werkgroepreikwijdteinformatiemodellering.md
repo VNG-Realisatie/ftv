@@ -42,7 +42,7 @@ Kijk voor meer informatie en aanmelding op de [IBDS-website](https://realisatiei
 
 
 {{< chapter/section title="Meer weten?" level="3">}}
-Lees de notulen voor een volledig overzicht van de discussie.
+Lees de [notulen](https://vng-realisatie.github.io/ftv/meedoen/werkgroep/reikwijdte-en-informatiemodellering/ voor een volledig overzicht van de discussie).
 
 
 {{< /chapter/section >}}
