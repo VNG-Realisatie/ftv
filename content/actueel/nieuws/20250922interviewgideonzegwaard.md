@@ -58,7 +58,10 @@ Voor een succesvolle adoptie van de standaard, zijn volgens Gideon koplopers nod
 
 
 {{< chapter/section title="Meer interviews" level="3">}}
-Benieuwd naar andere verhalen uit de praktijk? Lees:
+Benieuwd naar andere verhalen uit de praktijk?
+Lees:
 [Van berichten naar registers](https://vng-realisatie.github.io/ftv/actueel/interview-remo-van-rest/), een interview met Remo Van Rest van Zorginstituut Nederland over federatieve toegang in de zorg.
+[Het gaat niet om applicaties, het gaat om data](https://vng-realisatie.github.io/ftv/actueel/nieuws/20250908interviewkadaster/), een interview met Hans Schevers van het Kadaster over Linked Data en toegangsverlening.
+
 
 {{< /chapter/section >}}

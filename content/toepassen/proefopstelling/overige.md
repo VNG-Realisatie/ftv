@@ -5,7 +5,7 @@ type: 'chapter'
 {{< chapter/section title="" >}}
 # Overige use cases
 
-Benieuwd naar situaties waarin Federatieve Toegangsverlening (FTV) een rol kan spelen? Hier staan drie voorbeelden. Ze tonen verschillende aspecten van toegangscontrole in het algemeen, svan verzoeken over meerdere registraties heen en complexe anonimisatie door randomisatie tot gegeven nauwkeurigheid en een notificatie verzoek.
+Benieuwd naar situaties waarin Federatieve Toegangsverlening (FTV) een rol kan spelen? Hier staan drie voorbeelden. Ze tonen verschillende aspecten van toegangscontrole in het algemeen, van verzoeken over meerdere registraties heen en complexe anonimisatie door randomisatie tot gegeven nauwkeurigheid en een notificatie verzoek.
 ### Voorbeeld 1. Boete-uitgifte via ANPR op de A16
 
 **Situatie** Vanwege verkeersdrukte is de linker rijbaan van de A16 tijdens de spits gereserveerd voor inwoners van Rotterdam, Breda en omgeving. ANPR-camera's registreren kentekens van voertuigen op die rijbaan.
