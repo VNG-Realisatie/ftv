@@ -49,11 +49,11 @@ De subwerkgroep Authorization Decision Log heeft de voortgang van de [standaard]
 
 *Gerard van der Hoeven* vraagt waarom niet gewoon het iSHARE berichtformaat wordt gebruikt. *Michiel Trimpe* geeft aan dat de laatste helft van de werkgroep gewijd wordt aan een retrospective waar dit ook gedeeld kan worden.
 
-*Frank Terpstra* vraagt of er al een alternatief is gevonden voor het gebruik van het AVG-verwerkingenregister om aan te geven waar een logregel voor weggeschreven wordt. *Michiel Trimpe* laat hierop de [Action properties in AuthZEN NLGov](https://vng-realisatie.github.io/authzen-nlgov/#action-properties) zien die in het `request` opgenomen zullen worden. *Frank Terpstra* geeft aan dat dit ook nog niet helemaal werkt wanneer het algoritmeregister hierbij betrokken wordt. De voornaamste les uit [Logboek Dataverwerkingen voor (geo)objecten](https://geonovum.github.io/logboek-dataverwerkingen-voor-objecten/) was dat het algoritmeregister te grofmazig is voor deze toepassing.
+*Frank Terpstra* vraagt of er al een alternatief is gevonden voor het gebruik van het AVG-verwerkingenregister om aan te geven waar een logregel voor weggeschreven wordt. *Michiel Trimpe* laat hierop de [Action properties in AuthZEN NLGov](https://logius-standaarden.github.io/authzen-nlgov/#action-properties) zien die in het `request` opgenomen zullen worden. *Frank Terpstra* geeft aan dat dit ook nog niet helemaal werkt wanneer het algoritmeregister hierbij betrokken wordt. De voornaamste les uit [Logboek Dataverwerkingen voor (geo)objecten](https://geonovum.github.io/logboek-dataverwerkingen-voor-objecten/) was dat het algoritmeregister te grofmazig is voor deze toepassing.
 
 **Beslissing** Er zal, in afstemming met Logboek Dataverwerkingen, gekeken worden naar een gepaste manier van verwijzing naar de juridische basis van de gegevensverwerking.
 
-De subwerkgroep AuthZEN NLGov deelt de eerste versie van [AuthZEN NLGov](https://vng-realisatie.github.io/authzen-nlgov/) ter review. Alle aanpassingen op AuthZEN worden voorgelegd aan de werkgroep. 
+De subwerkgroep AuthZEN NLGov deelt de eerste versie van [AuthZEN NLGov](https://logius-standaarden.github.io/authzen-nlgov/) ter review. Alle aanpassingen op AuthZEN worden voorgelegd aan de werkgroep. 
 
 *Frank Terpstra* geeft aan dat hij het X-Request-ID ziet als een ander type identifier dan de W3C Trace Context. Request Identification hoeft dus wellicht niet uit de standaard verwijderd te worden.
 

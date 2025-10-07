@@ -90,7 +90,7 @@ De AuthZEN standaard beschrijft de basis die op elke uitwisseling van toepassing
 
 Voor de Nederlandse overheid ontwikkelt FTV een profiel bovenop AuthZEN: het NLGov Profile for OpenID AuthZEN Authorization API. Dit profiel bevat de aanvullingen die nodig zijn om te voldoen aan de Nederlandse wetgeving, de digitale strategie en regels van het Federatieve Datastelsel (FDS).
 
-De FTV werkgroep heeft [een release kandidaat van het profiel](https://vng-realisatie.github.io/authzen-nlgov/) goedgekeurd. De vervolgstappen zijn openbare consultatie, in beheername bij Logius, en opname in de domeinarchitectuur Gegevensuitwisseling binnen de Generieke Digitale Infrastructuur. Dit zal zeker tot eind 2025 duren.
+De FTV werkgroep heeft [een release kandidaat van het profiel](https://logius-standaarden.github.io/authzen-nlgov/) goedgekeurd. De vervolgstappen zijn openbare consultatie, in beheername bij Logius, en opname in de domeinarchitectuur Gegevensuitwisseling binnen de Generieke Digitale Infrastructuur. Dit zal zeker tot eind 2025 duren.
 
 {{< /chapter/section >}}
 

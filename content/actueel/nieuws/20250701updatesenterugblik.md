@@ -18,7 +18,7 @@ De subwerkgroep Authorization Decision Log (voorheen: Logboek Toegangsbeslissing
 Deze versie is beschikbaar voor feedback. De Nederlandse teksten worden nog (verder) vertaald naar het Engels, conform de afspraak voor technische documentatie.
 De scope van dit logboek sluit aan bij die van logboek Dataverwerkingen: de interface maakt inzien en opslaan mogelijk, maar niet het beheer.
 
-De subwerkgroep AuthZEN heeft een eerste [reviewversie](https://vng-realisatie.github.io/authzen-nlgov/) van het Nederlandse profiel online gezet.
+De subwerkgroep AuthZEN heeft een eerste [reviewversie](https://logius-standaarden.github.io/authzen-nlgov/) van het Nederlandse profiel online gezet.
 Deze is gebaseerd op de internationale standaard met daarin gemarkeerd herkenbare toevoegingen (groen) en weggelaten onderdelen (rood). De werkgroep nodigt iedereen uit om goedkeuring danwel opmerkingen te geven. De resultaten van deze eerste reviewronde worden in de werkgroep van 26 augustus besproken.  
 
 {{< /chapter/section >}}
