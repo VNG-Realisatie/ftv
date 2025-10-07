@@ -83,8 +83,8 @@ De gegevens die we bijhouden zijn voor deze opstelling heel simpel gehouden:
 
 {{< chapter/section title="Scenario 1: vergunning aanvragen (handhaving)" level="4">}}
 
-- Een burger kan een laadpaalvergunning aanvragen. Daarvoor zijn naam, postcode en huisnummer nodig. Een medewerker maakt in het zaaksysteem een zaak met zaaktype 'Aanvragen laadpaal' aan met die gegevens.
-- Het zaaksysteem zoekt in de BRP op postcode en huisnummer, en vindt de BSN(s).
+- Een burger kan een laadpaalvergunning aanvragen. Daarvoor zijn postcode en huisnummer (met eventueel huisnummertoevoeging) nodig. Een medewerker maakt in het zaaksysteem een zaak met zaaktype 'Aanvragen laadpaal' aan met die gegevens.
+- Het zaaksysteem zoekt in de BRP op postcode en huisnummer, en vindt een of meerdere BSNs.
 - Vervolgens zoekt het systeem de gevonden BSNs op in de BRV de voertuigen die op de persoon geregistreerd staan.
 - Als daar minstens 1 elektrisch voertuig bij zit, en de persoon heeft nog geen laadpaal op dat adres, dan wordt de vergunning toegekend, en een laadpaal toegevoegd.
 
@@ -147,6 +147,42 @@ Het scenario is dat in het beheersysteem de regel wordt veranderd en de wijzigin
 |-----------|----------|------------|---------------------------------------------|
 | Jerry     | 1111EE   | 5          | Niet toegekend vanwege diplomatiek kenteken |
 | Diane     | 1111EE   | 5          | Lukt                                        |
+
+{{< /chapter/section >}}
+
+{{< chapter/section title="Scenario 3: Audit" level="4">}}
+
+Deze scenario's beschrijven taken die een auditor zou kunnen uitvoeren, zowel als reactie op een gebeurtenis als in de vorm van  routinecontrole.
+
+**3a. Onderzoek naar een specifiek geval**
+
+_Achtergrond_
+
+Een burger heeft bij de gemeente gevraagd naar alle verwerkingen die er gedaan zijn op zijn gegevens. Daarbij zit een raadplegen van het BRV, maar de burger heeft geen auto en geen vergunning aangevraagd. Hoe kan dat?
+
+_Scenario_
+
+De auditor zoekt in de audit log op het betreffende tijdstempel en het beslispunt BRV. Op die manier vindt hij de naam van de medewerker die de aanvraag gedaan heeft en de regeling. Zo kan navraag gedaan worden bij de medewerker.
+
+**3b. Verloop van afwijzingen over de tijd**
+
+_Achtergrond_
+
+In normaal gebruik zijn er geen afwijzingen. Een medewerker zou niet moeten proberen een vergunning aan te vragen terwijl hij daar niet toe bevoegd is, en het zaaksysteem zou ook niet moeten aanbieden wat niet mag. Daarom kan het zinvol zijn om periodiek alle afwijzingen na te lopen, en te bekijken hoe die ontstaan. Ook kunnen de aantallen afwijzingen per periode vergeleken worden om te zien of er significante veranderingen zijn.
+
+_Scenario_
+
+Auditor filtert de audit log op afwijzingen en de periode die hij wil onderzoeken, en exporteert de data naar Excelformaat.
+
+**3c. Het lukt een medewerker niet om een aanvraag in te dienen.**
+
+_Achtergrond_
+
+Een nieuwe medewerker is toegevoegd als gebruiker maar het lukt niet om een laadpaalvergunning aan te vragen. De beheerder wil weten waarom.
+
+_Scenario_
+
+De beheerder filtert de audit log op de naam van de medewerker, en kiest een afwijzing op regeling Laadpalen. Op het detailscherm ziet hij het id en de titel van de regel die leidde tot de afwijzing.
 
 {{< /chapter/section >}}
 
