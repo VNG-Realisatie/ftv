@@ -32,8 +32,8 @@ Title: Reikwijdte en Verwerkingsregisters
 - Inventarisatie Register Toegangsbeleid (15m)
 - Afronding (5m)
 
-Het onderwerp reikwijdte staat opnieuw op de agenda omdat de vorige keer niet alle werkgroepleden aanwezig konden zijn. 
-
+Het onderwerp reikwijdte staat opnieuw op de agenda omdat de vorige keer niet alle werkgroepleden aanwezig konden zijn.
+{{< /chapter/section >}}
 {{< chapter/section title="Welkom & kennismaking" >}}
 Er zijn geen nieuwe werkgroepleden.
 
