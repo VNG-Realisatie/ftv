@@ -98,6 +98,7 @@ FDS werkt met plateaus van implementatie, waarbij standaarden geleidelijk breder
 *Igor van Haren* begrijpt de plateau-aanpak binnen FDS, maar wijst erop dat te late afstemming het risico vergroot dat organisaties de standaard verschillend interpreteren. Dat kan de beoogde interoperabiliteit ondermijnen.
 
 **Conclusie**
+
 De werkgroep concludeert dat er meer tijd nodig is om dit onderwerp te bespreken. Er wordt een apart overleg georganiseerd. Ook de leden die niet bij dit overleg aanwezig waren, worden geïnformeerd.
 
 
@@ -109,11 +110,12 @@ De werkgroep concludeert dat er meer tijd nodig is om dit onderwerp te bespreken
 De projectgroep FTV heeft Frank Terpstra (LDV) geconsulteerd. Hij deelt zijn conclusies met de werkgroep. Hij legt uit dat LDV verwerkingen van persoonsgegevens registreert: doelen, grondslagen, verantwoordelijke partijen en relaties tussen gegevensstromen. LDV biedt nog niet het  detailniveau waarmee je per toegangsbeslissing kunt zien wat de juridische basis was. Dat is iets voor latere uitbreiding. Hij gaat ook in op het AR. Elk algoritme in het AR heeft een unieke URI die kan worden opgenomen in logging. Daarbij kunnen ook verwijzingen naar wettelijke grondslagen worden toegevoegd, bijvoorbeeld via links naar wetten.nl. In de praktijk is dat nog niet precies genoeg: één algoritme kan meerdere wettelijke grondslagen hebben, waardoor niet duidelijk is welke bij een specifieke toepassing geldt. Om dat op te lossen zijn aanpassingen van het AR nodig. Het verlenen van toegang verloopt bovendien niet altijd via een algoritme. Daarom is mogelijk een apart register voor toegang nodig, waarin organisaties hun redenen voor toegang kunnen vastleggen.
 
 **Discussie**
+
 *Gideon Zegwaard* merkt op dat een verwerking breder is dan alleen een persoonsgegevensverwerking. Hij pleit voor een hiërarchische structuur waarin hoofd- en subverwerkingen worden onderscheiden, zodat toegangsbeslissingen traceerbaar zijn binnen een groter proces.
 
 *Frank Terpstra* bevestigt dat LDV zulke hiërarchie technisch kan ondersteunen. Belangrijk is dat de wettelijke grondslag in de logging wordt opgenomen.
 Michiel Trimpe geeft aan dat dit een leemte is die nog moet worden ingevuld. Mogelijk hoort dit in een Register Toegangsbeleid (RT), maar dat moet verder worden uitgewerkt. Hij stelt voor om  in AuthZEN NL Gov voorlopig te verwijzen naar het RvV en het AR. Volgend jaar kan dan de uitwerking van een RT worden opgepakt.
 
-**Voor Reikwijdte en  Register Toegangsbeleid worden aparte meeting georganiseerd.**
+**Voor Reikwijdte en  Register Toegangsbeleid worden aparte bijeenkomsten georganiseerd.**
 
 {{< /chapter/section >}}
