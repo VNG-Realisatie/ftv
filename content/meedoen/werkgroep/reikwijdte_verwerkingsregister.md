@@ -32,7 +32,7 @@ Title: Reikwijdte en Verwerkingsregisters
 - Inventarisatie Register Toegangsbeleid (15m)
 - Afronding (5m)
 
-  Het onderwerp reikwijdte staat opnieuw op de agenda omdat de vorige keer niet alle werkgroepleden aanwezig konden zijn. 
+Het onderwerp reikwijdte staat opnieuw op de agenda omdat de vorige keer niet alle werkgroepleden aanwezig konden zijn. 
 
 {{< chapter/section title="Welkom & kennismaking" >}}
 Er zijn geen nieuwe werkgroepleden.
@@ -44,31 +44,62 @@ Er zijn geen nieuwe werkgroepleden.
 
 *Michiel Trimpe* meldt dat de deadline van de interne consultatie van ADL is verstreken. Er zijn nog geen reacties ontvangen.
 Hij licht toe dat de interne consultatie een onofficiële interne review is, bedoeld om te toetsen of er nog inhoudelijke aandachtspunten (concerns) zijn. Deze procedure is ook toegepast bij voor het AuthZEN NL Gov-profiel. De openbare consultatie van AuthZEN NL Gov start op 14 oktober via Logius. De projectgroep had de start van de openbare consultatie van ADL graag gelijk willen laten lopen met die van AuthZEN NL Gov, maar kiest voor zorgvuldigheid boven snelheid. Daarom wordt de deadline van de interne consultatie verschoven, zodat werkgroepleden nog de gelegenheid hebben hun aandachtspunten of akkoord door te geven.
-De informatie over de standaard is te vinden op
+De informatie over de standaard is te vinden op [GitHub](https://vng-realisatie.github.io/authorization-decision-log/)
+
 
 **Subwerkgroep Juridisch Kader**
 
-De subwerkgroep Juridisch Kader is afgelopen twee weken niet bij elkaar geweest. 
+*Marc de Boer* meldt dat het juridisch kader in concept gereed is en vrijdag  10 oktober wordt besproken met Wouter Broekhuis (BZK). Het concept zal ook met de werkgroep worden gedeeld.
+Hij benadrukt dat het van belang is dat het juridisch kader tegelijk met de standaard beschikbaar is bij de openbare consultatie omdat reikwijdte en juridisch kader bij elkaar horen. Voor het ADL is ook een juridisch kader nodig.
 
-*Michiel Trimpe* is bezig met een document over machtigingen en delegatie binnen FTV en de vraag hoe je juridische en technisch vastlegt wie iets mag doen namens wie. Hij licht toe: Binnen toegangsverlening is er een subject (de aanvrager als persoon of organisatie) en de context waarin dat gebeurt. Machtigingen zijn het samenspel tussen deze twee. De kernvraag is: wie zien we als het subject en welke machtigingen horen daarbij? Een machtiging wordt vaak in de context geplaatst, maar past in sommige gevallen beter in het subject, bijvoorbeeld als iemand curator is en handelt namens een andere persoon. Binnen FDS is er sprake van uitwisseling tussen systemen. Daar speelt de machtigingsrelatie tussen bijvoorbeeld werkgever en werknemer maar die tussen opdrachtgever en leverancier.
+**Subwerkgroep AuthZEN**
 
-*Igor van Haren* verwijst naar het netwerkmodel van Vecozo waar de zorgaanbieder als formele partij toegang heeft tot bepaalde registers maar de IT-leverancier de feitelijke handeling uitvoert, zoals het ophalen van die gegevens. De zorgaanbieder geeft de IT-leverancier hiervoor een machtiging. Hij benadrukt dat hij dit onderscheid ook graag terugziet in de FTV-standaard.
+*Michiel Trimpe* meldt dat de internationale AuthZEN-standaard inmiddels de status final draft heeft bereikt. Deze versie gaat nog een interne review van twee weken in. Als er geen grote wijzigingen meer komen, volgt daarna de 60-daagse officiële reviewperiode. Zonder grote bezwaren wordt AuthZEN 1.0 dan internationaal vastgesteld.
+Dat sluit goed aan bij de Nederlandse planning: de publieke consultatie van het NL Gov-profiel start eveneens half oktober, zodat Nederlandse feedback nog in de internationale standaard kan worden verwerkt. Het is van groot belang dat de AuthZEN 1.0 final en het NL Gov-profiel precies op elkaar aansluiten.
 
-**Subwerkgroep Autorization Decision Log**
-
-*Michiel Trimpe*: De ontwerpversie van de standaard is klaar en vandaag wordt de interne consultatie gestart. Dat wordt ook aangekondigd in een nieuwsbericht. Er worden nog voorbeelden toegevoegd aan de documentatie om zaken te verduidelijken, maar de tekst zoals die er nu staat is wat de projectgroep betreft compleet. Aan iedereen het verzoek eventuele op- en aanmerkingen door te geven zodat de werkgroep deze punten kan bespreken voordat de standaard wordt aangeboden voor de publieke consultatie. De interne consultatie duurt tot en met dinsdag 7 oktober. 
-
-De standaard is te vinden op: [Authorization Decision Log](https://vng-realisatie.github.io/authorization-decision-log/)
 {{< /chapter/section >}}
 
-{{< chapter/section title="Reikwijdte van FTV standaarden" >}}
-*Michiel Trimpe* geeft een toelichting op het agendapunt.
+{{< chapter/section title="Reikwijdte" >}}
+Er is een gesprek geweest met Forum Standaardisatie over de actuele voorwaarden voor opname van het AuthZEN NL Gov-profiel op de pas-toe-of-leg-uit-lijst. 
+Deze zijn:
+1.	Het opnemen van de standaard op de lijst dient in substantiële mate bij te dragen aan het bevorderen van de interoperabiliteit, van een toekomstbestendige gegevensopslag, en/of van een verminderde leveranciersafhankelijkheid.
+2.	Het beoogde functioneel toepassingsgebied en het organisatorisch werkingsgebied van de standaard dient voldoende breed te zijn en betrekking te hebben op gebruik door de (semi-) overheid.
+3.	Het uitvragen of gebruiken van de standaard moet niet al verplicht zijn op grond van een bestaande (Europees) wettelijke verplichting die gelijk dan wel groter is dan het voor de lijst beoogde functioneel toepassingsgebied en het organisatorisch werkingsgebied.
+4.	De standaard dient bij te dragen aan de oplossing van een bestaand, relevant probleem.
+De werkgroep vindt dat het AuthZEN NL Gov wat betreft het eerste criterium voldoet aan de punten 1 en 3 (het bevorderen van de interoperabiliteit en/of van een verminderde leveranciersafhankelijkheid). De standaard voldoet aan de overige criteria.
 
-Voor de standaard is het belangrijk om te definiëren op welk gebied de standaard van toepassing is. Dit gaat bijvoorbeeld over verplicht of niet-verplicht stellen van de standaard en het gebruik van de standaard binnen overheden, tussen overheden en tussen publiek en private partijen. De projectgroep kan hier een aanbeveling over doen bij het aanbieden van de standaard aan GDI of Forum voor Standaardisatie. 
+**Discussie**
 
-Vanwege de beperkte opkomst lijkt het niet gepast om hier een beslissing over te nemen.
+*Michiel Trimpe* geeft aan wat het voorstel voor de reikwijdte was: wanneer een toegangsbeslissing buiten de applicatie wordt gelegd, moet AuthZEN NL Gov worden gebruikt.
+In de vorige vergadering is dat als volgt verwoord: AuthZEN NL Gov moet worden toegepast wanneer de toegangsbeslissing tot een API-aanroep in een ander component wordt afgedwongen (PEP) dan waar de beslissing wordt gemaakt (PDP), zodat organisaties van beslispunt (PDP) kunnen wisselen.
 
-*Michiel Trimpe* doet een voorzet als basis voor een discussie met de bredere werkgroep. Het idee is om AuthZEN te verplichten voor het EAM- architectuurpatroon, dus wanneer een overheidsinstantie een autorisatie beslissing buiten de eigen applicatie laat evalueren en AuthZEN aan te bevelen voor alle API-aanroepen van- en naar overheidsorganisaties. 
+*Gideon Zegwaard* vindt dat de voorgestelde reikwijdte te smal en te vrijblijvend is. Dit is nog geen gangbare praktijk: de meeste organisaties regelen toegangsbeslissingen binnen de applicatie.
+Als de standaard niet actiever aanstuurt op het externaliseren van autorisatie, blijft implementatie uit. In deze vorm beschrijft AuthZEN NL Gov vooral de interne inrichting van autorisatie binnen één organisatie en draagt het onvoldoende bij aan interoperabiliteit tussen organisaties. Hij neigt daarom naar een bredere reikwijdte, maar dan in de vorm van een aanbeveling.
+
+*Marc de Boer* herkent dat punt: als AuthZEN NL Gov alleen de interne inrichting van autorisatie beschrijft, gaat het niet over het stelsel (zoals FDS) maar over hoe een organisatie de toegangsverlening intern inricht. Wat betreft de sturing vraagt hij zich af of dit thuishoort bij FS of eerder bij architectuurrichtlijnen binnen GDI of FDS.
+
+*Gideon Zegwaard* benadrukt dat FDS zich richt op afspraken tussen deelnemers, terwijl de inrichting van toegangsverlening vooral een interne aangelegenheid is binnen organisaties. Dat past eerder bij de GDI dan bij FDS.
+
+*Danny Greefhorts* wijst erop dat Forum Standaardisatie zich vooral richt op positionering en interoperabiliteit, niet op architectuurkeuzes. Ook hij vindt  dat de huidige formulering voor de reikwijdte zich te veel richt op een intern proces en dus niet vanzelfsprekend past op de pas-toe-of-leg-uit-lijst.
+
+*Igor van Haren* geeft aan dat er bij gegevensuitwisseling vaak meerdere controlepunten aanwezig zijn: zowel aan de kant van de bevrager als aan de kant van de aanbieder.
+Dat betekent dat er twee PDPs (Policy Decision Points) kunnen bestaan die allebei een beslissing nemen over toegang. Dat impliceert eigenlijk altijd een EAM-achtige manier van werken: als je op meerdere plekken beslissingen neemt, moet je het beleid en de policies centraal kunnen beheren.
+
+*Gideon Zegwaard* merkt op dat organisaties ook zonder technische koppeling kunnen afspreken wie welke policies uitvoert. Dat kan logisch of tekstueel worden vastgelegd, zonder direct een gezamenlijke technische oplossing te hoeven gebruiken.
+
+*Igor van Haren* vindt dat een te beperkte invulling. In de praktijk, zegt hij, leidt dit tot uiteenlopende interpretaties van policies en verminderde transparantie.
+Hij ziet het als een afzwakking van de standaard, omdat zonder centrale afstemming niet meer duidelijk is op welke policy een beslissing is gebaseerd. 
+
+*Michiel Trimpe* merkt op dat leveranciersonafhankelijkheid ook een zwaarwegend argument is voor opname: zonder standaard ontstaat vendor lock-in. Hij stelt voor de argumenten interoperabiliteit en leveranciersonafhankelijkheid te gebruiken richting FS voor AuthZEN. Voor ADL kan gekeken worden naar een verplichting binnen het FDS, waar die standaard beter past.
+
+*Gideon Zegwaard*  vindt dat ADL binnen FDS thuishoort, maar niet als directe verplichting.
+FDS werkt met plateaus van implementatie, waarbij standaarden geleidelijk breder worden ingevoerd. Volgens hem is het logisch om ADL in zo’n plateau te positioneren, zodat organisaties ervaring kunnen opdoen zonder dat het formeel verplicht wordt.
+
+*Igor van Haren* begrijpt de plateau-aanpak binnen FDS, maar wijst erop dat te late afstemming het risico vergroot dat organisaties de standaard verschillend interpreteren. Dat kan de beoogde interoperabiliteit ondermijnen.
+Conclusie
+De werkgroep concludeert dat er meer tijd nodig is om dit onderwerp te bespreken. Er wordt een apart overleg georganiseerd. Ook de leden die niet bij dit overleg aanwezig waren, worden geïnformeerd.
+
+
 
 {{< /chapter/section >}}
 
