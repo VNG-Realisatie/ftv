@@ -106,23 +106,25 @@ De code is geschreven in Golang en vrij beschikbaar via GitLab.
 #### Modulair en flexibel
 - De GitLab-repository is opgezet als een mono-repo met losse modules die afzonderlijk of in combinatie te gebruiken zijn.
 - Elke module is grotendeels configureerbaar en zo flexibel mogelijk ingericht.
-- Voor de opslag van policies en attributen kan het DevOps-team kiezen uit verschillende key/value-stores of bijvoorbeeld een relationele database zoals Postgres.
-- Ook de policytaal is flexibel: op dit moment ondersteunt OpenFTV
+- Policies, attributen en andere beheergegevens worden in een PostgreSQL database opgeslagen.
+- Voor de opslag van de Authorization Decision Log kan het DevOps-team voor PostgreSQL kiezen,
+  of middels OpenTelemetry versturen naar een logging-systeem naar eigen keuze.
+- Ook de policy-taal is flexibel: op dit moment ondersteunt OpenFTV
   [Rego (OPA)](https://www.openpolicyagent.org/docs/latest/policy-language/),
-  [Cedar (Amazon-AWS)](https://www.cedarpolicy.com/en),
-  [Cerbos (Google)](https://docs.cerbos.dev/cerbos/latest/policies/)
+  [Cedar (Amazon)](https://www.cedarpolicy.com/en),
+  [Cerbos (Zenauth Ltd)](https://docs.cerbos.dev/cerbos/latest/policies/)
   en [OpenFGA](https://openfga.dev/docs/fga).
 
 #### OpenAPI-specificaties
 - Voor alle API endpoints binnen de OpenFTV modules is een OAS v3 specificatie beschikbaar,
   tenzij dit vanuit een ander project vastgesteld is.
-- Alle specificaties voldoen aan de REST API Design Rules van developer.overheid.nl.
+- Alle specificaties voldoen aan de REST API Design Rules van [developer.overheid.nl](https://developer.overheid.nl/kennisbank/apis/api-design-rules/).
+  * enige uitzondering hierop zijn bepaalde properties in de AuthZEN standaard die met *kebab-case* zijn gedefinieerd.
 - Wordt middels de Spectral linter afgedwongen.
 
 #### Kant-en-klare micro-services
-- De repository bevat meerdere backend microservices, waaronder een PDP en volledige PAP- en PIP-componenten.
+- De repository bevat meerdere backend microservices, waaronder een PDP en volledige PAP- en PIP-services.
   Omdat policies en data vaak door dezelfde gebruikers worden beheerd, is er ook een Manager-service die de PAP en PIP combineert.
-- Voor oudere versies van OpenFSC is een aparte autorisatie-plugin beschikbaar die als PDP fungeert.
 - Developers kunnen deze services direct inzetten voor een werkende EAM-implementatie. Wie liever zelf bouwt,
   kan de losse modules gebruiken om één of meer EAM-componenten zelf samen te stellen.
 - Gateways en andere systemen kunnen met standaard AuthZEN-profielen eenvoudig aansluiten op de generieke PDP-service.
@@ -130,11 +132,11 @@ De code is geschreven in Golang en vrij beschikbaar via GitLab.
   Zo hoeven ontwikkelteams niet opnieuw te beginnen bij het bouwen van EAM-functionaliteit.
 
 #### Test
-- Elke module is voorzien van uitgebreide unit-tests met een code coverage van meer dan 90%.
+- Elke module is voorzien van uitgebreide unit-tests met een code coverage van rond de 80%.
 - Regressies worden zo vroeg en efficiënt mogelijk gedetecteerd.
 - De testvoorzieningen zijn volledig opgenomen in de CI/CD-pipelines.
 
-### Meedenken
+### Meedoen
 Met een gratis GitLab-account is het mogelijk om mee te ontwikkelen, feedback te geven,
 de voortgang te volgen en de code vrij te gebruiken.
 
