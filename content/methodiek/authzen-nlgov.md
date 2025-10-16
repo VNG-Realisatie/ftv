@@ -36,7 +36,7 @@ De [AuthZEN Authorization API](https://openid.net/wg/authzen/) is een initiatief
 
 ![Het OpenID logo](/ftv/images/logo-openid.png)
 
-{{< /chapter/header >}}
+{{< /chapter/section >}}
 
 {{< chapter/section title="Over AuthZEN" level="3">}}
 
@@ -44,7 +44,7 @@ AuthZEN standaardiseert stap voor stap onderdelen van de PxP-architectuur die in
 
 De eerste stap is de standaardisering van de interface tussen het Policy Enforcement Point (PEP) en het Policy Decision Point (PDP): de vragen die een PEP stelt en de antwoorden die het PDP geeft.
 
-{{< /chapter/header >}}
+{{< /chapter/section >}}
 
 {{< chapter/section title="Informatiemodel" level="4" id="informatiemodel">}}
 

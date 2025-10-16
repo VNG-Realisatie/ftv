@@ -20,5 +20,5 @@ Deze website is zo ingericht dat hij voor zoveel mogelijk mensen bruikbaar is. D
 
 Heb je vragen of opmerkingen? Of wil je een melding doen van een niet-toegankelijke pagina? Neem dan contact op met [ftv@vng.nl](mailto:ftv@vng.nl).
 
-{{< /chapter/header >}}
+{{< /chapter/section >}}
 
