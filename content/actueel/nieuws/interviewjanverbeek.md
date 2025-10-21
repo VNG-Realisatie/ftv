@@ -66,7 +66,9 @@ Benieuwd naar andere verhalen uit de praktijk?
 Lees:
 
 [Van berichten naar registers](https://vng-realisatie.github.io/ftv/actueel/interview-remo-van-rest/), een interview met Remo Van Rest van Zorginstituut Nederland over federatieve toegang in de zorg.
+
 [Zonder standaarden geen Federatief Datastelsel](https://vng-realisatie.github.io/ftv/actueel/nieuws/20250922interviewgideonzegwaard/), een interview met Gideon Zegwaard, IBDS, over het belang van standaarden in een federatief stelsel.
+
 [“Het gaat niet om applicaties, het gaat om data”](/actueel/nieuws/20250908interviewkadaster/), een interview met Hans Schevers van het Kadaster over Linked Data en toegangsverlening.
 
 {{< /chapter/section >}}
