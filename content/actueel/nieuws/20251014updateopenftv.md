@@ -2,7 +2,7 @@
 type: 'nieuws'
 Title: Nieuwe release Open FTV
 date: '2025-10-14'
-summary: "De nieuwe releases van OpenFTV beschikbaar."
+summary: "Nieuwe releases OpenFTV beschikbaar."
 ---
 
 {{< nieuws/header title="Nieuwe releases Open FTV" >}}
