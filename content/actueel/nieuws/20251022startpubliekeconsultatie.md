@@ -6,7 +6,7 @@ summary: "De publieke consultatie voor het NL Gov-profiel van de internationale 
 ---
 
 {{< nieuws/header title="Start publieke consultatie AuhtZEN NL Gov" >}}
-De publieke consultatie voor het NL Gov-profiel van de internationale standaard AuthZEN (OpenID) is gestart bij Logius. De consultatie loopt van 16 oktober tot en met 20 november 2025.
+De publieke consultatie voor het NL Gov-profiel van de internationale standaard AuthZEN (OpenID) is 16 oktober gestart bij Logius. De consultatie loopt tot 20 november 2025.
 
 {{< /nieuws/header >}}
 
