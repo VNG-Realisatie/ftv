@@ -23,10 +23,11 @@ Deze FTV-standaarden zijn nog in ontwikkeling. De publieke consultatie van het A
 {{< chapter/section title="Feedback" level="3">}}
 Help mee het AuthZEN NL GOV-profiel klaar te maken voor de definitieve versie en geef voor 20 november feedback via api@logius.nl of via issues op GitHub. 
 De projectgroep FTV bespreekt de feedback daarna met de werkgroep FTV waaraan verschillende organisaties deelnemen.
+{{< /chapter/section >}}
 
 {{< chapter/section title="Meer informatie" level="3">}}
 - Kijk voor de consultatie versie van AuthZEN NL Gov op de website van [Logius](https://logius-standaarden.github.io/Openbare-Consultaties/2025-10-15-Authzen/).
 - Op de hoogte blijven over de voortgang van de FVT-standaarden? Meld je aan voor de tweewekelijkse [FTV Update](https://vng-realisatie.github.io/ftv/actueel/aanmelden-nieuwsbrief/).
-
+{{< /chapter/section >}}
 
 
