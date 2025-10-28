@@ -38,7 +38,10 @@ Title: JTC-25 en iSHARE
 {{< /chapter/section >}}
 
 {{< chapter/section title="Bijlages" >}} 
-
+- [Opname](https://github.com/VNG-Realisatie/ftv/raw/refs/heads/main/static/videos/20251021-jtc25-en-ishare.mp4)
+- [Presentatie iSHARE](/ftv/documents/20251021-ftv-en-ishare.pdf)
+- [Diagram klassieke data spaces](/ftv/documents/20251021-classic-data-space.png)
+- [Diagram data spaces met DRP](/ftv/documents/20251021-data-space-with-DRP.png)
 {{< /chapter/section >}}
 
 {{< chapter/section title="Welkom" >}}
