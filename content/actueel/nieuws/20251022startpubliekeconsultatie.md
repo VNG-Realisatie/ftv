@@ -1,11 +1,11 @@
 ---
 type: 'nieuws'
-Title: Start publieke consultatie AuhtZEN NL Gov 
+Title: Start publieke consultatie AuthZEN NL Gov 
 date: '2025-10-22'
 summary: "De publieke consultatie voor het NL Gov-profiel van de internationale standaard AuthZEN (OpenID) is gestart bij Logius."
 ---
 
-{{< nieuws/header title="Start publieke consultatie AuhtZEN NL Gov" >}}
+{{< nieuws/header title="Start publieke consultatie AuthZEN NL Gov" >}}
 De publieke consultatie voor het NL Gov-profiel van de internationale standaard AuthZEN (OpenID) is 16 oktober gestart bij Logius. De consultatie loopt tot 20 november 2025.
 
 {{< /nieuws/header >}}
