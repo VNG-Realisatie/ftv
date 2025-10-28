@@ -50,7 +50,7 @@ Data komende werkgroepen:
 ### Notulen
 
 #### Werkgroep FTV
--21 oktober: JTC-25 en iSHARE (Notulen)
+- 21 oktober: JTC-25 en iSHARE ([Notulen]({{% relref "jtc25eniSHARE" %}}))
 - 7 oktober: Reikwijdte en Verwerkingsregisters ([Notulen]({{% relref "reikwijdte_verwerkingsregister" %}}))
 - 23 september: Reijkwijdte en Informatiemodellering & Linked Data ([Notulen]({{% relref "reikwijdte-en-informatiemodellering" %}}))
 -  9 september: Reikwijdte en ReBAC ([Notulen]({{% relref "reikwijdte-en-rebac" %}}))
