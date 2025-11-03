@@ -128,7 +128,7 @@ Tot slot merkt *Danny Greefhorst* op dat er nog geen standaard voor policy-talen
 
 {{< chapter/section title="Volgende werkgroep" >}}
 
-Voor de volgende werkgroep staat reijkwijdte nogmaals op de agenda. Ook bespreekt de werkgroep de onderwerpen verwerkingsngsregisters & register toegangsbeleid. 
+Voor de volgende werkgroep staat reijkwijdte nogmaals op de agenda. Ook bespreekt de werkgroep de onderwerpen verwerkingsregisters & register toegangsbeleid. 
 
 *Frank Terpstra* verzorgt een presentatie over de aanpak van LDV. 
 

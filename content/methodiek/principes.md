@@ -46,7 +46,7 @@ Een overzicht van EAM in 2:30.
    <a href="../methodiek-slidecast-transcript.txt" download class="downloadtranscript" >Uitgeschreven tekst downloaden</a>
 </div>
 
-{{< /chapter/header >}}
+{{< /chapter/section >}}
 
 {{< chapter/section title="Separation of concerns" level="3">}}
 
@@ -54,7 +54,7 @@ Een overzicht van EAM in 2:30.
 
 De kern van EAM is het scheiden van verantwoordelijkheden (separation of concerns). Regels staan los van de applicatiecode in zogenoemde policies. En het beheer van de policies is gescheiden van het handhaven ervan.
 
-{{< /chapter/header >}}
+{{< /chapter/section >}}
 
 {{< chapter/section title="De drie kenmerken" level="3">}}
 
@@ -75,7 +75,7 @@ De policies worden beheerd met dezelfde zorgvuldigheid als broncode. Er wordt ve
 3. **Realtime**.
 Policies worden niet alleen tijdens login uitgevoerd, maar op elk moment wanneer toegang gevraagd wordt (zero trust) en op elke plek in de keten waar toegang gevraagd wordt (defense in depth).
 
-{{< /chapter/header >}}
+{{< /chapter/section >}}
 
 {{< chapter/section title="Lokale handhaving, centraal beheer" level="3">}}
 
@@ -124,7 +124,7 @@ Omdat de verschillen tussen ABAC, PBAC en ReBAC in de praktijk klein zijn, gebru
 
 Wel essentieel is het onderscheid met Role Based Access Control (RBAC). Dat gaat alleen uit van gebruikers(groepen) en rollen tijdens authenticatie en schiet daarmee te kort in fijnmazigheid en flexibiliteit als enige oplossing. RBAC heeft vaak een goede plek naast EAM. Ze vullen elkaar goed aan.
 
-{{< /chapter/header >}}
+{{< /chapter/section >}}
 
 {{< chapter/section title="Standaardisatie" >}}
 

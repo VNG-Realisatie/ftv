@@ -46,12 +46,11 @@ Aanmelden voor alle bijeenkomsten van de werkgroep kan via mail bij [ftv@vng.nl]
 De werkgroep vindt elke twee weken plaats op **dinsdag van 10:00 tot 11:00**. Deelname kan online of fysiek op Dev.loer (bij Digilab), Catharijnesingel 55, 3511 GD Utrecht (5e verdieping, Trindeborch gebouw)
 
 Data komende werkgroepen:
-- [dinsdag 21 oktober: iSHARE, Data Spaces en JTC-25](https://realisatieibds.nl/events/view/7d5851ac-c456-45b7-887f-72db9a7c10b7/werkgroep-federatieve-toegangsverlening-ishare-data-spaces-en-jtc-25)
 
 ### Notulen
 
 #### Werkgroep FTV
-
+- 21 oktober: JTC-25 en iSHARE ([Notulen]({{% relref "jtc25eniSHARE" %}}))
 - 7 oktober: Reikwijdte en Verwerkingsregisters ([Notulen]({{% relref "reikwijdte_verwerkingsregister" %}}))
 - 23 september: Reijkwijdte en Informatiemodellering & Linked Data ([Notulen]({{% relref "reikwijdte-en-informatiemodellering" %}}))
 -  9 september: Reikwijdte en ReBAC ([Notulen]({{% relref "reikwijdte-en-rebac" %}}))
