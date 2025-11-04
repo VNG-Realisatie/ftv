@@ -67,9 +67,9 @@ De opstelling bij de gemeente kunnen we verder detailleren als volgt:
 
   Omdat het systeem persoonsgegevens verwerkt (personen en voertuigen opzoekt) moet het een logboek dataverwerkingen bijhouden. Hier wordt de referentie-implementatie van Logboek Dataverwerking (LDV) gebruikt.
 
-- **Gateway (FSC)**
+- **API Gateway**
 
-  Om te communiceren met registraties, zowel binnen als buiten de gemeente, is er een gateway. Hier wordt de referentie-implementatie van Federatieve Service Connectiviteit (OpenFSC) gebruikt. Deze heeft een Policy Enforcement Point (PEP) die elke verbinding op toegang controleert.
+  Om te communiceren met registraties, zowel binnen als buiten de gemeente, is er een gateway nodig. Deze heeft een Policy Enforcement Point (PEP) die elke verbinding op toegang controleert. In dit voorbeeld is voor Kong gekozen, een populaire en AuthZEN compliant gateway. 
 
 - **Policy Decision Point (PDP)**
 
@@ -77,11 +77,11 @@ De opstelling bij de gemeente kunnen we verder detailleren als volgt:
 
 - **Policy Administration Point (PAP)**
 
-  De FTV referentieimplementatie OpenFTV wordt gebruikt als PAP. Deze gebruikt het bestandssysteem voor de opslag van policies. Er is een command line interface (CLI) om policies toe te voegen, bij te werken en te verwijderen. De policies worden door een push-interface aan de PDP gegeven.
+  De FTV referentieimplementatie OpenFTV wordt gebruikt als PAP. Deze gebruikt een PostgreSQL database voor de opslag van policies, en heeft een eigen applicatie met gebruikersinterface voor het inzien en wijzigen.
 
 - **Policy Information Point (PIP)**
 
-  Als PIP wordt ook OpenFTV gebruikt, en ook het bestandssyteem voor opslag.
+  Als PIP wordt ook OpenFTV gebruikt, met het bestandssyteem voor opslag.
 
 {{< /chapter/section >}}
 
