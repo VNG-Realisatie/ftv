@@ -41,9 +41,7 @@ Het onderwerp Contracten dat voor deze bijeenkomst op de agenda stond, is verpla
 {{< /chapter/section >}}
 
 {{< chapter/section title="Bijlages" >}} 
-
-- [Opname] Zie vanaf 49:30 voor de presentatie OpenFTV.
-  
+- [Opname](https://github.com/VNG-Realisatie/ftv/raw/refs/heads/main/static/videos/20251104-authorization-decision-log-en-open-ftv.mp4) Zie vanaf 49:30 voor de presentatie OpenFTV.
 {{< /chapter/section >}}
 
 {{< chapter/section title="Welkom" >}}
