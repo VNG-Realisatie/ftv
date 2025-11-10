@@ -127,6 +127,11 @@
     list-style-position: inside;
 }
 
+.section > ul > li > ol > li {
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+
 .section > ul > li > ul > li > ul > li {
     padding-inline-start: calc(var(--utrecht-unordered-list-item-padding-inline-start)*4);
     list-style-type: disc;
@@ -143,7 +148,7 @@
     padding-inline-start: var(--utrecht-ordered-list-padding-inline-start);
 }
 
-.section > ol > li {
+.section > ol > li,  {
     padding-inline-start: var(--utrecht-ordered-list-item-padding-inline-start);
     list-style-type: decimal;
     font-size: var(--utrecht-paragraph-font-size, var(--utrecht-document-font-size, inherit));

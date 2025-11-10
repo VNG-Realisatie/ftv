@@ -43,7 +43,7 @@ Het toepassen van Federatieve Toegangsverlening (FTV) begint met een goede voorb
    <div class="section-home-box">
        <a href="demonstratie">
            <h2 class="nl-heading nl-heading--level-4 rhc-heading">
-               Demo
+               Demonstratie
            </h2>
            <p class="utrecht-paragraph">
                De proefopstelling komt tot leven in een use case rondom laadpalen voor elektrische auto's.

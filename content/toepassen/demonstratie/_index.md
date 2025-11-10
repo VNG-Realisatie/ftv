@@ -33,35 +33,37 @@ type: 'chapter'
 {{< chapter/section title="Demonstratie" >}}
 
 {{< /chapter/section >}}
-{{< chapter/section title="Onderwerp" >}}
-In deze use case gaan gemeenten bijhouden welke laadpalen er zijn en wie de vergunning daarvoor heeft.
-Er mogen niet te veel laadpalen in een gebied zijn, voor de energievoorziening en de omgevingsregels.
+
+{{< chapter/section title="Onderwerp" level="3">}}
+In deze use case ziet de gemeente Vlierdam dat er veel laadpalen bijkomen, en maakt zich zorgen over de capaciteit van het elektriciteitsnet en de impact op de omgeving.
+Daarom wordt er een vergunning vereist voor het plaatsen. Burgers kunnen een vergunning aanvragen. 
 
 {{< img-url "images/4.1laadpaal.png" "Proefopstelling zaaksysteem" >}}
 
-Het zaaksysteem wordt daarvoor ingericht met een zaaktype 'laadpaalvergunning' en een registratie van laadpalen.
-Voor zaaktype laadpaalvergunningen kunnen aanvragen worden toegevoegd, goedgekeurd of afgekeurd.
+Het zaaksysteem wordt daarvoor ingericht met een zaaktype 'laadpaalvergunning' en een registratie van vergunningen.
+De enige handeling op het zaaktype is vooralsnog 'aanvragen', en de vergunning kan worden toegekend of afgewezen.
+
 {{< /chapter/section >}}
 
-{{< chapter/section title="Opstelling" >}}
+{{< chapter/section title="Opstelling" level="3"  >}}
 
 De basis is de [proefopstelling](../proefopstelling). Daar voegen we een registratie aan toe, namelijk die van laadpalen. Daarvoor wordt een database gebruikt met een bijpassende service waarmee laadpalen kunnen worden toegevoegd.
 
 {{< img-url "diagrams/usecase-opstelling.svg" "Proefopstelling zaaksysteem" >}}
 
 De gegevens die we bijhouden zijn voor deze opstelling heel simpel gehouden:
-- Een lijst met laadpalen
-- Van elke laadpaal de postcode, huisnummer en kenteken.
-- De service heeft maar een ingang: met de bovengenoemde 3 gegevens een laadpaal toevoegen. Controle op geldige postcodes, huisnummers en kentekens doen we niet. Dat er maar 1 laadpaal per adres mag zijn controleert het zaaksysteem.
+- Een lijst met vergunningen
+- Van elke vergunning de postcode, het huisnummer en het kenteken.
+- De service heeft maar een ingang: met de bovengenoemde 3 gegevens een vergunning toevoegen. Controle op geldige postcodes, huisnummers en kentekens doen we niet. Dat er maar 1 vergunning per adres mag bestaan zijn controleert het zaaksysteem.
 - Er zit geen toegangscontrole op de service zelf: de medewerkersautorisatie wordt door het zaaksysteem gedaan, en de toegang tot de
   registratie als service door de gateway.
 
 {{< /chapter/section >}}
 
-{{< chapter/section title="Regels" >}}
+{{< chapter/section title="Regels" level="3">}}
 
 - Zaaksysteem
-    - Doelbinding is de registratie van laadpalen, waarvoor de gemeente een besluit heeft aangenomen.
+    - Doelbinding is de registratie van vergunningen, waarvoor de gemeente een besluit heeft aangenomen.
     - De gemeente heeft ter dataminimalisatie vastgelegd dat voor laadpaalvergunningen een beperkte deelverzameling van persoons- en voertuiggegevens voldoende is:
         - Persoonsgegevens: BSN, NAW en meerderjarigheid
         - Voertuiggegevens: kenteken en uitstootklasse
@@ -85,25 +87,83 @@ De gegevens die we bijhouden zijn voor deze opstelling heel simpel gehouden:
 
 - Een burger kan een laadpaalvergunning aanvragen. Daarvoor zijn postcode en huisnummer (met eventueel huisnummertoevoeging) nodig. Een medewerker maakt in het zaaksysteem een zaak met zaaktype 'Aanvragen laadpaal' aan met die gegevens.
 - Het zaaksysteem zoekt in de BRP op postcode en huisnummer, en vindt een of meerdere BSNs.
-- Vervolgens zoekt het systeem de gevonden BSNs op in de BRV de voertuigen die op de persoon geregistreerd staan.
-- Als daar minstens 1 elektrisch voertuig bij zit, en de persoon heeft nog geen laadpaal op dat adres, dan wordt de vergunning toegekend, en een laadpaal toegevoegd.
+- Vervolgens zoekt het systeem met de gevonden BSNs in de BRV naar de voertuigen die op die personen geregistreerd staan.
+- Als daar minstens 1 elektrisch voertuig bij zit, en de persoon heeft nog geen vergunning op dat adres, dan wordt de vergunning toegekend en aan de registratie toegevoegd.
 
 Anders wordt de vergunning afgewezen met een passende melding.
 
-#### Testgevallen
+##### Testgevallen
 
-| Gebruiker | Postcode | Huisnummer | Resultaat                                  |
-|-----------|----------|------------|--------------------------------------------|
-| Rick      | 1111AA   | 1          | Rick niet geautoriseerd vanwege afdeling   |
-| Morty     | 1111AA   | 1          | Morty niet geautoriseerd vanwege opleiding |
-| Beth      | 1111AA   | 1          | Beth niet geautoriseerd vanwege opleiding  |
-| Jerry     | 1111AA   | 1          | Reeds laadpaal aanwezig                    |
-| Jerry     | 1111BB   | 2          | Toegekend                                  |
-| Jerry     | 1111CC   | 3          | Niet toegekend vanwege uitstootklasse      |
-| Jerry     | 1111DD   | 4          | Geen voertuig gevonden                     |
-| Jerry     | 1111EE   | 5          | Geen toestemming om voertuig in te zien    |
-| Jerry     | 1111FF   | 11         | Geen ingezetene gevonden                   |
-| Jerry     | 2222JJ   | 101        | Geen ingezetene gevonden (andere gemeente) |
+| Nr | Gebruiker | Postcode | Huisnummer | Resultaat                                          |
+|:---|-----------|----------|------------|----------------------------------------------------|
+| 1  | Rick      | 1111AA   | 1          | Rick niet geautoriseerd vanwege afdeling           |
+| 2  | Morty     | 1111AA   | 1          | Morty niet geautoriseerd vanwege opleiding         |
+| 3  | Beth      | 1111AA   | 1          | Beth niet geautoriseerd vanwege verlopen opleiding |
+| 4  | Jerry     | 1111FF   | 11         | Geen ingezetene gevonden                           |
+| 5  | Jerry     | 2222JJ   | 101        | Geen ingezetene gevonden (andere gemeente)         |
+| 6  | Jerry     | 1111DD   | 4          | Geen voertuig gevonden                             |
+| 7  | Jerry     | 1111CC   | 3          | Niet toegekend vanwege uitstootklasse              |
+| 8  | Jerry     | 1111EE   | 5          | Geen toestemming om voertuig in te zien            |
+|    | Jerry     | 1111AA   | 1          | Reeds laadpaal aanwezig                            |
+|    | Jerry     | 1111BB   | 2          | Toegekend                                          |
+
+Stappenplan demo:
+
+- Open twee tabbladen:
+
+  1. De laadpalenapplicatie van gemeente Vlierdam
+  2. De OpenFTV manager interface van gemeente Vlierdam
+  
+- Testcase 1: 
+  - in de laadpalenapplicatie:
+    - selecteer gebruiker Rick
+    - ga naar het scherm 'aanvragen vergunning'
+    - voer de postcode en het huisnummer in
+    - controleer dat een melding komt: gebruiker rick werkt niet op de afdeling burgerzaken
+  - in de OpenFTV manager: 
+    - selecteer gebruiker Rick
+    - ga naar de audit log
+    - controleer dat er een regel is bijgekomen met de tijd van zojuist, als afwijzing, en met dezelfde publieke melding
+    - controleer ook dat er een niet-publieke melding is waarbij het nummer van de policy staat die de aanvraag heeft afgewezen
+- Testcase 2: 
+  - Kies in de laadpalenapplicatie gebruik Morty en herhaal de aanvraag
+  - Melding dat Morty geen opleiding heeft
+- Testcase 3:
+  - Herhaal als Beth, en de melding zegt dat haar opleiding verlopen is.
+- Testcase 4:
+  - in de laadpalenapplicatie:
+    - Selecteer Jerry en voer de aanvraag in. De aanvraag wordt geaccepteerd.
+    - Ga naar het scherm 'beoordelen aanvraag'
+    - Druk op 'Controle BRP'
+    - Melding dat de persoon niet gevonden is
+  - in de OpenFTV manager
+    - controleer dat er een regel is bijgekomen dat de toegang tot de BRP verleend is
+- Testcase 5:
+  - In de laadpalenapplicatie:
+    - Voer een nieuwe aanvraag in met het andere adres
+    - Controleer BRP
+    - Melding dat het adres niet in de gemeente ligt
+  - In de OpenFTV manager:
+    - Controleer dat er een regel is bijgekomen dat de toegang tot de BRP verleend is
+    - En een regel dat het BRP-antwoord niet doorgegeven wordt omdat het adres niet in de gemeente is
+- Testcase 6:
+  - In de laadpalenapplicatie:
+    - Voer de aanvraag in en controleer BRP. Dat gaat goed.
+    - Controleer BRV, en er is een melding dat er geen voertuig gevonden is
+  - In de OpenFTV manager:
+    - Controleer dat er een regel is bijgekomen dat de toegang tot de BRV verleend is.
+- Testcase 7:
+  - In de laadpalenapplicatie:
+    - Voer de aanvraag, controleer BRP.
+    - Controleer BRV, en er is een melding dat er geen voertuig is met de juiste uitstootklasse
+- Testcase 8:
+  - In de laadpalenapplicatie:
+    - Voer de aanvraag in en controleer BRP.
+    - Controleer BRV, en er is een melding dat het voertuig afgeschermd is.
+  - In de OpenFTV manager:
+    - Controleer dat er een regel is bijgekomen dat de toegang tot de BRV verleend is.
+    - En een regel dat het BRV-antwoord niet doorgegeven wordt vanwege het diplomatieke kenteken
+
 
 {{< /chapter/section >}}
 
@@ -131,7 +191,7 @@ Het scenario is dat in het beheersysteem de regel wordt veranderd en de wijzigin
 
 - Vraag vergunning aan; zie testgevallen onder.
 
-#### Testgevallen
+##### Testgevallen
 
 **Beheer**
 
