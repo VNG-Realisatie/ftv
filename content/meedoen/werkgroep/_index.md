@@ -46,10 +46,13 @@ Aanmelden voor alle bijeenkomsten van de werkgroep kan via mail bij [ftv@vng.nl]
 De werkgroep vindt elke twee weken plaats op **dinsdag van 10:00 tot 11:00**. Deelname kan online of fysiek op Dev.loer (bij Digilab), Catharijnesingel 55, 3511 GD Utrecht (5e verdieping, Trindeborch gebouw)
 
 Data komende werkgroepen:
+- 18 november. Meer informatie op [IBDS-website](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/b4284753-c7fb-49f5-acda-5888f7268e17/werkgroep-federatieve-toegangsverlening-18-november).
+-  2 december. Meer informatie op [IBDS-website](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/71efe1d0-ec4f-4de0-b8c6-f61418ab60c9/werkgroep-federatieve-toegangsverlening-2-december).
 
 ### Notulen
 
 #### Werkgroep FTV
+-  4 november, Authorization Decision Log en OpenFTV 
 - 21 oktober: JTC-25 en iSHARE ([Notulen]({{% relref "jtc25eniSHARE" %}}))
 - 7 oktober: Reikwijdte en Verwerkingsregisters ([Notulen]({{% relref "reikwijdte_verwerkingsregister" %}}))
 - 23 september: Reijkwijdte en Informatiemodellering & Linked Data ([Notulen]({{% relref "reikwijdte-en-informatiemodellering" %}}))
