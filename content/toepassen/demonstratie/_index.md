@@ -104,8 +104,8 @@ Anders wordt de vergunning afgewezen met een passende melding.
 | 6  | Jerry     | 1111DD   | 4          | Geen voertuig gevonden                             |
 | 7  | Jerry     | 1111CC   | 3          | Niet toegekend vanwege uitstootklasse              |
 | 8  | Jerry     | 1111EE   | 5          | Geen toestemming om voertuig in te zien            |
-|    | Jerry     | 1111AA   | 1          | Reeds laadpaal aanwezig                            |
-|    | Jerry     | 1111BB   | 2          | Toegekend                                          |
+| 9  | Jerry     | 1111AA   | 1          | Reeds laadpaal aanwezig                            |
+| 10 | Jerry     | 1111BB   | 2          | Toegekend                                          |
 
 Stappenplan demo:
 
@@ -163,6 +163,10 @@ Stappenplan demo:
   - In de OpenFTV manager:
     - Controleer dat er een regel is bijgekomen dat de toegang tot de BRV verleend is.
     - En een regel dat het BRV-antwoord niet doorgegeven wordt vanwege het diplomatieke kenteken
+- Testcase 9:
+  - De aanvraag wordt direct afgewezen omdat er al een vergunning is op dat adres
+- Testcase 10:
+  - De aanvraag lukt en kan worden goedgekeurd
 
 
 {{< /chapter/section >}}
