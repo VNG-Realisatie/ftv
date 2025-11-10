@@ -52,7 +52,7 @@ Data komende werkgroepen:
 ### Notulen
 
 #### Werkgroep FTV
--  4 november, Authorization Decision Log en OpenFTV 
+- 4 november: Authorization Decision Log en OpenFTV ([Notulen]({{% relref "authorization-decision-log-en-open-ftv" %}}))
 - 21 oktober: JTC-25 en iSHARE ([Notulen]({{% relref "jtc25eniSHARE" %}}))
 - 7 oktober: Reikwijdte en Verwerkingsregisters ([Notulen]({{% relref "reikwijdte_verwerkingsregister" %}}))
 - 23 september: Reijkwijdte en Informatiemodellering & Linked Data ([Notulen]({{% relref "reikwijdte-en-informatiemodellering" %}}))
