@@ -63,10 +63,6 @@ De opstelling bij de gemeente kunnen we verder detailleren als volgt:
 
   Een of meerdere lokale registraties, waarin de gemeente gegevens opslaat over de eigen zaken.
 
-- **Logging (LDV)**
-
-  Omdat het systeem persoonsgegevens verwerkt (personen en voertuigen opzoekt) moet het een logboek dataverwerkingen bijhouden. Hier wordt de referentie-implementatie van Logboek Dataverwerking (LDV) gebruikt.
-
 - **API Gateway**
 
   Om te communiceren met registraties, zowel binnen als buiten de gemeente, is er een gateway nodig. Deze heeft een Policy Enforcement Point (PEP) die elke verbinding op toegang controleert. In dit voorbeeld is voor Kong gekozen, een populaire en AuthZEN compliant gateway. 
@@ -83,6 +79,10 @@ De opstelling bij de gemeente kunnen we verder detailleren als volgt:
 
   Als PIP wordt ook OpenFTV gebruikt, met het bestandssyteem voor opslag.
 
+- **Authorization decision log (ADL)**
+
+De PDP stuurt alle genomen toegangsbeslissingen, zowel positief als negatief, door aan een gekoppeld logsysteem. Hier wordt de standaard OpenFTV implementatie gebruikt op basis van OpenTelemetry.
+
 {{< /chapter/section >}}
 
 {{< chapter/section title="Opstelling basisregistraties"  level="3">}}
@@ -91,30 +91,9 @@ De opstelling bij de gemeente kunnen we verder detailleren als volgt:
 
 {{< chapter/section title="Registraties" level="4">}}
 
-Er zijn twee registraties: BRP en BRV. Ze bevatten allebei de volgende onderdelen:
+Er zijn twee registraties: BRP en BRV. Ze bevatten allebei dezelfde onderdelen als de gemeente-opstelling. 
 
-- **Gateway**
-
-  Elke registratie heeft een eigen gateway. Er zijn twee verschillende leveranciers gekozen om aan te tonen dat gateways uitwisselbaar zijn binnen het stelsel.
-
-- **Service**
-
-  Eenvoudige BRP en BRV services, met bijbehorende eenvoudige opslag.
-
-- **Logging**
-
-  Elke registratie maakt gebruik van een eigen logboek voor het bijhouden van de uitgevoerde verwerkingen. De aanroep is de verantwoordelijkheid van de service.
-
-- **Residual policy processor (RPP)**
-
-  Elk een RPP, die deelpolicies toepast die de afnemer niet kon uitvoeren. Er zijn ook hier twee verschillende gekozen, om twee alternatieve methodes te laten zien.
-
-{{< /chapter/section >}}
-{{< chapter/section title="Gedeeld EAM" level="4">}}
-
-De registraties delen in deze proefopstelling voor de eenvoud één toegangsverleningsysteem. In de praktijk zal dat meestal niet het geval zijn. De onderdelen zijn herkenbaar als dezelfde als bij de gemeente, maar dan:
-- Cerbos als **PDP**
-- Git als **PAP**, met GitLab als interface, zowel de service naar de PDP als de webapplicatie voor policybeheer.
+Om te testen dat AuthZEN compliant gateways en PDPs uitwisselbaar zijn is er gekozen voor een andere gateway, Tyk, en een andere PDP, Cerbos. 
 
 {{< /chapter/section >}}
 
