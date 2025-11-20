@@ -148,12 +148,11 @@
     padding-inline-start: var(--utrecht-ordered-list-padding-inline-start);
 }
 
-.section > ol > li,  {
+.section > ol > li  {
     padding-inline-start: var(--utrecht-ordered-list-item-padding-inline-start);
     list-style-type: decimal;
     font-size: var(--utrecht-paragraph-font-size, var(--utrecht-document-font-size, inherit));
     line-height: var(--utrecht-ordered-list-line-height);
-    list-style-position: inside;
 }
 
 .section > ol > li > ul {
