@@ -58,7 +58,7 @@ De volgende nieuwe deelnemers introduceren zich:
 
 De subwerkgroep Juridisch Kader komt 22 mei 2025 samen op het Ministerie van BZK in Den Haag onder leiding van Wouter en Elske. Alle werkgroep deelnemers worden uitgenodigd. Rens Kievit geeft aan ook deel te willen nemen.
 
-De subwerkgroep Logboek Toegangsbeslissingen (Guus, Maikel en Michiel) heeft gewerkt aan het opzetten van de hoofdstukstructuur en een eerste versie van [het specificatiedocument](https://vng-realisatie.github.io/authorization-decision-log/) gebouwd. 
+De subwerkgroep Logboek Toegangsbeslissingen (Guus, Maikel en Michiel) heeft gewerkt aan het opzetten van de hoofdstukstructuur en een eerste versie van [het specificatiedocument](https://logius-standaarden.github.io/authorization-decision-log/) gebouwd. 
 
 - *Gideon Zegwaard*: Waarom is gekozen voor Nederlands als voertaal?
 

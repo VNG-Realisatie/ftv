@@ -67,7 +67,7 @@ De interne consultatie is gesloten. Zie verder bij het volgende agendapunt.
 
 {{< chapter/section title="Feedback interne consultatie Authorization Decision Log (ADL)" >}}
 
-De informatie over de standaard is te vinden op: [Github](https://vng-realisatie.github.io/authorization-decision-log/)
+De informatie over de standaard is te vinden op: [Github](https://github.com/logius-standaarden/authorization-decision-log/)
 
 *Gideon Zegwaard* vraagt of er al een API bestaat om ADL-logs te ontsluiten. 
 *Michiel Trimpe* laat weten dat dit onderwerp nog open staat. De verwachting is dat er LDV voor het eind van dit jaar een API beschikbaar komt.
@@ -86,7 +86,7 @@ FSC heeft al wel een API-specificatie, daarom wordt bekeken of ADL daarbij kan a
 - In paragraaf 3.4.3 wordt beschreven hoe je kunt verwijzen naar een ander log waarin de requests zijn vastgelegd. Hiervoor wordt de trace-context gebruikt als identifier en wordt WARC voorgesteld als formaat, zodat verzoeken en antwoorden later exact kunnen worden teruggespeeld.
 - In paragraaf 4 (Information Management) staat dat vooraf bepaald moet worden welke informatie gelogd moet worden en welke informatie later terug gevonden moeten worden. Het doel van het log bepaalt welke gegevens er worden vastgelegd: niet alles maar alleen wat nodig is voor verantwoording en toezicht.
 
-Alle aanpassingen op de eerste versie van de standaard zijn verwerkt in de [documentatie](https://services.w3.org/htmldiff?doc1=https%3A%2F%2Fvng-realisatie.github.io%2Fauthorization-decision-log%2F20250825.html&doc2=https%3A%2F%2Fvng-realisatie.github.io%2Fauthorization-decision-log%2F).
+Alle aanpassingen op de eerste versie van de standaard zijn verwerkt in de [documentatie](https://services.w3.org/htmldiff?doc1=https%3A%2F%2Flogius-standaarden.github.io%2Fauthorization-decision-log%2F20250825.html&doc2=https%3A%2F%2Flogius-standaarden.github.io%2Fauthorization-decision-log%2F).
 
 Er is ook feedback ontvangen van Jule Hintzbergen van de VNG. 
 - ADL kan worden gebruikt als auditlog, maar organisaties kunnen ook kiezen voor een apart auditlog. Het is een inrichtingkeuze. ADL kan alleen als volledig auditlog dienen wanneer alle beslissingen via het AuthZEN-mechanisme verlopen. Als er besluiten binnen een applicatie zelf worden genomen, en dus geen berichten worden uitgewisseld, is een aanvullend auditlog nodig.

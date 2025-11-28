@@ -50,7 +50,7 @@ De werkgroep verwelkomt Daoud Urdu, sinds een maand werkzaam bij Geonovum als in
 
 *Michiel Trimpe*: De interne consultatie van het Authorization Decision Log is 15 september gestart. Dit biedt werkgroepleden de gelegenheid om suggesties en verbeteringen aan te dragen voordat de publieke consultatie volgt. Tot nu toe is er nog geen feedback ontvangen. De werkgroepleden worden uitgenodigd hun feedback door te geven. Ook is de redacteurplek nog niet ingevuld.
 
-De standaard is te vinden op: [Authorization Decision Log](https://vng-realisatie.github.io/authorization-decision-log/)
+De standaard is te vinden op: [Authorization Decision Log](https://logius-standaarden.github.io/authorization-decision-log/)
 
 **Subwerkgroep Juridisch Kader**
 
