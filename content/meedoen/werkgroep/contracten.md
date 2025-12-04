@@ -9,7 +9,7 @@ Title: 13. Contracten
 
 {{< chapter/section title="Aanwezigen" >}}
 
-- Frank Terpstra (Geonovum)
+- Danny Greefhorst (FDS)
 -	Jaap Smit (UWV)
 - Gideon Zegwaard (FDS)
 - Hugo Mostard (Gemeente Den Haag)
@@ -87,7 +87,7 @@ Daarna geeft Niels Boek een toelichting op de applicatie. (zie opname vanaf 24:4
 - KIK-V Kickstarter waarop zorgaanbieders zich kunnen registeren en vragende partijen data kunnen aanvragen en antwoorden kunnen ophalen.
 - Verificatieproces zorgaanbieders na registratie
 - Inrichten van de toegangsrechten
-- Demo met het testdatastaion. Deze zal er per zorgaanbieder anders uitzien, afhankelijk wat er is afgesproken met de zorgaanbieder. Zorgaanbieders kunnen het gegeven antwoord altijd goedkeuren voordat het verzonden wordt naar de aanvrager.
+- Demo met het testdatastation. Deze zal er per zorgaanbieder anders uitzien, afhankelijk wat er is afgesproken met de zorgaanbieder. Zorgaanbieders kunnen het gegeven antwoord altijd goedkeuren voordat het verzonden wordt naar de aanvrager.
 - Duur van het proces van aanvraag en verzenden. De zorgaanbieder heeft een bepaalde afgesproken tijd om data goed te keuren en te verzenden.
 - Ophalen van antwoorden door de vragende partij (via Excel of een API).
 - Opzet credentials in SPARQL
