@@ -45,7 +45,7 @@ Title: 13. Contracten
 
 {{< chapter/section title="Welkom" >}}
 
-Michiel Trimpe verwelkomt de nieuwe deelnemer Axel van den Minne, gegevensarchitect bij DUO én de gasten Niels Boek en René Houwen van KIK-V. Zij geven een presentatie over hoe architectuur voor data uitwisseling tussen zorgaanbieders en ketenpartners in de zorg is ingericht.
+Michiel Trimpe verwelkomt de nieuwe deelnemer Axel van Minne, gegevensarchitect bij DUO én de gasten Niels Boek en René Houwen van KIK-V. Zij geven een presentatie over hoe architectuur voor data uitwisseling tussen zorgaanbieders en ketenpartners in de zorg is ingericht.
 {{< /chapter/section >}}
 
 {{< chapter/section title="Update subwerkgroepen" >}}
