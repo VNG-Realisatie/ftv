@@ -107,7 +107,7 @@ Anders wordt de vergunning afgewezen met een passende melding.
 | 9  | Jerry     | 1111AA   | 1          | Reeds laadpaal aanwezig                            |
 | 10 | Jerry     | 1111BB   | 2          | Toegekend                                          |
 
-Stappenplan demo:
+##### De testgevallen stap voor stap 
 
 - Open twee tabbladen:
 
@@ -167,7 +167,6 @@ Stappenplan demo:
   - De aanvraag wordt direct afgewezen omdat er al een vergunning is op dat adres
 - Testcase 10:
   - De aanvraag lukt en kan worden goedgekeurd
-
 
 {{< /chapter/section >}}
 
