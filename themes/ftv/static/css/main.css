@@ -12827,6 +12827,14 @@ td, th {
 .next-previous-box-left {
   width: 42%;
 }
+.directnaar-wrapper {
+  padding: 0;
+  display: flex;
+}
+.directnaar-rechts {
+  width: 100%;
+  padding: 40px;
+}
 @media (max-width: 768px) {
   .next-previous-box-right, .next-previous-box-left {
     width: 150px;

@@ -30,6 +30,20 @@ type: 'chapter'
 
 {{< /chapter/header >}}
 
+{{< chapter/directnaar bg="bg-rhc-color-geel-neon">}}
+<a href="https://logius-standaarden.github.io/Openbare-Consultaties/2025-10-15-Authzen/">
+    <div class="mt-2">
+        <h3 style="text-decoration:underline" class="nl-heading nl-heading--level-3 rhc-heading">AuthZEN NL Gov</h3>
+    </div>
+    <div class="mt-2">
+        <p class="utrecht-paragraph-small">Standaard voor Federatieve Toegangsverlening</p>
+        <p class="utrecht-paragraph-small">Logius Standaard</p>
+        <p class="utrecht-paragraph-small">Consultatieversie 15 oktober 2025</p>
+    </div>
+</a>
+
+{{< /chapter/directnaar >}}
+
 {{< chapter/section title="AuthZEN">}}
 
 De [AuthZEN Authorization API](https://openid.net/wg/authzen/) is een initiatief van de OpenID Foundation, bekend van OpenID Connect. De belangrijkste leveranciers van Policy Decision Points (PDPs) en API gateways werken hier samen aan een autorisatiestandaard.

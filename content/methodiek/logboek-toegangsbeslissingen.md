@@ -30,6 +30,20 @@ type: 'chapter'
 
 {{< /chapter/header >}}
 
+{{< chapter/directnaar bg="bg-rhc-color-geel-neon">}}
+<a href="https://logius-standaarden.github.io/authorization-decision-log/">
+    <div class="mt-2">
+        <h3 style="text-decoration:underline" class="nl-heading nl-heading--level-3 rhc-heading">Authorisation decision log</h3>
+    </div>
+    <div class="mt-2">
+        <p class="utrecht-paragraph-small">Standaard voor Federatieve Toegangsverlening</p>
+        <p class="utrecht-paragraph-small">Logius Standaard</p>
+        <p class="utrecht-paragraph-small">Draft 16 november 2025</p>
+    </div>
+</a>
+
+{{< /chapter/directnaar >}}
+
 {{< chapter/section title="Authorization Decision Log">}}
 
 ### Doel

@@ -24,6 +24,7 @@
     --color-rhc-color-lintblauw-25: #EEF7FB;
     --color-rhc-color-geel-300: #FDD370;
     --color-rhc-color-geel-50: #FFF4DB;
+    --color-rhc-color-geel-neon: #FAE856;
     --color-rhc-color-mintgroen-100: #D6F2E9;
     --color-rhc-color-roze-100: #FBDEF0;
 }
@@ -369,6 +370,16 @@ td, th {
 
 .next-previous-box-left {
     width: 42%;
+}
+
+.directnaar-wrapper {
+    padding: 0;
+    display:flex;
+}
+
+.directnaar-rechts {
+    width:100%;
+    padding:40px;
 }
 
 @media (max-width: 768px) {

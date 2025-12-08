@@ -1,0 +1,17 @@
+<div class="section-home-wrapper directnaar-wrapper {{.Get "bg"}} py-2 lg:w-[1024px] mx-auto">
+
+    <img src="/ftv/images/oranje-standaard-banner.png" width="35%" height="100%">
+
+    <div class="bg-rhc-geel-400 flex flex-col px-2 directnaar-rechts">
+
+        <h2 class="utrecht-paragraph">Direct naar:</h2>
+{{ $content := .Inner | $.Page.RenderString }}
+    {{ $hasP := findRE "<p\\s" $content }}
+    {{ if $hasP }}
+    {{ $content | safeHTML }}
+    {{ else }}
+    <p class="utrecht-paragraph pt-2">{{ $content | safeHTML }}</p>
+    {{ end }}
+    </div>
+
+</div>
