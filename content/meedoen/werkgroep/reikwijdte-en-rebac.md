@@ -55,7 +55,7 @@ De subwerkgroep Juridisch Kader is afgelopen twee weken niet bij elkaar geweest.
 
 *Michiel Trimpe*: De ontwerpversie van de standaard is klaar en vandaag wordt de interne consultatie gestart. Dat wordt ook aangekondigd in een nieuwsbericht. Er worden nog voorbeelden toegevoegd aan de documentatie om zaken te verduidelijken, maar de tekst zoals die er nu staat is wat de projectgroep betreft compleet. Aan iedereen het verzoek eventuele op- en aanmerkingen door te geven zodat de werkgroep deze punten kan bespreken voordat de standaard wordt aangeboden voor de publieke consultatie. De interne consultatie duurt tot en met dinsdag 7 oktober. 
 
-De standaard is te vinden op: [Authorization Decision Log](https://vng-realisatie.github.io/authorization-decision-log/)
+De standaard is te vinden op: [Authorization Decision Log](https://logius-standaarden.github.io/authorization-decision-log/)
 {{< /chapter/section >}}
 
 {{< chapter/section title="Reikwijdte van FTV standaarden" >}}

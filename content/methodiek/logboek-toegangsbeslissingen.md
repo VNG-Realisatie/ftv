@@ -70,9 +70,9 @@ Toegangsbeslissingen zijn deel van het grotere proces van gegevensuitwisseling. 
 Deze drie zijn met elkaar verbonden door een zogenaamde trace.
 
 ### Status
-De huidige [versie van de standaard](https://vng-realisatie.github.io/authorization-decision-log/) is aangenomen door de eigen werkgroep. Momenteel worden de voorbereidingen gedaan om de standaard over te dragen naar Logius voor beheer en de openbare consultatie te starten.
+De huidige [versie van de standaard](https://logius-standaarden.github.io/authorization-decision-log/) is aangenomen door de eigen werkgroep. Momenteel worden de voorbereidingen gedaan om de standaard over te dragen naar Logius voor beheer en de openbare consultatie te starten.
 
-<a href="https://vng-realisatie.github.io/authorization-decision-log" class="utrecht-button utrecht-button--primary-action">
+<a href="https://logius-standaarden.github.io/authorization-decision-log/" class="utrecht-button utrecht-button--primary-action">
             Bekijk de consultatieversie van Authorization Decision Log
 </a>
 

@@ -44,7 +44,7 @@ Er zijn geen nieuwe werkgroepleden.
 
 *Michiel Trimpe* meldt dat de deadline van de interne consultatie van ADL is verstreken. Er zijn nog geen reacties ontvangen.
 Hij licht toe dat de interne consultatie een onofficiële interne review is, bedoeld om te toetsen of er nog inhoudelijke aandachtspunten (concerns) zijn. Deze procedure is ook toegepast bij voor het AuthZEN NL Gov-profiel. De openbare consultatie van AuthZEN NL Gov start op 14 oktober via Logius. De projectgroep had de start van de openbare consultatie van ADL graag gelijk willen laten lopen met die van AuthZEN NL Gov, maar kiest voor zorgvuldigheid boven snelheid. Daarom wordt de deadline van de interne consultatie verschoven, zodat werkgroepleden nog de gelegenheid hebben hun aandachtspunten of akkoord door te geven.
-De informatie over de standaard is te vinden op [GitHub](https://vng-realisatie.github.io/authorization-decision-log/)
+De informatie over de standaard is te vinden op [GitHub](https://logius-standaarden.github.io/authorization-decision-log/)
 
 
 **Subwerkgroep Juridisch Kader**

@@ -45,7 +45,7 @@ Title: 9. Evaluatie
 {{< chapter/section title="Update subwerkgroepen" >}}
 De subwerkgroep Juridisch Kader heeft met MinBZK de exacte reikwijdte van het juridisch kader nogmaals afgestemd. Wouter Diephuis zal samen met zijn collega's een voorstel doen voor de hoofdstukstructuur en dit voorleggen aan de werkgroep.
 
-De subwerkgroep Authorization Decision Log heeft de voortgang van de [standaard](https://vng-realisatie.github.io/authorization-decision-log/) getoond. Deze is nog deels in het Nederlands geschreven en zal stapsgewijs naar het Engels vertaald worden. De [scope](https://vng-realisatie.github.io/authorization-decision-log/#scope) werd gedeeld en hier waren geen opmerkingen over. Daarna werd de [berichtdefinitie](https://vng-realisatie.github.io/authorization-decision-log/#interface) gedeeld.
+De subwerkgroep Authorization Decision Log heeft de voortgang van de [standaard](https://logius-standaarden.github.io/authorization-decision-log/) getoond. Deze is nog deels in het Nederlands geschreven en zal stapsgewijs naar het Engels vertaald worden. De [scope](https://logius-standaarden.github.io/authorization-decision-log/#scope) werd gedeeld en hier waren geen opmerkingen over. Daarna werd de [berichtdefinitie](https://logius-standaarden.github.io/authorization-decision-log/#interface) gedeeld.
 
 *Gerard van der Hoeven* vraagt waarom niet gewoon het iSHARE berichtformaat wordt gebruikt. *Michiel Trimpe* geeft aan dat de laatste helft van de werkgroep gewijd wordt aan een retrospective waar dit ook gedeeld kan worden.
 
