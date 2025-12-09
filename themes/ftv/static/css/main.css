@@ -12830,6 +12830,8 @@ td, th {
 .directnaar-wrapper {
   padding: 0;
   display: flex;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 .directnaar-rechts {
   width: 100%;
