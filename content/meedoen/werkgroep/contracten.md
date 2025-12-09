@@ -36,7 +36,7 @@ Title: 13. Contracten
 {{< /chapter/section >}}
 
 {{< chapter/section title="Bijlages" >}} 
-- [Opname](https://github.com/VNG-Realisatie/ftv/raw/refs/heads/main/static/videos/20250701-evaluatie.mp4)
+- [Opname](https://github.com/VNG-Realisatie/ftv/raw/refs/heads/main/static/videos/20251202-contracten.mp4)
 - [Consultatiereactie Geo-basisregistraties organisaties](/ftv/documents/20251015-authzen-nlgov-consultatiereactie-geo-basisregistratie-organisaties.docx)
 - [KIK-V: Waarom en wat houdt het in?](https://www.youtube.com/watch?v=QRtHhH_lHPE)
 - [Logisch Ontwerp BRP](https://www.rvig.nl/sites/default/files/2024-04/Logisch%20Ontwerp%20BRP%202024.Q2_0.pdf)
