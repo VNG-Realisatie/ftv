@@ -5,7 +5,7 @@ date: '2025-11-09'
 summary: "De bijeenkomst van de werkgroep FTV op 2 december stond in het teken van contracten."
 ---
 
-{{< nieuws/header title="Start publieke consultatie AuthZEN NL Gov" >}}
+{{< nieuws/header title="Update subwerkgroepen" >}}
 
 **Authorization Decision Log**
 
