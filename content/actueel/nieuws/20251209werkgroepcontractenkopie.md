@@ -1,7 +1,7 @@
 ---
 type: 'nieuws'
 Title: Werkgroep FTV over contracten
-date: '2025-11-09'
+date: '2025-12-09'
 summary: "De bijeenkomst van de werkgroep FTV op 2 december stond in het teken van contracten."
 ---
 
