@@ -81,7 +81,7 @@ De opstelling bij de gemeente kunnen we verder detailleren als volgt:
 
 - **Authorization decision log (ADL)**
 
-De PDP stuurt alle genomen toegangsbeslissingen, zowel positief als negatief, door aan een gekoppeld logsysteem. Hier wordt de standaard OpenFTV implementatie gebruikt op basis van OpenTelemetry.
+  De PDP stuurt alle genomen toegangsbeslissingen, zowel positief als negatief, door aan een gekoppeld logsysteem. Hier wordt de standaard OpenFTV implementatie gebruikt op basis van OpenTelemetry.
 
 {{< /chapter/section >}}
 

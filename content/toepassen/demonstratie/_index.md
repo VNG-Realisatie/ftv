@@ -111,8 +111,8 @@ Anders wordt de vergunning afgewezen met een passende melding.
 
 - Open twee tabbladen:
 
-  1. De laadpalenapplicatie van gemeente Vlierdam
-  2. De OpenFTV manager interface van gemeente Vlierdam
+  1. De [laadpalenapplicatie](https://laadpalen.ftv.apps.digilab.network/behandelaar) van gemeente Vlierdam
+  2. De [OpenFTV manager interface](https://gemeente.ftv.apps.digilab.network/) van gemeente Vlierdam
   
 - Testcase 1: 
   - in de laadpalenapplicatie:
@@ -181,14 +181,7 @@ Het scenario is dat in het beheersysteem de regel wordt veranderd en de wijzigin
 
 **Beheer**
 
-- Gebruiker meldt zich aan op de OpenFTV beheersinterface
-- Zoek de BRV regel die gaat over diplomatieke kentekens
-- Verwijder de regel
-- Maak een nieuwe gemeenteregel conform bovenstaande tekst
-- Publiceer beide regels:
-    - Eerste keer met ingangsdatum in de toekomst, dan lukt het nog steeds niet
-    - Tweede keer met ingangsdatum vandaag, dan lukt het de gemeentesecretaris wel
-- Zet de testdata terug, draai de regel terug, dan lukt het niet meer
+- Verwijder de regel over diplomatieke kentekens bij BRV en voeg die voorwaardelijk toe aan de zaakapplicatie
 
 **Handhaving**
 
@@ -196,20 +189,77 @@ Het scenario is dat in het beheersysteem de regel wordt veranderd en de wijzigin
 
 ##### Testgevallen
 
-**Beheer**
+_Beheer_
 
-| Gebruiker | Ingangsdatum | Resultaat                                    |
-|-----------|--------------|----------------------------------------------|
-| Morty     |              | Morty mag geen regels aanpassen              |
-| Rick      | vorige week  | Ingangsdatum mag niet in het verleden liggen |
-| Rick      | vandaag      | Lukt                                         |
+| Nr | Gebruiker | Resultaat                                    |
+|----|-----------|----------------------------------------------|
+| 1  | Morty     | Morty mag geen regels aanpassen              |
+| 2  | Rick      | Lukt                                         |
 
-**Handhaving**
+_Handhaving_
 
-| Gebruiker | Postcode | Huisnummer | Resultaat                                   |
-|-----------|----------|------------|---------------------------------------------|
-| Jerry     | 1111EE   | 5          | Niet toegekend vanwege diplomatiek kenteken |
-| Diane     | 1111EE   | 5          | Lukt                                        |
+| Nr | Gebruiker | Postcode | Huisnummer | Resultaat                                   |
+|----|-----------|----------|------------|---------------------------------------------|
+| 3  | Jerry     | 1111EE   | 5          | Niet toegekend vanwege diplomatiek kenteken |
+| 4  | Diane     | 1111EE   | 5          | Lukt                                        |
+
+##### De testgevallen stap voor stap
+
+Testgeval 1
+
+- Open de de OpenFTV beheersinterface als Morty
+- Zoek de BRV regel die gaat over diplomatieke kentekens
+- Verwijder de regel. 
+Dit lukt niet omdat Morty die rechten niet heeft.
+
+Testgeval 2
+
+- Probeer het opnieuw als Rick
+- Verwijder de regel
+- Maak een nieuwe gemeenteregel met als inhoud de onderstaande Rego code
+- Sla de regel op
+- Distribueer de nieuwe regelset
+Dit lukt.
+
+Testgeval 3
+
+- Open de Laadpaalapplicatie als Jerry
+- Vraag een vergunning aan op 1111EE / 5
+Dit lukt niet omdat Jerry geen gemeentesecretaris is.
+
+Testgeval 4
+
+- Open de Laadpaalapplicatie als Diane
+- Vraag een vergunning aan op 1111EE / 5
+Dit lukt.
+
+_Broncode van de regel die stelt dat alleen gemeentesecretarissen diplomatieke kentekens mogen zien:_
+
+```rego linenums="1" copy=true
+    package authz
+    
+    default allow := false
+    
+    default reason := ""
+    
+    reason := "not a valid subject type" if {
+      input.subject.type != "user"
+    } else := "not a valid user" if {
+      input.subject.type == "user"
+      not input.subject.id in ["Morty", "Beth", "Jerry"]
+    } else := "not certified" if {
+      input.subject.type == "user"
+      input.subject.id == "Morty"
+    } else := "certification expired" if {
+      input.subject.type == "user"
+      input.subject.id == "Jerry"
+    }
+    
+    allow if {
+      input.subject.type == "user"
+      input.subject.id == "Beth"
+    }
+```
 
 {{< /chapter/section >}}
 
