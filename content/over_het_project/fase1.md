@@ -131,7 +131,10 @@ Daarom is fase 1 met twee maanden verlengd. Dankzij deze verlenging konden aan d
 
 {{< /chapter/section >}}
 {{< chapter/section title="Resultaten" >}}
-Dit zijn resultaten van fase 1:
+
+> Download hier het [activiteitenverslag](/ftv/documents/activiteitenverslag-fase-1.pdf) van fase 1.
+
+Dit zijn resultaten in vogelvlucht:
 
 ### Onderzoek
 
