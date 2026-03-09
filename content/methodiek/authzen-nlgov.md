@@ -72,7 +72,7 @@ In de PxP-architectuur zijn deze vier velden benoemd:
 3. Resource. De gegevens waarop de verwerking uitgevoerd wordt.
 4. Context. De situatie/ omgeving waarin het gegevensverzoek gedaan is. Dit kan gaan over de verbinding, de huidige tijd, de locatie van het subject en meer.
 
-In hoofdstuk 5 van de [AuthZEN specificatie](https://openid.net/specs/authorization-api-1_0-03.html#name-information-model) zijn alle details van het informatiemodel te vinden.
+In hoofdstuk 5 van de [AuthZEN specificatie](https://openid.net/specs/authorization-api-1_0.html#name-information-model) zijn alle details van het informatiemodel te vinden.
 
 {{< /chapter/section >}}
 
@@ -80,17 +80,19 @@ In hoofdstuk 5 van de [AuthZEN specificatie](https://openid.net/specs/authorizat
 
 AuthZEN 1.0 definieert een aantal APIs die gebruik maken van het informatiemodel:
 
-- [Access Evaluation](https://openid.net/specs/authorization-api-1_0-03.html#name-access-evaluation-api). Een enkelvoudige vraag om toegang. Dat is een verzoek met Subject, Action en Resource ingevuld en, optioneel, de Context. Het antwoord is in ieder geval een 'ja' of 'nee' en optioneel een onderbouwing van de beslissing.
-- [Access Evaluations](https://openid.net/specs/authorization-api-1_0-03.html#name-access-evaluations-api). Hiermee kunnen meerdere aanvragen in een verzoek gedaan worden. Dit kan de afhandeling efficiënter maken. Er is ook de optie om te eisen dat alle verzoeken geldig moeten zijn of dat een genoeg is.
-- [Search APIs](https://openid.net/specs/authorization-api-1_0-03.html#name-subject-search-api). Hiermee wordt gezocht naar opties door telkens Subject, Action of Resource weg te laten. Het ontbreken van een Subject bijvoorbeeld geeft aan dat de vrager wil weten welke Subjecten toegestaan zijn. Als de vraag een bestand en de actie 'inzien' meegeeft, dan vertelt de API welke Subjecten het bestand mogen lezen. En als de Action weggelaten wordt, dan is de vraag: 'welke acties mag deze gebruiker op dit bestand uitvoeren?'.
+- [Access Evaluation](https://openid.net/specs/authorization-api-1_0.html#name-access-evaluation-api). Een enkelvoudige vraag om toegang. Dat is een verzoek met Subject, Action en Resource ingevuld en, optioneel, de Context. Het antwoord is in ieder geval een 'ja' of 'nee' en optioneel een onderbouwing van de beslissing.
+- [Access Evaluations](https://openid.net/specs/authorization-api-1_0.html#name-access-evaluations-api). Hiermee kunnen meerdere aanvragen in een verzoek gedaan worden. Dit kan de afhandeling efficiënter maken. Er is ook de optie om te eisen dat alle verzoeken geldig moeten zijn of dat een genoeg is.
+- [Search APIs](https://openid.net/specs/authorization-api-1_0.html#name-subject-search-api). Hiermee wordt gezocht naar opties door telkens Subject, Action of Resource weg te laten. Het ontbreken van een Subject bijvoorbeeld geeft aan dat de vrager wil weten welke Subjecten toegestaan zijn. Als de vraag een bestand en de actie 'inzien' meegeeft, dan vertelt de API welke Subjecten het bestand mogen lezen. En als de Action weggelaten wordt, dan is de vraag: 'welke acties mag deze gebruiker op dit bestand uitvoeren?'.
 
 {{< /chapter/section >}}
 
 {{< chapter/section title="Status" level="4">}}
 
-De [AuthZEN standaard versie 1.0](https://openid.net/specs/authorization-api-1_0-01.html) heeft nu de status Implementers Draft. Deze versie bevat een informatiemodel zoals boven beschreven en de drie APIs. Deze versie zal eind 2025 aangeboden worden ter consultatie. 
+De [AuthZEN standaard versie 1.0](https://openid.net/specs/authorization-api-1_0.html) heeft de status Final. Deze versie bevat een informatiemodel zoals boven beschreven en de drie APIs. 
 
 Diverse commerciële toegangsverleningsproducten en API-gateways implementeren deze versie inmiddels. De [AuthZEN interop](https://authzen-interop.net/) laat zien welke partijen dat zijn, en legt uit welk niveau van commitment elke leverancier toezegt.
+
+Intussen wordt door de OpenID werkgroep doorgewerkt aan de volgende versies, de notulen daarvan zijn [openbaar](https://hackmd.io/@oidf-wg-authzen).
 
 {{< /chapter/section >}}
 
@@ -104,13 +106,17 @@ De AuthZEN standaard beschrijft de basis die op elke uitwisseling van toepassing
 
 Voor de Nederlandse overheid ontwikkelt FTV een profiel bovenop AuthZEN: het NLGov Profile for OpenID AuthZEN Authorization API. Dit profiel bevat de aanvullingen die nodig zijn om te voldoen aan de Nederlandse wetgeving, de digitale strategie en regels van het Federatieve Datastelsel (FDS).
 
-De FTV werkgroep heeft versie 1.0 van het profiel goedgekeurd. Deze versie is in beheer genomen door Logius, en is nu in [openbare consultatie](https://github.com/Logius-standaarden/Openbare-Consultaties/tree/master/2025-10-15-Authzen).
+Versie 1.0 van het profiel is goedgekeurd door de eigen werkgroep, is in beheer genomen door Logius, en is door [openbare consultatie](https://github.com/Logius-standaarden/Openbare-Consultaties/tree/master/2025-10-15-Authzen) heen gegaan en aangenomen.
+
+<br/><br>
 
 <a href="https://logius-standaarden.github.io/Openbare-Consultaties/2025-10-15-Authzen" class="utrecht-button utrecht-button--primary-action">
-            Bekijk de consultatieversie van AuthZEN NL GOV
+      Bekijk de consultatieversie van AuthZEN NL GOV
 </a>
 
-In de consultatieperiode staat het eenieder vrij om feedback te geven. Deze feedback zal worden verwerkt en nadat de werkgroep en Logius concensus hebben bereikt over de juiste verwerking van de feedback is de versie definitief. Vervolgstappen van de vaststelling zijn opname in de GDI en beoordeling door Forum Standaardisatie. Het hele proces kan tot ver in 2026 duren.
+<br/><br>
+
+Recent is versie 1.0 aangemeld voor de ‘Pas toe of leg uit’-lijst of lijst aanbevolen standaarden van het Forum Standaardisatie. Het proces van beoordeling en beslissing zal enkele maanden in beslag nemen.
 
 In de tussentijd wordt er doorgewerkt aan verbeteringen in de [werkversie](https://logius-standaarden.github.io/authzen-nlgov/). 
 
