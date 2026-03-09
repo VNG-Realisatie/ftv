@@ -52,5 +52,15 @@ Het project Federatieve Toegangsverlening (FTV) ontwikkelt een standaardwerkwijz
             </p>
         </a>
     </div>
+    <div class="section-home-box">
+        <a href="fase3">
+            <h2 class="nl-heading nl-heading--level-4 rhc-heading">
+                Fase 3
+            </h2>
+            <p class="utrecht-paragraph">
+                Vaststelling van twee standaarden en opstellen van de derde.
+            </p>
+        </a>
+    </div>
 </div>
 {{< /chapter/header >}}

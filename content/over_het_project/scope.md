@@ -24,6 +24,11 @@ Title: Scope
       <a href="../fase2">Fase 2</a>
    </p>
 </div>
+<div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-geel-50">
+   <p>
+      <a href="../fase3">Fase 3</a>
+   </p>
+</div>
 </div>
 {{< /chapter/header >}}
 

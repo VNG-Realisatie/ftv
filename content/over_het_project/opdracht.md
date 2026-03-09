@@ -56,11 +56,13 @@ De scope van het project is als volgt afgebakend:
 {{< /chapter/section >}}
 
 {{< chapter/section title="Uitvoering" level="3">}}
-Het Ministerie van Binnenlandse Zaken (MinBZK) verstrekt de subsidie voor het project. [VNG Realisatie](https://vng.nl/artikelen/vng-realisatie) voert het project uit in opdracht van MinBZK. Voor praktische uitvoering en ondersteuning werkt het project FTV samen met [Digilab](https://digilab.overheid.nl/).
+Het Ministerie van Binnenlandse Zaken (MinBZK) verstrekt de subsidies voor het project. Voor praktische uitvoering en ondersteuning werkt het project FTV samen met [Digilab](https://digilab.overheid.nl/).
+
+Fases 1 en 2 zijn door [VNG Realisatie](https://vng.nl/artikelen/vng-realisatie) uitgevoerd. De huidige fase 3 wordt door ICTU uitgevoerd. 
 {{< /chapter/section >}}
 
 {{< chapter/section title="Planning" level="3">}}
-Het project is opgedeeld in twee fases.
+Het project is opgedeeld in drie fases.
 
 **Fase 1: juli 2024 – april 2025**
 
@@ -68,10 +70,16 @@ Fase 1 had als doel om de basis te leggen voor een standaardmethodiek voor toega
 Tijdens deze fase is onderzoek gedaan, gewerkt aan communityvorming en is een eerste versie van de standaard en een referentie-implementatie ontwikkeld.
 Fase 1 is afgerond met het besluit om aan te sluiten bij de OpenID AuthZEN-standaard en daar een Nederlands profiel (NL Gov) op te maken.
 
-**Fase 2: april 2025 – december 2025**
+**Fase 2: april – december 2025**
 
-In fase 2 richt het project zich op het voorstellen, uitwerken en positioneren van een standaard voor toegangsverlening via API’s. Daarbij hoort het ontwikkelen van een referentie-implementatie, het uitvoeren van pilots en het creëren van draagvlak binnen en buiten de overheid. Cruciale randvoorwaarden zijn samenwerking binnen de federatieve context (zoals met het Federatieve Datastelsel en het project Federatieve Service Connectiviteit), goede juridische afspraken en het overwinnen van de technische en organisatorische complexiteit.
+In fase 2 richtte het project zich op het voorstellen, uitwerken en positioneren van standaarden voor toegangsverlening via API’s. Daarbij hoort het ontwikkelen van een referentie-implementatie, het uitvoeren van pilots en het creëren van draagvlak binnen en buiten de overheid.
 
+Deze fase is afgerond met twee standaarden afgerond en in beheer genomen bij Logius. Van de referentie-implementatie is een eerste versie opgeleverd en gebruikt in een pilot in samenwerking met Digilab en de gemeente Utrecht.
+
+**Fase 3: januari - december 2026**
+
+In fase 3 worden de bestaande standaarden door het vaststellingsproces van Forum Standaardisatie gebracht, wordt een derde standaard geschreven en wordt er verder gewerkt aan praktijkproeven met zowel de standaard als de implementatie.
+ 
 {{< /chapter/section >}}
 
 {{< chapter/section title="Tijdlijn" level="3">}}
@@ -83,9 +91,11 @@ In fase 2 richt het project zich op het voorstellen, uitwerken en positioneren v
 * 1 februari 2025: aansluiting bij AuthZEN
 * 1 augustus 2025:  AuthZEN NL GOV 1.0 naar consultatie
 * 1 september 2025: Authorization Decision Log (voorheen Logboek Toegangsverlening) naar consultatie
-* 31 december 2025: 1.0 in beheer bij Logius
+* 31 december 2025: AuthZEN NL GOV 1.0 in beheer bij Logius
+* 11 januari 2026L AUthZEN 1.0 heeft de status Final
+* 6 maart 2026: AuthZEN NL GOV 1.0 aangeboden aan Forum Standaardisatie
 
-Meer weten? Lees de rapportages over [Fase 1](/ftv/over_het_project/fase1/) en [Fase 2](/ftv/over_het_project/fase2/)
+Meer weten? Lees de rapportages over [Fase 1](/ftv/over_het_project/fase1/), [Fase 2](/ftv/over_het_project/fase2/) en [Fase 3](/ftv/over_het_project/fase3/)
 {{< /chapter/section >}}
 
 {{< chapter/section title="Relatie met andere projecten en programma’s" level="3">}}
