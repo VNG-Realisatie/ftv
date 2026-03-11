@@ -20,7 +20,7 @@ Neem voor meer informatie contact op met:
 
 **Product owner**  
 Marc de Boer  
-[marc.deboer@vng.nl](mailto:marc.deboer@vng.nl)  
+[marc.deboer@ictu.nl](mailto:marc.deboer@ictu.nl)  
 06-14460350
 
 ## Development

@@ -7,7 +7,7 @@ title: "Aanbieders"
 {{< chapter/section title="Aanbieders" >}}
 De term aanbieders verwijst hier naar de registers, of preciezer: de bronhouders, die samen met hun verwerkers een API aanbieden om verwerkingen op hun register mogelijk te maken.
 
-Met elk van deze registers zijn gesprekken gevoerd. De details zijn op [aanvraag](mailto:ftv@vng.nl) beschikbaar.
+Met elk van deze registers zijn gesprekken gevoerd. De details zijn op [aanvraag](mailto:ftv@ictu.nl) beschikbaar.
 
 ### 1. Basisregistraties
 

@@ -12,7 +12,7 @@ Het laatste nieuws lees je ook op de FTV-website bij [Actueel](https://vng-reali
 {{< /chapter/section >}}
 
 {{< chapter/section title="Aan- en afmelden" level="3">}}
-Wil je de nieuwsbrief automatisch in je mailbox ontvangen? Of juist niet meer? Meld je aan of af door een mail te sturen naar [ftv@vng.nl](mailto:ftv@vng.nl).
+Wil je de nieuwsbrief automatisch in je mailbox ontvangen? Of juist niet meer? Meld je aan of af door een mail te sturen naar [ftv@ictu.nl](mailto:ftv@ictu.nl).
 {{< /chapter/section >}}
 
 {{< chapter/section title="Archief" level="3">}}

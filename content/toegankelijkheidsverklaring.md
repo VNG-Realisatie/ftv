@@ -18,7 +18,7 @@ Deze website is zo ingericht dat hij voor zoveel mogelijk mensen bruikbaar is. D
 
 {{< chapter/section title="Problemen met toegankelijkheid melden" level="3">}}
 
-Heb je vragen of opmerkingen? Of wil je een melding doen van een niet-toegankelijke pagina? Neem dan contact op met [ftv@vng.nl](mailto:ftv@vng.nl).
+Heb je vragen of opmerkingen? Of wil je een melding doen van een niet-toegankelijke pagina? Neem dan contact op met [ftv@ictu.nl](mailto:ftv@ictu.nl).
 
 {{< /chapter/section >}}
 

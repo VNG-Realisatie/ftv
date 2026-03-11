@@ -37,7 +37,7 @@ We zoeken professionals die:
 {{< chapter/section title="Aanmelden"  level="3">}}
 Aanmelden voor individuele bijeenkomsten kan via de [agenda van het FDS](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events).
 
-Aanmelden voor alle bijeenkomsten van de werkgroep kan via mail bij [ftv@vng.nl](mailto:ftv@vng.nl).
+Aanmelden voor alle bijeenkomsten van de werkgroep kan via mail bij [ftv@ictu.nl](mailto:ftv@ictu.nl).
 {{< /chapter/section >}}
 
 {{< chapter/section title="Planning en Notulen"  level="2">}}
