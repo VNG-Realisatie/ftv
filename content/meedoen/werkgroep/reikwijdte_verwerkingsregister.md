@@ -43,7 +43,7 @@ Er zijn geen nieuwe werkgroepleden.
 **Authorization Decision Log (ADL)**
 
 *Michiel Trimpe* meldt dat de deadline van de interne consultatie van ADL is verstreken. Er zijn nog geen reacties ontvangen.
-Hij licht toe dat de interne consultatie een onofficiële interne review is, bedoeld om te toetsen of er nog inhoudelijke aandachtspunten (concerns) zijn. Deze procedure is ook toegepast bij voor het AuthZEN NL Gov-profiel. De openbare consultatie van AuthZEN NL Gov start op 14 oktober via Logius. De projectgroep had de start van de openbare consultatie van ADL graag gelijk willen laten lopen met die van AuthZEN NL Gov, maar kiest voor zorgvuldigheid boven snelheid. Daarom wordt de deadline van de interne consultatie verschoven, zodat werkgroepleden nog de gelegenheid hebben hun aandachtspunten of akkoord door te geven.
+Hij licht toe dat de interne consultatie een onofficiële interne review is, bedoeld om te toetsen of er nog inhoudelijke aandachtspunten (concerns) zijn. Deze procedure is ook toegepast bij voor het NLGov AuthZEN-profiel. De openbare consultatie van NLGov AuthZEN start op 14 oktober via Logius. De projectgroep had de start van de openbare consultatie van ADL graag gelijk willen laten lopen met die van NLGov AuthZEN, maar kiest voor zorgvuldigheid boven snelheid. Daarom wordt de deadline van de interne consultatie verschoven, zodat werkgroepleden nog de gelegenheid hebben hun aandachtspunten of akkoord door te geven.
 De informatie over de standaard is te vinden op [GitHub](https://logius-standaarden.github.io/authorization-decision-log/)
 
 
@@ -60,23 +60,23 @@ Dat sluit goed aan bij de Nederlandse planning: de publieke consultatie van het 
 {{< /chapter/section >}}
 
 {{< chapter/section title="Reikwijdte" >}}
-Er is een gesprek geweest met Forum Standaardisatie over de actuele voorwaarden voor opname van het AuthZEN NL Gov-profiel op de pas-toe-of-leg-uit-lijst. 
+Er is een gesprek geweest met Forum Standaardisatie over de actuele voorwaarden voor opname van het NLGov AuthZEN-profiel op de pas-toe-of-leg-uit-lijst. 
 Deze zijn:
 1.	Het opnemen van de standaard op de lijst dient in substantiële mate bij te dragen aan het bevorderen van de interoperabiliteit, van een toekomstbestendige gegevensopslag, en/of van een verminderde leveranciersafhankelijkheid.
 2.	Het beoogde functioneel toepassingsgebied en het organisatorisch werkingsgebied van de standaard dient voldoende breed te zijn en betrekking te hebben op gebruik door de (semi-) overheid.
 3.	Het uitvragen of gebruiken van de standaard moet niet al verplicht zijn op grond van een bestaande (Europees) wettelijke verplichting die gelijk dan wel groter is dan het voor de lijst beoogde functioneel toepassingsgebied en het organisatorisch werkingsgebied.
 4.	De standaard dient bij te dragen aan de oplossing van een bestaand, relevant probleem.
-De werkgroep vindt dat het AuthZEN NL Gov wat betreft het eerste criterium voldoet aan de punten 1 en 3 (het bevorderen van de interoperabiliteit en/of van een verminderde leveranciersafhankelijkheid). De standaard voldoet aan de overige criteria.
+De werkgroep vindt dat het NLGov AuthZEN wat betreft het eerste criterium voldoet aan de punten 1 en 3 (het bevorderen van de interoperabiliteit en/of van een verminderde leveranciersafhankelijkheid). De standaard voldoet aan de overige criteria.
 
 **Discussie**
 
-*Michiel Trimpe* geeft aan wat het voorstel voor de reikwijdte was: wanneer een toegangsbeslissing buiten de applicatie wordt gelegd, moet AuthZEN NL Gov worden gebruikt.
-In de vorige vergadering is dat als volgt verwoord: AuthZEN NL Gov moet worden toegepast wanneer de toegangsbeslissing tot een API-aanroep in een ander component wordt afgedwongen (PEP) dan waar de beslissing wordt gemaakt (PDP), zodat organisaties van beslispunt (PDP) kunnen wisselen.
+*Michiel Trimpe* geeft aan wat het voorstel voor de reikwijdte was: wanneer een toegangsbeslissing buiten de applicatie wordt gelegd, moet NLGov AuthZEN worden gebruikt.
+In de vorige vergadering is dat als volgt verwoord: NLGov AuthZEN moet worden toegepast wanneer de toegangsbeslissing tot een API-aanroep in een ander component wordt afgedwongen (PEP) dan waar de beslissing wordt gemaakt (PDP), zodat organisaties van beslispunt (PDP) kunnen wisselen.
 
 *Gideon Zegwaard* vindt dat de voorgestelde reikwijdte te smal en te vrijblijvend is. Dit is nog geen gangbare praktijk: de meeste organisaties regelen toegangsbeslissingen binnen de applicatie.
-Als de standaard niet actiever aanstuurt op het externaliseren van autorisatie, blijft implementatie uit. In deze vorm beschrijft AuthZEN NL Gov vooral de interne inrichting van autorisatie binnen één organisatie en draagt het onvoldoende bij aan interoperabiliteit tussen organisaties. Hij neigt daarom naar een bredere reikwijdte, maar dan in de vorm van een aanbeveling.
+Als de standaard niet actiever aanstuurt op het externaliseren van autorisatie, blijft implementatie uit. In deze vorm beschrijft NLGov AuthZEN vooral de interne inrichting van autorisatie binnen één organisatie en draagt het onvoldoende bij aan interoperabiliteit tussen organisaties. Hij neigt daarom naar een bredere reikwijdte, maar dan in de vorm van een aanbeveling.
 
-*Marc de Boer* herkent dat punt: als AuthZEN NL Gov alleen de interne inrichting van autorisatie beschrijft, gaat het niet over het stelsel (zoals FDS) maar over hoe een organisatie de toegangsverlening intern inricht. Wat betreft de sturing vraagt hij zich af of dit thuishoort bij FS of eerder bij architectuurrichtlijnen binnen GDI of FDS.
+*Marc de Boer* herkent dat punt: als NLGov AuthZEN alleen de interne inrichting van autorisatie beschrijft, gaat het niet over het stelsel (zoals FDS) maar over hoe een organisatie de toegangsverlening intern inricht. Wat betreft de sturing vraagt hij zich af of dit thuishoort bij FS of eerder bij architectuurrichtlijnen binnen GDI of FDS.
 
 *Gideon Zegwaard* benadrukt dat FDS zich richt op afspraken tussen deelnemers, terwijl de inrichting van toegangsverlening vooral een interne aangelegenheid is binnen organisaties. Dat past eerder bij de GDI dan bij FDS.
 
@@ -105,7 +105,7 @@ De werkgroep concludeert dat er meer tijd nodig is om dit onderwerp te bespreken
 {{< /chapter/section >}}
 
 {{< chapter/section title="Verwerkingsregister en Register Toegangsbeleid" >}}
-*Michiel Trimpe* licht toe dat dit het laatste inhoudelijke punt is uit de interne consultatie. De vraag is hoe binnen AuthZEN NL Gov kan worden verwezen naar het Register van Verwerkingsactiviteiten (RvV) en het Algoritmeregister (AR). AuthZEN NL Gov beschrijft hoe toegangsbeslissingen worden genomen, maar legt nog geen directe koppeling met de juridische verantwoording daarvan. Die verantwoording hoort vastgelegd te zijn in registers zoals bijvoorbeeld het Logboek Dataverwerkingen (LDV).
+*Michiel Trimpe* licht toe dat dit het laatste inhoudelijke punt is uit de interne consultatie. De vraag is hoe binnen NLGov AuthZEN kan worden verwezen naar het Register van Verwerkingsactiviteiten (RvV) en het Algoritmeregister (AR). NLGov AuthZEN beschrijft hoe toegangsbeslissingen worden genomen, maar legt nog geen directe koppeling met de juridische verantwoording daarvan. Die verantwoording hoort vastgelegd te zijn in registers zoals bijvoorbeeld het Logboek Dataverwerkingen (LDV).
 
 De projectgroep FTV heeft Frank Terpstra (LDV) geconsulteerd. Hij deelt zijn conclusies met de werkgroep. Hij legt uit dat LDV verwerkingen van persoonsgegevens registreert: doelen, grondslagen, verantwoordelijke partijen en relaties tussen gegevensstromen. LDV biedt nog niet het  detailniveau waarmee je per toegangsbeslissing kunt zien wat de juridische basis was. Dat is iets voor latere uitbreiding. Hij gaat ook in op het AR. Elk algoritme in het AR heeft een unieke URI die kan worden opgenomen in logging. Daarbij kunnen ook verwijzingen naar wettelijke grondslagen worden toegevoegd, bijvoorbeeld via links naar wetten.nl. In de praktijk is dat nog niet precies genoeg: één algoritme kan meerdere wettelijke grondslagen hebben, waardoor niet duidelijk is welke bij een specifieke toepassing geldt. Om dat op te lossen zijn aanpassingen van het AR nodig. Het verlenen van toegang verloopt bovendien niet altijd via een algoritme. Daarom is mogelijk een apart register voor toegang nodig, waarin organisaties hun redenen voor toegang kunnen vastleggen.
 
@@ -114,7 +114,7 @@ De projectgroep FTV heeft Frank Terpstra (LDV) geconsulteerd. Hij deelt zijn con
 *Gideon Zegwaard* merkt op dat een verwerking breder is dan alleen een persoonsgegevensverwerking. Hij pleit voor een hiërarchische structuur waarin hoofd- en subverwerkingen worden onderscheiden, zodat toegangsbeslissingen traceerbaar zijn binnen een groter proces.
 
 *Frank Terpstra* bevestigt dat LDV zulke hiërarchie technisch kan ondersteunen. Belangrijk is dat de wettelijke grondslag in de logging wordt opgenomen.
-Michiel Trimpe geeft aan dat dit een leemte is die nog moet worden ingevuld. Mogelijk hoort dit in een Register Toegangsbeleid (RT), maar dat moet verder worden uitgewerkt. Hij stelt voor om  in AuthZEN NL Gov voorlopig te verwijzen naar het RvV en het AR. Volgend jaar kan dan de uitwerking van een RT worden opgepakt.
+Michiel Trimpe geeft aan dat dit een leemte is die nog moet worden ingevuld. Mogelijk hoort dit in een Register Toegangsbeleid (RT), maar dat moet verder worden uitgewerkt. Hij stelt voor om  in NLGov AuthZEN voorlopig te verwijzen naar het RvV en het AR. Volgend jaar kan dan de uitwerking van een RT worden opgepakt.
 
 **Voor Reikwijdte en  Register Toegangsbeleid worden aparte bijeenkomsten georganiseerd.**
 

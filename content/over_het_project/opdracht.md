@@ -94,11 +94,11 @@ In fase 3 worden de bestaande standaarden door het vaststellingsproces van Forum
 * 15 november 2024: afronding onderzoek naar de status van EAM bij de overheid
 * 1 december 2024: start schrijven van de standaard
 * 1 februari 2025: aansluiting bij AuthZEN
-* 1 augustus 2025:  AuthZEN NL GOV 1.0 naar consultatie
+* 1 augustus 2025:  NLGov AuthZEN 1.0 naar consultatie
 * 1 september 2025: Authorization Decision Log (voorheen Logboek Toegangsverlening) naar consultatie
-* 31 december 2025: AuthZEN NL GOV 1.0 in beheer bij Logius
+* 31 december 2025: NLGov AuthZEN NL 1.0 in beheer bij Logius
 * 11 januari 2026L AUthZEN 1.0 heeft de status Final
-* 6 maart 2026: AuthZEN NL GOV 1.0 aangeboden aan Forum Standaardisatie
+* 6 maart 2026: NLGov AuthZEN 1.0 aangeboden aan Forum Standaardisatie
 
 Meer weten? Lees de rapportages over [Fase 1](/ftv/over_het_project/fase1/), [Fase 2](/ftv/over_het_project/fase2/) en [Fase 3](/ftv/over_het_project/fase3/)
 {{< /chapter/section >}}

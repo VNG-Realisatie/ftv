@@ -5,8 +5,8 @@ date: '2025-09-29'
 summary: "Sinds 22 september staat de AuthZEN Gov NL standaard als concept in het CGTS-register."
 ---
 
-{{< nieuws/header title="AuthZEN NL Gov-profiel opgenomen in Common Ground-register" >}}
-Sinds 22 september staat de conceptversie van de AuthZEN NL Gov-standaard in het Common Ground Technische Specificaties-register (CGTS-register).
+{{< nieuws/header title="NLGov AuthZEN-profiel opgenomen in Common Ground-register" >}}
+Sinds 22 september staat de conceptversie van de NLGov AuthZEN-standaard in het Common Ground Technische Specificaties-register (CGTS-register).
 {{< /nieuws/header >}}
 
  

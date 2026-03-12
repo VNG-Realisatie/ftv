@@ -43,15 +43,23 @@ Aanmelden voor alle bijeenkomsten van de werkgroep kan via mail bij [ftv@ictu.nl
 {{< chapter/section title="Planning en Notulen"  level="2">}}
 ### Planning
 
-De werkgroep vindt elke twee weken plaats op **dinsdag van 10:00 tot 11:00**. Deelname kan online of fysiek op Dev.loer (bij Digilab), Catharijnesingel 55, 3511 GD Utrecht (5e verdieping, Trindeborch gebouw)
+De werkgroep vindt elke twee weken plaats op **dinsdag van 10:00 tot 11:00**, en is voor nu alleen online.
 
 Data komende werkgroepen:
-- 16 december: AuthZEN residual policies voor contracten. Meer informatie op [IBDS-website](https://realisatieibds.nl/events/view/964026ea-28ef-424b-a3ba-6f6a351d905d/werkgroep-federatieve-toegangsverlening-residual-policies-voor-contracten).
+
 
 ### Notulen
 
-#### Werkgroep FTV
-- 2 december: Contracten ([Notulen]({{% relref "contracten" %}}))
+#### Werkgroep FTV- 2 december: Contracten ([Notulen]({{% relref "contracten" %}}))
+
+2026
+
+- 3 maart: Introductie ODRL voor register toegangsbeleid ([Notulen]({{% relref "introductie-odrl" %}}))
+- 17 februari: Kick off register toegangsbeleid ([Notulen]({{% relref "kick-off-register-toegangsbeleid" %}}))
+
+2025
+
+- 16 december: AuthZEN residual policies voor contracten. Meer informatie op [IBDS-website](https://realisatieibds.nl/events/view/964026ea-28ef-424b-a3ba-6f6a351d905d/werkgroep-federatieve-toegangsverlening-residual-policies-voor-contracten).
 - 4 november: Authorization Decision Log en OpenFTV ([Notulen]({{% relref "authorization-decision-log-en-open-ftv" %}}))
 - 21 oktober: JTC-25 en iSHARE ([Notulen]({{% relref "jtc25eniSHARE" %}}))
 - 7 oktober: Reikwijdte en Verwerkingsregisters ([Notulen]({{% relref "reikwijdte_verwerkingsregister" %}}))
@@ -66,6 +74,9 @@ Data komende werkgroepen:
 - 22 april: Juridisch Kader ([Notulen]({{% relref "juridisch-kader" %}}))
 - 8 april: Introductie Externalized Authorization Management architectuur ([Notulen]({{% relref "introductie-eam" %}}))
 - 25 maart 2025: Kick-off Werkgroep Federatieve Toegangsverlening ([Notulen]({{% relref "kick-off" %}}))
+
+2024
+
 - 20 november 2024: Pilot Gegevensminimalisatie ([Notulen]({{% relref "gegevensminimalisatie" %}})).
 
 #### Subwerkgroep Juridisch Kader

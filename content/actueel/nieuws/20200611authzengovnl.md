@@ -5,7 +5,7 @@ date: '2025-06-03'
 summary: "De werkgroep Federatieve Toegansgverlening (FTV) sprak op dinsdag 3 juni over de ontwikkeling van het NL Gov-profiel op AuthZEN."
 ---
 
-{{< nieuws/header title="Werkgroep: Ontwikkeling AuthZEN NL Gov" >}}
+{{< nieuws/header title="Werkgroep: Ontwikkeling NLGov AuthZEN" >}}
 De werkgroep Federatieve Toegansgverlening (FTV) sprak op dinsdag 3 juni over de ontwikkeling van het NL Gov-profiel op AuthZEN.
 {{< /nieuws/header >}}
 

@@ -7,7 +7,7 @@ summary: "Op 23 september ging de eerste pilot met FTV van start in samenwerking
 
 {{< nieuws/header title="Start eerste pilot FTV" >}}
 Op 23 september ging de eerste pilot met FTV van start in samenwerking met de gemeentes Utrecht en Den Haag.
-Met deze pilot zet FTV een belangrijke stap: voor het eerst wordt de AuthZEN NL Gov-standaard in een gemeentelijke praktijkomgeving toegepast en getest. 
+Met deze pilot zet FTV een belangrijke stap: voor het eerst wordt de NLGov AuthZEN-standaard in een gemeentelijke praktijkomgeving toegepast en getest. 
 {{< /nieuws/header >}}
 
 {{< chapter/section title="Behoefte" level="3">}}

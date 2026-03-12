@@ -1,17 +1,17 @@
 ---
 type: 'nieuws'
-Title: Start publieke consultatie AuthZEN NL Gov 
+Title: Start publieke consultatie NLGov AuthZEN 
 date: '2025-10-22'
 summary: "De publieke consultatie voor het NL Gov-profiel van de internationale standaard AuthZEN (OpenID) is gestart bij Logius."
 ---
 
-{{< nieuws/header title="Start publieke consultatie AuthZEN NL Gov" >}}
+{{< nieuws/header title="Start publieke consultatie NLGov AuthZEN" >}}
 De publieke consultatie voor het NL Gov-profiel van de internationale standaard AuthZEN (OpenID) is 16 oktober gestart bij Logius. De consultatie loopt tot 20 november 2025.
 
 {{< /nieuws/header >}}
 
 {{< chapter/section title="Controleerbaar en veilig" level="3">}}
-Het AuthZEN NL Gov-profiel is een van drie standaarden die door het project Federatieve Toegangsverlening (FTV) wordt ontwikkeld voor gebruik binnen het Federatieve Datastelsel (FDS).
+Het NLGov AuthZEN-profiel is een van drie standaarden die door het project Federatieve Toegangsverlening (FTV) wordt ontwikkeld voor gebruik binnen het Federatieve Datastelsel (FDS).
 In samenhang zorgen de FTV-standaarden voor controleerbare en veilige gegevensuitwisseling. De twee andere FTV-standaarden zijn:
 - Authorization Decision Log (ADL), de standaard voor verantwoording van genomen beslissingen;
 - Register Toegangsbeleid, de standaard voor opslag en inzage in het toegangsbeleid.

@@ -66,7 +66,7 @@ FTV kiest voor het architectuurpatroon van [Externalized Authorization Managemen
 
 Standaardisatie is bij uitstek het middel om aansluiting en uitwisseling tussen systemen te vergemakkelijken. [Open standaarden](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/open-standaarden/) hebben daarbij de sterke voorkeur, alsmede het voortbouwen op bestaande internationale standaarden.
 
-Daarvoor werkt FTV aan het [AuthZEN NLGov profiel](authzen-nlgov). Een Nederlands profiel op de internationale OpenID standaard [AuthZEN](https://openid.net/wg/authzen/) die het EAM-architectuurpatroon standaardiseert.
+Daarvoor heeft FTV het [NLGOv AuthZEN profiel](authzen-nlgov) opgesteld: een Nederlands profiel op de internationale OpenID standaard [AuthZEN](https://openid.net/wg/authzen/) die het EAM-architectuurpatroon standaardiseert.
 
 Om het mogelijk te maken om verleende toegangsbeslissingen te verantwoorden werkt FTV ook aan het [Logboek Toegangsbeslissingen](logboek-toegangsbeslissingen) (Authorization Decision Log). Deze gebruikt het AuthZEN informatiemodel om historische beslissingen te kunnen verantwoorden zonder onnodig beslisgegevens te dupliceren.
 

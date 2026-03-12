@@ -6,7 +6,7 @@ summary: "Op 23 september sprak de werkgroep over reikwijdte en informatiemodell
 ---
 
 {{< nieuws/header title="“Reikwijdte en informatiemodellering”" >}}
-De bijeenkomst van de werkgroep FTV op 23 september stond in het teken van de reikwijdte van de AuthZEN NL Gov-standaard en de manier waarop informatiemodellen en Linked Data (LD) een plek krijgen in de standaard.
+De bijeenkomst van de werkgroep FTV op 23 september stond in het teken van de reikwijdte van de NLGov AuthZEN-standaard en de manier waarop informatiemodellen en Linked Data (LD) een plek krijgen in de standaard.
 {{< /nieuws/header >}}
 
  

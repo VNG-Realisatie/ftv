@@ -81,9 +81,9 @@ Diverse commerciële toegangsverleningsproducten en API-gateways implementeren d
 
 {{< /chapter/section >}}
 
-{{< chapter/section title="AuthZEN NL Gov" level="4">}}
+{{< chapter/section title="NLGOv AuthZEN" level="4">}}
 
-De Nederlandse standaard is een uitbreiding op AuthZEN en heeft als volledige naam **NLGov Profile for OpenID AuthZEN Authorization API** gekregen; kortweg "AuthZEN NL Gov". Er wordt momenteel door de werkgroep FTV gewerkt aan de gewenste invulling daarvan.
+De Nederlandse standaard is een uitbreiding op AuthZEN en heeft als volledige naam **NLGov Profile for OpenID AuthZEN Authorization API** gekregen; kortweg "NLGob AuthZEN". Er wordt momenteel door de werkgroep FTV gewerkt aan de gewenste invulling daarvan.
 
 De huidige werkversie is te vinden op "[Standaard voor Federatieve Toegangsverlening](https://ftv-standaard-2f223b.gitlab.io/).".
 {{< /chapter/section >}}

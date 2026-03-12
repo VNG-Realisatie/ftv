@@ -52,7 +52,7 @@ Er zijn geen nieuwe werkgroepleden.
 
 {{< chapter/section title="Updates subwerkgroepen" >}}
 
-**AuthZEN NL Gov-profiel**
+**NLGov AuthZEN-profiel**
 De publieke consultatie is gestart via Logius. Er is nog geen feedback binnengekomen.
 Het team FTV heeft presentatie gegeven bij de GDI-werkgroep Gegevensuitwisseling. Daarbij werd toegelicht dat AuthZEN NL Gov richting Logius en beheer ging. De standaard kan opgenomen worden in de domeinarchitectuur gegevensuitwisseling. Het is nog niet duidelijk wat de formele vervolgstappen zijn om dit te realiseren. Dit wordt verder afgestemd met BZK.
 In de Access Control Module van Geonovum is een verwijzing naar AuhtZEN NL Gov opgenomen.

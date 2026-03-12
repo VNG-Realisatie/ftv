@@ -33,7 +33,7 @@ type: 'chapter'
 {{< chapter/directnaar bg="bg-rhc-color-geel-neon">}}
 <a href="https://logius-standaarden.github.io/Openbare-Consultaties/2025-10-15-Authzen/">
     <div class="mt-2">
-        <h3 style="text-decoration:underline" class="nl-heading nl-heading--level-3 rhc-heading">AuthZEN NL Gov</h3>
+        <h3 style="text-decoration:underline" class="nl-heading nl-heading--level-3 rhc-heading">NLGov AuthZEN</h3>
     </div>
     <div class="mt-2">
         <p class="utrecht-paragraph-small">Standaard voor Federatieve Toegangsverlening</p>
@@ -102,7 +102,7 @@ De AuthZEN standaard beschrijft de basis die op elke uitwisseling van toepassing
 
 {{< /chapter/section >}}
 
-{{< chapter/section title="AuthZEN NL Gov" id="nlgov" level="4">}}
+{{< chapter/section title="NLGOv AuthZEN" id="nlgov" level="4">}}
 
 Voor de Nederlandse overheid ontwikkelt FTV een profiel bovenop AuthZEN: het NLGov Profile for OpenID AuthZEN Authorization API. Dit profiel bevat de aanvullingen die nodig zijn om te voldoen aan de Nederlandse wetgeving, de digitale strategie en regels van het Federatieve Datastelsel (FDS).
 
@@ -111,7 +111,7 @@ Versie 1.0 van het profiel is goedgekeurd door de eigen werkgroep, is in beheer 
 <br/><br>
 
 <a href="https://logius-standaarden.github.io/Openbare-Consultaties/2025-10-15-Authzen" class="utrecht-button utrecht-button--primary-action">
-      Bekijk de consultatieversie van AuthZEN NL GOV
+      Bekijk de consultatieversie van NLGov AuthZEN
 </a>
 
 <br/><br>

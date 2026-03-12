@@ -53,7 +53,7 @@ Beiden zijn betrokken bij het programma MIAMI van het UWV dat zich richt op de m
 
 *Marc de Boer* vertelt dat er binnen de subwerkgroep Juridisch Kader een wisseling van de bezetting zal plaatsvinden. De twee juristen van het ministerie van BZK zijn niet langer beschikbaar. BZK ondersteunt het project FTV onverminderd en zoekt, ondanks beperkte capaciteit, naar vervangers. Hierdoor zal de voortgang van deze subwerkgroep vertraging oplopen.
 
-**AuthZEN NL Gov**
+**NLGov AuthZEN**
 
 *Michiel Trimpe* geeft aan dat er voor de vakantie een eerste versie van de standaard gedeeld voor interne consultatie. Daarop zijn opmerkingen ontvangen:
 - Verdere uitwerking van het gebruik van het Logboek Dataverwerkingen als verwijzing voor het activiteiten- en doelbindingsregister.
@@ -79,7 +79,7 @@ Er is geen update vanuit de werkgroep. *Marc de Boer* legt uit dat er geen finan
 *Michiel Trimpe* geeft aan dat er nog acht bijeenkomsten zijn tot het eind van het jaar en stelt voor een inhoudelijke planning te maken gebaseerd op de uitkomsten van de interne consultatie van de AuthZEN Gov NL standaard, de onderwerpen ter verdieping die eerder door de werkgroep zijn aangedragen én de resultaten uit de evaluatie in juli.
 
 De in te plannen onderwerpen zijn:
-1.	AuthZEN NL Gov: reikwijdte van de standaard, informatiemodellering standaarden en verwijzing Logboek Dataverwerking. 
+1.	NLGov AuthZEN: reikwijdte van de standaard, informatiemodellering standaarden en verwijzing Logboek Dataverwerking. 
 2.	Authorization Decision Log: start interne consultatie.
 3.	Registertoegangsbeleid: inventarisatie, scope en voorstel.
 4.	Informatiemodellering van het subject: hoe worden gebruikersgegevens gemodelleerd? Bijvoorbeeld bij delegatie en het gebruik van verschillende inlogmiddelen zoals eHerkenning en DigiD.
@@ -113,7 +113,7 @@ Op basis van de input werd een prioritering gemaakt voor de komende drie vergade
 
 **8 september**
 - Interne consultatie Authorization Decision Log
-- Slot interne consultatie AuthZen NL Gov
+- Slot interne consultatie NLGov AuthZEN
 - Reikwijdte
 - Relationship Based Access Control
 

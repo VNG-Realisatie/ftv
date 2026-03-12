@@ -93,7 +93,7 @@ Het is van belang om Forum Standaardisatie over de reikwijdte te raadplegen. Het
 
 AuthZEN ondersteunt nu al voorbeelden met JSON Schema en kan ook werken met JSON-LD. Het idee is dat de interpretatie van een toegangsverzoek gespecificeerd wordt in de context zodat duidelijk is wat een subject, resource, action en context precies betekenen. 
 
-De vertaling naar de AuthZEN NL Gov-standaard zou er als volgt uit kunnen zien: 
+De vertaling naar de NLGov AuthZEN-standaard zou er als volgt uit kunnen zien: 
 Elk AuthZEN verzoek zou in zijn context moeten linken naar informatiemodellering in de brede zin die uitlegt wat dit verzoek precies betekent.
 Er kan gelinkt worden naar een website met informatie maar dat is generiek. 
 

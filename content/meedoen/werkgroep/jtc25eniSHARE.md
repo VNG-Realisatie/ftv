@@ -52,9 +52,9 @@ Er zijn geen nieuwe werkgroepleden.
 
 {{< chapter/section title="Updates subwerkgroepen" >}}
 
-**AuthZEN NL Gov-profiel**
+**NLGov AuthZEN-profiel**
 
-Het AuthZEN NL Gov-profiel staat nu officieel in publieke consultatie via Logius. Vorige week is overeenstemming bereikt over de reikwijdte en het functioneel toepassingsgebied voor de consultatie. De consultatie is aangekondigd via Logius en het Kennisplatform APIs en wordt opgenomen in de FTV-Update van dinsdag 28 oktober.
+Het NLGov AuthZEN-profiel staat nu officieel in publieke consultatie via Logius. Vorige week is overeenstemming bereikt over de reikwijdte en het functioneel toepassingsgebied voor de consultatie. De consultatie is aangekondigd via Logius en het Kennisplatform APIs en wordt opgenomen in de FTV-Update van dinsdag 28 oktober.
 Functioneel toepassingsgebied: AuthZEN wordt toegepast wanneer de toegangsbeslissing tot een API-aanroep in een ander component wordt afgedwongen (PEP) dan waar de beslissing wordt genomen (PDP).
 
 **Authorization Decision Log (ADL)**
@@ -63,7 +63,7 @@ Op ADL is feedback ontvangen. Deze wordt nog verwerkt. Voor het bespreken van de
 
 **Juridisch Kader**
 
-De eerste versie van het juridisch kader is opgeleverd. Het raamwerk is duidelijk en er zijn geen conflicten gevonden met de opgeleverde inhoud. De scope omvat alle drie de standaarden: AuthZEN NL Gov, Authorization Decision Log en Register Toegangsbeleid. De verwachting is dat een volgende versie snel beschikbaar komt.
+De eerste versie van het juridisch kader is opgeleverd. Het raamwerk is duidelijk en er zijn geen conflicten gevonden met de opgeleverde inhoud. De scope omvat alle drie de standaarden: NLGov AuthZEN, Authorization Decision Log en Register Toegangsbeleid. De verwachting is dat een volgende versie snel beschikbaar komt.
 
 
 {{< /chapter/section >}}

@@ -37,7 +37,7 @@ Federatieve toegangsverlening (FTV) is een toepassing van Externalized Authoriza
 De referentie-implementatie maakt inzichtelijk hoe EAM werkt in de praktijk: de toegangsbeslissing vindt plaats buiten de applicatie, op basis van extern beheerde regels. FTV is in OpenFTV uitgewerkt als concreet voorbeeld en technisch getest op werking en betrouwbaarheid.
 
 > **OpenFTV is niet bedoeld voor productiesituaties**. OpenFTV wordt ontwikkeld vanuit het project FTV. Dat project eindigt, en er is nog geen beheer gepland voor daarna. 
-> De verwachting is dat op termijn voldoende van de bestaande EAM-producten aan AuthZEN NL Gov zullen gaan voldoen. OpenFTV zal wel beschikbaar blijven voor experimenten.  
+> De verwachting is dat op termijn voldoende van de bestaande EAM-producten aan NLGov AuthZEN zullen gaan voldoen. OpenFTV zal wel beschikbaar blijven voor experimenten.  
 
 {{< /chapter/section >}}
 

@@ -30,7 +30,7 @@ Kijk voor de notulen en de presentatie op de [website van FTV](/ftv/meedoen/werk
 {{< chapter/section title="Volgende bijeenkomst" level="4">}}
 De volgende bijeenkomst is op dinsdag 3 juni van 10:00 tot 11:00 uur. Kijk voor aanmelden op de [website van IBDS](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/9e22f713-29fd-4149-bf82-7f5c517e0d61/werkgroep-federatieve-toegangsverlening).
 
-Op de agenda staat dan de kick-off van de subwerkgroep AuthZen NL Gov.
+Op de agenda staat dan de kick-off van de subwerkgroep NLGov AuthZEN.
 {{< /chapter/section >}}
 
 {{< chapter/section title="Ook meedoen?" level="4">}}

@@ -42,7 +42,7 @@ De juiste softwarekeuze hangt af van meer dan alleen techniek. Belangrijke punte
   Hoe krachtig en leesbaar is de policytaal? Past deze bij de werkwijze van de organisatie?
 - **PDP en standaardisering**
 
-  Is de gekozen PDP volwassen en voldoet deze aan de AuthZEN NL Gov-standaard?
+  Is de gekozen PDP volwassen en voldoet deze aan de NLGov AuthZEN-standaard?
 - **Integratie met bestaande applicaties**
 
   Voor welke applicaties biedt de leverancier standaard PEPs om beslissingen af te dwingen?

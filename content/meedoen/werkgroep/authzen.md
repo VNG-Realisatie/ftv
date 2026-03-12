@@ -73,12 +73,12 @@ Er zijn geen nieuwe deelnemers.
 
   *Gideon Zegwaard* is van mening dat de inbedding in de architectuur kan wel in het Nederlands gebeuren. *Michiel Trimpe* geeft aan dat dit sowieso zal gebeuren aangezien GDI ook in het Nederlands wordt geschreven.
 
-  **Beslissing**: De voordelen van het Engels wegen zwaarder dan de nadelen. Voor het AuthZEN NL Gov-profiel, Logboek Toegangsbeslissingen en Register Toegangsbeleid zal de voertaal Engels worden. Logboek Toegangsbeslissingen en Register Toegangsbeleid zullen een nieuwe Engelse naam krijgen.
+  **Beslissing**: De voordelen van het Engels wegen zwaarder dan de nadelen. Voor het NLGov AuthZEN-profiel, Logboek Toegangsbeslissingen en Register Toegangsbeleid zal de voertaal Engels worden. Logboek Toegangsbeslissingen en Register Toegangsbeleid zullen een nieuwe Engelse naam krijgen.
 
   *Marc de Boer* vraagt of er nog meer deelnemers interesse hebben om aan de subwerkgroepen deel te nemen. Niemand meldt zich aan.
 {{< /chapter/section >}}
 
-{{< chapter/section title="Verkenning AuthZEN NL Gov" >}}
+{{< chapter/section title="Verkenning NLGov AuthZEN" >}}
 *Michiel Trimpe* introduceert de verwachte [kandidaat voor AuthZEN 1.0 Final](https://openid.github.io/authzen/) (draft 04).
 
 - *Gideon Zegwaard* geeft bij de context van het verzoek (5.4) aan dat hier ontbreekt wat de termen, zoals de action `name`, betekenen.
@@ -150,7 +150,7 @@ Deze stonden oorspronkelijk gepland voor het NL Gov-profiel, maar de AuthZEN-wer
 
   *Michiel Trimpe* geeft aan dat de intentie is om de aanpak bij Logboek Dataverwerkingen hiervoor te volgen en dat dit daar dus op aangepast moet worden.
 
-  **Beslissing**: Het AuthZEN NL Gov-profiel volgt de aanpak van Logboek Dataverwerking hierin.
+  **Beslissing**: Het NLGov AuthZEN-profiel volgt de aanpak van Logboek Dataverwerking hierin.
 
   *Michiel Trimpe* geeft aan dat zaken die voor logging belangrijk zijn niet in de PEP-PDP interface opgenomen zullen worden maar in de Logboek Toegangsbeslissingen standaard.
 
