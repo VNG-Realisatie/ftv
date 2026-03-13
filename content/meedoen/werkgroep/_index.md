@@ -43,13 +43,13 @@ Aanmelden voor alle bijeenkomsten van de werkgroep kan via mail bij [ftv@ictu.nl
 {{< chapter/section title="Planning en Notulen"  level="2">}}
 ### Planning
 
-De werkgroep vindt elke twee weken plaats op **dinsdag van 10:00 tot 11:00**, en is voor nu alleen online.
+De werkgroep vindt elke twee weken plaats op **dinsdag van 10:00 tot 11:00**, online en bij Stichting ICTU in Den Haag.
 
 Data komende werkgroepen:
 
+- [17 maart: verkenning publiek toegangsbeleid](https://realisatieibds.nl/events/view/b6a1065b-1c6c-4bd5-8337-89085f6fc5dd/werkgroep-federatieve-toegangsverlening-verkenning-publiek-toegangsbeleid)
 
 ### Notulen
-
 
 2026
 
