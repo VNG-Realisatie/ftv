@@ -50,7 +50,6 @@ Data komende werkgroepen:
 
 ### Notulen
 
-#### Werkgroep FTV- 2 december: Contracten ([Notulen]({{% relref "contracten" %}}))
 
 2026
 
@@ -60,6 +59,7 @@ Data komende werkgroepen:
 2025
 
 - 16 december: AuthZEN residual policies voor contracten. Meer informatie op [IBDS-website](https://realisatieibds.nl/events/view/964026ea-28ef-424b-a3ba-6f6a351d905d/werkgroep-federatieve-toegangsverlening-residual-policies-voor-contracten).
+- 2 december: Contracten ([Notulen]({{% relref "contracten" %}}))
 - 4 november: Authorization Decision Log en OpenFTV ([Notulen]({{% relref "authorization-decision-log-en-open-ftv" %}}))
 - 21 oktober: JTC-25 en iSHARE ([Notulen]({{% relref "jtc25eniSHARE" %}}))
 - 7 oktober: Reikwijdte en Verwerkingsregisters ([Notulen]({{% relref "reikwijdte_verwerkingsregister" %}}))
