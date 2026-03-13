@@ -7,12 +7,7 @@ Title: Kick off register toegangsbeleid
 
 {{< /chapter/section >}}
 
-{{< chapter/section title="Aanwezigen" >}}
-- Jaap Smit (UWV)
-- Nick Boxem (MinI&W) 
-- Danny Greefhorst (FDS)
-- Jos Hezemans (MinJenV)
-
+{{< chapter/section title="Aanwezigen" level="4">}}
 
 - Remo van Rest (Zorginstituut Nederland)
 - Axel van der Minne (DUO)
@@ -31,23 +26,53 @@ Title: Kick off register toegangsbeleid
 
 {{< /chapter/section >}}
 
+
+{{< chapter/section title="Bijlages" level="4">}}
+- [Opname](https://github.com/VNG-Realisatie/ftv/raw/refs/heads/main/static/videos/20260217-kickoff-register-toegangsbeleid.mp4)
+  {{< /chapter/section >}}
+
 {{< chapter/section title="Agenda" >}}
+
 - Welkom
-- Update subwerkgroepen
-- Feedback interne consultatie Authorization Decision Log (ADL)
-- Update project FTV
-- Demo OpenFTV
+- (Her) evaluatie structuur van de werkgroep
+- Inventarisatie register toegangsbeleid
 - Afronding
-Het onderwerp Contracten dat voor deze bijeenkomst op de agenda stond, is verplaatst naar de volgende bijeenkomst (18 november). Alle werkgroepleden hebben hierover een email ontvangen.
 
-{{< /chapter/section >}}
-
-{{< chapter/section title="Bijlages" >}} 
-- [Opname](https://github.com/VNG-Realisatie/ftv/raw/refs/heads/main/static/videos/20251104-authorization-decision-log-en-open-ftv.mp4) Zie vanaf 49:30 voor de presentatie OpenFTV.
 {{< /chapter/section >}}
 
 {{< chapter/section title="Welkom" >}}
 
 Maria Dziouba is nieuw, zij is informatieanalist nID bij VeCoZo en werkt met Duuk samen.
+
+{{< /chapter/section >}}
+
+{{< chapter/section title="(Her) evaluatie structuur van de werkgroep" >}}
+
+De groep stemt moet grote meerderheid voor behoud van de structuur: eens per twee weken, hybride, en op dinsdag 10-11 uur
+
+{{< /chapter/section >}}
+
+{{< chapter/section title="Kick-off Register Toegangsbeleid" >}}
+
+Hoofddoelstelling van het nieuwe jaar is het realiseren van een standaard voor register toegangsbeleid. Daar is geen bestaande standaard voor, dus deze zal door ons vanaf de basis geschreven moeten worden. 
+
+De werkgroep maakte samen een inventarisatie van de aanbieders, afnemers en use case van het register toegangsbeleid. 
+
+![Afnemers](/ftv/images/Register-toegangbeleid-afnemers.png)
+
+![Aanbieders](/ftv/images/Register-toegangbeleid-aaanbieders.png)
+
+![Use cases](/ftv/images/Register-toegangbeleid-use-cases.png)
+
+![Functionele vereisten](/ftv/images/Register-toegangbeleid-functionele-vereisten.png)
+
+Frank Terpstra benadrukt dat hier nog prioriteiten aan gegeven moeten worden; dit wordt snel te ingewikkeld om te realiseren.
+
+{{< /chapter/section >}}
+
+
+{{< chapter/section title="Afronding" >}}
+
+De volgende bijeenkomst is over twee weken.
 
 {{< /chapter/section >}}
