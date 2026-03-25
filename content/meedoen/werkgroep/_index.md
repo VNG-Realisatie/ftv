@@ -47,12 +47,15 @@ De werkgroep vindt elke twee weken plaats op **dinsdag van 10:00 tot 11:00**, on
 
 Data komende werkgroepen:
 
-- [17 maart: verkenning publiek toegangsbeleid](https://realisatieibds.nl/events/view/b6a1065b-1c6c-4bd5-8337-89085f6fc5dd/werkgroep-federatieve-toegangsverlening-verkenning-publiek-toegangsbeleid)
+- 31 maart
+- 14 april
+- 28 april
 
 ### Notulen
 
 2026
 
+- 17 maart: verkenning publiek toegangsbeleid]
 - 3 maart: Introductie ODRL voor register toegangsbeleid ([Notulen]({{% relref "introductie-odrl" %}}))
 - 17 februari: Kick off register toegangsbeleid ([Notulen]({{% relref "kick-off-register-toegangsbeleid" %}}))
 
