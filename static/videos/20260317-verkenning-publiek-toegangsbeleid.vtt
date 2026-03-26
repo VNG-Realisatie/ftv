@@ -1,0 +1,607 @@
+WEBVTT
+
+00:00:04.000 --> 00:00:06.000
+<v Michiel Trimpe>Ik wil er wel mee doen eh, Floris.</v>
+
+00:00:06.000 --> 00:00:08.000
+<v Floris Deutekom>Ja, ja, dat zou ik wel.</v>
+
+00:00:08.000 --> 00:00:10.000
+<v Michiel Trimpe>Ik heb een eh, soort van weddenschap verloren dat vorig jaar of dit jaar zou zijn van AI muziek.</v>
+
+00:00:10.000 --> 00:00:12.000
+<v Michiel Trimpe>Dat mensen gewoon een liedje dus.</v>
+
+00:00:12.000 --> 00:00:14.000
+<v Michiel Trimpe>Van elk genre wat genereren en eh.</v>
+
+00:00:14.000 --> 00:00:16.000
+<v Michiel Trimpe>Dat mensen neigen naar dat het helemaal los zou gaan dat iedereen zijn eigen componist en uitvoerder zou worden.</v>
+
+00:00:16.000 --> 00:00:18.000
+<v Michiel Trimpe>Er is bijna niks gebeurd op dat gebied.</v>
+
+00:00:18.000 --> 00:00:20.000
+<v Michiel Trimpe>Blijkbaar eh.</v>
+
+00:00:20.000 --> 00:00:22.000
+<v Michiel Trimpe>Durft niemand het aan.</v>
+
+00:00:22.000 --> 00:00:24.000
+<v Maria Dziouba>Ja, ja, het creatief zijn is nog moeilijk voor de AI.</v>
+
+00:00:24.000 --> 00:00:26.000
+<v Michiel Trimpe>Nou ja.</v>
+
+00:00:26.000 --> 00:00:28.000
+<v Maria Dziouba>Spotify staat vol met AI muziek.</v>
+
+00:00:28.000 --> 00:00:29.000
+<v Michiel Trimpe>Oké.</v>
+
+00:00:29.000 --> 00:00:31.000
+<v Maria Dziouba>Het is echt wel een ding hoor.</v>
+
+00:00:31.000 --> 00:00:32.000
+<v Michiel Trimpe>Ja?</v>
+
+00:00:32.000 --> 00:00:35.000
+<v Maria Dziouba>Het is een eh, best wel een probleem.</v>
+
+00:00:35.000 --> 00:00:38.000
+<v Maria Dziouba>Playlists en playlists vol met uren aan, ja, niks zeggende AI muziek, ja.</v>
+
+00:00:38.000 --> 00:00:39.000
+<v Michiel Trimpe>Hm.</v>
+
+00:00:39.000 --> 00:00:43.000
+<v Igor van Haren>Maar luisteraars weigeren het nog wel te luisteren.</v>
+
+00:00:43.000 --> 00:00:45.000
+<v Igor van Haren>Als ze het weten, dan eh klikken ze het ook weg, ja.</v>
+
+00:00:45.000 --> 00:00:50.000
+<v Michiel Trimpe>Ja, ik denk dat je wel wetenschappelijk de beste studiemuziek of programmeermuziek moet kunnen bedenken.</v>
+
+00:00:50.000 --> 00:00:54.000
+<v Michiel Trimpe>Het schijnt ook dat onbekend beter werkt dan bekend.</v>
+
+00:00:54.000 --> 00:00:58.000
+<v Michiel Trimpe>Dus mensen die studeren luisteren meestal iets wat op de achtergrond is, zonder stemmen, maar wat ze nog nooit eerder gehoord hebben.</v>
+
+00:00:58.000 --> 00:01:00.000
+<v Michiel Trimpe>Als het bekend is ga je in een groef daarbuiten met eh herinneringen.</v>
+
+00:01:00.000 --> 00:01:01.000
+<v Floris Deutekom>Ja, studiemuziek, dat zal ook wel.</v>
+
+00:01:01.000 --> 00:01:11.000
+<v Michiel Trimpe>Dat zal een AI niche</v>
+
+00:15:00.000 --> 00:15:05.000
+<v Michiel Trimpe>Oh nee, ik zit in Miro. Sorry.</v>
+
+00:15:05.000 --> 00:15:06.000
+<v Michiel Trimpe>Ja, dat wel.</v>
+
+00:15:06.000 --> 00:15:08.000
+<v Michiel Trimpe>Oké.</v>
+
+00:15:08.000 --> 00:15:16.000
+<v Michiel Trimpe>Nou, dan zie je dat dus eh in ieder geval dat is dan dus op de mens- en machineleesbaarheid dimensie is dit dan een korte samenvatting die ik gedaan heb.</v>
+
+00:15:16.000 --> 00:15:28.000
+<v Michiel Trimpe>Nou, we hadden de hiërarchie, hoe is het opgebouwd? En dan zie je dat bij eh in dit geval het is voor de registratie is, de BRP eerst, want je hebt ook de PIVA en nog wat andere.</v>
+
+00:15:28.000 --> 00:15:39.000
+<v Michiel Trimpe>Eh dan is het volgende niveau de afnemer. Eh ja, de afnemer heeft een besluit voor en dan binnen het besluit heb je dan ook nog eh veld kruisbevragingen heb ik even gedaan. Dus veld bevragingscombinatie.</v>
+
+00:15:39.000 --> 00:15:50.000
+<v Michiel Trimpe>Nou, maar dit geeft een beetje een idee van hoe het gestructureerd is. Als je zal elders bijvoorbeeld zien dat het eh op rol gebaseerd op op bevragingstype gebaseerd is bij Suwinet bijvoorbeeld.</v>
+
+00:15:50.000 --> 00:15:59.000
+<v Marc de Boer>Ja, je hebt ook nog een niveau van koppervlak ertussen, want er is dus eh ehm bevraging, dat is een API. Je hebt</v>
+
+00:15:59.000 --> 00:16:00.000
+<v Marc de Boer>ehm spontaan, dat is dat je</v>
+
+00:16:00.000 --> 00:16:05.000
+<v Michiel Trimpe>Ja, dit was genotificeerd wordt en je hebt selectie en dat is een bestand opvragen. Dus dat zijn dan de</v>
+
+00:16:05.000 --> 00:16:11.000
+<v Michiel Trimpe>Ja, je bedoelde ik de de term voor spontaan, selectie, et cetera, die vier. Ik wist niet hoe ik het moest noemen anders, maar dat is</v>
+
+00:16:11.000 --> 00:16:18.000
+<v Marc de Boer>Ja, dat is ik dat zou ik gewoon koppelvlakken noemen. Dus het zijn drie verschillende koppelvlakken die elk los geautoriseerd worden.</v>
+
+00:16:18.000 --> 00:16:21.000
+<v Michiel Trimpe>Ja.</v>
+
+00:16:21.000 --> 00:16:22.000
+<v Michiel Trimpe>Hoe ik dat moest noemen wist ik niet precies, maar dat</v>
+
+00:16:22.000 --> 00:16:34.000
+<v Marc de Boer>En dan per koppelvlak is het dus zowel op regel als op attribuut. Dus op regel is via die voorwaarderegel ingeperkt en op attribuut is via een opsomming van attributen beperkt.</v>
+
+00:16:34.000 --> 00:16:36.000
+<v Michiel Trimpe>Ja.</v>
+
+00:16:36.000 --> 00:16:44.000
+<v Michiel Trimpe>Nou, dan granulariteit zie je nou de dus de de hoofdblokken zijn eh afnemers besluit, dus we besluiten eigenlijk.</v>
+
+00:16:44.000 --> 00:16:51.000
+<v Michiel Trimpe>Ehm en vermazigheid eh nou, dus gedetailleerd, dus velden per bevragingstype en filters.</v>
+
+00:16:51.000 --> 00:16:58.000
+<v Michiel Trimpe>Ja.</v>
+
+00:16:58.000 --> 00:17:14.000
+<v Michiel Trimpe>Nou, dan heb je historisering. Hoe wordt de historie bijgehouden? Dan heb je het aantal dimensies. Eh effectief, van wanneer was het soort van wettelijk in werking? Materieel is hoe zit hoe is het geregistreerd in onze administratie?</v>
+
+00:17:14.000 --> 00:17:23.000
+<v Michiel Trimpe>En dan heb je ook nog formeel/technisch. Eh dus wat retourneerde de database op een specifiek tijdstip als je het bevragen als je een bevraging deed.</v>
+
+00:17:23.000 --> 00:17:40.000
+<v Michiel Trimpe>Nou, dan zie je dat de de BRP eh besluiten eh nou, historische besluiten doorzoekbaar zijn met een effectieve werking en materiële historie. Nou, dus het is van dan tot dan eh op basis van besluit op moment X.</v>
+
+00:17:40.000 --> 00:17:51.000
+<v Michiel Trimpe>Eh en de technisch formele historisering is dan impliciet. Eh want we gaan er vanuit dat de effectieve toestemming overeenkomt met de technische werkelijkheid.</v>
+
+00:17:51.000 --> 00:17:56.000
+<v Marc de Boer>En dit is de dit zijn de historisering van de</v>
+
+00:17:56.000 --> 00:17:56.000
+<v Michiel Trimpe>Van het beleid.</v>
+
+00:17:56.000 --> 00:17:57.000
+<v Marc de Boer>Van het beleid, niet van de data dat eruit komt.</v>
+
+00:17:57.000 --> 00:18:01.000
+<v Michiel Trimpe>Nee, nee, het gaat om de historisering van het beleid. Ja.</v>
+
+00:18:01.000 --> 00:18:04.000
+<v Michiel Trimpe>Ja.</v>
+
+00:18:04.000 --> 00:18:11.000
+<v Michiel Trimpe>Nou, dit is dan het veldje voor de de semantiek met ook specifieke aandacht voor de juridische semantiek, dus de grondslag.</v>
+
+00:18:11.000 --> 00:18:18.000
+<v Michiel Trimpe>Ehm nou, dan zagen we wat er net net opviel is als je dan hier naar de besluit kijkt.</v>
+
+00:18:18.000 --> 00:18:19.000
+<v Michiel Trimpe>Deze.</v>
+
+00:18:19.000 --> 00:18:25.000
+<v Michiel Trimpe>Dat je dan wel de velden ziet, maar niet per se direct een link hebt naar hoe hoe zijn die velden nou uitgelegd.</v>
+
+00:18:25.000 --> 00:18:30.000
+<v Michiel Trimpe>En je ziet wel de koppelvlakken, maar niet direct een koppeling naar wat het koppelvlak nou precies is.</v>
+
+00:18:30.000 --> 00:18:34.000
+<v Michiel Trimpe>Dat is dan een klein stukje waar je nog beter zou kunnen, maar verder is het gewoon</v>
+
+00:18:34.000 --> 00:18:36.000
+<v Marc de Boer>Dat is extern wel goed gedefinieerd.</v>
+
+00:18:36.000 --> 00:18:41.000
+<v Michiel Trimpe>Precies, dat volgt dan weer uit het logisch ontwerp. In het logisch ontwerp staat beschreven hoe je dat allemaal goed</v>
+
+00:18:41.000 --> 00:18:42.000
+<v Michiel Trimpe>Ja.</v>
+
+00:18:42.000 --> 00:18:46.000
+<v Michiel Trimpe>Ja, logisch ontwerp.</v>
+
+00:18:46.000 --> 00:18:55.000
+<v Michiel Trimpe>Nou, en dan als samenvatting. Uiterst volwassen gepubliceerd toegangsbeleid. Verreweg het beste voorbeeld dat ik heb kunnen vinden.</v>
+
+00:18:55.000 --> 00:18:57.000
+<v Michiel Trimpe>Zeg ik niet alleen omdat jij in de call zit, Hans.</v>
+
+00:18:57.000 --> 00:19:14.000
+<v Michiel Trimpe>Ehm nou, en dan inderdaad als kleine verbetering zou je de relatie naar het semantisch model van wat wat betekent het nou? Zou nog iets makkelijker te volgen en te interpreteren kunnen zijn. Want als je als bezoeker binnenkomt, dan zal je sommige dingen niet direct snappen.</v>
+
+00:19:14.000 --> 00:19:27.000
+<v Michiel Trimpe>Nou, en dat is dan even hoe eh ik de analyse van eh de BRP autorisatiebesluiten heb gedaan.</v>
+
+00:19:27.000 --> 00:19:51.000
+<v Michiel Trimpe>Eén van de dingen die je dus kan bereiken als je van al die registraties weet wat hun beleid is, dat je dan ook de relaties kan zien. Dus als één persoon praat over geboortedatum en die andere over adres en dat soort velden, dat ze dus ook verschillende registraties aan elkaar gekoppeld kunnen worden. Dat ze dezelfde catalogus hebben daaronder, zeg maar, dus</v>
+
+00:19:51.000 --> 00:19:51.000
+<v Hans Hendrikman>Ja, semantiek bedoel je.</v>
+
+00:19:51.000 --> 00:20:04.000
+<v Michiel Trimpe>Niet dat ze allemaal hetzelfde begrijpen bij eh land van herkomst. Wanneer is het herkomst, zeg maar? Dat is het land waar je binnenkwam, toen je de eerste grens over ging, of waar je geboren bent, of waar je paspoort vandaan komt, zeg maar, dat soort dingen.</v>
+
+00:20:04.000 --> 00:20:09.000
+<v Michiel Trimpe>En die definitie, zeg maar, van die term,</v>
+
+00:20:09.000 --> 00:20:12.000
+<v Michiel Trimpe>eh dat die</v>
+
+00:20:12.000 --> 00:20:14.000
+<v Hans Hendrikman>Als verschillende registraties dezelfde definitie gebruiken, dan kan je dus in het stelsel dat aan elkaar koppelen.</v>
+
+00:20:14.000 --> 00:20:26.000
+<v Michiel Trimpe>Ja, maar dat dat dan gaat het meer over de eh de semantische eh koppelbaarheid, want dat heb je natuurlijk op een gegeven moment wel nodig als je over meerdere datasets heen iets wil.</v>
+
+00:20:26.000 --> 00:20:29.000
+<v Michiel Trimpe>Eh maar dat gaat dan over de data zelf.</v>
+
+00:20:29.000 --> 00:20:35.000
+<v Hans Hendrikman>Ja, dat dacht ik even. Ook als je je beleid, zoals die velden die met de BRP noemde, dat je dus ook linked data daarvan kan maken.</v>
+
+00:20:35.000 --> 00:20:47.000
+<v Michiel Trimpe>Ja, ja, je kan het relateren aan bijvoorbeeld de core vocabularies van de EU. En dan heb je weer een kapstok waar je als verschillende databronnen je aan zou kunnen ophangen.</v>
+
+00:20:47.000 --> 00:20:48.000
+<v Michiel Trimpe>Ja.</v>
+
+00:20:48.000 --> 00:21:01.000
+<v Michiel Trimpe>En je hebt er komen ook nog interessante dingen terug. Dan zou ik direct naar de workshop gaan, maar inderdaad wat je bijvoorbeeld ziet hier in de zorg is dat zowel IBNZ als KIK-V gebruiken het concept van eh zorgkantoor.</v>
+
+00:21:01.000 --> 00:21:08.000
+<v Michiel Trimpe>Maar dat zou mooi zijn als je daar dan een verwijzing kan hebben naar de echt zelfde semantische definitie van wat</v>
+
+00:21:08.000 --> 00:21:09.000
+<v Hans Hendrikman>Hetzelfde begrip.</v>
+
+00:21:09.000 --> 00:21:10.000
+<v Michiel Trimpe>Hetzelfde begrip. Ja.</v>
+
+00:21:10.000 --> 00:21:16.000
+<v Michiel Trimpe>Nou, dat is dan een interessant dingetje wat je hierop zou kunnen zetten. Hey, eh</v>
+
+00:21:16.000 --> 00:21:21.000
+<v Michiel Trimpe>En dan ga je zien hoe je toe kan voegen. Dus hierboven heb je dan wat sticky's. Eh groot en klein.</v>
+
+00:21:21.000 --> 00:21:26.000
+<v Michiel Trimpe>En dan zou je hier bijvoorbeeld het stickie neer kunnen zetten.</v>
+
+00:21:26.000 --> 00:21:34.000
+<v Michiel Trimpe>Delen definitie party.</v>
+
+00:21:34.000 --> 00:21:43.000
+<v Michiel Trimpe>Nou, bijvoorbeeld. Dus dan heb ik hier een kleine opmerking van: hey, als je kijkt naar deze twee, dan delen ze dit stukje semantiek.</v>
+
+00:21:43.000 --> 00:21:52.000
+<v Michiel Trimpe>Ehm dan wil ik nu even naar eh het workshop stukje. Dus dan nodig ik iedereen uit om eh daar gewoon een beetje rond te kijken.</v>
+
+00:21:52.000 --> 00:22:10.000
+<v Michiel Trimpe>En kies eh een paar uit, open wat pagina's, krijg een beeld van eh ja, wat wat zit daar nou? We hebben hier ook internationaal heb ik met een sterretje en een blauwe de wat interessantere neergezet. Hier van alles meer hebben.</v>
+
+00:22:10.000 --> 00:22:18.000
+<v Michiel Trimpe>Ehm ik heb maar twee afnemers kunnen gevonden kunnen vinden. Eh mijn mijn oude werkgever en de dingen die ik daar mede gebouwd heb.</v>
+
+00:22:18.000 --> 00:22:28.000
+<v Michiel Trimpe>Ehm dus als je daar wil kijken, dan kun je hier naartoe. En dan zou ik zeggen eh we nemen een kwartiertje, 20 minuten en ga los.</v>
+
+00:30:08.000 --> 00:30:13.000
+<v Onbekend>(hoest)</v>
+
+00:30:13.000 --> 00:30:23.000
+<v Michiel Trimpe>(onverstaanbaar)</v>
+
+00:30:44.000 --> 00:31:00.000
+<v Floris Deutekom>(drinkt)</v>
+
+00:31:00.000 --> 00:31:10.000
+<v Guus van der Meer>(onverstaanbaar)</v>
+
+00:32:03.000 --> 00:32:22.000
+<v Igor van Haren>(onverstaanbaar)</v>
+
+00:32:22.000 --> 00:32:32.000
+<v Michiel Trimpe>(onverstaanbaar)</v>
+
+00:33:42.000 --> 00:33:52.000
+<v Michiel Trimpe>(onverstaanbaar)</v>
+
+00:34:18.000 --> 00:34:31.000
+<v Michiel Trimpe>Als we dan eh af te ronden.</v>
+
+00:34:31.000 --> 00:35:00.000
+<v Michiel Trimpe>Als je</v>
+
+00:35:00.000 --> 00:35:10.000
+<v Michiel Trimpe>Als we dan eh</v>
+
+00:36:10.000 --> 00:36:38.000
+<v Guus van der Meer>(onverstaanbaar)</v>
+
+00:36:38.000 --> 00:36:40.000
+<v Michiel Trimpe>de laatste loodjes voor iedereen.</v>
+
+00:36:40.000 --> 00:36:44.000
+<v Michiel Trimpe>Dan gaan we over in de twee in de twee minuten wat betreft.</v>
+
+00:36:44.000 --> 00:36:54.000
+<v Michiel Trimpe>Gezamenlijk.</v>
+
+00:37:31.000 --> 00:37:36.000
+<v Michiel Trimpe>Nou, nog iemand druk druk bezig of kunnen we</v>
+
+00:37:36.000 --> 00:37:40.000
+<v Michiel Trimpe>beginnen?</v>
+
+00:37:40.000 --> 00:37:46.000
+<v Michiel Trimpe>Nou, dat interpreteer ik dan als we kunnen beginnen.</v>
+
+00:37:46.000 --> 00:37:55.000
+<v Michiel Trimpe>Ehm, nou, dus terugkomend naar het eh gezamenlijke deel. Ehm.</v>
+
+00:37:55.000 --> 00:38:04.000
+<v Michiel Trimpe>Kijk, ik denk dat eh ik ik het scherm openhoud met de de Miro en daar doorheen kan scrollen op suggesties van mensen.</v>
+
+00:38:04.000 --> 00:38:21.000
+<v Michiel Trimpe>Allereerst, eh is er iemand die eh zeg maar algemene observaties wil delen van we hebben een aantal dingen bekeken en wat viel op zo over het algemeen?</v>
+
+00:38:21.000 --> 00:38:30.000
+<v Igor van Haren>Ik vond het in ieder geval overal verschillend. Dat vond ik wel grappig. Ik eh alles was verschillend, dat vond ik wel een eh leuke eh.</v>
+
+00:38:30.000 --> 00:38:30.000
+<v Michiel Trimpe>Ja.</v>
+
+00:38:30.000 --> 00:38:41.000
+<v Igor van Haren>observatie. Ja, niet zoveel overeenkomsten in ieder geval eh tussen de de opstellingen. Dat vond ik wel opvallend.</v>
+
+00:38:41.000 --> 00:38:51.000
+<v Michiel Trimpe>Ja. Zeker, dat was net ook één van mijn eerste observaties.</v>
+
+00:38:51.000 --> 00:38:55.000
+<v Michiel Trimpe>Nog andere? Ja, veel mensleesbare aspecten gericht.</v>
+
+00:38:55.000 --> 00:38:58.000
+<v Marc de Boer>Maar dat is misschien ook het kanaal wat we gebruiken.</v>
+
+00:38:58.000 --> 00:39:08.000
+<v Marc de Boer>Het zijn natuurlijk via websites eh dit eh het zijn links naar websites, dus misschien dat het machineleesbare er ook is, maar dat niet direct leesbaar.</v>
+
+00:39:08.000 --> 00:39:20.000
+<v Michiel Trimpe>Ja, ik heb expliciet geprobeerd zoveel mogelijk ook technisch beleid te zoeken en dit was alles wat ik heb kunnen vinden. Maar het kan zijn dat het technisch beleid nog moeilijker verstopt is.</v>
+
+00:39:20.000 --> 00:39:32.000
+<v Marc de Boer>Ja, of goed openbaar. Ja, inderdaad.</v>
+
+00:39:32.000 --> 00:39:38.000
+<v Marc de Boer>En dat vermoedt dat er overal een technische representatie is van wat je hier leest met alle foutgevoeligheid van die.</v>
+
+00:39:38.000 --> 00:40:04.000
+<v Michiel Trimpe>Ja.</v>
+
+00:40:04.000 --> 00:40:14.000
+<v Marc de Boer>Ik heb mij even gefocust op dat eh Amsterdam stuk, omdat het eh de afnemers was en eh zie ik dat ze enorm een eh best gedaan hebben om allerlei verschillende om gelijkvormige registraties die ze wel gebruiken bij de gemeente. Allemaal eh.</v>
+
+00:40:35.000 --> 00:40:40.000
+<v Marc de Boer>Eh te modelleren en daar eh toegangbeleid op te hebben.</v>
+
+00:40:40.000 --> 00:40:46.000
+<v Marc de Boer>Het is echt eh heel gedetailleerd. Maar juist dat het hè, juist dat ze allemaal zo verschillend zijn.</v>
+
+00:40:46.000 --> 00:40:53.000
+<v Marc de Boer>Ze hebben duidelijk een wet gedaan om enige gelijkheid te krijgen in het gebruik daarvan.</v>
+
+00:40:53.000 --> 00:40:58.000
+<v Michiel Trimpe>Ja. Ze hebben het helemaal zelf gedaan, dus ze verwijzen niet naar de bron.</v>
+
+00:40:58.000 --> 00:41:06.000
+<v Marc de Boer>Semantiek of de toegangbron, maar ze hebben een eigen semantiek en een eigen toegangsbeleid.</v>
+
+00:41:06.000 --> 00:41:14.000
+<v Michiel Trimpe>Eh op het gebruik van al die bronnen. Dat denk ik in ieder geval.</v>
+
+00:41:14.000 --> 00:41:18.000
+<v Michiel Trimpe>Ja. Ja.</v>
+
+00:41:18.000 --> 00:41:33.000
+<v Michiel Trimpe>Ja, en je mensen machine leesbaar, maar wel voornamelijk machine leesbaar in dit geval, volgens mijn realisatie ook. Het is eh. Het is zelfs zo dat ze overal een wet gedaan om descriptions bij te zetten en die kan je eh in een boom zetten.</v>
+
+00:41:33.000 --> 00:41:34.000
+<v Michiel Trimpe>Dus dan is het wel te begrijpen.</v>
+
+00:41:34.000 --> 00:41:58.000
+<v Michiel Trimpe>Er staan niet moeilijke veldnamen of nummers, alleen er staan overal waar het kan staat eh beschrijving van een rol bijvoorbeeld, een profiel noemen ze dat zeg maar. Je hebt je burgerservicenummer van een natuurlijke persoon. Er staat ook eh parkeerwachter eh niet in dienst van de gemeente. Het staat wel uitgeschreven, dus.</v>
+
+00:41:58.000 --> 00:42:00.000
+<v Marc de Boer>Ja, klopt.</v>
+
+00:42:00.000 --> 00:42:20.000
+<v Michiel Trimpe>Het is wel een heel technisch voorbeeld, dus dat een dataset natuurlijke personen bij de HR KVK met de de de redenen voor niet publicatie. Maar hier ook bijvoorbeeld een een authenticatie tag voor rollen op het BSN.</v>
+
+00:42:20.000 --> 00:42:30.000
+<v Michiel Trimpe>Dus dat het vanuit de techniek naar boven gekomen is.</v>
+
+00:42:30.000 --> 00:42:43.000
+<v Michiel Trimpe>Oké. Eh nog andere? Is er iemand anders eentje geanalyseerd die zegt: "Hé, dat is interessant" of eh "Dat viel me op"?</v>
+
+00:42:43.000 --> 00:42:46.000
+<v Marc de Boer>Ik had nog naar de de WOS eh gekeken.</v>
+
+00:42:46.000 --> 00:42:56.000
+<v Marc de Boer>En dat was een Excel en dat eh gaf de indruk dat het eh wel gestructureerd, maar ik kon me niet voorstellen dat het goed machine leesbaar was.</v>
+
+00:42:56.000 --> 00:42:59.000
+<v Marc de Boer>Ja, ik had diegene rechtsonder had ik eh genomen die eh.</v>
+
+00:42:59.000 --> 00:43:14.000
+<v Michiel Trimpe>Ja, dan moet ik het screenshare.</v>
+
+00:43:14.000 --> 00:43:32.000
+<v Marc de Boer>Ja, dus de de dat waren dat waren gewoon eh Excelen met eh nou, redelijk systematisch dingen, maar ja, wel ook textueel verfijningen aangebracht waarvan ik denk van hier gaat de machine geen chocola van maken.</v>
+
+00:43:32.000 --> 00:43:32.000
+<v Michiel Trimpe>Eh.</v>
+
+00:43:32.000 --> 00:43:36.000
+<v Marc de Boer>Dus dat betekent dat er nog iets anders is om daar invulling aan te geven.</v>
+
+00:43:36.000 --> 00:43:43.000
+<v Michiel Trimpe>Ja. Dat is denk ik niet leesbaar.</v>
+
+00:43:43.000 --> 00:43:50.000
+<v Michiel Trimpe>Of eh dat dit is dan inderdaad de verschillende omgevingen en.</v>
+
+00:43:50.000 --> 00:43:57.000
+<v Marc de Boer>Ja, en als ze daar van die jaatjes tussen haakjes nog dingen daarachter, dan denk ik van daar gaat de machine geen chocola van maken.</v>
+
+00:43:57.000 --> 00:44:00.000
+<v Michiel Trimpe>Ja, inderdaad.</v>
+
+00:44:00.000 --> 00:44:10.000
+<v Marc de Boer>Dus dat roept de vraag op dat is vast nog wat anders. Ja. En dit is dan weer een leesbare samenvatting daaruit of zo, maar dat.</v>
+
+00:44:10.000 --> 00:44:16.000
+<v Michiel Trimpe>Ja.</v>
+
+00:44:16.000 --> 00:44:27.000
+<v Michiel Trimpe>Inderdaad. Dat zie je dan vaak terugkomen. Dat zijn de algemene opmerkingen voornamelijk mensleesbaar in de praktijk.</v>
+
+00:44:27.000 --> 00:44:33.000
+<v Michiel Trimpe>Iemand komt te zeggen.</v>
+
+00:44:33.000 --> 00:44:36.000
+<v Michiel Trimpe>Ik onderbrak iemand volgens mij. Ik zie niemand met een handje omhoog, dus ik denk het niet.</v>
+
+00:44:36.000 --> 00:44:37.000
+<v Marc de Boer>Oké.</v>
+
+00:44:37.000 --> 00:44:47.000
+<v Michiel Trimpe>Ik hoorde wat eh even wat geluid.</v>
+
+00:44:47.000 --> 00:45:04.000
+<v Michiel Trimpe>Nou, heeft iemand anders nog een eh iets wat ze willen delen of wat opviel?</v>
+
+00:45:04.000 --> 00:45:09.000
+<v Floris Deutekom>Floris, wil jij wat op? Maria?</v>
+
+00:45:09.000 --> 00:45:35.000
+<v Maria Dziouba>Nou, voor mij was het iets te kort om diep. Ik heb de eentje van California gepakt, was eh, nou ja, ik was voornamelijk op zoek naar waar ik die informatie kon vinden. Ehm, tot nu toe wat ik kon vinden was het relatief oppervlakkig. Het is meer een afspraak van we gaan data met elkaar delen en dat moet ongeveer zo uitzien. Maar eh, het de technische aspecten, de de specifieke afspraken vond ik wat lastig om te vinden.</v>
+
+00:45:35.000 --> 00:45:40.000
+<v Michiel Trimpe>Ja.</v>
+
+00:45:40.000 --> 00:45:58.000
+<v Floris Deutekom>Ja, ik neem wel mee, ook al viel, maar het is een beetje een vervolgvraag op wat eerder gezegd is, is eh het abstractieniveau van van duiding is is ook heel heel wisselend. En soms wijst het echt echt gewoon naar oké, naar een wet en soms zegt het nou ja, zoek maar hier maar ergens. Een beetje</v>
+
+00:45:58.000 --> 00:46:17.000
+<v Maria Dziouba>Ja, er wordt vaak verwezen naar de DSA, de Data Sharing Agreement, maar vervolgens is die onvindbaar. Om echt te graven graven graven om de link te vinden. Dus eh, nou, dat is ook iets om aan te leren denk ik.</v>
+
+00:46:17.000 --> 00:46:27.000
+<v Michiel Trimpe>Ja. Inderdaad. Ik denk dat dat een hele herkenbare realisatie ook voor mij was inderdaad, dat je dat vaak vaak ziet. En dat is denk ik wat we overal terugkomen, dus vaak is er wel wat mensen leesbaars beschikbaar, maar op verschillend en vaak best hoog niveau. En het technische stuk is relatief zeldzaam. En iedereen doet het echt overal anders.</v>
+
+00:46:50.000 --> 00:47:00.000
+<v Michiel Trimpe>Ja. Nou, wat mij ook nog opviel hierarchie is dat je nou ook net een aantal verschillende ingangen hebt. Dus inderdaad, nou, dat is vaak per registratie, per systeem, per stelsel. De de internationale is het overal bijna altijd DSA, maar of ja, dat is vaak dan echt wel gewoon contractueel gericht. Eh, maar je hebt soms ook andere, dus bijvoorbeeld Suwinet die echt ehm per pagina binnen Suwinet eigenlijk zegt te autoriseren. Dit is het autorisatieniveau. Eh, waar daar ook wel interessant is dat zij expliciet zeggen, maar de afnemer moet dit zelf inrichten. Alleen hoe de afnemers dat dan ingericht hebben is niet beschikbaar. Even kijken. Misschien is het wel even leuk om dat pagina te laten zien. Dus hier zie je dat zeg maar dit zijn dan de Suwi autorisatieniveaus. Dus een overzichtspagina, handhaving met taken rondom handhaving en beoordelingsonderzoek. En dat suggereert een beetje een webapplicatie voor menselijke consumptie om het zo maar te zeggen.</v>
+
+00:47:58.000 --> 00:48:00.000
+<v Marc de Boer>Ja, dit is ook Suwinet Inkijk technisch gezien.</v>
+
+00:48:00.000 --> 00:48:10.000
+<v Michiel Trimpe>Ja. Waar dit over gaat. Ja. Nou, ik denk dat dit ehm, ik hoor ook wat ik terug hoor qua feedback is net ook een beetje wat ik wat ik merkte, wat ik ook even wilde zien en en delen. Ehm, met een eh een aantal opvallende dingen. Oh ja, ALB was ook wel interessant. Ehm, het de vraag is of dit nou echt toegangsbeleid is of dat het een attribuut voor toegangsbeleid is. Maar wat je wel zag is dat ze hier eh eigenlijk wel een soort linked data referentie naar wetten op hebben geprobeerd te lijnen. Eh, dus dat is wel een leuke, dus dan zie je echt dat ja, het ziet er een beetje de lijkt me alsof het de grondslagen zijn eh.</v>
+
+00:48:50.000 --> 00:49:08.000
+<v Marc de Boer>Ja.</v>
+
+00:49:08.000 --> 00:49:18.000
+<v Michiel Trimpe>Ehm, maar her en der zit er dan ook een stukje tekst in tussen door. Iets snel vinden, maar hier. Ja. Dus en en dit mee. Dat is wel een hele interessante. Oké. Nou, dit is dan de eh de evaluatie van hé, dit is dus het toegangsbeleid internationaal. Ehm, blijft toegankelijk, dus eh voel je vooral ook vrij om later nog eens een keer wat meer door te kijken, hier in te vullen wat er nog. Ehm, en dit is dus het speelveld waar wij ons eigenlijk op gaan bewegen. Want dit is wel wat wij in willen vullen en precies wat allemaal zeggen, hé, het is nu overal anders. Ik stop met delen. Ehm, en dat willen wij autoriseren, I guess, voor de standaard.</v>
+
+00:49:54.000 --> 00:50:09.000
+<v Marc de Boer>Jazeker, vanuit de FDS is er een behoefte om op een eenvormige manier inzichtelijk te maken welk toegangsbeleid wordt gehanteerd voor het ontsluiten van de dataset, maar ook eh voor het gebruik van de afgenomen data.</v>
+
+00:50:09.000 --> 00:50:35.000
+<v Michiel Trimpe>Ja. En als we dit allemaal zien, welke welke oplossingsrichtingen zien we al voor ons van hé, eh, nou ja. Dus je kijkt wie wat gedaan heeft. Moeten we iets als voorbeeld gaan meenemen? Eh, moeten we bepaalde richting op?</v>
+
+00:50:35.000 --> 00:50:40.000
+<v Michiel Trimpe>Het is lastig om in het digitale Ja, ik kan het niet meer. Ja, om een discussie op gang te brengen, want je kijkt meer toch?</v>
+
+00:50:40.000 --> 00:50:50.000
+<v Marc de Boer>Ik ik ik zou kijken van eh pak een eh een een aantal objecten of een object zo zo'n policy en verwacht wat je daar minimaal als attributen aan wil zien om het effectief te krijgen. Ehm, en wil je weten dat er een paar patronen zijn, hè, want je hebt verschillende vormen van policies en die vergen misschien verschillende attributen. Je ziet wel een paar dingen terugkomen, dat dat een dat een een partij of een groep partijen of een rol van een partij nodig is om het ergens aan te binden. En je hebt het moet ook van toepassing zijn op een op een gegeven of een gegevenselement of een eh of in ieder geval ook een ontsluiting van het gegeven. Dus dat dat soort links heb je nodig om het eh toegepast te krijgen.</v>
+
+00:51:32.000 --> 00:51:40.000
+<v Marc de Boer>Misschien een een soort van basis informatiemodelletje wat je eigenlijk altijd wel weer terug ziet komen. Hm hm. Van de policy.</v>
+
+00:51:40.000 --> 00:51:57.000
+<v Michiel Trimpe>Ja. Ja, en je mijn mijn takeaway tot nu toe was dat eigenlijk de dus de BRP de de ja, het beste voorbeeld is, ook internationaal gezien gewoon, zeg maar, unrivaled wat betreft eh in alle andere situaties.</v>
+
+00:51:57.000 --> 00:52:07.000
+<v Michiel Trimpe>Ja, qua granulariteit ook voldoende zeg maar. Ik bedoel, eh, er is geen context.</v>
+
+00:52:07.000 --> 00:52:17.000
+<v Marc de Boer>Mogelijk heeft hij in de BRP. Dus het is niet eh dat je met een bepaalde eh Ja, klopt.</v>
+
+00:52:17.000 --> 00:52:27.000
+<v Michiel Trimpe>Veiligheid van verbinding moet hebben of dat het alleen in werktijden mag of dat het alleen als zeg maar de geen andere condities dan die granulariteit die je noemde, dus de eh.</v>
+
+00:52:27.000 --> 00:52:30.000
+<v Marc de Boer>Nou, die condities zijn er wel, maar die zitten niet in die autorisatieregels.</v>
+
+00:52:30.000 --> 00:52:36.000
+<v Michiel Trimpe>Ja, inderdaad, dat is een interessante dus.</v>
+
+00:52:36.000 --> 00:53:02.000
+<v Gideon Zegwaard>Even een hele andere as. Eh, hebben wij helder welke vragen wij eh welke vragen er eigenlijk achter deze oplossingen zitten? Hebben we daar een scherp lijstje van? Dit dit zijn de use cases.</v>
+
+00:53:02.000 --> 00:53:09.000
+<v Michiel Trimpe>Ehm, ja, dus wat is wat is onze scoping? Ehm.</v>
+
+00:53:09.000 --> 00:53:19.000
+<v Marc de Boer>Ja, vanuit de FDS kan ik daar wat dingen benoemen, maar de scope is denk ik wat breder. Dus vanuit de FDS is volgens mij tweeledig. Dus enerzijds is iemand die data af wil nemen van een aanbieder, die wil weten aan welke eh policies hij moet voldoen om die data af te mogen nemen. En daar moet dus overeenstemming over hebben. Dus dan moeten ze beide snappen hoe ze die policy moeten het beleid moeten interpreteren. En de andere use case, dat is een aanbieder die wil gegevens ter beschikking stellen, maar die eist of die die wil inzage in het beleid, toegangsbeleid in het gebruik door de afnemer, zodat die vertrouwen heeft dat het op een rechtmatige manier gebruikt wordt.</v>
+
+00:53:54.000 --> 00:54:13.000
+<v Michiel Trimpe>Oké. Dus als we het erover eens zijn dat dit de twee use cases zijn, dan kunnen we op basis daarvan eh inderdaad dan een soort explicitering van eh eh wat wat is er? Even heel plat, wat is het datamodelletje wat we dan voor ons zien eh op basis van al die dingen die we hier zien.</v>
+
+00:54:13.000 --> 00:54:23.000
+<v Marc de Boer>Nou, volgens mij zit die BRP die zit een beetje aan de ene kant, hè. Dus dat is een eh eh dat geeft aan van onder welke condities je mag gebruiken. En de Amsterdam die zit wat meer aan de andere kant. Dat is het beleid voor het gebruik. En eh eh dat zou voor een aanbieder als de BRP zou dat eh voor RVO met de BRP zou dat vertrouwen geven dat Amsterdam als afnemer zijn zijn gebruik van de BRP gegevens goed ingericht heeft. Dat dat is nog weinig gebruikelijk dat dat eh eh dat op die manier inzicht wordt gegeven, maar dat hindert ook het delen van de gegevens.</v>
+
+00:54:49.000 --> 00:54:59.000
+<v Michiel Trimpe>En de eh eh verantwoording afleggen. Ik bedoel, ik zie heel duidelijk dat je hier in Amsterdam kunnen ze precies uitleggen waarom een parkeerwachter eh iemand mag zoeken of een eh een auto en een vergunning en dan alleen de parkeervakken of een gebied en dan dus die auto in dat hij mag de rest niet zien die parkeerwachter, maar hij mag wel zien dat het binnen dat gebied ligt wat hij weet in welk gebied hij loopt, zeg maar. En ze kunnen dus goed uitleggen waarom iemand persoonsgegevens op een adres gekoppeld aan een auto heeft opgezocht en gebruikt heeft om te kijken of iemand daar legaal staat, zeg maar. Dus achteraf kunnen uitleggen waarom je iets gedaan hebt. Eh, is fysiek ze gebruiken dit voor twee twee doelen. Dus om op dat moment ook parkeerwachter niet meer te geven dan die nodig heeft. Maar ook achteraf te kunnen uitleggen waarom het oké was dat die parkeerwachter dat gedaan heeft. Ja, dat is volledig geautomatiseerd kunnen doen. Ik denk dat FDS ook zegt dat wil je eigenlijk bij je afnemers kunnen vereisen, zeg het beste afnemer leg uit wat je verantwoordt je beleid.</v>
+
+00:55:51.000 --> 00:55:53.000
+<v Marc de Boer>Ja, dus inderdaad ook verantwoording.</v>
+
+00:55:53.000 --> 00:55:55.000
+<v Michiel Trimpe>De statement van Gideon zat impliciet voor hem ook al de verantwoording.</v>
+
+00:55:55.000 --> 00:56:05.000
+<v Marc de Boer>Ja, in die zin dat je je zou als aanbieder het beleid kunnen hebben dat je dat als afnemer kan verantwoorden.</v>
+
+00:56:05.000 --> 00:56:06.000
+<v Michiel Trimpe>Ja, en je wat ik ook wil.</v>
+
+00:56:06.000 --> 00:56:09.000
+<v Marc de Boer>Dat zou een soort van metabeleid worden, een metapolicy worden dat ook.</v>
+
+00:56:09.000 --> 00:56:11.000
+<v Michiel Trimpe>Ik bedoel ook een policy dat je policies hebt.</v>
+
+00:56:11.000 --> 00:56:21.000
+<v Marc de Boer>Is dit een inzicht tot de tot de WO verhoudt? Want stel dat je een een WO verzoek naar al deze aanbieders doet en zegt de beste mensen, wat is uw afnemersbeleid? Ehm, nou, zou je dat zo daar dat kan je ook zien als een een soort proactieve manier om die openheid te bieden. Ik denk dat dat inderdaad de alle functionele kaders zijn die we met z'n allen hebben. Ik vond het een interessante case op zich wel dat bij Amsterdam combineren ze dus andere basisregistraties met eigen gegevens. Drie minuten. Dus je gaat over die ze ze hebben recht om die data te gebruiken. Dat is zo afgesproken met het eh de EDW en met ze de met de BRP, maar ze combineren het ook tot nieuwe informatie en daar geven ze ook verantwoording aan. Waarom het oké is om dingen te combineren. Het gaat dus wel degelijk iets stelsel aan. Ja. Dat vind ik wel een interessante als we het hebben over eh als wij een standaard gaan bedenken of dat je beleid kan uitlezen, dat je het beleid zo kan combineren of eigen beleid kan hebben op basis van gecombineerde eh informatie. Want daar komt natuurlijk ook heel veel vrij. Het koppelen van registraties waar je nieuwe informatie uit kan afleiden.</v>
+
+00:57:23.000 --> 00:57:33.000
+<v Marc de Boer>Ja, en daar daar kan opeens informatie die je bijvoorbeeld eh los eh nog niet zo gauw als persoonsgegevens beschouwd, opeens wel persoonsgegevens worden.</v>
+
+00:57:33.000 --> 00:57:54.000
+<v Michiel Trimpe>Bijvoorbeeld. Combinatie van een persoon, een auto en een observatie dat een auto ergens staat kan nieuwe informatie geven. Ja. En daar zie je het ook andersom, dat je als die dingen samenvoegt je soms een aantal dingen wel kan delen, maar op een aantal niveau niet. Dus bijvoorbeeld zeg maar op beleidsniveau mag je wel weten wat eh hoeveel bonnetjes er gelegd waren.</v>
+
+00:57:54.000 --> 00:57:55.000
+<v Marc de Boer>Die zien we vaak terug.</v>
+
+00:57:55.000 --> 00:58:02.000
+<v Michiel Trimpe>Zeg maar een soort van pseudonimisering of wat dan ook op groepsniveau om het doel. Ja.</v>
+
+00:58:02.000 --> 00:58:04.000
+<v Hans Hendrikman>Jongens, ik moet er vandoor.</v>
+
+00:58:04.000 --> 00:58:26.000
+<v Michiel Trimpe>Ja. Dankjewel. Goed je erbij te hebben. Ehm, en nou, ik denk dat de volgende ehm iemand zei van ja, de ergens net net hé, hoe gaan we dit nou in een informatiemodelletje pakken wat alles dekt? En ik denk de volgende stap dat we misschien dan gewoon één van deze dimensies moeten gaan bekijken, hé, hoe zou het in dat model passen?</v>
+
+00:58:26.000 --> 00:58:32.000
+<v Marc de Boer>Ja, wat zit er in de ODRL wat goed past op wat we hier voorbij zien komen.</v>
+
+00:58:32.000 --> 00:58:39.000
+<v Michiel Trimpe>Oké. Nou, dank jullie allemaal voor jullie aanwezigheid. En tot de volgende.</v>
+
+00:58:39.000 --> 00:58:41.000
+<v Hans Hendrikman>Yo. Hoi.</v>
+
+00:58:41.000 --> 00:58:46.000
+<v Michiel Trimpe>Hoi hoi.</v>

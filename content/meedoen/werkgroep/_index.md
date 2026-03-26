@@ -55,7 +55,7 @@ Data komende werkgroepen:
 
 2026
 
-- 17 maart: verkenning publiek toegangsbeleid]
+- 17 maart: Verkenning publiek toegangsbeleid ([Notulen]({{% relref "verkenning-publiek-toegangsbeleid" %}}))
 - 3 maart: Introductie ODRL voor register toegangsbeleid ([Notulen]({{% relref "introductie-odrl" %}}))
 - 17 februari: Kick off register toegangsbeleid ([Notulen]({{% relref "kick-off-register-toegangsbeleid" %}}))
 
