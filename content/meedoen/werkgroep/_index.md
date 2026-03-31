@@ -47,7 +47,6 @@ De werkgroep vindt elke twee weken plaats op **dinsdag van 10:00 tot 11:00**, on
 
 Data komende werkgroepen:
 
-- 31 maart
 - 14 april
 - 28 april
 
@@ -55,6 +54,7 @@ Data komende werkgroepen:
 
 2026
 
+- 31 maart: Modellering toegangsbeleid BRP-keten ([Notulen]({{% relref "modellering-toegangsbeleid-brp-keten" %}}))
 - 17 maart: Verkenning publiek toegangsbeleid ([Notulen]({{% relref "verkenning-publiek-toegangsbeleid" %}}))
 - 3 maart: Introductie ODRL voor register toegangsbeleid ([Notulen]({{% relref "introductie-odrl" %}}))
 - 17 februari: Kick off register toegangsbeleid ([Notulen]({{% relref "kick-off-register-toegangsbeleid" %}}))
