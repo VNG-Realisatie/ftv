@@ -1,0 +1,1267 @@
+WEBVTT
+
+00:00:03.951 --> 00:00:05.111
+<v Michiel Trimpe>Oké.</v>
+
+00:00:07.411 --> 00:00:13.121
+<v Michiel Trimpe>Is de opname gestart bij deze. Beginnen met de kick-off.</v>
+
+00:00:14.441 --> 00:00:22.951
+<v Michiel Trimpe>Nou, zoals gebruikelijk openen we even met de agenda. Ehm, dus vandaag eh nou, we beginnen met de gebruikelijke welkomst en kennismaking.</v>
+
+00:00:23.631 --> 00:00:30.171
+<v Michiel Trimpe>Vijf minuten voor, maar als er geen nieuwe mensen zijn kan dat korter. Eh een kleine update van de subwerkgroepen.</v>
+
+00:00:31.521 --> 00:00:45.021
+<v Michiel Trimpe>En dan twee presentaties. Ehm, de eerste presentatie wordt eh over AuthZ/N en eh GraphQL door het iWlz team. Eh, volgens mij drie organisaties, dus ik heb hem even zo genoemd.</v>
+
+00:00:45.891 --> 00:00:55.071
+<v Michiel Trimpe>En daarna een stuk SPARQL eh door Lock Unlock. En een klein stukje van mij over eh hoe we mogelijk eh kunnen integreren met Linked Data.</v>
+
+00:00:55.771 --> 00:01:05.731
+<v Michiel Trimpe>En dan tot slot eh de bepaling van het volgende onderwerp, van de volgende onderwerpen voor de volgende sessie. Eh volle agenda, dus ik stel voor dat we gelijk van start gaan.</v>
+
+00:01:07.411 --> 00:01:10.121
+<v Michiel Trimpe>En voor de update van de subwerkgroep geef ik eerst Michael het woord.</v>
+
+00:01:12.331 --> 00:01:21.281
+<v Maikel Hofman>Yes, dank je. Eh vorige week hebben we weer een nieuwe subwerkgroep of de nieuwe werkgroep geweest van de eh werkgroep eh logging.</v>
+
+00:01:21.281 --> 00:01:29.131
+<v Maikel Hofman>Eh de eerste stap die we daar gedaan hebben, aangezien we nu naar Engelse namen overgaan, is besloten dat het de decision log gaat heten. We hebben het lekker simpel gehouden.</v>
+
+00:01:30.121 --> 00:01:38.381
+<v Maikel Hofman>Eh we gaan nu ook elke twee weken eh de subwerkgroep doen. Er was in verband met vakanties even wat langer geduurd voordat de volgende was.</v>
+
+00:01:40.421 --> 00:01:51.311
+<v Maikel Hofman>Ehm, ja, we zijn verder gegaan met het uitwerken van de standaard. Eh zoals de vorige keer al doorgegeven, hebben we daar een website voor. Die zal ik nog even eh sturen, eventueel in de in de notule meesturen.</v>
+
+00:01:52.921 --> 00:02:05.971
+<v Maikel Hofman>Ehm, even kijken naar mijn notities hierzo. Eh ja, we hebben daar daarbij het hoofddoel vastgesteld van de standaard is dus uniforme vastlegging van toegangsbeslissingen voor verantwoording binnen eh zowel organisaties als de overheid.</v>
+
+00:02:07.291 --> 00:02:10.591
+<v Maikel Hofman>Eh daarbij ook repairability als een één van de hoofddoelen neergezet.</v>
+
+00:02:12.181 --> 00:02:18.991
+<v Maikel Hofman>Ehm, dit gaan we allemaal verder uitwerken in de standaard die online komt.</v>
+
+00:02:19.411 --> 00:02:31.251
+<v Maikel Hofman>Ik zit even te kijken. Voor de volgende werkgroep wil ik eh misschien wat meer tijd nemen zodat we ook een korte presentatie kunnen geven van wat we op dat moment al hadden. We zijn nu ook bezig met alles te vertalen naar het Engels. Kost even wat tijd.</v>
+
+00:02:31.911 --> 00:02:45.921
+<v Maikel Hofman>Ik had wel een vraag voor de grotere werkgroep eh en dat is, we hadden een vraag over de scopebeperking. Eh want wij zaten met willen we de scope voor de voor deze standaard alleen binnen de Nederlandse overheid hebben.</v>
+
+00:02:46.431 --> 00:02:54.021
+<v Maikel Hofman>Maar aangezien we het nu ook in het Engels doen, zou het mogelijk ook interessant kunnen zijn om een bredere, internationalere scope te definiëren.</v>
+
+00:02:55.201 --> 00:03:10.511
+<v Maikel Hofman>Ik weet niet hoe de werkgroep daarover denkt en hoe dat ook past met de toegankelijkheidsstandaard. Of de toegankelijkheidsstandaard eh... Ik ben even de naam kwijt. Onze de standaard van de werkgroep.</v>
+
+00:03:16.891 --> 00:03:23.231
+<v Michiel Trimpe>Zullen we dit naar EU-niveau tillen bijvoorbeeld of internationaal zelfs? Of houden we de scope gewoon binnen Nederland?</v>
+
+00:03:24.381 --> 00:03:27.911
+<v Igor van Haren>Zijn er internationale standaarden al? Heb je daarnaar gekeken?</v>
+
+00:03:29.131 --> 00:03:32.141
+<v Michiel Trimpe>Eh daar heb ik wel naar gekeken. Die zijn er niet op dit vlak.</v>
+
+00:03:32.141 --> 00:03:34.021
+<v Igor van Haren>Nee. Oké.</v>
+
+00:03:36.251 --> 00:03:38.271
+<v Igor van Haren>Denk je dat er behoefte aan is?</v>
+
+00:03:40.401 --> 00:03:58.231
+<v Michiel Trimpe>Ik verwacht dat het uiteindelijk wel een keer eh in scope zal komen van de AuthZ/N werkgroep zelf. Ehm, maar dat het niet de hoogste prioriteit is. Dat je er zeg maar nog een drietal eerdere hebt. Dus dat het eh... ja, dat zal wel 2026, 27, 28 worden dan.</v>
+
+00:03:58.851 --> 00:04:05.411
+<v Igor van Haren>En en ehm je kan je zou je kunnen vragen aan die werkgroep of wij een voorzet daarin kunnen doen.</v>
+
+00:04:07.161 --> 00:04:24.081
+<v Michiel Trimpe>Ja, kan ik zeker. Snap ik. Dus als als die wens er is, dan denk ik dat we dat eh gewoon eh kunnen doen, maar gewoon landelijk houden, maar in het achterhoofd wel eh ja, dat het ook internationaal zou kunnen worden toegepast.</v>
+
+00:04:28.471 --> 00:04:29.471
+<v Maikel Hofman>Ja, klinkt goed.</v>
+
+00:04:32.121 --> 00:04:34.051
+<v Michiel Trimpe>Mee eens eh die aanpak?</v>
+
+00:04:38.071 --> 00:04:40.091
+<v Michiel Trimpe>Wie zwijgt stemt toe.</v>
+
+00:04:40.091 --> 00:04:40.591
+<v Maikel Hofman>Ja.</v>
+
+00:04:44.751 --> 00:04:46.601
+<v Maikel Hofman>Oké. Dat was ook eh de update.</v>
+
+00:04:46.601 --> 00:04:58.601
+<v Michiel Trimpe>Ja. Nou, voor de andere subwerkgroepen, eh ik kreeg van iemand de vraag van wat speelt er allemaal in de subwerkgroepen. Het is misschien ook een groot woord, maar het zijn eigenlijk gewoon de de groepjes rondom specifieke documenten die we schrijven, van mensen die daar actief input aan verlenen.</v>
+
+00:05:00.081 --> 00:05:08.231
+<v Michiel Trimpe>Ehm, even kijken. Mark, volgens mij van juridisch is het deze week even stil en zou de volgende binnenkort weer één komen.</v>
+
+00:05:09.551 --> 00:05:24.231
+<v Marc de Boer>Ja, verder geen nieuws te melden. Is wel de notule uitgewerkt en goedgekeurd. Zal die eventjes in de chat zetten. Kunnen mensen dat nalezen en eh de eerstvolgende bijeenkomst moet nog gepland worden.</v>
+
+00:05:26.111 --> 00:05:30.911
+<v Michiel Trimpe>Ja. Oké. Eh en voor AuthZ/N heb ik gesproken met eh Stas over het formaat.</v>
+
+00:05:32.061 --> 00:05:46.121
+<v Michiel Trimpe>Eh het formaat wordt ehm een soort eh eh gewoon eigenlijk een kopie van de standaard met aanpassingen en dan wordt er op een slimme wijze een delta gegenereerd, dat je kan zien wat het verschil is ten opzichte van de officiële standaard.</v>
+
+00:05:46.721 --> 00:05:56.631
+<v Michiel Trimpe>Dat is ook waar eh voor de andere O-Auth en dergelijke standaarden naar toe aan het werken zijn. Dat is duidelijk. Dus daar eh kunnen we nu aan beginnen te gaan schrijven.</v>
+
+00:05:59.041 --> 00:06:08.671
+<v Michiel Trimpe>Oké. Ehm, ik zag toevallig al op dat ik eh de welkom geskipt had, maar ik zie nu wel nieuwe namen in de chat.</v>
+
+00:06:11.141 --> 00:06:16.941
+<v Michiel Trimpe>Dus misschien wel even in omgekeerde volgorde. Eh alsnog een welkom.</v>
+
+00:06:19.121 --> 00:06:20.611
+<v Michiel Trimpe>Kijken, ik zie Duuk.</v>
+
+00:06:21.431 --> 00:06:31.921
+<v Duuk Calor>Yes, hallo. Leuk eh om jullie allemaal te zien. Eh mijn naam is Duuk Calor. Ik zal eh vanaf nu functioneren als eh PO van eh NID. Dus de taken van Igor overnemen.</v>
+
+00:06:32.611 --> 00:06:35.491
+<v Michiel Trimpe>Oké. Super. Welkom.</v>
+
+00:06:36.211 --> 00:06:37.141
+<v Duuk Calor>Dankjewel.</v>
+
+00:06:39.511 --> 00:06:45.001
+<v Michiel Trimpe>Kijken. Eh Hugo en Karel zich ook al voorgesteld?</v>
+
+00:06:46.331 --> 00:06:47.031
+<v Hugo Mostard>Nee.</v>
+
+00:06:47.031 --> 00:07:05.901
+<v Hugo Mostard>Hugo Mostard. Oh, sorry. Gemeente Den Haag. Ik werk voor het Urban Data Platform en eh vooral geïnteresseerd in wat er allemaal ontwikkeld wordt. Zeker federatieve toegangsverlening is wel een dingetje wat ook eh binnen Den Haag gaat spelen. Dus misschien dat we daar ook wat van eh op kunnen pakken, mee kunnen nemen.</v>
+
+00:07:08.351 --> 00:07:10.421
+<v Michiel Trimpe>Super. Welkom.</v>
+
+00:07:11.391 --> 00:07:28.601
+<v Karel Hilberdink>Ja, goedemorgen. Karel Hilberdink, productmanager bij eh eh federatieve service van Justitie en Veiligheid. Eh in die hoedanigheid als opdrachtgever in de persoon van ehm Jos Hezemans eh en als Jos er niet is, dan vertegenwoordig ik eh Jos eh bij deze.</v>
+
+00:07:29.931 --> 00:07:33.911
+<v Karel Hilberdink>En soms zijn we er samen en eh maar in ieder geval altijd één van ons. Ja.</v>
+
+00:07:34.701 --> 00:07:51.901
+<v Michiel Trimpe>Super. Welkom. Nou, welkom. Ehm, dan hebben we de de eerste twee al gehad. En ik stel voor dat we gewoon lekker doorpakken. Eh de de GraphQL presentatie. Wie gaat het geven aan jullie kant?</v>
+
+00:07:53.941 --> 00:08:03.111
+<v Igor van Haren>Nee, Remo gaat het eerste deel doen en Guus gaat het tweede deel doen en ik eh als er vragen zijn zal ik eh ze ondersteunen, denk ik.</v>
+
+00:08:03.951 --> 00:08:09.951
+<v Michiel Trimpe>Oké. Ja, en we hebben een timebox van 20 minuten, dus dan eh... Ja, dat eh dat gaan we denk ik wel halen.</v>
+
+00:08:10.821 --> 00:08:29.981
+<v R. van Rest>Ehm, even team iWlz. Ehm, dat zijn eh nou, in dit geval inderdaad eh Zorginstituut en eh VECOZO. Eh ik dacht ik wil jullie eerst eventjes een stukje context eh toegeven van waarom we naar GraphQL eh gaan en waarom AuthZ/N eh zo belangrijk wordt en dan neemt Guus het de technische eh vraagstukken over.</v>
+
+00:08:31.291 --> 00:08:40.091
+<v R. van Rest>Ik ga even mijn scherm delen voor de presentatie. Zo.</v>
+
+00:08:43.161 --> 00:08:54.301
+<v R. van Rest>Even voor de introductie inderdaad, Wet langdurige zorg, hè, dat is eh het zorgstelsel waarin je langdurige zorg kunt krijgen binnen Nederland. En het begint is een heel eh proces, beginnend vanaf de cliënt uiteraard.</v>
+
+00:08:54.911 --> 00:09:08.821
+<v R. van Rest>Eh CIZ die bekijkt eventjes of je inderdaad eh eh recht hebt op eh langdurige zorg. Dan is het zorgkantoor die zorgt dat je bemiddeld wordt naar een zorgverlener. De zorgverlener die gaat eh zorg leveren. Ik heb een ontzettende echo op een of andere manier.</v>
+
+00:09:15.681 --> 00:09:22.991
+<v R. van Rest>Ehm, een zorgverlener en vervolgens gaat het CAK op basis van gegevens de eigen bijdrage berekenen.</v>
+
+00:09:25.921 --> 00:09:54.491
+<v R. van Rest>Op dit moment gaat het via berichtuitwisseling. Dus er worden XML-berichten tussen alle partijen gestuurd. Een IO31 bericht gaat naar het zorgkantoor, wat het indicatiebericht is. Een AW33 bericht eh wat de toewijzing van zorg is, inclusief het IO31 bericht. Dat zit daarin gekapseld. Nou, daar reageert de zorgverlener op met een eh melding aanvang zorg of een aanvraag voor andere zorg.</v>
+
+00:09:54.491 --> 00:10:02.481
+<v R. van Rest>En dan stuurt het zorgkantoor weer een bericht richting de het CAK voor de berekening van de eigen bijdrage. Nou, dat zijn niet alle berichten, maar om eventjes een idee te geven hoe dat proces wordt...</v>
+
+00:10:11.531 --> 00:10:12.111
+<v Rest, R. van>wordt eh spel.</v>
+
+00:10:12.111 --> 00:10:21.211
+<v Rest, R. van>Ehm je registreert gegevens, er worden noti- notificaties uitgestuurd om eh partijen op de hoogte te brengen van de nieuwe gegevens. Die partijen gaan raadplegen.</v>
+
+00:10:21.931 --> 00:10:27.971
+<v Rest, R. van>En eigenlijk krijgt elke ketenpartij zijn eigen register en die slaat dus gegevens op voor meerdere partijen.</v>
+
+00:10:28.321 --> 00:10:37.331
+<v Rest, R. van>En je ziet dus hier bijvoorbeeld indicatieregister wordt geraadpleegd door zowel ehm het zorgkantoor als door de ehm zorgaanbieder.</v>
+
+00:10:38.741 --> 00:10:43.911
+<v Rest, R. van>Nou, dit hele eh spel, zal ik maar even zeggen, dat wordt vastgelegd in een informatiemodel.</v>
+
+00:10:43.911 --> 00:10:50.151
+<v Rest, R. van>Dat is ehm de iStandaard iWlz. Eh naast de iWlz hebben we ook de iWmo en de iJW.</v>
+
+00:10:50.721 --> 00:11:01.811
+<v Rest, R. van>En daarin is eigenlijk beschreven wat eigenlijk al die regels zijn, hè. Dus dan moet je ook denken aan technische regels als eh BSN moet 11-proef zijn en negen cijfertjes, eh geboortedatum moet een datum zijn, et cetera.</v>
+
+00:11:02.661 --> 00:11:07.111
+<v Rest, R. van>Nou, onderdeel van ehm van het informatiemodel is ook een een soort ERD.</v>
+
+00:11:07.501 --> 00:11:14.591
+<v Rest, R. van>Eh in dit geval laat ik het bemiddelingsregister zien en dan zie je eigenlijk de indeling van eh welke gegevens dan in het bemiddelingsregister zijn.</v>
+
+00:11:15.131 --> 00:11:21.431
+<v Rest, R. van>En daar waar we berichten hadden, ehm die waren vergelijkbaar op op een dergelijke manier vormgegeven.</v>
+
+00:11:21.991 --> 00:11:32.221
+<v Rest, R. van>Had je bijvoorbeeld de keuze ehm dat een zorgaanbieder die kreeg zeg maar dit deel aan gegevens opgestuurd minus het PGB-percentage.</v>
+
+00:11:32.741 --> 00:11:51.041
+<v Rest, R. van>En het zorgkantoor die krijgt een dergelijke bericht opgestuurd, eh want ehm als een zorgkantoor bovenregionaal is, dus eh dus een ander zorgkantoor dan waar de eh cliënt woont, die mocht het PGB-percentage wel zien. Dus die kreeg het wel opgestuurd. Nou, in het bemiddelingsregister of met een registergedachte kan dat natuurlijk niet meer.</v>
+
+00:11:51.421 --> 00:11:57.061
+<v Rest, R. van>Die gegevens staan in één bron. Er is één koppelvlakspecificatie, dat is die dat GraphQL-schema.</v>
+
+00:11:57.561 --> 00:12:11.831
+<v Rest, R. van>En iedereen heeft toegang tot dat schema. Dus je moet op een andere manier gaan bedenken van ja, hoe voorkom ik nou dat het zorgkantoor dit wel mag opvragen en hoe hoe ehm controleer ik dat een ehm een zorgaanbieder dat stiekem niet doet? Want hij mag dat natuurlijk niet opvragen.</v>
+
+00:12:12.721 --> 00:12:17.181
+<v Rest, R. van>Nou, daar hebben we allerlei eh regels voor bedacht, onder andere autorisatieregels.</v>
+
+00:12:17.581 --> 00:12:31.221
+<v Rest, R. van>En die regels die beschrijven inderdaad wie, wat, eh waarom, waarvoor, hè, dus dat is zeg maar de grondslag. Voor een grondslag is bijvoorbeeld voor het leveren van de juiste zorg of voor het eh kunnen toeleiden van de cliënt aan de juiste zorgaanbieder.</v>
+
+00:12:31.841 --> 00:12:35.221
+<v Rest, R. van>Eh dat hebben we daarin toegevoegd. Ehm...</v>
+
+00:12:36.161 --> 00:12:41.881
+<v Rest, R. van>Nou, dit is dan bijvoorbeeld zo'n voorbeeld hè, een zorgaanbieder mag voor het leveren van zorg een cliënt een eigen toewijzing raadplegen.</v>
+
+00:12:42.421 --> 00:12:50.321
+<v Rest, R. van>En daarin beschrijven we ook wat hij dan mag opvragen en wanneer en voor hoe lang die dan toegang heeft tot een eh bemiddelingsspecificatie.</v>
+
+00:12:50.321 --> 00:13:04.781
+<v Rest, R. van>Want je moet je voorstellen, ehm een Wlz-cliënt heeft zorg nodig in principe voor zijn hele leven. En het kan zijn dat de zorg verzwart en dat hij dan daardoor ook bij andere zorgaanbieders eh terecht eh moet komen helaas.</v>
+
+00:13:05.811 --> 00:13:12.071
+<v Rest, R. van>En ehm eerder betrokken zorgaanbieders die hebben geen recht meer om de nieuwe toewijzing te mogen inzien.</v>
+
+00:13:12.071 --> 00:13:17.491
+<v Rest, R. van>Dus ook in die tijdsperiode heb je een bepaalde beperking nodig om dat te kunnen regelen.</v>
+
+00:13:18.801 --> 00:13:23.361
+<v Rest, R. van>Ehm, nou dit is nog een ander voorbeeld, een zorgkantoor. Ehm...</v>
+
+00:13:24.011 --> 00:13:33.311
+<v Rest, R. van>om alleen maar even aan te geven hè, dus de eh we hebben ook een autorisatiematrix en in die matrix is zichtbaar dat je een zorgaanbieder, dat was BRA001.</v>
+
+00:13:33.721 --> 00:13:42.781
+<v Rest, R. van>Eh sorry, zorgkantoor zat. Oh sorry, toch zorgaanbieder. Hè, die mag dat eh PGB PGB-percentage niet inzien. En een zorgkantoor die mag dat wel gaan raadplegen.</v>
+
+00:13:43.331 --> 00:13:51.051
+<v Rest, R. van>Dus dat is alleen nog maar de beschrijving. Toen was de uitdaging inderdaad van hoe gaan we dat dan regelen richting de techniek?</v>
+
+00:13:51.621 --> 00:14:05.311
+<v Rest, R. van>Want we hebben één koppelvlakspecificatie. Dat is de dat is het GraphQL-schema van het hele bemiddelingsregister, maar we hebben daaroverheen hebben we eh GraphQL-templates gedefinieerd. En die GraphQL-templates...</v>
+
+00:14:05.991 --> 00:14:08.231
+<v Rest, R. van>ehm, sla ik deze even over.</v>
+
+00:14:08.881 --> 00:14:22.581
+<v Rest, R. van>Die GraphQL-templates, dat zijn deze eh query-templates, die worden eigenlijk bepaald door eh de autorisatieregels, de autorisatiematrix en een toegangscontrole richting de policy.</v>
+
+00:14:23.311 --> 00:14:37.491
+<v Rest, R. van>En wat ik daarmee wil zeggen is, we hebben eigenlijk per autorisatieregel hebben we eh ervoor gezorgd dat een raadpleging min of meer wordt ehm ja, wordt eigenlijk wordt ingekaderd in zijn ehm raadpleegbevoegdheid.</v>
+
+00:14:37.991 --> 00:14:52.421
+<v Rest, R. van>zodat de policy engine ook kan controleren van jij bent op dit moment ben jij een zorgaanbieder, dus ik weet in ieder geval dat jij de eh PGB-percentage bijvoorbeeld niet mag opvragen. En dat wordt dus ook gecontroleerd.</v>
+
+00:14:52.991 --> 00:14:56.031
+<v Rest, R. van>in deze policy engine.</v>
+
+00:14:57.231 --> 00:15:13.431
+<v Rest, R. van>Dus dat tot zover zeg maar hoe wij gekomen zijn tot een bepaalde filtering ehm richting de eh techniek toe. Zijn daar vragen over tot nu toe?</v>
+
+00:15:13.911 --> 00:15:14.231
+<v Rest, R. van>Nee.</v>
+
+00:15:14.631 --> 00:15:19.831
+<v Meer, Guus van der>Dan maak ik er niks. Dan zou ik het overnemen. Nou, ehm...</v>
+
+00:15:19.831 --> 00:15:27.171
+<v Meer, Guus van der>dan hebben we nu hoe wij het nu doen is dus ehm we hebben natuurlijk ook een PEP en een PDP situatie. Dus dat gaat je over autorisatie heen.</v>
+
+00:15:27.171 --> 00:15:37.211
+<v Meer, Guus van der>Dus als je nu een request doet, gaat er een ja, een berichtje naar de PEP eerst en die stuurt daarna door naar de GraphQL server, maar de PEP controleert dan bij de PDP of het mag.</v>
+
+00:15:37.211 --> 00:15:54.431
+<v Meer, Guus van der>Nou, eh dat wordt nu gedaan via eh ja, nu gebruiken we daar de Envoy proxy voor. Dus die die die is ja, die maakt eigenlijk van dat berichtje van van van de GraphQL request maakt hij een JSON objectje van met heel veel data.</v>
+
+00:15:54.431 --> 00:16:09.021
+<v Meer, Guus van der>Ehm nou, dit is namelijk dit is niet iets standaards. Dus als je een andere PEP hebt, en dat is ook wat we eigenlijk een beetje willen, is dat wij zorgen dat dat iedereen eigen PEP kan draaien zonder dat het eh dat het makkelijk is.</v>
+
+00:16:09.021 --> 00:16:18.331
+<v Meer, Guus van der>Ehm en omdat dit alleen maar op ja, een soort Kubernetes heel erg graag gebonden is, is dit geen standaard en dus willen we dit graag naar Authzen straks gaan maken.</v>
+
+00:16:18.331 --> 00:16:33.001
+<v Meer, Guus van der>Maar ik kan nu al eens even laten zien ehm naar eh als je hoe hoe hoe het nu eruit ziet. Ehm dus naar de volgende slide gaat.</v>
+
+00:16:33.001 --> 00:16:42.061
+<v Meer, Guus van der>Dan zie je dus dit is bijvoorbeeld een voorbeeld query die we doen. Dus dus eh die die we ook eerder hebben gezien is dus met die datums en de bemiddelingsspecificatie.</v>
+
+00:16:42.061 --> 00:16:51.371
+<v Meer, Guus van der>En wat voor een beetje input. Nou, dan zie je dat hier heel veel dingen ook gefilterd in worden en waar we ook moet je checken.</v>
+
+00:16:51.371 --> 00:17:03.041
+<v Meer, Guus van der>Dus dit moet eigenlijk helemaal door naar de PDP gestuurd worden. Ehm dus dus eh die moet naar de PDP, moeten dus de policies moeten dan gaan checken van hé, mogen deze acties?</v>
+
+00:17:03.041 --> 00:17:11.231
+<v Meer, Guus van der>Dus moet deze hele query met deze input naar de PDP. Nou, als je nu naar nog naar de volgende slide gaat die hier achter staat, dan kan ik hem daarna ook even overnemen om een plaatje te laten zien.</v>
+
+00:17:11.231 --> 00:17:27.021
+<v Meer, Guus van der>Nou, dit is een kleinere versie van wat nu wat die Envoy proxy naar naar de PDP stuurt. En dan zie je eigenlijk al, het is gewoon niet gestandaardiseerd. Het is de hele body wordt nu doorgestuurd.</v>
+
+00:17:27.021 --> 00:17:44.201
+<v Meer, Guus van der>Maar als je een andere PEP hebt, heb je dat niet. En nu zitten we willen we zitten dus te kijken hoe kunnen we dit straks gewoon naar een naar de Authzen standaard veranderen, zodat je eigenlijk eh niet een standaard hebt wat naar de PEP naar de PDP gestuurd wordt.</v>
+
+00:17:44.201 --> 00:18:10.511
+<v Meer, Guus van der>Dat is de voor kan ik ook wel even laten zien op mijn scherm. Ehm hoe hoe groot nou eigenlijk want dit was een kleinere versie, maar dan zie je nu ook als je deze even bekijkt, dan zie je ook hoe groot en hoe onoverzichtelijk zeg maar dit is ook als je dit wilt nabootsen naar een andere eh naar een andere ja, naar een andere PEP zeg maar.</v>
+
+00:18:10.511 --> 00:18:24.221
+<v Meer, Guus van der>Dus dan moet je heel dit bericht na gaan maken voor elke PEP, wat gewoon niet handig is. Nou, ehm, dan heb ik ook nog even samengevat wat eh erin staat. Nou, dus dat is dus dat de ja, dat nu de input is dus het proxy van van Envoy proxy.</v>
+
+00:18:24.221 --> 00:18:44.751
+<v Meer, Guus van der>Ja, eh en dus dat een andere PEP een andere input zou geven. Dus dan kun je de policies ook niet maken op dit moment. Want de policies kunnen maar van één één PEP afkomen. Dus dat zitten wij nu een beetje te gaan kijken hoe we dat eh ja, of jullie daar ook ideeën hebben hoe we dat in Authzen kunnen maken of ja, dat zitten we nu een beetje te bekijken.</v>
+
+00:18:44.751 --> 00:18:48.401
+<v Meer, Guus van der>Ja, dat is het denk ik wel. Ja.</v>
+
+00:18:48.401 --> 00:18:52.541
+<v Meer, Guus van der>Zijn er nog vragen? Ja. Eh Gerard.</v>
+
+00:18:52.541 --> 00:19:05.511
+<v Gerard Tuijn>Ja. Ehm, ik zie in de plaatjes dat dit eigenlijk allemaal gebeurt aan de kant van het register. Dus eh niet bij de afnemer.</v>
+
+00:19:05.511 --> 00:19:13.291
+<v Gerard Tuijn>Dus in principe hebben jullie alle autorisaties aan de kant van het register geplaatst. En neem je daar ook alle verantwoording?</v>
+
+00:19:13.291 --> 00:19:15.111
+<v Haren, Igor van>Ja, dus deze zit inderdaad...</v>
+
+00:19:15.111 --> 00:19:26.211
+<v Haren, Igor van>Ja, dus als je inderdaad als je het eh alles wordt voordat het bij de GraphQL server gedaan wordt. Dus voordat het bij het register aankomt, zijn alle checks al gedaan inderdaad.</v>
+
+00:19:26.211 --> 00:19:27.241
+<v Gerard Tuijn>Oké.</v>
+
+00:19:27.241 --> 00:19:45.191
+<v Haren, Igor van>Dus eigenlijk op basis van EAM, hè, dus eh external authorization management wordt het niet in de code zelf gedaan, in de GraphQL server, maar external. Het hoeft niet te zijn dat het bij de GraphQL server zit. Het kan ook bij de client zitten en ook tussenin.</v>
+
+00:19:45.191 --> 00:19:49.991
+<v Haren, Igor van>Het gaat erover dat als we zeg maar de PEP op meerdere...</v>
+
+00:20:08.209 --> 00:20:14.029
+<v Guus van der Meer>dat de client een bepaalde gateway heeft en een server een bepaalde gateway heeft van een ander merk.</v>
+
+00:20:14.029 --> 00:20:22.889
+<v Guus van der Meer>Dan willen we wel eigenlijk die communicatie richting een PDP op dezelfde manier plaatsvinden.</v>
+
+00:20:22.889 --> 00:20:32.069
+<v Guus van der Meer>Dus als ik u zag dat dat ja op dit moment ehm ja, iets propriety is eh zeg maar en daar willen we vanaf.</v>
+
+00:20:32.962 --> 00:20:34.132
+<v Gerard Luijn>Ja, duidelijk.</v>
+
+00:20:34.132 --> 00:20:38.832
+<v Gerard Luijn>Ehm jullie hadden in het verhaal ook genoemd.</v>
+
+00:20:38.832 --> 00:20:39.212
+<v Michiel Trimpe>Oh sorry.</v>
+
+00:20:39.212 --> 00:20:44.292
+<v Michiel Trimpe>Ja, ik ga even de timebox in het oog om de ruimte te laten voor de voor de andere.</v>
+
+00:20:45.542 --> 00:20:50.922
+<v Michiel Trimpe>Eh dus ik denk ook ja, het lijkt alsof dit voorsorteert op een een GraphQL profiel.</v>
+
+00:20:51.582 --> 00:20:59.022
+<v Michiel Trimpe>Ik weet ook hè de vandaag ook in de werkgroep contacten of eh wie daarmee bezig is. Er is iemand al mee bezig, dus die wil ik ook wel connecten.</v>
+
+00:20:59.732 --> 00:21:15.022
+<v Michiel Trimpe>Ik denk dat hier de de marsroute is, laten we kijken of dit laten we sowieso op Authz en, maar hopelijk ook gewoon een duidelijk GraphQL profiel op Authz en en waar mogelijk al internationaal afgestemd direct eh naarmate dat mogelijk is.</v>
+
+00:21:15.829 --> 00:21:16.619
+<v Guus van der Meer>Perfect.</v>
+
+00:21:17.069 --> 00:21:17.929
+<v Guus van der Meer>Ja, klopt. Ja.</v>
+
+00:21:20.732 --> 00:21:25.012
+<v Michiel Trimpe>Eh, het verder voor iedereen in de werkgroep duidelijk wat het is?</v>
+
+00:21:29.812 --> 00:21:30.312
+<v Michiel Trimpe>Oké.</v>
+
+00:21:31.862 --> 00:21:35.862
+<v Michiel Trimpe>Nou, dan in het kader van de timebox eh wil ik dan de ruimte geven voor</v>
+
+00:21:41.692 --> 00:21:44.522
+<v Michiel Trimpe>heb ik jullie nou te kort getimeboxt? Zit ik nou verkeerd te tellen?</v>
+
+00:21:45.712 --> 00:21:46.732
+<v Guus van der Meer>Ja.</v>
+
+00:21:46.732 --> 00:21:48.242
+<v Rens Kievit>Ja. Sorry.</v>
+
+00:21:48.242 --> 00:21:52.882
+<v Rens Kievit>Nee, sorry. De scheidsrechter is zo snel dat ik er 10 minuten. Oh wauw.</v>
+
+00:21:53.602 --> 00:21:57.222
+<v Michiel Trimpe>Ik zat eh ja, oké. Nee, excuses. Excuses.</v>
+
+00:21:57.942 --> 00:22:01.322
+<v Michiel Trimpe>Jullie waren zo snel dat eh er meer dan rugtijd was. Excuseer.</v>
+
+00:22:01.322 --> 00:22:03.922
+<v Guus van der Meer>Geert. I'm ashamed.</v>
+
+00:22:03.922 --> 00:22:08.022
+<v Guus van der Meer>Eh, ik ben een groot kleertje. Geert.</v>
+
+00:22:08.022 --> 00:22:11.232
+<v Michiel Trimpe>Ga door met je vraag. Excuses.</v>
+
+00:22:14.472 --> 00:22:25.962
+<v Gerard Luijn>Ehm ja, als ik verder mag vragen, één van de dingen die ik zag dat jullie met de PDP het request aan gaan passen, want je gaat de query aanpassen op wat er wel en niet bevraagd mag worden of zie ik dat verkeerd?</v>
+
+00:22:27.022 --> 00:22:45.392
+<v Guus van der Meer>Nee, de PDP de de de de PEP zeg maar, voordat request is alleen maar die zegt alleen maar ja of nee en dus dus als je naar de eh dus als je niet door de PDP komt, dan zegt hij gewoon een auto mag niet verder.</v>
+
+00:22:45.392 --> 00:22:46.542
+<v Guus van der Meer>Ja, dan mag je gewoon niet verder.</v>
+
+00:22:46.542 --> 00:22:48.512
+<v Guus van der Meer>Komt hij niet bij de komt hij niet eens bij de GraphQL server aan, zeg maar.</v>
+
+00:22:48.512 --> 00:22:56.122
+<v Gerard Luijn>Dus daar wordt ook al gecontroleerd welke velden je wel en niet mag inzien dus. Dus die policies zijn best ingewikkeld.</v>
+
+00:22:56.122 --> 00:22:57.212
+<v Guus van der Meer>Ja, inderdaad.</v>
+
+00:22:57.212 --> 00:22:57.712
+<v Gerard Luijn>Ja.</v>
+
+00:22:58.212 --> 00:23:00.322
+<v Gerard Luijn>Oké. Dat was mijn vraag.</v>
+
+00:23:01.072 --> 00:23:01.572
+<v Guus van der Meer>Ja.</v>
+
+00:23:08.682 --> 00:23:13.912
+<v Michiel Trimpe>Nou, dan ga ik hetzelfde wat Ah, wie begon? Ja, René.</v>
+
+00:23:13.912 --> 00:23:14.732
+<v René Kint>René, ga ervoor.</v>
+
+00:23:14.732 --> 00:23:20.312
+<v René Kint>Ja. Eh Guus, in je datamodel en in dat eh in dat schemaatje van wie mag het wel en niet lezen.</v>
+
+00:23:20.312 --> 00:23:24.812
+<v René Kint>Heb je eigenlijk een soort rollen rol-achtige beest access, hè?</v>
+
+00:23:26.312 --> 00:23:32.402
+<v René Kint>Eh en in de en in en in de GraphQL zie ik een soort van mask eh abstractieniveau.</v>
+
+00:23:33.152 --> 00:23:41.112
+<v René Kint>Zouden we het nog eenvoudiger kunnen maken in het patroon dat je kijkt naar de rol tegenover het mask en dat je daar toegang op geeft?</v>
+
+00:23:42.272 --> 00:23:48.422
+<v René Kint>Dus in plaats van op eh eh op op het niveau van de data dat je het iets meer op het rollenniveau kan tillen.</v>
+
+00:23:49.202 --> 00:23:51.192
+<v Guus van der Meer>Ja, we hebben het alle twee.</v>
+
+00:23:51.192 --> 00:23:54.332
+<v Guus van der Meer>Ehm, ik zou het laten zien misschien.</v>
+
+00:23:54.332 --> 00:24:02.832
+<v Guus van der Meer>We hebben het alle twee. We hebben rol back rol rol based access policies en we hebben ook attribute based. Rollen zijn bijvoorbeeld zorgaanbieder, zorgkantoor.</v>
+
+00:24:03.622 --> 00:24:21.182
+<v Guus van der Meer>Maar we hebben ook bijvoorbeeld eh je mag een bepaalde tijd niet iets zien. Dus je moet moet binnen een time range zitten en dat wordt heel moeilijk filteren als je dat heel moeilijk om dat niet mee te sturen de hele query en de variabele om dat eruit te kunnen filteren bij de PEP al.</v>
+
+00:24:21.182 --> 00:24:25.012
+<v René Kint>Dus dan moet je namelijk al Dus het aantal maskers wordt oneindig groot dan eigenlijk.</v>
+
+00:24:25.012 --> 00:24:37.002
+<v René Kint>Ja. Ik zat ik zat in mijn hoofd zat ik het te versimpelen. Nou, ik denk nou, als je nou 10 of 20 van die maskertjes hebt en je hebt acht rollen, dan zou je ook kunnen checken, mag deze rol bij dit masker en dan kan ik het ook, dan kan ik ook toegang verlenen.</v>
+
+00:24:37.002 --> 00:24:40.062
+<v René Kint>Dan is Authz en iets eenvoudiger in te richten misschien.</v>
+
+00:24:40.062 --> 00:24:41.062
+<v Igor van Haren>Ja.</v>
+
+00:24:41.512 --> 00:24:57.062
+<v Igor van Haren>René, het het zou zelfs kunnen zijn dat jij een eh dat een partij een behandelrelatie zou moeten hebben bijvoorbeeld eh met een cliënt voordat hij een eh eh voordat die decision allow kan zijn.</v>
+
+00:24:57.062 --> 00:24:57.612
+<v René Kint>Ja.</v>
+
+00:24:58.212 --> 00:25:03.822
+<v Igor van Haren>Ja. Het liefste hebben we rol gebaseerd, want dat maakt policies heel eenvoudig.</v>
+
+00:25:03.822 --> 00:25:17.062
+<v Guus van der Meer>Maar eh de grondslagen in de zorg zijn vaak heel complex. Eh en en daarmee dan ook policies eh complex.</v>
+
+00:25:17.612 --> 00:25:20.122
+<v Igor van Haren>Ja. Ja, ik ik probeer in mijn hoofd twee dingen eigenlijk te</v>
+
+00:25:20.122 --> 00:25:21.122
+<v Guus van der Meer>te te beperken.</v>
+
+00:25:21.122 --> 00:25:34.562
+<v Igor van Haren>En dat is de de de de complexiteit van de policy zelf, hè. Je zag net al hoe ingewikkeld het kan worden. Nou ja, vertaal dat naar een JSON met alles uit die body dan allemaal nog eens ook nog eens allemaal tussen accolades zelf, hè, dan wordt het een enorm ding.</v>
+
+00:25:34.992 --> 00:25:41.972
+<v Igor van Haren>En aan de andere kant natuurlijk de granulariteit in de eh in de policy zelf, dat je niet oneindig veel policies moet maken.</v>
+
+00:25:42.792 --> 00:25:49.122
+<v Igor van Haren>Eh want dat is de andere kant. Zo kan je het ook oplossen. Ja. Je maakt voor elke combinatie een policy. Eh ja.</v>
+
+00:25:50.942 --> 00:26:08.012
+<v Michiel Trimpe>Wat wel leuk is van die wil ik er nog even te benoemen is ehm ik noem wel eens vaker het onderscheid tussen logische en technische policies. En dat gebeurt hier ook al. Dus je ziet dat ehm ik weet niet precies hoe de organisatie zit, maar volgens mij dan vanuit iWlz worden tekstuele policies omschreven, dus dit zou er moeten gebeuren.</v>
+
+00:26:08.812 --> 00:26:24.032
+<v Michiel Trimpe>En die worden dan in het systeem vertaald naar technische policies. En dat biedt natuurlijk ook de ruimte om de tekstuele zo simpel mogelijk te houden en als je dan merkt dat je onnodig complexiteit in de techniek ingebouwd hebt, dat weer terug te brengen.</v>
+
+00:26:26.702 --> 00:26:39.992
+<v Igor van Haren>Het is ook zo dat deze policies zijn ontstaan uit een bestaande situatie. En eh en dat is dat vetmodel is eigenlijk één op één vertaald naar</v>
+
+00:26:39.992 --> 00:26:56.092
+<v Igor van Haren>het netwerkmodel ook om backwards compatible te blijven. Ik denk als je helemaal nieuw zou modelleren eh het de hele afsprakenstelsel, dan dan zou je ja, policy ook veel eenvoudiger kunnen maken, meer rol gebaseerd.</v>
+
+00:26:56.092 --> 00:26:59.432
+<v René Kint>Je hebt te maken met bestaande ketens overal in alle domeinen hebben we dat natuurlijk.</v>
+
+00:26:59.432 --> 00:27:05.422
+<v Igor van Haren>Dus die complexiteit is is standaard echt wel eh bij heel veel ketens aanwezig.</v>
+
+00:27:08.102 --> 00:27:22.012
+<v Gideon Zegwaard>Ga je nog wat met eh geparameteriseerde queries in deze context? Dus dat je eh dat je dan nog een policy hebt over op op eh de parameterwaardes die dan in de parameters van de query gebruikt worden.</v>
+
+00:27:22.012 --> 00:27:23.232
+<v Igor van Haren>Wordt toegepast. Ja.</v>
+
+00:27:27.242 --> 00:27:34.122
+<v Gideon Zegwaard>Daarmee kan je natuurlijk wel weer wat flexibiliteit creëren in eh in die queries.</v>
+
+00:27:34.122 --> 00:27:52.012
+<v Igor van Haren>Bijvoorbeeld eh zeg de gebruiker die deelneemt met het netwerk en een een query stelt, eh dan zit er soms in de een eh een parameter in de query zelf die moet vergeleken worden met de claims van die gebruiker.</v>
+
+00:27:52.792 --> 00:28:18.012
+<v Gideon Zegwaard>Ja, ik kan me ik kan me ook voorstellen dat je met eh dat je daar nog met ranges kan werken, hè, dus dat je een zelfde policy kan eh tenminste dezelfde eh query kan gebruiken voor verschillende partijen, maar dat ze eh eh dat ze verschillende waardes op een parameter moeten zijn of dat een bepaalde tijdswaarde in een bepaald bereik moet zijn en dat je dat soort controles als het ware uit de query trekt, maar in een parametervalidatie stopt.</v>
+
+00:28:18.012 --> 00:28:21.432
+<v Igor van Haren>Ja. Ja. Dat dat gebeurt ook. Dat gebeurt ook. Ja.</v>
+
+00:28:25.172 --> 00:28:44.822
+<v Michiel Trimpe>Wat wat vanuit Authz en perspectief nog interessant is om te benoemen is dat eh met met REST API's mapt dat heel mooi op de de resource van Authz en. Er is een resource is ook een resource. Eén van de dingen die bij GraphQL interessant zal zijn is wat wat is een resource? Want GraphQL kent natuurlijk gewoon de brede graaf.</v>
+
+00:28:45.622 --> 00:28:47.922
+<v Michiel Trimpe>Eh dus wellicht is daar eh</v>
+
+00:28:48.022 --> 00:28:51.322
+<v Igor van Haren>Vaak is een deel van de query een resource.</v>
+
+00:28:51.322 --> 00:29:11.142
+<v Igor van Haren>Maar ja, die is heel variabel. En daar hebben wij wel gekeken naar eh zeg maar hoe zouden wij hem gebrainstormd over hoe zou zoiets eruit zien. En die zou dat in een breder verband eh willen willen doen. En misschien zelfs internationaal afgestemd.</v>
+
+00:29:11.142 --> 00:29:12.002
+<v Michiel Trimpe>Ja. Ja.</v>
+
+00:29:14.532 --> 00:29:15.112
+<v Igor van Haren>kennen.</v>
+
+00:29:15.532 --> 00:29:26.242
+<v Igor van Haren>Nou, sequence met scopes zitten er natuurlijk vaak in, wat ook soms wel iets over een resource zegt. Eh en audience zegt vaak ook wel iets over een resource.</v>
+
+00:29:26.242 --> 00:29:35.392
+<v Igor van Haren>Dus zo zijn er wat dingen die waar wij ja, waar plaatsen we die in een eh Authz en autorisatie.</v>
+
+00:29:39.512 --> 00:29:42.842
+<v Michiel Trimpe>Oké. Eh nu hebben we wel de timebox bereikt.</v>
+
+00:29:42.842 --> 00:29:46.992
+<v Michiel Trimpe>Zijn er nog vragen? We beginnen te vragen. Iemand die nog echt eventjes iets kwijt wil?</v>
+
+00:29:51.272 --> 00:29:52.542
+<v Michiel Trimpe>Super. Dankjewel voor de presentatie.</v>
+
+00:30:09.328 --> 00:30:10.008
+<v Hans Schevers>Ja.
+
+00:30:11.418 --> 00:30:15.208
+<v Hans Schevers>En dan ga ik mijn eh scherm delen of mijn presentatie.
+
+00:30:22.848 --> 00:30:24.208
+<v Hans Schevers>Ja, is die nu zichtbaar?
+
+00:30:26.688 --> 00:30:30.588
+<v Michiel Trimpe>Ik zie een dia in een formaat, de in de zijkant.
+
+00:30:30.818 --> 00:30:32.118
+<v Michiel Trimpe>Ja, dit is beter.
+
+00:30:32.538 --> 00:30:33.728
+<v Gideon Zegwaard>Ja. Super.
+
+00:30:34.548 --> 00:30:50.558
+<v Hans Schevers>Ehm ja, ik ben Hans Schevers van Kadaster Data Science Team en we hebben anderhalf jaar geleden ofzo, ik weet het niet precies meer, een project gedaan eh Lock Unlock eh in het kader van eh FDS en eh dat ehm ehm ja, dat richtte zich wel heel erg op eh op link data.
+
+00:30:50.848 --> 00:31:11.898
+<v Hans Schevers>Ehm en ehm eh nou ja, wij eh ik persoonlijk moet nog wat eh leren van AuthZen eh hè, maar eh de titel eh was in ieder geval zeer interessant en daar willen we dus ook wel graag bij zijn. En ik nou, ik heb natuurlijk wel een klein beetje mijn huiswerk gedaan en ehm ja, ook ook vervolgens best wel gezien van goh, ik vind dit nog best wel lastig.
+
+00:31:12.568 --> 00:31:25.018
+<v Hans Schevers>Ehm en eh toen dacht ik: waarom vind ik dit lachen lastig? En daarom heb ik eventjes in deze presentatie even kort het gedachtegoed van in ieder geval van de link data die eh in ieder geval bij Kadaster heerst.
+
+00:31:25.378 --> 00:31:40.618
+<v Hans Schevers>En ehm ehm nou ja, eventjes kort op een rij gezet en dan vervolgens het lock iets korts over lock unlock. En dan eigenlijk ja, ik moet nog hoe kunnen die twee werelden bij elkaar komen? En ehm daar heb ik dan ook nog een vraagje over.
+
+00:31:40.808 --> 00:31:46.128
+<v Hans Schevers>Ja, en dan begint het bij het gedachtegoed hè. Nou ja, ik ben natuurlijk...
+
+00:31:46.128 --> 00:31:47.498
+<v Michiel Trimpe>Je bent een beetje weggevallen bij mij.
+
+00:31:47.498 --> 00:31:48.438
+<v Onbekend>Ik denk voor iedereen.
+
+00:31:48.748 --> 00:31:51.588
+<v Onbekend>Ja, je bent aan het hakkelen nu.
+
+00:31:54.678 --> 00:31:55.848
+<v Onbekend>Ik hoor hem niet meer.
+
+00:31:56.098 --> 00:31:56.518
+<v Onbekend>Nee.
+
+00:31:57.128 --> 00:31:58.218
+<v Onbekend>Nee, same here.
+
+00:32:04.608 --> 00:32:05.578
+<v Hans Schevers>Ben ik er weer?
+
+00:32:06.598 --> 00:32:07.548
+<v Onbekend>Nauwelijks.
+
+00:32:09.318 --> 00:32:14.778
+<v Onbekend>Ik hoorde dat je zei 'ben ik er weer', maar dat was omdat ik het zelf interpoleerde ergens in mijn hoofd.
+
+00:32:16.148 --> 00:32:17.208
+<v Hans Schevers>Gaat het nu beter?
+
+00:32:18.158 --> 00:32:20.558
+<v Michiel Trimpe>Nu eventjes wel. Toen je het vroeg wel.
+
+00:32:21.018 --> 00:32:23.118
+<v Onbekend>Laten we het langere zinnen en dan kijken we.
+
+00:32:24.238 --> 00:32:28.118
+<v Hans Schevers>Oké. Ehm, nou, dat is een centrisch manifest.
+
+00:32:28.668 --> 00:32:30.568
+<v Michiel Trimpe>Nee. Nee, helaas.
+
+00:32:31.238 --> 00:32:32.748
+<v Onbekend>Ik denk dat het een bluetooth probleem is.
+
+00:32:35.218 --> 00:32:36.728
+<v Onbekend>Even de gewone speakers zetten.
+
+00:32:42.238 --> 00:32:47.078
+<v Onbekend>Misschien ook even de de videostream uitzetten, dat scheelt bandbreedte. De inkomende video's uit.
+
+00:33:01.628 --> 00:33:04.138
+<v Onbekend>Er is af en toe nog wat audio, maar ook het video viel weg.
+
+00:33:06.128 --> 00:33:08.208
+<v Hans Schevers>Ja, ik heb nu eh alles uitstaan.
+
+00:33:08.818 --> 00:33:10.608
+<v Michiel Trimpe>Ja, dit lijkt beter.
+
+00:33:11.668 --> 00:33:14.008
+<v Hans Schevers>Ja, nou moet ik nou nog mijn scherm delen.
+
+00:33:14.908 --> 00:33:17.068
+<v Hans Schevers>Ehm, gaan we dat weer proberen.
+
+00:33:22.048 --> 00:33:28.008
+<v Hans Schevers>Dus het datacentrisch manifesto. Eh nou, laat me horen of ik eh goed te verstaanbaar ben of niet.
+
+00:33:28.008 --> 00:33:30.608
+<v Hans Schevers>Ja? Eh de slides zijn ook zichtbaar?
+
+00:33:31.068 --> 00:33:31.868
+<v Onbekend>Nog niet.
+
+00:33:32.058 --> 00:33:34.098
+<v Michiel Trimpe>Nog niet, maar hij is wel bezig.
+
+00:33:36.778 --> 00:33:50.778
+<v Hans Schevers>Nou ja, eh data is eh is eh hè, is een asset eh voor bedrijven en organisaties. Het is zelfbeschrijvend hè, zegt het datacentrisch manifesto. Dus het ja, er is echt een extreme scheiding tussen applicaties en eh en data.
+
+00:33:51.578 --> 00:34:04.228
+<v Hans Schevers>Eh data idealiter in een open formaat. Nou, vandaar link data. En eh toegang eh is eh tot de data is eh is echt een laag hè. Dus ook weer heel erg gescheiden van de applicaties.
+
+00:34:04.498 --> 00:34:20.018
+<v Hans Schevers>En dan is de definitie hè, volgens het datacentrisch manifesto is dus applicaties die eh ja, die komen en gaan. Die bekijken, hebben toegang tot de data en eh en die doen wat. En die schrijven eventueel data terug hè. Dus dat is een beetje de de de de het het concept.
+
+00:34:20.428 --> 00:34:26.758
+<v Hans Schevers>Ehm dus die die die security laag die moet natuurlijk zo laag mogelijk, hè, dus die moet eigenlijk echt op de data zitten.
+
+00:34:28.218 --> 00:34:56.638
+<v Hans Schevers>Nou, als je dan ook nog ehm nou ja, link data eh beschouwt en je doet dat in een beschouwt dat in een FDS hè, in een federatief datastelsel, dan ja, dan dan zou je eigenlijk willen, in ieder geval vanuit ons perspectief, hè, eh nou, een helder datamodel in link data, hè, eigenlijk SHACL hè, eh ehm een een een link data standaard waarin je precies kunt definiëren hè, de cardinaliteit tussen relaties en of iets verplicht aanwezig is of niet.
+
+00:34:56.638 --> 00:35:02.088
+<v Michiel Trimpe>Even een kleine inbreuk, je screenshare is toch niet opgekomen.
+
+00:35:02.088 --> 00:35:05.088
+<v Hans Schevers>Oké. Misschien een keer even aan en uit.
+
+00:35:06.568 --> 00:35:08.568
+<v Hans Schevers>Oh, wat gaat dat slecht, hè?
+
+00:35:09.628 --> 00:35:11.458
+<v Hans Schevers>Ga ik mijn scherm eens delen.
+
+00:35:11.668 --> 00:35:13.048
+<v Michiel Trimpe>Ja, nu wel.
+
+00:35:14.508 --> 00:35:41.528
+<v Hans Schevers>Ehm ja, dus als je dan naar link data kijkt dan hè, dan wil je eigenlijk een helder datamodel. Je wil de de de data zelf als link data. Je wil ook dat de data gelinkt is aan het datamodel. Je zou eigenlijk SHACL validatie willen hebben hè, of de resultaten daarvan, want dan weet je van hé eh wat kan ik eigenlijk verwachten van eh van eh van de dataset.
+
+00:35:41.528 --> 00:36:10.008
+<v Hans Schevers>Hè, links tussen de registers natuurlijk hè, uitgaande dat het gewoon eh toch eh ehm dat elk register zichzelf eh hè, de data publiceert. Maar er zijn natuurlijk wel links. Nou, waarschijnlijk wil je daar wat coördinatie op. Ook data die die ja, die achter slot en grendel moet, die is wel aanwezig hè. Dus vandaar het autorisatiegedeelte. Federatieve bevragingen via Sparql. Ik denk dat dat allemaal niet zo heel nieuw is.
+
+00:36:10.008 --> 00:36:13.598
+<v Hans Schevers>Eh maar je ziet wel dat Kadaster daar in ieder geval hè, de knowledge graph en eigenlijk alle registers ook in link data heeft staan.
+
+00:36:13.598 --> 00:36:15.228
+<v Hans Schevers>En ehm ehm ja, daar eigenlijk dus dan een eerste node is eh in dat netwerk.
+
+00:36:15.228 --> 00:36:17.518
+<v Hans Schevers>Dat is een beetje de algemene gedachtegoed.
+
+00:36:17.518 --> 00:36:42.008
+<v Hans Schevers>Ehm dat betekent ook dat je als je dan aan het lock unlock project eh toen we daaraan begonnen, toen toen keken we ook van ja, god, als je een rest API hebt dan eh ja, dan kun je eigenlijk één specifieke call maken. Hè, en die kun je dan natuurlijk wel beveiligen. Nou, hartstikke mooi, maar met GraphQL heb je natuurlijk al veel meer vrijheden in in in wat je bevraagt.
+
+00:36:42.008 --> 00:37:13.008
+<v Hans Schevers>Hè, er zit wel een een toch wel een soort schema eh zit daarin. En met met met puur met Sparql kun je natuurlijk van alles vragen. Hè, en we waren eigenlijk in dit project heel erg geïnteresseerd van: hé, stel dat je zegt van: hé, ik wil die Sparql wil ik toch overeind houden. Dus je mag alles vragen wat je wil, maar of je de data terug krijgt, dat ligt aan de autorisatie.
+
+00:37:13.008 --> 00:37:27.008
+<v Hans Schevers>Hè, je kunt vragen stellen van eh geef mij koopsommen, maar geef me ook eh de de definitie van een koopsom hè, op schema niveau. En eigenlijk elke vraag eh zou je moeten kunnen stellen aan het aan het systeem, idealiter.
+
+00:37:27.008 --> 00:37:42.008
+<v Hans Schevers>Ehm maar autorisatie bepaalt of je daadwerkelijk wel resultaten terug krijgt. Nou, dan hebben we gekeken van ja, wat voor mechanismes zijn er dan om te beveiligen? Wat hè, de de data is gelinkt aan elkaar, bevindt zich in verschillende triplestores.
+
+00:37:42.008 --> 00:37:59.008
+<v Hans Schevers>We willen daar met Sparql en federatief eh kunnen bevragen. Ehm ja, koopsom is is een voorbeeld wat we heel erg hebben uitgewerkt. Nou, daar mag je dus af en toe niet bij. Dat ligt natuurlijk aan de autorisatie. Dat noemen we dan een verticale subset hè. Je in binnen een dataset mag je nou, dat kenmerkje mag je daar mag je niet bij.
+
+00:37:59.008 --> 00:38:09.008
+<v Hans Schevers>Dat kan natuurlijk ook voor relaties gelden in link data. En we hebben ook horizontale subsets gedefinieerd waarbij we zeiden van ja, iemand die werkt bij Amsterdam mag waarschijnlijk wel iets meer opvragen van Amsterdam dan eh dan van Rotterdam.
+
+00:38:09.008 --> 00:38:27.508
+<v Hans Schevers>Hè, dus dus ehm eh sommige gegevens zijn eh ja, alleen horizontaal ehm eh gescheiden. Nou, dat hebben we geprobeerd om te implementeren. We hebben daar een autorisatie ontologie eh van gemaakt. Die hebben we geïmplementeerd met het idee van het komt een Sparql query binnen.
+
+00:38:27.508 --> 00:38:40.008
+<v Hans Schevers>We gaan die Sparql query heel goed bekijken en dan proberen we op basis daarvan te zeggen of die afgevuurd mag worden op de triplestore, ja of nee. Hè, een beetje de PEP PDP eh eh aanpak, alleen dan wel helemaal vrij, want je mag elke Sparql query stellen.
+
+00:38:40.008 --> 00:39:05.508
+<v Hans Schevers>Ehm, we hebben ook een flinke demo van gemaakt. We hebben kadasterdata, die hadden we natuurlijk al, de percelen en de BRK als koopsom, die hebben we fictief gemaakt. Ook het handelsregister en de BRP en de ANBI, hè, de stichtingen dataset, die hebben we fictief eh gemaakt, maar wel op eh vier, vijf verschillende triplestores gezet. Ehm en er zijn linkjes aanwezig tussen die triplestores, zodat er een federatieve vraag gesteld kan worden.
+
+00:39:05.508 --> 00:39:10.008
+<v Hans Schevers>Hè, geef mij de percelen en geef mij de koopsom van de percelen.
+
+00:39:10.008 --> 00:39:20.508
+<v Hans Schevers>Nou, als anoniem persoon mag je daar niet bij. Eh ben jij een persoon die wel recht heeft op die koopsom, dan eh dan eh dan krijg je wel gegevens terug.
+
+00:39:20.508 --> 00:39:38.008
+<v Hans Schevers>Ja, hoe definieer je dat? Nou ja, op elke Sparql endpoint zit dan een autorisatiemodel. Hè, en bij de BRK staat bij BRK staat er dan dat ehm niemand toegang heeft tot de koopsom, behalve bepaalde persona's.
+
+00:39:38.008 --> 00:39:51.508
+<v Hans Schevers>Ehm ja, voor het handelsregister geldt ook eh is daar een configuratie voor gemaakt en voor de personen ook. En de percelen die zijn openbaar, dus daar daar is de beveiliging minimaal.
+
+00:39:51.508 --> 00:40:00.008
+<v Hans Schevers>Hè, dus elke triplestore voorzien van een eigen autorisatie ontologie, eh geen restricties op die Sparql queries, behalve dan het feit dat ja, dat ze af en toe geen resultaten geven vanwege autorisatie.
+
+00:40:00.008 --> 00:40:08.008
+<v Hans Schevers>En dat is conceptueel wel ja, wel wel anders hè. Dus een een anoniem persoon die vraagt: geef me alle koopsommen en die krijgt geen resultaten terug.
+
+00:40:08.008 --> 00:40:10.008
+<v Hans Schevers>Ja, en bij...
+
+00:40:01.135 --> 00:40:01.835
+<v Hans Schevers>is dat voor mooi.</v>
+
+00:40:02.275 --> 00:40:06.525
+<v Hans Schevers>Eh heb je wel toegang tot koopsom, dan kun je diezelfde Sparkle query, dat vonden wij wel interessant.</v>
+
+00:40:06.525 --> 00:40:13.215
+<v Hans Schevers>Dus die dus de app, hè, de Sparkle query die de app draait, die ja, daar is niks aan veranderd.</v>
+
+00:40:13.215 --> 00:40:18.965
+<v Hans Schevers>Eh ehm maar die Sparkle query geeft dan wel resultaten terug, want je bent ingelogd als een ander persoon.</v>
+
+00:40:20.535 --> 00:40:26.995
+<v Hans Schevers>Horizontale subsets, hè, eh iemand we hebben twee gemeentes eh gemodeleerd, Zeewolde en Almere.</v>
+
+00:40:26.995 --> 00:40:31.225
+<v Hans Schevers>Dus iemand van Zeewolde, die stelt dezelfde vraag: geef mij alle percelen met koopsommen terug.</v>
+
+00:40:31.865 --> 00:40:38.235
+<v Hans Schevers>Nou ja, en eh nou ja, de Sparkle eh triplestore die kijkt, nou, waar heb jij recht toe? Eh nou, alles van Zeewolde.</v>
+
+00:40:38.235 --> 00:40:42.155
+<v Hans Schevers>Eh dus die geeft alle percelen terug met koopsommen van Zeewolde.</v>
+
+00:40:42.155 --> 00:40:45.895
+<v Hans Schevers>Nou, ben jij van Almere, krijg je natuurlijk dat hè, van Almere terug.</v>
+
+00:40:46.215 --> 00:40:53.115
+<v Hans Schevers>Dus die PEP, eh de PDP, ehm ja, true or false. Eh ja, geen idee eh eigenlijk.</v>
+
+00:40:53.115 --> 00:40:57.255
+<v Hans Schevers>Eh het is restricted, dus ehm hè, want je krijgt niet alles terug.</v>
+
+00:40:57.255 --> 00:41:05.995
+<v Hans Schevers>Ehm maar ja, zit ja, vragen heb ik daarover hè, is deze aanpak misschien niet zo handig zoals wij hem nu hebben ingestoken.</v>
+
+00:41:05.995 --> 00:41:12.595
+<v Hans Schevers>Maar het volgt wel een beetje de link data gedachte van nou ja, je hebt gewoon een triplestore en je kunt dat bevragen.</v>
+
+00:41:13.215 --> 00:41:22.715
+<v Hans Schevers>Ehm nou, dit is de het hè, het antwoord op de vraag van eh van Almere, hè, dus ehm zelfde query, eh andere persona, andere resultaten.</v>
+
+00:41:25.475 --> 00:41:30.215
+<v Hans Schevers>Ehm ja, dus we hebben een een een soort van PEP op die Sparkle endpoints gezet.</v>
+
+00:41:30.215 --> 00:41:35.995
+<v Hans Schevers>Nou, ik ik vind dus vind daar wel een parallel in zitten met eh de GraphQL presentatie van net.</v>
+
+00:41:36.755 --> 00:41:52.955
+<v Hans Schevers>Ehm ja, we hebben een autorisatie informatiemodel. Eh ja, die is vrij eh technisch ingestoken, want we moeten Sparkle queries kunnen analyseren en op basis daarvan moeten we daar extra restricties op eh leggen.</v>
+
+00:41:52.955 --> 00:42:08.955
+<v Hans Schevers>Eh ja, daar hebben we twee implementatie strategieën voor bedacht. Hè, één is herschrijven van de Sparkle query eh ehm met op basis van de autorisatieregels. Nou, dat dat het coole is dat je elke query kunt schrijven.</v>
+
+00:42:08.955 --> 00:42:12.285
+<v Hans Schevers>Minder cool is dat die Sparkle queries natuurlijk flink complex eh gaan worden, maar ja, dat is te automatiseren.</v>
+
+00:42:12.285 --> 00:42:21.055
+<v Hans Schevers>Een tweede implementatiestrategie is de subset aanpak. En iemand noemde net al een technische, hè, dat is best wel een je gaat dan eigenlijk de data engineeren om je autorisatieregels te kunnen implementeren.</v>
+
+00:42:21.055 --> 00:42:26.615
+<v Hans Schevers>Ehm maar ja, is is is is af en toe wel heel pragmatisch en handig natuurlijk.</v>
+
+00:42:27.325 --> 00:42:35.205
+<v Hans Schevers>Ehm wij hebben alleen naar eh naar eh read only gekeken, hè, dus dus het updaten van gegevens. Eh daar eh dat hebben we niet beschouwd.</v>
+
+00:42:35.595 --> 00:42:40.555
+<v Hans Schevers>En een eh ja, echte PEP en PDP die eh die eh ja, die hebben wij eigenlijk niet.</v>
+
+00:42:42.335 --> 00:42:44.835
+<v Hans Schevers>een paar linkjes voor de documentatie over Lock Unlock.</v>
+
+00:42:45.595 --> 00:42:56.555
+<v Hans Schevers>Ja, en dan krijg je een beetje de vraag natuurlijk van eh Authzen en link data Sparkle endpoints. Eh ja, ik zie het een beetje als een R&D eh waar ik denk ik wel wat tijd in eh kan stoppen, dus dat is eh</v>
+
+00:42:56.995 --> 00:42:58.625
+<v Hans Schevers>dus dat hoop ik dat dat gaat lukken.</v>
+
+00:42:59.215 --> 00:43:16.155
+<v Hans Schevers>Ehm ja, een beetje de vraag van ja, een een een hè, als je schemaloos gaat werken, hoe hoe werkt dat dan? Zo'n zo'n Authzen, hè, moeten we de hele Sparkle query dan eh eh in het brietje stoppen en en ehm nou ja, hoe hoe zorg je ervoor dat je dan een true of false terug krijgt?</v>
+
+00:43:17.035 --> 00:43:25.755
+<v Hans Schevers>Ehm nou ja, dan kom je weer op hetzelfde neer dat je die Sparkle query moet gaan eh evalueren, omdat het schemaloos is. Ehm ja, is dat dan de juiste weg?</v>
+
+00:43:26.345 --> 00:43:33.755
+<v Hans Schevers>Eh input is daar denk ik wel zeer eh welkom bij mij. Ehm ja, en horizontale subsets, is dat een is dat onhandig om te doen?</v>
+
+00:43:34.255 --> 00:43:43.835
+<v Hans Schevers>Eh wat is dan de de de feedback die je krijgt? Eh true of false of moet je gewoon zeggen van eh dat dat doen we niet? Eh dus dat is eigenlijk ook nog wel een vraag eh die ik heb.</v>
+
+00:43:44.425 --> 00:43:50.315
+<v Hans Schevers>Ehm ja, en eigenlijk wel eh hoop ik hier gewoon stappen in te kunnen zetten met een beetje in een R&D context.</v>
+
+00:43:52.515 --> 00:43:53.355
+<v Hans Schevers>Dat was hem.</v>
+
+00:43:58.709 --> 00:43:59.689
+<v René Kint>Mag ik reageren?</v>
+
+00:44:00.729 --> 00:44:02.319
+<v René Kint>Ik vind het een goed verhaal.</v>
+
+00:44:03.339 --> 00:44:10.309
+<v René Kint>Eh maar ik heb wel ik heb wel wat twijfels niet bij de aanpak hoor, maar ehm eh Timmerman ziet overal een spijker, want hij heeft een hamer bij zich.</v>
+
+00:44:11.139 --> 00:44:20.419
+<v René Kint>Ehm ik had hem mij bekroop een beetje het gevoel dat we misschien heel veel in Authzen willen stoppen wat we misschien ook met patronen kunnen oplossen.</v>
+
+00:44:21.209 --> 00:44:31.849
+<v René Kint>Het voorbeeld van iemand die zegt dat hij bij Almere werkt, hè, in de gemeente Almere werkt, daar zit al een patroon achter, want hij heeft dat ooit ergens moeten bewijzen bij iemand dat hij in Almere werkt.</v>
+
+00:44:32.649 --> 00:44:35.719
+<v René Kint>En datzelfde patroon zou je ook bij de toegang kunnen toepassen.</v>
+
+00:44:36.509 --> 00:44:51.719
+<v René Kint>Ehm je stoot namelijk op het feit dat die eh eh gegevens uit Zeewolde opvraagt en op dat moment moet er iemand, even nog ik weet nog niet wie, maar iemand moet die moet dan denken: hé, dat is verdacht. Hij vraagt gegevens van Zeewolde op. Werkt hij wel in Zeewolde?</v>
+
+00:44:52.219 --> 00:45:08.009
+<v René Kint>En dan ontstaat er eigenlijk een patroon, namelijk bewijs eens even dat jij in Zeewolde werkt, wat hij dus niet kan bewijzen, want hij werkt in Almere. Waar wordt dat gecheckt? Is dat niet ook gewoon een nieuw patroon voor die voor deze toegangsverlening?</v>
+
+00:45:09.449 --> 00:45:11.639
+<v Martin van der Plas>Dat is de analyse achteraf toch?</v>
+
+00:45:11.639 --> 00:45:17.859
+<v Martin van der Plas>Dat is de logboek toegangsverlening. Dat is de decision log. Nee, terwijl je terwijl je komt.</v>
+
+00:45:17.859 --> 00:45:27.949
+<v René Kint>Dus de we proberen nu alles in Authzen te doen. Dus eh op het moment dat je binnenkomt, proberen wij alles in één policy op te lossen voor die toegang.</v>
+
+00:45:28.929 --> 00:45:40.879
+<v Igor van Haren>Nou, en mijn de de vraag die mij bekroop was: moeten we dat wel in één policy doen of zit er toch een ketentje achter van policies, namelijk iemand heeft een keer bewezen dat hij in Almere werkt. Dat is ook een policy geweest.</v>
+
+00:45:41.279 --> 00:45:43.729
+<v René Kint>Dus er is er is een achterliggend patroon.</v>
+
+00:45:44.229 --> 00:45:47.799
+<v René Kint>Wat we misschien kunnen herhalen op het moment dat je de data vraagt.</v>
+
+00:45:49.959 --> 00:46:11.809
+<v Martin van der Plas>Om te beginnen met jouw analogie eh René, eh als je als je een hamer en een spijker hebt, als je een hamer hebt, ziet er alles eruit als een spijker. Als je vanuit de Oout standaard kijkt, dan denk je: ja, eh de gemeente Zeewolde die zal ongetwijfeld een authorization server hebben waar een token wordt uitgegeven voor hun medewerkers, waarin staat dat ze werkzaam zijn bij de gemeente Zeewolde.</v>
+
+00:46:12.309 --> 00:46:22.969
+<v Igor van Haren>Ja, dus dan kom je bij die database en dan zeg je: ik wil de gegevens van Almere hebben. Nou, die gegevens van Almere die in jouw token staat niet het bewijs dat je bij Almere werkt. Dan ben je waarschijnlijk ben je aangehaakt.</v>
+
+00:46:22.969 --> 00:46:34.499
+<v Igor van Haren>kan ook elders. Zoals wij dat in dit zelfde ook doen. Eh en een gebruiker die bij een authorization server een token heeft opgehaald en daar wordt verrijkt met een claims.</v>
+
+00:46:34.499 --> 00:46:42.019
+<v Igor van Haren>En één van die claims is bijvoorbeeld waar je werkt in Zeewolde. Ja. Eh die claims komen mee richting jouw jouw PEP.</v>
+
+00:46:42.019 --> 00:47:17.099
+<v Igor van Haren>En jouw PEP pakt die op en stopt hem in jouw Authzen eh naar een PDP. En in de PDP zou er een aparte policy kunnen zitten of meerdere of die die controleert of je wel op dezelfde gemeente bent waarvoor jij je data opvraagt. Ja. En die dat zit ergens in het datamodel. Eh het hoeft niet in het datamodel te zitten. Het kan ook in de vraag zitten en dat is wel wat Hans eigenlijk eh Ja.</v>
+
+00:47:17.099 --> 00:47:26.739
+<v René Kint>Kijk, kijk, ik ik kijk even in mijn hoofd net gewoon even een trappetje af, hè. Iemand heeft gezegd, iemand in Almere mag alleen maar gegevens van Almere bekijken. Dat heeft iemand een keer bedacht. Dat heeft hij in de datamodel gestopt.</v>
+
+00:47:27.239 --> 00:47:42.099
+<v René Kint>Eh dat is ook verifieerbaar, hè, dus eh dat datamodel is eh is wat te valideren en dus dus je kunt zien, ergens kun je zien, luister, die kolom eh gemeente waar de data van is, eh dat is een dat is ergens iets beschermd. Dat wordt afgeschermd. Dat weten we.</v>
+
+00:47:42.099 --> 00:47:51.759
+<v René Kint>Dus we weten, iemand weet dat op het moment dat die data wordt gevraagd, dat eh die gemeente waar die data van is, dat dat eh een beperkende factor is. Dus dat er even op daar moet op gecontroleerd worden.</v>
+
+00:47:52.359 --> 00:48:09.299
+<v René Kint>En het feit dat we moeten controleren is volgens mij een actie. Iemand moet gaan controleren. Hey, heb jij je paspoort wel bij je? We kunnen niet eh nou, we kunnen niet, misschien kunnen we het wel, maar wat ik zie is dat we proberen om alles in één paspoort te stoppen en dan dat hele paspoort door te eh kijken bij elke gegevens wat hij opvraagt om te kijken van is het wel</v>
+
+00:48:09.299 --> 00:48:11.929
+<v René Kint>is dit in het model allemaal wel goed geregeld?</v>
+
+00:48:12.289 --> 00:48:22.589
+<v René Kint>Maar we kunnen het ook in een patroon doen. Als je tegen tegen die kolom aanloopt, gemeente waar de data van is, dat je dan zegt: ik check eventjes waar jij werkt.</v>
+
+00:48:23.149 --> 00:48:27.829
+<v René Kint>En er zit een claim in. Er zit een claim, ik werk in Almere. Nou, dat ga ik dan even gewoon controleren.</v>
+
+00:48:27.829 --> 00:48:30.809
+<v René Kint>Dat kan toch volgens hetzelfde patroon? Ik kan toch volgens een</v>
+
+00:48:30.809 --> 00:48:34.919
+<v Michiel Trimpe>Ik denk dat we een technologieverwarring hebben.</v>
+
+00:48:35.319 --> 00:48:42.009
+<v Michiel Trimpe>We zijn in principe ook uit de tijdbox. Misschien moeten we een keer apart zitten om te kijken of we dat precies kunnen duiden waar de de verwarring zit. Guus, wilde jij nog een een poging eh een andere vraag stellen of iets?</v>
+
+00:48:42.009 --> 00:48:57.339
+<v Meer, Guus van der>proberen te verduidelijken. We kunnen nog wel één of twee minuten afronden, maar misschien ik ik kan hem wel een verduidelijking. Ik denk dat hier ook een verschil zit in waar doe je de autorisatie check. Want nu, wij doen de autorisatie check voordat je bij de GraphQL server zit, omdat je meerdere ja, plekken hebt en je eigenlijk er al daarvoor wilt gecheckt hebben, zodat het niet</v>
+
+00:48:57.339 --> 00:49:07.059
+<v Meer, Guus van der>ergens anders fout kan gaan. En hoe hoe volgens mij René het ziet is dat je het vanaf de vanaf de server gaat checken, klopt dit? En dat zijn twee, ja, het zijn twee verschillende patronen en dat</v>
+
+00:49:07.059 --> 00:49:16.329
+<v Meer, Guus van der>daarom is het lastig inderdaad om te kijken, ja, hoe dat zit, zeg maar. Ik vind het een mooie.
+
+00:50:10.337 --> 00:50:11.017
+<v Rens Kievit>kortsluiten.</v>
+
+00:50:11.607 --> 00:50:13.567
+<v Michiel Trimpe>Ik ik snap mezelf nog niet helemaal.</v>
+
+00:50:13.567 --> 00:50:18.107
+<v Michiel Trimpe>Ik denk dat we deze wel af moeten ronden in verband met de timebox.</v>
+
+00:50:18.107 --> 00:50:22.427
+<v Michiel Trimpe>Heeft iemand anders nog een een belangrijke vraag? Hans, ja.</v>
+
+00:50:23.777 --> 00:50:25.327
+<v Hans Schevers>Ik ging net ook hierover.</v>
+
+00:50:26.437 --> 00:50:32.747
+<v Igor van Haren>Nee, ik vond het best vergelijkbaar eigenlijk met GraphQL. De de de vragen die wij hadden en de vragen die jullie hebben</v>
+
+00:50:33.477 --> 00:50:35.347
+<v Igor van Haren>komen aardig met elkaar overeen.</v>
+
+00:50:35.347 --> 00:50:42.417
+<v Igor van Haren>Ehm ehm onderscheid maar bij GraphQL is wel een heel open schema.</v>
+
+00:50:42.417 --> 00:50:54.217
+<v Igor van Haren>Dus wij doen niet echt ehm in het schema een bevraging doen. Je mag alleen raadplegen mijn eigen verbindingsspecificatie op of zoiets.</v>
+
+00:50:54.217 --> 00:51:02.007
+<v Igor van Haren>Nee, je mag bemiddelingsspecificatie opvragen. En het filteren of die van jou zijn, die moet je wel in jouw vraag stellen.</v>
+
+00:51:02.007 --> 00:51:07.537
+<v Igor van Haren>Dus dus geef me een bemiddelingsspecificatie, waar moet er dan in staan die van mij zijn.</v>
+
+00:51:08.477 --> 00:51:12.307
+<v Igor van Haren>Hè, dus in in de vraag, toen wij die beperking.</v>
+
+00:51:12.637 --> 00:51:16.707
+<v Hans Schevers>Ja. Ja, dan zijn dat is mij helder eigenlijk. Ja.</v>
+
+00:51:18.427 --> 00:51:23.707
+<v Michiel Trimpe>Oké. Ehm, nou dan ga ik door naar de volgende. Mijn mijn eigen stukje.</v>
+
+00:51:24.427 --> 00:51:29.237
+<v Michiel Trimpe>Ehm, dus dit is eh we hebben nu twee onderwerpen over hoe doe je bevragingen op link data.</v>
+
+00:51:29.237 --> 00:51:33.327
+<v Michiel Trimpe>Eh er is ook nog een ander perspectief op het geheel.</v>
+
+00:51:34.727 --> 00:51:42.007
+<v Michiel Trimpe>Ehm en dat is natuurlijk dat eh de de Authzen bevragingen zelf ook data zijn.</v>
+
+00:51:42.007 --> 00:51:50.127
+<v Michiel Trimpe>En we hebben al vaker genoemd dat we het heel belangrijk vinden dat zeg maar Authzen gerelateerd wordt aan de meta-informatiemodellen in de overheid.</v>
+
+00:51:50.127 --> 00:51:57.207
+<v Michiel Trimpe>Eh dus al bij eh TOKN en het Nock-team van het Kadaster achtergrond ook veel draagvlak voor zijn.</v>
+
+00:51:57.977 --> 00:52:05.107
+<v Michiel Trimpe>Ehm maar momenteel is eh Authzen is gewoon eh JSON.</v>
+
+00:52:07.137 --> 00:52:14.127
+<v Michiel Trimpe>Eh en ja, JSON heeft niet inherent een link naar eh link data eh of de link data wereld.</v>
+
+00:52:16.427 --> 00:52:19.347
+<v Michiel Trimpe>Eh nou hoeft dat niet per se een probleem te zijn.</v>
+
+00:52:19.347 --> 00:52:26.047
+<v Michiel Trimpe>Eh ik heb hier een een voorbeeld van een eh resource waarde in Authzen neergezet.</v>
+
+00:52:26.047 --> 00:52:34.427
+<v Michiel Trimpe>Dus je hebt bijvoorbeeld een eh een resource met eh ID bla bla bla van het type, nou, inwoner.</v>
+
+00:52:35.317 --> 00:52:42.547
+<v Michiel Trimpe>met een aantal properties. Ik heb nu geen heel realistisch voorbeeld. En remove inwoner, dat zal vast niet kunnen.</v>
+
+00:52:45.347 --> 00:53:01.637
+<v Michiel Trimpe>Ehm, maar één van de dingen die ik voor wilde stellen is om te kijken of wij eh de action of de action, de dus de velden binnen Authzen met behulp van eh JSON-LD ook echt kunnen linken naar de RDF wereld.</v>
+
+00:53:02.667 --> 00:53:14.227
+<v Michiel Trimpe>Dus dat betekent dat eh je in principe het Authzen object, ik heb het bijna zoals dit kan houden. Dus dit is nog een een resource binnen een Authzen verzoek.</v>
+
+00:53:15.347 --> 00:53:18.337
+<v Michiel Trimpe>En dit is op zich gewoon standaard en normaal.</v>
+
+00:53:19.437 --> 00:53:31.227
+<v Michiel Trimpe>En op het moment dat jij een zogenaamde context annotatie toevoegt, in dit geval een een gist, een GitHub gist die ik net aan heb gemaakt.</v>
+
+00:53:31.997 --> 00:53:34.907
+<v Michiel Trimpe>Kan ik even opvragen.</v>
+
+00:53:35.487 --> 00:53:45.607
+<v Michiel Trimpe>Eh waar je dan in omschrijft, eh kijk, dit eh dus ik heb hier bijvoorbeeld de afkorting NLBRP. Nou, dat gaat eigenlijk over de de LinkedIn context brp.overheid.nl.</v>
+
+00:53:46.087 --> 00:53:57.487
+<v Michiel Trimpe>GDPR linkt naar de de GDPR link data definities. Nou, dan een trucje van de properties, de properties moet je eigenlijk als deel van dit beschouwen.</v>
+
+00:53:57.997 --> 00:54:01.127
+<v Michiel Trimpe>Nou, en dan de ID is het ID en het type is het type.</v>
+
+00:54:01.127 --> 00:54:22.027
+<v Michiel Trimpe>En dan kan je nog steeds ook voor eh de dingen binnen de properties zeggen, ja, oké, firstParent, eh daar staat dan een waarde, maar dat is eigenlijk de eh de NLBRP eh firstParent. Dat zal in het Nederlands natuurlijk eerste eerste ouder van het type BRP inwoner zijn.</v>
+
+00:54:22.807 --> 00:54:38.507
+<v Michiel Trimpe>Eh als we zo'n annotatie toevoegen, dan kan eh geautomatiseerde link data tooling dat eh extraheren en daar zelf link data definities en relaties van maken.</v>
+
+00:54:41.447 --> 00:54:56.287
+<v Michiel Trimpe>En ja, mijn voorstel was eigenlijk aan het denken is om eh te kijken of we dit patroon op kunnen nemen in de standaard als eh een recommended manier van eh modelleren van je verzoeken, van de metadata aan je verzoek koppen.</v>
+
+00:54:57.237 --> 00:55:03.017
+<v Michiel Trimpe>Het heeft relatief weinig impact op de definities.</v>
+
+00:55:03.017 --> 00:55:18.717
+<v Michiel Trimpe>Eh het enige is dat zeg maar dit patroon dan eh waarschijnlijk wel standaard of aangeraden zou kunnen worden. Dus dat je dan een prefix hebt voor je domein en dan een dubbele punt, ho. Een dubbele punt en dan je eh je datatype.</v>
+
+00:55:20.647 --> 00:55:37.387
+<v Michiel Trimpe>Eh en dit wil ik even aan de werkgroep voorleggen eh van wat denkt men hiervan? Is het een goed idee? Eh en willen we inderdaad bij de Authzen standaard, wat mij betreft internationaal dan aandragen, hé, kunnen we het toestaan dat dit toegevoegd wordt? Mensen die dit aan link data willen koppelen.</v>
+
+00:55:40.857 --> 00:55:42.007
+<v Gideon Zegwaard>Ik ben voor.</v>
+
+00:55:42.547 --> 00:55:43.027
+<v Rens Kievit>Ja.</v>
+
+00:55:43.747 --> 00:55:54.127
+<v Guus van der Meer>Nou, we hadden het eerder eh ging het over het meebrengen van je SPARQL queries, wat gewoon een troep wordt als je het in een JSON documentje zet, wat de eerste presentatie net liet zien.</v>
+
+00:55:54.127 --> 00:56:01.447
+<v Guus van der Meer>Is dit niet ook een manier om je SPARQL query soort van te encoden in JSON-LD? Zit dat hier ergens ook in?</v>
+
+00:56:03.537 --> 00:56:08.417
+<v Michiel Trimpe>Nou ja, dus je de de query zal in de action terechtkomen.</v>
+
+00:56:09.307 --> 00:56:23.337
+<v Michiel Trimpe>Eh maar het is nog steeds JSON in de action. Eh dus als als SPARQL naar JSON een lelijk formaat levert, dan zal dat ook hier, ja, het moet nog steeds naar JSON, dus zal nog steeds een lelijk formaat opleveren hier.</v>
+
+00:56:24.127 --> 00:56:33.107
+<v Gideon Zegwaard>Maar ja, ik denk dat is een ander, dat is denk ik een andere een ander vraagstuk. Eh kijk, er zijn allerhande translators om eh dingen naar link data te vertalen of terug, hè.</v>
+
+00:56:33.107 --> 00:56:44.477
+<v Gideon Zegwaard>Je kan een hele eh dat doen ze bij het Ministerie van Financiën, hebben ze het hele HTML eh model ook naar link data vertaald, zodat ze heen en weer kunnen. Zoiets zou je ook voor SPARQL kunnen doen.</v>
+
+00:56:45.207 --> 00:56:54.117
+<v Gideon Zegwaard>Alleen wat hier elegant aan is, is dat je met met minimale intrusie eh kan je eh dit eh eh als als link data bruikbaar maken.</v>
+
+00:56:54.117 --> 00:57:04.647
+<v Gideon Zegwaard>En dat er vervolgens, als je daar een SPARQL query of andere complexere eh parameters eh eh beter wil modelleren, eh daar kan.</v>
+
+00:57:05.427 --> 00:57:19.617
+<v Gideon Zegwaard>Maar het het ik het begint denk ik dat dat je die Authzen parameters en die properties in ieder geval eh eh vrij eenvoudig, tussen aanhalingstekens, naar link data kan vertalen.</v>
+
+00:57:20.217 --> 00:57:20.917
+<v Guus van der Meer>Check.</v>
+
+00:57:21.437 --> 00:57:28.117
+<v Michiel Trimpe>Oké. Ik zie nog een vraag van Gerard die ik graag had willen beantwoorden, maar mijn eigen timebox moet ik ook respecteren.</v>
+
+00:57:29.287 --> 00:57:32.417
+<v Michiel Trimpe>Eh Hans, nog een een korte slotvraag of?</v>
+
+00:57:33.137 --> 00:57:42.447
+<v Hans Schevers>Nou ja, eh meer een opmerking. Dus dus op het moment dat je dit gaat doen, dan heb je link data, maar dan heb je dat dat kan elke keer anders zijn, ligt aan de context natuurlijk.</v>
+
+00:57:42.447 --> 00:57:51.217
+<v Hans Schevers>En ik denk dat je dan een vraag creëert naar standaardisatie binnen de URL's die je gebruikt, hè. Dus nu staat er BRP inwoner.</v>
+
+00:57:51.217 --> 00:58:06.577
+<v Hans Schevers>Maar ja, dat wil je natuurlijk een eh mooie URI laten worden die ook daadwerkelijk naar de BRP toe verwijst. Lijkt mij, hè. Dus dan ga je eigenlijk, we hebben het niet over een context toevoegen, je hebt het eigenlijk over het hele bericht naar link data toe brengen in JSON-LD.</v>
+
+00:58:06.577 --> 00:58:17.517
+<v Hans Schevers>Hè, dus ik bedoel eh misschien dat de firstParent dat dat een URI wordt die weer ergens anders naartoe verwijst, hè, naar een friend of a friend eh ontologie of verzin is wat. In ieder geval iets anders.</v>
+
+00:58:17.517 --> 00:58:24.167
+<v Hans Schevers>Oftewel, ehm je wil eigenlijk elke ID, elk elk kenmerk binnen de JSON wil je</v>
+
+00:58:24.817 --> 00:58:31.627
+<v Hans Schevers>ehm laten verwijzen naar een URI die je daar 100% voor geschikt is. En dat kan elke keer iets anders zijn.</v>
+
+00:58:31.627 --> 00:58:35.127
+<v Hans Schevers>Dus je bent gewoon naar JSON-LD aan het gaan.</v>
+
+00:58:35.127 --> 00:58:48.517
+<v Hans Schevers>Hè, dus die context die zal waarschijnlijk nog veel, daar zal nog veel meer bij komen. Je wil zeggen nou eh de firstParent dat is een FOAF en secondParent dat is een eh een SKOS kenmerk en GDPR action dat is iets van de EU.</v>
+
+00:58:49.127 --> 00:58:51.587
+<v Hans Schevers>Ehm, dus andere URI's, andere base URI's.</v>
+
+00:58:52.327 --> 00:58:58.427
+<v Gideon Zegwaard>Ja. Ja, precies. Dat is precies wat we dan openen. Dan zeg je dat we eigenlijk ook uiteindelijk, het is ook een should en niet een must.</v>
+
+00:58:59.437 --> 00:59:06.547
+<v Gideon Zegwaard>Ja, je kan ook, ik ik zou hem dubbel doen. Ik zou zeggen, er is een standaard context voor de standaard Authzen eh eh kenmerken.</v>
+
+00:59:07.137 --> 00:59:21.327
+<v Gideon Zegwaard>En die die context gebruik je gewoon altijd als je eh Authzen dingen doet. En dan een een tweede context die eh eh die je gebruikt om om jouw toepassingsspecifieke properties eh te duiden.</v>
+
+00:59:21.697 --> 00:59:22.217
+<v Michiel Trimpe>Ja.</v>
+
+00:59:22.217 --> 00:59:32.327
+<v Michiel Trimpe>Oké. Even de timebox terug. Eh ik had niet zoveel inhoud verwacht en ik kan me zeker voorstellen Gerard voor een deep dive. Ehm ik ga wel eh ook ik moet ook nog onderwerpen voor de volgende keer bepalen.</v>
+
+00:59:33.207 --> 00:59:50.607
+<v Michiel Trimpe>En die hele tijd hebben we niet. Ik stel voor dat ik een aantal berichtjes in de chat zet. Eh sowieso wil ik dat doen voor de onderwerpen die we voor de volgende keer zouden kunnen bespreken. En dan ook één voor de deep dive en dat iedereen eh duimpjes achterlaat op degene waar zij voor de deep dive aanwezig willen zijn of de onderwerpen die ze voor de volgende sessie zouden willen.</v>
+
+01:00:10.529 --> 01:00:13.959
+<v Karin Hiralal>Eh hallo allemaal. Ik ben Karin Hiralal en ik ben eh verantwoordelijk voor de communicatie rondom het project.
+
+01:00:13.959 --> 01:00:19.329
+<v Karin Hiralal> Dan weet je ook even hoe je mij kan plaatsen. Wij geven sinds kort een nieuwsbrief uit.
+
+01:00:19.939 --> 01:00:23.369
+<v Karin Hiralal> Ik weet niet of jullie die al gezien hebben. Het heet de FTV update.
+
+01:00:24.229 --> 01:00:29.439
+<v Karin Hiralal> En ja, ik was even benieuwd, kennen jullie die en ja, wat vinden jullie ervan?
+
+01:00:29.439 --> 01:00:37.949
+<v Karin Hiralal> Nou, met het oog op de tijd misschien ook een slim idee om dat meteen even in de chat eh te zetten en eh nou, ik zou je reactie eh heel erg waarderen, dus alvast bedankt.
+
+01:00:47.119 --> 01:00:48.119
+<v Michiel Trimpe>1 minuut over tijd.
+
+01:00:48.869 --> 01:00:51.089
+<v Michiel Trimpe>En dank jullie wel voor jullie aanwezigheid allemaal.
+
+01:00:53.979 --> 01:00:54.579
+<v Michiel Trimpe>Hoi.
+
+01:00:58.799 --> 01:00:59.849
+<v Gerard Juijn>Ja, tot ziens.
+
+01:01:33.389 --> 01:01:35.489
+<v Michiel Trimpe>Ah, nou, de feedback over de nieuwsbrief.
+
+01:01:40.349 --> 01:01:51.719
+<v Igor van Haren>Ehm ook product management waar ik hem doorzet, die eh die vindt het goed leesbaar, eh duidelijk, eh kwalitatief eh hele goede teksten, vind ik eh.
+
+01:01:57.129 --> 01:01:58.129
+<v Igor van Haren>Gaat hij erachteraan.
+
+01:02:04.889 --> 01:02:09.129
+<v Guus van der Meer>En dan loopt Karin net weg terwijl ze hele goede feedback eh ontvangt.
+
+01:02:09.129 --> 01:02:11.799
+<v Michiel Trimpe>Ja.
+
+01:02:13.709 --> 01:02:19.209
+<v Marc de Boer>Complimenten ontvangen is één van de moeilijkste dingen die er is.
+
+01:02:27.819 --> 01:02:30.519
+<v Marc de Boer>Nu zijn we onder ons, hè?
+
+01:02:30.519 --> 01:02:30.919
+<v Michiel Trimpe>Ja.
+
+01:02:32.429 --> 01:02:33.629
+<v Michiel Trimpe>Ja, time management.
+
+01:02:34.329 --> 01:02:36.269
+<v Michiel Trimpe>Ja, ik val er iedere keer weer voor.
+
+01:02:38.599 --> 01:02:39.039
+<v Gerard Juijn>Ja.
+
+01:02:39.849 --> 01:02:51.199
+<v Gerard Juijn>Er zijn twee dingen die bij me opkomen zeg maar, want ehm de onderwerpen zijn goed en eh de discussies zijn waardevol. Dus daar valt niet zoveel op af te dingen.
+
+01:02:51.899 --> 01:03:01.799
+<v Gerard Juijn>Dus het is eh blijven zomaar twee dingen over. Eh dat iets minder willen, hè, met drie presentaties in een uur met alle aankleding eromheen is veel.
+
+01:03:02.889 --> 01:03:18.389
+<v Gerard Juijn>En eh ruimte laten om langer te blijven als mensen tijd hebben en eh door willen praten. Weet je, eh je hoort heel veel mensen horen ja. Ja, ik denk dat dat meer dan de helft eigenlijk nog wel een half uurtje heeft. Sommige mensen zeggen: "Nou, ik geloof het wel dit onderwerp."

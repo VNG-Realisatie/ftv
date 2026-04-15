@@ -59,6 +59,7 @@ Data komende werkgroepen:
 
 2026
 
+- 14 april: FORCE presentatie UGent & ADL feedback ([Notulen]({{% relref "force-presentatie-ugent-adl-feedback" %}}))
 - 31 maart: Modellering toegangsbeleid BRP-keten ([Notulen]({{% relref "modellering-toegangsbeleid-brp-keten" %}}))
 - 17 maart: Verkenning publiek toegangsbeleid ([Notulen]({{% relref "verkenning-publiek-toegangsbeleid" %}}))
 - 3 maart: Introductie ODRL voor register toegangsbeleid ([Notulen]({{% relref "introductie-odrl" %}}))

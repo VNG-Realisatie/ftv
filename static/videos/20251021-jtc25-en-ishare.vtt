@@ -1,0 +1,1192 @@
+WEBVTT
+
+00:00:02.593 --> 00:00:08.813
+<v Michiel Trimpe>Eh nou, dus eh zover gaat de de het federatief datastelsel wat ons geïnitieerd heeft.</v>
+
+00:00:08.813 --> 00:00:11.083
+<v Michiel Trimpe>en lijkt qua naamgeving natuurlijk erg op data spaces.</v>
+
+00:00:11.083 --> 00:00:17.153
+<v Michiel Trimpe>Het is misschien niet precies hetzelfde. Dat is misschien niet hetzelfde. Ik kan eh Gideon zou even later delen.</v>
+
+00:00:17.783 --> 00:00:20.663
+<v Michiel Trimpe>Maar ze zijn wel in ieder geval gelieerd.</v>
+
+00:00:20.663 --> 00:00:28.243
+<v Michiel Trimpe>Eh en er is in ieder geval de verwachting dat eh de werelden in sommige plekken binnen de overheid zullen samenkomen.</v>
+
+00:00:29.583 --> 00:00:36.963
+<v Michiel Trimpe>Eh Gerard van der Hoeven zit al eh langer in de werkgroep namens iSHARE, eh mede om dat perspectief te vertegenwoordigen.</v>
+
+00:00:37.523 --> 00:00:46.033
+<v Michiel Trimpe>En eh vorige week ben ik ook naar Berlijn geweest om de Europese plenaire sessie van JTC 25 bij te wonen.</v>
+
+00:00:46.653 --> 00:00:52.393
+<v Michiel Trimpe>die op Europees niveau standaarden rondom data spaces aan het opstellen is.</v>
+
+00:00:53.533 --> 00:00:56.813
+<v Michiel Trimpe>Eh dat is dus het onderwerp als geheel van vandaag.</v>
+
+00:00:57.253 --> 00:01:03.113
+<v Michiel Trimpe>Eh ik ben eigenlijk al iets te diep in een een vervolgonderwerp aan het gaan. Dus ik ga even terug naar de hoofdagenda.</v>
+
+00:01:03.623 --> 00:01:06.023
+<v Michiel Trimpe>Dus allereerst in ieder geval welkom bij deze werkgroep.</v>
+
+00:01:06.633 --> 00:01:13.313
+<v Michiel Trimpe>Ehm volgens mij hebben wij ja, een nieuw lid of in ieder geval eh Jaap.</v>
+
+00:01:15.653 --> 00:01:18.993
+<v Michiel Trimpe>Zou jij jezelf kunnen introduceren kort voor de groep?</v>
+
+00:01:19.233 --> 00:01:22.953
+<v Jaap Smit>Ja, dat dat kan. Ik heb het al eerder gedaan, want eh het is alweer een tijd geleden.</v>
+
+00:01:22.953 --> 00:01:28.023
+<v Jaap Smit>Eh het is niet de eerste keer dat ik deelneem. Eh ik ik eh ben als projectmanager werkzaam bij UWV.</v>
+
+00:01:28.023 --> 00:01:39.993
+<v Jaap Smit>En ik heb een eh project onder mijn hoede wat eh EAM eh heet en wat eh als doel heeft om eh policy based access eh fijnmazige eh autorisatie op basis van PBAC te implementeren.</v>
+
+00:01:40.423 --> 00:01:45.103
+<v Jaap Smit>En eh nou ja, dat heeft heel veel raakvlakken met eh wat jullie aan het doen zijn.</v>
+
+00:01:46.433 --> 00:01:49.033
+<v Michiel Trimpe>Super. Ja, ik zat altijd te twijfelen.</v>
+
+00:01:49.683 --> 00:01:53.793
+<v Michiel Trimpe>Ja. Maar ik kon niet snel niet. Maar Miami was het project toch ook?</v>
+
+00:01:53.793 --> 00:02:02.013
+<v Jaap Smit>Ja, heel goed. Marcel Molenaar eh die die eh ja, die schuift ook wel eens aan, maar eh door omstandigheden konden we vaak niet deelnemen.</v>
+
+00:02:02.013 --> 00:02:11.133
+<v Jaap Smit>En ik eh heb mezelf beloofd dat ik eh eh dat ik heel veel eh van jullie kan leren. Ik heb mezelf beloofd dat ik elke twee weken probeer om aan te schuiven.</v>
+
+00:02:11.373 --> 00:02:16.413
+<v Michiel Trimpe>Nou, hartstikke mooi. Fijn. Op termijn eh misschien kan bijdragen. Maar ja, dat is nu nog even te vroeg.</v>
+
+00:02:17.153 --> 00:02:18.993
+<v Michiel Trimpe>Fijn je erbij te hebben in ieder geval.</v>
+
+00:02:20.313 --> 00:02:24.323
+<v Michiel Trimpe>Ehm even kijken. Dan gaan we even de de standaard update van de subwerkgroepen.</v>
+
+00:02:24.933 --> 00:02:31.333
+<v Michiel Trimpe>Ehm allereerst de de update van NL Gov of van het eh AuthZEN profiel.</v>
+
+00:02:31.893 --> 00:02:38.013
+<v Michiel Trimpe>Dus het NL Gov AuthZEN profiel is nu in publieke consultatie bij Logius.</v>
+
+00:02:38.723 --> 00:02:49.333
+<v Michiel Trimpe>Dus vorige week hebben we eh overeenstemming bereikt over de reikwijdte/functioneel toepassingsgebied die wij aanraden of in ieder geval voorleggen bij de consultatie.</v>
+
+00:02:50.123 --> 00:03:00.123
+<v Michiel Trimpe>En zowel die reikwijdte als eh het functioneel toepassingsgebied is nu onder consultatie.</v>
+
+00:03:00.123 --> 00:03:08.353
+<v Michiel Trimpe>Dat kan ik misschien even voorbereiden. Misschien kan ik het snel vinden.</v>
+
+00:03:09.113 --> 00:03:16.383
+<v Michiel Trimpe>Ja, dus dit is de de consultatietekst.</v>
+
+00:03:17.653 --> 00:03:25.483
+<v Michiel Trimpe>Hij staat bij Logius openbare consultaties. Hij is ook aangekondigd via eh kennisplatform API's.</v>
+
+00:03:26.173 --> 00:03:34.503
+<v Michiel Trimpe>En wordt vandaag ook in onze eh werkgroep Nee, eh wordt volgende week dinsdag in de FTV update gedeeld.</v>
+
+00:03:35.913 --> 00:03:40.893
+<v Michiel Trimpe>Dit is uiteindelijk het voorgestelde functionele toepassingsgebied geworden.</v>
+
+00:03:41.693 --> 00:03:47.933
+<v Michiel Trimpe>Dus eh ja, eigenlijk heel dichtbij de oorspronkelijke tekst.</v>
+
+00:03:48.243 --> 00:03:57.123
+<v Michiel Trimpe>AuthZEN wordt toegepast wanneer de toegangsbeslissing tot een API aanroep in een ander component wordt afgedwongen, de PEP, dan waar de beslissing gemaakt wordt, de PDP.</v>
+
+00:03:57.823 --> 00:04:01.023
+<v Michiel Trimpe>En tijdens de consultatie kan daar ook op gereageerd worden.</v>
+
+00:04:02.943 --> 00:04:05.223
+<v Michiel Trimpe>Dus eh doe dat al een vooral.</v>
+
+00:04:06.193 --> 00:04:09.483
+<v Michiel Trimpe>Eh maar dat is verder de de update over die werkgroep.</v>
+
+00:04:10.233 --> 00:04:18.663
+<v Michiel Trimpe>Authorization Decision Log heeft eh even stilgelegen, deels wegens de corona, dus er is feedback op, dankjewel. Eh en die moeten we nu gaan verwerken.</v>
+
+00:04:19.323 --> 00:04:26.963
+<v Michiel Trimpe>Ik wil voorstellen om daar waarschijnlijk volgende werkgroep voor interesse ruimte voor in te plannen zodat we daarop door kunnen pakken.</v>
+
+00:04:27.763 --> 00:04:34.113
+<v Michiel Trimpe>Eh en voor de juridische kader is de eerste versie van het juridisch kader opgeleverd.</v>
+
+00:04:34.703 --> 00:04:44.023
+<v Michiel Trimpe>Eh maar dat is nog een in eerste versie die niet in een deelbare staat is, maar waar wel het het raamwerk duidelijk staat uitgewerkt is.</v>
+
+00:04:44.623 --> 00:04:49.803
+<v Michiel Trimpe>Daar zagen we eigenlijk geen conflicten met wat er opgeleverd is.</v>
+
+00:04:50.143 --> 00:04:58.623
+<v Michiel Trimpe>Als scope heeft hij ook alle drie de standaarden als geheel, dus wel eh de decision log als AuthZEN als het register toegangsbeleid.</v>
+
+00:04:59.343 --> 00:05:08.773
+<v Michiel Trimpe>Ehm en ja, zo gaat het reglement. Dus we hopen dat de de de finalisatie en de het afmaken van de tekst snel vorm kan geven zodat BZK dat kan delen.</v>
+
+00:05:09.113 --> 00:05:12.443
+<v Michiel Trimpe>En dat helpt denk ik ook wel bij het register toegangsbeleid om dit al kader te hebben.</v>
+
+00:05:12.443 --> 00:05:15.013
+<v Michiel Trimpe>Ja, zeker, zeker.</v>
+
+00:05:15.653 --> 00:05:24.903
+<v Michiel Trimpe>Dus we hadden het kader heel graag van tevoren gehad, maar dat nog net niet, maar bij register toegangsbeleid kunnen we het inderdaad wel als sturend gebruiken.</v>
+
+00:05:26.953 --> 00:05:32.093
+<v Michiel Trimpe>Nou, dat zijn eh de de updates van de subwerkgroepen.</v>
+
+00:05:32.803 --> 00:05:37.703
+<v Michiel Trimpe>En dan hebben we de dus de twee onderwerpen, iSHARE en Data Spaces en JTC 25.</v>
+
+00:05:38.303 --> 00:05:42.023
+<v Michiel Trimpe>Daar hebben we de rest van de meeting voor ingeruimd.</v>
+
+00:05:42.613 --> 00:05:46.073
+<v Michiel Trimpe>Ik geef even met Gerard afstemmen, wat lijkt handig om te doen?</v>
+
+00:05:46.073 --> 00:06:05.103
+<v Michiel Trimpe>Ik ik zou graag korte update over JTC 25 delen en eh ik heb wat plaatjes gemaakt om onze afstemming over de relatie tussen FTV en iSHARE of eigenlijk dus het Eclipse Digital Rights Policies profile te duiden.</v>
+
+00:06:05.623 --> 00:06:12.193
+<v Gerard Van Der Hoeven>En jij hebt een presentatie voorbereid over meer het algemene introductie JTC 25 data spaces.</v>
+
+00:06:12.693 --> 00:06:19.893
+<v Gerard Van Der Hoeven>En daar zit ook een daar zit ook een FTV iSHARE eh combinatieplaat in. Dus ik ben nou heel benieuwd of wij dezelfde soort van plaat hebben.</v>
+
+00:06:20.303 --> 00:06:22.953
+<v Michiel Trimpe>Ehm nou dan eh kijken.</v>
+
+00:06:22.953 --> 00:06:27.183
+<v Gerard Van Der Hoeven>Misschien misschien moet jij er maar misschien moet jij ermee beginnen Michiel. Dat is dat is wel dat is ook wel goed.</v>
+
+00:06:27.183 --> 00:06:30.003
+<v Gerard Van Der Hoeven>Ik heb ook Rajiv even in de call gevraagd.</v>
+
+00:06:30.003 --> 00:06:42.103
+<v Michiel Trimpe>Ah, super. Eh dus dan zijn we Ik begreep dus jullie vorige week in Berlijn niet meer hadden kunnen afstemmen of daarna ook niet meer na vanwege vanwege jouw COVID eh opvang actie.</v>
+
+00:06:44.693 --> 00:06:46.723
+<v Gerard Van Der Hoeven>Even kijken.</v>
+
+00:06:47.303 --> 00:06:51.353
+<v Gerard Van Der Hoeven>Nou, dan eh</v>
+
+00:06:51.353 --> 00:06:54.403
+<v Michiel Trimpe>Ehm nou, dus allereerst ja, dus naar de de JTC 25 geweest.</v>
+
+00:06:54.403 --> 00:07:09.113
+<v Michiel Trimpe>Even een goede brede kadering voor de werkgroep. Dus ehm je hebt een een aantal EU wetgevingen, de Data Act en de Data Governance Act die als geheel het het data delen binnen de EU willen faciliteren.</v>
+
+00:07:09.613 --> 00:07:18.103
+<v Michiel Trimpe>Eh ook als meer deels ook vanuit het eh perspectief van het unlocken van je de waarde van je data als burger.</v>
+
+00:07:19.103 --> 00:07:30.123
+<v Michiel Trimpe>Ehm die worden gestandaardiseerd op Europees niveau in de JTC 25. Dus er zijn een aantal NEN standaarden eh of CEN/CENELEC eigenlijk op Europees niveau die daar invulling aan geven.</v>
+
+00:07:30.733 --> 00:07:43.013
+<v Michiel Trimpe>Eh die zijn opgedeeld in een aantal stukken. Dus eh ja, part 1 is dan de de definities van termen in dit geheel. Eh deel twee is wat zijn dan de de trustworthiness requirements?</v>
+
+00:07:43.483 --> 00:07:49.193
+<v Michiel Trimpe>Hoe eh bouw je vertrouwen op? En deel drie geeft dan een vulling aan de interoperabiliteit.</v>
+
+00:07:49.773 --> 00:08:09.133
+<v Michiel Trimpe>Eh dit zijn allemaal wel standaarden die niet technische standaarden afdwingen. Dus deze definiëren het structuur en het concept van eh een data space. Maar ze zeggen niet: gij zult eh FSC gebruiken of gij zult DCP gebruiken of gij zult AuthZEN gebruiken of dat soort dingen. Dus dat zit hier niet in.</v>
+
+00:08:09.613 --> 00:08:13.973
+<v Michiel Trimpe>Dus we eh definiëren het patroon van uitwisseling.</v>
+
+00:08:17.203 --> 00:08:28.023
+<v Michiel Trimpe>Even twee plaatjes. Dus ehm even in eh in FTV kleurstelling. Even heel kort door de bocht heb je dan een aantal spelers.</v>
+
+00:08:28.023 --> 00:08:35.993
+<v Michiel Trimpe>Dus je hebt een een data provider, een data consumer. Dus dat zijn de de technische partijen die het uitwisselen doen.</v>
+
+00:08:36.413 --> 00:08:41.133
+<v Michiel Trimpe>En je hebt een data rights holder. Dus dat is degene die de eigenaar is van de data.</v>
+
+00:08:41.713 --> 00:08:49.033
+<v Michiel Trimpe>Eh wat binnen de de standaard heel erg speelt of van belang is, is dat men wil dat dit werkt op basis van evidence en claims.</v>
+
+00:08:49.523 --> 00:09:11.023
+<v Michiel Trimpe>Dus je kan als data rights holder, en de pijltjes kunnen verschillende kanten op, dus dit is één vorm waarop het kan, maar dat je als data rights holder bijvoorbeeld een eh een token, een getekend token aan kan leveren waarin je zegt: ik geef eh data consumer X de rechten om data te delen of mijn data te kunnen gebruiken.</v>
+
+00:09:11.643 --> 00:09:20.013
+<v Michiel Trimpe>En als data consumer kan je dan ook bijvoorbeeld een claim hebben van een contract van: hé, ik heb een contract met data provider om data uit te wisselen.</v>
+
+00:09:20.613 --> 00:09:32.193
+<v Michiel Trimpe>En eh je kan ook een claim hebben die bijvoorbeeld het beleid bevat. Dus eh en ik heb hier een claim die bewijst dat eh het beleid van de data space is dat het mag onder deze regels.</v>
+
+00:09:32.863 --> 00:09:53.033
+<v Michiel Trimpe>En als data consumer lever je dan al die claims aan en kan de data provider zelf dat reconcilen, zoals dat mooi heet. Dus van nou, ik zie al deze gecryptografisch geverifieerde stukjes evidence. En op basis daarvan weet ik dat dit het beleid is, jij die dingen hebt, dus ja, dit verzoek kan ik toestaan.</v>
+
+00:09:53.683 --> 00:09:58.213
+<v Michiel Trimpe>Dat heeft ook als meerwaarde dat dit ook offline kan gebeuren. Dus dat je ook niet die evidence op een andere...</v>
+
+00:10:07.139 --> 00:10:08.639
+<v Michiel Trimpe>ik en dan doe ik even een tweede.</v>
+
+00:10:20.729 --> 00:10:26.729
+<v Michiel Trimpe>onder andere dus dus iSHARE binnenkomt is eh dus nou dat dat is leuk met het het werken van tokens.</v>
+
+00:10:27.279 --> 00:10:39.029
+<v Michiel Trimpe>Maar een andere manier om te kijken naar dit geheel is om te zeggen: nee, we hebben een een autorisatieregister/ een digital rights policy PDP heb ik het even genoemd.</v>
+
+00:10:39.029 --> 00:10:42.239
+<v Michiel Trimpe>Een term die ik even benoemd heb om het uit te leggen. Is niet de officiële term.</v>
+
+00:10:42.929 --> 00:10:51.139
+<v Michiel Trimpe>waarbij je als data consumer ook aan het autorisatieregister een digital rights policy token op kan vragen.</v>
+
+00:10:51.789 --> 00:11:00.329
+<v Michiel Trimpe>Dus dit is een een derde PDP in het geheel, want je kunt je eigen PDP hebben als provider, je eigen PDP als consumer, maar ook nog een PDP in het stelsel.</v>
+
+00:11:00.999 --> 00:11:19.149
+<v Michiel Trimpe>en die kan dan op basis van zijn eigen PIP, PEP en PAP een digital rights policy token leveren die bijvoorbeeld zegt: ja, u mag eh van het resource type zaak alle ID's opvragen en daar de acties sluit en archiveer op uitvoeren.</v>
+
+00:11:19.809 --> 00:11:24.369
+<v Michiel Trimpe>Ehm en dan ook nog voor een een bepaalde tijdsspanne.</v>
+
+00:11:25.439 --> 00:11:31.629
+<v Michiel Trimpe>Nou, en dit digital rights policy token is waar iSHARE zich voornamelijk op richt.</v>
+
+00:11:32.619 --> 00:11:42.129
+<v Michiel Trimpe>En FTV richt zich op dit kleine stukje, de verbinding tussen de PEP en de PDP binnen de individuele organisaties.</v>
+
+00:11:42.669 --> 00:11:50.629
+<v Michiel Trimpe>En wat je ziet, eh Authzen werkt met resources en actions in het informatiemodel en een digital rights policies ook.</v>
+
+00:11:51.279 --> 00:12:12.449
+<v Michiel Trimpe>Dus in die zin mapt eh nou, iSHARE en de digital rights policies heel mooi op de FTV wereld. En gaan we dus werken. Eigenlijk hadden we dat al willen hebben vandaag, maar heeft corona een stokje voor gestoken. Gaan we werken aan een profiel dat expliciet documenteert hoe dit token mapt op het Authzen informatiemodel.</v>
+
+00:12:16.895 --> 00:12:18.425
+<v Nico Spijkers>Briljant gedaan.</v>
+
+00:12:19.345 --> 00:12:27.245
+<v Gerard Van Der Hoeven>Hartstikke mooi. Ons ons plaatje later in de in het dek. Nou, doet dat in een in een simpele versie, maar precies dat.</v>
+
+00:12:27.605 --> 00:12:28.235
+<v Nico Spijkers>Oké.</v>
+
+00:12:28.715 --> 00:12:43.215
+<v Gerard Van Der Hoeven>Nou, en dit is waarbij eh tot in ieder geval onder ons tot de conclusie waren. En ik denk, nou, ik ben niet een expert op data spaces en dat zijn Gerard en Rajiv relatief wel. Ik denk dat dit inderdaad wel een mooie is om het eh over te geven.</v>
+
+00:12:43.785 --> 00:12:45.545
+<v Karin Hiralal>Relatief wel. Dankjewel.</v>
+
+00:12:46.325 --> 00:12:54.915
+<v Gerard Van Der Hoeven>Ten opzichte van... Ik bedoel dat juist in de in de vergrotende zin dat jullie veel ten opzichte van mij.</v>
+
+00:12:55.455 --> 00:12:58.215
+<v Jaap Smijt>Maar allemaal goed, maakt helemaal niet uit.</v>
+
+00:12:59.295 --> 00:13:01.125
+<v Gerard Van Der Hoeven>Take it away. Ja, thanks.</v>
+
+00:13:01.835 --> 00:13:16.335
+<v Gerard Van Der Hoeven>Nee, ik denk dat Michiel zijn voorzet eigenlijk al heel erg versterkend en goed is. Dus eh voor mensen die mij niet kennen, ik ben eh Gerard van der Hoeven. Ik ben de de directeur van de stichting die het iSHARE framework bewaakt.</v>
+
+00:13:16.885 --> 00:13:35.215
+<v Gerard Van Der Hoeven>Ooit opgericht in 2018 door het ministerie van Infrastructuur, dus ons eigen I&W. Ehm vanuit het principe we moeten datarechtstructuren creëren zodat we meer met data en datagestuurd kunnen doen als overheid, maar met gebruik van de private data.</v>
+
+00:13:35.735 --> 00:13:43.435
+<v Gerard Van Der Hoeven>Nou, ik zal zo meteen de details induiken. Even mijn andere collega die eh ook aan boord is eh voorstellen, Rajiv. Quick intro from your end.</v>
+
+00:13:44.475 --> 00:13:52.125
+<v Rajiv Rojani>Hi, I'm Rajiv. I'm the CTO of iSHARE Foundation, a colleague of Gerard and also the architect of iSHARE framework.</v>
+
+00:13:54.605 --> 00:13:57.015
+<v Rajiv Rojani>I'm just keeping it short.</v>
+
+00:13:57.515 --> 00:13:58.265
+<v Gerard Van Der Hoeven>Thanks.</v>
+
+00:14:06.265 --> 00:14:07.125
+<v Gerard Van Der Hoeven>Top.</v>
+
+00:14:09.435 --> 00:14:21.195
+<v Gerard Van Der Hoeven>Nou, ik zal er vlot doorheen eh vliegen. Kijken of de slides eh mee willen werken. Zie je nog een beetje vaag?</v>
+
+00:14:21.495 --> 00:14:22.315
+<v Michiel Trimpe>Aan onze kant ook nog.</v>
+
+00:14:22.615 --> 00:14:23.215
+<v Gerard Van Der Hoeven>Ja, ik zie het.</v>
+
+00:14:23.475 --> 00:14:24.225
+<v Michiel Trimpe>Alleen iSHARE.</v>
+
+00:14:24.695 --> 00:14:28.325
+<v Karin Hiralal>Ja, het is wel gek, want...</v>
+
+00:14:32.325 --> 00:14:35.225
+<v Gerard Van Der Hoeven>Even nog een keer proberen hoor.</v>
+
+00:14:42.535 --> 00:14:52.205
+<v Gerard Van Der Hoeven>Ehm maar dus even terug naar de naar de oorsprong van het eh van het framework. Ehm de oorspronkelijke gedachte was: we gaan een nieuw platform maken en daar laten we iedereen zijn data opzetten.</v>
+
+00:14:58.535 --> 00:15:01.325
+<v Gerard Van Der Hoeven>En daar was vrij snel de conclusie: ja, dat gaat niemand doen.</v>
+
+00:15:02.315 --> 00:15:18.325
+<v Gerard Van Der Hoeven>Maar die data staat al op allerlei locaties. Dus uiteindelijk is de methode van gefedereerde toegangsverlening, om maar even deze term te gebruiken, is de juiste route.</v>
+
+00:15:24.585 --> 00:15:27.215
+<v Gerard Van Der Hoeven>Ja, nu is hij oké.</v>
+
+00:15:27.515 --> 00:15:29.285
+<v Michiel Trimpe>Ja, perfect, dank je.</v>
+
+00:15:29.585 --> 00:15:30.215
+<v Gerard Van Der Hoeven>Top.</v>
+
+00:15:30.735 --> 00:16:08.815
+<v Gerard Van Der Hoeven>Dus, ehm uiteindelijk was de conclusie: er is een methode van federatieve toegangsverlening nodig zodat bedrijven andere toegang kunnen geven tot de API's van hun bestaande systemen, bestaande platformen. En daar is het iSHARE framework uit eh ontwikkeld. Bovenop een aantal andere zekerheden die er eh al zijn. En ik wilde jullie even met een paar slides door eh door het framework eh lopen, wat de basisbeginselen zijn. En daarmee was de voorzet van Michiel echt eh heel waardevol, want dan snap je eigenlijk gelijk wat de eh gedachtelijn is.</v>
+
+00:16:09.435 --> 00:16:27.135
+<v Gerard Van Der Hoeven>De essentie van het framework is dat ook een organisatie moet kunnen besturen wat er met hun data gebeurt eh wanneer. Your data, your choice. Dat is ook your data, your rules. Dus jij bepaalt eh wie er tegen welke voorwaarden bij jouw eh gegevens mogen.</v>
+
+00:16:27.645 --> 00:16:44.705
+<v Gerard Van Der Hoeven>En dat is een heel belangrijk aspect wat het iSHARE framework toevoegt, is dat het eh juridische dekking geeft voor elke datatransactie ook zonder dat je eh juridische dekking met eh eh of losse contracten met partijen hebt gesloten.</v>
+
+00:16:46.305 --> 00:17:10.215
+<v Gerard Van Der Hoeven>De basisbeginsel is echt dat eh iSHARE een een horizontale toegangstandaard is, bewaakt door de eh door de foundation en zorgt dat ook een bedrijf over meerdere domeinen heen op dezelfde manier hun data toegang kunnen regelen. En dat we zo data eh beschikbaar eh gaan maken voor allerlei nou dwarsverbanden.</v>
+
+00:17:10.735 --> 00:17:29.315
+<v Gerard Van Der Hoeven>In Nederland wordt het iSHARE framework gebruikt door de belangrijkste eh data stelsels of data spaces. Eh goede discussie wat dan precies het verschil is, maar in die end gaat het om eh domeinen, ecosystemen van partijen die met elkaar rondom data willen samenwerken.</v>
+
+00:17:29.835 --> 00:17:57.395
+<v Gerard Van Der Hoeven>Nou, in Nederland heb je onder andere het DMI ecosysteem, eh de basis data infrastructuur vanuit I&W, data stelsel gebouwde omgeving, data stelsel voor duurzaamheid, utiliteit en al die data stelsels zijn op iSHARE gebaseerd en krijgen daardoor dus ook over de domeinen heen de mogelijkheid om niet binnen één omgeving alleen maar te delen, maar ook cross domein en cross silo eh toegang te geven.</v>
+
+00:17:57.915 --> 00:18:41.025
+<v Gerard Van Der Hoeven>En dat is ook de essentie, de basis van eh van de gedachte zoals we dat ook in Europa eh aan het eh aan het ontwikkelen zijn. Eigenlijk de geharmoniseerde laag voor data soevereiniteit, dus your data, your rules, vertrouwen en en discovery van eh van zowel partijen als eh als databronnen. En dat dus over of eigenlijk onder, want het is het is geen machtsblok, maar het is een eh een benutting. onder de verschillende eh data spaces die Europa aan het ontwikkelen is.</v>
+
+00:18:41.025 --> 00:18:50.625
+<v Gerard Van Der Hoeven>Mobiliteit, Agri, Green Deal en al die andere domeinen die er zijn. Die harmonisatie zorgt ervoor dat we niet in nieuwe silootjes klem komen, maar tegelijkertijd dat er ook gewoon vrijheid is per eh per domein om andere dingen anders te doen.</v>
+
+00:18:51.575 --> 00:19:18.115
+<v Gerard Van Der Hoeven>Nou, het iSHARE framework eh is echt gemaakt om die tokenstructuur te creëren, ehm zodat er bestaande applicaties op basis van die tokens, zoals Michiel net toelichtte, op basis van het harde bewijs dat een datarechthebbende, en dat is dus vaak de klant van bestaande applicaties, iemand anders kan machtigen om zijn gegevens op te halen.</v>
+
+00:19:18.635 --> 00:19:41.015
+<v Gerard Van Der Hoeven>Om dat praktisch te maken, eh data stelsel voor duurzaamheid, utiliteit in Nederland doet dat voor energiegebruiksdata. En daar kan elk bedrijf in Nederland vandaag de dag met behulp van iSHARE andere toegang geven tot het energiegebruik van bedrijfspanden. Het energiegebruik staat bij de netbeheerders.</v>
+
+00:19:41.535 --> 00:19:52.265
+<v Gerard Van Der Hoeven>Dus die data die is er al, die staat er daar al te zoemen. En het enige wat je doet is zeggen: ik ga nou, een andere organisatie toegang geven tot mijn data tegen bepaalde condities.</v>
+
+00:20:07.119 --> 00:20:09.439
+<v Gerard Van Der Hoeven>natuur van zekerheden cruciaal.</v>
+
+00:20:11.239 --> 00:20:17.659
+<v Gerard Van Der Hoeven>Dat is waar het iSHARE framework eh vanaf het begin de bewaking doet van eigenlijk die detailafspraken.</v>
+
+00:20:17.659 --> 00:20:24.319
+<v Gerard Van Der Hoeven>die heel in detail zijn als in welke API's exact, welke tokens exact, eh welke velden exact.</v>
+
+00:20:24.319 --> 00:20:28.619
+<v Gerard Van Der Hoeven>Maar voornamelijk ook wat zit er achter zo'n veld voordat je dat eh dat mag uitgeven.</v>
+
+00:20:29.719 --> 00:20:33.889
+<v Gerard Van Der Hoeven>Niet uitgegeven door het eh eh door door de iSHARE stichting.</v>
+
+00:20:33.889 --> 00:20:35.919
+<v Gerard Van Der Hoeven>De stichting bewaakt alleen maar de standaard.</v>
+
+00:20:36.519 --> 00:20:42.339
+<v Gerard Van Der Hoeven>Echte uitgifte van die tokens wordt door eh gecertificeerde partijen gedaan die dat eh zelfstandig doen.</v>
+
+00:20:44.759 --> 00:20:45.289
+<v Gerard Van Der Hoeven>Ja.</v>
+
+00:20:46.739 --> 00:20:47.369
+<v Gerard Van Der Hoeven>Ehm.</v>
+
+00:20:48.479 --> 00:20:54.079
+<v Gerard Van Der Hoeven>Zoals ik al zei, eh gebruikt in eh in Nederland over allerlei domeinen heen, maar ook in Europa, want</v>
+
+00:20:54.919 --> 00:21:02.049
+<v Gerard Van Der Hoeven>we zijn de basis onder de Agri data space, de mobility data space, de eh de Green Deal data space en zo gaan er nog veel meer komen.</v>
+
+00:21:02.519 --> 00:21:08.199
+<v Gerard Van Der Hoeven>die eigenlijk dezelfde hetzelfde fundament gebruiken, dezelfde tokens, dezelfde eh dezelfde logica.</v>
+
+00:21:08.199 --> 00:21:12.789
+<v Gerard Van Der Hoeven>Omdat we dat ook in die standaardisatieprocessen meenemen zijn, waar ik zo meteen op terugkom.</v>
+
+00:21:13.919 --> 00:21:15.099
+<v Gerard Van Der Hoeven>Nou, hoe werkt dat?</v>
+
+00:21:15.099 --> 00:21:21.699
+<v Gerard Van Der Hoeven>Ehm eigenlijk in de basis is eh eh is het iSHARE framework verzint niet opnieuw identiteiten.</v>
+
+00:21:22.699 --> 00:21:32.039
+<v Gerard Van Der Hoeven>Identities worden eh overgenomen. We bouwen het verder op bestaande identity providers die al een bepaald niveau van zekerheid geven.</v>
+
+00:21:32.609 --> 00:21:35.259
+<v Gerard Van Der Hoeven>Nou, in Nederland hebben we e-herkenning voor organisaties.</v>
+
+00:21:35.759 --> 00:21:39.699
+<v Gerard Van Der Hoeven>Dus bouwt door op eh het bewijspunt van e-herkenning.</v>
+
+00:21:40.299 --> 00:21:44.699
+<v Gerard Van Der Hoeven>En daarmee eh onder die voorwaarden kan dus een partij toegang krijgen.</v>
+
+00:21:44.699 --> 00:21:49.039
+<v Gerard Van Der Hoeven>Hey, je hebt je eh je identity bewezen met behulp van e-herkenning.</v>
+
+00:21:49.699 --> 00:21:52.369
+<v Gerard Van Der Hoeven>Daar komt je jij als identificatie uit.</v>
+
+00:21:52.369 --> 00:21:57.489
+<v Gerard Van Der Hoeven>En punt twee, je hebt bewezen dat je eh de juridische voorwaarden accepteert.</v>
+
+00:21:57.489 --> 00:22:01.029
+<v Gerard Van Der Hoeven>En dat is de tweede voorwaarde in dat eh in dat data rights token.</v>
+
+00:22:01.029 --> 00:22:06.129
+<v Gerard Van Der Hoeven>Nou, twee van die condities en daarmee zou je toegang kunnen krijgen tot een specifiek veld.</v>
+
+00:22:08.289 --> 00:22:11.499
+<v Gerard Van Der Hoeven>Wat het dus eigenlijk is, even in eh in gewone mensentaal.</v>
+
+00:22:11.499 --> 00:22:20.019
+<v Gerard Van Der Hoeven>Het is eigenlijk een data deel rijbewijsje wat wordt uitgegeven door eh door onafhankelijke partijen die toetsen of een organisatie zich</v>
+
+00:22:21.219 --> 00:22:29.079
+<v Gerard Van Der Hoeven>op dezelfde manier kenbaar heeft gemaakt en of eh of die op dezelfde manier de juridische voorwaarden van data accepteren.</v>
+
+00:22:29.619 --> 00:22:36.039
+<v Gerard Van Der Hoeven>Die algemene juridische voorwaarden zijn niet eh allesomvattend.</v>
+
+00:22:37.239 --> 00:22:42.489
+<v Gerard Van Der Hoeven>Want de volgende stap die erbij komt, de toegang tot de data zelf, bevat de detailvoorwaarden.</v>
+
+00:22:42.489 --> 00:22:48.649
+<v Gerard Van Der Hoeven>Wat je als eerste accepteert, is op het moment dat ik data krijg van een partij, krijg ik daar ook gebruikslicenties bij.</v>
+
+00:22:49.209 --> 00:22:51.699
+<v Gerard Van Der Hoeven>En ik zal me houden aan die gebruikslicenties.</v>
+
+00:22:52.149 --> 00:23:02.229
+<v Gerard Van Der Hoeven>Dit vormt een vangnet wat je technisch ook wel kan afdwingen, maar voornamelijk een vangnet voor elke datatransactie, zodat je niet nieuwe contracten hoeft te sluiten, maar wel volledig juridisch dicht.</v>
+
+00:23:04.149 --> 00:23:10.149
+<v Gerard Van Der Hoeven>Tweede punt wat er dan voor nodig is en dat is dat data rights eh profile, dat data rights token.</v>
+
+00:23:11.049 --> 00:23:13.119
+<v Gerard Van Der Hoeven>is eigenlijk vergelijkbaar met de autosleutel.</v>
+
+00:23:13.569 --> 00:23:17.079
+<v Gerard Van Der Hoeven>gestandaardiseerde autosleutel die ik aan iemand kan geven.</v>
+
+00:23:17.079 --> 00:23:23.229
+<v Gerard Van Der Hoeven>Het is mijn auto. Ik geef eh ik zie eh Jaap toevallig zitten. Ik geef Jaap mijn autosleutel.</v>
+
+00:23:24.129 --> 00:23:26.679
+<v Gerard Van Der Hoeven>onder de voorwaarde dat hij een rijbewijs heeft.</v>
+
+00:23:27.519 --> 00:23:30.099
+<v Gerard Van Der Hoeven>En onder de voorwaarde dat hij goed verzekerd is.</v>
+
+00:23:30.639 --> 00:23:39.819
+<v Gerard Van Der Hoeven>Want dat is wel handig. Die twee voorwaarden die stel ik eraan. En dan krijg je toegang tot mijn auto, maar hij mag er maar 100 km/u mee rijden. En hij mag niet in mijn dashboardkastje.</v>
+
+00:23:40.719 --> 00:23:52.059
+<v Gerard Van Der Hoeven>Dat zit dus in zo'n eh in die gestandaardiseerde sleutel eh verstopt, die is getekend eh namens mij als data eigenaar, als eh als auto-eigenaar.</v>
+
+00:23:52.659 --> 00:24:07.059
+<v Gerard Van Der Hoeven>En op die manier eh is er een geharmoniseerde structuur die het mogelijk maakt dat bedrijven tussen tussen elkaar, maar ook bedrijven naar overheden eh data toegang aan elkaar geven, waarbij de bron ontsloten wordt.</v>
+
+00:24:08.619 --> 00:24:19.239
+<v Gerard Van Der Hoeven>En daarmee dus een een standaard voor die autosleutel die eh die overal herkenbaar is eh en gaat worden in in software applicaties om op dezelfde manier te verwerken.</v>
+
+00:24:21.729 --> 00:24:31.119
+<v Gerard Van Der Hoeven>En dan inderdaad de verwerking dan aan de achterkant waar FTV eh de vertaling doet naar wat betekent dat dan intern.</v>
+
+00:24:36.219 --> 00:24:41.019
+<v Gerard Van Der Hoeven>Sleutelelement in de in de hele puzzel zijn die gebruikslicenties, die 100 km/u.</v>
+
+00:24:41.619 --> 00:24:44.679
+<v Gerard Van Der Hoeven>Dus in het framework zijn gebruikslicenties gedefinieerd.</v>
+
+00:24:45.729 --> 00:24:50.049
+<v Gerard Van Der Hoeven>Maar dat wordt dus niet door, again, door de foundation gedaan.</v>
+
+00:24:50.589 --> 00:25:04.569
+<v Gerard Van Der Hoeven>Foundation beheert alleen namens alle gebruikers, dus vanuit Europa, vanuit Nederland, eh zijn er partijen die zitten in de Change Advisory Board en die ontwikkelen ook steeds die gebruikslicenties door.</v>
+
+00:25:04.569 --> 00:25:16.629
+<v Gerard Van Der Hoeven>Die eh dat worden er dus steeds meer. Op die manier kan je zeggen tegen een andere partij: ik geef jou deze autosleutel met deze voorwaarden. Je mag het alleen, je mag er alleen maar in Duitsland mee rijden en je mag er niet harder mee dan 100.</v>
+
+00:25:16.629 --> 00:25:22.089
+<v Gerard Van Der Hoeven>Ik zeg maar wat. Maar dat moet je natuurlijk wel kunnen begrijpen en daar moet dat moet gestandaardiseerd zijn.</v>
+
+00:25:23.139 --> 00:25:26.559
+<v Gerard Van Der Hoeven>Vandaar dat dat dus eh bewaakt wordt op dezelfde manier.</v>
+
+00:25:28.659 --> 00:25:36.159
+<v Gerard Van Der Hoeven>Als je dan even kijkt naar de eh naar de basis hoe de eh hoe het iSHARE framework en het iSHARE ecosysteem werkt.</v>
+
+00:25:37.629 --> 00:25:53.949
+<v Gerard Van Der Hoeven>De foundation als credential authority, die bewaakt op welke voorwaarden en op welke wijze die eh die kunnen worden uitgegeven. Daaroverheen worden en zijn open source onderdelen ontwikkeld.</v>
+
+00:25:54.429 --> 00:26:10.629
+<v Gerard Van Der Hoeven>waarbij dus ook weer in nauw eh nauw in samenwerken, onder andere in de Eclipse Foundation. Maar ook FIWARE heeft iSHARE eh specificaties geïmplementeerd. Simpel is dat aan het doen. Nou, zo zijn er nog nogal wat andere initiatieven die daar eh die daarmee bezig zijn.</v>
+
+00:26:11.619 --> 00:26:18.039
+<v Gerard Van Der Hoeven>Eigenlijk doorbouwend op de specificaties die er die er staan en zorgen dat het daarna bruikbaar is.</v>
+
+00:26:19.119 --> 00:26:37.059
+<v Gerard Van Der Hoeven>Daarbovenop zijn er gecertificeerde issuers die die sleuteltjes uitgeven. Dus zowel dat rijbewijs, bijvoorbeeld door de Nederlandse overheid, want RVO geeft die eh geeft die uit. Maar ook die autosleutel wordt eh door partijen uitgegeven, zodat hij op dezelfde manier te gebruiken is.</v>
+
+00:26:37.659 --> 00:26:42.459
+<v Gerard Van Der Hoeven>Daar is KPN, Visma, Dexes, Port 8 en vele anderen die dat eh die dat issuen.</v>
+
+00:26:42.459 --> 00:26:48.159
+<v Gerard Van Der Hoeven>En dat is weer de basis voor die data ecosystemen om op door te bouwen. Die gebruiken dat.</v>
+
+00:26:49.359 --> 00:27:01.119
+<v Gerard Van Der Hoeven>Bijvoorbeeld DMI dat eh zet dat volop in tussen haar eh alle participanten binnen binnen DMI. En waarbij in het geval van DMI Dexes dat heeft gerealiseerd.</v>
+
+00:27:02.019 --> 00:27:10.059
+<v Gerard Van Der Hoeven>In het geval van eh van RVO heeft eh heeft Port 8 en KPN dat gerealiseerd. En daar bouwt eh bouwt de Nederlandse overheid op door.</v>
+
+00:27:10.719 --> 00:27:28.659
+<v Gerard Van Der Hoeven>Want het allerbelangrijkste is dat daar dus een feedback loop in zit. Dus die eh input vanuit de gebruikers wordt elke keer doorgevoerd en eh komt steeds weer terug, komen steeds weer nieuwe inzichten, verbeteringen, zowel op credential niveau als op de methode van uitwisseling en de methode van aanvragen.</v>
+
+00:27:29.259 --> 00:27:44.619
+<v Gerard Van Der Hoeven>Om dat praktisch te maken, je je wil natuurlijk niet altijd afhankelijk zijn van wachten tot iemand jou een sleuteltje gaat geven. Er is nu ook gestandaardiseerd hoe die sleuteltjes kunnen worden aangevraagd. Ik kan in één keer voor heel veel partijen sleutels aanvragen.</v>
+
+00:27:45.219 --> 00:27:48.159
+<v Gerard Van Der Hoeven>Met daarbij de melding: dit is wat ik met met die data wil gaan doen.</v>
+
+00:27:49.239 --> 00:27:55.119
+<v Gerard Van Der Hoeven>Maar één voorbeeldje van de vele eh elementen die dus in zo'n framework worden worden beheerd.</v>
+
+00:27:57.699 --> 00:28:02.259
+<v Gerard Van Der Hoeven>Kijk, nou, ik dacht al, waar blijft DMI? Die zat nog ergens achter verstopt.</v>
+
+00:28:03.939 --> 00:28:07.059
+<v Gerard Van Der Hoeven>Ehm, nou, hoe doen we dat eh praktisch?</v>
+
+00:28:08.139 --> 00:28:27.099
+<v Gerard Van Der Hoeven>In samenwerking met de hele community zijn er dus specificaties in in nou ja, op diep detailniveau wat de identificatieprocedures zijn, dus welke zekerheden zijn er nodig. Wil je accepteren dat iemand zijn rijbewijsje heeft, moet hij op dezelfde manier getoetst zijn.</v>
+
+00:28:27.699 --> 00:28:30.579
+<v Gerard Van Der Hoeven>Daar is weer een standaard component voor.</v>
+
+00:28:31.659 --> 00:28:40.059
+<v Gerard Van Der Hoeven>Wil je weten hoe iemand onderdeel is van bijvoorbeeld DMI, is er een eh een data space membership bewijsje wat wordt uitgegeven.</v>
+
+00:28:40.659 --> 00:28:45.159
+<v Gerard Van Der Hoeven>En daarbovenop dus die data rights credentials, de DRP.</v>
+
+00:28:47.319 --> 00:29:10.059
+<v Gerard Van Der Hoeven>En dat op al die vlakken zijn we aligned met ook in eh IDSA, International Data Spaces en ook met eh met Gaia-X, die weer andere bewijsjes geeft. Dus dat is wel goed om even uit elkaar te trekken. Ik weet niet of daar iemand geïnteresseerd in is, maar ehm ik krijg vaak de vraag: oh, zijn jullie dan een concurrent van Gaia?</v>
+
+00:29:10.059 --> 00:29:13.059
+<v Gerard Van Der Hoeven>Nee, helemaal niet. Gaia geeft andere zekerheden uit.</v>
+
+00:29:13.599 --> 00:29:28.059
+<v Gerard Van Der Hoeven>Dus die doet eigenlijk niks met deze kaartjes, maar die doet eigenlijk iets met het bewijs van de weg, het bewijs van wat voor infrastructuur je opdraait. En of jij dus alleen maar op een bepaald soort weg rijdt.</v>
+
+00:29:28.059 --> 00:29:33.219
+<v Gerard Van Der Hoeven>Als in, is jouw infrastructuur, de machines, draaien die allemaal in Europa bijvoorbeeld?</v>
+
+00:29:34.119 --> 00:29:50.559
+<v Gerard Van Der Hoeven>Nou, daar heeft Gaia een certificeringsmethode voor. En je kan dus prima stellen: ik geef nou, nog een keer Jaap toegang tot mijn auto, maar wel met de voorwaarde dat hij alleen maar op Europese wegen rijdt. Dus op Europese infrastructuur zijn data verwerkt, dat het niet naar Amerika loopt.</v>
+
+00:29:50.559 --> 00:29:54.219
+<v Gerard Van Der Hoeven>Nou, prima, dan heb je zo'n Gaia bewijsje als voorwaarde.</v>
+
+00:30:07.137 --> 00:30:08.917
+<v Gerard Van Der Hoeven>dat je even wil wil benoemen.</v>
+
+00:30:10.707 --> 00:30:14.217
+<v Gerard Van Der Hoeven>We doen dat dus op twee protocol stacks.</v>
+
+00:30:15.117 --> 00:30:20.317
+<v Gerard Van Der Hoeven>één waar we ooit mee gestart zijn. Gewoon O2 en Open ID Connect die we allemaal kennen.</v>
+
+00:30:20.737 --> 00:30:28.227
+<v Gerard Van Der Hoeven>waar we claims en tokens eh eh gebruiken. eh het iSHARE protocol wat dat realiseert.</v>
+
+00:30:30.347 --> 00:30:33.027
+<v Gerard Van Der Hoeven>En twee, eigenlijk meer daar eh naar voren toe.</v>
+
+00:30:33.387 --> 00:30:43.797
+<v Gerard Van Der Hoeven>in samenwerking met IDS en eh en Gaia waar we op basis van een data space protocol en de decentralized claims protocol, maar misschien ook wel OIDC voor verifiable credentials.</v>
+
+00:30:44.477 --> 00:30:46.077
+<v Gerard Van Der Hoeven>ehm gebruiken.</v>
+
+00:30:47.157 --> 00:30:51.487
+<v Gerard Van Der Hoeven>En in die lijn van de eh Europese wallets waar waar Europa naartoe aan het bewegen is.</v>
+
+00:30:52.247 --> 00:30:58.997
+<v Gerard Van Der Hoeven>Het is wel expliciet hybride, want we weten dat de toekomst beweegt naar verifiable credentials toe.</v>
+
+00:30:59.457 --> 00:31:03.487
+<v Gerard Van Der Hoeven>Maar eh vandaag de dag zijn het gewoon de tokens die gebruikt worden voor voor dagelijks gebruik.</v>
+
+00:31:04.117 --> 00:31:07.417
+<v Gerard Van Der Hoeven>En daarmee is het hele framework dus ook expliciet hybride.</v>
+
+00:31:08.317 --> 00:31:12.837
+<v Gerard Van Der Hoeven>echt bedoeld om eh beide domeinen te supporten, maar met precies dezelfde principes.</v>
+
+00:31:15.158 --> 00:31:15.718
+<v Frank Terpstra>Frank.</v>
+
+00:31:16.488 --> 00:31:18.158
+<v Frank Terpstra>Ja, kan je nog even terug naar de vorige slide?</v>
+
+00:31:18.398 --> 00:31:21.518
+<v Frank Terpstra>Dus je geeft aan hè, dat het een hybride oplossing is.</v>
+
+00:31:22.258 --> 00:31:32.128
+<v Frank Terpstra>Ehm kan de ene stack gebaseerd op O en Open ID Connect, dus de claims die daaruit voortkomen eh zijn die niet compatible te maken met de European wallets?</v>
+
+00:31:32.618 --> 00:31:36.468
+<v Frank Terpstra>Dus moet je daarvoor echt op de andere stack zitten als je die wil gebruiken?</v>
+
+00:31:37.528 --> 00:31:39.388
+<v Gerard Van Der Hoeven>Nou, als je als je kijkt hoe hoe die hybride is.</v>
+
+00:31:39.598 --> 00:31:45.698
+<v Gerard Van Der Hoeven>Dus de uitgeef software of de source software die ehm die die geefbewijsjes uitgeven.</v>
+
+00:31:46.398 --> 00:31:55.338
+<v Gerard Van Der Hoeven>Die gaat hybride zijn, zodat je zowel eh de European wallet credentials kan uitgeven als de huidige tokenstructuur.</v>
+
+00:31:55.658 --> 00:32:01.538
+<v Gerard Van Der Hoeven>De huidige tokenstructuur is ook JWT, is ook signed, maar is niet verifiable credential format.</v>
+
+00:32:02.328 --> 00:32:03.428
+<v Gerard Van Der Hoeven>Dat is eigenlijk het enige verschil.</v>
+
+00:32:03.598 --> 00:32:08.528
+<v Gerard Van Der Hoeven>Dus de logica van signing en de zekerheden daarachter is gelijk.</v>
+
+00:32:09.438 --> 00:32:15.828
+<v Frank Terpstra>Ja, precies, maar dus de eh degene van eh de niet verifiable credential stack krijg je niet zomaar in een wallet.</v>
+
+00:32:16.208 --> 00:32:18.998
+<v Gerard Van Der Hoeven>Deze krijg je niet in een krijg je niet in een wallet gefrimeld.</v>
+
+00:32:19.238 --> 00:32:20.008
+<v Frank Terpstra>Correct.</v>
+
+00:32:20.008 --> 00:32:29.938
+<v Gerard Van Der Hoeven>En deze deze daarom wel. En wij zijn dus onderdeel van dat eh de large scale pilot voor European wallets in het testen van alle credentials die we hier hebben staan.</v>
+
+00:32:31.578 --> 00:32:40.408
+<v Rajiv Raja>Ik vind het even te benoemen. Dit is ook mooi want dus die dat de onderste stack, dat is heel erg waar dus de de JTC 25 standaardisatie over gaat.</v>
+
+00:32:40.408 --> 00:32:41.168
+<v Frank Terpstra>Hm hm.</v>
+
+00:32:41.168 --> 00:33:02.778
+<v Rajiv Raja>En inderdaad dus ook en dat is net je zie aligned with, je ziet daar net tijdens in mijn meeting zag je ook heel duidelijk dat de verschillende grote data space spelers, dus eh, IDSA, DSSA, Eclipse Foundation, et cetera, allemaal echt samen aan het werken zijn in dat standaardisering traject om die protocollen op elkaar aan te laten sluiten.</v>
+
+00:33:03.358 --> 00:33:16.638
+<v Rajiv Raja>Je ziet bijvoorbeeld decentralized claims protocol en OID4VC die wellicht ook een deels wat over hebben, lap hebben of conflicterend zouden kunnen zijn en dat wordt daar dus ook echt bekeken hoe kunnen we dit samenhangend maken.</v>
+
+00:33:16.638 --> 00:33:17.348
+<v Gerard Van Der Hoeven>Ja.</v>
+
+00:33:18.578 --> 00:33:26.478
+<v Gerard Van Der Hoeven>En waar waar OID voor VC oorspronkelijk alleen maar voor eh natuurlijke persoon wallets was, is dat ook aan het doorontwikkelen.</v>
+
+00:33:26.658 --> 00:33:38.198
+<v Gerard Van Der Hoeven>Dus vanuit vanuit iSHARE perspectief willen we zowel eh de één als de ander eh aan nou zeg maar claims protocols eh ondersteunen.</v>
+
+00:33:38.618 --> 00:33:49.498
+<v Gerard Van Der Hoeven>Het gaat uiteindelijk om de non-repudiation, dus de zekerheid dat iemand dat echt accepteert en dat een partij dat dus echt accepteert. Ehm en en heeft getekend aan de andere kant.</v>
+
+00:33:52.278 --> 00:34:15.548
+<v Gerard Van Der Hoeven>Maar inderdaad eh Rajiv eh zit volop in dat proces en eh meer van meer mensen uit het eh uit het team in de samenwerking met eh met partijen. Dus ook in, daar had ik die volgende slide even voor staan. Ehm nou, dat we in de Eclipse Data Space werkgroep aan het doen zijn, is echt het nou, het doorontwikkelen en samen verder verder bouwen van die protocollagen.</v>
+
+00:34:16.198 --> 00:34:23.218
+<v Gerard Van Der Hoeven>En en daar nou, daar zijn steeds weer doorontwikkelingen in. Daar zit ik zelf in de stuurgroep. Rajiv is eh voorzitter van de specificatiecommissie.</v>
+
+00:34:23.638 --> 00:34:29.218
+<v Gerard Van Der Hoeven>Ehm en met elkaar zijn we dat echt aan het eh aan het realiseren over eh over Europa heen.</v>
+
+00:34:30.018 --> 00:34:42.228
+<v Gerard Van Der Hoeven>En dan dus hier expliciet in nauwe samenwerking met Microsoft, T-Systems, Amadeus en de partijen die daar echt dienstverlening op eh maken of juist anderen weer enablen om daar dienstverlening op te maken.</v>
+
+00:34:42.998 --> 00:34:49.008
+<v Gerard Van Der Hoeven>En daarom zijn we nou hard op de weg om dit echt als Europese eh basis te gaan eh gaan neerzetten.</v>
+
+00:34:54.278 --> 00:34:59.208
+<v Gerard Van Der Hoeven>Kan me voorstellen dat dit veel logo's en veel dingen door elkaar.</v>
+
+00:34:59.598 --> 00:35:05.348
+<v Gerard Van Der Hoeven>En hou de hou de essentie helder. Het gaat uiteindelijk om die kaartjes eh die worden uitgegeven op dezelfde manier.</v>
+
+00:35:06.008 --> 00:35:15.778
+<v Gerard Van Der Hoeven>Eh en op dezelfde manier worden uitgewisseld. Op het moment dat ik dit kaartje aan eh aan Jaap verstrek, tekent Jaap voor ontvangst van dat kaartje.</v>
+
+00:35:16.428 --> 00:35:20.618
+<v Gerard Van Der Hoeven>Wat weer terug wordt gerapporteerd aan de uitgeefsoftware die dat kaartje heeft uitgegeven.</v>
+
+00:35:21.058 --> 00:35:29.328
+<v Gerard Van Der Hoeven>En zo kan ik met elk moment kijken wie toegang heeft gekregen tot mijn auto eh en wie dan daarvoor de voorwaarden heeft geaccepteerd.</v>
+
+00:35:29.618 --> 00:35:32.428
+<v Gerard Van Der Hoeven>Dat is uiteindelijk de essentie eh van het hele puzzeltje.</v>
+
+00:35:32.618 --> 00:35:41.048
+<v Gerard Van Der Hoeven>En dat is waarom we door door die hele stack nou constant beïnvloeden om te zorgen dat die nou die juridische zekerheid niet eh niet gebroken wordt.</v>
+
+00:35:42.348 --> 00:35:45.068
+<v Rajiv Raja>Welke standaard definieert nou dat kaartje?</v>
+
+00:35:47.318 --> 00:35:51.528
+<v Gerard Van Der Hoeven>Dus de het even terug hoor. Ja, daar is hij weer.</v>
+
+00:35:52.128 --> 00:35:55.438
+<v Gerard Van Der Hoeven>Dus in het kaartje, dat is het data rights profile.</v>
+
+00:35:56.168 --> 00:36:03.888
+<v Gerard Van Der Hoeven>Maar de details van de data rights profile wordt weer door eh nou in het in het iSHARE framework gespecificeerd. Dus welke velden daar exact in zitten.</v>
+
+00:36:05.418 --> 00:36:13.018
+<v Gerard Van Der Hoeven>Dus die veldspecificaties eh bijvoorbeeld van de licenties of veldspecificaties welke machtigingen er allemaal zijn.</v>
+
+00:36:13.378 --> 00:36:20.578
+<v Gerard Van Der Hoeven>Die zijn allemaal gestandaardiseerd. Ehm maar de DRP, dus het data rights profile geeft de hoofdstructuur aan.</v>
+
+00:36:21.228 --> 00:36:33.728
+<v Gerard Van Der Hoeven>Vanuit de gedachte, je zou, en die kans is niet zo heel groot, maar je zou wellicht een ander eh trust framework voor data rights kunnen willen gebruiken wat andere specificaties heeft.</v>
+
+00:36:34.228 --> 00:36:37.528
+<v Gerard Van Der Hoeven>Het is vanuit de gedachte, het moet uiteindelijk allemaal open zijn.</v>
+
+00:36:38.428 --> 00:36:44.228
+<v Gerard Van Der Hoeven>Als je nu kijkt, gewoon praktisch, wereldwijd is er maar één eh framework wat dit echt in detail doet.</v>
+
+00:36:44.228 --> 00:37:00.738
+<v Gerard Van Der Hoeven>Maar daarom is die losgekoppeld, zodat DRP nou een grove samenvatting geeft en als je de details bekijkt, is het is jouw data rights profile op iSHARE gebaseerd, dan gelden alle iSHARE licenties en kan je die in de in de kit ophalen ook eh machine readable.</v>
+
+00:37:05.478 --> 00:37:14.158
+<v Michiel Trimpe>Misschien even goed om expliciet te benoemen, dus je hebt de digital right, iSHARE digital rights profile en dat is dan zeg maar in de hybride stack de de bovenste, dus de klassieke.</v>
+
+00:37:14.618 --> 00:37:32.228
+<v Michiel Trimpe>En jullie zijn ook actief bezig in de Eclipse Foundation om een Eclipse Digital Rights Policies profile te maken. En dat is dan eh het samenwerkingsstuk in het onderste gedeelte, dus de toekomstige EU compatible stack.</v>
+
+00:37:32.228 --> 00:37:33.328
+<v Gerard Van Der Hoeven>Dus even terug naar deze.</v>
+
+00:37:33.538 --> 00:37:41.328
+<v Gerard Van Der Hoeven>Dus dit is het de onderkant is inderdaad het eh het data rights profile zoals we dat in Eclipse bewaken.</v>
+
+00:37:41.698 --> 00:37:59.218
+<v Gerard Van Der Hoeven>Eh dat is ons project in de Eclipse Data Space werkgroep. Wij doen die specificatie daarvan vanuit iSHARE Foundation, maar vanuit het principe, het moet dat is open. En het zou kunnen zijn dat je andere trust frameworks gaat gebruiken onder zo'n data rights profile.</v>
+
+00:37:59.218 --> 00:38:06.748
+<v Gerard Van Der Hoeven>Die kans is niet zo groot, maar ehm nou, stel dat je dat wil. En als je in dat data rights profile zegt: ik ga het iSHARE trust framework gebruiken, dan weet je daarmee wel welke velden je daaronder nodig hebt.</v>
+
+00:38:07.228 --> 00:38:15.118
+<v Gerard Van Der Hoeven>In de huidige structuur, in de huidige nou, autosleutel tokens zit dat natuurlijk allemaal verwerkt en is het eh is het één.</v>
+
+00:38:15.658 --> 00:38:19.218
+<v Gerard Van Der Hoeven>Maar ja, daarmee dus eh gewoon mooie mooie open doorontwikkeling.</v>
+
+00:38:20.218 --> 00:38:22.258
+<v Gerard Van Der Hoeven>Ehm ja, die.</v>
+
+00:38:23.008 --> 00:38:43.438
+<v Michiel Trimpe>Ik vind het even goed wat wat mij heel erg hielp als oorspronkelijke context ook eh te realiseren dat als je kijkt naar de dus de Europese wetgevingen en dat men vaak bij data spaces het idee had van een dataproduct wat je als geheel kan downloaden.</v>
+
+00:38:43.438 --> 00:38:56.238
+<v Michiel Trimpe>Dus echt eigenlijk waar je op een knop kon drukken van ik heb nu een contract op deze dataset in zijn geheel te delen. En dat zie je in in de wetgeving en de oorspronkelijke standaard nog best vaak terugkomen.</v>
+
+00:38:56.238 --> 00:39:00.278
+<v Michiel Trimpe>En in die zin zitten iSHARE en bijvoorbeeld FDS een beetje op hetzelfde stuk.</v>
+
+00:39:00.278 --> 00:39:06.278
+<v Michiel Trimpe>We zeggen: ja, oké, maar hoe vaak download je nou een hele dataset? Vaak wil je een stukje daarvan of onder voorwaarden, et cetera.</v>
+
+00:39:06.278 --> 00:39:16.208
+<v Michiel Trimpe>En iSHARE doet het dus voornamelijk in het private stuk eh en op token gebaseerd. En vanuit FDS en en FTV zijn we meer van ja, vanuit de overheid wil je dat</v>
+
+00:39:16.208 --> 00:39:22.408
+<v Michiel Trimpe>ook real time doen, dus met alle informatie zoals het altijd is. Maar nog steeds is het hetzelfde.</v>
+
+00:39:22.408 --> 00:39:30.208
+<v Michiel Trimpe>Je er is niemand die een datacontract zal krijgen om de hele BRP te downloaden. Je zal altijd een meer fijnmazige set doen.</v>
+
+00:39:30.208 --> 00:39:37.328
+<v Michiel Trimpe>En dan iSHARE is dus het eerste stukje zover als je komt met een token met een private keten.</v>
+
+00:39:37.328 --> 00:39:40.328
+<v Michiel Trimpe>En wij trekken dat verder naar ja, en je hebt ook nog ABC.</v>
+
+00:39:40.328 --> 00:39:46.048
+<v Michiel Trimpe>Je hebt alle vereisten rondom je beleid real time. Ja. Ja.</v>
+
+00:39:46.048 --> 00:39:51.328
+<v Gerard Van Der Hoeven>Goede goede aanvulling Michiel. Dus dat in dat kaartje staan de attributen waar je toegang toe krijgt en niet alles.</v>
+
+00:39:51.328 --> 00:39:53.248
+<v Gerard Van Der Hoeven>En in het data space landschap is het vaak versimpeld.</v>
+
+00:39:53.248 --> 00:39:54.648
+<v Gerard Van Der Hoeven>Ik ga wel eventjes terug nog naar deze, want anders dan</v>
+
+00:40:03.680 --> 00:40:04.080
+<v Gerard Van Der Hoeven>Ja, dat is</v>
+
+00:40:04.720 --> 00:40:12.680
+<v Gerard Van Der Hoeven>dat is mooi, maar daar daar heb je in nou eh in ook in business samenwerking eigenlijk niet zo gek veel aan.</v>
+
+00:40:12.680 --> 00:40:24.300
+<v Gerard Van Der Hoeven>Je wil eigenlijk kunnen zorgen dat nou, de de live aankomst eh minuut van een specifieke container gedeeld wordt met de vrachtwagenchauffeur die daarvoor dat hek staat.</v>
+
+00:40:25.640 --> 00:40:34.200
+<v Gerard Van Der Hoeven>Je wil je live energiegebruik delen met de partij die jou een eh een een dienstverlening levert op eh energiebesparing.</v>
+
+00:40:34.200 --> 00:40:36.120
+<v Gerard Van Der Hoeven>Nou, zo zijn er bergen voorbeelden.</v>
+
+00:40:36.120 --> 00:40:57.080
+<v Gerard Van Der Hoeven>Ehm dus het gaat inderdaad om die toegang tot API's die eh een live datastroom leveren en waar je specifieke attributen kan eh eh tot toegang kan geven, maar dat is eh de specificatie van het kaartje zegt je kan tot dit attribuutniveau gaan en specifiek voor deze organisatie.</v>
+
+00:40:57.080 --> 00:41:08.660
+<v Gerard Van Der Hoeven>Maar je kan natuurlijk ook datzelfde kaartje en diezelfde standaard gebruiken als je zegt: ik wil niet een specifieke organisatie, maar ik wil alleen maar organisaties uit Nederland eh toegang geven tot eh eh tot dit eh tot deze databron.</v>
+
+00:41:08.660 --> 00:41:13.920
+<v Gerard Van Der Hoeven>Of specifieke partijen van de Nederlandse overheid alleen maar toegang geven tot deze databron.</v>
+
+00:41:14.340 --> 00:41:16.920
+<v Gerard Van Der Hoeven>Dus daar kan je dus in de in de breedte in.</v>
+
+00:41:17.720 --> 00:41:21.140
+<v Gerard Van Der Hoeven>En dat is dat maakt het zo'n ja, zo'n praktisch instrument.</v>
+
+00:41:21.140 --> 00:41:31.900
+<v Gerard Van Der Hoeven>Wat je natuurlijk als datarechthebbende ben je niet zo'n kaartje aan het ontwerpen. Daar gebruik je zo'n dienstverlening van KPN of van andere partijen voor die dat voor jou doet. Je geeft alleen aan: dit is wat ik wil.</v>
+
+00:41:35.109 --> 00:41:41.149
+<v Gerard Van Der Hoeven>Nou, dat geheel eh loopt inderdaad in het proces van JC 25. Michiel had dat net al even toegelicht.</v>
+
+00:41:41.149 --> 00:41:52.149
+<v Gerard Van Der Hoeven>Er zijn een paar werkgroepen daarin. En specifiek werkgroep twee eh gaat eh wat eh over dataspaces. We zijn in een aantal flows zijn we hierin eh bezig.</v>
+
+00:41:53.149 --> 00:42:08.429
+<v Gerard Van Der Hoeven>En Rajiv en Michiel zijn hier allebei nauw aan betrokken om te zorgen dat we eh vanuit Nederland eh beïnvloeding doen om dit voor elkaar te krijgen. En eh Rajiv is eh zelfs project lead van één van de streams hier binnen.</v>
+
+00:42:10.373 --> 00:42:16.913
+<v Gerard Van Der Hoeven>Nou, eigenlijk hetzelfde plaatje als Michiel net had, maar dan eh met eh eh met minder kleurtjes.</v>
+
+00:42:17.533 --> 00:42:22.333
+<v Gerard Van Der Hoeven>Ehm en met minder bolletjes, maar eigenlijk dezelfde dezelfde essentie.</v>
+
+00:42:23.213 --> 00:42:26.133
+<v Gerard Van Der Hoeven>Als je dan kijkt dus weer FTV versus iShare.</v>
+
+00:42:26.573 --> 00:42:36.993
+<v Gerard Van Der Hoeven>iShare zegt die zekerheid eh gevend aan private partijen zowel in het delen van data met elkaar als naar de eh naar de overheid.</v>
+
+00:42:37.713 --> 00:42:51.533
+<v Gerard Van Der Hoeven>En waar eh FDS eh en FTV echt uitgaat van eh zekerheid die er al is, omdat het eh een deel het delen is tussen overheidspartijen die een ander eh ander zekerheidsniveau toch al hebben.</v>
+
+00:42:52.333 --> 00:43:16.473
+<v Gerard Van Der Hoeven>En daarmee vult het elkaar heel mooi aan en zijn we dus nu ook eh het proces gestart. Het is nog niet formeel gestart, maar we gaan nu starten met eh iShare opnemen ook in de GDI. proces, dat zal nog wel even lopen, maar eh wel vanuit de verschillende datastelsels die iShare gebruiken is die vraag wel gekomen dat het handig zou zijn om dat eh ja, die vervolgstap te nemen.</v>
+
+00:43:17.633 --> 00:43:36.453
+<v Gerard Van Der Hoeven>Nou, en daarmee vullen we elkaar weer heel mooi aan en eh is er een mooie vertaling tussen nou, de iShare data rights credentials ehm en de claims of eh bewijzen daaronder die er nodig zijn en dan naar de vertaling van wat betekent dat dan in Authzen eh policy structuur.</v>
+
+00:43:38.816 --> 00:43:46.216
+<v Gerard Van Der Hoeven>Ehm ik had in gedachten we gaan gewoon vol de inhoud in, maar gezien de tijd ehm is dat een beetje lastig.</v>
+
+00:43:46.216 --> 00:43:56.316
+<v Gerard Van Der Hoeven>Wat ik even wilde laten zien kort is we hebben het hele change management van het iShare framework is gewoon online. Je ziet hier de URL.</v>
+
+00:43:56.316 --> 00:44:08.116
+<v Gerard Van Der Hoeven>Als je daarna klikt op other resources heb je eigenlijk toegang tot de licenties, de open API specificaties, de hele eh developer portal en alle details van het eh van het framework.</v>
+
+00:44:08.696 --> 00:44:20.816
+<v Gerard Van Der Hoeven>En zo acteren we het is het is een open ecosysteem. Het het framework wordt gebruikt door eh door datastelsels die bouwen daarop door, maar komen dus zelf ook met aanvullingen.</v>
+
+00:44:20.816 --> 00:44:31.116
+<v Gerard Van Der Hoeven>En eh alles wat we aan eh aan changes daarin hebben lopen, die loopt door het het change management proces, wat weer transparant is voor eh voor iedereen.</v>
+
+00:44:33.116 --> 00:44:47.916
+<v Gerard Van Der Hoeven>Open source componenten zijn beschikbaar voor partijen die zich gaan met eh met iShare aan de slag. Dus zowel op die gateway kant die we net in het plaatje zagen. Eh dus hoe verwerk je dan die tokens, maar ook uitgifte van die tokens.</v>
+
+00:44:47.916 --> 00:45:05.616
+<v Gerard Van Der Hoeven>Daar zijn standaard componenten voor beschikbaar zodat het nou makkelijker is voor partijen om dat te gaan gebruiken. Maar elke change leidt natuurlijk ook weer tot updates in eh op verschillende niveaus. Dus ook dat eh ja, dat is een continu proces eh wat we steeds meer met het ecosysteem samen doen.</v>
+
+00:45:06.416 --> 00:45:25.116
+<v Gerard Van Der Hoeven>iShare heeft daarin echt de eh het doel om dit eh Europees breed, maar zelfs ook wereldwijd eh als basis te laten gelden, zodat elke organisatie zelf controle kan houden over al zijn databronnen, waar die eh waar die ook staan.</v>
+
+00:45:26.516 --> 00:45:31.316
+<v Gerard Van Der Hoeven>Ehm en dan daarin dus bepalen wat mag je met mijn data wanneer?</v>
+
+00:45:31.316 --> 00:45:47.816
+<v Gerard Van Der Hoeven>En daarmee data autonomie terugbrengen als eh eh ja, eigenlijk als recht van eh van elke organisatie en elke elke persoon. Nou, misschien daarmee even het einde gezien de tijd.</v>
+
+00:45:48.516 --> 00:45:56.116
+<v Gerard Van Der Hoeven>Misschien zijn er nog allemaal vragen of eh is het waanzinnig confusing of is het waanzinnig helder? Dat eh daar kan alle kanten op.</v>
+
+00:45:57.336 --> 00:46:04.416
+<v Michiel Trimpe>Ja, en ik wil 5 minuten gebruiken voor de de volgende meeting, maar er zijn nog 5 minuten voor vragen dus ook.</v>
+
+00:46:07.936 --> 00:46:09.216
+<v Michiel Trimpe>uit de zaal.</v>
+
+00:46:11.496 --> 00:46:12.656
+<v Gerard Van Der Hoeven>Was het helder?</v>
+
+00:46:13.516 --> 00:46:16.336
+<v Gerard Van Der Hoeven>Of was het intens verwarrend? Dat kan ook.</v>
+
+00:46:17.896 --> 00:46:32.116
+<v Nico Spijkers>Nou, het blijft altijd wel een beetje lastig van wat is nou standaard? Wat is nou referentie implementatie? Wat is nou een eh implementatieprofiel van al internationale standaarden. Eh het dat blijft nog een beetje fuzzy zeg maar.</v>
+
+00:46:33.416 --> 00:46:59.636
+<v Gerard Van Der Hoeven>Ja, de sleutel in in deze de ja, dat dat is een beroemde terminologie. Als je kijkt naar de standaard, dan heb je natuurlijk O en andere standaarden waar het iShare framework voor is ontwikkeld is uiteindelijk die interoperabiliteit. Er staat er staan exacte velddefinities hoe die velden worden uitgegeven en daarmee kan je dit als juridisch rechtgeldig ding gebruiken.</v>
+
+00:46:59.636 --> 00:47:19.716
+<v Gerard Van Der Hoeven>Nou, heet dat dan een standaard? Is dat een normgevende implementatie beschrijving? Nou ja, noem het maar iets, maar Frank Terpstra: Zolang dat het niet is, ben je eh ben je eigenlijk gebonden aan de aan de referentie implementatie en dat maakt het wel weer wat ingewikkelder natuurlijk.</v>
+
+00:47:19.716 --> 00:47:36.316
+<v Michiel Trimpe>Op het moment dat je een normerende beschrijving hebt van die uit eh die uitgewisselde tokens, dan kan iedereen een implementatie maken. Eh en dat is natuurlijk wel een eh een aantrekkelijker aanbod dan dat het eh zowel zeg maar de zowel de standaard als de referentie implementatie sterk aan elkaar gebonden zijn.</v>
+
+00:47:36.316 --> 00:47:44.216
+<v Frank Terpstra>Omdat ze met elkaar meebewegen. Ja. Maar de de huidige structuur is dat er meerdere partijen de eh de specificaties aan het implementeren zijn in hun eigen omgeving en hun eigen aanpak.</v>
+
+00:47:44.216 --> 00:47:56.816
+<v Gerard Van Der Hoeven>Dus Simpler heeft een eigen implementatielijn. En Eclipse eh heeft ook een implementatielijn.</v>
+
+00:47:56.816 --> 00:48:08.916
+<v Frank Terpstra>We proberen die wel zo dicht mogelijk aan elkaar te houden dat er dus geen licht tussen zit. En vandaar het RFC proces waar al die partijen ook bij betrokken zijn. Ja, dat snap ik wel, maar die implementeren primair het dataspace protocol en de internationale standaarden die er zitten.</v>
+
+00:48:08.916 --> 00:48:17.116
+<v Michiel Trimpe>Dus eh ja. Ja, ik denk dat je daar ook naar het het gereed traject moet kijken. We hebben dus de hybride en de klassieke stack. Welk stuk gaan we inschieten en hoe?</v>
+
+00:48:17.116 --> 00:48:29.116
+<v Frank Terpstra>Dat is natuurlijk een andere keuze wanneer je zeg maar de het bovenste stuk, ik weet niet wat de naam ervan is, het huidige het volledige iShare profiel inschiet of aspecten van het eh van de hybride stack.</v>
+
+00:48:29.116 --> 00:48:49.116
+<v Michiel Trimpe>Dat is eh Ja, want voor voor FDS geldt het eh ideale model voor een FDS is eh een eh een open genormeerde standaard over hoe het werkt, waar je zelf je implementatie kan maken, maar waar als implementatie ondersteuning een eh een publiek open referentie implementatie beschikbaar is.</v>
+
+00:48:49.116 --> 00:48:56.516
+<v Michiel Trimpe>Dat is het ideale model. Elk model wat er aan af doet, dat eh ja, dat wordt ingewikkelder. Ja.</v>
+
+00:48:56.516 --> 00:49:23.916
+<v Gerard Van Der Hoeven>Ja, precies. Maar volgens mij is dat ook de de route die er nu staat waar wij ook op eh op zitten. Het enige element in deze eh in dit geheel los van de implementatie is natuurlijk welke partijen mogen of geven dezelfde zekerheid bij de uitgifte van die credentials. Dat is het mechanisme van het trust framework hè, dus wat we bijvoorbeeld met PKI overheid hebben geregeld, op e-herkenning hebben geregeld, of wat VECOZO doet in de zorg.</v>
+
+00:49:23.916 --> 00:49:36.916
+<v Frank Terpstra>Dus daar zijn diverse partijen die het trust framework bieden. Eh ja, dat dat is het organisatorische aspect er tegenaan. Ja, precies. Maar</v>
+
+00:50:03.111 --> 00:50:04.291
+<v Gerard Van Der Hoeven>de lijn waar we waar we op zitten.</v>
+
+00:50:04.291 --> 00:50:08.011
+<v Gerard Van Der Hoeven>En vandaar dus dat er meerdere partijen die implementaties al aan het doen zijn.</v>
+
+00:50:08.011 --> 00:50:09.681
+<v Gerard Van Der Hoeven>Ehm.</v>
+
+00:50:11.131 --> 00:50:22.451
+<v Gerard Van Der Hoeven>We hebben een geharmoniseerd conform assessment omgeving waar je toetst of de de eigenlijk de de implementatie van protocol en tokens eh juist is gedaan.</v>
+
+00:50:23.511 --> 00:50:27.121
+<v Smit, Jaap (J.J.M.)>Maar dat vergt weer een een eh een een iets normerends.</v>
+
+00:50:27.121 --> 00:50:30.141
+<v Smit, Jaap (J.J.M.)>Want als je iets gaat valideren, dan doe je dat tegen een norm.</v>
+
+00:50:30.141 --> 00:50:34.021
+<v Smit, Jaap (J.J.M.)>Dus dan heb je een duidelijke norm nodig, versionering daarvan.</v>
+
+00:50:34.021 --> 00:50:38.101
+<v Gerard Van Der Hoeven>Precies. Dus die norm staat er. En eh. Ja. Precies.</v>
+
+00:50:38.101 --> 00:50:45.211
+<v Gerard Van Der Hoeven>Dus die die normen in eh in alle documentatie is dat volledig helder en open beschikbaar en daartegen wordt getoetst.</v>
+
+00:50:45.981 --> 00:50:49.001
+<v Gerard Van Der Hoeven>Ehm, dus dat is precies de de structuur.</v>
+
+00:50:49.631 --> 00:50:50.181
+<v Smit, Jaap (J.J.M.)>Oké.</v>
+
+00:50:50.181 --> 00:50:58.111
+<v Michiel Trimpe (Ruimte)>Ik denk dat daar die projecten net ook precies de precies dit, deze discussie die hier nu opkomt is, die gaat daar de diepte in.</v>
+
+00:50:58.111 --> 00:51:01.011
+<v Michiel Trimpe (Ruimte)>En dat hoeven we gelukkig hier niet te doen. Ja.</v>
+
+00:51:01.011 --> 00:51:02.191
+<v Gideon Zegwaard (Ruimte)>Oké. Nou, heel goed.</v>
+
+00:51:02.191 --> 00:51:04.591
+<v Gideon Zegwaard (Ruimte)>Nou. Dankjewel voor de presentatie, Gerard.</v>
+
+00:51:04.591 --> 00:51:08.191
+<v Gerard Van Der Hoeven>En eh. Graag gedaan. Ik hoop dat het eh dat het mijn eigen vestiging maakt dat.</v>
+
+00:51:08.191 --> 00:51:10.871
+<v Karin Hiralal>Ik zal de</v>
+
+00:51:11.011 --> 00:51:17.071
+<v Gerard Van Der Hoeven>de link voor de presentatie even delen dan mochten er meer mensen hem willen zien dan.</v>
+
+00:51:17.071 --> 00:51:20.191
+<v Michiel Trimpe (Ruimte)>Ja, super. Die hebben we in de in de notule mee.</v>
+
+00:51:20.191 --> 00:51:21.031
+<v Gerard Van Der Hoeven>Ja.</v>
+
+00:51:21.031 --> 00:51:22.211
+<v Michiel Trimpe (Ruimte)>Cool. Oké.</v>
+
+00:51:22.211 --> 00:51:30.071
+<v Michiel Trimpe (Ruimte)>Nou, dan nog 5 minuten voor de de de planning. Ehm, ik zal even deze hier opzetten.</v>
+
+00:51:30.071 --> 00:51:46.431
+<v Michiel Trimpe (Ruimte)>Ehm, dus we hebben een tijd geleden een planning gemaakt waarbij we eh een viertal sessies relatief in veel detail hadden vastgezet.</v>
+
+00:51:46.431 --> 00:52:01.191
+<v Michiel Trimpe (Ruimte)>En een aantal sessies wat wat breder met onderwerpen van nou oké, dit willen we ook nog een keer bespreken, maar niet direct per se super urgent.</v>
+
+00:52:01.191 --> 00:52:12.191
+<v Michiel Trimpe (Ruimte)>Aan het begin van de meeting gaf ik ook aan, eh we hebben natuurlijk de authorization decision log met feedback en waarvan ik ook graag die wel eh of ja, die willen we ook richting openbare consultatie duwen.</v>
+
+00:52:12.191 --> 00:52:22.231
+<v Michiel Trimpe (Ruimte)>En we hebben register toegangsbeleid, waar we in de werkgroep breed niet aan toe kwamen, maar we hebben gezegd, we kunnen we ook een subwerk of ja, een aparte meeting aan wijden.</v>
+
+00:52:22.231 --> 00:52:34.011
+<v Michiel Trimpe (Ruimte)>Eh ik wil allereerst even vragen voor register toegangsbeleid. Ehm, willen we nog steeds de kleinere meeting eerst doen of willen we dat mogelijk voor volgende werkgroep breed agenderen?</v>
+
+00:52:34.011 --> 00:52:37.011
+<v Michiel Trimpe (Ruimte)>Even.</v>
+
+00:52:37.011 --> 00:52:40.111
+<v Michiel Trimpe (Ruimte)>Ja, ik denk de deelnemers van de kleine groep zijn niet breed aanwezig, ben ik bang.</v>
+
+00:52:40.111 --> 00:52:41.191
+<v Gideon Zegwaard (Ruimte)>Alleen Gideon en ik.</v>
+
+00:52:41.191 --> 00:52:42.191
+<v Gideon Zegwaard (Ruimte)>Een hele kleine groep.</v>
+
+00:52:42.191 --> 00:52:48.271
+<v Michiel Trimpe (Ruimte)>Nee, er zijn een aantal andere mensen die mee wilden doen, maar die zijn allemaal op vakantie denk ik. Wat is jouw eerste instinct? Willen we dat toch alsnog klein houden?</v>
+
+00:52:48.271 --> 00:52:54.431
+<v Gideon Zegwaard (Ruimte)>Ik denk dat het handig is als we het even met elkaar bespreken wat we nou precies willen doen en hoe we het aanpakken.</v>
+
+00:52:54.431 --> 00:52:56.191
+<v Michiel Trimpe (Ruimte)>Oké.</v>
+
+00:52:56.191 --> 00:52:58.011
+<v Michiel Trimpe (Ruimte)>Nou, dat is dan één.</v>
+
+00:52:58.011 --> 00:53:18.391
+<v Michiel Trimpe (Ruimte)>Eh de tweede vraag: is iedereen akkoord om voor volgende werkgroep eh het onderwerp eh authorization decision log er wel op te zetten en dan kunnen we even daarover een functioneel toepassingsgebied van bespreken.</v>
+
+00:53:18.391 --> 00:53:23.231
+<v Michiel Trimpe (Ruimte)>En even kijken of de feedback die ik hopelijk dan verwerkt heb tegen die tijd werkt voor iedereen.</v>
+
+00:53:23.231 --> 00:53:24.311
+<v Gideon Zegwaard (Ruimte)>Is dat akkoord?</v>
+
+00:53:24.311 --> 00:53:29.351
+<v Michiel Trimpe (Ruimte)>Kijken. Online zie ik voornamelijk geknik, dus dan zet ik die erbij.</v>
+
+00:53:29.351 --> 00:53:44.111
+<v Michiel Trimpe (Ruimte)>En we hadden verder op de planning staan ehm de relatie met contracten en bijvoorbeeld de de dus de BRP autorisatiebesluiten.</v>
+
+00:53:44.111 --> 00:53:51.431
+<v Gideon Zegwaard (Ruimte)>Hoe we dat uit willen werken in het geheel. Ja, dat is een use case die vrij prominent is in eh in ieder geval de FDS context.</v>
+
+00:53:51.431 --> 00:53:57.311
+<v Michiel Trimpe (Ruimte)>Inderdaad. Dat raakt misschien wel lichtelijk ook aan register. Zullen we die gewoon op de planning houden?</v>
+
+00:53:57.311 --> 00:54:12.311
+<v Michiel Trimpe (Ruimte)>Voor volgende sessie. We hebben bijvoorbeeld verifiable credentials, partial evaluation en residual policy en informatiemodellering van subject nog als onderwerpen.</v>
+
+00:54:12.311 --> 00:54:24.431
+<v Michiel Trimpe (Ruimte)>Ehm. Is er iemand behoefte om iets te schuiven, iets naar boven te trekken of?</v>
+
+00:54:24.431 --> 00:54:26.031
+<v Michiel Trimpe (Ruimte)>Gerard?</v>
+
+00:54:26.031 --> 00:54:33.151
+<v Gerard Van Der Hoeven>Nee, het was eerder als eh als we die verifiable credential beweging gaan doen, eh help ik graag mee in het eh in het voorbereiden daarvan.</v>
+
+00:54:33.151 --> 00:54:42.391
+<v Gerard Van Der Hoeven>Er zitten daar natuurlijk meerdere eh mede in dat puzzeltje. Ja, dat is kunnen we ook de European Wallet beweging even eh toelichten voor iedereen.</v>
+
+00:54:42.391 --> 00:54:44.031
+<v Michiel Trimpe (Ruimte)>Ja.</v>
+
+00:54:44.031 --> 00:55:07.351
+<v Gideon Zegwaard (Ruimte)>We zijn er wensen uit de groep om iets naar boven te tillen of vinden we de contracten die nu bovenaan staan? Nou, kijk, vanuit overheidscontext speelt hier ook nog eh eh eh initiatieven zoals eh eh uniforme bronontsluiting/generieke bronontsluiting.</v>
+
+00:55:07.351 --> 00:55:29.151
+<v Gideon Zegwaard (Ruimte)>Wat juist de overheidscontext eh aan de overheidskant, om het zo maar te zeggen, invulling geeft eh aan eh eh nou ja, credentials die vanuit de overheid moeten komen. Ehm eh ODS eh de DTP is een nieuwe anti-scraping eh initiatieven.</v>
+
+00:55:29.151 --> 00:55:39.231
+<v Gideon Zegwaard (Ruimte)>En FDS. Dus daar zit daar daar vindt ook het één en ander plaats. Ik weet niet in hoeverre dat ook nog interessant is, want ik hoor wallet voorbij komen, maar vanuit de overheidscontext</v>
+
+00:55:39.231 --> 00:55:43.311
+<v Gideon Zegwaard (Ruimte)>eh wordt er heel erg naar dat initiatief gekeken om invulling te geven.</v>
+
+00:55:43.311 --> 00:55:45.471
+<v Michiel Trimpe (Ruimte)>Ja, is dat voor volgende werkgroep of is dat te gehaast om?</v>
+
+00:55:45.471 --> 00:55:55.311
+<v Gideon Zegwaard (Ruimte)>Ik denk dat we het goed is om dat samen te trekken. Ja, ik denk ook dat het goed is als er dan iemand uit zo'n initiatief daar misschien een keer wat over vertelt.</v>
+
+00:55:55.311 --> 00:56:01.311
+<v Michiel Trimpe (Ruimte)>Inderdaad. Ik heb begrepen dat ze ook net een nieuwe lichting voor 2026 of een nieuw project voor 2026 gestart zijn.</v>
+
+00:56:01.311 --> 00:56:11.311
+<v Gideon Zegwaard (Ruimte)>Ja. En dan dat het in principe blijft staan waar het nu staat, dus niet komende werkgroep, maar de werkgroep daarop. Dan wat tijd om mensen aan te haken.</v>
+
+00:56:11.311 --> 00:56:22.111
+<v Michiel Trimpe (Ruimte)>Ehm en dan lijkt het me voor volgende werkgroep dan dat we in ieder geval dus het contract en de BRP wel kunnen verkennen en benoemen dat we daar wat ruimte voor reserveren.</v>
+
+00:56:22.111 --> 00:56:40.111
+<v Gideon Zegwaard (Ruimte)>Oké, dan houden we de de de planning aan en voegen we alleen voor vier. Het is echt alweer 4 november. Wauw. Het gaat snel met de tijd.</v>
+
+00:56:40.111 --> 00:56:45.391
+<v Michiel Trimpe (Ruimte)>Eh voegen we hier dus een review van authorization decision log en functioneel toepassingsgebied daarvoor aan toe in deze sessie.</v>
+
+00:56:45.391 --> 00:56:47.031
+<v Michiel Trimpe (Ruimte)>Oké.</v>
+
+00:56:47.031 --> 00:56:56.311
+<v Michiel Trimpe (Ruimte)>Dat was het dan wat mij betreft. Dank iedereen voor de aanwezigheid. Eh zoals gebruikelijk, mocht je nog even na willen bespreken, de recording gaat uit, maar we blijven nog een paar minuten hangen voor eh iedereen die nog wat na wil borrelen.</v>
+
+00:56:56.311 --> 00:56:58.031
+<v Michiel Trimpe (Ruimte)>Digitaal.</v>
+
+00:56:58.031 --> 00:57:00.151
+<v Spijkers, Nico>Oké, bedankt. Fijne dag.</v>
+
+00:57:00.151 --> 00:57:02.031
+<v Frank Terpstra>Dankjewel allemaal.</v>
+
+00:57:02.031 --> 00:57:03.031
+<v Frank Terpstra>Dag.</v>
+
+00:57:03.031 --> 00:57:04.111
+<v Mironov, Stas>Dankjewel.</v>

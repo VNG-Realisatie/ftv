@@ -1,0 +1,1234 @@
+WEBVTT
+
+00:00:02.589 --> 00:00:06.129
+<v Michiel Trimpe>Dan is de opname nu gestart.</v>
+
+00:00:07.419 --> 00:00:10.119
+<v Michiel Trimpe>Nou, welkom bij de werkgroep allemaal.</v>
+
+00:00:10.119 --> 00:00:17.499
+<v Michiel Trimpe>Ehm nou, ik heb geen agenda rondgestuurd. We gaan hebben vandaag een beetje een andere agenda.</v>
+
+00:00:17.499 --> 00:00:26.699
+<v Michiel Trimpe>Oorspronkelijk hadden we een eh gesprek over het informatiemodel van het subject op de agenda staan of dat had de meeste stemmen als volgende onderwerp.</v>
+
+00:00:27.759 --> 00:00:34.699
+<v Michiel Trimpe>Eh maar ik heb daar niet echt de juiste mensen voor samen gekregen.</v>
+
+00:00:34.699 --> 00:00:41.019
+<v Michiel Trimpe>En ehm het lijkt ook een mooi eh evaluatiemoment te zijn.</v>
+
+00:00:41.019 --> 00:00:45.099
+<v Michiel Trimpe>We gaan natuurlijk de vakantie tegemoet. Dus we moeten sowieso eh de vakantieplanning bespreken.</v>
+
+00:00:45.099 --> 00:00:52.399
+<v Michiel Trimpe>En dat betekent ook dat we er een eh nou ja, een eh schooljaar of in ieder geval een eh voor vakantiejaar op hebben zitten.</v>
+
+00:00:52.919 --> 00:00:59.999
+<v Michiel Trimpe>Eh dus de planning voor vandaag is het laten zien van de voortgang eh nou, de voortgang van de subwerkgroepen eigenlijk.</v>
+
+00:01:00.419 --> 00:01:06.639
+<v Michiel Trimpe>Een aantal standaarden die nu in te zien zijn, dus die wil ik eh iets meer detail aan gebruiken, wil ik laten zien en bespreken.</v>
+
+00:01:07.159 --> 00:01:11.239
+<v Michiel Trimpe>En daarna wil ik een eh een retro retrospective doen eigenlijk.</v>
+
+00:01:12.239 --> 00:01:14.479
+<v Michiel Trimpe>Ja, dus dat is de planning voor vandaag.</v>
+
+00:01:15.199 --> 00:01:21.199
+<v Michiel Trimpe>Eh ik zie wel één nieuw gezicht volgens mij, maar Marise, Marise?</v>
+
+00:01:22.379 --> 00:01:23.639
+<v Maryse Bücking>Marise inderdaad.</v>
+
+00:01:25.439 --> 00:01:28.879
+<v Michiel Trimpe>Welkom. Eh wil je jezelf even kort introduceren?</v>
+
+00:01:29.539 --> 00:01:30.159
+<v Maryse Bücking>Ja.</v>
+
+00:01:30.159 --> 00:01:36.759
+<v Maryse Bücking>Ik ben eh Marise Buking. Ik werk eh als informatiearchitect bij het NDW, het Nationaal Dataportaal Wegverkeer.</v>
+
+00:01:37.239 --> 00:01:46.319
+<v Maryse Bücking>Eh en als zodanig ben ik eh ook bezig met eh de federatieve data spaces en dan eh ook met name de EDIC van eh mobiliteit en eh logistiek.</v>
+
+00:01:47.319 --> 00:01:51.359
+<v Maryse Bücking>Ehm dus dat eh dit leek me een goede om eh om bij aan te sluiten.</v>
+
+00:01:52.439 --> 00:01:53.919
+<v Michiel Trimpe>Hartstikke mooi. Welkom.</v>
+
+00:01:53.919 --> 00:01:54.639
+<v Maryse Bücking>Dank je.</v>
+
+00:01:54.639 --> 00:02:01.039
+<v Michiel Trimpe>Nou, de eh inhoudelijk misschien wel minder, maar we gaan dus ook de inhoud bespreken vandaag.</v>
+
+00:02:01.039 --> 00:02:04.519
+<v Michiel Trimpe>Ehm nou, dan beginnen we met de updates van de subwerkgroepen.</v>
+
+00:02:04.519 --> 00:02:10.039
+<v Michiel Trimpe>Ehm er is een kleine update van de juridische subwerkgroep. Wil jij die geven, Mark?</v>
+
+00:02:11.439 --> 00:02:12.039
+<v Marc de Boer>Ja.</v>
+
+00:02:13.119 --> 00:02:17.519
+<v Marc de Boer>Ehm Michiel en ik hebben met eh Wouter. Welkom Wouter.</v>
+
+00:02:18.279 --> 00:02:27.039
+<v Marc de Boer>En eh en Jasper gesproken om nog een keer duidelijk de scope van FTV te benoemen, omdat het</v>
+
+00:02:27.839 --> 00:02:41.359
+<v Marc de Boer>ja, waar het gaat om de juridische kaders die mensen die gebruik maken van de standaard eh bepaald wordt door de wet. En natuurlijk waar het ondervalt. Nou valt FTV in principe niet onder een wet, maar de uitwisseling</v>
+
+00:02:42.319 --> 00:02:55.519
+<v Marc de Boer>die met het FDS en FTV gedaan wordt valt wel onder bepaalde wetten. Dus we hebben nog een keer gesproken over wat nou precies het kader moet zijn waar dit aan voldoet eh zowel gebruik binnen als buiten de overheid.</v>
+
+00:02:56.079 --> 00:03:09.159
+<v Marc de Boer>Dus eh dat was even nodig om het eh de subwerkgroep eh goed op de rit te houden. Dat we de juiste grenzen benoemen en ook eh ja, dat we juist benoemen waar wij onszelf kaderen.</v>
+
+00:03:14.439 --> 00:03:18.359
+<v Michiel Trimpe>En dan gingen Wouter en Jasper nu de volgende meeting inplannen.</v>
+
+00:03:19.359 --> 00:03:29.159
+<v Marc de Boer>Ja, volgens mij Wouter heb jij nu genoeg om te zeggen: ik ga een soort van opzet en hoofdstuk indeling maken en dat breng ik bij de eerstvolgende bijeenkomst in. Dat geeft ons richting.</v>
+
+00:03:30.199 --> 00:03:48.919
+<v Wouter Diephuis>Ja, klopt. We hebben we hebben afgesproken een soort eh een soort opzet inhoudsopgave zeg maar waarin je de structuur zeg maar eh kunt zien. Hè, zodat we eh goed input kunnen krijgen op de structuur en of we op de goede weg zijn. En dan gaan we dat daarna eh als dat zo blijkt, hè, dan gaan we dat verder eh verder invullen.</v>
+
+00:03:49.439 --> 00:03:56.359
+<v Wouter Diephuis>En ik kom ik kom een beetje halverwege jouw koppeling binnen, Mark, maar dat is eh wat ik heb gehoord klonk goed.</v>
+
+00:03:57.519 --> 00:04:03.039
+<v Michiel Trimpe>Ja, dat is echt eh je hebt de introductiezin gemist en de rest heb je gehoord. Precies de essentie heb je meegekregen.</v>
+
+00:04:03.039 --> 00:04:03.519
+<v Wouter Diephuis>Oké.</v>
+
+00:04:04.959 --> 00:04:05.359
+<v Wouter Diephuis>Oké.</v>
+
+00:04:07.319 --> 00:04:11.159
+<v Michiel Trimpe>Oké. Nou, dat is dan de update van de juridische subwerkgroep.</v>
+
+00:04:12.199 --> 00:04:21.559
+<v Michiel Trimpe>Ehm voor de andere subwerkgroepen, eh voor het logboek. Ik even een screen share starten.</v>
+
+00:04:22.839 --> 00:04:32.039
+<v Michiel Trimpe>Kijken, kan iemand ook de als ik de screen share start, kan iemand de mensen binnen laten? Ja, ik zal die laten. Oh, je bent er al.</v>
+
+00:04:32.039 --> 00:04:32.399
+<v Marc de Boer>Ja.</v>
+
+00:04:35.319 --> 00:04:35.719
+<v Michiel Trimpe>Oké.</v>
+
+00:04:37.359 --> 00:04:41.919
+<v Michiel Trimpe>Ik zal even de URL wel posten in de chat.</v>
+
+00:04:42.839 --> 00:04:52.039
+<v Michiel Trimpe>Dus ehm nou, de het was ik had vorige keer al gedeeld, maar er is een eh pagina voor het standaard voor het logboek toegangsbeslissingen.</v>
+
+00:04:53.039 --> 00:04:56.359
+<v Michiel Trimpe>We zijn daar met de subwerkgroep nu wat verder in gekomen.</v>
+
+00:04:56.719 --> 00:05:10.199
+<v Michiel Trimpe>Eh momenteel is het nog een mix van Nederlands en Engels, eh maar dat is omdat sommige dingen ja, gekopieerd zijn van andere plekken en het vertalen soms wat meer voeten in de aarde heeft dan eh nou ja, niet 1 2 3 gedaan is.</v>
+
+00:05:10.719 --> 00:05:14.399
+<v Michiel Trimpe>Dus bijvoorbeeld de terminologie is nog in het Nederlands.</v>
+
+00:05:15.559 --> 00:05:22.519
+<v Michiel Trimpe>Ehm maar we zijn begonnen met eh de scope.</v>
+
+00:05:23.599 --> 00:05:47.519
+<v Michiel Trimpe>Ehm de scope hebben we grotendeels eigenlijk identiek gehouden aan eh logboek dataverwerkingen. En wat we daar ook zeggen is dat wat expliciet out of scope is is het beheer van logs. Dus het is een interface voor het inzien van logs en hoe je dat opslaat. Maar beschrijft niet hoe we dit hoe je dan de logs ook moet beheren. Dus eh verwijderen, aanpassen, archiveren en dergelijke.</v>
+
+00:05:49.119 --> 00:05:58.159
+<v Michiel Trimpe>Ehm is iedereen het daar dus eh alles wat ik nu zeg is ook de uitnodiging vandaag om eh het er niet mee aan te geven dat je ergens niet mee eens bent.</v>
+
+00:05:58.639 --> 00:06:01.999
+<v Michiel Trimpe>Eh dus eh is iedereen het hiermee eens?</v>
+
+00:06:04.559 --> 00:06:12.039
+<v Michiel Trimpe>Dan eh ga ik door met het zeggen en eh ja, die verwachting dus als je ergens iets ziet waar je het niet mee eens bent of waar je vragen over hebt, laat het vooral weten.</v>
+
+00:06:12.599 --> 00:06:17.919
+<v Michiel Trimpe>Eh het belangrijkste waar we mee begonnen zijn is de berichtstructuur van de logs. Dus dat is dit.</v>
+
+00:06:18.879 --> 00:06:41.399
+<v Michiel Trimpe>Ehm we hebben het eh ja, voor een gedeelte identiek gehouden aan logboek dataverwerkingen. Dus we zeggen eh dat we verwachten dat de W3C Trace context gebruikt wordt, waar je dan op basis van trace en span ID een request kan identificeren. Ehm we nemen het timestamp mee in het bericht, dus wanneer het gebeurd is.</v>
+
+00:06:42.119 --> 00:06:58.359
+<v Michiel Trimpe>En verder voor de logging leunen wij dus sterk op het AuthZen formaat. Dus we hebben een veld voor de request en de response. En de verwachting is dat het gehele AuthZen request en het gehele AuthZen response daarin in principe gelogd wordt.</v>
+
+00:06:59.159 --> 00:07:09.119
+<v Michiel Trimpe>Eh dat is natuurlijk nog niet genoeg om een eh beslissing te kunnen reconstrueren en verantwoorden. Daarvoor heb je ook het type van het AuthZen request of het een evaluation is of evaluations en mogelijk ook de search API's.</v>
+
+00:07:09.919 --> 00:07:26.359
+<v Michiel Trimpe>En dat is dan natuurlijk nog niet genoeg om een beslissing te kunnen reconstrueren en verantwoorden. Daarvoor heb je ook de policies nodig. Dus welke policy of samengesteld geheel van policies zijn gebruikt om deze beslissing te maken.</v>
+
+00:07:27.119 --> 00:07:42.599
+<v Michiel Trimpe>Er kan ook additionele informatie uit de PIP komen. Eh deze naam zijn we nog niet helemaal blij mee. Deze ook niet, maar dit is het beste wat we even zo snel konden bedenken.</v>
+
+00:07:43.159 --> 00:07:54.519
+<v Michiel Trimpe>En eh additioneel is er ook een eh PDP bericht. En dat kan bijvoorbeeld de de versie van je policy decision point en de configuratie daarvan bevatten.</v>
+
+00:07:55.199 --> 00:08:01.119
+<v Michiel Trimpe>En op hoog niveau zijn dit dan de inputs van het eh logboek.</v>
+
+00:08:02.399 --> 00:08:03.719
+<v Michiel Trimpe>Vragen tot dusver?</v>
+
+00:08:08.519 --> 00:08:14.119
+<v Michiel Trimpe>Oké. Nou, eh request is een AuthZen request. Ik zit ondertussen in de chat te tikken, want we hebben natuurlijk nog steeds de discussie.</v>
+
+00:08:14.119 --> 00:08:23.959
+<v Gerard Juijn>Die hebben we vanmiddag over waarom gebruiken we niet gewoon de iSHARE formatering en eh iSHARE basis eh voor het geheel.</v>
+
+00:08:24.439 --> 00:08:30.119
+<v Gerard Juijn>Ehm want daarmee zou er heel veel van de dingen die we nu aan het toevoegen zijn eh niet hoeven te doen.</v>
+
+00:08:30.599 --> 00:08:32.199
+<v Gerard Juijn>Want die zijn al gedefinieerd.</v>
+
+00:08:32.199 --> 00:08:43.159
+<v Michiel Trimpe>We hebben daar vanmiddag natuurlijk de diepduif over, dus gaan we vanmiddag op door, maar even voor hier eh voor de record eh wel even dat eh eh de die eh nou. Ja, ja, Gerard, fijn dat je erbij bent.</v>
+
+00:08:43.159 --> 00:08:52.519
+<v Michiel Trimpe>We hebben dus eh oh je had gemist denk ik een stuk begin van de introductie. Eh de laatste helft van deze sessie is ook gereserveerd voor een retrospective. Ja.</v>
+
+00:08:52.519 --> 00:09:05.559
+<v Michiel Trimpe>Dus ik zie ook dat we een bredere aandachtspunten en concerns en twijfels et cetera vast kunnen leggen daarin en ook wat we daarin willen doen. En maar inderdaad, we hebben ook een aantal meetings gepland om dit aspect wat verder uit te diepen. Helemaal goed. Top.</v>
+
+00:09:05.559 --> 00:09:09.159
+<v Gerard Juijn>Ja, die miste ik. Ik ben met Teams aan het pielen. Ja.</v>
+
+00:09:09.159 --> 00:09:10.119
+<v Michiel Trimpe>Check. Top.</v>
+
+00:09:11.159 --> 00:09:12.199
+<v Gerard Juijn>Ehm oké.</v>
+
+00:09:13.079 --> 00:09:41.159
+<v Michiel Trimpe>Eh nou, voor dit stuk, nou, dus response gebruiken we het AuthZen formaat. Eh nou, de policies is dan een JSON veld waarbij de policy sources geïdentificeerd moeten kunnen worden tot specifieke versies. Dus dan eh je kan meerdere policy sources hebben, dus eh bundels bijvoorbeeld in de OPA wereld. En maar elke heeft bijvoorbeeld een specifieke versie, zoals een timestamp, een Git hash, soms is het een semantic version.</v>
+
+00:09:41.599 --> 00:09:50.959
+<v Michiel Trimpe>Wat het is maakt niet uit, maar wat je daar opneemt moet gebruikt kunnen worden om een exacte versie van de policy eh achteraf op te kunnen halen.</v>
+
+00:09:52.159 --> 00:10:08.319
+<v Michiel Trimpe>Eh voor information is het vergelijkbaar. Dus in information staan de additionele bronnen die gebruikt zijn. En de verwachting is dus als je ergens iets ziet waar je het niet mee eens bent of waar je vragen over hebt, laat het vooral weten.</v>
+
+00:10:09.119 --> 00:10:17.519
+<v Michiel Trimpe>Eh het belangrijkste waar we mee begonnen zijn is de berichtstructuur van de logs. Dus dat is dit. Eh we hebben het eh ja, voor een gedeelte identiek gehouden aan logboek dataverwerkingen.</v>
+
+00:10:17.519 --> 00:10:41.399
+<v Michiel Trimpe>Dus we zeggen eh dat we verwachten dat de W3C Trace context gebruikt wordt, waar je dan op basis van trace en span ID een request kan identificeren. Ehm we nemen het timestamp mee in het bericht, dus wanneer het gebeurd is.</v>
+
+00:10:42.119 --> 00:10:58.359
+<v Michiel Trimpe>En verder voor de logging leunen wij dus sterk op het AuthZen formaat. Dus we hebben een veld voor de request en de response. En de verwachting is dat het gehele AuthZen request en het gehele AuthZen response daarin in principe gelogd wordt.</v>
+
+00:10:59.159 --> 00:11:09.119
+<v Michiel Trimpe>Eh dat is natuurlijk nog niet genoeg om een eh beslissing te kunnen reconstrueren en verantwoorden. Daarvoor heb je ook het type van het AuthZen request of het een evaluation is of evaluations en mogelijk ook de search API's.</v>
+
+00:11:09.919 --> 00:11:26.359
+<v Michiel Trimpe>En dat is dan natuurlijk nog niet genoeg om een beslissing te kunnen reconstrueren en verantwoorden. Daarvoor heb je ook de policies nodig. Dus welke policy of samengesteld geheel van policies zijn gebruikt om deze beslissing te maken.</v>
+
+00:11:27.119 --> 00:11:42.599
+<v Michiel Trimpe>Er kan ook additionele informatie uit de PIP komen. Eh deze naam zijn we nog niet helemaal blij mee. Deze ook niet, maar dit is het beste wat we even zo snel konden bedenken.</v>
+
+00:11:43.159 --> 00:11:54.519
+<v Michiel Trimpe>En eh additioneel is er ook een eh PDP bericht. En dat kan bijvoorbeeld de de versie van je policy decision point en de configuratie daarvan bevatten.</v>
+
+00:11:55.199 --> 00:12:01.119
+<v Michiel Trimpe>En op hoog niveau zijn dit dan de inputs van het eh logboek.</v>
+
+00:12:02.399 --> 00:12:03.719
+<v Michiel Trimpe>Vragen tot dusver?</v>
+
+00:12:08.519 --> 00:12:14.119
+<v Michiel Trimpe>Oké. Nou, eh request is een AuthZen request. Ik zit ondertussen in de chat te tikken, want we hebben natuurlijk nog steeds de discussie.</v>
+
+00:12:14.119 --> 00:12:23.959
+<v Gerard Juijn>Die hebben we vanmiddag over waarom gebruiken we niet gewoon de iSHARE formatering en eh iSHARE basis eh voor het geheel.</v>
+
+00:12:24.439 --> 00:12:30.119
+<v Gerard Juijn>Ehm want daarmee zou er heel veel van de dingen die we nu aan het toevoegen zijn eh niet hoeven te doen.</v>
+
+00:12:30.599 --> 00:12:32.199
+<v Gerard Juijn>Want die zijn al gedefinieerd.</v>
+
+00:12:32.199 --> 00:12:43.159
+<v Michiel Trimpe>We hebben daar vanmiddag natuurlijk de diepduif over, dus gaan we vanmiddag op door, maar even voor hier eh voor de record eh wel even dat eh eh de die eh nou. Ja, ja, Gerard, fijn dat je erbij bent.</v>
+
+00:12:43.159 --> 00:12:52.519
+<v Michiel Trimpe>We hebben dus eh oh je had gemist denk ik een stuk begin van de introductie. Eh de laatste helft van deze sessie is ook gereserveerd voor een retrospective. Ja.</v>
+
+00:12:52.519 --> 00:13:05.559
+<v Michiel Trimpe>Dus ik zie ook dat we een bredere aandachtspunten en concerns en twijfels et cetera vast kunnen leggen daarin en ook wat we daarin willen doen. En maar inderdaad, we hebben ook een aantal meetings gepland om dit aspect wat verder uit te diepen. Helemaal goed. Top.</v>
+
+00:13:05.559 --> 00:13:09.159
+<v Gerard Juijn>Ja, die miste ik. Ik ben met Teams aan het pielen. Ja.</v>
+
+00:13:09.159 --> 00:13:10.119
+<v Michiel Trimpe>Check. Top.</v>
+
+00:13:11.159 --> 00:13:12.199
+<v Gerard Juijn>Ehm oké.</v>
+
+00:13:13.079 --> 00:13:41.159
+<v Michiel Trimpe>Eh nou, voor dit stuk, nou, dus response gebruiken we het AuthZen formaat. Eh nou, de policies is dan een JSON veld waarbij de policy sources geïdentificeerd moeten kunnen worden tot specifieke versies. Dus dan eh je kan meerdere policy sources hebben, dus eh bundels bijvoorbeeld in de OPA wereld. En maar elke heeft bijvoorbeeld een specifieke versie, zoals een timestamp, een Git hash, soms is het een semantic version.</v>
+
+00:13:41.599 --> 00:13:50.959
+<v Michiel Trimpe>Wat het is maakt niet uit, maar wat je daar opneemt moet gebruikt kunnen worden om een exacte versie van de policy eh achteraf op te kunnen halen.</v>
+
+00:13:52.159 --> 00:13:57.519
+<v Michiel Trimpe>Eh voor information is het vergelijkbaar. Dus in information staan de additionele bronnen die gebruikt zijn.</v>
+
+00:10:00.000 --> 00:10:05.530
+<v Michiel Trimpe>want een query zijn, maar het kan ook een eh ja, een gerepliceerde dataset zijn in de PDP.</v>
+
+00:10:07.130 --> 00:10:08.350
+<v Michiel Trimpe>Eh maar je moet wel opnemen welke exact welke versie gebruikt is</v>
+
+00:10:08.350 --> 00:10:12.180
+<v Michiel Trimpe>voor de beslissing.</v>
+
+00:10:13.130 --> 00:10:18.420
+<v Michiel Trimpe>Eh en we hebben een aantal voorbeelden, specifieke voorbeelden uitgeroepen, dus bijvoorbeeld een eh temporal source.</v>
+
+00:10:18.810 --> 00:10:22.040
+<v Michiel Trimpe>Dus eh eh bronnen die tijdreizen ondersteunen.</v>
+
+00:10:22.040 --> 00:10:28.230
+<v Michiel Trimpe>Dan moet ik nog de verwijzing naar eh de rest API design rules opnemen, de extensie.</v>
+
+00:10:29.620 --> 00:10:34.420
+<v Michiel Trimpe>En hier zeggen we als je een bron gebruikt die je op een specifiek tijdstip kan bevragen,</v>
+
+00:10:35.530 --> 00:10:40.850
+<v Michiel Trimpe>eh dan hoef je dit eigenlijk niet eens op te nemen als je het timestamp op hoog niveau gebruikt.</v>
+
+00:10:41.480 --> 00:10:44.750
+<v Michiel Trimpe>Mocht je een andere timestamp gebruiken, dan moet je die hier wel opnemen.</v>
+
+00:10:44.750 --> 00:10:51.840
+<v Michiel Trimpe>Maar verder hoef je dan niks op te nemen over de bron. Hoef de bron daar niet echt op eh aanwezig te zijn.</v>
+
+00:10:52.920 --> 00:10:55.220
+<v Michiel Trimpe>En alternatief is een logged request.</v>
+
+00:10:55.220 --> 00:11:02.100
+<v Michiel Trimpe>Dus waar je zegt we hebben dit verzoek gedaan. Het is in een ander logbestand gelogd, dus niet in de decision log, maar elders.</v>
+
+00:11:03.070 --> 00:11:09.280
+<v Michiel Trimpe>Ehm nou, en als je dat doet, should use the W3C W3C Trace context.</v>
+
+00:11:11.130 --> 00:11:18.320
+<v Michiel Trimpe>Ehm nou, we raden aan om dat met de WARC standard te doen. Dat is een standaard voor het loggen van requests, zoals eh search engines dat ook doen.</v>
+
+00:11:18.830 --> 00:11:23.950
+<v Michiel Trimpe>En wanneer je dat doet, kun je dat opnemen, de verwijzing opnemen, maar is dus een trace ID en span ID.</v>
+
+00:11:24.910 --> 00:11:31.900
+<v Michiel Trimpe>En zo kan je dus een eh een bron verwijzen zonder dat je de data in de decision log hoeft te dupliceren.</v>
+
+00:11:33.220 --> 00:11:38.930
+<v Michiel Trimpe>En tot slot dan Policy Decision Point. En daar hebben we een aantal velden standaard, de version,</v>
+
+00:11:39.510 --> 00:11:48.060
+<v Michiel Trimpe>optioneel de host name en configuration. Eh in sommige gevallen kan dat ook relevant zijn wanneer er bepaalde settings zijn die grote impact hebben op</v>
+
+00:11:48.060 --> 00:11:51.100
+<v Michiel Trimpe>hoe je de policies interpreteert.</v>
+
+00:11:51.820 --> 00:12:03.880
+<v Michiel Trimpe>Stel dat bijvoorbeeld dat je een policy engine hebt die eh op hoog niveau zeg maar permit or deny first heeft. Dus van eh de eerste die ja zegt en dan zeggen we ja op alles eh of een setting andersom.</v>
+
+00:12:04.750 --> 00:12:10.110
+<v Michiel Trimpe>Iedereen moet het akkoord zijn of niet. Dat zijn wel hele belangrijke settings om mee te nemen in je beslissing.</v>
+
+00:12:12.300 --> 00:12:17.000
+<v Michiel Trimpe>Dus dit is de voortgang van logboek dataverwerkingen.</v>
+
+00:12:18.660 --> 00:12:20.000
+<v Michiel Trimpe>Ehm Frank?</v>
+
+00:12:20.300 --> 00:12:29.070
+<v Frank Terpstra>Ja, hebben jullie al gekeken naar een alternatief voor het eh verwerkingenregister om eh zeg maar aan te geven waarvoor je een logregel schrijft, hè. Dus wat eh</v>
+
+00:12:29.070 --> 00:12:37.200
+<v Frank Terpstra>de daadwerkelijke eh nou ja, juridische eh basis is waarvoor eh op basis waarvan je aan het loggen bent.</v>
+
+00:12:37.200 --> 00:12:42.110
+<v Michiel Trimpe>Ja. Dat is een mooi via bruggetje in het volgende, want ik moet er nog ruimte laten voor anderen.</v>
+
+00:12:42.540 --> 00:12:51.270
+<v Michiel Trimpe>Eh we zijn we hebben ook de eerste versie van het NL Gov profiel neergezet. En dat is dus wat er in het request dan zou komen te staan.</v>
+
+00:12:51.980 --> 00:12:59.000
+<v Michiel Trimpe>En daar hebben we bij action processing action properties eh dit opgenomen.</v>
+
+00:12:59.880 --> 00:13:08.000
+<v Michiel Trimpe>Ehm dus dat er een processing activity en algorithm identifier opgenomen moeten worden of zou moeten worden.</v>
+
+00:13:08.480 --> 00:13:15.110
+<v Michiel Trimpe>En dat daarvoor de identifiers zoals gedefinieerd in logboek dataverwerkingen gebruikt zouden moeten worden.</v>
+
+00:13:16.140 --> 00:13:19.570
+<v Frank Terpstra>Nou, dat gaat nog niet helemaal werken, denk ik.</v>
+
+00:13:20.150 --> 00:13:29.060
+<v Frank Terpstra>Zeg maar hè, dus bij logboek dataverwerkingen eh de core standaard eh die verwijst naar het verwerkingenregister, maar het verwerkingenregister is echt gebaseerd op de AVG.</v>
+
+00:13:29.060 --> 00:13:40.670
+<v Frank Terpstra>Dus daar staat verwerkingen van de AVG in. En wat wij hier loggen zijn geen AVG of tenminste ik weet niet in hoeverre dat matcht op de AVG, maar mijn vermoeden is dat dat niet een één op één match is.</v>
+
+00:13:41.480 --> 00:13:45.180
+<v Michiel Trimpe>Nee, maar soms wel over de identifier toch?</v>
+
+00:13:47.160 --> 00:13:56.020
+<v Wouter Gier>Ja, wat wat we hier willen loggen is denk ik breder dan hè, dus AVG zal wel eh eh onderdeel zijn, maar de de de deelverzameling is breder, zeg maar.</v>
+
+00:13:56.780 --> 00:14:10.100
+<v Frank Terpstra>Ja. Dus eh ik denk dat er echt eh dat je goed moet kijken van eh kunnen we dat dan allemaal toch in dat eh verwerkingenregister proppen of eh hebben we iets anders nodig? En als we iets anders nodig hebben, hoe ziet dat eruit?</v>
+
+00:14:10.700 --> 00:14:27.230
+<v Frank Terpstra>Eh want dat is mijn voornaamste les van eh logboek dataverwerking voor objecten. Nou ja, dan past eh het verwerkingenregister niet. Dus dan hebben we het algoritme register genomen, maar het algoritme register is een stuk minder fijnmazig dan het verwerkingenregister. Dus je verliest gewoon eh detail daarin.</v>
+
+00:14:27.230 --> 00:14:48.100
+<v Frank Terpstra>En dat hebben we voor nu maar even geaccepteerd en eh we hebben wel wat mogelijke workarounds daaromheen. Eh maar dit is echt eh ja, dit zit in de basis van de architectuur van hoe logboek dataverwerkingen werkt. Dus als je eh de structuur van logboek dataverwerking wil gebruiken, moet je echt goed nadenken over eh waar verwijs ik nou naar? Eh en hoe zit dat goed in elkaar?</v>
+
+00:14:48.470 --> 00:14:56.240
+<v Michiel Trimpe>Ja. Ja, dus ik heb bewust gezegd logboek dataverwerking en dit is extensions. En daar valt dan die dat algoritme register onder.</v>
+
+00:14:56.710 --> 00:15:10.100
+<v Michiel Trimpe>Maar wat ik je nu hoorde zeggen is ook eigenlijk in dat project heb je een begin gemaakt, maar waren we er nog niet helemaal. Nee, kijk, we eh heel pragmatisch gezien zeggen we hè, we moeten nu werken met het algoritme register zoals het nu is.</v>
+
+00:15:10.100 --> 00:15:23.150
+<v Frank Terpstra>Ehm maar dat is heel grofmazig in eh hoe je kan duiden eh wat de relatie met wet- en regelgeving is. Dus in het algoritme register kan je zo zeggen, dit algoritme wordt voor drie, vier wetten gebruikt.</v>
+
+00:15:23.150 --> 00:15:36.200
+<v Frank Terpstra>Eh maar ja, dan kan je in een individuele logregel verwijs je naar het algoritme register en dan weet je nog niet welke van de drie, vier wetten het is, laat staan welk artikel in die wet.</v>
+
+00:15:36.200 --> 00:15:48.010
+<v Frank Terpstra>Ja. Eh dus dat is echt heel grofmazig en dat ja, voor nu accepteren we dat even als in eh met de use cases die we hebben is het eh beduidend beter dan dan geen relatie met de wetgeving.</v>
+
+00:15:48.480 --> 00:15:56.120
+<v Frank Terpstra>Maar het is niet ideaal. Ehm en ik denk zeker hier eh zou je wel eh specifiekere eh verwijzingen willen hebben.</v>
+
+00:15:56.510 --> 00:16:02.430
+<v Frank Terpstra>Dus misschien is dit iets om eh in een een gezamenlijk werkgroepje nog eens in detail naar te kijken.</v>
+
+00:16:02.430 --> 00:16:18.420
+<v Michiel Trimpe>Oké, ja. Graag. Eh dus dan eh zetten we dat bij deze als de op de actielijst om specifiek dit aspect nog wat verder in te duiken. Dan eh het vorige statement was misschien wat makkelijker om te hopen dat we gewoon konden verwijzen naar een andere standaard.</v>
+
+00:16:20.140 --> 00:16:29.110
+<v Michiel Trimpe>Maar er nog andere feedback op dit op de logboektoetsingen die in deze context deze meeting gedeeld willen worden?</v>
+
+00:16:32.200 --> 00:16:39.990
+<v Michiel Trimpe>Oké. Ehm nou, dan laten we het voor nu hierbij. Eh we zullen sowieso nog bespreken hoe we hier over de vakantieperiode mee verder gaan met de verschillende standaarden.</v>
+
+00:16:41.560 --> 00:16:49.110
+<v Michiel Trimpe>Nou, en de tweede is dan de andere subwerkgroep, eh AuthZEN zelf. Ehm daar zit momenteel alleen nog ons team in trouwens.</v>
+
+00:16:49.770 --> 00:16:56.110
+<v Michiel Trimpe>Maar die hebben wij nu in ieder geval neergezet. Ik zal hem even in de chat delen.</v>
+
+00:16:58.070 --> 00:17:11.470
+<v Michiel Trimpe>Ehm dus, zoals besproken is de standaard eh essentieel een kopie van de OpenID AuthZEN Authorization API met alle tekst daar dus in gekopieerd.</v>
+
+00:17:12.370 --> 00:17:21.010
+<v Michiel Trimpe>Maar alle wijzigingen zijn gekleurd. Eh de de styling kan nog beter. Daar moeten we nog naar gaan kijken.</v>
+
+00:17:22.250 --> 00:17:33.470
+<v Michiel Trimpe>Ehm maar eh nou, we zijn al door de AuthZEN standaard zelf heen gegaan een tijd geleden. En we hebben daar een aantal dingen opgenomen. Er zijn niet heel veel veranderingen, want dat is ook goed om te realiseren.</v>
+
+00:17:33.910 --> 00:17:43.370
+<v Michiel Trimpe>Dus één van de aanpassingen die we zeggen is dat het informatiemodel geïntegreerd zou moeten worden eh ja, eh volgens MIM. Dus misschien nog een iets sterker sterk statement.</v>
+
+00:17:43.370 --> 00:17:50.190
+<v Michiel Trimpe>Misschien moeten we dat nog afzwakken. Ik ben maar begonnen met de wat sterkere variant.</v>
+
+00:17:51.210 --> 00:17:58.120
+<v Michiel Trimpe>Eh en we raden aan om JSON-LD 1.1 te gebruiken om automatische integratie met semantische modellen mogelijk te maken.</v>
+
+00:18:00.670 --> 00:18:10.120
+<v Michiel Trimpe>Nou, en we hebben een aantal plekken dan eh de integratie van JSON-LD gedefinieerd. Dus waar dat dan gebruikt mag worden.</v>
+
+00:18:13.250 --> 00:18:16.890
+<v Michiel Trimpe>Dus hier JSON-LD, JSON-LD, JSON-LD.</v>
+
+00:18:17.510 --> 00:18:24.030
+<v Michiel Trimpe>Nou, dan eh voor de action properties definiëren we dus wat we net besproken hebben.</v>
+
+00:18:24.580 --> 00:18:30.010
+<v Michiel Trimpe>Ehm daar gaan we dus nog dieper op in om te kijken of dat nog beter kan en moet.</v>
+
+00:18:31.280 --> 00:18:40.240
+<v Michiel Trimpe>Ehm voor de context eh hebben wij een aantal dingen gedefinieerd. Dus we hebben deze sectie toegevoegd.</v>
+
+00:18:41.250 --> 00:18:56.230
+<v Michiel Trimpe>En daarin schrijven we zoals elders ook al genoemd staat in AuthZEN, eh moet de de gegevens van de PEP als gevalideerd beschouwd worden. Want het argument is de PEP zal het toch af moeten dwingen, dus als je je PEP al niet vertrouwt, dan ben je dan mee bezig.</v>
+
+00:18:57.100 --> 00:19:07.100
+<v Michiel Trimpe>Ehm maar, eh ook wat Ivo aangaf, soms wil je nog steeds de claims ook gewoon hebben, dus het bewijs dat het er is voor het eh voor logging of wat dan ook.</v>
+
+00:19:07.970 --> 00:19:18.600
+<v Michiel Trimpe>Ehm dus we raden hier aan om de de waardes in het informatiemodel op te nemen. En wanneer jij additioneel evidence mee wil sturen, zouden die in het context object included moeten worden.</v>
+
+00:19:22.560 --> 00:19:32.960
+<v Michiel Trimpe>Nou, en dan definiëren we verder nog twee velden. We definiëren expliciet time met een formaat.</v>
+
+00:19:33.680 --> 00:19:41.020
+<v Michiel Trimpe>En ook dat deze time in principe gebruikt zou moeten worden voor temporal queries. Dus wanneer jij eh</v>
+
+00:19:41.520 --> 00:19:52.120
+<v Michiel Trimpe>bronnen gaat benaderen die historisering ondersteunen, wil je dat alle bronnen dezelfde timestamp met dezelfde timestamp benaderd worden.</v>
+
+00:19:52.820 --> 00:19:57.510
+<v Michiel Trimpe>Ehm en daar zeggen wij hier dus dat zou deze timestamp op topniveau moeten zijn.</v>
+
+00:19:57.510 --> 00:19:59.200
+<v Michiel Trimpe>En ook dat deze</v>
+
+00:20:09.308 --> 00:20:16.898
+<v Michiel Trimpe>Jason LD annotatie.</v>
+
+00:20:17.898 --> 00:20:19.828
+<v Michiel Trimpe>En tot dusver al vragen?</v>
+
+00:20:25.438 --> 00:20:29.178
+<v Michiel Trimpe>Ik weet niet of iedereen dit kan volgen. Het is natuurlijk vrij specifiek, vrij plotseling.</v>
+
+00:20:30.138 --> 00:20:30.738
+<v Stas Mironov>Ja.</v>
+
+00:20:31.328 --> 00:20:32.328
+<v Michiel Trimpe>Ja, dat is denk ik wel.</v>
+
+00:20:32.328 --> 00:20:37.128
+<v Stas Mironov>Deze link staat ook in de chat en op de site eh Michiel?</v>
+
+00:20:37.528 --> 00:20:38.028
+<v Michiel Trimpe>Ja.</v>
+
+00:20:38.428 --> 00:20:38.928
+<v Stas Mironov>Oké.</v>
+
+00:20:39.328 --> 00:20:42.128
+<v Stas Mironov>En even duidelijk ook wat we eigenlijk als vraag hebben aan de werkgroep hierbij.</v>
+
+00:20:42.128 --> 00:20:46.628
+<v Michiel Trimpe>Oké. Ja, ik zal deze nog even afronden, dan ben ik in ieder geval, dan heb ik, heeft iedereen alle wijzigingen gezien.</v>
+
+00:20:46.628 --> 00:20:47.328
+<v Stas Mironov>Hm hm.</v>
+
+00:20:47.928 --> 00:20:56.628
+<v Michiel Trimpe>Ehm, AuthZEN definieert ook dat het verzoek van de PEP aan de PDP een X-Request-ID moet hebben.</v>
+
+00:20:57.628 --> 00:21:09.028
+<v Michiel Trimpe>Ehm, wij adopteren natuurlijk de W3C context. Eh en of dat verzoek zelf ook echt een ID moet hebben, dat vind ik even secundair, dus ik wilde eigenlijk voorstellen om ook bij AuthZEN aan te vragen</v>
+
+00:21:09.828 --> 00:21:16.328
+<v Michiel Trimpe>of dat verwijderd kan worden uit de standaard en dat aspect ook bij ons uit de standaard te laten.</v>
+
+00:21:17.528 --> 00:21:24.828
+<v Michiel Trimpe>Want het biedt niet heel veel extra en we hebben toch al binnen Nederland een andere standaard dat we de W3C context horen te gebruiken.</v>
+
+00:21:26.128 --> 00:21:28.328
+<v Michiel Trimpe>Dus mijn voorstel was om dit weg te laten.</v>
+
+00:21:32.328 --> 00:21:41.928
+<v Michiel Trimpe>Eh en dat zijn alle aanpassingen die wij voorstellen om te doen op op AuthZEN in het eerste NL Gov profiel. Dus een relatief beperkt.</v>
+
+00:21:44.328 --> 00:21:51.428
+<v Frank Terpstra>Maar een request identification is volgens mij net iets anders dan waar we voor de W3C context ID gebruiken.</v>
+
+00:21:53.428 --> 00:21:54.428
+<v Michiel Trimpe>Hm hm.</v>
+
+00:21:55.228 --> 00:22:08.128
+<v Frank Terpstra>Dus de trace context eh eh gaat niet om een request, maar gaat om een stuk van het proces, zeg maar, waar je mee bezig bent. Eh en een request, dat duidt heel erg op eh een daadwerkelijke eh REST API actie.</v>
+
+00:22:08.128 --> 00:22:12.828
+<v Frank Terpstra>Dat is eh dat is een ander type identifier volgens mij, als ik dat zo snel lees.</v>
+
+00:22:15.628 --> 00:22:16.628
+<v Michiel Trimpe>Oké.</v>
+
+00:22:18.628 --> 00:22:22.228
+<v Michiel Trimpe>Ja, ja, daar kunnen we dan het gesprek over aangaan.</v>
+
+00:22:23.028 --> 00:22:32.128
+<v Michiel Trimpe>Dat hij ook mededeels eh ja, mede bij eh logboek dataverwerking en de het adopteren van de W3C context, dat zorgt dat daar geen mismatch tussen zit.</v>
+
+00:22:32.128 --> 00:22:37.328
+<v Michiel Trimpe>Dat kunnen we misschien dan ook bij bij net bij logboek dataverwerking ophalen hoe zij dat zien of een</v>
+
+00:22:38.128 --> 00:22:44.228
+<v Michiel Trimpe>of ja, willen we willen we binnen de Nederlandse overheid op de W3C trace context standaardiseren en is dat van toepassing hier?</v>
+
+00:22:47.528 --> 00:22:52.228
+<v Michiel Trimpe>Oké. Nou, dan zal ik dat ook eh kunnen we dat verder bespreken en verdiepen.</v>
+
+00:22:53.628 --> 00:23:02.828
+<v Michiel Trimpe>Ehm, nou, mijn doel hierbij voornamelijk was ook te zorgen dat iedereen in ieder geval ziet wat we voorstellen aan veranderingen. Ehm, alle mogelijke feedback daarop verzamelen.</v>
+
+00:23:06.228 --> 00:23:12.028
+<v Michiel Trimpe>Ehm, dit was eigenlijk, dit waren in alle updates dan vanuit de werkgroep.</v>
+
+00:23:14.228 --> 00:23:22.028
+<v Michiel Trimpe>Ehm, ja, misschien gelijk even dan doorgaan naar de het voorstel voor de planning voor de komende periode.</v>
+
+00:23:23.628 --> 00:23:26.428
+<v Michiel Trimpe>Eh want we gaan dus de vakantieperiode in.</v>
+
+00:23:27.228 --> 00:23:39.728
+<v Michiel Trimpe>Eh en wij zouden de voorstellen om tijdens de vakantieperiode geen werkgroepen te organiseren, hoofdwerkgroepen. En dat pas weer op te vatten, op te pakken na de vakantieperiode.</v>
+
+00:23:40.428 --> 00:23:45.028
+<v Michiel Trimpe>Maar in de vakantieperiode wel de subwerkgroepen door te laten gaan.</v>
+
+00:23:45.028 --> 00:23:53.028
+<v Michiel Trimpe>Dus dat eh ja, het logboek of het juridisch kader of de AuthZEN standaard nog wel verder voortgang kan maken.</v>
+
+00:23:54.328 --> 00:23:57.528
+<v Michiel Trimpe>Is dat een voorstel dat werkt dat voor iedereen?</v>
+
+00:24:05.428 --> 00:24:06.128
+<v Michiel Trimpe>Oké.</v>
+
+00:24:06.528 --> 00:24:09.128
+<v Gerard Vaandrager>Ja, wij zullen sowieso wel doorpakken, denk ik, Michiel.</v>
+
+00:24:09.128 --> 00:24:10.328
+<v Michiel Trimpe>Ja, ja, dat zeg ik.</v>
+
+00:24:10.328 --> 00:24:10.828
+<v Gerard Vaandrager>Ja.</v>
+
+00:24:12.028 --> 00:24:22.128
+<v Michiel Trimpe>Nou, dan eh doen we dat in ieder geval als... Oké.</v>
+
+00:24:22.728 --> 00:24:29.828
+<v Michiel Trimpe>Ja, oké. Eh ik zie ook veel in de chat. Misschien is dat ook wel, het is voor mij eh trouwens moeilijk om achteraf de notule aan de chat te koppelen.</v>
+
+00:24:31.428 --> 00:24:38.828
+<v Michiel Trimpe>Dus dat, ik heb de in de vorige gemerkt dat er veel in de chat stond, dat het moeilijk was om dan precies te weten wat waarop eh reageerde.</v>
+
+00:24:41.728 --> 00:24:53.228
+<v Stas Mironov>Ik zat voor het laatste stuk wel mee te lezen. Gerard zegt hetzelfde punt. AuthZEN is niet voor cross-organisatie bedoeld, maar voor eh applicatiemachtigingen, terwijl iSHARE dat dan allemaal wel heeft.</v>
+
+00:24:54.228 --> 00:25:03.528
+<v Gerard Vaandrager>Ja, we hebben er natuurlijk vanmiddag over, maar ik denk even voor de record en voor eh voor het bredere publiek. Niet iedereen zit zo detailmatig in de in de inhoud.</v>
+
+00:25:05.328 --> 00:25:18.128
+<v Gerard Vaandrager>Hier gaan we vanmiddag eh hebben we daar een een deep dive over. Maar gewoon dus wel steeds maar even in, want dan anders denkt iedereen, ik ben helemaal mee met alles en eh is dan de conclusie eh ja, je hebt geen antwoord gegeven.</v>
+
+00:25:18.528 --> 00:25:25.928
+<v Michiel Trimpe>Ja. Ja, misschien eh beter om dat toch wel even net verbaal te doen, dan...</v>
+
+00:25:26.528 --> 00:25:35.028
+<v Stas Mironov>Ja, dan ligt het ook beter vast, Gerard. Ik denk dat het dan goed is dat dat je je uitspreekt hier in de werkgroep eh je ook vrij voelt en uitgenodigd voelt om dat te doen.</v>
+
+00:25:35.028 --> 00:25:36.028
+<v Gerard Vaandrager>Ja.</v>
+
+00:25:36.428 --> 00:26:03.828
+<v Gerard Vaandrager>Nou ja, dus en goed, dan eh dan even voorlezend wat eh wat er al in de chat stond, wat iedereen denk ik wel heeft gezien. Die structuur die eh AuthZEN vandaag de dag gebruikt eh ook voor hun de de policy aanpak is best wel rudimentair, super basic. En we hebben natuurlijk door de jaren heen eh allemaal doorontwikkeling gedaan in de policy structuren, gewoon gebaseerd op daadwerkelijke cross-organisatie toegangsmachtigingen tot eh tot databronnen.</v>
+
+00:26:04.428 --> 00:26:27.328
+<v Gerard Vaandrager>Die lessen die ja, daar is AuthZEN gewoon nog niet doorheen gegaan en die hebben we eh in de iSHARE specs al wel gedaan. Ik denk dat we daar juist heel veel van kunnen gebruiken. En het is natuurlijk gemaakt in de praktijk waar dat cross-organisatie machtigingen stuk elke keer ook weer juridische dekking moet hebben. Daar is AuthZEN ook niet primair voor geregeld.</v>
+
+00:26:28.228 --> 00:26:43.128
+<v Gerard Vaandrager>Dus daar zit zit echt wel stevige verschillen in. En dan zeggen: nou, we gaan dat gebruiken en we bouwen AuthZEN helemaal aan, eh daar bouwen we de stukken aan die eh die ontbreken. Dan dan gaan we het eigenlijk helemaal opnieuw doen.</v>
+
+00:26:50.428 --> 00:26:54.728
+<v Stas Mironov>Ja, er zijn onze uitdagingen. Zullen mensen binnen de werkgroep die daar ook op willen reageren?</v>
+
+00:26:58.328 --> 00:27:03.428
+<v Michiel Trimpe>Nee. Ik denk misschien wel goed is dat we dan ons perspectief even hier kort ook te delen.</v>
+
+00:27:05.228 --> 00:27:21.628
+<v Michiel Trimpe>Ehm, dus ja, wij zijn, we hebben AuthZEN gekozen ook juist omdat dit een eh een initiatief is van een groep van verschillende policy leveranciers, policy decision points, waarin inderdaad eh merkte dat het standaardiseren op de policies tussen organisaties moeilijk was, ook voor die leveranciers zelf.</v>
+
+00:27:26.228 --> 00:27:47.128
+<v Michiel Trimpe>Waar zij voor gekozen hebben is om een klein stukje consensus af te pellen, zoals ik het noem, waarin iedereen binnen die wereld zei: oké, waar we het allemaal wel over eens kunnen zijn is dat we onze toegangsverzoeken en de beslissing daarop goed moeten kunnen modelleren. En dat dat iets is wat wij allemaal delen.</v>
+
+00:27:47.728 --> 00:27:57.228
+<v Michiel Trimpe>Dus je toegangsverzoek moet je in een informatiemodel samenvatten en je moet de toegangsbeslissing krijgen die je ook moet kunnen modelleren. Je moet weten wat dat betekent.</v>
+
+00:27:57.828 --> 00:28:09.228
+<v Michiel Trimpe>Alle andere dingen was ja, konden die leveranciers niet echt consensus over bereiken of niet op korte termijn, maar hier wel. Dus dat is waar AuthZEN is uit ontstaan. En dat is ook dus alles wat AuthZEN zegt.</v>
+
+00:28:09.228 --> 00:28:21.628
+<v Michiel Trimpe>Dus vanuit ons zien wij ook geen reden waarom dat niet samen zou kunnen gaan met iSHARE, net zoals het past voor de andere policy decision points of de ja, de policy leveranciers.</v>
+
+00:28:22.228 --> 00:28:55.228
+<v Gerard Vaandrager>Er zijn een aantal van die formateringen van die van die policies die nu in AuthZEN dan niet gespect zijn. In iSHARE heb je net zo goed die vrijheidsgraden om daar dingen eh om het zelf in te richten natuurlijk, maar heb je wel een soort van die nesting. Ja. Die die dat juist weer eh weer praktischer maakt, omdat het voor specifieke toepassingen nodig is. Daar kan vandaag de dag niet met eh AuthZEN spec. Je ziet dat die gewoon veel dunner is en dat eh dat er in iSHARE meer opties zijn, waar je nog steeds van kan zeggen: we gaan niet alles gebruiken.</v>
+
+00:28:58.228 --> 00:29:12.128
+<v Michiel Trimpe>Ja, ja, en ons ons idee, en daar gaan we dus nog dieper in. Ehm, en dat kunnen we ook iedereen hier aanwezig is ook denk ik wel welkom bij de de latere deep dives aan te haken, wat mij betreft. Ik weet niet meer wat ik maak en...</v>
+
+00:29:12.128 --> 00:29:14.328
+<v Stas Mironov>Met René recent de 24e juli.</v>
+
+00:29:14.328 --> 00:29:15.128
+<v Michiel Trimpe>Ja.</v>
+
+00:29:15.128 --> 00:29:16.128
+<v Stas Mironov>Ja.</v>
+
+00:29:17.128 --> 00:29:50.028
+<v Stas Mironov>Zeker, we kunnen een eh eh bij deze de uitnodiging in de groep zetten. Dus er is een eh een breder overleg met eh René, eh Nico over de toepasbaarheid binnen Zicht op Nederland. Eh en daar is ook eh eh Stefan, Stefan Wekking van Kadaster bij. Er zijn meer mensen die zeggen: nou, we willen ook wel meedenken over hoe iSHARE eh en andere standaarden en FTV eventueel uitlijnen of elkaar onnodig concurreren. Dan wees welkom om daar mee te denken.</v>
+
+00:30:02.308 --> 00:30:06.388
+<v Frank Terpstra>waren hè, die cross-organisatie machtiging wilde hebben om</v>
+00:30:06.388 --> 00:30:14.128
+<v Frank Terpstra>eh aanmeldingen voor aanmeldingen van ladingen en allerlei andere toegang tot API's direct te organiseren.</v>
+00:30:15.228 --> 00:30:21.528
+<v Frank Terpstra>Het is geen commerciële oplossing. Het wordt gewoon beheerd door de ministeries.</v>
+00:30:22.218 --> 00:30:25.108
+<v Frank Terpstra>En is het dus wel echt ontwikkeld met precies dezelfde doelstelling.</v>
+00:30:25.518 --> 00:30:28.918
+<v Frank Terpstra>En daarom is het zo, nou ja, zit ik daar zo op te hameren.</v>
+00:30:28.918 --> 00:30:39.018
+<v Frank Terpstra>We zijn eh eh ja, we zijn gewoon gemaakt door de Nederlandse overheid en blijft daarmee de basis voor eh voor heel veel van de overheidstoepassingen.</v>
+00:30:41.778 --> 00:30:42.878
+<v Michiel Trimpe>Laten we het benutten.</v>
+00:30:42.878 --> 00:30:43.348
+<v Frank Terpstra>Ja.</v>
+00:30:43.348 --> 00:30:43.718
+<v Michiel Trimpe>Helemaal.</v>
+00:30:43.718 --> 00:30:46.888
+<v Michiel Trimpe>Dank. Vraag inderdaad, is de deep dive?</v>
+00:30:46.888 --> 00:30:56.998
+<v Michiel Trimpe>Er zijn twee opties. Eh zal ik jou voor allebei uitnodigen eh Frank, dan eh gaan we even stemmen wie er bij de wie er kan zijn en welke wat de locatie wordt.</v>
+00:31:03.628 --> 00:31:04.558
+<v Frank Terpstra>Dat is goed.</v>
+00:31:08.978 --> 00:31:10.018
+<v Michiel Trimpe>Ja.</v>
+00:31:10.018 --> 00:31:22.508
+<v Michiel Trimpe>En dan voor de laatste duidelijkheid en die gaat dan letterlijk weer wij eh wij zien ook geen reden om of vanuit ons perspectief is er ook geen conflict tussen Olsen en Ishare en verwachten we eh een integratie en een samenwerking.</v>
+00:31:23.208 --> 00:31:30.228
+<v Michiel Trimpe>Dus we verwachten niet dat dat elkaar in enige zin uitsluit. Eh maar dat moeten we nog in de diepte, in de deep dive de diepte in.</v>
+00:31:30.598 --> 00:31:35.128
+<v Frank Terpstra>Nee, ik denk dus dat we grotere stappen kunnen maken als we de de volgordelijkheid aanpassen.</v>
+00:31:35.638 --> 00:31:52.018
+<v Frank Terpstra>Dus wij zitten nu ook in die AuthZEN werkgroep, kunnen dan samen kijken welke dingen kunnen we nu generiek maken, maar voor de voor het cross-organisatiedomein, ja, hebben we natuurlijk al staan. Zijn wij gewoon veel verder dan eh dan AuthZEN en zijn we nu in gesprek, kunnen we dingen bij elkaar brengen of AuthZEN doorontwikkelen.</v>
+00:31:52.898 --> 00:31:53.228
+<v Michiel Trimpe>Ja.</v>
+00:31:54.598 --> 00:32:00.018
+<v Michiel Trimpe>Nou, volgens mij hebben we de posities duidelijk voor de notule en we gaan later over de diepte in.</v>
+00:32:00.018 --> 00:32:02.328
+<v Frank Terpstra>En ik en ik zal vaker lawaai maken.</v>
+00:32:03.558 --> 00:32:05.348
+<v Michiel Trimpe>Totdat het welkom.</v>
+00:32:05.348 --> 00:32:09.008
+<v Michiel Trimpe>Maar we hadden wel eh liever in de eh verbaal dan in de chat voor mij in ieder geval.</v>
+00:32:09.008 --> 00:32:11.238
+<v Frank Terpstra>Ja, meneer.</v>
+00:32:13.568 --> 00:32:14.198
+<v Michiel Trimpe>Oké.</v>
+00:32:14.198 --> 00:32:21.578
+<v Michiel Trimpe>Ehm nou, dan eh deel ik, dan gaan we door naar het laatste stukje, de retrospective.</v>
+00:32:22.578 --> 00:32:25.048
+<v Michiel Trimpe>Oh wacht, nee, misschien deel ik nou niet de juiste link.</v>
+00:32:25.618 --> 00:32:33.918
+<v Michiel Trimpe>Ehm, ik denk dat ik deze moest hebben. Is dit wel de juiste link?</v>
+00:32:34.338 --> 00:32:38.648
+<v Michiel Trimpe>Eh ik heb een link in de chat geplaatst voor een Mirobord. Eh dat is voor de evaluatie.</v>
+00:32:39.738 --> 00:32:47.008
+<v Michiel Trimpe>Eh je kan er een guest account aanmaken. Als je daar je echte naam gebruikt, dan kunnen wij ook zien wie welke stickies heeft aangemaakt.</v>
+00:32:47.418 --> 00:32:50.218
+<v Michiel Trimpe>Eh dus dat helpt voor eh de verslaglegging.</v>
+00:32:51.758 --> 00:32:58.388
+<v Michiel Trimpe>Heeft iedereen toegang tot Miro? Ja, jij niet, maar je kan met mij meetyen.</v>
+00:32:58.388 --> 00:32:59.888
+<v Spreker 2>Gaat goed.</v>
+00:33:04.998 --> 00:33:05.598
+<v Michiel Trimpe>Ja.</v>
+00:33:08.998 --> 00:33:19.018
+<v Michiel Trimpe>Nou, ik denk dat iedereen de de retrospective, het idee van de retrospective wel kent, zeker met de de Miro structuur. Ehm</v>
+00:33:20.358 --> 00:33:22.868
+<v Michiel Trimpe>Dus we beginnen met wat ging er goed en wat kan er beter?</v>
+00:33:23.378 --> 00:33:32.418
+<v Michiel Trimpe>Je hebt hier een sticky stack en dan kan je een sticky van pakken en kan je op slepen en invullen wat goed ging of wat beter kon.</v>
+00:33:35.218 --> 00:33:42.668
+<v Michiel Trimpe>Eh mocht je een stickie van iemand anders zien waar je denkt, daar ben ik het helemaal mee eens, dan kun je een dot pakken en die erop plaatsen.</v>
+00:34:19.128 --> 00:34:23.778
+<v Spreker 2>Ik zie het wel ja, het is niet veel, maar we zijn er aan het nadenken.</v>
+00:34:23.778 --> 00:34:28.328
+<v Michiel Trimpe>Oké, nou, leden en medewerkers van team FTV zijn uitgesloten van deelname, zoals dat gaat.</v>
+00:34:28.328 --> 00:34:35.638
+<v Spreker 2>Oh ja. Ik zal niet eh streng zijn. Geen dingen eh alleen mee.</v>
+00:34:37.338 --> 00:34:38.788
+<v Michiel Trimpe>Belanghebbenden.</v>
+00:35:20.618 --> 00:35:23.768
+<v Nico Spijkers>Wat is het verschil tussen wat kan er beter en wat kunnen we veranderen?</v>
+00:35:24.418 --> 00:35:36.218
+<v Michiel Trimpe>Dat zijn de volgende. Dus eh we zijn nu even met zeg maar venten. Dus wat kan er beter? Kan je gewoon negatief zijn. En in wat kan er veranderen, willen we dan de de verandering die daarop past opzetten.</v>
+00:35:36.218 --> 00:35:41.448
+<v Nico Spijkers>Dus wat kan er beter? Dit is fout en wat kunnen we veranderen? Dit doe ik eraan. Oké. Yes.</v>
+00:35:41.448 --> 00:35:41.818
+<v Michiel Trimpe>Ja.</v>
+00:39:22.189 --> 00:39:33.229
+<v Michiel Trimpe>Eh degene die eh de opmerking over tempo in de werkgroepen en subwerkgroepen en de identificatie van onderwerpen heeft opgezet, die heeft geen naam eh anoniem.</v>
+00:39:34.259 --> 00:39:39.049
+<v Michiel Trimpe>Dus kan diegene dat dat ik, dus dan ga ik mijn naam erbij zetten.</v>
+00:39:39.639 --> 00:39:41.229
+<v Nico Spijkers>Ik zie gewoon daar Nico staan.</v>
+00:39:41.229 --> 00:39:48.519
+<v Spreker 2>Nico staat hoor. Als je inzoomt komt hij Oh nee, jij nu niet. Ik niet. Oké, dan is het een eh software issue.</v>
+00:39:49.339 --> 00:39:51.719
+<v Michiel Trimpe>Oké, top. Dan is iedereen tot nu toe.</v>
+00:39:52.509 --> 00:39:56.639
+<v Spreker 2>En dan meer ruimte inbrengen. is leeg voor mij. Ja, die is ook leeg.</v>
+00:39:56.639 --> 00:39:57.419
+<v Michiel Trimpe>Dat was mijn voorbeeld.</v>
+
+00:40:12.869 --> 00:40:13.399
+<v Michiel Trimpe>Oké.
+
+00:40:14.149 --> 00:40:16.399
+<v Michiel Trimpe>Het is inderdaad een software issue eh.
+
+00:40:18.969 --> 00:40:19.939
+<v Michiel Trimpe>Kunnen ze er even bij typen.
+
+00:40:20.989 --> 00:40:22.549
+<v Nico Spijkers>Kan hem er beter bij typen. Komt goed.
+
+00:40:23.449 --> 00:40:23.739
+<v Michiel Trimpe>Ja.
+
+00:40:26.779 --> 00:40:27.519
+<v Michiel Trimpe>Ja, typisch.
+
+00:41:01.849 --> 00:41:04.209
+<v Michiel Trimpe>Ik denk dat de meeste opmerkingen gestabiliseerd zijn.
+
+00:41:05.929 --> 00:41:11.159
+<v Michiel Trimpe>Is er nog iemand aan het typen? Iemand nog zijn sticky toevoegen, zijn of haar?
+
+00:41:16.539 --> 00:41:17.009
+<v Michiel Trimpe>Oké.
+
+00:41:19.429 --> 00:41:22.839
+<v Michiel Trimpe>Nou, dan gaan wij even ehm doorheen.
+
+00:41:24.889 --> 00:41:28.079
+<v Michiel Trimpe>Nou, wat goed ging, eh we houden goed het tempo erin.
+
+00:41:29.589 --> 00:41:31.639
+<v Michiel Trimpe>We identificeren de onderwerpen goed.
+
+00:41:32.819 --> 00:41:36.349
+<v Michiel Trimpe>Eh gezamenlijke discussies. Veel stemmen daarop.
+
+00:41:37.319 --> 00:41:41.699
+<v Michiel Trimpe>De FTV update, de nieuwsbrief wordt geapprecieerd. Dankjewel Karin.
+
+00:41:43.789 --> 00:41:52.519
+<v Michiel Trimpe>Eh nou, werken in subwerkgroepen. Nou, nogmaals identificatie van onderwerpen. Ook aansluiting zoeken op internationale standaarden. Wordt goed gezien.
+
+00:41:53.519 --> 00:42:05.439
+<v Michiel Trimpe>Dat is fijn. Volgens mij zijn ze op zich zelf ja, vanzelfsprekend allemaal. Heeft iemand daar nog vragen over of wil iemand zijn of haar sticky nog eh uitleggen, verder toelichten?
+
+00:42:10.979 --> 00:42:11.449
+<v Michiel Trimpe>Oké.
+
+00:42:13.519 --> 00:42:22.019
+<v Michiel Trimpe>Nou, wat kan er beter? Eh het is heel specialistisch werk. Kennisniveau van mensen daarom niet altijd gelijk en dus zijn besluiten niet altijd volledig informed.
+
+00:42:29.589 --> 00:42:39.079
+<v Michiel Trimpe>Ehm meer ruimte en inbreng voor lessen, lessons learned vanuit de praktijk. Wel eerst redenerend vanuit de gedachte welke patronen en structuren ondersteund moeten worden.
+
+00:42:42.399 --> 00:42:45.959
+<v Michiel Trimpe>Ehm een voorkeur voor bekende/eigen oplossingen.
+
+00:42:50.119 --> 00:42:57.119
+<v Michiel Trimpe>Eh het delen van bijvoorbeeld documentatie dat mogelijk besproken wordt zoals iShare, moest net googelen om te vinden wat het inhoudt.
+
+00:42:57.679 --> 00:43:00.319
+<v Michiel Trimpe>Wie is die? Daar zie ik ook geen naam bij.
+
+00:43:03.229 --> 00:43:14.089
+<v Marc de Boer>Dat was voor mij. Want ja, ik ik moest namelijk net even googelen wat er nou precies inhoudt. Dus dat is zover. Ik moet even even uitzoeken wat het nou waar het nou precies over ging. Dus dat is een beetje onhandig misschien.
+
+00:43:16.389 --> 00:43:16.889
+<v Michiel Trimpe>Oké.
+
+00:43:21.829 --> 00:43:23.429
+<v Michiel Trimpe>Nou, is dat Nico's eh commentaar is?
+
+00:43:23.429 --> 00:43:31.379
+<v Michiel Trimpe>Nee, nee, nee, dus de dezelfde tekst kwam. Zijn hier nog vragen op van mensen of is dit duidelijk voor iedereen of wil iemand zijn of haar sticky nog toevoegen?
+
+00:43:31.979 --> 00:43:41.409
+<v Michiel Trimpe>Inderdaad, zelf heb ik ook een aantal stickies eh zou ik wel wat duidelijker willen krijgen. Ehm.
+
+00:43:45.499 --> 00:43:56.199
+<v Michiel Trimpe>Ja, vanuit de zaal. Dus eh de de op zich de bijdrage van Gerard snap ik, maar ik kan van andere mensen misschien ook nog wel meer context krijgen.
+
+00:43:57.129 --> 00:44:05.619
+<v Michiel Trimpe>Van Nico kan ik zelf ook nog wel wat uitleg gebruiken en van Frank Terpstra zou ik ook graag hier wat meer eh voorbeelden horen.
+
+00:44:08.249 --> 00:44:28.369
+<v Frank Terpstra>Eh ik kan het mondeling wel even toelichten. Kijk, we zitten hier natuurlijk eh eh eh we kennen logboek dataverwerkingen. Eh we kennen FVC. Eh er zijn een heel aantal standaarden die we eh zeg maar een heel aantal mensen in de groep goed kennen. Eh dus we hebben eh bewust of onbewust toch de neiging om eerder daarnaar te kijken dan eh eh naar standaarden die we minder goed kennen.
+
+00:44:28.369 --> 00:44:43.329
+<v Frank Terpstra>En dat is iets eh ja, daar heb ik ook een volgend briefje mee van hoe kan het beter? Dan moet je in ieder geval bewust van zijn en eh even nog een keer goed nadenken van eh dit lijkt voor ons meteen de logische keuze, maar is dat ook echt zo en is dat niet meer in de wereld?
+
+00:44:45.419 --> 00:44:45.819
+<v Michiel Trimpe>Ja.
+
+00:44:47.189 --> 00:44:49.789
+<v Michiel Trimpe>standaarden van eigen stal.
+
+00:44:49.789 --> 00:44:50.589
+<v Frank Terpstra>Inderdaad.
+
+00:44:52.589 --> 00:44:55.189
+<v Nico Spijkers>Daarop aanhaken. Oh sorry Mark.
+
+00:44:55.189 --> 00:44:56.089
+<v Michiel Trimpe>Verder.
+
+00:44:56.589 --> 00:45:05.229
+<v Michiel Trimpe>Nee, ik wou alleen zeggen dat we kijk we zo eventjes naar de andere stickies eh wat we daar als oplossing voor zien. Maar dankjewel. Gehoord eh Frank.
+
+00:45:08.239 --> 00:45:44.749
+<v Nico Spijkers>En misschien even kort eh aanvullend op wat eh Frank eh eh zegt, dat herken ik ook, maar ook van oké, waar wat van ik ik noem even patronen en structuren, dus vanuit wat we met FDS beogen en hoe we daar eh mee willen omgaan bijvoorbeeld tussen organisaties, cross eh waar Gerard naar refereert, is als dat een patroon is dat we allemaal herkennen, wat welke standaarden zijn er al? Wat kunnen we daarvan leren en hoe kunnen we dat een stukje generiek maken dan versus specifiek? Dat dat ik mis die gedachtelijn nog soms bij een aantal eh discussies.
+
+00:45:46.509 --> 00:45:51.249
+<v Nico Spijkers>is mijn in mijn beeld en daarom dat we daar ook een deep dive eh ook willen hebben.
+
+00:45:56.619 --> 00:45:58.419
+<v Michiel Trimpe>Gerard, je wilt ook nog iets delen?
+
+00:45:59.529 --> 00:46:02.189
+<v Gerard van der Hoeven>Nee, ik had alles in de in de stickies gecommuniceerd.
+
+00:46:02.189 --> 00:46:03.229
+<v Michiel Trimpe>Oké.
+
+00:46:03.229 --> 00:46:03.779
+<v Michiel Trimpe>Oké.
+
+00:46:07.799 --> 00:46:29.199
+<v Michiel Trimpe>Oké. Ehm misschien is wel een interessante. Mark zei net dat we vanuit het team zelf niks toe moeten voegen. Eén van de dingen die wij wel merkten is dat het leek alsof we vaak moeite hadden met de krappe agenda. Ehm dat er vaak dingen eh afgekapt moesten worden of niet voldoende ruimte was of dat we net uit de tijd liepen. Is dat iets waar alleen wij intern als een probleem zagen of herkennen meer mensen dat?
+
+00:46:34.779 --> 00:46:37.059
+<v Frank Terpstra>Het is de wereld van vergaderen.
+
+00:46:37.059 --> 00:46:38.139
+<v Michiel Trimpe>Ja.
+
+00:46:40.249 --> 00:46:47.649
+<v Nico Spijkers>Ja, die laatste paar keer heb je het wel eh wat eh eh strakker en ook wat minder ambitieus gepland. Dus ik vond het heel goed gaan de laatste paar keer.
+
+00:46:48.349 --> 00:46:55.519
+<v Michiel Trimpe>Oké. Nou, dan eh zetten we dat er verder niet op als actie. En dan weten we in ieder geval dat het iets is waar wij soms intern mee worstelden.
+
+00:46:57.909 --> 00:47:02.199
+<v Michiel Trimpe>Nou, eh wat kunnen we hier nou aan of aan doen?
+
+00:47:03.129 --> 00:47:06.519
+<v Michiel Trimpe>Eh hup. Ik kan niet zoomen.
+
+00:47:07.549 --> 00:47:11.799
+<v Michiel Trimpe>Eh expert teams van mensen die heel diep in specifieke topics zitten.
+
+00:47:17.799 --> 00:47:29.009
+<v Michiel Trimpe>Even kijken. Ik lees ze eerst even allemaal voor. Eh er is naast dit project een hele wereld aan ontwikkelingen gaande op het vlak van verifiable credentials. Dus van belang om openheid te hebben naar meer ontwikkelingen voor de langere termijn.
+
+00:47:29.729 --> 00:47:43.959
+<v Michiel Trimpe>Meer samenwerking met iShare. Daar ook changes in schieten. En praktische toepassingen als startpunt gebruiken, zodat daarin tegen te toetsen is of de aanpak goed is, naast de consensus aanpak hier.
+
+00:47:45.129 --> 00:47:52.379
+<v Michiel Trimpe>Breder trekken naar andere ministeries die hier ook gebruik van willen maken, IMW, maar dan specifiek ook de cross organisatie data stelsels.
+
+00:47:53.729 --> 00:47:57.639
+<v Michiel Trimpe>Ja, en deze was net al bewust zijn van eigen bias, waken voor not invented here.
+
+00:48:02.229 --> 00:48:03.749
+<v Michiel Trimpe>Wat kunnen we veranderen?
+
+00:48:04.399 --> 00:48:10.599
+<v Michiel Trimpe>Bewustzijn. Dus dan ja, daar kunnen we wel een actie aan koppelen.
+
+00:48:11.599 --> 00:48:23.949
+<v Michiel Trimpe>Ja, en ik denk dus hier ook bewust zijn van eigen bias, waken voor not invented here, neigt voor mij naar ook weer een evaluatie van waar dupliceren we mogelijk internationale standaarden of andere standaarden.
+
+00:48:27.319 --> 00:48:28.809
+<v Michiel Trimpe>Wie zei iets?
+
+00:48:31.689 --> 00:48:33.519
+<v Gerard van der Hoeven>Ja, van de overweer.
+
+00:48:34.259 --> 00:48:41.999
+<v Michiel Trimpe>Gerard, ja. Je hebt veel, je hebt veel opgeschreven, dus je hebt ook veel eh te duiden. Ja, je zei dat mijn kleppen open moest trekken, dus eh alstublieft.
+
+00:48:41.999 --> 00:48:42.519
+<v Gerard van der Hoeven>Graag.
+
+00:48:44.489 --> 00:49:23.669
+<v Gerard van der Hoeven>Ja, we moeten hier gewoon natuurlijk volop in samenwerken en dat eh wat wat we hier proberen te doen is hartstikke waardevol. Eh maar wij zitten natuurlijk elke dag in het hele Europese eh stakeholder veld hier omheen. Deze soort van standaarden zijn constant aan het alignen met ook de wereld van eh van data spaces, van eh eh de hele GaiaX eh IDSA eh gebeurens. En tegelijkertijd eh met de Europese Commissie. Dus wat wat we hier aan het doen zijn is is goed om dat met elkaar te doen, maar het is ook wel goed om dat bredere plaatje te zien. En dan ja, daar gaan ook de grote softwarepartijen op eh op mee.
+
+00:49:26.159 --> 00:49:40.419
+<v Gerard van der Hoeven>Ja. En dat ja, dat breng ik ook graag in, want daar zit zit ik zelf ook vaak aan tafel. En schakel direct met de commissie over de standaardisatie van gefedereerde toegangsverlening. En ze zijn wij schrijven zelf de documentatie van de commissie daarop.
+
+00:49:42.599 --> 00:49:48.199
+<v Gerard van der Hoeven>Dus ik denk dat het ook wel goed is om dat eh ja, dan mee te nemen in alle overwegingen.
+
+00:50:06.188 --> 00:50:08.088
+<v Frank Terpstra>volgens mij moeten we daar in ieder geval wat mee gaan doen.</v>
+
+00:50:08.088 --> 00:50:08.588
+<v Michiel Trimpe>Ja.</v>
+
+00:50:12.878 --> 00:50:13.278
+<v Frank Terpstra>Ja.</v>
+
+00:50:13.278 --> 00:50:22.068
+<v Michiel Trimpe>Ja, dus eh wat gaan we anders doen? En dat past denk ik op zich ook wel dat we na de vakantie ook dus wat meer in de praktische toepassingen gaan kijken. Dus</v>
+
+00:50:22.068 --> 00:50:27.068
+<v Michiel Trimpe>cases cases naar voren halen en uitdiepen.</v>
+
+00:50:27.068 --> 00:50:30.318
+<v Marc de Boer>Eén van de dingen die wij zouden kunnen doen hier</v>
+
+00:50:30.318 --> 00:50:43.918
+<v Marc de Boer>is de uitnodiging om meer eh praktisch werkende datastelsels of praktisch werkende toegangsverleningsoplossingen die wij nog niet kennen eh aan te dragen.</v>
+
+00:50:43.918 --> 00:50:47.838
+<v Marc de Boer>Dat wij ermee in gesprek kunnen gaan. We hebben met een aantal weten we van.</v>
+
+00:50:48.338 --> 00:50:49.138
+<v Marc de Boer>Eh ja.</v>
+
+00:50:49.778 --> 00:50:56.318
+<v Marc de Boer>Gerard had ons getipt dat DSGO goed werk doet in deze richting met iSHARE en gezegd: nou, ga daar eens mee in gesprek.</v>
+
+00:50:56.318 --> 00:51:05.818
+<v Marc de Boer>Nou, dat was super eh eh zinvol voor ons om die te leren kennen. En die hebben ook echt eh best wel praktijkervaring. Eh dat is allemaal live, maar er zijn er nog genoeg die we niet kennen.</v>
+
+00:51:05.818 --> 00:51:17.968
+<v Marc de Boer>En dat is iets wat ik wel veel tegenkom dat er altijd wel weer een datastelsel is die vanuit een andere eh eh initiatief vanuit een ander ministerie of een ander doel begonnen is.</v>
+
+00:51:17.968 --> 00:51:20.408
+<v Marc de Boer>En eh op hetzelfde punt een beetje is aangekomen.</v>
+
+00:51:20.408 --> 00:51:23.228
+<v Marc de Boer>Dus hoe meer we kennen, hoe meer gesprekken we kunnen voeren.</v>
+
+00:51:24.088 --> 00:51:26.478
+<v Nico Spijkers>Vooral inderdaad die al er zijn.</v>
+
+00:51:26.838 --> 00:51:39.848
+<v Nico Spijkers>Ik zou ook zeker naar DVU kijken, want dat draait natuurlijk gewoon bij Dictu. Draait gewoon al eh in huis als eh met die federatie componenten, maar over publiek en private infrastructuren heen.</v>
+
+00:51:39.848 --> 00:51:45.188
+<v Nico Spijkers>Dus dit is precies wat wat we willen bereiken, maar gewoon in productie voor duizenden organisaties vandaag.</v>
+
+00:51:49.338 --> 00:52:00.198
+<v Frank Terpstra>De beste standaarden die ik heb eh zien maken, daar werd iteratief een standaard opgesteld, meteen gebouwd, gekeken, werkt dit eh en vervolgens weer een volgende iteratie van standaard bijstellen, standaard bouwen.</v>
+
+00:52:00.198 --> 00:52:00.818
+<v Nico Spijkers>Precies.</v>
+
+00:52:01.178 --> 00:52:14.338
+<v Nico Spijkers>En dat is precies natuurlijk hoe hoe het iSHARE framework is ontwikkeld. En gewoon praktisch stap voor stap. We hebben net versie 2.2 gereleased. Gewoon met alle input van datastelsels die er dagelijks gebruik van maken.</v>
+
+00:52:30.828 --> 00:52:31.578
+<v Michiel Trimpe>Kijken.</v>
+
+00:52:32.068 --> 00:52:33.918
+<v Michiel Trimpe>Die laatste vier?</v>
+
+00:52:33.918 --> 00:52:34.418
+<v Marc de Boer>Nee, ik heb er</v>
+
+00:52:34.418 --> 00:52:35.018
+<v Michiel Trimpe>Nee.</v>
+
+00:52:35.018 --> 00:52:36.718
+<v Marc de Boer>Nee, dat dat ben ik.</v>
+
+00:52:37.668 --> 00:52:40.168
+<v Marc de Boer>Ja ja, maar ik zie jou typen, maar ik zie je naam niet verschijnen.</v>
+
+00:52:40.168 --> 00:52:42.268
+<v Michiel Trimpe>Dus dat geldt ook voor anderen dat we die niet</v>
+
+00:52:42.268 --> 00:52:44.768
+<v Marc de Boer>Ja, kunnen we wel uit de opname halen misschien.</v>
+
+00:52:45.368 --> 00:52:48.568
+<v Michiel Trimpe>Ja, dus die naampjes ook. Doen we achteraf dat administratie.</v>
+
+00:52:49.568 --> 00:52:53.648
+<v Nico Spijkers>Die opmerking rondom verifiable credentials. Ik weet niet of iedereen die die helemaal pakt, maar</v>
+
+00:52:54.608 --> 00:53:06.128
+<v Nico Spijkers>er is natuurlijk heel veel gedaan op door de commissie specifiek om voor te bereiden op een wereld met eh met wallets. Dus ook legal entity wallets waar je op andere manieren gaat eh gaat machtigen.</v>
+
+00:53:06.128 --> 00:53:12.828
+<v Nico Spijkers>Dus meerdere credentials combineert en dan gecombineerd met een expliciete eh machtiging tot toegang.</v>
+
+00:53:13.628 --> 00:53:16.028
+<v Nico Spijkers>Maar daar bovenop checks die uit uit wallets komen.</v>
+
+00:53:16.828 --> 00:53:17.128
+<v Michiel Trimpe>Ja.</v>
+
+00:53:17.388 --> 00:53:28.988
+<v Nico Spijkers>En in iSHARE zijn we daarop aan het voorsorteren. Dus versie 3 die in, nou, zoals het er nu uitziet in september wordt gelanceerd, heeft support voor zowel de Oauth wereld als voor de wallet wereld.</v>
+
+00:53:30.188 --> 00:53:39.388
+<v Nico Spijkers>Dat is wel waardevol, want dat dat ja, dat gaat toch komen. En inderdaad dat is niet vandaag eh massaal, maar we moeten daar wel eh rekening mee houden.</v>
+
+00:53:42.488 --> 00:53:42.888
+<v Michiel Trimpe>Ja.</v>
+
+00:53:43.388 --> 00:53:45.988
+<v Nico Spijkers>Met het gevaar dat niemand snapt wat ik zeg, dat kan ook, maar</v>
+
+00:53:46.388 --> 00:53:58.888
+<v Guus van der Meer>Nee, dus de vanuit de wallets hebben wij dat tot nu toe gezien als eh voor een groot gedeelte meer het authenticatiestuk, waar dus FTV wel echt expliciet het autorisatiestuk af heeft gepeld.</v>
+
+00:53:59.888 --> 00:54:07.088
+<v Nico Spijkers>Met het autorisatiestuk, dus die dat zouden ook gewoon langere termijn toegangstokens kunnen zijn die in wallets gaan eh gaan landen.</v>
+
+00:54:07.088 --> 00:54:08.088
+<v Guus van der Meer>Zeker.</v>
+
+00:54:08.088 --> 00:54:08.988
+<v Nico Spijkers>En en in die</v>
+
+00:54:08.988 --> 00:54:14.988
+<v Guus van der Meer>Zeker. En dan in die authenticatie</v>
+
+00:54:14.988 --> 00:54:21.988
+<v Nico Spijkers>voor toegang. Ja, zou het best wel eens kunnen zijn dat er eh credentials worden gebruikt eh voor die zekerheden of iemand wel of geen toegang krijgt.</v>
+
+00:54:21.988 --> 00:54:33.788
+<v Nico Spijkers>Nu hebben we daar natuurlijk de de certificaten voor die uit FC en in iSHARE eh uit eh de basis eh eIDAS certificaten onder andere wordt getrokken.</v>
+
+00:54:33.788 --> 00:54:36.788
+<v Nico Spijkers>Maar die wordt eigenlijk fijnmaziger straks.</v>
+
+00:54:37.888 --> 00:54:46.888
+<v Michiel Trimpe>Ja. Nou, misschien is dat sowieso de de wat gaan wat gaan we anders doen? Is daar nog een keer een deep dive op doen om dat in ieder geval echt duidelijk te krijgen.</v>
+
+00:54:47.388 --> 00:54:58.388
+<v Nico Spijkers>Ik zou het ook graag uitleggen hoe hoe dat vanuit het commissieperspectief nu wordt bekeken. En dan weet ik dat dat niet noodzakelijk onmiddellijk de waarheid is. Ehm, maar de</v>
+
+00:54:58.388 --> 00:55:04.088
+<v Nico Spijkers>eigenlijk door de oogharen heen waar beweegt dat naartoe is echt super waardevol om even te even te voelen.</v>
+
+00:55:07.888 --> 00:55:28.088
+<v Nico Spijkers>En dat je daar dus, nou goed, in mijn hoofd, in iSHARE sturen we door alle input die we van alle datastelsels krijgen naar een hybride structuur, zodat zowel, nou, softwarepartijen vandaag als de softwarepartijen van morgen eh op dezelfde manier elkaar kunnen eh gewoon machtigingen kunnen afhandelen.</v>
+
+00:55:28.588 --> 00:55:29.088
+<v Michiel Trimpe>Ja.</v>
+
+00:55:29.688 --> 00:55:30.188
+<v Michiel Trimpe>Oké.</v>
+
+00:55:30.688 --> 00:55:32.988
+<v Marc de Boer>Dan krijg ik het signaal om op de tijd te letten.</v>
+
+00:55:33.588 --> 00:55:34.188
+<v Michiel Trimpe>Ja, sorry.</v>
+
+00:55:34.688 --> 00:55:48.888
+<v Michiel Trimpe>Ja, dus ik denk ook daar eh dus wat wat we zitten nu ook in het stadium dus dat als zijn, wat ik zeg ook als zijn is niet de oplossing voor alle aspecten, voor een stuk. Dus het kan ook zijn wat jij nu omschrijft dat dat een vervolgstap kan zijn van het project of een verdere verdieping.</v>
+
+00:55:48.888 --> 00:55:53.888
+<v Michiel Trimpe>Laten we daar sowieso inderdaad ruimte voor inplannen op de, volgens mij staat het op de lijst van onderwerpen.</v>
+
+00:55:54.588 --> 00:55:57.388
+<v Michiel Trimpe>Ik denk voor de evaluatie, we hebben nog twee minuten.</v>
+
+00:55:57.788 --> 00:56:00.888
+<v Michiel Trimpe>Eh we hebben een aantal dingen geïdentificeerd die we sowieso willen veranderen.</v>
+
+00:56:01.888 --> 00:56:04.388
+<v Michiel Trimpe>Eh sowieso de feedback opgehaald. Dat is ook altijd heel waardevol.</v>
+
+00:56:05.388 --> 00:56:14.088
+<v Michiel Trimpe>Zijn er nog eh dingen die men toe wil voegen in de laatste twee minuten van ja, dat moeten we echt nog doen? Of zullen wij richting afronding?</v>
+
+00:56:14.488 --> 00:56:20.088
+<v Marc de Boer>Ja, ik zie eh geen proces opmerkingen, vooral inhoudelijke opmerkingen.</v>
+
+00:56:20.088 --> 00:56:37.188
+<v Marc de Boer>Zijn er mensen die nog iets vinden van de samenstelling van de groep, de manier waarop het gerund wordt, jullie geïnformeerd worden, praktisch over locatie of hoe het online gaat. Of is eh is dat allemaal wel oké? Is natuurlijk wel hartstikke fijn als we het over de inhoud kunnen hebben en het praktische deel geregeld is.</v>
+
+00:56:44.388 --> 00:56:44.688
+<v Michiel Trimpe>Ja.</v>
+
+00:56:45.388 --> 00:56:46.188
+<v Marc de Boer>Oké, zo.</v>
+
+00:56:49.188 --> 00:56:51.688
+<v Marc de Boer>Neem ik als een compliment aan jou, Michiel.</v>
+
+00:56:52.188 --> 00:56:52.988
+<v Michiel Trimpe>Ja, dat is wel waar.</v>
+
+00:56:53.588 --> 00:57:02.088
+<v Michiel Trimpe>Oké. Ehm nou, dat eh dan dan was dit het voor de eh de schoolperiode 2024 2025.</v>
+
+00:57:02.888 --> 00:57:07.088
+<v Michiel Trimpe>Ehm dan annuleer ik de komende drie werkgroepen.</v>
+
+00:57:07.588 --> 00:57:12.188
+<v Michiel Trimpe>En dan beginnen we daarna, nou, ik weet niet de precieze datum niet, maar beginnen we daarna weer.</v>
+
+00:57:12.188 --> 00:57:13.888
+<v Michiel Trimpe>Subwerkgroepen gaan door.</v>
+
+00:57:13.888 --> 00:57:19.888
+<v Michiel Trimpe>Eh we stellen ook voor om die eh de meetings daarvan wel te delen in het Mattermost kanaal.</v>
+
+00:57:19.888 --> 00:57:23.888
+<v Michiel Trimpe>Iedereen oproep doen om daar echt lid van te worden.</v>
+
+00:57:23.888 --> 00:57:25.388
+<v Michiel Trimpe>Ik zal nog even de link delen.</v>
+
+00:57:25.988 --> 00:57:30.988
+<v Michiel Trimpe>Ehm we zullen misschien ook wel dingen in de op de mail zetten, want dat is echt wel het makkelijkste om te delen.</v>
+
+00:57:31.388 --> 00:57:48.188
+<v Marc de Boer>Ja, het is ook een goede plek om vragen neer te zetten. Wij lezen dat, maar misschien nog meer mensen in deze groep. Dus dan ontstaat er een eh ja, wat meer vrije discussie die niet aan de werkgroep eh per se hoeft te zijn. Misschien wel dat het mooie input oplevert zelfs naar de werkgroep. Dat we hier natuurlijk maar een uur hebben eentje in de twee weken.</v>
+
+00:57:48.688 --> 00:57:50.288
+<v Marc de Boer>En die die groep is er altijd.</v>
+
+00:57:52.388 --> 00:57:56.188
+<v Michiel Trimpe>En dan eh wens ik iedereen een hele fijne vakantieperiode toe.</v>
+
+00:57:58.888 --> 00:57:59.688
+<v Onbekend>Bedankt.</v>
+
+00:58:00.088 --> 00:58:00.888
+<v Onbekend>Ja, insgelijks.</v>
+
+00:58:01.588 --> 00:58:02.188
+<v Onbekend>Dankjewel.</v>
+
+00:58:02.588 --> 00:58:04.088
+<v Onbekend>Goede vakantieperiode allemaal.</v>
+
+00:58:09.588 --> 00:58:10.588
+<v Onbekend>Fijne periode.</v>

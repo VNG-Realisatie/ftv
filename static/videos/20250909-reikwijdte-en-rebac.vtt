@@ -1,0 +1,1027 @@
+WEBVTT
+
+00:00:02.046 --> 00:00:05.146
+<v Michiel Trimpe>richting share.</v>
+
+00:00:11.596 --> 00:00:13.016
+<v Michiel Trimpe>Oké.</v>
+
+00:00:13.016 --> 00:00:20.626
+<v Michiel Trimpe>Ehm Nou, dit is de agenda voor vandaag. Eh nou, welkom en kennismaking.</v>
+
+00:00:22.756 --> 00:00:28.186
+<v Michiel Trimpe>Ehm de update van de subwerkgroepen en dan hadden we reikwijdte en ReBAC op de agenda staan.</v>
+
+00:00:29.356 --> 00:00:32.486
+<v Michiel Trimpe>Eh volgens mij Hugo heeft er al wel iets geïntroduceerd.</v>
+
+00:00:32.486 --> 00:00:37.896
+<v Michiel Trimpe>Dus dat bekend of niet? Ja.</v>
+
+00:00:39.226 --> 00:00:41.986
+<v Michiel Trimpe>Eh nou, de de kennismaking slaan we dan over.</v>
+
+00:00:42.596 --> 00:00:47.966
+<v Michiel Trimpe>Eh dan even de de update van de subwerkgroepen, eh deels voor de aanwezigen en de geïnteresseerden.</v>
+
+00:00:48.656 --> 00:00:54.436
+<v Michiel Trimpe>Eh voor de of-zen interne consultatie hebben we geen punten meer, additionele punten meer ontvangen.</v>
+
+00:00:55.056 --> 00:00:58.746
+<v Michiel Trimpe>Dus daarbij we het bij de de punten die we nu aan het afwerken zijn.</v>
+
+00:00:59.396 --> 00:01:07.576
+<v Michiel Trimpe>Dus de nou, vandaag de reikwijdte, de informatiemodellering en de verwijzing naar registers voor de grondslag en doelbinding.</v>
+
+00:01:10.516 --> 00:01:17.426
+<v Michiel Trimpe>Ehm, voor het juridische stuk, Nico, jij hebt de mail... Ja. nam deel aan de</v>
+
+00:01:17.426 --> 00:01:19.106
+<v Michiel Trimpe>eh juridische stuk.</v>
+
+00:01:19.676 --> 00:01:26.966
+<v Michiel Trimpe>Nou, dus de de vorige keer de update gehad van Mark over de eh nou, de het algemene document.</v>
+
+00:01:27.776 --> 00:01:39.236
+<v Michiel Trimpe>Eh ik heb ook een vraag aan het juridische subwerkgroep naar aanleiding van iets waar ik mee bezig ben. Dus ik ben begonnen aan een eh document over machtiging en delegatie in FTV.</v>
+
+00:01:40.176 --> 00:01:52.206
+<v Michiel Trimpe>En hoe dat zou moeten werken en wat de richtlijnen daarvoor zijn. En ik kwam eigenlijk snel tot de conclusie dat het vaak meer of een groot gedeelte juridische vraagstukken zijn.</v>
+
+00:01:53.646 --> 00:02:08.116
+<v Michiel Trimpe>Bijvoorbeeld eh vanuit het eh vanuit het FDS wordt dan gezegd dat je als als organisatie eh juridiciteit deelneemt, terwijl het in veel andere gevallen het de persoon is die een machtiging moet presenteren.</v>
+
+00:02:08.736 --> 00:02:13.626
+<v Michiel Trimpe>En nou ja, ook bijvoorbeeld met eh iSHARE heeft ook een bepaalde manier van delegatie.</v>
+
+00:02:14.546 --> 00:02:27.426
+<v Michiel Trimpe>Eh en de nuances lijken heel erg op juridisch niveau te liggen. Dus hoe duid je dat? Eh is het wanneer iemand een mandaat heeft dat de mandans, heet dat dan geloof ik, de de identiteit is en hoe ga je daarmee om?</v>
+
+00:02:27.996 --> 00:02:32.316
+<v Michiel Trimpe>Eh maar ik kan daar kom daar zelf natuurlijk niet uit, want ik heb geen juridische achtergrond.</v>
+
+00:02:32.966 --> 00:02:41.246
+<v Nico Spijkers>Ja. Dus ik kan de vraag eh meenemen. Dus dat heeft te maken met eh hoe zou je de vraag formuleren?</v>
+
+00:02:42.946 --> 00:02:53.886
+<v Michiel Trimpe>Ehm, het is vanuit toegangsverlening heb je een subject waar je informatie over kan vertellen en je hebt eh een context waarin dat plaatsvindt.</v>
+
+00:02:54.916 --> 00:03:06.376
+<v Michiel Trimpe>En de en machtigingen lijkt altijd een samenspel te zijn dus tussen de vraag: wie is het subject? Dus wie zien wij als nou, de entiteit die dit doet?</v>
+
+00:03:07.246 --> 00:03:18.236
+<v Michiel Trimpe>En eh wat heeft hij nodig als machtigingen? Dus de machtiging zal waarschijnlijk in de context geplaatst worden van ik heb een machtiging van iSHARE om dit bericht uit te voeren of een delegatie, ik heb een machtiging om namens iemand anders</v>
+
+00:03:18.236 --> 00:03:27.876
+<v Michiel Trimpe>eh die DigiD-handelingen uit te voeren. Dus eh bijvoorbeeld DigiD-machtigingen.</v>
+
+00:03:28.586 --> 00:03:42.996
+<v Michiel Trimpe>Ehm, maar in sommige gevallen zou het ook kunnen zijn van nee, eh jij wordt echt deze persoon. Dus jij wordt het subject, want jij bent de curator van deze persoon, dus je mag echt effectief alles, dus jij handelt namens, dus jij bent de persoon. En dus die dynamiek...</v>
+
+00:03:43.716 --> 00:03:57.656
+<v Michiel Trimpe>Dus wat, in wat zien we als de identiteit die het de actie uitvoert? En wat zien we als de machtigingen? En zijn de machtigingen dan ja, context of deel van de identiteit?</v>
+
+00:03:57.996 --> 00:04:07.136
+<v Nico Spijkers>Zouden we dan die vraag naar FDS-scope terugbrengen? Maar en dan onze opdracht is eigenlijk ook vaker van systeem naar systeem.</v>
+
+00:04:08.206 --> 00:04:26.176
+<v Nico Spijkers>Eh en wij zitten niet zozeer in de DigiD-hoek waar mensen machtigen eh om werk door iemand anders te laten doen, of mensen die niet meer bevoegd zijn omdat ze nog geen 18 zijn of omdat ze handelingsonbekwaam zijn en dergelijke. Wil je dat meenemen in die discussie? Want dat is juridisch best ingewikkeld.</v>
+
+00:04:26.686 --> 00:04:27.896
+<v Michiel Trimpe>Welk stukje?</v>
+
+00:04:28.326 --> 00:04:42.206
+<v Nico Spijkers>Nou, ik zie dat het 'ik ben werknemer van een organisatie en daarom heb ik een bepaalde bevoegdheid of hè, eh namens de organisatie om namens de organisatie te spreken'.</v>
+
+00:04:42.826 --> 00:04:52.126
+<v Nico Spijkers>Het is zeg maar een vrij duidelijke vraag. Dus ik bedien een computer die vervolgens wat gaat doen, of ik heb ingesteld dat de computer iets gaat doen elke minuut, zeg maar.</v>
+
+00:04:53.306 --> 00:05:02.326
+<v Nico Spijkers>En dat is minder eh, het is een ander gebied denk ik dan dat ik als persoon handel namens een andere persoon. Die die situatie.</v>
+
+00:05:02.326 --> 00:05:06.126
+<v Michiel Trimpe>Dus misschien druk je nu zo direct wat is de reikwijdte van de standaard?</v>
+
+00:05:06.126 --> 00:05:21.806
+<v Michiel Trimpe>Ik zag het wel als in de in de breedte, dus we we hebben AuthZ en welke sturing willen we daaraan geven, maar dat moet inderdaad invulling geven aan de reikwijdte technisch gezien. Dus als de reikwijdte inderdaad is alleen machine-to-machine binnen de overheid,</v>
+
+00:05:22.506 --> 00:05:24.846
+<v Nico Spijkers>Ja. Dan kan je daar tot beperken.</v>
+
+00:05:25.266 --> 00:05:34.626
+<v Michiel Trimpe>Ja. Oké. Dus ik neem de vraag mee in de brede zin. En dan eh kijken we wat we eh als subwerkgroep eh daarvan kunnen maken.</v>
+
+00:05:35.046 --> 00:05:36.846
+<v Michiel Trimpe>Ja. Hoe het antwoord kan zijn.</v>
+
+00:05:38.006 --> 00:05:45.106
+<v Michiel Trimpe>Ja. En dan is dus ook en de de andere machtigingsrelatie die interessant is, is dus de bijvoorbeeld de eh technische uitvoerder.</v>
+
+00:05:45.106 --> 00:06:05.156
+<v Michiel Trimpe>Dus wat je dus bij alle RFC, dus een een IT-leverancier doet het fysieke verzoek, maar namens een overheid. En wie is dan de identiteit? Dus wie is het subject bijvoorbeeld? Is dat dan de IT-dienstverlener of is dat de overheidsorganisatie? En moet de IT-dienstverlening gemachtigd presteren? Hoe hoe werkt dat?</v>
+
+00:06:05.476 --> 00:06:18.106
+<v Nico Spijkers>Dat is analoog aan de verwerker in AVG-termen, de verwerkingsovereenkomst waar je dus namens een IT-leverancier doet dit werk namens iemand die eh houder is van de gegevens.</v>
+
+00:06:18.666 --> 00:06:27.116
+<v Michiel Trimpe>Ja. Dus niet hetzelfde vraagstuk. Dus niet die kant op gaan, zeg maar. Nee, dat hoort er denk ik ook bij.</v>
+
+00:06:28.496 --> 00:06:30.936
+<v Michiel Trimpe>Igor. Igor, welkom.</v>
+
+00:06:32.736 --> 00:06:34.176
+<v Igor van Haren>Je staat nog op mute.</v>
+
+00:06:34.506 --> 00:06:40.916
+<v Michiel Trimpe>Audio inschakelen, audio inschakelen. Ehm...</v>
+
+00:06:41.226 --> 00:06:44.976
+<v Igor van Haren>Eh het netwerkmodel wat VECOZO nu heeft.</v>
+
+00:06:45.996 --> 00:06:56.406
+<v Igor van Haren>Ik ehm ik ben met twee devices ingelogd omdat eh de ene mijn microfoon is en de andere mijn mijn koptelefoon, dus dat gaat niet heel goed, maar...</v>
+
+00:06:57.346 --> 00:07:21.036
+<v Igor van Haren>Ehm eh bij VECOZO of in binnen het iWlz-netwerkmodel hebben wij wel ehm het eh machtigingen. Eh en een zorgaanbieder machtigt bijvoorbeeld wel een eh softwareleverancier om namens hen ehm ja, bepaalde registers te raadplegen.</v>
+
+00:07:21.886 --> 00:07:36.316
+<v Igor van Haren>Ehm dus ik zou daar echt eh wel meegenomen willen hebben in de in de standaard. En we hebben daar eh gebruik gemaakt van het subject, maar de actor is dan anders dan het subject zelf.</v>
+
+00:07:37.896 --> 00:07:48.516
+<v Igor van Haren>Ehm... hoe komt dat? Wordt dat meegenomen? Of wordt dat nu in de twijfel of dit wel of niet eh...</v>
+
+00:07:51.396 --> 00:07:58.106
+<v Michiel Trimpe>Nou, dus momenteel past alles in de standaard. Dus momenteel, momenteel geven we hier nog geen sturing op.</v>
+
+00:07:58.616 --> 00:08:14.416
+<v Michiel Trimpe>Eh maar je valt nu precies net in het gesprek dat mij is gevraagd om daar sturing op te geven. Dat ik daarin dook en dat eigenlijk snel bleek dat het niet zozeer een technisch vraagstuk is, maar eh of niet alleen in ieder geval een technisch vraagstuk, maar ook grotendeels een juridisch vraagstuk.</v>
+
+00:08:16.296 --> 00:08:20.006
+<v Igor van Haren>Ja, ik denk dat het beide is, zowel juridisch als technisch is.</v>
+
+00:08:20.006 --> 00:08:27.616
+<v Nico Spijkers>Maar zeker, zeker hier gaat juridisch eigenlijk eerst voordat je daar technisch in gaat duiken.</v>
+
+00:08:28.026 --> 00:08:38.316
+<v Michiel Trimpe>Zo voelt het voor mij in ieder geval. Nou, in ieder geval sowieso technisch is wel vertegenwoordigd in dit clubje met juridisch. Ja. Dus we hebben... dat moet op zijn minst aangevuld worden.</v>
+
+00:08:38.646 --> 00:08:46.016
+<v Michiel Trimpe>Hebben jullie iemand, is er iemand bij jullie die zich ook bezighoudt met of juridische stuk of die deze kunnen helpen bij de juridische invulling?</v>
+
+00:08:46.666 --> 00:08:49.336
+<v Igor van Haren>En de vraag je aan mij, denk ik, hè? Ja.</v>
+
+00:08:49.336 --> 00:09:02.006
+<v Igor van Haren>Ja, we hebben daar wel ehm eh juridische mensen voor eh eh omdat we dat nu al allemaal toepassen eh binnen de hele zorg. Ehm die daar eh iets van kan zeggen.</v>
+
+00:09:02.516 --> 00:09:11.236
+<v Michiel Trimpe>Ja. Misschien kun jij dat met eh Mark en dan de juridische subwerkgroep koppelen dat zij daar wellicht aan kunnen bijdragen of aanhaken of input leveren.</v>
+
+00:09:11.666 --> 00:09:19.426
+<v Igor van Haren>Ja. Dan ga ik even een notitie van maken. Nico, jij had ook een hand opgestoken.</v>
+
+00:09:20.176 --> 00:09:47.336
+<v Nico Spijkers>Nee, ik zal deze vraag ook even uitzetten eh binnen ons eh netwerk van partners die de bijvoorbeeld TNO, die de BRO eh eh uitvoert. Eh Kadaster, de BAG, eh BGT onder andere. Eh wij vanuit meer open data perspectief hebben misschien iets minder met deze soort type vraagstukken te maken. Eh maar ik ik zal het even navragen eh of het ook geldt voor een bepaald aantal gesloten datasets binnen de geo-wereld ook geldt.</v>
+
+00:09:48.006 --> 00:09:58.236
+<v Michiel Trimpe>Ja. Ja. En ik kan dan nog, ja, dus we doen, ik kan ook delen hoever ik gekomen ben in...</v>
+
+00:10:04.169 --> 00:10:11.469
+<v Spijkers, Nico>leek het te zijn dat degene die de feitelijke handeling uitvoert eigenlijk het subject zou moeten zijn.
+
+00:10:12.359 --> 00:10:18.229
+<v Spijkers, Nico>Tenzij er sprake is van een mandateringsrelatie, waarbij je dus iets doet in een gezagsverhouding.
+
+00:10:18.229 --> 00:10:24.879
+<v Spijkers, Nico>En dan is dus eigenlijk je baas de de mandans, heet dat dan, het subject.
+
+00:10:25.539 --> 00:10:28.139
+<v Spijkers, Nico>Dat was tot dusver mijn analyse.
+
+00:10:28.609 --> 00:10:30.209
+<v Spreker 1 (Michiel Trimpe)>Dus het subject moet de
+
+00:10:30.739 --> 00:10:40.619
+<v Igor van Haren>Misschien zit daar wel een verschil in als je een werknemer-werkgever verhouding bent of zeg maar ehm zorg aanbieder, softwareleverancier.
+
+00:10:41.099 --> 00:10:42.019
+<v Spreker 2 (Michiel Trimpe)>Ja, dat zijn twee verschillende dingen, ja.
+
+00:10:42.019 --> 00:10:42.899
+<v Spijkers, Nico>Precies. Ja.
+
+00:10:42.899 --> 00:10:43.219
+<v Spreker 2 (Michiel Trimpe)>Ja.
+
+00:10:43.219 --> 00:10:52.039
+<v Spijkers, Nico>Nee, dus eh mandans is dan ook een specifieke term voor een eh iets wat in eigenlijk over het algemeen in een hiërarchische relatie gebeurt.
+
+00:10:52.959 --> 00:11:02.119
+<v Spijkers, Nico>Maar dat is dan wel gericht op het verrichten van wettelijke feiten. Nou, in ieder geval, ik tot dusver ben ik gekomen.
+
+00:11:02.119 --> 00:11:14.119
+<v Spijkers, Nico>Dus mijn tekst tot nu toe was zou zijn geweest: degene die de feitelijke handeling uitvoert is het subject, tenzij dit in een mandateringsrelatie gebeurt, in welk geval de mandans het subject is.
+
+00:11:14.899 --> 00:11:20.399
+<v Michiel Trimpe>Maar 16.000 afwijzingen of afwijkingen en eh
+
+00:11:20.809 --> 00:11:23.739
+<v Igor van Haren>Ik denk dat een goede beschrijving eh noodzakelijk is. Ja.
+
+00:11:24.249 --> 00:11:24.729
+<v Spreker 2 (Michiel Trimpe)>Ja.
+
+00:11:24.729 --> 00:11:25.129
+<v Spijkers, Nico>Oké.
+
+00:11:25.129 --> 00:11:35.199
+<v Michiel Trimpe>Nou, mooi dat dat eh helemaal even de term verzamelen en dan kijken of ik de vraag goed kan formuleren. Leg ik hem nog heel even bij je voor eh.
+
+00:11:36.429 --> 00:11:41.029
+<v Hans Schevers>onze juristen en inderdaad die we nog in de groep hebben om mee te denken.
+
+00:11:41.929 --> 00:11:51.529
+<v Michiel Trimpe>Oké. Met als consequentie, zeg maar, dus stel dat er een iets komt van een kader, zo moet je dit zien, eh hebben we het dan over claims?
+
+00:11:52.519 --> 00:11:58.219
+<v Spijkers, Nico>Je hebt het over het samenspel van van claims in de brede zin en subject.
+
+00:11:58.219 --> 00:12:09.399
+<v Spijkers, Nico>Dus het is inderdaad het geeft antwoord op de vraag: wat moet er in je subject staan van Authzen en wat moet er als claims aangeboden worden in de context?
+
+00:12:10.989 --> 00:12:28.139
+<v Spijkers, Nico>Dat kunnen W3C claims zijn, maar eigenlijk claims in de bredere zin van machtigingsrelaties en wie weet zou dat ook via registers kunnen, dus dat je dat in een register opzoekt of iemand inderdaad de curator van iemand anders is.
+
+00:12:28.549 --> 00:12:29.199
+<v Spreker 2 (Michiel Trimpe)>Ja.
+
+00:12:31.639 --> 00:12:32.199
+<v Spreker 2 (Michiel Trimpe)>Goed.
+
+00:12:34.649 --> 00:12:36.649
+<v Michiel Trimpe)>Vraag duidelijk.
+
+00:12:37.599 --> 00:12:38.119
+<v Spijkers, Nico>Oké.
+
+00:12:39.199 --> 00:12:42.499
+<v Spijkers, Nico>Ehm Oké, ja.
+
+00:13:02.509 --> 00:13:03.049
+<v Spreker 3 (Michiel Trimpe)>Ja.
+
+00:13:03.049 --> 00:13:03.409
+<v Spreker 2 (Michiel Trimpe)>Ja, inderdaad.
+
+00:13:40.639 --> 00:13:43.239
+<v Michiel Trimpe>Michiel, volgens mij staan jullie op mute, want
+
+00:13:48.549 --> 00:13:51.009
+<v Spreker 3 (Michiel Trimpe)>opname ook weer opnieuw starten, denk ik.
+
+00:13:51.009 --> 00:13:51.369
+<v Spijkers, Nico>Oh, oké.
+
+00:13:51.699 --> 00:13:52.629
+<v Spijkers, Nico>Hoor je ons nu wel?
+
+00:13:53.219 --> 00:13:53.619
+<v Michiel Trimpe>Ja.
+
+00:13:54.219 --> 00:13:55.419
+<v Spijkers, Nico>Oké.
+
+00:13:55.419 --> 00:13:56.119
+<v Spreker 2 (Michiel Trimpe)>groene rand.
+
+00:13:56.119 --> 00:13:56.399
+<v Spijkers, Nico>Ja.
+
+00:13:56.829 --> 00:13:58.719
+<v Spijkers, Nico>Excuseer. Dankjewel voor de correctie.
+
+00:13:59.349 --> 00:14:12.089
+<v Spijkers, Nico>Ehm ik was aan het vertellen dat eh we voor de subwerkgroep eh Authorization Decision Log, ehm dat wij in principe het document of dat wij het document klaar hebben.
+
+00:14:12.089 --> 00:14:21.039
+<v Spijkers, Nico>Dus dat wij vanaf nu de interne consultatie hiervoor starten. Dat komt ook in de nieuwsbericht zal het aangekondigd worden.
+
+00:14:21.659 --> 00:14:30.429
+<v Spijkers, Nico>En eh we hebben de intentie nog om voorbeelden toe te voegen om hier wat dingen in te verduidelijken, maar de tekst zoals die er nu staat is wat ons betreft compleet.
+
+00:14:31.219 --> 00:14:46.509
+<v Spijkers, Nico>Dus aan een iedere het verzoek om dit door te lezen en te kijken of ja, of je nog op- en of aanmerkingen hebt en fouten ziet of wijzigingen zou willen doen, eh aanvragen die wij in deze groep kunnen afhandelen voordat het later naar een publieke consultatie gaat.
+
+00:14:51.579 --> 00:14:57.089
+<v Spijkers, Nico>En ik stel voor om niet het hele document heen te gaan, maar dat eventjes als huiswerk aan iedereen mee te geven.
+
+00:15:01.999 --> 00:15:03.729
+<v Spreker 3 (Michiel Trimpe)>Wat is de deadline, Michiel?
+
+00:15:04.989 --> 00:15:05.919
+<v Spreker 2 (Michiel Trimpe)>te reageren.
+
+00:15:06.739 --> 00:15:12.299
+<v Michiel Trimpe>Zullen we een deadline van twee sprints, is vier weken doen? Vier weken.
+
+00:15:31.399 --> 00:15:31.739
+<v Spijkers, Nico>Ja.
+
+00:15:32.069 --> 00:15:44.119
+<v Spijkers, Nico>Nou, en eh ik wil verder nog aan een eh een document met iSHARE gaan werken, maar die zijn niet in de call, dus dat zullen we dan apart met ze op moeten pakken.
+
+00:15:44.119 --> 00:15:51.019
+<v Spijkers, Nico>Dus ik wil graag een mapping uitwerken hoe de de iSHARE claims mappen op het Authzen informatiemodel.
+
+00:15:51.819 --> 00:16:00.819
+<v Spijkers, Nico>Eh we hebben eindelijk ook bevestigd dat Authzen een JSON-LD voorbeeld opneemt of als voorbeeld opneemt. Dat zou ook goed samen moeten kunnen gaan.
+
+00:16:02.189 --> 00:16:05.639
+<v Spijkers, Nico>Ehm en dat zijn dat wat mij betreft de updates van de subwerkgroepen.
+
+00:16:09.629 --> 00:16:16.669
+<v Hugo Mostard>En dan hebben we twee onderwerpen, de reikwijdte en ReBAC. Ik zit een beetje te worstelen met de reikwijdte.
+
+00:16:17.649 --> 00:16:26.119
+<v Hugo Mostard>Eh dus voor de standaard is het heel belangrijk dat we definiëren op welk ja, op welk gebied de standaard van toepassing is en hoe we dat precies verwoorden.
+
+00:16:27.149 --> 00:16:37.049
+<v Hugo Mostard>Ik heb wel het gevoel alsof de aanwezigen hier vandaag niet echt gepast zijn om die discussie inhoudelijk te voeren.
+
+00:16:37.049 --> 00:16:44.729
+<v Hugo Mostard>Ik hoop op een eh Frank, eh Frank, Gideon, Danny, misschien ook wat anders.
+
+00:16:45.939 --> 00:16:58.119
+<v Michiel Trimpe>Het is wel zo dat we de vraag nog niet echt hebben voorgelegd. En wat we wel kunnen doen is dat jij hem nu zo neerlegt dat hij ook in de notule komt en dat mensen die er niet bij zijn dan de volgende keer erop terug kunnen komen.
+
+00:16:58.119 --> 00:17:06.119
+<v Hugo Mostard>Ja. Als je nu even de minuut neemt om eh Ja, dat is de vraag heel helder te maken. Dan ligt hij er voor niet stil. Ja.
+
+00:17:06.709 --> 00:17:26.349
+<v Hugo Mostard>Laten we dat doen. Dan kunnen we het eh de aanwezigen ook nog verduidelijking verduidelijking vragen. Ehm dus de reikwijdte eh komt uit feedback van Steven Mekking. Eh die had kritiek op de informatiemodellering, maar voornamelijk ook in combinatie met de voorziene reikwijdte.
+
+00:17:27.109 --> 00:17:58.109
+<v Hugo Mostard>En dus zijn feedback was dat eh wanneer het voorzien wordt dat de standaard bijvoorbeeld verplicht zou worden voor ehm alle alle overheids API calls, even als de de maximale reikwijdte, eh dan zou je andere vormen van informatiemodellering mogelijk moeten maken, want de huidige verwijzingen verwijzen momenteel naar MIM, wat geen verplichte standaard is.
+
+00:17:58.109 --> 00:18:02.269
+<v Hugo Mostard>Dus het zou gek zijn als je uit je verplichte standaard niet verplichte standaarden alsnog verplicht stelt.
+
+00:18:02.269 --> 00:18:03.979
+<v Hugo Mostard>En dus dat was zijn feedback en dat was de aanleiding.
+
+00:18:05.439 --> 00:18:22.159
+<v Hugo Mostard>Ehm en eh ik had eh eerst ook begrepen dat eh GDI en Forum Standaardisatie zelf de reikwijdte zouden bepalen, maar dat schijnt te zijn dat je dat aangeeft als suggestie vanuit de werkgroep. Dus dat is niet per se de waarheid, maar wel wij denken dat dit de reikwijdte zou moeten zijn.
+
+00:18:22.989 --> 00:18:32.989
+<v Hugo Mostard>En wij moeten dus precies gaan verwoorden op welke situaties Authzen van toepassing zou moeten zijn volgens ons.
+
+00:18:35.869 --> 00:18:47.489
+<v Hugo Mostard>Ehm en dan gaat het dus over organisatorische reikwijdte. Eh is het een standaard voor ehm alle alle overheidsinstanties, voor alle uitvoeringsorganisaties, eh et cetera.
+
+00:18:48.319 --> 00:18:55.119
+<v Hugo Mostard>Eh dus dan zou ik zeggen in eerste instantie waarschijnlijk dus de organisaties die ook onder het GDI vallen.
+
+00:18:56.199 --> 00:19:04.499
+<v Hugo Mostard>Ehm dan hebben we de technische toepassingsgebied.
+
+00:19:07.379 --> 00:19:19.699
+<v Michiel Trimpe>Je vraagt ook bijvoorbeeld of publiek-private samenwerkingen, dus waar de overheid informatie van derden verwerkt of daar ook van toepassing is.
+
+00:19:19.699 --> 00:19:20.019
+<v Hugo Mostard)>Ja.
+
+00:19:20.019 --> 00:19:20.309
+<v Michiel Trimpe)>Ja.
+
+00:19:20.809 --> 00:19:31.499
+<v Hugo Mostard>Inderdaad. En dan eh loopt dus de vraag: is het alleen eh tussen overheidsorganisaties, ook binnen overheidsorganisaties van toepassing?
+
+00:19:34.399 --> 00:19:36.999
+<v Hugo Mostard>En dan welke aspecten het verplicht zou moeten zijn.
+
+00:19:45.909 --> 00:19:51.719
+<v Hugo Mostard>En de aanwezigen als of zeg maar feedback of verduidelijking of meningen hierover.
+
+00:30:07.390 --> 00:30:09.540
+<v Gerard Klijn>in onze demonstratie gaan gebruiken.</v>
+
+00:30:10.610 --> 00:30:17.100
+<v Gerard Klijn>Eh een aantal simpele voorbeeldjes. De eerste is eigenlijk gewoon heel erg simpel eh gebaseerd op wat je in veel voorbeelden ziet dat we een gebruiker hebben met groepen</v>
+
+00:30:17.100 --> 00:30:23.870
+<v Gerard Klijn>die eh eh in folders documenten kunnen beheren.</v>
+
+00:30:24.430 --> 00:30:28.570
+<v Gerard Klijn>Dus dat is eigenlijk wat ze allemaal eh als standaard voorbeeld geven.</v>
+
+00:30:28.570 --> 00:30:36.200
+<v Gerard Klijn>Ik heb dat iets omgebouwd naar wat wij als eh gemeente zouden kunnen hebben, bijvoorbeeld dat we API's moeten bevragen.</v>
+
+00:30:37.310 --> 00:30:43.780
+<v Gerard Klijn>Dus een medewerker heeft een functie, die functie geeft toegang tot een gateway of tot een API of specifieke API's.</v>
+
+00:30:44.740 --> 00:30:49.100
+<v Gerard Klijn>En je ziet dat de beschrijving hier, die is vrij rigide.</v>
+
+00:30:49.590 --> 00:31:01.620
+<v Gerard Klijn>Dus hier kunnen eh hier definieer je je relatie tussen verschillende eh types, dus tussen verschillende eh entiteiten zeg maar.</v>
+
+00:31:02.100 --> 00:31:07.010
+<v Gerard Klijn>Een entiteit heet hier dan een type. Maar een medewerker heeft dus een functie.</v>
+
+00:31:07.540 --> 00:31:11.150
+<v Gerard Klijn>En dat is in feite dan de relatie tussen die twee.</v>
+
+00:31:11.590 --> 00:31:16.890
+<v Gerard Klijn>En een gateway eh heeft een relatie met de functie heeft.</v>
+
+00:31:17.310 --> 00:31:25.700
+<v Gerard Klijn>Wat we hier beschrijven is dat er deze relatie moet dus niet specifieke medewerker zijn, maar iemand met een functie.</v>
+
+00:31:26.480 --> 00:31:31.730
+<v Gerard Klijn>Dus het relateert wel weer aan de medewerker, maar via de relatie functie.</v>
+
+00:31:32.320 --> 00:31:46.130
+<v Gerard Klijn>En dat komt in de API ook weer terug. Het bevragen mag via die functie heeft of via het bevragen van de parent. En de parent is in dit geval de gateway.</v>
+
+00:31:46.510 --> 00:32:02.290
+<v Gerard Klijn>Dus als er een relatie is tussen een medewerker en een functie naar de API, dan heb je toegang. Of als er een relatie is tussen de medewerker en de functie naar een gateway en de gateway automatisch naar de API.</v>
+
+00:32:02.290 --> 00:32:02.720
+<v Gerard Klijn>Hm?</v>
+
+00:32:04.400 --> 00:32:11.660
+<v Gerard Klijn>Nou, we hebben oh, hier hebben we ook een aantal eh tuples geladen. Dat zijn dus de relaties.</v>
+
+00:32:12.430 --> 00:32:24.620
+<v Gerard Klijn>Je ziet hier een wat ze noemen een user, dat is eigenlijk de subject. Want het zijn niet altijd users die hier in de relaties eh weergeeft. Dus je hebt subject relation object.</v>
+
+00:32:25.270 --> 00:32:31.510
+<v Gerard Klijn>En hier geven we aan medewerker met nummer 123 heeft de functie aanvragen van laadpalen.</v>
+
+00:32:32.410 --> 00:32:35.860
+<v Gerard Klijn>Medewerker 21 heeft de functie van manager.</v>
+
+00:32:36.440 --> 00:32:41.430
+<v Gerard Klijn>Enzovoort. Functie medewerker 290, baliemedewerker.</v>
+
+00:32:41.960 --> 00:32:51.380
+<v Gerard Klijn>En hier zie je dus zo'n gecombineerde functie. Manager heeft die mag de outway bevragen, de gateway outway.</v>
+
+00:32:52.210 --> 00:33:04.400
+<v Gerard Klijn>Dus ieder element heeft een type en een ID. En samen door met met dat dubbele puntje maak je daar een unieke key van voor de relatie zelf.</v>
+
+00:33:05.990 --> 00:33:14.980
+<v Gerard Klijn>Gaan we verder. Laadpaal aanvragen heeft mag dus de API persoon op BSN bevragen.</v>
+
+00:33:15.610 --> 00:33:22.210
+<v Gerard Klijn>En datzelfde geldt voor de outway. Die gateway outway mag ook als parent die API bevragen.</v>
+
+00:33:25.200 --> 00:33:31.210
+<v Gerard Klijn>Nou, het plaatje geeft in feite aan wat alle wat alle types zijn en wat de relaties zijn, niet de terugkoppeling.</v>
+
+00:33:31.670 --> 00:33:43.500
+<v Gerard Klijn>Dus je ziet alleen de relatie die aan de API is gekoppeld. En het feit dat die bevragen dan eh aan de functie heeft hangt, dat zit in het plaatje niet weergegeven.</v>
+
+00:33:46.100 --> 00:33:50.820
+<v Gerard Klijn>Maar we hebben hier ook de mogelijkheid om een query uit te voeren.</v>
+
+00:33:52.810 --> 00:34:01.970
+<v Gerard Klijn>Dus bijvoorbeeld is medewerker 123 related to functie laadpaal aanvragen als heeft.</v>
+
+00:34:02.610 --> 00:34:06.570
+<v Gerard Klijn>Dus heeft medewerker 123 de functie laadpalen?</v>
+
+00:34:06.910 --> 00:34:09.400
+<v Gerard Klijn>Als ik dan op enter druk, dan zegt hij ja.</v>
+
+00:34:10.330 --> 00:34:13.510
+<v Gerard Klijn>Als het goed is. Hij doet er even over.</v>
+
+00:34:20.700 --> 00:34:21.950
+<v Gerard Klijn>Hij is nog aan het nadenken.</v>
+
+00:34:24.870 --> 00:34:25.200
+<v Michiel Trimpe>Ehm.</v>
+
+00:34:30.520 --> 00:34:33.780
+<v Gerard Klijn>Laten we het kijken met functie medewerker 21.</v>
+
+00:34:34.520 --> 00:34:38.200
+<v Michiel Trimpe>De plaatjes worden niet geladen. Ik denk dat het met het sharen te maken heeft.</v>
+
+00:34:38.200 --> 00:34:42.470
+<v Gerard Klijn>Misschien resolutie was net ook zo, die ging ineens aan.</v>
+
+00:34:44.740 --> 00:34:45.260
+<v Michiel Trimpe>Nee.</v>
+
+00:34:45.260 --> 00:34:45.510
+<v Gerard Klijn>Nee.</v>
+
+00:34:46.890 --> 00:34:48.470
+<v Michiel Trimpe>F12 ofzo.</v>
+
+00:34:49.330 --> 00:35:04.950
+<v Gerard Klijn>Een beetje jammer, want dit zou dit plaatje zou dus laten zien hoe die eh bij zijn beslissing komt dat die relaties allemaal bestaan. Dus hij laat dan zien van nou, deze medewerker heeft inderdaad de functie laadpaal aanvragen en laadpaal aanvragen. Nou, dat is dus klaar.</v>
+
+00:35:05.500 --> 00:35:07.310
+<v Michiel Trimpe>Misschien full tree dat hij dan</v>
+
+00:35:07.790 --> 00:35:13.200
+<v Gerard Klijn>Nee, dat laat het hele plaatje zien van alle mogelijke situaties. Nee, ik denk het niks.</v>
+
+00:35:14.480 --> 00:35:38.200
+<v Gerard Klijn>Maar als ik nu zou zeggen van nou, ik wil dus echt weten van mag ik eh BRP eh persoon op BSN als bevragen?</v>
+
+00:35:41.100 --> 00:35:43.470
+<v Gerard Klijn>Hij laat de plaatjes echt niet zien. Dat is wel jammer.</v>
+
+00:35:43.470 --> 00:35:53.420
+<v Nico Spijkers>Ja, dus normaal zou je hier dan Normaal zou je hier dus zien van of een rood blokje van het mag niet. Of je ziet netjes een grafiek van hoe de relaties liggen en dat het wel mag.</v>
+
+00:35:54.330 --> 00:36:05.220
+<v Gerard Klijn>Eén van de leuke dingen die ze dus wel hebben is dat je ook assertions kunt opnemen. En daar zitten eigenlijk je vraagstellingen in. Dus dat zijn een soort eh test cases.</v>
+
+00:36:05.910 --> 00:36:12.100
+<v Gerard Klijn>En die kan je dan allemaal tegelijk afdraaien. En hier had ik er zes gedefinieerd en ze zijn allemaal zes goed.</v>
+
+00:36:13.300 --> 00:36:24.100
+<v Gerard Klijn>Mocht er ergens iets niet kloppen. Bijvoorbeeld stel ik heb eh ik laat dit eventjes weg uit mijn voorbeeld.</v>
+
+00:36:25.300 --> 00:36:38.500
+<v Gerard Klijn>Dus je moet je moet nu echt de definitie een functie hebben en het mag dus niet via de gateway. Hm hm.</v>
+
+00:36:39.200 --> 00:36:42.200
+<v Gerard Klijn>Dus dan opslaan. Save.</v>
+
+00:36:43.420 --> 00:36:52.100
+<v Gerard Klijn>En dan run. Hey. Nu mag medewerker 21 niet meer bij die API. Want die gateway heeft geen toegang meer.</v>
+
+00:36:55.700 --> 00:36:58.930
+<v Gerard Klijn>Dus zo zie je hoe dingen aan elkaar gekoppeld zijn.</v>
+
+00:37:02.200 --> 00:37:18.000
+<v Gerard Klijn>Nou, laat ik naar een iets ingewikkelder voorbeeld gaan. Vierdam 2. Hier hebben we de opleiding erbij opgenomen. En de API is dan even kijken hoor, ik zal het scherm ietsje zo.</v>
+
+00:37:20.470 --> 00:37:31.300
+<v Gerard Klijn>Dus de parent is nog steeds de gateway. Maar voor toegang moet je nu de functie bevragen de de relatie bevragen en opleiding hebben.</v>
+
+00:37:31.890 --> 00:37:41.700
+<v Gerard Klijn>Dus als medewerker moet je ook gekoppeld zijn aan de opleiding die aan de API gekoppeld is. Want anders krijg je nog steeds geen toegang.</v>
+
+00:37:42.510 --> 00:37:57.300
+<v Gerard Klijn>En dit soort eh informatie zit dus ook weer in de tuples. Eh even kijken. Medewerker 123 heeft dus de opleiding laadpalen.</v>
+
+00:37:58.200 --> 00:38:01.630
+<v Gerard Klijn>En laadpalen is weer gekoppeld aan deze API.</v>
+
+00:38:02.400 --> 00:38:08.200
+<v Gerard Klijn>Dus op die manier mag 123 er dus wel bij.</v>
+
+00:38:09.140 --> 00:38:11.800
+<v Gerard Klijn>Maar de manager heeft hier opleiding niet gevolgd.</v>
+
+00:38:12.800 --> 00:38:23.970
+<v Gerard Klijn>Dus de manager, als ik even kijk in de voorbeelden, die heeft wel de functie manager, maar heeft niet de functie laadpaal aanvragen.</v>
+
+00:38:25.200 --> 00:38:39.200
+<v Gerard Klijn>Dus hier staat wat het antwoord moet zijn, false of true. En eh medewerker 21 die mag nog steeds de API bevragen. Maar dat is raar.</v>
+
+00:38:40.200 --> 00:38:43.100
+<v Gerard Klijn>Want hij moest toch een opleiding hebben?</v>
+
+00:38:48.400 --> 00:38:52.700
+<v Gerard Klijn>Heeft hij dan die opleiding wel? Nee.</v>
+
+00:38:52.700 --> 00:38:53.700
+<v Nico Spijkers>Hoe kan dat nou?</v>
+
+00:38:53.700 --> 00:39:06.700
+<v Gerard Klijn>Het punt is dat het relatiemodel is zo dat er twee paden zijn. En dat betekent van nou, als het ene pad er is, dan zijn we klaar. Dan gaat hij dus niet meer controleren of dat andere pad er ook is.</v>
+
+00:39:08.100 --> 00:39:27.300
+<v Gerard Klijn>Dus je moet bij je modellering van het autorisatiemodel moet je heel goed oppassen hoe je dat allemaal aan elkaar koppelt. Je moet echt alle alle controles die je wilt doen moeten in een directe lijn van A naar B zitten. Dus van medewerker tot aan API moet alles ertussen zitten.</v>
+
+00:39:28.100 --> 00:39:30.900
+<v Gerard Klijn>Als het ernaast zit, dan controleert hij het niet meer.</v>
+
+00:39:31.800 --> 00:39:32.100
+<v Nico Spijkers>Ja.</v>
+
+00:39:32.900 --> 00:39:39.900
+<v Nico Spijkers>Dus als je ook per ongeluk een relatie definieert die overal toegang op geeft, dan is alles in één keer weg. Dan is alles in één keer weg.</v>
+
+00:39:39.900 --> 00:39:40.200
+<v Gerard Klijn>Ja.</v>
+
+00:39:40.200 --> 00:39:40.500
+<v Nico Spijkers>Ja.</v>
+
+00:39:42.600 --> 00:39:52.100
+<v Gerard Klijn>Maar wat je hier dus wel ziet is dat je heel veel data moet gaan repliceren, want je moet al je medewerkers eh gaan definiëren in de tuples, alle resources, alle</v>
+
+00:40:01.100 --> 00:40:03.800
+<v Gerard Luijn>Maar al deze relaties zitten in je database.</v>
+
+00:40:03.800 --> 00:40:08.230
+<v Gerard Luijn>Dus bijvoorbeeld voor een gateway van de gemeente die naar de BRP koppelt.</v>
+
+00:40:08.230 --> 00:40:17.100
+<v Gerard Luijn>Als ik daar de API opvraag BRP eh persoon op BSN-nummer, dan volgt moet ik dat hieraan koppelen.</v>
+
+00:40:17.590 --> 00:40:21.810
+<v Gerard Luijn>Dus de PEP moet ook nog zorgen dat hij het juiste model aanroept.</v>
+
+00:40:24.620 --> 00:40:28.200
+<v Gerard Luijn>Dus er zitten best wel een hoop haken en ogen aan om dit helemaal goed te krijgen.</v>
+
+00:40:28.200 --> 00:40:28.600
+<v Nico Spijkers>Ja.</v>
+
+00:40:28.960 --> 00:40:33.910
+<v Nico Spijkers>Dus het lijkt een beetje op zo'n bevraging met GraphQL die heel veel verzamelpunten data binnentrekt.</v>
+
+00:40:33.910 --> 00:40:43.580
+<v Nico Spijkers>Maar dit kan sneller omdat ze alle of omdat alle of in ieder geval veel data weten in de relatie database zitten en dus sneller te bevragen is.</v>
+
+00:40:44.200 --> 00:40:48.900
+<v Gerard Luijn>Dus in plaats van dat je het aan allerlei systemen gaat vragen van geef mij even die informatie.</v>
+
+00:40:49.430 --> 00:40:51.530
+<v Gerard Luijn>Heb je dus al staan.</v>
+
+00:40:51.980 --> 00:40:59.500
+<v Gerard Luijn>Daarbij moet ik wel opmerken dat bij de bevraging van om een autorisatieverzoek te doen, kun je eventueel tuples meegeven.</v>
+
+00:40:59.500 --> 00:41:02.100
+<v Gerard Luijn>Dat zijn dan contextuele tuples.</v>
+
+00:41:02.690 --> 00:41:13.100
+<v Gerard Luijn>En dan zou je dus een tuple van een medewerker kunnen overschrijven waarbij je een extra context meegeeft waarin de claims zitten van die gebruiker die op dat moment gelden.</v>
+
+00:41:14.600 --> 00:41:18.000
+<v Gerard Luijn>Want je kunt geen claims in het relatiemodel ophangen.</v>
+
+00:41:18.320 --> 00:41:19.940
+<v Gerard Luijn>Je moet je meegeven in een context.</v>
+
+00:41:19.940 --> 00:41:20.340
+<v Nico Spijkers>Ja.</v>
+
+00:41:24.690 --> 00:41:31.500
+<v Gerard Luijn>Om het nog wat ingewikkelder te maken, hebben we eh nog een model vierdam 3.</v>
+
+00:41:31.500 --> 00:41:34.600
+<v Gerard Luijn>Ik heb ook aan de aanbieder kant de BRP.</v>
+
+00:41:35.360 --> 00:41:38.100
+<v Gerard Luijn>Maar voor even voor de gemeentes, dit model.</v>
+
+00:41:40.480 --> 00:41:42.850
+<v Gerard Luijn>Even kijken, hebben we nog tijd?</v>
+
+00:41:46.440 --> 00:41:48.700
+<v Gerard Luijn>Want hier komen met condities.</v>
+
+00:41:49.600 --> 00:41:52.660
+<v Gerard Luijn>Dus dat je RBAC combineert met ABAC.</v>
+
+00:41:53.930 --> 00:42:00.510
+<v Gerard Luijn>En eh OpenFGA heeft dat wel een beetje geknutseld, dat hebben ze er later in aangebouwd.</v>
+
+00:42:01.100 --> 00:42:04.840
+<v Gerard Luijn>Dus de condities moeten altijd in een relatie zitten.</v>
+
+00:42:06.480 --> 00:42:12.300
+<v Gerard Luijn>Dus als je bijvoorbeeld zegt van nou, de API bevragen, nee, de API can read.</v>
+
+00:42:13.100 --> 00:42:21.950
+<v Gerard Luijn>Je kan dus meerdere condities definiëren, ook definities eh relaties die gebaseerd zijn op andere relaties.</v>
+
+00:42:22.560 --> 00:42:29.100
+<v Gerard Luijn>Dus can read moet je hebben, je moet de functie de relatie bevragen hebben en werktijd.</v>
+
+00:42:29.480 --> 00:42:32.200
+<v Gerard Luijn>En werktijd is in dit geval een functie.</v>
+
+00:42:33.100 --> 00:42:37.340
+<v Gerard Luijn>En als je dit zo ziet, dan ziet dat eruit als een geprogrammeerde functie en dat klopt ook.</v>
+
+00:42:37.680 --> 00:42:42.600
+<v Gerard Luijn>Want dit is gewoon geschreven in eh Common Expression Language, CEL van Google.</v>
+
+00:42:43.530 --> 00:42:46.300
+<v Gerard Luijn>Dus dat voldoet ook aan alle condities.</v>
+
+00:42:46.780 --> 00:42:54.600
+<v Gerard Luijn>Je geeft daar een aan, je kan eh meerdere variabelen meegeven die in de eh conditie gebruikt worden.</v>
+
+00:42:55.360 --> 00:43:05.740
+<v Gerard Luijn>En die variabelen kunnen komen uit de tuple zelf, in de context van de tuple zelf, vaste waardes die daarin staan of uit de context van het request.</v>
+
+00:43:06.750 --> 00:43:08.620
+<v Gerard Luijn>Dus je kunt dingen combineren.</v>
+
+00:43:11.640 --> 00:43:16.100
+<v Gerard Luijn>En in dit geval is er dus een check of iemand eh wel tijdens werktijd eh bezig is.</v>
+
+00:43:16.660 --> 00:43:21.730
+<v Gerard Luijn>En die werktijd wordt dus in het request meegegeven als de parameter nu.</v>
+
+00:43:22.120 --> 00:43:29.380
+<v Gerard Luijn>En dan kunnen we kijken van nou, is het eh maandag, dinsdag, woensdag, donderdag, vrijdag en ben je tussen 9 en 5 uur bezig.</v>
+
+00:43:31.680 --> 00:43:33.200
+<v Gerard Luijn>En zo niet?</v>
+
+00:43:33.200 --> 00:43:33.500
+<v Onbekend>Ja.</v>
+
+00:43:33.900 --> 00:43:35.980
+<v Gerard Luijn>En zo niet, dan wordt het afgekeurd.</v>
+
+00:43:38.780 --> 00:43:46.000
+<v Nico Spijkers>zou ook medewerker kunnen meegeven aan zo'n conditie, zodat je eigenschappen van de gebruiker kan meenemen in.</v>
+
+00:43:46.000 --> 00:43:46.500
+<v Gerard Luijn>Precies, ja.</v>
+
+00:43:46.900 --> 00:43:47.280
+<v Nico Spijkers>Ja.</v>
+
+00:43:47.280 --> 00:43:47.580
+<v Gerard Luijn>Ja.</v>
+
+00:43:54.700 --> 00:43:55.100
+<v Onbekend>Dat.</v>
+
+00:43:55.100 --> 00:43:55.300
+<v Gerard Luijn>Ja.</v>
+
+00:43:58.200 --> 00:44:09.300
+<v Nico Spijkers>het request ook, dus je kan de Ja, dat wilde ik nog. subject action resource context alle drie gebruiken. kan je allemaal meegeven als aparte losse parameters.</v>
+
+00:44:09.300 --> 00:44:09.600
+<v Gerard Luijn>Ja.</v>
+
+00:44:09.600 --> 00:44:10.000
+<v Nico Spijkers>Ja.</v>
+
+00:44:10.000 --> 00:44:11.700
+<v Onbekend>handje van die.</v>
+
+00:44:12.500 --> 00:44:26.300
+<v Hugo Mostard>En ehm als je dit ziet in een in een in de FTV context ehm met eh PEP PDP's en eh AuthZ ehm</v>
+
+00:44:28.200 --> 00:44:45.200
+<v Hugo Mostard>dan dan zal de een PDP eh bij wijze spreken als hij op meerdere plekken staat dat ik client ook al een validatie zou willen doen, dan zou die ook al toegang moeten hebben helemaal tot het ehm tot de relatie database.</v>
+
+00:44:45.200 --> 00:44:46.000
+<v Gerard Luijn>Ja.</v>
+
+00:44:46.000 --> 00:44:46.300
+<v Hugo Mostard>Ja.</v>
+
+00:44:46.800 --> 00:44:47.100
+<v Gerard Luijn>Ja.</v>
+
+00:44:47.900 --> 00:45:01.000
+<v Gerard Luijn>Ja, OpenFGA draait als een container en maakt nu gebruik van eh PostgreSQL of SQLite, maar in de productieomgeving zou je natuurlijk PostgreSQL gebruiken en die kan je natuurlijk delen over meerdere PDP's.</v>
+
+00:45:01.000 --> 00:45:01.300
+<v Hugo Mostard>Ja.</v>
+
+00:45:01.800 --> 00:45:18.400
+<v Gerard Luijn>Dat betekent wel dat iedere PDP voor een bevraging eh ze zullen wel, er zit wel iets van caching in, dus hè, als ze bepaalde dingen heel vaak bevraagd worden, dan zullen die in het geheugen zitten, maar voor een heleboel vragen zal die toch naar de database moeten om informatie op te halen.</v>
+
+00:45:18.400 --> 00:45:25.900
+<v Gerard Luijn>En dan heeft hij Maar wat ik aangeven dat hij over het algemeen eh wel binnen een milliseconde antwoord kan geven.</v>
+
+00:45:25.900 --> 00:45:26.200
+<v Hugo Mostard>Ja.</v>
+
+00:45:26.700 --> 00:45:33.800
+<v Hugo Mostard>Maar dan heeft hij natuurlijk wel volledige toegang tot die database nodig, die PDP. En dat klopt.</v>
+
+00:45:33.800 --> 00:45:34.100
+<v Gerard Luijn>Ja.</v>
+
+00:45:34.100 --> 00:45:39.500
+<v Hugo Mostard>En dat is natuurlijk wel een risico, een security risico dat je Ja, dat is ja, dat</v>
+
+00:45:42.500 --> 00:45:43.000
+<v Gerard Luijn>Ja.</v>
+
+00:45:43.000 --> 00:45:44.800
+<v Hugo Mostard>Je moet goed beveiligen.</v>
+
+00:45:44.800 --> 00:45:58.800
+<v Nico Spijkers>Ik denk dat je Ik denk dat je dat dat dat dat ook ja, heel duidelijk moet zijn wat je wel en niet kan wil toepassen in een PDP. Ehm</v>
+
+00:46:01.900 --> 00:46:31.000
+<v Nico Spijkers>dit is een heel fijn model hè, eh relationele eh RBAC. Ehm maar ik weet vraag me af of dat realistisch is om dat in een EAM te gaan toepassen en vooral over organisaties heen, binnen een organisatie is dat is dat goed te doen, maar over organisaties heen lijkt me dat eh</v>
+
+00:46:31.800 --> 00:46:41.800
+<v Nico Spijkers>Nee, je zou het over over organisaties heen, uiteindelijk is ook over organisaties heen gebeurt alles nog binnen binnen organisaties, maar aan twee kanten vaak. Ja.</v>
+
+00:46:41.800 --> 00:46:42.100
+<v Hugo Mostard>Ja.</v>
+
+00:46:42.100 --> 00:46:46.500
+<v Hugo Mostard>Maar dat betekent dat klopt eh maar maar aan de ene kant ja.</v>
+
+00:46:46.500 --> 00:47:16.100
+<v Nico Spijkers>Ja, de de gedeelde tuples, dus dat je als stelsel een gedeelde eh FGA database zou hebben theoretisch. Dat en dat dat waarschijnlijk niet handig is of niet realistisch. Als je statement. Nee, en een voorbeeld van de BRP hebben we ook hele andere tuples erin zitten, want daar gaan we niet uit van medewerkers, maar van organisaties. Dus daar is het relatiemodel al heel anders, dus dan krijg je ook hele andere data in je database te zitten. Dus het delen van die database heeft dan helemaal geen zin.</v>
+
+00:47:16.800 --> 00:47:29.000
+<v Gerard Luijn>Nee, binnen een stelsel zou je misschien wel zoiets kunnen bedenken, maar dan moet dan ook eigenlijk dus openbare of semi-openbare, in ieder geval niet gevoelige data zijn. Moet niet gevoelige data zijn.</v>
+
+00:47:29.000 --> 00:47:29.300
+<v Nico Spijkers>Ja.</v>
+
+00:47:31.400 --> 00:47:48.000
+<v Nico Spijkers>Wat ik ook zijn er eh heb je ergens dingen gezien dat er dat je kan beperken wat de PEP/PDP mag bevragen van je model. Dus dat je, want je kan hier evalueren, maar dan kan je dus ook stellen dat de heel de BRP bevat. database mag de PDP er doorheen.</v>
+
+00:47:48.500 --> 00:47:52.600
+<v Gerard Luijn>Dus alles wat er in die tuple staat is beschikbaar voor de PDP.</v>
+
+00:47:53.000 --> 00:47:53.300
+<v Nico Spijkers>Ja.</v>
+
+00:47:55.500 --> 00:48:15.000
+<v Nico Spijkers>Dat is dat is denk ik misschien de sturing die wij ook vanuit FTV en begeleidende documentatie hierbij kunnen geven. RBAC is mooi en krachtig en je kan dus ook ABAC in RBAC combineren. Ja. Maar het RBAC stuk of het algemeen impliceert of heeft redelijk inzicht dat je de data A repliceert en B zeg maar voor de voor de PEP en PDP volledig opengooit.</v>
+
+00:48:15.000 --> 00:48:15.300
+<v Gerard Luijn>Ja.</v>
+
+00:48:15.300 --> 00:48:21.600
+<v Onbekend>Demo OpenFGA playground.</v>
+
+00:48:21.600 --> 00:48:23.600
+<v Gerard Luijn>Bevindingen.</v>
+
+00:48:23.600 --> 00:48:32.000
+<v Hugo Mostard>Ja, het hoeft dan in principe alleen de relationele data te zijn hè. Dus het hoeft niet de inhoudelijk te zijn, alleen Precies, ja.</v>
+
+00:48:32.000 --> 00:48:38.200
+<v Gerard Luijn>alleen de relaties en alle informatie die ik nodig heb om de autorisatie uit te voeren, dus ook bepaalde kenmerken.</v>
+
+00:48:38.200 --> 00:48:45.800
+<v Nico Spijkers>Ja, maar wat je uit vanuit je je AuthZ context of je binnenhaalt en in je request doet, dat is wel oké.</v>
+
+00:48:45.800 --> 00:48:46.100
+<v Gerard Luijn>Ja.</v>
+
+00:48:48.800 --> 00:48:49.200
+<v Nico Spijkers>Ja.</v>
+
+00:48:50.000 --> 00:48:54.200
+<v Gerard Luijn>Oké. Maar dat kunnen we ja, richting afronding.</v>
+
+00:48:54.200 --> 00:48:54.800
+<v Onbekend>Ja, de afronding.</v>
+
+00:48:54.800 --> 00:49:01.400
+<v Gerard Luijn>De conclusies, het heeft veel overeenkomst met linked data, omdat het bijna allemaal triples zijn eigenlijk.</v>
+
+00:49:02.100 --> 00:49:13.900
+<v Gerard Luijn>Eh zoals we zeiden, een relatie database bevat, de relation database bevat heel veel gerepliceerde data en die kan vrij snel groeien, zeker als je daar hele grote eh databases achter hebt zitten.</v>
+
+00:49:14.400 --> 00:49:18.700
+<v Gerard Luijn>Er is nog geen support voor partial evaluation, niet in OpenFGA in ieder geval.</v>
+
+00:49:19.900 --> 00:49:25.200
+<v Gerard Luijn>En het policy model kan snel ingewikkeld worden, want die condities moeten dus in je relaties zitten.</v>
+
+00:49:25.700 --> 00:49:30.700
+<v Gerard Luijn>Dat betekent dus ook dat je je tuples van zo'n relatie met die conditie moet gaan definiëren.</v>
+
+00:49:31.200 --> 00:49:33.900
+<v Gerard Luijn>Dus je database wordt ook ineens veel groter.</v>
+
+00:49:34.500 --> 00:49:43.000
+<v Gerard Luijn>En dan hoeft die conditie hoeft nog geen data te bevatten als die ergens anders vandaan komt, maar hij moet wel gedefinieerd zijn, want anders werken die tuples niet.</v>
+
+00:49:43.800 --> 00:49:47.800
+<v Gerard Luijn>Dus dat zijn allemaal dingen die waar je rekening mee moet houden als je dit op gaat zetten.</v>
+
+00:49:48.500 --> 00:50:00.000
+<v Gerard Luijn>En eh zeker als je met eh meerdere stores gaat werken, ja, dat is klinkt heel leuk, want dan kun je meerdere policies hebben, maar dan moet je dus ook je tuples allemaal gaan dupliceren.</v>
+
+00:50:11.697 --> 00:50:14.917
+<v Gerard Aijn>dan krijg je echt een vrij onoverzichtelijke policy.</v>
+
+00:50:18.117 --> 00:50:24.017
+<v Igor van Haren>Voor simpele dingen zoals Google Drive, ja, je hebt gebruikers, je hebt eh groepen, je hebt folders en je hebt documenten.</v>
+
+00:50:24.017 --> 00:50:27.107
+<v Igor van Haren>That's it. Maar wij zitten op een heel ander vlak natuurlijk.</v>
+
+00:50:27.427 --> 00:50:27.817
+<v Gerard Aijn>Ja.</v>
+
+00:50:29.477 --> 00:50:37.987
+<v Nico Spijkers>misschien want kijk of we een zin die we dan qua sturing kunnen doen is dat we dan zeg maar zeggen ReBAC is krachtig</v>
+
+00:50:37.987 --> 00:50:49.197
+<v Nico Spijkers>als je een hele snelle evaluatie op mogelijk complexe, relationele structuren nodig hebt. Dus niet tabulair, maar relationele structuren.</v>
+
+00:50:50.627 --> 00:51:02.897
+<v Nico Spijkers>Maar, hij heeft een hele grote kanttekening in dat de data dan altijd gerepliceerd wordt naar elk PDP, dus je hele infrastructuur rondreist. data, maar alleen de data</v>
+
+00:51:02.897 --> 00:51:03.417
+<v Gerard Aijn>stukjes data.</v>
+
+00:51:03.417 --> 00:51:24.517
+<v Nico Spijkers>Ja, maar dat dus je hele infrastructuur rondreist, dat er over het algemeen vanuit het perspectief van de PEP en PDP geen beveiligingsmodel op zit, dus dat je in één keer toegang tot alles geeft. En dat het dus of alleen voor lichtgevoelige data, niet-gevoelige data, of met heel veel zorg gedaan moet worden.</v>
+
+00:51:25.317 --> 00:51:27.417
+<v Nico Spijkers>Dus dat Igor, is dat ook hoe jij er naar kijkt?</v>
+
+00:51:27.997 --> 00:51:29.987
+<v Igor van Haren>Ja. Ja.</v>
+
+00:51:30.467 --> 00:51:39.637
+<v Igor van Haren>Ja, en ik denk dat bij sommige data echt bij, ja, dat dat juist die gevoelige data vaak de relaties zijn.</v>
+
+00:51:39.637 --> 00:51:53.517
+<v Igor van Haren>Ehm en ik weet niet of je daar eh zegt dat je dat in een eh in de zorg zou doen. Ehm hè, dus eh of als je een behandelrelatie hebt bijvoorbeeld.</v>
+
+00:51:53.517 --> 00:52:02.997
+<v Igor van Haren>Ja, die kan je eigenlijk al niet eh buiten je je je organisatie plaatsen.</v>
+
+00:52:04.577 --> 00:52:15.607
+<v Spreker (Ruimte)>Maar de vraag daarop, je hebt daar je autorisatiemodel op zitten, dus je hebt processen die die informatie al op moeten vragen om überhaupt de autorisatie te kunnen doen.</v>
+
+00:52:16.277 --> 00:52:17.827
+<v Spreker (Ruimte)>Is dat dan niet hetzelfde?</v>
+
+00:52:18.497 --> 00:52:35.037
+<v Igor van Haren>Nee, ja, in in het model wat wij wat wij nu toepassen moet jij de vraag stellen waarin je in de vraag zelf de behandelrelatie vastlegt. Ehm en en kan je daar niet buitenom.</v>
+
+00:52:36.277 --> 00:52:41.137
+<v Nico Spijkers>Dus dan zit het niet in de in de relationele database, maar in wat jij aanlevert. Ja, dat is het verschil.</v>
+
+00:52:41.137 --> 00:52:56.917
+<v Gerard Aijn>Dan zou je met tekstuele tuples kunnen werken en die informatie uit je database. Precies, we zeiden net al dat hoort, dus je kan dit, je kan de relaties gebruiken voor de niet-gevoelige data, maar gevoelige data moet je eigenlijk, kan je beter in je tuples aanleveren vanuit je request, dus in je user request.</v>
+
+00:52:56.917 --> 00:52:57.327
+<v Nico Spijkers>Ja.</v>
+
+00:52:57.997 --> 00:52:58.507
+<v Gerard Aijn>Oké.</v>
+
+00:52:59.217 --> 00:53:06.667
+<v Gerard Aijn>Nou, deze presentatie zoals gezegd, de links en dergelijke. En de vragen hebben we gehad, dus. Ja.</v>
+
+00:53:06.667 --> 00:53:07.717
+<v Gerard Aijn>Dat is mijn verhaaltje.</v>
+
+00:53:07.717 --> 00:53:10.157
+<v Nico Spijkers>Oké. Nou, het is ook het einde van de werkgroep.</v>
+
+00:53:10.157 --> 00:53:22.997
+<v Nico Spijkers>Ik ik denk dat we het wel redelijk af kunnen ronden. Ik ga kijken wanneer we reikwijdte in kunnen plannen. Dan misschien even omdraaien met de de mensen die aanwezig moeten zijn vragen wanneer ze aanwezig kunnen zijn. En dat we dan één van de meetings inplannen.</v>
+
+00:53:23.907 --> 00:53:24.327
+<v Spreker (Ruimte)>Uit.</v>
+
+00:53:26.157 --> 00:53:28.227
+<v Nico Spijkers>En dan eh. Dankjewel.</v>
+
+00:53:28.227 --> 00:53:30.127
+<v Nico Spijkers>Was dat het voor vandaag?</v>
+
+00:53:31.787 --> 00:53:35.217
+<v Nico Spijkers>Zijn er nog vragen voor afronding? Mensen die nog...</v>
+
+00:53:36.707 --> 00:53:43.917
+<v Igor van Haren>Nee. Met eh met wie moest ik eh een eh juristen contact mee laten opnemen?</v>
+
+00:53:44.427 --> 00:53:45.817
+<v Nico Spijkers>Mark. Mark de Boer.</v>
+
+00:53:47.817 --> 00:53:48.157
+<v Igor van Haren>Ja.</v>
+
+00:53:52.487 --> 00:53:54.837
+<v Nico Spijkers>Wil jij nog wat zeggen Nico? Ik ging ook van mute af.</v>
+
+00:53:55.777 --> 00:54:00.287
+<v Nico Spijkers>Eh nee, ik wou eh jullie danken en afronden.</v>
+
+00:54:01.327 --> 00:54:05.157
+<v Hugo Mostard>Nou, jullie bedankt voor de aanwezigheid en de kern.</v>
+
+00:54:05.157 --> 00:54:06.947
+<v Spreker (Ruimte)>Dankjewel.</v>
+
+00:54:07.827 --> 00:54:09.617
+<v Igor van Haren>Oké. Mooie presentatie, dankjewel.</v>
+
+00:54:09.617 --> 00:54:10.007
+<v Spreker (Ruimte)>Ja.</v>
+
+00:54:10.597 --> 00:54:11.527
+<v Spreker (Ruimte)>Thanks.</v>

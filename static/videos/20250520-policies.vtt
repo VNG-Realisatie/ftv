@@ -1,0 +1,727 @@
+WEBVTT
+
+00:00:02.099 --> 00:00:02.699
+<v Spreker 1 (Ruimte)>taal kiezen.</v>
+
+00:02.939 --> 00:3.839
+<v Spreker 2 (Ruimte)>Is niet zo nuttig.</v>
+
+00:00:06.319 --> 00:00:00.000.19
+<v Spreker 1 (Ruimte)>Ja, sorry.</v>
+
+00:00:08.439 --> 00:00:14.199
+<v René Kort>Als je nou meteen ruzies kiest, dan scheelt het weer een hoop chat GPT voor eh voor Poetin.</v>
+
+00:00:14.439 --> 00:00:16.299
+<v Spreker 1 (Ruimte)>Ah, die kan je mee spski, praten.</v>
+
+00:00:16.299 --> 00:00:16.799
+<v René Kort>Ja.</v>
+
+00:00:26.399 --> 00:00:34.399
+<v Michiel Trimpe (Ruimte)>Ehm nou, eh welkom allemaal eh bij de vierde werkgroep van federatieve toegangsverlening.</v>
+
+00:00:36.499 --> 00:00:41.299
+<v Michiel Trimpe (Ruimte)>Ehm. Ik laat even de andere, kan iemand anders admits doen, zodat ik de presentatie doe.</v>
+
+00:00:41.899 --> 00:00:55.599
+<v Michiel Trimpe (Ruimte)>Nou, eh vandaag is het het thema de de kick-off van eh het onderwerp stelsel policies en eh de eventuele standaard die daarop zou volgen die we als werktitel register toegangsbeleid hebben gegeven.</v>
+
+00:00:56.599 --> 00:01:05.299
+<v Michiel Trimpe (Ruimte)>De agenda is zoals gebruikelijk eh beginnen met een welkom en een kennismaking voor eh nieuwe leden. Mensen die voor het eerst bij de werkgroep aanhaken.</v>
+
+00:01:05.799 --> 00:01:15.499
+<v Michiel Trimpe (Ruimte)>En we geven een update van de subwerkgroepen die er ondertussen zijn. En dan is eh de hoofdact de introductie stelsel policies door Gideon Zegwaard.</v>
+
+00:01:16.899 --> 00:01:28.499
+<v Michiel Trimpe (Ruimte)>Ehm daar is ongeveer 30 minuten voor. Ehm en daarna hebben we dan weer een workshop over de verwachtingen voor de standaard die hier uit zou rollen of kunnen rollen.</v>
+
+00:01:28.499 --> 00:01:37.499
+<v Michiel Trimpe (Ruimte)>En dat is weer een Miro workshop, net zoals eh voor het logboek is gedaan. En we sluiten af met eventuele acties en de bepaling van het volgende onderwerp.</v>
+
+00:01:39.599 --> 00:01:47.399
+<v Michiel Trimpe (Ruimte)>Ehm, allereerst kennismaking. Eh zijn er mensen die voor het eerst bij de werkgroep aanwezig zijn?</v>
+
+00:01:49.699 --> 00:01:50.599
+<v Michiel Trimpe (Ruimte)>Ja, Hans.</v>
+
+00:01:51.399 --> 00:00:00.000.99
+<v Hans Schevers>Nee.</v>
+
+00:01:53.199 --> 00:01:54.999
+<v Hans Schevers>Volgens mij ben ik al een keer eerder geweest.</v>
+
+00:01:55.299 --> 00:01:58.299
+<v Michiel Trimpe (Ruimte)>Een kleine introductie. Ja. En Lexi is de volgende. Ja.</v>
+
+00:01:59.399 --> 00:02:11.499
+<v Hans Schevers>Eh Hans Schevers. Eh eh R&D manager bij BIM Connected. Ehm ik werk eigenlijk al een wat langere tijd bij Kadaster en heb eh daar binnen, ik zag Mark van Andel daar ook zitten en ik zie Lexi ook.</v>
+
+00:02:11.499 --> 00:02:25.399
+<v Hans Schevers>eh gewerkt aan een project eh van FDS eh lock unlock. En daar hebben we eh gekeken hoe we eh ja, eh data kunnen afschermen eh op basis van link data en eh Sparkle queries.</v>
+
+00:02:29.999 --> 00:00:00.000.99
+<v Michiel Trimpe (Ruimte)>Eh Lexi.</v>
+
+00:02:32.299 --> 00:02:52.499
+<v Lexi Rowland>Ja, Lexi Rowland, ik ben lid van de data science team eh bij Kadaster. Ik werk vooral aan de Kadaster Knowledge Graph. Ehm en ik ben nu ook bezig met mijn PhD bij eh Universiteit Twente ehm over de ja, security en privacy awareness in virtual knowledge graphs is de titel.</v>
+
+00:02:54.599 --> 00:02:56.599
+<v Michiel Trimpe (Ruimte)>Super, welkom. Guus.</v>
+
+00:02:57.499 --> 00:03:08.999
+<v Guus van der Meer>Eh nou, ik ben Guus van der Meer. Eh van bij VECOZO. Eh bij en bij werkend bij het NDI stelsel. Dus ja, bij het netwerkmodel van de zorg van het IOLZ.</v>
+
+00:03:09.299 --> 00:00:00.000.99
+<v Guus van der Meer>Eh ik ben vervanger nu van Igor van Haren, eh omdat hij eh even tijdelijk op vakantie is. Dus eh daarom sluit ik aan.</v>
+
+00:03:19.599 --> 00:03:22.199
+<v Michiel Trimpe (Ruimte)>Super. Nou, welkom allemaal.</v>
+
+00:03:24.499 --> 00:03:36.199
+<v Michiel Trimpe (Ruimte)>Ehm nou de voor de updates voor de subwerkgroepen. Ehm allereerste eh juridische subwerkgroep. Geef ik even Mark kort het woord.</v>
+
+00:03:36.699 --> 00:03:52.499
+<v Mark (Ruimte)>Ja. We hebben een bijeen te komen overmorgen in Den Haag. Zijn te gast bij het ministerie van eh BZK. Eh met eh drie juristen al daar. Eh en er is altijd nog plek voor voor meer.</v>
+
+00:03:54.899 --> 00:04:00.499
+<v Mark (Ruimte)>Zijn er hier nog mensen die zeggen eh ja, daar wil ik wel bij zijn. Dat gaat dus over</v>
+
+00:04:00.499 --> 00:04:01.299
+<v Rens Kievit>Eh ja, dat kan wel.</v>
+
+00:04:03.499 --> 00:00:00.000.99
+<v Mark (Ruimte)>Wie zei dat? Rens.</v>
+
+00:04:05.399 --> 00:04:05.999
+<v Michiel Trimpe (Ruimte)>Rens.</v>
+
+00:04:06.399 --> 00:04:06.899
+<v Rens Kievit>Ja.</v>
+
+00:04:07.399 --> 00:04:08.799
+<v Rens Kievit>Excuus, sorry.</v>
+
+00:04:09.299 --> 00:04:29.499
+<v Mark (Ruimte)>Ja. Wat we daar doen eh is praten dus over een eh juridisch raamwerk daarvoor. Kijken welke eh delen van de eh aansluitvoorwaarden en de eh usage policy eh juridisch vastgelegd moeten zijn.</v>
+
+00:04:29.499 --> 00:00:00.000.99
+<v Mark (Ruimte)>Die te maken hebben met toegangsverlening op wereld. Dus we sturen een beetje weg te sturen bij überhaupt deelname aan FDS, want natuurlijk een veel groter juridisch kader is.</v>
+
+00:04:39.599 --> 00:04:50.499
+<v Mark (Ruimte)>Onder bezielende leiding van eh Wouter en Elske. En juridische eh leiding hebben. Donderdagochtend in Den Haag.</v>
+
+00:04:51.199 --> 00:04:52.599
+<v Mark (Ruimte)>Ik stuur jou de uitnodiging, Rens.</v>
+
+00:04:56.599 --> 00:00:00.000.99
+<v Elske Derks>En eh stuur mij even de contactgegevens van Rens, dan kan ik hem aanmelden voor het gebouw.</v>
+
+00:05:02.499 --> 00:00:00.000.99
+<v Mark (Ruimte)>Ja.</v>
+
+00:05:08.399 --> 00:00:00.000.99
+<v Michiel Trimpe (Ruimte)>Oké.</v>
+
+00:05:09.599 --> 00:00:00.000.99
+<v Michiel Trimpe (Ruimte)>Ehm voor de eh werkgroep eh logboek. Eh daar hebben Guus, Michael en ik aan gewerkt. Ja, echo is weg.</v>
+
+00:05:23.599 --> 00:05:32.599
+<v Michiel Trimpe (Ruimte)>Ehm die zal ik even. Nou, Michael is in principe daar de leider van de subwerkgroep, maar die is net op vakantie.</v>
+
+00:05:35.499 --> 00:00:00.000.99
+<v Michiel Trimpe (Ruimte)>Dus ik zal eventjes eh tonen waar we mee bezig geweest zijn.</v>
+
+00:05:45.599 --> 00:00:00.000.99
+<v Michiel Trimpe (Ruimte)>De link had ik beter voor kunnen bereiden, maar eh we zijn begonnen met eh een eh plekje vinden voor de specificatie die zou komen en we hebben een hoofdstukkenstructuur opgezet, waarvan we denken dat dat grofweg de structuur zou moeten zijn van eh de standaard voor het logboek, het logboek toegangsbeslissingen.</v>
+
+00:06:19.199 --> 00:00:00.000.99
+<v Michiel Trimpe (Ruimte)>Dit is de URL. Is te zien voor iedereen? Chat en ook in de chat zetten.</v>
+
+00:06:31.999 --> 00:06:58.299
+<v Michiel Trimpe (Ruimte)>terug. Ehm dus waar we op uitgekomen zijn is eh nou, dat we natuurlijk de de status of de standaard introduceren. Eh dat we beginnen met het het informatiemodel of in ieder geval de omschrijven, nou, wat moet er nou, wat komt er in de standaard? Eh hoe werkt dat? En eh ook de ja, de bredere aspecten, zoals hoe doen we het informatiebeheer, wat net genoemd werd.</v>
+
+00:06:58.299 --> 00:07:08.299
+<v Michiel Trimpe (Ruimte)>om eh overeenstemming met het logboek dataverwerkingen te houden. We kunnen het nog aanpassen natuurlijk, want het is nu alleen nog maar een eh een ding.</v>
+
+00:07:12.399 --> 00:07:25.199
+<v Danny Greefhorst>Ja, ik ik ik voorzie wel wat eh eh als je het wil aansluiten bij internationale standaarden, dan moet je het vertalen naar het Nederlands. Wat bedoel je met de Nederlandse term? Wat dan de Engelse term is? Hm hm.</v>
+
+07:26.99 --> 07:38.499
+<v Danny Greefhorst>Maar goed, dat ja, dat speelt natuurlijk bij logboek dataverwerking ook al. Ja, en bovendien eh eh verhindert het eventuele internationale adoptie of tenminste verhindert het, het maakt het lastiger. Ja.</v>
+
+00:07:41.499 --> 00:07:44.299
+<v Michiel Trimpe (Ruimte)>Alleen Engels verhindert de Nederlandse adoptie.</v>
+
+00:07:44.699 --> 00:07:49.299
+<v Danny Greefhorst>Nou, niet per se. Ja, je adopteert behoorlijk wat eh internationale standaarden.</v>
+
+00:07:49.299 --> 00:00:00.000.99
+<v Michiel Trimpe (Ruimte)>Ja, dat weet ik wel, maar ik merk dat het gesprek vaak moeilijker wordt zodra het Engelse termen zijn.</v>
+
+00:07:55.599 --> 00:07:59.299
+<v Danny Greefhorst>Nee, ja, dat is hangt er vanaf met wie je praat, maar dat snap ik. Ja.</v>
+
+00:08:02.499 --> 00:00:00.000.99
+<v Michiel Trimpe (Ruimte)>Ja. Ehm. Nou, dus sowieso ook de vraag, eh dus dit hebben we met z'n drieën gedaan. Ehm, zijn er nog meer aanmeldingen met mensen die interesse hebben in de subwerkgroep?</v>
+
+08:14.99 --> 08:22.499
+<v Michiel Trimpe (Ruimte)>Dat is niet bedoeld om jullie er uit te zetten, maar ook van eh mochten die er zijn, kom graag naar voren, want het is altijd fijn, beter om dat met meer mensen te doen.</v>
+
+00:08:25.499 --> 00:08:41.499
+<v Michiel Trimpe (Ruimte)>Dit is in ieder geval de structuur, dus informatiemodel, dus hoe wat sla je op, hoe sla je dat op, hoe beheer je dat? Eh de inzicht API's of ja, de het eh hoe verleen je inzicht tot het logboek bij je eigen organisatie, maar ook naar andere organisaties.</v>
+
+00:08:41.999 --> 00:00:00.000.99
+<v Michiel Trimpe (Ruimte)>En dat is eigenlijk de kern.</v>
+
+00:08:46.499 --> 00:00:00.000.99
+<v Michiel Trimpe (Ruimte)>Het verzoek ook aan iedereen om eh ja, dit even door te lezen. En nogmaals, als je interesse hebt, haak vooral mee aan.</v>
+
+00:08:59.399 --> 00:00:00.000.99
+<v Michiel Trimpe (Ruimte)>Ehm wat dat betreft, ik denk dat over Engels versus Nederlands kunnen we daar dat stemming. Nee, daar gaan we niet nu over stemmen, maar laten we bespreken hoe we dat eh verder aanpakken.</v>
+
+00:09:14.499 --> 00:00:00.000.99
+<v Michiel Trimpe (Ruimte)>Voornamelijk ook om te zorgen dat er voldoende ruimte laten voor het volgende stuk dan.</v>
+
+00:09:20.599 --> 00:00:00.000.99
+<v Michiel Trimpe (Ruimte)>Dit was in ieder geval de update van eh logboek toegangsbeslissingen.</v>
+
+00:09:28.699 --> 00:00:00.000.99
+<v Michiel Trimpe (Ruimte)>Ehm. Even kijken. Nou, ik denk dat dat dan al het bruggetje is naar de hoofdact van vandaag. De presentatie van Gideon.</v>
+
+00:09:54.699 --> 00:00:00.000.99
+<v Gideon Zegwaard>Ja, hij doet het.</v>
+
+00:10:09.117 --> 00:10:10.007
+<v Gideon Zegwaard>eh boxjes.</v>
+
+00:10:12.317 --> 00:10:14.437
+<v Gideon Zegwaard>Eh dus we beginnen even met een eh korte introductie.</v>
+
+00:10:14.777 --> 00:10:22.017
+<v Gideon Zegwaard>Even een schermpje opzij, want anders zit dat vervelend zo'n Teams-schermpje over mijn scherm.</v>
+
+00:10:23.517 --> 00:10:24.737
+<v Gideon Zegwaard>Ehm.</v>
+
+00:10:27.607 --> 00:10:32.127
+<v Gideon Zegwaard>Ja. Dan gaat hij bij mij wel daar. Ja.</v>
+
+00:10:33.327 --> 00:10:39.087
+<v Gideon Zegwaard>Eh dit is een eh eh nou ja, een soort van praatplaat van het FDS, van waar gaat het FDS over?</v>
+
+00:10:39.087 --> 00:10:48.117
+<v Gideon Zegwaard>Het FDS gaat over eh aanbod van data, diverse soorten data ehm en eh het verbinden aan de vraag eh van data.</v>
+
+00:10:48.647 --> 00:10:58.827
+<v Gideon Zegwaard>Eh wat voor soort aanbod? Eh basisregistratie, begin, sectorregistraties, eh de volgende ring, maar daar spelen nog allerhande eh andere activiteiten.</v>
+
+00:10:58.827 --> 00:11:08.117
+<v Gideon Zegwaard>En aan de vraagkant eh twee kanten. Enerzijds eh eh de publieke dienstverlening, dus dan heb je echt een soort van productie data, om het zo maar te zeggen.</v>
+
+00:11:08.117 --> 00:11:17.477
+<v Gideon Zegwaard>En aan de andere kant maatschappelijke opgaven en daar kan je ook eh beleidsondersteuning, onderzoek, dat soort aspecten bij eh eh bij bedenken.</v>
+
+00:11:21.607 --> 00:11:35.537
+<v Gideon Zegwaard>Dit is een een soort van vrij simpel plaatje van de scope ehm waarbij we een data-aanbieder hebben die eh datasets aanbiedt aan eh verschillende data-afnemers eh binnen de context van de Nederlandse overheid.</v>
+
+00:11:35.987 --> 00:11:51.217
+<v Gideon Zegwaard>Nou is dat eh nog een beetje ter discussie op dit moment. Dus daar daar eh lopen daar nog eh vragen over van eh hoever zou dat dan moeten reiken? Moet er achter die data-aanbieder ook de bronhouder bij betrokken worden eh en hoe dan?</v>
+
+00:11:51.217 --> 00:11:57.067
+<v Gideon Zegwaard>Eh en voor wat betreft binnen de overheid, is het nou allemaal hè, hoe kader je dat af?</v>
+
+00:11:57.067 --> 00:12:02.737
+<v Gideon Zegwaard>Maar even voor het voor de hoofd, dit de de de voor het overgrote deel.</v>
+
+00:12:04.607 --> 00:12:07.127
+<v Gideon Zegwaard>Eh FDS is een afsprakenstelsel.</v>
+
+00:12:07.677 --> 00:12:24.207
+<v Gideon Zegwaard>Eh en dat eh dat geeft ook een paar eh eh piketpaaltjes. Dus de deelnemers zijn organisaties. De organisaties hebben rollen. Eh primaire rollen zijn vooralsnog eh afnemer en aanbieder. Nou, er is wel discussie over de bronhouder, of dat er ook bij moet en hoe dan.</v>
+
+00:12:24.937 --> 00:12:38.227
+<v Gideon Zegwaard>Ehm er zijn ook ondersteunende rollen, eh bijvoorbeeld eh regisseur, beheerder, marktmeesters. Dat zijn eigenlijk allemaal rollen die het uitwisselen faciliteren. En afspraken binden organisaties bij invulling van hun rol.</v>
+
+00:12:42.927 --> 00:12:45.397
+<v Gideon Zegwaard>Er zijn er een aantal uitgangspunten binnen het FDS.</v>
+
+00:12:45.997 --> 00:13:06.317
+<v Gideon Zegwaard>Ehm de eerste is eh grip op data. En dat is vooral het eh eh eigenlijk een beetje een een afwijking ten opzichte van hoe eh grip op data of datasoevereiniteit in eh de Europese context wordt geformuleerd, want daar wordt heel erg gezegd de de de eigenaar van de data die heeft volledige zeggenschap.</v>
+
+00:13:06.707 --> 00:13:14.207
+<v Gideon Zegwaard>En eh binnen het FDS stellen we eh meer dat het maatschappelijk belang leidend zou moeten zijn, omdat we te maken hebben met publieke data.</v>
+
+00:13:14.657 --> 00:13:27.277
+<v Gideon Zegwaard>Hè, het is niet de de gemeente of de belastingdienst wiens data het is en die heeft zeggenschap, maar het is een algemeen belang en dat moeten we met elkaar delen als overheid onderling.</v>
+
+00:13:28.277 --> 00:13:44.547
+<v Gideon Zegwaard>Ehm daarnaast decentraal wat kan eh en en centraal, nou ja, hetje bij, eh wat moet. Eh dat is hè, dat is vooral ook het het eh het federatieve aspect. Geen eh centrale voorzieningen, maar proberen zoveel mogelijk decentraal te regelen.</v>
+
+00:13:45.247 --> 00:13:49.127
+<v Gideon Zegwaard>Ehm afspraken boven open standaarden boven voorzieningen.</v>
+
+00:13:49.127 --> 00:14:04.547
+<v Gideon Zegwaard>Ehm nou, ik maakte er ook wel eens van afspraken en eh standaarden boven voorzieningen, want het is een beetje lastig om eh afspraken echt volledig boven standaarden te voorzien. Dat zou bijna dat zou bijna suggereren dat als je een standaard hebt dat je dan dan terzijde zou leggen boven een afspraak. Dat lijkt me ook weer niet helemaal de bedoeling.</v>
+
+00:14:04.547 --> 00:14:14.237
+<v Gideon Zegwaard>Maar het geeft wel aan dat in ieder geval afspraken en standaarden eh gaan boven ergens een eh ergens een eh systeem neerzetten dat bepaalt hoe het werkt.</v>
+
+00:14:15.227 --> 00:14:27.147
+<v Gideon Zegwaard>Ehm daarnaast eh het concept van data bij de bron en dat is vooral het terugdringen van eh kopieën eh en zorgen dat je zoveel mogelijk eh data gebruikt op de plek waar die gegenereerd wordt.</v>
+
+00:14:27.947 --> 00:14:35.887
+<v Gideon Zegwaard>Eh en het FDS is een vertrouwensraamwerk. Dus dat wil zeggen dat de afspraken zo gericht zijn zodat de deelnemers van het FDS eh elkaar kunnen vertrouwen.</v>
+
+00:14:39.207 --> 00:14:43.417
+<v Gideon Zegwaard>Dan zijn er ook nog een aantal uitgangspunten geformuleerd in de intentieverklaring.</v>
+
+00:14:44.407 --> 00:15:00.287
+<v Gideon Zegwaard>Ehm dat zijn deze. De burger staat centraal, eh uitgangspunten over transparantie. Eh nou ja, dat we proberen te standaardiseren, dat we eh iedereen bijdraagt eh en dat we het open, verbonden en verantwoord eh proberen in te richten.</v>
+
+00:15:00.997 --> 00:15:08.207
+<v Gideon Zegwaard>Eh dit zijn er meer een soort soort waardes, terwijl de andere meer eh eh kaders stellen.</v>
+
+00:15:11.757 --> 00:15:14.237
+<v Gideon Zegwaard>We werken langs de as van stelselfuncties.</v>
+
+00:15:15.347 --> 00:15:24.407
+<v Gideon Zegwaard>Eh dat geeft een ordening eh van de werking van het FDS. Dat gebruiken we om afspraken in te delen, standaarden in te delen, puzzles in te delen.</v>
+
+00:15:24.957 --> 00:15:34.727
+<v Gideon Zegwaard>Het is een samenvoeging van wat voorheen eh eh capabilities en stelselfuncties werden genoemd. Dus we hadden daar eerst twee losse dingen voor die ook wel behoorlijk overlapt hebben.</v>
+
+00:15:35.207 --> 00:15:40.067
+<v Gideon Zegwaard>Eh bij OpenDEI en Data Space Support Center noemen ze dit building blocks.</v>
+
+00:15:40.067 --> 00:15:53.497
+<v Gideon Zegwaard>En zeker voor wat betreft de technische stelselfuncties leunen we daar heel sterk op. Dus dat is bijna één op één wat daar ook in de internationale context wordt gebruikt. Eh en het is opgesplitst in organisatorische en in technische stelselfuncties.</v>
+
+00:15:55.057 --> 00:16:01.297
+<v Gideon Zegwaard>En ook dat, die opdeling is hebben we ook overgenomen uit eh de internationale context.</v>
+
+00:16:01.997 --> 00:16:07.317
+<v Gideon Zegwaard>Dit zijn de stelselfuncties. Is een nieuw plaatje, staat nog niet op onze site. Er wordt nog hard aan gewerkt.</v>
+
+00:16:08.137 --> 00:16:28.027
+<v Gideon Zegwaard>Eh maar we hebben dus in het midden eh zien we de de technische stelselfuncties. Die zijn ook te delen in interoperabiliteit, datawaarde en vertrouwen. En daar hangen weer de de daadwerkelijke stelselfuncties onder. De eh het groene cirkeltje zijn de organisatorische. Dat is weer op te delen in coördinerende en faciliterende.</v>
+
+00:16:28.027 --> 00:16:48.317
+<v Gideon Zegwaard>En daar vallen dan die eh functies als eh poortwachter en marktmeester en regisseur eh en regie eh allemaal onder. En dus deze opdeling gebruiken we om als we ergens inhoudelijk wat over willen vertellen of als we ergens een standaard hebben of als we ergens een afspraak over willen maken, waar dat dan betrekking op heeft.</v>
+
+00:16:48.317 --> 00:16:49.627
+<v Gideon Zegwaard>Welke van deze.</v>
+
+00:16:51.637 --> 00:17:01.217
+<v Gideon Zegwaard>Eén van de stelselfuncties is de stelselfunctie toegang. Dus daar komt alvast eh mooi uit. Dus dat we een stelselfunctie hebben waar we eh hier doen we keurig onder valt.</v>
+
+00:17:02.397 --> 00:17:12.337
+<v Gideon Zegwaard>Ehm eh wat we nu daarover opgeschreven hebben is bepalen of en in welke mate toegang wordt verleend. Eh zowel door de aanbieder als door de afnemer. Dus daar hebben daar beide verantwoordelijkheid in.</v>
+
+00:17:12.877 --> 00:17:25.117
+<v Gideon Zegwaard>Ter voorkoming van misbruik. Ehm eh en dat vertrouwt op geïdentificeerde partijen van de stelselfuncties identiteit en veiligheid. Hè, dus in die stelselfuncties wordt vastgesteld wie is u.</v>
+
+00:17:25.667 --> 00:17:33.357
+<v Gideon Zegwaard>En dit is wat mag u. Ehm en het is voorgesorteerd op policy based access control. Dus daar daar gingen we al vanuit dat het die kant op ging.</v>
+
+00:17:36.567 --> 00:17:45.307
+<v Gideon Zegwaard>En dan komen we op policies in het FDS. Dus tot zover eh even in vogelvlucht eh eh het FDS en de opzet van het FDS.</v>
+
+00:17:45.927 --> 00:17:49.497
+<v Gideon Zegwaard>En als we dan kijken wat wat kunnen we met policies in het FDS?</v>
+
+00:17:51.377 --> 00:18:07.517
+<v Gideon Zegwaard>Ehm dan is één van de dingen waar ik aan zit te denken is een centrale FDS policy die vastlegt dat een uitwisseling een FDS uitwisseling betreft. Dus stel er vindt gegevensuitwisseling plaats, is het nou een gegevensuitwisseling die onder de afspraken van het FDS valt of niet?</v>
+
+00:18:08.687 --> 00:18:35.827
+<v Gideon Zegwaard>Ehm en dat zou je kunnen doen door eh zo'n policy bijvoorbeeld een business policy vast te stellen dat de data-aanbieder, in het Engels de provider, een deelnemer is binnen FDS, dat die afnemer dat ook is. En beide onderschrijven dat de uitwisseling onder de afspraken van het FDS valt. Nou, er zijn nog andere manieren om eh om dit vorm te geven, maar ik ik ik geef alvast een schot voor de boeg hè, zoiets zou volgens mij kunnen.</v>
+
+00:18:39.267 --> 00:18:45.027
+<v Gideon Zegwaard>Daarnaast worden er een aantal afspraken gemaakt binnen het afsprakenstelsel.</v>
+
+00:18:45.747 --> 00:19:12.117
+<v Gideon Zegwaard>Eh en we zouden kunnen kijken van kunnen we policies gebruiken om eh het te conformeren aan die afspraken af te dwingen, om te kijken of we het conformeren aan die afspraken kunnen monitoren. Ehm een eerste versie van het afsprakendocument is op dit moment in procedure. Eh maar het aantal afspraken, ik heb er nog even gekeken, het aantal afspraken waarvan je zou kunnen bedenken van oké, dit kunnen we technisch met een policy afdwingen. Nou, dat was eh nog even lastig zeg maar.</v>
+
+00:19:14.337 --> 00:19:31.427
+<v Gideon Zegwaard>Twee waar ik wel aan zat te denken waren eh deze. Eh één van de dingen die we zeggen is dat een dataset, een dataservice is aangemerkt als aanbod binnen het FDS en dat wordt ook weer geadministreerd. Dus dat zou je kunnen valideren of eh de aangeboden dataset of dataservice inderdaad als aanbod binnen FDS is geregistreerd.</v>
+
+00:19:32.227 --> 00:19:45.167
+<v Gideon Zegwaard>En een ander waar je aan zou kunnen denken, maar daar hebben we nog geen afspraak op, is eh dat je een wettelijke grondslag en doelbinding hebt geadministreerd daar waar het om persoonsgegevens gaat. Maar wellicht ook andere.</v>
+
+00:19:45.897 --> 00:19:51.347
+<v Gideon Zegwaard>Dan heb je dus een administratie voor nodig en in je policy zou je dan kunnen definiëren, die verifieert dat dat het is.</v>
+
+00:20:03.111 --> 00:20:04.011
+<v Gideon Zegwaard>kunnen kijken.</v>
+
+00:20:04.011 --> 00:20:16.331
+<v Gideon Zegwaard>Eh in ieder geval als je op het moment dat je dit voor de afnemer eh standaardiseert, kan je de aanbieder daar weer op laten vertrouwen dat daar een afspraak over is gemaakt die gemonitord wordt.</v>
+
+00:20:16.711 --> 00:20:19.681
+<v Gideon Zegwaard>Of gemonitord kan worden, want wat doe je dan met die policy?</v>
+
+00:20:20.941 --> 00:20:23.511
+<v Danny Greefhorst>Ik denk ook kijken hoe dit staat op de verwerkingsactiviteit.</v>
+
+00:20:25.591 --> 00:20:31.221
+<v Gideon Zegwaard>Bijvoorbeeld. Ja, één van die dingen zou kunnen zijn dat je verifieert dat dat ding er is, om maar iets te noemen. Ja.</v>
+
+00:20:37.741 --> 00:20:39.121
+<v Rens Kievit>Ja, ik zit nog heel even te kauwen op</v>
+
+00:20:39.531 --> 00:20:45.141
+<v Rens Kievit>bedoel je dan dat een aanbieder doorkrijgt dat de eh grondslag is voor de afnemer?</v>
+
+00:20:45.141 --> 00:20:46.171
+<v Gideon Zegwaard>Nee. Nee, oké.</v>
+
+00:20:46.171 --> 00:20:49.301
+<v Gideon Zegwaard>Ik bedoel dat de aanbieder erop kan vertrouwen dat de afnemer dat ingericht heeft.</v>
+
+00:20:49.301 --> 00:20:52.121
+<v Rens Kievit>Ja, dat hij het zelf ingevuld heeft. Ja. Oké, ja. Ja.</v>
+
+00:20:54.491 --> 00:21:06.771
+<v Gideon Zegwaard>Dus door doordat die policy, hè, dat is hetzelfde, er is een of andere FDS policy die zegt eh die die afdwingt dat een afnemer dat ingeregeld heeft.</v>
+
+00:21:06.771 --> 00:21:15.391
+<v Gideon Zegwaard>En als zo'n aanbieder dan een uitwisseling heeft waarbij die policy actief is, dat die aanbieder dan ook kan vertrouwen dat die afnemer dat dan ook ingericht heeft.</v>
+
+00:21:15.391 --> 00:21:18.431
+<v Gideon Zegwaard>Ja. Dat is een beetje de gedachte die ik daarbij heb.</v>
+
+00:21:19.531 --> 00:21:20.321
+<v Gideon Zegwaard>Ehm.</v>
+
+00:21:22.201 --> 00:21:31.631
+<v Gideon Zegwaard>Nou, dan nog eh de eh de structuur waar ik eh op dit moment aan zit te denken, is we hebben een FDS afspraak.</v>
+
+00:21:31.631 --> 00:21:52.501
+<v Gideon Zegwaard>Die zou kunnen verwijzen naar eh direct een standaard, maar ik vermoed in veel gevallen ook een FDS applicatieprofiel of een FDS concretisering van een bij voorkeur een Nederlands applicatieprofiel wat al eh voor de Nederlandse context geschikt is gemaakt en die dan weer verwijst naar een internationale standaard.</v>
+
+00:21:52.501 --> 00:22:03.541
+<v Gideon Zegwaard>Dus door als het ware op die manier een soort eh eh doorverwijzing eh eh te maken waarbij we van beneden naar boven steeds specifieker worden voor het FDS.</v>
+
+00:22:06.231 --> 00:22:23.951
+<v Gideon Zegwaard>Ehm dus dat is de gedachte die ik eh die ik eh daarbij heb. En voor deze groep is dan ook wel interessant van eh ja, wat stop je dan in dan in zo'n NL GOV eh applicatieprofiel en wat wil je daar nou nog dan wil moet je daar nog aanvullend regelen binnen zo'n FDS applicatieprofiel.</v>
+
+00:22:28.711 --> 00:22:38.711
+<v Gideon Zegwaard>We hadden het er net over eh ehm FDS afspraken die je via via policy zou kunnen afdwingen, maar je zou ook afspraken kunnen maken in hoe je policies toepast.</v>
+
+00:22:40.351 --> 00:22:53.221
+<v Gideon Zegwaard>Ehm als je als je kijkt naar de toepassing van policies, heb ik er een lijstje gemaakt van dingen waarin ik aan denk van die je zou kunnen uniformeren en waar je dus weer afspraken over zou kunnen maken.</v>
+
+00:22:53.691 --> 00:23:09.841
+<v Gideon Zegwaard>Dus de uniforme definitie van policies, uniforme definitie van toepassing van policies. Voor mijn gevoel zijn dat ook weer twee verschillende dingen. Eén is is je definieert dat hij er is en wat hij betekent. En de andere is op welke service is die van toepassing? Of op welke uitwisseling is die van toepassing?</v>
+
+00:23:11.481 --> 00:23:15.221
+<v Gideon Zegwaard>Eh het generiek ontsluiten van die definitie en die toepassing van die policies.</v>
+
+00:23:16.141 --> 00:23:25.961
+<v Gideon Zegwaard>Eh het onderkennen van centrale en algemene policies. We hadden het er net al over een FDS policy. Nou, dat is een soort van gedeelde policy, maar het kan ook zijn dat een aanbieder aanbieder specifieke policies heeft.</v>
+
+00:23:27.531 --> 00:23:39.561
+<v Gideon Zegwaard>Ehm de vorige keer kwam ook al voorbij dat je wellicht policies kan categoriseren. Nou, dat is wel interessant. Wat voor een soort categorieën zou je dan eh kunnen onderkennen en zou je dat dan kunnen uniformeren?</v>
+
+00:23:41.421 --> 00:23:58.261
+<v Gideon Zegwaard>Ehm verder ehm is nog even de vraag. Ik denk het wel dat policies metadata zijn. Ehm en vanuit de GDI wordt gesteld metadata is link data. Dus dat geeft het ook weer hè, oké, als het dan link data is, hoe hoe hoe nemen we dat dan mee in eh</v>
+
+00:23:58.261 --> 00:24:01.031
+<v Gideon Zegwaard>eh in de uitwerking.</v>
+
+00:24:01.631 --> 00:24:26.651
+<v Gideon Zegwaard>Ehm en wat vooral vanuit FDS ook interessant is, is hoe de aansluiting op andere standaarden is. Want eh binnen het FDS willen we al die standaarden in samenhang gaan toepassen en dat betekent dus ook dat het interessant wordt hoe ze dan op elkaar aansluiten. En dat vergt voor sommige van die standaarden dan dat je een soort van NL GOV profiel of in een FDS profiel aanwijst hoe je die in combinatie zou kunnen gebruiken.</v>
+
+00:24:29.581 --> 00:24:34.691
+<v Gideon Zegwaard>Dus ehm dat voor wat betreft standaardisatie toegang.</v>
+
+00:24:35.491 --> 00:24:37.491
+<v Gideon Zegwaard>Nou, nog een paar uitdagingen.</v>
+
+00:24:38.331 --> 00:24:48.491
+<v Gideon Zegwaard>Ehm er is een eh nogal een verscheidenheid in syntax en semantiek. Dus variaties in uitwisselingsprotocollen, regeltalen en semantische modellering.</v>
+
+00:24:50.401 --> 00:25:15.421
+<v Gideon Zegwaard>Ehm je hebt een onderscheid en ik en ik verwacht dat we op iets uitkomen is dat we een onderscheid maken tussen generieke en syntax specifieke kenmerken van een policy. Dus we hebben als we iets generieks hebben, dan kunnen we ze in ieder geval al benoemen welke er allemaal zijn met wellicht een toelichting van wat ze beogen te doen. Ehm en dat dan los kunnen knippen van eh allerhande eh toepassings of eh protocol specifieke eh aspecten van de policy.</v>
+
+00:25:15.821 --> 00:25:28.181
+<v Gideon Zegwaard>En wellicht kunnen we iets met een content type constructie voor eh voor syntaxen. Je hebt ook iets voor uitwisseling content type of iets eh tekst HTML is of dat het turtle of dat het JSON is.</v>
+
+00:25:28.181 --> 00:25:33.881
+<v Gideon Zegwaard>Dus daar zijn al mechanismes om met verschillende syntaxen om te gaan en wellicht kunnen we zoiets ook voor policies doen.</v>
+
+00:25:35.611 --> 00:26:02.321
+<v Gideon Zegwaard>Eh een ander vraagstuk wat ik interessant vind in deze context is de positionering van filtering door data services. Nou, dat zie je er vooral ook bij de BRP natuurlijk toegepast worden met de voorwaarderegels. Ehm en hoe verhoudt zich dat ten opzichte van policies? Hoe gaan we daarmee om?</v>
+
+00:26:02.321 --> 00:26:12.181
+<v Gideon Zegwaard>Dus dat zijn niet dingen die je eh die je de policy enforcement point kan laten doen. Je gaat niet de hele BRP database naar de policy enforcement point brengen om die te laten zeggen van oké, alleen dat stukje geef ik door.</v>
+
+00:26:12.181 --> 00:26:21.651
+<v Gideon Zegwaard>En bovendien hadden we het net ook besproken, de policy enforcement point die zegt alleen ja of nee, die zegt niet we gaan eh we gaan eh de data aanpassen.</v>
+
+00:26:21.651 --> 00:26:24.231
+<v Gideon Zegwaard>Maar dat roept wel de vraag op: hoe werkt dat dan samen met een data service</v>
+
+00:26:24.231 --> 00:26:25.041
+<v Frank Tempelman>Mag ik wat vragen?</v>
+
+00:26:25.041 --> 00:26:25.341
+<v Gideon Zegwaard>Ja.</v>
+
+00:26:25.641 --> 00:26:29.201
+<v Frank Tempelman>Hoe eh hoe worden hier keuzes in gemaakt en eh en vastgelegd?</v>
+
+00:26:30.011 --> 00:26:46.721
+<v Frank Tempelman>Ehm want er als ik dit zie en alle standaarden kennende kan je heel makkelijk zeggen van oké eh eh we gaan voor deze eh eh federatief datastelsel context gaan we alleen eh JSON en XML uitwisselen.</v>
+
+00:26:48.241 --> 00:27:01.121
+<v Frank Tempelman>Volgens mij is dat redelijk voor de hand liggend. Maar dat soort keuzes ja, zijn natuurlijk wel handig om te maken en vast te leggen. Eh wellicht zelfs nog een voorkeur voor één van de twee uit te spreken.</v>
+
+00:27:01.121 --> 00:27:10.871
+<v Frank Tempelman>En hetzelfde geldt voor de uitwisselingsprotocollen. Eh is er een voorkeur voor rest of voor voor soap of voor eh voor GraphQL of of wat dan ook.</v>
+
+00:27:13.391 --> 00:27:24.161
+<v Gideon Zegwaard>Ik ik denk dat deze werkgroep daarover gaat. Hè, hoe in ieder geval voor het eh voor het bereik van eh van de policies en de toepassing van policies.</v>
+
+00:27:24.641 --> 00:27:31.721
+<v Gideon Zegwaard>Hè, dus dit dit soort vraagstukken zitten in het FDS veel breder en op al van die aspecten hebben we dit soort vraagstukken, maar ook op policies.</v>
+
+00:27:32.531 --> 00:27:41.201
+<v Gideon Zegwaard>Ehm en ik hoop dat we hier binnen deze werkgroep erop uitkomen wat eh verstandig in deze is en wat we op welk niveau beleggen.</v>
+
+00:27:41.561 --> 00:27:52.541
+<v Gideon Zegwaard>Dus wellicht dat je bijvoorbeeld op een NL GOV profiel wat eh eh iets een ergens een aanbeveling over doet waarin je in een FDS profiel zegt: ja, die aanbeveling die volgen we gewoon.</v>
+
+00:27:53.051 --> 00:27:55.601
+<v Gideon Zegwaard>Hè, en dat dat soort dat soort constructies.</v>
+
+00:27:56.081 --> 00:28:00.431
+<v Gideon Zegwaard>Maar daar ja, daar zijn wij denk ik voor hier in deze werkgroep om daar een invulling aan te geven.</v>
+
+00:28:00.431 --> 00:28:01.031
+<v Frank Tempelman>Oké.</v>
+
+00:28:01.541 --> 00:28:04.291
+<v Frank Tempelman>Ja, vandaar ook mijn vraag, want volgens mij kan je een policy niet gaan toepassen als je</v>
+
+00:28:04.291 --> 00:28:05.411
+<v Rens Kievit>Gideon, vraagje.</v>
+
+00:28:05.411 --> 00:28:06.011
+<v Gideon Zegwaard>Ja.</v>
+
+00:28:06.911 --> 00:28:08.831
+<v Rens Kievit>Ehm, dit lijkt, dit is eh op zich helder hè.</v>
+
+00:28:08.831 --> 00:28:15.551
+<v Rens Kievit>Ehm, je hebt het wel steeds over het het ophalen, het vragen van gegevens.</v>
+
+00:28:16.241 --> 00:28:26.381
+<v Rens Kievit>Eh denk je dat er ook nog specifieke policies nodig zijn voor eh event mechanismes en eh abonneren op eh op eh mel een pushmeldingen enzo.</v>
+
+00:28:27.311 --> 00:28:43.271
+<v Gideon Zegwaard>Ja, dus dat is eh het het eh gebied van eh notificeren. Ehm daarom heb ik die heb ik ehm hieronder rechtsonder heb ik er wel bij genoemd notificaties Cloud Events als een eh een aspect van het FDS waar we invulling aan willen geven.</v>
+
+00:28:43.271 --> 00:28:49.331
+<v Gideon Zegwaard>Die niet onder deze stelselfunctie van toegang valt, maar ze hebben wel interacties, ze hebben wel met elkaar te maken.</v>
+
+00:28:49.721 --> 00:28:55.241
+<v Gideon Zegwaard>Dus je moet die policies ook kunnen toepassen op dat soort wijzen van informatieuitwisseling.</v>
+
+00:28:55.241 --> 00:28:57.041
+<v Frank Tempelman>Ja, vermoedelijk komt hij weer bij elkaar.</v>
+
+00:28:57.041 --> 00:29:00.221
+<v Gideon Zegwaard>Ja, dat is een beetje het beeld wat ik daarbij heb.</v>
+
+00:29:00.221 --> 00:29:00.821
+<v Rens Kievit>Oké.</v>
+
+00:29:01.331 --> 00:29:22.751
+<v Frank Tempelman>Ja, vandaar ook mijn vraag, want volgens mij kan je een policy niet gaan toepassen als je ja, eh een hele andere technologie kiest voor eh voor notificaties zoals eh AMQP of MQTT of dat soort eh protocollen, dan wordt het toch lastiger als dat je standaardiseert op eh op HTTP eh calls.</v>
+
+00:29:24.161 --> 00:29:34.121
+<v Gideon Zegwaard>Ja, maar dan daar kan je dus de interactie zoeken met die met die andere werkgroep die met notificaties bezig is.</v>
+
+00:29:34.121 --> 00:29:35.261
+<v Gideon Zegwaard>Want er is daar ook een werkgroep mee bezig.</v>
+
+00:29:35.261 --> 00:29:57.431
+<v Gideon Zegwaard>En je zou natuurlijk vanuit de policies kunnen stellen van oké, hè, over dit bereik kunnen wij wat zeggen, daar kunnen wij wat mee. En op op sommige van die uitwisselingsprotocollen, ja, daar kunnen we op dit moment niks over zeggen. En de consequentie daarvan is is als je bij een notificatie dus voor zo'n protocol kiest waar je in de policies niks van zegt, dat je daar dus de policy standaarden niet op kan toepassen.</v>
+
+00:45:25.545 --> 00:45:28.435
+<v Michiel Trimpe>mensen zijn aan het schrijven. Lijkt gestabiliseerd.</v>
+
+00:45:29.895 --> 00:45:32.025
+<v Michiel Trimpe>Nou, ik hoor niemand meer die nog actief aan het schrijven is.</v>
+
+00:45:33.725 --> 00:45:34.355
+<v Michiel Trimpe>Oké.</v>
+
+00:45:34.615 --> 00:45:35.135
+<v Michiel Trimpe>Ehm...</v>
+
+00:45:36.705 --> 00:45:44.975
+<v Michiel Trimpe>Nou, ik denk dat eh we hebben nog 10 minuten de tijd en we willen nog het volgende onderwerp bespreken, dus we zouden hier nog een aantal minuten door de resultaten heen kunnen gaan, maar dat is misschien niet handig.</v>
+
+00:45:45.745 --> 00:45:49.825
+<v Michiel Trimpe>Zijn er nog mensen die stickies gezien hebben waarvan ze uitleg willen? Van hé, wat wordt hier precies mee bedoeld?</v>
+
+00:45:53.305 --> 00:45:56.595
+<v Hans (RvIG)>Ter aanvulling, ik heb eh mijn initialen erbij gezet. Dat is altijd wel handig dat je nog eens...</v>
+
+00:45:56.595 --> 00:45:58.555
+<v Michiel Trimpe>Want je bent heel zachtjes voor ons. Ik weet niet of dat...</v>
+
+00:45:58.555 --> 00:46:03.355
+<v Hans (RvIG)>Oh. Geen idee. Eh, ik heb mijn initialen erbij gezet. Dat is misschien wel een handige als je nog eens terug wil eh zoeken, vragen.</v>
+
+00:46:03.355 --> 00:46:09.685
+<v Spreker 4>Hij zegt, hij heeft zijn initialen erbij gezet en dat is natuurlijk een heel goed idee, want als je nog eens een keer wat na wil vragen, dan weet je wie het geschreven heeft.</v>
+
+00:46:09.685 --> 00:46:14.735
+<v Michiel Trimpe>Ja. Ehm... Oh ja, dat is misschien net wel goed voor de de de visiting Miro heroes. Dus als je je aanmeldt met naam, daar ging ik een beetje van uit...</v>
+
+00:46:15.355 --> 00:46:17.615
+<v Michiel Trimpe>dan kunnen wij sowieso zien wie wat geschreven heeft.</v>
+
+00:46:18.255 --> 00:46:20.195
+<v Michiel Trimpe>Ehm, maar mocht je inderdaad één van de de generieke namen hebben,</v>
+
+00:46:21.055 --> 00:46:23.275
+<v Michiel Trimpe>dan is het wellicht goed om je initialen er even bij te zetten.</v>
+
+00:46:25.295 --> 00:46:25.795
+<v Michiel Trimpe>Oké.</v>
+
+00:46:27.705 --> 00:46:30.135
+<v Michiel Trimpe>Nou, maar verder zijn er dan niet direct vragen over deze onderwerpen.</v>
+
+00:46:31.255 --> 00:46:32.425
+<v Michiel Trimpe>Ga ik terug het scherm delen.</v>
+
+00:46:35.795 --> 00:46:38.525
+<v Michiel Trimpe>En dan gaan we naar ehm het volgende onderwerp voor de volgende werkgroepsessie.</v>
+
+00:46:39.465 --> 00:46:41.835
+<v Michiel Trimpe>Dus we hebben een inventarisatie gedaan van de verschillende onderwerpen.</v>
+
+00:46:42.825 --> 00:46:46.855
+<v Michiel Trimpe>Tot nu toe eh heb ik een aantal onderwerpen laten passeren met de de meeste inschrijvingen en deelnemers.</v>
+
+00:46:48.095 --> 00:46:51.905
+<v Michiel Trimpe>Voor de volgende keer zou ik wel het verzoek willen doen of wij ons kunnen richten op de AuthZEN NL Gov.</v>
+
+00:46:53.115 --> 00:46:56.845
+<v Michiel Trimpe>En dat is natuurlijk de, ja, de grootste standaard die we hebben gaan standaardiseren en introduceren.</v>
+
+00:46:57.665 --> 00:47:03.415
+<v Michiel Trimpe>En ik zou graag met de werkgroep willen bespreken hoe we dat aan willen gaan pakken, welke structuur, eh hoeveel willen we toevoegen, wanneer willen we het indienen en dergelijke.</v>
+
+00:47:03.415 --> 00:47:04.885
+<v Spreker 5 (Ruimte)>Wellicht ook het onderwerp prioriteren.</v>
+
+00:47:05.215 --> 00:47:06.095
+<v Michiel Trimpe>Binnen AuthZEN NL Gov?</v>
+
+00:47:06.325 --> 00:47:11.215
+<v Spreker 5 (Ruimte)>Ja, dus als we veel dingen hebben die we in NL Gov willen adresseren, dat we kijken van oké, maar wat zijn nou de meest logische eerste stappen die je neemt.</v>
+
+00:47:11.215 --> 00:47:18.175
+<v Michiel Trimpe>Ja. Ja, we gaan als team meer naartoe naar de beslissing, willen we een plain NL Gov standaard standaardiseren of een NL Gov profiel. Dat lijkt redelijk licht, maar inderdaad dat soort dingen verkennen.</v>
+
+00:47:19.145 --> 00:47:24.875
+<v Michiel Trimpe>Zijn daar eh mensen die daar bezwaar tegen hebben of die een ander onderwerp liefst eerder zien geadresseerd worden?</v>
+
+00:50:04.999 --> 00:50:09.529
+<v Michiel Trimpe>Lexi, Hans, Rens en nog anderen, staan jullie daar open voor?
+
+00:50:11.479 --> 00:50:13.429
+<v Rowland, Lexi>Zeker. Ja.
+
+00:50:14.389 --> 00:50:17.699
+<v Danny Greefhorst>Eh op zich wel, buiten het feit dat ik op dit moment wel wat druk heb.
+
+00:50:17.699 --> 00:50:20.699
+<v Spreker (Ruimte)>Op zich wel, zeg ik. Ja, dat hoor ik. Ik verstond het wel.
+
+00:50:21.399 --> 00:50:32.989
+<v Michiel Trimpe>Oké, dan eh benader ik jullie in ieder geval daarvoor. Zijn er nog andere mensen die eh hierbij dan aan willen haken? Dus dan wordt dan een korte voorbespreking wat we op de werkvloer willen gaan doen.
+
+00:50:33.519 --> 00:50:36.199
+<v Hans Schevers>Ja, daar wil ik wel. Hans Schevers.
+
+00:50:37.199 --> 00:50:38.709
+<v Michiel Trimpe>Hans, dus Hans Schevers.
+
+00:50:40.419 --> 00:50:46.419
+<v Hans Schevers>Hebben we twee Hansen, dat is fijn, dus eh... Komt vast goed.
+
+00:50:48.229 --> 00:50:51.799
+<v Spreker (Ruimte)>Misschien is dat toch iets met ons, want Hans klinkt ook zachtjes.
+
+00:50:55.499 --> 00:50:58.199
+<v Michiel Trimpe>Nee, maar ik zie het niet zo snel erop.
+
+00:50:58.399 --> 00:51:01.639
+<v Michiel Trimpe>Oké. Ehm, dan gaan we dat op die manier doen.
+
+00:51:02.329 --> 00:51:11.299
+<v Michiel Trimpe>Eh zijn er verder nog acties die we moeten nemen? Welke acties willen we nemen rondom de policies?
+
+00:51:11.939 --> 00:51:14.839
+<v Michiel Trimpe>Eh we hebben vier mensen die zich al hebben aangemeld.
+
+00:51:16.299 --> 00:51:28.699
+<v Michiel Trimpe>Eh ik zet er sowieso bij. Zijn er nog meer mensen die bij policies, eh dus het onderwerp wat we net besproken hebben. Oh ja, René zit er ook bij. Nog meer mensen die bij die subwerkgroep aan willen haken?
+
+00:51:39.509 --> 00:51:40.209
+<v Michiel Trimpe>Nee.
+
+00:51:41.509 --> 00:51:42.099
+<v Michiel Trimpe>Oké.
+
+00:51:43.599 --> 00:51:45.899
+<v Michiel Trimpe>Want dan doen we het met deze bezetting voor nu.
+
+00:51:47.999 --> 00:51:57.999
+<v Michiel Trimpe>Ehm en dan denk ik dat we mijn agenda zijn we er dan in ieder geval doorheen. Zijn er verder nog...
+
+00:51:58.009 --> 00:52:02.199
+<v Michiel Trimpe>punten of dingen die iemand wil bespreken?
+
+00:52:04.189 --> 00:52:06.989
+<v Spreker (Ruimte)>Ik zie nog wel een vraag over of de slides gedeeld worden.
+
+00:52:07.389 --> 00:52:11.289
+<v Michiel Trimpe>Ja, de slides worden altijd gedeeld. Ehm...
+
+00:52:12.389 --> 00:52:14.789
+<v Spreker (Ruimte)>Op de website in de notule.
+
+00:52:15.289 --> 00:52:21.389
+<v Spreker (Ruimte)>Als het goed is zijn ook alle... Op het Mattermost kanaal zetten we een linkje er ook naartoe en in de nieuwsbrief.
+
+00:52:21.789 --> 00:52:31.889
+<v Michiel Trimpe>Dat is misschien wel een goede. We hebben inderdaad ook een Mattermost kanaal. Dat is voor de de chat. Dus we hebben de ja, de chat functionaliteit.
+
+00:52:36.289 --> 00:52:37.989
+<v Michiel Trimpe>Hij werkt het niet.
+
+00:52:39.989 --> 00:52:51.189
+<v Michiel Trimpe>Ik zal ook nog even die link zal ik ook in de chat zetten. En dat is in ieder geval een goed kanaal ook voor de wat laagdrempelige communicatie. Iedereen het verzoek of zij zich daarin indien mogelijk voor aan willen melden.
+
+00:52:56.689 --> 00:52:57.189
+<v Michiel Trimpe>Oké.
+
+00:52:58.489 --> 00:53:02.189
+<v Michiel Trimpe>Nou, vijf minuten voor tijd, maar eh is ook wel eens een keer goed.
+
+00:53:02.789 --> 00:53:07.189
+<v Michiel Trimpe>Dan stel ik voor dat we de bijeenkomst bij deze dan afronden.
+
+00:53:08.289 --> 00:53:11.689
+<v Michiel Trimpe>Dankjewel voor jullie aanwezigheid allemaal. En tot over twee weken.
+
+00:53:12.089 --> 00:53:16.389
+<v Meerdere sprekers>(Zwaaien en zeggen gedag)

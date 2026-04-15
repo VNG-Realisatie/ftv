@@ -1,0 +1,916 @@
+WEBVTT
+
+00:00:07.411 --> 00:00:09.111
+<v Michiel Trimpe>Oké, de opname is gestart.</v>
+
+00:00:10.911 --> 00:00:13.011
+<v Michiel Trimpe>Nou, allereerst eh welkom allemaal.</v>
+
+00:00:13.811 --> 00:00:18.421
+<v Michiel Trimpe>Ehm ik zie volgens mij één nieuw gezicht. Maria?</v>
+
+00:00:18.911 --> 00:00:24.231
+<v Maria Dziouba>Ja, hallo. Eh ik ben de nieuwe informatieanalist van NID.</v>
+
+00:00:24.781 --> 00:00:28.911
+<v Maria Dziouba>Ehm ik zal het ook een beetje van Duuk overnemen in de toekomst.</v>
+
+00:00:29.541 --> 00:00:39.201
+<v Maria Dziouba>Ehm mijn achtergrond is sterrenkunde, dus ik heb verder geen kennis, ervaring in het federatief datastelsel of in de zorg waar de koers natuurlijk van is.</v>
+
+00:00:39.521 --> 00:00:46.201
+<v Maria Dziouba>Dus eh ik ben vooral benieuwd om eh voorlopig heel veel te leren en eh heel veel kennis te maken met iedereen en het onderwerp.</v>
+
+00:00:46.521 --> 00:00:48.971
+<v Michiel Trimpe>Oké. Welkom bij de werkgroep.</v>
+
+00:00:49.441 --> 00:00:50.211
+<v Maria Dziouba>Dankjewel.</v>
+
+00:00:51.871 --> 00:00:56.031
+<v Michiel Trimpe>Het is altijd goed om wat meer eh diversiteit qua achtergronden te hebben.</v>
+
+00:00:56.771 --> 00:01:02.491
+<v Michiel Trimpe>Soms wel eens een eh een zwakte zijn van deze werkgroep dat het heel technisch kunnen zijn. Die krijg ik ook wel eens terug.</v>
+
+00:01:02.491 --> 00:01:10.421
+<v Michiel Trimpe>Dus eh trek ons voornamelijk aan onze eh zeg maar eh wat is het? Hou ons voornamelijk eh op het juiste niveau voor iedereen.</v>
+
+00:01:10.421 --> 00:01:14.071
+<v Michiel Trimpe>Dus eh voel je altijd vrij om vragen te stellen en te zeggen: hé, wat is dit en eh.</v>
+
+00:01:12.181 --> 00:01:14.071
+<v Maria Dziouba>Ik zal heel veel vragen stellen.</v>
+
+00:01:14.071 --> 00:01:16.481
+<v Michiel Trimpe>Ja, dat je.</v>
+
+00:01:16.791 --> 00:01:19.031
+<v Michiel Trimpe>En dan welkom bij de groep in ieder geval.</v>
+
+00:01:19.401 --> 00:01:20.141
+<v Maria Dziouba>Dankjewel.</v>
+
+00:01:20.611 --> 00:01:31.111
+<v Michiel Trimpe>Ehm, ik zal even een screen share starten van... Oh wacht even, Microsoft Teams is requesting access. Ik hoop dat dat in één keer goed gaat.</v>
+
+00:01:46.401 --> 00:01:46.901
+<v Michiel Trimpe>Oké.</v>
+
+00:01:47.531 --> 00:01:50.181
+<v Michiel Trimpe>Ehm, zien jullie mijn screen share?</v>
+
+00:01:50.591 --> 00:01:51.191
+<v Guus van der Meer>Ja.</v>
+
+00:01:52.401 --> 00:01:52.901
+<v Michiel Trimpe>Nou.</v>
+
+00:01:53.671 --> 00:02:03.991
+<v Michiel Trimpe>Ehm dus we gaan even ja, ehm misschien eerst eventjes introductie of even kijken waar we update waar we staan met de werkgroep en FTV als geheel.</v>
+
+00:02:04.661 --> 00:02:10.881
+<v Michiel Trimpe>Eh zoals jullie allemaal weten, FTV was eh vorig jaar werd die gerund door eh VNG realisatie.</v>
+
+00:02:11.721 --> 00:02:22.971
+<v Michiel Trimpe>Eh toen heeft VNG realisatie gezegd gekozen om ehm ja, gezien de wet DBA afstand te nemen van alle eh externen en ook de</v>
+
+00:02:23.411 --> 00:02:34.611
+<v Michiel Trimpe>eh het het missende gat niet op te vullen met interne medewerkers. Dus toen hebben zij aangegeven aan eh de opdrachtgever van FTV dat zij dus de subsidie niet langer in kunnen invullen.</v>
+
+00:02:35.881 --> 00:02:39.991
+<v Michiel Trimpe>Eh dus toen is eind vorig jaar eh is het project eventjes stilgevallen.</v>
+
+00:02:40.481 --> 00:02:49.771
+<v Michiel Trimpe>Eh echter eh binnen als opdrachtgever wil wel dat het project eh verder bleef gaan. Dus die heeft besloten om de subsidie aan Ictu te verlenen.</v>
+
+00:02:50.771 --> 00:03:10.221
+<v Michiel Trimpe>Eh en Ictu heeft de subsidie aangenomen eh en is nu eh langzaamaan... Hey! ...is nu langzaamaan eh ja, de functies weer aan het verwerven. Sinds eh een week of twee ben ik weer binnen. En eh ben ik aan het voorbereiden voor 2026.</v>
+
+00:03:10.971 --> 00:03:22.111
+<v Michiel Trimpe>En officieel is hij nog niet binnen, maar in de praktijk is hij net binnengekomen, want als het goed is is eh Marc de Boer ook weer aan boord als product owner.</v>
+
+00:03:22.921 --> 00:03:39.091
+<v Michiel Trimpe>Eh het team is iets kleiner, dus eh we hebben eh wel nog ruimte voor nog een ontwikkelaar, maar niet meer twee ontwikkelaars zoals vorig jaar. En de communicatieprofessionals zijn eh nou, daar moeten we het even zonder doen. Dus we zullen sommige uitingen iets minder professioneel zijn dan vorig jaar.</v>
+
+00:03:39.541 --> 00:03:41.831
+<v Michiel Trimpe>Inhoudelijk gaan we gewoon lekker verder.</v>
+
+00:03:44.571 --> 00:03:46.171
+<v Michiel Trimpe>Eh Mark, hoor je ons ook?</v>
+
+00:03:47.381 --> 00:03:50.321
+<v Marc de Boer>Ja, ik hoor je luid en duidelijk. Goedemorgen iedereen.</v>
+
+00:03:50.791 --> 00:03:54.121
+<v Michiel Trimpe>Nou, volgens mij heb je net mijn introductie van jou ook gehoord.</v>
+
+00:03:55.331 --> 00:04:01.211
+<v Michiel Trimpe>Eh maar Mark is ook officieel begint hij morgen geloof ik pas, eh maar alvast in de call aanwezig.</v>
+
+00:04:04.421 --> 00:04:22.251
+<v Michiel Trimpe>Nou, en voor 2026 hebben we dus een aantal hoofddoelen. Ehm, of eigenlijk twee hoofddoelen. Dus dat is de standaarden die we met z'n allen vorig jaar hebben eh verwerkt en in ieder geval vastgesteld binnen deze werkgroep te ondersteunen in de verdere governance trajecten.</v>
+
+00:04:22.781 --> 00:04:34.891
+<v Michiel Trimpe>En als hoofddeliverable voor de werkgroep dit jaar eh wordt dat het register toegangsbeleid. Dus ik geef de Nederlandse werknaam. We zullen nog discussie voeren over het Engels en wat het dan in het Engels zal zijn.</v>
+
+00:04:35.421 --> 00:04:51.991
+<v Michiel Trimpe>Ehm, maar eh wat we dit jaar op willen leveren is het register toegangsbeleid. En het register toegangsbeleid heeft als doel om primair als eh als doel inzicht te verlenen tussen en binnen organisaties over welk toegangsbeleid er nu actief is.</v>
+
+00:04:52.921 --> 00:04:56.091
+<v Michiel Trimpe>Of eh nu actief is of actief is geweest.</v>
+
+00:04:58.261 --> 00:05:12.871
+<v Michiel Trimpe>Nou, eh in tegenstelling tot de vorige standaarden, een standaard die er niet is in de markt. Eh dus we kunnen dit keer niet eh een marktstandaard adopteren en daar een profiel op maken. Dus deze zullen wij echt zelf van scratch moeten schrijven.</v>
+
+00:05:14.391 --> 00:05:22.981
+<v Michiel Trimpe>Ehm en dat heeft als eh nadeel dat het wat meer adoptie zal werken, als voordeel dat we het precies toe kunnen spitsen op de Nederlandse werkelijkheid.</v>
+
+00:05:23.631 --> 00:05:34.501
+<v Michiel Trimpe>En dat willen wij dit jaar op gaan pakken. Ehm, allereerst over dat, eh zijn daar vragen over?</v>
+
+00:05:42.471 --> 00:05:43.071
+<v Michiel Trimpe>Oké.</v>
+
+00:05:44.181 --> 00:05:50.081
+<v Michiel Trimpe>Ehm, nou, dan zou ik met ieders goedkeuren eh willen beginnen met het eh het kick-off stuk.</v>
+
+00:05:50.681 --> 00:06:06.191
+<v Michiel Trimpe>We hebben een aantal dingen voor de kick-off gepland staan. Eh allereerst is even een korte herevaluatie van de structuur van de werkgroep. Het is iets anders van aard komend jaar. Eh dus misschien eh is een ander formaat wellicht beter. Zullen we even herevalueren.</v>
+
+00:06:06.841 --> 00:06:28.011
+<v Michiel Trimpe>En daarna wil ik graag eh een inventarisatie gaan doen over het register toegangsbeleid. Dus welke aanbieders en afnemers kennen wij eh die we wellicht zouden willen modelleren komend jaar. Welke use cases zouden we willen modelleren om te kunnen toetsen of het past. En welke functionele vereisten kunnen we bedenken waar het register toegangsbeleid aan moet voldoen.</v>
+
+00:06:28.461 --> 00:06:32.251
+<v Michiel Trimpe>En als we dat afgerond hebben, een korte planning van de komende werkgroepen.</v>
+
+00:06:34.201 --> 00:06:42.341
+<v Michiel Trimpe>Eh allereerst even de structuur. Ehm, dus dit eh is hetzelfde formulier als wij eh helemaal aan het begin vorig jaar hebben ingevuld.</v>
+
+00:06:42.921 --> 00:06:51.271
+<v Michiel Trimpe>En daar kwam toen de huidige structuur uit. Dus eh tweewekelijks een hybride meeting van dinsdagochtend 10 tot 11.</v>
+
+00:06:52.331 --> 00:07:04.221
+<v Michiel Trimpe>Eh het is nu ja, een jaar verder en we hebben een ander formaat. Eh dus ik wil iedereen even de kans bieden om te ja, te zeggen of ze het huidige formaat nog fijn vinden. Of ze daar iets aan willen veranderen.</v>
+
+00:07:05.001 --> 00:07:09.301
+<v Michiel Trimpe>Eh dus zit iedereen al in de Miro? Is het iedereen gelukt om daar in te komen?</v>
+
+00:07:10.291 --> 00:07:23.231
+<v Michiel Trimpe>Ik zie even niet de duimpjes, maar ik denk het wel. Ehm, als het niet lukt, laat het even weten.</v>
+
+00:07:23.711 --> 00:07:42.061
+<v Michiel Trimpe>Eh en hoe dit dan werkt is, we hebben hier dus de frequentie, online of hybride en tijdstip en duur. Eh als je hier heb je de stemdots. Dus als je wilt zeggen: ja, ik ben er nog steeds voor dat het tweewekelijks is, dan sleep je een dot naar tweewekelijks.</v>
+
+00:07:42.631 --> 00:07:44.931
+<v Michiel Trimpe>Ik haal de mijne even weg.</v>
+
+00:08:16.141 --> 00:08:20.351
+<v Michiel Trimpe>Nou, super. Eh dus ja, hybride eh zodra we weer een office of een werkplek hebben in Centraal Nederland</v>
+
+00:08:20.351 --> 00:08:44.221
+<v Michiel Trimpe>eh zullen we sowieso hybride gaan. Eh in de tussentijd zouden we ook kunnen overwegen om eh Ictu te gebruiken als locatie. Dat ik vandaag niet doe, omdat het mijn eerste keer bij Ictu zou zijn. Dat combineren met een eerste werkgroep was een beetje veel voor mij.</v>
+
+00:08:47.381 --> 00:09:18.151
+<v Michiel Trimpe>Maar waarschijnlijk eh heeft dat denk ik tot er een eh een locatie in Utrecht is, heeft dat denk ik de voorkeur van iedereen. Of heeft iemand een betere locatie in Utrecht die we al volgende week of over twee weken kunnen betrekken? Oké. Nou, dan is het in principe dus over twee weken eh bij de Ictu. Dan gaan we kijken of we daar een ruimte kunnen regelen. En we houden het verder gewoon hybride zoals altijd en dezelfde cadence en tijdstip.</v>
+
+00:09:19.461 --> 00:09:24.971
+<v Michiel Trimpe>Ehm, nou, dan kunnen we door naar de volgende stuk, aanbieders en afnemers.</v>
+
+00:09:25.451 --> 00:09:36.421
+<v Michiel Trimpe>Ik heb ze even gesplitst in eh dat ik duidelijker kunnen maken. Dus dit is afnemers hier.</v>
+
+00:09:37.311 --> 00:09:51.321
+<v Michiel Trimpe>gesplitst in twee secties. Vorig jaar hebben we heel duidelijk gelet op de aanbieders. Dus eh als aanbieder, eh nou, hoe kan ik mijn verzoeken modelleren? En welke aanbieders zijn er? Wat past? Welke patronen zijn er? Etcetera.</v>
+
+00:09:51.891 --> 00:10:04.991
+<v Michiel Trimpe>Afnemers hebben we enigszins benoemd met het eh het is het eh API</v>
+
+00:10:03.120 --> 00:10:05.000
+<v Michiel Trimpe>voor het register toegangsbeleid zijn afnemers echt eh ook</v>
+
+00:10:05.000 --> 00:10:09.610
+<v Michiel Trimpe>heel belangrijk en misschien soms nog wel belangrijker dan aanbieders.</v>
+
+00:10:10.820 --> 00:10:17.990
+<v Michiel Trimpe>Want het idee is natuurlijk ook dat je of het idee is ook vanuit de FDS dat je het register kan gebruiken, dat je als afnemer het register kan gebruiken</v>
+
+00:10:19.240 --> 00:10:24.690
+<v Michiel Trimpe>om aan je aanbieder aan te tonen dat je compliant bent, dat je aan de afspraken van het FDS voldoet.</v>
+
+00:10:25.400 --> 00:10:36.130
+<v Michiel Trimpe>Dus dat je ook als aanbieder kan zijn: hé, eh deze organisatie gebruikt netjes het register toegangsbeleid om zijn eh toegangsbeleid als afnemer te modelleren. Dus eh hebben hun zaakjes op orde.</v>
+
+00:10:37.910 --> 00:10:42.410
+<v Michiel Trimpe>Ehm nou, maar dat hebben we dus niet echt eh voor afnemers niet echt geïnventariseerd.</v>
+
+00:10:42.410 --> 00:10:46.510
+<v Michiel Trimpe>Dus ik zou iedereen willen vragen: kunnen wij afnemers bedenken?</v>
+
+00:10:47.200 --> 00:11:00.010
+<v Michiel Trimpe>Eh of kan jij als aanbieder afnemers bedenken waarvan je denkt: hé, dat zou een mooie zijn om dit jaar te modelleren of contact mee op te nemen of in ieder geval te zorgen dat we het register toegangsbeleid aan hun behoeftes voldoet.</v>
+
+00:11:02.970 --> 00:11:04.810
+<v Guus van der Meer>Afnemer</v>
+
+00:11:06.910 --> 00:11:08.010
+<v Guus van der Meer>Veiling</v>
+
+00:11:08.010 --> 00:11:11.510
+<v Guus van der Meer>Afnemers die persoonsgegevens</v>
+
+00:11:15.610 --> 00:11:18.010
+<v Guus van der Meer>Afnemers die persoonsgegevens</v>
+
+00:11:37.340 --> 00:11:44.500
+<v Guus van der Meer>En Michiel, zijn burgers bijvoorbeeld, de burger zelf ook een eh een een een actor?</v>
+
+00:11:44.500 --> 00:11:45.120
+<v Michiel Trimpe>Afnemer.</v>
+
+00:11:45.720 --> 00:11:52.680
+<v Michiel Trimpe>Eh nee, dus dat zou meer voor eh logboek dataverwerkingen zijn bijvoorbeeld. Dus die die acteren wel naar de burger toe.</v>
+
+00:11:53.350 --> 00:11:57.100
+<v Michiel Trimpe>Dit zijn wel afnemers eh binnen de overheid.</v>
+
+00:11:57.570 --> 00:12:06.940
+<v Michiel Trimpe>Dus het is ook eh ja, we bedoelt om inzicht te bieden eh ja, oké, het is bedoeld om inzicht te bieden tussen overheidsorganisaties.</v>
+
+00:12:07.480 --> 00:12:14.710
+<v Michiel Trimpe>Het kan wel zo zijn dat je als organisatie het register toegangsbeleid ook openbaar maakt of de gegevens daarin en zo transparantie biedt naar de burger.</v>
+
+00:12:14.980 --> 00:12:15.980
+<v Guus van der Meer>Dat bedoel ik. Ja.</v>
+
+00:12:16.710 --> 00:12:18.110
+<v Michiel Trimpe>Oké, dat bedoel je.</v>
+
+00:12:18.110 --> 00:12:24.430
+<v Michiel Trimpe>Ja, dat zou eh nou ja, dat we hebben hier use cases en functionele vereisten. Eh en die kan je daar wel ook in opnemen.</v>
+
+00:12:24.430 --> 00:12:35.050
+<v Michiel Trimpe>Dus als jij eh zegt van: hé, ik vind dat dat we dit zouden moeten overwegen en mee zouden moeten nemen, dan kunnen we dat nou ja, is dat denk ik een use case bijvoorbeeld.</v>
+
+00:12:41.880 --> 00:12:53.160
+<v Guus van der Meer>Gemeente Amsterdam (gebruik van HaalCentraal API's)</v>
+
+00:12:59.600 --> 00:13:03.100
+<v Guus van der Meer>Transparantie van toegangsbeleid aan de burger</v>
+
+00:13:51.270 --> 00:13:56.470
+<v Guus van der Meer>Den Haag en Utrecht, gedeeld toegangsbeleid binnen Common Ground</v>
+
+00:14:54.680 --> 00:15:06.080
+<v Guus van der Meer>BRO met toegangsbeleid van bronhouders die door BRO afgedwongen moet worden</v>
+
+00:15:06.080 --> 00:15:11.180
+<v Guus van der Meer>Toezichthouders</v>
+
+00:15:14.180 --> 00:15:16.880
+<v Guus van der Meer>Bevoegd gezag van een data</v>
+
+00:15:20.940 --> 00:15:23.440
+<v Michiel Trimpe>Oké.</v>
+
+00:15:24.170 --> 00:15:33.650
+<v Michiel Trimpe>Nou, ik denk dat eh de afnemers, dus voel je ook later in de sessie vrij om dingen toe te voegen. Maar het lijkt wel dat de beweging er wel een beetje uit is.</v>
+
+00:15:36.500 --> 00:15:39.190
+<v Michiel Trimpe>Ehm als we kijken naar aanbieders.</v>
+
+00:15:39.690 --> 00:15:43.300
+<v Michiel Trimpe>Eh dus we hebben natuurlijk vorig jaar al veel aanbieders aan het woord gehad.</v>
+
+00:15:44.330 --> 00:15:52.030
+<v Michiel Trimpe>Ehm zijn er daar nog eh ja, speciale aanbieders van denken: ja, die willen we eh dit jaar modelleren.</v>
+
+00:15:52.580 --> 00:16:08.860
+<v Michiel Trimpe>Kan zijn dat je ook een aanbieder kent of bent die denkt: ja, ik wil graag eh meewerken aan die modellering. Want dat betekent natuurlijk ook dat eh dus zelfs al eh zouden wij de de leiding nemen, we hebben nog steeds veel informatie nodig om te kijken: hé, maar hoe zit het toegangsbeleid precies in jullie organisatie?</v>
+
+00:16:09.900 --> 00:16:15.200
+<v Michiel Trimpe>Eh maar het kan ook een organisatie zijn waarvan je denkt: hé, dat toegangsbeleid zou gewoon heel interessant zijn om te modelleren.</v>
+
+00:16:15.730 --> 00:16:21.630
+<v Michiel Trimpe>Dus ik zal bijvoorbeeld namens Gideon alvast BRP RvIG opschrijven.</v>
+
+00:16:22.180 --> 00:16:30.980
+<v Michiel Trimpe>Eh dus ik weet dat dat gewoon een een hele interessante is om te kijken: kunnen we de de autorisatiebesluiten ook modelleren in dit geheel?</v>
+
+00:17:24.730 --> 00:17:28.230
+<v Guus van der Meer>Fijn om ZIN daarop te zien, die eh zet ik erop inderdaad.</v>
+
+00:18:35.100 --> 00:18:37.340
+<v Michiel Trimpe>Eh Hugo, ik zie dat jij gemeente opschreef.</v>
+
+00:18:37.340 --> 00:18:41.940
+<v Michiel Trimpe>Heb jij een specifieke gemeente in gedachten of de gemeente als aanbieder in het algemeen?</v>
+
+00:18:42.610 --> 00:18:44.910
+<v Hugo Mostard>Gemeente als aanbieder algemeen.</v>
+
+00:18:46.130 --> 00:18:57.730
+<v Hugo Mostard>Ik weet, we zijn nu binnen Den Haag met met het Urban Data Platform bezig. Dus we hebben een dataplatform. En we hebben dan inderdaad eh ja, hogescholen en universiteiten die onderzoeken willen doen met die data.</v>
+
+00:18:58.430 --> 00:19:01.830
+<v Hugo Mostard>Dus die willen op één of andere manier veilig kunnen aanbieden.</v>
+
+00:19:02.330 --> 00:19:05.430
+<v Hugo Mostard>En dat is ja, allerlei soorten data, sorry.</v>
+
+00:19:05.430 --> 00:19:06.130
+<v Michiel Trimpe>Oké.</v>
+
+00:19:06.630 --> 00:19:10.230
+<v Michiel Trimpe>Dus dan eh gemeente als als aanbieder aan onderzoek.</v>
+
+00:19:10.230 --> 00:19:11.130
+<v Hugo Mostard>Ja.</v>
+
+00:19:20.860 --> 00:19:25.760
+<v Hugo Mostard>Dat komt een beetje overeen met de afnemer die ik aan ook universiteiten, hogescholen.</v>
+
+00:19:25.760 --> 00:19:26.360
+<v Michiel Trimpe>Ja.</v>
+
+00:19:28.700 --> 00:19:36.700
+<v Michiel Trimpe>Oké. Ik had het trouwens even voor mezelf verduidelijkt, de gemeente. Dus als gemeente als eh bronhouder is natuurlijk heel breed. Ja, precies.</v>
+
+00:19:37.420 --> 00:19:39.820
+<v Marc de Boer>Eh ik ik zie ik zie eh DUO staan als aanbieder.</v>
+
+00:19:40.220 --> 00:19:42.720
+<v Marc de Boer>Ehm met welke gedachte zit hier achter?</v>
+
+00:19:46.940 --> 00:19:48.240
+<v Maria Dziouba>Ja, dat eh dat ben ik.</v>
+
+00:19:48.840 --> 00:19:56.840
+<v Maria Dziouba>Ehm niet een hele specifieke, eerlijk gezegd. Ik eh probeer eh maar wat een beetje toe te voegen eigenlijk en eh Oké.</v>
+
+00:20:12.189 --> 00:20:17.029
+<v Michiel Trimpe>heb je het zelf ervaring? Heb je de heb je specifieke bronnen binnen de duo in gedachten of?</v>
+
+00:20:17.029 --> 00:20:25.689
+<v Maria Dziouba>Nou ja, ik was door de aan het kijken en ik zag dat duo wel één van de partijen was die ehm ook eerder in deze werkgroep betrokken waren, vandaar.</v>
+
+00:20:25.689 --> 00:20:26.319
+<v Michiel Trimpe>Zeker.</v>
+
+00:20:28.189 --> 00:20:30.019
+<v Michiel Trimpe>Ja, Axel is er onder andere.</v>
+
+00:20:30.019 --> 00:20:34.889
+<v Marc de Boer>Ik ben van duo. Vandaar dat ik denk van welke welke data heb je heb je dan in gedachten?</v>
+
+00:20:37.039 --> 00:20:39.229
+<v Maria Dziouba>Nee, ik heb geen niks in gedachten, maar eh</v>
+
+00:20:39.229 --> 00:20:42.889
+<v Marc de Boer>Ja, want jullie eh je ziet duo niet als een mogelijke aanbieder?</v>
+
+00:20:43.399 --> 00:20:44.229
+<v Maria Dziouba>Jawel, zeker wel.</v>
+
+00:20:45.699 --> 00:20:51.129
+<v Marc de Boer>Maar hè, dus we zijn we zijn wel aan het kijken naar eh aansluiting op het FDS, want dat zijn we ook nu nog niet.</v>
+
+00:20:51.129 --> 00:20:51.819
+<v Maria Dziouba>Hm hm.</v>
+
+00:20:53.499 --> 00:21:05.219
+<v Marc de Boer>Hè, maar dat dat is dat is in eerste instantie, dat is dan ook vooral nog zeg maar de de open data. Hè, de registerdata. Dus de de de de de de onderwijsinstellingen en en dat soort dingen.</v>
+
+00:21:08.319 --> 00:21:14.919
+<v Marc de Boer>En ik vraag me even af van van of of het toegangsbeleid of dat dan hè, dan komt er één regeltype staan wat geregeld is.</v>
+
+00:21:17.219 --> 00:21:19.829
+<v Michiel Trimpe>Ja, omdat het open data is, dus dan eh</v>
+
+00:21:20.579 --> 00:21:23.639
+<v Gideon Zegwaard>Die is die die is publiek die eh data.</v>
+
+00:21:23.639 --> 00:21:24.499
+<v Marc de Boer>Precies.</v>
+
+00:21:24.499 --> 00:21:25.229
+<v Gideon Zegwaard>Hm.</v>
+
+00:21:26.419 --> 00:21:28.219
+<v Michiel Trimpe>Duo heeft er best wel veel bestanden.</v>
+
+00:21:28.219 --> 00:21:36.039
+<v Marc de Boer>Nee, en we hebben natuurlijk een heleboel eh gegevensleveringen. Hè eh eh en en daar zou ik dan veel eh logische plek zijn.</v>
+
+00:21:36.039 --> 00:21:37.989
+<v Marc de Boer>En</v>
+
+00:21:39.849 --> 00:21:42.279
+<v Marc de Boer>eh maar ja, sowieso ben ik een beetje aan het puzzelen.</v>
+
+00:21:42.849 --> 00:21:43.359
+<v Michiel Trimpe>Ja.</v>
+
+00:21:43.599 --> 00:22:02.199
+<v Marc de Boer>We zijn natuurlijk bezig met allerlei allerlei eh eh doorontwikkelingen van onze productcatalogie en en en eh eh dingen die we leveren. Hè, en dan zou dit dan ergens in in die organisatie zou het ook wel echt een plekje hebben, maar eh ik zie hem nog niet meteen eh met ik zie hem nog niet helemaal scherp.</v>
+
+00:22:02.199 --> 00:22:03.009
+<v Michiel Trimpe>Precies.</v>
+
+00:22:03.399 --> 00:22:06.339
+<v Michiel Trimpe>Ja, dat hoeft ook niet. Ik vind het wel leuk dat het dit soort gesprek op gang brengt.</v>
+
+00:22:06.339 --> 00:22:23.019
+<v Igor van Haren>best heel groot is. Kijk, ik ik had ook Vicose toe kunnen voegen. Wij hebben heel veel uitleveringen, heel veel partijen. Ehm op zich zijn die dingen nu gemodeleerd, maar niet</v>
+
+00:22:23.019 --> 00:22:37.749
+<v Igor van Haren>misschien wel voorgesteld ik dit eh register toegangsbeleid. Ehm het beleid is ook allemaal beschreven waar die uitwisselingen zijn, maar die volgen allemaal nog niet het netwerkmodel of of FDS. Dus je kan die wel gaan modelleren, maar ik ik zou me liever beperken tot</v>
+
+00:22:38.619 --> 00:22:58.989
+<v Igor van Haren>nu eh de de registers die wij via FDS ook gaan ontsluiten. Eh en daar op het eh en ik denk dat eh Mine dat bij jou ook geldt eh hè, dus de registers die je wilt ontsluiten zijn de publieke. Ja, dat is eh ja, daar valt weinig dan eh te modelleren aan toegangsbeleid eh.</v>
+
+00:22:58.989 --> 00:22:59.829
+<v Michiel Trimpe>Ja.</v>
+
+00:23:00.099 --> 00:23:00.819
+<v Igor van Haren>Ja.</v>
+
+00:23:01.089 --> 00:23:02.019
+<v Maria Dziouba>Ja.</v>
+
+00:23:02.619 --> 00:23:13.209
+<v Michiel Trimpe>Ja, en dus denk ik ook inderdaad, we willen natuurlijk hier de de aanbieders modelleren die eh het register beproeven. Dus waar je dat je van hé, past dit of werkt het? Dus ehm</v>
+
+00:23:13.209 --> 00:23:14.079
+<v Marc de Boer>Precies.</v>
+
+00:23:14.079 --> 00:23:23.019
+<v Marc de Boer>En als ik kijk kijk naar hoeveel werk we hebben liggen de komende tijd en en eh ja, dan dan dan zie ik nog niet dat we hier veel tijd in kunnen besteden als als aanbieder.</v>
+
+00:23:23.019 --> 00:23:27.219
+<v Michiel Trimpe>Je bent niet ineens gevrijwilligd omdat het hier op staat hoor, dus dat eh</v>
+
+00:23:27.219 --> 00:23:27.999
+<v Marc de Boer>Nee, nee.</v>
+
+00:23:27.999 --> 00:23:33.219
+<v Michiel Trimpe>Maar het kan ook zijn inderdaad voor ons dat wij eh dat wij denken van hé, er zit dus wel iets inderdaad hoe hoe zou je daarmee omgaan? Dus dat wij daar nog eens een keer</v>
+
+00:23:33.219 --> 00:23:34.029
+<v Marc de Boer>Precies.</v>
+
+00:23:34.029 --> 00:23:41.829
+<v Michiel Trimpe>Als als de groep komt van hé, maar wij wij zien daar heel heel duidelijk meerwaarde, nou, dan kan ik er natuurlijk op gaan ook.</v>
+
+00:23:41.829 --> 00:23:42.519
+<v Marc de Boer>Ja.</v>
+
+00:23:44.529 --> 00:23:47.619
+<v Michiel Trimpe>Oké, ik denk dat we wel een een een breed beeld hebben.</v>
+
+00:23:47.619 --> 00:23:54.429
+<v Michiel Trimpe>De de geo-registratie. Ik denk dat ik die wel kan duiden, maar misschien een beetje toelichting kan geen kwaad.</v>
+
+00:23:55.479 --> 00:23:59.679
+<v Hugo Mostard>Daar ben ik ook wel geïntrigeerd in wat eh daar de achterliggende gedachte is.</v>
+
+00:24:01.629 --> 00:24:07.419
+<v Michiel Trimpe>Dus vandaar de BRO is natuurlijk ook een geo-registratie. Dit is volgens mij</v>
+
+00:24:07.419 --> 00:24:08.019
+<v Hugo Mostard>Ja, BRO.</v>
+
+00:24:10.479 --> 00:24:26.559
+<v Hugo Mostard>Maar dat zijn twee verschillende dingen zeg maar. Tenminste eh de eerste is zeg maar op basis van geografische kenmerken al dan niet eh toegang verlenen. Hè, dus stel dat je op een defensieterrein aan het kijken bent en je bent niet van defensie, dan mag je niks zien, terwijl als je er buiten kijkt, dan mag het wel zeg maar.</v>
+
+00:24:26.559 --> 00:24:27.279
+<v Michiel Trimpe>Hm hm.</v>
+
+00:24:27.279 --> 00:24:51.399
+<v Hugo Mostard>Ehm en die andere bij de basisregistratie ondergrond is veel meer eh eh eh je mag bepaalde objecten gewoon niet zien waar ze ook liggen. Ja. Ehm en en dat laatste is een stuk makkelijker om te doen dan het eerste. Eh voor het eerste hè, voor op op gebied zijn de standaarden, dus je hebt GeoXACML om te beschrijven eh eh wat geo-objecten zijn waar je eh autorisatieregels aan kan koppelen.</v>
+
+00:24:51.399 --> 00:25:15.759
+<v Hugo Mostard>Maar de praktijk leert dat eh eh dat eh in eh gateways en dergelijke nooit geïmplementeerd wordt. Zelfs als Kadaster en andere eh eh vergelijkbare eh eh organisaties erbij andere overheden erom vragen, dat komt er gewoon niet in. Eh dus dat is een eh een vrij dooie standaard zeg maar. Maar die van de BRO die vind ik wel intrigerend. Dus ik ben benieuwd wie die gesuggereerd heeft.</v>
+
+00:25:16.359 --> 00:25:17.559
+<v Stas Mironov>Die komt ook uit BRO zelf.</v>
+
+00:25:19.359 --> 00:25:28.059
+<v Stas Mironov>Ik ik heb wat van de BRO eh ook eh erop gezet, omdat we laatst daar een sessie ook over hadden. Eh bij eh Binnenlandse Zaken.</v>
+
+00:25:28.929 --> 00:25:43.539
+<v Stas Mironov>Eh maar ook in in de wat bredere zin ook in de context van de BRP, waar bijvoorbeeld laatst ook allerhande toestanden waren met eh eh de GGD's die informatie eh eh lekker hadden gehad.</v>
+
+00:25:43.539 --> 00:26:05.079
+<v Stas Mironov>Ehm zie ik wel brood in het inzichtelijk maken door afnemers van eh eh policies, toegangsbeleid die die zij implementeren, zodat je daar dan weer kan van kan beoordelen of je dat afdoende vindt om eh om informatie aan die partij te verstrekken.</v>
+
+00:26:05.079 --> 00:26:05.619
+<v Hugo Mostard>Ja.</v>
+
+00:26:06.129 --> 00:26:36.699
+<v Hugo Mostard>En bijzonder bij de BRP, omdat je dan zeg maar een wettelijke taak hebt waarop je als organisatie sowieso mag bevragen. Dus dan mag de BRP eigenlijk niet zeggen van wie binnen jouw organisatie vraagt dit. Je moet altijd teruggeven, want hè eh eh volgens de wettelijke taak mag die organisatie het bevragen. Maar tegelijkertijd wil je wel eh eh dat je kan aantonen als organisatie dat je je huis op orde hebt. Bij de BRO is het subtiel anders, want er is het niet per se een wettelijke taak waarbij je eh bij die gegevens mag. Het is meer een soort algemeen veiligheidsbelang waarom ze niet publiek worden getoond.</v>
+
+00:26:36.699 --> 00:27:02.499
+<v Hugo Mostard>Maar daar is het vooral heel lastig om in de landelijke voorziening achteraf nog in te bouwen dat er eh eh nou ja, gedetailleerd geautoriseerd wordt, want de zo is de hele landelijke voorziening nooit opgebouwd. Eh en tegelijkertijd is het ook eh zeg maar, zijn het ook type gegevens van het type ja, we vinden dat het eh eh vanwege nationale veiligheid niet meteen aan iedereen gegeven mag worden. Maar ja, als je op Google Maps ziet, dan vind je de meeste van die gegevens toch wel.</v>
+
+00:27:02.499 --> 00:27:06.609
+<v Hugo Mostard>Hè, dus het is het is ook een beetje een paarse krokodil. Dus eh daarmee zou het wel fijn zijn als de afnemers in ieder geval kunnen aantonen, nou, we laten alleen medewerkers waarvoor het zinnig is eh erbij.</v>
+
+00:27:06.609 --> 00:27:11.739
+<v Frank Terpstra>Ja, en je kan in ieder geval zeggen: I told you so. Ook al staat hij op Google Maps, maar ik heb toch in ieder geval duidelijk gemeld dat het niet mag.</v>
+
+00:27:11.739 --> 00:27:12.339
+<v Hugo Mostard>Ja.</v>
+
+00:27:13.539 --> 00:27:15.939
+<v Frank Terpstra>Maar Frank, daar gaat het toch niet over. Dit</v>
+
+00:27:15.939 --> 00:27:18.429
+<v Hugo Mostard>Nee, daar gaat het nu niet om hè. Dus het gaat het gaat erover of het toegangsbeleid interessant is.</v>
+
+00:27:18.429 --> 00:27:47.259
+<v Frank Terpstra>Nee, ik moest alleen even mijn frustratie kwijt van Ja, nee, ik snap ik wel, maar het is natuurlijk wel interessant om dat toegangsbeleid wel te kunnen modelleren. Ja. Nee, dat is zeker. En dat maakt het ook zeg maar voor de BRO interessant om dat te doen, omdat juist in de BRO er in de landelijke voorziening heel weinig middelen zijn om het af te dwingen. Als je dan bij de afnemer kan modelleren en kan aantonen dat je dat netjes op orde hebt, dan heb je toch in ieder geval het idee dat je je beleid een beetje op orde hebt, zeg maar.</v>
+
+00:27:47.259 --> 00:27:48.009
+<v Hugo Mostard>Ja.</v>
+
+00:27:48.009 --> 00:28:24.729
+<v Frank Terpstra>Ja. En je kan dus als als BRO dan wel weer in je voorwaardes opnemen dat je een gepubliceerde eh toegangsbeleid moet hebben. Ja, precies. Dus dan kan je in plaats van met techniek in de basis het met beleid doen, maar dat beleid wel weer controleerbaar maken. Dus vandaar dat ik er wel gecharmeerd was voornamelijk aan de afnemerkant, meer nog dan aan de eh landelijke voorziening kant.</v>
+
+00:28:24.729 --> 00:28:25.539
+<v Frank Terpstra>Ja.</v>
+
+00:28:39.669 --> 00:29:28.179
+<v Michiel Trimpe>Inderdaad. Vanuit de landelijke voorziening kant heeft BRO zelf dus aangegeven dat zij worstelen met het eh bronhouder versus versus ontsluitingspunt, dat zij vaak dan niet echt de bronhouder zijn en dat de bronhouder het toegangsbeleid zou moeten bepalen. Hm hm. En wat zij dan weer theoretisch af zouden moeten dwingen. Eh maar ja, dat dat presenteert een beetje het probleem, maar hoe dan? Eh dat is niet echt te doen. En dat zou interessant zijn om te modelleren als casus. Kan een bronhouder van de BRO, van de BRO, ehm toegangsbeleid opnemen dat in een nou, of een BRO register of een een register per bronhouder publiceren op zo'n manier dat de BRO het dan ook in de service in de toekomst wel netjes af kan gaan dwingen.</v>
+
+00:29:28.179 --> 00:29:28.929
+<v Hugo Mostard>Ja.</v>
+
+00:29:29.199 --> 00:29:44.739
+<v Michiel Trimpe>En ik denk dat we die dan met deze twee stickies beide op zich wel benoemd hebben. Dus de de geo-registraties is interessant, is net het GeoXACML probleem van het gebeurt niet. We weten dat het kan en het zou soms ook zijn moeten, maar we doen het gewoon niet. Eh hoe kunnen kan dit daarbij helpen?</v>
+
+00:30:06.289 --> 00:30:08.539
+<v Michiel Trimpe>waar ze liggen ook al mag je er gewoon vrolijk langs fietsen.</v>
+
+00:30:09.529 --> 00:30:15.319
+<v Marc de Boer>Precies. Dat dat eh en dat is aan hun om te bepalen of dat mag of niet en dat is niet aan de landelijke voorziening om dat te bepalen.</v>
+
+00:30:15.899 --> 00:30:22.959
+<v Michiel Trimpe>Ja. Precies. En dat vanuit dat aspect is was dat is het met voor het register toegangsbeleid wel interessant om te kijken of we dat kunnen modelleren.</v>
+
+00:30:23.509 --> 00:30:23.949
+<v Marc de Boer>Ja.</v>
+
+00:30:26.699 --> 00:30:27.399
+<v Michiel Trimpe>Oké.</v>
+
+00:30:27.979 --> 00:30:37.609
+<v Michiel Trimpe>Ehm nou, er wordt ondertussen weinig meer toegevoegd, zie ik worden hier. En ik denk dat op zich de discussie ook wel redelijk volledig is. Of zijn er nog vragen voor iemand?</v>
+
+00:30:40.899 --> 00:30:44.529
+<v Michiel Trimpe>NDW interpreteer ik als een een aanbod om mee te werken aan de modellering.</v>
+
+00:30:44.979 --> 00:30:46.599
+<v Michiel Trimpe>Dus... Volgens mij...</v>
+
+00:30:50.319 --> 00:30:50.979
+<v Onbekend>Yes, klopt.</v>
+
+00:30:51.639 --> 00:30:56.229
+<v Michiel Trimpe>Ja, precies. Nou, dan eh ga ik je daar een steekje in accepteren.</v>
+
+00:30:57.129 --> 00:31:02.949
+<v Michiel Trimpe>RWS trouwens, is dat hetzelfde bij...</v>
+
+00:31:03.579 --> 00:31:10.119
+<v Michiel Trimpe>Iemand van RWS in de call of wie heeft eh die sticky geplaatst?</v>
+
+00:31:18.529 --> 00:31:20.429
+<v Michiel Trimpe>Nee, oké. Nou, dan laten we het voor nu.</v>
+
+00:31:25.539 --> 00:31:32.139
+<v Michiel Trimpe>Nou, ik zag net in ieder geval bij de de use cases al interessant al driftig geschreven worden, dus dat is hartstikke mooi.</v>
+
+00:31:33.109 --> 00:31:40.039
+<v Michiel Trimpe>Ehm, en de use case is dan ja, welke use cases zouden we in moeten kunnen vullen met register toegangsbeleid?</v>
+
+00:31:40.699 --> 00:31:56.129
+<v Michiel Trimpe>Ehm, ik heb in de tekst hier specifiek op begeleid op toegangsbeleid geschreven, maar het kan ook een wat bredere use case zijn. Dus eh het moet gebruikt kunnen worden in, nou, door wat hier al staat, voor de voorwaarden bij het aangaan van een datadeelrelatie.</v>
+
+00:31:56.129 --> 00:31:59.009
+<v Michiel Trimpe>Dus het mag breder dan alleen deze tekst hier.</v>
+
+00:33:16.899 --> 00:33:31.029
+<v Marc de Boer>Michiel, ik weet niet hoe goed ik het hoe ik het zou moeten bewoorden, maar zeg dat er een wetswijziging komt of zoiets, dan zou je dat eigenlijk willen toetsen aan ja, alles wat in het in het toegangsbeleid staat beschreven.</v>
+
+00:33:31.629 --> 00:33:43.629
+<v Marc de Boer>En dat kan natuurlijk best grotendeels automatisch gebeuren. Welke eh organisaties, welke uitwisselingen hebben daar impact op.</v>
+
+00:33:49.449 --> 00:33:56.049
+<v Michiel Trimpe>Ja, dus bijvoorbeeld gewoon ja, dat is een hele mooie use case, precies zoals je het zegt, op de wetsaanpassing te toetsen aan het bestaand toegangsbeleid.</v>
+
+00:34:12.219 --> 00:34:30.009
+<v Michiel Trimpe>Eentje die ik van eh justitie weet is dat zij heel erg geïnteresseerd zijn in eh ja, voorbeeld, eigenlijk meer template overeenkomsten eh voor eh datadeling.</v>
+
+00:34:48.119 --> 00:35:11.519
+<v Michiel Trimpe>Vanuit justitie was er heel erg de wens om dat daar ook echt ehm ja, wetswijzigingen of eh convenanten of in ieder geval complexe contracten op afgesloten moeten worden op eh het register toegangsbeleid op kunnen gebruiken om eh ja, per standaard wetteksten te creëren. Dus dat je per standaard wettekst hebt die gekoppeld is aan een standaard eh stukje technisch toegangsbeleid.</v>
+
+00:35:12.119 --> 00:35:16.499
+<v Michiel Trimpe>En op die manier juridische standaardisatie te promoten.</v>
+
+00:36:30.349 --> 00:36:43.009
+<v Michiel Trimpe>Ik zie dat er weinig getypt wordt. Ehm, was er net een grote spurt van veel typen en nu niks. Dus dat denk ik wel dat wat hier staat eigenlijk alle use cases voor het register toegangsbeleid afdekt.</v>
+
+00:37:32.489 --> 00:37:43.919
+<v Michiel Trimpe>Oké, maar ik denk eh ik weet niet of het goed is dat als iedereen dit zo ziet dat men denkt eh ja, dit dekt eigenlijk wel de lading, dus dit zijn over het algemeen de use cases die we hiermee zouden willen adresseren.</v>
+
+00:38:02.099 --> 00:38:08.129
+<v Michiel Trimpe>Ja, dekt het allemaal duimpje omhoog of eh ja, ik weet het niet, ik zit te twijfelen. Wie wie brengt dat je zo?</v>
+
+00:38:15.899 --> 00:38:18.419
+<v Michiel Trimpe>Ja, nou, dan houden we het de laatste opmerking bij.</v>
+
+00:38:19.499 --> 00:38:31.109
+<v Michiel Trimpe>Ik ga even eh dit is wel ondersteuning bij opvolgen van security incidents.</v>
+
+00:38:31.109 --> 00:38:33.149
+<v Michiel Trimpe>Die zag ik nog wel.</v>
+
+00:38:35.429 --> 00:38:36.149
+<v Michiel Trimpe>Oké.</v>
+
+00:38:37.229 --> 00:38:52.019
+<v Michiel Trimpe>Ehm, dan hebben we ook nog de de de functionele vereisten. Ehm, er zit vaak al een beetje in de use case in de use cases verwerkt. Eh maar hier wil ik ook ruimte laten voor zeg maar andersoortige en mogelijk ook dus technische vereisten waarvan je denkt: hé,</v>
+
+00:38:52.019 --> 00:39:18.029
+<v Michiel Trimpe>hier moet het toegangsbeleid wel aan doen, eh aan voldoen. Dus ehm een voorbeeld is eh ik wil dat het het federeerbaar maken. Dus dat eh eh beleid eh dus het hiërarchisch opgebouwd kan zijn en dat je het als een centraal punt in kan zien.</v>
+
+00:39:18.029 --> 00:39:31.319
+<v Gideon Zegwaard>Beleid kan gefedereerd worden zoals ODRL heet.</v>
+
+00:39:31.319 --> 00:39:52.229
+<v Michiel Trimpe>Beleid opgenomen gekoppeld met ODRL.</v>
+
+00:40:47.889 --> 00:40:51.589
+<v Hugo Mostard>Beleidsregels zijn identificeerbaar. Is dat hetzelfde als herleidbaar?</v>
+
+00:40:53.539 --> 00:40:54.299
+<v Stas Mironov>Nee.</v>
+
+00:40:55.209 --> 00:40:55.729
+<v Hugo Mostard>Oké.</v>
+
+00:40:56.549 --> 00:40:58.219
+<v Stas Mironov>Dus die mag erbij.</v>
+
+00:40:59.229 --> 00:40:59.949
+<v Hugo Mostard>Bij deze.</v>
+
+00:42:19.109 --> 00:42:25.049
+<v Frank Terpstra>Wat betekent voor jou herleidbaar? Dus en dat wat nu getypt wordt, koppelbaar aan wettelijke vereisten of wat jij dan in andere zin?</v>
+
+00:42:25.819 --> 00:42:27.709
+<v Hugo Mostard>Maar dat ben ik nu aan het typen.</v>
+
+00:42:28.269 --> 00:42:33.009
+<v Frank Terpstra>Ja, en ze dus wat betekent herleidbaar? Nou, we zullen we dubbelen.</v>
+
+00:42:33.729 --> 00:42:36.919
+<v Michiel Trimpe>Ja, Hugo, wat betekent beleid herleidbaar voor jou?</v>
+
+00:42:37.769 --> 00:42:43.839
+<v Hugo Mostard>Eh ja, wat de achter achterliggende gedachte is. Dus eh of dat wettelijke regels er zijn of iets dergelijks.</v>
+
+00:42:44.499 --> 00:42:45.149
+<v Frank Terpstra>Oké.</v>
+
+00:45:21.939 --> 00:45:23.639
+<v Michiel Trimpe>Ik zit even te kijken.</v>
+
+00:45:23.639 --> 00:45:28.029
+<v Michiel Trimpe>Eh...</v>
+
+00:45:28.029 --> 00:45:46.339
+<v Gideon Zegwaard>Toegang, dat is de en een een punt wat ook vaak benoemd wordt is eh doelbinding bijvoorbeeld.</v>
+
+00:45:46.859 --> 00:45:49.919
+<v Michiel Trimpe>Heb ik genoeg.</v>
+
+00:45:50.559 --> 00:45:51.019
+<v Gideon Zegwaard>Ja.</v>
+
+00:45:52.449 --> 00:45:54.009
+<v Michiel Trimpe>Middelste onderaan.</v>
+
+00:45:54.919 --> 00:45:56.619
+<v Gideon Zegwaard>Middelste onderaan.</v>
+
+00:45:57.419 --> 00:45:59.109
+<v Michiel Trimpe>Doel toegang duidelijk.</v>
+
+00:45:59.519 --> 00:45:59.919
+<v Gideon Zegwaard>Ja.</v>
+
+00:46:01.889 --> 00:46:02.489
+<v Michiel Trimpe>Ja.</v>
+
+00:46:04.389 --> 00:46:09.849
+<v Gideon Zegwaard>Ja, dus doelbinding van verwerking zit erachter. Ja.</v>
+
+00:46:14.499 --> 00:46:23.619
+<v Michiel Trimpe>Ja, en dan moeten we denk ik ook waarschijnlijk technisch kijken naar de de relatie met dus bijvoorbeeld algoritme register, register van verwerkingsactiviteiten.</v>
+
+00:46:24.219 --> 00:46:24.719
+<v Gideon Zegwaard>Ja.</v>
+
+00:46:26.709 --> 00:46:39.549
+<v Michiel Trimpe>Michiel, in in de FDE hebben we ook de AuthZEN standaard eh zeg maar. Hè, ehm moet daar eventueel een koppelingen mee gelegd worden of is daar is dat een te technische vereiste en zoiets?</v>
+
+00:46:40.489 --> 00:46:53.989
+<v Gideon Zegwaard>Eh nee, dat is zeker niet te technisch. Eh dus dat willen we inderdaad, dus je hebt die beleidsmachine leesbaar. En AuthZEN is eh een groot gedeelte van de basis daarvoor.</v>
+
+00:46:54.499 --> 00:46:55.519
+<v Michiel Trimpe>Dus dat is de...</v>
+
+00:46:59.159 --> 00:47:01.319
+<v Igor van Haren>Even een verhelderende vraag, Michiel.</v>
+
+00:47:02.669 --> 00:47:13.799
+<v Igor van Haren>Ik zie uit de functionele vereisten die hier worden opgeschreven, zie ik eigenlijk twee dingen. Ik zie een register waar je naar verwijst als je toegang wil geven of niet.</v>
+
+00:47:13.799 --> 00:47:22.999
+<v Igor van Haren>Maar ik zie ook wel wat enforcement-achtige dingen. Gaat dit gaat dit register nu wel of niet toegang enforcen?</v>
+
+00:47:25.199 --> 00:47:28.169
+<v Gideon Zegwaard>Nee, het register gaat sowieso geen toegang enforcen.</v>
+
+00:47:29.179 --> 00:47:39.189
+<v Gideon Zegwaard>Het kan zijn dat je als enforcement point ervoor kiest de machineleesbare beleidsregels te gebruiken om te enforcen.</v>
+
+00:47:43.439 --> 00:47:50.939
+<v Igor van Haren>Ja, ik ik heb nog machineleesbaar en machine executeerbaar eh nog als verschillende geïntroduceerd, want...</v>
+
+00:47:51.279 --> 00:47:52.129
+<v Gideon Zegwaard>Ja, precies.</v>
+
+00:47:52.129 --> 00:47:58.129
+<v Igor van Haren>Ja, de de tweede kolom eh één na onderste.</v>
+
+00:47:58.129 --> 00:47:59.219
+<v Gideon Zegwaard>Ja, die is nog precies inderdaad.</v>
+
+00:47:59.609 --> 00:48:03.959
+<v Rens Kievit>Ik zou het wel mooi vinden. Ik weet niet of of...</v>
+
+00:48:03.959 --> 00:48:06.129
+<v Igor van Haren>Ja, maar dan komen we wel heel dicht bij policies terecht.</v>
+
+00:48:06.129 --> 00:48:06.829
+<v Rens Kievit>Ja, ja.</v>
+
+00:48:07.129 --> 00:48:11.029
+<v Igor van Haren>En terwijl voor mijn beeld is dit veel juridischer dan eh policies.</v>
+
+00:48:11.529 --> 00:48:12.129
+<v Rens Kievit>Oké.</v>
+
+00:48:13.129 --> 00:48:16.429
+<v Gideon Zegwaard>Het idee is wel dat dit de link moet kunnen leggen.</v>
+
+00:48:16.429 --> 00:48:20.529
+<v Gideon Zegwaard>Dus dat...</v>
+
+00:48:20.529 --> 00:48:21.229
+<v Igor van Haren>De link leggen, ja.</v>
+
+00:48:21.229 --> 00:48:31.629
+<v Gideon Zegwaard>Ja, het is één van de belangrijkste punten zal zijn: hoe kunnen wij de link tussen de juridische policies en de technische policies zo betekenisvol mogelijk faciliteren hiermee?</v>
+
+00:48:32.429 --> 00:48:33.829
+<v Igor van Haren>En een contract.</v>
+
+00:48:34.529 --> 00:48:41.829
+<v Igor van Haren>Je hebt een policy, je hebt het beleid, je hebt een policy, je hebt een contract. En die drie-eenheid die wil je in met elkaar in verband blijven kunnen brengen.</v>
+
+00:48:45.929 --> 00:48:50.029
+<v Igor van Haren>Maar de policy enforced, de policy is enforceable, zeg maar.</v>
+
+00:48:52.129 --> 00:48:56.329
+<v Igor van Haren>Ik bedoel, is het beleidsuitvoering of is het beleidstoetsing? Want dat is wel een heel belangrijk verschil.</v>
+
+00:48:57.429 --> 00:49:12.029
+<v Gideon Zegwaard>Dat dat is een definitie dingetje, want de policy wordt ook nog wel eens eh toegangsbeleid en policy worden nog wel eens als een Nederlandse en Engelse vertalingen van hetzelfde eh gebruikt. Dus daar moeten we qua definitie eh moeten we daar ook duidelijkheid in scheppen.</v>
+
+00:49:12.729 --> 00:49:18.129
+<v Igor van Haren>Ja. Dit kan ons wel in de in de staart bijten met eh met vertalen ook enzo.</v>
+
+00:49:20.029 --> 00:49:26.529
+<v Michiel Trimpe>Is dit ook eh de policy administration point als we het zo over PEP, PDP's en dergelijke dingen hebben of niet?</v>
+
+00:49:27.629 --> 00:49:36.329
+<v Gideon Zegwaard>Nee. Ehm een policy administration point impliceert ook eh edit functionaliteit, dus updates. Ja, en dat is in ieder geval out of scope wat mij betreft.</v>
+
+00:49:36.829 --> 00:49:45.129
+<v Michiel Trimpe>Ja, ik zou het ook out of scope houden. Ik zou dit meer het juridische stuk en de pap, denk ik, en administration point dan meer de technische kant.</v>
+
+00:50:09.111 --> 00:50:18.211
+<v Michiel Trimpe>heeft gewoon twee aspecten. Dat heeft het het het eh het juridische mensleesbare aspect en het heeft het machine executeerbare aspect en daar moeten we duidelijk in worden wat het is.</v>
+
+00:50:18.211 --> 00:50:26.711
+<v Michiel Trimpe>Moet in ieder geval de verbinding kunnen leggen. En wie weet kan het wel allebei in hetzelfde register, maar dat moet denk ik nog blijken in de uitwerking.</v>
+
+00:50:27.243 --> 00:50:35.133
+<v Rens Kievit>Ja, want er zit een soort hiërarchie in natuurlijk. Een policy is veel specifieker. Tenminste op dit moment technisch gezien is een policy veel specifieker dan toegangsbeleid.</v>
+
+00:50:35.133 --> 00:50:38.823
+<v Rens Kievit>Wie schrijft toegangsbeleid? Een jurist, denk ik.</v>
+
+00:50:40.481 --> 00:50:48.201
+<v Michiel Trimpe>We moeten heel goed op de terminologie gaan letten, want policy is letterlijk vertaald natuurlijk gewoon beleid. Ja. Dus dat maakt het zeker als het een echte standaard wordt.</v>
+
+00:50:48.201 --> 00:50:49.011
+<v Rens Kievit>Ja, precies.</v>
+
+00:50:49.011 --> 00:50:57.651
+<v Michiel Trimpe>Ehm dus onze interpretatie als Nederlanders van in deze context van het woord policy is heel specifiek en dat is technisch policy, maar Ja.</v>
+
+00:50:58.821 --> 00:51:02.041
+<v Hugo Mostard>Ik denk dat de granulariteit ook een dingetje is.</v>
+
+00:51:02.811 --> 00:51:05.141
+<v Michiel Trimpe>Ja, dat is een heel groot ding hier.</v>
+
+00:51:05.741 --> 00:51:14.071
+<v Gideon Zegwaard>En ik ik heb daarom ook in één van die dingetjes eh dat beleid dus de derde van boven op de tweede kolom.</v>
+
+00:51:14.071 --> 00:51:20.611
+<v Gideon Zegwaard>Dat is dat getrapt opbouwen, want ik denk dat dat vaak de vorm zal zijn. Dus het begint met een iets algemeens wat alleen mensleesbaar is.</v>
+
+00:51:20.611 --> 00:51:29.021
+<v Gideon Zegwaard>En daar liggen dan onder eh wordt het steeds moet het specifieker kunnen worden totdat het machine executeerbaar is.</v>
+
+00:51:43.141 --> 00:51:57.291
+<v Michiel Trimpe>Precies, dus daar eh daar zal veel van ehm dus de hoe je omgaat met de hiërarchie en de relatering en de granulariteit zal heel pittig zijn.</v>
+
+00:51:57.291 --> 00:52:08.201
+<v Michiel Trimpe>Want tenminste dat kan je heel pittig maken. En ik denk dat daarvoor, dat is precies waarom ik ook die use cases als eerst wilde zetten, dat we heel erg moeten gaan kijken als we inderdaad een representatieve set van use cases hebben, hoe kunnen we dat netjes en effectief modelleren?</v>
+
+00:52:09.131 --> 00:52:17.301
+<v Michiel Trimpe>En dat is dan ook de leidraad voor nou ja, de de hiërarchie, de getraptheid en de granulariteit die we willen gaan opzetten.</v>
+
+00:52:18.671 --> 00:52:22.561
+<v Michiel Trimpe>Oké. Ehm even kijken naar de tijd. Hebben we</v>
+
+00:52:22.561 --> 00:52:31.021
+<v Michiel Trimpe>eh nou, ik denk dat we de de basis ook wel goed gelegd hebben. Zijn er nog punten waarvan we denken: hé, dit moeten we echt nog even benoemen voordat we naar de afronding gaan?</v>
+
+00:52:37.913 --> 00:52:47.883
+<v Rens Kievit>Misschien moeten we wel een keer gaan prioriteren op de functionele vereisten. Want als we ze allemaal eh aan gaan voldoen, dan wordt het misschien wel een eh een erg dure oplossing.</v>
+
+00:52:48.421 --> 00:53:01.991
+<v Michiel Trimpe>Nee, dat oké. Dat is sowieso. Het is denk ik sowieso niet de verwachting dat we alles wat hier staat op kunnen pakken. Ehm maar inderdaad prioritering, dat dat is ook inderdaad of de eerste en scope, wat je wat je echt wil bereiken.</v>
+
+00:53:02.503 --> 00:53:09.103
+<v Rens Kievit>Ik zie een hele duidelijke parallel met eh de toepasbare regels in de omgevingswet in de DSO.</v>
+
+00:53:09.813 --> 00:53:18.003
+<v Rens Kievit>Dat is een dan dat is dan een soort toegang, dat is geen toegang, maar het is krijg je wel of niet een vergunning. Of eh moet je een vergunning aanvragen of krijg je hem? En dat is een heel ingewikkeld ding.</v>
+
+00:53:18.813 --> 00:53:25.773
+<v Rens Kievit>En waar je van juridische tekst naar uitvoerbare hè, machine uitvoerbare code gaat.</v>
+
+00:53:26.373 --> 00:53:47.163
+<v Rens Kievit>Nou, als we dat overnieuw gaan doen, dan eh is dat wel best wel een dat is best wel een ingewikkeld ding en lastig te implementeren ook door veel partijen. Waardoor je in de DSO al snel bij gemeente Bloemkoolstraat deel al snel eindigt in bel uw gemeente, want daar hebben ze dan gewoon geen regels voor kunnen vaststellen.</v>
+
+00:53:49.193 --> 00:53:55.203
+<v Rens Kievit>Dus er zit ook wel een soort van ambitie in van wat wil je wel en wat wil je niet met de register kunnen ondersteunen.</v>
+
+00:53:55.801 --> 00:53:57.391
+<v Michiel Trimpe>Ja.</v>
+
+00:53:57.941 --> 00:54:12.181
+<v Michiel Trimpe>Oké. Eh ja, ik zit te denken wat of dat gelijk is voor voor een volgende sessie om als eerste in te plannen of dat misschien een beetje vroeg is om ambities te doen.</v>
+
+00:54:12.871 --> 00:54:26.181
+<v Michiel Trimpe>Ehm ik denk we hebben nog eh drie minuten, dus ik denk dat eh waarschijnlijk ik dit eventjes wegneem en dan probeer een eh een goed onderwerp voor de eerstvolgende sessie te bedenken. Ik denk dat het ons niet in twee minuten lukt nu.</v>
+
+00:54:28.021 --> 00:54:46.681
+<v Michiel Trimpe>Ehm even dan voor de algemene drie minuten. Ehm ja, eh de eerste kick-off. Ehm die formaat of nou ja, degene die formaat zelf formaat. Zijn er nog dingen die je ons zou laten willen weten? Opmerkingen, nabranders. Eh mag hier op het scherm, mag ook gewoon eh verbaal nu.</v>
+
+00:55:04.418 --> 00:55:06.128
+<v Stas Mironov>Stilte.</v>
+
+00:55:11.978 --> 00:55:17.418
+<v Stas Mironov>Ik vind het wel weer gewoon fijn eh en eh goed dat het eh dat het weer doorgaat eh. Dat was wel als opmerking nog geven.</v>
+
+00:55:18.451 --> 00:55:30.411
+<v Michiel Trimpe>Ja, dankjewel. Het is ook weer goed om terug te zijn. Het voelt ergens ook gek om net te doen alsof we gewoon doorstomen alsof er niks gebeurd is, terwijl het eigenlijk ergens ook wel als een heel heel nieuw begin voelt. Dat even benoemd.</v>
+
+00:55:31.501 --> 00:55:34.021
+<v Michiel Trimpe>Maar ik zie jou nog even aangaan. Wil je nog iets zeggen in de laatste minuut?</v>
+
+00:55:36.219 --> 00:55:44.919
+<v Marc de Boer>Nee hoor, likewise. Het is eh goed om terug te zijn en eh een vreemde overstap zo weer, maar dank ook eh Michiel, je hebt het goed opgezet weer.</v>
+
+00:55:47.101 --> 00:55:48.431
+<v Michiel Trimpe>Nou, dan eh</v>
