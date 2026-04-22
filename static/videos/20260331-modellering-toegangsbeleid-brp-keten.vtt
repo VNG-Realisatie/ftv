@@ -1,0 +1,1393 @@
+WEBVTT
+
+00:00:02.465 --> 00:00:05.885
+<v Michiel Trimpe>was iets te laat.</v>
+
+00:00:08.215 --> 00:00:11.995
+<v Gideon Zegwaard>Ik denk uit de stilte dat niemand er moeite mee heeft. Dus eh, let's go.</v>
+
+00:00:12.595 --> 00:00:17.155
+<v Michiel Trimpe>Yes, hij staat aan. Dus dan eh kunnen we het duur maken.</v>
+
+00:00:17.465 --> 00:00:25.395
+<v Hugo Mostard>Goedemorgen. Nou, welkom allemaal. Eh, het is eh alweer de 18e werkgroep van Federatieve Toegangsverlening ondertussen.</v>
+
+00:00:26.425 --> 00:00:33.015
+<v Hugo Mostard>Dus we zijn al lang bezig. En ehm nou, dit is de agenda van vandaag.</v>
+
+00:00:33.635 --> 00:00:44.425
+<v Hugo Mostard>En vandaag gaan we eh nou ja, kijken naar onze poging om het toegangsbeleid van de BRP-keten te modelleren op basis van ODRL.</v>
+
+00:00:45.625 --> 00:00:55.205
+<v Hugo Mostard>Eh dus de vorige keer hebben we ja, allerlei verschillende eh publieke toegangsbeleiden verkend. En was de conclusie: let's get down to it en laten we er eentje proberen.</v>
+
+00:00:55.825 --> 00:01:05.895
+<v Hugo Mostard>En met de BRP als eh zeg maar het grote voorbeeld die ook uit de evaluatie kwam als degene die het tussen aanhalingstekens in dit eh aspect het beste op orde hebben.</v>
+
+00:01:06.385 --> 00:01:16.635
+<v Hugo Mostard>Dus daar heb ik nu een poging voor gedaan. Ehm en daar gaan we het vandaag over hebben. Maar even naar de agenda terug. Eh laten we beginnen met de welkomst en kennismaking.</v>
+
+00:01:17.965 --> 00:01:23.635
+<v Hugo Mostard>Ehm want volgens mij zag ik een aantal nieuwe namen langskomen.</v>
+
+00:01:27.515 --> 00:01:34.325
+<v Hugo Mostard>Kijken. In ieder geval Karl. Even voor de werkgroep nieuw?</v>
+
+00:01:35.195 --> 00:01:38.435
+<v Karl de Boer>Nou, weet ik niet. Misschien heb ik ook in de eerste meeting gezeten. Dat weet ik niet meer.</v>
+
+00:01:38.435 --> 00:01:51.215
+<v Karl de Boer>Ehm Ik ben uitgenodigd door Michiel. Oh trouwens, ik ben eh nu een soort van zelfstandig softwareontwikkeling, ontwikkelaar. Ik ben bezig met een BRP API gateway waar ook inderdaad doelbinding en filtering eh een rol speelt.</v>
+
+00:01:51.755 --> 00:02:02.125
+<v Karl de Boer>Dus dat was mijn concrete interesse. En ehm ja, dus eh en bekend dus met eh met BRP toegang in het algemeen.</v>
+
+00:02:04.885 --> 00:02:07.115
+<v Hugo Mostard>Ja, super. Welkom in de groep.</v>
+
+00:02:09.615 --> 00:02:18.125
+<v Hugo Mostard>Kijk en een aantal terugkerende gezichten. Eh... Volgens mij is er René, ben jij ook voor het eerst aanwezig, toch?</v>
+
+00:02:20.535 --> 00:02:25.075
+<v Rens Kievit>Dat klopt. Ik eh werd getipt door een collega eh van DUO.</v>
+
+00:02:25.075 --> 00:02:38.115
+<v Rens Kievit>Ehm ik ben een gegevensarchitect bij DUO en zit ook in de werkgroep data bij de bron. En dit is wel een interessante thematiek.</v>
+
+00:02:38.585 --> 00:02:43.035
+<v Hugo Mostard>Oké, top. Is een mooie aanvulling op de groep. Dank je.</v>
+
+00:02:48.545 --> 00:02:57.515
+<v Hugo Mostard>Oké. Yes, eh ja, er is volgens mij allemaal bekende gezichten. Verder. Dan start met de inhoud.</v>
+
+00:02:58.625 --> 00:03:04.025
+<v Hugo Mostard>Ehm, allereerst een een algemene update FTV. Geen?</v>
+
+00:03:05.445 --> 00:03:20.135
+<v Hans Schevers>Ehm... Even kijken. Eh... is wel leuk om eh te delen. Ehm er is vanuit eh Common Ground, koplopers, G4, met Utrecht en Den Haag als trekkers...</v>
+
+00:03:20.705 --> 00:03:42.155
+<v Hans Schevers>...het verzoek gekomen om eh FTV en ook Open FTV, de referentie-implementatie, eh geschikt te maken als basiscomponent van Common Ground. Daar is een eh subsidie op verleend...</v>
+
+00:03:42.155 --> 00:04:02.115
+<v Hans Schevers>...VNG heeft subsidie namens BZK. Ehm met een groepje en ik eh leid dat. Eh echt een concrete implementatie van Open FTV voor het eh klantcontactcentrum van de gemeente Utrecht eh inzetten.</v>
+
+00:04:02.535 --> 00:04:20.255
+<v Hans Schevers>Kijken hoe ver we komen. Die hebben al een lange uitdaging met eh een grote hoeveelheid medewerkers en een grote hoeveelheid zaaktypes en eh al jaren met vormen van eh role-based access control en eh autorisatiemodules zoals die in de verschillende componenten zitten.</v>
+
+00:04:22.525 --> 00:04:43.005
+<v Hans Schevers>We hebben een pilot vorig jaar gedaan om te bewijzen dat we in alle lagen van het vijflagenmodel van Common Ground autorisatie van dezelfde module af kon komen. Nou, dat is in theorie bewezen, dus de opdracht is eh maak het dit jaar praktijk. Dus dat eh zijn we aan het doen.</v>
+
+00:04:49.335 --> 00:04:56.325
+<v Hugo Mostard>Ja, en dan houden we het af en toe op de hoogte bij het Common Ground Fieldlab voor eh bijvoorbeeld ontmoet. Ja.</v>
+
+00:04:57.785 --> 00:05:09.215
+<v Hugo Mostard>Ehm... Ja, ja, en eh verder denk ik nog geen FTV project updates. Dus dat eh daarmee ronden we dan de algemene update FTV af voor vandaag.</v>
+
+00:05:10.325 --> 00:05:15.235
+<v Hugo Mostard>Eh en gaan we over naar eh de inhoud. Ehm, ik dacht...</v>
+
+00:05:15.235 --> 00:05:25.345
+<v Hugo Mostard>...eh ter voorbereiding... Ik ja, we hebben het vorige keer over benoemd en het stond op de evaluatielijst. Het BRP en de autorisatiebesluiten.</v>
+
+00:05:25.345 --> 00:05:38.105
+<v Hugo Mostard>Ik denk dat niet iedereen in de werkgroep daar echt gedetailleerd eh overzicht of inzicht in heeft.</v>
+
+00:05:38.725 --> 00:05:45.155
+<v Hugo Mostard>Kijk, zijn er... van de Gideon heeft hier veel ervaring mee. Hans weet natuurlijk hier alles van.</v>
+
+00:05:46.125 --> 00:06:01.015
+<v Hugo Mostard>Eh dus eh ik ben hier geen expert in. Ik heb mijn best gedaan het te proberen in te, zeg maar, in te lezen en in te werken, maar corrigeer me en breid eh breid me vooral uit waar relevant. Ik zal je aanvullen als het nodig is.</v>
+
+00:06:01.545 --> 00:06:02.515
+<v Hans Hendrikman>Super.</v>
+
+00:06:03.325 --> 00:06:27.515
+<v Hugo Mostard>Ehm nou, de eh ja, de BRP, dus de de landelijke voorziening BRP eh wordt gedefinieerd in een eh logisch ontwerp. Dus met een logisch ontwerp... eh is eigenlijk de de systeemspecificatie van het RvIG voor de BRP. En die beschrijft de de interfaces, de berichten en de voorwaarden voor gegevensuitwisseling in heel veel detail.</v>
+
+00:06:28.445 --> 00:06:44.595
+<v Hugo Mostard>Eh elk kwartaal komt er een nieuwe versie uit. Eh dat is voor mij ook nieuw. Ik zat al heel lang naar de versie van 2024 te kijken. Dus eh maar hou daar rekening mee, deze is in ontwikkeling en elk kwartaal eh komt er een nieuwe versie uit waar het alle wijzigingen netjes in opgenomen zijn.</v>
+
+00:06:45.345 --> 00:06:55.625
+<v Hugo Mostard>En ehm in het eh logisch ontwerp BRP wordt eh ja, eigenlijk het het beleidsregister, dus het register toegangsbeleid uitgeschreven.</v>
+
+00:06:56.455 --> 00:07:04.025
+<v Hugo Mostard>Eh wat nog meer dan dat, dus ook wel de werking van het systeem, maar alles waar wij het over gaan hebben wordt ook heel duidelijk opgenomen.</v>
+
+00:07:05.955 --> 00:07:15.155
+<v Hugo Mostard>Eh als je kijkt naar het datamodel, heb je als eerste belangrijk om te weten de persoonslijst, PL. Dus die afkorting zie je soms wel eens langskomen.</v>
+
+00:07:15.785 --> 00:07:22.525
+<v Hugo Mostard>Eh maar dat is dus eigenlijk de de de lijst van gegevens over een persoon. Eh met een aantal categorieën.</v>
+
+00:07:23.235 --> 00:07:36.005
+<v Hugo Mostard>Welke categorieën van gegevensmodellen hebben we? Hier. Eh in een categorie zitten weer groepen. En in een groep zitten elementen of rubrieken.</v>
+
+00:07:36.535 --> 00:07:48.545
+<v Hugo Mostard>Dus je hebt bijvoorbeeld eh de de categorie ouder 1 en dan de groep naam en het element eh geslachtsnaam, voor achternaam is denk ik niet.</v>
+
+00:07:49.505 --> 00:07:52.115
+<v Hugo Mostard>Eh en die hebben dan een rubrieknummer.</v>
+
+00:07:57.245 --> 00:08:15.245
+<v Hugo Mostard>Ehm nou, daarbovenop eh is een autorisatiemodel eh ingericht. Autorisatie komt echt vanuit een wettelijke basis. Dus hier zijn wetten over. Die leggen de doelbinding vast, eh beoordelen de proportionaliteit. En wanneer dit juridische proces is doorlopen, wordt er dan een autorisatiebesluit genomen.</v>
+
+00:08:15.935 --> 00:08:36.115
+<v Hugo Mostard>Eh dat is dus eh dat is dan niet bij de meeste voorbeelden van register toegangsbeleid zijn, maar hier wordt het dus ook echt gepubliceerd in de Staatscourant. Eh en wat al niet meer zijn, welke afnemer, welke rubrieken, welke koppelvlakken, et cetera. En wat voor ons heel relevant is, wordt het dan technisch vertaald in tabel 35, zoals dat dan genoemd wordt.</v>
+
+00:08:36.585 --> 00:08:43.725
+<v Hugo Mostard>En in tabel 35, de autorisatietabel... Gideon?</v>
+
+00:08:46.785 --> 00:08:52.155
+<v Gideon Zegwaard>Ja, je je je zei eh van waar het technisch interessant wordt op de vorige sheet.</v>
+
+00:08:52.725 --> 00:09:02.995
+<v Gideon Zegwaard>Als je eentje teruggaat. Volgens mij is dit ook al interessant, want hier staat, dat is volgens mij ook al toegangsbeleid. Namelijk dat je eh een wettelijke basis moet hebben, dat je een doelbinding moet hebben en eh dat de proportionaliteit eh wordt toegepast.</v>
+
+00:09:03.005 --> 00:09:17.815
+<v Gideon Zegwaard>dat je een doelbinding moet hebben en eh dat de proportionaliteit eh wordt toegepast.</v>
+
+00:09:19.355 --> 00:09:22.155
+<v Gideon Zegwaard>Dat wilde ik nog even eh benadrukken.</v>
+
+00:09:22.645 --> 00:09:24.025
+<v Hugo Mostard>Ik sla hem namelijk niet op.</v>
+
+00:09:24.515 --> 00:09:29.135
+<v Hans Hendrikman>Anders wil ik er reageren hoor. Ja, ik sluit me aan bij Gideon.</v>
+
+00:09:36.315 --> 00:09:50.525
+<v Hugo Mostard>Ja, oké. Ehm, ik denk dat dat dat we dat mooi later terug kunnen koppelen, zeg maar naar wat ik eh hiervan heb geprobeerd te brouwen in ODRL en dat we kunnen kijken: hé, hoe kunnen we dit aspect dan daar ook in meenemen?</v>
+
+00:09:52.325 --> 00:09:57.255
+<v Hugo Mostard>Dat is dan denk ik ook je je feedback waar je op wilt eh hint op, Gideon. Dus van dit...</v>
+
+00:10:11.231 --> 00:10:11.811
+<v Michiel Trimpe>de BRP.</v>
+
+00:10:11.811 --> 00:10:22.081
+<v Michiel Trimpe>En dan zou ik verwachten, hè, dus dit is heel overzichtelijk. Ehm en dit zijn de stappen die je moet doorlopen. Daar staat uitgewerkt in het logisch ontwerp BRP hoe dat precies werkt.</v>
+
+00:10:22.081 --> 00:10:33.001
+<v Michiel Trimpe>Eh nou ja, zo'n soort eh ingang zou ik ook eh eh in de catalogus en dan bij voorkeur in de vorm van ODRL eh verwachten.</v>
+
+00:10:33.001 --> 00:10:39.061
+<v Michiel Trimpe>Dus dat er toegangsbeleid is die op gebaseerd die je verwijst naar de correcte informatie om dat invulling te geven.</v>
+
+00:10:39.061 --> 00:10:41.011
+<v Michiel Trimpe>Dat.</v>
+
+00:10:42.458 --> 00:10:50.958
+<v Rens Kievit>Oké, en dan hebben we straks zeker nog een haakje waar we dat op op kunnen hangen, want ik heb hetzelfde commentaar als een uitdaging benoemd voor zeg maar het gedeeld technisch beleid.</v>
+
+00:10:50.958 --> 00:10:57.398
+<v Rens Kievit>Dus eh bijvoorbeeld het het moet altijd via MTLS of via, ik weet niet of het zo is, maar via Diginetwerk of iets dergelijks.</v>
+
+00:10:57.398 --> 00:11:07.038
+<v Rens Kievit>Dat is eigenlijk dezelfde feedback dat we willen ook dit soort generieke autorisatievereisten op kunnen nemen in het toegangsbeleid.</v>
+
+00:11:07.728 --> 00:11:11.268
+<v Rens Kievit>Dat is me net nog niet gelukt in wat ik nu opgezet heb, dus dat is een.</v>
+
+00:11:11.691 --> 00:11:12.081
+<v Michiel Trimpe>Ja.</v>
+
+00:11:12.081 --> 00:11:17.841
+<v Rens Kievit>punt wat niet alleen technisch, maar ook op het zeg maar logische en juridische stuk speelt.</v>
+
+00:11:18.231 --> 00:11:21.931
+<v Michiel Trimpe>Ehm.</v>
+
+00:11:22.561 --> 00:11:39.001
+<v Michiel Trimpe>Nou, even een korter overzicht dan eh voor de autorisatietabel. Wat staat erin? Eigenlijk misschien beter is dat ik een nieuwe tab openen om eventjes eh de tabel 35 zoekpagina te laten zien.</v>
+
+00:11:39.811 --> 00:11:44.011
+<v Michiel Trimpe>Dus de de er is een nette zoekpagina voor de tabel 35.</v>
+
+00:11:44.751 --> 00:11:53.111
+<v Michiel Trimpe>Eh en daar kan je dan nou, afnemers in eh et cetera, historie zo terug zoeken en dan kan je dus een</v>
+
+00:11:53.601 --> 00:11:58.641
+<v Michiel Trimpe>autorisatiebesluit inzien. Dat ziet er dan zo uit.</v>
+
+00:11:59.591 --> 00:12:07.821
+<v Michiel Trimpe>Dus dit is een eh PDF document met de meldingen die hier zou kunnen worden. Kleine kleine correctie.</v>
+
+00:12:08.281 --> 00:12:13.621
+<v Spreker (Ruimte DR)>Ehm je ziet op dit moment niet het autorisatiebesluit, maar je ziet het resultaat van het autorisatiebesluit.</v>
+
+00:12:14.471 --> 00:12:23.031
+<v Spreker (Ruimte DR)>En dat is eigenlijk een lijst met opsomming van elementen, dus eh categorieën en eh dergelijke waar je uiteindelijk recht op hebt.</v>
+
+00:12:23.361 --> 00:12:23.901
+<v Michiel Trimpe>Oké.</v>
+
+00:12:26.791 --> 00:12:30.931
+<v Spreker (Ruimte DR)>Dus dit is niet het autorisatiebesluit. Dit is het uitvloeisel van het autorisatiebesluit.</v>
+
+00:12:31.321 --> 00:12:34.221
+<v Michiel Trimpe>Dus het besluit zelf is een heel lang document.</v>
+
+00:12:34.731 --> 00:12:38.601
+<v Spreker (Ruimte DR)>Ja, en het autorisatiebesluit zelf is een eh is een juridisch document.</v>
+
+00:12:39.111 --> 00:12:40.011
+<v Michiel Trimpe>Ja.</v>
+
+00:12:40.011 --> 00:12:47.111
+<v Michiel Trimpe>Oké, en die relatie daarvan is hier nog niet direct van te vinden, maar die zouden we dan waarschijnlijk via ODRL wel op willen nemen.</v>
+
+00:12:49.991 --> 00:12:53.641
+<v Michiel Trimpe>Inderdaad, die had ik ook, dat dat is dus iets wat ik dus ook nog niet gevonden heb.</v>
+
+00:12:53.641 --> 00:12:55.941
+<v Michiel Trimpe>Dus.</v>
+
+00:13:01.761 --> 00:13:02.321
+<v Michiel Trimpe>Oké.</v>
+
+00:13:02.321 --> 00:13:10.011
+<v Michiel Trimpe>Ja, nou en dan in zo'n autorisatietabel regel, dan eh staan een aantal dingen.</v>
+
+00:13:10.011 --> 00:13:14.151
+<v Michiel Trimpe>Dus eh wie is de afnemer? Op basis van de code met de naam van de afnemer.</v>
+
+00:13:14.151 --> 00:13:22.031
+<v Michiel Trimpe>Eh het is geversioneerd. Het heeft een datum van ingang en einde, dus een effectieve tijdsdimensie.</v>
+
+00:13:22.621 --> 00:13:44.971
+<v Michiel Trimpe>En dan een aantal ehm rubrieken. Dus eh je hebt dan een rubriek met welke velden toegankelijk zijn als je iets bevraagt, welke velden toegankelijk zijn eh als je een pushbericht wilt ontvangen, welke velden in een selectie geleverd zijn of worden.</v>
+
+00:13:45.831 --> 00:13:53.861
+<v Michiel Trimpe>En welke voorwaarderegels er gelden. Dus hoe de condities voor een bepaald veld op personen eh je toegang tot hebt.</v>
+
+00:13:55.151 --> 00:14:01.551
+<v Michiel Trimpe>En dan ook sleutelrubrieken, dus welke velden de levering van een spontane push triggeren.</v>
+
+00:14:02.101 --> 00:14:12.561
+<v Michiel Trimpe>En dan zeg ik ja, er zijn drie koppelvlakken, ad hoc, dus dat is een bevraging. Kan volgens mij ook via StUF, tegenwoordig ook via HaalCentraal BRP API.</v>
+
+00:14:13.231 --> 00:14:21.501
+<v Michiel Trimpe>Eh spontaan, dat zijn dan de leveringen. Waarschijnlijk nog niet op basis van CloudEvents, maar dat zal dan eh typisch iets wat dan op basis van CloudEvents zou willen gaan.</v>
+
+00:14:22.351 --> 00:14:29.981
+<v Michiel Trimpe>En selectie, dat zijn dus echt eenmalig of periodieke bestanden. Dus eh krijg je via CSV of netwerklevering.</v>
+
+00:14:31.201 --> 00:14:38.991
+<v Michiel Trimpe>En de voorwaarderegels, dat zijn dan eh Boolean expressions die dus echt bepalen welke personen in scope zijn.</v>
+
+00:14:40.941 --> 00:14:45.191
+<v Michiel Trimpe>Dus dit formaat, dus dan is een rubrieknummer, een vergelijkingswoord en een waarde.</v>
+
+00:14:45.821 --> 00:14:48.971
+<v Michiel Trimpe>Dus dit is bijvoorbeeld gemeente van inschrijving is Amsterdam.</v>
+
+00:14:49.691 --> 00:14:54.341
+<v Michiel Trimpe>En dit is een voorbeeld van een leeftijd tussen 3 en 18 jaar.</v>
+
+00:14:55.511 --> 00:15:08.571
+<v Michiel Trimpe>De leeftijd kleiner dan of gelijk aan een bepaalde datum. De logica is soms eh iets wat moeilijk te begrijpen direct, maar hij is wel duidelijk gedefinieerd.</v>
+
+00:15:09.211 --> 00:15:13.781
+<v Michiel Trimpe>Eh hier hebben we ook geprobeerd een ODRL mapping van te maken.</v>
+
+00:15:13.781 --> 00:15:16.291
+<v Michiel Trimpe>Ik denk dat ik later op terug als ik het heb laten zien.</v>
+
+00:15:16.631 --> 00:15:18.661
+<v Michiel Trimpe>Ja, van tabel 35.</v>
+
+00:15:23.231 --> 00:15:30.041
+<v Michiel Trimpe>Ik denk dat ik hier voor nu eventjes eh zeg maar een momentje voor zeg maar vragen en verduidelijkingen voor iedereen.</v>
+
+00:15:31.861 --> 00:15:37.781
+<v Michiel Trimpe>Dus dit zo horende, eh zijn er vragen, eh verduidelijking gewenst, opmerkingen?</v>
+
+00:15:42.924 --> 00:15:53.114
+<v Karl de Boer>Nou, wel op welke domeinen binnen de BRP gaan we ons richten, want sommige zijn natuurlijk heel goed eh heeft het zin om die überhaupt nog eh te modelleren?</v>
+
+00:15:54.894 --> 00:15:56.284
+<v Michiel Trimpe>Met de koppelvlakken bedoel je?</v>
+
+00:15:56.694 --> 00:15:58.124
+<v Karl de Boer>Ja, in de koppelvlakken, ja.</v>
+
+00:15:59.264 --> 00:16:14.474
+<v Michiel Trimpe>Ja, wat mij betreft is eh de het bedoel is om eh de doel is om inzicht te geven in het toegangsbeleid zoals het uitgevoerd wordt in binnen de overheid. En zolang een koppelvlak nog in werking is, is het denk ik waardevol om die te blijven modelleren.</v>
+
+00:16:15.194 --> 00:16:17.064
+<v Karl de Boer>Lijkt mij.</v>
+
+00:16:20.674 --> 00:16:21.324
+<v Karl de Boer>Oké.</v>
+
+00:16:22.564 --> 00:16:27.244
+<v Gideon Zegwaard>Ik heb zelf een vraag. Ik had mijn handje netjes omhoog. Prima, eerst. Ja.</v>
+
+00:16:30.934 --> 00:16:46.684
+<v Gideon Zegwaard>Ja, kijk, ik op zich vind ik deze mapping op ODRL wel interessant voor het moment dat je binnen de BRP ehm deze expressietaal, dus die machine executeerbare eh beleid om zou willen zetten tot iets wat breder executeerbaar is.</v>
+
+00:16:47.464 --> 00:17:01.814
+<v Gideon Zegwaard>Eh maar voor mij zou de eerste waarde zitten in het op een generieke manier eh ontsluiten dat deze voorwaarderegels er zijn en eh eh toegankelijk maken eh wat ze wat ze doen door te verwijzen naar hoe ze werken.</v>
+
+00:17:01.814 --> 00:17:12.124
+<v Gideon Zegwaard>Dus dat zou nog niet per se eh vertalen van die voorwaarderegels naar ODRL zijn. Misschien dat dat eh ergens ver in de verre toekomst een een logische ontwikkelstap voor de BRP is.</v>
+
+00:17:12.124 --> 00:17:34.344
+<v Gideon Zegwaard>Maar in de basis zou ik in eerste instantie kijken van kunnen we met ODRL zorgen dat we op een generieke manier ontsluiten dat deze voorwaarderegels er zijn en hoe ze dan gekoppeld zijn aan wat we daarnet zagen eh ehm eh dat er een autorisatiebesluit bijvoorbeeld is die hierbij hoort en dat het allemaal invulling is van een hoger liggend beleid wat we een paar sheets terug zagen.</v>
+
+00:17:34.344 --> 00:17:38.214
+<v Gideon Zegwaard>Aan dataminimalisatie doet, dat je een eh eh een grondslag moet hebben en dat soort aspecten.</v>
+
+00:17:38.214 --> 00:17:42.734
+<v Gideon Zegwaard>Dus om om dat uit te drukken in ODRL, want dat kunnen we eh toegankelijk maken in eh in een catalogus.</v>
+
+00:17:42.734 --> 00:17:52.014
+<v Gideon Zegwaard>Zodat mensen vinden wat eh waaraan je moet voldoen om eh aan eh een dataset aan te sluiten. Ja, je wil eigenlijk één niveau hoger dan wat hier nu beschreven is eh gaan beschrijven.</v>
+
+00:17:52.014 --> 00:17:52.414
+<v Michiel Trimpe>Ja.</v>
+
+00:17:52.414 --> 00:17:57.914
+<v Gideon Zegwaard>Gideon, misschien ik ik probeer even in Jip en Janneke taal te vatten wat je net precies gezegd hebt.</v>
+
+00:17:57.914 --> 00:18:00.084
+<v Gideon Zegwaard>Dus als ik het verkeerd begrijp, dan alsjeblieft corrigeer me.</v>
+
+00:18:00.814 --> 00:18:10.824
+<v Gideon Zegwaard>Maar hoe ik het nu begrijp is wat je zegt is eigenlijk wil ik eerst kijken, kunnen we met ODRL aantonen of wat eh hier nu gedaan is we eigenlijk überhaupt zouden moeten doen.</v>
+
+00:18:13.594 --> 00:18:14.234
+<v Michiel Trimpe>Eh ja.</v>
+
+00:18:14.234 --> 00:18:35.534
+<v Michiel Trimpe>Kijk, voor mij is de is de vertaling van de daadwerkelijke machine uitvoerbare validatie naar ODRL is niet zo dat ik zou denken van ja, er zijn ook alternatieven. Er is ook Rego. Er zijn ook andere eh ehm eh machine executeerbare talen en die daar daar is vaak voor verschillende van die talen is wat te zeggen.</v>
+
+00:18:36.164 --> 00:18:44.024
+<v Michiel Trimpe>Ehm en ik denk ook niet dat we moeten gaan zeggen van oké, we moeten per se voor die machine executeerbare variant ODRL gaan gebruiken.</v>
+
+00:18:44.754 --> 00:19:21.434
+<v Michiel Trimpe>Eh waar ik meer naar kijk is hoe kunnen we ervoor zorgen dat ontsluitbaar, hè, dat we op een generieke manier ontsluiten dat deze voorwaarderegels er zijn en hoe ze dan gekoppeld zijn aan wat we daarnet zagen eh ehm eh dat er een autorisatiebesluit bijvoorbeeld is die hierbij hoort en dat het allemaal invulling is van een hoger liggend beleid van dat je eh eh aan dataminimalisatie doet, dat je een eh eh een grondslag moet hebben en dat soort aspecten.</v>
+
+00:19:21.434 --> 00:19:26.784
+<v Gideon Zegwaard>Dus je wil eigenlijk één niveau hoger dan wat hier nu beschreven is eh gaan beschrijven.</v>
+
+00:19:27.204 --> 00:19:31.424
+<v Michiel Trimpe>Ja, ik vind die niveau hoger in eerste instantie het interessantst.</v>
+
+00:19:31.424 --> 00:19:38.254
+<v Michiel Trimpe>Ja. En dan en dan snap ik dat er vervolgens ook wenselijk is om een beleid op zoveel mogelijk plekken machine executeerbaar uit te voeren.</v>
+
+00:19:38.904 --> 00:19:43.914
+<v Michiel Trimpe>Ehm maar dan moet je eerst weten wat je uitvoert. En dat niveau, dat eh zou ik graag.</v>
+
+00:19:44.184 --> 00:20:11.754
+<v Gideon Zegwaard>Ik snap heel erg die die wens om dat te doen en ik ben er ook mee eens dat dat misschien nog wel meer waarde heeft. Ik heb wel geprobeerd het al echt eh te verwerken, maar ook weer meer als inspiratie van hoe zou dat dan wat komt er dan bij kijken? Waar loop je dan tegenaan? Gideon, misschien ik ik probeer even in Jip en Janneke taal te vatten wat je net precies gezegd hebt. Dus als ik het verkeerd begrijp, dan alsjeblieft corrigeer me. Maar hoe ik het nu begrijp is wat je zegt is eigenlijk wil ik eerst kijken, kunnen we met ODRL aantonen of wat eh hier nu gedaan is we eigenlijk überhaupt zouden moeten doen.</v>
+
+00:20:13.594 --> 00:20:14.234
+<v Michiel Trimpe>Eh ja.</v>
+
+00:20:14.234 --> 00:20:35.534
+<v Michiel Trimpe>Kijk, voor mij is de is de vertaling van de daadwerkelijke machine uitvoerbare validatie naar ODRL is niet zo dat ik zou denken van ja, er zijn ook alternatieven. Er is ook Rego. Er zijn ook andere eh ehm eh machine executeerbare talen en die daar daar is vaak voor verschillende van die talen is wat te zeggen.</v>
+
+00:20:36.164 --> 00:20:44.024
+<v Michiel Trimpe>Ehm en ik denk ook niet dat we moeten gaan zeggen van oké, we moeten per se voor die machine executeerbare variant ODRL gaan gebruiken.</v>
+
+00:20:44.754 --> 00:21:21.434
+<v Michiel Trimpe>Eh waar ik meer naar kijk is hoe kunnen we ervoor zorgen dat ontsluitbaar, hè, dat we op een generieke manier ontsluiten dat deze voorwaarderegels er zijn en hoe ze dan gekoppeld zijn aan wat we daarnet zagen eh ehm eh dat er een autorisatiebesluit bijvoorbeeld is die hierbij hoort en dat het allemaal invulling is van een hoger liggend beleid van dat je eh eh aan dataminimalisatie doet, dat je een eh eh een grondslag moet hebben en dat soort aspecten. Dus om om dat uit te drukken in ODRL, want dat kunnen we eh toegankelijk maken in eh in een catalogus, zodat mensen vinden wat eh waaraan je moet voldoen om eh aan eh een dataset aan te sluiten.</v>
+
+00:21:21.434 --> 00:21:26.784
+<v Gideon Zegwaard>Dus je wil eigenlijk één niveau hoger dan wat hier nu beschreven is eh gaan beschrijven.</v>
+
+00:21:27.204 --> 00:21:31.424
+<v Michiel Trimpe>Ja, ik vind die niveau hoger in eerste instantie het interessantst.</v>
+
+00:21:31.424 --> 00:21:38.254
+<v Michiel Trimpe>Ja. En dan en dan snap ik dat er vervolgens ook wenselijk is om een beleid op zoveel mogelijk plekken machine executeerbaar uit te voeren.</v>
+
+00:21:38.904 --> 00:21:43.914
+<v Michiel Trimpe>Ehm maar dan moet je eerst weten wat je uitvoert. En dat niveau, dat eh zou ik graag.</v>
+
+00:21:44.184 --> 00:21:52.014
+<v Gideon Zegwaard>Ik snap heel erg die die wens om dat te doen en ik ben er ook mee eens dat dat misschien nog wel meer waarde heeft. Ik heb wel geprobeerd het al echt eh te verwerken, maar ook weer meer als inspiratie van hoe zou dat dan wat komt er dan bij kijken? Waar loop je dan tegenaan?</v>
+
+00:21:52.014 --> 00:21:57.914
+<v Gideon Zegwaard>Gideon, misschien ik ik probeer even in Jip en Janneke taal te vatten wat je net precies gezegd hebt.</v>
+
+00:21:57.914 --> 00:22:00.084
+<v Gideon Zegwaard>Dus als ik het verkeerd begrijp, dan alsjeblieft corrigeer me.</v>
+
+00:22:00.814 --> 00:22:10.824
+<v Gideon Zegwaard>Maar hoe ik het nu begrijp is wat je zegt is eigenlijk wil ik eerst kijken, kunnen we met ODRL aantonen of wat eh hier nu gedaan is we eigenlijk überhaupt zouden moeten doen.</v>
+
+00:22:13.594 --> 00:22:14.234
+<v Michiel Trimpe>Eh ja.</v>
+
+00:22:14.234 --> 00:22:35.534
+<v Michiel Trimpe>Kijk, voor mij is de is de vertaling van de daadwerkelijke machine uitvoerbare validatie naar ODRL is niet zo dat ik zou denken van ja, er zijn ook alternatieven. Er is ook Rego. Er zijn ook andere eh ehm eh machine executeerbare talen en die daar daar is vaak voor verschillende van die talen is wat te zeggen.</v>
+
+00:22:36.164 --> 00:22:44.024
+<v Michiel Trimpe>Ehm en ik denk ook niet dat we moeten gaan zeggen van oké, we moeten per se voor die machine executeerbare variant ODRL gaan gebruiken.</v>
+
+00:22:44.754 --> 00:23:21.434
+<v Michiel Trimpe>Eh waar ik meer naar kijk is hoe kunnen we ervoor zorgen dat ontsluitbaar, hè, dat we op een generieke manier ontsluiten dat deze voorwaarderegels er zijn en hoe ze dan gekoppeld zijn aan wat we daarnet zagen eh ehm eh dat er een autorisatiebesluit bijvoorbeeld is die hierbij hoort en dat het allemaal invulling is van een hoger liggend beleid van dat je eh eh aan dataminimalisatie doet, dat je een eh eh een grondslag moet hebben en dat soort aspecten. Dus om om dat uit te drukken in ODRL, want dat kunnen we eh toegankelijk maken in eh in een catalogus, zodat mensen vinden wat eh waaraan je moet voldoen om eh aan eh een dataset aan te sluiten.</v>
+
+00:23:21.434 --> 00:23:26.784
+<v Gideon Zegwaard>Dus je wil eigenlijk één niveau hoger dan wat hier nu beschreven is eh gaan beschrijven.</v>
+
+00:23:27.204 --> 00:23:31.424
+<v Michiel Trimpe>Ja, ik vind die niveau hoger in eerste instantie het interessantst.</v>
+
+00:23:31.424 --> 00:23:38.254
+<v Michiel Trimpe>Ja. En dan en dan snap ik dat er vervolgens ook wenselijk is om een beleid op zoveel mogelijk plekken machine executeerbaar uit te voeren.</v>
+
+00:23:38.904 --> 00:23:43.914
+<v Michiel Trimpe>Ehm maar dan moet je eerst weten wat je uitvoert. En dat niveau, dat eh zou ik graag.</v>
+
+00:23:44.184 --> 00:23:52.014
+<v Gideon Zegwaard>Ik snap heel erg die die wens om dat te doen en ik ben er ook mee eens dat dat misschien nog wel meer waarde heeft. Ik heb wel geprobeerd het al echt eh te verwerken, maar ook weer meer als inspiratie van hoe zou dat dan wat komt er dan bij kijken? Waar loop je dan tegenaan?</v>
+
+00:23:52.014 --> 00:23:57.914
+<v Gideon Zegwaard>Gideon, misschien ik ik probeer even in Jip en Janneke taal te vatten wat je net precies gezegd hebt.</v>
+
+00:23:57.914 --> 00:24:00.084
+<v Gideon Zegwaard>Dus als ik het verkeerd begrijp, dan alsjeblieft corrigeer me.</v>
+
+00:24:00.814 --> 00:24:10.824
+<v Gideon Zegwaard>Maar hoe ik het nu begrijp is wat je zegt is eigenlijk wil ik eerst kijken, kunnen we met ODRL aantonen of wat eh hier nu gedaan is we eigenlijk überhaupt zouden moeten doen.</v>
+
+00:24:13.594 --> 00:24:14.234
+<v Michiel Trimpe>Eh ja.</v>
+
+00:24:14.234 --> 00:24:35.534
+<v Michiel Trimpe>Kijk, voor mij is de is de vertaling van de daadwerkelijke machine uitvoerbare validatie naar ODRL is niet zo dat ik zou denken van ja, er zijn ook alternatieven. Er is ook Rego. Er zijn ook andere eh ehm eh machine executeerbare talen en die daar daar is vaak voor verschillende van die talen is wat te zeggen.</v>
+
+00:24:36.164 --> 00:24:44.024
+<v Michiel Trimpe>Ehm en ik denk ook niet dat we moeten gaan zeggen van oké, we moeten per se voor die machine executeerbare variant ODRL gaan gebruiken.</v>
+
+00:24:44.754 --> 00:25:21.434
+<v Michiel Trimpe>Eh waar ik meer naar kijk is hoe kunnen we ervoor zorgen dat ontsluitbaar, hè, dat we op een generieke manier ontsluiten dat deze voorwaarderegels er zijn en hoe ze dan gekoppeld zijn aan wat we daarnet zagen eh ehm eh dat er een autorisatiebesluit bijvoorbeeld is die hierbij hoort en dat het allemaal invulling is van een hoger liggend beleid van dat je eh eh aan dataminimalisatie doet, dat je een eh eh een grondslag moet hebben en dat soort aspecten. Dus om om dat uit te drukken in ODRL, want dat kunnen we eh toegankelijk maken in eh in een catalogus, zodat mensen vinden wat eh waaraan je moet voldoen om eh aan eh een dataset aan te sluiten.</v>
+
+00:25:21.434 --> 00:25:26.784
+<v Gideon Zegwaard>Dus je wil eigenlijk één niveau hoger dan wat hier nu beschreven is eh gaan beschrijven.</v>
+
+00:25:27.204 --> 00:25:31.424
+<v Michiel Trimpe>Ja, ik vind die niveau hoger in eerste instantie het interessantst.</v>
+
+00:25:31.424 --> 00:25:38.254
+<v Michiel Trimpe>Ja. En dan en dan snap ik dat er vervolgens ook wenselijk is om een beleid op zoveel mogelijk plekken machine executeerbaar uit te voeren.</v>
+
+00:25:38.904 --> 00:25:43.914
+<v Michiel Trimpe>Ehm maar dan moet je eerst weten wat je uitvoert. En dat niveau, dat eh zou ik graag.</v>
+
+00:25:44.184 --> 00:25:52.014
+<v Gideon Zegwaard>Ik snap heel erg die die wens om dat te doen en ik ben er ook mee eens dat dat misschien nog wel meer waarde heeft. Ik heb wel geprobeerd het al echt eh te verwerken, maar ook weer meer als inspiratie van hoe zou dat dan wat komt er dan bij kijken? Waar loop je dan tegenaan?</v>
+
+00:25:52.014 --> 00:25:57.914
+<v Gideon Zegwaard>Gideon, misschien ik ik probeer even in Jip en Janneke taal te vatten wat je net precies gezegd hebt.</v>
+
+00:25:57.914 --> 00:26:00.084
+<v Gideon Zegwaard>Dus als ik het verkeerd begrijp, dan alsjeblieft corrigeer me.</v>
+
+00:26:00.814 --> 00:26:10.824
+<v Gideon Zegwaard>Maar hoe ik het nu begrijp is wat je zegt is eigenlijk wil ik eerst kijken, kunnen we met ODRL aantonen of wat eh hier nu gedaan is we eigenlijk überhaupt zouden moeten doen.</v>
+
+00:26:13.594 --> 00:26:14.234
+<v Michiel Trimpe>Eh ja.</v>
+
+00:26:14.234 --> 00:26:35.534
+<v Michiel Trimpe>Kijk, voor mij is de is de vertaling van de daadwerkelijke machine uitvoerbare validatie naar ODRL is niet zo dat ik zou denken van ja, er zijn ook alternatieven. Er is ook Rego. Er zijn ook andere eh ehm eh machine executeerbare talen en die daar daar is vaak voor verschillende van die talen is wat te zeggen.</v>
+
+00:26:36.164 --> 00:26:44.024
+<v Michiel Trimpe>Ehm en ik denk ook niet dat we moeten gaan zeggen van oké, we moeten per se voor die machine executeerbare variant ODRL gaan gebruiken.</v>
+
+00:26:44.754 --> 00:27:21.434
+<v Michiel Trimpe>Eh waar ik meer naar kijk is hoe kunnen we ervoor zorgen dat ontsluitbaar, hè, dat we op een generieke manier ontsluiten dat deze voorwaarderegels er zijn en hoe ze dan gekoppeld zijn aan wat we daarnet zagen eh ehm eh dat er een autorisatiebesluit bijvoorbeeld is die hierbij hoort en dat het allemaal invulling is van een hoger liggend beleid van dat je eh eh aan dataminimalisatie doet, dat je een eh eh een grondslag moet hebben en dat soort aspecten. Dus om om dat uit te drukken in ODRL, want dat kunnen we eh toegankelijk maken in eh in een catalogus, zodat mensen vinden wat eh waaraan je moet voldoen om eh aan eh een dataset aan te sluiten.</v>
+
+00:27:21.434 --> 00:27:26.784
+<v Gideon Zegwaard>Dus je wil eigenlijk één niveau hoger dan wat hier nu beschreven is eh gaan beschrijven.</v>
+
+00:27:27.204 --> 00:27:31.424
+<v Michiel Trimpe>Ja, ik vind die niveau hoger in eerste instantie het interessantst.</v>
+
+00:27:31.424 --> 00:27:38.254
+<v Michiel Trimpe>Ja. En dan en dan snap ik dat er vervolgens ook wenselijk is om een beleid op zoveel mogelijk plekken machine executeerbaar uit te voeren.</v>
+
+00:27:38.904 --> 00:27:43.914
+<v Michiel Trimpe>Ehm maar dan moet je eerst weten wat je uitvoert. En dat niveau, dat eh zou ik graag.</v>
+
+00:27:44.184 --> 00:27:52.014
+<v Gideon Zegwaard>Ik snap heel erg die die wens om dat te doen en ik ben er ook mee eens dat dat misschien nog wel meer waarde heeft. Ik heb wel geprobeerd het al echt eh te verwerken, maar ook weer meer als inspiratie van hoe zou dat dan wat komt er dan bij kijken? Waar loop je dan tegenaan?</v>
+
+00:27:52.014 --> 00:27:57.914
+<v Gideon Zegwaard>Gideon, misschien ik ik probeer even in Jip en Janneke taal te vatten wat je net precies gezegd hebt.</v>
+
+00:27:57.914 --> 00:28:00.084
+<v Gideon Zegwaard>Dus als ik het verkeerd begrijp, dan alsjeblieft corrigeer me.</v>
+
+00:28:00.814 --> 00:28:10.824
+<v Gideon Zegwaard>Maar hoe ik het nu begrijp is wat je zegt is eigenlijk wil ik eerst kijken, kunnen we met ODRL aantonen of wat eh hier nu gedaan is we eigenlijk überhaupt zouden moeten doen.</v>
+
+00:28:13.594 --> 00:28:14.234
+<v Michiel Trimpe>Eh ja.</v>
+
+00:28:14.234 --> 00:28:35.534
+<v Michiel Trimpe>Kijk, voor mij is de is de vertaling van de daadwerkelijke machine uitvoerbare validatie naar ODRL is niet zo dat ik zou denken van ja, er zijn ook alternatieven. Er is ook Rego. Er zijn ook andere eh ehm eh machine executeerbare talen en die daar daar is vaak voor verschillende van die talen is wat te zeggen.</v>
+
+00:28:36.164 --> 00:28:44.024
+<v Michiel Trimpe>Ehm en ik denk ook niet dat we moeten gaan zeggen van oké, we moeten per se voor die machine executeerbare variant ODRL gaan gebruiken.</v>
+
+00:28:44.754 --> 00:29:21.434
+<v Michiel Trimpe>Eh waar ik meer naar kijk is hoe kunnen we ervoor zorgen dat ontsluitbaar, hè, dat we op een generieke manier ontsluiten dat deze voorwaarderegels er zijn en hoe ze dan gekoppeld zijn aan wat we daarnet zagen eh ehm eh dat er een autorisatiebesluit bijvoorbeeld is die hierbij hoort en dat het allemaal invulling is van een hoger liggend beleid van dat je eh eh aan dataminimalisatie doet, dat je een eh eh een grondslag moet hebben en dat soort aspecten. Dus om om dat uit te drukken in ODRL, want dat kunnen we eh toegankelijk maken in eh in een catalogus, zodat mensen vinden wat eh waaraan je moet voldoen om eh aan eh een dataset aan te sluiten.</v>
+
+00:29:21.434 --> 00:29:26.784
+<v Gideon Zegwaard>Dus je wil eigenlijk één niveau hoger dan wat hier nu beschreven is eh gaan beschrijven.</v>
+
+00:29:27.204 --> 00:29:31.424
+<v Michiel Trimpe>Ja, ik vind die niveau hoger in eerste instantie het interessantst.</v>
+
+00:29:31.424 --> 00:29:38.254
+<v Michiel Trimpe>Ja. En dan en dan snap ik dat er vervolgens ook wenselijk is om een beleid op zoveel mogelijk plekken machine executeerbaar uit te voeren.</v>
+
+00:29:38.904 --> 00:29:43.914
+<v Michiel Trimpe>Ehm maar dan moet je eerst weten wat je uitvoert. En dat niveau, dat eh zou ik graag.</v>
+
+00:29:44.184 --> 00:29:52.014
+<v Gideon Zegwaard>Ik snap heel erg die die wens om dat te doen en ik ben er ook mee eens dat dat misschien nog wel meer waarde heeft. Ik heb wel geprobeerd het al echt eh te verwerken, maar ook weer meer als inspiratie van hoe zou dat dan wat komt er dan bij kijken? Waar loop je dan tegenaan?</v>
+
+00:29:52.014 --> 00:29:57.914
+<v Gideon Zegwaard>Gideon, misschien ik ik probeer even in Jip en Janneke taal te vatten wat je net precies gezegd hebt.</v>
+
+00:29:57.914 --> 00:30:00.084
+<v Gideon Zegwaard>Dus als ik het verkeerd begrijp, dan alsjeblieft corrigeer me.</v>
+
+00:30:00.814 --> 00:30:10.824
+<v Gideon Zegwaard>Maar hoe ik het nu begrijp is wat je zegt is eigenlijk wil ik eerst kijken, kunnen we met ODRL aantonen of wat eh hier nu gedaan is we eigenlijk überhaupt zouden moeten doen.</v>
+
+00:30:13.594 --> 00:30:14.234
+<v Michiel Trimpe>Eh ja.</v>
+
+00:30:14.234 --> 00:30:35.534
+<v Michiel Trimpe>Kijk, voor mij is de is de vertaling van de daadwerkelijke machine uitvoerbare validatie naar ODRL is niet zo dat ik zou denken van ja, er zijn ook alternatieven. Er is ook Rego. Er zijn ook andere eh ehm eh machine executeerbare talen en die daar daar is vaak voor verschillende van die talen is wat te zeggen.</v>
+
+00:30:36.164 --> 00:30:44.024
+<v Michiel Trimpe>Ehm en ik denk ook niet dat we moeten gaan zeggen van oké, we moeten per se voor die machine executeerbare variant ODRL gaan gebruiken.</v>
+
+00:30:44.754 --> 00:31:21.434
+<v Michiel Trimpe>Eh waar ik meer naar kijk is hoe kunnen we ervoor zorgen dat ontsluitbaar, hè, dat we op een generieke manier ontsluiten dat deze voorwaarderegels er zijn en hoe ze dan gekoppeld zijn aan wat we daarnet zagen eh ehm eh dat er een autorisatiebesluit bijvoorbeeld is die hierbij hoort en dat het allemaal invulling is van een hoger liggend beleid van dat je eh eh aan dataminimalisatie doet, dat je een eh eh een grondslag moet hebben en dat soort aspecten. Dus om om dat uit te drukken in ODRL, want dat kunnen we eh toegankelijk maken in eh in een catalogus, zodat mensen vinden wat eh waaraan je moet voldoen om eh aan eh een dataset aan te sluiten.</v>
+
+00:31:21.434 --> 00:31:26.784
+<v Gideon Zegwaard>Dus je wil eigenlijk één niveau hoger dan wat hier nu beschreven is eh gaan beschrijven.</v>
+
+00:31:27.204 --> 00:31:31.424
+<v Michiel Trimpe>Ja, ik vind die niveau hoger in eerste instantie het interessantst.</v>
+
+00:31:31.424 --> 00:31:38.254
+<v Michiel Trimpe>Ja. En dan en dan snap ik dat er vervolgens ook wenselijk is om een beleid op zoveel mogelijk plekken machine executeerbaar uit te voeren.</v>
+
+00:31:38.904 --> 00:31:43.914
+<v Michiel Trimpe>Ehm maar dan moet je eerst weten wat je uitvoert. En dat niveau, dat eh zou ik graag.</v>
+
+00:31:44.184 --> 00:31:52.014
+<v Gideon Zegwaard>Ik snap heel erg die die wens om dat te doen en ik ben er ook mee eens dat dat misschien nog wel meer waarde heeft. Ik heb wel geprobeerd het al echt eh te verwerken, maar ook weer meer als inspiratie van hoe zou dat dan wat komt er dan bij kijken? Waar loop je dan tegenaan?</v>
+
+00:31:52.014 --> 00:31:57.914
+<v Gideon Zegwaard>Gideon, misschien ik ik probeer even in Jip en Janneke taal te vatten wat je net precies gezegd hebt.</v>
+
+00:31:57.914 --> 00:32:00.084
+<v Gideon Zegwaard>Dus als ik het verkeerd begrijp, dan alsjeblieft corrigeer me.</v>
+
+00:32:00.814 --> 00:32:10.824
+<v Gideon Zegwaard>Maar hoe ik het nu begrijp is wat je zegt is eigenlijk wil ik eerst kijken, kunnen we met ODRL aantonen of wat eh hier nu gedaan is we eigenlijk überhaupt zouden moeten doen.</v>
+
+00:32:13.594 --> 00:32:14.234
+<v Michiel Trimpe>Eh ja.</v>
+
+00:32:14.234 --> 00:32:35.534
+<v Michiel Trimpe>Kijk, voor mij is de is de vertaling van de daadwerkelijke machine uitvoerbare validatie naar ODRL is niet zo dat ik zou denken van ja, er zijn ook alternatieven. Er is ook Rego. Er zijn ook andere eh ehm eh machine executeerbare talen en die daar daar is vaak voor verschillende van die talen is wat te zeggen.</v>
+
+00:32:36.164 --> 00:32:44.024
+<v Michiel Trimpe>Ehm en ik denk ook niet dat we moeten gaan zeggen van oké, we moeten per se voor die machine executeerbare variant ODRL gaan gebruiken.</v>
+
+00:32:44.754 --> 00:33:21.434
+<v Michiel Trimpe>Eh waar ik meer naar kijk is hoe kunnen we ervoor zorgen dat ontsluitbaar, hè, dat we op een generieke manier ontsluiten dat deze voorwaarderegels er zijn en hoe ze dan gekoppeld zijn aan wat we daarnet zagen eh ehm eh dat er een autorisatiebesluit bijvoorbeeld is die hierbij hoort en dat het allemaal invulling is van een hoger liggend beleid van dat je eh eh aan dataminimalisatie doet, dat je een eh eh een grondslag moet hebben en dat soort aspecten. Dus om om dat uit te drukken in ODRL, want dat kunnen we eh toegankelijk maken in eh in een catalogus, zodat mensen vinden wat eh waaraan je moet voldoen om eh aan eh een dataset aan te sluiten.</v>
+
+00:33:21.434 --> 00:33:26.784
+<v Gideon Zegwaard>Dus je wil eigenlijk één niveau hoger dan wat hier nu beschreven is eh gaan beschrijven.</v>
+
+00:33:27.204 --> 00:33:31.424
+<v Michiel Trimpe>Ja, ik vind die niveau hoger in eerste instantie het interessantst.</v>
+
+00:33:31.424 --> 00:33:38.254
+<v Michiel Trimpe>Ja. En dan en dan snap ik dat er vervolgens ook wenselijk is om een beleid op zoveel mogelijk plekken machine executeerbaar uit te voeren.</v>
+
+00:33:38.904 --> 00:33:43.914
+<v Michiel Trimpe>Ehm maar dan moet je eerst weten wat je uitvoert. En dat niveau, dat eh zou ik graag.</v>
+
+00:33:44.184 --> 00:33:52.014
+<v Gideon Zegwaard>Ik snap heel erg die die wens om dat te doen en ik ben er ook mee eens dat dat misschien nog wel meer waarde heeft. Ik heb wel geprobeerd het al echt eh te verwerken, maar ook weer meer als inspiratie van hoe zou dat dan wat komt er dan bij kijken? Waar loop je dan tegenaan?</v>
+
+00:33:52.014 --> 00:33:57.914
+<v Gideon Zegwaard>Gideon, misschien ik ik probeer even in Jip en Janneke taal te vatten wat je net precies gezegd hebt.</v>
+
+00:33:57.914 --> 00:34:00.084
+<v Gideon Zegwaard>Dus als ik het verkeerd begrijp, dan alsjeblieft corrigeer me.</v>
+
+00:34:00.814 --> 00:34:10.824
+<v Gideon Zegwaard>Maar hoe ik het nu begrijp is wat je zegt is eigenlijk wil ik eerst kijken, kunnen we met ODRL aantonen of wat eh hier nu gedaan is we eigenlijk überhaupt zouden moeten doen.</v>
+
+00:34:13.594 --> 00:34:14.234
+<v Michiel Trimpe>Eh ja.</v>
+
+00:34:14.234 --> 00:34:35.534
+<v Michiel Trimpe>Kijk, voor mij is de is de vertaling van de daadwerkelijke machine uitvoerbare validatie naar ODRL is niet zo dat ik zou denken van ja, er zijn ook alternatieven. Er is ook Rego. Er zijn ook andere eh ehm eh machine executeerbare talen en die daar daar is vaak voor verschillende van die talen is wat te zeggen.</v>
+
+00:34:36.164 --> 00:34:44.024
+<v Michiel Trimpe>Ehm en ik denk ook niet dat we moeten gaan zeggen van oké, we moeten per se voor die machine executeerbare variant ODRL gaan gebruiken.</v>
+
+00:34:44.754 --> 00:35:21.434
+<v Michiel Trimpe>Eh waar ik meer naar kijk is hoe kunnen we ervoor zorgen dat ontsluitbaar, hè, dat we op een generieke manier ontsluiten dat deze voorwaarderegels er zijn en hoe ze dan gekoppeld zijn aan wat we daarnet zagen eh ehm eh dat er een autorisatiebesluit bijvoorbeeld is die hierbij hoort en dat het allemaal invulling is van een hoger liggend beleid van dat je eh eh aan dataminimalisatie doet, dat je een eh eh een grondslag moet hebben en dat soort aspecten. Dus om om dat uit te drukken in ODRL, want dat kunnen we eh toegankelijk maken in eh in een catalogus, zodat mensen vinden wat eh waaraan je moet voldoen om eh aan eh een dataset aan te sluiten.</v>
+
+00:35:21.434 --> 00:35:26.784
+<v Gideon Zegwaard>Dus je wil eigenlijk één niveau hoger dan wat hier nu beschreven is eh gaan beschrijven.</v>
+
+00:35:27.204 --> 00:35:31.424
+<v Michiel Trimpe>Ja, ik vind die niveau hoger in eerste instantie het interessantst.</v>
+
+00:35:31.424 --> 00:35:38.254
+<v Michiel Trimpe>Ja. En dan en dan snap ik dat er vervolgens ook wenselijk is om een beleid op zoveel mogelijk plekken machine executeerbaar uit te voeren.</v>
+
+00:35:38.904 --> 00:35:43.914
+<v Michiel Trimpe>Ehm maar dan moet je eerst weten wat je uitvoert. En dat niveau, dat eh zou ik graag.</v>
+
+00:35:44.184 --> 00:35:52.014
+<v Gideon Zegwaard>Ik snap heel erg die die wens om dat te doen en ik ben er ook mee eens dat dat misschien nog wel meer waarde heeft. Ik heb wel geprobeerd het al echt eh te verwerken, maar ook weer meer als inspiratie van hoe zou dat dan wat komt er dan bij kijken? Waar loop je dan tegenaan?</v>
+
+00:35:52.014 --> 00:35:57.914
+<v Gideon Zegwaard>Gideon, misschien ik ik probeer even in Jip en Janneke taal te vatten wat je net precies gezegd hebt.</v>
+
+00:35:57.914 --> 00:36:00.084
+<v Gideon Zegwaard>Dus als ik het verkeerd begrijp, dan alsjeblieft corrigeer me.</v>
+
+00:36:00.814 --> 00:36:10.824
+<v Gideon Zegwaard>Maar hoe ik het nu begrijp is wat je zegt is eigenlijk wil ik eerst kijken, kunnen we met ODRL aantonen of wat eh hier nu gedaan is we eigenlijk überhaupt zouden moeten doen.</v>
+
+00:36:13.594 --> 00:36:14.234
+<v Michiel Trimpe>Eh ja.</v>
+
+00:36:14.234 --> 00:36:35.534
+<v Michiel Trimpe>Kijk, voor mij is de is de vertaling van de daadwerkelijke machine uitvoerbare validatie naar ODRL is niet zo dat ik zou denken van ja, er zijn ook alternatieven. Er is ook Rego. Er zijn ook andere eh ehm eh machine executeerbare talen en die daar daar is vaak voor verschillende van die talen is wat te zeggen.</v>
+
+00:36:36.164 --> 00:36:44.024
+<v Michiel Trimpe>Ehm en ik denk ook niet dat we moeten gaan zeggen van oké, we moeten per se voor die machine executeerbare variant ODRL gaan gebruiken.</v>
+
+00:36:44.754 --> 00:37:21.434
+<v Michiel Trimpe>Eh waar ik meer naar kijk is hoe kunnen we ervoor zorgen dat ontsluitbaar, hè, dat we op een generieke manier ontsluiten dat deze voorwaarderegels er zijn en hoe ze dan gekoppeld zijn aan wat we daarnet zagen eh ehm eh dat er een autorisatiebesluit bijvoorbeeld is die hierbij hoort en dat het allemaal invulling is van een hoger liggend beleid van dat je eh eh aan dataminimalisatie doet, dat je een eh eh een grondslag moet hebben en dat soort aspecten. Dus om om dat uit te drukken in ODRL, want dat kunnen we eh toegankelijk maken in eh in een catalogus, zodat mensen vinden wat eh waaraan je moet voldoen om eh aan eh een dataset aan te sluiten.</v>
+
+00:37:21.434 --> 00:37:26.784
+<v Gideon Zegwaard>Dus je wil eigenlijk één niveau hoger dan wat hier nu beschreven is eh gaan beschrijven.</v>
+
+00:37:27.204 --> 00:37:31.424
+<v Michiel Trimpe>Ja, ik vind die niveau hoger in eerste instantie het interessantst.</v>
+
+00:37:31.424 --> 00:37:38.254
+<v Michiel Trimpe>Ja. En dan en dan snap ik dat er vervolgens ook wenselijk is om een beleid op zoveel mogelijk plekken machine executeerbaar uit te voeren.</v>
+
+00:37:38.904 --> 00:37:43.914
+<v Michiel Trimpe>Ehm maar dan moet je eerst weten wat je uitvoert. En dat niveau, dat eh zou ik graag.</v>
+
+00:37:44.184 --> 00:37:52.014
+<v Gideon Zegwaard>Ik snap heel erg die die wens om dat te doen en ik ben er ook mee eens dat dat misschien nog wel meer waarde heeft. Ik heb wel geprobeerd het al echt eh te verwerken, maar ook weer meer als inspiratie van hoe zou dat dan wat komt er dan bij kijken? Waar loop je dan tegenaan?</v>
+
+00:37:52.014 --> 00:37:57.914
+<v Gideon Zegwaard>Gideon, misschien ik ik probeer even in Jip en Janneke taal te vatten wat je net precies gezegd hebt.</v>
+
+00:37:57.914 --> 00:38:00.084
+<v Gideon Zegwaard>Dus als ik het verkeerd begrijp, dan alsjeblieft corrigeer me.</v>
+
+00:38:00.814 --> 00:38:10.824
+<v Gideon Zegwaard>Maar hoe ik het nu begrijp is wat je zegt is eigenlijk wil ik eerst kijken, kunnen we met ODRL aantonen of wat eh hier nu gedaan is we eigenlijk überhaupt zouden moeten doen.</v>
+
+00:38:13.594 --> 00:38:14.234
+<v Michiel Trimpe>Eh ja.</v>
+
+00:38:14.234 --> 00:38:35.534
+<v Michiel Trimpe>Kijk, voor mij is de is de vertaling van de daadwerkelijke machine uitvoerbare validatie naar ODRL is niet zo dat ik zou denken van ja, er zijn ook alternatieven. Er is ook Rego. Er zijn ook andere eh ehm eh machine executeerbare talen en die daar daar is vaak voor verschillende van die talen is wat te zeggen.</v>
+
+00:38:36.164 --> 00:38:44.024
+<v Michiel Trimpe>Ehm en ik denk ook niet dat we moeten gaan zeggen van oké, we moeten per se voor die machine executeerbare variant ODRL gaan gebruiken.</v>
+
+00:38:44.754 --> 00:39:21.434
+<v Michiel Trimpe>Eh waar ik meer naar kijk is hoe kunnen we ervoor zorgen dat ontsluitbaar, hè, dat we op een generieke manier ontsluiten dat deze voorwaarderegels er zijn en hoe ze dan gekoppeld zijn aan wat we daarnet zagen eh ehm eh dat er een autorisatiebesluit bijvoorbeeld is die hierbij hoort en dat het allemaal invulling is van een hoger liggend beleid van dat je eh eh aan dataminimalisatie doet, dat je een eh eh een grondslag moet hebben en dat soort aspecten. Dus om om dat uit te drukken in ODRL, want dat kunnen we eh toegankelijk maken in eh in een catalogus, zodat mensen vinden wat eh waaraan je moet voldoen om eh aan eh een dataset aan te sluiten.</v>
+
+00:39:21.434 --> 00:39:26.784
+<v Gideon Zegwaard>Dus je wil eigenlijk één niveau hoger dan wat hier nu beschreven is eh gaan beschrijven.</v>
+
+00:39:27.204 --> 00:39:31.424
+<v Michiel Trimpe>Ja, ik vind die niveau hoger in eerste instantie het interessantst.</v>
+
+00:39:31.424 --> 00:39:38.254
+<v Michiel Trimpe>Ja. En dan en dan snap ik dat er vervolgens ook wenselijk is om een beleid op zoveel mogelijk plekken machine executeerbaar uit te voeren.</v>
+
+00:39:38.904 --> 00:39:43.914
+<v Michiel Trimpe>Ehm maar dan moet je eerst weten wat je uitvoert. En dat niveau
+
+00:20:01.130 --> 00:20:02.830
+<v Karl de Boer>te zeggen wat lager hangend fruit eh gegaan is.</v>
+
+00:20:05.030 --> 00:20:06.010
+<v Gideon Zegwaard>Nee, ik snap dit ook hoor.</v>
+
+00:20:06.010 --> 00:20:21.990
+<v Gideon Zegwaard>Dit ik en ik vind het ook valide, want dit dit toont aan hoe hoe eh eh dat ODRL in principe behoorlijk eh eh flexibel is en eh eh nou ja, toch eh behoorlijk dicht in de buurt kan komen wat je nu ook al met eh met die voorwaarderegels bijvoorbeeld kan.</v>
+
+00:20:21.990 --> 00:20:28.210
+<v Gideon Zegwaard>Dus het is bijzonder zinvol om dat te kijken of ODRL de flexibiliteit heeft om dat soort dingen ook te kunnen.</v>
+
+00:20:29.568 --> 00:20:32.588
+<v Floris Deutekom>Ik denk dat het goed is om dan naar de uitwerking te gaan.</v>
+
+00:20:33.488 --> 00:20:46.638
+<v Floris Deutekom>Ehm want inderdaad een beetje vooruitlopend, ik denk een deel van de conclusie die ik een beetje heb is dat dus ODRL best goed past op dit eh modelleren van per afnemer, maar dat het bredere modellering dat ik daar nog wat vragen bij heb.</v>
+
+00:20:46.638 --> 00:20:48.698
+<v Floris Deutekom>Dus dat eh Marcel?</v>
+
+00:20:50.397 --> 00:21:07.517
+<v Marcel Molenaar>Ja, ik vraag me eh eh met name af, kijk, als ik denk aan een een modelleertaaltje, dan zou ik graag iets willen wat ook eh eh begrijpelijk is voor andere dan ehm alleen de de programmeurs zo meteen.</v>
+
+00:21:08.167 --> 00:21:23.727
+<v Marcel Molenaar>Als ik dit zo meteen eh zo zojuist zag, lijkt mij dat heel lastig te begrijpen. Eh ik ik moest zelf even kijken, hoe hoe werkt die die codering en ehm nou, op een gegeven moment dacht ik oké, misschien snap ik het wel.</v>
+
+00:21:24.227 --> 00:21:52.727
+<v Marcel Molenaar>Maar ik vind dat ehm ja, het moet eigenlijk als je een taaltje kiest, moet hij juist meer duidelijkheid geven, denk ik, in in plaats van alleen maar eh de de de noodzaak om iets goed te kunnen coderen, die er natuurlijk is, hè. Even even los daarvan, maar daarvoor heb je inderdaad meerdere eh eh taaltjes, eh als Orego, maar je hebt ook ehm eh zeg maar dat je het meer visueel kan uitdrukken bij bij sommige pakketten.</v>
+
+00:21:52.727 --> 00:21:58.057
+<v Marcel Molenaar>Dus de vraag is een beetje van wat is het doel dan eigenlijk van van het ODRL zelf?</v>
+
+00:21:58.437 --> 00:22:11.327
+<v Marcel Molenaar>Ik had gehoopt, want ik kende het niet hè, maar ik had gehoopt dat het eigenlijk een taaltje is wat eigenlijk voor iedereen makkelijk leesbaar is, waardoor het ehm ook ook breed in de overheid gebruikt kan worden, maar misschien is mijn verwachting verkeerd, dat eh</v>
+
+00:22:11.907 --> 00:22:20.257
+<v Michiel Trimpe>Ik denk dat we daarvoor misschien eerst even naar de uitwerking moeten kijken, want we hebben tot nu toe alleen een paar mapping tabelletjes gezien. Dus misschien dat we eventjes het eindproduct beoordelen.</v>
+
+00:22:20.707 --> 00:22:27.327
+<v Marcel Molenaar>Ja, perfect. Nou, dat lijkt me helemaal goed. Alleen ja, omdat er nu zo over gepraat werd, dacht ik van hé, dan is het ook relevant.</v>
+
+00:22:27.327 --> 00:22:27.947
+<v Marcel Molenaar>Maar helemaal goed.</v>
+
+00:22:27.947 --> 00:22:36.617
+<v Michiel Trimpe>Ja, maar jouw wens om om iets voor iedereen leesbaar te hebben, of je nou een leek of een programmeur of iets anders bent, dat is natuurlijk eh daar zijn we denk ik allemaal mee eens, hè.</v>
+
+00:22:37.047 --> 00:22:42.867
+<v Michiel Trimpe>Maar laten we dan even naar het eindproduct kijken en dan gezien eh nou, vinden we dit leesbaar voor meer dan alleen techneuten.</v>
+
+00:22:43.297 --> 00:22:44.277
+<v Marcel Molenaar>Ja, helemaal goed.</v>
+
+00:22:44.637 --> 00:22:45.017
+<v Michiel Trimpe>Ja.</v>
+
+00:22:46.587 --> 00:23:05.757
+<v Michiel Trimpe>Nou, ehm dat heb ik de afgelopen week gebouwd. Dus ik heb eh geprobeerd omdat tabel 35 zo mooi beschikbaar is in een duidelijk CSV formaat, heb ik geprobeerd om te kijken of ik alles wat daarin staat kan vangen in een ODRL formaat. Eh en wat komt er dan bij kijken als je dat gaat doen?</v>
+
+00:23:06.217 --> 00:23:14.217
+<v Michiel Trimpe>Ehm het is ook echt een tooltje, dus je kan hem downloaden, zelf runnen eh en experimenteren. Niet productieniveau, maar gewoon echt om te om te verkennen.</v>
+
+00:23:15.217 --> 00:23:35.547
+<v Michiel Trimpe>Nou, wat we dan zagen is dat eh best veel dingen op zich goed mappen naar ODRL. Eh van dit perspectief. Het hogere perspectief is dus nog wat moeilijker en dergelijke, maar je hebt bijvoorbeeld het concept van een ODRL set. Nou, dat mapt wel mooi op een autorisatiebesluit. Dus dat is gewoon een een set van eh permissies.</v>
+
+00:23:37.077 --> 00:23:50.717
+<v Michiel Trimpe>Ehm de afnemersoriëntatie klopt heel goed met eh het ODRL concept van een assignee, want je wijst beleid toe aan een assignee in ODRL. En nou ja, dat is dan de afnemer in ons geval, in ons eh geval.</v>
+
+00:23:52.207 --> 00:24:00.037
+<v Michiel Trimpe>Ehm je wijst dan rechten toe voor een action. Eh dat hebben we in deze context gemapt op eh het koppelvlak.</v>
+
+00:24:00.467 --> 00:24:09.617
+<v Michiel Trimpe>Dus we hebben een aantal koppelvlakken. Eh maar we merkten ook dat ehm er soms ook subtypen zijn. Dus daar heb ik zo een slide voor hoe we dat uitgewerkt hebben.</v>
+
+00:24:11.477 --> 00:24:24.007
+<v Michiel Trimpe>Eh dan zie je bij ODRL dan het concept van een target, dus waar geef je rechten op. Eh dat hebben we in deze context hebben we gekozen voor dus de rubrieken. Eh dus alle verschillende gegevenselementen.</v>
+
+00:24:25.217 --> 00:24:48.987
+<v Michiel Trimpe>Ehm dat kan je daarmee kan je het heel duidelijk opschrijven. Het is wel een beetje de vraag of dat nou echt de juiste target is, want soms zou je de target ook kunnen zien als zeg maar de dataset die je bevraagt. Dus of dat helemaal accuraat is, weet ik ja, heb ik nog twijfels over, maar wat je straks zal zien, het geeft wel een heel duidelijk het legt wel heel duidelijk uit wat het autorisatiebesluit is.</v>
+
+00:24:49.487 --> 00:24:50.527
+<v Michiel Trimpe>Gideon?</v>
+
+00:24:53.327 --> 00:25:16.797
+<v Gideon Zegwaard>Ja, wat bij mij opkomt inderdaad is wellicht dat die target hier een soort van subset van de BRP is. En wat is die subset van de BRP dan? Nou, dat is de hele BRP met beperkingen als gevolg van die voorwaarderegel en die ehm eh die die kenmerken. Eh maar goed, dat is puur eh dus een modelleringsvraagstuk, dus hoe je hoe je dit inricht.</v>
+
+00:25:16.797 --> 00:25:32.817
+<v Gideon Zegwaard>Maar dat dat kwam bij mij, dat komt bij mij op met die target. Dus dat je die target eerder een soort van virtuele subset van de BRP maakt en die dan definieert eh eh dan eh dat je de direct op de individuele kenmerken target.</v>
+
+00:25:33.967 --> 00:25:41.827
+<v Floris Deutekom>Precies. Er zijn een aantal dingen van misschien kun je het ook met een refinement modelleren of andere dingen die misschien semantisch zuiverder zijn.</v>
+
+00:25:42.747 --> 00:26:03.117
+<v Floris Deutekom>En dat zeker als je het naar richting uitvoerbaar gaat, wordt dat heel belangrijk. Ehm maar in ieder geval ik heb laten zien dus dit het kan het mapt soort van logisch en visueel als je straks ziet, lijkt het logisch. Maar misschien is het niet helemaal semantisch zuiver, precies wat je inderdaad zegt Gideon. Andere weergaves zijn waarschijnlijk netter, maar we wilden het anders met je delen.</v>
+
+00:26:03.937 --> 00:26:14.267
+<v Michiel Trimpe>Eh we hebben ook het concept van constraints. Eh en dat leek best goed te mappen op de de voorwaarderegels. Eh in ieder geval was goed uitdrukbaar. Dus we gaan zo ook wat voorbeelden zien.</v>
+
+00:26:14.987 --> 00:26:33.787
+<v Michiel Trimpe>En we hebben gekeken naar de temporal profiel. Eh en eh daar hebben we dan de temporal set gebruikt. En daarmee eh kunnen we dan zeg maar de de verschillende versies van een autorisatiebesluit eh uitdrukken. En dat dat werkt op zich wel prima voor de effectieve tijdsdimensie.</v>
+
+00:26:36.157 --> 00:26:45.037
+<v Michiel Trimpe>Ehm nou ja, hier zagen we dus dan die koppelvlakken. Eh daar zag je dat we oorspronkelijk eigenlijk alleen de drie hadden, dus ad hoc, selectie en spontane.</v>
+
+00:26:46.097 --> 00:27:10.147
+<v Michiel Trimpe>Eh maar eigenlijk heb je daar binnen heb je ook weer subtypen eh van nou ja, bijvoorbeeld raadplegen met BSN, zoeken met postcode en huisnummer, selectie, selectieverstrekking had eigenlijk een aantal verschillende dingen, dus een indicatie plaatsen of eh verwijderen, een aantal subtypen. En die waren een een beetje moeilijk direct te mappen.</v>
+
+00:27:10.557 --> 00:27:22.997
+<v Michiel Trimpe>Dus uiteindelijk heb ik dat gedaan door ze subklasse te maken van de ad hoc verstrekking. Dus dan is de action is raadplegen met BSN. En die heeft de superklasse of die is van het type ook van het type ad hoc verstrekking.</v>
+
+00:27:28.167 --> 00:27:28.837
+<v Michiel Trimpe>was het te doen.</v>
+
+00:27:32.597 --> 00:27:42.157
+<v Michiel Trimpe>Ehm nou, en dan een voorbeeldje. Eh dus stel dat je eh tabel 35 had met een afnemer 890001, Defensie en een voorwaarderegel.</v>
+
+00:27:42.157 --> 00:27:48.457
+<v Michiel Trimpe>En er nog meer bij dat samen, want het is ook van het type ad hoc verstrekking, et cetera, krijg je er een ODRL uit als deze.</v>
+
+00:27:53.507 --> 00:28:14.967
+<v Michiel Trimpe>Dus voor afnemer 890001 V11, wat je een set. En in die set heb jij de permissie gekregen om een ad hoc verstrekking te krijgen. Die wordt toegewezen aan een afnemer. En dit is wat eh voor mij die dat generieke beleid moeilijk maakt, want dit ODRL lijkt wel echt gericht te zijn op zeg maar een actie, een recht van een actie aan een afnemer toe te wijzen.</v>
+
+00:28:16.117 --> 00:28:47.117
+<v Michiel Trimpe>Maar in ieder geval dus die actie mag deze eh actor uitvoeren op deze targets. Dus dan krijg je de verschillende rubrieken onder voorbehoud van. En hier heb je dan ehm nou ja, hoe noem je dat dan? Toch iets beter begrijpbaar, waar is de natuur dan de voorwaarderegeling wellicht? Deze kan je ook uiteindelijk ook wel mooier weer gaan geven in een UI met eh ANDs en ORs en standaardconcepten.</v>
+
+00:28:51.777 --> 00:29:01.837
+<v Michiel Trimpe>Ehm is misschien een moment om even een een share op te zetten van de Excel.</v>
+
+00:29:06.467 --> 00:29:10.057
+<v Michiel Trimpe>Dus eh dan krijg je dit als resultaat.</v>
+
+00:29:10.057 --> 00:29:32.007
+<v Michiel Trimpe>Eh deze eigenlijk. Dus je hebt een een DCAT entry, dus wat je op data.overheid.nl zou zien. Die krijgt dan een nieuw attribuut, eh ODRL hasPolicy en verwijst naar deze, dus met de BRP autorisatiebesluiten.</v>
+
+00:29:33.937 --> 00:29:38.797
+<v Michiel Trimpe>En dat is dan bijvoorbeeld deze.</v>
+
+00:29:53.797 --> 00:30:04.877
+<v Michiel Trimpe>Ehm nou, dan ga je hier proberen dus alle verschillende autorisatiebesluiten. Daar heb je een set. En in die set heb jij de permissie gekregen om een ad hoc verstrekking te krijgen.</v>
+
+00:30:06.128 --> 00:30:07.128
+<v Michiel Trimpe>even gelijsten.</v>
+
+00:30:08.018 --> 00:30:10.298
+<v Michiel Trimpe>Ehm hele steen even gelijsten.</v>
+
+00:30:12.228 --> 00:30:14.928
+<v Michiel Trimpe>Eh dat is een beetje de vraag hoe je dat weer wil geven.</v>
+
+00:30:15.518 --> 00:30:23.998
+<v Michiel Trimpe>ook nog een variant gemaakt waarbij je dan ook de rechten kan krijgen op niet alleen op eh individuele elementen, maar ook op hele categorieën en groepen.</v>
+
+00:30:25.438 --> 00:30:30.938
+<v Michiel Trimpe>Dan verwijs je naar, je mag alles van kind zien, alles van groep.</v>
+
+00:30:31.638 --> 00:30:38.218
+<v Michiel Trimpe>En dan is het iets korter, maar nog steeds niet heel kort. Dat is iets wat eh opviel.</v>
+
+00:30:39.528 --> 00:30:43.998
+<v Michiel Trimpe>En wat hier ook bij opviel is dit zijn allemaal concepten, persoon, naam, et cetera.</v>
+
+00:30:44.388 --> 00:30:46.438
+<v Michiel Trimpe>Daar wil je met link data naar verwijzen.</v>
+
+00:30:47.538 --> 00:30:56.408
+<v Michiel Trimpe>Maar die heb ik zelf moeten verzinnen, want RVG heeft niet een een standaard link data model dat zijn data informatiemodel uitwerkt.</v>
+
+00:30:57.308 --> 00:31:02.138
+<v Michiel Trimpe>En om dit betekenisvol te maken, wil je dat dus eigenlijk wel hebben of heb je dat wel nodig.</v>
+
+00:31:03.358 --> 00:31:11.358
+<v Michiel Trimpe>Want wil je beleid op deze manier te modelleren, heb je ook een heel informatiemodel op link data van je register nodig eigenlijk.</v>
+
+00:31:11.838 --> 00:31:12.448
+<v Michiel Trimpe>Gideon?</v>
+
+00:31:13.208 --> 00:31:22.588
+<v Gideon Zegwaard>Ja, en je je ziet hier dat eh eh dat dit op op dit niveau gaat het eh eh dus interlinken met eh standaardisatie op informatiemodellering.</v>
+
+00:31:22.928 --> 00:31:36.328
+<v Gideon Zegwaard>Eh dus op het niveau hierboven, dus als we het hebben over een policy waarin want dit is een policy om toegang te krijgen tot een eh eh hè op een op een aansluiting die er is eh en dan toegang te verlenen op die aansluiting.</v>
+
+00:31:36.628 --> 00:31:42.508
+<v Gideon Zegwaard>Maar het krijgen van een aansluiting is ook een proces waar je een policy op kan definiëren, want dan moet namelijk dit gemaakt worden.</v>
+
+00:31:43.438 --> 00:31:55.208
+<v Gideon Zegwaard>Dus eh ik denk dat op dat niveau en ook op het niveau waarbij je bijvoorbeeld verwijst naar die eh naar een PDF met het daadwerkelijke autorisatiebesluit hè, met de juridische tekst.</v>
+
+00:31:55.618 --> 00:32:10.378
+<v Gideon Zegwaard>Eh dat is een stuk wat je eh denk ik ehm eh eh sneller of eenvoudiger te eh te standaardiseren is, omdat er nog weinig standaardisatie op is. Dus hè, een soort van greenfield heb je.</v>
+
+00:32:10.878 --> 00:32:13.928
+<v Gideon Zegwaard>Eh en je je je bent nog niet op het niveau van de semantiek.</v>
+
+00:32:14.738 --> 00:32:22.388
+<v Gideon Zegwaard>Eh dus dan eh eh dan dan dan heb je die afhankelijkheid die waar je nu tegenaan loopt eh eh niet direct.</v>
+
+00:32:24.328 --> 00:32:31.628
+<v Karl de Boer>En nog een aanvulling. Je kunt bijvoorbeeld wel iets van een kind mogen zien, maar bijvoorbeeld daar niet de, nou ja, is een fictief voorbeeld, maar niet de voornaam van een kind.</v>
+
+00:32:32.228 --> 00:32:34.738
+<v Karl de Boer>Eh dus het is zit nog iets complexer in elkaar.</v>
+
+00:32:35.598 --> 00:32:40.238
+<v Michiel Trimpe>Nee, dat is op zich wel geadresseerd met die categorieën en rubrieken groepen.</v>
+
+00:32:40.538 --> 00:32:51.358
+<v Michiel Trimpe>Dus dan krijg je rechten tot de tot het element eh kind.voornaam of eh alleen het element kind. Hoe je identiek ja.</v>
+
+00:32:51.658 --> 00:32:52.158
+<v Karl de Boer>Ja.</v>
+
+00:32:52.458 --> 00:33:04.458
+<v Michiel Trimpe>Dat is wel het voordeel van deze aanpak is dat zeg maar echt alles wat uitgewerkt is in de BRP, dat is zo mooi degelijk opgezet is met een logisch ontwerp. Zeg maar alles wat technisch afgesproken wordt, is hier ook echt in gemodelleerd.</v>
+
+00:33:04.758 --> 00:33:07.358
+<v Michiel Trimpe>Dus dat is wel... Ja.</v>
+
+00:33:12.358 --> 00:33:25.158
+<v Michiel Trimpe>Eens kijken, nog even dit afronden, want eh zeg maar hier helemaal doorheen gaan is waarschijnlijk niet zo interessant, maar eh dit was denk ik voornamelijk eh dus die die links dat om dat je die wil hebben om het op dit niveau te kunnen modelleren.</v>
+
+00:33:25.458 --> 00:33:29.858
+<v Michiel Trimpe>Was voor mij een belangrijk inzicht, omdat ik echt eh onoverkomelijk is.</v>
+
+00:33:35.158 --> 00:33:37.058
+<v Michiel Trimpe>Ja, en ook dat het eh best veel is.</v>
+
+00:33:37.358 --> 00:33:46.358
+<v Michiel Trimpe>Ik heb eh dit wel eh je ziet ook de computer zelf echt even mee struggelen. En ja, het gaat echt, het is het is heel veel data.</v>
+
+00:33:46.958 --> 00:33:57.358
+<v Michiel Trimpe>Eh wat ik wel ook dus merk dat wel fijn is dat ten opzichte van het alternatief waarbij je een rubriek hebt met een cijfer, kan je hier dus wel zeggen: oké, burgerservicenummer kind.</v>
+
+00:33:57.958 --> 00:34:03.558
+<v Michiel Trimpe>informatiemodel van oké, nou hier is dan de uitleg. Het wordt netjes doorgelinkt.</v>
+
+00:34:04.258 --> 00:34:15.358
+<v Michiel Trimpe>Eh ook wanneer we bijvoorbeeld dus de echte besluiten hebben, kan je dat eh hier ook wel als een relatie toevoegen. Kan je dat gaan volgen.</v>
+
+00:34:15.958 --> 00:34:20.258
+<v Karl de Boer>En ik ben benieuwd ehm andere andere hand wat een...</v>
+
+00:34:20.558 --> 00:34:24.258
+<v Michiel Trimpe>...visualisatie gemaakt.</v>
+
+00:34:27.858 --> 00:34:33.158
+<v Michiel Trimpe>Ehm dus en dit is dus puur op basis van deze data en volgens mij een volledig automatisch tooltje.</v>
+
+00:34:33.758 --> 00:34:40.858
+<v Michiel Trimpe>Eh kan je dus al kiezen van nou, ik heb hier de autorisatiebesluiten, dan heb ik hier de autorisatiebesluiten.</v>
+
+00:34:41.258 --> 00:34:44.158
+<v Michiel Trimpe>Ik weet alleen niet hoe ik hier in kan klikken. Weet jij dat?</v>
+
+00:34:44.758 --> 00:34:51.158
+<v Hans Schevers>Ja, ehm ik zag link data en ik dacht eh laat ik dit eens even doen.</v>
+
+00:34:51.758 --> 00:34:59.358
+<v Hans Schevers>Ehm ook tevens een uitnodiging om te kijken van hé, kunnen we die datastructuren die heel belangrijk zijn nog wat meer op de voorgrond kijken. Dus daar wil ik best aan werken.</v>
+
+00:34:59.758 --> 00:35:05.158
+<v Hans Schevers>Eh ja, je kunt erop dubbelklikken als er een eh een eh als het verder gaat.</v>
+
+00:35:05.658 --> 00:35:09.358
+<v Michiel Trimpe>Oké, dat werkt bij mij in de browser dan op de een of andere manier niet.</v>
+
+00:35:09.658 --> 00:35:11.558
+<v Hans Schevers>Oké, in de Mac of in mijn Firefox deed hij het.</v>
+
+00:35:11.858 --> 00:35:19.158
+<v Michiel Trimpe>Nou, in ieder geval eh als het goed is en dat eh kan je dus mee, dus dan kan je dan dus doorklikken en kan je het zo verder verkennen.</v>
+
+00:35:19.458 --> 00:35:25.058
+<v Hans Schevers>Kijk, misschien wel even... Werkt bij mij dus even niet goed, maar hier zie je dan dus wel de specialization.</v>
+
+00:35:25.358 --> 00:35:42.758
+<v Michiel Trimpe>Je kan alle relaties volgen en in die zin is het wel iets meer discoverable en dat was ook eh Marcel's opmerking van hier kan je dus ook een wat mooiere UI's voor gaan bouwen die ja, dit wat meer ondersteunen, maar wel alle flexibiliteit houden.</v>
+
+00:35:43.358 --> 00:35:46.358
+<v Marc de Boer>Ja, het ziet er inderdaad veel mooier uit. Het eh...</v>
+
+00:35:46.658 --> 00:36:01.858
+<v Marc de Boer>...ik denk ik kan altijd aan denken hoe hoe gaan mijn eh de mijn policy eh eh eh managers, want die gaan we natuurlijk krijgen, hoe hoe gaan die dit gebruiken? Maar dit dit zou een echt wel kunnen helpen, denk ik, ja.</v>
+
+00:36:02.258 --> 00:36:14.958
+<v Michiel Trimpe>Ja, en dit is dus al wat je out of the box krijgt en wat je dan vaak ziet is dat je voor de bepaalde types die veel voorkomen, zoals een autorisatiebesluit, daar dan ook nog een kleine speciale UI maakt die dit nog beter weergeeft.</v>
+
+00:36:17.558 --> 00:36:19.858
+<v Michiel Trimpe>Ehm...</v>
+
+00:36:20.658 --> 00:36:22.958
+<v Michiel Trimpe>Kijken.</v>
+
+00:36:23.358 --> 00:36:27.158
+<v Michiel Trimpe>Ja, ik heb ook nog de geprobeerd de afnemer te modelleren.</v>
+
+00:36:28.558 --> 00:36:34.058
+<v Michiel Trimpe>Dan zal ik even snel doorheen, want ik denk ik denk dat ik liever meer discussie heb dan hier in detail op ingaan.</v>
+
+00:36:34.658 --> 00:36:44.158
+<v Michiel Trimpe>Met het idee waarom ik ook de BRP gekozen, was dat we ook eh Amsterdam hebben die hun afnamebeleid online heeft gezet, in de vorm van code, maar toch.</v>
+
+00:36:44.758 --> 00:36:50.058
+<v Michiel Trimpe>Eh en dan zie je dat eh jullie dat op zich ook redelijk kan modelleren met ODRL.</v>
+
+00:36:50.658 --> 00:37:01.058
+<v Michiel Trimpe>Ehm en dan zie je dat bijvoorbeeld Amsterdam en zijn eigen collecties heeft gedefinieerd. Dus persoonsgegevens.</v>
+
+00:37:01.358 --> 00:37:19.658
+<v Michiel Trimpe>Ja, maar dat je daar ook wel gebruik van kan maken van de modellering op hoger niveau. Dus dat je dan ook wat Amsterdam als een basisset van persoonsgegevens heeft gemodelleerd, ook weer kan modelleren in termen van het officiële, ja, wat ik dan verzonnen heb, maar het officiële link data informatieschema van de RVG.</v>
+
+00:37:20.258 --> 00:37:32.158
+<v Michiel Trimpe>Ehm wat je daar gelijk al zag, dat gaat een beetje naar de de uitvoerbaarheid, eh is dat zij het op een manier hadden opgezet dat er eh standaard beperkingen zijn op die policies die je op kan heffen.</v>
+
+00:37:32.658 --> 00:37:38.158
+<v Michiel Trimpe>Dus by default is het alleen Amsterdam, niet overleden en eh niet geheim.</v>
+
+00:37:38.458 --> 00:37:43.558
+<v Michiel Trimpe>En als je dan een bepaald recht hebt, dus een bepaalde scope, eh dan mag je dat ineens wel.</v>
+
+00:37:44.158 --> 00:37:50.058
+<v Michiel Trimpe>Dat is dan een voorbeeld van iets waarin eh ODRL dat eigenlijk niet lijkt te ondersteunen.</v>
+
+00:37:50.558 --> 00:37:54.758
+<v Michiel Trimpe>Eh omdat zij dan alleen beperkingen toe kunnen voegen.</v>
+
+00:37:55.258 --> 00:38:01.058
+<v Michiel Trimpe>Dus dat is iets van kunnen we kunnen het dan wel opnemen in ODRL, maar het lijkt alsof we het niet echt kunnen uitvoeren.</v>
+
+00:38:01.358 --> 00:38:11.358
+<v Michiel Trimpe>Dus dan zie je die mapping, want ODRL prima geschikt lijkt om het concept te delen, maar echt de uitvoerbaarheid eh wringt soms.</v>
+
+00:38:11.658 --> 00:38:12.258
+<v Michiel Trimpe>Gideon?</v>
+
+00:38:12.858 --> 00:38:31.858
+<v Gideon Zegwaard>Is dat dan een voorbeeld waarvan je zou kunnen zeggen van oké, hier hier formuleer ik wel het beleid in ik noem maar wat, mensleesbare vorm in eh wat de bedoeling is en eh en om een ID te hebben en om hem te kunnen opsommen in lijstjes, maar om hem executeerbaar te krijgen heb ik eh iets van Rego nodig om eh om dat uit te voeren.</v>
+
+00:38:33.558 --> 00:38:36.158
+<v Michiel Trimpe>Eh ja. Ja, inderdaad.</v>
+
+00:38:36.458 --> 00:38:41.058
+<v Michiel Trimpe>Dat is dan waarschijnlijk, ik heb het dat als vraag ergens eh opgenomen.</v>
+
+00:38:41.858 --> 00:38:44.358
+<v Michiel Trimpe>En dit is dan ook de mapping naar Authzen. Maar eh...</v>
+
+00:38:44.658 --> 00:39:15.758
+<v Michiel Trimpe>Dat is inderdaad dan eh de vraag die ik stelde in de groep van hé, wat willen we als doel? Willen we echt ook een eh nu al tijd tijd stoppen in het echt zeg maar helemaal doorlinken van de hele keten en kijken hoe we dat werkend kunnen krijgen. Eh of is het belangrijkste focus nu van hoe kunnen we dit opschrijven zodat het in ieder geval vastgelegd is, maar dat de uitvoerbaarheid secundair is.</v>
+
+00:39:18.258 --> 00:39:19.058
+<v Michiel Trimpe>Igor?</v>
+
+00:39:19.658 --> 00:39:44.258
+<v Igor van Haren>Ik zou nog eerst een paar stappen doen met betrekking tot ehm zeg maar hoe ik in ODRL behandel relaties en dergelijke. Bijvoorbeeld of ehm eh PIP raadpleging of relaties. Dus hoe hoe je dat ehm zou kunnen modelleren.</v>
+
+00:39:45.158 --> 00:39:46.658
+<v Michiel Trimpe>Begrijp je wat ik daarmee bedoel?</v>
+
+00:39:47.258 --> 00:39:51.158
+<v Michiel Trimpe>Ja. Dat is eh nee, maar ik snap waar je op doelt.</v>
+
+00:39:51.458 --> 00:39:54.458
+<v Michiel Trimpe>Ik denk dat dat, zeg maar ik eh aan het einde van de meeting moeten we de vervolgstap gaan doen.</v>
+
+00:40:02.119 --> 00:40:03.779
+<v Michiel Trimpe>in detail uit te werken.</v>
+
+00:40:03.779 --> 00:40:07.879
+<v Karl de Boer>Dat is dan waarschijnlijk lijkt me jullie, zoals je dat ook staat.</v>
+
+00:40:07.879 --> 00:40:18.999
+<v Hans Schevers>Ja, ik weet niet of er in de BRP ook zoiets is. Bijvoorbeeld, ik mag alleen maar iets raadplegen als als er ook eh de familie eh bij wijze van spreken</v>
+
+00:40:18.999 --> 00:40:26.129
+<v Michiel Trimpe>Nee. Nee, ja, nee, dus er zit dan zeg maar over juridisch beleid is dat heel hè, soms is wel vastgelegd.</v>
+
+00:40:26.129 --> 00:40:35.999
+<v Michiel Trimpe>En er zijn wel een soort technische hulpmiddelen als afnemersindicaties plaats die er een beetje op lijken. Maar het is bij de BRP echt anders gemodeleerd in die zin.</v>
+
+00:40:35.999 --> 00:40:36.829
+<v Hans Schevers>Ja.</v>
+
+00:40:36.829 --> 00:40:46.799
+<v Michiel Trimpe>En ook in deze context, dus wat er dan een beetje op lijkt is met de afnemersindicatie, maar dat is dan echt een vlaggetje dat jij plaatst als afnemer. Dat is tegenwoordig dus iets anders.</v>
+
+00:40:46.799 --> 00:40:51.399
+<v Hans Schevers>Ja, ja, nee, dat is dat is vrij dat is dat is vrij eenvoudig eigenlijk.</v>
+
+00:40:51.399 --> 00:40:53.899
+<v Michiel Trimpe>Ehm Ja.</v>
+
+00:40:53.899 --> 00:41:11.599
+<v Hans Schevers>Nee, mee eens, maar ik zou dat graag eerst willen zien voordat ik het voordat je die stap wat verder gaat kijken naar bijvoorbeeld de de rego eh eh implementatie of koppeling of eh transformatie of hoe je dat wil noemen. Ja.</v>
+
+00:41:12.599 --> 00:41:13.599
+<v Michiel Trimpe>Oké.</v>
+
+00:41:13.599 --> 00:41:27.299
+<v Karl de Boer>Bord, mag ik een vraag tussendoor stellen? Behoort alleen de de landelijke voorziening eh is die hier in scope? Want we kennen ook nog het verschijnsel binnengemeentelijk afnemers wat weer subset zijn van een van een autorisatiebesluit.</v>
+
+00:41:27.299 --> 00:41:45.999
+<v Karl de Boer>Dus bepaalde applicaties en dat zal ook waarschijnlijk wel in een pensioen eh fonds eh spelen. Bepaalde systemen moet mogen weer zich abonneren op subsets van het autorisatiebesluit. Die hebben een eigen doelbinding. Bijvoorbeeld het verlenen van WMO of eh</v>
+
+00:41:45.999 --> 00:41:53.299
+<v Michiel Trimpe>Is dat iets wat de landelijke voorziening biedt of is dat iets wat de gemeente intern Nee, dat is wel iets wat de gemeente moet implementeren. Dat is precies het onderdeel waar ik nu mee bezig ben.</v>
+
+00:41:53.299 --> 00:41:58.099
+<v Michiel Trimpe>Dat is waar ik even langs skipte met het met Amsterdam als voorbeeld. Ja, zag ik ja.</v>
+
+00:41:58.099 --> 00:42:04.499
+<v Michiel Trimpe>Heb ik daar een beetje geprobeerd uit te werken hoe Amsterdam dat intern gedaan heeft en te kijken of ik dat kon meppen.</v>
+
+00:42:04.499 --> 00:42:17.099
+<v Michiel Trimpe>Dus daar heb ik wel naar gekeken. Maar ja, daar zijn ook nog best wel wat vragen over hoe dat nou precies werkte. Ik denk dat we vandaag niet de tijd hebben om daar ook echt de diepte op te gaan.</v>
+
+00:42:17.099 --> 00:42:20.499
+<v Michiel Trimpe>Maar dat is wel in scope dus, ja.</v>
+
+00:42:20.499 --> 00:42:27.299
+<v Michiel Trimpe>Ehm</v>
+
+00:42:27.299 --> 00:42:35.899
+<v Michiel Trimpe>Nou, ga ik even denk ik al richting eh zeg maar weer die afsluiting dat we nog of afsluiting in ieder geval mijn presentatie stuk afsluiten dat we nog een discussie kunnen.</v>
+
+00:42:35.899 --> 00:42:50.999
+<v Michiel Trimpe>En wat ik in ieder geval gezien heb dus wat ODRL goed doet is ehm ja, extensible via profielen. Dus je kan je eigen operators definiëren, je eigen acties en andere zaken en dat werkt dus best goed. Dus daar kom je best een eind mee uit de voeten.</v>
+
+00:42:50.999 --> 00:43:02.499
+<v Michiel Trimpe>Eh temporal profiel kwam eigenlijk best ver. Als je alleen de de effectieve tijdsdimensie, dus niet wanneer wat eh in welk technisch systeem stond. Maar je komt er al een heel eind mee.</v>
+
+00:43:02.499 --> 00:43:06.199
+<v Michiel Trimpe>Dus dat is op zich. Ik heb wellicht zelfs genoeg.</v>
+
+00:43:06.199 --> 00:43:15.099
+<v Michiel Trimpe>Ehm Nee, we konden het beleid conceptueel best redelijk uitdrukken op afnemersniveau.</v>
+
+00:43:15.099 --> 00:43:23.499
+<v Michiel Trimpe>Ehm een aantal trucjes, dus eh dat asset collection voor het groeperen van die rubrieken, dat ging ook goed.</v>
+
+00:43:23.499 --> 00:43:33.999
+<v Michiel Trimpe>En ik vond zelf de de voorwaarderegels met de and or in plaats van dat je daar hele schreven voorwaarderegels met haakjes en rubriekcodes eh vond ik ook best leesbaar.</v>
+
+00:43:38.999 --> 00:43:52.099
+<v Michiel Trimpe>Nou, wat we dan dus als open vragen nog wel hadden is ehm meer dan autorisatiebesluiten. Dus hier noemde ik een eh een aantal meer technische verplichtingen die je ook hebt die gewoon voor alle afnemers gelden.</v>
+
+00:43:52.099 --> 00:43:57.599
+<v Michiel Trimpe>En hier past dus eigenlijk ook de vraag die die Gideon net stelde van oké, wat is nou het grote geheel waar dit binnen past?</v>
+
+00:43:57.599 --> 00:44:05.199
+<v Michiel Trimpe>Ik zag zelf niet direct hoe je dat mooi in ODRL modelleert, omdat ODRL echt op de afnemer lijkt te assignen.</v>
+
+00:44:05.199 --> 00:44:11.999
+<v Michiel Trimpe>De ODRL experts in de zaal, ik weet niet of jullie daar wel iets in zien. Of iets eh een oplossing voor zien.</v>
+
+00:44:17.499 --> 00:44:24.099
+<v Spreker (Ruimte DR)>Hier is er wel stilte aan. Floris en is er nog meer met mensen met veel ODRL ervaring?</v>
+
+00:44:24.099 --> 00:44:28.199
+<v Michiel Trimpe>Dus Rens zit er ook in.</v>
+
+00:44:28.199 --> 00:44:36.799
+<v Rens Kievit>Ik zou er nu zo 1 2 3 niks over durven zeggen eh of dit kan of niet of hoe.</v>
+
+00:44:36.799 --> 00:44:39.699
+<v Michiel Trimpe>Ja. Echt even over nadenken.</v>
+
+00:44:39.699 --> 00:44:40.999
+<v Floris Deutekom>Ik zat ook te denken, maar nee.</v>
+
+00:44:40.999 --> 00:44:44.999
+<v Floris Deutekom>Ik durf ik nu even niet één op één nu te zeggen: ja, zo moet dat.</v>
+
+00:44:44.999 --> 00:44:47.899
+<v Michiel Trimpe>Ja. Dat is ook wel een duidelijk antwoord. Gideon?</v>
+
+00:44:47.899 --> 00:45:10.199
+<v Gideon Zegwaard>Ja, je zit ook dan nog niet de kwestie van dat je dat dan eh ongestructureerd eh in ODRL eh eh uitdrukt. Dus dat je in ieder geval heb je dan een ID. Je hebt vastgesteld dat het een policy is. Eh dat je niet weet hoe je het eh eh gestructureerd eh opslaat. Ja, je kan altijd in een comment natuurlijk beschrijven wat de bedoeling is.</v>
+
+00:45:10.199 --> 00:45:21.199
+<v Michiel Trimpe>Ja, maar is het dan nog ODRL? Of dan moet een beetje naar kijken, want je zou natuurlijk een trucje kunnen doen van we hebben de afnemer ster die vertegenwoordigt alles ofzo.</v>
+
+00:45:21.199 --> 00:45:23.499
+<v Gideon Zegwaard>Ja, dat is een voorbeeld stellen, maar</v>
+
+00:45:23.499 --> 00:46:06.199
+<v Gideon Zegwaard>Ja, je kan natuurlijk ook eh wij hebben dadelijk in een datastelsel heb je eigenlijk drie niveaus hè. Dus je hebt het eh je hebt een beleid om iemand toe te laten tot een stelsel. Vervolgens heb je een beleid om iemand een aansluiting te geven. En je hebt een beleid wat je uitvoert bij de individuele uitwisseling op het eh op die aansluiting. Nou, die laatste, nou heb je een geïdentificeerde tegenpartij. Maar eh het beleid om iemand een aansluiting al dan niet een aansluiting eh te geven. Eh ja, dan zou je kunnen zeggen van de target is eh de de de de de potentiële aan te sluiten de partij, een soort van anoniem eh iemand die eh of een prospect om het zo maar te zeggen.</v>
+
+00:46:06.199 --> 00:46:18.299
+<v Michiel Trimpe>eh waar je het beleid op loslaat. Ja. Dat zou inderdaad ook een optie kunnen zijn. Dat je het eh je kan natuurlijk naar een linked data concepten verwijzen dat je soms naar een echte afnemer verwijst en dat je soms als assign een concept toewijst.</v>
+
+00:46:18.299 --> 00:46:33.999
+<v Michiel Trimpe>Ja, of een groep. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander. Ja, dat is een ander
+
+00:50:18.988 --> 00:50:21.058
+<v Hans Schevers>Toch wel stil.</v>
+
+00:50:22.958 --> 00:50:23.868
+<v Hans Schevers>Precies op.</v>
+
+00:50:25.108 --> 00:50:33.928
+<v Michiel Trimpe>Hoe diep wil je gaan eigenlijk hè, want je kan natuurlijk ook eh eh de verkeerde cijfers, verkeerde TLS versies, verkeerde bla bla bla bla.</v>
+
+00:50:33.928 --> 00:50:36.788
+<v Michiel Trimpe>Ja, dat wil je, dat wil je niet aan beginnen natuurlijk hè.</v>
+
+00:50:37.428 --> 00:50:43.018
+<v Michiel Trimpe>Hè, bepaalde of er is misschien wel veel te technisch.</v>
+
+00:50:43.598 --> 00:50:52.128
+<v Michiel Trimpe>Hè, we hadden het toen straks wel over leesbaar hè. Ehm, ik denk dat mutual TLS al best wel onleesbaar is voor menig ehm</v>
+
+00:50:52.548 --> 00:51:00.628
+<v Floris Deutekom>Je zou hooguit kunnen opschrijven denk ik iets in de richting van geef, weet ik veel, geef een marktconforme foutrespons ofzo.</v>
+
+00:51:01.558 --> 00:51:03.358
+<v Floris Deutekom>Dat dat kan iedereen in principe wel lezen.</v>
+
+00:51:04.228 --> 00:51:11.458
+<v Floris Deutekom>Maar inderdaad als je gaat zeggen geef deze specifieke MTLS melding of oh je cipher suite eh RS256 klopt niet, noem maar wat.</v>
+
+00:51:12.398 --> 00:51:14.128
+<v Floris Deutekom>Ja, dat snapt helemaal niemand.</v>
+
+00:51:14.418 --> 00:51:14.938
+<v Michiel Trimpe>Nee.</v>
+
+00:51:15.828 --> 00:51:26.918
+<v Karl de Boer>Ja, en we hebben natuurlijk ook nog dat dit zoveel eh triggert. Dus dat is al een indicatie dat hier eh verschillende meningen zijn. Misschien ook een indicatie dat we het dan uit out of scope moeten plaatsen, maar</v>
+
+00:51:27.278 --> 00:51:30.918
+<v Michiel Trimpe>laten we het ook nog even hebben. Ja, voor de tijd.</v>
+
+00:51:31.788 --> 00:51:45.028
+<v Marcel Molenaar>Ja, als ik voor mezelf praat, dan eh eh merk ik nu aan dit gesprek dat voor mij de de scope helemaal niet duidelijk was aan het begin. Dus ik weet niet of ik dingen ook ook goed heb geïnterpreteerd daardoor.</v>
+
+00:51:45.028 --> 00:51:54.438
+<v Marcel Molenaar>Dus dat dat vind ik hier heel heel moeilijk aan, want ik ik ben het inderdaad op zich eens met hé, haal die techniek en de en de wet zeg maar uit elkaar.</v>
+
+00:51:55.338 --> 00:52:08.438
+<v Marcel Molenaar>Ehm, die moet je niet eh eh per se ook bij elkaar stoppen. Natuurlijk heb je ook wetten voor eh voor als BIO enzo, maar ik ja, dat is wel weer een, ik vind dat ook een ander ander verhaal. Dus</v>
+
+00:52:08.438 --> 00:52:18.028
+<v Marcel Molenaar>ik vind het heel moeilijk van hé, wat willen we hier wel in vatten en wat niet. Ik eh om om mijn in mijn hoofd is die scope nog niet duidelijk.</v>
+
+00:52:19.338 --> 00:52:33.228
+<v Karl de Boer>Ik denk eigenlijk gezegd dat dat ook voor de werkgroep dat we dat samen aan het verkennen zijn. Dus dan zie je dat wanneer dus ik had dit meer als als scope als de kern. Dan zie je dat voor Gideon eh bijvoorbeeld voor de FTS de scope een ander niveau is, belangrijker is.</v>
+
+00:52:33.228 --> 00:52:38.508
+<v Karl de Boer>Dus ik denk dat we dit ook echt een beetje samen uit moeten werken om dat punt dicht te kunnen krijgen.</v>
+
+00:52:40.358 --> 00:52:46.468
+<v Karl de Boer>En maar draag er dus ook vooral bij. Dus dus als je ook meningen en sturing op wil geven, doe dat vooral.</v>
+
+00:52:47.538 --> 00:52:53.198
+<v Karl de Boer>Voor sturing en dan tijd gesproken, ehm is dit dan een open punt om te kijken welke richting gaan we nu op?</v>
+
+00:52:54.218 --> 00:53:13.338
+<v Karl de Boer>Ehm, we hebben eh dat is eh ook nog FORCE, dus dat is hoe je ODRL eventueel wel technisch eh af zou kunnen handelen. Dus stel dat je ODRL als een een variant van Rego wil gebruiken, wanneer dat kan of wanneer dat toepasbaar is, dan zou je naar FORCE toe kunnen gebruiken.</v>
+
+00:53:14.108 --> 00:53:27.148
+<v Karl de Boer>We hebben contact met degene van de Universiteit Gent die dit ontwikkeld heeft. En die zou, die kunnen we vragen om over, dus bij de volgende werkgroep hier wat over te presenteren. Dus dat wordt dan meer echt een inhouding van hé, hoe zou dat werken als we ODRL ook gebruiken om</v>
+
+00:53:27.798 --> 00:53:34.228
+<v Karl de Boer>dingen af te dwingen en waar staat dat? En dan kunnen we hem vragen erover stellen.</v>
+
+00:53:35.598 --> 00:53:41.248
+<v Karl de Boer>Ehm, dat kunnen we doen. En ik heb twee hoofdvervolgpunten geïdentificeerd in het gesprek.</v>
+
+00:53:41.938 --> 00:53:48.978
+<v Karl de Boer>Is ehm we kunnen we zeggen gaan kijken hoe we dus dit algemeen beleid in ODRL kunnen vangen en hoe dat zou werken.</v>
+
+00:53:49.628 --> 00:54:01.278
+<v Karl de Boer>En we kunnen, zoals Igor ook aangaf, gewoon ook door naar een volgende van hoe eh zou het gaan werken als we iWlz proberen te modelleren met behandelrelaties en dergelijke.</v>
+
+00:54:02.738 --> 00:54:12.018
+<v Karl de Boer>Ehm, ik neig zelf naar, goed te stellen dat het mij leuk lijkt ook om een FORCE presentatie te krijgen volgende werkgroep. Eh als mensen zich daarin vinden, dan zou ik dat op willen zetten.</v>
+
+00:54:12.018 --> 00:54:22.588
+<v Karl de Boer>En dat we wellicht daarna dan kunnen kijken naar één van de andere twee richtingen, dus algemeen generiek beleid of een tweede specifiek beleid eh voor de zorg.</v>
+
+00:54:23.518 --> 00:54:33.978
+<v Karl de Boer>Eh allereerst, kan iedereen eh zich vinden als we een eh FORCE specialist uitnodigen om dat aspect te presenteren en daar nog even mee te kijken volgende keer?</v>
+
+00:54:34.508 --> 00:54:35.088
+<v Floris Deutekom>Ja.</v>
+
+00:54:35.538 --> 00:54:36.018
+<v Karl de Boer>Ja.</v>
+
+00:54:37.338 --> 00:54:59.938
+<v Karl de Boer>Ehm, als dat lukt, super. We hebben nog eh geen de twee weken agenda nog niet, dus dat kan op de agenda's mislopen. Eh maar dan dan is dat zo, dan komt het later. En voor de andere twee keuzes, eh wat lijkt nu handiger? Eh eerst naar zeg maar een volgend specifiek beleid eh uit de zorg te gaan met iWlz of eerst te kijken naar hoe we het hogere niveau zouden willen modelleren?</v>
+
+00:55:00.618 --> 00:55:22.208
+<v Michiel Trimpe>Ik eh ik heb Remo van eh Zorginstituut Nederland even geappt. Die zit die is vandaag niet eh die kon niet. Ehm of te kijken of die überhaupt aankomende week wel kan ook om ja, eh mee tijd te investeren om eh om die ODRL uitwerkingen te doen.</v>
+
+00:55:22.778 --> 00:55:26.358
+<v Michiel Trimpe>Dus ehm daar heb ik nog geen antwoord op gekregen. Oké.</v>
+
+00:55:26.718 --> 00:55:28.008
+<v Karl de Boer>Gideon?</v>
+
+00:55:28.798 --> 00:55:45.108
+<v Gideon Zegwaard>Ja, is het een idee om inderdaad wel een volgend eh voorbeeld eh erbij te pakken, maar daar ook wel even expliciet aandacht te geven van oké, en waar hè, wat is nou het hoger liggende niveau hier, zodat we ook inzicht krijgen op waar dat dan onder hangt en waar het een uitvoering van is.</v>
+
+00:55:46.438 --> 00:55:53.908
+<v Karl de Boer>Oké. Waarbij we dus de uitdaging bij iWlz ook kan zijn. Probeer ze aan te stippen hoe generiek beleid zou zijn, maar</v>
+
+00:55:54.558 --> 00:55:55.038
+<v Karl de Boer>Ja.</v>
+
+00:55:55.848 --> 00:56:11.458
+<v Karl de Boer>Oké, dat kunnen we proberen. Eh ik denk wel dat als eh als de FORCE presentatie komende week niet doorgaat, is twee weken denk ik te weinig voor mij om beide op te pakken. Eh maar inderdaad als de FORCE werkgroep wel doorgaat, dan hebben we sowieso vier weken om dit uit te werken, dan kunnen we beide proberen aan te stippen.</v>
+
+00:56:12.338 --> 00:56:27.028
+<v Spreker (Ruimte DR4-04)>Hangt een beetje vanaf wat je vindt hè, of je in één werkgroep eh vier weken van bevindingen kan presenteren, of iedereen nog bij de les is. Dat is wel veel hè. Je merkt dat hier ook al een schat aan veel te delen en te bespreken was. En het op zich dan de afnemers hebben we geskipt uiteindelijk.</v>
+
+00:56:27.538 --> 00:56:40.018
+<v Karl de Boer>Ik ben, we hebben nog eh een minuut om ook een minuut om mensen iets willen zeggen hoe ze dit ontvangen hebben of het eh goede diepgang heeft of het eh andere dingen op zijn gekomen waar jullie zeggen eh besteed aandacht aan.</v>
+
+00:56:40.598 --> 00:56:47.348
+<v Spreker (Ruimte DR4-04)>Of deze intensiteit van eh zenden werkbaar.</v>
+
+00:56:48.398 --> 00:57:02.398
+<v Floris Deutekom>Ik vond het zelf geen probleem en ik vond het ook prettig dat er ruimte was om even in te breken en eventjes wat punten te noemen, maar dat we wel met z'n allen bij de les blijven. Dus voor mij werkt het, maar</v>
+
+00:57:02.838 --> 00:57:04.478
+<v Karl de Boer>ik ben benieuwd naar de rest.</v>
+
+00:57:05.108 --> 00:57:12.008
+<v Spreker (Ruimte DR4-04)>Oké. Nou, dan is het tot daar. Bij deze is officieel voorbij.</v>
+
+00:57:12.008 --> 00:57:26.128
+<v Karl de Boer>We gaan kijken of we FORCE kunnen regelen voor de volgende keer en we gaan door naar iWlz met als aandachtspunt het hogere beleid daar ook in als vervolgstap.</v>
+
+00:57:29.478 --> 00:57:31.298
+<v Karl de Boer>Dankjewel voor jullie tijd allemaal.</v>
+
+00:57:31.588 --> 00:57:31.948
+<v Floris Deutekom>Ja.</v>
+
+00:57:32.328 --> 00:57:35.508
+<v Floris Deutekom>Jij ook bedankt voor al het eh uitzoeken en regelen van tevoren.</v>
+
+00:57:39.818 --> 00:57:42.928
+<v Marcel Molenaar>Bedankt en eh tot de volgende keer. Hoi.</v>
+
+00:57:43.328 --> 00:57:43.898
+<v Hans Schevers>Hoi.</v>
+
+00:57:44.028 --> 00:57:45.098
+<v Gideon Zegwaard>Tot de volgende.</v>
+
+00:57:45.528 --> 00:57:46.128
+<v Maria Dziouba>Doei.</v>
+
+00:57:47.018 --> 00:57:47.788
+<v Marc de Boer>Doei.</v>

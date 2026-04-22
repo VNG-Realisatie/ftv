@@ -1,0 +1,1534 @@
+WEBVTT
+
+00:00:02.388 --> 00:00:03.148
+<v Spreker (Michiel Trimpe)>Nee, jammer.
+
+00:00:06.338 --> 00:00:07.568
+<v Spreker (Michiel Trimpe)>Twee dagen nog, dan is het helemaal...
+
+00:00:12.638 --> 00:00:16.828
+<v Spreker (Michiel Trimpe)>Oké, de Engelse vertaling van de Nederlandse teksten zijn...
+
+00:00:24.328 --> 00:00:27.128
+<v Spreker (Michiel Trimpe)>Maar neem je nou gesprek op of neem je video op?
+
+00:00:28.418 --> 00:00:30.008
+<v Spreker (Michiel Trimpe)>Transcriptie in het Engels. Ja.
+
+00:00:30.348 --> 00:00:33.208
+<v Spreker (Michiel Trimpe)>Maar je kan ook gewoon opnemen toch? Nee, whatever.
+
+00:00:33.548 --> 00:00:35.918
+<v Spreker (Michiel Trimpe)>Als het goed is, hopelijk neemt hij beide op.
+
+00:00:35.918 --> 00:00:36.428
+<v Spreker (Michiel Trimpe)>Whatever.
+
+00:00:36.788 --> 00:00:38.868
+<v Spreker (Michiel Trimpe)>Nou ja, ik bedoel...
+
+00:00:39.228 --> 00:00:41.928
+<v Spreker (Michiel Trimpe)>Oh ja, record and... Ja.
+
+00:00:53.288 --> 00:00:56.128
+<v Michiel Trimpe>Oké. Ehm, nou, welkom allemaal.
+
+00:00:56.638 --> 00:01:01.128
+<v Michiel Trimpe>Eh, het is de eerste officiële werkgroepsessie. Vorige keer was de kick-off, wat gaan we doen.
+
+00:01:01.628 --> 00:01:06.278
+<v Michiel Trimpe>En nu is dan eh ja, het idee, let's let's go actually do it.
+
+00:01:06.848 --> 00:01:15.998
+<v Michiel Trimpe>Ik heb voor in de chat al een Miro link gepaste, maar volgens mij de mensen die joinen van remote, die zien dat niet, dus ik paste hem nog een keer.
+
+00:01:16.848 --> 00:01:29.018
+<v Michiel Trimpe>Ehm, dus dat zullen we nog steeds, dezelfde link als vorige keer. En we zullen het nog steeds enigszins gebruiken om ehm ja, wat de samenwerking, ja, interactiviteit te creëren.
+
+00:01:30.128 --> 00:01:37.338
+<v Michiel Trimpe>Even kijken hoe we het screen kunnen delen.
+
+00:01:38.618 --> 00:01:45.318
+<v Michiel Trimpe>Ik weet dat jullie nu allemaal mijn scherm zien, maar even kijken hoe het hoe dat werkt.
+
+00:01:49.498 --> 00:02:00.678
+<v Michiel Trimpe>Nou, dus dit was ehm de Miro van vorige keer. Eh dus we hebben met z'n allen een hoop onderwerpen ja, op tafel gelegd, daarop gestemd.
+
+00:02:01.448 --> 00:02:05.008
+<v Michiel Trimpe>En in de eerste sessie hadden we een aantal dingen die we wilden bespreken.
+
+00:02:05.478 --> 00:02:12.018
+<v Michiel Trimpe>Eh een stukje kennis delen. Eh deze werd groot neergezet, dus de referentiearchitectuur.
+
+00:02:12.728 --> 00:02:20.308
+<v Michiel Trimpe>Ehm, even naar AuthZEN kijken en deze twee, dus een samenwerkvorm bespreken en een scope vaststellen van de werkgroep.
+
+00:02:21.688 --> 00:02:31.338
+<v Michiel Trimpe>Ehm, één verzoek daarbij van iedereen was om eh te presenteren wat wat is externalized authorization management nou, wat wat waar hebben we het over in iets meer detail.
+
+00:02:31.728 --> 00:02:38.118
+<v Michiel Trimpe>Ook voor ja, iedereen om een beeld te krijgen en te kijken, hebben we hetzelfde beeld van waar we het over hebben.
+
+00:02:38.608 --> 00:02:46.408
+<v Michiel Trimpe>Hè, dus daar heb ik een presentatie voor voorbereid. Ehm, ik verwacht dat we daarin in ongeveer 20 minuten doorheen zullen lopen.
+
+00:02:47.018 --> 00:02:52.228
+<v Michiel Trimpe>Allereerst even voor iedereen, ehm, is het oké? Even kijken.
+
+00:02:52.888 --> 00:02:57.428
+<v Michiel Trimpe>Kijken of ik de mensen weer terug kan krijgen. Nee.
+
+00:02:58.008 --> 00:03:05.208
+<v Michiel Trimpe>Oké. Nou, stop ik even met delen, want dan anders zie je niet iedereen.
+
+00:03:05.208 --> 00:03:06.008
+<v Michiel Trimpe>niet iedereen.
+
+00:03:10.828 --> 00:03:11.378
+<v Michiel Trimpe>Zo.
+
+00:03:12.338 --> 00:03:17.138
+<v Michiel Trimpe>Ehm, even kijken. Voor iedereen in de zaal of in de zaal en remote,
+
+00:03:17.718 --> 00:03:26.138
+<v Michiel Trimpe>eh is het oké voor jullie als we beginnen met de presentatie? Of zijn er mensen die nog wat dingen willen delen of
+
+00:03:28.488 --> 00:03:30.228
+<v Michiel Trimpe>Ja, een beetje knikken. Oké.
+
+00:03:30.828 --> 00:03:37.218
+<v Michiel Trimpe>Dan gaan we beginnen met de presentatie.
+
+00:03:39.698 --> 00:03:46.128
+<v Michiel Trimpe>Als dat lukt.
+
+00:03:46.478 --> 00:03:48.458
+<v Michiel Trimpe>Nou ja, dat is...
+
+00:03:49.778 --> 00:03:51.988
+<v Michiel Trimpe>Even kijken.
+
+00:04:00.918 --> 00:04:03.358
+<v Michiel Trimpe>Ja, hier zijn we bij het begin.
+
+00:04:04.288 --> 00:04:06.948
+<v Michiel Trimpe>Ehm, oké. Nou, de
+
+00:04:07.388 --> 00:04:13.118
+<v Michiel Trimpe>werkgroep Federatieve Toegangsverlening. Eh dat is een Nederlandse term en de werk en de en de teamnaam.
+
+00:04:13.628 --> 00:04:20.018
+<v Michiel Trimpe>Waar we over het algemeen over gaan is wat we noemen Externalized Authorization Management, de Engelse term.
+
+00:04:20.378 --> 00:04:29.018
+<v Michiel Trimpe>Probeer voor de meeste termen ook de Nederlandse variant te maken, maar het is een samenvatting van wat in het Engels bekend staat als Externalized Authorization Management.
+
+00:04:29.798 --> 00:04:33.908
+<v Michiel Trimpe>Allereerst even als definitie, dus wat is toegangsverlening voor ons?
+
+00:04:34.418 --> 00:04:42.998
+<v Michiel Trimpe>En dat verstaan wij als op basis van toegangsbeleid verzoeken tot gegevensverwerking geheel of gedeeltelijk toestaan of afwijzen.
+
+00:04:44.228 --> 00:04:48.338
+<v Michiel Trimpe>Eh, deze presentatie gaan we opbouwen van een aantal perspectieven.
+
+00:04:48.918 --> 00:05:03.188
+<v Michiel Trimpe>Eh, het ontwerp van eh autorisatie, toegangsverlening, het beheer, dus nadat het gebouwd is, hoe beheer je het en hou je het bij, en de werking, hoe verloopt het fysiek door je infrastructuren en hoe werkt het.
+
+00:05:04.098 --> 00:05:13.118
+<v Michiel Trimpe>En eh één van de belangrijke dingen die we ook even neer willen zetten is ehm, zeg maar wat wij voorstellen versus de huidige wereld.
+
+00:05:13.628 --> 00:05:18.998
+<v Michiel Trimpe>Eh en dat is eh in plaats van externalized, het tegenovergestelde, embedded authorization.
+
+00:05:19.468 --> 00:05:30.338
+<v Michiel Trimpe>Eh dus dat is een wereld waarin eh qua ontwerpfase in applicaties het toegangsbeleid en beheersinterfaces hoe die toegang hard gecodeerd zijn over het algemeen.
+
+00:05:30.728 --> 00:05:40.238
+<v Michiel Trimpe>En waarin dan de applicatierollen nog wel aan je identity governance en Active Directory gekoppeld worden waar mogelijk. Maar veel in het ontwerp.
+
+00:05:40.918 --> 00:05:47.108
+<v Michiel Trimpe>Eh dat is een wereld waarin het beheer voornamelijk gaat met die gebruikersrollen. Dus heel veel rollen aanmaken en die beheren.
+
+00:05:47.578 --> 00:05:53.308
+<v Michiel Trimpe>Eh als je een recht moet geven, moet je de verschillende beheersapplicaties, interfaces per applicatie induiken.
+
+00:05:53.778 --> 00:06:09.118
+<v Michiel Trimpe>Dus eh nou, dat verschilt, dat is niet uniform en niet vergelijkbaar. En als toegangsbeleid wijzigt, betekent dat over het algemeen dat je een verzoek in moet dienen, een change request bij je ontwikkelteam of je leverancier om je toegangsbeleid in de applicatie aan te laten passen.
+
+00:06:09.718 --> 00:06:22.188
+<v Michiel Trimpe>Dat heeft als resultaat in de werking dat de toegang over het algemeen grofmazig, relatief grofmazig wordt verleend op basis van gebruikersrollen, applicatie-instellingen en hand-gecodeerd toegangsbeleid.
+
+00:06:22.578 --> 00:06:34.258
+<v Michiel Trimpe>Dat door het gebrek aan beheersbaarheid vaak, nou, als je het gaat over rollen, uren verouderd kunnen zijn, over toegangsbeleid ook vaak maanden verouderd kunnen zijn, omdat een change request uitloopt of simpelweg niet is ingediend.
+
+00:06:36.198 --> 00:06:47.018
+<v Spreker (Michiel Trimpe)>Vanuit de inkoop eh heb ik hier altijd problemen mee, want de partij die jou de spullen gaat leveren, eh hoe minder die hierin geïnvesteerd hebben,
+
+00:06:47.378 --> 00:06:53.228
+<v Spreker (Michiel Trimpe)>hoe voordeliger ze het kunnen aanbieden. Dus als je gaat inkopen op basis van prijs,
+
+00:06:53.588 --> 00:06:59.138
+<v Spreker (Michiel Trimpe)>dan is dit altijd één van de één van de slechtst ingevulde punten. De beheer en de Ja, gewoon de opzet van je van je toegang tot je applicatie.
+
+00:06:59.138 --> 00:07:06.198
+<v Spreker (Michiel Trimpe)>Ja. Username, password en eh ja, dat is het dan. Alles wat je meer wilt, dat eh kost meer geld.
+
+00:07:06.558 --> 00:07:08.858
+<v Michiel Trimpe>Ja, inderdaad. En als het niet hoeft...
+
+00:07:09.458 --> 00:07:15.008
+<v Michiel Trimpe>Ja, nou en dat is op zich de komt dat is mooi wat externalized authorization ook eigenlijk dus juist voorstelt.
+
+00:07:15.008 --> 00:07:27.188
+<v Michiel Trimpe>Ja. Dus als je dus ook gaat aanbesteden of dingen op laat leveren, is het ook probeer deze de de toegangsbeleid logica en de admin interfaces en alle rollen et cetera,
+
+00:07:27.658 --> 00:07:42.148
+<v Michiel Trimpe>laat dat buiten scope. Dus wat belangrijk is is in de ontwerpfase van externalized authorization, is dat je eigenlijk alleen zegt: je moet de informatie bepalen die vereist is voor toegangsbeslissingen en waar en hoe beslissingen afgedwongen moeten worden.
+
+00:07:42.148 --> 00:07:44.308
+<v Spreker (Michiel Trimpe)>Dat is wel een hele andere doorsnede dan de vorige.
+
+00:07:44.668 --> 00:07:46.708
+<v Michiel Trimpe>Want bij de vorige moet je dat ook.
+
+00:07:47.068 --> 00:07:56.248
+<v Spreker (Michiel Trimpe)>Dus hier beschrijf je hoe het is gedaan, hoe het is uitgevoerd. En bij die andere beschrijf je wat je moet besluiten. Volgens mij moet je hetzelfde besluiten, alleen het wordt anders uitgevoerd.
+
+00:07:56.608 --> 00:08:05.008
+<v Michiel Trimpe>Ontwerp. Volgens mij als ik in een applicatie beleid en beheerinterface voor toegang moet coderen, dan moet ik dat wat je in de volgende sheet zegt ook doen.
+
+00:08:05.368 --> 00:08:12.148
+<v Michiel Trimpe>Nee. Alleen ik doe het in een andere op een andere manier. Je ontwerpt hier niet het beleid.
+
+00:08:12.508 --> 00:08:16.048
+<v Michiel Trimpe>Dus in het beleid zit in de beheersfase.
+
+00:08:16.408 --> 00:08:37.348
+<v Michiel Trimpe>Dus je ontwerpt hier in je applicatie, dus aan je externe leverancier zeg je ook ontwerp welke beslissingen, dus wat zijn gegevensverzoeken, de verwerkingsverzoeken, welke informatie is er nodig om daarover te beslissen en zorg dat die aangeleverd worden. Maar hoe je dat beleid codeert en hoe je dat afhandelt,
+
+00:08:37.708 --> 00:08:41.248
+<v Michiel Trimpe>>dat valt daarbuiten. Dus dat valt in de beheersfase. Oké, we praten langs elkaar heen, maar ga maar even door.
+
+00:08:41.248 --> 00:08:53.068
+<v Michiel Trimpe>Ja. Ehm, dat is in ieder geval en dat is ook in de beheer, dus beheer wordt ook daar moet je het organisatorisch beleid en het technisch beleid op elkaar afgestemd houden.
+
+00:08:53.428 --> 00:09:05.308
+<v Michiel Trimpe>En dat is een continu proces. En in de werking is het van je dan dat je dus over een individueel verwerkingsverzoek beslist op het moment van ontvangst en op basis van volledige actuele informatie op dat moment.
+
+00:09:11.248 --> 00:09:24.748
+<v Michiel Trimpe>Eh, dat is op hoog niveau het verschil tussen de oude en de nieuwe wereld. Dus in plaats van in de voor op het beheer uit te voeren, ook wel afhankelijk van wat detailniveau diepgravende kennis van de applicatie.
+
+00:09:24.748 --> 00:09:48.028
+<v Michiel Trimpe>Ja. En het beheer dat is een latere slide in de beheerssectie, gaan we net ook van dat beheer wil je natuurlijk nog steeds de juiste plekken leggen. Dat je het beheer de verantwoordelijkheid voor het beheer wel belegt bij bijvoorbeeld je DevOps applicatie voor veel dingen. Maar wel als beheersactiviteit en centraal gemanaged.
+
+00:09:48.388 --> 00:09:56.428
+<v Michiel Trimpe>En dat komt later dan nog. Ehm, nou, als we kijken naar de werking, dat zal voor veel mensen hier aan tafel, zal het gesneden koek zijn.
+
+00:09:56.788 --> 00:09:58.348
+<v Michiel Trimpe>En ook online, toch even door.
+
+00:10:12.449 --> 00:10:17.849
+<v Michiel Trimpe>Dus, er zijn dan de stappen van het, ja, het klassieke P-bak patroon.</v>
+
+00:10:17.849 --> 00:10:23.779
+<v Michiel Trimpe>Dus als eerste dient de aanvrager een verwerkingsverzoek in. Die wordt opgevangen door een Policy Enforcement Point.</v>
+
+00:10:23.779 --> 00:10:35.109
+<v Michiel Trimpe>Eh, het Policy Enforcement Point vat dat verzoek dus samen in dat informatiemodel wat je ontworpen hebt. Dus dat is de belangrijkste, het belangrijkste ding wat je ontwerpt in deze oplossing.</v>
+
+00:10:35.109 --> 00:10:43.609
+<v Michiel Trimpe>En biedt dat dan aan een Policy Decision Point aan. Met ons voorstel op basis van de OpenID AuthZEN standaard.</v>
+
+00:10:43.609 --> 00:10:53.389
+<v Michiel Trimpe>Ehm, dus een PDP is een decision point, kan centraal draaien, maar kan ook lokaal naast je applicatie draaien, dus dat hoeft niet per se gedistribueerd.</v>
+
+00:10:56.789 --> 00:11:04.609
+<v Michiel Trimpe>Ehm, dan eh pakt de, ja, combineert de PDP dat met de access of het toegangsbeleid uit de Policy Administration Point.</v>
+
+00:11:04.609 --> 00:11:07.969
+<v Michiel Trimpe>Die dat netjes geversioneerd aanbiedt.</v>
+
+00:11:07.969 --> 00:11:14.219
+<v Michiel Trimpe>Eh dan merk je vaak dat er nog additionele informatie nodig is uit de context om die beslissing te kunnen maken.</v>
+
+00:11:14.219 --> 00:11:22.259
+<v Michiel Trimpe>Dus die wordt eh verrijkt door de Policy Information Point, wederom met herleidbare informatie.</v>
+
+00:11:22.259 --> 00:11:30.079
+<v Michiel Trimpe>En uiteindelijk wordt de beslissing dan op uniform wijze vastgelegd in het logboek.</v>
+
+00:11:30.079 --> 00:11:43.519
+<v Michiel Trimpe>En nou, doordat zowel de PAP en de PIP eh historisering of eh logging moeten ondersteunen, kan je met behulp van het logboek historische beslissingen volledig reconstrueren en verantwoorden.</v>
+
+00:11:43.519 --> 00:11:48.739
+<v Spreker 2 (Ruimte)>En dit model is hetzelfde ook als de aanvrager niet een persoon is, maar maar ook een systeem.</v>
+
+00:11:48.739 --> 00:11:54.319
+<v Michiel Trimpe>Ja, ja, de aanvrager, we hadden een icoontje voor beide moeten vinden, maar dat was nog niet gelukt.</v>
+
+00:11:54.319 --> 00:12:01.079
+<v Michiel Trimpe>Dus inderdaad, de aanvrager eh is niet per se een persoon, maar een entiteit. Dus een systeem of persoon.</v>
+
+00:12:04.389 --> 00:12:09.139
+<v Michiel Trimpe>Nou, en dan komt er een toegangsbeslissing terug. Dat is primair ja of nee.</v>
+
+00:12:09.139 --> 00:12:12.989
+<v Michiel Trimpe>Maar daar kan ook uitleg bij zitten en beargumentatie.</v>
+
+00:12:12.989 --> 00:12:21.239
+<v Michiel Trimpe>Ook step-up indicaties bijvoorbeeld. Want wij wijzen dit verzoek af, maar als je het nog een keer probeert, dan wel, met een aanpassing X, dan wel.</v>
+
+00:12:21.239 --> 00:12:27.429
+<v Michiel Trimpe>En mogelijk ook voorwaarden. We zitten, ja, restbeleid noemen we het, in het Engels residual policy.</v>
+
+00:12:27.429 --> 00:12:34.509
+<v Michiel Trimpe>Waar je zegt: ja, dit verzoek is toegestaan, maar er hoort nog wat meer bij. Dus alleen als je ook dit en dat kan doen, kan afdwingen.</v>
+
+00:12:35.659 --> 00:12:37.789
+<v Spreker 2 (Ruimte)>Ik zou de ronde Engelse term dan gebruiken.</v>
+
+00:12:37.789 --> 00:12:44.479
+<v Michiel Trimpe>Ja, we zijn nog aan het worstelen met of we willen alles in het Engels of we willen ook echt de Nederlandse vertaling introduceren, maar...</v>
+
+00:12:44.479 --> 00:12:49.129
+<v Spreker 2 (Ruimte)>Noted. Over het algemeen klinkt het altijd een beetje houterig.</v>
+
+00:12:49.129 --> 00:12:59.139
+<v Spreker 2 (Ruimte)>En eh doe je net alsof je het zelf bedacht hebt. Terwijl als je de Engelse termen gebruikt, dan kun je het ook relateren aan andere standaarden, bijvoorbeeld EIDAS-standaarden of dingen die daarboven liggen.</v>
+
+00:12:59.139 --> 00:13:05.109
+<v Spreker 2 (Ruimte)>Ja. Anders is het net alsof we dingen steeds helemaal zelf bedenken, terwijl we natuurlijk hangen aan iets anders.</v>
+
+00:13:05.109 --> 00:13:16.389
+<v Michiel Trimpe>Ja. Ja, en een van de vragen voor de werkgroep is ook bij de standaard. Ik heb nu een opzet voor de standaard in het Nederlands bijvoorbeeld. En één van de eerste vragen die ik wil stellen: willen we dat zo houden? Of moet hij naar het Engels?</v>
+
+00:13:18.259 --> 00:13:19.119
+<v Spreker 2 (Ruimte)>Ja. Point.</v>
+
+00:13:19.119 --> 00:13:23.519
+<v Spreker 3 (Ruimte)>Je introduceert heel veel verwarring. We hebben jarenlang verwarring gehad over eh...</v>
+
+00:13:23.519 --> 00:13:31.429
+<v Spreker 3 (Ruimte)>Ja. Digikoppeling, vertaalde begrippen, waar mensen eindeloos over worstelen met wat is er nou een transactie?</v>
+
+00:13:31.429 --> 00:13:36.529
+<v Spreker 3 (Ruimte)>Is het nou, is het nou een melding? Ja. Wat is een melding technisch gezien? Ja.</v>
+
+00:13:38.259 --> 00:13:39.119
+<v Spreker 2 (Ruimte)>Goed punt.</v>
+
+00:13:39.119 --> 00:13:42.069
+<v Michiel Trimpe>Ja, point taken. Dat was één van de...</v>
+
+00:13:42.069 --> 00:13:48.249
+<v Spreker 2 (Ruimte)>De vorige slide stond inderdaad eerst de Engelse term. Dus step-up eh...</v>
+
+00:13:48.249 --> 00:13:53.169
+<v Michiel Trimpe>Ja, inderdaad, die kreeg ik niet. En dan de restbeleid. En we hebben PDP. PDP retourneert beslissing. Ik snap wat er staat.</v>
+
+00:13:53.169 --> 00:13:59.049
+<v Spreker 2 (Ruimte)>Ja. Als we daar een eh een toegangsbeleid eh beslissingspunt van maken...</v>
+
+00:13:59.049 --> 00:14:08.519
+<v Spreker 2 (Ruimte)>Dan weet ik het opeens niet zo goed. En dan wordt het ook nog eens vervormd straks in de politiek of door mensen die uit business komen en die gaan er nog net een andere term aan geven en dan zijn we de klos.</v>
+
+00:14:08.519 --> 00:14:15.119
+<v Michiel Trimpe>Ja, nou, point taken. We gaan het eh Nederlands, vernederlandsiseren, hoogstwaarschijnlijk.</v>
+
+00:14:15.119 --> 00:14:27.429
+<v Spreker 2 (Ruimte)>Ik zou denken daar waar je precies wil zijn, moet je het Engels. Dus ik zou zeggen de standaard zelf ook in het Engels. Maar en daar waar je het uitlegt, moet je op een gegeven moment de sprong naar het Nederlands maken.</v>
+
+00:14:27.429 --> 00:14:28.029
+<v Michiel Trimpe>Ja.</v>
+
+00:14:28.029 --> 00:14:36.199
+<v Spreker 2 (Ruimte)>Maar als je dit weer heel hoog over als plaatje beschrijft, dan kan je zelfs eh eh PKI overheid of iets dergelijks...</v>
+
+00:14:36.199 --> 00:14:41.229
+<v Spreker 2 (Ruimte)>Of certificaten erop plotten. Als algemeen begrip, ja, dat werkt ook zo.</v>
+
+00:14:41.229 --> 00:14:45.029
+<v Spreker 2 (Ruimte)>Ja, dat is... Dat is die wil als...</v>
+
+00:14:45.029 --> 00:14:51.029
+<v Michiel Trimpe)>Als opmerking over dit. Als je het heel abstract maakt en en voor de business, dan zeg je: ja, tuurlijk, ja.</v>
+
+00:14:51.029 --> 00:14:54.029
+<v Spreker 2 (Ruimte)>Ja. Dat hadden we toch al?</v>
+
+00:14:54.029 --> 00:14:59.029
+<v Michiel Trimpe>Dat dat hadden we al. Ja. Ja.</v>
+
+00:14:59.029 --> 00:15:05.129
+<v Spreker 2 (Ruimte)>Ja, want het is ook met dit met dit plaatje ook hè. Dit is al meteen vrij technisch.</v>
+
+00:15:05.129 --> 00:15:14.029
+<v Spreker 2 (Ruimte)>Als je het één stapje hoger doet en dat zat net wel in die in die eh kanteling tussen modern en eh eh eh traditioneel.</v>
+
+00:15:14.029 --> 00:15:22.029
+<v Spreker 2 (Ruimte)>Dat is dat je eh hier, als je als je dit ziet en als je ziet wat je kunt, en dat kun je ook centraal doen.</v>
+
+00:15:22.029 --> 00:15:35.029
+<v Spreker 2 (Ruimte)>Ik kan ook alles loggen als centraal punt. En als ik een platform heb met een eh met één toegangsbeleid dat ik echt heel star ben. Ik heb alleen maar een password dingetje en ik heb een lijst in de database staan en dat is mijn toegangsbeleid. Dan kan ik alles wat je net zei ook.</v>
+
+00:15:35.029 --> 00:15:46.029
+<v Spreker 2 (Ruimte)>En en dus dus daar zit nog een daar zit ook een abstractie nog ergens in, want je moet vertellen waarom waarom je dit waarom we dit zouden moeten willen.</v>
+
+00:15:46.029 --> 00:15:52.029
+<v Spreker 2 (Ruimte)>Het is veel ingewikkelder hè dan eh... We hebben we hebben wij zeggen op Nederland ook een heel korte discussie gehad over waarom willen wij eigenlijk federatief data delen?</v>
+
+00:15:52.029 --> 00:15:59.029
+<v Spreker 2 (Ruimte)>Moeten we niet gewoon een platform bouwen? Want dat moet je eerst even die bunken.</v>
+
+00:15:59.029 --> 00:16:10.029
+<v Spreker 2 (Ruimte)>Als ik dit aan een als ik dit vertel en ik teken eerst een plaatje met een centraal platform en dan iedereen die koppelt en die passwordje inlevert en daarna ga ik deze laten zien, zegt iedereen: doe mij die oude maar.</v>
+
+00:16:10.029 --> 00:16:28.029
+<v Spreker 2 (Ruimte)>Omdat de technische voorbeelden die je net noemde, de technische dingen die je kunt, die kun je ook op een platform. Je moet zeggen dat het makkelijker kan of dat het beter beheersbaar is of dat het goedkoper wordt of dat een ander het niet meer hoeft te doen of iets waardoor we dit ook eh interessant maken om eh verder te kunnen.</v>
+
+00:16:28.029 --> 00:16:30.029
+<v Spreker 2 (Ruimte)>Anders verkopen we techniek.</v>
+
+00:16:30.029 --> 00:16:46.029
+<v Michiel Trimpe>Ja, ja, dus inderdaad. En ik ben er helemaal voor hè. Laat we even, ik klink kritisch, maar ik wil dat we het heel goed eh eh beargumenteren waarom wij deze stap, wij als de B in Nederland, deze stap moeten, ik vind ook dat we moeten maken, maar waarom we hem precies moeten maken.</v>
+
+00:16:46.029 --> 00:16:57.029
+<v Michiel Trimpe>Ja. Dus voor de duidelijkheid, dit is wel de presentatie die voor de werkgroep is gemaakt om duidelijk te hebben wat is ons domein en onze reikwijdte en waar wij ons op richten. Dus nog niet de de presentatie die we aan de wereld gaan geven.</v>
+
+00:16:57.029 --> 00:17:06.029
+<v Spreker 2 (Ruimte)>Nee, oké. Volgens mij de crux zit hem ook in het feit dat je eindeloos veel enforcement points kan hebben en één decision point.</v>
+
+00:17:06.029 --> 00:17:12.029
+<v Michiel Trimpe>Ja. Ehm, maar dat is ook meteen weer een heikel vraagstuk.</v>
+
+00:17:12.029 --> 00:17:20.029
+<v Spreker 2 (Ruimte)>We hebben 1600 overheidsorganisaties. Willen we 1600 decision points? Of willen we daar nog op een ander niveau...</v>
+
+00:17:20.029 --> 00:17:27.029
+<v Michiel Trimpe>Ja, ja, dus elk van deze componenten kan naar wens gedistribueerd worden.</v>
+
+00:17:27.029 --> 00:17:44.029
+<v Michiel Trimpe>Dat is denk ik ook één van de punten die wel echt voor ons ook relevant is, is dus bijvoorbeeld de, ja, wat gaan we nou doen? Want dat was het logboek. Als je dat standaardiseert, dan kan je federatief werken mogelijk maken door logboeken op allerlei plekken te hebben, maar ze wel allemaal naar of volgens één standaard naar één punt te laten stromen.</v>
+
+00:17:44.029 --> 00:17:53.029
+<v Michiel Trimpe>Ja. En dat zijn precies de nette dingen waar we in deze werkgroep moeten beslissen waar we ons druk over willen maken en wat we willen gaan oppakken.</v>
+
+00:17:53.029 --> 00:18:05.029
+<v Michiel Trimpe>Ehm, dus dan door naar het ontwerp. Dus eh dus dan dus de ontwerpfase was wat moeten we dan beslissen?</v>
+
+00:18:05.029 --> 00:18:19.029
+<v Michiel Trimpe>Ehm en dat is dan welke het informatiemodel, eh welke functionaliteit heb je nodig voor het afdwingen, dus de policy enforcement points en wat moeten de enforcement points kunnen. En wie moeten de genomen beslissingen in kunnen zien? Dus hoe gaan we met de logboek om?</v>
+
+00:18:19.029 --> 00:18:24.029
+<v Spreker 2 (Ruimte)>En in hoe ontsluit je dat naar elkaar toe?</v>
+
+00:18:24.029 --> 00:18:34.029
+<v Michiel Trimpe>Als je federatief wil zijn, dan dan moet je ook standaardiseren hoe hoe je daar dan als andere partij dan de partij die het uitvoert, inzicht in geeft.</v>
+
+00:18:34.029 --> 00:18:40.029
+<v Spreker 2 (Ruimte)>Ja, maar het is dus meer dan welke informatie is nodig als je...</v>
+
+00:18:40.029 --> 00:18:49.029
+<v Michiel Trimpe>Ja, dat logboek of als je een policy register hebt, dan moet je dus definiëren hoe ontsluit je dit register?</v>
+
+00:18:49.029 --> 00:18:54.029
+<v Spreker 2 (Ruimte)>Ja. Kan je dat in de onderwerpen erbij zetten? Want je zet hem hier op...</v>
+
+00:18:54.029 --> 00:18:55.029
+<v Michiel Trimpe>Welke onderwerpen?</v>
+
+00:18:55.029 --> 00:19:03.029
+<v Spreker 2 (Ruimte)>Ja, dus de of of in de grote onderwerpenlijst of op sessie twee of iets dergelijks. Dat we het daar gelijk vastleggen.</v>
+
+00:19:03.029 --> 00:19:08.029
+<v Michiel Trimpe>Nou, dan één van de belangrijkste dingen die wij zeggen, willen zeggen is dus je moet de gegevenswerking gaan modelleren.</v>
+
+00:19:08.029 --> 00:19:28.029
+<v Michiel Trimpe>Stellen we voor om te doen conform de subject, action, resource, context kapstok die uit de de P-bak wereld bekend is.</v>
+
+00:19:28.029 --> 00:19:37.029
+<v Michiel Trimpe>En binnen overheidscontext, ook dat we dit dus in ons informatiemodel op moeten gaan nemen. Dus dat dit netjes en degelijk gemodelleerd is.</v>
+
+00:19:37.029 --> 00:19:42.029
+<v Spreker 2 (Ruimte)>Ja, ik heb een woord dingetje. Dat gaat over entiteit.</v>
+
+00:19:42.029 --> 00:19:47.029
+<v Spreker 2 (Ruimte)>Daar is ook heel veel gedoe altijd al. Je hebt entiteit. Volgens mij is hier is dit actor.</v>
+
+00:19:47.029 --> 00:19:48.029
+<v Spreker 2 (Ruimte)>Actor.</v>
+
+00:24:23.080 --> 00:24:24.490
+<v Michiel Trimpe>adopteren.</v>
+
+00:24:24.490 --> 00:24:26.700
+<v Arnoud Quanjer>Ja, dit is wel een goed voorbeeld van eh</v>
+
+00:24:27.200 --> 00:24:27.700
+<v Michiel Trimpe>Precies.</v>
+
+00:24:28.200 --> 00:24:29.800
+<v Spreker 3>Ja, van de verwarring hè, die eh</v>
+
+00:24:29.800 --> 00:24:31.200
+<v Arnoud Quanjer>Ja, dit is weer een verwarring, ja.</v>
+
+00:24:31.200 --> 00:24:31.500
+<v Spreker 3>Ja.</v>
+
+00:24:31.700 --> 00:24:44.200
+<v Michiel Trimpe>Nou, en dan krijg je dus informatiemodellen zoals, nou, subject is een BOA, die schrijft een boete op een bepaald tijdstip wanneer eh hij conform een rooster aan het werk is.</v>
+
+00:24:48.500 --> 00:24:51.000
+<v Michiel Trimpe>Eh dat is dan dus het het informatiemodel van het verzoek.</v>
+
+00:24:51.000 --> 00:24:53.200
+<v Arnoud Quanjer>Is het waar? Ik ga toch terug. Ja, ik even terug, sorry.</v>
+
+00:24:53.200 --> 00:24:56.500
+<v Arnoud Quanjer>Is het een BOA of is het René Kind als BOA?</v>
+
+00:24:58.500 --> 00:24:59.200
+<v Michiel Trimpe>René Kind als BOA.</v>
+
+00:24:59.500 --> 00:25:02.500
+<v Arnoud Quanjer>Oké. Ja, even scherp. Sorry hoor, want ik wil het even scherp houden.</v>
+
+00:25:02.500 --> 00:25:03.500
+<v Michiel Trimpe>Ja. Ja, ja.</v>
+
+00:25:05.000 --> 00:25:06.000
+<v Arnoud Quanjer>Anders is het een rol.</v>
+
+00:25:07.000 --> 00:25:09.500
+<v Michiel Trimpe>Ja, klopt. Het is inderdaad René Kind als BOA.</v>
+
+00:25:13.000 --> 00:25:21.000
+<v Michiel Trimpe>Nou, en dan moet je bepalen waar in de keten moeten we dit afdwingen. Eh dit zijn dan de policy enforcement points, kunnen op allerlei verschillende plekken zitten.</v>
+
+00:25:22.000 --> 00:25:29.000
+<v Michiel Trimpe>Ehm rapporteren in principe wel vaak naar een centraal decision point, bijna altijd naar een centraal administration point.</v>
+
+00:25:31.000 --> 00:25:40.000
+<v Michiel Trimpe>Eh en ook nog wat fijnmaziger, dus eh step-up acties en voorwoordelijke voorwaardelijke verwerking, dus of ja, de residual policies, laten we het dan gaan noemen.</v>
+
+00:25:41.000 --> 00:25:51.500
+<v Michiel Trimpe>Eh nou, en de step-up acties die liggen bij de aanvrager. Dus als je iets af kan wijzen met van hé eh ik wil het graag binnen FSC hebben en niet binnen jouw connectivity, dan moet de aanvrager FSC kunnen gaan supporten.</v>
+
+00:25:52.500 --> 00:26:05.000
+<v Michiel Trimpe>Als je wilt zeggen: ik wil graag een DigiD of een two-factor auth of een eHerkenning niveau 4 hebben, biometrics, dan moet de aanvrager het verzoek opnieuw in kunnen dienen met zo'n extra niveau van assurance.</v>
+
+00:26:06.000 --> 00:26:11.000
+<v Michiel Trimpe>Eh en omgekeerd heb je ook de de verwerkende applicatie kan soms ook extra beleid uit moeten voeren.</v>
+
+00:26:11.000 --> 00:26:17.000
+<v Michiel Trimpe>Dus bijvoorbeeld, ja, dit verzoek is toegestaan, maar het BSN moet gemaskeerd tot de laatste vier cijfers.</v>
+
+00:26:17.000 --> 00:26:28.000
+<v Michiel Trimpe>Of ja, dit verzoek is toegestaan, maar de locatie moet een randomisatie hebben van plus of minus 8 km eh om de anonimiteit te waarborgen.</v>
+
+00:26:28.500 --> 00:26:33.000
+<v Arnoud Quanjer>Hoe ehm eh in het ook in het vorige plaatje, hoe</v>
+
+00:26:33.500 --> 00:26:42.000
+<v Arnoud Quanjer>eh modelleer je of ga je om met het feit dat René Kind als BOA opereert namens een organisatie?</v>
+
+00:26:43.000 --> 00:26:52.000
+<v Arnoud Quanjer>Is want als als het naar een systeem van de eigen organisatie is, dan dan de eigen organisatie die die wordt geacht zijn eigen medewerkers wel te kennen.</v>
+
+00:26:52.000 --> 00:27:02.000
+<v Arnoud Quanjer>Maar als het naar een andere organisatie is, hoezo zou die andere organisatie mogen weten zelfs dat het René Kind is die daar als BOA opereert?</v>
+
+00:27:03.000 --> 00:27:12.500
+<v Arnoud Quanjer>En hoe en hoe weet die organisatie namens wie René Kind optreedt, wat wat zijn medewerker allemaal namens die organisatie aan het uitspoken is?</v>
+
+00:27:12.500 --> 00:27:13.000
+<v Michiel Trimpe>Ja.</v>
+
+00:27:13.500 --> 00:27:15.000
+<v Marc de Boer>Ja, daar zijn trucjes voor hoor.</v>
+
+00:27:15.000 --> 00:27:18.000
+<v Michiel Trimpe>Ja, maar dat dus... associaties en eh</v>
+
+00:27:18.000 --> 00:27:27.000
+<v Michiel Trimpe>Vanuit ons project zien we dat, dus precies als de informatie modellering van het subject wat wij als overheid op orde moeten willen gaan krijgen.</v>
+
+00:27:27.000 --> 00:27:28.500
+<v Marc de Boer>Dat kan heel gelaagd zijn.</v>
+
+00:27:28.500 --> 00:27:36.000
+<v Michiel Trimpe>Ja. En een een een entiteit in een identiteit versleuteld weer door een andere identiteit en daar kan je dan afpellen en dan...</v>
+
+00:27:36.000 --> 00:27:39.000
+<v Arnoud Quanjer>Ja, maar momenteel doet iedereen het op zijn eigen manier en dat willen we niet.</v>
+
+00:27:39.000 --> 00:27:54.000
+<v Arnoud Quanjer>Nee, want want ik hier dus zou denken is dat René Kind als BOA opereert als organisatie en dat mag binnen die organisatie bekend zijn, maar de vervolgens het verzoek naar een andere organisatie is niet meer bekend dat René Kind het is.</v>
+
+00:27:54.000 --> 00:27:57.000
+<v Arnoud Quanjer>Maar is het een medewerker namens die organisatie?</v>
+
+00:27:57.000 --> 00:28:00.000
+<v Marc de Boer>Ja, dat is... Nou, daar kunnen we over verschillen hoe dat moet werken. Dat is...</v>
+
+00:28:00.000 --> 00:28:05.000
+<v Arnoud Quanjer>Dat zal denk ik... Dat is een patroon wat interessant is om te kijken van welke patronen hebben we daar, want er zijn verschillende manieren voor.</v>
+
+00:28:05.500 --> 00:28:06.500
+<v Michiel Trimpe>Ja, precies.</v>
+
+00:28:06.500 --> 00:28:10.000
+<v Arnoud Quanjer>Ik snap jouw insteek vanuit FDS in ieder geval. Dan zie ik hem.</v>
+
+00:28:10.000 --> 00:28:13.000
+<v Michiel Trimpe>Dan moet je dat ook op andere nog misschien op andere insteken.</v>
+
+00:28:13.000 --> 00:28:16.000
+<v Arnoud Quanjer>Het het hangt ook van verantwoordelijkheidsverdeling af.</v>
+
+00:28:16.000 --> 00:28:16.500
+<v Michiel Trimpe>Precies.</v>
+
+00:28:16.500 --> 00:28:23.000
+<v Arnoud Quanjer>Is het de organisatie die verantwoordelijk is voor het handelen van eh René Kind als BOA of is het René Kind zelf die verantwoordelijk is?</v>
+
+00:28:23.000 --> 00:28:23.500
+<v Michiel Trimpe>Ja.</v>
+
+00:28:24.500 --> 00:28:35.000
+<v Marc de Boer>Nou goed, dat is een invullingsding, maar inderdaad hoe hoe we een subject gaan coderen en gaan checken, dat is een patroon wat we goed moeten doordenken voor veel use cases.</v>
+
+00:28:35.000 --> 00:28:35.500
+<v Michiel Trimpe>Ja.</v>
+
+00:28:35.500 --> 00:28:56.000
+<v Michiel Trimpe>Dus ook een voorbeeld is ook een project, volgens mij binnen J&V, binnen Justitie, dat ook federatieve toegangsverlening heet. En die richten zich alleen tot nu toe op het standaardiseren van een subject, dan ook binnen een bepaalde case, van dus federatief als overheidsmedewerker inloggen op gedeelde infrastructuur. Dat is ook een voorbeeld van een heel project dat zich op dat stuk gericht.</v>
+
+00:28:56.000 --> 00:29:13.000
+<v Arnoud Quanjer>Ja, ik weet dat ze in het kader van EADS zijn ze er ook heel druk mee eh bij eh voor VWS met generieke functies, waar ze ook met zorgprofessionals die ook allerhande informatie met elkaar moeten uitwisselen. En namens wie doen ze dat dan? Dus het is het is een breed gedeelde...</v>
+
+00:29:13.000 --> 00:29:22.000
+<v Marc de Boer>Ik moet een project voeren dus binnen Scheepvaart, walstroom eh leveren. Dat doen we met federatief, gaan we federatief doen helemaal. Daar is het schip het subject.</v>
+
+00:29:22.000 --> 00:29:22.500
+<v Arnoud Quanjer>Ja, maar het schip...</v>
+
+00:29:22.500 --> 00:29:29.000
+<v Marc de Boer>Maar het schip, het schip logt nooit in natuurlijk. Daar zit een schipper op en het schip is ook niet verantwoordelijk.</v>
+
+00:29:29.000 --> 00:29:34.000
+<v Arnoud Quanjer>Nee, maar toch is het schip het subject, want daar wordt stroom aangeleverd. Dat is het ding wat je ziet liggen in de haven.</v>
+
+00:29:34.500 --> 00:29:37.000
+<v Marc de Boer>Die schepen die die die die niks, die...</v>
+
+00:29:37.000 --> 00:29:38.000
+<v Arnoud Quanjer>Die kapitein is verantwoordelijk.</v>
+
+00:29:38.000 --> 00:29:42.000
+<v Marc de Boer>Dus die die logt het schip aan. Dus dan heb je ook weer een rare...</v>
+
+00:29:44.000 --> 00:29:46.000
+<v Arnoud Quanjer>Het schip kan wel een eigen BV hebben.</v>
+
+00:29:46.000 --> 00:29:49.000
+<v Marc de Boer>Ja, die heeft een reder en die die betaalt dan weer.</v>
+
+00:29:49.000 --> 00:29:52.000
+<v Arnoud Quanjer>Dus nou goed, maar dat kan heel gelaagd zijn.</v>
+
+00:29:52.500 --> 00:29:55.000
+<v Marc de Boer>Kom uit het vissersdorp. Ja, dan weet je dat.</v>
+
+00:29:57.000 --> 00:30:05.000
+<v Rens Kievit>Wat ik nog wel interessant vind ook in deze context eh is de is ouderlijk gezag en dergelijke. En allerlei machtigingsconstructies.</v>
+
+00:30:05.000 --> 00:30:08.000
+<v Rens Kievit>Daar is ook heel veel over opgezet bij de overheid.</v>
+
+00:30:08.000 --> 00:30:15.000
+<v Rens Kievit>Eh en we hebben zelf vanuit die represents claim eh in Oauth eh lopen er af en toe tegenaan.</v>
+
+00:30:15.500 --> 00:30:28.000
+<v Rens Kievit>Maar ja, dat is natuurlijk ook afgewezen tenzij, ja, eh met eHerkenning is het simpel. Je bent afgewezen tenzij je deze machtiging hebt. Nou, vul je die toe. Eh maar met ouderlijk gezag is het wel weer lastiger eh...</v>
+
+00:30:28.000 --> 00:30:33.500
+<v Michiel Trimpe>Ja, dus afgewezen tenzij in de ideale wereld is afgewezen tenzij eigenlijk de de procedure checklist die je moet doorlopen</v>
+
+00:30:33.500 --> 00:30:44.000
+<v Michiel Trimpe>om alsnog toestemming toestemming te krijgen. Dus dat kan ook bijvoorbeeld een afgewezen tenzij en dan gewoon een verwijzing naar een een formulier of een regels.overheid workflow zijn, want dit moet je doorlopen om alsnog toegang te krijgen.</v>
+
+00:30:44.500 --> 00:30:51.500
+<v Michiel Trimpe>En dan een subset daarvan is dus de de het makkelijke voorbeeld is de de technisch automatische dingen als een eHerkenning inderdaad.</v>
+
+00:30:51.500 --> 00:31:02.000
+<v Michiel Trimpe>Maar idealiter zou je ook de step-up acties gewoon echt modelleren in de hele rijkheid van alles wat er nodig is om alsnog toegang te krijgen.</v>
+
+00:31:02.000 --> 00:31:02.500
+<v Arnoud Quanjer>Ja.</v>
+
+00:31:04.000 --> 00:31:09.000
+<v Arnoud Quanjer>Voordat ik de party poep, ehm het woord contract heb ik nog niet gezien.</v>
+
+00:31:09.500 --> 00:31:14.000
+<v Arnoud Quanjer>Wat is het want er wordt vaak over contracts gesproken hè. En eh</v>
+
+00:31:14.000 --> 00:31:22.000
+<v Arnoud Quanjer>Wat is het contract dan? Het geheel van de Is zit die in de context of zit die als een soort van vastlegging van...</v>
+
+00:31:22.000 --> 00:31:29.000
+<v Michiel Trimpe>Dit gaat in principe, dus dat is dus ook goed als we het hebben over de verlening gaat in principe niet over contracten.</v>
+
+00:31:29.000 --> 00:31:55.000
+<v Michiel Trimpe>Dus een contract kan een entiteit zijn dat verleend wordt of niet. En dan zijn het acties op je contract. Dus bijvoorbeeld met FSC zijn we bezig om te kijken kunnen we de de contractverlening op basis van dit patroon gewoon automatisch verlenen in bepaalde situaties van oké, je bent FDS deelnemer en dit is een een lichtgevoelige dataset die toegankelijk is voor alle FDS deelnemers, dus ja, hup, automatisch.</v>
+
+00:31:55.000 --> 00:32:05.000
+<v Arnoud Quanjer>Ik bedoel eh het vastleggen, ik kom naar data halen. Ik heb er helemaal geen idee. En op dat moment, maar dat mag ik me alleen maar doen als ik die data alleen maar voor een bepaald iets gebruik.</v>
+
+00:32:05.500 --> 00:32:10.000
+<v Arnoud Quanjer>Weet je, je krijgt hier dat getal, maar pas op, je mag het alleen maar daar en daarvoor...</v>
+
+00:32:10.000 --> 00:32:14.000
+<v Michiel Trimpe>Maar dan kan er dus een policy zijn die vereist dat jij eerst een contract hebt voordat...</v>
+
+00:32:14.000 --> 00:32:17.000
+<v Arnoud Quanjer>Dat ik een contract check of dat ik bewijs dat ik dat contract heb of...</v>
+
+00:32:17.000 --> 00:32:23.000
+<v Michiel Trimpe>Of dat het gewoon gelogd wordt en als later blijkt dat ik me niet aan de regel heb gehouden dat ik dan een juridisch probleem heb.</v>
+
+00:32:23.000 --> 00:32:28.000
+<v Arnoud Quanjer>En dan kan je dus verschillende soorten policies hebben om af te dwingen dat je een contract moet hebben.</v>
+
+00:32:28.000 --> 00:32:28.500
+<v Michiel Trimpe>Ja.</v>
+
+00:32:28.500 --> 00:32:32.000
+<v Arnoud Quanjer>Ja. Dus maar dat zit hier in de context of is is dit hele ding een contract?</v>
+
+00:32:32.000 --> 00:32:36.000
+<v Michiel Trimpe>Nee, de de contract wat je nu omschrijft zou in de context inzetten.</v>
+
+00:32:36.000 --> 00:32:36.500
+<v Arnoud Quanjer>In de context. Ja.</v>
+
+00:32:36.500 --> 00:32:37.000
+<v Michiel Trimpe>Oké.</v>
+
+00:32:37.000 --> 00:32:40.000
+<v Arnoud Quanjer>Dus alleen met een geldig contract bijvoorbeeld.</v>
+
+00:32:40.500 --> 00:32:55.000
+<v Michiel Trimpe>Ja, dus inderdaad als ik ehm een actie perform met eh met een bepaalde claim of iets dergelijks, of ik heb als subject een bepaalde claim dat ik dit ben en dat valt onder contract X, dan geef ik toestemming.</v>
+
+00:32:55.000 --> 00:32:56.000
+<v Arnoud Quanjer>Heb jij wel een rijbewijs?</v>
+
+00:32:56.000 --> 00:32:57.000
+<v Michiel Trimpe>Dus dat is een...</v>
+
+00:32:57.000 --> 00:32:58.500
+<v Arnoud Quanjer>Ja. Oké. Policy in die zin.</v>
+
+00:32:58.500 --> 00:33:09.000
+<v Rens Kievit>Ja, vanuit die RFC context zijn die contracten natuurlijk van belang, want ja, je gunt een leverancier toegang tot jouw data onder de voorwaarden van het contract. Ja. Eh en als je dat contract niet opneemt, ja, dan zijn de boeteclausules, de voorwaarden en de beperkingen zijn ook niet relevant.</v>
+
+00:33:09.000 --> 00:33:18.500
+<v Michiel Trimpe>Ja. En er zijn dus twee niveaus hè. Dus je zou kunnen zeggen van oké, je hebt een policy dat je een contract moet hebben. Maar je zou ook nog een policy kunnen definiëren dat dat contract aan bepaalde voorwaarden moet voldoen.</v>
+
+00:33:19.000 --> 00:33:29.000
+<v Michiel Trimpe>Ja, dat is waar het contract dan een entiteit of een eh resource is. Dus dan doe je iets op het contract en dat mag wel of niet conform beleid.</v>
+
+00:33:29.000 --> 00:33:29.500
+<v Arnoud Quanjer>Ja.</v>
+
+00:33:29.500 --> 00:33:37.000
+<v Michiel Trimpe>Dus stel bijvoorbeeld je hebt een contract, maar die die stelt dat je dan wel een doelbinding geregistreerd hebt. Ik noem maar even wat.</v>
+
+00:33:37.000 --> 00:33:44.500
+<v Arnoud Quanjer>Ja, oké, ja, dat is net nog een. Dus dan is een policy dat actief is op basis van actief is of niet op basis van een attribuut van je contract.</v>
+
+00:33:44.500 --> 00:33:45.500
+<v Michiel Trimpe>Ja. Ja.</v>
+
+00:33:48.000 --> 00:33:54.000
+<v Michiel Trimpe>Maar dat is dus ook de de focus op toegangsverlening is dus op het patroon faciliteren en inderdaad dan heb je invullingen daarvan met beleid en contracten en informatie.</v>
+
+00:30:12.509 --> 00:30:13.009
+<v Michiel Trimpe>Ja.</v>
+
+00:30:13.009 --> 00:30:18.009
+<v Michiel Trimpe>Ehm.</v>
+
+00:30:20.509 --> 00:30:21.209
+<v Michiel Trimpe>Even kijken.</v>
+
+00:30:21.909 --> 00:30:25.109
+<v Michiel Trimpe>Als we even terug gaan, dus als we net al naar de beheerfase kijken,</v>
+
+00:30:25.109 --> 00:30:31.009
+<v Michiel Trimpe>dan heb je dit, ik heb elke, na het punt heeft een slide, dus dan ga ik ook gewoon door de slide heen.</v>
+
+00:30:31.009 --> 00:30:38.009
+<v Michiel Trimpe>Dit is wat jij net al een beetje noemde van eh ja, het beheer wil je waarschijnlijk niet helemaal centraal doen voor alles.</v>
+
+00:30:39.009 --> 00:30:43.209
+<v Michiel Trimpe>Dus het idee is ook dat je de beheer op verschillende plekken neer kan leggen.</v>
+
+00:30:44.509 --> 00:30:51.509
+<v Michiel Trimpe>Ehm, nou bijvoorbeeld een een auditor die voor alles voor één directie doet, eh een security operations center die alles overziet.</v>
+
+00:30:52.009 --> 00:30:57.809
+<v Michiel Trimpe>Mogelijk een federatie die van alles in wil kunnen zien omdat het op organisatieniveau is ingeregeld.</v>
+
+00:30:58.509 --> 00:31:07.009
+<v Michiel Trimpe>Eh maar ook, nou ja, eh als je een DevOps team hebt, wil je waarschijnlijk het DevOps team verantwoordelijk maken voor het fijnmazig beleid van een applicatie.</v>
+
+00:31:07.509 --> 00:31:10.509
+<v Arnoud Quanjer>Maar er zit, dat zit volgens mij ook eh, zit een beetje dubbel hè?</v>
+
+00:31:10.509 --> 00:31:14.509
+<v Arnoud Quanjer>Dus je hebt enerzijds heb je de de aanbieder en anderzijds de afnemer.</v>
+
+00:31:14.509 --> 00:31:20.509
+<v Arnoud Quanjer>Ik kan me voorstellen, die moeten ergens een soort van middle ground vinden eh waar ze in elkaars definities over kunnen gaan.</v>
+
+00:31:20.509 --> 00:31:25.009
+<v Arnoud Quanjer>Dus in de applicatie heb je eh functioneel applicatiebeheerder, noem maar even wat,</v>
+
+00:31:25.009 --> 00:31:31.509
+<v Arnoud Quanjer>die die allerhande fijnmazige toe eh rechten omzet naar bijvoorbeeld een eh een verzameling rollen.</v>
+
+00:31:31.509 --> 00:31:46.009
+<v Arnoud Quanjer>En dan is er vervolgens aan de organisatiekant iemand die kijkt van oké, ja, maar welke mensen met welke functies zouden dan die rollen moeten vervullen als je rolbased als een soort van middle ground beschouwt om van personen tot fijnmazige eh toegang te verlenen.</v>
+
+00:31:46.509 --> 00:31:56.009
+<v Arnoud Quanjer>Dus je hebt daar iets nodig waar je het vanuit de eh de de de organisatie die kijkt van oké, welke personen heb ik allemaal, wat doen ze allemaal?</v>
+
+00:31:56.009 --> 00:32:01.509
+<v Arnoud Quanjer>Omgaat naar ik heb die applicatie en daar kan ik voor allerhande kleine acties zeggen of het wel of niet mag.</v>
+
+00:32:02.509 --> 00:32:03.009
+<v Michiel Trimpe>Ja.</v>
+
+00:32:03.509 --> 00:32:08.509
+<v Michiel Trimpe>Ja, en hoe je dat in moet regelen, dat kan ik kan ik kunnen wij bij de niet echt bepalen.</v>
+
+00:32:08.509 --> 00:32:12.509
+<v Michiel Trimpe>Ja, het idee is wel dat je moet duidelijk moet beslissen hoe je dat doet.</v>
+
+00:32:13.509 --> 00:32:23.009
+<v Michiel Trimpe>Maar wel als belangrijk punt dat alles uiteindelijk wel in dezelfde structuur gebeurt die die dan waarschijnlijk bijvoorbeeld ook binnen dezelfde applicatie of taal binnen een organisatie.</v>
+
+00:32:23.509 --> 00:32:26.009
+<v Arnoud Quanjer>Maar je kan dus dat dat decentraliseren naar twee richtingen doen, hè?</v>
+
+00:32:26.009 --> 00:32:31.509
+<v Arnoud Quanjer>Dus enerzijds naar die applicatiekant decentraliseren en anderzijds naar die organisatiekant.</v>
+
+00:32:33.509 --> 00:32:38.009
+<v Arnoud Quanjer>Want het kan best zijn dat een applicatie binnen een organisatie door 1000 mensen wordt gebruikt.</v>
+
+00:32:38.509 --> 00:32:58.009
+<v Arnoud Quanjer>Dan is het zou ik denken, heb je een applicatie eh partij die kennis heeft over die applicatie en wat voor soort rollen wat zouden moeten mogen binnen die organisatie, maar aan de andere kant heb je die organisatiekant en en wie van mijn 10.000 medewerkers, welke 1000 van mijn 10.000 medewerkers mag die applicatie eigenlijk gebruiken in welke rol?</v>
+
+00:32:59.009 --> 00:33:00.009
+<v Michiel Trimpe>Ja.</v>
+
+00:33:02.509 --> 00:33:07.509
+<v Arnoud Quanjer>Dat wil je ook niet bij elke individuele applicatie leggen om die kennis dan ook weer te hebben.</v>
+
+00:33:07.509 --> 00:33:12.009
+<v Arnoud Quanjer>Dus je je kan het dus je op twee manieren langs twee assen.</v>
+
+00:33:12.009 --> 00:33:12.509
+<v Michiel Trimpe>Ja, ik heb het.</v>
+
+00:33:12.509 --> 00:33:13.009
+<v Arnoud Quanjer>Decentraliseren.</v>
+
+00:33:13.009 --> 00:33:17.009
+<v Michiel Trimpe>Dit is eigenlijk voornamelijk naar technisch benoemd, maar hier zit ook gewoon een veel breder stuk aan.</v>
+
+00:33:17.009 --> 00:33:17.509
+<v Arnoud Quanjer>Dat is denk ik.</v>
+
+00:33:17.509 --> 00:33:21.509
+<v Michiel Trimpe>Ja, ook organisatorische kant van je organisatie, als je een hele grote organisatie hebt.</v>
+
+00:33:21.509 --> 00:33:22.009
+<v Arnoud Quanjer>Ja.</v>
+
+00:33:22.509 --> 00:33:28.509
+<v Michiel Trimpe>Ja, ik heb net een beetje de laatste laatste slide van analyseer beslissingen en en analyseer beslissingen en beleid.</v>
+
+00:33:29.509 --> 00:33:40.009
+<v Michiel Trimpe>Hè, dus inderdaad eh nou ja, eh bijvoorbeeld dingen om onnodig brede toegang te identificeren en eh kijken hoe je je je toegangsbeleid klopt.</v>
+
+00:33:40.509 --> 00:33:41.509
+<v Michiel Trimpe>Nou.</v>
+
+00:33:43.009 --> 00:33:45.509
+<v Michiel Trimpe>Ik zal kijken hoe ik het mee kan.</v>
+
+00:33:46.009 --> 00:33:51.009
+<v Arnoud Quanjer>Ja, het is ook volgens mij een lastige puzzel en er wordt vaak mee geworsteld in waar je dan die grens dan legt.</v>
+
+00:33:51.009 --> 00:33:55.009
+<v Arnoud Quanjer>Tot hoever ga je in de context van die applicatie in definiëren van rollen?</v>
+
+00:33:55.009 --> 00:34:05.509
+<v Arnoud Quanjer>Want dan ga je dus ook heel strak zetten naar wat voor soort rollen iemand dan, maar dat kan ook weer organisatie specifiek zijn, dus je wilt wel heel flexibel hebben.</v>
+
+00:34:05.509 --> 00:34:07.509
+<v Arnoud Quanjer>Nou, één organisatie kijkt op dezelfde manier naar rollen als de andere organisatie.</v>
+
+00:34:07.509 --> 00:34:11.509
+<v Arnoud Quanjer>Maar bij grote organisaties heb je wel iets nodig als een soort van middle ground.</v>
+
+00:34:11.509 --> 00:34:25.509
+<v Arnoud Quanjer>Want een HR medewerker die gaat niet van van eh 400 kleine soorten toegangen die je op een applicatie kan verlenen, allemaal bepalen hoe dat dan voor die medewerkers, zeker als er 100 applicaties zijn.</v>
+
+00:34:26.509 --> 00:34:27.509
+<v Arnoud Quanjer>Ja, dat wordt gewoon teveel, zeg maar.</v>
+
+00:34:27.509 --> 00:34:32.009
+<v Arnoud Quanjer>Dus je hebt de applicatiespecialisten nodig die dat dan naar een soort van tussentaal vertalen.</v>
+
+00:34:32.509 --> 00:34:33.509
+<v Michiel Trimpe>Groeperen.</v>
+
+00:34:33.509 --> 00:34:34.009
+<v Arnoud Quanjer>Ja.</v>
+
+00:34:34.509 --> 00:34:40.009
+<v Michiel Trimpe>Ja, dat is misschien wellicht dat ik hier inderdaad enigszins getekend heb, waar is mijn muis?</v>
+
+00:34:40.509 --> 00:34:50.009
+<v Michiel Trimpe>Dus net de flow van hoe ga je van het organisatorisch beleid, daar heb ik iets toegevoegd, het logisch toegangsbeleid, dus eh conform de MIM niveaus gematched.</v>
+
+00:34:50.509 --> 00:35:05.509
+<v Michiel Trimpe>Je gaat eigenlijk van een historisch beleid naar het logisch beleid van zo zou het in elkaar moeten zitten, dit is in woorden opgeschreven en dat moet ook weer vertaald worden naar technisch toegangsbeleid en die keten moet je netjes inrichten en beheren.</v>
+
+00:35:08.009 --> 00:35:09.509
+<v Frank Terpstra>Ik heb een gedachte spiegel.</v>
+
+00:35:09.509 --> 00:35:12.009
+<v Frank Terpstra>Eh selfservice.</v>
+
+00:35:13.509 --> 00:35:19.009
+<v Frank Terpstra>We focussen nu ons vooral top down hoe je dit in de organisatie helemaal uit gaat waaien.</v>
+
+00:35:19.509 --> 00:35:24.009
+<v Frank Terpstra>Eh als er 400 applicaties zijn om uit te kiezen.</v>
+
+00:35:25.009 --> 00:35:27.009
+<v Frank Terpstra>Ja, als je zegt van joh, kies zelf maar.</v>
+
+00:35:27.509 --> 00:35:28.509
+<v Frank Terpstra>Oké.</v>
+
+00:35:29.009 --> 00:35:36.009
+<v Frank Terpstra>Eh dan ga ik als nieuwe medewerker wel kijken wat er in die lijst van 400 applicaties zit wat ik wil gebruiken.</v>
+
+00:35:37.009 --> 00:35:41.009
+<v Frank Terpstra>Kan je het ook op die manier insteken?</v>
+
+00:35:41.009 --> 00:35:50.509
+<v Frank Terpstra>Eh nou ja, dan krijg je natuurlijk wel allerlei requests van gebruikers die zeggen van hé, mag ik deze applicatie gebruiken, mag ik deze gebruiken, mag ik deze rollen in deze applicatie?</v>
+
+00:35:54.009 --> 00:35:57.009
+<v Michiel Trimpe>Ik weet niet helemaal hoe faciliteer je dat dan?</v>
+
+00:35:58.509 --> 00:36:02.509
+<v Frank Terpstra>Het verlenen van toegang. Ja.</v>
+
+00:36:02.509 --> 00:36:06.009
+<v Michiel Trimpe>Als je het als gebruiker zelf gewoon aanvraagt.</v>
+
+00:36:08.509 --> 00:36:15.509
+<v Frank Terpstra>We hebben een we hebben een intranet met publieke informatie die iedereen mag rond, maar je moet even, je moet even een aanvraag doen.</v>
+
+00:36:16.509 --> 00:36:17.009
+<v Arnoud Quanjer>Ja.</v>
+
+00:36:19.509 --> 00:36:28.009
+<v Arnoud Quanjer>Als elke applicatie voor die applicatie een hoeveelheid rollen heeft gedefinieerd voor die voor de die organisatie logisch zijn.</v>
+
+00:36:28.509 --> 00:36:38.509
+<v Arnoud Quanjer>En al die rollen zijn weer gekoppeld aan eh bijvoorbeeld functies die jij hebt binnen de organisatie, dan zou je zo'n uitrol zou je gewoon volledig automatisch kunnen doen, want je kan als je die applicatie selecteert,</v>
+
+00:36:38.509 --> 00:36:48.009
+<v Arnoud Quanjer>dan eh nou ja, dan krijg je hem en dan krijg je meteen ook de de de rol die bij jouw functie hoort.</v>
+
+00:36:48.509 --> 00:36:54.009
+<v Michiel Trimpe>Ja, we noemen ook nog steeds vaak rollen, maar dat zijn in principe zijn rollen vaak voornamelijk attributen.</v>
+
+00:36:54.009 --> 00:37:03.009
+<v Michiel Trimpe>Dus dan is het meer, dus het idee is juist dat je het omdraait vanuit het organisatiebeleid, bijvoorbeeld dit voorbeeld van we hebben een intranet, wie zou daar toegang moeten tot moeten hebben?</v>
+
+00:37:03.509 --> 00:37:12.009
+<v Michiel Trimpe>Eh nou, dat zijn alle alle medewerkers of alle medewerkers minus deze set van minus dit attribuut.</v>
+
+00:37:12.009 --> 00:37:23.009
+<v Michiel Trimpe>Dus het idee is juist dat je als organisatiebeleid dat vastlegt en dat je niet zozeer na hoeft te denken over rollen, maar meer van welke informatiepuntjes heb ik nodig om ja of nee hier tegen te zeggen.</v>
+
+00:37:23.509 --> 00:37:26.509
+<v Arnoud Quanjer>Ja, maar je moet het koppelen aan een functie binnen een organisatie.</v>
+
+00:37:26.509 --> 00:37:28.009
+<v Arnoud Quanjer>Niet iedereen mag alles.</v>
+
+00:37:28.009 --> 00:37:32.009
+<v Michiel Trimpe>Ja, dat kan de beslissing zijn, maar dat hoeft, dat kan een functie zijn, het kan een afdeling zijn.</v>
+
+00:37:32.009 --> 00:37:36.009
+<v Arnoud Quanjer>Ja, functie, maar kan ook, je kan aan diverse attributen koppelen.</v>
+
+00:37:36.009 --> 00:37:49.009
+<v Arnoud Quanjer>Maar je moet daar vaak zie je dat dat eh je hebt niet zo definitief functie binnen een eh een eh soms zijn het van die matrix organisaties, heb je langs twee assen heb je kenmerken.</v>
+
+00:37:49.509 --> 00:37:56.009
+<v Arnoud Quanjer>Eh die de combinatie van die kenmerken die maakt dan dat je voor een applicatie bepaalde rechten hebt.</v>
+
+00:37:56.009 --> 00:38:11.009
+<v Arnoud Quanjer>Ik kan me voorstellen als je een hele grote organisatie hebt, dan is dan misschien opgedeeld in eh nou ja, eh release trains, maar je kan ook hebben dat in elk team zit een scrum master en dat de groep van scrum masters binnen een organisatie binnen Jira nog iets meer mag dan de gewone developer.</v>
+
+00:38:11.009 --> 00:38:11.509
+<v Arnoud Quanjer>Noem maar even wat.</v>
+
+00:38:11.509 --> 00:38:27.509
+<v Arnoud Quanjer>En dan kan je op die manier eh eh als het ware beleid zetten op kenmerken die je hebt in je HR systeem als het ware van wat wat doet iemand in een organisatie naar kenmerken in je applicatie, wat mag iemand in de applicatie?</v>
+
+00:38:28.509 --> 00:39:07.509
+<v Michiel Trimpe>Ja, en het is denk ik belangrijk wat dit dan opzet, dus eh er zijn ook met wat leveranciers aan het praten bijvoorbeeld en die zeggen van ja, wij zitten ook bij de defensie en wat we dan daar doen is dat je dan, zeg maar zij hebben dan een groot SAP systeem en dan heeft het SAP beheer werkt is dat je dan eh nou ja, custom dingetjes hebt en daar hebben ze dan gezegd: nee, we gaan elk verzoek binnen SAP gaat naar deze centrale policy engine en daar bepalen we dan nou ja, welke tabel mag je bij, wat mag je hier, wat mag je daar? Dus het is juist inderdaad dat die die logica die dan in de praktijk in de custom coded beheer interfaces en toegangsbeleid van de applicatie verstopt wordt momenteel.</v>
+
+00:39:07.509 --> 00:39:30.009
+<v Michiel Trimpe>Wat je dan best effort moet managen, dat je die eruit trekt en in één taal, in één ja, in één taal die de hele organisatie inzichtelijk en beheersbaar maakt, zodat je ook no matter waar waar je deze keten zit, dus het beheer en de implementatie kan door iedereen apart gedaan worden, maar het is één uniforme taal, één uniform datamodel, één uniforme manier van werken.</v>
+
+00:39:30.509 --> 00:39:46.509
+<v Michiel Trimpe>Zodat iemand die in de security operations center een gek bericht krijgt van hé, I don't trust this, wat is hier aan de hand? Helemaal het toegangsbeleid van je applicatie in kan zien en zegt: ah, wacht even, dit gebeurt hier ongeveer en dit is er aan de hand, dus.</v>
+
+00:40:06.219 --> 00:40:06.829
+<v Michiel Trimpe>Hm hm.</v>
+
+00:40:07.229 --> 00:40:11.129
+<v Michiel Trimpe>Ja. Om dit helemaal top down te regelen en te te</v>
+
+00:40:11.619 --> 00:40:16.089
+<v Michiel Trimpe>Ja, als je gewoon ergens kan aanvinken van joh, eh ik heb nu deze applicatie nodig, mag dat?</v>
+
+00:40:16.799 --> 00:40:26.389
+<v Michiel Trimpe>Ehm ja, tuurlijk. Het kost niks. Eh er zitten geen risico's aan verbonden. We hebben het gepackaged. Hier heb je de applicatie eh maak er gebruik van.</v>
+
+00:40:28.229 --> 00:40:31.969
+<v Spreker 2>Ja, ja, ik denk ik denk dat je dat ook wil. Dat is meer hoe richt je dit in.</v>
+
+00:40:31.969 --> 00:40:43.039
+<v Spreker 2>Zullen organisaties die top down, maar idealiter wil je het inderdaad gewoon ook wat bottom up, wil je zoveel mogelijk laag beleggen en zo mogelijk laag drempelig doen. Gewoon automatisch of zet je eigen rechten aan.</v>
+
+00:40:43.039 --> 00:40:43.449
+<v Michiel Trimpe>Ja, want</v>
+
+00:40:44.119 --> 00:40:59.019
+<v Michiel Trimpe>als je dat op deze manier top down zou gaan doen, dan zeg je: oh, we hebben 10.000 werknemers. We gaan 10.000 installaties van Notepad++ faciliteren, want er zijn er is een behoefte vanuit de organisatie. Ja, is altijd maar een een heel klein deel.</v>
+
+00:40:59.019 --> 00:41:07.959
+<v Spreker 2>Ja, ja, ik heb nog niet echt dus applicatie bedoel ik minder de zeg maar de de software hier bedoelde ik meer ehm een SAP of een eh</v>
+
+00:41:08.419 --> 00:41:13.849
+<v Spreker 2>zaak af, generiek zaak af component met applicaties. Dus minder een een applicatie die in je desktop runt.</v>
+
+00:41:14.589 --> 00:41:17.619
+<v Spreker 2>Eh dat speelt soms ook wel, dus we iemand van de Rijksoverheid.</v>
+
+00:41:17.619 --> 00:41:20.139
+<v Michiel Trimpe>Ja, SaaS eh SaaS applicatie kan natuurlijk hetzelfde zijn.</v>
+
+00:41:20.139 --> 00:41:27.109
+<v Spreker 2>Nee, het speelt het speelt wel hetzelfde, maar dat perspectief heb ik eh niet helemaal uitbedacht hoe dat</v>
+
+00:41:27.589 --> 00:41:37.939
+<v Spreker 3>Maar je kan ook tot tot toegang tot shares eh op omgeving of eh file access toegang. Je kan het overal kan je het op toepassen.</v>
+
+00:41:38.789 --> 00:41:45.909
+<v Michiel Trimpe>Ja, dat is inderdaad de het mooie van het patroon. Het is gaat eigenlijk gewoon een verzoek moet afgewezen worden of toegestaan.</v>
+
+00:41:46.449 --> 00:41:52.089
+<v Michiel Trimpe>En je ziet nu dat er heel vaak omheen gewerkt wordt door ook om te gegevens te delen eh oh, niet.</v>
+
+00:41:53.579 --> 00:41:54.029
+<v Michiel Trimpe>Ja.</v>
+
+00:41:55.419 --> 00:42:02.839
+<v Michiel Trimpe>Als je dan als je dat laagdrempelig kan aanbieden en kan aanvragen, dan zit je er ook gelijk in onder controle van je organisatie.</v>
+
+00:42:03.789 --> 00:42:16.329
+<v Michiel Trimpe>Ehm dus je kan dat soort dingen beter faciliteren, ook die SaaS diensten eh en dan de controle erop houden, omdat je zegt van hé, we doen het niet, want dan gaan mensen zitten trucs om eromheen te werken.</v>
+
+00:42:16.859 --> 00:42:17.219
+<v Michiel Trimpe>Ja.</v>
+
+00:42:17.909 --> 00:42:34.109
+<v Spreker 3>Wat je waarschijnlijk als applicatieleverancier wel moet doen is eh zeker als het heel fijnmazig wordt is dat je een soort van standaard rollenpatroon of een standaard toegangspatroon meeleveren om mensen niet meteen het bos in te sturen van wat ze allemaal kunnen opeens.</v>
+
+00:42:34.549 --> 00:42:41.319
+<v Michiel Trimpe>Ja, dat is wat ik het informatiemodel eigenlijk. Dus je moet heel duidelijk je informatiemodel van je verwerkingsverzoeken doen.</v>
+
+00:42:41.319 --> 00:42:51.609
+<v Michiel Trimpe>Dus nu hebben we vaak het informatiemodel zijn de resources. En los daarvan leeft er ook nog een informatiemodel over subjecten, maar het informatiemodel van de acties ontbreekt vaak.</v>
+
+00:42:52.199 --> 00:43:02.189
+<v Michiel Trimpe>Dus ook een mooie link naar data bij de bron die daar ook vaak over zegt van hé, we moeten niet alleen de veranderingen in de registraties doen, maar ook waarom die veranderd zijn.</v>
+
+00:43:02.189 --> 00:43:12.359
+<v Michiel Trimpe>Het is een vergelijkbare dynamiek. Dus je moet om dit goed te doen, is één van de grootste wijzigingen zal zijn het modelleren van je goed informatiemodel van je acties en wat er kan gebeuren.</v>
+
+00:43:13.629 --> 00:43:16.479
+<v Michiel Trimpe>En dat is dan inderdaad ook met mooie documentatie in de hand blijven.</v>
+
+00:43:16.479 --> 00:43:31.349
+<v Spreker 3>Nou, ja, en een voorbeeld van eh hier eh daar kan je zo out of the box mee aan de gang en dat dat is redelijk voor veel organisaties te doen. Maar vervolgens heb je een hele gereedschapskist open hoe je dat kan finetunen voor jouw organisatie. Hoezo dat beter werkt voor jou.</v>
+
+00:43:31.349 --> 00:43:32.029
+<v Michiel Trimpe>Ja, uit.</v>
+
+00:43:33.689 --> 00:43:34.399
+<v Michiel Trimpe>Inderdaad.</v>
+
+00:43:35.199 --> 00:43:35.689
+<v Michiel Trimpe>Oké.</v>
+
+00:43:36.869 --> 00:43:41.599
+<v Michiel Trimpe>Ehm eigenlijk best veel slides al gehad ondertussen. Niet helemaal in order, maar</v>
+
+00:43:42.479 --> 00:44:07.909
+<v Michiel Trimpe>Ja, hier is ook een stukje van federatief stelsel, dus hoe je dan ook met de zeg maar het logisch toegangsbeleid van een stelsel kan integreren dat je dat naar ja, technisch toegangsbeleid voor één organisatie echt uitrolt. Ehm dit is voor deze club denk ik, weet je, dat eh nou, je moet het goed en gecontroleerd deployen, dus doe dingen als pair programming, unit testing voor policy.</v>
+
+00:44:08.929 --> 00:44:28.019
+<v Michiel Trimpe>Ehm wat je hier kan doen wat wel cool is wat vaak niet kan is dus die eh het feit dat alle oude beslissingen hergespeeld af ja, opnieuw afgespeeld kunnen worden, kan je ook gebruiken om nieuw beleid te toetsen aan oude toegangsverleningen. Dus van als ik dit doe, wat zou er dan gebeurd zijn met deze 16.000 verzoeken van de afgelopen maand?</v>
+
+00:44:28.689 --> 00:44:31.979
+<v Michiel Trimpe>Oh, dan zouden ze in één keer allemaal toegestaan zijn. Hm, misschien niet.</v>
+
+00:44:32.619 --> 00:44:35.319
+<v Michiel Trimpe>Of allemaal afgewezen. Hm, misschien niet.</v>
+
+00:44:36.389 --> 00:44:43.309
+<v Michiel Trimpe>Ehm en natuurlijk een degelijk proces van niet dat niet iedereen dit zomaar live kan zetten. Dus daar daar moet wel echt goed over nagedacht worden.</v>
+
+00:44:43.689 --> 00:44:52.439
+<v Spreker 2>Want even voor mijn beeld, policy access point is hetzelfde als policy register? Administration point. Ja, dus policy administration point. Ja, dus policy register.</v>
+
+00:44:52.439 --> 00:44:53.019
+<v Michiel Trimpe>Ja.</v>
+
+00:44:55.309 --> 00:45:02.919
+<v Michiel Trimpe>Ja, wat is inderdaad interessant om dat met logging te combineren van oké, welke policies worden hoe vaak gebruikt en is dat nog wel logisch?</v>
+
+00:45:03.369 --> 00:45:22.039
+<v Michiel Trimpe>Ja, precies. En wat voor ons daar dan weer relevant of interessant is, is dat veel leveranciers bieden dit al door gewoon alle data te kopiëren en op te slaan forever. Dat is binnen de Nederlandse overheid dan weer ongewenst. Dus daar zullen we moeten gaan kijken en dat is één van de dingen die ik voor me zie dat ze bijvoorbeeld met data bij de bron uit betrouwbare bron bekijken.</v>
+
+00:45:22.039 --> 00:45:23.419
+<v Spreker 2>Bewaartermijnen voor de.</v>
+
+00:45:23.419 --> 00:45:47.049
+<v Michiel Trimpe>Ja, bewaartermijnen, maar ook zeg maar verwijzingen gebruiken, maar wel naar echt de informatie die toen opgehaald is. Dus als je een systeem hebt wat netjes kan zeggen: dit was de informatie uit ja, op 16 november 2024 die toen geleverd is, dan kan je volstaan met een referentie naar Ja, als je de bron de hetzelfde antwoord bij dezelfde vraag altijd geeft, dan kan je dat doen.</v>
+
+00:45:47.049 --> 00:45:47.509
+<v Michiel Trimpe>Ja, precies.</v>
+
+00:45:48.079 --> 00:45:51.499
+<v Michiel Trimpe>Dus daar zit de link bij de andere FDS werkgroepen.</v>
+
+00:45:54.689 --> 00:46:11.979
+<v Michiel Trimpe>Nou en dan ehm een klein opzetje voor de de werkgroep wat we dan zien als de de standaardiseringskoppelvlakken voor de werkgroep is ehm ja, dus deze interface, de de AuthZEN interface en het het informatiemodel van de vraag, hoe stel ik de vraag?</v>
+
+00:46:13.359 --> 00:46:36.889
+<v Michiel Trimpe>Wat we net al benoemden, het logboek, dus precies met wat ik net uitlegde, ja, hoe kunnen we dat gaan standaardiseren? Hoe kunnen we dat inzichtelijk maken? Wellicht ook met het stukje van de de federatieve deling van hoe kunnen we dat bij elkaar inzien en hoe doen we dat? En dan specifiek in de Nederlandse aspect zonder alles te hoeven kopiëren.</v>
+
+00:46:38.889 --> 00:46:43.089
+<v Spreker 2>de policy access point of eh de policy administration point.</v>
+
+00:46:43.089 --> 00:46:47.119
+<v Michiel Trimpe>Hoe wat is daarvan beschikbaar? Kun je</v>
+
+00:46:47.119 --> 00:47:01.839
+<v Spreker 2>Qua standaardisatie is daar nog weinig. Dus dat eh dus binnen die AuthZEN club is men aan het standaardiseren. Ehm voor een aantal dingen heeft men al ideeën hoe we dit zouden willen hoe je dat zou willen gaan doen.</v>
+
+00:47:02.449 --> 00:47:15.029
+<v Spreker 2>Dus voor de PIP is er een perspectief, voor het logboek is er een perspectief, maar die dat zijn daar niet heel erg op hoog prio. Op access point weet men dat men het heel belangrijk vindt, maar is er nog niet echt een consensus van zo willen we dit aan gaan vliegen.</v>
+
+00:47:15.399 --> 00:47:36.119
+<v Spreker 3>Ja, want het liefst zou je iets hebben wat eh wat toegankelijk is voor allerhande talen als het ware waarin je zo'n policy zou kunnen uitdrukken en dat je ook iets met capabilities zou kunnen eh kan eh of zo'n enforcement point of die eh een bepaalde taal ondersteunt of niet.</v>
+
+00:47:36.839 --> 00:47:42.999
+<v Spreker 3>Dat soort aspecten zou je daar graag zou ik tenminste zou ik verwachten dat je daarin ziet. Dus dat je daar een soort van</v>
+
+00:47:43.449 --> 00:47:50.889
+<v Spreker 3>die administration niet afdwingt dat het in een bepaalde semantiek moet hoe die policy is uitgedrukt.</v>
+
+00:47:51.489 --> 00:48:04.789
+<v Michiel Trimpe>Ja, en dat is een goede vraag van eh willen we dat er als werkgroep bij pakken? Dus dat zou wel dan echt een Nederlandse standaard zijn. Dat als we de context van AuthZEN pakt, dus dat is niet iets wat internationaal al</v>
+
+00:48:05.229 --> 00:48:21.779
+<v Spreker 3>Ja, je kan een voorstel doen, zeg maar. Oké, wij hebben het zo gedaan. Ja, precies. Nee, maar je hebt als je als je pijl drie structureert. Ja, je moet inzicht geven in hoe die policies eruit zien. Dus dat het moet toegankelijk zijn voor externe partijen hoe die policy werkt, want anders is het een organisatie intern feestje.</v>
+
+00:48:21.779 --> 00:48:22.729
+<v Michiel Trimpe>Ja, en daar word ik niet blij van, zeg maar.</v>
+
+00:48:22.729 --> 00:48:23.149
+<v Spreker 3>Ja.</v>
+
+00:48:23.609 --> 00:48:33.519
+<v Spreker 2>Misschien eh voor je huiswerk eh welke van deze interfaces hebben welke van deze punten hebben een interface? Een gebruikersinterface?</v>
+
+00:48:34.119 --> 00:48:38.439
+<v Michiel Trimpe>Dus waar zit iemand achter de knoppen? Volgens mij</v>
+
+00:48:38.439 --> 00:48:46.959
+<v Spreker 2>Het gaat allemaal. Het decision point wil je volledig geautomatiseerd kunnen runnen op basis van. Het zijn allemaal technische interfaces.</v>
+
+00:48:47.679 --> 00:48:54.119
+<v Spreker 2>De interface van de aanvrager. Die administration point, iemand moet de administration doen.</v>
+
+00:48:54.599 --> 00:48:55.319
+<v Michiel Trimpe>Lijkt mij.</v>
+
+00:48:56.499 --> 00:49:23.699
+<v Spreker 2>Ja, alleen dat lijkt de de administration van de PAP, dat is denk ik echt niet te standaardiseren en dat wil je denk ik ook niet. Want dat is ook echt heel organisatiespecifiek. Dus als je een AuthZEN met heel veel programmeurs hebt, dan willen ze waarschijnlijk als PAP een een Git repository met hun open policies hebben. Maar als je een andere organisatie hebt die juist op de business users wil, dan moet je het marktproduct inkopen op basis van hun sterkte.</v>
+
+00:49:24.849 --> 00:49:44.739
+<v Spreker 3>Ik zou als ik vanuit FDS kijk, zou ik graag die PAP en die logboek en want dat is wat je naar andere organisaties toe inzichtelijk maakt. Nou, ik heb het over het beheer van de PAP. De inzage is een ander stuk. Oké. De inzage in de PAP, dat is wel te doen binnen de Nederlandse context. Dat kunnen we niet internationaal gaan standaardiseren.</v>
+
+00:49:45.519 --> 00:49:49.099
+<v Spreker 3>Nee, je kan een voorstel doen, zeg maar. Oké, wij hebben het zo gedaan. Ja, precies.</v>
+
+00:49:49.099 --> 00:49:50.889
+<v Michiel Trimpe>Nee, maar</v>
+
+00:49:51.339 --> 00:49:54.099
+<v Spreker 2>Kijk, als je als je pijl drie structureert,</v>
+
+00:50:05.429 --> 00:50:07.339
+<v Michiel Trimpe>voor eh voor tooling erin zet.
+
+00:50:08.209 --> 00:50:10.519
+<v Michiel Trimpe>Als je het wilt overdragen aan het decision point.
+
+00:50:10.519 --> 00:50:16.899
+<v Michiel Trimpe>En het decision point zeggen we van die heeft geen interface waar je handmatig dingen kan gaan zitten tweaken,
+
+00:50:16.899 --> 00:50:21.439
+<v Michiel Trimpe>maar die heeft gewoon alleen maar een script. Eh en je levert dus een script aan.
+
+00:50:22.069 --> 00:50:25.549
+<v Michiel Trimpe>En op basis van het script baseert hij die die decision.
+
+00:50:26.219 --> 00:50:29.159
+<v Michiel Trimpe>En dan moet je een uniforme manier hebben waarop je dat script aanlevert.
+
+00:50:29.679 --> 00:50:32.229
+<v Michiel Trimpe>Of of een aantal uniforme manieren. Maar
+
+00:50:32.229 --> 00:50:32.819
+<v Arnoud Quanjer>Hm hm.
+
+00:50:33.249 --> 00:50:34.999
+<v Michiel Trimpe>Ja. Ja, ik niet zeggen van eh
+
+00:50:35.539 --> 00:50:42.509
+<v Michiel Trimpe>hier heb je hier heb je C++ code eh ga op basis hiervan eh maar de decision eh
+
+00:50:42.509 --> 00:50:43.349
+<v Arnoud Quanjer>Ja.
+
+00:50:43.349 --> 00:50:46.909
+<v Arnoud Quanjer>Ik denk wel dat je er zit op het eind.
+
+00:50:46.909 --> 00:50:47.409
+<v Michiel Trimpe>Oké.
+
+00:50:47.969 --> 00:50:56.889
+<v Michiel Trimpe>Ehm dus hoe ik het in principe met je eens zou zou zijn, dus je ziet wel dat de pap PDP interface is momenteel alle leveranciers hebben dat wel op hun eigen manier al opgelost.
+
+00:50:57.659 --> 00:51:03.959
+<v Michiel Trimpe>En alle leveranciers zeggen momenteel van ja, totdat wij een internationale standaard hebben waar we het allemaal over eens zijn, gaan we dat niet aanpassen.
+
+00:51:04.609 --> 00:51:17.339
+<v Michiel Trimpe>Dus wat realistisch wat we kunnen doen is eigenlijk een een interface ernaast, maar de tussen pap en PDP zal effectief totdat het internationaal gestandaardiseerd is, vendor specific nog zijn.
+
+00:51:18.239 --> 00:51:28.239
+<v Arnoud Quanjer>Dus dan koop je eigenlijk altijd een combinatie van een PDP en een pap waarin de leveranciers een proprietary interface hebben op eh op lijn 3.
+
+00:51:28.239 --> 00:51:28.809
+<v Michiel Trimpe>Ja.
+
+00:51:29.579 --> 00:51:31.079
+<v Arnoud Quanjer>Eh
+
+00:51:31.549 --> 00:51:35.049
+<v Michiel Trimpe>Ik heb ook eigenlijk per mode gegooid, we hebben nog 7 minuten.
+
+00:51:35.549 --> 00:51:46.229
+<v Michiel Trimpe>Dit in principe, ik had nog twee slides voor erbij, maar het is eigenlijk hetzelfde dat we dan het informatiemodel waar we het al veel over hebben gehad willen standaardiseren en de step-up acties en residual policies, restbeleid.
+
+00:51:47.109 --> 00:51:50.049
+<v Michiel Trimpe>Daarmee zijn we door de presentatie heen.
+
+00:51:50.599 --> 00:52:00.419
+<v Michiel Trimpe>Ik heb eh helaas ik hoop dat het remote nog te doen was. Ik heb wat minder input van remote gehoord dan ik eh idealiter had, dus ik hoop dat dat eh
+
+00:52:00.419 --> 00:52:04.499
+<v Marc de Boer>Ik ik sorry dat ik even weg moet. Ik had er net nog één vraag op mijn lippen, maar toen meldde mijn dochter.
+
+00:52:04.499 --> 00:52:05.909
+<v Michiel Trimpe>Ja.
+
+00:52:06.449 --> 00:52:15.529
+<v Marc de Boer>Ehm dat policy administration point, is dat zowel de policy zelf als het punt waar die policy moet worden toegepast?
+
+00:52:15.529 --> 00:52:16.129
+<v Michiel Trimpe>Nee.
+
+00:52:16.489 --> 00:52:20.029
+<v Michiel Trimpe>Dat is alleen de policy zelf en dat wordt aan de PDP geleverd.
+
+00:52:20.029 --> 00:52:21.129
+<v Marc de Boer>En hoe weet de PEP afgerond?
+
+00:52:21.129 --> 00:52:31.229
+<v Marc de Boer>En hoe weet weet de PEP en de PDP dan dat een bepaalde specifieke policy op een bepaalde endpoint moet worden toegepast?
+
+00:52:31.789 --> 00:52:41.149
+<v Michiel Trimpe>Dat is het moeilijke waarom het moeilijk is om paps die die standaard te maken, hoe je dat doet. Dat verschilt per oplossing. En dat is precies de moeilijkheid voor de standaardisatie.
+
+00:52:41.589 --> 00:52:47.229
+<v Marc de Boer>Want je hebt misschien in je organisatie 80 endpoints en je hebt eh 300 policies, ik noem maar even wat.
+
+00:52:47.709 --> 00:52:51.249
+<v Marc de Boer>Ja. En maar je hebt ook nog een combinatie van welke policy op welk endpoint.
+
+00:52:51.249 --> 00:52:51.849
+<v Michiel Trimpe>Ja.
+
+00:52:52.179 --> 00:52:58.989
+<v Michiel Trimpe>Ja, dus dat is precies de moeilijkheid. Maar ik stel voor dat we dat even dan naar uitschuiven, want we hebben nog 5 minuten. Wouter, je had een vraag? Je stak je hand op?
+
+00:52:59.989 --> 00:53:04.149
+<v Wouter>Ja, of een gewoon een vraag en een eh en een opmerking eigenlijk. Ik heb eh
+
+00:53:04.899 --> 00:53:08.439
+<v Wouter>expres even gewacht tot aan het eind van de presentatie hè, van ehm
+
+00:53:09.119 --> 00:53:29.219
+<v Wouter>wat je wat je merkt hè van en wij kijken eh vanuit een beleidsjuridische blik zeg maar naar dit eh dit project. Ehm en de het gesprek gaat eh logischerwijs heel veel over de eh ja, over de operationele invulling hè, van hoe hoe eh hoe hoe richt je eh systemen en techniek eh eh in.
+
+00:53:29.819 --> 00:53:43.019
+<v Wouter>Ehm maar ik vroeg me af van hoe de hoe we de eh de borging eh regelen zeg maar naar de naar de behoefte van de organisaties hè en in de overheidscontext natuurlijk ook de ehm wet- en regelgeving.
+
+00:53:43.019 --> 00:53:53.699
+<v Wouter>Hè, want het is ehm ehm en deze standaard die moet uiteindelijk eh de behoefte van overheidsorganisaties en de kaders waarmee zij te maken hebben borgen.
+
+00:53:54.329 --> 00:54:12.329
+<v Wouter>Eh en heel veel van de vragen die tijdens de het gesprek ook aan de orde zijn geweest hè, vragen over autorisatie hè, van van moet je alleen organisaties kennen of ook personen die ehm eh die bepaalde bevragingen doen. Wanneer mogen bepaalde bevragingen, wanneer niet hè, van ehm
+
+00:54:12.929 --> 00:54:18.329
+<v Wouter>ehm hè van heel veel antwoorden liggen eh waarschijnlijk in wet- en regelgeving besloten.
+
+00:54:18.809 --> 00:54:26.549
+<v Wouter>Ehm ik vraag me af hoe of en hoe dat nu belegd is of dat we daar iets eh samen nog iets voor moeten moeten bedenken.
+
+00:54:27.269 --> 00:54:36.149
+<v Michiel Trimpe>Ja. Nee, een bruggetje was laten we beslissen wat we volgende één of twee werkgroepen gaan doen. En dat lijkt me een mooie opzet daar naartoe.
+
+00:54:36.149 --> 00:54:43.109
+<v Michiel Trimpe>Want inderdaad, de de juridische aspect is heel belangrijk, maar in onze tot nu toe minder vertegenwoordigd.
+
+00:54:43.529 --> 00:54:48.209
+<v Michiel Trimpe>Dus dat lijkt me een goede om snel echt ja, snel te bespreken.
+
+00:54:48.869 --> 00:54:56.129
+<v Wouter>Ja, en wij zijn vanuit wij zitten erbij om daar juist om daarbij te helpen hè. Dus het is meer een vraag en een aanbod tegelijk eigenlijk.
+
+00:54:56.129 --> 00:54:57.809
+<v Michiel Trimpe>Hm hm.
+
+00:54:58.349 --> 00:55:07.169
+<v Michiel Trimpe>Voor de het voorstel voor volgende eh werkgroepsessie, wat zullen wij daar op pakken?
+
+00:55:07.169 --> 00:55:09.449
+<v Michiel Trimpe>Dus we hebben het Miro board.
+
+00:55:12.149 --> 00:55:14.249
+<v Michiel Trimpe>Ehm
+
+00:55:15.209 --> 00:55:24.029
+<v Michiel Trimpe>Nou, de scope vaststellen. Even samenvattend denk ik dat er dus de wens is om de de de pap inzicht interface erbij te trekken.
+
+00:55:24.749 --> 00:55:35.069
+<v Michiel Trimpe>Eh en verder zijn er nog kanttekeningen in de scope. Wat er nog bij moet of af moet of is er wat hier gepresenteerd is op zich oké?
+
+00:55:36.269 --> 00:55:38.249
+<v Arnoud Quanjer>En die loggen die is echt ook.
+
+00:55:38.249 --> 00:55:40.469
+<v Michiel Trimpe>Ja, die maar die staat al omcirkeld.
+
+00:55:41.549 --> 00:55:45.209
+<v Michiel Trimpe>Dan stel ik voor dat op technisch aspect dat de scope is.
+
+00:55:46.109 --> 00:56:03.449
+<v Michiel Trimpe>Dan mag ik als voorstel doen dat we wellicht voor de volgende sessie beginnen met wat is het scope op het juridisch stuk? Van hoe willen we dat aanpakken? Oh, Gerard had ook nog een handje op.
+
+00:56:04.229 --> 00:56:06.269
+<v Michiel Trimpe>Eh Gerard?
+
+00:56:07.229 --> 00:56:13.049
+<v Gerard Van Der Hoeven>We hadden natuurlijk hè, heel groot als volgende sessie kennis delen.
+
+00:56:13.049 --> 00:56:20.009
+<v Gerard Van Der Hoeven>Dus dat is nu heb je voornamelijk gedaan vanuit het project zelf, wat wat er is er intern bedacht.
+
+00:56:20.549 --> 00:56:27.209
+<v Gerard Van Der Hoeven>Misschien is dan ook een wijze om een volgende sessie extern kennis te delen. Wat is er al en wat zijn er voor andere opties?
+
+00:56:27.209 --> 00:56:32.009
+<v Gerard Van Der Hoeven>We hebben onze eh de samenvatting van onze vorige call.
+
+00:56:32.009 --> 00:56:32.609
+<v Michiel Trimpe>Ja.
+
+00:56:34.049 --> 00:56:39.089
+<v Michiel Trimpe>Oké, dus dan een idee voor voor volgende.
+
+00:56:39.629 --> 00:56:46.229
+<v Michiel Trimpe>Ja, we hebben ook de de de onderwerpen met de stemmen hebben we links gezet.
+
+00:56:46.709 --> 00:56:53.069
+<v Michiel Trimpe>Dus dat daar kijken of we van zeg maar iedereen recht doen.
+
+00:56:53.729 --> 00:57:04.649
+<v Michiel Trimpe>Er zitten dus relatie met open authenticatie. Eh dat is net over kennis delen past dat ook mooi met bijvoorbeeld Stas en Martin, hoe hoe dat zich verhoudt.
+
+00:57:05.309 --> 00:57:12.029
+<v Michiel Trimpe>Relatie met API design rules. Nou, dat past wellicht ook met Frank. Eh
+
+00:57:12.629 --> 00:57:18.029
+<v Michiel Trimpe>Dus misschien dan Oh ja, en de attestering en de verifiable credentials.
+
+00:57:18.569 --> 00:57:28.229
+<v Michiel Trimpe>Dus misschien is dat ook een goed idee dat we voor de volgende sessie zeggen we we scopen we gaan echt serieus kijken hoe we de scope van het juridisch aspect en wat we daar op pakken.
+
+00:57:28.229 --> 00:57:42.029
+<v Michiel Trimpe>En hoe verhouden we ons tot de Umbelt, de de grotere wereld. Dus verifiable credentials, API design rules, Oth, I share, FDS.
+
+00:57:42.629 --> 00:57:50.669
+<v Michiel Trimpe>Dus even ons ons oriënteren op de bredere wereld en hoe zien wij ons daarin en kunnen we daarin kennis delen.
+
+00:57:51.809 --> 00:58:06.029
+<v Arnoud Quanjer>Misschien dat we eerst een stap kunnen maken daartussen eh om te kijken meer naar welke welke bouwstenen er gebruikt worden. Dus ook die referentie bouwstenen eh vanuit de architectuur bekijken.
+
+00:58:06.569 --> 00:58:21.449
+<v Arnoud Quanjer>En ik zie nu een een allerlei eh per PDP pap eh systemen voorbij komen. Eh maar als je bij een organisatie kijkt, dan zijn er ook allerlei identity providers eh eh die die organisatie al hebben.
+
+00:58:21.449 --> 00:58:32.609
+<v Arnoud Quanjer>Daarnaast hebben ze e-herkenning, DigiD, eh EIDAS, eh eh conform Oth heeft iedereen authorization server die van alles doet. We hebben we hebben client software.
+
+00:58:32.609 --> 00:58:51.449
+<v Arnoud Quanjer>Dus dat dat speelveld als we dat abstract niet helder hebben, dan gaan we allerlei ontwikkelingen en en allerlei producten plotten en dan zijn we het overzicht kwijt, want ja, wat zit nou in welke hoek?
+
+00:58:51.929 --> 00:58:58.229
+<v Arnoud Quanjer>En je ziet dat in de praktijk natuurlijk alles nodig is om iets simpels te laten werken. Eh
+
+00:58:58.229 --> 00:59:09.269
+<v Michiel Trimpe>Ja, dat klinkt dat je hetzelfde wat ik voor wilde stellen. Laten we kijken wat er in de ja, wat er inderdaad allemaal al speelt in bestaande systemen en hoe wij ons daar toe verhouden.
+
+00:59:09.269 --> 00:59:14.069
+<v Arnoud Quanjer>En je wilt dat dat eerst uitgewerkt wordt van tevoren of is
+
+00:59:14.069 --> 00:59:21.449
+<v Michiel Trimpe>Nee, gewoon het voorstel om te relateren aan abstracte bouwstenen. Ah oké, ja, abstracte bouw. Oké, dan snap ik het. Dus dat we
+
+00:59:21.449 --> 00:59:27.149
+<v Arnoud Quanjer>We kunnen allerlei leveranciers uitnodigen en zeggen van ja, eh vertel maar hoe jullie het hebben opgezet. Nee, nee, nee, dus inderdaad.
+
+00:59:27.149 --> 00:59:41.249
+<v Michiel Trimpe>We gaan het over de relatie naar abstracte bouwstenen als ja, de de identity providers en de Ja, maar dit ik zou dan ook denken om bijvoorbeeld het bouwblokkenmodel van DSC er dan even eh erbij te pakken.
+
+00:59:41.849 --> 00:59:52.229
+<v Michiel Trimpe>En daar of eh Open Day hè, dus die heeft ook een bepaalde opdeling gaan die ik hoor identity bijvoorbeeld voorbij komen.
+
+00:59:52.709 --> 00:59:55.349
+<v Michiel Trimpe>Maar voor mij is is toegang
+
+01:00:07.039 --> 01:00:09.329
+<v Spreker 1 (Ruimte)>om een voorbeeld te geven.
+
+01:00:09.329 --> 01:00:10.029
+<v Spreker 2 (Ruimte)>Ja.
+
+01:00:10.299 --> 01:00:12.639
+<v Spreker 2 (Ruimte)>Inderdaad, met die relatie bespreken is wel goed en dan heb je ook weer die
+
+01:00:12.639 --> 01:00:17.439
+<v Spreker 1 (Ruimte)>Ja, want het heeft een verhouding ten opzichte van elkaar, maar het het maakt er gebruik van om het zo maar te zeggen.
+
+01:00:17.439 --> 01:00:27.819
+<v Spreker 2 (Ruimte)>Dat is wel goed om te delen. Ja, dan heb je ook weer de nuance dat O8 wel richting autorisatie en het bewegen is, maar met token en zeggen ja, dat dat kunnen we dan als kennis delen, dat verder doen.
+
+01:00:28.119 --> 01:00:38.319
+<v Michiel Trimpe>Even eh point of order voor de mensen die remote aanwezig zijn. We hebben ook nog het opmerkingensectie voor deze sessie, dus als je feedback hebt, plaats dat graag hier.
+
+01:00:39.519 --> 01:00:46.219
+<v Michiel Trimpe>Ehm, mensen die af moeten haken, wat nu, want het is twee minuten over tijd, helemaal alle begrip voor.
+
+01:00:48.519 --> 01:00:51.649
+<v Michiel Trimpe>Ehm, volgens mij de mensen die hier zitten, blijven nog even zitten.
+
+01:00:53.519 --> 01:00:57.219
+<v Michiel Trimpe>Ja, we kunnen nog even doorpraten naarmate er ruimte is voor iedereen.
+
+01:00:58.419 --> 01:00:59.819
+<v Spreker 1 (Ruimte)>Ik ben er de hele dag nog.
+
+01:00:59.819 --> 01:01:05.519
+<v Michiel Trimpe>Precies, de mensen die de meeste mensen die hier zitten, zitten hier de hele dag voor een activiteit, dus vandaar de rust en de ruimte hier.
+
+01:01:07.919 --> 01:01:11.719
+<v Michiel Trimpe>Ehm, vanuit de de digitale wereld.
+
+01:01:12.719 --> 01:01:20.219
+<v Michiel Trimpe>Zijn er nog
+
+01:01:20.219 --> 01:01:27.219
+<v Michiel Trimpe>is typing. Ja, dankjewel Wouter.
+
+01:01:30.419 --> 01:01:42.019
+<v Michiel Trimpe>Oké. Ehm, maar dan denk ik dat we wellicht wel naar de afdronk kunnen, dat we volgende sessie dus goed gaan kijken naar hoe kaderen we doen we met het juridische aspect, welke scope trekken we daar, hoe willen we dat aanpakken.
+
+01:01:43.419 --> 01:01:50.119
+<v Michiel Trimpe>Ehm, voor hier houden we de scope aan die ongeveer getekend is plus inzicht voor de policy registers.
+
+01:01:50.619 --> 01:02:01.319
+<v Michiel Trimpe>En volgende sessie gaan we even kijken hoe verhouden we ons naar de bredere wereld. Dus eh iSHARE authorization, IDP's, ehm en dergelijke.
+
+01:02:01.619 --> 01:02:02.419
+<v Spreker 1 (Ruimte)>Yes, dat.
+
+01:02:03.519 --> 01:02:04.319
+<v Michiel Trimpe>Oké.
+
+01:02:06.119 --> 01:02:07.119
+<v Michiel Trimpe>Super.
+
+01:02:07.819 --> 01:02:10.019
+<v Michiel Trimpe>Nou, dan wil ik je bedankt iedereen.
+
+01:02:10.819 --> 01:02:18.819
+<v Michiel Trimpe>Ik denk dat het voor de mensen, ik weet niet of het voor de mensen remote nog handig is, leuk is om mee te luisteren wat we hier nog nababbelen, maar ik kan me voorstellen dat het niet helemaal werkt.
+
+01:02:19.219 --> 01:02:24.919
+<v Arnoud Quanjer>Nou, je mag hem aan laten staan hoor. Zet je de recording uit en de microfoon aan, dan eh blijf ik nog even na luisteren.

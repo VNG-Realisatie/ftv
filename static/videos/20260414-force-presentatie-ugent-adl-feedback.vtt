@@ -1,0 +1,1151 @@
+WEBVTT
+
+00:00:04.800 --> 00:00:06.000
+<v Michiel Trimpe>Super.</v>
+
+00:00:06.800 --> 00:00:12.800
+<v Michiel Trimpe>Nou, eh welkom allemaal bij de 19e werkgroep van Federatieve Toegangsverlening alweer.</v>
+
+00:00:13.600 --> 00:00:16.400
+<v Michiel Trimpe>Ehm, de agenda heb ik vorige week rondgestuurd.</v>
+
+00:00:16.400 --> 00:00:20.400
+<v Michiel Trimpe>Ehm, dus deze week een eh presentatieagenda.</v>
+
+00:00:20.400 --> 00:00:23.800
+<v Michiel Trimpe>Dus we beginnen zos gelijk met de welkomst en kennismaking.</v>
+
+00:00:25.400 --> 00:00:32.400
+<v Michiel Trimpe>zie ik geen nieuwe gezichten behalve onze presentator die eh mag ik straks wel uitgebreid introduceren.</v>
+
+00:00:34.600 --> 00:00:43.000
+<v Michiel Trimpe>Ehm, nou, en dan is verder eh dus een presentatie over ODRL evaluatie via FORCE van eh van Wout Slabbinck van de Universiteit Gent.</v>
+
+00:00:44.200 --> 00:00:49.000
+<v Michiel Trimpe>Eh daar heb ik 35 minuten voor staan. Eh kan eventueel nog wat uitlopen.</v>
+
+00:00:49.600 --> 00:00:55.000
+<v Michiel Trimpe>En daarna hebben we een eh agenda item eh over de feedback voor het Authorization Decision Log.</v>
+
+00:00:55.600 --> 00:01:03.800
+<v Michiel Trimpe>Eh die is eh ja, richting Logius voor beheer. Dus daar is akkoord voor en vanuit zijn beheersrol waren ze aan het voorbereiden op de consultatie.</v>
+
+00:01:04.600 --> 00:01:11.200
+<v Michiel Trimpe>En toen heeft Tim van der Lippe daarnaar gekeken. Eh die heeft heel veel ervaring ook met de dataverwerkingen.</v>
+
+00:01:11.800 --> 00:01:21.000
+<v Michiel Trimpe>Die had een eh aantal observaties die nou wel wat wat impact kunnen hebben op de structurering van zowel de standaard als het log.</v>
+
+00:01:21.600 --> 00:01:28.000
+<v Michiel Trimpe>Dus die willen we ook even bespreken, zodat we de consultatie hopelijk alsnog snel kunnen starten.</v>
+
+00:01:28.600 --> 00:01:38.800
+<v Michiel Trimpe>En daar heb ik eh 15 minuten voor gereserveerd en 5 minuten planning vervolg. Ik denk dat dat ruim is. Eh maar we dus laten we ook gewoon de ruimte voor de presentatie houden.</v>
+
+00:01:40.800 --> 00:01:46.000
+<v Michiel Trimpe>Ehm. Even terug naar het scherm. Ja.</v>
+
+00:01:48.200 --> 00:01:53.800
+<v Michiel Trimpe>Nou, nog even voor de de introductie van de presentatie. Eh dus eh volgens mij vorige sessie,</v>
+
+00:01:53.800 --> 00:02:08.600
+<v Michiel Trimpe>ja, vorige sessie alweer, hebben we gekeken naar eh het gebruik van ODRL voor de de BRB. Eh we zijn in een bredere zin zijn we aan het voor sorteren om ons toegangsbeleid op basis van ODRL te modelleren.</v>
+
+00:02:09.600 --> 00:02:23.400
+<v Michiel Trimpe>En één van de punten die we daarin eh ontdekten was oh ja, hoe hoe evalueren we ODRL en hoe moeten we daaraan kijken? In welke mate is dat al mogelijk? In welke mate is dat eh wenselijk? Moeten we dat altijd verplichten?</v>
+
+00:02:24.200 --> 00:02:28.400
+<v Michiel Trimpe>En ook een stukje eh over hoe kunnen we ODRL visualiseren?</v>
+
+00:02:29.600 --> 00:02:40.000
+<v Michiel Trimpe>Nou, Wout van de Universiteit Gent heeft daar al een eh ik weet niet hoe lang, maar al een redelijke tijd eh onderzoek naar gedaan. Eén van de ontwikkelaars van het FORCE framework.</v>
+
+00:02:40.600 --> 00:02:48.000
+<v Michiel Trimpe>En eh heeft ook een stukje dus met de presentatie van ODRL gewerkt. Dat is de kern van het onderzoek van wat hij heeft gedaan.</v>
+
+00:02:48.600 --> 00:02:54.200
+<v Michiel Trimpe>En daar is eh gelukkig Wout is eh bereid geweest om daar een presentatie voor voor te bereiden.</v>
+
+00:02:54.200 --> 00:02:58.800
+<v Michiel Trimpe>En eh nou, hij is dus ook eh waarschijnlijk de grootste ODRL expert van ons allemaal.</v>
+
+00:02:59.400 --> 00:03:06.600
+<v Michiel Trimpe>Dus ook eh ja, staat ook beschikbaar om allerlei vragen en verduidelijkingen te bieden waar nodig.</v>
+
+00:03:07.800 --> 00:03:08.600
+<v Wout Slabbinck (UGent-imec)>Wout.</v>
+
+00:03:09.800 --> 00:03:13.000
+<v Wout Slabbinck (UGent-imec)>Ja, eh dank u voor de introductie.</v>
+
+00:03:13.400 --> 00:03:19.800
+<v Wout Slabbinck (UGent-imec)>Ehm, ik ga dan denk ik eh direct proberen eh mijn slides te delen.</v>
+
+00:03:20.000 --> 00:03:21.000
+<v Wout Slabbinck (UGent-imec)>En ehm</v>
+
+00:10:00.000 --> 00:10:03.380
+<v Wout Slabbinck (UGent-imec)>ik ga expliciet zeggen dat ge bepaalde documenten niet kunt zien.</v>
+
+00:10:03.380 --> 00:10:09.340
+<v Wout Slabbinck (UGent-imec)>Of zeggen dat als ge eh ehm uw uw data krijgt van iemand,</v>
+
+00:10:09.340 --> 00:10:13.430
+<v Wout Slabbinck (UGent-imec)>dat ge daarna ook verplicht zijt om die te verwijderen.</v>
+
+00:10:13.430 --> 00:10:17.420
+<v Wout Slabbinck (UGent-imec)>Met enkel permissies kunt ge dat niet uitdrukken, maar met obligaties wel.</v>
+
+00:10:17.420 --> 00:10:25.790
+<v Wout Slabbinck (UGent-imec)>En dan kunt ge dus eigenlijk meer algemene eh wetteksten eh proberen te vertalen naar eh usage policies.</v>
+
+00:10:25.790 --> 00:10:31.910
+<v Wout Slabbinck (UGent-imec)>Eh hoe kunnen we dat dan eh te werk stellen? Wel, eh binnen ODRL kunnen we dat doen.</v>
+
+00:10:31.910 --> 00:10:35.430
+<v Wout Slabbinck (UGent-imec)>Dus open ODRL staat dus voor het Open Digital Rights Language.</v>
+
+00:10:35.430 --> 00:10:42.100
+<v Wout Slabbinck (UGent-imec)>En dat is eigenlijk een een standaard eh die eh afgeklopt is in 2018.</v>
+
+00:10:42.100 --> 00:10:45.960
+<v Wout Slabbinck (UGent-imec)>Met eigenlijk de focus om die policies te kunnen neerschrijven.</v>
+
+00:10:45.960 --> 00:10:51.690
+<v Wout Slabbinck (UGent-imec)>Eh dat was de focus van die ehm standaardisatieproces.</v>
+
+00:10:51.690 --> 00:10:57.430
+<v Wout Slabbinck (UGent-imec)>Eh en dat wilt ook zeggen dat dat de de de standaardisatie zover gaat.</v>
+
+00:10:57.430 --> 00:11:04.410
+<v Wout Slabbinck (UGent-imec)>Ehm verder ehm is er ook nog de community group dat zich bezighoudt met het verder werken.</v>
+
+00:11:04.410 --> 00:11:09.200
+<v Wout Slabbinck (UGent-imec)>Kijken hoe dat we eh de limitaties of enkele problemen of of verduidelijking kunnen geven.</v>
+
+00:11:09.200 --> 00:11:16.890
+<v Wout Slabbinck (UGent-imec)>De community group zit samen om dan ook specificaties, demo's, workshops, allerhande te organiseren, zodat mensen ook</v>
+
+00:11:16.890 --> 00:11:22.680
+<v Wout Slabbinck (UGent-imec)>ehm daaraan kunnen eh allez, makkelijker kunnen begrijpen wat het allemaal inhoudt.</v>
+
+00:11:22.680 --> 00:11:30.820
+<v Wout Slabbinck (UGent-imec)>En iedereen is ook altijd vrij om die te joinen. Ehm dat is een open community group binnen het eh W3C.</v>
+
+00:11:30.820 --> 00:11:39.460
+<v Wout Slabbinck (UGent-imec)>Eh ze specificeren ook verschillende best practices en profielen om bijvoorbeeld een profiel daarbij wilt eigenlijk gewoon zeggen dat</v>
+
+00:11:39.460 --> 00:11:49.190
+<v Wout Slabbinck (UGent-imec)>als het niet compleet gedefinieerd staat in ODRL, dat ge iedereen zijn eigen profiel kan maken zodat het specifiek voor de use case ook gewoon eh kan werken.</v>
+
+00:11:49.190 --> 00:11:54.910
+<v Wout Slabbinck (UGent-imec)>Met bepaalde acties of eh constraints binnen de taal, zodat het makkelijker mogelijk maakt.</v>
+
+00:11:54.910 --> 00:12:02.820
+<v Wout Slabbinck (UGent-imec)>En ehm dat is grosso modo zo de de de de eh eerder overview kant van ODRL.</v>
+
+00:12:02.820 --> 00:12:06.910
+<v Wout Slabbinck (UGent-imec)>Maar wat kunnen we dan eigenlijk hoe hoe ziet het er dan concreet uit?</v>
+
+00:12:06.910 --> 00:12:14.470
+<v Wout Slabbinck (UGent-imec)>Wel, eh het belangrijkste rond een ODRL policy is eigenlijk eh de regels zelf.</v>
+
+00:12:14.470 --> 00:12:18.230
+<v Wout Slabbinck (UGent-imec)>En een regel, zoals eerder al gezegd, kan dus drie vormen hebben.</v>
+
+00:12:18.230 --> 00:12:24.320
+<v Wout Slabbinck (UGent-imec)>Het kan oftewel een permissie, een prohibition of een obligatie eh zijn.</v>
+
+00:12:24.320 --> 00:12:31.060
+<v Wout Slabbinck (UGent-imec)>Wat dat dus wil zeggen is kunt ge iets, mocht ge iets juist niet of moet ge iets doen.</v>
+
+00:12:31.060 --> 00:12:34.420
+<v Wout Slabbinck (UGent-imec)>Eh en dat gaat dan over wie, de party in kwestie.</v>
+
+00:12:34.420 --> 00:12:43.300
+<v Wout Slabbinck (UGent-imec)>Ehm mag welke actie dan uitvoeren over welke resource, welke asset is dat in ODRL termen.</v>
+
+00:12:43.300 --> 00:12:52.790
+<v Wout Slabbinck (UGent-imec)>En ehm daar kunt ge ook nog heel veel constraints aan toevoegen en dat zorgt ervoor dat we juist zaken kunnen limiteren in tijd.</v>
+
+00:12:52.790 --> 00:13:04.660
+<v Wout Slabbinck (UGent-imec)>Als voorbeeld is er dan een policy eh uitgedrukt dan eh om om eigenlijk te zeggen van kijk, ge moogt ge moogt deze contactinformatie eh wel zien.</v>
+
+00:13:04.660 --> 00:13:10.420
+<v Wout Slabbinck (UGent-imec)>Mijn eh maar dat is enkel als er een bepaalde doel aan meegegeven, een bepaalde purpose.</v>
+
+00:13:10.420 --> 00:13:17.610
+<v Wout Slabbinck (UGent-imec)>Als die doel niet voorhanden is, dan zal die geen eh geen toegang krijgen voor die eh informatie.</v>
+
+00:13:17.610 --> 00:13:22.500
+<v Wout Slabbinck (UGent-imec)>Nu, ehm ik heb al even vermeld daarnet dat ehm</v>
+
+00:13:22.500 --> 00:13:31.250
+<v Wout Slabbinck (UGent-imec)>de standaardisatie van ODRL, dat dat gaat over het expressiveness, om eigenlijk die policies te kunnen maken.</v>
+
+00:13:31.250 --> 00:13:37.310
+<v Wout Slabbinck (UGent-imec)>Eh helaas, ehm om te evalueren heeft ODRL dat niet gestandaardiseerd.</v>
+
+00:13:37.310 --> 00:13:39.310
+<v Wout Slabbinck (UGent-imec)>Dat was een bewuste keuze in die tijd.</v>
+
+00:13:39.310 --> 00:13:47.530
+<v Wout Slabbinck (UGent-imec)>Persoonlijk ga ik er nu niet meer akkoord, maar goed, ik was nog geen onderzoeker dan. Ik zat nog eh op de universiteit, dus ik kon daar ook niets aan aan toebrengen.</v>
+
+00:13:47.530 --> 00:13:56.400
+<v Wout Slabbinck (UGent-imec)>Eh maar dat wilt dus zeggen dat als iemand vraagt van kijk, ik geef jullie de ODRL policy en wat input, dus een vraag om om wat toegang te hebben.</v>
+
+00:13:56.400 --> 00:14:08.200
+<v Wout Slabbinck (UGent-imec)>Het component dat zou moeten berekenen of dat die actie eh mag gebeuren is niet gestandaardiseerd, met als gevolg dat iedereen zijn die op dit moment met ODRL aan het werken is, zijn eigen oplossingen heeft.</v>
+
+00:14:08.200 --> 00:14:14.540
+<v Wout Slabbinck (UGent-imec)>Wat dat minder ideaal is als de know-how, de deterministische manier om dat te doen, is er dus niet.</v>
+
+00:14:14.540 --> 00:14:27.100
+<v Wout Slabbinck (UGent-imec)>Dus wat hebben wij ehm binnen onze groep dan eh naar gekeken is, wel, wij hebben een eerste eh plaats een ODRL evaluator die de eh gemaakt.</v>
+
+00:14:27.100 --> 00:14:35.100
+<v Wout Slabbinck (UGent-imec)>En aan de andere kant hebben wij ook onderzoek gedaan naar wat zijn de belangrijke inputs en en hoe kunnen we die eh differentiëren.</v>
+
+00:14:35.100 --> 00:14:43.140
+<v Wout Slabbinck (UGent-imec)>Aan de ene kant gaat dat eh hebben we daar een een een klein modelletje voor eh gemaakt die eigenlijk de request modelleert.</v>
+
+00:14:43.140 --> 00:14:56.810
+<v Wout Slabbinck (UGent-imec)>Dus eigenlijk ook een een soort regelachtig die eigenlijk zegt: "Hey, ik ben hier Wout en ik zou graag de contactinformatie documenten van Michiel willen eh zien.</v>
+
+00:14:56.810 --> 00:15:00.860
+<v Wout Slabbinck (UGent-imec)>Mag dat? Eh op dit moment zit ik hier eh in Gent.</v>
+
+00:15:00.860 --> 00:15:08.380
+<v Wout Slabbinck (UGent-imec)>Eh dus dat is wat State of the World eh informatie. Het is ook 14 april. Dat is allemaal informatie die meegerekend wordt.</v>
+
+00:15:08.380 --> 00:15:13.250
+<v Wout Slabbinck (UGent-imec)>Er is dan het componentje dat dan berekent van de policies en uiteindelijk krijgen we dan een output.</v>
+
+00:15:13.250 --> 00:15:25.100
+<v Wout Slabbinck (UGent-imec)>Dus bijvoorbeeld van het eh model, maar dat is al iets eh technischer, eh waar dat we ook wat constraints aan kunnen toevoegen om nog wat meer duidelijker informatie mee te geven over mezelf.</v>
+
+00:15:25.100 --> 00:15:33.600
+<v Wout Slabbinck (UGent-imec)>Ehm dan de State of the World kunnen we ook verschillende zaken modelleren, zoals de tijd, hoe lang dat we het document willen gebruiken.</v>
+
+00:15:33.600 --> 00:15:42.700
+<v Wout Slabbinck (UGent-imec)>Eh eventueel ehm nog wat extra informatie zoals de locatie, allerhande informatie die noodzakelijk kan zijn voor het evalueren van de policies.</v>
+
+00:15:42.700 --> 00:15:54.910
+<v Wout Slabbinck (UGent-imec)>En dan finaal, wat dat we ook onderzocht hebben is eigenlijk eh dat we niet alleen een de output een ja/nee kunnen krijgen, maar dat we eigenlijk eh meer in detail</v>
+
+00:15:54.910 --> 00:16:04.590
+<v Wout Slabbinck (UGent-imec)>ehm eigenlijk een soort rapport kunnen krijgen voor alle regels binnen de ODRL policy, waarom al dan niet eh wij toegang mogen hebben.</v>
+
+00:16:04.590 --> 00:16:12.780
+<v Wout Slabbinck (UGent-imec)>Bijvoorbeeld, ik had toegang om tot, allez, om om tot en met vorige week toegang te krijgen tot bepaalde informatie.</v>
+
+00:16:12.780 --> 00:16:19.640
+<v Wout Slabbinck (UGent-imec)>Wel, dat wilt dus zeggen dat op dit moment deze constraint niet vervuld is en ik daardoor geen toegang eh kan hebben.</v>
+
+00:16:19.640 --> 00:16:29.280
+<v Wout Slabbinck (UGent-imec)>Dit is misschien een een beetje een te big picture, maar dat zorgt ervoor dat we heel precies kunnen zeggen welke condities binnen ODRL niet vervolledigd zijn en welke wel.</v>
+
+00:16:29.280 --> 00:16:32.960
+<v Wout Slabbinck (UGent-imec)>En dus weten wij ook waarom we toegang hebben of juist niet.</v>
+
+00:16:32.960 --> 00:16:40.850
+<v Wout Slabbinck (UGent-imec)>Ehm maar omdat wij gemerkt hebben dat dat redelijk technisch was en dat het ook voor ons eigen soms wel moeilijk was om te begrijpen,</v>
+
+00:16:40.850 --> 00:16:52.540
+<v Wout Slabbinck (UGent-imec)>hebben we ook geprobeerd om dat iets toegankelijker te maken en hebben we een ehm wat een demonstrator gemaakt en eigenlijk een eh suite van eh specificaties.</v>
+
+00:16:52.540 --> 00:16:58.820
+<v Wout Slabbinck (UGent-imec)>En dat hebben we FORCE genoemd, wat dus staat voor Framework for ODRL Rule Compliance through Evaluation.</v>
+
+00:16:58.820 --> 00:17:08.970
+<v Wout Slabbinck (UGent-imec)>Dus aan de ene kant hebben we dus de specificatie zelf, dat dus eigenlijk ook linkt naar verschillende subspecificaties. De ene die meer eh zegt over die inputs.</v>
+
+00:17:08.970 --> 00:17:19.720
+<v Wout Slabbinck (UGent-imec)>Bijvoorbeeld die request, State of the World. Aan de andere kant verwijst hij ook naar ons compliance report model die juist onze eh output duidelijk eh definieert.</v>
+
+00:17:19.720 --> 00:17:24.310
+<v Wout Slabbinck (UGent-imec)>En zoals al gezegd, aan de andere kant eh heb ik hier ook een een demonstrator.</v>
+
+00:17:24.310 --> 00:17:37.930
+<v Wout Slabbinck (UGent-imec)>Ik ga eens kijken als ik erop klik of dat dit ook rechtstreeks eh zichtbaar is als ik even testen. Zien jullie eh dit?</v>
+
+00:17:37.930 --> 00:17:38.520
+<v Michiel Trimpe>Oké, top.</v>
+
+00:17:38.520 --> 00:17:46.120
+<v Michiel Trimpe>Dus wat ik daarnet allemaal gezegd heb van die inputs en outputs, dus aan deze kant heb ik de input. Ik heb hier een policy zelf.</v>
+
+00:17:46.120 --> 00:17:51.980
+<v Wout Slabbinck (UGent-imec)>Dit is een simpele policy die zegt: "Hey, ehm Alice mag een bepaalde resource lenen."</v>
+
+00:17:51.980 --> 00:17:58.550
+<v Wout Slabbinck (UGent-imec)>Alice eh vraagt toegang tot een bepaalde resource en de State of the World eh is hier fictief is van eh</v>
+
+00:17:58.550 --> 00:18:01.620
+<v Wout Slabbinck (UGent-imec)>twee jaar geleden ongeveer.</v>
+
+00:18:01.620 --> 00:18:09.430
+<v Wout Slabbinck (UGent-imec)>En wat dat deze evaluator dan doet is eigenlijk gewoon live in de browser evalueren, heb ik toegang of niet.</v>
+
+00:18:09.430 --> 00:18:11.110
+<v Wout Slabbinck (UGent-imec)>En in dit geval wel.</v>
+
+00:18:11.110 --> 00:18:24.120
+<v Wout Slabbinck (UGent-imec)>Had ik hier bijvoorbeeld dan eh gezegd, het is eigenlijk Bob dat toegang heeft, gaat hij zeggen van: "Oké, ehm dat is niet akkoord, want de policy zei dat dat niet mocht."</v>
+
+00:18:24.120 --> 00:18:36.310
+<v Wout Slabbinck (UGent-imec)>Goed, dit is een een heel klein voorbeeldje, eh maar er zijn veel meer voorbeelden van policies dat ook ervoor zorgt dat er heel aantal voorbeelden van ODRL policies hebt, tesamen met input en output.</v>
+
+00:18:36.310 --> 00:18:46.990
+<v Wout Slabbinck (UGent-imec)>En deze test suite is ook ontwikkeld door mij, dus ik weet normaal gezien nog steeds over eh wat het gaat. Dus moest u hierover vragen zijn, kunt u ook achteraf mij nog contacteren eh hierrond.</v>
+
+00:18:46.990 --> 00:19:01.990
+<v Wout Slabbinck (UGent-imec)>Ehm en deze eh compliance report eh technologie, allez, terminologie eh wordt ook meer en meer gekeken binnen eh de community group en zal ook een basis vormen voor verdere standaardisatie.</v>
+
+00:19:01.990 --> 00:19:14.930
+<v Wout Slabbinck (UGent-imec)>En wij hebben ook binnen de ODRL genoeg contacten en wij proberen onze eigen visie wat door te duwen, maar wij merken ook te praten met de mensen die mee de standaardisatie leiden, dat zij ook daar eh geïnteresseerd zijn.</v>
+
+00:19:14.930 --> 00:19:16.900
+<v Wout Slabbinck (UGent-imec)>Even kijken. Oké.</v>
+
+00:19:16.900 --> 00:19:22.950
+<v Wout Slabbinck (UGent-imec)>Ehm ja, dat was het het FORCE gedeelte zelf.</v>
+
+00:19:22.950 --> 00:19:36.870
+<v Wout Slabbinck (UGent-imec)>En dan ga ik nu nog eh een klein beetje meer context geven hoe wij dat dan in de praktijk eh zetten, omdat dit is het eigenlijk het het policy engine gedeelte. Stel dat ge uw volledige infrastructuur hebt,</v>
+
+00:19:36.870 --> 00:19:42.340
+<v Wout Slabbinck (UGent-imec)>is dit slechts een klein onderdeeltje van, gegeven dat alle informatie binnenkomt, kan die een beslissing pakken.</v>
+
+00:19:42.340 --> 00:19:47.460
+<v Wout Slabbinck (UGent-imec)>Natuurlijk, als ge een een volledige end-to-end applicatie aan het bouwen zijt, is dat niet genoeg.</v>
+
+00:19:47.460 --> 00:19:59.310
+<v Wout Slabbinck (UGent-imec)>En dat beseffen wij ook. Dus binnen een bepaald project, eh dat is het Paksoi project, waarbij dat wij eigenlijk ehm medische data vragenlijsten willen kunnen openstellen voor hergebruik.</v>
+
+00:20:00.088 --> 00:20:08.888
+<v Wout Slabbinck (UGent-imec)>back. Iets wat dat we veel tegenkomen is dat dat een probleem is aangezien dat er moet consent gegeven worden en consent is niet herbruikbaar.</v>
+
+00:20:09.538 --> 00:20:19.898
+<v Wout Slabbinck (UGent-imec)>Dus wat dat we daar concreet van het policy zijde aan het onderzoeken zijn is hoe dat we een andere vorm van contract kunnen definiëren zodat voor medische onderzoek</v>
+
+00:20:19.898 --> 00:20:26.318
+<v Wout Slabbinck (UGent-imec)>die data zou kunnen hergebruikt worden. En daarvoor gebruiken we voornamelijk ODRL.</v>
+
+00:20:26.788 --> 00:20:32.748
+<v Wout Slabbinck (UGent-imec)>Eh ik had ook al gemeld dat wij gebruiken met profiles. Wij gebruiken ook vaak de data privacy vocabulary.</v>
+
+00:20:32.748 --> 00:20:41.878
+<v Wout Slabbinck (UGent-imec)>Dat eigenlijk ervoor zorgt dat we ook legale termen kunnen uitdrukken. En eigenlijk die combinatie zorgt ervoor dat wij heel expressieve policies kunnen eh maken.</v>
+
+00:20:42.348 --> 00:20:49.888
+<v Wout Slabbinck (UGent-imec)>En dat passen we dan toe in dat project. Maar dat is alleen het policy modellering. Aan de andere kant ehm</v>
+
+00:20:50.298 --> 00:20:57.948
+<v Wout Slabbinck (UGent-imec)>gaan wij ook proberen om dat end-to-end te enforcen. Zoals al gezegd, ehm zijn wij eerst begonnen met Solid zelf.</v>
+
+00:20:58.288 --> 00:21:04.998
+<v Wout Slabbinck (UGent-imec)>En en hebben we eigenlijk onze ervaring met Solid eigenlijk gebruikt om dan verder te werken hoe dat we ODRL kunnen enforcen.</v>
+
+00:21:05.618 --> 00:21:14.078
+<v Wout Slabbinck (UGent-imec)>Dus wat gebeurt er eigenlijk bij ODRL zelf eh sorry, bij Solid zelf is dat er dus een bepaalde resource owner eh is die de policies gaat zetten.</v>
+
+00:21:14.078 --> 00:21:20.738
+<v Wout Slabbinck (UGent-imec)>Een bepaalde client die toegang wil hebben. De resource owners configureert al die access control policies,</v>
+
+00:21:21.218 --> 00:21:30.318
+<v Wout Slabbinck (UGent-imec)>waardoor dat de client toegang kan vragen. De pod zelf enforced die policies, dat zit allemaal in één geheel en krijgt dan eh toegang.</v>
+
+00:21:30.698 --> 00:21:38.998
+<v Wout Slabbinck (UGent-imec)>Wat dat we gemerkt hebben is doordat alles zo hard aan elkaar gekoppeld eh werd, was het moeilijk om zomaar een nieuwe policy aan die infrastructuur toe te voegen.</v>
+
+00:21:38.998 --> 00:21:46.438
+<v Wout Slabbinck (UGent-imec)>Ehm terwijl dat het idee van Solid was wel handig in het feit dat alle data op één plaats zat, maar het feit dat die policies zo hard gekoppeld waren</v>
+
+00:21:46.438 --> 00:21:56.888
+<v Wout Slabbinck (UGent-imec)>aan die data zelf eh zorgde ervoor en dat was ook een hiërarchische structuur, zorgde ervoor dat dat moeilijk was om dat zomaar te vervangen met ODRL.</v>
+
+00:21:57.188 --> 00:22:01.308
+<v Wout Slabbinck (UGent-imec)>Dus wat dat we daarvoor gedaan hebben is gekeken naar OAuth 2.0.</v>
+
+00:22:02.588 --> 00:22:12.108
+<v Wout Slabbinck (UGent-imec)>Ehm dat eigenlijk gewoon eh die eh resource server en die die die, allez, eigenlijk een een bepaald platform eigenlijk opdeelt in twee zaken.</v>
+
+00:22:12.108 --> 00:22:20.158
+<v Wout Slabbinck (UGent-imec)>Een resource server die de documenten bevat en een authorization server die eigenlijk de beslissingen pakt of dat iets al dan niet mogelijk was.</v>
+
+00:22:20.918 --> 00:22:27.428
+<v Wout Slabbinck (UGent-imec)>En hoe werkt dat dan bij OAuth? Is dat er iemand een access request rechtstreeks geeft aan een resource owner.</v>
+
+00:22:27.998 --> 00:22:36.428
+<v Wout Slabbinck (UGent-imec)>Ehm dat kom je ook tegen als je bijvoorbeeld eh een Miro drawing board en een Google Excel eh wilt</v>
+
+00:22:36.428 --> 00:22:44.918
+<v Wout Slabbinck (UGent-imec)>delen daarmee en dan ga je ook eerst eh vragen eh binnen uw Miro omgeving moeten vragen aan uw Google Drive zelf te authenticeren</v>
+
+00:22:44.918 --> 00:22:52.928
+<v Wout Slabbinck (UGent-imec)>en eigenlijk toegang geven. Dat doe je daar dan. En dan vanaf dan wordt de volledige OAuth flow</v>
+
+00:22:53.518 --> 00:22:59.348
+<v Wout Slabbinck (UGent-imec)>ehm in gang gezet zodat uw Miro toegang kan krijgen tot uw documenten binnen de Google Drive.</v>
+
+00:22:59.908 --> 00:23:06.918
+<v Wout Slabbinck (UGent-imec)>Ehm en eigenlijk zijn we een stap verder gegaan dan OAuth. Wij hebben eigenlijk gekeken naar user-managed, sorry.</v>
+
+00:23:08.538 --> 00:23:19.828
+<v Wout Slabbinck (UGent-imec)>naar user-managed access dat na delegated access control en eh separation of concerns van OAuth eigenlijk ook nog verder gaat en zorgen dat</v>
+
+00:23:19.828 --> 00:23:30.228
+<v Wout Slabbinck (UGent-imec)>die eh toegang niet altijd op het moment synchroon moet gevraagd worden, maar dat die ook asynchroon kan geprogrammeerd worden door policies. En</v>
+
+00:23:31.748 --> 00:23:42.848
+<v Wout Slabbinck (UGent-imec)>dat is ook eh de flow dat dan hier eh vlug wordt eh afgebeeld waarbij dat er eigenlijk gekeken wordt van de client, hé, mag ik die documenten bekijken?</v>
+
+00:23:43.438 --> 00:23:52.268
+<v Wout Slabbinck (UGent-imec)>De eh resource server en de authorization server eh initieel heeft hij geen token, dus dan mag dat niet, heeft geen toegang.</v>
+
+00:23:52.938 --> 00:24:08.578
+<v Wout Slabbinck (UGent-imec)>Die vraagt een access request op. Eh ondertussen had de resource owner al policies kunnen programmeren waardoor dat die de access grant heeft, krijgt een bepaalde token en op dat moment is het poortje open en krijgt de eh client wel toegang tot de resources.</v>
+
+00:24:09.168 --> 00:24:12.788
+<v Wout Slabbinck (UGent-imec)>En kunnen wij ook de de policies eh managen.</v>
+
+00:24:13.118 --> 00:24:19.988
+<v Wout Slabbinck (UGent-imec)>En dit is dan ook wat dat wij zelf hebben ehm wat infrastructuur rond gebouwd. Wij hebben onze eh community solid server</v>
+
+00:24:20.448 --> 00:24:30.708
+<v Wout Slabbinck (UGent-imec)>een klein beetje veranderd om daar ehm die die eh opsplitsing te kunnen maken in de pure resource server die al bestond eh daardoor en dan eigenlijk de authorization server</v>
+
+00:24:30.708 --> 00:24:36.218
+<v Wout Slabbinck (UGent-imec)>waar wij onze ODRL eh engine hebben kunnen eh programmeren.</v>
+
+00:24:36.658 --> 00:24:45.198
+<v Wout Slabbinck (UGent-imec)>En dan eigenlijk eh waar wij ook onderzoek naar deden is dan eh kijken hoe kunnen we dan die die eh policies managen.</v>
+
+00:24:45.628 --> 00:24:58.128
+<v Wout Slabbinck (UGent-imec)>En hebben we eigenlijk een een een bepaalde infrastructuur op poten gezet om ehm eigenlijk een access management applicatie te kunnen maken zodat we die policies binnen authorization eh server kunnen zetten.</v>
+
+00:24:58.598 --> 00:25:09.308
+<v Wout Slabbinck (UGent-imec)>Dus om om even kort samen te vatten, hier we hebben zowel dus de infrastructuur eh gemaakt volgens het user-managed access eh protocol om eigenlijk onze resource server en authorization server te maken.</v>
+
+00:25:09.308 --> 00:25:20.108
+<v Wout Slabbinck (UGent-imec)>En aangezien dat binnen user-managed access server de de policies ehm niet niet standaard gedefinieerd waren hoe dat we die kunnen programmeren, hebben we onze eigen applicatie eh daar ook opgebouwd</v>
+
+00:25:20.108 --> 00:25:29.938
+<v Wout Slabbinck (UGent-imec)>zodat we eh ook die policies kunnen managen. En als alles goed gaat, zou daar nu een filmpje over kunnen zijn.</v>
+
+00:25:32.418 --> 00:25:40.048
+<v Wout Slabbinck (UGent-imec)>Dus dit is wat wij gemaakt hebben. Aan de linkerkant zie je de eh Loama applicatie eh zelf. Ik ga even op pauze zetten.</v>
+
+00:25:40.048 --> 00:25:48.828
+<v Wout Slabbinck (UGent-imec)>Ah, nu is het weer scherper. Aan de rechterkant eh zorgen we ervoor dat we eh toegang kunnen hebben aan die eh pod eh zelf.</v>
+
+00:25:49.198 --> 00:25:53.918
+<v Wout Slabbinck (UGent-imec)>Zoals je kunt zien zijn er vier resources eh binnen Loama.</v>
+
+00:25:54.808 --> 00:26:03.118
+<v Wout Slabbinck (UGent-imec)>Ehm en we zijn ingelogd als Test-Pod. Nu niet de beste naamgeving, geef ik achteraf toe.</v>
+
+00:26:03.118 --> 00:26:10.148
+<v Wout Slabbinck (UGent-imec)>But it is what it is. En dan is er iemand anders die eh wil eh toegang hebben tot een bepaalde resource</v>
+
+00:26:10.148 --> 00:26:16.328
+<v Wout Slabbinck (UGent-imec)>en eigenlijk kunnen eh schrijven. En dat is Test-Pod 2.</v>
+
+00:26:16.698 --> 00:26:24.968
+<v Wout Slabbinck (UGent-imec)>En die heeft geen toegang. En dat is een probleem. Eh dus wat dat we dan gedaan hebben is met de applicatie kunnen we eh</v>
+
+00:26:25.338 --> 00:26:31.338
+<v Wout Slabbinck (UGent-imec)>in deze view heel makkelijk eh access toegeven aan die bepaalde resource. En</v>
+
+00:26:33.918 --> 00:26:44.478
+<v Wout Slabbinck (UGent-imec)>creëren we een policy, meer bepaald een policy zodat die eh schrijf rechten heeft zodat er informatie kan eh weggeschreven worden.</v>
+
+00:26:45.698 --> 00:26:50.088
+<v Wout Slabbinck (UGent-imec)>En dan kunnen we dit nog eens proberen. En wat zien we?</v>
+
+00:26:51.108 --> 00:26:59.998
+<v Wout Slabbinck (UGent-imec)>Op dit moment kunnen we inderdaad eh schrijven, maar zoals jullie gezien hebben, hebben we geen leesrechten gegeven waardoor dat die uiteraard geen access heeft.</v>
+
+00:27:00.418 --> 00:27:15.308
+<v Wout Slabbinck (UGent-imec)>En als we die dan ook aanpassen, dan krijgen we nu zowel het schrijven als het lezen dat dat nu geslaagd is.</v>
+
+00:27:15.828 --> 00:27:24.118
+<v Wout Slabbinck (UGent-imec)>Dus onze eh demo hier werkt. Maar eh ook... Ja.</v>
+
+00:27:24.788 --> 00:27:36.138
+<v Wout Slabbinck (UGent-imec)>Eh maar onze applicatie zorgt ervoor dat we op een iets makkelijkere manier dan dan puur handmatig de ODRL policies aan te passen dat wij eh die policies kunnen maken.</v>
+
+00:27:36.608 --> 00:27:50.938
+<v Wout Slabbinck (UGent-imec)>Eh en dat was in het algemeen wat ik wou eh vertellen over wat wij gedaan hebben, onze ervaringen met ODRL, niet alleen in in isolatie, maar ook als eh infrastructuur.</v>
+
+00:27:51.528 --> 00:28:06.508
+<v Wout Slabbinck (UGent-imec)>Eh en wat ik ook nog even eh meedelen dat ehm dat is eigenlijk officieel op 17 april zou dat gaan aanstaan worden, maar dat ze nu bezig zijn met eh de begin de eigenlijk zo wat het start van een nieuw standaardisatieproces.</v>
+
+00:28:06.508 --> 00:28:27.138
+<v Wout Slabbinck (UGent-imec)>Dat gaat waarschijnlijk pas afgekloppt worden in november. De officiële start, maar op dit moment zijn ze allemaal use cases en requirements aan het verzamelen. En daarvoor is er de ODRL 3 workshop. Die gaat ook doorgaan in Londen. Ik denk eind juni. Ik ken de exacte data niet. Vandaar is er ook de link naar eh de website daarbij.</v>
+
+00:28:27.918 --> 00:28:46.858
+<v Wout Slabbinck (UGent-imec)>Eh verder willen ehm zijn we ook nog verder binnen onze groep eh onderzoek aan het doen rond eh user experience over policy management, zodat onze applicatie die we net getoond hebben, Loama, dat die ook nog veel beter kan worden en meer intuïtief zijn voor het managen van onze policies.</v>
+
+00:28:47.388 --> 00:29:02.738
+<v Wout Slabbinck (UGent-imec)>En dan eh finaal, dat is een klein beetje reclame maken voor onze onderzoeksgroep, gaat er volgende week een event door, onder andere over ehm data wallets, over ODRL policies en dergelijke.</v>
+
+00:29:02.738 --> 00:29:18.108
+<v Wout Slabbinck (UGent-imec)>En dat heet Trust Triggers. Dat gaat doorgaan bij ons in Gent in de Krook. En daar komen een heleboel mensen die ja, er komen heel wat goede gastsprekers om dat te vertellen, onder andere mijn collega Beatrice en ook Jan Lindqvist,</v>
+
+00:29:18.108 --> 00:29:35.498
+<v Wout Slabbinck (UGent-imec)>die ook mee zit in UDI wallets en gaan ook gelijkenissen proberen eh treffen tussen eh data spaces en eh wallets en eh ja, allemaal interessante eh kleine presentaties en eventueel panels om wat eh informatie te delen.</v>
+
+00:29:35.498 --> 00:29:44.978
+<v Wout Slabbinck (UGent-imec)>Eigenlijk een een een network event. En ik wou daar toch nog gebruik maken om een klein beetje eh reclame over te maken. Eh maar dat was eh mijn verhaal. Ik hoop dat het iets of wat interessant was.</v>
+
+00:29:45.508 --> 00:29:55.108
+<v Wout Slabbinck (UGent-imec)>En ehm ja, als er vragen zijn, shoot. Ehm en ik hoop dat het niet te technisch was. Ik heb soms de neiging om daar te snel naartoe te gaan, maar ik heb mij proberen eh beperken.</v>
+
+00:30:00.609 --> 00:30:01.589
+<v Axel van der Minne>vragen Wouter.</v>
+
+00:30:02.089 --> 00:30:03.889
+<v Michiel Trimpe>Zeker. Wat dat mij betreft zeker.</v>
+
+00:30:04.369 --> 00:30:05.009
+<v René Kint>Oké.</v>
+
+00:30:05.509 --> 00:30:07.959
+<v René Kint>Ehm, dankjewel eh Wout.</v>
+
+00:30:07.959 --> 00:30:13.929
+<v René Kint>Ehm, hebben jullie ook gekeken naar ehm automatisch genereren van policies?</v>
+
+00:30:13.929 --> 00:30:20.939
+<v René Kint>Dus vanuit eh geautomatiseerde systemen als policy management methode, dus met API's ofzo.</v>
+
+00:30:21.849 --> 00:30:26.919
+<v René Kint>Eh bedoel je dan allez, wat genereren. Ja.</v>
+
+00:30:27.019 --> 00:30:32.799
+<v Wout Slabbinck (UGent-imec)>Eh maar automatisch ja, niets gaat puur automatisch, dus dan is er een bepaald profiel eh nodig.</v>
+
+00:30:33.329 --> 00:30:40.979
+<v Wout Slabbinck (UGent-imec)>Eh maar op dit moment ehm wij zelf zijn daar een beetje bij beetje bij bezig zodat de volledige flow van een resource maken</v>
+
+00:30:40.979 --> 00:30:47.889
+<v Wout Slabbinck (UGent-imec)>dat je daar ook al een een standaard policy aanhangt.</v>
+
+00:30:48.209 --> 00:30:56.129
+<v Wout Slabbinck (UGent-imec)>We hebben daar al wat onderzoek gedaan, eh maar dat loopt eh iets stroever dan gewenst, aangezien dat er ook nog wat artefacten bijkomen van</v>
+
+00:30:56.129 --> 00:31:05.399
+<v Wout Slabbinck (UGent-imec)>de systemen waar dat we aan het werken. Bijvoorbeeld user managed access heeft een bepaalde flow die uitgewerkt moet worden als een resource geregistreerd wordt.</v>
+
+00:31:05.399 --> 00:31:13.799
+<v Wout Slabbinck (UGent-imec)>Eh en dan proberen we ook te kijken om eigenlijk eh dus als controller eigenlijk een soort default policies te kunnen aanmaken, maar</v>
+
+00:31:13.799 --> 00:31:24.309
+<v Wout Slabbinck (UGent-imec)>we zijn rond dat allez, onze focus is is dan wat verlegd, dus daar hebben we niet verder gewerkt, niet zo ver als we als we zouden willen.</v>
+
+00:31:24.819 --> 00:31:33.849
+<v Wout Slabbinck (UGent-imec)>Eh en aan de andere kant eh in de literatuur hebben we ook al gevonden dat collega's, maar dan internationaal, dat ze ook bezig zijn en ook informatief meegeven om eigenlijk</v>
+
+00:31:33.849 --> 00:31:45.929
+<v Wout Slabbinck (UGent-imec)>eh eigenlijk uw policies met de hand te typen eh in in natural language om die dan te kunnen omzetten naar correcte ODRL policies, syntactisch, semantisch.</v>
+
+00:31:46.399 --> 00:31:52.929
+<v Wout Slabbinck (UGent-imec)>Natuurlijk idealiter moet dat nog eens gecontroleerd worden, maar daar wordt er ook onderzoek naar gedaan. Er zijn er ook al tools voor aanwezig.</v>
+
+00:31:52.929 --> 00:31:56.559
+<v Wout Slabbinck (UGent-imec)>Ik hoop dat dat zo wat eh uw vraag beantwoordt.</v>
+
+00:31:56.889 --> 00:31:58.319
+<v René Kint>Voorlopig wel ja, dankjewel.</v>
+
+00:31:58.319 --> 00:31:58.829
+<v René Kint>Oké.</v>
+
+00:32:00.919 --> 00:32:02.619
+<v Danny Greefhorst>Eh mag ik een vraag stellen?</v>
+
+00:32:03.889 --> 00:32:04.729
+<v Danny Greefhorst>Zeker.</v>
+
+00:32:05.589 --> 00:32:19.349
+<v Danny Greefhorst>Ehm ik vraag me af hoe hoe jullie onderzoek zich verhoudt tot wat er internationaal gebeurt rondom data spaces, de International Data Spaces Association. Ehm want daar waren ze ook met ODRL bezig.</v>
+
+00:32:19.349 --> 00:32:20.629
+<v Danny Greefhorst>Heb jij daar zicht op?</v>
+
+00:32:21.379 --> 00:32:23.179
+<v Wout Slabbinck (UGent-imec)>Eh ja, ja zeker.</v>
+
+00:32:23.179 --> 00:32:35.319
+<v Wout Slabbinck (UGent-imec)>Ehm dus eigenlijk ook ehm één van de redenen waarom dat ik dat wij zelf ook geloven in ODRL is wel, het is een W3C standaard, maar we zien ook dat het juist daar ook gebruikt wordt.</v>
+
+00:32:35.319 --> 00:32:49.239
+<v Wout Slabbinck (UGent-imec)>We hebben ook contacten met eh onder andere mensen onder het team van Stefan Decker die ook eh bezig is met eh data spaces en nog anderen eh met allez, connecties met Frauenhofer. Eh ook met Gaia X</v>
+
+00:32:49.239 --> 00:32:53.799
+<v Wout Slabbinck (UGent-imec)>kennen we een paar onderzoekers en en en verder en proberen we ook af te stemmen.</v>
+
+00:32:54.219 --> 00:33:04.329
+<v Wout Slabbinck (UGent-imec)>Ehm ook een redelijk aantal van die mensen zit in eh data space eh van van de data space community, probeert ook te komen naar de community groups en ook omgekeerd.</v>
+
+00:33:05.139 --> 00:33:14.319
+<v Wout Slabbinck (UGent-imec)>Ehm dus we volgen alles wel van elkaar op. Ehm allez, proberen daar best gewoon. Natuurlijk kun je niet overal eh gaan.</v>
+
+00:33:14.829 --> 00:33:27.069
+<v Wout Slabbinck (UGent-imec)>Maar ehm ja, één van de plaatsen waar we bijvoorbeeld die ODRL workshop willen naartoe gaan is bijvoorbeeld op het data space event dat doorgaan, denk eind mei. Ik dacht Griekenland, maar dat durf ik me nu niet op vastpinnen.</v>
+
+00:33:27.069 --> 00:33:34.599
+<v Wout Slabbinck (UGent-imec)>Maar we proberen naar elkaar eh te kijken kwestie dat dat niet het wiel gaat uitgevonden worden.</v>
+
+00:33:35.109 --> 00:33:57.699
+<v Wout Slabbinck (UGent-imec)>Ehm omdat ja, access control is een access control zeker centraal is een mooi opgelost probleem. Decentraal begint ook mooi te gaan. Maar hoe verder dat je dan ook nog dynamische zaken aan toevoegt, hebben we gemerkt dat het dan zeker als je over grote gedistribueerde systemen praat dat we dat het heel veel nut heeft om af te stemmen eh op elkaar.</v>
+
+00:33:58.199 --> 00:33:58.599
+<v Wout Slabbinck (UGent-imec)>Ehm.</v>
+
+00:34:00.519 --> 00:34:01.899
+<v Danny Greefhorst>Oké, dankjewel.</v>
+
+00:34:05.219 --> 00:34:06.919
+<v René Kint>Eh Wout, ik heb ook nog een vraag.</v>
+
+00:34:07.919 --> 00:34:10.599
+<v Michiel Trimpe>Eh nog een iemand anders zijn handje ook. Oh sorry.</v>
+
+00:34:10.599 --> 00:34:12.599
+<v René Kint>Ja, ik zag het niet.</v>
+
+00:34:15.389 --> 00:34:17.489
+<v Gideon Zegwaard>Ja, zal ik nog even mijn vraag stellen?</v>
+
+00:34:17.489 --> 00:34:18.089
+<v Michiel Trimpe>Ja.</v>
+
+00:34:19.189 --> 00:34:20.989
+<v Michiel Trimpe>Ehm, ik heb er stiekem twee.</v>
+
+00:34:21.589 --> 00:34:30.149
+<v Gideon Zegwaard>Eh één is of je ehm ook ehm een soort van hiërarchische eh eh policies of jullie daar ook mee bezig zijn.</v>
+
+00:34:30.149 --> 00:34:39.899
+<v Gideon Zegwaard>Hè, dus je stelt je hebt een algemene policy eh toegang moet data minimalisatie worden toegepast en een specifieke policy die daar dan invulling aan geeft.</v>
+
+00:34:40.529 --> 00:34:47.609
+<v Gideon Zegwaard>Ehm hebben jullie daar al eh aandacht voor aanbesteed of is daar een construct voor?</v>
+
+00:34:48.969 --> 00:34:52.419
+<v Wout Slabbinck (UGent-imec)>Eh ja, ik zal dan eh direct die vraag beantwoorden.</v>
+
+00:34:52.419 --> 00:35:04.149
+<v Wout Slabbinck (UGent-imec)>Ehm het is het is een ehm niet de makkelijkste vraag, omdat wat dat er dan wat dat we dan ook zien is is dat we dan ehm</v>
+
+00:35:05.949 --> 00:35:11.149
+<v Wout Slabbinck (UGent-imec)>Ja, sorry, ik was ik was eventjes mee gedachten aan aan het eh vormen.</v>
+
+00:35:11.149 --> 00:35:23.979
+<v Wout Slabbinck (UGent-imec)>Ehm er zijn we naar aan het kijken. En ik wil ook al eerst zeggen, er is nog van onze kant geen concrete oplossing, maar er zijn wel anderen eh in de literatuur die daar wel al contributies hebben eh bijgedragen.</v>
+
+00:35:24.519 --> 00:35:31.719
+<v Wout Slabbinck (UGent-imec)>Eh niet helaas niet allemaal open source, zoals wij het wel zouden willen, waardoor dat het iets moeilijker is om opnieuw in te vullen.</v>
+
+00:35:32.229 --> 00:36:04.429
+<v Wout Slabbinck (UGent-imec)>Ehm maar dat zorgt er eh ja, een moeilijkheid daaraan dat we merken is dat er daarvoor ook verdere formal eh semantics, ook iets dat nog niet gedefinieerd is binnen ODRL, nodig zijn om eigenlijk enerzijds te kunnen zeggen wanneer is een policy specifieker dan een andere. En om dan ook de nodige strategie te hebben die zegt eigenlijk ja, als er twee regels zijn en één is duidelijk specifieker dan de andere, dan moet die specifieke ehm voorrang hebben.</v>
+
+00:36:04.789 --> 00:36:17.119
+<v Wout Slabbinck (UGent-imec)>Binnen ODRL zelf op dit moment is dat niet gedefinieerd, maar er zijn wel verschillende onderzoeksgroepen die daar wel eh papers en een ene heeft daar ook een een bepaalde implementatie met SHACL.</v>
+
+00:36:17.749 --> 00:36:26.989
+<v Wout Slabbinck (UGent-imec)>Ehm ik ken hem de naam van die paper niet van buiten, maar ik kan die wel achteraf doorsturen ehm moest u dat eh interesseren.</v>
+
+00:36:27.529 --> 00:36:40.519
+<v Wout Slabbinck (UGent-imec)>Eh maar dus concreet nog niet in ons lab. Algemeen in ODRL niet, maar er is wel onderzoek naar gebeurd eh met allez, voorstellen over hoe het kan gedaan worden binnen eh ODRL.</v>
+
+00:36:41.779 --> 00:36:45.619
+<v Gideon Zegwaard>Ja, en eh mijn andere vraag was ehm eh</v>
+
+00:36:45.619 --> 00:37:14.329
+<v Gideon Zegwaard>als je eh de de context van data space neemt, heb je eigenlijk eh verschillende eh lagen hè. Dus je wordt eerst deelnemer van een data space. Nou, je kan een policy zetten op het worden van deelnemer. Vervolgens ga je een data deelrelatie aan tussen twee partijen en dat is ook weer waar je een policy op kan zetten van wanneer doe je dat of niet. En binnen zo'n data deelrelatie zou je een individuele eh request kunnen doen en daar kan je weer ook weer een policy op toepassen</v>
+
+00:37:14.329 --> 00:37:24.829
+<v Gideon Zegwaard>eh en evalueren. Ehm zijn jullie actief op al die drie niveaus of vooral dat laatste niveau of waar waar moet ik dat eh evalueren van die policies plaatsen?</v>
+
+00:37:27.709 --> 00:37:31.189
+<v Wout Slabbinck (UGent-imec)>Dat is een eh letterlijk gelaagde vraag.</v>
+
+00:37:31.189 --> 00:37:31.789
+<v Wout Slabbinck (UGent-imec)>Ehm.</v>
+
+00:37:35.149 --> 00:38:06.589
+<v Wout Slabbinck (UGent-imec)>Ik denk sowieso dat wij op dit moment de de oplossingen die wij nu gemaakt hebben meer op het het laatste niveau. Ehm omdat wij al moeten eh nadenken over bijvoorbeeld de de authenticatie en de de allez, zorgen dat we die kunnen identificeren, zorgen dat we die informatie kunnen vertalen binnen onze authorization engines, zodat we kunnen weten, ah deze is inderdaad wel die bepaalde identiteit. Dus de onboarding</v>
+
+00:38:06.589 --> 00:38:16.789
+<v Wout Slabbinck (UGent-imec)>concreet nog niet. Al moet ik zeggen dat een collega van mij een eh een een project opvolgt. Het heet Pilots. Ehm niet de beste naam in in mijn ogen.</v>
+
+00:38:16.789 --> 00:38:29.029
+<v Wout Slabbinck (UGent-imec)>Maar het gaat over eh physical internet waarbij dat ze eigenlijk aan het aan het kijken om processen ook te modelleren waarbij dat ook elke stap van een proces zou kunnen gemodelleerd worden met ODRL policies.</v>
+
+00:38:29.029 --> 00:38:31.829
+<v Wout Slabbinck (UGent-imec)>Dus misschien dat dat naar die richting gaat.</v>
+
+00:38:32.429 --> 00:38:42.329
+<v Wout Slabbinck (UGent-imec)>Maar concreet ehm die onboarding flow hebben nog geen eh onderzoek zelf naar eh gedaan.</v>
+
+00:38:43.729 --> 00:38:54.629
+<v Gideon Zegwaard>Ja, het is ook een vorm van gelaagdheid hè, want je kan op je low level policy kan je vereisen dat er een data deelrelatie is. Bij een data deelrelatie kan je vereisen dat je dat je een onboarding gedaan hebt tot het data stelsel hè. Dus dat</v>
+
+00:38:55.229 --> 00:39:02.329
+<v Wout Slabbinck (UGent-imec)>In principe zou het zou het ja, maar je kunt het altijd engineeren om om het te maken eh maar ja.</v>
+
+00:39:02.329 --> 00:39:05.529
+<v Wout Slabbinck (UGent-imec)>Oké. Ja. Ja. Eh dank voor je antwoord.</v>
+
+00:39:08.729 --> 00:39:09.529
+<v Michiel Trimpe>René.</v>
+
+00:39:12.429 --> 00:39:26.329
+<v René Kint>Ja, eh in je intro had je ook ehm autorisatie op ehm op locatie op basis van locatie in ieder geval als een eh als een mogelijkheid. Zijn daar al use cases voor?</v>
+
+00:39:30.529 --> 00:39:45.729
+<v Wout Slabbinck (UGent-imec)>Binnen onze huidige projecten niet. We hebben daar wel nog ehm ja, use cases gemaakt om om het tastbaar te maken, maar binnen onze projecten concreet op dit moment niet.</v>
+
+00:39:46.229 --> 00:39:47.029
+<v René Kint>Oké, dankjewel.</v>
+
+00:39:48.529 --> 00:39:59.029
+<v Michiel Trimpe>Ik ik ook gelijk weer net een vervolgvraag voor. Ik sprak gisteren ook met iemand en die wilde natuurlijk dat je ook binnen het geo domein heb je natuurlijk ook ook geo operaties van valt binnen gebied.</v>
+
+00:39:59.029 --> 00:39:59.829
+<v Michiel Trimpe>Is</v>
+
+00:40:00.088 --> 00:40:04.088
+<v Michiel Trimpe>Daar heb je ook al werk gedaan binnen ODRL of waarschijnlijk nog niet?</v>
+
+00:40:04.088 --> 00:40:17.188
+<v Wout Slabbinck (UGent-imec)>Binnen ODRL niet, omdat dat dan En er zijn ook heftige discussies geweest binnen die community group om om ook te zeggen van ja, tot hoever moet je al die constraints zelf binnen ODRL ontwikkelen.</v>
+
+00:40:17.188 --> 00:40:26.188
+<v Wout Slabbinck (UGent-imec)>En waarbij dat er op een gegeven moment gezegd van: kijk, eh wat belangrijk is dat op een gegeven moment dat we ook bijvoorbeeld met die profielen kunnen gebruik maken van</v>
+
+00:40:26.188 --> 00:40:31.988
+<v Wout Slabbinck (UGent-imec)>bijvoorbeeld binnen de geo community die wel die relaties kan leggen om die dan te hergebruiken.</v>
+
+00:40:31.988 --> 00:40:45.988
+<v Wout Slabbinck (UGent-imec)>Eigenlijk die techniek gebruiken wij bijvoorbeeld ook om die legale purposes ook wat te groeperen met DPV om dan eigenlijk ook te kunnen weten is een bepaalde purpose die wat specifieker is, bevat die binnen een andere purpose.</v>
+
+00:40:45.988 --> 00:40:48.388
+<v Wout Slabbinck (UGent-imec)>En die zaken lukken op dit moment wel al.</v>
+
+00:40:48.388 --> 00:41:01.988
+<v Wout Slabbinck (UGent-imec)>Dus ik veronderstel dat als er een een mooi geo profiel daarvoor is om te zeggen een bepaalde stad, ik ik ken niet genoeg van Nederland om specifieke regio's, maar ik weet wel Amsterdam is deel van Nederland, dus als je in Amsterdam zit, zit je ook in Nederland.</v>
+
+00:41:01.988 --> 00:41:10.888
+<v Wout Slabbinck (UGent-imec)>Ik denk dat die relaties eens die die, allez, als als er iemand daar een component voor gemaakt is, dat die wel kan zouden toegevoegd worden.</v>
+
+00:41:10.888 --> 00:41:18.088
+<v Wout Slabbinck (UGent-imec)>Maar concreet eh is dat out of scope van ODRL, omdat ja, je moet je moet de grens eh ergens trekken.</v>
+
+00:41:18.088 --> 00:41:29.188
+<v Wout Slabbinck (UGent-imec)>Maar zeker met die profiel profielen is dat wel combineerbaar, zolang dat je zelf maar weet eh hoe dat dat allemaal eh beschreven wordt.</v>
+
+00:41:29.188 --> 00:41:30.288
+<v Michiel Trimpe>Super.</v>
+
+00:41:32.488 --> 00:41:34.988
+<v Stas Mironov>Zijn er nog meer vragen? Kan ik ook een korte vraag?</v>
+
+00:41:34.988 --> 00:41:43.688
+<v Stas Mironov>Wat, ehm ik was even benieuwd, het is niet een vraag over ODRL, maar je had het ook over User Managed Access en ben dat in het verleden ook tegengekomen.</v>
+
+00:41:43.688 --> 00:41:52.388
+<v Stas Mironov>Maar ehm ik was benieuwd, wordt het ook buiten Solid gebruikt? Vliegt dat ook internationaal? Heb je daar voorbeelden van?</v>
+
+00:41:52.388 --> 00:42:03.788
+<v Stas Mironov>Want toen ik heb mensen gesproken die hem eigenlijk al hadden aangegeven dat het een ja, is eh ja, niet gaan vliegen. Beetje geflopt. Ik weet niet hoe hoe jij er naar kijkt.</v>
+
+00:42:03.788 --> 00:42:10.088
+<v Wout Slabbinck (UGent-imec)>Ehm ik zou sowieso moeten verwijzen naar een collega van mij die er meer van eh kent.</v>
+
+00:42:10.088 --> 00:42:19.388
+<v Wout Slabbinck (UGent-imec)>Eh wij zijn daar, hebben daar ehm vooral naar gekeken omdat we we wouden sowieso OAth eh blijven.</v>
+
+00:42:19.388 --> 00:42:27.188
+<v Wout Slabbinck (UGent-imec)>Eh we zagen we zochten naar protocollen die ook dicht bij eh Solid aanleunen, dus is dat wel onze kant geweest.</v>
+
+00:42:27.188 --> 00:42:38.888
+<v Wout Slabbinck (UGent-imec)>Maar mijn collega had ook nog andere ehm flow, allez, gelijkaardige protocollen die die dezelfde capaciteiten of soms zelfs meer generiek waren dan User Managed Access.</v>
+
+00:42:38.888 --> 00:42:51.988
+<v Wout Slabbinck (UGent-imec)>En zijn idee was om de oplossingen waar wij aan het werken zijn om die ook dicht genoeg te houden bij de andere. Maar ik ben nu even de de naam kwijt van die andere protocollen.</v>
+
+00:42:52.688 --> 00:42:56.088
+<v Wout Slabbinck (UGent-imec)>Ja, ik ben naar de mail sturen dan eh Ja.</v>
+
+00:42:56.088 --> 00:42:58.188
+<v Michiel Trimpe>Als dat kan eh graag. Ja.</v>
+
+00:42:58.188 --> 00:43:02.388
+<v Wout Slabbinck (UGent-imec)>Ja, we zullen na de meeting nog wat opsturen en dan eh later uitdelen natuurlijk.</v>
+
+00:43:02.388 --> 00:43:09.188
+<v Wout Slabbinck (UGent-imec)>Ik weet wel dat eh de ontwikkelaar van UMA, Eve Maler, of één van de één van de initiators,</v>
+
+00:43:09.188 --> 00:43:12.088
+<v Michiel Trimpe>eh die zat ook in de in de AuthZEN werkgroepen. Oké.</v>
+
+00:43:12.088 --> 00:43:21.088
+<v Michiel Trimpe>En eh zij is nog steeds enthousiast over haar over UMA, maar het heeft in ieder geval geen eh hele grote brede adoptie Nee. gehaald.</v>
+
+00:43:21.088 --> 00:43:36.588
+<v Michiel Trimpe>En ik denk dat het ook, het is ja, het is echt ook zeg maar net als met OAth hier als gebruiker wat wat gecontroleerd kan eh beschikbaar maken.</v>
+
+00:43:36.588 --> 00:43:44.288
+<v Michiel Trimpe>Eh dus UMA is ook wel nog verder te verfijnen en nog meer controle naar de gebruiker terug te brengen. En dat heeft ook ja, politiek of in ieder geval dat heeft ook qua use case en</v>
+
+00:43:44.288 --> 00:43:50.188
+<v Michiel Trimpe>functionaliteit is dat nooit echt gaan leven. Dus volgens mij is dat ook weer de het wat de standaard biedt</v>
+
+00:43:50.188 --> 00:44:01.788
+<v Michiel Trimpe>is societally eh maatschappelijk gezien nooit voldoende gaan leven om het echt van de grond te krijgen. En ze vinden het heel heel jammer, maar ze ondersteunen ook de ja, de andere toekomst.</v>
+
+00:44:04.688 --> 00:44:06.388
+<v Michiel Trimpe>Vragen met de zaal?</v>
+
+00:44:08.488 --> 00:44:14.088
+<v Michiel Trimpe>Eh ik heb zelf nog één één toevoeging, dus ter eh dus ook hoe eh een deel van de presentatie in ons aanhaakt.</v>
+
+00:44:14.088 --> 00:44:20.888
+<v Michiel Trimpe>Dus je zag bij bij Force zag je de request modellering en de state of the world, zoals het genoemd werd.</v>
+
+00:44:20.888 --> 00:44:32.488
+<v Michiel Trimpe>En dat zijn dan dus ook eh zeg maar link data weergaves van beide. En dat correspondeert eh bij de één op één met eh de AuthZEN standaard.</v>
+
+00:44:32.488 --> 00:44:40.788
+<v Michiel Trimpe>Eh we willen ook nog gaan kijken in de AuthZEN standaard hebben we voor elkaar gebokst dat daar ook eh JSON-LD eh definities bij kunnen.</v>
+
+00:44:40.788 --> 00:44:51.988
+<v Michiel Trimpe>Dus wie weet en hopelijk is het zelfs mogelijk om die automatisch converteerbaar te krijgen. Eh maar daar moeten we nog naar kijken of dat echt ook eh volledig automatisch kan op basis van JSON-LD.</v>
+
+00:44:51.988 --> 00:44:57.888
+<v Michiel Trimpe>Maar het is sowieso eh dan te converteren en die moet je dus ook echt als gelijk zien.</v>
+
+00:45:01.688 --> 00:45:02.888
+<v Michiel Trimpe>Dat wilde ik toevoegen.</v>
+
+00:45:05.788 --> 00:45:07.188
+<v Michiel Trimpe>Oké.</v>
+
+00:45:07.788 --> 00:45:11.688
+<v Michiel Trimpe>Nou Wout, dan eh namens iedereen enorm bedankt voor de presentatie.</v>
+
+00:45:11.688 --> 00:45:13.688
+<v Michiel Trimpe>Dank u wel.</v>
+
+00:45:13.688 --> 00:45:18.088
+<v Floris Deutekom>Het is denk ik een betere diepgaande dan ik eh dan ik eh een paar weken geleden heb geprobeerd.</v>
+
+00:45:18.088 --> 00:45:20.088
+<v Michiel Trimpe>Dus enorm bedankt daarvoor.</v>
+
+00:45:20.088 --> 00:45:26.988
+<v Michiel Trimpe>Ik moest van Rens nog eh excuses aanbieden dat hij er niet bij kon zijn. Hij was op een conferentie met technische problemen en kreeg het niet voor elkaar.</v>
+
+00:45:26.988 --> 00:45:32.088
+<v Michiel Trimpe>Dus hij had heel graag mee willen kijken, maar hij belooft dat hij de de opname gaat bekijken.</v>
+
+00:45:32.988 --> 00:45:36.788
+<v Wout Slabbinck (UGent-imec)>Jammer, maar eh ik zal hem sowieso nog wel eh eens tegenkomen.</v>
+
+00:45:36.788 --> 00:45:43.988
+<v Wout Slabbinck (UGent-imec)>Eh ik ga ook nu al de slides delen. Ik denk dat ik ze share ready gezet heb. Moest dat niet zo zijn,</v>
+
+00:45:43.988 --> 00:45:51.888
+<v Wout Slabbinck (UGent-imec)>ehm ja, dan kunnen we het mij nu laten weten. Dan kijk ik nog even naar de permissies. Ehm</v>
+
+00:45:51.888 --> 00:45:54.888
+<v Wout Slabbinck (UGent-imec)>Ik kan ze gewoon openen, dus dat eh lijkt geen probleem te zijn.</v>
+
+00:45:54.888 --> 00:45:59.988
+<v Wout Slabbinck (UGent-imec)>Voilà, dan dan weet ik dat ik dit al niet meer kan vergeten. Ehm</v>
+
+00:45:59.988 --> 00:46:01.088
+<v Michiel Trimpe>Voilà.</v>
+
+00:46:01.088 --> 00:46:01.588
+<v Wout Slabbinck (UGent-imec)>Mooi.</v>
+
+00:46:02.488 --> 00:46:17.088
+<v Floris Deutekom>Ik wou alleen nog toevoegen Wout, eh je zei: oh, hopelijk was het niet te technisch en te gedetailleerd. Ik denk eigenlijk dat we er allemaal enorm bij gebaat zijn geweest dat je dat juist zo technisch en gedetailleerd hebt verteld, eh omdat daardoor al het abstracte een beetje is gaan leven.</v>
+
+00:46:17.088 --> 00:46:17.888
+<v Floris Deutekom>Dus dankjewel daarvoor.</v>
+
+00:46:18.488 --> 00:46:20.488
+<v Wout Slabbinck (UGent-imec)>Oké, bedankt voor de feedback.</v>
+
+00:46:25.588 --> 00:46:26.188
+<v Michiel Trimpe>Oké.</v>
+
+00:46:26.188 --> 00:46:32.888
+<v Michiel Trimpe>Nou, dan neem ik het nu even over voor het laatste puntje van de agenda. Eén na laatste puntje.</v>
+
+00:46:32.888 --> 00:46:34.188
+<v Michiel Trimpe>Ehm</v>
+
+00:46:35.388 --> 00:46:38.188
+<v Michiel Trimpe>als ik mijn browser scherm kan vinden.</v>
+
+00:46:40.688 --> 00:46:41.288
+<v Michiel Trimpe>Nee.</v>
+
+00:46:43.588 --> 00:46:44.088
+<v Michiel Trimpe>Ja.</v>
+
+00:46:44.688 --> 00:46:47.788
+<v Michiel Trimpe>Ehm en de authorization decision log.</v>
+
+00:46:47.788 --> 00:46:54.488
+<v Michiel Trimpe>Eh dus dit is ehm nou, zoals ik zei, in beheer genomen door Logius.</v>
+
+00:46:54.488 --> 00:46:59.888
+<v Michiel Trimpe>En ze wilden de consultatie gaan starten en besloten daarvoor nog een review te doen.</v>
+
+00:46:59.888 --> 00:47:06.388
+<v Michiel Trimpe>En er zijn een aantal kleinere feedback puntjes uitgekomen. Ik ga even van onder naar boven qua impact.</v>
+
+00:47:06.388 --> 00:47:15.888
+<v Michiel Trimpe>Eh dus een aantal dingen over de definities, ehm dat de introductiesecties zelfstandig geschreven waren in plaats van op elkaar voortbouwend, waardoor er veel herhaling in zat.</v>
+
+00:47:15.888 --> 00:47:28.488
+<v Michiel Trimpe>Eh ook nog iets over, zeg maar, we hebben nu voorbeelden in de specificatie uitgewerkt op basis van de de detailniveaus.</v>
+
+00:47:28.488 --> 00:47:34.288
+<v Michiel Trimpe>En het voorstel om die voorbeelden</v>
+
+00:47:34.288 --> 00:47:39.188
+<v Michiel Trimpe>naar het detailniveau hoofdstuk te verplaatsen. Dus dan passen ze goed bij waar het</v>
+
+00:47:39.188 --> 00:47:40.188
+<v Michiel Trimpe>ja, waar het detailniveau over gaat.</v>
+
+00:47:40.188 --> 00:47:54.088
+<v Michiel Trimpe>Ehm nou, nog een klein dingetje dat we ergens request gebruiken en de ene plek bedoelen we een AuthZEN API request en de andere plek bedoelen we een eh gelogd HTTP request. Dat was verwarrend.</v>
+
+00:47:54.088 --> 00:48:07.788
+<v Michiel Trimpe>Ehm nou, nog een aantal plekken waar eh we een must en een may hadden, wat eigenlijk een should zou moeten zijn. Dus dan zeiden we: je moet dit, maar je mag dat.</v>
+
+00:48:07.788 --> 00:48:16.888
+<v Michiel Trimpe>En daar was de feedback van: dat is een should waarbij je uitlegt dat eh nou ja, het in het ene geval niet geldt.</v>
+
+00:48:16.888 --> 00:48:24.088
+<v Michiel Trimpe>Dus dat is een eh ja, ook een beetje een proces definitie tekst.</v>
+
+00:48:26.088 --> 00:48:33.988
+<v Michiel Trimpe>Eh en dan hebben we eh drie grotere stukken feedback. Beginnen we nog met de</v>
+
+00:48:33.988 --> 00:48:35.188
+<v Michiel Trimpe>kleinste daarvan.</v>
+
+00:48:35.188 --> 00:48:48.088
+<v Michiel Trimpe>Ehm dat is dat we momenteel ook eh uitleggen hoe je source verwijzingen kan doen. Dus hoe kan je zeg maar data minimalisatie toepassen door niet een een bron in je log op te nemen, maar er naar te verwijzen.</v>
+
+00:48:48.088 --> 00:48:58.988
+<v Michiel Trimpe>Eh de feedback was dat dit eh niet zo ver uitgeschreven is dat het echt een normatieve standaard kan zijn. Het is alleen een algemene uitleg hoe je dit moet doen.</v>
+
+00:48:58.988 --> 00:49:16.688
+<v Michiel Trimpe>En daarmee dan ook de vraag van Tim, ehm moet dit dan, het moet er sowieso naar een niet-normatieve sectie of niet-normatief gemaakt worden. Eh maar suggereert ook misschien kan dit dan eh uit naar bijvoorbeeld een artikel op developer.overheid.</v>
+
+00:49:16.688 --> 00:49:20.188
+<v Michiel Trimpe>Dat is een vraag die hij wilde stellen.</v>
+
+00:49:20.188 --> 00:49:25.788
+<v Michiel Trimpe>Wie daar wat van denkt?</v>
+
+00:49:32.388 --> 00:49:36.388
+<v Michiel Trimpe>Zie jij zelf het nut zitten om het zo uit te schrijven zover dat het normatief genoemd kan worden?</v>
+
+00:49:37.288 --> 00:49:44.088
+<v Michiel Trimpe>Ehm dat wilden we nog doen, maar dat was er in de in de tijd niet van gekomen.</v>
+
+00:49:44.088 --> 00:49:50.088
+<v Michiel Trimpe>Wat ik ook wel heb is als je dat doet, verdient het eigenlijk ook bijna zijn volledige eigen standaard.</v>
+
+00:49:50.088 --> 00:49:53.688
+<v Michiel Trimpe>Want dit kan op heel veel plekken toegepast worden.</v>
+
+00:49:53.688 --> 00:50:01.388
+<v Michiel Trimpe>Dus hoe doen we een concrete data minimalisatie verwijzing en hoe structureren we dat?</v>
+
+00:50:00.000 --> 00:50:05.480
+<v Michiel Trimpe>idee je dat in verschillende vormen met zeg maar de temporeel en de versies en dat soort zaken.</v>
+
+00:50:08.570 --> 00:50:09.010
+<v Michiel Trimpe>Het is denk</v>
+
+00:50:09.010 --> 00:50:18.890
+<v Michiel Trimpe>het is sowieso een groot iets om af te bijten en sowieso teveel om in zeg maar de twee weken die we eigenlijk hiervoor wilden reserveren om op te pakken.</v>
+
+00:50:18.890 --> 00:50:19.220
+<v Michiel Trimpe>Oké.</v>
+
+00:50:21.610 --> 00:50:29.710
+<v Michiel Trimpe>Dus dat is dit stukje waarbij je een geversioneerde verwijzing kan doen en een temporele verwijzing en een een log verwijzing.</v>
+
+00:50:31.420 --> 00:50:32.000
+<v Michiel Trimpe>Maar wat eh</v>
+
+00:50:32.390 --> 00:50:33.560
+<v Michiel Trimpe>Wat denkt de groep hiervan?</v>
+
+00:50:33.950 --> 00:50:41.590
+<v Michiel Trimpe>Is het oké om dit eh naar developer.overheid te maken of stellen we voor dat we het niet normatief maken, maar wel in de standaard laten zoals het is?</v>
+
+00:50:43.910 --> 00:50:45.500
+<v Michiel Trimpe>addendum misschien.</v>
+
+00:50:50.490 --> 00:51:00.320
+<v Michiel Trimpe>Als er geen meningen zijn, dan stel ik voor dat we een eh niet normatief maken. Is stel ik voor dat we hem niet normatief maken. Dat zou ik dan in dit stadium maken.</v>
+
+00:51:00.990 --> 00:51:10.510
+<v Floris Deutekom>Ja, ik wou net zeggen, ik denk dat het misschien nog iets te on, nou, onbekend, zullen we zeggen, terrein is om het nu al normatief te maken.</v>
+
+00:51:11.490 --> 00:51:18.170
+<v Floris Deutekom>Ja, dit kan sowieso niet normatief in de huidige staat. Dat sowieso. Maar het is meer de vraag: houden we hem niet normatief of zetten we het uit de standaard?</v>
+
+00:51:18.170 --> 00:51:18.810
+<v Michiel Trimpe>Ja.</v>
+
+00:51:21.570 --> 00:51:31.110
+<v Floris Deutekom>Ik zou hem dan ook niet normatief houden, zonde om het weg te gooien. Ja. Dan kan je wel feedback over krijgen in de consultatie.</v>
+
+00:51:33.810 --> 00:51:35.430
+<v Stas Mironov>Ja, dat is het risico.</v>
+
+00:51:35.430 --> 00:51:36.190
+<v Michiel Trimpe>Precies.</v>
+
+00:51:39.260 --> 00:51:48.970
+<v Michiel Trimpe>Maar ik denk dat dit dan, dit is ook niet de belangrijkste waar de grootste mening over wilde. Eh de grootste, en daar heb ik eigenlijk wat te weinig tijd voor, maar misschien ook zo een procesvoorstel.</v>
+
+00:51:51.370 --> 00:52:11.020
+<v Michiel Trimpe>is dat ehm we ook voorstellen om eh de trace context, dus wat eh logboek dataverwerking gebruikt, die hebben we nu als eh optioneel gezet en een beetje een verwarrende tekst van als je FC gebruikt, gebruik dan de transaction ID en als je trace context gebruikt, dan raden we dat aan, dan doe je het zo.</v>
+
+00:52:11.720 --> 00:52:28.470
+<v Michiel Trimpe>En stel het logisch voor om gewoon een steviger statement te zetten van het wordt een standaard gebaseerd op de trace context, net zoals logboek dataverwerkingen en zoals eh FC dat ook wil gaan doen. Kunnen wij ons daarin vinden als werkgroep?</v>
+
+00:52:29.410 --> 00:52:31.620
+<v Michiel Trimpe>Ik zeg van, ik zou zeggen van wel.</v>
+
+00:52:31.620 --> 00:52:31.950
+<v Guus van der Meer>Ja.</v>
+
+00:52:35.430 --> 00:52:44.590
+<v Guus van der Meer>Als FC dat ook gaat gebruiken, zou ik dat ook goed, dan dan zou ik zou ik zeggen dat dat dan ook in de toekomst gaat gebruiken, dan zou ik dat sowieso gewoon doen. Toch of niet?</v>
+
+00:52:46.030 --> 00:52:47.160
+<v Michiel Trimpe>Ja, ik denk dat wel.</v>
+
+00:52:47.530 --> 00:53:09.520
+<v Stas Mironov>Persoonlijk, ik ik ben ook de trekker van FC. Ik vind dat dit inderdaad eh zo had het eigenlijk gemoeten. Dat eh dat je ook trace ID eh gewoon op een must staat. Dat stukje over FC dat gaat doen, dat is dus nog niet zeker. Ik wil het heel graag. FC spreekt de intentie uit om. De intentie is uitgesproken, maar het is helemaal niet zeker en het kan nog best wel even duren.</v>
+
+00:53:09.520 --> 00:53:20.930
+<v Michiel Trimpe>Maar los daarvan kunnen wij dit wel gewoon verplichten, want je kan altijd zelf je eigen trace ID starten, zelfs al heb je alleen van krijg je van FC alleen een transaction ID. Dan kan je nog steeds je eigen trace starten.</v>
+
+00:53:20.930 --> 00:53:21.210
+<v Stas Mironov>Ja.</v>
+
+00:53:21.780 --> 00:53:34.200
+<v Michiel Trimpe>Ik vind het nog steeds verplichten, zelfs al doet FC dit uiteindelijk niet. Ja, en voor mij kun je dan dan daarnaast toch ook vermelden, wat mij betreft ook ergens ook van metadata ofzo, dat je dan daar zou je dan die transaction ID in kunnen verwerken als je het dan voor die voor die eh</v>
+
+00:53:34.200 --> 00:53:46.990
+<v Guus van der Meer>Ja, die blijft. Dus hij blijft gewoon als optioneel als je een transaction ID hebt, mag je hem erbij zetten. Maar dus dit waar deze twee nu recommended zijn, worden deze twee required.</v>
+
+00:53:49.270 --> 00:53:50.620
+<v Guus van der Meer>Ik ik stem voor daarvoor.</v>
+
+00:53:52.500 --> 00:53:53.720
+<v Michiel Trimpe>Oké, dat lijkt consensus.</v>
+
+00:53:54.540 --> 00:53:55.770
+<v Floris Deutekom>Ja, ben ik het wel mee eens.</v>
+
+00:53:57.300 --> 00:54:13.110
+<v Michiel Trimpe>Eh en dan de laatste en dat is ook gelijk de pijnlijkste. Ehm is wij hebben dit gemodeleerd als eigenlijk een eh een event binnen de trace context standaard, ook omdat we het natuurlijk niet helemaal adopteren, maar gewoon iets dat gebeurt.</v>
+
+00:54:14.310 --> 00:54:29.110
+<v Michiel Trimpe>Ehm waar Tim mee terugkwam is dat is eigenlijk niet correct. Want eigenlijk is een PDP verzoek een span binnen een trace context. En dat is weer zeg maar binnen het grotere geheel van het oorspronkelijke verzoek is het een request dat daaronder valt.</v>
+
+00:54:29.620 --> 00:54:39.310
+<v Michiel Trimpe>En sterker nog, ook de verzoeken naar de pips zijn ook weer kunnen sub spans zijn van ons verzoek. Ehm en daar heeft hij eigenlijk gelijk in.</v>
+
+00:54:40.120 --> 00:55:08.100
+<v Michiel Trimpe>Ehm maar als we dat doen, dan betekent dat wel redelijk wat voor het formaat, want dan hebben we geen timestamp, maar hebben we een begin en een eindtijd. Eh dan moeten we echt overstappen op de attributenstructuur van een trace context span. Eh en moeten we dus definiëren hoe je naar de parent span verwijst.</v>
+
+00:55:08.100 --> 00:55:13.790
+<v Michiel Trimpe>Het is de pijnlijkste, maar eigenlijk denk ik wel correct. Er is geen alternatief toch? Ja, we kunnen het als event doen, maar dat is eigenlijk dus gewoon niet netjes.</v>
+
+00:55:14.930 --> 00:55:15.340
+<v Floris Deutekom>Precies.</v>
+
+00:55:15.680 --> 00:55:23.990
+<v Floris Deutekom>Dus wat stel je dan voor om bijvoorbeeld die timestamp uit de must lijst te halen naar de may te verplaatsen, dat je hem toch op één of andere manier behoudt of echt helemaal eruit weghalen?</v>
+
+00:55:24.620 --> 00:55:47.110
+<v Floris Deutekom>Eh dat de timestamp dan vervangen wordt door een from en to. Oké. En dat de de andere attributen die we nu hebben, dus type, request, response, policies, dat die in de in de attributen map komen. Dus dan krijg je een een prefix, dus eh ADL.type, ADL.request, allemaal in een map attributen en dan is het conform een trace context span.</v>
+
+00:55:47.740 --> 00:55:55.770
+<v Guus van der Meer>Ja, en dan dan denk ik dan ook dat je dan bij de trace context nog een parent ID bij toevoegt. Dat is eigenlijk ook wel, dat is ook wel nodig, zie ik ook, want die miste.</v>
+
+00:55:55.770 --> 00:55:56.120
+<v Guus van der Meer>Ja.</v>
+
+00:55:59.570 --> 00:56:14.800
+<v Michiel Trimpe>Als wij ons daarin kunnen vinden, dan eh ja, ik denk dat we dat moeten doen. Ja. Het is een bak werk. Eh dus stel ik voor dat eh ik samen met Stas en Tim de komende twee weken rond gaat proberen te krijgen.</v>
+
+00:56:15.520 --> 00:56:26.430
+<v Michiel Trimpe>En is ook weer de vraag aan iedereen die denkt hierover mee wil denken of eh feedback op wil hebben, mening over hebben, dat die ook in de komende twee weken bij ons aanhaakt. Dus dan even de oproep naar deze.</v>
+
+00:56:26.430 --> 00:56:27.000
+<v Guus van der Meer>Yes.</v>
+
+00:56:29.830 --> 00:56:30.290
+<v Michiel Trimpe>Oké.</v>
+
+00:56:30.880 --> 00:56:37.470
+<v Michiel Trimpe>Ja. Dus dat eh iets meer werk dan gehoopt, maar wel waardevol en wel goede, ja, goede feedback. We doen wel het juiste daarmee denk ik.</v>
+
+00:56:39.140 --> 00:56:56.590
+<v Michiel Trimpe>Ehm nou, dan hebben we nog net tot 1 minuut te gaan. Hebben we dat? Eh dat is de planning voor de volgende week. Ik heb ook voor volgende werkgroep heb ik eh of hebben we Erwich bereid gevonden om een vragenuurtje te komen houden. Dus ik wil niet echt een presentatie voorbereiden, maar wel eh van over wat we besproken hebben om dat echt toe te lichten.</v>
+
+00:56:57.650 --> 00:57:11.750
+<v Michiel Trimpe>En Remo zit ook in de call. Remo, zou jij komende twee weken ook tijd hebben om eventueel naar het eh bovenliggend beleid van I-real Z te kijken of we dat in ODRL zouden kunnen modelleren, hoe dat zou werken.</v>
+
+00:57:12.650 --> 00:57:19.850
+<v Remo van Rest>Ehm dat denk ik wel. De eerste eerste opzet. Ja.</v>
+
+00:57:20.500 --> 00:57:27.350
+<v Michiel Trimpe>En dan kijken of we daar ook hoever we daarmee komen. En dan dat ik denk dat dat dan waarschijnlijk de voortgang presenteren in de volgende werkgroep.</v>
+
+00:57:30.070 --> 00:57:31.570
+<v Michiel Trimpe>Dat is dan even de planning voor de volgende.</v>
+
+00:57:36.100 --> 00:57:44.970
+<v Michiel Trimpe>Dan is ook de tijd dus voor degene die willen gaan, kunnen gaan. En degene die willen blijven hangen, kunnen altijd na blijven borrelen virtueel hier in de call.</v>
+
+00:57:45.620 --> 00:57:46.810
+<v Michiel Trimpe>Dank jullie wel allemaal.</v>
+
+00:57:47.260 --> 00:57:48.510
+<v Stas Mironov>Bedankt iedereen.</v>
+
+00:57:49.520 --> 00:57:50.530
+<v Floris Deutekom>Bedankt. Hoi.</v>
+
+00:57:58.210 --> 00:57:58.830
+<v Remo van Rest>En Michiel.</v>
+
+00:58:00.860 --> 00:58:03.310
+<v Remo van Rest>Ja, wacht even, ik ga even de recording stoppen.</v>
+

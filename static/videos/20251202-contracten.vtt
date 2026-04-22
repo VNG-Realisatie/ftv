@@ -1,0 +1,1180 @@
+WEBVTT
+
+00:02:49.079 --> 00:03:00.079
+<v Michiel Trimpe>Uhm, oké.</v>
+
+00:08:44.829 --> 00:08:55.829
+<v Michiel Trimpe>Nou, ga ik op de screen share starten.</v>
+
+00:00:11.939 --> 00:00:12.299
+<v Michiel Trimpe>starten.</v>
+
+00:00:15.819 --> 00:00:16.179
+<v Michiel Trimpe>Ik kan</v>
+
+00:00:22.489 --> 00:00:23.939
+<v Michiel Trimpe>Ja, daar is hij zo. Super.</v>
+
+00:00:25.729 --> 00:00:26.429
+<v Michiel Trimpe>window.</v>
+
+00:00:27.669 --> 00:00:32.499
+<v Michiel Trimpe>Zo. Eens kijken. Dan moet ik</v>
+
+00:00:33.519 --> 00:00:36.999
+<v Michiel Trimpe>Het blijft altijd worstelen met Teams.</v>
+
+00:00:39.399 --> 00:00:40.319
+<v Michiel Trimpe>Zelfs na al die tijd.</v>
+
+00:00:40.789 --> 00:00:43.299
+<v Michiel Trimpe>Maar we maken er wederom het beste van.</v>
+
+00:00:45.729 --> 00:00:53.199
+<v Michiel Trimpe>Nou, eh allemaal welkom bij de 13e werkgroep van Federatieve Toegangsverlening alweer.</v>
+
+00:00:54.839 --> 00:00:57.719
+<v Michiel Trimpe>Ehm, dit is de agenda voor vandaag.</v>
+
+00:00:58.329 --> 00:01:06.959
+<v Michiel Trimpe>Ehm, nou, de standaard welkomst en kennismaking, updates van de subwerkgroepen. Als hoofdonderwerp contracten.</v>
+
+00:01:06.959 --> 00:01:13.319
+<v Michiel Trimpe>Eh ja, contracten. Ehm, ik kon deze niet aanpassen, maar we hebben eh KIK-V ook als gast daarover.</v>
+
+00:01:14.239 --> 00:01:20.879
+<v Michiel Trimpe>Eh en RVG heb ik niet te pakken kunnen krijgen, dus die eh BRP zullen we wat minder diepgaand bespreken.</v>
+
+00:01:21.309 --> 00:01:31.119
+<v Michiel Trimpe>En we hebben ook, en dat valt dan eigenlijk onder de update subwerkgroepen, ehm ook een consultatiereactie gekregen van eh PICO. Die wil ik daar ook bespreken.</v>
+
+00:01:32.379 --> 00:01:36.119
+<v Michiel Trimpe>Eh, dus dat is de agenda voor vandaag.</v>
+
+00:01:36.749 --> 00:01:41.879
+<v Michiel Trimpe>Eh allereerst welkom. Eh ik weet niet of er nieuwe gezichten zijn.</v>
+
+00:01:46.119 --> 00:01:49.879
+<v Michiel Trimpe>Ik zie in feite niet direct.</v>
+
+00:01:52.959 --> 00:01:53.319
+<v Michiel Trimpe>Nee.</v>
+
+00:01:54.499 --> 00:01:55.199
+<v Axel van der Minne>Jawel, ik.</v>
+
+00:01:55.659 --> 00:01:57.199
+<v Michiel Trimpe>Oh. Ah, Axel.</v>
+
+00:01:57.609 --> 00:02:01.099
+<v Axel van der Minne>Ja, hoi. Eh Axel van der Minne, ik ben van DUO.</v>
+
+00:02:01.099 --> 00:02:07.399
+<v Axel van der Minne>Ehm, ik ik eh eh eh Michiel heeft me volgens mij uitgenodigd voor deze sessie, omdat ik ooit eens belangstelling hiervoor had.</v>
+
+00:02:07.849 --> 00:02:16.299
+<v Axel van der Minne>Eh het punt is dat deze sessie eigenlijk altijd valt over een vast overleg in mijn afdeling eh waar ik bij ben, dus ik ben er eigenlijk ik zal hier maar heel weinig bij aanwezig zijn, denk ik.</v>
+
+00:02:16.899 --> 00:02:32.239
+<v Axel van der Minne>Ehm, maar mijn belangstelling gaat vooral uit naar eh zeg maar de, hè, ik ben gegevensarchitect. Eh en ik ben vooral op zoek naar naar dingen die al geregeld zijn of geregeld worden eh eh richting eh autorisatie op eh het gebruik van data.</v>
+
+00:02:34.729 --> 00:02:37.399
+<v Michiel Trimpe>Oké. Nou, je bent in ieder geval bij de goede werkgroep.</v>
+
+00:02:37.399 --> 00:02:38.229
+<v Michiel Trimpe>En welkom.</v>
+
+00:02:38.499 --> 00:02:39.099
+<v Axel van der Minne>Dank je.</v>
+
+00:02:39.309 --> 00:02:41.139
+<v Niels Boek>Ik ben ook eh ook nieuw.</v>
+
+00:02:41.749 --> 00:02:50.099
+<v Niels Boek>Eh ik ben projectleider vanuit eh KIK-V beheer en ik ga straks laten zien over het architectuur dat wij al eh hebben ingericht en eh hebben staan. Dus eh</v>
+
+00:02:51.399 --> 00:02:52.199
+<v Michiel Trimpe>Ah, super.</v>
+
+00:02:53.389 --> 00:02:54.029
+<v Michiel Trimpe>Welkom.</v>
+
+00:02:55.109 --> 00:02:55.829
+<v Niels Boek>Dankjewel.</v>
+
+00:02:58.329 --> 00:03:00.399
+<v Ruben Houwert>Ja, en ik ben ook van KIK-V. Ja.</v>
+
+00:03:01.699 --> 00:03:16.099
+<v Ruben Houwert>En ik heb eh vorige week even bijgepraat samen met mijn collega Ruben. En ik ga een kleine introductie over KIK-V vertellen en daarna laat ik vooral Niels de applicatie zien en wat we al op dit moment al hebben aan tools en oplossingen.</v>
+
+00:03:18.149 --> 00:03:18.999
+<v Michiel Trimpe>Hartstikke mooi.</v>
+
+00:03:20.799 --> 00:03:21.299
+<v Michiel Trimpe>Oké.</v>
+
+00:03:22.319 --> 00:03:28.099
+<v Michiel Trimpe>Ehm, dat waren wel alle introducees, denk ik wel.</v>
+
+00:03:29.219 --> 00:03:31.099
+<v Michiel Trimpe>Nou, nogmaals welkom allemaal.</v>
+
+00:03:32.119 --> 00:03:34.399
+<v Michiel Trimpe>Eh wat betreft de updates voor de subwerkgroepen.</v>
+
+00:03:35.199 --> 00:03:42.399
+<v Michiel Trimpe>Ehm, Mark is op vakantie en voor de juridische subwerkgroep ehm zijn er niet echt updates.</v>
+
+00:03:43.499 --> 00:03:54.399
+<v Michiel Trimpe>Ja, wel een gerucht, maar dat eh ik hoorde via via dat er eh dat eh Mariette Lokin ook gewerkt heeft aan een stuk over policies en wetten.</v>
+
+00:03:54.399 --> 00:04:09.399
+<v René Kievit (Ruimte)>Ja, ik heb vanochtend was in de IBDS eh team stand-up eh ging het gerucht. Er werd werd er gezegd dat Mariette Lokin er een stuk heeft geschreven. We gingen niet in op de inhoud. En dat eh eh nou ja, dat ze hopen dat ze binnenkort kunnen publiceren.</v>
+
+00:04:09.399 --> 00:04:18.399
+<v Michiel Trimpe>Oké, nou, dat is eh in ieder geval alvast een teaser dus. Ehm, maar we zitten op hetzelfde informatieniveau wat dat betreft.</v>
+
+00:04:18.999 --> 00:04:22.799
+<v Michiel Trimpe>Ehm, maar verder dus geen updates over het juridisch kader.</v>
+
+00:04:23.899 --> 00:04:38.199
+<v Michiel Trimpe>Ehm, de authorization decision log, eh daar hebben we dus vorige week eh vorige keer onze interne consultatie voor afgerond, eh besproken, is aangepast en aangeboden aan Logius ter beheer.</v>
+
+00:04:39.199 --> 00:04:46.399
+<v Michiel Trimpe>Ehm, het repository is overgedragen. Eh vanuit Logius, ja, Stas moest helaas afhaken vanwege crisisdienst, zag ik net.</v>
+
+00:04:46.999 --> 00:05:00.099
+<v Michiel Trimpe>Eh vanuit Logius is het in beheername eh is nu even eh onduidelijk vanuit welke hoek de financiering daarvoor gaat gebeuren, geloof ik. Dus dat gaat eh gaan ze niet direct oppakken.</v>
+
+00:05:00.699 --> 00:05:07.099
+<v Michiel Trimpe>Eh maar dat zal wel in de loop, ja, of het komend jaar gewoon opgenomen worden.</v>
+
+00:05:07.099 --> 00:05:08.399
+<v René Kievit (Ruimte)>Als geheel is dat dan of een deel?</v>
+
+00:05:08.899 --> 00:05:20.199
+<v Michiel Trimpe>Ja, is me niet helemaal duidelijk. Volgens mij dus waar de waar het beheer van de standaarden bij Logius financieel moet komen te liggen.</v>
+
+00:05:21.299 --> 00:05:27.099
+<v Michiel Trimpe>Eh, maar dat is eh dus ze gaan het eh dat niet direct oppakken. Dat is even de inhoudelijke boodschap daarvan.</v>
+
+00:05:28.499 --> 00:05:31.599
+<v Michiel Trimpe>Ehm, maar het eh ja, het is vanuit ons aangeleverd.</v>
+
+00:05:34.999 --> 00:05:41.099
+<v Michiel Trimpe>Ehm, even kijken. Eh ja, de derde subwerkgroep is eh AuthZEN NL Gov.</v>
+
+00:05:41.899 --> 00:05:50.299
+<v Michiel Trimpe>Ehm, daar hebben we de consultatieperiode voor afgerond. We hebben één reactie gekregen van eh Nico en zijn team.</v>
+
+00:05:50.999 --> 00:05:59.399
+<v Michiel Trimpe>En ehm ja, daar zou ik graag nu dan even ruimte voor willen maken, ook voor Nico om dat te eh bespreken en te introduceren.</v>
+
+00:05:59.399 --> 00:06:05.199
+<v Michiel Trimpe>Ik zal hem even op het scherm zetten.</v>
+
+00:06:06.299 --> 00:06:13.299
+<v Michiel Trimpe>Eh Nico, wat denk je dat het handig is? Wil jij het even eh introduceren? Wil je dat we er doorheen gaan?</v>
+
+00:06:13.899 --> 00:06:18.399
+<v Nico Spijkers>Eh ik kan het, ik hoop dat ik te verstaan ben. Jazeker. Voor ons niet, voor ons goed.</v>
+
+00:06:18.399 --> 00:06:26.199
+<v Nico Spijkers>Heel goed. Eh nee, ik kan het wel even eh toelichten vanuit welke console, ja, eh perspectief we deze consultatie hebben geschreven.</v>
+
+00:06:26.199 --> 00:06:37.399
+<v Nico Spijkers>Eh ook meer in het licht vanuit het ministerie van VRO eh samen met organisaties die betrokken zijn rondom de geobasisregistraties, die ook onderdeel zijn van verschillende werkgroepen binnen binnen FDS.</v>
+
+00:06:37.399 --> 00:06:56.099
+<v Nico Spijkers>Ehm en eh ons ons was ons perspectief van eh we zien de consultatie, we zien eh de de NL Gov eh AuthZEN profiel standaard eh en we dachten we geven een reactie meer ook ter eh eh in het verdere proces wanneer die eh ook steeds volwassener wordt.</v>
+
+00:06:56.099 --> 00:07:05.399
+<v Nico Spijkers>om te kijken van waar zit ook de samenhang met onze eigen inspanningen rondom eh de dataspace fysieke leefomgeving. Dus hoe gaan we datadelen in de fysieke leefomgeving structuur vormgeven.</v>
+
+00:07:05.399 --> 00:07:20.099
+<v Nico Spijkers>Dus vanuit dat perspectief eh hadden we een eh reactie gestuurd. Nou, blijkbaar waren we de enige die een reactie hadden gestuurd. Nou, op op zich de standaard an sich was hadden we niet heel veel technische aanmerkingen, maar meer aanmerkingen in het licht van oké, in de verdere eh doorontwikkeling bij verdere eh implementatie is het goed om even te kijken naar</v>
+
+00:07:20.099 --> 00:07:33.399
+<v Nico Spijkers>meer eh praktijkervaring om daar meer te kijken wat wat daar naar boven komt drijven. Ook in het licht van onze ontwikkeling richting de dataspace fysieke leefomgeving. Eh omdat we ook graag zien dat we eh wat er al is ontwikkeld ook eventueel kunnen hergebruiken</v>
+
+00:07:33.399 --> 00:07:45.099
+<v Nico Spijkers>binnen de dataspace fysieke leefomgeving. Dat was ook meer de de de de hoofdmoot van onze reactie. Eh en daar ook de samen met jullie te kijken hoe we daar het beste handen en voeten aan kunnen geven.</v>
+
+00:07:45.099 --> 00:07:58.199
+<v Nico Spijkers>Wij staan midden in eigenlijk in de start van de ontwikkeling van eh van eh de dataspace eh waar we mee bezig zijn. Eh en het is goed als we daar elkaar eh steeds beter in vinden.</v>
+
+00:07:58.199 --> 00:08:08.199
+<v Nico Spijkers>zodat we ook onderdelen kunnen hergebruiken. Eh er is één zat meer op meer ervaring te doen rondom eh praktijk. En de andere zat meer rondom eh</v>
+
+00:08:08.199 --> 00:08:28.199
+<v Nico Spijkers>ja, eh de de status van de standaard eh om te kijken van ja, welke status krijgt krijgt de standaard nu, maar ook in de toekomst. Eh maar ja, daarvoor geldt ook voor ons het belangrijkste argument om eh daar ook wat meer praktijkervaring op te doen.</v>
+
+00:08:28.199 --> 00:08:33.399
+<v Nico Spijkers>Dus René zit eh knikt ook in de call. Hij zit ook vanuit de geobasisregistratie.</v>
+
+00:08:33.399 --> 00:08:53.399
+<v Nico Spijkers>is natuurlijk ook betrokken rondom de dataspace fysieke leefomgeving. Dus daar gaan we samen graag samen met jullie ook in gesprek van hoe kunnen we daar eh onze inspanningen met jullie inspanningen eh goed op lijnen, zodat we niet op het technische aard, maar meer gewoon van hoe kunnen we dat verder doorontwikkelen</v>
+
+00:08:53.399 --> 00:08:57.199
+<v Nico Spijkers>eh en daar samen in optrekken.</v>
+
+00:08:57.199 --> 00:09:07.199
+<v Michiel Trimpe>En als als het eh als je willen dan eh ik het staat nu op het scherm, maar als het behoefte is, kunnen we het ook gewoon ronddelen met de hele groep. Daar hebben we geen moeite mee.</v>
+
+00:09:07.199 --> 00:09:21.099
+<v Michiel Trimpe>Vind je dat eh al oké? Want het officiële proces zou zijn dat Logius, dus Stas dan hierop een commentaar op zal geven en dat dat als geheel gepubliceerd zou worden, maar ik denk dat het voor de groep fijn is om het eh alvast in te zien.</v>
+
+00:09:21.099 --> 00:09:21.799
+<v Nico Spijkers>Ja.</v>
+
+00:09:22.999 --> 00:09:33.199
+<v Michiel Trimpe>Ehm, oké. Ja, ik denk eigenlijk dat jouw mondelinge omschrijving misschien meer duidelijkheid biedt dan het in detail doorlezen nu an sich.</v>
+
+00:09:33.199 --> 00:09:57.099
+<v Michiel Trimpe>Eh het komt eruit overheen. Alvast de de eerste reactie en dat is eh ja, ik denk dat je dat ook al ehm ons eh wat is het? voorgesteld functioneel toepassingsgebied eh is al inderdaad redelijk klein gedefinieerd.</v>
+
+00:09:57.099 --> 00:10:03.099
+<v Michiel Trimpe>Eh dus wanneer dus eh wanneer je een PEP en PDP gebruikt, gebruik dan AuthZEN.</v>
+
+00:10:08.162 --> 00:10:13.212
+<v Michiel Trimpe>implementeren. Wat zijn dan de aandachtspunten waar we aan moeten denken? Dus zo interpreteerden wij de</v>
+
+00:10:13.612 --> 00:10:22.902
+<v René Kievit>Misschien ook wel meer hoe we dat in federatief datastelsel zien, denk ik. Misschien is dat meer iets wat eh wat Gideon en ik met René Kind beter kunnen kortsluiten dan.</v>
+
+00:10:23.442 --> 00:10:26.552
+<v Michiel Trimpe>Ja, dat is inderdaad hoe hoe nu verder inderdaad.</v>
+
+00:10:26.552 --> 00:10:42.012
+<v Michiel Trimpe>Eh nou ja, vanuit FTV heb ik ook aangegeven dus ja, de het toepassen in concrete cases en verkennen waar het beter en minder goed tot zijn recht komt. Dat doen wij heel graag natuurlijk. Dus dat dat nemen we met twee handen aan dat aanbod en om dat volgend jaar verder te gaan verkennen.</v>
+
+00:10:42.012 --> 00:10:45.102
+<v Michiel Trimpe>Ehm.</v>
+
+00:10:45.822 --> 00:10:57.112
+<v Michiel Trimpe>Inhoudelijk had ik behoefte om één ding te benoemen vanuit ons is ehm het het aantal geodatasets eh dat beperkingen kent of fijnmazige autorisatie vraagt is heel klein.</v>
+
+00:10:58.042 --> 00:11:15.932
+<v Michiel Trimpe>Ehm ook mede vanuit mijn ervaring bij Amsterdam is dat denk ik ook een een omgekeerde causaliteit. Ik denk omdat het fijnmazig ontsluiten van geodata relatief moeilijk is, is het over het algemeen momenteel voornamelijk grofmazig geautoriseerd.</v>
+
+00:11:16.472 --> 00:11:29.122
+<v Michiel Trimpe>Dat geodata werkt vaak met zeg maar grote bestanden, eh tiles of wat dan ook die uitgerenderd zijn. En dat autoriseren is moeilijk en de libraries voor geofencing zijn beperkt.</v>
+
+00:11:29.722 --> 00:11:42.752
+<v Michiel Trimpe>Ik denk dat juist daar ook het het goed juist goed is om FTV toe te gaan passen, zodat je ook fijnmazig kan gaan autoriseren op grote datasets en die ook kan gaan ontsluiten en kan gebruiken.</v>
+
+00:11:44.272 --> 00:11:46.892
+<v Michiel Trimpe>Klinkt dat ook logisch voor jullie, Nico en René?</v>
+
+00:11:48.422 --> 00:11:49.812
+<v René Kievit>Eh ja, voor mij wel.</v>
+
+00:11:50.622 --> 00:12:03.322
+<v René Kievit>Ehm we hebben natuurlijk ook nog een discussie met defensie bijvoorbeeld over hoe dat dan moet eh om eh zeg maar ruimtelijk te autoriseren. Hm hm. Eh maar goed, die die discussie die hebben we denk ik daarna nog wel een keer.</v>
+
+00:12:03.322 --> 00:12:05.122
+<v René Kievit>Ja. Die gaan we eerst maar oplossen. Ja.</v>
+
+00:12:05.122 --> 00:12:08.782
+<v René Kievit>Maar vanuit FTV zien wij juist. Maar die discussie. Ja.</v>
+
+00:12:09.122 --> 00:12:09.472
+<v René Kievit>Ja.</v>
+
+00:12:10.822 --> 00:12:25.222
+<v Michiel Trimpe>Goed, maar in ieder geval inhoudelijk mijn mijn feedback die ik aan Stas zal geven, die Stas dan kan beantwoorden is juist dat daar ook echt een grote toegevoegde waarde zal zitten, zodat je grote datasets ook fijnmazig kan ontsluiten in de geowereld.</v>
+
+00:12:26.242 --> 00:12:26.812
+<v Michiel Trimpe>Oké.</v>
+
+00:12:27.662 --> 00:12:38.322
+<v Michiel Trimpe>Ehm en ik had nog één vraag voor de verduidelijking. Eh dus hier staat vanuit eh DGRO, eh Kadaster, bestuur en strategie, geologische dienst en ook Geonovum.</v>
+
+00:12:38.692 --> 00:12:39.212
+<v Guus van der Meer>Ja.</v>
+
+00:12:39.702 --> 00:12:43.082
+<v Michiel Trimpe>En zijn dit dan ook de officiële Geonovum reacties of zijn dit</v>
+
+00:12:43.972 --> 00:13:17.122
+<v Guus van der Meer>Ik heb bij eh Geonovum specifiek eh Frank Terpstra en Niels Hofman ook even eh meegenomen in deze reactie. Eh en eh dus in die zin hebben we gewoon vanuit de Geo daar een reactie meegenomen. Dus en Frank had al in de in de verschillende werkgroepen al zijn commentaar en feedback meegegeven. Eh voornamelijk eh commentaar zat op de status van de standaard, dus om het nu aanbevolen en dan even te bezien of wanneer op termijn het een eventueel een zwaardere status zou moeten krijgen. Maar</v>
+
+00:13:19.602 --> 00:13:20.092
+<v Michiel Trimpe>Oké.</v>
+
+00:13:20.342 --> 00:13:35.792
+<v Michiel Trimpe>En vanuit Kadaster, dit is dan dus ook niet de Kadaster IAM kant met Martin Borgman, maar Kadaster eh de eh Kadaster waar wij mee afstemmen is dus Steven Macking. Oké. Vanuit directie bestuur en strategie. Ja.</v>
+
+00:13:35.792 --> 00:13:39.922
+<v Guus van der Meer>Dus daarom had ik dat expliciet nog erbij gezet. Eh</v>
+
+00:13:40.532 --> 00:13:50.822
+<v Michiel Trimpe>Ja. Inderdaad, voor mij goed om te plaatsen dat de de we hebben er met ook meerdere mensen gesproken van Kadaster. En maar dit is dus een visie van dit specifieke stuk. Oké.</v>
+
+00:13:53.132 --> 00:13:58.322
+<v Michiel Trimpe>Ehm zijn hier vanuit de groep nog op of aanmerkingen, de behoefte om dingen te bespreken?</v>
+
+00:14:01.012 --> 00:14:17.982
+<v Michiel Trimpe>Oké. Eh dan ehm met jouw goedkeuring Nico ga ik dit eh over de op de mail delen met de groep. Ehm en eh gaan we vanuit of gaat Stas vanuit Logius nou ja, nog inhoudelijk reageren, want dat zal ongeveer zijn wat we net besproken hebben.</v>
+
+00:14:17.982 --> 00:14:37.992
+<v René Kievit>Dus eh ja, we beamen dat voor een breder toepassingsgebied er een iteratieve verkenning nodig is waar het meer en minder goed tot zijn recht komt. Misschien dat jullie daar dan ook mee af willen stemmen of is iets voor de FDS of misschien niet. Het staat nog niet in de afsprakenstelsel nu, dus wij zullen dat gesprek nog wel verder moeten gaan voeren denk ik.</v>
+
+00:14:38.502 --> 00:14:59.122
+<v Michiel Trimpe>Ja, en ik verwacht ook dat vanuit FDS gezien de meeste eh interesse en aandacht daar gaat uit naar dat eh eh register eh eh beleids toegangsbeleid register, toegangsbeleid voor register. Omdat dat typisch iets is wat je tussen deelnemers eh aan elkaar kenbaar wil maken.</v>
+
+00:14:59.632 --> 00:15:02.972
+<v Michiel Trimpe>En dit meer iets is binnen een deelnemer.</v>
+
+00:15:03.862 --> 00:15:11.522
+<v Michiel Trimpe>Ehm dus ik denk dat we vanuit FDS meer focus hebben op wat je aan elkaar in het stelsel eh kenbaar maakt.</v>
+
+00:15:12.232 --> 00:15:16.122
+<v Michiel Trimpe>Oké. En dat zit meer op dat register.</v>
+
+00:15:17.592 --> 00:15:22.922
+<v Michiel Trimpe>Super. Nou, dan eh sluiten we dit stuk daarmee af. En dan stop ik ook even met</v>
+
+00:15:24.422 --> 00:15:25.122
+<v Michiel Trimpe>delen.</v>
+
+00:15:26.802 --> 00:15:57.122
+<v Michiel Trimpe>Ehm nou en voor het eh het volgende stuk onderwerp hebben we eh contracten op de planning staan. Eh en eh contracten zijn wat ons betreft dus overeenkomsten die je met een eh tja, in in een gegevenslevering sluit waar je naar verwijst of die zeg maar toegevoegd worden aan een gegevensverzoek.</v>
+
+00:15:57.122 --> 00:16:08.422
+<v Michiel Trimpe>Dus iets wat niet per se in het verzoek zelf zit, maar iets wat erbij zit en het ondersteunt wat je als twee partijen onderling afspreekt. Ehm dat is een een nieuw stuk of ja, een nieuw stuk scope wat we nog niet echt besproken hebben.</v>
+
+00:16:08.422 --> 00:16:18.522
+<v Michiel Trimpe>In de werkgroep tot nu toe. Eh we hebben daar gerefereerd met onder andere het BRP autorisatiebeleid. Nee, de autorisatietabellen. Autorisatie. Ja, de autorisatietabel en daarbinnen de autorisatiebesluiten. Ja.</v>
+
+00:16:18.522 --> 00:16:35.422
+<v Michiel Trimpe>Eh dus dat is eh één voorbeeld van eh waar dit eh binnen de Nederlandse overheid echt actief gebruikt wordt, eh gedefinieerd is, et cetera. Eh daar heb ik Erik niet kunnen strikken om dat te presenteren. Eh waarschijnlijk te druk.</v>
+
+00:16:38.322 --> 00:16:39.122
+<v Hans Hendrikman>Hans?</v>
+
+00:16:39.722 --> 00:16:49.322
+<v Michiel Trimpe>Wil je je unmuten? Ja, nou, het is inderdaad wel druk geweest aan onze kant en eh het lastige is dat de deze meeting gelijk valt met een heleboel andere meetings.</v>
+
+00:16:50.122 --> 00:16:52.122
+<v Michiel Trimpe>Dus eh Geen probleem hoor.</v>
+
+00:16:53.422 --> 00:16:56.122
+<v Hans Hendrikman>Maar de autorisatiebesluiten zijn wel leuke dingen inderdaad.</v>
+
+00:16:56.822 --> 00:17:13.222
+<v Michiel Trimpe>Ja. Ja, inderdaad. Ik heb ook al vaker met Hans besproken, zeg maar eh wat wat we met FTV bespreken is een standaardisering van dingen die zeker het eigenlijk al heel lang doet, maar op zijn eigen manier. Ehm natuurlijk, want dit bestond allemaal nog niet toen het inrichtte.</v>
+
+00:17:14.122 --> 00:17:16.422
+<v Michiel Trimpe>Ehm dus dat is ja, een hele mooie.</v>
+
+00:17:17.122 --> 00:17:49.322
+<v Michiel Trimpe>Ehm naast hebben we ook nog een bekend voorbeeld waar veel over gesproken is. En dat is namelijk KickV. En daar wordt ook actief gebruik gemaakt van contracten. Ook op basis van onder andere verifiable credentials, een ander hot topic. En in samenwerking met met gebruik van Nuts. Dat is eh een alternatief stelsel of een ander stelsel in de zorg. Eh dus er raakt ook heel veel eh van deze werkgroep hele interessante punten. Dus ik heb hen uitgenodigd om eh hun oplossing te presenteren en hoe dat bij hen werkt.</v>
+
+00:17:49.322 --> 00:17:51.722
+<v Michiel Trimpe>alternatief zou zijn voor de zaal.</v>
+
+00:17:53.922 --> 00:17:58.322
+<v Houwen, R.>Dus ehm René en Niels.</v>
+
+00:17:58.322 --> 00:18:30.822
+<v Houwen, R.>En Niels. Ja. Is goed. Zal ik hem even overpakken? Ja. Eh Ja, KickV, ik weet niet als iedereen weet wat KickV is of wat het doet. Daarvoor heb ik even een filmpje wat in 3 minuten vertelt heel erg beeldend wat KickV is en wat we doen. En daarna eh zal Niels het overpakken om de applicaties die wij inmiddels hebben gebouwd. Die hebben wij zelf laten ontwikkelen om het federatief datastelsel te kunnen laten werken.</v>
+
+00:18:30.822 --> 00:18:47.822
+<v Houwen, R.>Daar gaat Niels toelichten hoe dat dus werkt met een informatieverzoek en credential en Sparkle. Dus eigenlijk gewoon wat in de praktijk nu al werkt, dat laten we aan jullie zien. Eh en als je daar vragen over hebt, stel maar. Eh is het. Maar dan ga ik eerst even een filmpje over KickV laten zien, want dan dat scheelt gewoon heel veel presenteren zeg maar. Dat is aanschouwelijk onderwijs.</v>
+
+00:18:51.322 --> 00:19:01.522
+<v Houwen, R.>Het filmpje is ook gewoon terug te vinden op YouTube. Dat is het mooie.</v>
+
+00:19:11.322 --> 00:19:12.922
+<v Houwen, R.>Oké. Ja, dat dacht ik al.</v>
+
+00:19:15.522 --> 00:19:16.122
+<v Michiel Trimpe>Dus</v>
+
+00:19:16.722 --> 00:19:20.122
+<v Houwen, R>is dat ook alweer een setting?</v>
+
+00:19:23.422 --> 00:19:25.722
+<v Spreker (Ruimte)>Kun je het uit je laptop gewoon laten komen anders ofzo?</v>
+
+00:19:32.822 --> 00:19:36.122
+<v Spreker (Ruimte)>Als Gerard zijn geluid aanzet, komt er bij Gerard wel geluid uit of niet?</v>
+
+00:19:42.622 --> 00:19:43.922
+<v René Kievit>Hoor jij het wel, René?</v>
+
+00:19:46.322 --> 00:19:47.022
+<v Houwen, R.>Ja.</v>
+
+00:19:47.822 --> 00:19:52.922
+<v Spreker (Ruimte)>Ik hoor alleen de stem uit de vergadering. Daar gaat het eh Nee, op zich niet dan.</v>
+
+00:20:03.587 --> 00:20:06.127
+<v Axel van der>Ja, moet je bij delen met geluid eh instellen dan.
+
+00:20:06.597 --> 00:20:08.237
+<v Igor van Haren>Ja, dat is tijdens delen inderdaad.
+
+00:20:11.537 --> 00:20:12.827
+<v Rens Kievit>delen met geluid.
+
+00:20:14.617 --> 00:20:17.007
+<v Igor van Haren>Klopt, staat dus bij helemaal rechtsboven bij delen.
+
+00:20:17.587 --> 00:20:22.517
+<v Igor van Haren>Ja. Als je op share klikt, staat er bij mij in het Engels, maar bij jou in het Nederlands include sound en zo'n toggeltje.
+
+00:20:27.577 --> 00:20:30.517
+<v Igor van Haren>Als je vanuit de Teams app zelf werkt, vanuit de browser werkt het niet.
+
+00:20:30.517 --> 00:20:32.617
+<v Rens Kievit>Nee, ik ben inderdaad de Teams app.
+
+00:20:34.257 --> 00:20:39.197
+<v Rens Kievit>Maar ik heb op zich geen... Ik heb alleen geluid opnemen.
+
+00:20:39.777 --> 00:20:40.457
+<v Hans Hendrikman>Ja.
+
+00:20:41.877 --> 00:20:44.427
+<v Michiel Trimpe>doorstuurt, dan kan Michiel hem misschien draaien.
+
+00:20:46.617 --> 00:20:48.817
+<v N. Boek>geluid opnemen zou het eh moeten doen.
+
+00:20:49.597 --> 00:20:50.217
+<v Rens Kievit>Oké.
+
+00:20:52.547 --> 00:20:54.197
+<v Rens Kievit>Maar dan begin ik gewoon eh...
+
+00:20:58.337 --> 00:20:59.267
+<v Rens Kievit>Nog een keer.
+
+00:21:13.315 --> 00:21:23.235
+<v Video>In het programma KIK-V werken ketenpartijen in de verpleeghuiszorg samen aan het stroomlijnen van de informatie-uitwisseling, aan de hand van een afsprakenset.
+
+00:21:23.965 --> 00:21:28.995
+<v Video>Deze video legt uit waarom dat nodig is en wat het inhoudt.
+
+00:21:30.345 --> 00:21:46.815
+<v Video>Nu vragen ketenpartijen zoals de zorgkantoren, de NZa, de IGJ en het Zorginstituut aan zorgaanbieders vooral om gegevens aan te leveren via centrale databases om zo het aantal uitvragen aan een zorgaanbieder te beperken.
+
+00:21:47.905 --> 00:21:59.515
+<v Video>Helaas sluiten deze centrale informatiebronnen niet altijd aan bij de behoeften van de ketenpartijen. Die hebben actuelere gegevens nodig of van een ander detailniveau.
+
+00:22:00.225 --> 00:22:05.625
+<v Video>Soms zijn aanvullende gegevens nodig of veranderen behoeften door externe factoren.
+
+00:22:06.635 --> 00:22:13.335
+<v Video>Het gevolg is: juist méér uitvragen aan de zorgaanbieder. En die had het al zo druk!
+
+00:22:14.615 --> 00:22:23.415
+<v Video>Tussen ketenpartijen is er weinig afstemming over deze uitvragen. De gegevens zijn, als appels en peren, onderling niet goed vergelijkbaar.
+
+00:22:24.515 --> 00:22:33.515
+<v Video>Er zijn verschillen in definities en formaten, in uitvraagmomenten en in de periode waarover informatie wordt gevraagd.
+
+00:22:34.415 --> 00:22:38.405
+<v Video>En dat leidt weer tot minder bruikbare informatie voor ketenpartijen.
+
+00:22:39.425 --> 00:22:44.415
+<v Video>Daarom streeft het programma KIK-V naar een nieuwe manier van gegevensuitwisseling.
+
+00:22:45.025 --> 00:22:50.815
+<v Video>Hoe? Niet met één centrale database met alle informatie over de zorgaanbieders.
+
+00:22:51.485 --> 00:22:56.125
+<v Video>De oplossing ligt in het definiëren en samenstellen van een standaard gegevensset.
+
+00:22:57.075 --> 00:23:09.615
+<v Video>Deze set bestaat uit gegevens die een zorgaanbieder al registreert in bestaande processen, zoals voor het personeelsbeleid, de financiële bedrijfsvoering of cliëntondersteuning.
+
+00:23:10.425 --> 00:23:19.785
+<v Video>De gegevensset staat bij de bronhouder, de zorgaanbieder zelf. Ketenpartijen baseren hun uitvragen alleen op deze gegevensset.
+
+00:23:20.525 --> 00:23:31.545
+<v Video>In KIK-V-verband stemmen ze met elkaar af welke uitvragen dit zijn. Het is gemakkelijk om nieuwe vragen toe te voegen als deze met de bestaande gegevensset beantwoord kunnen worden.
+
+00:23:32.225 --> 00:23:39.465
+<v Video>De zorgaanbieder stelt uit de gegevensset de antwoorden samen en deelt alleen deze antwoorden met ketenpartijen.
+
+00:23:40.305 --> 00:23:51.825
+<v Video>Omdat elke vraag wordt beantwoord met diezelfde gegevensset, gaat de kwaliteit en vergelijkbaarheid van de antwoorden omhoog. En de inspanning voor de zorgaanbieder blijft beperkt.
+
+00:23:52.665 --> 00:23:59.105
+<v Video>Meer weten? Kijk op onze website of mail met infokikv@zinl.nl.
+
+00:24:14.887 --> 00:24:19.897
+<v R. Houwen>Ja, dit was eigenlijk KIK-V in een nutshell en in een eh in een filmpje.
+
+00:24:20.257 --> 00:24:28.147
+<v R. Houwen>Zijn daar vragen op dit moment al over? Of kunnen we door naar Niels die dan de applicaties laat zien die dit ondersteunt?
+
+00:24:32.617 --> 00:24:34.507
+<v Rens Kievit>Geen handjes, geen vragen.
+
+00:24:35.437 --> 00:24:35.917
+<v R. Houwen>Niels?
+
+00:24:36.337 --> 00:24:36.817
+<v N. Boek>Ja.
+
+00:24:39.367 --> 00:24:41.317
+<v N. Boek>Oké, dan ga ik ook even mijn scherm delen.
+
+00:24:42.615 --> 00:24:53.645
+<v N. Boek>Ehm, dan begin ik eigenlijk bij ons eh ontwikkelplatform. Dat is eh GitLab. Dat is een eh een vorm van GitHub waar we dus eh de ontologie eh ontwikkelen. Dat is de gegevensset waarop eh alle data bij de zorgaanbieder wordt eh gebaseerd.
+
+00:24:53.645 --> 00:25:14.135
+<v N. Boek>De uitwisselprofielen, die zijn per eh per informatievragende partij worden die gespecificeerd met daarin een aantal eh functionele omschrijvingen van een indicator. Dus dat is de de eh ja, een functionele vraag dat een eh ketenpartij wil stellen.
+
+00:25:14.135 --> 00:25:37.525
+<v N. Boek>En dan de technische uitwerking daarvan, ehm dat zich uit in een SPARQL query. Eh en het antwoord op berekend. Eh en dan de afsprakensets zijn dan eh René, moet je me misschien even aanvullen, maar dat is dan de afspraken die tussen informatievragende partijen en de zorgaanbieders worden vastgesteld. Eh en dat...
+
+00:25:40.485 --> 00:25:54.125
+<v Rens Kievit>Ja, dat klopt. Daar hebben we bijvoorbeeld frequentie, omvang, eh gebieden, ehm dat soort zaken worden in die afsprakenset eh afgestemd. Dus wil je één keer per maand uitvragen, één keer per kwartaal, één keer per jaar.
+
+00:25:54.125 --> 00:26:00.615
+<v Rens Kievit>Dus dat leg je in afsprakenset tussen partijen vast. Eh en dat is een soort van governance tussen partijen.
+
+00:26:02.435 --> 00:26:03.215
+<v N. Boek>Ja, precies.
+
+00:26:04.305 --> 00:26:09.915
+<v N. Boek>Eh en dan als voorbeeld zal ik dan het uitwisselprofiel voor ActiZ eh nemen.
+
+00:26:10.585 --> 00:26:34.295
+<v N. Boek>waar we al, volgens mij in eh oktober hebben we gepubliceerd. Ehm maar ja, daarin zie je dan eh de verschillende facetten wat ik net benoemde. Documentatie is een beetje achtergronddocumentatie voor de informatievragende partij. Eh en dan heb je de gevalideerde vragen eh functioneel, wat zijn uitgewerkt.
+
+00:26:34.295 --> 00:26:58.745
+<v N. Boek>Dus er is een reeks aan vragen. Wat eerst als functionele vraag worden uitgewerkt voor de informatie door informatieanalisten bij eh KIK-V. Dus dit is een voorbeeld: wat is het aantal cliënten per leveringsvorm? Met de definities, dat ook zijn opgenomen in de algemene uitgangspunten met de randvoorwaarden. En ook alle eh alle gegevens die worden opgevraagd die zijn eh vastgesteld in de ontologie. Eh daar is afstemming over geweest.
+
+00:26:59.395 --> 00:27:11.225
+<v N. Boek>Ehm dit wordt dan vertaald naar een technische vraag, dus de SPARQL query. Dat zal ik dan even hier uit toveren. Dus dat is de indicator 1.2.
+
+00:27:11.225 --> 00:27:23.115
+<v N. Boek>Eh en dat ziet er dan ongeveer zo uit. Ehm en dat gaat dan via een ontwikkel-, review- en testproces bij ons intern.
+
+00:27:23.115 --> 00:27:31.025
+<v N. Boek>Eh en als dat allemaal is goedgekeurd en eh de randvoorwaarden eh zijn voldaan, dan publiceren we deze op ons publicatieplatform.
+
+00:27:31.025 --> 00:27:45.425
+<v N. Boek>Eh dat ziet er zo uit. Dus dan kan je een beetje die drie facetten wat ik net liet zien, dus de afsprakenset waar René het over had, technische specificaties, dat is een beetje bovenin. En dan de uitwisselprofielen voor elke informatievragende partij.
+
+00:27:46.105 --> 00:27:53.305
+<v N. Boek>Dus we hebben nu al een aantal voor de IGJ, de NZa, zorgkantoren, VWS en ook eh recent eh ActiZ.
+
+00:27:54.195 --> 00:28:08.435
+<v N. Boek>Eh dat ziet er dan zo uit. Je kan de verschillende versies aanklikken. Eh de documentatie en de achtergrond. Eh en dan zijn er ook natuurlijk de vragen wat ik net ook liet zien. Dus eh het voorbeeld hier is eh wat is het aantal cliënten per leveringsvorm?
+
+00:28:08.435 --> 00:28:22.625
+<v N. Boek>Eh en dan een hele reeks aan andere. Eh dan kan een eh zorgaanbieder of een dataleverancier kan dan ook gelijk de SPARQL zien dat ze moeten inbouwen in hun eh in hun datastation.
+
+00:28:24.035 --> 00:28:41.135
+<v N. Boek>En als wij hebben gepubliceerd, dan eh is het eigenlijk de taak aan de zorgaanbieder om een eh dataleverancier eh te contracteren en hun data te eh ordenen volgens de KIK-V methode en hun data te mappen op de ontologie, zodat ze de gegevens eh kunnen opvragen.
+
+00:28:41.625 --> 00:28:52.125
+<v N. Boek>Dan eh hebben wij de applicatie de KIK-starter waar zij eh zich moeten registreren. Eh vaak dan ja, als een eh gegevensaanbieder, als zorgaanbieder zijn.
+
+00:28:52.125 --> 00:29:08.315
+<v N. Boek>En als dit is gedaan, dan krijgen wij als eh KIK-V beheerder een mail binnen met de registratiegegevens. Dat moeten wij dan aan de achterkant van de KIK-starter koppelen met de verifiable credentials op basis van de Nuts DID. Dus daar was het in het begin ook al gegeven dat wij wij gebruiken het Nuts netwerk om te verifiëren.
+
+00:29:08.315 --> 00:29:19.245
+<v N. Boek>Ehm en dit is ons credential platform, ook een applicatie wat wij hebben laten ontwikkelen op basis waarvan wij dus de...
+
+00:29:19.245 --> 00:29:22.255
+<v N. Boek>Oei, helaas, gaat er iets fout.
+
+00:29:23.275 --> 00:29:27.105
+<v N. Boek>Moet ik even opnieuw inloggen. Dat is ook wel fijn. Live demo hè.
+
+00:29:30.345 --> 00:29:40.165
+<v N. Boek>Oké, ja, eh... Ja, zoals je ziet is het eh voeren wij dan de de zorgaanbieders die zijn geregistreerd, voeren we dan in met de nieuwe uittreksel zorgaanbieders.
+
+00:29:40.165 --> 00:29:50.005
+<v N. Boek>Eh en de de DIDs zijn dan van de informatievragende partijen en die koppelen we dan aan elkaar eh op basis van wie eh welke vragen mag stellen.
+
+00:29:50.005 --> 00:29:56.005
+<v N. Boek>Dat zal ik dan nu even voor jullie laten zien. Dus als er een nieuwe vraag uitgestuurd wordt, dan...
+
+00:30:10.871 --> 00:30:11.531
+<v Niels Boek>deze maar.
+
+00:30:13.911 --> 00:30:21.501
+<v Niels Boek>Eh en dan kan je specifiek selecteren welke indicator je wilt eh je credentials voor wilt uitgeven, dus wat eh ja, gevalideerd en geautoriseerd mag worden.
+
+00:30:21.991 --> 00:30:23.511
+<v Niels Boek>Ik kan deze even selecteren.
+
+00:30:24.181 --> 00:30:29.471
+<v Niels Boek>En dan kan je selecteren welke informatievragende partij die vragen mag stellen.
+
+00:30:30.981 --> 00:30:39.381
+<v Niels Boek>Ehm met de specifieke parameters, dus de randvoorwaarden van eh de ja, de uitvraagfrequentie bijvoorbeeld eh of de jaren.
+
+00:30:39.381 --> 00:30:51.131
+<v Niels Boek>We hebben voor IGJ net andere parameters, dus de vestigingsnummer die eh zij mogen opvragen en voor zorgkantoren geldt dat dan voor de specifieke zorgkantoorregio waar zij dan eh informatie voor mogen opvragen.
+
+00:30:52.331 --> 00:30:54.491
+<v Niels Boek>Ehm ja, dan ga ik even terug.
+
+00:30:54.491 --> 00:31:03.011
+<v Niels Boek>Dus jullie zien dat deze credentials al zijn in eh uitgegeven. Dus voor indicator 1.2 bijvoorbeeld, zal ik even een run through doen.
+
+00:31:03.011 --> 00:31:11.721
+<v Niels Boek>Dus dan eh ben ik hier nu bij de kickstarter ingelogd als een eh een actis eh informatievragende partij demo.
+
+00:31:12.441 --> 00:31:21.431
+<v Niels Boek>Eh daar hebben we dan zelf een eh een ja, een zorgaanbieder gekoppeld. Eh dit is een test datastation dat we hebben eh die we zelf ook hebben ontwikkeld.
+
+00:31:21.871 --> 00:31:27.271
+<v Niels Boek>Ehm en dat is eh ja, dan van zorgaccent. Daar heb ik dan credentials voor uitgegeven.
+
+00:31:27.761 --> 00:31:34.721
+<v Niels Boek>Die selecteer ik dan. En dan kan ik de uitwisselprofiel selecteren, de specifieke indicator.
+
+00:31:36.031 --> 00:31:44.521
+<v Niels Boek>En dan kan ik het jaar ook selecteren. Dus dan eh doe ik even Volgens mij was het deze. En dan versturen.
+
+00:31:47.241 --> 00:32:02.001
+<v Niels Boek>Als het goed is zou je hier moeten zien dat hij eh redelijk snel is aan binnen moeten komen. Met de kanttekening dat er nu een eh een demo bezig is eh in productie, dus ehm kan het zijn dat er enige verkeer over de lijn gaat.
+
+00:32:02.001 --> 00:32:08.701
+<v Niels Boek>Dus dat als het iets langer duurt, dan is dat ook wel een reden. Ehm vaak is dit wel, we hebben in de laatste een update gedaan waardoor het redelijk snel gaat.
+
+00:32:08.701 --> 00:32:13.881
+<v Niels Boek>Oké, ja. En we hebben de lijn gestuurd. Alleen ik heb nu even
+
+00:32:15.651 --> 00:32:29.321
+<v Niels Boek>En dit is dan onze test datastation. Dit probeert een zorgaanbieder ja, het is een nabootsen van een zorgaanbieder. Eh we hebben zelf een eh een dataset erin geladen met eh met test data eh ja, met eigenlijk eh fictuele test data.
+
+00:32:29.321 --> 00:32:35.101
+<v Niels Boek>En je ziet dan bovenaan dat die vraag is binnengekomen. 2 december 10:36, dus een minuut geleden.
+
+00:32:35.531 --> 00:32:46.221
+<v Niels Boek>Resultaat is berekend. Ehm dit zal er net anders uitzien per zorgaanbieder. Dat is ja, eigenlijk de keuze aan de zorgaanbieder en de dataleverancier wat gecontracteerd is hoe ze dat willen invullen.
+
+00:32:46.591 --> 00:32:53.301
+<v Niels Boek>Maar wat belangrijk is is dat ze de antwoorden kunnen bewerken. Als ze dus niet mee eens zijn met ja, de berekende antwoord, wat eigenlijk niet zou moeten, want je gaat dan vanuit dat die Sparkle eh gemapt is op de ontologie.
+
+00:32:53.301 --> 00:33:00.521
+<v Niels Boek>En dat je die berekening allemaal goed gaat. Ehm en dan kan je hem of goedkeuren of afkeuren.
+
+00:33:00.521 --> 00:33:07.031
+<v Niels Boek>Dus dan eh zal ik hem nu even goedkeuren.
+
+00:33:07.881 --> 00:33:10.161
+<v Niels Boek>Zie je dat hij aan het beantwoorden is.
+
+00:33:11.751 --> 00:33:16.631
+<v Niels Boek>En dat gaat wel redelijk snel. En beantwoord is gelukt. Dat is altijd eh altijd leuk.
+
+00:33:17.711 --> 00:33:24.011
+<v Niels Boek>Dan ga ik het even nog een keer proberen. Ga ik even dezelfde stappen doorlopen.
+
+00:33:24.011 --> 00:33:32.841
+<v Niels Boek>Waarom zit die handmatige handeling hier tussen?
+
+00:33:34.341 --> 00:33:36.141
+<v Niels Boek>Ja, welke handmatige handeling bedoel je?
+
+00:33:36.561 --> 00:33:37.821
+<v René Kievit>In dat datastation.
+
+00:33:38.641 --> 00:33:40.011
+<v Igor van Haren>Het bewerken, goedkeuren bedoel je?
+
+00:33:40.421 --> 00:33:43.761
+<v René Kievit>Ja, waarom moet er een goedkeuring? Want er is er toch al een autorisatie.
+
+00:33:45.831 --> 00:33:51.321
+<v Igor van Haren>Ja, onderdeel van is dat omdat dat datastation staat bij de zorgaanbieder.
+
+00:33:51.781 --> 00:34:00.311
+<v Igor van Haren>Eh de antwoorden worden berekend, maar de afspraak is wel dat zij altijd nog even controleren of ze het als ze het eens zijn met het berekende antwoord en willen versturen.
+
+00:34:00.311 --> 00:34:14.421
+<v Igor van Haren>Dus die autonomie eh voor welke data stel ik beschikbaar, welke antwoorden dat dat blijven we dat zit nu nog in het datastation als een soort van accorderingsslag richting eh de informatievragende partij.
+
+00:34:14.791 --> 00:34:23.231
+<v Igor van Haren>Dat komt ook omdat eh bij sommige uitvragen heb je een bestuurlijk akkoord nodig. Ja, die wordt dan meegezonden om dat te gaan doen. Dus er zitten nog wat regeltjes aan.
+
+00:34:23.231 --> 00:34:38.291
+<v Igor van Haren>Maar de verwachting wel is dat in de loop van de tijd sommige antwoorden gewoon geautomatiseerd worden verzonden en bij sommige financiële bijvoorbeeld, daar wil ze toch nog wel even controleren van hé, wat komt eruit voordat ik het verstuur.
+
+00:34:38.291 --> 00:34:54.801
+<v Igor van Haren>Dus dat is meer een keus die de partijen gemaakt hebben dat er altijd nog een accorderingsslag voor het vrijgeven van het antwoord zit.
+
+00:34:55.571 --> 00:34:56.171
+<v Niels Boek>Igor.
+
+00:34:56.611 --> 00:34:59.131
+<v Igor van Haren>Sorry. Je je microfoon moet even omlaag. Ja.
+
+00:34:59.511 --> 00:35:00.111
+<v Niels Boek>Sorry.
+
+00:35:00.561 --> 00:35:18.211
+<v Igor van Haren>Ehm dus de vraag staat los van het antwoord, hè. Dus ehm ehm daar zit tijd tussen en hoe wordt het antwoord teruggestuurd? Of moet je de vraag opnieuw stellen en dan krijg je hem terug? Of hoe hoe ging dat net?
+
+00:35:18.631 --> 00:35:31.331
+<v Niels Boek>Nou, je vanuit de kickstarter, de het platform voor de informatievragende partijen, die stellen vanuit daar de vraag en die sturen ze naar het datastation van één of meerdere zorgaanbieders.
+
+00:35:31.331 --> 00:35:44.321
+<v Niels Boek>Het is een asynchroon proces, dus in in één van de afspraken is dat je een maand de tijd hebt om het vraag- en antwoordspel, zoals wij dat noemen, te gaan doen. Dus de zorgaanbieder heeft een bepaalde periode om antwoord te geven.
+
+00:35:44.321 --> 00:35:57.321
+<v Niels Boek>Dus de vraag komt binnen bij het datastation. Dat die daar ziet zo'n gebruiker ook de binnenkomende vragen staan die die moet beantwoorden. En die kan hij dan vrijgeven. En die stuurt hij dan weer terug naar wat Niels zegt, naar de kickstarter.
+
+00:35:57.321 --> 00:36:11.331
+<v Niels Boek>En daar kan je dan, je hebt je hebt het vraag verzonden, het antwoord is binnen. Dus daar die die kun je daar visueel zien van hé, hoeveel vragen heb ik verzonden, hoeveel antwoorden heb ik binnen en waar wacht ik nog op.
+
+00:36:11.331 --> 00:36:12.331
+<v Igor van Haren>Oké, ja, ja.
+
+00:36:12.601 --> 00:36:13.101
+<v Niels Boek>Ja.
+
+00:36:13.431 --> 00:36:28.161
+<v Niels Boek>Precies. Zoals René net zei, dit is dan eh onze test datastation. Dus als we onze onze Sparkles willen testen op eh een eh fictieve dataset van een zorgaanbieder, sturen we ze hier naartoe. En ook om de applicatie en de ja, applicaties te testen, sturen we dan het antwoord terug.
+
+00:36:28.161 --> 00:36:40.321
+<v Niels Boek>Eh je zag dan dat de eerste niet eh ja, antwoorden was mislukt. Eh het kan door meerdere redenen zijn, maar die tweede eh was wel gelukt. En dan zie je gelijk eh ook wel het antwoord.
+
+00:36:40.321 --> 00:36:55.191
+<v Niels Boek>In een eh ja, een tabelweergave. En deze kan ook gedownload worden als eh een CSV-bestand om dan te incorporeren in eh BI eh die BI eh ja, systemen van eh van de informatievragende partijen.
+
+00:36:55.591 --> 00:36:57.061
+<v Igor van Haren>Ja, moet je even toevoegen Niels.
+
+00:36:57.061 --> 00:37:16.291
+<v Niels Boek>We hebben Excel. Dat is toch het meest gebruikte. Dat is niet heel erg eh heel erg modern, maar we hebben ook een API, zeg maar. Er zit ook een API achter. Dus als jij de antwoorden gewoon wilt binnenslurpen in je applicatie, dan kan je ook de API bevragen van de betreffende informatievragende partij.
+
+00:37:16.291 --> 00:37:17.391
+<v Niels Boek>En dan krijg je alles in één keer binnen.
+
+00:37:21.351 --> 00:37:26.001
+<v Igor van Haren>Dus die kickstarter is een centrale applicatie of zoiets dan.
+
+00:37:26.341 --> 00:37:27.241
+<v Niels Boek>Ja. Ja.
+
+00:37:27.531 --> 00:37:28.131
+<v Igor van Haren>Oké.
+
+00:37:28.531 --> 00:37:40.311
+<v Niels Boek>Ja, wij noemen dat eigenlijk het up- en download center, zo'n beetje. Eh want uiteindelijk je logt daarin, je stelt de vragen en je haalt de antwoorden op. Dat is eigenlijk wat je als informatievragende partij daar doet.
+
+00:37:40.681 --> 00:37:41.581
+<v Igor van Haren>Ja. Ja.
+
+00:37:44.621 --> 00:37:54.211
+<v René Kievit>En zijn die vragen niet altijd altijd hetzelfde? Dus als daar ehm als een bepaalde vraag gewoon elk kwartaal gesteld wordt, dan zou je toch ook kunnen inregelen dat eh dat dat al door de zorgaanbieders
+
+00:37:54.211 --> 00:38:04.421
+<v René Kievit>geprepareerd wordt dat die antwoorden er staan, zodat die direct opgehaald kunnen worden.
+
+00:38:05.571 --> 00:38:19.331
+<v Niels Boek>Eh ik denk dat dat in de volgende fase komt, maar dan moeten ze daar zelf afspraken over maken. Wij faciliteren het geheel, dus het proces en de applicaties. Afspraken moeten ze echt zelf gaan maken.
+
+00:38:19.331 --> 00:38:31.541
+<v Niels Boek>En soms eh wijzigt de frequentie, want dat zit in de afspraken set. En die afspraken set is dan wel voor een jaar. Dus het is niet zo Kijk, we je hebt nu een set aan vragen zijn er gedefinieerd.
+
+00:38:31.541 --> 00:38:42.231
+<v Niels Boek>Ja, als zo'n uitvragende partij eh bedenkt van ik wil er een vraag bij hebben, ja, dan moet hij op de volgende release wachten en dan moet hij daardoorheen.
+
+00:38:42.231 --> 00:38:51.271
+<v Niels Boek>Dat geautomatiseerd. Ja, ik snap het, want dat is ook zo. De data staat klaar. Je weet al welke vragen je krijgt en welke antwoorden je wilt verzenden.
+
+00:38:51.271 --> 00:38:59.111
+<v Niels Boek>Maar het blijkt toch, nu we maar daarmee bezig zijn, dat heel veel zorgaanbieders sommige vragen gewoon niet gaan beantwoorden of willen beantwoorden.
+
+00:38:59.111 --> 00:39:13.521
+<v Niels Boek>Dus dan krijg je wel de vraag binnen, maar dan gaan ze het niet beantwoorden, omdat ze of omdat de data nog niet klaar staat of dat er een hiccup is. Sommige zitten in een wisselen van een bronapplicatie waardoor ze de data niet actueel hebben.
+
+00:39:13.521 --> 00:39:25.101
+<v Niels Boek>Dus er is altijd wel een reden waarom en het in het ideaalbeeld wordt elke dag of elke week wordt die data op het datastation ververst en staat klaar voor al die partijen die vragen hebben.
+
+00:39:25.101 --> 00:39:31.251
+<v Niels Boek>Alleen dan zeg ik, we zijn hier net zo ver zijn we nog niet. Dat het helemaal geautomatiseerd is.
+
+00:39:31.631 --> 00:39:41.731
+<v René Kievit>En wordt dat antwoord gepusht naar de naar de vrager of eh kan de vrager het ophalen zodra het goedgekeurd is?
+
+00:39:42.691 --> 00:39:51.001
+<v Niels Boek>Zodra die in het datastation een akkoord geeft, dan eh wordt hij ook verzonden naar de kickstarter waar die binnenkomt. En
+
+00:40:06.098 --> 00:40:08.138
+<v Houwen, R.>weten eh van nou,
+
+00:40:08.138 --> 00:40:17.348
+<v Houwen, R.>bijvoorbeeld zorgkantoren, dat is één keer per kwartaal, dus dan moet je eh rond 1 april je vraag stellen en dan zijn de antwoorden 30 april beschikbaar.
+
+00:40:17.348 --> 00:40:22.018
+<v Houwen, R.>De meeste loggen dan een dag later in op 1 mei en halen dan in één keer alle antwoorden op.
+
+00:40:22.018 --> 00:40:22.508
+<v Boek, N.>Eh.
+
+00:40:22.818 --> 00:40:24.628
+<v Boek, N.>En waar halen ze die antwoorden dan op?
+
+00:40:24.628 --> 00:40:26.018
+<v Houwen, R.>Eh uit de Kickstarter.
+
+00:40:26.018 --> 00:40:34.498
+<v Houwen, R.>Dat kunnen ze via de Excel, maar ze kunnen ook de API bevragen en de API levert dan eh alle antwoorden op alle vragen.
+
+00:40:35.288 --> 00:40:38.988
+<v Boek, N.>En waarom halen ze ze op dat moment op bij de Kickstarter en niet bij de aanbieder?
+
+00:40:38.988 --> 00:40:40.008
+<v Houwen, R.>Omdat zij...
+
+00:40:42.648 --> 00:41:02.058
+<v Houwen, R.>omdat zij, omdat de de Kickstarter is het platform wat ertussen zit om want anders moeten die zorgaanbieder, anders moeten die informatievragende partijen zelf een een functionaliteit à la de Kickstarter bouwen om de vraag te kunnen stellen en het antwoord op te kunnen halen. Dat hebben ze niet zelf gebouwd. Wij hebben daar een applicatie voor ze gebouwd, eigenlijk en gefaciliteerd.
+
+00:41:02.378 --> 00:41:04.958
+<v Michiel Trimpe>Dat zouden ze op zich wel kunnen, begreep ik, toch?
+
+00:41:04.958 --> 00:41:13.618
+<v Michiel Trimpe>Dus dan je het stelsel is in principe federatief met afspraken en de credentials, dus je zou ook je eigen Kickstarter kunnen bouwen.
+
+00:41:13.618 --> 00:41:14.048
+<v Houwen, R.>Ja.
+
+00:41:14.448 --> 00:41:19.438
+<v Michiel Trimpe>Maar Kickstarter is in die zin dan een een ontzorgingsfunctionaliteit die je voor je kan doen.
+
+00:41:19.438 --> 00:41:20.018
+<v Houwen, R.>Ja.
+
+00:41:20.018 --> 00:41:38.228
+<v Houwen, R.>En de en er is nu voor gekozen, want wat je ziet dat hebben wij ooit als tijdelijke applicaties bestempeld, hè. Dus een credential platform, dat zal eigenlijk een soort van generieke functie moeten zijn of een landelijke functie. Een Kickstarter is een applicatie die zou eigenlijk door de marktpartijen opgepakt moeten worden, moeten worden bouwen.
+
+00:41:38.228 --> 00:41:50.988
+<v Houwen, R.>Maar er is nu wel gekozen om bijvoorbeeld zo'n Kickstarter, die voldoet, die is goed genoeg om die gewoon in beheer en permanent te maken. Want ze vinden het ook zonde van het geld om om 10 keer dezelfde applicatie te laten bouwen, terwijl die er al is.
+
+00:41:50.988 --> 00:42:21.718
+<v Houwen, R.>Dus er is ook op basis van beheer, eh geld, want het kost geld om zo'n inrichting te bouwen, dan is het goedkoper en beter om voorlopig de Kickstarter als permanente oplossing voor ketenpartijen eh te laten functioneren. En dan hoeven ze niet zelf eentje te bouwen. Die hoeft dan ook niet in een IT-architectuur en omgeving wordt geïntegreerd, maar zij kunnen hier gewoon inloggen, vraag stellen, data ophalen.
+
+00:42:21.718 --> 00:42:32.008
+<v Michiel Trimpe>Dan wat ik begrijp is de basis daaronder is dus wel een verifiable credential contract eigenlijk tussen de twee partijen.
+
+00:42:32.008 --> 00:42:32.418
+<v Houwen, R.>Ja.
+
+00:42:32.418 --> 00:42:34.918
+<v Michiel Trimpe>Als vraag en antwoord.
+
+00:42:34.918 --> 00:42:41.228
+<v Houwen, R.>Dat zit meer aan de kant denk ik Niels van het credentials platform, hè, eh waarin we eh zitten.
+
+00:42:41.228 --> 00:43:01.438
+<v Houwen, R.>En de en de daas-leveranciers die een datastation eh die moeten ook, we hebben, ik heb we hebben een soort aansluitprotocol voor nuts zeg maar, voor daas-leveranciers en voor onszelf, zodat je dat kunt inregelen, inrichten en kunt testen en onderdeel wordt van het vertrouwde netwerk vanuit nuts.
+
+00:43:02.888 --> 00:43:08.928
+<v Houwen, R.>En het credential gaat inderdaad mee in de vraag en volgens mij ook in het antwoord, dacht ik, Niels, hè?
+
+00:43:09.478 --> 00:43:11.828
+<v Boek, N.>Als de VC ID inderdaad.
+
+00:43:11.828 --> 00:43:12.158
+<v Houwen, R.>Ja.
+
+00:43:12.758 --> 00:43:24.738
+<v Houwen, R.>Zodat partijen weten dat de vragende partij de vraag mag stellen en dat de ontvangende partij ook weet dat hij het antwoord moet verzenden aan de vragende partij. Dus dat is gewoon dan de afspraak.
+
+00:43:25.428 --> 00:43:31.818
+<v Michiel Trimpe>Ja, dat is denk ik het voor het onderwerp van vandaag de sessie, het contract. In die zin is dat het credential.
+
+00:43:31.818 --> 00:43:47.338
+<v Michiel Trimpe>In onze voorbereiding liet je dat ook even zien. Dat is misschien ook interessant voor de werkgroep als dat zeg maar de structuur van dat credential, wat is het? Een Jason, Jason-LD stukje.
+
+00:43:47.338 --> 00:43:48.138
+<v Houwen, R.>Dat klopt.
+
+00:43:48.138 --> 00:43:56.398
+<v Houwen, R.>En Niels, Ruben had even een stukje laten zien hoe dat credential in een Sparkle zit, zeg maar.
+
+00:43:56.398 --> 00:43:57.008
+<v Spijkers, Nico>Ja.
+
+00:43:57.008 --> 00:43:58.008
+<v Spijkers, Nico>Ja.
+
+00:43:58.008 --> 00:44:06.578
+<v Spijkers, Nico>Ja, ik zal even kijken. Misschien kan ik anders alvast even de met de bredere context terugbrengen. Dus ehm
+
+00:44:06.578 --> 00:44:35.418
+<v Boek, N.>als ik kijk naar contracten, wat ik nu zie en dit speelt dus ook bij de BRP, ehm is dat je eh het lijkt alsof contracten vanuit toegangsverlening een een relatief standaard geheel patroon vormen, waarbij je eh contracten hebt tussen partijen eh en die gebeuren in principe buiten de context van een individueel verzoek al.
+
+00:44:35.418 --> 00:44:44.988
+<v Boek, N.>En die kunnen wel toegevoegd worden aan een verzoek als bewijs, maar die worden er eigenlijk buiten gesloten. En wat je dus bijvoorbeeld bij Kick-V ziet, maar ook bij BRP, is dat wat dan heel erg belangrijk is, is dat je
+
+00:44:44.988 --> 00:44:51.708
+<v Boek, N.>definieert hoe ziet dit contract eruit en dat je dat echt aan een degelijke informatiemodellering voorziet.
+
+00:44:51.708 --> 00:45:11.288
+<v Spreker (Ruimte)>Dus jullie hebben hier dan inderdaad de vraagstelling gedaan, eh de ontologie, eh wat eh wat is de vraag functioneel, hoe is die technisch vertaald? En als je dat allemaal afgestemd had hebt, kan je dat in een, in jullie geval in een contract token voegen. En dat is dan bewijs dat dat verzoek plaats mag vinden.
+
+00:45:11.288 --> 00:45:29.568
+<v Spreker (Ruimte)>Als je naar de BRP kijkt, hebben ze eigenlijk hetzelfde gedaan of naar RVIG. Dus je hebt dan de autorisatiebesluiten. Eh daarin zitten dan voorwaarderegels en dat is ook, Ruben heeft daar nog aan deels aan meegewerkt, dat is dan ook een hele gedetailleerde uitleg van wat precies mag gebeuren op de onderliggende dataset.
+
+00:45:29.568 --> 00:45:41.988
+<v Boek, N.>Ik denk dat dat, dus die die componenten van de definitie van het contract, de definitie van de taal van het contract en de modellering van de taal van het contract op technisch vlak,
+
+00:45:41.988 --> 00:45:48.788
+<v Boek, N.>dat dat eigenlijk even de de drie hoofdaspecten van ja, contracten voor toegang te zijn.
+
+00:45:48.788 --> 00:46:12.878
+<v Spreker (Ruimte)>En ze hebben denk ik allebei, want dat is ehm hier zit een soort van gelaagdheid, een soort van functionele beschrijving wat die beoogd wordt te doen. En ik denk dat dat relatief eenvoudig generiek te maken is. Maar ze hebben ook een een technische beschrijving hoe er door het systeem de data gefilterd wordt. En dat is natuurlijk veel lastiger om dat te harmoniseren, want dat zit allemaal ingebakken en ingebouwd in systemen.
+
+00:46:12.878 --> 00:46:13.808
+<v Boek, N.>Ja, inderdaad.
+
+00:46:14.218 --> 00:46:17.168
+<v Boek, N.>Die zijn dan ook heel specifiek.
+
+00:46:17.168 --> 00:46:23.428
+<v Harro Hendrikman (RVIG)>Ik moet een volgende werkgroep voor gaan bereiden. Dus ik denk ik ga afhaken. Het was wel een interessante sessie.
+
+00:46:24.288 --> 00:46:26.888
+<v Boek, N.>Ik denk dat je, heeft Ruben je dit laten zien de vorige keer?
+
+00:46:26.888 --> 00:46:28.888
+<v Houwen, R.>Ja. Ja.
+
+00:46:28.888 --> 00:46:29.438
+<v Boek, N.>Yes.
+
+00:46:29.438 --> 00:46:32.888
+<v Boek, N.>Precies, ja, met eh, sorry, misschien een beetje inzoomen.
+
+00:46:33.998 --> 00:46:39.038
+<v Boek, N.>Dit is dan eh de inhoud van het verifiable credential, volgens mij.
+
+00:46:39.038 --> 00:46:44.278
+<v Houwen, R.>Ja, echt de ontologie van het verifiable credential.
+
+00:46:45.128 --> 00:46:57.388
+<v Houwen, R.>Maar als je naar het publicatieplatform gaat, heb je de Nuts-aansluitspecificaties, die zijn gewoon openbaar. Dan kan je hier gewoon doorheen klikken en dan dan zie je die JSON-LD ook eh verschijnen.
+
+00:46:57.388 --> 00:47:04.188
+<v Houwen, R.>En dan staat wat moet je doen, de dataspecificaties en dan kan je naar klikken, dus dan kan je zelf ook even
+
+00:47:04.188 --> 00:47:05.088
+<v Boek, N.>Ja.
+
+00:47:07.448 --> 00:47:11.158
+<v Boek, N.>Dus die aansluitspecificaties staat dat hier ergens tussen?
+
+00:47:11.158 --> 00:47:13.388
+<v Boek, N.>Misschien hier.
+
+00:47:15.938 --> 00:47:18.328
+<v Igor van Haren>Welke versie Nuts gebruiken jullie?
+
+00:47:18.328 --> 00:47:28.938
+<v Boek, N.>Eh nog niet zes, maar daar gaan we hopelijk volgend jaar naartoe. Eh we hebben 5.20 ofzo was de laatste update volgens mij.
+
+00:47:28.938 --> 00:47:29.268
+<v Houwen, R.>Ja.
+
+00:47:29.268 --> 00:47:38.098
+<v Igor van Haren.>En en migreer je dan ook naar DID:web eh of blijf je op DID:nuts eh zitten? Dus alle Nuts-methodes dan?
+
+00:47:38.098 --> 00:47:39.708
+<v Igor van Haren.>Of ga je
+
+00:47:39.708 --> 00:47:40.008
+<v Houwen, R.>Nou,
+
+00:47:40.538 --> 00:48:02.188
+<v Houwen, R.>we gaan doen het in twee stappen. We doen eerst een soort van eh over naar 6.0 met de functionaliteit van 5 en we gebruiken de nieuwe functionaliteit van 6 nog niet. Die hebben we wel in kaart gebracht, want dat moeten we ook met partijen afstemmen eh qua roadmap en planning. Dus als wij het inbouwen, dan moeten zij er ook op participeren en op hun roadmap.
+
+00:48:02.188 --> 00:48:21.488
+<v Houwen, R.>Dus dat gaan we volgend jaar, dus hij staat bij ons eerst een soort van load and go en daarna de functionaliteiten die we die het extra brengt en die gaan we dan stap voor stap eh inbedden en afstemmen, zodat we ook met partijen niet dat wij...
+
+00:48:21.488 --> 00:48:28.388
+<v Igor van Haren>Maar er zijn ook bepaalde functionaliteiten vervallen bij zes. En en hoe ga je die oplossen? Ga je die kijken dan hoe je dat met de generieke functies gaat eh invullen?
+
+00:48:28.388 --> 00:48:29.388
+<v Houwen, R.>Ja.
+
+00:48:29.388 --> 00:48:30.188
+<v Igor van Haren>Igor.
+
+00:48:30.188 --> 00:48:39.188
+<v Igor van Haren>Ik vind het heel erg vind als ik inbreek, maar dit is denk ik een heel interessant gesprek voor jullie twee. Maar voor de bredere werkgroep misschien eh wat wat minder goed te volgen.
+
+00:48:39.188 --> 00:48:40.188
+<v Houwen, R.>Is goed.
+
+00:48:40.188 --> 00:48:40.788
+<v Houwen, R.>Top.
+
+00:48:41.648 --> 00:48:42.588
+<v Houwen, R.>Igor, wij eh
+
+00:48:42.588 --> 00:48:44.588
+<v Boek, N.>Zijn er nog vragen over?
+
+00:48:44.588 --> 00:48:52.088
+<v Igor van Haren>We zoeken nog wel contact. Kom maar even op de lijn een keer samen met eh Ruben, dan kunnen we daar wel een keer wat eh diep dive op doen, zeg maar met dat.
+
+00:48:52.088 --> 00:48:52.788
+<v Houwen, R.>Super, dankjewel.
+
+00:48:53.458 --> 00:49:23.798
+<v Boek, N.>Nou, als er nog urgente vragen zijn, kan dat. Anders dan wil ik voorstellen nog eventjes heel kort in ieder geval de materialen laten zien van de BRP die ik verzameld had ter voorbereiding. Die zal ik later doorsturen. Dat lijkt me in ieder geval interessant voor de de werkgroep om te weten. En dan nog even kort bespreken, eh we hebben nog één werkgroep in dit jaar eh vanuit FTV. Ehm welk aspect we hier dan willen verdiepen met z'n allen. Dus dat zijn wat ik nog eventjes in de laatste 5 minuten wil doen.
+
+00:49:24.918 --> 00:49:28.308
+<v Boek, N.>Eh even mijn scherm delen.
+
+00:49:29.398 --> 00:49:54.218
+<v Boek, N.>Ehm dus in ieder geval dus de het RVIG BRP equivalent grofweg van wat we net hier gezien hebben is eh de autorisatietabellen. Tabel 35 heet dat dan. En daar heeft dan eh de BRP ook een hoop ja, eh gegevensleveringsovereenkomsten. Eh dit is de website versie hiervan met een een PDF.
+
+00:50:00.000 --> 00:50:05.110
+<v Michiel Trimpe>eh maar wat eh interessanter is voor ons is de voorwaarderegels.</v>
+
+00:50:05.110 --> 00:50:08.590
+<v Michiel Trimpe>En die staan hier niet in. Tenminste kan ik hier niet zo snel vinden in ieder geval.</v>
+
+00:50:09.450 --> 00:50:12.640
+<v Michiel Trimpe>Hey, ik hoop dat ik niet afgemeld ben.</v>
+
+00:50:15.170 --> 00:50:21.420
+<v Michiel Trimpe>Ehm dus de als je dit hele bestand downloadt,</v>
+
+00:50:22.560 --> 00:50:31.890
+<v Michiel Trimpe>dan zijn er dus ook bijvoorbeeld voorwaarderegels, in dit geval voor de selectie, dus dat is de data die je eh kan meekrijgen.</v>
+
+00:50:31.890 --> 00:50:35.920
+<v Michiel Trimpe>En daar zie je dat, ik zal even een paar pakken.</v>
+
+00:50:37.970 --> 00:50:43.720
+<v Michiel Trimpe>er een eh een technische voorwaarderegelformaat is ontstaan of gedefinieerd.</v>
+
+00:50:43.720 --> 00:50:50.310
+<v Michiel Trimpe>Dus hier zie je eigenlijk het equivalent van de Sparkle query bij KickV. En met allerlei complexe codes.</v>
+
+00:50:51.300 --> 00:51:00.200
+<v Michiel Trimpe>Ehm maar voor ja, eh RVG specialisten betekent dit veel. Dus dit is dan eh een N voor of Ja, natuurlijk.</v>
+
+00:51:00.600 --> 00:51:04.770
+<v Igor van Haren>Die codes dat eh die 08 14 20 bijvoorbeeld die daar staat.</v>
+
+00:51:05.540 --> 00:51:06.030
+<v Michiel Trimpe>Uhuh.</v>
+
+00:51:06.880 --> 00:51:16.430
+<v Igor van Haren>Dat zijn eh alle categorieën en rubrieken, zeg maar, de elementnummers die voorkomen in de basisregistratie. En dat is de hele duiding van alle soorten van gegevens.</v>
+
+00:51:16.820 --> 00:51:17.130
+<v Michiel Trimpe>Ja.</v>
+
+00:51:17.440 --> 00:51:24.920
+<v Igor van Haren>Dus die 08 bijvoorbeeld is een categorie kind geloof ik. En eh die 14 20 zegt iets over het element binnen die categorie kind.</v>
+
+00:51:25.520 --> 00:51:29.240
+<v Igor van Haren>Er zit een bepaalde opbouw in, maar als je dat fijn vindt, wil ik dat best een keer toelichten.</v>
+
+00:51:29.580 --> 00:51:34.230
+<v Michiel Trimpe>Ja, ja, dat dat eh misschien dan in eh het volgend jaar.</v>
+
+00:51:34.230 --> 00:51:43.390
+<v Michiel Trimpe>Eh in ieder geval eh en wat dan ook dus relevant is, en dit is dan zeker gedocumenteerd, hé, wat betekent dit formaat dan?</v>
+
+00:51:43.820 --> 00:51:50.030
+<v Michiel Trimpe>Dat is een eh logisch ontwerp BRP. En er is een heel hoofdstuk waar dit precies in detail is uitgelegd.</v>
+
+00:51:50.640 --> 00:51:54.830
+<v Michiel Trimpe>En zo kan je dus ook weten, ja, wat wat hoe moet ik dit contract interpreteren?</v>
+
+00:51:54.830 --> 00:52:04.920
+<v Michiel Trimpe>En dat heeft dus, wat ik zeg, heel ja, equivalenten met KickV die ik zie, dus een technische definitie, omschrijving wat die betekent. Bij KickV is dan op basis van Sparkle en ontologieën.</v>
+
+00:52:05.520 --> 00:52:23.970
+<v Michiel Trimpe>Eh boven de de functionele definitie. Eh en dan andere manieren om dat beschikbaar te maken, want volgens mij eh heeft de RVG dit ergens in een database staan en verifiëren zij dit intern. Maar KickV het als een verifiable credential meelevert bij een verzoek op basis van nuts.</v>
+
+00:52:24.570 --> 00:52:26.660
+<v Michiel Trimpe>Dus deze zal ik nog even doorsturen.</v>
+
+00:52:26.660 --> 00:52:29.810
+<v Igor van Haren>Die tabel 35 is één van de eh stamtabellen.</v>
+
+00:52:29.990 --> 00:52:30.360
+<v Michiel Trimpe>Ja.</v>
+
+00:52:31.430 --> 00:52:39.560
+<v Michiel Trimpe>Ja, precies, maar daar wordt naar verwezen. En de en de voorwaarderegel kon je eigenlijk gewoon zien als een soort van filter op het resultaat wat uiteindelijk verstrekt wordt.</v>
+
+00:52:40.170 --> 00:52:46.680
+<v Michiel Trimpe>Ja, inderdaad. Net zoals de de Sparkle query bij KickV. Het het ook. Er zit een eh er zit een behoorlijke analogie in, zeg maar.</v>
+
+00:52:47.200 --> 00:52:47.520
+<v Michiel Trimpe>Ja.</v>
+
+00:52:48.180 --> 00:52:51.710
+<v Michiel Trimpe>Dat was wat ik eh wat ik hoopte te delen met de werkgroep.</v>
+
+00:52:52.380 --> 00:52:57.130
+<v Michiel Trimpe>Voor de volgende keer, we hebben eh één werkgroep is hebben we af moeten zeggen. We hadden twee onderwerpen.</v>
+
+00:52:57.810 --> 00:53:04.520
+<v Michiel Trimpe>Het zijn mooi, heel mooi twee richtingen die we op gaan kunnen gaan om dit verder te verdiepen. De ene was verifiable credentials, dus meer de techniek in.</v>
+
+00:53:05.270 --> 00:53:08.820
+<v Michiel Trimpe>En de andere was eh residual policies, zoals dat heet.</v>
+
+00:53:09.390 --> 00:53:17.700
+<v Michiel Trimpe>Eh en dat is eigenlijk de manier om eh binnen standaarden zoals OIDC dit soort regels te proberen te uniformeren.</v>
+
+00:53:18.240 --> 00:53:28.920
+<v Michiel Trimpe>En dus een standaard formaat te vinden waarin zowel een Sparkle als een voorwaarderegel van de BRP in één formaat gedeeld kan worden, maar toch zijn eigen functionaliteit kan behouden.</v>
+
+00:53:30.360 --> 00:53:34.080
+<v Michiel Trimpe>Ehm welke richting willen we opgaan?</v>
+
+00:53:34.080 --> 00:53:40.330
+<v Michiel Trimpe>Verifiable credentials of het modelleren van dit soort talen? Mijn voorkeur is om op te gaan naar de residual policies.</v>
+
+00:53:40.840 --> 00:53:50.110
+<v Michiel Trimpe>Dus hoe kunnen we in onze wereld dit soort complexe technische regels definiëren en op een uniforme wijze aan elkaar beschikbaar maken?</v>
+
+00:53:50.590 --> 00:53:59.820
+<v Michiel Trimpe>Eh maar verifiable credentials kan ook. Daar vinden we nut zijn nodig, kunnen we wat andere mensen uitnodigen. Dat zal iets meer richting authenticatie gaan dan autorisatie.</v>
+
+00:54:02.960 --> 00:54:05.620
+<v Michiel Trimpe>Ergens meningen, voorstander?</v>
+
+00:54:06.950 --> 00:54:07.820
+<v Igor van Haren>Alle twee, ja.</v>
+
+00:54:07.990 --> 00:54:09.800
+<v Hans Hendrikman>Alle twee is ook. Ja.</v>
+
+00:54:09.800 --> 00:54:12.900
+<v Michiel Trimpe>Ja. Ehm.</v>
+
+00:54:13.660 --> 00:54:22.910
+<v Michiel Trimpe>Als ik zeg: laten we volgende keer de policies doen en eh verifiable credentials in het komend jaar oppakken, is daar tegen is iedereen daarmee eens?</v>
+
+00:54:24.180 --> 00:54:25.590
+<v Michiel Trimpe>Dan doen we dat gewoon.</v>
+
+00:54:26.280 --> 00:54:36.250
+<v Michiel Trimpe>En even een last minute, de de hoe het in het volgend jaar verder gaat is nog even niet helemaal duidelijk. Dus eh het laatste de komende werkgroep is waarschijnlijk de laatste officiële gegarandeerde brede werkgroep.</v>
+
+00:54:37.030 --> 00:54:44.040
+<v Michiel Trimpe>En in 26 eh gaat het project over naar Ictu en wanneer wij weer direct of in ieder geval van start gaan is nog niet helemaal duidelijk.</v>
+
+00:54:44.730 --> 00:54:48.820
+<v Michiel Trimpe>Hopelijk kunnen we daar volgende week iets meer over vertellen. Of volgende werkgroep iets meer over vertellen.</v>
+
+00:54:49.730 --> 00:54:50.120
+<v Michiel Trimpe>Dan...</v>

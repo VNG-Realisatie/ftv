@@ -1,0 +1,988 @@
+WEBVTT
+
+00:00:04.210 --> 00:00:11.010
+<v Michiel Trimpe>Ehm voor de technische mensen, zijn is zeg maar is dit eh duidelijk qua relatie tussen OAuth en EAM?</v>
+
+00:00:16.470 --> 00:00:17.170
+<v Rens Kint>Ja.</v>
+
+00:00:18.780 --> 00:00:20.080
+<v Gerard Van Der Hoeven>Voor mij wel.</v>
+
+00:00:22.330 --> 00:00:29.030
+<v Gerard Van Der Hoeven>Als samenvatting als half technisch persoon, eh de twee sluiten elkaar niet uit, vullen elkaar aan.</v>
+
+00:00:29.720 --> 00:00:35.820
+<v Gerard Van Der Hoeven>En eh dat ik het daar even bij laat.</v>
+
+00:00:35.820 --> 00:00:47.420
+<v Gerard Van Der Hoeven>Dus eh eh er is een duidelijk eh OAuth vervult een goede functie en eh wij kunnen daar met eh externalized authorization fijnmaziger aan toevoegen.</v>
+
+00:00:47.970 --> 00:00:51.170
+<v Michiel Trimpe>Ja, inderdaad. Dus het versterkt elkaar.</v>
+
+00:00:51.590 --> 00:01:02.490
+<v Michiel Trimpe>En OAuth vult de gaten in waar EAM niet bij kan. En EAM vervult eigenlijk een andere functie dan OAuth, namelijk het centraliseren van toegangsbeleid.</v>
+
+00:01:04.650 --> 00:01:05.250
+<v Michiel Trimpe>Oké.</v>
+
+00:01:05.630 --> 00:01:16.130
+<v Michiel Trimpe>Nou, dus dit is dan één stukje relatie tot andere standaarden dat we eruit hebben gewerkt. En aan het einde kunnen we dan nog ja, een aantal andere standaarden die we verder verkennen bespreken of wat we als volgende stappen willen zetten.</v>
+
+00:01:18.610 --> 00:01:19.210
+<v Michiel Trimpe>Mooi.</v>
+
+00:01:20.410 --> 00:01:22.210
+<v Michiel Trimpe>Nou, netjes binnen de tijd.</v>
+
+00:01:24.180 --> 00:01:32.080
+<v Michiel Trimpe>Stop ik met delen. Eh en dan wil ik nu ruimte laten voor eh het juridische kader. Eh Wouter.</v>
+
+00:01:35.560 --> 00:01:37.060
+<v Wouter Diephuis>Ja, eh nou, dankjewel.</v>
+
+00:01:37.710 --> 00:01:43.510
+<v Wouter Diephuis>Ehm Nou ja, eigenlijk ik ondertussen, ik ga even kijken of het lukt om eh om te delen.</v>
+
+00:01:45.610 --> 00:01:46.810
+<v Wouter Diephuis>Even kijken.</v>
+
+00:01:53.410 --> 00:01:54.010
+<v Wouter Diephuis>Ja.</v>
+
+00:01:58.650 --> 00:02:04.750
+<v Wouter Diephuis>Ja, nu nog de presentatiestand. Ja.</v>
+
+00:02:06.820 --> 00:02:23.720
+<v Wouter Diephuis>Ehm nou en dat eh kijk, ik vond het wel, ik vond het wel grappig hè. De je je je gaf net aan hè van eh het eerste plaatje wat we net hebben gezien eh is voor de is voor de technische mensen eh eh en en de rest kon even wat voor zichzelf gaan doen hè. Dat even een beetje gesocieerd hè, maar...</v>
+
+00:02:24.740 --> 00:02:39.640
+<v Wouter Diephuis>ehm en ik ik denk dat is eigenlijk de een beetje de kern zeg maar van de boodschap die we vandaag hebben is ehm ik denk dat eh ehm hè van de mensen vanuit het juridisch kader hè, dus de juristen maar ook beleidsmakers...</v>
+
+00:02:40.740 --> 00:02:51.240
+<v Wouter Diephuis>voldoende moeten begrijpen zeg maar van het plaatje hè, wat net eh wat net is getoond, omdat dat de mogelijkheden biedt om eh om de behoefte zeg maar en de kaders eh in te vullen.</v>
+
+00:02:51.710 --> 00:03:04.210
+<v Wouter Diephuis>Hè, dus die die die die link zeg maar van door het dus het hè de de tussen het beleid en het juridische eh en de technische uitwerking en mogelijkheden die dat heeft, die zal die brug die zal wel geslagen moeten worden.</v>
+
+00:03:04.210 --> 00:03:22.210
+<v Wouter Diephuis>Dus ik denk dat wij eh eh ja, misschien hè vandaag wel een een soort eerste poging zullen doen hè, om om te om te kijken van als je de hè de de uitwerkingen die hier plaatsvinden, eh hoe verhoudt zich nou tot dat tot het kader waarin die oplossing moet eh moet functioneren.</v>
+
+00:03:24.200 --> 00:03:41.200
+<v Wouter Diephuis>Ehm nou heel even eh in het kort. Ehm eh Els en ik, Els zit eh ook in de webex. Wij zijn eh van het Ministerie van Binnenlandse Zaken. Ehm en wij eh nemen eigenlijk altijd als vertrekpunt voor allerlei trajecten, dus ook eh dus ook dit traject waar wij in zitten van ehm eh...</v>
+
+00:03:41.880 --> 00:03:54.380
+<v Wouter Diephuis>wat is nou de behoefte? Hè, dus we de eh deze standaard die wordt voor overheden eh is breder bruikbaar, maar in in eerste instantie voor overheden eh ingericht.</v>
+
+00:03:54.930 --> 00:04:00.130
+<v Wouter Diephuis>Ehm en die overheden die hebben zich te te houden aan een bepaald aan bepaalde kaders.</v>
+
+00:04:00.580 --> 00:04:13.380
+<v Wouter Diephuis>En we zullen niet tot in detail eh eh wetsartikelen en grondslagen eh op de in de presentatie toveren, maar ehm nou, laten zien hoe die verhouding eh ehm ja, hoe die verhouding eh is.</v>
+
+00:04:14.730 --> 00:04:25.330
+<v Wouter Diephuis>Ehm mochten mochten er vragen zijn eh zijn, stel ze gerust tussendoor. Ehm dan eh hè dan hoe meer hoe interactiever het gesprek wordt, hoe beter dat eh wat mij betreft is.</v>
+
+00:04:27.850 --> 00:04:37.050
+<v Wouter Diephuis>Ehm nou, wat gaan we vandaag doen? We we zullen wat ik net zei, we gaan vanuit de behoefte eh eh dus uit toelichten. Hè, dus we juridisch gezien...</v>
+
+00:04:37.050 --> 00:04:44.050
+<v Wouter Diephuis>hebben wij de behoefte eh om onszelf als overheid te verantwoorden. Hè, en dat moeten we binnen binnen kaders eh doen.</v>
+
+00:04:48.470 --> 00:04:54.170
+<v Wouter Diephuis>Ehm en eenduidige toegangsverlening eh tussen overheidsorganisaties maakt daar onderdeel van uit.</v>
+
+00:04:54.620 --> 00:05:16.320
+<v Wouter Diephuis>Hè, want toegangsverlening is een aan de ene kant een maatregel eh die je als overheid eh inricht. Maar het is ook een belangrijk eh verantwoordingsinstrument, omdat je ehm achteraf ook kan aantonen dat je eh dat de juiste functionarissen of de juiste organisaties de informatie hebben gevraagd die zij mochten mochten opvragen.</v>
+
+00:05:16.720 --> 00:05:21.420
+<v Wouter Diephuis>Ehm dus het is een belangrijk instrument om de verplichtingen uit te voeren.</v>
+
+00:05:21.940 --> 00:05:34.140
+<v Wouter Diephuis>Nou, en uiteindelijk zal ik nog wat wat zeggen over als je eenduidigheid over organisaties heen wil hebben, dan moet je natuurlijk gaan standaardiseren. Ehm en uiteindelijk tot de standaard komen.</v>
+
+00:05:38.510 --> 00:05:41.410
+<v Wouter Diephuis>Nou, even heel kort de de behoefte.</v>
+
+00:05:41.410 --> 00:05:45.510
+<v Wouter Diephuis>Ehm kijk, ons ons bredere uitgangspunt is verantwoording door de overheid.</v>
+
+00:05:45.510 --> 00:06:01.210
+<v Wouter Diephuis>We ehm we hebben overheden eh hebben publieke taken opgedragen gekregen. Eh en die moeten ze uitvoeren ten behoeve van eh van burgers en bedrijven uiteindelijk die daar eh nou die die daar eh eh voordeel mee kunnen doen.</v>
+
+00:06:01.800 --> 00:06:21.200
+<v Wouter Diephuis>Een belangrijk een eigenlijk een steeds groter eh een belangrijk deel daarvan is dat de overheid zich heeft te verantwoorden. Eh moest dat altijd al, alleen eh de laatste tijd is dat eh ehm wordt dat wordt dat eigenlijk steeds belangrijker en transparantie eh eh daarbij.</v>
+
+00:06:21.710 --> 00:06:42.310
+<v Wouter Diephuis>Ehm en de overheid moet zich daarbij ehm hè om informatie wordt een steeds grotere eh nou, grondstof zeg maar voor voor besluiten eh die de overheid neemt. Ehm dus je moet je ook verantwoorden over de informatie die je daarvoor gebruikt en met name ook hoe je deze hoe overheden die eh informatie gebruiken.</v>
+
+00:06:42.310 --> 00:06:52.110
+<v Wouter Diephuis>Dus informatie die ze zelf verwerken voor besluiten, maar ook organisaties die informatie bij andere collega-overheidsorganisaties ophalen.</v>
+
+00:06:52.720 --> 00:07:03.220
+<v Wouter Diephuis>Ehm en de inzichtelijkheid daarvan eh hè dus rechtmatige toegangsverlening is eigenlijk onderdeel van die eh van die verantwoording die de overheid heeft af te leggen.</v>
+
+00:07:05.950 --> 00:07:08.250
+<v Wouter Diephuis>Nou, dan eh de behoefte nog eventjes.</v>
+
+00:07:10.980 --> 00:07:25.380
+<v Wouter Diephuis>Publieke taken die zijn opgedragen bij bij wet- en uitvoeringsregelgeving en dat eh dat verschilt ook per eh per overheidsorganisatie. Hè, gemeentes hebben een andere behoefte dan het eh het UWV of de of de belastingdienst.</v>
+
+00:07:27.140 --> 00:07:43.540
+<v Wouter Diephuis>Ehm en organisaties zullen daardoor ook heel verschillend zijn ingericht en ook in eh organisatiegrootte verschillen, waardoor je waardoor de de eh wijze waarop je toegangsverlening eh goed moet eh in en vooral afregelen, dus heel erg kan verschillen.</v>
+
+00:07:45.030 --> 00:08:13.230
+<v Wouter Diephuis>Nou, de ehm de doelgroep en de gegevensbehoefte zal eh daardoor ook verschillend zijn. En een eh een belangrijk eh onderscheid binnen de binnen de overheid wat we vanuit juridische context vaak maken is eh een onderscheid tussen de dienstverlenende taken.</v>
+
+00:08:13.230 --> 00:08:24.430
+<v Wouter Diephuis>Hè, dus de overheid als dienstverlener om om burgers eh eh te ondersteunen met wat dan ook, hè, van vergunningen tot en met eh subsidieverlening en handhavings eh handhavende taken. Hè, dus de rechtshandhaving, opsporing en eh...</v>
+
+00:08:24.430 --> 00:08:28.330
+<v Wouter Diephuis>en toezichtstaken om eh hè om te kijken of de burger zich wel aan de aan de regels houdt.</v>
+
+00:08:28.330 --> 00:08:42.330
+<v Wouter Diephuis>Nou, dus dat is eh en eigenlijk de de kern daarbij, de overheid heeft daarvoor gegevens nodig, eh gegevens die ze zelf heeft, maar ook eh een organisatie die informatie bij collega-overheden moet eh moet opvragen.</v>
+
+00:08:44.200 --> 00:08:46.800
+<v Igor van Haren>Wouter, mag ik een vraag stellen? Zeker.</v>
+
+00:08:47.820 --> 00:09:02.020
+<v Igor van Haren>Eh want in de vorige slide doe je iets, zeg je over de eh de verantwoording, maar in hoeverre schiet het logboek eh dataverwerkingen dan tekort in die verantwoording?</v>
+
+00:09:02.840 --> 00:09:07.040
+<v Wouter Diephuis>Ehm het het korte antwoord is niet.</v>
+
+00:09:08.340 --> 00:09:44.140
+<v Wouter Diephuis>Ehm het is ehm kijk, het logboek, het logboek dataverwerkingen is ehm eh is eigenlijk ingericht om te zorgen dat de de de de de gegevens die eh de handelingen die met gegevens verricht worden, los van van wie het doet, eh dat die eh vastgelegd worden. Dus je kunt zeg maar de de de handelingen, de mutaties die gegevens...</v>
+
+00:09:44.140 --> 00:09:56.440
+<v Wouter Diephuis>met betrekking tot gegevens die leg je eh vast zowel in een organisatie als over organisaties heen. Dus je zorgt dat de de informatieketen eh gelegd kan worden.</v>
+
+00:09:56.440 --> 00:10:01.040
+<v Wouter Diephuis>Ehm en de vervolgvraag is als als organisaties informatie hebben uitgewisseld, hè, dat zal als gevolg van een eh...</v>
+
+00:10:12.338 --> 00:10:14.618
+<v Spreker 1 (Ruimte)>Ik ik snap ik snap die verbondenheid.
+
+00:10:14.618 --> 00:10:26.018
+<v Spreker 1 (Ruimte)>Alleen het eh waarom waarom ik het vraag is eh als we de verantwoording twee keer gaan oplossen, dan hebben we hebben we het complexer gemaakt.
+
+00:10:26.018 --> 00:10:36.798
+<v Spreker 1 (Ruimte)>Dus dus ik probeer even scherp te zijn over wat wat moeten we in deze standaard nog aan verantwoording oplossen en wat is al opgelost en moeten we gewoon een nauwe verbinding maken.
+
+00:10:37.248 --> 00:10:38.218
+<v Spreker 2 (Ruimte)>Mag ik een poging doen?
+
+00:10:38.218 --> 00:10:38.748
+<v Spreker 1 (Ruimte)>Ja.
+
+00:10:39.318 --> 00:10:44.918
+<v Spreker 2 (Ruimte)>Dus de logboek dataverwerkingen is er voor verantwoording naar de burger toe.
+
+00:10:45.338 --> 00:10:52.288
+<v Spreker 2 (Ruimte)>Daar staat in welke verwerkingen zijn gedaan eh met welke doelbinding en welke grondslag.
+
+00:10:52.688 --> 00:11:01.628
+<v Spreker 2 (Ruimte)>En het logboek toegangsverlening is voor een verantwoording naar het stelsel en de tegenpartij toe.
+
+00:11:01.628 --> 00:11:06.638
+<v Spreker 2 (Ruimte)>Waarin we zeggen welke toegangsbeslissingen er genomen zijn, inclusief de afwijzingen.
+
+00:11:07.448 --> 00:11:14.888
+<v Spreker 2 (Ruimte)>Eh en die kan je dus gebruiken om als je een data hebt gegeven hebt, later terug te vragen van wat heb jij daarmee gedaan?
+
+00:11:15.318 --> 00:11:19.988
+<v Spreker 2 (Ruimte)>Daar staat dus ook wel bijvoorbeeld in wie die persoon was. Dat zei eh Wouter ook al eventjes.
+
+00:11:20.318 --> 00:11:22.718
+<v Spreker 2 (Ruimte)>Dus ze vullen elkaar aan, maar ze hebben een ander doel.
+
+00:11:22.718 --> 00:11:23.188
+<v Wouter Gijsbertsen)>Ja.
+
+00:11:23.518 --> 00:11:35.038
+<v Spreker 2 (Ruimte)>En zou je met de derde logboek eh de transactie logging die FC doet, heb je dan een drietal die het geheel vormen, maar ze hebben alle drie een ander doelgroep.
+
+00:11:35.038 --> 00:11:35.508
+<v Wouter Gijsbertsen)>Ja.
+
+00:11:36.148 --> 00:11:37.388
+<v Spreker 1 (Ruimte)>Ja, duidelijk, dankjewel.
+
+00:11:39.438 --> 00:11:45.928
+<v Wouter Gijsbertsen)>Ja, dus het is dus nadrukkelijk niet niet de bedoeling om om om zaken dubbel te doen, maar echt eh elkaar te laten aanvullen.
+
+00:11:47.378 --> 00:11:48.748
+<v Spreker 1 (Ruimte)>Ja. Mooi.
+
+00:11:48.748 --> 00:11:49.218
+<v Wouter Gijsbertsen)>Ja.
+
+00:11:52.448 --> 00:11:54.218
+<v Wouter Gijsbertsen)>Ehm
+
+00:11:54.218 --> 00:12:09.618
+<v Wouter Gijsbertsen)>nou, dan nog ehm en en waarom is dat nou belangrijk hè, om om zowel de inzichtelijk te hebben welke gegevens je hebt uitgewisseld en ook te kunnen eh inregelen en ook te achterhalen wie een bepaalde gegevensvraag heeft eh gedaan.
+
+00:12:10.328 --> 00:12:15.018
+<v Wouter Gijsbertsen)>Eh nou, dat heeft te maken met eh de kaders die voor de overheid gelden.
+
+00:12:16.208 --> 00:12:30.348
+<v Wouter Gijsbertsen)>Ehm hè, wat ik altijd wat we maar even op de sheet zetten van eh een groot verschil met private sector, hè, in in in de private sector zijn gegevensuitwisseling in principe toe te staan.
+
+00:12:30.348 --> 00:12:33.028
+<v Wouter Gijsbertsen)>Eh eh eh hè, alles mag, tenzij verboden.
+
+00:12:33.358 --> 00:12:41.488
+<v Wouter Gijsbertsen)>Hè, en als je in privacy wetgeving gaat kijken, dan zijn er natuurlijk gewoon heel veel eh regels waardoor je ook als private eh organisaties natuurlijk aan eh aan aan veel privacy regels moet houden.
+
+00:12:41.488 --> 00:13:11.988
+<v Wouter Gijsbertsen)>Maar een groot verschil met de overheid is dat de overheid eigenlijk alleen gegevens mag verwerken ehm en dus ook mag opvragen eh als ze daar expliciet in de wet een taak voor heeft. En dat is aan de ene kant is dat eh lijkt dat beperkend. Aan de andere kant is het op zich ook wel prettig, want je kan eh eh vanuit die taken redeneren en je weet eigenlijk ook waar je vervolgens verantwoording over moet afleggen en en en en hoe je dat eh hoe je dat moet doen.
+
+00:13:11.988 --> 00:13:22.258
+<v Wouter Gijsbertsen)>Dus de overheid mag niks, tenzij het expliciet in een wettelijke taak is opgenomen. En dat kan een wettelijke taak zijn in de wet, maar ook in eh in in lagere regelgeving.
+
+00:13:23.518 --> 00:13:26.918
+<v Rene Kort>Eh Wouter, mag ik iets vragen hierover? Over dit hele specifieke stukje?
+
+00:13:26.918 --> 00:13:27.428
+<v Wouter Gijsbertsen)>Ja.
+
+00:13:27.428 --> 00:13:31.728
+<v Rene Kort)>Ehm het tussen private en overheid.
+
+00:13:31.728 --> 00:13:34.828
+<v Rene Kort)>Hoe zit dat dan? Als je daar zo'n principe dingetje zou van moeten schrijven.
+
+00:13:35.218 --> 00:13:39.528
+<v Rene Kort)>Je hebt nu tussen private sectoren, de overheid vindt dat alles mag tenzij het verboden is.
+
+00:13:39.858 --> 00:13:44.478
+<v Rene Kort)>De overheid vindt van zichzelf dat ze niks mag tenzij expliciet toegestaan, maar hoe zit het tussen elkaar?
+
+00:13:44.478 --> 00:13:45.048
+<v Wouter Gijsbertsen)>Ja.
+
+00:13:45.048 --> 00:14:06.948
+<v Wouter Gijsbertsen)>Nou ja, daar gaan we wat daar gaat spelen van de overheid eh kijk, je dit dit vraagstuk zie je in in in heel veel dossiers die nu eh spelen. Het speelt binnen ehm eh nou eigenlijk voor FDS, hè, als je als je het zo gaat bekijken, daar dat zijn in principe zijn dat eh overheden.
+
+00:14:07.308 --> 00:14:13.628
+<v Wouter Gijsbertsen)>Ehm maar je het is ook mogelijk om informatie vanuit de overheid naar private organisaties te te sturen.
+
+00:14:14.338 --> 00:14:23.018
+<v Wouter Gijsbertsen)>Ehm bepalend is dat er aan beide kanten een een een mogelijkheid moet zijn om eh ja, gewoon gewoon een juridische grondslag moet zijn.
+
+00:14:23.408 --> 00:14:39.018
+<v Wouter Gijsbertsen)>Hè, dus de ene organisatie, hè, de overheid moet een moet een grondslag zien te vinden in het kader van haar taken om eh om informatie aan eh aan een private organisatie eh te te te leveren. En die organisatie moet eh in een bepaald specifiek geval een een grondslag eh hebben.
+
+00:14:39.018 --> 00:15:03.738
+<v Wouter Gijsbertsen)>En die twee verschillen. Hè, dus de de de overheid het is niet zo dat hè, hier staat niks of hier staat niet dat de overheid nooit gegevens met met private organisaties mag uitwisselen. Eh maar wel dat als ze dat doen, dat ze er eh goed moeten kijken hoe dat binnen hun publieke taak eh past.
+
+00:15:04.748 --> 00:15:05.318
+<v Spreker 2 (Ruimte)>Hè en ehm
+
+00:15:05.318 --> 00:15:06.398
+<v Wouter Gijsbertsen)>Dus dus dat is eigenlijk eh
+
+00:15:06.398 --> 00:15:19.018
+<v Spreker 2 (Ruimte)>het het het het naast elkaar leggen van grondslagen aan de ene kant aan de verstrekkende kant en aan de ontvangende kant.
+
+00:15:20.088 --> 00:15:31.908
+<v Spreker 2 (Ruimte)>Maar Wouter, als even samenvattend wat René vroeg, als ons als de overheid gegevens beschikbaar stelt aan private organisaties, moeten ze daar een grondslag voor hebben.
+
+00:15:31.908 --> 00:15:42.028
+<v Spreker 2 (Ruimte)>Ja. Maar ik denk dat andersom, als de overheid private gegevens wil betrekken, dat ze daar geen eh grondslag voor nodig hebben. Dus dat ze dan onder de eerste groep vallen.
+
+00:15:42.028 --> 00:15:43.018
+<v Wouter Gijsbertsen)>Nou,
+
+00:15:43.018 --> 00:16:01.918
+<v Spreker 2 (Ruimte)>Nee, kijk, overheid, je mag ehm wat de overheid voor haar voor voor de taak mag verwerken en dat verschilt dus per per overheidsorganisatie, omdat je daar omdat je ja, bij verschillende taken horen ook verschillende gegevens die je nodig kunt hebben om eh om een om een besluit te nemen.
+
+00:16:02.268 --> 00:16:14.868
+<v Spreker 2 (Ruimte)>Ehm dus je mag ehm nou ja, een een een een eh laat ik de de de de RDW bijvoorbeeld als voorbeeld pakken.
+
+00:16:15.428 --> 00:16:22.148
+<v Spreker 2 (Ruimte)>Ehm hè, de kans dat daar medische gegevens eh aan eh aan verstrekt mogen worden, die is die is niet zo groot.
+
+00:16:22.618 --> 00:16:29.428
+<v Spreker 2 (Ruimte)>Hè, dus je dus het is wel ehm ja, het hangt heel erg van de situatie af.
+
+00:16:31.428 --> 00:16:32.328
+<v Rene Kort)>Ja, oké.
+
+00:16:35.808 --> 00:16:46.408
+<v Spreker 2 (Ruimte)>Hè, dus het is heel erg van kijk, sommige sommige soms heb je generieke gegevensstromen in het kader van taken en soms is het heel erg eh ja, is het heel casuïstisch eh ingericht.
+
+00:16:48.518 --> 00:16:57.658
+<v Spreker 2 (Ruimte)>Maar mag ik het wel zo samenvatten dat als je dus als gemeente iets van de RDW wil gebruiken, moet je daar duidelijke grondslag en doelbinding bij laten zien.
+
+00:16:58.288 --> 00:17:26.048
+<v Spreker 2 (Ruimte)>Maar als je dus als private organisatie dat wil gebruiken, dan moet de overheid dezelfde zorgvuldigheid betrachten. Die geeft ze niet zomaar aan iemand. Maar andersom, als je dus als overheidsorganisatie iets privaat wil betrekken, dus je gaat een overeenkomst aan met een commerciële partij om informatie op te halen die je dan kan gebruiken voor besluitvorming, dan hoef je daar geen doelbinding of grondslag, hoef je geen wettelijk artikel bij te hebben, want het mag tenzij het verboden is.
+
+00:17:26.048 --> 00:17:26.558
+<v Wouter Gijsbertsen)>Nou,
+
+00:17:26.558 --> 00:17:32.188
+<v Spreker 2 (Ruimte)>Nee, het is kijk, je je moet de de de de verstrekkende partij, of je nou overheid
+
+00:17:32.188 --> 00:17:42.118
+<v Wouter Gijsbertsen)>Nou, laat ik hem nog algemener trekken. Om om om persoonsgegevens te verwerken moet je een grondslag hebben.
+
+00:17:42.618 --> 00:17:48.068
+<v Wouter Gijsbertsen)>Dat geldt dat geldt voor overheden, maar dat geldt ook voor private organisaties.
+
+00:17:48.068 --> 00:18:11.758
+<v Wouter Gijsbertsen)>Alleen ehm wat we hebben wat wij duidelijk eh hebben willen maken is is dat je ehm als overheid eh altijd op een in de wet vastgelegde grondslag jezelf moet baseren.
+
+00:18:12.108 --> 00:18:24.118
+<v Wouter Gijsbertsen)>En als eh private organisatie eh hè, van heb je afhankelijk van je taak eh de mogelijkheden om gegevens te verwerken. Maar ik zie dat Els de hand heeft eh opgestoken.
+
+00:18:24.698 --> 00:18:53.018
+<v Ilske Devos)>Ja. Ja, wat ik ehm hoe je dit inderdaad moet vooral moet lezen is ehm de private sector, wat beweegt hun handelen of wat begrenst hun handelen is nou ja, ze zullen winst willen maken, maar in principe als in de wet staat dat iets niet mag, dan mogen ze het niet doen. En bij overheidshandelen werkt het eigenlijk andersom. Dus voor de overheid moet van tevoren bepaald zijn dat ze bepaalde taken hebben en binnen die taken moeten ze dan handelen.
+
+00:18:53.538 --> 00:18:58.758
+<v Ilske Devos)>Dus dat is het eigenlijk wat vooral waarschijnlijk hier aangegeven wordt, is dat er net een omgekeerde denkwijze is.
+
+00:18:59.268 --> 00:19:11.058
+<v Ilske Devos)>Dus als bedrijfsleven hè, heb je wat meer ruimte, tenzij ergens staat dat je iets niet mag. En als overheid moet dus eerst van tevoren bepaald zijn dat je iets wel mag of dat het je taak hoort te zijn.
+
+00:19:11.058 --> 00:19:26.968
+<v Rene Kort)>Ja, dat is ook mijn vraag, dat daar dus een dat dat grijze gebied wat daar tussen ligt, dat zijn allerlei eh overheidsdiensten die dan eh overgeheveld worden of uitbesteed worden aan private partijen. Eh in de omgevingswet hebben we grote problemen met de rol van de omgevingsdiensten bijvoorbeeld.
+
+00:19:27.428 --> 00:19:41.028
+<v Rene Kort)>Eh die vallen overal een beetje half tussenin. En dat geldt ook voor veel uitvoerings eh overheden die dus soms in sommige gevallen wel en in sommige gevallen niet tot diezelfde persoonsgegevens mogen komen bijvoorbeeld. Dus daar zit een stukje dynamiek.
+
+00:19:41.028 --> 00:19:42.008
+<v Wouter Gijsbertsen)>Wat als
+
+00:19:42.008 --> 00:19:48.338
+<v Rene Kort)>Want als dat wordt uitbesteed, want valt dat dan eh dat grijze gebied valt
+
+00:20:05.187 --> 00:20:07.917
+<v Wouter Di...>gebruik zeg maar van de van de bevoegdheid van de overheid.
+
+00:20:08.207 --> 00:20:14.597
+<v Gerard Van Der Hoeven>Dat is een dat is een rol. Dat is een rol, maar je kunt niet verwachten dat ze technisch gezien een kopietje worden van een overheidspartij.
+
+00:20:14.597 --> 00:20:21.377
+<v Gerard Van Der Hoeven>Dat kun je niet afdwingen. Dat is ook niet te doen. Dus daar zit een stukje koppeling die ik nog zoek.
+
+00:20:22.317 --> 00:20:38.317
+<v Gerard Van Der Hoeven>Ehm dus je kunt wel een de kunt de rol misschien wel uitgeven hè, van je mag nu namens een overheid en een omgevingsdienst is een goed voorbeeld. Je mag namens een overheid een eh vergunning controleren hè of eh handhaven of iets dergelijks en daartoe heb je allerlei gegevens nodig die je in een andere rol helemaal niet mag krijgen.
+
+00:20:38.837 --> 00:20:49.007
+<v Gerard Van Der Hoeven>Ehm, maar je kunt niet van die omgevingsdienst verwachten dat hij zich technisch gezien volledig eh gedraagt als een overheidspartij. Dat zou wel eens veel te zwaar kunnen zijn.
+
+00:20:49.377 --> 00:20:53.117
+<v Gerard Van Der Hoeven>Dus daar zit een stukje dynamiek in die we moeten tackelen, denk ik.
+
+00:20:55.617 --> 00:21:05.817
+<v Wouter Di...>Nee, ik ehm ik zit ik zit even te kijken van de de eh want ik stel me dan ik stel me ervoor de overheid eh betreffende overheid die vraagt aan de omgevingsdienst van
+
+00:21:05.817 --> 00:21:17.807
+<v Wouter Di...>ehm bepaalde controles moeten binnen de verantwoordelijkheid van die overheidsdienst uitgevoerd worden. Daar schakelen ze dan een een een private partij voor in. Ehm
+
+00:21:18.297 --> 00:21:21.617
+<v Gerard Van Der Hoeven>Maar dat is dan die geven ze dan toegang tot data.
+
+00:21:21.617 --> 00:21:22.017
+<v Wouter Di...>Ja.
+
+00:21:22.017 --> 00:21:37.827
+<v Gerard Van Der Hoeven>Tot tot bepaalde data en die partij kan ook bepaalde data weer teruggeven aan het aan aan de overheid hè, bijvoorbeeld eh handhavingsgegevens. Ik heb dit ik heb dit gezien op die plek en dat was wel of niet volgens een vergunning. Om maar een voorbeeld te geven.
+
+00:21:38.277 --> 00:21:51.987
+<v Gerard Van Der Hoeven>Dat dat dat vereist dat die ehm in dit geval private partij eh een rol speelt namens de overheid. Dus die krijgt wel of niet die gegevens en die mag wel of niet die gegevens terugmelden en dat soort en die verwerking.
+
+00:21:52.627 --> 00:21:54.417
+<v Gerard Van Der Hoeven>Dat is een rol. Dat is een rol.
+
+00:21:55.307 --> 00:22:00.517
+<v Gerard Van Der Hoeven>Als we de rol één op één koppelen aan de aan de overheidspartij,
+
+00:22:00.517 --> 00:22:18.237
+<v Gerard Van Der Hoeven>dan zeg je de overheid die die private partij moet een kopietje worden van de eh handhavingsclub die misschien zo'n overheid zelf heeft. Ehm, want dan dan kun je dan weet je zeker dat hij zich helemaal ehm gedraagt als een overheid, omdat hij een overheid is.
+
+00:22:18.237 --> 00:22:24.997
+<v Gerard Van Der Hoeven>Maar een overheid zijn en het spelen van de rol, zeker in data en in toegang is niet hetzelfde.
+
+00:22:25.617 --> 00:22:30.987
+<v Gerard Van Der Hoeven>En kan heel zwaar worden voor een private partij om dat überhaupt nog te kunnen.
+
+00:22:31.427 --> 00:22:40.947
+<v Gerard Van Der Hoeven>Want de de private sector is niet voorbereid op dat niks mag. Dus je zult ze een soort ehm eh eh exclusief dynamisch ergens iets mee moeten doen.
+
+00:22:41.837 --> 00:22:42.237
+<v Wouter Di...>Ja.
+
+00:22:42.237 --> 00:22:51.687
+<v Danny Greefhorst>Ik denk dat we nu wel een werkpunt hebben. We hebben ook de kans om later nog in de verdieping te gaan hè. Dus is goed om daar gebruik van te maken. Dus hoeven we nu niet overal op in detail te treden.
+
+00:22:52.487 --> 00:22:55.807
+<v Danny Greefhorst>Dus ik stel voor dat we deze noteren voor later.
+
+00:22:55.807 --> 00:22:56.287
+<v Wouter Di...>Oké.
+
+00:22:59.397 --> 00:23:03.747
+<v Wouter Di...>Oké, nee maar prima, dan gaan we dan eh gaan we verder.
+
+00:23:05.107 --> 00:23:12.007
+<v Danny Greefhorst>Ja, nou ja, dus je mag hem je mag hem beantwoorden, maar dit is ook typisch iets wat we op kunnen nemen als een onderwerp om later te adresseren.
+
+00:23:12.007 --> 00:23:12.507
+<v Wouter Di...>Ja.
+
+00:23:12.927 --> 00:23:25.997
+<v Wouter Di...>Nee ja, goed, ik ik eh nou, ik zou ik zou die discussie nu of dus ik zou het gesprek graag nu nog verder voeren, maar laten we dat even aan het eind van de presentatie parkeren. Dan eh Ja. Want hier kunnen we volgens mij nog heel lang over doorpraten.
+
+00:23:26.547 --> 00:23:27.247
+<v Danny Greefhorst>Inderdaad.
+
+00:23:28.007 --> 00:23:33.727
+<v Wouter Di...>Maar goed, de ehm even kijken, als je de ehm
+
+00:23:35.487 --> 00:23:41.827
+<v Wouter Di...>Ja, dus er zijn eh er zijn grote verschillen binnen organisaties. Eh wat is eh van belang?
+
+00:23:42.827 --> 00:23:47.457
+<v Wouter Di...>Ehm organisaties en dat zal voor iedere organisatie voor zich gelden.
+
+00:23:47.967 --> 00:23:54.217
+<v Wouter Di...>Eh is voor welke doelen, wat zijn mijn taken? Dus voor voor welke doelen heb ik nou gegevens precies nodig?
+
+00:23:55.437 --> 00:23:59.227
+<v Wouter Di...>Ehm, welke gegevens mag ik als organisatie vragen?
+
+00:23:59.947 --> 00:24:02.827
+<v Wouter Di...>Ehm en wie mag dat eh wie mag dat doen?
+
+00:24:02.827 --> 00:24:13.027
+<v Wouter Di...>Hè, van is dat moet dat op organisatieniveau eh in de eh toegangsvoorlening worden vastgelegd? Eh moet dat op medewerkersniveau eh of op systeem eh systeemniveau?
+
+00:24:13.027 --> 00:24:23.367
+<v Wouter Di...>Hè, dat dat er zeker in het kader van reguliere uitwisseling kan ik me voorstellen van dat dat niet eh gebeurt op basis van eh specifieke verzoeken door die door eh werknemers worden gedaan.
+
+00:24:23.367 --> 00:24:28.327
+<v Wouter Di...>Maar dat gaat gewoon geautomatiseerd. En de vraag is dan hoe maak je dat inzichtelijk?
+
+00:24:31.707 --> 00:24:39.677
+<v Wouter Di...>En uiteindelijk doe je dat om eh aan het eind van de rit eh verantwoording te kunnen afleggen over wat je hebt gedaan.
+
+00:24:39.677 --> 00:24:52.927
+<v Wouter Di...>Dus heb je gegevens eh ehm eh gebruikt eh waar je een grondslag voor had en is dat ook gegaan eh die uitwisseling door eh iemand die daartoe eh bevoegd is geweest binnen je organisatie.
+
+00:24:56.847 --> 00:24:58.557
+<v Wouter Di...>Ja, nog de volgende sheet.
+
+00:25:00.587 --> 00:25:02.097
+<v Wouter Di...>Even kijken hoor, de ja.
+
+00:25:04.427 --> 00:25:28.437
+<v Wouter Di...>Ehm nou, en daar heb je ehm dus toegangsvoorlening is is dus een verantwoordings eh instrument, wat ik net aangaf. Eh dat geldt zowel eh toegangsvoorlening per organisatie, afhankelijk van de taken eh die je hebt, de gegevens die je daarvoor nodig hebt. Ehm en het in kaart brengen ehm en zo zul je eh je eigen toegangsvoorlening kunnen inrichten.
+
+00:25:28.437 --> 00:25:40.917
+<v Wouter Di...>Hè, dat kan je natuurlijk helemaal zelf doen of je kan gebruik maken van wat er eh eh gestandaardiseerd beschikbaar is. Hè, dat is eigenlijk al een beetje een voorloper naar eh de standaard toe.
+
+00:25:41.427 --> 00:25:46.507
+<v Wouter Di...>Ehm, maar je moet het niet alleen als organisatie voor jezelf hebben, maar ook eh als organisatie onderling.
+
+00:25:47.077 --> 00:26:01.707
+<v Wouter Di...>Hè, dus je moet ook in staat zijn om als als organisaties gegevens van jou vragen om eh te kunnen omgaan met eh met de de de rollen ehm hè, die in het kader van toegangsvoorlening zijn zijn ingericht.
+
+00:26:04.757 --> 00:26:20.127
+<v Wouter Di...>Nou, en dan ehm eenduidigheid bevorderen. En dit is eigenlijk hetzelfde als wat ze bij eh het logboek dataverwerking hebben gedaan. Ehm dat betekent dat je moet standaardiseren in hoe je eh toegangsvoorlening binnen organisaties eh vormgeeft.
+
+00:26:20.817 --> 00:26:25.927
+<v Wouter Di...>Ehm dat geldt zowel voor de mogelijkheden die je hebt als de manier waarop je dat eh doet.
+
+00:26:26.797 --> 00:26:42.817
+<v Wouter Di...>Ehm en in het kader van informatieuitwisseling moet je dus ook van elkaar eh dat ligt eigenlijk een beetje in het eerste besloten. Eh je moet eh om kunnen gaan eh met de inrichting van toegangsvoorlening die je als organisatie afzonderlijk eh doet.
+
+00:26:47.117 --> 00:27:08.977
+<v Wouter Di...>Nou, en dan ehm nou, wat is daarvoor belang van van belang? Dat je dus afspraken maakt eh over de manier waarop je toegangsvoorlening, hoe je daarmee omgaat. Ehm belangrijk is ook dat elk eh overheidsorgaan, zoals bij het logboek dataverwerking ook zo, je bent verantwoordelijk eh voor je eigen voor je eigen delen. Hè, dus de ehm als je organisatie uitlevert op het moment dat je volgens je eigen regels organisatie hebt geleverd aan een organisatie,
+
+00:27:08.977 --> 00:27:26.737
+<v Wouter Di...>dan is de ontvangst van gegevens en eh en de wijze waarop het andere overheidsorgaan ermee omgaat, valt buiten je eigen verantwoordelijkheid. Ehm
+
+00:27:28.817 --> 00:27:56.967
+<v Wouter Di...>En verder is het eh denken wij een eh ja, een een kwestie van de grote gemene deler zoeken. Ehm misschien een een een baseline voor toe eh voor voor toegangsvoorlening. En hè, wat ik daarmee bedoel is dat je eh bepaalde mogelijkheden, hè, fijnmazigheid in de toegangsvoorlening, dat je daar zaken zou kunnen afspreken waardoor je eigenlijk alle smaken en details die je voor toegangsvoorlening nodig hebt kan kan faciliteren.
+
+00:27:57.827 --> 00:28:06.337
+<v Wouter Di...>Ehm nou, uiteindelijk ehm om verantwoording te kunnen afleggen eh zal ook logging eh nodig zijn.
+
+00:28:06.917 --> 00:28:22.587
+<v Wouter Di...>En dat zal uiteindelijk dan eh tot een functionele invulling eh van de mogelijkheden leiden en en ehm op basis daarvan eh kom je tot de technische invulling en de aspecten die daarin mogelijk gestandaardiseerd zouden kunnen worden.
+
+00:28:25.867 --> 00:28:37.037
+<v Wouter Di...>En uiteindelijk kom je dan vanuit de behoefte en de kaders geredeneerd tot eh ja, tot de beschrijving van de standaard. En dat is wat we volgens mij eh op dit moment eh samen proberen te doen.
+
+00:28:47.387 --> 00:28:54.007
+<v Wouter Di...>Dus dat was dit was eh dit was eigenlijk wat we vandaag eh wilden vertellen.
+
+00:28:54.007 --> 00:29:18.297
+<v Wouter Di...>En het is eh kijk, er is over het juridisch kader valt nog eh veel meer te zeggen. En we zijn gewoon bewust niet ingegaan op specifieke grondslagen in de specifieke situaties, maar het is meer een soort bewustwording hè, van als we de standaard aan het inrichten zijn, weet dat daar behoeftes eh boven liggen van overheidsorganisaties die zich aan een eh aan een heel scala van regels moeten houden.
+
+00:29:18.897 --> 00:29:26.917
+<v Wouter Di...>Ehm en de standaard dus als een instrument willen gebruiken om die regels eh na te leven.
+
+00:29:27.917 --> 00:29:42.117
+<v Gerard Van Der Hoeven>Hè, en ik weet, dit zal ook ehm dit zal ook vast wel ten grondslag liggen aan eh aan aan de werkgroep hè, zoals die ooit is eh is ingesteld, maar die verbinding eh continu in het zicht houden is denk ik wel belangrijk.
+
+00:29:43.137 --> 00:29:46.617
+<v Gerard Van Der Hoeven>Wouter, is er is er een eh juridische definitie van keten?
+
+00:29:49.577 --> 00:29:51.627
+<v Wouter Di...>Eh, zover ik weet niet.
+
+00:29:53.537 --> 00:29:54.407
+<v Gerard Van Der Hoeven>Oké, want er wordt wel
+
+00:30:15.632 --> 00:30:22.302
+<v Wouter>is dat je doordat je gestandaardiseerd werkt, eh kun je ehm nou kun je de de zaken die je zelf eh of mutaties die je zelf vastlegt en gegevens die je verstrekt.
+
+00:30:22.302 --> 00:30:33.622
+<v Wouter>Als je dat allemaal op dezelfde manier doet, ehm hè, dan ehm hè, dan kan je dus met eh collega-organisaties zonder dat je van tevoren al weet wie dat precies zijn en hoe groot die keten is.
+
+00:30:33.622 --> 00:30:47.342
+<v Wouter>Kun je eh heb je dezelfde werkwijze.
+
+00:30:47.342 --> 00:30:56.162
+<v Wouter>Maar het belangrijkste is in in een keten dat je eh verantwoordelijk bent eh voor dat stukje waar je zelf over gaat.
+
+00:30:56.162 --> 00:31:01.442
+<v Wouter>En ehm als je in de chat.
+
+00:31:01.442 --> 00:31:02.012
+<v Michiel Trimpe>Ja.
+
+00:31:02.012 --> 00:31:07.992
+<v Michiel Trimpe>De één is dus wel degelijk iets waar een verbindende factor is.
+
+00:31:07.992 --> 00:31:15.912
+<v Michiel Trimpe>Dat er een identifier een doel om een geheel is dat eh dat de verwerkingen aan elkaar verbindt.
+
+00:31:15.912 --> 00:31:27.012
+<v Wouter>Ja, maar ik denk dat dat is ook weer terug naar maar hoe passen we in het grotere geheel? Want we hebben inderdaad over dataverwerking hebben we ook en die is wellicht meer gefocust op de keten dan wij.
+
+00:31:27.012 --> 00:31:32.012
+<v Wouter>Dus die heeft meer intentie over de hele keten heen. Ja. Waarin het bij ons vaak is alleen naar één stapje verder tussen elkaar.
+
+00:31:32.012 --> 00:31:35.012
+<v Michiel Trimpe>Nou ja. En zelfs misschien ook.
+
+00:31:35.012 --> 00:31:46.012
+<v Wouter>Ja. Misschien nog even om het proberen samen te voegen, er is inderdaad ook men is met mee waarschijnlijk niet omdat er ook een juridisch beleidskader al bestaat voor logboekdataverwerkingen.
+
+00:31:46.012 --> 00:31:53.912
+<v Wouter>Dus ik zal even de link in de chat zetten. Dat is denk ik ook goede inspiratie van hé, wat wat hoe ziet zo'n beleidskader er dan uit?
+
+00:31:53.912 --> 00:32:02.612
+<v Wouter>En en eh een punt van de agenda. Eh Gerard heeft ook nog een presentatie voorbereid van 5 à 10 minuten.
+
+00:32:02.612 --> 00:32:06.612
+<v Wouter>Dus we zitten redelijk op de agenda.
+
+00:32:06.612 --> 00:32:14.412
+<v Wouter>Gerard, heb jij eh inschatting is het wil jij graag van start of wil je dit nog even laten lopen?
+
+00:32:14.412 --> 00:32:22.712
+<v Gerard Van Der Hoeven>Nou, ik denk dat het verstandig is om van start te gaan, want dan denk ik dat er heel veel dingen bij bij elkaar komen. 5 à 10 minuten is eh.
+
+00:32:22.712 --> 00:32:27.812
+<v Michiel Trimpe>Als er nog hele belangrijke dingen uit de vorige presentatie zijn, dan eventjes bewaren tot het eind.
+
+00:32:27.812 --> 00:32:33.812
+<v Wouter>Ja, het past ook heel mooi bij de laatste 10 minuten, want de laatste 10 minuten is inderdaad eh hoe gaan we de diepte in?
+
+00:32:33.812 --> 00:32:38.112
+<v Michiel Trimpe>Ja. Oké. Ja, super Gerard. Voel je je graag.
+
+00:32:38.112 --> 00:32:46.112
+<v Gerard Van Der Hoeven>Even kijken of dit goed gaat. Ja, we zien je. Mijn slidejes zien.
+
+00:32:46.112 --> 00:32:56.512
+<v Gerard Van Der Hoeven>Helemaal goed. Dan kan ik jullie alleen, ik kan de chat niet meer zien, dus mocht er commentaar zijn, dan eh eh dan graag. Ja. Toeter er maar gelijk doorheen.
+
+00:32:56.512 --> 00:33:05.012
+<v Gerard Van Der Hoeven>Goed. Nou, fijn om dit even met eh eh met jullie te delen. Eh dank Wouter eh voor voor alle eh linkjes.
+
+00:33:05.012 --> 00:33:18.212
+<v Gerard Van Der Hoeven>Ehm het is sowieso nog een keer handig om, we hadden het al over gehad, om nog een keer wat meer deep dive te doen op het iSHARE framework en de en de structuur daarvan, maar hè, we beginnen nu maar met het eh het juridische deel.
+
+00:33:18.212 --> 00:33:28.712
+<v Gerard Van Der Hoeven>Ehm de essentie van het iSHARE framework eh wat beheerd wordt door de iSHARE Foundation is en blijft your data, your choice.
+
+00:33:28.712 --> 00:33:41.812
+<v Gerard Van Der Hoeven>Een framework eh beschikbaar stellen waarbij data-eigenaren, data-rechthebbenden bepalen wat er met hun data gebeurt, wanneer op volledig gefedereerde eh en gedistribueerde wijze.
+
+00:33:41.812 --> 00:33:50.812
+<v Gerard Van Der Hoeven>En juridische dekking is daar absoluut essentieel in geweest in het begin toen het werd ontwikkeld door het ministerie van I&W.
+
+00:33:50.812 --> 00:34:08.212
+<v Gerard Van Der Hoeven>Vanuit de gedachte, de kwetsbaarheid van die data die is eh eh die is soms groot als het gaat bijvoorbeeld over inhoud van containers of aankomstmomenten van containers waar het iSHARE framework oorspronkelijk voor startte en daar was er behoefte aan een hele expliciete structuur die juridische zekerheid geeft bij elke data-uitwisseling.
+
+00:34:08.212 --> 00:34:12.412
+<v Gerard Van Der Hoeven>Ehm dus basisbeginselen van het eh van het framework.
+
+00:34:12.412 --> 00:34:29.012
+<v Gerard Van Der Hoeven>Dus primair dus die juridische dekking geven voor datatransacties tussen private partijen. Nou, jullie kunnen allemaal lezen. Eh private partijen, eh private partijen en overheid en wellicht zelfs overheid naar overheid.
+
+00:34:29.012 --> 00:34:37.012
+<v Gerard Van Der Hoeven>Ook dus als er geen bestaande relatie is. Het geeft de volledige basis, een een gedistribueerde NDA met specifieke besturing voor elke transactie.
+
+00:34:37.012 --> 00:34:46.012
+<v Gerard Van Der Hoeven>En dit is zowel in een één op één relatie, maar ook in een langere keten op het moment dat er andere organisaties betrokken zijn.
+
+00:34:46.012 --> 00:35:01.012
+<v Gerard Van Der Hoeven>En de sleutel in de puzzel is een ja, een soort four-corner structuur waarbij er zekerheid wordt eh eh geregistreerd.
+
+00:35:01.012 --> 00:35:14.012
+<v Gerard Van Der Hoeven>Ehm en eh zekerheid wordt eh wordt uitgegeven. Stapje één, de organisatie credentials waarin organisaties akkoord gaan met een eh ja, een multilaterale overeenkomst die de basis legt.
+
+00:35:14.012 --> 00:35:28.512
+<v Gerard Van Der Hoeven>Ik ga zo meteen de details in. Die wordt ondertekend met behulp van een betrouwbare identity, bijvoorbeeld eHerkenning of in geval van machine to machine met de eIDAS eSEALs, waarbij één uniforme identifier wordt geregistreerd.
+
+00:35:28.512 --> 00:35:46.512
+<v Gerard Van Der Hoeven>Die daarna bruikbaar is in alle transacties. Tweede punt zijn data toegangs- en gebruikscredentials of tokens, waarbij dus specifieke juridische details worden uitgegeven door de datarechthebbende. Of direct of via een geaccrediteerde leverancier.
+
+00:35:46.512 --> 00:35:53.012
+<v Gerard Van Der Hoeven>Hierin staat wat je mag doen met data die je eh hebt ontvangen, maar ook welke data je toegang krijgt.
+
+00:35:53.012 --> 00:36:14.012
+<v Gerard Van Der Hoeven>Data consumer die vraagt toegang aan, eigenlijk allemaal nou, bekende patronen waar we het afgelopen tijd eh ook in dit overleg over hebben gehad. Data consumer vraagt toegang aan en stelt die credentials beschikbaar aan de data provider of laat de data provider direct bij het autorisatieregister die eh credentials ophalen.
+
+00:36:14.012 --> 00:36:28.012
+<v Gerard Van Der Hoeven>En de data provider en/of de autorisatieregister toetst dat en besluit of er eh of er toegang kan worden verleend waarna de data provider die data toegang geeft.
+
+00:36:28.012 --> 00:36:52.012
+<v Gerard Van Der Hoeven>Nou, dit gebeurt allemaal op basis van bewezen webstandaarden en patronen. Protocolstandaarden waar we het nu ook over hebben, OAuth2, OpenID Connect, EAM structuren. Waar we dezelfde schema's gebruiken, dus API eh specificaties en eh en gedragingen en attributen en dezelfde token schema's.
+
+00:36:52.012 --> 00:37:12.012
+<v Gerard Van Der Hoeven>Zodat het herkenbaar is wat er binnenkomt en dat je dat elke keer kan eh gebruiken op dezelfde manier. Maar de sleutel in alles is dat iSHARE als foundation de bewaking doet doordat alle gebruikers eh van het framework daar ook constante input op leveren.
+
+00:37:12.012 --> 00:37:29.012
+<v Gerard Van Der Hoeven>Dat is een continu proces. Elke twee weken komen er dus ook weer nieuwe inzichten en nieuwe discussies over eh eh over toevoeging van elementen. Maar iSHARE als foundation speelt daar dus geen eh geen rol in de daadwerkelijke operationele uitwisseling.
+
+00:37:29.012 --> 00:37:37.012
+<v Gerard Van Der Hoeven>Nou, stapje naar dat juridische stuk. En mochten er vragen zijn, eh doe maar roepen.
+
+00:37:37.012 --> 00:37:59.012
+<v Gerard Van Der Hoeven>Stapje één is die multilaterale overeenkomst waarbij eigenlijk alle organisaties hetzelfde akkoord geven dat ze accepteren, punt één, de nationale wetgeving, eh Data Act en Data Governance Act en GDPR.
+
+00:37:59.012 --> 00:38:09.012
+<v Gerard Van Der Hoeven>Dat is eigenlijk generiek. En het hele eh juridische kader werkt eigenlijk op basis van derdenwerking. In sommige gevallen heb je namelijk internationale spelers die niet per se vanuit het Nederland of specifiek vanuit Europa komen.
+
+00:38:09.012 --> 00:38:13.012
+<v Gerard Van Der Hoeven>En hiermee zorg je dat er dezelfde juridische dekking is.
+
+00:38:13.012 --> 00:38:14.012
+<v Marc de Boer>Mark.
+
+00:38:14.012 --> 00:38:22.012
+<v Marc de Boer>Ja, ik heb een eh niet eh jurist vraag. Derdenwerking, wat betekent dat?
+
+00:38:22.012 --> 00:38:36.012
+<v Gerard Van Der Hoeven>En dat je dit dus doorgeeft aan eh aan eh aan anderen, waarmee je dus dat je daarmee in een keten machtigingen kan geven.
+
+00:38:36.012 --> 00:38:43.012
+<v Gerard Van Der Hoeven>Nou, kan misschien Wouter, eh moet ik die aan jou geven, want ik ben ook geen eh geen pure jurist. Sowieso geen jurist.
+
+00:38:43.012 --> 00:38:54.012
+<v Michiel Trimpe>Maar dit had te maken met internationaal, dus je hebt twee partijen die niet dezelfde nationale wet hebben na te leven, die gegevens uitwisselen. Ja.
+
+00:38:54.012 --> 00:39:07.012
+<v Michiel Trimpe>Ja, het belangrijkste in derdenwerking is dat een partij kan delegeren aan een andere om toegang te krijgen onder eh de afspraak die gemaakt is door deze partij.
+
+00:39:07.012 --> 00:39:10.012
+<v Michiel Trimpe>Dus daar dat je daarmee in een keten machtigingen kan geven.
+
+00:39:10.012 --> 00:39:19.012
+<v Michiel Trimpe>Oké. Ja, derde werking in de in de meest juridische zin.
+
+00:39:19.012 --> 00:39:34.012
+<v Gerard Van Der Hoeven>Derde punt, alle organisaties accepteren de terms of use als basis waarin. Maar daarbij staat niet wat die terms of use staan. Dat is per transactie eh gespecificeerd.
+
+00:39:34.012 --> 00:39:43.012
+<v Gerard Van Der Hoeven>En per delegation. Maar de terms of use staat eigenlijk, jij accepteert op het moment dat je van iemand licenties eh krijgt, gebruikslicenties krijgt, accepteer je dat je daar eh dat je die zult naleven.
+
+00:39:43.012 --> 00:39:44.012
+<v Marc de Boer>Mark.
+
+00:40:04.218 --> 00:40:08.618
+<v Gerard Van Der Hoeven>Dat is het stukje waar delegations kunnen worden doorgegeven aan een derde partij die zelfs niet in het eh</v>
+
+00:40:08.618 --> 00:40:20.648
+<v Gerard Van Der Hoeven>in de overeenkomst valt die bijvoorbeeld als eh onderaannemer ergens wordt gebruikt.</v>
+
+00:40:22.048 --> 00:40:23.648
+<v Gerard Van Der Hoeven>SLA's voor Service Providers.</v>
+
+00:40:24.918 --> 00:40:35.288
+<v Gerard Van Der Hoeven>Volgens die terms of use waar hè een aantal basisvoorwaarden zijn afgesproken, waaronder andere de SLA's voor eh voor service providers, maar ook voor de geaccrediteerde partijen.</v>
+
+00:40:35.288 --> 00:40:37.068
+<v Gerard Van Der Hoeven>Door data rechthebbenden uit te geven licenties door Data Consumers.</v>
+
+00:40:37.928 --> 00:40:46.508
+<v Gerard Van Der Hoeven>en het accepteren van de door data rechthebbende uit te geven licenties voor eh niet door, voor data consumers.</v>
+
+00:40:47.208 --> 00:40:56.518
+<v Gerard Van Der Hoeven>Dus de juridische structuur maakt het mogelijk dat je eh een derde gebruiksrecht geeft, doelbinding geeft of op de data die je beschikbaar stelt.</v>
+
+00:40:56.518 --> 00:40:58.318
+<v Gerard Van Der Hoeven>https://framework.ishare.eu/main-aspects-of-the-ishare-trust-framework/legal-provisions</v>
+
+00:40:59.528 --> 00:41:06.518
+<v Gerard Van Der Hoeven>Dit is het multilaterale deel. En dan dus per delegation, gebruikslicenties waar die doelbinding in zit.</v>
+
+00:41:08.698 --> 00:41:19.148
+<v Gerard Van Der Hoeven>Gebruikslicenties worden meegegeven, ook technisch in de tokens die worden uitgegeven door de data rechthebbende of door data rechthebbende gebruikte geaccrediteerde services.</v>
+
+00:41:19.148 --> 00:41:27.448
+<v Gerard Van Der Hoeven>Dus het iSHARE framework bestaat uiteindelijk uit een ecosysteem van geaccrediteerde partijen die die bewijsjes uitgeven.</v>
+
+00:41:28.418 --> 00:41:37.488
+<v Gerard Van Der Hoeven>Maar het is aan de data rechthebbende ook nog vrij om te zeggen: ik ga dat zelf doen. Ik ga zelf dat element implementeren. Als dat zijn eigen rechten zijn, is dat oké.</v>
+
+00:41:38.118 --> 00:41:39.078
+<v Gerard Van Der Hoeven>Deze licenties (https://github.com/iSHAREScheme/licenses/blob/main/License%20list.md)</v>
+
+00:41:39.078 --> 00:41:43.248
+<v Danny Greefhorst>tijd hebben we in principe bereikt. Weet je, zit je tegen het einde van de</v>
+
+00:41:44.218 --> 00:41:47.048
+<v Gerard Van Der Hoeven>Nou, ik ik chase nog een klein beetje door als je dat oké vindt.</v>
+
+00:41:48.078 --> 00:41:49.738
+<v Danny Greefhorst>Laten we er twee minuten van maken. Dan eh</v>
+
+00:41:49.738 --> 00:41:54.288
+<v Gerard Van Der Hoeven>Dan blaas ik nog een beetje harder door en dan eh die licentie, want dit is wel essentieel.</v>
+
+00:41:54.288 --> 00:41:58.618
+<v Gerard Van Der Hoeven>Die licenties zijn stapelbaar en bevatten wat de data gebruiker mag doen met die data.</v>
+
+00:41:59.538 --> 00:42:13.988
+<v Gerard Van Der Hoeven>En die licenties, die lijst met licenties zijn machine readable en worden ook beheerd in het beheerproces eh van ons framework, zodat daar steeds ook weer nieuwe gebruikslicenties die zorgen voor interoperabiliteit en herkenbaarheid over een keten heen eh gaat ontstaan.</v>
+
+00:42:15.428 --> 00:42:28.808
+<v Gerard Van Der Hoeven>Nou, dat leidt dus tot een token structuur waar je een partij mag kan machtigen, waar je bepaalde zekerheden vereist, waar je daarmee toegangsrechten op attribuutniveau geeft en vervolgens gebruikslicenties die daarbij horen die ik net heb benoemd.</v>
+
+00:42:31.188 --> 00:42:38.518
+<v Gerard Van Der Hoeven>Belangrijk in dit hele geheel, mag ik die nog even af, is dat er gedecentraliseerde ondertekening en vastlegging eh gebeurt.</v>
+
+00:42:38.518 --> 00:42:54.518
+<v Gerard Van Der Hoeven>Dus op elk ketenelement in eh in de verschillende rollen kan er geregistreerd worden dat die data is opgehaald tegen die voorwaarden, zodat er op alle vlakken gedetailleerde registratie is eh welke data consumer welke data heeft ontvangen tegen welke voorwaarden.</v>
+
+00:42:55.168 --> 00:43:14.268
+<v Gerard Van Der Hoeven>En dit is volledig volgens het principe van non-repudiation. Er constant juridische zekerheid van die transacties. En daarmee biedt het framework dus de flexibiliteit van die geharmoniseerde laag, maar ook de per eh nou ja, per delegation details eh van het eh van het gebruik.</v>
+
+00:43:14.268 --> 00:43:25.018
+<v Gerard Van Der Hoeven>En waarmee je dus als private partij altijd blijft bepalen wat er met jouw data mag gebeuren tegen welke eh op welk moment. Maar datzelfde kan je natuurlijk als eh publieke partij gebruiken.</v>
+
+00:43:25.808 --> 00:43:31.628
+<v Gerard Van Der Hoeven>Nou, tot zover dan maar de de de de de korte eh editie.</v>
+
+00:43:35.418 --> 00:43:42.528
+<v Gerard Van Der Hoeven>zodat iedereen op elk moment weet wat zijn eh gebruiksrechten zijn, maar ook wie welke gebruiksrechten heeft opgevraagd.</v>
+
+00:43:46.668 --> 00:43:48.118
+<v Gerard Van Der Hoeven>Is tot zover?</v>
+
+00:43:48.828 --> 00:43:50.888
+<v Gerard Van Der Hoeven>Ik zal de de slides even delen hier.</v>
+
+00:43:53.488 --> 00:44:01.858
+<v Danny Greefhorst>Misschien wel eh interessant is, we hebben nu twee presentaties gehad van eh</v>
+
+00:44:03.518 --> 00:44:23.948
+<v Danny Greefhorst>zien jullie als presentatoren een overlap of een verschil? Zijn hier dingen waarvan je zegt: hé, eh Wouter van hé, dat daar kijk ik van op eh wat iSHARE gedaan heeft of die zijn eh ver andersom. Zie jij Gerard dingen in Wouter's presentatie van ik denk hé, dat is heel anders dan wij het zouden hebben gedaan hebben of zouden willen.</v>
+
+00:44:30.928 --> 00:44:42.958
+<v Gerard Van Der Hoeven>Ehm ik denk dat het verschil zit hem in de de aanvliegroute vanuit overheid, wat mag ik allemaal en wat waar heb ik de de rechten toe en dan krijg je toegang.</v>
+
+00:44:43.948 --> 00:45:01.488
+<v Gerard Van Der Hoeven>Ehm terwijl de de iSHARE aanvliegroute is natuurlijk vanuit private partijen die ja, expliciet toegang geven en niet uitgaan van ja, je mag het sowieso. Het is een discussie die ik ook al vaker heb gehad met bijvoorbeeld de de douane.</v>
+
+00:45:01.488 --> 00:45:13.908
+<v Gerard Van Der Hoeven>Ja, ik heb sowieso toegang tot het systeem, maar dat heb je niet. Je hebt toe je hebt een verplicht eh recht tot eh tot het ontvangen van een rapportage, maar je hebt niet een verplicht recht tot toegang tot eh eh tot API's of tot databronnen.</v>
+
+00:45:15.808 --> 00:45:16.218
+<v Wouter Diephuis>Ja.</v>
+
+00:45:18.248 --> 00:45:20.008
+<v Wouter Diephuis>Ja, nee, ik denk inderdaad de aanvliegroute.</v>
+
+00:45:20.008 --> 00:45:38.398
+<v Wouter Diephuis>Maar ik denk gewoon het doel zeg maar van eh eh de de de kern is wel hè, van eh als je informatie verwerkt of je nou privaat of publiek bent, eh hè, van dat moet altijd een doel dienen. Hè, je je je hebt wel altijd binnen een kader eh eh te werken.</v>
+
+00:45:38.398 --> 00:46:07.078
+<v Wouter Diephuis>Ehm en eh iSHARE is is een eh zie ik als een een eh een best wel gedetailleerde invulling daarvan. Hè, hoe je dat hoe je dat allemaal netjes kan eh kan afrekenen om te zorgen dat je eh ja, voorafgaand borgt dat je eh ja, niet teveel informatie vraagt en en eigenlijk gewoon informatie op maat vraagt.</v>
+
+00:46:07.078 --> 00:46:08.928
+<v Wouter Diephuis>En als een uitvoersel daarvan daar ook je verantwoording over kan afleggen.</v>
+
+00:46:09.438 --> 00:46:48.638
+<v Danny Greefhorst>Ja, is het is het eerlijk om te zeggen dat ik een beetje diezelfde tweedeling uit de vraag voorkwam. Bij overheid zijn we gaan we er eigenlijk vanuit dat we gaan uitzoeken of het allemaal klopt en macht en tussen twee organisaties en als het zo is, dan maken we een contract en voorwaarden en vanaf dat moment hebben we toegang tot elkaars gegevens of mogen we verwerken. En bij deze private samenwerking is het eerder dat je dus eh ad hoc eh voorwaarden verbindt aan de verbinding en die steeds meestuurt eh waar je dus eh meer eh ja, meer op de transactie en meer eigenaar eh meer naar juridische voorwaarden verbindt als private partij.</v>
+
+00:46:49.508 --> 00:47:18.318
+<v Gerard Van Der Hoeven>Het hoeft niet alleen ad hoc. Dat kan ook voor periode van een jaar, maar het is inderdaad wel per per deelactie en per attribuut. Dus het is niet altijd hoeft hè. Dat is de het het het is de ultieme detaillering waar je ook wel weer vanaf kan stappen. Ik wil dat voor een langere periode of ik wil veel minder eh vereisten stellen. Het framework is zo gemaakt dat je tot ver achter de komma kan specificeren.</v>
+
+00:47:20.398 --> 00:47:23.898
+<v Danny Greefhorst>Oké, want ik heb terug te pakken voor de laatste 4 minuten nog helaas.</v>
+
+00:47:24.808 --> 00:47:32.828
+<v Danny Greefhorst>Ehm dus ja, een hele mooie presentatie en we ook zien dat het juridisch kader ook een een groot stuk alleen al op zich is.</v>
+
+00:47:33.638 --> 00:47:52.628
+<v Danny Greefhorst>Eh ik zou graag even bespreken hoe we nu verder willen om meer de diepgang in te gaan. Want we hebben denk ik een een luxe probleem dat er zoveel verschillende perspectieven zijn en heel veel mensen bij willen dragen. Eh maar hoe willen we dat in banen leiden naar nou, bijvoorbeeld wat gaan we de volgende sessie doen?</v>
+
+00:47:53.628 --> 00:48:03.978
+<v Danny Greefhorst>Ik merk dat aan mijn kant het eh lijkt dat het lijkt alsof er behoefte is aan subgroepen met waar meer verdieping in gezocht kan worden voor bepaalde onderwerpen.</v>
+
+00:48:07.128 --> 00:48:09.418
+<v Danny Greefhorst>Eh leeft dat bij iedereen?</v>
+
+00:48:09.418 --> 00:48:12.128
+<v Danny Greefhorst>Of is dat</v>
+
+00:48:12.618 --> 00:48:20.218
+<v René Kint>Ja, maar ik ik merk dat ik zoek naar de leidende principes. Op welke principes ontwerpen ontwerpen we dit nu precies?</v>
+
+00:48:21.848 --> 00:48:28.608
+<v René Kint>Ehm Want dat is toch daar daar zit toch nog wel die uitgangspunten moeten we echt samen delen, denk ik.</v>
+
+00:48:30.528 --> 00:48:31.548
+<v Danny Greefhorst>Oké.</v>
+
+00:48:32.208 --> 00:48:33.208
+<v Danny Greefhorst>Andere?</v>
+
+00:48:37.318 --> 00:48:51.778
+<v Gerard Van Der Hoeven>Ik denk dat dat wel van belang is. En inderdaad, ik kan me voorstellen dat voor veel mensen verwarrende thema's zijn. Dan is het fijn om eh vanuit expertgroepjes wel die leidende principes weer terug te geven. Want hier zijn we het in ieder geval allemaal mee eens.</v>
+
+00:48:52.438 --> 00:48:58.318
+<v Gerard Van Der Hoeven>Maar dat we wel de details hier en daar in gaan, want als je er te hoog overheen vliegt, dan mis je sowieso de inhoud.</v>
+
+00:48:58.938 --> 00:48:59.338
+<v Wouter Diephuis>Ja.</v>
+
+00:49:00.468 --> 00:49:43.958
+<v Wouter Diephuis>Ja, en ik sluit me er ook bij aan hè, van want ik kijk die leidende principes en ik denk ook dat je eh dus zoals we bij eh in ons in ons eigen onze eigen afdeling eigenlijk altijd eh eh aangeven van hè eh multidisciplinair samenwerken. Hè, dus juist van eh hè, want kijk vanuit het juridisch kader kunnen we aangeven van eh wat eh hè wat mag er. Hè, nou ja, vanuit beleidsmatige opzicht zou je kan je er ook nog wat van vinden.</v>
+
+00:49:43.958 --> 00:49:54.198
+<v Wouter Diephuis>Maar bepalend is ook hè, en dat is vanuit de de de technische achtergrond, wat kan er? Hè, en en en in die drieslag hè, daar zul je eh werkbare leidende principes met met met elkaar moeten destilleren, denk ik.</v>
+
+00:49:55.588 --> 00:50:07.078
+<v Wouter Diephuis>Oké, en dan heb je volgens mij ook gewoon de link tussen beleid en eh het beleidsjuridische en de eh de technische operationele kant goed geborgd.</v>
+
+00:50:01.178 --> 00:50:06.878
+<v Michiel Trimpe>een een een mini workshopje voorbereid, maar daar is in twee minuten is dat natuurlijk veel te kort. Dag Michiel.</v>
+
+00:50:07.599 --> 00:50:11.599
+<v Wouter Diephuis>Ehm wellicht dat ik voorstel dat dan voor de volgende sessie,</v>
+
+00:50:11.599 --> 00:50:16.999
+<v Wouter Diephuis>de sessie plannen om te bespreken hoe we de diepte in gaan en op welke onderwerpen.</v>
+
+00:50:16.999 --> 00:50:24.399
+<v Wouter Diephuis>En dan inderdaad met als kanttekening dat we van tevoren duidelijk moeten zorgen dat het kader en de de rode lijn of René hoe jij het ook alweer omschreven had, dat dat</v>
+
+00:50:24.919 --> 00:50:27.799
+<v Wouter Diephuis>moet aangestipt is.</v>
+
+00:50:28.719 --> 00:50:29.919
+<v Wouter Diephuis>De leidende principes.</v>
+
+00:50:30.419 --> 00:50:40.519
+<v Wouter Diephuis>En dat we dan de volgende sessie gebruiken om te kijken, want ik krijg privé ook wel af en toe feedback van hé, ik wil graag de diepte in op dit onderwerp en op dat onderwerp en hoe we daar beter invulling aan kunnen geven.</v>
+
+00:50:41.639 --> 00:50:44.739
+<v Wouter Diephuis>Klinkt dat als een goed plan voor de volgende sessie?</v>
+
+00:50:47.619 --> 00:50:51.219
+<v Wouter Diephuis>Dus als thema, de leidende principes en hoe nu de diepte in.</v>
+
+00:50:55.339 --> 00:50:56.139
+<v Wouter Diephuis>Oké.</v>
+
+00:50:58.019 --> 00:51:01.219
+<v Wouter Diephuis>Nou, dat... Ik zou nog even open willen gooien voor reacties.</v>
+
+00:51:01.899 --> 00:51:02.399
+<v Wouter Diephuis>Ja.</v>
+
+00:51:03.699 --> 00:51:06.599
+<v Wouter Diephuis>Vragen of reacties op hoe dit gaat.</v>
+
+00:51:16.889 --> 00:51:18.089
+<v Gerard Van Der Hoeven>Gerard?</v>
+
+00:51:18.489 --> 00:51:23.189
+<v Gerard Van Der Hoeven>Ja, er is natuurlijk een paar keer genoemd. Moeten we niet wat publieker even delen</v>
+
+00:51:23.189 --> 00:51:29.389
+<v Gerard Van Der Hoeven>eh iSHARE framework versus FTV eh gedachten en eh en principes.</v>
+
+00:51:30.689 --> 00:51:34.889
+<v Gerard Van Der Hoeven>Ehm daar hebben we natuurlijk al apart over gehad, maar ik denk dat het goed is om dat ook hier te delen.</v>
+
+00:51:35.389 --> 00:51:36.989
+<v Gerard Van Der Hoeven>Gewoon voor de beeldvorming.</v>
+
+00:51:37.289 --> 00:51:37.589
+<v Spreker (Marc de Boer)>Ja.</v>
+
+00:51:37.789 --> 00:51:43.489
+<v Spreker (Marc de Boer)>We hebben op de Miro eh de eerste keer eh alle onderwerpen gezet met dot voting en die staat erbij hè?</v>
+
+00:51:44.389 --> 00:51:45.089
+<v Wouter Diephuis>Onder andere, ja.</v>
+
+00:51:45.389 --> 00:51:46.189
+<v Spreker (Marc de Boer)>Die staat erbij.</v>
+
+00:51:46.189 --> 00:51:46.589
+<v Wouter Diephuis>Oké.</v>
+
+00:51:46.789 --> 00:51:54.189
+<v Spreker (Marc de Boer)>Dus die, maar die nemen we dus ook mee naar de volgende keer als je het hebt over eh hoe hoe nu verder. Daar zijn die onderwerpen de kandidaten.</v>
+
+00:51:54.189 --> 00:52:00.389
+<v Spreker (Marc de Boer)>En in principe houden we die dot voting aan, maar daar kunnen we dus nog aan schaven gezamenlijk.</v>
+
+00:52:00.589 --> 00:52:01.089
+<v Wouter Diephuis>Ja.</v>
+
+00:52:01.089 --> 00:52:10.089
+<v Spreker (Marc de Boer)>Als er bijvoorbeeld de stem dus is van de relatie FTV en iSHARE nog een keer als onderwerp expliciet terugbrengen.</v>
+
+00:52:13.789 --> 00:52:16.989
+<v Wouter Diephuis>Oké. Nog andere uitspuiters?</v>
+
+00:52:21.789 --> 00:52:22.289
+<v Wouter Diephuis>Oké.</v>
+
+00:52:22.889 --> 00:52:28.989
+<v Wouter Diephuis>Dan bedank ik iedereen voor aanwezigheid. En dan eh zien we elkaar over twee weken weer.</v>
+
+00:52:29.489 --> 00:52:30.689
+<v Gerard Van Der Hoeven>Ja, tot over twee weken.</v>
+
+00:52:30.689 --> 00:52:31.189
+<v Wouter Diephuis>Tot ziens.</v>
+
+00:52:31.389 --> 00:52:32.089
+<v Danny Greefhorst>Tot ziens.</v>
+
+00:52:32.089 --> 00:52:32.489
+<v Michiel Trimpe>Hoi.</v>
+
+00:52:32.489 --> 00:52:32.789
+<v René Kievit>Hoi.</v>
+
+00:52:33.289 --> 00:52:33.889
+<v Elske Derks>Tot ziens.</v>
