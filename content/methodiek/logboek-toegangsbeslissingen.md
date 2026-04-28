@@ -48,26 +48,41 @@ type: 'chapter'
 
 ### Doel
 
-Het Authorization Decision Log (Logboek Toegangsbeslissingen) legt vast welke toegangsbeslissingen zijn genomen. Het maakt die beslissingen traceerbaar en is daarmee een belangrijk verantwoordingsinstrument. Bij audits kan achteraf worden aangetoond welke beslissing wanneer is genomen op basis van welke regels en gegevens. En daarmee vastgesteld kan worden of de beslissing terecht was.
+Het Authorization Decision Log (Logboek Toegangsbeslissingen) legt vast welke toegangsbeslissingen zijn genomen. Het maakt die beslissingen traceerbaar en is daarmee een belangrijk verantwoordingsinstrument. Bij audits kan achteraf worden aangetoond welke beslissing wanneer is genomen, op basis van welke regels en gegevens. En daarmee vastgesteld kan worden of de beslissing terecht was.
+
+Waar [AuthZEN](../authzen-nlgov) invulling geeft aan verantwoor*de* toegangsverlening, geeft het Authorization Decision Log invulling aan verantwoord*ing* van toegangsverlening. Het log werkt daarbij aan beide kanten van een federatief verzoek: de afnemer logt de beslissing om een verzoek te versturen en de aanbieder logt de beslissing om het verzoek toe te staan.
 
 ### Een standaard
 
 Er is nog geen open standaard voor het vastleggen van toegangsbeslissingen. Daarom stelt FTV deze zelf op.
 
-De standaard beschrijft hoe een opdracht tot het opslaan van een toegangsbeslissing eruit moet zien. Het logboek gebruikt daarom het AuthZEN-informatiemodel als basis. Belangrijk is welke gegevens er verplicht zijn en welke optioneel. 
+De standaard beschrijft wat er gelogd wordt bij een toegangsbeslissing, niet hoe het log die gegevens op moet slaan. Het [AuthZEN-informatiemodel](../authzen-nlgov#informatiemodel) vormt de basis: elk logrecord bevat het oorspronkelijke verzoek en het antwoord in AuthZEN-formaat. De standaard beschrijft welke gegevens verplicht zijn en welke optioneel.
 
-De standaard legt niet vast hoe het log daadwerkelijk deze gegevens op moet slaan. Daarvoor zijn er al veel goede oplossingen beschikbaar, ook open source. Ook legt de standaard niet vast hoe opgeslagen beslissingen beveiligd, teruggelezen en opgeruimd worden. Deze zaken zal elke implementatie zelf invullen.
+### Vier niveaus van detail
 
-### Dataminimalisatie 
+De standaard definieert vier niveaus van vastlegging, van minimaal tot volledig:
 
-Om goed verantwoording af te kunnen leggen is het nodig dat de verzoeken, regels en gegevens die aan de beslissing ten grondslag hebben gelegen beschikbaar zijn. Tegelijkertijd moeten er niet meer gegevens opgeslagen worden dan strikt noodzakelijk.
+1. **Niveau 1**: Alleen het verzoek en de beslissing
+2. **Niveau 2**: Aangevuld met de versies van het gebruikte toegangsbeleid
+3. **Niveau 3**: Aangevuld met verwijzingen naar gebruikte informatiebronnen (PIPs)
+4. **Niveau 4**: Aangevuld met de configuratie van het beslissingsmechanisme (PDP)
 
-Hier geldt het principe van [data bij de bron](https://www.digitaleoverheid.nl/data-bij-de-bron/). In plaats van gegevens te kopiëren, verwijst het logboek naar [betrouwbare bronnen](https://website-digilab-overheid-nl-research-uit-betrouw-e1f39021ce924c.gitlab.io/) waar de gebruikte informatie is vastgelegd. Dit voorkomt onnodige gegevensduplicatie en maakt het logboek transparanter en beter beheersbaar. Een van de belangrijke voorwaarde voor een betrouwbare bron is dat de historische gegevens bewaard blijven.
+Hogere niveaus maken het beter mogelijk om beslissingen achteraf te reproduceren, maar vragen meer opslag en zorgvuldigere afweging rond dataminimalisatie. Organisaties kiezen zelf welk niveau past bij hun verantwoordingsbehoeften.
+
+### Dataminimalisatie
+
+Om verantwoording af te leggen moeten de verzoeken, regels en gegevens die aan een beslissing ten grondslag lagen beschikbaar zijn. Tegelijkertijd moeten er niet meer gegevens opgeslagen worden dan strikt noodzakelijk.
+
+Hier geldt het principe van [data bij de bron](https://www.digitaleoverheid.nl/data-bij-de-bron/). In plaats van gegevens te kopiëren verwijst het logboek naar [betrouwbare bronnen](https://website-digilab-overheid-nl-research-uit-betrouw-e1f39021ce924c.gitlab.io/) waar de gebruikte informatie is vastgelegd. De standaard biedt hiervoor drie verwijsmechanismen:
+- **Versioned sources**: verwijzingen naar specifieke versies (bijvoorbeeld een git-hash of versie-ID van een policy)
+- **Temporal sources**: verwijzingen naar gegevens die golden op het moment van de beslissing, zodat die later teruggehaald kunnen worden zonder de gegevens zelf op te slaan
+- **Logged sources**: verwijzingen via W3C Trace Context naar externe logs, bijvoorbeeld in WARC-formaat
 
 ### Logging in het FDS
-Toegangsbeslissingen zijn deel van het grotere proces van gegevensuitwisseling. Om een compleet beeld te hebben van de uitwisseling in het Federatief Datastelsel (FDS) zijn er ook het [Logboek Dataverwerkingen](https://logius-standaarden.github.io/logboek-dataverwerkingen/) en het logboek Federatieve Service Connectiviteit [FSC-Logging](https://commonground.gitlab.io/standards/fsc/logging/draft-fsc-logging-00.html). 
 
-Deze drie zijn met elkaar verbonden door een zogenaamde trace.
+Toegangsbeslissingen zijn deel van het grotere proces van gegevensuitwisseling. Om een compleet beeld te hebben van de uitwisseling in het Federatief Datastelsel (FDS) zijn er ook het [Logboek Dataverwerkingen](https://logius-standaarden.github.io/logboek-dataverwerkingen/) en het logboek Federatieve Service Connectiviteit [FSC-Logging](https://commonground.gitlab.io/standards/fsc/logging/draft-fsc-logging-00.html).
+
+Deze drie logboeken zijn met elkaar verbonden door een zogenaamde trace: een gedeelde identifier ([W3C Trace Context](https://www.w3.org/TR/trace-context/)) die het mogelijk maakt om alle logregels die bij dezelfde uitwisseling horen aan elkaar te koppelen.
 
 ### Status
 De huidige [versie van de standaard](https://logius-standaarden.github.io/authorization-decision-log/) is aangenomen door de eigen werkgroep, en voor beheer overgedragen aan Logius. Momenteel loopt de openbare consultatieperiode tot 29 mei 2026.
