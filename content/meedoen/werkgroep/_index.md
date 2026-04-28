@@ -58,6 +58,7 @@ Data komende werkgroepen:
 
 2026
 
+- 28 april: Consultatie Authorization Decision Log ([Notulen]({{% relref "consultatie-authorization-decision-log" %}}))
 - 14 april: FORCE presentatie UGent & ADL feedback ([Notulen]({{% relref "force-presentatie-ugent-adl-feedback" %}}))
 - 31 maart: Modellering toegangsbeleid BRP-keten ([Notulen]({{% relref "modellering-toegangsbeleid-brp-keten" %}}))
 - 17 maart: Verkenning publiek toegangsbeleid ([Notulen]({{% relref "verkenning-publiek-toegangsbeleid" %}}))
