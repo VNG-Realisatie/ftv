@@ -28,7 +28,7 @@ Met de doorstart gaat FTV ook een nieuwe fase in, met nieuwe doelstellingen. 202
 Met afronden bedoelen we dat de drie standaarden compleet gaan maken:
 
 1. NLGov AuthZEN is door de openbare consultatie heen en zal zijn weg naar vaststelling zullen gaan vervolgen bij MIDO. 
-2. Authorisation Decision Log is klaar voor openbare consultatie. 
+2. Authorization Decision Log is klaar voor openbare consultatie. 
 3. En de derde standaard, het register toegangsbeleid, zal geschreven gaat worden. 
  
 Daarmee verkrijgen we een complete set erkende standaarden die toegangsverlening binnen en buiten de federatieve context naar het volgende niveau tilt.

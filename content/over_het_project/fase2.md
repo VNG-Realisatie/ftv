@@ -111,9 +111,9 @@ quo te handhaven ('het gaat nu toch ook goed').
 
 Openstaande activiteiten die in 2026 voortgezet zouden moeten worden zijn:
 
-- Het vaststellingstraject voor NLGov AuthZEN en Authorisation Decision Log bij de GDI en Forum Standaardisatie
+- Het vaststellingstraject voor NLGov AuthZEN en Authorization Decision Log bij de GDI en Forum Standaardisatie
 - Het uitwerken van Register Toegangsbeleid
-- Het actief uitdragen van het FTV-gedachtengoed bij potentiële deelnemers aan het FDS, vooral tijdens aanbestedingen en implementatie.
+- Het actief uitdragen van het FTV-gedachtegoed bij potentiële deelnemers aan het FDS, vooral tijdens aanbestedingen en implementatie.
 - Het deelnemen aan een aantal PoC's of werkelijke implementaties
 
 {{< /chapter/section >}}

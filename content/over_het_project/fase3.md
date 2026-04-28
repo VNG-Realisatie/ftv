@@ -48,7 +48,7 @@ Projectfase 3 heeft de volgende doel:
 
 Voor 2026 zijn de volgende activiteiten voorzien:
 
--	Begeleiden van het vaststellingsproces van de eerste twee standaarden: AuthZEN NL Gov en Authorisation Decision Log;
+-	Begeleiden van het vaststellingsproces van de eerste twee standaarden: AuthZEN NL Gov en Authorization Decision Log;
 -	aanleveren aan de MIDO governance (minimaal een afgeronde consultatie fase) van de derde standaard; het Register Toegangsbeleid;
 -	uitdragen van het geheel van werkwijzen en standaarden;
 -	verder uitwerken van de proefopstelling voor demonstratie in de simulatieomgeving van het FDS, waarin ook alle facetten beproefd en aangetoond kunnen worden;
