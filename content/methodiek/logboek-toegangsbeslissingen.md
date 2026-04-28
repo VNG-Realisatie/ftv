@@ -8,7 +8,7 @@ type: 'chapter'
 <div class="sub-navigation-wrapper" role="navigation">
 <div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-groen-25">
    <p>
-      <a href="../principes">De principes</a> 
+      <a href="../principes">De principes</a>
    </p>
 </div>
 <div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-groen-25">
@@ -31,14 +31,14 @@ type: 'chapter'
 {{< /chapter/header >}}
 
 {{< chapter/directnaar bg="bg-rhc-color-geel-neon">}}
-<a href="https://logius-standaarden.github.io/authorization-decision-log/">
+<a href="https://logius-standaarden.github.io/authorization-decision-log/" target="_blank">
     <div class="mt-2">
-        <h3 style="text-decoration:underline" class="nl-heading nl-heading--level-3 rhc-heading">Authorisation decision log</h3>
+        <h3 style="text-decoration:underline" class="nl-heading nl-heading--level-3 rhc-heading">Authorization decision log</h3>
     </div>
     <div class="mt-2">
         <p class="utrecht-paragraph-small">Standaard voor Federatieve Toegangsverlening</p>
         <p class="utrecht-paragraph-small">Logius Standaard</p>
-        <p class="utrecht-paragraph-small">Draft 16 november 2025</p>
+        <p class="utrecht-paragraph-small">Draft 20 april 2025</p>
     </div>
 </a>
 
@@ -70,9 +70,11 @@ Toegangsbeslissingen zijn deel van het grotere proces van gegevensuitwisseling. 
 Deze drie zijn met elkaar verbonden door een zogenaamde trace.
 
 ### Status
-De huidige [versie van de standaard](https://logius-standaarden.github.io/authorization-decision-log/) is aangenomen door de eigen werkgroep. Momenteel worden de voorbereidingen gedaan om de standaard over te dragen naar Logius voor beheer en de openbare consultatie te starten.
+De huidige [versie van de standaard](https://logius-standaarden.github.io/authorization-decision-log/) is aangenomen door de eigen werkgroep, en voor beheer overgedragen aan Logius. Momenteel loopt de openbare consultatieperiode tot 29 mei 2026.
 
-<a href="https://logius-standaarden.github.io/authorization-decision-log/" class="utrecht-button utrecht-button--primary-action">
+<br>
+
+<a href="https://logius-standaarden.github.io/authorization-decision-log/" class="utrecht-button utrecht-button--primary-action" target="_blank">
             Bekijk de consultatieversie van Authorization Decision Log
 </a>
 
