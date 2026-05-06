@@ -47,7 +47,6 @@ De werkgroep vindt elke twee weken plaats op **dinsdag van 10:00 tot 11:00**, on
 
 Data komende werkgroepen:
 
-- [28 april](https://realisatieibds.nl/events/view/adb3ddf4-a556-427f-a3eb-b27ae204f86b/werkgroep-federatieve-toegangsverlening)
 - [12 mei](https://realisatieibds.nl/events/view/1e868554-bb76-42ad-9174-ee340e9475cd/werkgroep-federatieve-toegangsverlening)
 - [26 mei](https://realisatieibds.nl/events/view/80ab5cb8-ac90-44fe-8165-62b5cc8fc313/werkgroep-federatieve-toegangsverlening)
 - [9 juni](https://realisatieibds.nl/events/view/5de39381-71ae-4dc3-a3a2-b41f01491b8d/werkgroep-federatieve-toegangsverlening)
