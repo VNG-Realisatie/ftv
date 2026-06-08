@@ -1,0 +1,772 @@
+WEBVTT
+
+00:00:04.427 --> 00:00:06.227
+<v Michiel Trimpe>heel simpel.</v>
+
+00:00:11.267 --> 00:00:21.657
+<v Michiel Trimpe>heel simpel. Dus welkom allemaal weer bij de de FTV werkgroep.</v>
+
+00:00:23.937 --> 00:00:32.137
+<v Michiel Trimpe>met de titel erbij. Nou, dus eh vandaag is eh het onderwerp van de werkgroep de de BRP-keten met RvIG.</v>
+
+00:00:34.547 --> 00:00:56.057
+<v Michiel Trimpe>dit is nog de de de vraag en uurtje titel, maar eh ondertussen is dat een beetje uitgebreid. Dus krijgen we niks van een presentatie en een vragen uurtje. En de kans om te te discussiëren en wat nog meer. Is alles voor de agenda vandaag, dus we hebben alle ruimte ervoor. Eh dus ook ja, als het wat korter duurt, hebben we alle ruimte voor de workshop en te kijken hoe we hiermee naar het vervolg door willen.</v>
+
+00:00:59.007 --> 00:01:07.617
+<v Michiel Trimpe>eventjes voor de zekerheid checken. Volgens mij hebben wij geen nieuwe gezichten vandaag. Nee.</v>
+
+00:01:09.767 --> 00:01:11.327
+<v Michiel Trimpe>Nou, dan welkom terug allemaal.</v>
+
+00:01:14.647 --> 00:01:25.067
+<v Michiel Trimpe>Nou, dan is in principe het het volgende item gelijk de presentatie vanuit RvIG. Ehm, we hebben Remco en Hans in de call.</v>
+
+00:01:28.507 --> 00:01:34.947
+<v Michiel Trimpe>Remco en Hans, eh willen jullie wat eh introductie van mij of willen jullie eh wat wat werkt voor jullie het fijnst?</v>
+
+00:01:36.597 --> 00:01:38.757
+<v Remko Muis>Nou, een beetje introductie van jou is wel leuk eigenlijk.</v>
+
+00:01:39.297 --> 00:02:46.657
+<v Michiel Trimpe>Nou, hartstikke mooi. Gaan we dat doen. Ehm ja, want Remco is, jij bent natuurlijk wel een nieuw teamlid. Dat of een teamlid, een nieuwe aanwezige voor de FTV. Ehm, nou voor de context, dus ehm nou ja, dit jaar eh is voor FTV het jaar van het register toegangsbeleid. En eh nou, dan zijn we aan het eh uitwerken van hoe kan eh zowel een aanbieder als een afnemer eh zijn of haar toegangsbeleid eh inzichtelijk maken. Of dat nou publiek is naar de burgers toe of naar mededeelnemers in een federatief datastelsel. Dat nog even daargelaten, maar in ieder geval willen we gaan werken aan het inzichtelijk maken van toegangsbeleid. En nou ja, we hebben ondertussen ook al een aantal workshops hier gehad. Eh en ik kan me nog de workshop eh inventarisatie publiek toegangsbeleid wereldwijd eh herinneren. En eh daar zagen we al dat de de BRP eh eigenlijk een beetje een vreemde eend in de bijt is in een positieve zin. Dat zij eh met stip de meest, ja, het meest gedetailleerde toegangsbeleid hadden wat wij ook internationaal hebben kunnen vinden.</v>
+
+00:02:49.967 --> 00:03:06.207
+<v Michiel Trimpe>Ehm nou, dat maakt het voor ons natuurlijk heel interessant. Ehm vanuit RvIG is het geeft het ook een interessante dynamiek, want wat wij gaan bieden zal functioneel waarschijnlijk niet zo heel veel toevoegen bovenop wat RvIG al biedt, want RvIG doet het of ja, ongeveer zo goed als, ja, zo goed als mogelijk is.</v>
+
+00:03:08.297 --> 00:04:35.757
+<v Michiel Trimpe>Ehm maar er speelt natuurlijk wel eh meer. Dus we hebben ook eh ja, dat is de nou ja, eh RvIG, die laat ik misschien aan jullie, maar eh het is natuurlijk ook een zware last om dat allemaal te moeten administreren. En het is in ieder geval zo dat wat RvIG gedaan heeft, dat we eh dat ook met deze standaard breder in willen zetten. Dus dat we dat eigenlijk wat RvIG eh en de BRP-keten voor de BRP-keten gedaan heeft, dat we iets vergelijkbaars voor heel de Nederlandse overheid neer willen zetten. Nou, omdat het zo interessant is, eh zitten we al ja, een tijd een tijd lang heel geïnteresseerd bij RvIG aan het kloppen van we willen er graag meer over jullie horen. Van hoe werkt het nou? Hoe kan dat, hoe zit het eh toegangsbeleid in de BRP-keten in elkaar? Hoe kijken jullie eh naar een toegangsbeleid in de toekomst? En kunnen jullie ons daar wat meer over vertellen? Nou, Hans is al langer eh in de werkgroep regelmatig aanwezig. Eh maar eh nou, toen we dit eh ter sprake kwam van eh nou, eh ik denk dat Remco hier ook een hele goede is om eh dit verder uit te diepen en dit verder te presenteren. Dus een paar keer geleden hebben we even samen gezeten en grof de lijnen geschetst. En eh nou ja, daar is deze meeting uitgekomen. En eh ja, ik heb er eigenlijk niet heel erg goed doorgevraagd wat jouw rol precies is binnen binnen het team, behalve dat jij de ja, de aangewezen expert was om hier dieper in te duiken. Dus dat is dan misschien een mooi bruggetje terug naar jou toe.</v>
+
+00:04:37.787 --> 00:04:39.787
+<v Michiel Trimpe>Ehm nou, nu zitten we hier, Remco.</v>
+
+00:04:40.797 --> 00:04:42.767
+<v Remko Muis>Ja. Nee, want Hans kennen jullie allemaal.</v>
+
+00:04:43.807 --> 00:04:44.207
+<v Michiel Trimpe>Ja.</v>
+
+00:04:44.287 --> 00:05:55.367
+<v Remko Muis>Die die behoeft geen introductie meer. Nou ja, ik ben Remco Muis. Ik ben LO-specialist. Logisch ontwerper bij RVG, dus ik beheer samen met nog een collega de vijf logische ontwerpen die het RVG eh ja, onder handen heeft. En dan degene die de meest omvangrijke en het die het vaakst wijzigt, dat is het logische ontwerp van de BRP. Dus dat is wat mijn dagelijkse bezigheid. Ik heb geprobeerd om in een presentatie eh een aantal slides op een rijtje te zetten hoe onze eh ja, hoe verstrekking uit de BRP eh wat het beleid daarachter is, wat de wet daarover zegt en eh hoe dat werkt. Wat aspecten daaromheen die we daarbij niet moeten vergeten. En aan het eind heb ik een doorkijkje gegeven naar eh ja, wat wij denken dat de ontwikkeling van de BRP in de toekomst gaat zijn. In het kader van eh informatieverstrekking en halen bij de bron. Ik zal mijn scherm delen. En dan hoop ik dat dat eh goed aansluit bij wat wat Hans jullie eerder heeft verteld, wat jullie eerder hebben besproken. En waar de werkgroep mee bezig is, want dat nou, ik val hier nu zomaar in. Maar eh ik ben wel een beetje benieuwd hoe dit eh straks valt. Dus we gaan het zien.</v>
+
+00:05:57.407 --> 00:05:58.367
+<v Remko Muis>Even kijken, dit is de</v>
+
+00:05:58.287 --> 00:06:04.567
+<v Michiel Trimpe>Wat vind je fijn qua vragen trouwens? Wil je eerst de presentatie afgeronden of wil je tijdens de presentatie vragen ontvangen?</v>
+
+00:06:05.127 --> 00:06:09.287
+<v Remko Muis>Nou, verhelderende vragen eh kan altijd tussendoor. Daar schrik ik niet van.</v>
+
+00:06:10.937 --> 00:06:11.337
+<v Michiel Trimpe>Oké.</v>
+
+00:06:11.107 --> 00:06:15.287
+<v Remko Muis>Maar eh ja, als het echt op discussie aankomt, dan is het misschien handiger om dat aan het eind te doen.</v>
+
+00:06:20.077 --> 00:06:28.237
+<v Remko Muis>Ik eh de muis. Ja. Nou, het BRP stelsel in heel erg hoog over. Kunnen ze hem zien? Ja, jullie kunnen mijn scherm zien, toch?</v>
+
+00:06:27.447 --> 00:06:28.927
+<v Michiel Trimpe>Ja, zeker.</v>
+
+00:06:29.757 --> 00:07:24.447
+<v Remko Muis>Heel hoog over hebben we in de linkerkolom zeg maar de bijhouders, de gemeente en de eh RVG dan met de RNI loketten voor de niet ingezetenen. Ehm, daarvandaan worden alle persoonsgegevens gesynchroniseerd naar de landelijke voorziening, de BRP verstrekkingsvoorziening. Van waaruit eh naar landelijke afnemers gegevens worden verstrekt aan eh aan afnemers. Een aantal afnemers zijn aangewezen bestuursorganen, die mogen zelf ook wijzigingen eh voorstellen of zelfs rechtstreeks doorvoeren in de RNI voor niet ingezetenen. En dan praat je over eh DUO, de belastingdienst, een aantal eh grote afnemers, SVB. Nou, om die centrale voorzieningen, de BRP hangen een hele aantal eh satelliet applicaties die eh de kwaliteit van de gegevens in de BRP eh controleren, bewaken, waarin tabellen worden beheerd.</v>
+
+00:07:27.767 --> 00:07:50.687
+<v Remko Muis>eh die een portaal bieden aan de gemeente om eh nou ja, bijvoorbeeld protocolleringsoverzichten op te vragen. Maar dat is hier allemaal niet zo heel belangrijk. Eh belangrijk is dat we landelijk gegevens verstrekken uit die verstrekkingsvoorziening. Maar eh gemeenten verstrekken ook zelf gegevens aan binnen gemeentelijke afnemers. Dat is wel een stroom die we hier niet hebben ingetekend, maar die wel belangrijk is.</v>
+
+00:07:54.597 --> 00:09:06.407
+<v Remko Muis>Als we dan naar de wet kijken, even hoog over een soort inhoudsopgave van de wet BRP. Hoofdstuk 1 en hoofdstuk 4 zijn daarbij wat minder interessant, algemene bepalingen en slotbepalingen. Maar in hoofdstuk 2 en 3 gaat het over de bijhouding. Daar staan alle wettelijke regels vastgelegd eh die gelden voor de bijhouding van persoonsgegevens door de colleges van eh burgemeester en wethouders, dus waar de gemeenten. Maar ook door de minister van BZK voor niet ingezetenen en sinds 11 november ook eh de minister van BZK voor de ingezetenen van openbare lichamen. Dat zijn de eilanden van het eh niet niet het hele Caribische gebied, alleen de BES eilanden. Dus eh Bonaire, Sint Eustatius en eh Saba. En er is een heel hoofdstuk wat regel bevat over de verstrekking van die gegevens aan eh verschillende type organisaties. Dat is verstrekking aan overheidsorganen en aangewezen derden. Dat zijn verstrekkingen door de minister, dus eh die RVG verzorgt. Ehm maar er staan ook regels in voor de verstrekking door colleges van burgemeester en wethouder. En zelfs specifieke regels voor de colleges van eh verstrekking door de colleges van burgemeester en wethouder van bijhoudingsgemeente.</v>
+
+00:09:09.117 --> 00:09:12.597
+<v Remko Muis>Dus de de gemeenten hebben een autorisatie op BRP gegevens als</v>
+
+00:09:15.077 --> 00:09:43.617
+<v Remko Muis>buitengemeentelijke afnemer. Ze moeten zelf geautoriseerd worden om gegevens op te mogen vragen van eh andere personen dan hun eigen inwoners. Vandaar dat de wet dat onderscheid maakt. En dan is er nog een aparte afdeling in hoofdstuk 3 van de wet eh die spreken over de rechten van de burger. Dus daar komen we straks ook nog even over te spreken.</v>
+
+00:09:45.897 --> 00:10:12.547
+<v Remko Muis>van de wet. Enerzijds door de minister van Binnenlandse Zaken, lees RvIG als uitvoeringsorgaan van de minister. En die komen dan uit de BRP-Verstrekkingsvoorziening en die gaan naar landelijke afnemers. En anderzijds heb je een stroom van verstrekkingen die worden gedaan door de gemeente zelf aan hun eigen binnengemeentelijke afnemers.</v>
+
+00:10:14.727 --> 00:10:27.097
+<v Remko Muis>dat wereldje is voor mij wat minder eh bekend. Ik zit vaak aan tafel met landelijke afnemers en niet zozeer met eh binnengemeentelijke afnemers, maar praat je volgens mij over sociale diensten.</v>
+
+00:10:30.017 --> 00:10:34.697
+<v Remko Muis>Nee, dat is vaak vaak niet bij landelijke organisaties.</v>
+
+00:10:40.717 --> 00:11:25.067
+<v Remko Muis>Nou, aan wie worden die gegevens dan verstrekt? Dat is echt uitsluitend aan overheidsorganen die een wettelijke taak uitvoeren. Of aan aangewezen derden die taken verrichten waarvan de overheid zegt: die hebben een gewichtig maatschappelijk belang. Al die aangewezen derden worden opgesomd in het eh besluit van de BRP, bijlage 4 en 5. Vier voor de landelijke aangewezen derden en vijf voor gemeentelijke aangewezen derden. En dan moet je dus denken aan eh pensioenuitvoerders, het Centraal Bureau voor de Genealogie, de bloedbank, Veilig Thuis, et cetera. Ze zijn formeel zelf geen overheidsorganen, maar organisaties die dus de taak uitvoeren met eh maatschappelijk belang.</v>
+
+00:11:29.907 --> 00:11:49.027
+<v Remko Muis>Nou, welke gegevens worden dan verstrekt aan die organisaties? Eh in de wet, artikel 3.2 staat: Bij de bepaling van de gegevens die worden verstrekt, worden de gegevens opgenomen die in het verzoek zijn vermeld, dus waar de afnemer om vraagt, voor zover het overheidsorgaan aantoont dat deze gegevens noodzakelijk zijn voor de goede vervulling van zijn taak.</v>
+
+00:11:53.597 --> 00:12:08.477
+<v Remko Muis>zeg maar de de BRP-vertaling van doelbinding eh in de AVG. Dus dat moet ik misschien nog even bij vermelden. De BRP geeft invulling aan de AVG en is daar ook gewoon geheel mee eh in overeenstemming uiteraard. Zouden we een probleem hebben.</v>
+
+00:12:11.047 --> 00:12:14.047
+<v Remko Muis>maar spitst het verder toe op eh de BRP als eh stelsel.</v>
+
+00:12:16.357 --> 00:12:20.597
+<v Remko Muis>Nou, hier is volgens mij vorige keer al wel iets meer over gezegd. Hoe worden gegevens dan verstrekt?</v>
+
+00:12:23.387 --> 00:13:18.087
+<v Remko Muis>ruwweg zijn er drie stromen van of drie soorten verstrekkingen van gegevens uit de BRP. Dat zijn spontane verstrekkingen. Als iets wijzigt op een persoonslijst en een afnemer is geautoriseerd voor dat gegeven. En die afnemer heeft bij die bewuste persoonslijst een afnemersindicatie gestaan, dus een soort van abonnement geplaatst op die eh op wijzigingen. En dan eh worden die wijzigingen spontaan dus direct na mutatie eh doorgegeven aan die afnemer. In een bericht waarin die dan zowel het oude als het nieuwe gegeven, de nieuwe waarde van de rubriek eh opgestuurd krijgt. Dat is altijd via de berichtendienst. Dat zijn eh spontane of eh dat zijn dat is een mechanisme eh wat asynchroon werkt. Dus eh de BRP-verstrekkingsvoorziening plaatst zo'n Gv01 of een Gv02 bericht in de mailbox van de afnemer en die moet dat zelf ophalen.</v>
+
+00:13:20.157 --> 00:13:34.267
+<v Remko Muis>Die die berichtendienst heeft weer drie verschillende smaken. Ehm maar dat kunnen we voor nu even laten rusten. Dat is de mailbox server, een webserver, stuur GBA bericht. En de nieuwe variant van de mailbox server, dat is de BRP berichten API.</v>
+
+00:13:36.877 --> 00:14:10.637
+<v Remko Muis>Nou, de tweede soort van verstrekkingen eh die de minister kan doen, dat zijn periodieke of eenmalige selecties. Dan krijgen afnemers echt een enorme berg gegevens van een heel aantal persoonslijsten die aan een bepaalde voorwaarde voldoen. En die voorwaarde is de vertaling van de doelgroep van een afnemer in een taaltje wat de BRPV verstrekkingsvoorziening eh begrijpt. En daarin worden in bulk alle gegevens verstrekt waarvoor geldt dat die afnemer eh geautoriseerd is voor verstrekking via selectie.</v>
+
+00:14:13.167 --> 00:14:26.197
+<v Remko Muis>Ook dat gaat grotendeels via de berichtendienst of als het echt eh hè bijvoorbeeld eh CBG krijgt één keer in de zoveel tijd een volledige eh overzicht van ik geloof allerlei naam en eh relatiegegevens.</v>
+
+00:14:29.277 --> 00:14:34.637
+<v Remko Muis>via een alternatief medium, want dat gaat gewoon om teveel berichten om via de mailbox server uit te wisselen.</v>
+
+00:14:37.887 --> 00:14:47.247
+<v Remko Muis>En er is er nog een derde stroom, de meest gebruikte variant van verstrekking uit de BRP, dat is eh een vraag-antwoordmechanisme, ad hoc verstrekkingen, dus op verzoek.</v>
+
+00:14:49.947 --> 00:15:18.427
+<v Remko Muis>dan geldt dat van de persoonslijst die voldoet aan opgegeven criteria. Dus ook daarvan geldt dat er een afnemer een doelgroep gespecificeerd krijgt, kan krijgen. Eh er worden de gevraagde gegevens verstrekt, mits die afnemer uiteraard geautoriseerd is voor die eh gegevens voor ad hoc verstrekking van gegevens en eh die persoonslijst voldoet aan de de voorwaarden.</v>
+
+00:15:20.557 --> 00:15:44.397
+<v Remko Muis>Nou, dat kan op drie verschillende manieren. Eh via de berichtendienst, dus eh die ook weer drie smaakjes heeft. En daarnaast is er de ad hoc webserver, op dit moment de meest gebruikte variant van eh ad hoc bevraging. En wat dan eh nieuw is sinds 2023 geloof ik, de BRP API. En een webserver en een API zijn uiteraard eh synchrone verstrekkingen, dus een afnemer krijgt direct een antwoord op zijn vraag.</v>
+
+00:15:47.567 --> 00:15:53.927
+<v Remko Muis>Nou, de details van hoe dit allemaal werkt, die kunnen we volgens mij hier achterwege laten. Als daar vragen over zijn, dan kunnen we die beantwoorden.</v>
+
+00:15:56.627 --> 00:16:05.467
+<v Remko Muis>Ehm maar dan heb je een beetje een beeld bij welke eh gegevensstromen er zijn naar afnemers toe en op welke verschillende manieren eh de BRP kan worden bevraagd.</v>
+
+00:16:10.007 --> 00:16:47.387
+<v Remko Muis>Voordat een afnemer zover komt dat hij gegevens verstrekt krijgt of eh of eh de BRP mag bevragen, hebben we een hele afdeling van collega's die beoordelen of die afnemer daartoe wel gerechtigd is. Dus een afnemer dient een verzoek in eh om eh gegevensverstrekking uit de BRP. Die geeft aan van nou, ik ik denk dat ik deze en deze deze gegevens nodig heb. Voor die en die taak. En dan gaan eh juristen bij RvIG eerst na wat de wettelijke taak van die afnemer precies is. En ze vragen uit bij die organisatie op welke manier die taak wordt uitgevoerd, via welke werkprocessen.</v>
+
+00:16:49.547 --> 00:17:38.067
+<v Remko Muis>en op welk moment in die processen eh BRP gegevens nodig zijn. En dan ook nog voor welke doelgroep. Hè, dus zo zo brengen ze volledig in kaart ehm ja, welke gegevens nodig zijn en dan als LO specialist denken wij vaak mee. Eh soms is het vraagt een eh een afnemer om een gegeven en dan zeggen wij: ja, maar dan moet je eigenlijk nog een ander gegeven meegestrekt krijgen, want anders kun je dat eerste gegeven niet goed duiden. Een geboorteplaats bijvoorbeeld is niet eh afdoende, want dat nou, er zijn eh in verschillende landen plaatsen met dezelfde naam. Eh dus het is belangrijk dat je dan ook het geboorteland eh mee verstrekt krijgt. Ehm wij denken ook vaak mee over ehm nou ja, allerlei gegevens die mee verstrekt behoren te worden, die de afnemer dus ook moet verwerken, ook als hij er niet om vraagt.</v>
+
+00:17:40.977 --> 00:18:15.987
+<v Remko Muis>En zo eh ontstaat zeg maar een beeld bij de informatiebehoefte van de afnemer en de juridische grondslag die hij heeft eh voor de verwerking van die gegevens. En daarbij beoordeelt RvIG vervolgens ja, eh welke gegevens we wel of niet gaan verstrekken. En op welke manier? Je kunt je voorstellen dat voor spontane verstrekking eh de lat wat hoger ligt dan voor ad hoc bevraging. Want ongevraagd allerlei gegevens verstrekken is een grotere inbreuk op iemands privacy dan eh ja, op eh om gegevens vragen op het moment dat je ze nodig hebt.</v>
+
+00:18:20.017 --> 00:19:20.757
+<v Remko Muis>Uiteindelijk wordt dit samen met de afnemer vastgelegd in een autorisatie aanvraagformulier. Dat kun je ook op onze website vinden. En daarop eh schrijft die afdeling, schrijft zelf dat autorisatiebesluit, maar dat is een formeel besluit van de minister. Eh ook die worden allemaal gepubliceerd en daarin staat exact op grond van welke taakstelling eh gegevens worden verstrekt. En die zijn dan ook zo gedifferentieerd dat verschillende taken eh aan verschillende gegevenssets zijn gekoppeld. Dus zo'n autorisatiebesluit is vaak heel fijnmazig. Er wordt voor verschillende taken, verschillende kruisjeslijsten met waarin rubrieken worden aangekruist van gegevens die worden verstrekt. Opgesomd wat door RvIG uiteindelijk weer platgeslagen wordt in één regel voor tabel 35, dat is onze autorisatietabel. En dat is de technische vertaling van zo'n autorisatiebesluit op grond waarvan de BRP verstrekkingsvoorziening bepaalt of een afnemer bijvoorbeeld spontaan gegevens verstrekt moet krijgen en welke gegevens dat dan zijn.</v>
+
+00:19:25.937 --> 00:19:45.347
+<v Remko Muis>Dat is eigenlijk eh het het beleid waar jij het net over had, Michiel, wat de RvIG volgt om eh afnemers te autoriseren voor verstrekking uit de BRP. Nou zei ik net al dat was eh nou eh nee, zijn er tot zover vragen?</v>
+
+00:19:48.347 --> 00:19:50.787
+<v Remko Muis></v>
+
+00:19:50.307 --> 00:19:51.307
+<v Michiel Trimpe></v>
+
+00:19:53.307 --> 00:20:47.177
+<v Gideon Zegwaard></v>
+
+00:20:49.367 --> 00:20:50.787
+<v Remko Muis>Wat bedoel je met die laatste, Gideon?</v>
+
+00:20:52.517 --> 00:20:57.237
+<v Gideon Zegwaard>Ehm nou die autorisatietabelregel, dat levert een beleid op voor die individuele afnemer.</v>
+
+00:21:00.007 --> 00:21:36.587
+<v Gideon Zegwaard>eh dus dat kan je ook uitdrukken met ODRL dat dat hè, dus wat je kan zeggen is eh we maken een ODRL beschrijving van eh van de autorisatietabel. Hè, dus dat elke regel is daar een eh is daar een toegangsverstrekking. En je kan zeggen van oké, we hebben toegang tot de BRP in den brede en dan eh heb je het erover van nou ja, je moet blijkbaar eh eh een een wettelijke taak uitvoeren. Je moet aangeven op welke wijze je dat doet. Je moet aangeven welke gegevens daarbij nodig zijn, hè, dus de criteria op grond waarvan je deze autorisatieprocedure doorloopt.</v>
+
+00:21:38.737 --> 00:21:53.497
+<v Gideon Zegwaard>ehm dus dat zijn een beetje de twee niveaus eh voor eh die ik hier eh zie. Dus eh de de het toegangsbeleid om tot een autorisatie te komen en de autorisatie zelf die dat oplevert is zelf ook weer een toegangsbeleid.</v>
+
+00:21:49.247 --> 00:21:49.487
+<v Remko Muis>Ja.</v>
+
+00:21:54.077 --> 00:21:54.717
+<v Remko Muis>Ja, ja, ja.</v>
+
+00:21:57.007 --> 00:22:08.377
+<v Michiel Trimpe>Ik had ook nog een vraag, want ik ik hoorde dus net dat eh namelijk ik begreep dat net aanvraagformulier dat de de kruisjeslijsten per taak uitgesplitst zijn. Klopt dat?</v>
+
+00:22:11.517 --> 00:22:11.877
+<v Remko Muis>Ja.</v>
+
+00:22:12.277 --> 00:22:15.197
+<v Michiel Trimpe>Oké. En zijn die ook publiek beschikbaar of?</v>
+
+00:22:17.627 --> 00:22:19.547
+<v Remko Muis>Nee, nee, de autorisatiebesluiten wel.</v>
+
+00:22:20.247 --> 00:22:20.567
+<v Michiel Trimpe>Oké.</v>
+
+00:22:20.987 --> 00:22:24.827
+<v Remko Muis>Maar aanvraagformulieren die daar de aanleiding voor zijn eh eh niet.</v>
+
+00:22:25.477 --> 00:22:52.387
+<v Michiel Trimpe>Ja. Oké, want inderdaad de de ik denk dat we ergens ook nog een een derde laag hebben voor die relevante ODRL, maar die dan dus officieel buiten RVG valt en dat is dan eh het afnemersbeleid. Dus inderdaad die, want waarschijnlijk is die die kruisjeslijsten per taak die de afnemer dan zelf ook bedacht heeft. Dat de de afnemers die ook inzichtelijk kunnen maken op basis van nou, ODRL bijvoorbeeld.</v>
+
+00:22:54.507 --> 00:24:11.107
+<v Remko Muis>Ja, want waar wij zelf een beetje tegenaan lopen ehm en daarom hebben sommige afnemers ook meerdere regels in die autorisatietabel. Ik zei dat we het platslaan. Dat is dat is meestal zo, maar er zijn afnemers die meerdere regels hebben. Dat er ook parameters in in die tabel staan eh die regelen of de burger bijvoorbeeld inzage mag krijgen in die verstrekkingen. Daar komen we zo nog op. Eh de politie bijvoorbeeld doet soms bevragingen waarvan de burger helemaal niet op de hoogte mag zijn in het kader van eh nou onderzoek naar strafbare feiten. Ehm maar de politie doet soms ook bevragingen die wel degelijk eh als jij gewoon een verkeersboete op straat krijgt en ze hebben daarvoor jouw persoons of of ze controleren jouw eh identiteitsgegevens. Dan mag je dat wel degelijk inzien. Dus de politie en ook de AIVD hebben meerdere regels in de autorisatietabel om om die verschillende niveaus van eh vertrouwelijkheid van die verstrekkingen te kunnen waarborgen. En zo lopen we er soms ook tegenaan dat nou ja, ik ik sta gaf net al het voorbeeld dat een afnemer verschillende wettelijke taken kan uitvoeren en daar ook verschillende gegevenssets voor nodig heeft. Dat slaan we vaak wel plat. Dan nemen we de superset van die gegevens en die leggen we in die tabelregels vast. Eigenlijk zou je dat fijnmaziger willen kunnen eh bepalen.</v>
+
+00:24:13.387 --> 00:24:16.490
+<v Michiel Trimpe>En maar is de vraag: moeten jullie dat doen of moeten afnemer dat doen?</v>
+
+00:24:13.807 --> 00:24:14.127
+<v Remko Muis>Ja.</v>
+
+00:24:16.490 --> 00:24:18.097
+<v Michiel Trimpe>Dat is denk ik</v>
+
+00:24:17.797 --> 00:24:20.107
+<v Remko Muis>Exact, dat laten we nu aan de afnemer over.</v>
+
+00:24:21.497 --> 00:24:29.657
+<v Michiel Trimpe>Inderdaad. En dan momenteel hebben ze daar nog geen handvaten voor, maar mogelijk zouden ze dat zouden wij dat met onze standaard kunnen gaan bieden.</v>
+
+00:24:29.347 --> 00:24:36.187
+<v Remko Muis>Dus dat zou Nou ja, dat dat zou voor jullie zeker een afweging zijn om dat fijnmaziger te modelleren dan nu in de BRP gerealiseerd is, ja.</v>
+
+00:24:36.397 --> 00:24:37.237
+<v Michiel Trimpe>Ja. Oké.</v>
+
+00:24:40.457 --> 00:25:25.387
+<v Gideon Zegwaard>Ja, en ik wilde er nog even toevoegen dat dat ook weer allerhande dilemma's oproept hè. Dus je kan het fijnmaziger doen, maar als je dan bijvoorbeeld eh tot bepaalde patronen van bevraging komt, dan zou dat eh voor RVG bijvoorbeeld weer eh die die zou als als die informatie over welk patroon dan gebruikt is, dat zou er dan weer toe kunnen leiden dat eh op eh de RVG zou kunnen weten eh wel eh voor welke specifieke taak een individuele bevraging heeft eh is uitgevoerd. En dat is op zich ook weer informatie waarvan je je af moet vragen van wil je die wel bij de RVG hebben? Eh dus dus dat dat roept allerhande vragen en dilemma's op van hoe fijnmazig wil je het hebben en welke informatie eh komt dan waar terecht en eh hoe wenselijk is dat?</v>
+
+00:25:26.827 --> 00:25:34.337
+<v Remko Muis>Ja, en die eh die fijnmazigheid die leidt dan automatisch tot herleidbaarheid. En dat is niet altijd wenselijk, zeg maar. Ja.</v>
+
+00:25:32.997 --> 00:25:44.252
+<v Gideon Zegwaard>Precies. Maar aan de andere kant, als je zegt van ik geef altijd alles, dan geef ik je dus soms ook teveel en dan heeft die afnemer weer teveel dan dat hij op dat moment heeft. Dus het is ook wel een beetje of je door de kat of door de hond gebeten wordt.</v>
+
+00:25:43.687 --> 00:25:43.807
+<v Remko Muis>Ja.</v>
+
+00:25:44.252 --> 00:25:45.817
+<v Gideon Zegwaard>Ja.</v>
+
+00:25:46.637 --> 00:26:04.277
+<v Remko Muis>Ja. Nou, en een ander aspect van fijn van van deze grofmazigheid is dat sommige afnemers eh nou eh maandelijks bijvoorbeeld een selectie willen krijgen. Eh maar één keer per jaar een hele andere selectie. Ja, dan dat kunnen we eigenlijk alleen maar regelen door ze een extra tabelregel te geven.</v>
+
+00:26:07.747 --> 00:26:22.217
+<v Remko Muis>En dan heb je eigenlijk een tabelregel per taak. Nee, dat is niet noodzakelijk gekoppeld aan een taak. Ja, meestal natuurlijk wel, maar eh Nee, dat is puur omdat de techniek je niet toestaat om eh eh verschillende selecties te definiëren voor voor één en dezelfde afnemer.</v>
+
+00:26:26.437 --> 00:26:28.957
+<v Gideon Zegwaard>Ja, dus als je ervoor geautoriseerd bent, dan krijg je het ook.</v>
+
+00:26:29.517 --> 00:26:30.957
+<v Remko Muis>Ja. Ja, komt er vijf op neer.</v>
+
+00:26:30.827 --> 00:26:34.907
+<v Gideon Zegwaard>Of je het nou nodig hebt of niet, als je ervoor geautoriseerd bent, dan krijg je het.</v>
+
+00:26:34.767 --> 00:26:35.847
+<v Remko Muis>Ja, bij selecties wel, ja.</v>
+
+00:26:35.287 --> 00:26:36.767
+<v Michiel Trimpe>Ja.</v>
+
+00:26:36.857 --> 00:26:48.457
+<v Remko Muis>Bij selecties en bij spontane verstrekking is dat zo. Bij ad hoc bevraging natuurlijk niet. Dan moet je echt aangeven: ik heb nu deze en deze gegevens nodig. Ik ga een brief opstellen en ik wil alleen de de naam en adresgegevens.</v>
+
+00:26:51.597 --> 00:26:55.117
+<v Gideon Zegwaard>Ja, is dat ook bij elke ad hoc bevragingsvorm eh zo?</v>
+
+00:26:55.767 --> 00:27:00.927
+<v Remko Muis>Ja. Eh ja, ja, je moet altijd aangeven om welke gegevens je vraagt.</v>
+
+00:27:01.407 --> 00:27:06.267
+<v Gideon Zegwaard>Je moet de de de de rubrieken opgeven in je vraag. Ja.</v>
+
+00:27:12.047 --> 00:28:31.607
+<v Remko Muis>Zullen we verder gaan? Want ik zei al naast autorisatie is er nog zoiets als eh ja, de rechten van de burger. Eh burger heeft drie belangrijke rechten waar je bij de verstrekking eh eh rekening mee moet houden. Enerzijds ehm nou, verstrekkingen kunnen onjuist zijn en de burger heeft recht op om op correctie, het recht om onjuiste gegevens in de BRP te laten corrigeren. Dus hij kan zich dan tot de gemeente wenden en die moet eh die gegevens eh corrigeren. Er is het inzagerecht in de gegevens zelf. Dus welke gegevens staan er over mij in de BRP? Maar er is ook inzagerecht met betrekking tot de verstrekkingen van die gegevens. Aan wie, welke afnemers zijn wanneer, welke gegevens van mij verstrekt en op welke manier? Dat staat op het zogenaamde protocolleringsoverzicht. Dat kun je dat dat moet de gemeente je aanbieden. Ik heb het eh toen ik bij RVG kwam werken gelijk een keertje ook gevraagd om te zien hoe dat eruit ziet. En dan krijg je een dik pak papier afhankelijk van hoe groot de periode je opvraagt van alle verstrekkingen die er over jou zijn gedaan eh aan de landelijke afnemers. Formeel moet de gemeente daar ook de verstrekkingen uit hun eigen gemeentelijke systeem eh aan toevoegen, maar eh nou, mijn gemeente had eh had dat niet op orde en eh dat was een lege een leeg velletje.</v>
+
+00:28:33.947 --> 00:29:01.017
+<v Remko Muis>Maar zo kun je dus als eh als burger achterhalen wie jou überhaupt volgen. Dat kun je trouwens op mijn overheid zien hè, welke landelijke afnemers jou eh een afnemersindicatie bij jouw persoonslijst hebben staan. Dat kun je op mijn overheid zien. Maar op welke momenten zij daadwerkelijk gegevens over jou verstrekt hebben gekregen, dat staat alleen maar op het protocolleringsoverzicht. Dat gaat binnenkort ook via mijn overheid eh verstrekt worden. Maar dat eh ligt even stil geloof ik.</v>
+
+00:29:06.047 --> 00:29:40.977
+<v Remko Muis>Nou, tot tot zover even over toegangsverlening en de rechten van burgers die daarbij moeten worden eh gewaarborgd. Autorisatie van afnemers van de BRP voor verstrekking of het opvragen van gegevens is strikt wettelijk beperkt tot de gegevens die noodzakelijk zijn voor de uitvoering van wettelijke taken of eh taken waarvan de overheid zegt vindt dat ze gewichtig maatschappelijk belang hebben.</v>
+
+00:29:43.557 --> 00:32:20.097
+<v Remko Muis>eh en dat je dus minder eh stringent hoeft te zijn in ehm op welke manier en onder welke voorwaarden je daar toegang toe verleent. Maar dat is eh ja, nou, laat ik het als een vraag neerleggen. Ik wilde nog even kort doorgaan over eh informatieverstrekking uit de BRP. De wet BRP kent een artikel waarin staat dat je bij wijze van experiment van die wet mag afwijken voor een periode van maximaal 4 jaar. En op dit moment zijn er drie experimenten die daar eh die die lopen. Dat is het experiment uitbreiding van de bijhouding van gegevens van niet-ingezetenen door gemeenten, dus eigenlijk de gemeente als een eh algemeen bestuurs aangewezen bestuursorgaan. ABO. Er is een experiment eh over het informeren van ingezetenen over inschrijvingen op het woonadres. Ik ben recent verhuisd en ik kreeg netjes een brief van de nieuwe gemeente waarin stond hoeveel eh inschrijvingen er op mijn nieuwe adres eh zijn. Dus ik kon controleren dat het aantal bewoners klopte. En het derde experiment, dat kennen jullie beter, dat is het experiment dataminimalisatie uit de BRP. En daar gaan we even op inzoomen. Eh de reikwijdte van dat experiment is dat de minister gegevens uit de BRP mag bewerken tot informatie. En die informatie vervolgens ook mag verstrekken aan dezelfde overheidsorganen en aangewezen derden mits die een convenant daartoe ondertekenen. Het blijft een experiment en eh deelnemers aan dat experiment die moeten ook meewerken aan evaluatie bijvoorbeeld van het experiment. Dus er zijn allerlei voorwaarden voor eh om daaraan deel te mogen nemen. Eh maar het experiment loopt nu een paar jaar. En eh nou, de stand van zaken van nu is dat er een wetswijziging in de maak is om dat ook echt definitief toe te staan dat die minister die informatie mag afleiden uit de gegevens in de BRP en die informatie ook mag verstrekken. Nou, de manier waarop dat gebeurt is eh middels de BRP API. Eh daar zijn eh nu drie, eigenlijk vier smaakjes van. We hebben een bewoning API, er is een personen API en er is een API voor de verblijfplaatshistorie. Er is ook nog reisdocumenten, maar die is die is nu alweer obsolet verklaard. Want eh voor reisdocumenten worden afnemers eigenlijk ehm doorverwezen naar het basisregister reisdocumenten.</v>
+
+00:32:22.317 --> 00:32:35.287
+<v Remko Muis>Nou, het experiment dat is eh heeft best wel een eh vlucht genomen. Er zijn nu 121 gemeenten aangesloten en 65 overheidsorganen en aangewezen derden die allemaal gebruik maken van die BRP API en die informatie vragen.</v>
+
+00:32:37.497 --> 00:34:03.767
+<v Remko Muis>En de wetswijziging is zoals gezegd in de maak. Dus dit dit is wel een beetje hoe Binnenlandse Zaken eh de BRP voor zich ziet in de toekomst. Nou, wat heeft informatieverstrekking te maken met dataminimalisatie, want zo heet het experiment tenslotte. Als je gegevens mag verwerken tot informatie, dan maakt dat dataminimalisatie mogelijk. Je kunt de leeftijd verstrekken in plaats van de geboortedatum en daarmee verstrek je dus strikt genomen minder informatie dan wanneer je de hele geboortedatum verstrekt. En een aanschrijfnaam eh bevat beduidend minder informatie dan alle gegevens uit de BRP die je nodig hebt om die aanschrijfnaam samen te stellen. Als je aangeeft dat je wilt worden aangeschreven met de naam van je partner, dan moet vanuit de BRP alle ex-partner, alle partners eh worden verstrekt. En dan moet een afnemer zelf uitpuzzelen wat op dit moment iemands partner is en wat daarvan de naam is. Dat is echt een hele set eh gegevens die ja, dat is gewoon zware overkill om alleen maar eh een naam op een envelop te kunnen krijgen. Dus eh dit zijn eh gevallen waarin dataminimalisatie echt eh een enorme verbetering is eh ten aanzien van de bescherming van de privé wereld van de burger. Maar het is ook weer niet zo dat elke bewerking eh leidt tot dataminimalisatie. Ik bedoel, aanvankelijk was zelfs sprake van dat de minister een juridische grondslag nodig had om de data in een ander formaat te verstrekken.</v>
+
+00:34:06.127 --> 00:34:17.807
+<v Remko Muis>dan dat hij in de BRP is vastgelegd. Ehm maar inmiddels zijn we zover dat zelfs enumeraties met maar twee mogelijke waarden, als we daar een die vertalen naar een boolean, dan krijg je dus echt iets anders verstrekt dan wat er in de BRP geregistreerd is.</v>
+
+00:34:20.697 --> 00:34:27.457
+<v Remko Muis>eh maar ook dat vinden we ehm ehm geen echte bewerking zeg maar. Dus die had met terugwerkende kracht de minister ook wel mogen doen zonder dat experiment besluit.</v>
+
+00:34:32.187 --> 00:35:09.007
+<v Remko Muis>Die informatie wordt on the fly afgeleid op het moment dat er een vraag wordt gesteld aan de BRP API. Dus die wordt niet opgeslagen. En dat ehm levert een beperking op dat het ook echt alleen maar ad hoc te verstrekken valt, want je kunt nou ja, je kunt je kunt spontaan informatie verstrekken. Dan moet je dus als één van de gegevens die ten grondslag ligt aan een informatieproduct eh als die wijzigt, dan ga je ervan uit dat ook het informatieproduct wijzigt en dan zou je dat spontaan kunnen verstrekken.</v>
+
+00:35:11.197 --> 00:35:57.127
+<v Remko Muis>En een tweede beperking van eh de huidige oplossing van de BRP API is dat ehm de gegevens in de BRP verstrekkingvoorziening die zijn niet niet real time up to date zeg maar. Als er een verhuizing plaatsvindt, dan duurt het een paar dagen zelfs voordat dat eh helemaal tussen de gemeente onderling is geregeld en dus ook een paar dagen voordat je nieuwe adres correct geregistreerd staat in de BRP verstrekkingvoorziening. Dat betekent dus ad hoc verstrekking aan een binnengemeentelijke afnemer die is overgestapt uit zijn van eh verstrekking uit het eigen gegevensmagazijn op de BRP API eh en soms toe leidt dat zij geen niet eh up-to-date informatie verstrekt krijgen.</v>
+
+00:35:59.537 --> 00:36:07.417
+<v Remko Muis>En dat betekent weer dat als een taak applicatie van zo'n afnemer eh ja, dat dat gegeven nodig heeft eh niet altijd ehm</v>
+
+00:36:09.777 --> 00:36:44.297
+<v Remko Muis>eh direct een proces in gang kan zetten wat eh ja, waar dat gegeven voor nodig is. Dus we moeten een beetje overstappen op naar een eh gebeurtenisgebaseerde architectuur. En om dat te realiseren wordt er op dit moment gewerkt aan een ja, een nieuwe API van de BRP API. Dat zijn notificaties op de gebeurtenissen. Waarin een afnemer een signaaltje krijgt dat er iets gewijzigd is op iemand op iemands persoonslijst en dus een trigger krijgt om die persoonslijst te bevragen. En dat kan dan weer eh nou, allerlei processen bij een afnemer in gang zetten.</v>
+
+00:36:46.447 --> 00:37:19.987
+<v Remko Muis>Nou, het ministerie beschouwt dit wel een beetje als de toekomst van de BRP, verdere dataminimalisatie en ook meer halen bij de bron, dus het afscheid nemen van allerlei lokale kopieën van de BRP bij afnemers. En zelfs de belastingdienst eh praat over mee om over een meerjarenplan zeg maar om eh afscheid te nemen van hun eigen lokale kopieën. Nou, als dat zou eh gebeuren, dan eh praten we over eh eh bevraging van de BRP in in enorme aantallen. En als dat landelijk de standaard wordt, dan eh</v>
+
+00:37:22.467 --> 00:38:16.937
+<v Remko Muis>ja, dan kunnen al die afnemers dus afscheid van nemen van hun eigen kopieën met alle kostenbesparingen van dien. Ehm is het alleen wel aan ons om te zorgen dat we die BRP misschien wat meer eh real time up to date krijgen of eh inzetten op die notificaties en die eh snel weer afnemers krijgen. En dat betekent eigenlijk dat ehm de wereld van de bijhouding, de de brongegevens zeg maar bijhouden en die van de verstrekking zich steeds meer gaan verhouden als eh ja, de de ingrediënten en een menukaart. De ingrediënten worden door gemeenten verzameld. Eh een kopietje daarvan gaat naar RVG en de RVG stelt daaruit een soort menu samen voor eh nou, aanschrijf nou, allerlei informatieproducten volgens openbare recepten, dat dan weer wel. Eh waarmee afnemers hun eigen dienstverlening aan burgers kunnen eh ondersteunen.</v>
+
+00:38:23.367 --> 00:38:29.977
+<v Remko Muis></v>
+
+00:38:33.497 --> 00:41:06.017
+<v Remko Muis>en ter vervanging zo meteen voor de mailbox. Eh daar loopt dus echt de bestaande autorisatie eh loopt daar ook gewoon op. Kijk je naar de BRP API, dan zit je veel meer in de vorm van die informatieproducten, zoals we die eh net noemden. En daar zie je twee verschillende. Eh de eerste die je hier ziet is voor binnengemeentelijke afnemers. En wat Remco net ook al zei, je hebt ehm op het moment dat een gemeente in zijn eigen, zeg maar, burgerzaken gaat graven, dan kan die best wel veel. Maar wil je iets over een ingezetene weten van een andere gemeente, dan heeft hij ineens een autorisatie nodig. En eh als je dat dus gebruikt voor eh intern of weet dat binnengemeentelijke afnemers zoals zorg of belastingen en andere dingen. Ehm dan zie je daar een verschuiving bij de BRP API en dat experimentbesluit, waarbij de autorisatie volledig bij de gemeente komt te liggen. Dus de gemeente heeft dan volledige toegang tot de BRP, in dit geval de BRP-V, van zijn eigen gemeente en van alle andere gemeenten. En de gemeente wordt zelf verantwoordelijk voor het feit dat die autorisatie intern wordt geregeld naar zijn eigen deelnemers, in dit geval binnengemeentelijke afnemers, die daarop hun verwerking doen. Dat is de eerste variant. Deze hoort dus bij eh de BRP API zo meteen. En heeft dus ook te maken met eventuele notificaties die worden gestuurd, wat dus, nou, noem het even een informatieproduct, dus we hebben een verhuizing of we hebben een overlijden of whatever, waarbij de gemeente of wie dan ook in kennis wordt gesteld van het feit dat die gebeurtenissen hebben plaatsgevonden en daarna op eigen initiatief dus de betreffende gegevens op kan vragen. En dus in tegenstelling bijvoorbeeld tot spontane of conditionele verstrekking die automatisch die gegevens krijgt. Kijken we naar de tweede variant van dit verhaal, dan zie je een kleine wijziging in het plaatje. Dan zie je dat het blokje autoriseren, toetsen, dat hij naar de linkerkant is geschoven. En dat betekent dat als er dus een reguliere afnemer is met een overheidstaak die dus recht heeft op het verwerken van gegevens uit de BRP, dat die autorisatie nog steeds door ons wordt gedaan, dat wij bepalen: mag jij die gegevens wel of niet krijgen.</v>
+
+00:41:08.807 --> 00:41:36.097
+<v Remko Muis>op basis van dus een trigger als een notificatie en de informatievraag die zij stellen. En dat kan dus ook zo meteen een gegevensvraag zijn. Kijk je in het kader van Haal Centraal, dan zou het ook nog kunnen zijn dat ze vragen van ja, weet je, is deze persoon 18 jaar of ouder? En dan leveren we een informatieproduct op wat weer van een andere orde is en wat ook gevolgen heeft voor meteen voor de protocollering, omdat wij van alles bij moeten gaan houden hoe wij welke vraag we hebben ontvangen en hoe we het antwoord hebben samengesteld.</v>
+
+00:41:38.847 --> 00:41:40.247
+<v Remko Muis>Dat even in een notendop.</v>
+
+00:41:45.097 --> 00:41:49.977
+<v Remko Muis>En dan waren we er volgens mij doorheen. En daarmee zijn wij aan het einde van ons eh betoog. verhaal.</v>
+
+00:41:54.057 --> 00:41:58.767
+<v Michiel Trimpe>Interessant. Dat is eh eruit. Vragen uit de eh vanuit de zaal.</v>
+
+00:42:05.367 --> 00:42:06.337
+<v Remko Muis>Wilde dit een beetje landen?</v>
+
+00:42:05.707 --> 00:42:24.667
+<v Michiel Trimpe>Ja, ik ik zie sowieso een hoop interessante aanknopingspunten. Die laatste, dus dat ook die die laatste twee slides, dus daar daar gebeurt iets heel interessants. Dat eigenlijk dezelfde autorisatie in sommige gevallen binnenshuis is en in sommige gevallen buitenshuis.</v>
+
+00:42:25.327 --> 00:42:57.807
+<v Remko Muis>Ja, heb je dus een afnemer, dan zit die autorisatie eigenlijk bij ons binnenshuis, als je het zo wilt noemen. Ehm, ga je eentje terug naar de gemeente die dus zeg maar eigenlijk vanuit zijn bijhoudingstaak volledige toegang heeft tot de BRP-V, dan zie je dat die autorisatie eigenlijk voor ons buitenshuis is. En dat wij zeggen van oké, als gemeente zijnde, je hebt volledige toegang, dus alsjeblieft. En daarbij vervolgens eh zij zelf wel de verplichting hebben om bij te houden aan wie ze wat zeg maar intern verstrekken.</v>
+
+00:42:59.567 --> 00:43:11.307
+<v Michiel Trimpe>Ja, en voor Giel was het je, ik was benieuwd, in in deze variant, betekent dit dat je dan ook notificaties van heel Nederland krijgt als elke gemeente zijnde of...</v>
+
+00:43:11.097 --> 00:43:15.217
+<v Remko Muis>Eh daarvoor zit ik er nog niet diep genoeg in, maar ik denk het wel.</v>
+
+00:43:16.037 --> 00:43:16.197
+<v Michiel Trimpe>Oké.</v>
+
+00:43:16.867 --> 00:43:33.517
+<v Remko Muis>Maar de vraag is even, hoe gaan we dat zeg maar reguleren? Want je wilt niet alles naar iedereen sturen. Nee, nee, de bedoeling is dat eh dat je je kunt abonneren ook weer op notificaties bij een bepaalde persoonslijst. Dus eh zo'n gemeente moet zich dan abonneren op eh bepaalde gebeurtenissen.</v>
+
+00:43:38.207 --> 00:43:45.127
+<v Remko Muis>Ehm dus is inderdaad nog niet helemaal uitgewerkt, maar het idee is in ieder geval niet dat dat iedereen heel Nederland alle van alle gebeurtenissen een signaaltje krijgt. Dat zou echt eh</v>
+
+00:43:46.567 --> 00:43:50.927
+<v Michiel Trimpe>Nee, dat eh kan je de andere kant weer terug. Oké.</v>
+
+00:43:52.337 --> 00:44:33.812
+<v Gideon Zegwaard>Ja, ik wilde even aangeven dat eh hè, dat dat die gemeentelijke autorisatie, maar eigenlijk is dat een patroon wat je volgens mij eh bij elke afnemer wel ziet. Want als het een afnemer hem zelf gebruikt, dan zal hij ook een applicatielandschap hebben. En als het naar één applicatie gaat, dan is het overzichtelijk, maar als er meerdere applicaties zijn eh die op die manier toegang krijgen, dan zou je er toch ook een soort van toegangsbeleid op uit moeten voeren. En afnemers ehm ook andere afnemers dan gemeente die eh leveren nog wel eens door. Ik ik heb eh in een grijs verleden ook nog wel wat voor Studielink gedaan en die kregen BRP-informatie van DUO en DUO is dus Alex Dex een gewone landelijke afnemer, maar die is zelf ook weer aan het doorleveren aan Studielink en Studielink levert weer door aan eh aan universiteiten en hogescholen.</v>
+
+00:44:30.507 --> 00:44:30.907
+<v Remko Muis></v>
+
+00:44:33.812 --> 00:44:47.537
+<v Gideon Zegwaard>Eh dus er je je je je gaat steeds weer allerhande ketens krijgen en die moeten allemaal autoriseren en toetsen of die vragen op dat moment wel eh eh gehonoreerd mag worden.</v>
+
+00:44:47.757 --> 00:44:48.037
+<v Remko Muis>Ja.</v>
+
+00:44:49.337 --> 00:44:50.457
+<v Gideon Zegwaard>Klopt.</v>
+
+00:44:51.177 --> 00:44:58.177
+<v Remko Muis>Het grootste verschil zit hem erin dat de eh de gemeente eigenlijk een wat bredere toegang heeft dan de gewone reguliere afnemer.</v>
+
+00:44:58.937 --> 00:45:03.133
+<v Gideon Zegwaard>Ja, de gemeente die die ziet gewoon alles, dus dat eh dat is natuurlijk wel een hele grote hè, zet eh</v>
+
+00:45:00.977 --> 00:45:02.877
+<v Remko Muis>Ja, dat is natuurlijk wel een hele grote zet.</v>
+
+00:45:03.133 --> 00:45:03.657
+<v Gideon Zegwaard>Ja.</v>
+
+00:45:05.987 --> 00:45:10.967
+<v Remko Muis>Ja, kijk en in hoeverre distributie ehm achter de verstrekking zit, dat weten wij ook niet altijd.</v>
+
+00:45:14.117 --> 00:45:32.837
+<v Gideon Zegwaard>En en dat is op zich ook wel weer een interessante als je het hebt over eh over transparantie eh dat we ook kijken naar eh eh wat hoe hoe afnemers eh hun toegangsbeleid dan weer inzichtelijk kunnen maken. Dat kan ook weer comfort geven aan aanbieders dat ze dat op een zorgvuldige manier doen.</v>
+
+00:45:33.687 --> 00:45:35.527
+<v Remko Muis>Ja. Dank voor het compliment.</v>
+
+00:45:35.357 --> 00:45:53.631
+<v Michiel Trimpe>Ja. Eens. Het is interessant. Het lijkt alsof er bijna een eh een hiërarchische gelaagdheid in zit dat je als als aanbieder beleid hebt voor je afnemer en dat die afnemer dan zelf ook weer een nieuwe aanbiedersrol is en datzelfde beleid door zou door moet geven verder de keten in.</v>
+
+00:45:53.577 --> 00:45:53.937
+<v Remko Muis></v>
+
+00:45:53.631 --> 00:46:00.246
+<v Michiel Trimpe>Dus dat het niet een een één stap is, maar een meerstap teruggeeft.</v>
+
+00:45:58.627 --> 00:45:59.307
+<v Remko Muis>Ja.</v>
+
+00:46:00.246 --> 00:46:00.917
+<v Michiel Trimpe>Ja.</v>
+
+00:46:01.647 --> 00:46:03.847
+<v Remko Muis>Helpt dit verhaal een beetje zo bij de beeldvorming?</v>
+
+00:46:08.337 --> 00:46:49.167
+<v Gideon Zegwaard>Ik ik denk dat het een prima verhaal is en dat het kijk, er is natuurlijk in de context van de BRP heel veel ervaring met eh met toegangsverlening. En je ziet dat de eh de andere registraties die ook met persoonsgegevens te maken hebben. Ik denk aan de polisadministratie, ik denk aan eh de basisregistratie inkomen, maar er zijn nog wel een paar eh eh basisregistraties met persoonsgegevens erin, hè, het handelsregister, eh het kadaster, hè, dus eigendomsinformatie. Eh daar zit allemaal gevoelige informatie in en eh die hebben dat niet zo gestructureerd netjes opgericht en ik denk dat er veel van te leren is hoe de BRP dat doet.</v>
+
+00:46:52.347 --> 00:46:53.267
+<v Remko Muis>Ja.</v>
+
+00:46:55.227 --> 00:48:01.667
+<v Michiel Trimpe>Ja, en ik denk dat voor deze werkgroep, dus de, we hebben nog een een stukje te gaan in dit jaar. Ehm maar ik denk dat wij met z'n allen dus een een ODRL profiel neer moeten zetten of een voorbeeld of wat dan wat dan ook, waarmee we eigenlijk de de vergelijkbare structuur zoals hier neergezet is over heel de overheid gelijk kunnen trekken of neer kunnen zetten. En wat dan uit Erfig eh specifiek dan ook weer interessant is of lijkt me, wat dan weer wat interessant lijkt is dus diezelfde structuur ook eh bij de afnemers neerzetten. Want ik kan me voorstellen vanuit de, ja, vanuit de Erfig heb je dan momenteel weinig zicht of er wordt alles bij Erfig neergelegd. En ik kan me voorstellen dat wanneer er een een duidelijke structuur is voor hoe afnemers hun beleid moeten modelleren, dat dat naar de toekomst toe het wellicht mogelijk maakt om wat van het werk van Erfig bij de afnemers neer te gaan leggen.</v>
+
+00:48:00.727 --> 00:48:27.927
+<v Gideon Zegwaard>Als je bijvoorbeeld standaardiseert hoe hoe je een doelbinding formuleert, om er iets te noemen, hè, je hebt een wettelijke taak en dan moet je ergens een artikel in de wet aanwijzen en dat moet je op een bepaalde manier onderbouwen. Dus op het moment dat je daar wat eh wat duiding aan geeft wat gewoon breder toepasbaar is.</v>
+
+00:48:33.427 --> 00:48:51.797
+<v Michiel Trimpe>en met is uitgeschreven is voor deze taak, voor deze taak, voor deze taak en voor deze taak. Eh hoe we dat dan ook gestandaardiseerd kunnen maken en ook bij de afnemer neer kunnen leggen. Dat is wat je dan voorstelt.</v>
+
+00:48:53.387 --> 00:50:00.387
+<v Gideon Zegwaard>Ja, wat je dan zou krijgen is dan dan dan is er een bepaalde autorisatie bij de BRP, die is er waarschijnlijk wat hoger over. En dan als die afnemer dan daar vervolgens aan zijn kant eh de verdere verfijning doet, en wie weet heeft die afnemer wel vijf taken. Ehm of is één taak is dat een soort van containertaak eh waar allehande subtaken ondervallen. Eh en als zo'n eh zo'n afnemer, zeker een grotere afnemer dan aan zijn kant het dan weer verder uitsplitst van dit gaat niet naar die applicatie voor dat stukje van eh van de taak en dit gaat eh eh is voor die hoofdtaak hè, dus als je daar die eh die differentiatie bij de afnemer ook inzichtelijk kan maken en je kan dat aan elkaar verbinden hè, dus het het dat niveau wat op de bij de eh bij RVG wordt gedefinieerd, dat splitst zich uit in bij de afnemer in weer een aantal eh lossere eh fijnmaziger geautorisaties. Als we daar iets op kunnen verzinnen in hoe je dat doet, dan is denk ik elke vorm van leidraad of of verdere structurering of verdere hulp aan partijen om dit netjes te doen is meegenomen, want nu doet iedereen maar wat.</v>
+
+00:50:05.217 --> 00:51:05.557
+<v Michiel Trimpe>Ja. Ja, het is inderdaad ook de de keten vanaf aanbieder tot eh ja, tot verstrekking API, tot afnemer, doorwerken. En dan wat we zagen vandaag is dat je dus inderdaad een gelaagdheid hebt over niet alleen de autorisatiebesluiten, maar ook het beleid over hoe kom je tot die autorisatiebesluiten en het algemene afnemersbeleid. En probeer het een beetje te te samenvatten richting de tijd, want het is best veel. Maar ik denk dat dat misschien ook de samenvatting is van het is dus momenteel is het eigenlijk best veel, dus er is best veel beleid en het is een best complex geheel. En ik denk dat dan aan eh de uitdaging voor de werkgroep is, dus hoe kunnen we daar een stukje structuur uit distilleren en die van toepassing is op iedereen. Dus wat wat is hier echt universeel aan? Wat voor iedereen geldt.</v>
+
+00:51:07.927 --> 00:51:10.087
+<v Michiel Trimpe>En wat eh</v>
+
+00:51:08.707 --> 00:51:28.587
+<v Remko Muis>Je kunt ook niet uitsluiten dat er in andere overheidsregistraties nog aspecten een rol spelen die in de BRP nog niet zo zijn eh. Ik zit even te denken, de burger heeft weinig regie op de gegevens die eh over hem worden verstrekt. Terwijl bij het handelsregister kan ik wel aangeven eh of ik wil dat mijn adres publiek wordt gemaakt, ja of nee.</v>
+
+00:51:31.437 --> 00:52:05.990
+<v Remko Muis>Dat dat is in de BRP nog niet heel erg eh daar is wel sprake van hè, er wordt bijvoorbeeld gegevens verstrekt aan de Stichting Interkerkelijke Ledenadministratie. Dat is de enige waarvan je als burger kunt zeggen van dat wil ik niet. Kun je uitzetten. Maar dan moet je dus om geheimhouding van je gegevens vragen en dat is voert ook alweer best ver.</v>
+
+00:52:03.387 --> 00:52:03.827
+<v Gideon Zegwaard>Ja.</v>
+
+00:52:05.990 --> 00:52:07.437
+<v Remko Muis>En eigenlijk zou je gewoon op mijn overheid willen kunnen aangeven van nou, eh deze afnemers eh daar kan ik niet onderuit, die voeren een wettelijke taak uit, maar eh deze en deze afnemer, dat vind ik eigenlijk niet zo nodig dat die mijn gegevens krijgen. En die regie is er nu die mogelijkheid is er nu niet. En dat is in andere registraties misschien wel zo.</v>
+
+00:52:08.137 --> 00:52:28.597
+<v Gideon Zegwaard>Ja, dat heeft ook weer te maken met de grondslagen in de AVG hè. Dus je hebt verschillende grondslagen. Als er een wettelijke grondslag is, dan heb je als burger niet zoveel te willen. Eh maar als er een consent grondslag is, en dat is bijvoorbeeld bij de SILA heel duidelijk, want daar is geen wettelijke grondslag waarop ze de SILA dat eh krijgt, dan dan zou je het consent construct eh ook eh willen toepassen.</v>
+
+00:52:28.477 --> 00:52:38.957
+<v Remko Muis>Ja. Ja, dat is wat nu bij ons geheimhouding is hè. Ja. Die SILA. Ja. Stichting Interkerkelijke Ledenadministratie.</v>
+
+00:52:43.947 --> 00:52:46.307
+<v Remko Muis>Oké. Zo ver zo goed denk ik.</v>
+
+00:52:44.337 --> 00:53:00.077
+<v Michiel Trimpe>Ja, zeker. Ik heb niet eh niet direct vanzelfsprekend wat wat de vervolg eh even dan in de groep. Wat denken we wij gezien dit eh dit mooie duidelijke verhaal. Ik denk dat we ondertussen met z'n allen wel weten waar we voor aan de lat staan.</v>
+
+00:53:03.177 --> 00:53:09.057
+<v Michiel Trimpe>Ehm wat eh wat wat wat leeft er in de groep als eh vervolgactie om hier vorm aan te gaan geven?</v>
+
+00:53:14.417 --> 00:53:16.177
+<v Gideon Zegwaard>Misschien een definitie van die niveaus?</v>
+
+00:53:18.187 --> 00:53:23.827
+<v Gideon Zegwaard>Dus we hebben al gezien dat er een aantal niveaus zijn. Wellicht dat we daarvan een een definitie voor kunnen opstellen, welke niveaus dat zijn.</v>
+
+00:53:28.607 --> 00:53:29.007
+<v Michiel Trimpe>Ja.</v>
+
+00:53:29.977 --> 00:53:39.617
+<v Rob van Dort>Ja, ik denk ook we hebben nu deze presentatie in een vrij kleine kring meegemaakt. We hebben natuurlijk veel meer leden, dus ik denk dat we het wel eventjes op moeten hameren dat eh anderen ook de opname bekijken.</v>
+
+00:53:40.167 --> 00:53:40.287
+<v Igor van Haren>Ja.</v>
+
+00:53:43.117 --> 00:53:45.837
+<v Rob van Dort>Want een verhelderend eh verhaal eh. Dank jullie wel.</v>
+
+00:53:47.837 --> 00:53:50.957
+<v Remko Muis>Graag gedaan. Bedankt voor jullie aandacht.</v>
+
+00:53:53.847 --> 00:54:14.167
+<v Michiel Trimpe>Ja, zeker. Nou, ik denk dat wij met eh de werkgroep ja hier dan eh verder in moeten in kunnen duiken, hoe kunnen we dit vormgeven. Vanuit eh vanuit de RVG als we af en toe dat meer willen workshoppen over eh specifieke RVG voorbeelden, kunnen we jullie eh af en toe uitnodigen of ja, uitnodigen mag altijd denk ik.</v>
+
+00:54:17.827 --> 00:54:19.067
+<v Remko Muis>Ja hoor.</v>
+
+00:54:21.277 --> 00:54:38.797
+<v Michiel Trimpe>Oké. Dat blijft natuurlijk een hele mooie case, maar we moeten inderdaad, dat is ook een goede uitdaging challenge terug. We moeten ook eh de breedte in gaan. Niet alleen met het eh het mooiste uitgewerkte voorbeeld werken, maar ook ja, de andere aspecten eh van andere domeinen verkennen.</v>
+
+00:54:40.947 --> 00:55:10.997
+<v Michiel Trimpe>Oké. Ehm ik denk eigenlijk ook dat we dan voorstellen voor de volgende sessie met z'n allen eh een keer eh ja, een beetje richting eh een workshop te gaan van hoe eh even kijken naar ODRL, hoe kunnen we dit echt uitwerken? Welke concepten past het in? Even niet eh centraal, maar even met z'n allen zitten. Ik denk wel dat we wel op moeten geven dat we een hybride groep zijn, want dat zijn we niet meer volgens mij. Volgens mij zijn we nu echt een online only werkgroep geworden.</v>
+
+00:55:13.257 --> 00:55:21.497
+<v Michiel Trimpe>Als het oké is, dan ga ik ook niet meer trouw elke elke tweede dinsdag van de maand naar eh elke om de dinsdag naar Den Haag afreizen.</v>
+
+00:55:24.267 --> 00:55:44.557
+<v Michiel Trimpe>Ehm, maar dan zal ik iets voorbereiden in ieder geval qua richting voor de volgende werkgroep. En eh Remco en Hans, enorm bedankt voor de presentatie. Heeft eh ja, duidelijk iedereen geholpen om echt even het brede beeld en het kader neer te zetten. Ik denk dat we nu met z'n allen goed weten waar we ja, welke uitdagingen er voor ons voorligt.</v>
+
+00:55:46.527 --> 00:55:47.687
+<v Igor van Haren>Michiel, ik heb nog wel één vraag.</v>
+
+00:55:48.277 --> 00:55:49.677
+<v Remko Muis>Hey, ik moet er helaas vandoor.</v>
+
+00:55:51.337 --> 00:55:57.257
+<v Michiel Trimpe>Oké, dan hebben we nog even tijd. Dus dank jullie wel alvast. En eh Igor, vraag stellen. Ja.</v>
+
+00:55:56.677 --> 00:56:01.357
+<v Igor van Haren>En dat gaat over toch ook wel over de BRP. Ehm</v>
+
+00:56:02.137 --> 00:56:03.377
+<v Remko Muis>En zeg maar straks die ODRL eh</v>
+
+00:56:03.327 --> 00:56:05.447
+<v Igor van Haren>ehm de autorisatie goed beschrijven in ODRL.</v>
+
+00:56:08.047 --> 00:56:10.847
+<v Igor van Haren>Ehm dan heb je natuurlijk verschillende punten waarin je</v>
+
+00:56:13.567 --> 00:56:29.917
+<v Igor van Haren>eh die autorisatie gaat valideren of toepassen. Eh en en net was het eh eh binnen de RVG en eh eh maar ook gemeentelijk.</v>
+
+00:56:29.397 --> 00:56:31.957
+<v Remko Muis>Ehm en</v>
+
+00:56:33.597 --> 00:56:34.197
+<v Igor van Haren>ehm</v>
+
+00:56:36.767 --> 00:57:13.127
+<v Igor van Haren>binnen de netwerkmodellen, binnen de eh binnen de zorg willen we dat eigenlijk als een soort EAM-achtige structuur gaan toepassen. Hè, dus dat het echt wel op één plek alle autorisaties inzichtelijk zijn in plaats van dat je de verantwoordelijkheid legt bij eh een andere partij voor het goed inrichten. Ehm hoe hoe hoe zien zien jullie dat vanuit de overheid daar hè, dat</v>
+
+00:57:14.457 --> 00:57:21.706
+<v Michiel Trimpe>Ik denk een beetje voor degene die af moeten haken, haak gerust af. Dan ga ik even inhoudelijk het antwoord geven op Igor wat langer kan duren dan de deadline. Dus eh</v>
+
+00:57:19.027 --> 00:57:19.387
+<v Igor van Haren>Ja.</v>
+
+00:57:21.706 --> 00:57:46.264
+<v Michiel Trimpe>voor degene die af moeten haken, dankjewel voor jullie aanwezigheid alvast. En eh Igor, voor wat jij omschrijft, klinkt een beetje als wat we bijvoorbeeld met de met de DRO enigszins voor het oog hebben. En dat je ook vaak hebt dat je de bijvoorbeeld een onderscheid hebt tussen de de bronhouders die gegevens aanleveren aan een landelijke voorziening en de landelijke voorziening die dit dan verder verstrekt. Ja. Daar is de voorziening dan bijna weer een een dienstverlening. En daar heb je dus ook een dynamiek en die willen wij nu ook</v>
+
+00:57:45.237 --> 00:57:45.677
+<v Igor van Haren>Ja.</v>
+
+00:57:46.264 --> 00:58:29.977
+<v Michiel Trimpe>één van de cases die wij willen verkennen. Waarbij de bronhouder eh zijn eigen beleid aanlevert aan de landelijke voorziening. Dus het beleid van de bronhouder, eh maar de afdwinging daarvan die wordt centraal belegd. En dat is ook één van de cases waarvan we met het ODRL willen kijken of we daarmee kunnen werken om dan dat toegangsbeleid eh de verantwoordelijkheid voor het beheer van het toegangsbeleid bij de bronhouder te houden, maar de afdwinging daarvan centraal te beleggen.</v>
+
+00:58:32.627 --> 00:58:41.387
+<v Igor van Haren>gelegd.</v>
+
+00:58:37.277 --> 00:58:37.517
+<v Michiel Trimpe></v>
+
+00:58:42.987 --> 00:58:50.323
+<v Igor van Haren>En er hoort dan bij bij de WLZ is het zo dat Zorginstituut Nederland het beleid eh</v>
+
+00:58:45.517 --> 00:58:46.197
+<v Michiel Trimpe></v>
+
+00:58:50.323 --> 00:59:19.437
+<v Igor van Haren>vastlegt, de grondslagen, de wettelijke grondslagen. Maar er zijn partijen eh zorgkantoren die zeggen die bij wijze van spreken dat zelf willen gaan toepassen. Of dat het zelfs hybride is, hè, dus dat het eh binnen FTV kan het op ja, bij bij eh ehm op verschillende plekken gebeuren. Ehm, maar die moet wel allemaal eigenlijk hetzelfde beleid gaan handhaven.</v>
+
+00:59:22.727 --> 00:59:38.837
+<v Igor van Haren>eh in in plaats van het eh de de ODRL beschrijving, zeg maar, ehm je je moet het beleid toepassen zoals hier beschreven. Dat vind ik nog net iets anders. Dat vind ik nog eh</v>
+
+00:59:41.317 --> 00:59:43.277
+<v Igor van Haren>Bij ODRL is het natuurlijk wel ietsjes</v>
+
+00:59:49.207 --> 00:59:49.927
+<v Igor van Haren>eh beter</v>
+
+00:59:52.017 --> 00:59:56.857
+<v Igor van Haren>eh interpreteerbaar of eh in ieder geval uniform interpreteerbaar, altijd hetzelfde.</v>
+
+01:00:03.637 --> 01:00:08.854
+<v Igor van Haren>maar ik zou het nog iets verder willen trekken. Wij wij zien het klinken hebben bedoel je ook. Nee, echt afdwingen. Dit is de enige mogelijkheid</v>
+
+01:00:06.347 --> 01:00:08.587
+<v Michiel Trimpe>Ja, het klinkt hebben bedoel je ook.</v>
+
+01:00:08.854 --> 01:00:10.917
+<v Igor van Haren>om het</v>
+
+01:00:11.707 --> 01:01:33.347
+<v Michiel Trimpe>Ja. Nou ja, wat eh wat je net zegt maar eh wat natuurlijk ook speelt is eh die bijvoorbeeld dat eh met FDS dan stelselbeleid genoemd wordt. Dus dat er ook toegangsbeleid kan zijn dat eh op een een datastelsel eh vanuit een datastelsel bijvoorbeeld afgedwongen wordt. En dan heb je dus een beleid waar je naar refereert. En wat je als als geheel binnentrekt en ja, wat je als organisatie dan ook uit zal moeten voeren. Ehm en dat kan met ODRL. Eh wat ook wel belangrijk is is dat we ODRL ook kunnen en zullen moeten linken aan technisch beleid. Dus dat die koppeling ook echt gelegd wordt. Die is momenteel niet expliciet. Maar dat is wel nodig. En ik denk dat als je dat combineert, dan is wat wat jij omschrijft ook mogelijk. Dus dan heb je eigenlijk leg je dan eh stelselbeleid vast in ODRL. Dat koppel je aan één of meerdere eh technisch afdwingbare vereisten. En als afnemer kun je dan stelselbeleid in jouw toegangsbeleid binnentrekken. Dus dan kun je zeggen: ik heb als organisatiebeleid A, B en C, maar ik eh maak ook deel uit van eh stelsel X. Dus ik eh dwing ook het ODRL-beleid van stelsel X af. Dan trek je dat op die manier automatisch binnen.</v>
+
+01:01:35.507 --> 01:01:36.827
+<v Igor van Haren>Ja. Ja.</v>
+
+01:01:37.667 --> 01:01:41.827
+<v Michiel Trimpe>Misschien is dit een goede om ook in we hebben een workshop eh volgens mij morgen al?</v>
+
+01:01:41.677 --> 01:01:52.597
+<v Igor van Haren>Ik denk dat je dat zeker in de workshop eh hè, dus gaan we het gaan we het toepassen in een use case of zoiets en dan zou ik dat graag ook hoe zou je dat dan ook gaan implementeren?</v>
+
+01:01:53.757 --> 01:02:13.294
+<v Michiel Trimpe>Ja. Ja, ik denk dat we daarvoor het dat is nu echt wel een doorkijk naar voor waarschijnlijk volgende sessie. Dus ik denk dat het belangrijk is dat we nu echt gaan proeven, hé, welke concepten heb je in ODRL? Wat voor beleid kan je hierin moduleren? Hoe hoe werkt dit? Maar dan ook meer de education opzoeken van hoe kunnen we dan informatie delen? Dus wat we dan vandaag horen, ik denk dat weet je, hoe kan je informatie, hoe kan je als eh ene partij</v>
+
+01:02:10.917 --> 01:02:12.067
+<v Igor van Haren>Ja.</v>
+
+01:02:13.294 --> 01:02:23.357
+<v Michiel Trimpe>beleid opleggen aan de volgende partij in de keten. Ja.</v>
+
+01:02:25.407 --> 01:02:30.207
+<v Michiel Trimpe>Ik denk dat dat dat daar hebben we niet direct antwoorden op. Ik denk dat we dat best wel echt ook even moeten verkennen.</v>
+
+01:02:33.887 --> 01:02:47.567
+<v Rob van Dort>Nou, ik kijk hoe we eh zeg maar ja, vroeger noemden we het STP hè, dus dat je straight dus op basis van zoveel mogelijk automatisch toepassen van regels eh je autorisatie zover mogelijk zeg maar eh afgevinkt kunt krijgen.</v>
+
+01:02:51.147 --> 01:03:06.267
+<v Rob van Dort>Maar het kan ook betekenen dat je een extra stukje metadata nodig hebt over welke gegevens bijvoorbeeld wel wel privacygevoelig zijn en welke niet, hè. Dus dat je dat wat fijnmaziger eh definieert dan alleen op zeg maar een op datasetniveau, maar echt op gegevenselementniveau.</v>
+
+01:03:09.247 --> 01:03:38.809
+<v Michiel Trimpe>Ja, precies. Nou, dan komen we dan in de interessante wereld dat de de ODRL aan link data is bedoeld, primair bedoeld om te omschrijven, hebben we besloten. Dus die er zijn wel initiatieven om het ook echt af te dwingen, maar dat is nog echt research eh echt onderzoek. Ehm dus dat die wereld is er om te omschrijven, maar hij kan wel linken en relateren naar de echte, ja, de echte wereld, naar de de technische wereld waarin afgedwongen wordt.</v>
+
+01:03:37.877 --> 01:03:38.117
+<v Rob van Dort>Ja.</v>
+
+01:03:38.809 --> 01:03:49.307
+<v Michiel Trimpe>En dan moet je dan gaan kijken, ja, hoe hoe ga je met dit soort concepten dan om? Moet je bij elk eh ja, bijvoorbeeld dan eh bij de BRP bijvoorbeeld in de rubrieken, moet je dan ook een link data weergave van hebben om daarin je beleid naar te kunnen verwijzen?</v>
+
+01:03:52.897 --> 01:03:56.417
+<v Michiel Trimpe>of niet? Nou, het is een hele leuke discussie. En deze denk ik meer voor de volgende eh</v>
+
+01:03:57.097 --> 01:04:01.845
+<v Igor van Haren>Ja, ook door de tijd heen, maar ik op een gegeven moment door zo'n gesprek en dan begin je ook alweer na te denken.</v>
+
+01:03:57.907 --> 01:03:58.787
+<v Michiel Trimpe>Ja.</v>
+
+01:04:01.845 --> 01:04:04.537
+<v Igor van Haren>Ik ik de</v>
+
+01:04:04.507 --> 01:04:10.947
+<v Michiel Trimpe>Ja, ik vind het dubbel. Ik vind het juist heel interessant en dit is denk ik inderdaad van de de het soort van discussie die we met z'n allen moeten willen voeren.</v>
+
+01:04:11.767 --> 01:04:12.007
+<v Igor van Haren>Ja.</v>
+
+01:04:12.477 --> 01:04:13.517
+<v Michiel Trimpe>wat we de volgende keer moeten</v>
+
+01:04:15.687 --> 01:04:26.877
+<v Michiel Trimpe>bespreken. Ik heb zelf wel dat ik wel wat steeds meer de behoefte krijg om toch samen aan tafel te gaan zitten, maar we zijn wel heel breed verspreid denk ik ook over het land.</v>
+
+01:04:27.257 --> 01:04:33.017
+<v Igor van Haren>Michiel, we hebben wel binnenkort een afspraak staan bij eh met met Remo bij de hè, dus dan</v>
+
+01:04:35.157 --> 01:04:38.277
+<v Igor van Haren>misschien dat we daar al een eh ja, een tipje van de sluier eh</v>
+
+01:04:38.317 --> 01:04:41.067
+<v Michiel Trimpe>Ja, dan zie jullie zeker. Ja.</v>
+
+01:04:43.847 --> 01:04:44.767
+<v Igor van Haren>oplichten. Ja.</v>
+
+01:04:45.677 --> 01:04:50.926
+<v Rob van Dort>Maar waar het voor mij denk ik misschien dat je een een klein werkgroepje zou kunnen nou, belasten of</v>
+
+01:04:45.867 --> 01:04:46.387
+<v Igor van Haren>Ja.</v>
+
+01:04:50.926 --> 01:05:01.237
+<v Rob van Dort>gaat natuurlijk vragen van vrijwilligers. Hè, die zeg maar in een case uitwerken tot een zeker niveau en dat je dat weer inbrengt en als hele groep bespreekt.</v>
+
+01:05:05.037 --> 01:05:10.597
+<v Michiel Trimpe>Ja, inderdaad. En dan eens te kijken welke mensen kunnen fysiek samenkomen en dan misschien wat verder vooruit plannen ook.</v>
+
+01:05:13.287 --> 01:05:13.887
+<v Guus van der Meer>Ja.</v>
+
+01:05:13.367 --> 01:05:13.727
+<v Michiel Trimpe>Ja.</v>
+
+01:05:13.497 --> 01:05:36.737
+<v Igor van Haren>Michiel, eh we hebben dan de ODRL eh overlegje zeg maar eh gepland staan. Eh wij zijn bij VECOZO, ik heb hè, wij praten GrafQL eh zeg maar hè en daar hebben we ook nog voor Authzen hadden we daar iets open staan van ja, hoe gaan we met GrafQL en Authzen precies om? Dus eh daar daar zijn wij best ver mee.</v>
+
+01:05:37.437 --> 01:05:37.717
+<v Michiel Trimpe>Oké.</v>
+
+01:05:37.627 --> 01:05:46.427
+<v Igor van Haren>En Guus heeft daar een demo eh voor gemaakt. Die willen we ook over een een een eh een maand ongeveer willen we die presenteren in ieder geval.</v>
+
+01:05:51.617 --> 01:06:20.107
+<v Igor van Haren>En en en daar ligt eigenlijk de hele koppeling van ODRL tot en met daadwerkelijk het eh forceren van de autorisatie eh ehm via Authzen en dan ook in policies beschreven enzovoort die dan allemaal met elkaar te mappen zijn. Dus ehm ja, daar gaan wij die gaan wij inplannen überhaupt, want die moeten we aan meer ook aan het management en dergelijke geven. Dus willen we hier ook in de werkgroep eh eh misschien ook gaan tonen. Ja.</v>
+
+01:06:21.287 --> 01:06:26.757
+<v Michiel Trimpe>Ja, hou die zeker die hele keten uit van begin tot eind door. Dat zou heel mooi zijn, want dat is precies waar we naar op zoek zijn.</v>
+
+01:06:27.107 --> 01:06:29.521
+<v Igor van Haren>Ja. Maar daarvoor willen we ook nog eerst het gesprek eh</v>
+
+01:06:28.297 --> 01:06:28.697
+<v Michiel Trimpe>Ja.</v>
+
+01:06:29.521 --> 01:06:34.787
+<v Igor van Haren>met de ODRL binnenkort al hebben, want dan heeft het van ons uit ook duidelijk eh eh</v>
+
+01:06:37.197 --> 01:06:39.277
+<v Igor van Haren>wat wat onze startpositie gaat zijn eh</v>
+
+01:06:40.297 --> 01:06:40.537
+<v Guus van der Meer>Ja.</v>
+
+01:06:42.257 --> 01:06:45.947
+<v Michiel Trimpe>Ja, nou, volgens mij ik dacht morgen dinsdag toch? Of was het nou dinsdag?</v>
+
+01:06:45.287 --> 01:06:47.827
+<v Remo van Rest>Volgens mij dinsdag. Ja, dinsdag.</v>
+
+01:06:47.477 --> 01:06:48.397
+<v Igor van Haren>Ja, dinsdag.</v>
+
+01:06:48.327 --> 01:06:50.974
+<v Michiel Trimpe>Ja, ik zei net woensdag, maar ik had het verkeerd onthouden. Ja, dinsdag.</v>
+
+01:06:49.437 --> 01:06:50.987
+<v Remo van Rest>Ja, dinsdag.</v>
+
+01:06:50.974 --> 01:06:51.407
+<v Michiel Trimpe>Ja.</v>
+
+01:06:52.917 --> 01:06:53.717
+<v Guus van der Meer>Ja, nou super.</v>
+
+01:06:53.807 --> 01:06:59.727
+<v Michiel Trimpe>Ja, nou leuk. Bedankt. Dan eh gaan we kijken of we</v>
+
+01:06:55.757 --> 01:06:57.117
+<v Guus van der Meer>Bedankt.</v>
+
+01:06:57.517 --> 01:06:59.987
+<v Igor van Haren>Dankjewel. Zullen we maar</v>
+
+01:07:01.447 --> 01:07:05.147
+<v Guus van der Meer>Bedankt Remco voor de voor de dingen enzo.</v>
+
+01:07:07.717 --> 01:07:07.837
+<v Guus van der Meer>Oh</v>
+
+01:07:07.777 --> 01:07:08.697
+<v Michiel Trimpe>je staat op mute Remco.</v>
+
+01:07:10.037 --> 01:07:10.117
+<v Remo van Rest>Ja.</v>
+
+01:07:12.817 --> 01:07:14.777
+<v Remko Muis></v>
+
+01:07:14.957 --> 01:07:15.197
+<v Guus van der Meer>Ja.</v>
+
+01:07:15.667 --> 01:07:18.747
+<v Michiel Trimpe></v>
+
+01:07:16.347 --> 01:07:18.147
+<v Hugo Mostard></v>
+
+01:07:17.717 --> 01:07:19.317
+<v Remko Muis></v>
+
+01:07:18.877 --> 01:07:19.197
+<v Hugo Mostard></v>

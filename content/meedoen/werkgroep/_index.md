@@ -47,8 +47,6 @@ De werkgroep vindt elke twee weken plaats op **dinsdag van 10:00 tot 11:00**, on
 
 Data komende werkgroepen:
 
-- [12 mei](https://realisatieibds.nl/events/view/1e868554-bb76-42ad-9174-ee340e9475cd/werkgroep-federatieve-toegangsverlening)
-- [26 mei](https://realisatieibds.nl/events/view/80ab5cb8-ac90-44fe-8165-62b5cc8fc313/werkgroep-federatieve-toegangsverlening)
 - [9 juni](https://realisatieibds.nl/events/view/5de39381-71ae-4dc3-a3a2-b41f01491b8d/werkgroep-federatieve-toegangsverlening)
 - [23 juni](https://realisatieibds.nl/events/view/b28848c3-36a7-448e-ac02-59aa6042f9b7/werkgroep-federatieve-toegangsverlening)
 <!-- - [7 juli](https://realisatieibds.nl/events/view/59a679f4-092c-448a-8e2e-a50ea8b56922/werkgroep-federatieve-toegangsverlening) -->
@@ -57,6 +55,7 @@ Data komende werkgroepen:
 
 2026
 
+- 12 mei: Vragenuur BRP-keten met RvIG ([Notulen]({{% relref "vragenuur-brp-keten" %}}))
 - 28 april: Consultatie Authorization Decision Log ([Notulen]({{% relref "consultatie-authorization-decision-log" %}}))
 - 14 april: FORCE presentatie UGent & ADL feedback ([Notulen]({{% relref "force-presentatie-ugent-adl-feedback" %}}))
 - 31 maart: Modellering toegangsbeleid BRP-keten ([Notulen]({{% relref "modellering-toegangsbeleid-brp-keten" %}}))
