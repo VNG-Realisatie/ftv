@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.8 Chrome/140.0.7339.240 Electron/38.4.0 Safari/537.36" version="28.2.8">
   <diagram name="Pagina-1" id="7EMD5238N7OeClpTgA7I">
-    <mxGraphModel dx="1736" dy="1818" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1157" dy="1488" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -326,13 +326,19 @@
         <mxCell id="36Bqpp8WAuF4Bjl2Ke54-73" value="&lt;div&gt;wearefrank!&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
           <mxGeometry x="1380" y="-680" width="90" height="27.5" as="geometry" />
         </mxCell>
-        <mxCell id="E_7jU3CNfWBZL8SSTt9J-1" value="Loki logging" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#d6b656;" vertex="1" parent="1">
+        <mxCell id="E_7jU3CNfWBZL8SSTt9J-1" value="Loki logging" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#d6b656;" parent="1" vertex="1">
           <mxGeometry x="1592" y="152" width="90" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="E_7jU3CNfWBZL8SSTt9J-2" value="" style="endArrow=classic;html=1;rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;exitX=0.854;exitY=0.983;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="36Bqpp8WAuF4Bjl2Ke54-68" target="E_7jU3CNfWBZL8SSTt9J-1">
+        <mxCell id="E_7jU3CNfWBZL8SSTt9J-2" value="" style="endArrow=classic;html=1;rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;exitX=0.854;exitY=0.983;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="36Bqpp8WAuF4Bjl2Ke54-68" target="E_7jU3CNfWBZL8SSTt9J-1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="1640" y="40" as="sourcePoint" />
             <mxPoint x="1532" y="212" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JpxDQ8ahuFDjIOaviAum-1" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;fillColor=#d52b1e;strokeColor=#FF3333;" edge="1" parent="1" source="36Bqpp8WAuF4Bjl2Ke54-48" target="36Bqpp8WAuF4Bjl2Ke54-68">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="980" y="235" as="sourcePoint" />
+            <mxPoint x="1587" y="80" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
