@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.8 Chrome/140.0.7339.240 Electron/38.4.0 Safari/537.36" version="28.2.8">
   <diagram name="Pagina-1" id="7EMD5238N7OeClpTgA7I">
-    <mxGraphModel dx="1157" dy="1488" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1429" dy="1643" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -68,7 +68,7 @@
           <mxGeometry x="430" y="-285" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="36Bqpp8WAuF4Bjl2Ke54-12" value="&lt;div&gt;&lt;div&gt;&lt;b&gt;IKO Autorisatie&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;gegevens:&lt;/b&gt;&lt;/div&gt;&lt;div&gt;-rollen&lt;/div&gt;&lt;div&gt;gebruiker-rol&lt;/div&gt;&lt;div&gt;functie-rol&lt;/div&gt;&lt;div&gt;org.eenh-rol&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
-          <mxGeometry x="430" y="142" width="120" height="160" as="geometry" />
+          <mxGeometry x="430" y="137" width="120" height="160" as="geometry" />
         </mxCell>
         <mxCell id="36Bqpp8WAuF4Bjl2Ke54-13" value="id + rollen" style="endArrow=classic;html=1;rounded=0;exitX=0.661;exitY=1.027;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="36Bqpp8WAuF4Bjl2Ke54-3" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -240,10 +240,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="36Bqpp8WAuF4Bjl2Ke54-52" value="&lt;div&gt;Utrecht&lt;/div&gt;&lt;div&gt;HaalCentraal client&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
-          <mxGeometry x="290" y="142" width="120" height="60" as="geometry" />
+          <mxGeometry x="290" y="137" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="36Bqpp8WAuF4Bjl2Ke54-53" value="&lt;div&gt;BRP&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="290" y="242" width="120" height="60" as="geometry" />
+          <mxGeometry x="290" y="237" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="36Bqpp8WAuF4Bjl2Ke54-54" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="36Bqpp8WAuF4Bjl2Ke54-66" target="36Bqpp8WAuF4Bjl2Ke54-52" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
