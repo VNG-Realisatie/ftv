@@ -77,7 +77,7 @@ Policies worden niet alleen tijdens login uitgevoerd, maar op elk moment wanneer
 
 {{< /chapter/section >}}
 
-{{< chapter/section title="Lokale handhaving, centraal beheer" level="3">}}
+{{< chapter/section title="Lokale handhaving, centraal beheer" level="3"  id="lokaalcentraal">}}
 
 In een architectuurplaat zijn de gescheiden verantwoordelijkheden goed zichtbaar.
 
