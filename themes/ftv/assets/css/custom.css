@@ -102,7 +102,7 @@
 }
 
 /* Target only first-level lists */
-.section > ul {
+.section ul {
     color: var(--utrecht-paragraph-color, var(--utrecht-document-color, inherit));
     font-family: var(--utrecht-unordered-list-font-family);
     font-size: var(--utrecht-unordered-list-font-size);
@@ -111,32 +111,20 @@
     padding-inline-start: var(--utrecht-unordered-list-padding-inline-start);
 }
 
-.section > ul > li {
+.section ul ul {
     margin-block-end: var(--utrecht-unordered-list-item-margin-block-end);
     margin-block-start: var(--utrecht-unordered-list-item-margin-block-start);
-    padding-inline-start: var(--utrecht-unordered-list-item-padding-inline-start);
     list-style-type: disc;
     line-height: var(--utrecht-unordered-list-line-height);
+    padding-inline-start: 2em;
 }
 
-.section > ul > li > ul > li {
+.section li {
     margin-block-end: var(--utrecht-unordered-list-item-margin-block-end);
     margin-block-start: var(--utrecht-unordered-list-item-margin-block-start);
-    padding-inline-start: var(--utrecht-unordered-list-item-padding-inline-start);
     list-style-type: circle;
     line-height: var(--utrecht-unordered-list-line-height);
-    list-style-position: inside;
-}
-
-.section > ul > li > ol > li {
-    list-style-type: decimal;
-    list-style-position: inside;
-}
-
-.section > ul > li > ul > li > ul > li {
-    padding-inline-start: calc(var(--utrecht-unordered-list-item-padding-inline-start)*4);
-    list-style-type: disc;
-    list-style-position: inside;
+    list-style-position: outside;
 }
 
 .section > ol {

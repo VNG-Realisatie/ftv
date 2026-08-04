@@ -44,7 +44,7 @@ OpenFTV is een door het project FTV gebouwde oplossing, open source en onder EUP
 
 {{< /chapter/section >}}
 
-{{< chapter/section title="Logische architectuur" level="3" >}}
+{{< chapter/section title="Architectuur" level="3" >}}
 
 Onderstaand diagram toont de componenten van OpenFTV. De gekozen indeling is gebaseerd de principes van [PxP](../../methodiek/principes/#pxp) en de [functies](../implementatie/functioneel). 
 
@@ -78,9 +78,21 @@ Hieronder volgt een korte beschrijving van elk van de componenten:
 
 {{< /chapter/section >}}
 
-{{< chapter/section title="Fysieke architectuur" level="3" >}}
+{{< chapter/section title="Deployment en distributie" level="3" >}}
 
-Volgens het principe van [lokaal handhaven en centraal beheren](../../methodiek/principes/#lokaalcentraal) is het mogelijk om meerdere handhavingsblokken aan een centrale beheerapplicatie te koppelen. OpenFTV zorgt dat elke handhaving beschikt over de juiste versies van policies en dynamische informatie.
+Volgens het principe van [lokaal handhaven en centraal beheren](../../methodiek/principes/#lokaalcentraal) is het mogelijk om meerdere handhavingsblokken aan een centrale beheerapplicatie te koppelen:
+
+{{< img-url "diagrams/openftv-deployment-architectuur.svg" "OpenFTV deployment" >}}
+
+In de beheerapplicatie worden nieuwe versies van policies en dynamische informatie gebundeld en aangeven welke beslispunten welke bundels moeten gebruiken. OpenFTV zorgt dan dat elke handhaving beschikt over de juiste informatie.
+
+{{< /chapter/section >}}
+
+{{< chapter/section title="Autorisatie op autorisatie" level="3" >}}
+
+Voor de beheerapplicatie zelf wordt ook OpenFTV handhaving gebruikt om de toegang te beheren. Daarom is er naast de applicaties meestal een aparte handhavingsinstantie voor de beheerapplicatie.
+
+{{< img-url "diagrams/openftv-deployment-architectuur-2.svg" "OpenFTV deployment met beheerapplicatie" >}}
 
 {{< /chapter/section >}}
 
