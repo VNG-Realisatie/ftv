@@ -38,7 +38,7 @@ type: 'chapter'
 
 Het project FTV definieert een drietal standaarden die de werkwijze Externalised Authorisation Management (EAM) nader specificeren. Dit is echter nog geen software, en zegt ook niets over hoe die software intern zou moeten werken.
 
-Om van de standaarden te komen tot een werkend systeem zijn er softwarecomponenten nodig die de nodige [functies](../implementatie/functioneel) vervullen. Er bestaat al software die een deel of alle functies voor hun rekening nemen, met verschillende licenties en prijskaartjes. Zo bestaan er PDP's die voldoen aan de AuthZEN standaard. Er zijn echter geen oplossingen die aan de ADL-standaard voldoen, omdat deze standaard door ons recent is bedacht.
+Om van de standaarden te komen tot een werkend systeem zijn er softwarecomponenten nodig die de nodige [functies](../implementatie/functioneel) vervullen. Er bestaat al software die een deel van de functies voor hun rekening kunnen nemen, met verschillende licenties en prijskaartjes. Zo bestaan er PDP's die voldoen aan de AuthZEN standaard. Er zijn echter geen oplossingen die volledig voldoen. Zo is voor de ADL-standaard nog geen implementatie door derden, omdat deze standaard door die project recent is opgesteld.
 
 OpenFTV is een door het project FTV gebouwde oplossing, open source en onder EUPL-licentie. OpenFTV kan zelfstandig worden ingezet als complete oplossing, en de componenten kunnen ook los worden gebruikt als bouwsteen van een ander systeem.
 
@@ -72,7 +72,7 @@ Hieronder volgt een korte beschrijving van elk van de componenten:
   - Policies kunnen inzien en aanpassen
   - Policies kunnen distribueren naar beslispunten
   - Statische contextinformatie kunnen inzien en aanpassen
-  - Een audit log op policies kunnen raadplegen  
+  - De auditlog kunnen raadplegen  
   - Het logboek toegangsbeslissing kunnen raadplegen
 
 
@@ -90,7 +90,7 @@ In de beheerapplicatie worden nieuwe versies van policies en dynamische informat
 
 {{< chapter/section title="Autorisatie op autorisatie" level="3" >}}
 
-Voor de beheerapplicatie zelf wordt ook OpenFTV handhaving gebruikt om de toegang te beheren. Daarom is er naast de applicaties meestal een aparte handhavingsinstantie voor de beheerapplicatie.
+Voor de beheerapplicatie zelf wordt ook OpenFTV gebruikt om de toegang te beheren. Daarom is er naast de applicaties meestal een aparte handhavingsinstantie voor de beheerapplicatie.
 
 {{< img-url "diagrams/openftv-deployment-architectuur-2.svg" "OpenFTV deployment met beheerapplicatie" >}}
 
@@ -99,7 +99,7 @@ Voor de beheerapplicatie zelf wordt ook OpenFTV handhaving gebruikt om de toegan
 {{< chapter/section title="Aan de slag met OpenFTV" level="3" >}}
 
 #### Open source
-OpenFTV is geschreven in Golang en vrij beschikbaar via https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/open-ftv.
+OpenFTV is geschreven in Golang en vrij beschikbaar in [Gitlab](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/open-ftv).
 
 #### Modulair en flexibel
 - De GitLab-repository is opgezet als een mono-repo met losse modules die afzonderlijk of in combinatie te gebruiken zijn.
@@ -108,8 +108,7 @@ OpenFTV is geschreven in Golang en vrij beschikbaar via https://gitlab.com/digil
 #### OpenAPI-specificaties
 - Voor alle API endpoints binnen de OpenFTV modules is een OAS v3 specificatie beschikbaar,
   tenzij dit vanuit een ander project vastgesteld is.
-- Alle specificaties voldoen aan de REST API Design Rules van [developer.overheid.nl](https://developer.overheid.nl/kennisbank/apis/api-design-rules/).
-  * enige uitzondering hierop zijn bepaalde properties in de AuthZEN standaard die met *kebab-case* zijn gedefinieerd.
+- Alle specificaties voldoen aan de REST API Design Rules van [developer.overheid.nl](https://developer.overheid.nl/kennisbank/apis/api-design-rules/). De enige uitzondering hierop zijn bepaalde properties in de AuthZEN standaard die met *kebab-case* zijn gedefinieerd.
 - Wordt middels de Spectral linter afgedwongen.
 
 #### Kant-en-klare micro-services
