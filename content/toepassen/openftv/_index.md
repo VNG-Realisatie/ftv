@@ -38,7 +38,7 @@ type: 'chapter'
 
 Het project FTV definieert een drietal standaarden die de werkwijze Externalised Authorisation Management (EAM) nader specificeren. Dit is echter nog geen software, en zegt ook niets over hoe die software intern zou moeten werken.
 
-Om van de standaarden te komen tot een werkend systeem zijn er softwarecomponenten nodig die de nodige [functies](../implementatie/functioneel) vervullen. Er bestaat al software die een deel van de functies voor hun rekening kunnen nemen, met verschillende licenties en prijskaartjes. Zo bestaan er PDP's die voldoen aan de AuthZEN standaard. Er zijn echter geen oplossingen die volledig voldoen. Zo is voor de ADL-standaard nog geen implementatie door derden, omdat deze standaard door die project recent is opgesteld.
+Om van de standaarden te komen tot een werkend systeem zijn er softwarecomponenten nodig die de nodige [functies](../implementatie/functioneel) vervullen. Er bestaat al software die een deel van de functies voor hun rekening kunnen nemen, met verschillende licenties en prijskaartjes. Zo bestaan er PDP's die voldoen aan de AuthZEN standaard. Er zijn echter geen oplossingen die volledig voldoen. Zo is voor de ADL-standaard nog geen implementatie door derden, omdat deze standaard door project FTV recent is opgesteld.
 
 OpenFTV is een door het project FTV gebouwde oplossing, open source en onder EUPL-licentie. OpenFTV kan zelfstandig worden ingezet als complete oplossing, en de componenten kunnen ook los worden gebruikt als bouwsteen van een ander systeem.
 
@@ -46,7 +46,7 @@ OpenFTV is een door het project FTV gebouwde oplossing, open source en onder EUP
 
 {{< chapter/section title="Architectuur" level="3" >}}
 
-Onderstaand diagram toont de componenten van OpenFTV. De gekozen indeling is gebaseerd de principes van [PxP](../../methodiek/principes/#pxp) en de [functies](../implementatie/functioneel). 
+Onderstaand diagram toont de componenten van OpenFTV. De gekozen indeling is gebaseerd op de principes van [PxP](../../methodiek/principes/#pxp) en de [functies](../implementatie/functioneel) van EAM. 
 
 - De blauwe componenten zijn onderdeel van OpenFTV. 
 - De oranje cirkels geven aan waar een keus te maken is. 
@@ -64,8 +64,8 @@ Hieronder volgt een korte beschrijving van elk van de componenten:
 
   - Het Policy Decision Point (PDP) is hier een omhulsel die de AuthZEN verzoeken aanneemt en de verwerking coördineert. Het echte werk gebeurt door een engine naar keuze. OpenFTV ondersteunt [OPA (Rego)](https://www.openpolicyagent.org/docs/latest/policy-language/), [Cedar](https://www.cedarpolicy.com/en), [Cerbos](https://docs.cerbos.dev/cerbos/latest/policies/) en [OpenFGA](https://openfga.dev/docs/fga). 
   - Het Policy Administration Point (PAP) voorziet de PDP van regels, door deze op te halen uit een opslag. Hiervoor biedt OpenFTV de keus uit Git, PostgreSQL en het bestandssysteem.
-  - Het Policy Information Point (PIP) haalt dynamische informatie op. Dit kan komen uit de OpenFTV opslag, die dezelfde methodes ondersteunt als de PAP, of uit een extern systeem zoals KeyCloak of EntraID.
-  - De logging zorgt dat genomen beslissingen volgens de Authorization Decision Log (ADL) standaard geschreven worden. De opslag daarvoor kan in elk OpenTelemetry systeem gebeuren.
+  - Het Policy Information Point (PIP) haalt dynamische informatie op. Dit kan komen uit de OpenFTV opslag of uit externen systemen zoals KeyCloak of EntraID. OpenFTV opslag kan ook hier Git, PostgreSQL of het bestandssysteem gebruiken.
+  - De logging zorgt dat genomen beslissingen volgens de Authorization Decision Log (ADL) standaard geschreven worden. Omdat ADL zich baseert op het OpenTelemetry-datamodel (het OTel LogRecord), kan de daadwerkelijke opslag in elk willekeurig OpenTelemetry-compatibel systeem (bijv. Grafana Loki, Elastic, Jaeger-achtige backends, etc.) plaatsvinden, maar ook in een PostgreSQL database.
 
 - **Beheerapplicatie**. Een zelfstandige webapplicatie waarmee gebruikers:
 
