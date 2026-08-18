@@ -86,7 +86,7 @@ Door de OpenID werkgroep wordt doorgewerkt aan de volgende versies; de notulen d
 
 ### Een Nederlands profiel
 
-De AuthZEN standaard beschrijft de basis die op elke uitwisseling van toepassing is. Daarbovenop kunnen voor specifieke situaties aanvullende afspraken vastgelegd worden in een profiel. Voor de Nederlandse overheid ontwikkelt FTV zo’n profiel: het **NLGov Profile for OpenID AuthZEN Authorization API**.
+De AuthZEN standaard beschrijft de basis die op elke uitwisseling van toepassing is. Daarbovenop kunnen voor specifieke situaties aanvullende afspraken vastgelegd worden in een profiel. Voor de Nederlandse overheid heeft FTV zo’n profiel ontwikkeld: het **NLGov Profile for OpenID AuthZEN Authorization API**.
 
 Dit profiel bevat de aanvullingen die nodig zijn om te voldoen aan de Nederlandse wetgeving, de digitale strategie en de regels van het Federatieve Datastelsel (FDS). Het profiel voegt onder meer toe:
 - Verwijzingen naar **verwerkingsactiviteiten** voor AVG-compliance, in lijn met de aanpak van [Logboek Dataverwerkingen](https://logius-standaarden.github.io/logboek-dataverwerkingen/)
@@ -99,7 +99,7 @@ Het profiel is ontwikkeld door de [werkgroep Federatieve Toegangsverlening](/ftv
 
 ### Status
 
-Versie 1.0 van het NLGov AuthZEN-profiel is goedgekeurd door de werkgroep en heeft de [openbare consultatie](https://github.com/Logius-standaarden/Openbare-Consultaties/tree/master/2025-10-15-Authzen) bij Logius doorlopen.
+Versie 1.0 van het NLGov AuthZEN-profiel is **definitief**. Het profiel is goedgekeurd door de werkgroep, heeft de [openbare consultatie](https://github.com/Logius-standaarden/Openbare-Consultaties/tree/master/2025-10-15-Authzen) bij Logius doorlopen en is vervolgens goedgekeurd door de Programmeringstafel GDI. De definitieve versie is gepubliceerd als [NLGov-profiel op AuthZEN](https://gitdocumentatie.logius.nl/publicatie/ftv/authzen/).
 
 <br/><br>
 
@@ -109,7 +109,7 @@ Versie 1.0 van het NLGov AuthZEN-profiel is goedgekeurd door de werkgroep en hee
 
 <br/><br>
 
-Het profiel is in maart 2026 aangemeld bij [Forum Standaardisatie](https://www.forumstandaardisatie.nl/). Het proces van beoordeling zal enkele maanden in beslag nemen. De definitieve versie is gepubliceerd als [NLGov-profiel op AuthZEN](https://gitdocumentatie.logius.nl/publicatie/ftv/authzen/).
+Het profiel is in maart 2026 aangemeld bij [Forum Standaardisatie](https://www.forumstandaardisatie.nl/); het proces van beoordeling zal enkele maanden in beslag nemen.
 
 Het profiel is ook opgenomen in het [Common Ground Technische Specificaties-register](https://commonground.nl/page/view/09342b57-f764-4e41-9d8e-16d8e780bac4/groundrules) en er is een verwijzing opgenomen in de Access Control Module van Geonovum.
 

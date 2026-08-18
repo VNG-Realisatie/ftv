@@ -85,7 +85,7 @@ Toegangsbeslissingen zijn deel van het grotere proces van gegevensuitwisseling. 
 Deze drie logboeken zijn met elkaar verbonden door een zogenaamde trace: een gedeelde identifier ([W3C Trace Context](https://www.w3.org/TR/trace-context/)) die het mogelijk maakt om alle logregels die bij dezelfde uitwisseling horen aan elkaar te koppelen.
 
 ### Status
-De [standaard](https://gitdocumentatie.logius.nl/publicatie/ftv/adl/) is aangenomen door de eigen werkgroep en voor beheer overgedragen aan Logius. De [openbare consultatie](https://github.com/Logius-standaarden/Openbare-Consultaties/blob/master/2026-04-adl/README.md) liep tot 29 mei 2026; de definitieve versie is inmiddels gepubliceerd.
+Versie 1.0 van Authorization Decision Log is **definitief**. De standaard is aangenomen door de eigen werkgroep, voor beheer overgedragen aan Logius, heeft de [openbare consultatie](https://github.com/Logius-standaarden/Openbare-Consultaties/blob/master/2026-04-adl/README.md) doorlopen en is vervolgens goedgekeurd door de Programmeringstafel GDI. De definitieve versie is gepubliceerd als [Authorization Decision Log](https://gitdocumentatie.logius.nl/publicatie/ftv/adl/).
 
 <br>
 
