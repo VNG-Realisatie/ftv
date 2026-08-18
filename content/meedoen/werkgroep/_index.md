@@ -54,6 +54,7 @@ Data komende werkgroepen:
 
 2026
 
+- 23 juni: Planning en evaluatie mid 2026 ([Notulen]({{% relref "planning-en-evaluatie-mid-2026" %}}))
 -  9 juni: Roadmap register toegangsbeleid ([Notulen]({{% relref "roadmap-register-toegangsbeleid" %}}))
 - 12 mei: Vragenuur BRP-keten met RvIG ([Notulen]({{% relref "vragenuur-brp-keten" %}}))
 - 28 april: Consultatie Authorization Decision Log ([Notulen]({{% relref "consultatie-authorization-decision-log" %}}))
