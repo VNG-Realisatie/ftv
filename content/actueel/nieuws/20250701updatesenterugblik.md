@@ -14,11 +14,11 @@ Tijdens deze meeting gaven de subwerkgroepen een update en blikten de deelnemers
 De subwerkgroep Juridisch Kader heeft de scope van het juridische kader vastgesteld.
 Dit kader zal gelden voor toepassingen binnen de overheid. De subwerkgroep werkt nu aan een structuur die in een volgende sessie wordt besproken.
 
-De subwerkgroep Authorization Decision Log (voorheen: Logboek Toegangsbeslissing) publiceerde een [werkversie](https://logius-standaarden.github.io/authorization-decision-log/) van de standaard.
+De subwerkgroep Authorization Decision Log (voorheen: Logboek Toegangsbeslissing) publiceerde een [werkversie](https://gitdocumentatie.logius.nl/publicatie/ftv/adl/) van de standaard.
 Deze versie is beschikbaar voor feedback. De Nederlandse teksten worden nog (verder) vertaald naar het Engels, conform de afspraak voor technische documentatie.
 De scope van dit logboek sluit aan bij die van logboek Dataverwerkingen: de interface maakt inzien en opslaan mogelijk, maar niet het beheer.
 
-De subwerkgroep AuthZEN heeft een eerste [reviewversie](https://logius-standaarden.github.io/authzen-nlgov/) van het Nederlandse profiel online gezet.
+De subwerkgroep AuthZEN heeft een eerste [reviewversie](https://gitdocumentatie.logius.nl/publicatie/ftv/authzen/) van het Nederlandse profiel online gezet.
 Deze is gebaseerd op de internationale standaard met daarin gemarkeerd herkenbare toevoegingen (groen) en weggelaten onderdelen (rood). De werkgroep nodigt iedereen uit om goedkeuring danwel opmerkingen te geven. De resultaten van deze eerste reviewronde worden in de werkgroep van 26 augustus besproken.  
 
 {{< /chapter/section >}}

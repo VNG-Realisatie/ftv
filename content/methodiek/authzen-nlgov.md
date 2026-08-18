@@ -31,14 +31,14 @@ type: 'chapter'
 {{< /chapter/header >}}
 
 {{< chapter/directnaar bg="bg-rhc-color-geel-neon">}}
-<a href="https://logius-standaarden.github.io/Openbare-Consultaties/2025-10-15-Authzen/">
+<a href="https://gitdocumentatie.logius.nl/publicatie/ftv/authzen/">
     <div class="mt-2">
         <h3 style="text-decoration:underline" class="nl-heading nl-heading--level-3 rhc-heading">NLGov AuthZEN</h3>
     </div>
     <div class="mt-2">
         <p class="utrecht-paragraph-small">Standaard voor Federatieve Toegangsverlening</p>
         <p class="utrecht-paragraph-small">Logius Standaard</p>
-        <p class="utrecht-paragraph-small">Consultatieversie 15 oktober 2025</p>
+        <p class="utrecht-paragraph-small">Definitieve versie</p>
     </div>
 </a>
 
@@ -103,13 +103,13 @@ Versie 1.0 van het NLGov AuthZEN-profiel is goedgekeurd door de werkgroep en hee
 
 <br/><br>
 
-<a href="https://logius-standaarden.github.io/Openbare-Consultaties/2025-10-15-Authzen" class="utrecht-button utrecht-button--primary-action">
-      Bekijk de consultatieversie van NLGov AuthZEN
+<a href="https://gitdocumentatie.logius.nl/publicatie/ftv/authzen/" class="utrecht-button utrecht-button--primary-action">
+      Bekijk de standaard NLGov AuthZEN
 </a>
 
 <br/><br>
 
-Het profiel is in maart 2026 aangemeld bij [Forum Standaardisatie](https://www.forumstandaardisatie.nl/). Het proces van beoordeling zal enkele maanden in beslag nemen. In de tussentijd wordt doorgewerkt aan verbeteringen in de [werkversie](https://logius-standaarden.github.io/authzen-nlgov/).
+Het profiel is in maart 2026 aangemeld bij [Forum Standaardisatie](https://www.forumstandaardisatie.nl/). Het proces van beoordeling zal enkele maanden in beslag nemen. De definitieve versie is gepubliceerd als [NLGov-profiel op AuthZEN](https://gitdocumentatie.logius.nl/publicatie/ftv/authzen/).
 
 Het profiel is ook opgenomen in het [Common Ground Technische Specificaties-register](https://commonground.nl/page/view/09342b57-f764-4e41-9d8e-16d8e780bac4/groundrules) en er is een verwijzing opgenomen in de Access Control Module van Geonovum.
 

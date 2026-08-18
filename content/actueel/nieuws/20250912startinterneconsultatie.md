@@ -20,7 +20,7 @@ Met de consultatie nodigt de projectgroep FTV collega’s en betrokken organisat
 {{< /chapter/section >}}
 
 {{< chapter/section title="Informatie en deadline" level="3">}}
-Alle informatie is te vinden op [Authorization Decision Log](https://logius-standaarden.github.io/authorization-decision-log/)
+Alle informatie is te vinden op [Authorization Decision Log](https://gitdocumentatie.logius.nl/publicatie/ftv/adl/)
 Feedback kan gegeven worden tot en met 7 oktober via: ftv@vng.nl
 
 {{< /chapter/section >}}
