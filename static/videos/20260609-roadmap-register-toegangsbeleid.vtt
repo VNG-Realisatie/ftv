@@ -1,0 +1,922 @@
+WEBVTT
+
+00:00:07.612 --> 00:00:32.882
+<v Michiel Trimpe>hadden we besloten dat het eh tijd is om eh een keer even wat een een bredere open discussie eh te doen over nou, hoe nu verder. Dus wat gaan we uitwerken en wat hoe willen we het concreet maken?</v>
+
+00:00:36.112 --> 00:00:49.682
+<v Michiel Trimpe>eh ja, dat is het doel van deze werkgroep vandaag. Eh ik kon het toch niet laten en ik heb toch wel enigszins een kleine opener voorbereid.</v>
+
+00:00:54.162 --> 00:00:57.722
+<v Michiel Trimpe>eh ja, dan eh vandaag zou dan de vraag gaan over wat</v>
+
+00:01:03.422 --> 00:01:24.902
+<v Michiel Trimpe>wat eh willen we op gaan leveren in ieder geval vanuit de werkgroep. En sowieso de werkgroep ehm ja, dit jaar lijkt een een heel ander karakter te hebben dan de werkgroep van vorig jaar. Dus vorig jaar waren er heel veel eh ja, eh meningen en perspectieven op EAM en en waren we echt met z'n allen afstemming aan het bereiken.</v>
+
+00:01:29.182 --> 00:01:55.972
+<v Michiel Trimpe>Dus eh vorig jaar waren we echt aan het afstemmen met z'n allen. En eh dit jaar merk je dat ja, dus we zijn met ODRL bezig. We zijn erop uitgekomen. Het is duidelijk de de keuze. Maar binnen de Nederlandse overheid lijkt niemand er actief nog mee bezig. En is het meer zo dat ja, we hier met z'n allen dan aan het bedenken zijn wat willen we met ODRL en hoe gaan we dit inzetten?</v>
+
+00:01:59.992 --> 00:02:12.792
+<v Michiel Trimpe>Dus het is denk ik ja, ik moet denk ik af van het idee dat ik ehm meningen ga samenbrengen. En we moeten denk ik toe naar wat willen we gaan eh bouwen met z'n allen. Of maken.</v>
+
+00:02:14.952 --> 00:02:31.442
+<v Michiel Trimpe>Dus ik heb een eh met met de onze NLN vrienden een beetje een eh korte presentatie in elkaar gezet. van oké, wat waar zou wat zou ik in ieder geval wat we zouden kunnen gaan eh doen. Dus welke dingen kunnen we opleveren. En ook waar loop ik tegenaan.</v>
+
+00:02:34.882 --> 00:02:50.172
+<v Michiel Trimpe>Eh allereerst is eh ja, waar we in eerste instantie waar ik in eerste instantie aan zat te denken is eigenlijk een eh een Nederlands ODRL profiel opzetten. Eh dus er zijn een hoop verschillende bestaande ODRL profielen.</v>
+
+00:02:53.442 --> 00:02:53.682
+<v Michiel Trimpe>Kijken.</v>
+
+00:02:58.432 --> 00:03:19.042
+<v Michiel Trimpe>Alleen wat ik merkte is als ik daarnaar ga kijken is dat de meeste profielen eh definiëren eigenlijk een soort van informatiemodellen voor specifieke toepassingen. Dus je ziet hier het ODRL profiel voor eh data sovereignty. En die definiëren een aantal acties, eh die definiëren een aantal eh constraints.</v>
+
+00:03:22.132 --> 00:03:36.052
+<v Michiel Trimpe>en andere zaken. En ook bijvoorbeeld Big Data. Nou, dan heb je bijvoorbeeld eh aggregate by consumer action. Eh en een aanzet van parties, dus we definiëren een concept van provider, consumer en controller.</v>
+
+00:03:40.262 --> 00:03:40.822
+<v Michiel Trimpe>Ehm</v>
+
+00:03:41.302 --> 00:03:53.502
+<v Rob van Dort>toch niet het niveau eh waar we in eerste op moeten inzoomen. Kunnen we even zeg maar de de big picture voordat we zeg maar de de ODRL details en dergelijke induiken.</v>
+
+00:03:54.552 --> 00:04:15.023
+<v Michiel Trimpe>Ja, dus ik wil van plan was ook van plan om hier even doorheen te klikken. Ja, dat is met de LLM kan veel maken als je het vraagt. Maar wat mijn observatie hierbij voornamelijk was dat ehm zeg maar wat dit soort dit soort definities lijken me binnen de overheid niet per direct iets wat je in het Nederlands overheidsprofiel vast wil leggen.</v>
+
+00:04:15.023 --> 00:04:23.607
+<v Gideon Zegwaard>Nee, hier en daar zie je verwijzen. gebruik van maken. van deze bestaande profielen kun je natuurlijk gebruik maken. Als als het iets toevoegt.</v>
+
+00:04:23.607 --> 00:04:32.252
+<v Michiel Trimpe>Ja. En ik denk ik zie niet direct hoe we in een dat een Nederlands profiel willen doen met definities van acties voor de Nederlandse overheid of</v>
+
+00:04:36.162 --> 00:05:03.362
+<v Marc de Boer>je niet met twee voorbeelden zien die niet per se data spaces waren denk ik. Het was niet dat je het hebt over finance of healthcare, maar het zijn wel ja, data sovereignty klinkt toch wel wat meer horizontaal dan dat. En ik deed het er ook wel, zeg maar je big data natuurlijk in elke data space. Of sovereignty in elke data space.</v>
+
+00:05:05.702 --> 00:05:08.554
+<v Michiel Trimpe>domeinspecifieke dingen van.</v>
+
+00:05:08.554 --> 00:05:12.525
+<v Marc de Boer>Nou, ik heb dit niet gelezen hoor, dus.</v>
+
+00:05:12.525 --> 00:05:30.042
+<v Michiel Trimpe>Ja, het is een vaak een domein van een aspect, een domein van je of een aspect van je toegangsbeleid. Dus je hebt ook bijvoorbeeld de de DVP, de de GDPR gebaseerde variant.</v>
+
+00:05:32.142 --> 00:05:34.621
+<v Marc de Boer>En wat Gaia X bijvoorbeeld die zie ik inderdaad langskomen.</v>
+
+00:05:34.621 --> 00:05:36.302
+<v Michiel Trimpe>Ja, dat is wel echt een hele technische.</v>
+
+00:05:38.342 --> 00:05:39.782
+<v Michiel Trimpe>te veel.</v>
+
+00:05:42.292 --> 00:05:51.412
+<v Michiel Trimpe>Ja, dus Gaia X definieert echt definieert hoe je eh eh ODRL mapt op verifiable credentials. Dus dat is wat je net zegt, hoe kan je dit technisch uitvoerbaar maken?</v>
+
+00:06:00.252 --> 00:06:12.812
+<v Rob van Dort>Mag ik eventjes voor eh zeg maar voor mijn beeld en hopelijk voor jullie beeld ook eh zeg maar de de de big picture schetsen in de in de meest kernachtige lijnen zoals ik die hier voor ogen heb, even</v>
+
+00:06:15.282 --> 00:06:17.802
+<v Rob van Dort>als als als denkkader denk ik voor deze sessie.</v>
+
+00:06:16.802 --> 00:06:17.002
+<v Michiel Trimpe>Ja.</v>
+
+00:06:19.182 --> 00:06:19.852
+<v Michiel Trimpe>Ja, barst los.</v>
+
+00:06:21.142 --> 00:06:51.412
+<v Rob van Dort>Ehm even denkend hè, we hebben een een een federatief datastelsel. En daarbinnen hebben we aanbieders, afnemers en assets, datasets, hoe we het noemen willen, hè? Eh even als als als hoofd eh zeg maar beschrijving van het hoofdmenu hè. Volgens mij hebben we het daarover. Klopt dat?</v>
+
+00:06:47.052 --> 00:06:47.452
+<v Michiel Trimpe>Ja.</v>
+
+00:06:53.302 --> 00:07:07.292
+<v Rob van Dort>En willen we een soort eh zeg maar een rechten gaan verdelen. Dat je zegt van nou, gezien die eh die die die die assets die er zijn, willen we kunnen bepalen welke eh afnemers recht hebben, ja of nee, hè, even simpel in eh in in de kern eh tot die eh tot die assets.</v>
+
+00:07:09.992 --> 00:07:13.392
+<v Rob van Dort>Wat ik me dan voor me zie is eh als we het hebben over een federatief datastelsel, dan hebben we zeg maar het federatieniveau.</v>
+
+00:07:11.202 --> 00:07:11.602
+<v Michiel Trimpe>Ja.</v>
+
+00:07:13.392 --> 00:07:23.612
+<v Rob van Dort>eh waar in ieder geval alle eh relevante overheidspartijen staan geregistreerd.</v>
+
+00:07:26.502 --> 00:07:32.982
+<v Rob van Dort>Ja, en op basis waarvan zij een toekenning kunnen krijgen binnen onderliggende data spaces.</v>
+
+00:07:35.022 --> 00:07:38.542
+<v Rob van Dort>eh tot datasets waar ze afnemer voor willen zijn.</v>
+
+00:07:41.412 --> 00:08:17.092
+<v Rob van Dort>Hè, dus alle onderliggende data spaces, daar gebeurt het echte werk. Die zijn gekoppeld aan de aan het federatieve niveau. Daar staan alle overheidspartijen geregistreerd. En per dataspace kan je dus toe gaan zeggen van oké eh hier gaan we, nou, dit is een dataspace voor dat en dat doel. Daar gaan we die en die eh datasets toelaten als eh assets. En daar kunnen dus eh potentiële afnemers een verzoek indienen van ik wil daar wat bij en dan komt daar een nou, een jaartje of een neetje uit.</v>
+
+00:08:18.852 --> 00:08:44.502
+<v Michiel Trimpe>Ik weet niet of we dit Ja, in in het FDS wordt nu het eh het eh een onderliggend domein of sector datastelsel nog niet als dusdanig eh geïdentificeerd of herkend. Dus wat nu is het op het niveau van aangeboden datasets en datadiensten en dat die ook eh georganiseerd zijn in een domein datastelsel, dat kan heel goed.</v>
+
+00:08:47.092 --> 00:08:52.812
+<v Michiel Trimpe>Ehm ehm maar dat dat is nog eh dat is nog niet geformaliseerd dat dat zo is. Dat hoeft ook niet per se.</v>
+
+00:08:53.812 --> 00:08:59.332
+<v Rob van Dort>Nee, precies, maar in ieder geval dan heb je één grote hoop, hè, dan heb je één één dataspace en dat is tegelijk de federatie.</v>
+
+00:08:59.922 --> 00:09:55.642
+<v Michiel Trimpe>Ja, en en wat ik daarin terugzie zijn drie niveaus. Eén niveau is het eh het het het beleid om deelnemers toe te laten tot het datastelsel. Eén niveau om een afnemer eh een eh een datadeel relatie aan te laten gaan met een aanbieder. En het derde niveau is om binnen een datadeelrelatie een individueel request te kunnen doen. Dus dat zijn volgens mij dat zijn de drie niveaus die ik onderscheid. Waarbij ik denk die eerste, nou, dat daar zijn de volumes nog niet dusdanig dat we daar heel erg nu op hoeven te sturen. Eh maar die tweede, het inzichtelijk maken aan welke voorwaarden je moet voldoen om een eh om een datadeelrelatie aan te kunnen gaan.</v>
+
+00:09:56.342 --> 00:09:56.542
+<v Rob van Dort>Ja.</v>
+
+00:09:56.422 --> 00:09:59.255
+<v Michiel Trimpe>gewoon al vanuit vanuit informatie</v>
+
+00:09:57.302 --> 00:09:57.782
+<v Axel van der Minne>Ja.</v>
+
+00:09:59.255 --> 00:10:00.822
+<v Michiel Trimpe>delen.</v>
+
+00:10:05.512 --> 00:10:05.912
+<v Rob van Dort>Ja.</v>
+
+00:10:06.302 --> 00:10:34.592
+<v Gideon Zegwaard>Ehm en dan is het volgende is hè, stel je hebt zo'n zo'n zo'n toegang eh toegewezen gekregen, dan worden daar waarschijnlijk aanvullende voorwaarden gesteld in de in de BRP in de vorm van een autorisatietabelregel, waarin staat dat je alleen bepaalde attributen of een bepaalde eh eh objecten kan krijgen en dat zit dan op het niveau van de individuele requests.</v>
+
+00:10:35.432 --> 00:10:35.592
+<v Rob van Dort>Ja.</v>
+
+00:10:36.182 --> 00:10:44.582
+<v Gideon Zegwaard>Eh dus dat is en en die laatste twee niveaus, die zijn denk ik interessant om eh om uit te kunnen drukken. Om inzichtelijk te kunnen maken.</v>
+
+00:10:48.782 --> 00:10:59.342
+<v Axel van der Minne>Ja, en en de nuancering die ik nog zie is dat je aan de ene kant praat over een gegevensverzameling en aan de andere kant over gegevensproducten die je beschikbaar stelt. Of datasets.</v>
+
+00:11:01.102 --> 00:11:08.422
+<v Gideon Zegwaard>Ja, je hebt ja, dat onderscheiden we ook. Dus in eh in FDS hebben we datasets en datadiensten.</v>
+
+00:11:09.062 --> 00:11:09.462
+<v Axel van der Minne>Ja.</v>
+
+00:11:09.342 --> 00:11:13.712
+<v Gideon Zegwaard>En datadiensten ontsluiten de datasets. Snap je wat je bedoelt?</v>
+
+00:11:14.002 --> 00:11:45.462
+<v Axel van der Minne>Nee, ik ik zit meer te denken aan aan aan de eisen hè eh die je stelt eh als je als aanbieder eh eh mee wilt doen. Eh hè, dat aan de ene kant je zegt van we hebben deze verzameling, hè, dus bijvoorbeeld eh register onderwijsinstellingen. Hè en daaronder zitten een aantal dataproducten die je af kan nemen, datasets die wij beschikbaar stellen. Dat zijn de twee niveaus waarop je nou het hoogste niveau is eigenlijk te abstract. Ik denk dat je daar niet op gaat sturen. Hè, maar die die dat onderste niveau, daar daar zou je iets van sturing op willen kunnen zetten.</v>
+
+00:11:47.752 --> 00:11:56.152
+<v Gideon Zegwaard>Ja, even kijken als ik het goed begrijp. Een voorbeeld wat wij nu hebben is de is de BRO, de basisregistratie ondergrond.</v>
+
+00:11:58.472 --> 00:12:10.400
+<v Gideon Zegwaard>Eh dat is een soort abstract eh ehm eh registratie die bestaat uit een 12tal datasets met elk een eigen eh dataset eh datadiensten. Hè, dus daar zien we dus ook wel hè, de BRP is toevallig eentje die heeft gewoon ja, één of twee hè, een beetje afhankelijk van hoe je er naar kijkt.</v>
+
+00:12:06.472 --> 00:12:06.482
+<v Axel van der Minne>Ja.</v>
+
+00:12:10.400 --> 00:12:26.944
+<v Gideon Zegwaard>Eh je zou bij de BRP nog kunnen zeggen van daar zit het eh eh register ingezetenen en register niet ingezetenen. Dat zijn nog twee losse sets. Maar je zou ook kunnen zeggen nou ja, dat is één set. Eh maar bij zoiets als de eh BRO, daar heb je de BRO, wat een soort van strik is om een 12tal datasets.</v>
+
+00:12:23.172 --> 00:12:23.532
+<v Axel van der Minne>Ja.</v>
+
+00:12:26.944 --> 00:12:33.342
+<v Michiel Trimpe>Ja. Maar maar eigenlijk is het niveau waarop we praten is van je hebt je hebt een dienst, hè, want dat is ook een term die die wij gebruiken.</v>
+
+00:12:34.012 --> 00:12:34.092
+<v Rob van Dort>Ja.</v>
+
+00:12:34.192 --> 00:13:02.792
+<v Axel van der Minne>En en die dienst daar daar zit een bepaalde data is zit daar in data structuur, data hè, dus dus eh een een dienst heeft of een verwerking heeft een bepaalde data. Hè en en dat is het niveau, denk ik, waarop je eh wilt kunnen zeggen van oké, wie heeft eh wie wie krijgt recht op basis van welke regels tot deze set?</v>
+
+00:13:05.722 --> 00:13:18.152
+<v Gideon Zegwaard>Ja, want dat dat is dus ook wel een interessante discussie. Ehm eh want dan enerzijds heb je dus het beleid om toegang te verlenen en waar verleen je dan toegang toe? Dat is toegang tot een dataset via een datadienst.</v>
+
+00:13:18.942 --> 00:13:19.302
+<v Axel van der Minne>Ja.</v>
+
+00:13:19.372 --> 00:13:26.092
+<v Gideon Zegwaard>Of meerdere datadiensten of één datadienst met meerdere datasets. Dat is nog interessant om te kijken, oké, hoe maak je dat dan af?</v>
+
+00:13:24.112 --> 00:13:24.352
+<v Axel van der Minne>Ja.</v>
+
+00:13:26.622 --> 00:13:49.822
+<v Axel van der Minne>Hè, je kan je kan het ook nog moeilijker maken, want hè, het model zegt bronhouder aanbieder. Hè, en een aanbieder kan dus alweer meerdere bronhouders hebben. Hè, en ik kan me voorstellen met een federatief systeem dat je wilt kunnen dat je eigenlijk op dat niveau ook kunt zeggen van goh, je hebt toegang tot deze dataset, maar omdat dit stukje data weer van een andere bron is, heb je moet je daar weer aparte toegang toe regelen. Hè, maar goed, dat ik denk dat dat een stap stap twee is.</v>
+
+00:13:51.542 --> 00:13:58.009
+<v Michiel Trimpe>Ja, dat is dat is de. Dat is typisch ook iets wat bij de BRO ook speelt, ja. Ja. Dat is één van de de voorstellen die ik later nog langs kan laten komen.</v>
+
+00:13:55.482 --> 00:13:55.762
+<v Axel van der Minne>Ja.</v>
+
+00:13:58.009 --> 00:14:08.112
+<v Michiel Trimpe>Maar dat is de dus dit is inderdaad het speelveld eh waar we mee zitten, waar eh ik mee zit is ehm</v>
+
+00:14:10.392 --> 00:14:27.323
+<v Michiel Trimpe>Nou, dus we hebben dus ja, het ODRL specifiek profiel. Dit enige wat ik echt kon bedenken wat heel specifiek is, vond ik bijvoorbeeld eh doelbinding. Hè, dus het eh een iets toespitsen op een specifieke doelbinding. Dus dat zou je dan in een Nederlands overheids ODRL profiel kunnen zetten. Maar zoiets zou je zelfs ook naar TOI kunnen verhuizen van naar een ander denk dataregister binnen Nederland.</v>
+
+00:14:25.822 --> 00:14:26.222
+<v Axel van der Minne>Ja.</v>
+
+00:14:27.323 --> 00:15:03.662
+<v Michiel Trimpe>En alles wat tot nu toe beschreven is is eh dit is een beetje dit. De eerste optie die we zouden kunnen doen. Eh dat zijn allemaal dingen die die maakt ODRL al mogelijk. Dus ODRL biedt al offers, eh je kan al assignees definiëren en actions, et cetera. Dus dat voegt eigenlijk niks toe aan de standaard ODRL als anders anders dat je zegt wat opgenomen moet zijn en dat je dat een bepaalde betekenis toekent.</v>
+
+00:15:07.662 --> 00:15:53.032
+<v Michiel Trimpe>de kunnen begrijpen wat wat het wat de toegang doet. Dus dan is er een beschrijving nodig. Nou kan wel zeggen van oké, er is alleen, daar gebruiken we RDF comment voor, ik noem maar even wat, omdat we dat in het ODRL gebruikt wordt, maar dat kan je dan toelichten, hè, die comment is dan bedoeld dat we daar kunnen terug kunnen lezen wat het eh mensleesbare eh ehm beleid is, zeg maar. Zeg maar de de de natuurlijke taalvariant van wat er misschien ook in het systeem eh gerealiseerd eh is.</v>
+
+00:15:57.732 --> 00:16:40.722
+<v Rob van Dort>Moet ik heb ik nog een vraag over. Eh zien wij voor ons dat eh zeg maar het toegangsbeleid voor een voor de aanbieder van de data eh dat hij zijn toegangsbeleid van tevoren moet publiceren? Of zeggen van het zou ook kunnen dat je zegt van nou, het is altijd op aanvraag, hè, zeker in de startperiode. Eh en dan komt er een specifieke aanvraag, die wordt nou door een menselijke beoordelaar wordt hij ingevuld en dan komt er een jaartje of een neetje uit, bij wijze van spreken. Hè, dus dat je zegt van we hoeven dat van tevoren niet alles in beleid te vatten, maar dan kunnen we het in eerste instantie, hè, dat gaat misschien maar om om een paar afnemers, kun je met de hand kun je dat bootstrappen. En naderhand wordt dat in eh geautomatiseerd eh ODRL ondersteund beleid omgezet.</v>
+
+00:16:41.422 --> 00:16:43.222
+<v Michiel Trimpe>Ja, maar ook ook dat is weer een beleid. Ja.</v>
+
+00:16:44.102 --> 00:16:44.462
+<v Rob van Dort>Ja.</v>
+
+00:16:44.832 --> 00:16:46.952
+<v Michiel Trimpe>En dat hoeft dus ook niet technisch uitvoerbaar te zijn.</v>
+
+00:16:46.652 --> 00:16:47.572
+<v Rob van Dort>Tweesporenbeleid.</v>
+
+00:16:46.952 --> 00:16:48.352
+<v Michiel Trimpe>Ja.</v>
+
+00:16:47.982 --> 00:17:19.902
+<v Axel van der Minne>Ja, maar goed, het is eigenlijk een implementatieplan. Hè, want want eigenlijk waar het proces nu is, is dat een heel erg handmatig proces. Aanvrager eh eh zegt op basis vraagt op basis van een aantal gewoon doelbindingen, grondslagen, enzovoort, iets aan bij een aanbieder en die gaat dan weer helemaal beoordelen en een DPIA-proces enzovoort. Hè, en eh eigenlijk waar je een beetje naartoe gaat is dat je in de toekomst dat je dat eigenlijk op basis van deze regels zo zou kunnen doen, zonder menselijke tussenkomst. Maar ik denk dat we daar voorlopig nog niet aan toe zijn.</v>
+
+00:17:20.072 --> 00:17:25.575
+<v Michiel Trimpe>Nee, ik ik zou denken dat we beginnen met gewoon het gestructureerd administreren wat we nu aan het doen zijn.</v>
+
+00:17:22.622 --> 00:17:23.062
+<v Axel van der Minne>Ja.</v>
+
+00:17:25.452 --> 00:17:26.072
+<v Axel van der Minne>Precies.</v>
+
+00:17:25.575 --> 00:17:32.096
+<v Michiel Trimpe>Want nu hebben al die die basis al die registraties die hebben zo'n soort beleid. Alleen als je dat nu bij open data eh bij data.overheid.nl probeert op te zoeken</v>
+
+00:17:31.342 --> 00:17:31.662
+<v Axel van der Minne>Ja.</v>
+
+00:17:32.096 --> 00:17:43.072
+<v Michiel Trimpe>of in een lijstje naast elkaar proberen te zetten, dan kan het allemaal niet, want het is niet gestructureerd. Het staat in PDF'jes of op websites of allemaal op een andere manier.</v>
+
+00:17:42.732 --> 00:17:46.073
+<v Axel van der Minne>Nou ja, dat is binnen DUO is dat ook is dat al een een uitdaging om om om daar zeg maar</v>
+
+00:17:43.202 --> 00:17:43.482
+<v Rob van Dort>Ja.</v>
+
+00:17:46.073 --> 00:17:53.962
+<v Axel van der Minne>een een eenduidige soort kapstok van te maken. Dus dat zou al heel erg zijn.</v>
+
+00:17:53.642 --> 00:18:15.682
+<v Michiel Trimpe>De vorige keer was de is er ook uitgelegd hoe de eh wat je bij de BRP, wat je dan in moet dienen als het ware voor een verzoek tot aansluiting. Nou, het feit dat je bepaalde informatie moet verzamelen, moet indienen en een verzoek te moet indoen via via een bepaald formulier, dat is al een toegangsbeleid. En dat kan je al eh op een uniforme manier eh eh kan je al zorgen dat dat gewoon vindbaar is in een policy.</v>
+
+00:18:12.812 --> 00:18:13.212
+<v Axel van der Minne>Ja.</v>
+
+00:18:17.272 --> 00:18:20.792
+<v Michiel Trimpe>Ja.</v>
+
+00:18:25.122 --> 00:18:25.522
+<v Michiel Trimpe>Ja.</v>
+
+00:18:28.912 --> 00:18:29.472
+<v Michiel Trimpe>Ja.</v>
+
+00:18:29.222 --> 00:18:37.502
+<v Axel van der Minne>Ja, maar dat is stap één zeg maar, het standaardiseren van van van van van dit dit dit toegangsbeleid zou zijn. Ik denk dat dat een hele nuttige eerste stap is.</v>
+
+00:18:39.542 --> 00:18:48.275
+<v Michiel Trimpe>Ja, en mijn vraag is, wat standaardiseren we dan precies? Dus de de ODRL profielen zeggen meer over de semantische elementen die je gebruikt in je toegangsbeleid.</v>
+
+00:18:44.132 --> 00:18:44.612
+<v Axel van der Minne>Ja.</v>
+
+00:18:48.275 --> 00:18:57.502
+<v Michiel Trimpe>Ja, en ik zou zeggen, wat we standaardiseren is datgene waarmee we het aan de data koppelen, zodat het in een catalogus vindbaar is.</v>
+
+00:19:00.162 --> 00:19:05.682
+<v Michiel Trimpe>Zodat je het op kan zoeken als je ergens een eh eh een een catalogus hebt met aanbod.</v>
+
+00:19:06.842 --> 00:19:07.282
+<v Axel van der Minne>Ja.</v>
+
+00:19:09.772 --> 00:19:23.792
+<v Axel van der Minne>Dus als ik een als ik een een een catalogus entry vind, dat ik daarbij dan ook eh eh alle regels heb vastgelegd eh of alle eh criteria heb vastgelegd waaraan ik moet voldoen om toegang te krijgen tot die dataset.</v>
+
+00:19:24.612 --> 00:19:28.205
+<v Michiel Trimpe>Precies. Ja, of dat de datadienst hè, daar moet je dus een beetje zoeken van waar waar koppel je het aan en eh ja.</v>
+
+00:19:27.722 --> 00:19:29.082
+<v Axel van der Minne>Ja.</v>
+
+00:19:28.205 --> 00:19:31.775
+<v Gideon Zegwaard>Want dan moet je die waarschijnlijk dan ook uitspraken over gaan doen, hè. Is dat dan</v>
+
+00:19:30.562 --> 00:19:31.002
+<v Axel van der Minne>Ja.</v>
+
+00:19:31.775 --> 00:19:43.662
+<v Gideon Zegwaard>aan een datadienst gekoppeld, is er een dataset gekoppeld?</v>
+
+00:19:43.032 --> 00:19:44.792
+<v Axel van der Minne></v>
+
+00:19:47.852 --> 00:19:48.292
+<v Michiel Trimpe></v>
+
+00:19:48.002 --> 00:20:09.472
+<v Axel van der Minne>deze verzameling eh eh eh eh eh daar is een entry point voor met bepaalde criteria.</v>
+
+00:20:11.102 --> 00:20:18.862
+<v Gideon Zegwaard>Uiteindelijk ben je een verbinding aan het maken met een datadienst. Dus dat misschien dat dat ook de meest logische plek is om te zeggen van oké, daar haak je op aan.</v>
+
+00:20:19.222 --> 00:20:26.102
+<v Axel van der Minne>Ja, alleen dan je komt waarschijnlijk in de praktijk tegen dat mensen onder dienst verschillende dingen verstaan. Dat daar soms weer een één op veel zit.</v>
+
+00:20:25.702 --> 00:20:28.153
+<v Michiel Trimpe>Ja, dat moet je dat weer definiëren dat je dan een API bedoelt.</v>
+
+00:20:27.832 --> 00:20:31.223
+<v Axel van der Minne>Precies. dus dus eh in de nu hantering hanteer ik je hebt dienst en dienst kent verwerkingen.</v>
+
+00:20:28.153 --> 00:20:31.382
+<v Michiel Trimpe></v>
+
+00:20:31.223 --> 00:20:41.032
+<v Axel van der Minne>En één dienst kan meerdere verwerkingen hebben. Maar goed, dat is een beetje eh eh onze poging om hier eh hier eh orde te scheppen.</v>
+
+00:20:41.672 --> 00:21:13.982
+<v Michiel Trimpe>Ja, en daar zit ook alweer dingen aan dat we dan waarschijnlijk vanuit Dcat willen linken, omdat Dcat ook weer aannames heeft. Dus dat eh de has policy of Dcat op de distribution zit bijvoorbeeld. Dus daar kunnen we ook over spreken wat eh wat dat betekent en hoe we daarmee omgaan. Ja, en dat we want binnen FDS gebruiken we nu de data service en de data set. Dat zijn de twee waarvan we willen zeggen dat die beschreven moeten zijn. En bij hebben we dan dan aangeknoopt. Oké, wat is dan de de policy?</v>
+
+00:21:15.212 --> 00:21:21.592
+<v Axel van der Minne>Ja, want er gespeeld het register voor verwerkingsactiviteiten hier ook een rol in, denk ik.</v>
+
+00:21:25.472 --> 00:21:25.992
+<v Gideon Zegwaard>Ja, ik</v>
+
+00:21:28.102 --> 00:22:16.341
+<v Michiel Trimpe>ik denk dat eh eh dat uiteindelijk als er eh want hoe we nu aan het positioneren zijn met FDS of proberen tenminste die stap wordt nu gemaakt in plateau 2 en even kijken hoe dat precies uitkristalliseert, maar dat er een eh je gaat als afnemer een datadeel overeenkomst aan met een aanbieder. Ja. En in die datadeel overeenkomst, dat is dan eh hè, je begint met het aanbod. Daar is een policy op om een datadeel overeenkomst te krijgen. En als je die datadeel overeenkomst ook hebt, dan zit op die datadeel overeenkomst zit weer een specifieke policy van oké, eh onder welke condities gebruik ik die datadeel overeenkomst en daar komt die die verbinding met volgens mij met dat register van gegevens en verwerkingen ook te pas. Want dan heb je een specifieke en dan kan je ook aanwijzen, deze datadeel overeenkomst is voor dat doel.</v>
+
+00:22:14.732 --> 00:22:14.812
+<v Axel van der Minne>Ja.</v>
+
+00:22:16.341 --> 00:22:19.062
+<v Gideon Zegwaard>Ja.</v>
+
+00:22:19.992 --> 00:22:20.432
+<v Axel van der Minne>Ja.</v>
+
+00:22:21.782 --> 00:23:13.912
+<v Michiel Trimpe>Ja, en dan zitten we inderdaad ook de richting wat ik hier dan op had gezet met modeleringshandleiding. Want dit zijn dingen die je dan in ODRL sec al prima kan modeleren, want het is gewoon een is het eh een eh assigne asset rule met een refinement van het type doelbinding. En dat zijn dan dingen die we dus wel vast kunnen leggen of in het profiel of in een in een handleiding van zo modeleren we deze specifieke gevallen. Ja, en het is nog een beetje hè, we zijn nog een beetje aan het verkennen hoor, maar daar daar kan je dus ook nog in kwijt dat een afnemer nog bepaalde policies hanteert en een aanbieder hanteert bepaalde policies. En een afnemer, dat richt zich dan meer op het gebruik hè, van wanneer stel ik een vraag? Dat doe ik pas als aan voorwaarden is voldaan. En als die vraag wordt gesteld, gaat die aanbieder kijken, oké, mag die afnemer die vraag wel stellen?</v>
+
+00:23:16.312 --> 00:23:19.152
+<v Axel van der Minne>Ja.</v>
+
+00:23:18.132 --> 00:23:41.102
+<v Rob van Dort>En dan kun je het feitelijk dus zien voorstellen als als starter hè, dat je zegt van in de eerste instantie eh continuering van bestaande afspraken en dan zeg je gewoon een vinkje bij die partij voor dat eh die data set, datadienst, data product. En dat je na de hand zorgvuldig gaat kijken hoe je dat beleid gaat formuleren, want dat is natuurlijk wel even een een ja, een ding om dat goed op eh eh gestandaardiseerd te krijgen.</v>
+
+00:23:42.532 --> 00:23:49.524
+<v Gideon Zegwaard>Ik denk ook dat het een logische stap is om het als eerst inzichtelijk te maken, want dan weet je wat je aan aan je fiets hangen om het zo maar te zeggen.</v>
+
+00:23:48.442 --> 00:23:48.842
+<v Rob van Dort>Ja.</v>
+
+00:23:49.524 --> 00:24:12.792
+<v Gideon Zegwaard>En dan kan je daar ook vervolgens naar kijken. Oké, zie ik grote gemeendedelers in? Zijn er bepaalde soorten afspraken die heel vaak worden min of meer hetzelfde worden gebruikt. Is dat een afspraak die je misschien naar FDS</v>
+
+00:24:13.912 --> 00:24:49.002
+<v Rob van Dort>gaat natuurlijk heel lastig worden, want dan hoe eh heterogener je dataspace is, hoe eh bonter, zal ik maar zeggen, je ODRL eh voorwaarden. En ik denk dus dat je met een zeg maar de de een opdeling in doelgerichte dataspaces, krijg je ook een vereenvoudiging van je ODRL policy.</v>
+
+00:24:51.572 --> 00:25:31.582
+<v Gideon Zegwaard>Maar het zou denk ik al helpen als we zeggen van oké, er zijn een paar basiselementen in zo'n ODRL policy, die moeten er zijn. Hij moet een identifier hebben, hij moet een titel hebben, hij moet een een mensleesbare tekst hebben, zodat je begrijpt wat hij beoogt te doen. Hè, dat zijn dingen die zijn heel generiek. En op het moment dat je zegt van oké, hoe hè, hoe die moeten werken, dan kan je ze en je zou dat breed gaan toepassen op die manier. Hm hm. Dan kan je er ook meer onderzoek dan doen en dan kan je ook meer kijken van oké, wat voor policies zijn er eigenlijk allemaal? Wat beogen ze te doen? Zien we daar een grote gemene deler in? Zou je de volgende slag kunnen maken in eh adviseren in hoe je die policies opstelt en uitdrukt.</v>
+
+00:25:33.862 --> 00:25:35.742
+<v Gideon Zegwaard>Maar daarvoor moet je eerst weten wat je allemaal hebt.</v>
+
+00:25:38.852 --> 00:27:22.782
+<v Michiel Trimpe>Ja. En dat is inderdaad een dat is een beetje een een ander ander deliverable die we neer zouden kunnen gaan zetten en dat is dat we het niet zozeer zien als een ODRL profiel, maar dat eigenlijk eh maturity levels voor je ODRL beleid. Dus waarin je dus bijvoorbeeld zegt eh inderdaad eh kwaliteitsniveaus gaat definiëren. Eh je zegt als basisniveau, het heeft een titel en een omschrijving. Ja. Ehm maar ook het eh een hoger niveau met eh nou bijvoorbeeld eh dus de wat je wat Rob benoemt, dat je ook de keten verwerkt. Dus niet alleen jouw relatie met je aanbieder, maar ook wanneer hoe jij weer doorlevert naar je eigen achterban. Eh een aantal andere andere aspecten van oké, heb je het netjes gekoppeld aan je AuthZEN informatiemodel bijvoorbeeld? Eh is dat gerelateerd? Dus dat we een standaard neerzetten met eisen aan die ODRL. Met ook twee mogelijke vertrekpunten benoemd. Eentje is die we impliciet tot nu toe ook genomen hebben is zeg maar wat wat brengt het met je mee als je deelname wil eh deel wil nemen aan het FDS. Ehm kan ook bijvoorbeeld aan een ander vertrekpunt doen ehm dus eh toegangsbeleid valt in principe valt ook onder de Woo. Eh stel dus wat zou er nodig zijn om eh aan je Woo-vereisten te voldoen voor toegangsbeleid. Nou ja, GDPR zijn natuurlijk ook kunnen nemen. Dat is ook een vrij algemene. Hm hm. Ehm en dat daarvan zou je ook al kunnen zeggen van oké, dit is dit is toegang wat een toegangsverlening die onder de GDPR valt of niet onder de GDPR valt. Heb je notificatie nodig, maar als die onder de GDPR valt, dan kan je zo al een paar dingetjes aanwijzen die je dus in waar waar je dus iets voor geregeld moet hebben.</v>
+
+00:27:25.002 --> 00:27:43.322
+<v Rob van Dort>Precies, maar ik ik wil nog eventjes terugkomen op wat ik zei, hè, dus dat ik die eh die onderverdeling in doelgerichte dataspaces zie ik ook als een beheers eh maatregel voor je rechten om daar dus eh zeg maar niet het onderscheid te hoeven maken tussen de</v>
+
+00:27:46.652 --> 00:27:50.372
+<v Rob van Dort>eh zeg maar tussen tussen jouw buurman en ministerie van Defensie, laat ik het zo zeggen.</v>
+
+00:27:52.712 --> 00:28:15.092
+<v Rob van Dort>Hè, dus dat je door het feit dat je een een FDS inricht is al een voorfiltering hè. Dan zeg je van oké, we zijn het overheidsgerelateerde partijen. Maar als je bij KOOP kijkt, wat voor soorten partijen of je dan hebt, is nog een hele bonte verzameling van eh eh keurmeesters van eh van lamsvlees, zal ik maar zeggen, tot eh tot en met de commissie stiekem. En alles wat ertussen zit.</v>
+
+00:28:16.782 --> 00:28:30.302
+<v Gideon Zegwaard>Ja, en dat betekent ook dat dat we als je naar de context van FDS kijkt, dat we waarschijnlijk iets van FDS policies gaan krijgen. En zo'n FDS policy zou dus kunnen zijn, je controleert altijd of de of de ander overliggende partij ook een FDS deelnemer is.</v>
+
+00:28:30.272 --> 00:28:36.752
+<v Rob van Dort>Ja. Ik moet even onder de tafel duiken, want mijn eh laptop zegt dat hij zonder stroom zit.</v>
+
+00:28:37.482 --> 00:28:37.762
+<v Michiel Trimpe>Oké.</v>
+
+00:28:40.432 --> 00:29:00.632
+<v Michiel Trimpe>Ja. Maar dit dus maar een lijst van vereisten aan je beleid, dat is iets waar we ook wel echt een een standaard of iets voor kunnen standaardiseren.</v>
+
+00:29:02.942 --> 00:29:35.512
+<v Michiel Trimpe>en de de PKDI. En ik zit nu te zoeken wat wat willen we daaraan opleveren? Is dat sec ODRL als aanbevolen standaard? Dat voelt wat te licht waarschijnlijk. Ja. Want dan heb je nog mensen niet geholpen om Ja. Dus ik ik zou het meest denk ik het meest geholpen zijn met een standaard die ervoor zorgt dat toegangsbeleid inzichtelijk wordt in catalogi.</v>
+
+00:29:38.002 --> 00:29:38.402
+<v Axel van der Minne>Ja.</v>
+
+00:29:39.892 --> 00:29:47.920
+<v Michiel Trimpe>Ja, maar dan ook bruikbaar inzichtelijk, dus niet alleen het het het tech je kan linken naar de ODRL, maar je kan het ook enigszins duiden.</v>
+
+00:29:47.920 --> 00:29:52.078
+<v Gideon Zegwaard>Ja, je snapt wat het toegangsbeleid is als als afnemer van de catalogus.</v>
+
+00:29:52.078 --> 00:30:14.372
+<v Michiel Trimpe>Ja. Inderdaad, het is dus ook inzichtelijk maken. Dit had ik nog geskipt, maar dat is denk ik, dat is niet zozeer iets van standaardisatie, maar ik denk dat we ook als team, wanneer er weer ontwikkelaars eh zowel ontwikkelaars weer wat meer betrokken zijn, ook visualisatie tooling zullen moeten maken om dit te kunnen tonen. Die is er nog niet echt voor complexere ODRL eh ODRL beleid.</v>
+
+00:30:16.682 --> 00:30:25.711
+<v Gideon Zegwaard>Ja, maar en maar dat is natuurlijk een beetje dan moet je eens kijken hoe ver je daarin gaat. Want als er je moet ook weer niet teveel energie steken in hele complexe ODRL profielen als die er nog niet veel zijn.</v>
+
+00:30:25.711 --> 00:30:26.009
+<v Michiel Trimpe>Ja. Dus</v>
+
+00:30:26.009 --> 00:30:34.144
+<v Gideon Zegwaard>Nee, dat is visualisatie. Nee, ik zou ik zou denk ik kijk naar data.overheid.nl, wat daar nu aan datasets staat. En daar zit ongetwijfeld, hè, daar kan je ook kijken van oké, wat is gesloten?</v>
+
+00:30:33.102 --> 00:30:33.702
+<v Axel van der Minne>Ja.</v>
+
+00:30:34.144 --> 00:30:48.273
+<v Gideon Zegwaard>En van die gesloten zou ik willen weten, oké, onder welke condities mag ik erbij dan? En dat zou je dan daarin zichtelijk willen hebben.</v>
+
+00:30:48.273 --> 00:30:48.584
+<v Michiel Trimpe>Ja.</v>
+
+00:30:48.584 --> 00:30:54.090
+<v Gideon Zegwaard>En wat en wat welke informatie heb je daarvoor nodig?</v>
+
+00:30:54.090 --> 00:30:54.402
+<v Michiel Trimpe>Ja.</v>
+
+00:30:53.592 --> 00:31:09.364
+<v Rob van Dort>Precies, en dan vormt zich een eh een taal, zal ik maar zeggen, hè, op basis waarvan je je hè, bijvoorbeeld doelbinding is zo'n element uit die taal. Eh wettelijke taak zou er wel iets zijn. Nou ja, hè, dus dat vocabularium, dat is eh in eerste instantie belangrijk, want daarin drukken we de rechten uit en nou, dat doen we dan met de technische middelen van ODRL, hè, maar die die taal, dat is het eerste waar het om gaat.</v>
+
+00:31:08.412 --> 00:31:08.812
+<v Axel van der Minne>Ja.</v>
+
+00:31:09.364 --> 00:31:17.932
+<v Rob van Dort>denk ik. Eh mens interpreteerbaar. Ja, begrijpelijk hè, dus dat je dat uit moet kunnen leggen dat je</v>
+
+00:31:20.482 --> 00:31:21.002
+<v Rob van Dort>denk ik.</v>
+
+00:31:22.352 --> 00:31:23.592
+<v Axel van der Minne>Eh mens interpreteerbaar.</v>
+
+00:31:25.012 --> 00:31:29.300
+<v Rob van Dort>Ja, begrijpelijk hè, dus dat je dat uit moet kunnen leggen dat je</v>
+
+00:31:26.192 --> 00:31:26.632
+<v Axel van der Minne>Ja.</v>
+
+00:31:29.300 --> 00:31:33.242
+<v Rob van Dort>En van joh, als jij die die doelbinding hebt, nou, dat dat is iets, een begrip wat wat wat</v>
+
+00:31:32.602 --> 00:31:32.962
+<v Axel van der Minne>Ja.</v>
+
+00:31:33.242 --> 00:31:36.492
+<v Rob van Dort>eh leeft, zal ik maar zeggen, binnen de community.</v>
+
+00:31:37.012 --> 00:31:43.172
+<v Axel van der Minne>Ja. Ja, maar dus dus dus wel wel gestructureerd en gestandaardiseerd, maar wel voor mensen begrijpbaar.</v>
+
+00:31:44.012 --> 00:31:46.932
+<v Rob van Dort>Jawel, precies, maar in eerste instantie maar eens eventjes eh term voor term.</v>
+
+00:31:54.572 --> 00:32:30.430
+<v Michiel Trimpe>dat wel belangrijk is dus eh de PRP keten keten alleen al nemende. Dus dan hebben we een duidelijke structuur van eh toegangsbeleid tot het mogen afnemen, dus dat een ODRL offer. Eh en dan hebben we de autorisatiebesluiten, dus dat zijn dan eh ODRL assignments of die wel de rules. sets. Ehm en dan hebben we daar weer binnen het concept van de doelbindingen die we net besproken. Dus dat is dan wat ik zei, dat is dan een rule met een refinement. En dat zijn dingen die je in ODRL qua linked data best kan modelleren. Als je dat als ruwe RDF online zet, heeft het nog steeds geen inzicht.</v>
+
+00:32:30.430 --> 00:32:37.979
+<v Gideon Zegwaard>Ja, dus je hebt daar een vertaling voor nodig naar oké, hoe hoe presenteer je dat nou op een eh op een begrijpelijke manier.</v>
+
+00:32:37.979 --> 00:32:38.162
+<v Michiel Trimpe>Ja.</v>
+
+00:32:40.172 --> 00:33:01.932
+<v Gideon Zegwaard>ook wel grappig om daar eh bijvoorbeeld eh zou je ook kunnen kijken naar eh wat eh bij NLSBB wordt gedaan. Daar wordt ook het hè, je hebt dus SKOS, dat is dan de begrip ontologie, maar daar wordt ook heel erg gekeken naar oké, en hoe leg je dat dan uit? Wat betekent het dan? Hoe lees je dat dan?</v>
+
+00:33:02.272 --> 00:33:20.172
+<v Rob van Dort>Ja. En ook ten aanzien van zeg maar hoe diep een organisatie in de overheid zit bij wijze van spreken, hè. Dus je hebt je hebt natuurlijk je je je echte overheidsorganisatie, je ministeries bijvoorbeeld. Je hebt je ZBO's, je hebt je provincies. Hè, dus de de hele gebeuren, daar ja, daar moet ook een een vocabularium voor voor komen.</v>
+
+00:33:22.762 --> 00:33:27.002
+<v Michiel Trimpe>Ja, en ik weet niet of wij dat moeten doen of dat dat</v>
+
+00:33:25.592 --> 00:33:27.192
+<v Rob van Dort>doen het woord te komen. Ja.</v>
+
+00:33:27.602 --> 00:33:36.364
+<v Michiel Trimpe>Ja, je hebt al het eh TOOI eh initiatief die eh heel veel van dit soort termen aan het definiëren is. Ik denk dat wij waar wij daar gaten in zien dat wij die</v>
+
+00:33:36.364 --> 00:33:44.847
+<v Gideon Zegwaard>Ja, daar kan je naar kijken van oké, ga je weer die aanvullen bij TOOI of eh zelf nog een aanvullende vocabulair. Dus daar moet je eventjes naar zoeken.</v>
+
+00:33:44.847 --> 00:33:45.014
+<v Michiel Trimpe>Ja.</v>
+
+00:33:43.112 --> 00:33:43.512
+<v Rob van Dort>Ja.</v>
+
+00:33:45.014 --> 00:33:46.368
+<v Michiel Trimpe>Ja.</v>
+
+00:33:46.368 --> 00:33:47.722
+<v Gideon Zegwaard>Ja.</v>
+
+00:33:50.182 --> 00:33:59.102
+<v Rob van Dort>En dan zou er ook een beslissing moeten komen van zijn ze zijn wij uiteindelijk zeg maar de bepalende daarvan of</v>
+
+00:34:00.482 --> 00:34:20.398
+<v Michiel Trimpe>alleen de eigenaar moeten zijn van specifieke ODRL mappingen die relevant zijn. Dus dat wij zeker niet eigenaar moeten zijn van het concept doelbinding. Maar dat we mogelijk wel de eigenaar zijn van eh de definitie van een eh een ODRL left operand als subklasse van</v>
+
+00:34:19.212 --> 00:34:19.222
+<v Axel van der Minne></v>
+
+00:34:20.398 --> 00:34:34.942
+<v Gideon Zegwaard>Ja, ja ja ja. doelbinding. Ja. Ja, je kan dan ook nog kijken naar eh want Nora heeft ook een aantal begrippenkaders. Dus daar wellicht dat je daar dan ook gebruik van kan maken.</v>
+
+00:34:37.342 --> 00:35:07.292
+<v Guus van der Meer>Ik hoor nu best wel veel opties wat we kunnen wat we kunnen maken. Zijn er ook al ehm misschien kunnen we kijken wat er ook voorbeeld zijn van bestaande dingen die al gemaakt zijn, dus niet voor ODRL. En dan kijken wat we dan zoiets vergelijkbaars kunnen maken. Want er worden nu standaarden, maar ik hoor ook zeg maar inderdaad dat je wat je zei, dat je niet eh dat je gewoon inderdaad mapping alleen maar gaat definiëren. Zijn er al andere dingen die bij eh standaarden ingeleverd ingediend zijn die zeg maar die alleen dat doen zeg maar of niet?</v>
+
+00:35:08.772 --> 00:35:17.972
+<v Michiel Trimpe>Ik zou heel erg kijken naar wat eh eh DCAT-AP-NL gedaan heeft eh voor DCAT en wat eh NL-SBB heeft gedaan voor SKOS.</v>
+
+00:35:20.212 --> 00:35:22.692
+<v Michiel Trimpe>Eh is die hebben ook zoiets vergelijkbaars gedaan.</v>
+
+00:35:20.532 --> 00:35:39.362
+<v Guus van der Meer>Oké. Dan kunnen we daar misschien naar kijken en dan kunnen we dat een beetje op op zo'n zelfde manier zo'n ODRL voor ODRL kunnen doen. Dan heb je een beetje de ja, een beetje van een beetje zoals het ja, wat gestandaardiseerd zeg maar, hoe het ook op andere plekken gedaan wordt. Daar zit ik een beetje mee aan het denken.</v>
+
+00:35:40.912 --> 00:35:52.152
+<v Michiel Trimpe>Ja, precies. Dit zijn dan wat jij noemt zijn dat eh de de de applicatieprofielen of toespitsingen van andere standaarden. Maar Guus, bedoelde jij andere plekken waar toegangsbeleid gemodeleerd wordt?</v>
+
+00:35:51.752 --> 00:36:06.334
+<v Guus van der Meer>Nee, nee, dat nee, ik bedoel inderdaad dat. Gewoon andere standaarden die die die op op ja, want we zitten nu te kijken wat gaan we opleveren zeg maar uiteindelijk. Die op zo'n zelfde manier zijn opgeleverd zeg maar. Dat is een beetje waar ik een beetje naartoe wilde. Niet dat we</v>
+
+00:36:06.022 --> 00:36:07.702
+<v Gideon Zegwaard>Ja, dat zijn dan de profielen.</v>
+
+00:36:06.334 --> 00:36:09.921
+<v Guus van der Meer>Ja. En niet hoeven opeens</v>
+
+00:36:09.192 --> 00:36:10.032
+<v Michiel Trimpe>Ja.</v>
+
+00:36:09.921 --> 00:36:14.492
+<v Guus van der Meer>Ja, want dan hebben we een beetje een dan kunnen we een beetje een idee vormen van</v>
+
+00:36:16.572 --> 00:36:22.982
+<v Guus van der Meer>ehm ja, wat gaan we dan echt definiëren erin zeg maar. Dat was meer mijn eh ja, mijn gedachtegang.</v>
+
+00:36:24.962 --> 00:36:34.242
+<v Rob van Dort>eh even die die dat eh scherm wat nu voor staat hè. Even ter inspiratie eh nemen. Ik zie daar eh gemeenten op staan en ministeries, waterschappen.</v>
+
+00:36:37.952 --> 00:36:52.312
+<v Rob van Dort>Eh Hè, want zijn dat en dan moet je dat eigenlijk zien als instanties waarbij je de de bijbehorende klasse aan het eh zoeken bent hè. Dus bijvoorbeeld ministeries, dat is dan zou je kunnen zeggen dat is een een een klasse of een instantie waarvan ehm</v>
+
+00:36:55.332 --> 00:36:56.692
+<v Rob van Dort>landelijk bestuur.</v>
+
+00:37:00.162 --> 00:37:15.313
+<v Michiel Trimpe>Ehm nou, wat ik wilde laten zien was eigenlijk meer de TOOI-thesauri, die kan ik kon ik van hier niet direct vinden. Ehm dit zijn de zijn de waardelijsten. Waardelijsten waar je dan specifiek naar eh kan verwijzen als je naar een</v>
+
+00:37:15.313 --> 00:37:31.192
+<v Gideon Zegwaard>Maar daar kan je ook wat over zeggen hè. Dus als je een bijvoorbeeld een overheidsorganisatie aanwijst, kan je in zo'n applicatieprofiel zeggen, dat aanwijzen, dat doen we door de TOOI-identifier te gebruiken om maar een voorbeeld te geven.</v>
+
+00:37:35.022 --> 00:37:36.262
+<v Michiel Trimpe>Inderdaad. En je hebt ook de</v>
+
+00:37:45.652 --> 00:37:48.111
+<v Gideon Zegwaard>deze maar. Maar dan de goed leesbare.</v>
+
+00:37:48.111 --> 00:38:16.362
+<v Michiel Trimpe>Dan de goed leesbare variant. Hier wordt toch eventjes dan de slecht leesbare variant. Hier wordt dan bijvoorbeeld het concept bestuursorgaan benoemd. Hm hm. Het concept eh bevoegdheidsoverdracht. Dus wanneer dat dan relevant is voor jouw toegangsbeleid, willen we voorstellen dat je dan deze definitie gebruikt en niet ehm DUO bevoegdheidsoverdracht definieert als concept, terwijl het ook een landelijk bestaand concept is.</v>
+
+00:38:16.782 --> 00:38:17.182
+<v Axel van der Minne>Ja.</v>
+
+00:38:18.582 --> 00:38:46.422
+<v Gideon Zegwaard>Ja, daar doet Nora natuurlijk ook een hoop in hè, want die heeft ook een aantal van dat soort dingen gedefinieerd. Dus het is altijd een beetje zoeken. Ja. Maar dat is altijd. Dat hebben we met FDS ook gehad. Dan ga je op zoek en dan zeg je van oké, primair doen we kijken we bij Nora. En dan kom je dingen tegen die goed passen en dan kom je dingen tegen die niet goed passen en dingen tegen die er gewoon niet tussen staan. Dan ga je weer verder zoeken. En zo probeer je bestaande definities die al een soort autoriteit hebben te te hergebruiken.</v>
+
+00:38:53.392 --> 00:38:53.672
+<v Michiel Trimpe>Ja.</v>
+
+00:39:01.052 --> 00:39:43.209
+<v Michiel Trimpe>te komen is. Ja, zoals al wat duidelijk was, maar eh ODRL als as is, als aanbevolen of voor standaardisatie is niet, voldoet niet aan de behoefte die er ligt. Eh wat we eh maar een klassiek ODRL profiel met eh eigenlijk semantische domeinelementen toevoegen is ook niet direct wat we nodig hebben. Misschien een aantal kleine dingen mogelijk voor het koppelen aan datasets. Maar wellicht, ik heb zo'n gevoel dat die misschien wel bestaan.</v>
+
+00:39:43.209 --> 00:39:44.942
+<v Gideon Zegwaard>Lijkt het ook wel.</v>
+
+00:39:44.942 --> 00:39:46.482
+<v Michiel Trimpe>Dat denk ik wel.</v>
+
+00:39:48.792 --> 00:40:00.192
+<v Gideon Zegwaard>Dus dat is waarschijnlijk waar niet de het zwaartepunt ligt. En maar wat we wel hoeven of proeven is een beetje een mix wat ik noemde, de modelleringshandleiding en dit eh volwassenheidsniveaus.</v>
+
+00:40:03.572 --> 00:40:09.052
+<v Michiel Trimpe>een applicatieprofiel waarin we uitleggen, waarin we definiëren hoe we eh</v>
+
+00:40:11.432 --> 00:40:22.652
+<v Michiel Trimpe>toch wel, weet je, het het FDS model waarschijnlijk eh neerzetten met aanbieders, afnemers, datasets en ontsluitingen.</v>
+
+00:40:25.032 --> 00:40:28.830
+<v Gideon Zegwaard>AP, zodat het een goed koppeltje wordt, om het zo maar te zeggen.</v>
+
+00:40:28.830 --> 00:40:37.244
+<v Michiel Trimpe>Ja, en en dan wel toegespitst naar de de overheids casus, dus wel bijvoorbeeld uitgewerkt hoe eh hoe doelbindingen daar dan in opgenomen worden.</v>
+
+00:40:37.244 --> 00:40:43.262
+<v Gideon Zegwaard>Ja, maar doelbinding is niet specifiek overheid, hè? Het is geen GDPR, dus dat is dat is gewoon breder.</v>
+
+00:40:45.332 --> 00:40:47.212
+<v Gideon Zegwaard>Nee, maar goed, bij</v>
+
+00:40:47.642 --> 00:40:58.519
+<v Rob van Dort>in ons vocabularium eh moet het opgenomen zijn, want wij gaan eh ODRL regels uitdrukken mogelijk in termen van doelbinding.</v>
+
+00:40:56.562 --> 00:40:56.842
+<v Michiel Trimpe>Ja.</v>
+
+00:40:57.012 --> 00:40:57.172
+<v Axel van der Minne>Hè, dus</v>
+
+00:40:58.519 --> 00:41:02.322
+<v Rob van Dort>waar die ook uiteindelijk nog meer voorkomt is eigenlijk niet relevant. Wij hebben hem ook nodig.</v>
+
+00:41:02.842 --> 00:41:18.181
+<v Michiel Trimpe>Ja, en wat wij zullen dan wel definiëren, zeg maar binnen de overheid of binnen onze context, als je dit standaard volgt, dan doe je dat door, nou bijvoorbeeld wat ik net noemde, door een refinement op een rule set toe te voegen van een type.</v>
+
+00:41:18.181 --> 00:41:38.084
+<v Gideon Zegwaard>Ja, en wie weet kan je al een soort van lijstje archetype policies definiëren waar je een instantie van aanmaakt voor je eigen dataset. Dus als jij een een een doelbindings policy hebt, dat is al een soort van classificatie van soorten policies, waar zijn ze voor? Eh en wellicht dat je dan zoiets ook kan opnemen.</v>
+
+00:41:38.084 --> 00:42:06.036
+<v Michiel Trimpe>Ja. Ja, dat is inderdaad iets anders waar ik tegenaan loop, dus wanneer je dit gaat modelleren, dan zie je vaak dat je hetzelfde stukje toegangsbeleid of concepten op meerdere plekken gebruikt. Dus je hebt dan vaak bijvoorbeeld eh de de de offer en specifieke autorisatie, waarbij je dan het algemene beleid wat je afdwingt om eh de data deelrelatie aan te gaan, ook nog eens een keer wil afdwingen in een individuele data deelrelatie die je</v>
+
+00:42:06.036 --> 00:42:09.459
+<v Gideon Zegwaard>Ja, dan toegesteld en toegespitst op die data relatie.</v>
+
+00:42:09.459 --> 00:42:13.008
+<v Michiel Trimpe>Precies, en dan hebben ze ook een verhouding met elkaar.</v>
+
+00:42:13.008 --> 00:42:17.762
+<v Gideon Zegwaard>Ja, verwijzen, zodat je het niet gaat kopiëren, maar dat je gaat refereren.</v>
+
+00:42:18.612 --> 00:42:19.012
+<v Rob van Dort>Ja.</v>
+
+00:42:19.252 --> 00:42:41.822
+<v Michiel Trimpe>Dat is een potentieel de policies is ook inderdaad de BRP casus bijvoorbeeld waar je dan heel vaak dezelfde eh wettelijke basis hebt, doelbinding of hoe je het noemt. Dat je ook dat ook voorkent stelt, nou dus dan raden wij aan om als eh als RVIG dit als voorgedefinieerde policies te gebruiken waar je naar verwijst. Niet in elke policy het weer te dupliceren.</v>
+
+00:42:39.972 --> 00:42:39.982
+<v Rob van Dort>Ja.</v>
+
+00:42:45.092 --> 00:42:48.073
+<v Rob van Dort>Maar dat moet dan vaak wel ergens op teruggrijpen, hè.</v>
+
+00:42:45.922 --> 00:42:46.002
+<v Gideon Zegwaard>Ja.</v>
+
+00:42:48.073 --> 00:43:00.312
+<v Rob van Dort>Dus als je bijvoorbeeld zegt van ik noem wat eh dit dit is eh leesbaar voor ik noem wat eh alle ministeries. Hè, dan moet dus elke organisatie, die moet dus zeg maar dat stempeltje kunnen achterhalen van ben ik een ministerie of niet?</v>
+
+00:43:02.792 --> 00:43:30.052
+<v Gideon Zegwaard>En dingetjes waar je ook naar zou kunnen kijken is relaties met standaarden als PROF, die aan eh dus provenance, die aangeven van oké, dit is gebaseerd op of dit is dit komt voort uit. Eh want dan kan een verwijzing naar wet- en regelgeving zijn waar je het op baseert, hè, er is ergens een wetsartikel en dan moet je invulling aan geven. Dat doe je met met een met een bepaalde policy ergens. Zo kan je wellicht ook relaties leggen die ervoor zorgen dat een toegangsbeleid ook herleidbaar wordt.</v>
+
+00:43:33.532 --> 00:43:33.732
+<v Michiel Trimpe>Oké.</v>
+
+00:43:36.792 --> 00:43:45.792
+<v Michiel Trimpe>Dat is denk ik een</v>
+
+00:43:46.972 --> 00:44:15.432
+<v Rob van Dort>dat als je gespecialiseerde dataspaces hebt, dan kun je dus zeg maar ook over standaard policies hè, dus je zegt van van nou deze dataset mag voor is voor alle deelnemers in deze dataspace is die leesbaar. Hè, dan heb je dat met je toegangsbeleid tot die dataspace heb je dat al geregeld en hoef je dat niet nog nog een keertje in eh fijnere eh regels te vatten.</v>
+
+00:44:19.292 --> 00:44:34.358
+<v Gideon Zegwaard>Ja, en dat is denk ik het voordeel van ODRL, die is heel flexibel en alles wat we tot nu toe genoemd hebben kan je op de een of andere manier goed uitdrukken in ODRL.</v>
+
+00:44:34.358 --> 00:44:52.783
+<v Michiel Trimpe>Maar je wilt het ook kunnen tonen in een catalogus, dus dan heb je iets van sturing nodig van oké, dit en dit, deze kenmerken moeten er in ieder geval wel zijn, want anders eh kan ik het niet laten zien.</v>
+
+00:44:52.783 --> 00:45:26.002
+<v Gideon Zegwaard>Ja, en dat daarin de catalogus zou je wel een soort happy middle moeten vinden van zeggen nou, dit is de structuur die we kunnen gepast kunnen visualiseren, maar je hebt ook nog deze complexere constructies als je die gebruikt, nou, de detail view of the case, maar hier heb je een RDF view van dit stukje toegangsbeleid, want dit is dit kunnen we niet visualiseren.</v>
+
+00:45:26.852 --> 00:45:51.492
+<v Rob van Dort>Dus zou je dat stukje toegangsbeleid voor een eh dataspace, zou je zomaar kunnen uitschrijven hè. Dus dat je zegt van de de de regel voor deze eh dataspace is dat. Eh en dan kun je vervolgens zeggen van nou hè, deze alle datasets zijn of een bepaalde dataset is openbaar voor alle deelnemers. En dat betekent dan dus dat elke van die deelnemers die eh ODRL eh dat hij daaraan voldoet.</v>
+
+00:45:54.112 --> 00:46:09.702
+<v Michiel Trimpe>dat er specifieke FDS policies kunnen gaan komen en datzelfde kan natuurlijk gelden ook voor allerhande domein policies. Hè, domein eh stelsels die kunnen ook gewoon hun domein policies hebben en die kunnen naast FDS policies bestaan.</v>
+
+00:46:12.092 --> 00:46:12.292
+<v Gideon Zegwaard>Zeker.</v>
+
+00:46:15.182 --> 00:46:26.932
+<v Gideon Zegwaard>ook voor werk, want eh we krijgen weer wat ontwikkelaars in het team. Eh die gaan ook met de simulatieomgeving aan de slag. Eh en ik wil dan ook nog met twee cases bedoelen die we kunnen gaan simuleren.</v>
+
+00:46:29.922 --> 00:46:57.892
+<v Gideon Zegwaard>Tenminste de ik denk dat het goed is dat we wat gaan simuleren. En ik wil in ieder geval twee eh cases bedenken van ik denk dat dat waardevol is. Eh ik denk de eerste case is eigenlijk ook eh is gewoon de BRP-keten gaan simuleren, maar dan gaan simuleren zoals wij hem in een eh een ideale wereld voor zouden stellen. Dus waarbij je als afnemer je toegangsbeleid definieert en je gegevensset en je doelbindingen</v>
+
+00:46:59.992 --> 00:47:12.084
+<v Michiel Trimpe>rechttoesluiting neerlegt en je dat aanbiedt aan RVIG en RVIG dat voor jou eh technisch wel afdwingt, maar je alleen de superset afdwingt. Dus echt kijken hoe werken we het uit.</v>
+
+00:47:12.084 --> 00:47:16.935
+<v Gideon Zegwaard>Mogelijk zeg maar ambitieus als een mogelijk toekomstig experiment BRP.</v>
+
+00:47:16.935 --> 00:47:51.368
+<v Michiel Trimpe>Ja, en wie weet kan je ik weet niet hoeveel capaciteit je daarin hebt, maar je zou ook nog twee kunnen doen. Je zou kunnen zeggen eentje die heel dicht blijft bij wat wat er nu hoe het nu ingevuld is, maar dan veel beter inzichtelijk gemaakt en eh eh wat wat er precies gebeurt, wat er geregistreerd is. En één die eh aangeeft van oké ja, wat gebeurt er nou ook als je eh de wet en regelgeving kan aanpassen en eh je kan veel meer verantwoordelijkheid bij de afnemer leggen en hoe zou het er dan uitzien?</v>
+
+00:47:51.368 --> 00:47:51.573
+<v Gideon Zegwaard>Ja.</v>
+
+00:47:51.573 --> 00:48:00.113
+<v Gideon Zegwaard>Ja. Ja, en dan denk ik de huidige situatie is voornamelijk een wat je al omschrijft, dus dat is dan meer beleid neerzetten en</v>
+
+00:48:00.113 --> 00:48:12.888
+<v Michiel Trimpe>Ja, die voorwaarderegels gewoon zorgen dat die goed vindbaar zijn, de doelbinding, dat die goed vindbaar is. Gewoon alles wat er in feite nu al is aan informatie, maar dan goed ontsloten.</v>
+
+00:48:12.888 --> 00:48:13.093
+<v Gideon Zegwaard>Ja.</v>
+
+00:48:13.093 --> 00:48:22.726
+<v Gideon Zegwaard>Ja. Ja, en dat dat laagt heel erg op elkaar. Dus wanneer je dat omschreven hebt, kan je dat eventueel ook als afnemer zelf aanbieden en zelf.</v>
+
+00:48:22.726 --> 00:49:14.102
+<v Michiel Trimpe>Ja, nou ik ik denk dat dat je daar eh tot andere ehm mechanismes gaat komen. Dat je bij als je meer bij de afnemer gaat leggen, dat hij veel specifieker beleid kan gaan invoeren dan dat de BRP nu kan, omdat hij gelimiteerd is aan wat er via die API aan de andere kant komt. Maar zo zo zo'n afnemer aan de vragende kant, die weet veel meer. Of die kan veel meer weten. Kan weten welke welke persoon het is die de actie start. die voor welk proces die het op dat moment aan het doen is. Dus dan kan je meer eh toegangsbeleid en dat gebeurt ook waarschijnlijk wel. Dus er zal ongetwijfeld al die applicaties die de BRP gaan bevragen, die hebben daar zelf ook allerhande eh controles nog in voordat die vraag gesteld wordt. Alleen dat is nu niet zichtbaar.</v>
+
+00:49:14.102 --> 00:49:14.307
+<v Gideon Zegwaard>Ja.</v>
+
+00:49:14.307 --> 00:49:20.798
+<v Gideon Zegwaard>Ja, daar ging ik vanuit inderdaad, dat dat dat lijkt me de interessantste om te gaan simuleren.</v>
+
+00:49:20.798 --> 00:49:21.003
+<v Michiel Trimpe>Ja.</v>
+
+00:49:21.003 --> 00:49:29.269
+<v Gideon Zegwaard>Oh, je hebt tegelijkertijd je hebt ook een lager niveau waar je inderdaad gewoon eigenlijk duidelijke patronen vaststelt.</v>
+
+00:49:29.269 --> 00:49:29.474
+<v Michiel Trimpe>Ja.</v>
+
+00:49:29.474 --> 00:49:33.300
+<v Michiel Trimpe>Ja, en voor de BR BRO is het natuurlijk ook interessant.</v>
+
+00:49:33.300 --> 00:49:33.505
+<v Gideon Zegwaard>Ja.</v>
+
+00:49:33.505 --> 00:50:02.199
+<v Gideon Zegwaard>Ja, dat was net de volgende. Ik had ook al Floris kon er niet bij zijn, maar ik had er voor ook al met hem gespart. En daar kwamen we ook op uit dat de BRO ook een hele interessante zou zijn. Omdat we daar ook ook echt iets nieuws kunnen doen, waarbij je als bronhouder je toegangsbeleid kan definiëren en dat aan het centrale ontsluitingspunt eh aan kan leveren om door het centrale ontsluitingspunt te laten handhaven.</v>
+
+00:50:02.199 --> 00:50:12.242
+<v Michiel Trimpe>Ja, en je wat je kan doen met de BRO is vereisen kijken hoe het werkt als je vereist dat de afnemer inzichtelijk maakt welke maatregelen hij neemt.</v>
+
+00:50:18.162 --> 00:50:24.602
+<v Gideon Zegwaard>Aha. Welke af welke maatregelen had ze benoemd? Ik hoor het niet.</v>
+
+00:50:24.602 --> 00:50:55.812
+<v Michiel Trimpe>Nou, wat het wat nu ehm je kan natuurlijk ook bij de BRO al gaan zeggen van oké, je mag wel toegang verlenen, maar alleen als jij ehm maatregelen hebt ingericht die bepaalde risico's inperken op een overtuigende manier. Je moet nog steeds wel beoordelen of je dat ook als bronhouder overtuigend genoeg vindt. Hm hm.</v>
+
+00:50:59.022 --> 00:51:09.885
+<v Michiel Trimpe>hun toegangsbeleid om een vraag te kunnen stellen inzichtelijk te maken. Omdat dat vaak lastig is, hè, want waar leg je die controle nou precies?</v>
+
+00:51:09.885 --> 00:51:10.109
+<v Gideon Zegwaard>Ja.</v>
+
+00:51:10.109 --> 00:51:20.972
+<v Gideon Zegwaard>Oké. Ik weet niet of ODRL dat dat BRO dat zelf benoemd had. Maar dat dat eh is denk ik de de ODRL's maar obligations opleggen dan waarschijnlijk.</v>
+
+00:51:23.412 --> 00:51:24.412
+<v Michiel Trimpe>Ja, dus je legt een verplichting</v>
+
+00:51:26.642 --> 00:51:38.702
+<v Michiel Trimpe>ehm je legt een verplichting op. Hè, dus je je verleent pas toegang</v>
+
+00:51:41.802 --> 00:51:45.242
+<v Michiel Trimpe>Maar dan kan je dus eh ehm het</v>
+
+00:51:47.322 --> 00:52:20.962
+<v Michiel Trimpe>informatie. En dat kunnen we natuurlijk hier ook heel mooi toepassen, dat je ook het toegangsbeleid mogelijk kan maken. Dus ehm je mag alleen de actuele stand van waterputten zien wanneer dit niet in een veiligheidsrisicogebied ligt bijvoorbeeld. Ja. Hè, dus dat soort ja, eh geografisch toegangsbeleid kunnen we dan ook toetsen en kijken of dat nog steeds eh performant te ontsluiten is.</v>
+
+00:52:23.472 --> 00:52:30.792
+<v Michiel Trimpe>Dus dit is waar ik mee opkwam. Ehm dat is de eerste feedback van de van de groep. En mis ik nog iets of</v>
+
+00:52:32.962 --> 00:52:34.042
+<v Michiel Trimpe>betere voorbeelden.</v>
+
+00:52:36.752 --> 00:52:38.792
+<v Gideon Zegwaard>heeft een goede zo. de BRP.</v>
+
+00:52:44.552 --> 00:53:00.852
+<v Rob van Dort>leuke categorie vindt voor de toegang is eh één zeg maar eh open data, hè, dus dat je eigenlijk zegt van nou jongens, gewoon geen beperking. Hoppatee. Eh tweede level is dat je zegt eh toegankelijk voor alle overheidspartijen.</v>
+
+00:53:04.312 --> 00:53:11.256
+<v Rob van Dort>Dus dat je dat je zegt van nou, dan moeten we daar dus al iets voor inrichten om dat onderscheid te maken.</v>
+
+00:53:10.972 --> 00:53:11.292
+<v Michiel Trimpe>Ja.</v>
+
+00:53:11.256 --> 00:53:24.052
+<v Rob van Dort>En die BRO-keten, die is daar een keertje nog specifieker in, hè, er zitten nog wat scherpere categorieën in. Maar ik denk dat als we daar dan een beetje een weg in vinden, dat we een idee krijgen van de problematiek eh die op ons ligt te wachten.</v>
+
+00:53:24.882 --> 00:53:26.122
+<v Michiel Trimpe>Ja. Oké.</v>
+
+00:53:26.232 --> 00:53:48.882
+<v Axel van der Minne>Ja, want als je die twee zie je note tussenwereld is die twee uiterste voor je of Rob. Dus hè, dus eh eh hè, want wij kennen bijvoorbeeld de smaak open data. Eh maar die dan vaak weer weer niet open is, omdat we als gemeente dan dat wil hebben van nou nee, maar dan dan dan krijg je te maken met de wet van kleine aantallen. Hè, eh waardoor je identificeringsproblemen krijgt.</v>
+
+00:53:49.272 --> 00:53:49.592
+<v Rob van Dort>Ja.</v>
+
+00:53:49.762 --> 00:53:56.282
+<v Axel van der Minne>Hè, je zou prima voor kunnen stellen dat dat dit dat dit zo'n situatie hier mee ook ook eh is opgelost zou kunnen worden.</v>
+
+00:53:57.422 --> 00:54:21.399
+<v Rob van Dort>Nou, je tipt je volgens mij iets aan wat eh waarschijnlijk wel gaat spelen, maar eh wat weer een andere categorie is. Namelijk, stel je voor dat je nou bijvoorbeeld die eh voor je eh voor de BRP, hè, dat is een landelijke voorziening is dat. Waarbij je als gemeente bijvoorbeeld maar een deel, hè, van de van de totale set is van jou.</v>
+
+00:54:20.562 --> 00:54:21.162
+<v Axel van der Minne>Ja.</v>
+
+00:54:21.399 --> 00:54:24.462
+<v Rob van Dort>En daar mag je andere dingen mee dan met de andere gegevens.</v>
+
+00:54:25.132 --> 00:54:26.092
+<v Axel van der Minne>Ja, precies.</v>
+
+00:54:25.352 --> 00:54:42.685
+<v Rob van Dort>Dus dan heb je een soort een data kenmerk, een sleutel ergens waarbij je zegt van nou, die moet je ook hebben. En dan mag je bij bepaalde instanties van die dataset wel en bij andere instanties mag je niet.</v>
+
+00:54:41.612 --> 00:54:41.812
+<v Axel van der Minne>Ja.</v>
+
+00:54:42.685 --> 00:54:43.372
+<v Rob van Dort>Ja.</v>
+
+00:54:43.232 --> 00:54:46.848
+<v Axel van der Minne>Ja, nee, prima, maar ik hoorde je er buiten buiten buitenste uiteinde noemen. Ik</v>
+
+00:54:43.952 --> 00:54:46.352
+<v Gideon Zegwaard>de BRP.</v>
+
+00:54:46.848 --> 00:54:50.032
+<v Axel van der Minne>oh ja, maar dat dat is een hele interessante groep.</v>
+
+00:54:50.282 --> 00:54:58.995
+<v Rob van Dort>Nou, maar ik bedoel het geen niet zozeer als uiteinde, hè, want eigenlijk zeg maar open data, nou, dat is het makkelijkste, hè, dus iedereen. Eh overheidspartijen, dat is nou ja, dat is al een subselectie, maar dat is nog heel behoorlijk open.</v>
+
+00:54:55.402 --> 00:54:55.722
+<v Axel van der Minne>Ja.</v>
+
+00:54:58.995 --> 00:55:23.712
+<v Rob van Dort>Hè, en en ja, zo zijn er nog veel strakkere, hè, dus denk bijvoorbeeld aan eh justitieel, hè, opsporingsdiensten. Eh militaire veiligheid, terrorismebestrijding. Nou, ik denk dat daar nog wel een paar tikjes bij gaan komen. Maar het zijn allemaal wel dingen die geadresseerd moeten gaan worden. Ja, maar dat dat zijn dus echt de uitersten.</v>
+
+00:55:21.312 --> 00:55:25.802
+<v Michiel Trimpe>Ja. Ja, we hebben nog twee minuten. Ehm</v>
+
+00:55:28.092 --> 00:55:58.242
+<v Michiel Trimpe>af te ronden. Even nog voor de de Axel is net eh dit is natuurlijk deels open data, dus ik denk dat het ook goed is om het toegangsbeleid op open data te benoemen. Want daar zit vaak nog steeds toegangsbeleid op met eh availability en rate limiting en et cetera. Dus kunnen we ook nog kijken. Deze simulaties gaan we natuurlijk wel simuleren en daar zit ook gewoon ontwikkelcapaciteit beperkingen op. Dus dit zijn ideeën en doelen die we op kunnen gaan afhankelijk van de capaciteit moeten we zien hoe ver we komen en hoeveel dingen eh aspecten we hierin kunnen simuleren.</v>
+
+00:56:02.232 --> 00:56:16.032
+<v Michiel Trimpe>Ik denk afsluitend dat het wel eh voor dus het de standaard redelijk duidelijk ja, richting in ieder geval ruimte de richting hebben die we op willen gaan. De simulaties zijn we denk ik met z'n allen redelijk of ja, wat ik hoor zijn we met z'n allen over eens dat het goede richtingen zijn.</v>
+
+00:56:18.952 --> 00:56:30.192
+<v Michiel Trimpe>Even samenvattend, dus wanneer we dan eh de komende het komende half jaar voornamelijk richten op die twee die aspecten. Dekken we dan de lading of missen we nog iets?</v>
+
+00:56:33.062 --> 00:56:35.822
+<v Gideon Zegwaard>Ik denk dat dat twee hele goede zijn. Oké.</v>
+
+00:56:37.612 --> 00:56:39.132
+<v Rob van Dort>Ja.</v>
+
+00:56:40.792 --> 00:56:40.992
+<v Michiel Trimpe>Ja.</v>
+
+00:56:40.842 --> 00:56:44.122
+<v Rob van Dort>Ja.</v>
+
+00:56:46.392 --> 00:56:55.792
+<v Michiel Trimpe>Uit gesprek met Floris Deutekom - al dan niet samen met BRO zelf.</v>
+
+00:56:56.942 --> 00:56:57.892
+<v Axel van der Minne>Ja.</v>
+
+00:56:58.442 --> 00:56:58.972
+<v Nico Spijkers>Ja.</v>
+
+00:56:58.582 --> 00:56:58.742
+<v Rob van Dort>Ja.</v>
+
+00:56:59.922 --> 00:57:00.042
+<v Axel van der Minne>Ja.</v>
+
+00:57:00.002 --> 00:57:00.362
+<v Rob van Dort>Ja.</v>

@@ -54,7 +54,7 @@ Data komende werkgroepen:
 
 2026
 
-- 9 juni:
+-  9 juni: Roadmap register toegangsbeleid ([Notulen]({{% relref "roadmap-register-toegangsbeleid" %}}))
 - 12 mei: Vragenuur BRP-keten met RvIG ([Notulen]({{% relref "vragenuur-brp-keten" %}}))
 - 28 april: Consultatie Authorization Decision Log ([Notulen]({{% relref "consultatie-authorization-decision-log" %}}))
 - 14 april: FORCE presentatie UGent & ADL feedback ([Notulen]({{% relref "force-presentatie-ugent-adl-feedback" %}}))
