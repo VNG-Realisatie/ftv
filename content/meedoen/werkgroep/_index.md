@@ -45,11 +45,10 @@ Aanmelden voor alle bijeenkomsten van de werkgroep kan via mail bij [ftv@ictu.nl
 
 De werkgroep vindt elke twee weken plaats op **dinsdag van 10:00 tot 11:00**, online en bij Stichting ICTU in Den Haag.
 
-Data komende werkgroepen:
+Data komende werkgroepen (na de zomerstop):
 
-- [7 juli](https://realisatieibds.nl/events/view/59a679f4-092c-448a-8e2e-a50ea8b56922/werkgroep-federatieve-toegangsverlening) 
-- [21 juli](https://realisatieibds.nl/events/view/59a679f4-092c-448a-8e2e-a50ea8b56922/werkgroep-federatieve-toegangsverlening)
-- 
+- [18 augustus](https://realisatieibds.nl/events/view/59a679f4-092c-448a-8e2e-a50ea8b56922/werkgroep-federatieve-toegangsverlening)
+
 ### Notulen
 
 2026
