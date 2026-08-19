@@ -1,0 +1,841 @@
+WEBVTT
+
+00:00:03.514 --> 00:00:04.274
+<v Michiel Trimpe>Oké.</v>
+
+00:00:07.664 --> 00:00:08.544
+<v Michiel Trimpe>Nou, eh</v>
+
+00:00:10.614 --> 00:00:16.134
+<v Michiel Trimpe>de eerste FTV werkgroep van het nieuwe schooljaar.</v>
+
+00:00:20.204 --> 00:00:43.224
+<v Michiel Trimpe>Eh ik heb de niet de de de agenda netjes opgeschreven. Ik moet nog eventjes op gang komen. En we hebben een redelijk simpele eh brede agenda. Ook een beetje open. Hoe we kennen hoe dingen gaan. Het eerste agendapunt is natuurlijk altijd wel eh nieuwe deelnemers die nog niet eerder bij de groep geweest zijn. De kans geven zich te introduceren. En ik zie in ieder geval één nieuw gezicht.</v>
+
+00:00:46.844 --> 00:00:47.284
+<v Michiel Trimpe>Ja, ik ben eh</v>
+
+00:00:48.424 --> 00:00:50.704
+<v Govert Claus>nieuw in deze groep.</v>
+
+00:00:48.804 --> 00:00:49.084
+<v Ton></v>
+
+00:00:51.964 --> 00:00:54.564
+<v Govert Claus>zit een echo eh. Is dat bij mij?</v>
+
+00:00:55.294 --> 00:00:58.621
+<v Michiel Trimpe>de deelnemer hier in de zaal die eh nog een eh een echo'tje maakte.</v>
+
+00:00:56.354 --> 00:00:58.274
+<v Govert Claus>Ah.</v>
+
+00:00:58.621 --> 00:01:02.464
+<v Michiel Trimpe>Nee. Ja, eh beginnen we opnieuw.</v>
+
+00:01:02.914 --> 00:01:32.004
+<v Govert Claus>Ja, ik ben Govert. Govert Claus. Ik ehm ben nieuw in deze groep. Eh ik ben betrokken bij het project GBO, dat staat voor Gemeenschappelijke Bronontsluiting. Eh waarbij we we eh de Open FTV eh software willen gaan toepassen. Dus eh we zijn daar enorm eh in geïnteresseerd. Eh het vormt echt wel een belangrijk onderdeel ook van van eh het eh project waar we mee bezig zijn. Ehm we hebben er ook bepaalde plannen mee, dus ik ben heel erg benieuwd of dat inderdaad gaat lukken. Vandaar dat ik graag aansluit bij deze werkgroep.</v>
+
+00:01:36.974 --> 00:01:39.254
+<v Govert Claus>vertellen over GBO, maar</v>
+
+00:01:37.434 --> 00:01:37.954
+<v Michiel Trimpe>Oké.</v>
+
+00:01:40.034 --> 00:01:41.834
+<v Govert Claus>dat is misschien voor een andere keer beter.</v>
+
+00:01:42.504 --> 00:01:53.744
+<v Michiel Trimpe>Ja, misschien is het ook wel eh leuk. Vorig vorig jaar hadden we op een gegeven moment een hele hele reeks, een hele mooie presentaties, dus misschien kunnen we die eh met GBO weer een beetje nieuw leven inblazen.</v>
+
+00:01:56.784 --> 00:02:11.744
+<v Michiel Trimpe>mooie intro naar Oh wacht, ik krijg een mailtje dat iemand eh graag erbij wil zijn, maar een link mist, dus die ga ik nog even antwoorden. Ik kan ondertussen misschien wel alvast even richting Mark eh aangeven.</v>
+
+00:02:15.454 --> 00:02:33.114
+<v Michiel Trimpe>Ja, dat ik niet snap. Oké. Ehm, dan antwoord ik zo het mailtje aan Mark Westbroek die erbij wil. Eh maar allereerst even de opening. Eh dus ja, dit is de de eerste sessie van eh het nieuwe schooljaar. Eh gekscherend. En eh we zijn nu al een tijdje bezig dit jaar met eh voornamelijk eh ODRL.</v>
+
+00:02:36.314 --> 00:02:48.994
+<v Michiel Trimpe>We merken ook dat ODRL minder lijkt te leven in eh in ieder geval de overheidswereld eh actief dan O Zen eh dat vorig jaar deed. Dus echt de concrete PDP's en de implementatie.</v>
+
+00:02:51.644 --> 00:03:12.754
+<v Michiel Trimpe>Vandaag staat wel nog steeds de voortgang eh voor het ODRL applicatieprofiel eh op de planning en wat we daar mee gedaan hebben. Waarschijnlijk eh leek het ons goed om ook even te openen eh met een wat bredere opening. Eh van waar eh hebben wij als club behoefte aan. Mark, jij gaf aan dat jij dat misschien nog even</v>
+
+00:03:13.524 --> 00:04:44.644
+<v Marc de Boer>Nou, ik kan ik zelf keek net even mee naar wat Michiel had voorbereid eh en dat gaat best wel diep in op eh ODRL 3. En dat hebben we aangevat omdat we het register toegangsbeleid daar in willen schrijven. En het register is de derde van onze standaarden. En misschien wel het verste weg van waar we origineel begonnen. Dus ik ik merkte bij mezelf en ik vroeg me af hoe het bij de werkgroep is, in hoeverre jullie aan boord zijn bij dit onderwerp, hoe dat leeft en hoe dat ook iets is van je denkt, nou, dat dat mijn organisatie gaat dit ook doen. En het is dus belangrijk dat ik begrijp waar dat heen gaat en ook wel invloed heb op eh hoe dat gaat werken. En of er misschien ook andere dingen zijn, want we hebben O Zen en O Gof en ADRL eh in zoverre achter ons dat het eh standaarden zijn die afgespecificeerd en in gebruik zijn. Maar veel implementaties zijn er nog niet. Dus het is absoluut niet dat we daarmee eh klaar zijn en eh kan me ook voorstellen dat er onderwerpen zijn bij de implementatie daarvan eh die jullie tegen tegenkomen of verwachten eh die leven. Dus een beetje meer een open oproep van los van register toegangsbeleid als ons belangrijkste doel qua standaarden dit jaar, voor de voor de rest van dit jaar, zijn er dingen die jullie ons mee te geven hebben of onderwerpen waarvan jullie vinden dat ze aandacht behoeven eh in de brede zin als het gaat over toegang in een federatief stelsel.</v>
+
+00:04:46.734 --> 00:04:49.795
+<v Danny Greefhorst>Ja, maar als vraag</v>
+
+00:04:47.844 --> 00:04:48.244
+<v Marc de Boer></v>
+
+00:04:49.795 --> 00:05:06.494
+<v Danny Greefhorst>misschien als een meer algemeen mechanisme voor het beschrijven van gegevensleveringsovereenkomsten. Dus ik vraag me even af welke afbakeningen jullie hier gaan kiezen. Beperk je echt tot de toegangsaspecten of wil je het ook breder beschouwen?</v>
+
+00:05:08.974 --> 00:05:46.714
+<v Marc de Boer>Nou, ons doel is natuurlijk het eh eh een middel hebben waarmee we het register toegangsbeleid kunnen faciliteren. Eh dus alles wat wij daar verwachten dat onze eh doelgroep daarmee wil doen, daarin kwijt kan. Ja, en ODRL is natuurlijk al al heel lang en heel groot en ODRL 3 eh Michiel is bij de conferentie geweest eh gaat over van alles. Niet per se over toegang. Dus eh Michiel, ik denk dat wij ons beperken tot het toegangsstuk dat wij kunnen faciliteren wat wij willen. Maar eh jij bent wel geïnteresseerd in de bredere zin en wat</v>
+
+00:05:45.144 --> 00:05:50.666
+<v Danny Greefhorst>Ja, ik kan me dus voorstellen dat dat dat het ook een apart profiel zou kunnen zijn hè. Dat je ODRL over toegang en ODRL voor gegevensleveringsovereenkomsten, dat dat twee verschillende profielen kunnen zijn.</v>
+
+00:05:50.204 --> 00:05:50.564
+<v Marc de Boer>Ja.</v>
+
+00:05:50.666 --> 00:05:54.304
+<v Danny Greefhorst>dat dat twee verschillende profielen kunnen zijn eh.</v>
+
+00:05:54.694 --> 00:05:55.014
+<v Marc de Boer>Ja.</v>
+
+00:05:57.184 --> 00:05:58.584
+<v Marc de Boer>Wat kun je daarover zeggen, Michiel?</v>
+
+00:05:59.044 --> 00:06:01.694
+<v Michiel Trimpe>Ja. Nee, ik denk dat dit</v>
+
+00:06:04.264 --> 00:06:13.704
+<v Michiel Trimpe>Nee, dus sowieso wij gaan waarschijnlijk werken aan een ODRL APNL, zo zal het denk ik zijn. Dus het applicatieprofiel voor ODRL Nederland.</v>
+
+00:06:16.654 --> 00:06:37.044
+<v Michiel Trimpe>Ehm ik denk dat het het mijn eerste instinct is dat het nuttig lijkt dat dat eh alle behoeftes voor ODRL in Nederland dekt. Eh hoeft niet per se de waarheid te zijn. Het kan inderdaad ook de verschillende verschillende aspecten dekken.</v>
+
+00:06:39.144 --> 00:06:46.174
+<v Michiel Trimpe>eh van het stuk wat jij benoemt, dat die in ieder geval niet in deze werkgroep aanwezig zijn, denk ik.</v>
+
+00:06:45.844 --> 00:06:49.484
+<v Danny Greefhorst>Ik weet niet hoor. Het is als je zegt we kijken breed, dan moet je ook breder kijken, zeg maar, hè. Dus eh</v>
+
+00:06:49.524 --> 00:06:49.884
+<v Michiel Trimpe>Ja.</v>
+
+00:06:50.034 --> 00:06:57.283
+<v Marc de Boer>Ja, gegevensleveringsovereenkomst is natuurlijk niet heel ver weg hè, van ons eh onderwerp. Ik bedoel, je levert volgens voorwaarden in een overeenkomst en die bekrachtig je met</v>
+
+00:06:53.924 --> 00:06:54.204
+<v Danny Greefhorst>Nee.</v>
+
+00:06:57.283 --> 00:07:08.044
+<v Marc de Boer>eh met zo'n eh met je met je beleid. Dus eh ze zitten wel aan elkaar. Ik ik snap eh Danny's eh wens wel.</v>
+
+00:07:11.104 --> 00:07:12.704
+<v Michiel Trimpe>Ja.</v>
+
+00:07:11.204 --> 00:07:28.274
+<v Marc de Boer>Zijn er mensen hier in deze groep die zeggen van nou, wij hebben eh digitale of formele gegevensleveringsovereenkomsten waar we wat mee zouden willen in eh, god, maar in in automatiseringszin, zeg maar. Die je wil publiceren of die je wil kunnen eh evalueren of eh</v>
+
+00:07:34.774 --> 00:07:51.614
+<v Danny Greefhorst>Kijk, ik heb in ieder geval ook even gesproken met eh de de heren van JAGA, zeg maar, bij J&V. En die hebben natuurlijk eh ook iets eh dat noemen ze dan een gegevensleveringsprotocol. En daar hebben ze ook een hele administratie bij. Eh dus ik denk dat het sowieso interessant is om eens te kijken wat zij administreren.</v>
+
+00:07:59.244 --> 00:08:00.444
+<v Marc de Boer>Ja, ik heb er</v>
+
+00:08:00.324 --> 00:08:01.884
+<v Michiel Trimpe>Ik heb er ooit gesproken.</v>
+
+00:08:03.574 --> 00:08:24.424
+<v Marc de Boer>Ik weet dat eh Mike mij ook attendeerde dat daar het een en ander speelde, dus eh we kunnen dat eh contact leven warm houden. Neem ik wel even contact met jou op Danny om eh die de lijntjes over te nemen. Dat is één, is een hele goede. Dus ODRL wat breder trekken in eh naar de gegevensleveringsovereenkomsten.</v>
+
+00:08:29.954 --> 00:08:39.943
+<v Marc de Boer>Ik kan misschien nog wel even kort wat eh wat zeggen over wat we nog eh bij de ehm Common Ground aan het doen zijn. Mark haakt net aan.</v>
+
+00:08:39.454 --> 00:08:41.454
+<v Mark Westbroek>Ja, ja, ik haak net aan.</v>
+
+00:08:39.943 --> 00:08:43.194
+<v Marc de Boer>Dus dat kan nog.</v>
+
+00:08:51.004 --> 00:10:06.964
+<v Marc de Boer>graag willen eh ook hun toegang verbeteren. En eh hebben ons gevraagd om een aantal leveranciers van gemeentelijke software eh met ze samen te werken om OZN eh en ADL eh in te bouwen. Dus we zijn specifiek bezig met eh met Retens die een zaakafhandelsysteem levert. Eh het zaakgericht werken eh is best wel een goede toepassing. Eh heel vaak is daar een grofmazige autorisatie op eh maar is er veel meer te doen. Er zijn binnen gemeentelijke zaken allerlei nuances over dat je tot een bepaald bedrag of onder bepaalde voorwaarden wel of niet een zaak mag afhandelen of dat er allerlei rollen zijn binnen een zaakafhandeling. Dus daar zijn we mee bezig. Ook met eh met Maykin, het eh bedrijf die de implementatie van eh Open klant en Open zaak schrijft. Dus zeg maar de de de API en backend voor de opslag. En eh en ook nog met een eh met We are Frank die een eh</v>
+
+00:10:10.984 --> 00:10:36.994
+<v Marc de Boer>ehm BRP eh client aan het schrijven is eh die ook met eh OPA of en dan liefst ook gaan wij die met OZN en ADL aankleden. Dus dat zijn dan een aantal leveranciers in een ander landschap eh die hier ook aan meedoen. Kan ook interessant zijn voor deze groep om dat te weten of daar iets van te vinden zeg maar. Dat is dan specifiek voor het eh het gemeentelijke landschap.</v>
+
+00:10:48.014 --> 00:11:58.674
+<v Marc de Boer>Nou, is gewoon voor jullie om te weten als als die leveranciers dan langskomen hè, sowieso dan heb je het ook nog eh info en of info/Icat en Contessa, dat zijn ook nog partijen die in dat gemeentelijke landschap eh rondlopen die we ook eh aanhaken op dit gedachtegoed. En eh ja, autorisatie is is ook daarbij gemeente vaak een eh een uitdagend ding. Het is al heel snel te ingewikkeld voor een gemeente om veel rollen en eh daar administratie omheen te hebben. Dus die komen er vaak niet zo goed uit. Ze willen het liever uitbesteden en hopen dat het goed zit. Het zelf inregelen is lastig. En we proberen een eh een model en een manier van werken op te stellen die voor alle gemeenten of voor een groot deel toepasbaar zou moeten zijn. Zodat we één set van toegangsregels voor voor voor de zaken die eigenlijk elke gemeente wel doet. Elke gemeente heeft natuurlijk zijn paspoorten, zijn rijbewijzen, vergunningen die afgegeven worden, toeslagen, dat soort dingen. Dat we dus een centraal eh register van beleidsregels komt dat alle gemeenten kunnen toepassen eh ook als ze verschillende systemen hebben.</v>
+
+00:12:01.884 --> 00:12:30.444
+<v Marc de Boer>Nou, zomaar iets van wat wat leeft eh in eh in onze wereld. En eh ook als er als er een aanhaak hier hè, dus als er mensen zeggen, dus nogmaals, los van register toegangsbeleid en ODRL, dit zijn dingen waar wij mee worstelen of waar ik naar uitkijk of waar ik denk hè, daar moet aandacht aan gegeven worden om echt vooruit te komen. Dat was deze oproep. Breng ze in voordat we de rest van het jaar alleen met ODRL bezig zijn en dat jullie denken op een gegeven moment van nou, hoe is dit voor mij?</v>
+
+00:12:34.074 --> 00:12:34.394
+<v Marc de Boer>Mark.</v>
+
+00:12:35.384 --> 00:12:39.584
+<v Mark Westbroek>Yo. Hoi, was je al verder met met hoe je die ODRL wil vormgeven?</v>
+
+00:12:40.244 --> 00:12:42.444
+<v Marc de Boer>Ja, dat gaan we Michiel gaat daar van alles over vertellen nu.</v>
+
+00:12:42.604 --> 00:12:46.924
+<v Mark Westbroek>Oh, dat gaat dat die gaat deze meeting over. Ja, ik miste het beginnetje natuurlijk, dus eh</v>
+
+00:12:45.744 --> 00:12:57.294
+<v Marc de Boer>Ja, het begin was dat we heel specifiek nu in ODRL zitten en dat we eigenlijk niet niet zeker weten of een groot deel van deze groep dat wel interessant vindt en ook, laat ik de andere kant op de oproep ook doen, als jullie weten van mensen die in jullie organisatie of in jullie kring met ODRL bezig zijn</v>
+
+00:12:56.474 --> 00:12:56.754
+<v Mark Westbroek>Ja.</v>
+
+00:12:57.294 --> 00:13:07.304
+<v Marc de Boer>en die hier eh wat aan zouden kunnen bijdragen, eh wijs ze op de werkgroep.</v>
+
+00:13:12.874 --> 00:13:39.564
+<v Hans Schevers | BIM-Connected>Even en Mark, misschien een domme vraag hè, maar eh als je ODRL eh beleid wil formaliseren, dan dan heb je het over zoals je al zo mooi zei hè, over zaaksystemen, vergunningen, noem het maar op. Die de de de definities van een zaak, de definities van een vergunning, de definities van alle objecten en klassen die aanwezig zijn in het gemeentelijk landschap. Eh</v>
+
+00:13:41.534 --> 00:14:43.954
+<v Marc de Boer>De zaakgericht werken API's zoals VNG die beheert. Eh daar zijn ook weer wat eh versies en dingen van, maar de zoals eh VNG hem nu beheert, daar staat eh je hebt ook een zaaktype catalogus daarin. Het algemene concept van wat een zaak is, eh wat wat stappen daarin zijn, welke rollen daarin voorkomen. En wij breiden daar ook een beetje op uit omdat we ook merken dat daar bij bij wij komen nu uitdagingen tegen specifiek rondom organisatie. Dus een persoon zit ergens in een afdeling, in een organisatie, in een vestiging en dergelijke. Dus je je als als gebruiker, als subject, ook misschien als geautomatiseerd subject of als een AI agent heb je natuurlijk een plek in de organisatie. Nou, en dat stukje wat open organisatie heet, dat eh daar werken we dan ook aan mee om dat wat eh wat uit te breiden en goed hier in te passen. Maar zaakgericht werken API van VNG is het uitgangspunt voor eh wat wij doen met het gemeentelijk werken.</v>
+
+00:14:47.104 --> 00:15:03.264
+<v Michiel Trimpe>ging over het RDF aspect. Dus ja, het is één van de aandachtspunten dat die geen eh RDF ontologieën gedefinieerd hebben momenteel nog. Dat is inderdaad één van de dingen die het de koppeling met ODRL eh moeilijk maakt dat hij dan niet daar in ieder geval wel voor geregeld zal moeten worden, ja.</v>
+
+00:15:05.304 --> 00:15:19.874
+<v Hans Schevers | BIM-Connected>Ja, en en en en als je dan in die link data wereld blijft, dan dan ja, dan is het natuurlijk heel mooi als je alle alle hè, als je een ontologie hebt over het hele gemeenschappelijke eh informatie eh ecosysteem van een gemeente</v>
+
+00:15:22.084 --> 00:15:28.844
+<v Hans Schevers | BIM-Connected>om vervolgens eh ODRL daarop toe te passen.</v>
+
+00:15:32.524 --> 00:15:44.704
+<v Marc de Boer>Ja, het zou zomaar kunnen dat wij die eh dat stuk een beetje kunnen aanzwengelen. Dat dat eh hele idee van RDF ontologieën nooit zo geleefd heeft, maar dat wij dat nu wat kunnen ja, opwarmen.</v>
+
+00:15:44.244 --> 00:16:58.274
+<v Hans Schevers | BIM-Connected>praat ik graag verder over. Wij wij zitten bij Utrecht hebben wij het IMBOR eh neergezet hè. Dus IMBOR is het eh beheer openbare ruimte. Dat is een RDF schema is van CROW is ook eh dus de ontologie is ook aanwezig en wij moeten dat nu uitbreiden met werfkelders, maar daar zit dan weer een restrictie op dat niet iedereen daarbij mag. En eh nou ja, precies eh zie mijn interesse richting ODRL. Ehm eh want het zou natuurlijk heel mooi zijn als wij hè, de de de IMBOR ontologie hè, dus dat is een ontologie die de die de die de hè, de de putdeksels en eh en de bomen en noem het maar op eh beschrijft van een eh van een gemeente. Nou, die hebben we uitgebreid met werfkelders. Leek ons slim, want dan hebben we één ontologie waar IMBOR en de werfkelders eh nou en de riolering ook hè, dus dat is weer een ander model. Dus dat dat dat is één centrale plek waar al die informatie aanwezig is over meerdere systemen. Zijn er nog maar drie, maar goed. Eh laten we het groot denken. Ehm en en dan ja, dan is het natuurlijk heel mooi als we daar ODRL op kunnen toepassen om eh om om om eh de toegang te te gaan beheren. Dus dus of dat in jouw straatje ligt Mark, dan eh dan eh dan eh praat ik graag verder.</v>
+
+00:17:03.054 --> 00:17:04.094
+<v Michiel Trimpe>Is dat niet</v>
+
+00:17:03.334 --> 00:17:04.134
+<v Mark Westbroek>Hans misschien</v>
+
+00:17:06.884 --> 00:17:13.314
+<v Mark Westbroek>Hans, misschien goed om te weten dat eh ze bij het GGM eh ook bezig zijn met het IMBOR op het IMBOR</v>
+
+00:17:15.474 --> 00:17:18.114
+<v Mark Westbroek>in een in een in een MIM-opdracht te zetten.</v>
+
+00:17:21.084 --> 00:17:21.724
+<v Mark Westbroek>sowieso</v>
+
+00:17:24.164 --> 00:17:26.404
+<v Hans Schevers | BIM-Connected>IMBOR in hun, welk formaat eh Mark?</v>
+
+00:17:27.234 --> 00:17:27.754
+<v Mark Westbroek>Eh MIM.</v>
+
+00:17:28.314 --> 00:17:32.874
+<v Hans Schevers | BIM-Connected>In MIM. Ja. Ja, in het GGM, in het GGM op te nemen.</v>
+
+00:17:29.474 --> 00:18:06.252
+<v Mark Westbroek>omdat omdat we en het tweede ding is dat we met Common Ground bezig zijn het GGM ehm wat sterker te neer te zetten. Het is eigenlijk nu zelfs een pas-toe-of-leg-uit toe eh status gaat krijgen, maar dan is het wel vooral voor de BI toepassing. Eh voor het registreren moet er nog wel wat gebeuren vind ik. Maar er zijn we wel zijn we wel mee bezig. Dus eh een stukje metje willen we het GGM wel positioneren als een soort van ding wat dat dat dat kanoniek model waar je het over hebt, dat dat kanoniek model wat je Ja. hè, waar je waar je je woordenschat uit put voor je ODRL.</v>
+
+00:18:02.204 --> 00:18:02.684
+<v Hans Schevers | BIM-Connected>Ja.</v>
+
+00:18:06.252 --> 00:18:08.364
+<v Mark Westbroek>om te kunnen praten in</v>
+
+00:18:06.944 --> 00:18:07.224
+<v Hans Schevers | BIM-Connected>Ja.</v>
+
+00:18:08.634 --> 00:18:11.354
+<v Mark Westbroek>ja, om te kunnen aanwijzen wat wel en niet mag en waarom.</v>
+
+00:18:11.994 --> 00:18:12.074
+<v Hans Schevers | BIM-Connected>Ja.</v>
+
+00:18:13.084 --> 00:18:22.234
+<v Mark Westbroek>Dus die die ontologie of eh ik noem het liever eerder een logisch model of een kanoniek model. Dat heb je wel nodig dan.</v>
+
+00:18:24.464 --> 00:18:40.365
+<v Hans Schevers | BIM-Connected>Ja, grappig dat MIM. Hè, daar hadden we het natuurlijk ook vorige keer over of in ieder geval een paar eh keren geleden hè, dus eh dus eh ja, die die IMBOR die die is weer gebaseerd op een ander model hè, de de de NEN 2660. En eh op een bepaalde manier is alles wel te relateren aan elkaar.</v>
+
+00:18:38.314 --> 00:18:39.514
+<v Mark Westbroek>Ja.</v>
+
+00:18:40.365 --> 00:18:44.364
+<v Hans Schevers | BIM-Connected>Ja, goed, het het gaat ook naar 2.0 en dan wordt hij ook weer anders, dus ehm</v>
+
+00:18:44.424 --> 00:18:47.584
+<v Mark Westbroek>maar we zitten we zitten daar wel bovenop en ik snap het model van eh dat</v>
+
+00:18:48.524 --> 00:18:48.724
+<v Hans Schevers | BIM-Connected>Ja.</v>
+
+00:18:49.324 --> 00:18:54.084
+<v Mark Westbroek>ik ken het nummer niet uit mijn hoofd, maar het is net een iets ander iets ander metamodel.</v>
+
+00:18:54.734 --> 00:18:55.414
+<v Hans Schevers | BIM-Connected>Precies.</v>
+
+00:18:56.244 --> 00:18:58.084
+<v Mark Westbroek>Eh maar wel logisch voor</v>
+
+00:18:58.274 --> 00:18:58.874
+<v Hans Schevers | BIM-Connected>Ja.</v>
+
+00:18:59.164 --> 00:19:20.284
+<v Mark Westbroek>voor geografische data is het logisch dat je zoiets hebt. Maar er zit natuurlijk heel veel overerving in in dat IMOR. Eh maar is ook verborgen. Soms ook weer niet, dat je denkt van zou dat ook een overerving kunnen zijn. Maar goed, maar daar gaan we daar op in. Dit gaat het nu niet over. Als je meer wilt weten, neem even contact op. Die eh, ik ken de mensen bij eh GVV goed.</v>
+
+00:19:17.024 --> 00:19:18.784
+<v Michiel Trimpe></v>
+
+00:19:20.954 --> 00:19:22.674
+<v Hans Schevers | BIM-Connected>Ja, graag, dankjewel Mark.</v>
+
+00:19:24.634 --> 00:19:35.514
+<v Michiel Trimpe>en en een beetje een scheiding is tussen de de link data enthousiasten en de de authenticatie en autorisatie focus.</v>
+
+00:19:35.284 --> 00:19:37.204
+<v Mark Westbroek>Nou ja, het een of het ander nodig hè. Je hebt mekaar nodig.</v>
+
+00:19:37.934 --> 00:19:40.574
+<v Michiel Trimpe>Ja, we zitten op de scheidslijn, maar dat maakt het een uitdaging.</v>
+
+00:19:39.844 --> 00:19:40.124
+<v Mark Westbroek>Boeiend.</v>
+
+00:19:40.854 --> 00:20:48.714
+<v Michiel Trimpe>Je ziet ook in de gesprekken hier dat eh dat twee de helft, twee helften van of ja, je twee helften van de werkgroep op verschillende punten aanslaan en niet. Ehm misschien is wel dat goed voor mij om even ook gewoon qua tijd eventjes de in ieder geval de voortgang voor de ODRL-AP-NL en de visualizer en de ODRL3 en dergelijke te presenteren. Dat stuk. Oh, dan zien we gelijk de binnenkomst. Ehm, ik denk 20 minuten of zo voor pakken en aan het einde hebben we dan dus ook wat mij betreft nog ruimte om eh vervolgstap te bepalen. En misschien voor de de belangrijkste van de update is ehm even kijken, dit is de hoofd. Dus ik ben eh naar de de ODRL3 workshop geweest. Dus dat is ehm de W3C manier om een nieuwe versie van een standaard aan te kondigen. Ehm, die was eh een maand geleden in Londen. Eh was heel interessant om daarbij aanwezig te zijn. Eh je merkt dat het een een relatief kleine club was, ongeveer 30 deelnemers.</v>
+
+00:20:51.124 --> 00:21:09.044
+<v Michiel Trimpe>Ehm met wel hele diverse eh insteken en vertegenwoordigingen. Dus het ging over eh veel mensen waren echt over de de evaluatie van de ODRL bezig. Eh mensen waren met het het media-aspect bezig, ehm het legal stuk, eh data marketplaces.</v>
+
+00:21:11.154 --> 00:21:34.834
+<v Michiel Trimpe>weinig vertegenwoordiging vanuit de data spaces. Dus dat verbaasde me wel een beetje. Ehm, maar wel breed vertegenwoordigd. Eh we merkten dat eh hij grotendeels afgetrapt leek te zijn doordat eh JP Morgan ODRL heel actief ondersteunt en op heeft genomen voor eh zijn marktdata. Dus die is eh heel actief bezig met ODRL momenteel.</v>
+
+00:21:37.224 --> 00:21:46.984
+<v Michiel Trimpe>Ik ik had niet verwacht dat eh zeg maar de de de snacks extreem luxe dingen in midden in eh een historisch pand in Londen zouden zijn. Dus dat was eh interessant.</v>
+
+00:21:49.704 --> 00:22:14.264
+<v Michiel Trimpe>Ehm als afdronk van de meeting is wel dat ik merkte dat het een eh echt wel een hele sterke academische inslag heeft. Dus er waren ehm ik zei eigenlijk enkele consultancy's vertegenwoordigd, maar dat is eigenlijk fout. Het moet consultants zijn. Dus dat was voornamelijk heel veel academici. Eh en een aantal mensen van JP Morgan en eh een drietal consultants die eh hun geld verdienen met het werken in en aan ODRL.</v>
+
+00:22:16.654 --> 00:24:05.954
+<v Michiel Trimpe>eh cultuur is. Dus daar is echt de vendor en en API bouwers en productbouwers. En dit is voornamelijk eh ja, de academia. Eh er was er wel een hele nuttige meeting, dus er zijn een hele hoop presentaties geweest van wat zouden we kunnen willen doen met de toekomst van ODRL 3. En aan het einde van de twee dagen is er een eh plenaire sessie geweest waarin eh de de voorgestelde deliverables voor ODRL 3 uitgewerkt zijn. Dat zijn deze. Dus dat is eh ja eh dus recommendation REC, dat dat is dan het echt standaard stuk. En een note is een eh een document wat de standaarden begeleidt. Dus het idee voor ODRL 3 is dat er eh nou een policy model komt wat ehm eigenlijk de de huidige ODRL basis is eh met een aantal aanpassingen en lessen uit het verleden. Waarschijnlijk wordt dit een breaking change ODRL 3, maar het zou zelf een update van zeg maar het ODRL 2 informatiemodel kunnen zijn. En de grootste toevoegingen zijn eigenlijk eh evaluation en architecture en protocols. Dus dat eh het intentie is een officiële evaluatiestandaard te maken, zodat je ODRL ook echt kan gaan evalueren. Dus dat ODRL zelf ook één van de policy talen kan gaan worden. En ook het eh echt definiëren van een architectuur en protocollen. Ja, dat is voor ons natuurlijk ook heel interessant, omdat eh AuthZEN NLgov één van dat soort protocollen in zo'n architectuur is. Eh dus wanneer dit van start gaat, is het goed voor ons om te zorgen dat het protocol wat ze hiervoor gebruiken of direct AuthZEN is of in ieder geval één op één te mappen is op AuthZEN.</v>
+
+00:24:09.344 --> 00:24:26.624
+<v Michiel Trimpe>Ehm nou, dan een aantal dingen die minder relevant zijn, dus een een conformance en een test suite, hoe ga je daarmee om? Hoe ga je om met de de registries die je hebt gebruikt? Dus dat is een beetje wat Hans net ook al eh benoemde, want je gebruikt natuurlijk veel data van andere aspecten, van andere domeinen.</v>
+
+00:24:29.594 --> 00:24:58.744
+<v Michiel Trimpe>Deze weet ik eigenlijk niet waar ik voor gebruiken. En dit is de interessantste. Dus dit eh omdat ik erbij was heb ik deze aan kunnen dragen en die is geaccepteerd in het proposed charter. Is een visualization note. Eh dus dat eh nou, is dan een uitleg over hoe je ODRL kan visualiseren. Eh profielen en dergelijke vallen buiten deze deliverable. Dus dat is waar eh ODRL 3 staat.</v>
+
+00:25:02.224 --> 00:25:18.344
+<v Michiel Trimpe>Nou, dus we hebben de aangedragen als een visualization note. Ehm het is geen dit zou geen software zijn, dus het is niet een ODRL viewer, maar een uitleg over waar je ODRL specifi waar je ODRL aan moet voldoen om visualiseerbaar en indirect ook eh editable te kunnen zijn.</v>
+
+00:25:20.464 --> 00:25:46.234
+<v Michiel Trimpe>Eén van de interessante punten daarvan bleek dat eh JP Morgan ook gelijk wel een octrooi heeft aangevraagd op een ODRL visualizer. Dus dat maakt het wel weer interessant. Eh maar ze voor ons schuldigde ze zich ook wel een beetje voor en ze die zou dan waarschijnlijk weer eh freely licensed door nou, er iets mee gedaan kunnen worden. Maar een interessante noot.</v>
+
+00:25:48.514 --> 00:26:15.704
+<v Michiel Trimpe>Ehm en wat voor dit proces interessant is, is dat de de TPAC in Dublin op 26 oktober eh is dan zeg maar het officiële W3C ehm het officiële W3C brede bijeenkomst. Waar dit dan eh volgens mij waar dit dan volgens mij geratified zou worden, dus waarin deze proposed scope dan de beslissing gebracht zal worden en eh mogelijk geaccordeerd en daarmee officieel afgetrapt.</v>
+
+00:26:20.894 --> 00:26:58.104
+<v Michiel Trimpe>Even kijken, wat wij eh voor willen stellen is dat wij, en dat wij die visualization note gaan schrijven. Dus dat wij eh ons daarvoor aanbieden. En dat we daarin eigenlijk het eh ja, een aantal eh slagen opbouwen. Dus dat we een labeling regime definiëren. Dat is eigenlijk het belangrijkste. Het stelt misschien niet eens zo superveel voor, maar dat ODRL in deze visualization note definieert als je het wil visualiseren, moet elke relatie een label hebben, moet van de relatie een definitie zijn en moet alle metadata beschikbaar zijn om het te kunnen visualiseren. En wat is dat dan en welke relaties gebruik je daarvoor?</v>
+
+00:27:00.424 --> 00:27:08.344
+<v Michiel Trimpe>En eh we voorzien dan eh eigenlijk drie lagen. Dus één is het het generieke stuk, dus dat is hoe visualiseer je de standaard ODRL elementen.</v>
+
+00:27:10.484 --> 00:27:21.244
+<v Michiel Trimpe>veel specifieker is. Dus eh als jij zelf een stukje domeinmodel definieert, hoe kan je dat integreren in je visualizer.</v>
+
+00:27:23.564 --> 00:27:59.544
+<v Michiel Trimpe>Eh of soms moet dat custom dingen zijn, soms kan dat misschien geautomatiseerd en dat is dat UI shapes. dus wanneer jij er zijn een aantal RDF standaarden eh die uitleggen hoe je RDF data kan projecteren in eh formulieren en tabellletjes en dergelijke. Dus dat eh willen we dan in die middenlaag verkennen. En als onderste laag hebben we eigenlijk de het ruwe vangnet. dus als al jouw data hier doorheen valt en nergens eh echt weer getoond wordt, hoe kunnen we de ruwe RDF data dan tonen.</v>
+
+00:28:02.204 --> 00:28:17.004
+<v Michiel Trimpe>dit is ook weer dus als je dit soort labels gebruikt, die zitten vaak niet in de policy zelf, maar die komen ernaast. Dus ook hoe gaan we daarmee om? Dus hoe verwijs je naar de registers, de RDF bronnen waar de labels uit voortkomen.</v>
+
+00:28:19.134 --> 00:28:36.684
+<v Michiel Trimpe>voor willen gaan stellen bij eh RDL3. Als ik dit zo ja, als ik dit zo zeg, hoe hoe landt dat bij de werkgroep? Is dat gobbledygook? Is dat dat eh specifiek of is er feedback of</v>
+
+00:28:40.344 --> 00:28:49.144
+<v Hans Schevers | BIM-Connected>een labeling regime hè, dus dat dat voelt wat eh hè wat je kunt testen en toetsen. Dat voelt als een checkelmodel of hoe eh hoe eh eh ja.</v>
+
+00:28:51.954 --> 00:29:00.474
+<v Hans Schevers | BIM-Connected>dat je die checkel eh hebt, dan zeg je van daar wil ik dan een visualisator op eh op specificeren.</v>
+
+00:29:00.894 --> 00:29:19.836
+<v Michiel Trimpe>Ja, dus dus Ja, dus twee lagen. Dus ene enerzijds is het een checkel die die inderdaad ook afdwingt wat eh dat je de RDF relaties hebt die nodig zijn om het te kunnen visualiseren. Precies. Maar die middelste laag, dat zullen we waarschijnlijk inderdaad checkel definities zijn die zijn van dit is mijn domein specifieke stukje.</v>
+
+00:29:15.394 --> 00:29:15.834
+<v Hans Schevers | BIM-Connected>Precies.</v>
+
+00:29:19.836 --> 00:29:30.984
+<v Michiel Trimpe>heeft deze checkel structuur en dan heb je met Dash en Shoy, dat zijn dan eh de visualisatie dingen, kan je die dan koppelen aan een soort formulierstructuur.</v>
+
+00:29:31.904 --> 00:29:39.354
+<v Hans Schevers | BIM-Connected>Ja. Ja, ja, je kunt hem net even iets mooier maken met Dash enzo. Ja. Ja. Oké.</v>
+
+00:29:42.774 --> 00:29:42.854
+<v Hans Schevers | BIM-Connected>Ja.</v>
+
+00:29:46.834 --> 00:29:47.234
+<v Michiel Trimpe></v>
+
+00:29:47.974 --> 00:29:50.414
+<v Mark Westbroek>Heb je dat al gemaakt of is het dit is nog het plan toch?</v>
+
+00:29:52.724 --> 00:29:55.895
+<v Michiel Trimpe>we zijn een eindje verderop. Of we zijn een eindje de richting op. Dus eh</v>
+
+00:29:55.284 --> 00:29:56.644
+<v Mark Westbroek>Ja, anders is het</v>
+
+00:29:55.895 --> 00:29:57.084
+<v Michiel Trimpe>Ja.</v>
+
+00:29:59.114 --> 00:30:09.354
+<v Michiel Trimpe>voorstel is wel dat we dit inderdaad dit dan ook gaan maken. Maar het idee is dat we in ieder geval deze basis eh internationaal proberen te krijgen, zodat dit niet iets Nederlands specifiek hoeft te blijven.</v>
+
+00:30:10.814 --> 00:30:14.234
+<v Mark Westbroek>Ja, want je gebruikt het ODRL metamodel dan.</v>
+
+00:30:17.044 --> 00:30:19.497
+<v Mark Westbroek>of er is een er bestaat een metamodel toch van ODRL met eh</v>
+
+00:30:17.284 --> 00:30:17.804
+<v Michiel Trimpe>Ja.</v>
+
+00:30:19.497 --> 00:30:20.724
+<v Mark Westbroek>Ja.</v>
+
+00:30:21.144 --> 00:30:24.584
+<v Michiel Trimpe>Ja, dus wat hier generiek is, dat is het ODRL model.</v>
+
+00:30:21.764 --> 00:30:22.004
+<v Mark Westbroek>Ja.</v>
+
+00:30:24.904 --> 00:30:25.144
+<v Mark Westbroek>Ja.</v>
+
+00:30:26.164 --> 00:30:28.444
+<v Michiel Trimpe>permission, obligation, et cetera.</v>
+
+00:30:30.204 --> 00:30:39.004
+<v Mark Westbroek>En dan leg je dan eh en en de visualisatie bedoel je daar een formulier mee of bedoel je daar een soort van modelachtige structuur mee?</v>
+
+00:30:42.044 --> 00:30:44.244
+<v Michiel Trimpe>oké, dan ga ik toch alvast. We hebben alvast</v>
+
+00:30:43.634 --> 00:30:47.314
+<v Mark Westbroek>Misschien wel gewoon laten zien hè. Ja.</v>
+
+00:30:46.974 --> 00:30:48.894
+<v Michiel Trimpe>Ja, het staat later op de planning.</v>
+
+00:30:48.834 --> 00:30:49.834
+<v Mark Westbroek>Het is perfect.</v>
+
+00:30:50.714 --> 00:31:02.674
+<v Michiel Trimpe>We hebben nou we hebben al wat gebouwd. Dus dan zie je hier een ODRL van eh onze onze zeg maar demo BRP analyse. met eh een aantal offers per</v>
+
+00:31:05.554 --> 00:31:39.678
+<v Michiel Trimpe>Nou dan een offer kan geaccepteerd worden in een agreement. Dus dan heb je bijvoorbeeld gemeente Oostzaan. die dan zijn een aantal punten die ik nog de presentatie wilde benoemen, maar bijvoorbeeld een gegevenset heeft. En dus dit de verplichting en offer en eh een aanbod en overeenkomst, dat zijn gewoon standaard ODRL termen. Maar in de BRP wereld hebben we bijvoorbeeld de gegevenset. En dan heb je hier een overzichtje van eh welke gegevens in gearrangeerd in groepen en rubrieken.</v>
+
+00:31:34.794 --> 00:31:34.874
+<v Mark Westbroek>Ja.</v>
+
+00:31:37.924 --> 00:31:38.324
+<v Mark Westbroek>Ja.</v>
+
+00:31:39.678 --> 00:31:54.364
+<v Michiel Trimpe>En dit is natuurlijk iets eh BRP specifiek. Dus dit is dan zo'n eh detail weergave. Inmiddels</v>
+
+00:31:57.934 --> 00:32:20.164
+<v Mark Westbroek>En is het nou ook nog als ja, het is heel veel informatie hè. Dus als tekst weer weer te geven is niet zo want dat was je eerste idee toch? Een soort van menselijk leesbare tekst. Zelfs van als dit, dan als dit waar is, dan ehm kan deze rol deze acties uitvoeren.</v>
+
+00:32:21.644 --> 00:32:27.524
+<v Michiel Trimpe>En die zit er nog steeds in. Dus we hebben ook de voorwaarden visualisatie, dat is ook gewoon standaard ODRL.</v>
+
+00:32:28.444 --> 00:32:28.884
+<v Mark Westbroek>Ja.</v>
+
+00:32:29.594 --> 00:32:37.608
+<v Michiel Trimpe>Ehm ik weet even niet uit mijn hoofd. Ik heb geen geen voorbeeld. Ja, dus dit is dan alleen het doel, dus alleen de doelbinding.</v>
+
+00:32:36.714 --> 00:32:38.194
+<v Mark Westbroek>Ja, met een operand.</v>
+
+00:32:37.608 --> 00:32:43.314
+<v Michiel Trimpe>bijvoorbeeld de BRP voorwaardenregels en die zijn hier ook in in uitgeschreven als ze uitgeschreven zijn.</v>
+
+00:32:45.194 --> 00:32:45.594
+<v Mark Westbroek>Ja.</v>
+
+00:32:49.214 --> 00:32:56.639
+<v Michiel Trimpe>Nou, als ik het heb over mensleesbaar, heb ik het niet over een een lap tekst. Dan heb ik het over zoiets als dit. Want dit is dus niet per se uitvoerbaar.</v>
+
+00:32:56.284 --> 00:32:58.161
+<v Mark Westbroek>Ja, in in in boxjes verdeeld, ja.</v>
+
+00:32:56.639 --> 00:32:57.254
+<v Michiel Trimpe>uitvoerbaar.</v>
+
+00:32:58.161 --> 00:32:58.804
+<v Mark Westbroek></v>
+
+00:32:59.854 --> 00:33:03.734
+<v Michiel Trimpe>Maar dit is wel mens interpreteerbaar, denk ik het.</v>
+
+00:33:04.304 --> 00:33:18.554
+<v Mark Westbroek>Nou ja, als je moet het zo, want het is het idee toch? Dat gewoon een een een beetje een senior medewerker of of of functioneel ontwerp, functioneel beheerder dit kan doen en niet dat je een ontwikkelaar nodig hebt.</v>
+
+00:33:21.364 --> 00:33:29.044
+<v Michiel Trimpe>Ja, of dat iemand die met een gedegen ken of ja, voldoende kennis het kan interpreteren. Dus ook als je geen techneut bent.</v>
+
+00:33:28.754 --> 00:33:31.074
+<v Mark Westbroek>Ja, iemand uit het domein. Dat bedoel ik bedoel ik.</v>
+
+00:33:32.034 --> 00:33:36.789
+<v Michiel Trimpe>Ja, je kan nog steeds hier, dus dit zou je dan eh zeg maar in eh data.overheid.nl</v>
+
+00:33:32.144 --> 00:33:32.384
+<v Mark Westbroek>Ja.</v>
+
+00:33:36.789 --> 00:33:44.831
+<v Michiel Trimpe>onder de BRP entry kan je dan doorklikken naar toegangsbeleid. En dan zie je nou, we hadden ze het aanbod. Dus dan weet ik</v>
+
+00:33:44.654 --> 00:33:44.734
+<v Mark Westbroek>Ja.</v>
+
+00:33:44.831 --> 00:33:52.874
+<v Michiel Trimpe>aanbod van de BRP heeft deze vormen. Er zijn eh nou 634 overeenkomsten. Nou, ik snap, dit snap ik wel.</v>
+
+00:33:52.744 --> 00:33:58.384
+<v Mark Westbroek>Ja, dit dit dit is het register. Dus dit is wie dit allemaal wie deze policy allemaal heeft, bedoel je?</v>
+
+00:34:00.634 --> 00:34:01.034
+<v Mark Westbroek>Of?</v>
+
+00:34:01.314 --> 00:34:04.074
+<v Michiel Trimpe>Ja, dit is het overzicht van het beleid van de BRP.</v>
+
+00:34:05.254 --> 00:34:09.364
+<v Mark Westbroek>Ah ja, ja. Ja, vanuit de BRP gezien.</v>
+
+00:34:08.374 --> 00:34:09.134
+<v Michiel Trimpe>Ja.</v>
+
+00:34:11.994 --> 00:34:18.074
+<v Michiel Trimpe>Ja, en dan is eh voor het doel van de wet op de kansspelen mogen deze velden benaderd worden.</v>
+
+00:34:18.434 --> 00:34:18.554
+<v Mark Westbroek>Ja.</v>
+
+00:34:19.734 --> 00:34:25.294
+<v Michiel Trimpe>Dus dit is zelfs voor niet-technische mensen, licht technische mensen nog wel te interpreteren. Dat is</v>
+
+00:34:24.824 --> 00:34:33.954
+<v Mark Westbroek>Ja. Ja. Ja, en hier dit dit is met BRP, dus ik ik zat even in de gemeente context, maar bij gemeentes zou het er anders uitzien.</v>
+
+00:34:35.984 --> 00:34:36.064
+<v Michiel Trimpe></v>
+
+00:34:36.304 --> 00:34:37.424
+<v Mark Westbroek>aan de andere kant dan.</v>
+
+00:34:38.084 --> 00:34:59.224
+<v Michiel Trimpe>Ja, dit is bijvoorbeeld een eh geo-aspect. Dus van eh aanbod eh GMW meetnet provincie Utrecht. En dan heb je hier alleen features met gevoeligheidswaarde kleiner dan vier. Ja, dus wel enigszins technisch, want features, ja, wat is nou een feature? Dat zegt geo-mensen wat, maar burgers niet.</v>
+
+00:34:57.954 --> 00:35:01.774
+<v Mark Westbroek>Nee, maar iemand in het domein snapt dat. Ja. Ja. Snap ik.</v>
+
+00:35:02.984 --> 00:35:14.304
+<v Michiel Trimpe>Oké. Nou, even voor we dan het ODRL APNL, dus wat wij toevoegen wat ehm ja, Nederlands specifiek is of misschien ODRL 3 specifiek.</v>
+
+00:35:16.954 --> 00:36:10.994
+<v Michiel Trimpe>Eén van de belangrijkste dingen is dat wij eh bij de overheid vaak met doelbindingen werken en dat willen we kunnen modelleren in ODRL. Eh waar we op terecht zijn gekomen is, dit impliceert trouwens dat het een een element is. Het is niet, maar dat wij eh doelbindingen willen definiëren als een permission met een purpose. Dit is nog een oude versie. We willen daarvoor gewoon eh de DPV, dat is de Data Privacy Vocabulary eh purpose veld gebruiken. Dus dan zeggen we eigenlijk altijd als je een permission hebt die gescoped is tot één specifieke purpose, doel, dan heb je het over een doelbinding. En dan kunnen we het dus ook op deze manier tonen. Dus dat hier een doel is, doelbinding voor aanwezigheidsvergunningen waaronder je dit mag.</v>
+
+00:36:13.744 --> 00:36:16.024
+<v Michiel Trimpe>Ehm, dus dat is echt iets overheidsspecifieks.</v>
+
+00:36:20.664 --> 00:36:25.454
+<v Michiel Trimpe>Wat er meningen zijn. Ik zie geen handjes opgaan, dus moet je even schreeuwen.</v>
+
+00:36:28.124 --> 00:37:01.594
+<v Michiel Trimpe>een koppeling naar eh machine executable policy. We zien in de praktijk dat de meeste mensen of ja, dat bijna iedereen toch gewoon met Rego of Cedar of iets dergelijks werkt. Dus wij willen ook een conformsToPolicy operator toe gaan voegen. En die impliciet of die eh expliciet zegt wanneer je het verzoek modelleert conform dit AuthZEN verzoek en je het analyseert aan deze policy bundle, eh dan voldoe je aan deze requirement.</v>
+
+00:37:05.494 --> 00:37:32.714
+<v Michiel Trimpe>En tot slot eh bleek dat eh in basis ODRL geen relatie is gedefinieerd tussen offer en agreement. Dus je kan wel een aanbod doen waarin je je zeg maar je stelselvereisten definieert. Eh dat is in BRP is dat beter te zien. Dus van als spontane verstrekking heb je een aantal, dus als BRP afnemer eigenlijk heb je een aantal verplichtingen. Dat is iets wat je op je aanbod zet.</v>
+
+00:37:36.964 --> 00:38:05.644
+<v Michiel Trimpe>maar officieel is standaard ODRL is er geen manier om dan te zeggen deze agreement met deze afnemer is gebaseerd op eh het op aanbod X. Op aanbod spontane verstrekking. Dus daar willen we een stel ik voor om een uitbreiding toe te voegen op eh basis ODRL waarbij we dat wel toevoegen. En dit is dan ook iets wat we wel in ODRL 3 of ODRL 2.3 aan kunnen dragen.</v>
+
+00:38:13.214 --> 00:38:18.574
+<v Michiel Trimpe>En ja, mijn voorstel is om het eh hierop te houden, maar</v>
+
+00:38:21.514 --> 00:38:21.674
+<v Michiel Trimpe>even.</v>
+
+00:38:25.214 --> 00:38:44.404
+<v Michiel Trimpe>een stukje weggelaten. Ehm maar je kan dit natuurlijk ook nog verder uitbreiden. Dat is misschien wel een discussiepunt, want je kan hier ook allerlei eh Europese vocabularies gaan definiëren. Dus je kan bijvoorbeeld zeggen eh voor het definiëren van een eh gebruikersrol, gebruik de org eh vocabulary.</v>
+
+00:38:46.804 --> 00:39:02.724
+<v Michiel Trimpe>En ja, voor het eh definiëren van diensten gebruik CPSV. Eh en al die elementen die kan je hier specifiek gaan benoemen. Ik weet niet of dat slim is. Of ik betwijfel of dat slim is, laat ik het zo zeggen.</v>
+
+00:39:05.344 --> 00:39:08.904
+<v Michiel Trimpe>Danny, Hans, of de, heb je daar een mening over heeft?</v>
+
+00:39:11.364 --> 00:39:21.404
+<v Danny Greefhorst>Ja, als je als je breder gaat en dus inderdaad gaat kijken naar eh gegevensleveringsovereenkomsten, dan moet je allerlei andere soorten dingen ook eh in de scope gaan trekken, ja.</v>
+
+00:39:24.964 --> 00:39:34.364
+<v Michiel Trimpe>Ja, ja, dit komt inderdaad, dit had ik terug voorbereid voor jouw opmerking natuurlijk, maar dit komt daar inderdaad mooi op terug. Dus dit is denk ik inderdaad de set voor autorisatie an sich.</v>
+
+00:39:38.394 --> 00:39:42.114
+<v Michiel Trimpe>Als je breder wilt trekken, dan kan er nog meer bijkomen.</v>
+
+00:39:46.424 --> 00:39:52.824
+<v Michiel Trimpe>Maar de misschien ook willen wij willen wij een een arbiter gaan worden van welke eh Europese</v>
+
+00:39:54.884 --> 00:39:57.684
+<v Michiel Trimpe>ontologieën wij aanraden of niet.</v>
+
+00:40:00.004 --> 00:40:06.284
+<v Danny Greefhorst>Nou, er moeten in Nederland toch afspraken gemaakt, dus eh dus in het Nederlandse profiel kun je wel dingen doen.</v>
+
+00:40:10.554 --> 00:40:11.274
+<v Mark Westbroek>Dat zou ik wel doen.</v>
+
+00:40:16.224 --> 00:40:30.024
+<v Michiel Trimpe>Oké. Ja, misschien maar misschien is dat dan ook wel een bruggetje naar inderdaad eh meer Nederlandse eh linked data ontologieën standaardisatieveld aan gaan spreken.</v>
+
+00:40:35.924 --> 00:40:36.164
+<v Michiel Trimpe>Oké.</v>
+
+00:40:40.684 --> 00:40:51.054
+<v Michiel Trimpe>Ehm ja, dit is wat net al benoemd werd. Dus we stellen voor om dat dan met een aantal sheckles te gaan verifiëren. En de labels hebben we natuurlijk SBB conform</v>
+
+00:40:53.674 --> 00:40:56.874
+<v Michiel Trimpe>voorstellen, zodat dat ook internationaal mooi aansluit.</v>
+
+00:41:00.634 --> 00:41:09.914
+<v Michiel Trimpe>is anders, dat soort conventies. Willen we de manier waarop je verwijst naar juridische stukken gaan standaardiseren of niet. Dat is dan die bredere discussie.</v>
+
+00:41:18.394 --> 00:41:23.474
+<v Michiel Trimpe>Ja, en dit is het laatste stukje waar we natuurlijk dus al een beetje van tevoren</v>
+
+00:41:27.014 --> 00:42:23.104
+<v Michiel Trimpe>eh herschreven. De een AI'tje het voor ons laten schrijven en we gaan het verder verfijnen. En dan ehm wat je daar dus ook ziet is dat dit zijn eh externe bestaande policies. Dus dit is het eh de voorbeelddata van JP Morgan bijvoorbeeld. Dus dan zie je dat een aantal stukken wel oké weergegeven kunnen worden. Eh maar je ziet ook op een aantal vlakken ook precies het probleem. Dus hier is een aanbieder, alleen de identifier en niet een betekenisvolle naam. En hier heb je dan eh T1 en verplichting O1. Dus ja, eh dat is dan wel de juiste technische verwijzing, maar zonder een eh goed labeling regime heb je daar niet zo heel veel aan. En dit is het officiële dataspace voorbeeld. Een UUID en een eh invalide voorwaarde.</v>
+
+00:42:25.504 --> 00:42:31.624
+<v Michiel Trimpe>Dus je ziet dat het eh ja, eh als je ODRL nu sec probeert te visualiseren, krijg je vaak niet zo heel veel moois.</v>
+
+00:42:34.094 --> 00:42:57.014
+<v Michiel Trimpe>En dit heb ik eigenlijk net dus al laten zien. Dus eh met het juiste labeling regime eh en de dingen die we net hebben besproken toegevoegd, kan je visualisatie op dit niveau krijgen. Hier moet eigenlijk ook RVG staan, daar gaat nog iets fout. Maar je ziet wel dat de de dataset netjes een label heeft, eh de afgeleide de artikelen netjes labels hebben.</v>
+
+00:43:00.254 --> 00:43:11.764
+<v Michiel Trimpe>de tekst hier getoond wordt. Dus al die zaken dat dit ja, in mijn optiek eh veel beter te begrijpen is voor een leek.</v>
+
+00:43:21.104 --> 00:43:23.704
+<v Michiel Trimpe>nog niet had laten zien.</v>
+
+00:43:27.854 --> 00:43:49.494
+<v Michiel Trimpe>Ja, nee, ik denk dat ik net dus alles hiervan had laten zien. Dus dit is dit zou dan de zo'n eh visualizer zijn. En dan heb je ook bijvoorbeeld een eh in principe als het goed gaat, kan je alles ook editable maken. Dus dan kan je ook naar een editor switchen en dan kan je dingen daarin aan gaan passen.</v>
+
+00:44:04.654 --> 00:44:24.254
+<v Michiel Trimpe>en eh dus deze ja, die editor en dat soort dingen, dat is dus dan ook iets wat waarschijnlijk in Open FTV ingebouwd zal worden. Dus de idee is ook wel dat al het Open FTV beleid in ieder geval geëxporteerd kan worden naar dit formaat dat we zien. En dat idealiter ook de FTV editor direct dit soort dingen kan editen.</v>
+
+00:44:28.464 --> 00:44:31.784
+<v Michiel Trimpe>Dus dat is waar we tot nu toe mee bezig geweest zijn.</v>
+
+00:44:34.774 --> 00:44:40.094
+<v Michiel Trimpe>Lijkt dit de goede richting voor het ODRL en het registertoegangsbeleid stuk?</v>
+
+00:44:49.974 --> 00:44:51.774
+<v Michiel Trimpe>Stilzwijgend is consent, laten we maar zeggen dan.</v>
+
+00:44:56.744 --> 00:45:09.254
+<v Michiel Trimpe>Nou, dus dit was wat ik eh wat ik wilde laten zien en waar we mee bezig zijn. En ik denk dat dat nu dan hebben we nog een kwartiertje om nog even terug te komen op waar het mee opende. Van hoe gaan we hier nu mee verder?</v>
+
+00:45:13.244 --> 00:45:23.734
+<v Danny Greefhorst>Ik vraag me nog wel een beetje af eh Michiel eh ik begrijp dat jullie die visualisatie naar je toe trekken hè, maar staat dat niet een beetje ver af van eh toegang?</v>
+
+00:45:28.704 --> 00:46:37.374
+<v Michiel Trimpe>eh merkte dat voorheen dus de het toegangsbeleid heeft als doel om toegangsbeleid inzichtelijk te maken. En eh we zijn gesettled op ODRL. Alleen ODRL zonder visualisatie is is maar link data. Eh en je merkt dat daar ehm dat weinig aanstoeg bij weinig mensen en dat het moeilijk te begrijpen en te plaatsen was. Ik heb ook bijvoorbeeld met eh met IWBZ die heel actief bezig is met FTV en OZN presentatie gehad en ik het uitlegde en eh eh Remo de business analyst het heel terecht zag daar dan een een RDF ding staan van het ODRL beleid. van ja, wat wat koop ik hiervoor als organisatie. Dus ik ben er ondertussen wel echt van overtuigd dat zonder een ODRL visualisatie ODRL gebruiken voor het bieden van inzicht in toegangsbeleid tussen organisaties niet te doen is. Dus het is echt wel een harde vereiste daarvoor.</v>
+
+00:46:42.924 --> 00:46:54.684
+<v Michiel Trimpe>is inderdaad wel een een scope uitbreiding. Dat is ook waarom het wel een beetje aan Open FTV proberen te koppelen dat het eh ja, daar dan ook bijvoorbeeld vanuit eh persistence formaat van Open FTV kan worden.</v>
+
+00:46:58.534 --> 00:46:59.014
+<v Michiel Trimpe>Mark?</v>
+
+00:47:03.664 --> 00:47:14.264
+<v Mark Westbroek>Ja, ik denk ik denk ook ik ben wel eens met je dat dat dat was in het begin niet het uitgangspunt dat dat het voor mensen eenvoudiger moet zijn om een policy te schrijven of te lezen.</v>
+
+00:47:17.374 --> 00:47:47.854
+<v Mark Westbroek>Dus eh ik ik was trouwens ook nog bezig geweest parallel. Eh kan ik nog wel laten zien als je wil, maar dat is een dat is wel een tekst die je gaven die een soort van geïnterpreteerd wordt. Dus ik heb iets geprobeerd te maken wat ehm wat tekst snapt en en met kleurtjes eh als hij het eh wat hij herkent als een eh voorwaarde, als een als een werkwoord, als een zelfstandig naamwoord. Het is eh en en ook een soort grafische weergave ervan. Dus dat kan het is net net een iets andere eh insteek, maar volgens mij komt het op hetzelfde neer.</v>
+
+00:47:47.064 --> 00:47:47.184
+<v Michiel Trimpe></v>
+
+00:47:50.144 --> 00:47:52.064
+<v Mark Westbroek>beelden we.</v>
+
+00:47:54.104 --> 00:47:54.544
+<v Mark Westbroek>Ehm</v>
+
+00:47:56.704 --> 00:48:09.454
+<v Michiel Trimpe>dat Debby Morgan heeft eh echt de voorwaarden ook teruggetraceerd naar de contracten waarop het gebaseerd is. En dus daar eh lijkt een beetje dan de de andere richting op, maar een beetje op wat je nu omschrijft.</v>
+
+00:48:10.254 --> 00:48:14.340
+<v Mark Westbroek>Ja, het zijn allemaal semantische blokjes hè. Dus ze hebben allemaal alles, het zijn eigenlijk een soort van types</v>
+
+00:48:10.374 --> 00:48:11.014
+<v Michiel Trimpe></v>
+
+00:48:14.340 --> 00:48:22.294
+<v Mark Westbroek>die je met elkaar verbindt als je het als je het metamodel weer bekijkt. Dus dat zijn dat kun je al visueel maken.</v>
+
+00:48:23.484 --> 00:48:26.284
+<v Danny Greefhorst>Je kunt dus een soort domein specifieke taal boven zien nog, zeg maar.</v>
+
+00:48:25.844 --> 00:48:31.004
+<v Mark Westbroek>Ja, je je je kunt een soort eh ja, een soort business een soort rulespeak-achtig iets, want het zijn regels.</v>
+
+00:48:30.614 --> 00:48:33.174
+<v Danny Greefhorst>Precies. Wel interessant. Ja.</v>
+
+00:48:35.144 --> 00:48:48.544
+<v Mark Westbroek>Het werkt al een beetje. En ik eh en en ik kan eh hij hij kent ook eh als je doorklikt op een zelfstandig naamwoord, dan gaat hij naar naar de naar het het gegeven in de in de gegevens eh eh boom, zeg maar, in de boom van eh van van gegevensmodel.</v>
+
+00:48:49.894 --> 00:48:51.934
+<v Danny Greefhorst>Wil je mij daar sowieso even iets over mailen, Mark?</v>
+
+00:48:51.784 --> 00:48:55.634
+<v Mark Westbroek>Ja. Ja. Is goed.</v>
+
+00:48:58.364 --> 00:48:59.684
+<v Mark Westbroek>Ja, ik vind ik vind die ik vind die driehoek</v>
+
+00:48:58.774 --> 00:48:59.014
+<v Michiel Trimpe></v>
+
+00:48:59.684 --> 00:49:03.204
+<v Mark Westbroek>gegevens, regels en eh en en proces wel heel interessant.</v>
+
+00:49:04.844 --> 00:49:08.788
+<v Danny Greefhorst>Ja, ik ben toevallig zelf ook bezig met een domein specifieke taal voor gegevenskwaliteit, dus eh</v>
+
+00:49:04.984 --> 00:49:12.624
+<v Mark Westbroek>Gegevenskwaliteit. Ja. Nice.</v>
+
+00:49:08.788 --> 00:49:10.864
+<v Danny Greefhorst></v>
+
+00:49:15.904 --> 00:49:16.104
+<v Mark Westbroek>Ja.</v>
+
+00:49:20.064 --> 00:49:42.104
+<v Michiel Trimpe>lijkt het goed dat we een een stukje en misschien moet dat is het goed om dat deels apart te doen of enigszins te gaan scheiden over het link data stuk. Hoe passen wij in de link data wereld? Eh en ook wie speelt er, wie zijn daar in actief? Dus zorgen dat we ook bij de partijen die daarin bezig zijn aanhaken voor de rest van dit stuk.</v>
+
+00:49:43.314 --> 00:49:43.714
+<v Mark Westbroek>Ja.</v>
+
+00:49:44.324 --> 00:50:11.784
+<v Michiel Trimpe>Misschien is het ook voor de werkgroep goed om dus ik kan me voorstellen dat ja, voor eh voor Igo, voor Robert, voor Hugo, voor Axel dat dit misschien eh het echt het link data stuk uitspitten wat specifiek gaat worden. Of weet je aan het invullen dat Ja, dat merk ik dat dat eh de aanmaking de aansluiting verliest. Dus dat we misschien ehm</v>
+
+00:50:12.894 --> 00:50:26.974
+<v Govert Claus>Ja, sorry, ik was inderdaad aan het bevestigen. Op zich hè, visualisatie voor ons, wij liepen daar ook, lopen daar een beetje tegenaan eh in dat eh GBO project wat ik net noemde. Dus dit vinden we weer interessant, maar de hele uitwerking zo, dat is inderdaad iets verder van mijn eh bed af.</v>
+
+00:50:27.844 --> 00:50:54.724
+<v Michiel Trimpe>Ja, maar dat Mark eh niet tot het einde aanwezig kan zijn, maar ik denk dat het waarschijnlijk goed is dat we misschien in ieder geval een soort eh cadans doen dat we ook gewoon weer back to our roots gaan. En dat we ook weer sessies gaan hebben over autorisatie in het algemeen en wat zijn en hoe werkt het nu bij de systemen? Dus hoe werkt het bijvoorbeeld bij GBO? Waar zijn we daarmee bezig? Wat zijn de concrete uitdagingen waar je tegenaan loopt?</v>
+
+00:50:56.794 --> 00:51:03.204
+<v Michiel Trimpe>Ik denk dat het goed is om daar wat meer naar terug te gaan. Ik zie nu heel veel knikkende gezichtjes. Ik denk dat dat een eh</v>
+
+00:51:07.334 --> 00:51:11.374
+<v Mark Westbroek>Je zei GBO. Dit dat heet anders inmiddels, maar die waren bezig met</v>
+
+00:51:13.454 --> 00:51:17.694
+<v Mark Westbroek>eh toegangsverlening en GraphQL te combineren. En is dat al iets verder gekomen?</v>
+
+00:51:18.564 --> 00:51:23.995
+<v Govert Claus>Jazeker. Ja. Ja, en inderdaad, ik ik ik kan er heel veel over vertellen hoor, maar misschien is dat niet heel handig, maar eh heel kort</v>
+
+00:51:23.734 --> 00:51:24.774
+<v Mark Westbroek>Oh ja, heel kort.</v>
+
+00:51:23.995 --> 00:52:09.094
+<v Govert Claus>inderdaad, het het is het idee om eh via één eh API, een GraphQL hebben we dan in gedachten, gegevens beschikbaar te stellen aan verschillende gegevensstromen. Betekent wel dat je inderdaad qua qua toegang echt, ja, je ontkomt eigenlijk niet aan een eh een een soort FTV eh oplossing. Vandaar dat we dat ook willen gaan toepassen. Dus eh ja, daar wordt nu aan gewerkt. We zijn we er is een demo. Ik ik zal een ik zal een linkje delen. Dan eh kunnen jullie even meekijken. Ehm en het idee is dat we ook daadwerkelijk wat pilots gaan inrichten om dit ook te gaan beproeven eh hoe dit in de praktijk kan gaan werken. Ehm dat is meer voor volgend jaar, maar dit jaar zijn we bezig met de uitwerking gewoon hè, van van en een demo en het uitwerken van alle vraagstukken waar we tegenaan lopen.</v>
+
+00:52:13.024 --> 00:52:31.944
+<v Michiel Trimpe>gaf net al een beetje een opzetje, maar ik denk dat het sowieso waarschijnlijk leuk zal zijn om een keer een eh ja, gewoon een eh GBO presentatie hier te hebben voor de club. Misschien nog even Axel en Hugo, eh waar zijn er dingen waar jullie dan nu concreet tegenaan lopen binnen jullie organisaties?</v>
+
+00:52:35.104 --> 00:52:51.094
+<v @1>Ehm eh ik heb op het moment ik voor mij is dit dit is eh echt nog een stap te ver voor voor voor waar wij nu mee bezig zijn. Hè, maar het is voor mij vooral verkennen van oké, dit is wel dit is dit past wel in het grote plaatje waar waar we aan het tekenen zijn. Dus maar we zijn nog niet concreet hiermee met dit stuk bezig.</v>
+
+00:52:52.984 --> 00:52:55.424
+<v Hugo Mostard>Ja. Klopt. Dat geldt ook voor mij, zeg maar.</v>
+
+00:52:54.874 --> 00:53:08.004
+<v @1>Nee, ik vind het wel heel heel interessant en ik ik ik het is ook ik ben ook zeker dat ik kan uit aan het duwen. Maar eh om laten zeggen ik denk dat ik denk dat het echt nog wel twee jaar duurt minstens voordat u hier naartoe is.</v>
+
+00:53:12.674 --> 00:53:17.794
+<v Michiel Trimpe>En dan Igor, Igor en Guus, denk ik misschien ook wel een tijd om een keer een update van UWV Z te geven.</v>
+
+00:53:22.044 --> 00:53:35.004
+<v Michiel Trimpe>Dan kunnen we hoeft niet. Dan kunnen we buiten de sessie om misschien wel wat over afstemmen. René, vanuit welke waar zit jij nu qua wat welk aspect hiervan leeft bij jou in de organisatie momenteel het meest?</v>
+
+00:53:38.454 --> 00:54:10.694
+<v Ren&#233; Kint>Ehm conditionele toegang. Dus ehm aan en uitzetten van toegang. Ook geografisch gebonden hè. Dus eh binnen zoveel kilometer van een eh van een eh militaire luchthaven mag opeens daar bepaalde data wel of niet gedekt worden. Vooral in combinatie met eh eisen van defensie op dit moment. Hier ligt die eh die drukken een grote stempel op eh op toegang in het algemeen.</v>
+
+00:54:12.804 --> 00:54:14.444
+<v Michiel Trimpe>Ja, wat meer eh wat meer tenzij dan.</v>
+
+00:54:15.004 --> 00:54:24.604
+<v Ren&#233; Kint>Ja, en hoe je die tenzij dan eh moet modeleren en kunt met elkaar kunt uitwisselen eh dynamisch hè, in real time. Dat wordt wel echt een eh interessant onderdeel voor mij.</v>
+
+00:54:25.674 --> 00:54:26.034
+<v Michiel Trimpe>Ja.</v>
+
+00:54:28.884 --> 00:54:46.714
+<v Michiel Trimpe>denk ik met eh nee, ik gewoon even af ga stemmen van hé, waar waar gaan we gewoon even concreet de diepte in van dit soort cases. Dus we gaan even weer terug naar de roots op dat stuk. En dat we daar de de volgende sessie wat meer op zullen sturen.</v>
+
+00:54:49.554 --> 00:54:50.394
+<v Michiel Trimpe>Nou, lijkt me een goed plan.</v>
+
+00:54:52.674 --> 00:54:54.674
+<v Michiel Trimpe>En fijn om weer eens een keer wat meer knikkende gezichten te zien.</v>
+
+00:54:58.814 --> 00:55:04.934
+<v Michiel Trimpe>Oké. Nou, wat mij betreft was dat dan de de sessie. Zijn er nog nabranders van iemand voor de laatste paar minuten?</v>
+
+00:55:06.974 --> 00:55:16.134
+<v Ren&#233; Kint>Nou, even een hele domme. Dit zit ook dit is allemaal op localhost. Het ziet er allemaal hartstikke mooi uit op localhost. Is er ook eh staat het ook ergens anders alleen op localhost?</v>
+
+00:55:16.614 --> 00:55:17.934
+<v Michiel Trimpe>Nee, gewoon intypen.</v>
+
+00:55:17.234 --> 00:55:22.354
+<v Mark Westbroek>Maar je moet je moet ook dubbele punt 8000 achter zetten. Waarom gaat het fout?</v>
+
+00:55:22.504 --> 00:55:23.344
+<v Ren&#233; Kint>Ah, dan</v>
+
+00:55:26.394 --> 00:55:40.234
+<v Michiel Trimpe>ik zeg maar voordat ik ik probeer voordat ik dat te publiceren het meestal eerst echt te snappen. En dat punt heb ik nog niet bereikt. Als je het alvast wil hebben, ehm</v>
+
+00:55:41.194 --> 00:55:43.834
+<v Ren&#233; Kint>Ja, we zijn wel vrienden hè, dus eh ja, ik weet niet.</v>
+
+00:55:42.614 --> 00:55:42.774
+<v Michiel Trimpe>Ja.</v>
+
+00:55:44.234 --> 00:55:49.354
+<v Ren&#233; Kint>Wij snappen dat dit LLM code is, dat maakt mij niet zoveel uit. Het gaat meer om het concept en ja.</v>
+
+00:55:48.584 --> 00:55:59.564
+<v Michiel Trimpe>Ja, ik kan het eh ergens eh prima met ergens te publiceren. Ga ik doen. Met een grote LLM disclaimer en dan eh komt het helemaal goed.</v>
+
+00:56:03.124 --> 00:56:10.244
+<v Michiel Trimpe>Oké. Nou, dan eh dank ik iedereen voor jullie aanwezigheid en dan eh tot over twee weken.</v>
+
+00:56:11.984 --> 00:56:12.464
+<v Ren&#233; Kint>Dankjewel.</v>
+
+00:56:12.194 --> 00:56:12.714
+<v Govert Claus>Dankjewel.</v>
+
+00:56:13.204 --> 00:56:13.484
+<v Ren&#233; Kint>Dankjewel.</v>
+
+00:56:13.424 --> 00:56:14.104
+<v Stas Mironov></v>
+
+00:56:14.084 --> 00:56:14.484
+<v Mark Westbroek></v>

@@ -53,6 +53,7 @@ Data komende werkgroepen (na de zomerstop):
 
 2026
 
+- 18 augustus: Voortgang ODRL-AP-NL ([Notulen]({{% relref "voortgang-odrl-ap-nl" %}}))
 - 23 juni: Planning en evaluatie mid 2026 ([Notulen]({{% relref "planning-en-evaluatie-mid-2026" %}}))
 -  9 juni: Roadmap register toegangsbeleid ([Notulen]({{% relref "roadmap-register-toegangsbeleid" %}}))
 - 12 mei: Vragenuur BRP-keten met RvIG ([Notulen]({{% relref "vragenuur-brp-keten" %}}))
