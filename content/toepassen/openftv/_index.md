@@ -108,7 +108,7 @@ OpenFTV is geschreven in Golang en vrij beschikbaar in [Gitlab](https://gitlab.c
 #### OpenAPI-specificaties
 - Voor alle API endpoints binnen de OpenFTV modules is een OAS v3 specificatie beschikbaar,
   tenzij dit vanuit een ander project vastgesteld is.
-- Alle specificaties voldoen aan de REST API Design Rules van [developer.overheid.nl](https://developer.overheid.nl/kennisbank/apis/api-design-rules/). De enige uitzondering hierop zijn bepaalde properties in de AuthZEN standaard die met *kebab-case* zijn gedefinieerd.
+- Alle specificaties voldoen aan de REST API Design Rules van [developer.overheid.nl](https://developer.overheid.nl/kennisbank/apis/api-design-rules/). De AuthZEN API voldoet aan AuthZEN NLGov standaard.
 - Wordt middels de Spectral linter afgedwongen.
 
 #### Kant-en-klare micro-services
