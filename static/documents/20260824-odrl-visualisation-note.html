@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ODRL Visualisations</title>
+<style>
+  :root {
+    --ground: #FBFCFD; --paper: #FFFFFF; --ink: #1E2933; --ink-soft: #52616E;
+    --line: #D9E1E8; --accent: #2C5E8A; --accent-ink: #FFFFFF;
+    --code-bg: #EFF3F7; --quote-bg: #EDF3F8; --issue: #8A6116; --issue-bg: #FBF3E1;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #10161C; --paper: #171F27; --ink: #E2EAF1; --ink-soft: #9DAEBC;
+      --line: #2B3844; --accent: #79ACD9; --accent-ink: #10161C;
+      --code-bg: #1E2933; --quote-bg: #1B2836; --issue: #D9A94E; --issue-bg: #2A2410;
+    }
+  }
+  body {
+    background: var(--ground); color: var(--ink); margin: 0;
+    font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+    font-size: 16px; line-height: 1.65;
+  }
+  .page { display: grid; grid-template-columns: 1fr; max-width: 78rem; margin: 0 auto; padding: 0 1.25rem 5rem; }
+  @media (min-width: 1100px) { .page { grid-template-columns: 17rem minmax(0, 46rem); gap: 3rem; } }
+  nav.toc { font-size: 0.82rem; line-height: 1.5; padding-top: 2.5rem; }
+  @media (min-width: 1100px) {
+    nav.toc { position: sticky; top: 0; align-self: start; max-height: 100vh; overflow-y: auto; padding-bottom: 2rem; }
+  }
+  nav.toc .toctitle { font-weight: 650; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.7rem; color: var(--ink-soft); margin-bottom: 0.5rem; }
+  nav.toc ul { list-style: none; margin: 0; padding-left: 0; }
+  nav.toc ul ul { padding-left: 0.9rem; }
+  nav.toc a { color: var(--ink-soft); text-decoration: none; display: block; padding: 0.12rem 0; }
+  nav.toc a:hover { color: var(--accent); }
+  main { min-width: 0; padding-top: 2.5rem; }
+  .eyebrow { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); font-weight: 650; margin: 0 0 0.4rem; }
+  h1 { font-size: 2.15rem; font-weight: 700; letter-spacing: -0.015em; margin: 0 0 0.3rem; text-wrap: balance; }
+  .subtitle { color: var(--ink-soft); margin: 0 0 1.6rem; font-size: 0.95rem; }
+  h2 { font-size: 1.35rem; font-weight: 700; letter-spacing: -0.01em; margin: 2.8rem 0 0.8rem; padding-top: 1.5rem; border-top: 1px solid var(--line); text-wrap: balance; }
+  h3 { font-size: 1.08rem; font-weight: 650; margin: 1.9rem 0 0.5rem; text-wrap: balance; }
+  h4 { font-size: 0.98rem; font-weight: 650; margin: 1.8rem 0 0.45rem; padding: 0.55rem 0.8rem; background: var(--paper); border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 6px; }
+  p { margin: 0 0 0.9rem; }
+  li { margin-bottom: 0.35rem; }
+  a { color: var(--accent); }
+  blockquote { margin: 1.4rem 0; padding: 1rem 1.3rem; background: var(--quote-bg); border-left: 4px solid var(--accent); border-radius: 6px; font-size: 1.02rem; }
+  blockquote p:last-child { margin-bottom: 0; }
+  code { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; font-size: 0.86em; background: var(--code-bg); padding: 0.08em 0.35em; border-radius: 3px; }
+  pre { background: var(--code-bg); border: 1px solid var(--line); border-radius: 6px; padding: 0.8rem 1rem; overflow-x: auto; font-size: 0.85rem; line-height: 1.5; }
+  pre code { background: none; padding: 0; }
+  .tablewrap { overflow-x: auto; margin: 1rem 0; border: 1px solid var(--line); border-radius: 8px; background: var(--paper); }
+  table { border-collapse: collapse; width: 100%; font-size: 0.87rem; }
+  th, td { text-align: left; padding: 0.45rem 0.7rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); }
+  tr:last-child td { border-bottom: none; }
+  .req { float: right; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em; border-radius: 999px; padding: 0.14rem 0.6rem; margin-left: 0.6rem; }
+  .req.must { background: var(--accent); color: var(--accent-ink); }
+  .req.should { border: 1.5px solid var(--accent); color: var(--accent); }
+  .issue-tag { color: var(--issue); }
+  hr { border: none; border-top: 1px solid var(--line); margin: 2.5rem 0; }
+</style>
+</head>
+<body>
+<div class="page">
+<nav class="toc"><div class="toctitle">Contents</div><div class="toc">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#1-labels">1. Labels</a></li>
+<li><a href="#2-reusable-nodes">2. Reusable nodes</a></li>
+<li><a href="#3-collections-of-targets">3. Collections of targets</a></li>
+<li><a href="#4-links-between-offers-and-agreements">4. Links between offers and agreements</a></li>
+<li><a href="#5-versions-and-time">5. Versions and time</a></li>
+<li><a href="#6-what-degrades">6. What degrades</a></li>
+<li><a href="#a-odrl-ap-nl-specific">A. ODRL-AP-NL specific</a></li>
+</ul>
+</div></nav>
+<main>
+<p class="eyebrow">Unofficial Draft — basic version</p>
+<h1>ODRL Visualisations</h1>
+<p class="subtitle">The triples an ODRL policy needs, on top of valid ODRL, so a generic viewer can render it.</p>
+
+
+<h2 id="introduction">Introduction</h2>
+<p>The requirements below make it possible to visualise ODRL policies
+with generic tooling: one viewer that renders any policy as a
+readable document, without code per profile or per dataset.</p>
+<p>This note assumes valid ODRL 2.2 policies.
+It lists only the triples a policy needs <strong>on top of that</strong>,
+so a viewer can name, group, date, link, and trace what it shows.
+Every requirement below is used by a working viewer today
+(the ODRL-AP-NL visualiser). Nothing here is speculative.</p>
+<p>Words used: <strong>needs</strong> = without this triple the feature does not work.
+<strong>should</strong> = without this triple the feature works but reads worse.</p>
+
+<h2 id="1-labels">1. Labels</h2>
+<p>The viewer never invents names. Names come from the data.</p>
+<ul>
+<li>Every IRI shown to a person <strong>needs</strong> one of:
+<code>rdfs:label</code>, <code>skos:prefLabel</code>, or <code>dct:title</code>.</li>
+<li>This holds for: actions, targets, parties, left operands, operators,
+right-operand values, classes, and container documents.
+ODRL core terms are the exception: the viewer carries their words itself.</li>
+<li>Labels <strong>should</strong> carry a language tag (<code>@nl</code>, <code>@en</code>).
+The viewer picks the label that matches the user's language.
+In English mode: <code>@en</code>, then no tag, then <code>@nl</code>. In Dutch: the reverse.</li>
+<li>No label at all → the viewer shows the last segment of the IRI.</li>
+<li>A blank node with no label and no name-like property shows as
+"(anonymous)". This is honest but unreadable. Give things labels.</li>
+</ul>
+<p>In SPARQL mode the viewer fetches labels <strong>one hop</strong> from the policy.
+So labels <strong>need</strong> to sit in the same endpoint as the policy data.</p>
+
+<h2 id="2-reusable-nodes">2. Reusable nodes</h2>
+<ul>
+<li>Rule nodes may be blank nodes, but reuse <strong>needs</strong> IRIs:
+a rule shared by an Offer and an Agreement <strong>needs</strong> to be
+the <em>same IRI node</em> in both.
+The viewer then folds it on the agreement card into one row:
+"from the offer (n duties)".
+With copied blank nodes the same text repeats on every agreement.</li>
+</ul>
+
+<h2 id="3-collections-of-targets">3. Collections of targets</h2>
+<ul>
+<li>A collection lists its members with <code>dct:hasPart</code>.</li>
+<li>Each member <strong>should</strong> have an <code>rdf:type</code> from the domain
+(for example <code>brp:Rubriek</code>), next to <code>odrl:Asset</code>.
+The viewer groups members under the label of that class.</li>
+<li>That domain class (the <code>rdf:type</code> value) <strong>needs</strong> a label per language
+(for example <code>brp:Rubriek</code> with "Rubriek"@nl, "Data item"@en).
+The class label becomes the group heading.</li>
+<li>Members without a domain type all land in one flat group. Nothing breaks.</li>
+</ul>
+
+<h2 id="4-links-between-offers-and-agreements">4. Links between offers and agreements</h2>
+<ul>
+<li>Agreement → Offer: <code>prov:wasDerivedFrom</code> or <code>dct:references</code>,
+where the object is typed <code>odrl:Offer</code>.
+This gives the "agreements under this offer" list.
+The type check matters: the same predicates also point at laws
+and documents, and those must not show up as offers.</li>
+</ul>
+
+<h2 id="5-versions-and-time">5. Versions and time</h2>
+<p>The viewer shows one card per policy, with a version navigator.
+Plain ODRL has no version model, so all of this is extra.</p>
+<ul>
+<li>A version container is a node that links its versions:
+container → version with <code>dct:hasPart</code> or <code>pav:hasVersion</code>,
+or the inverse, version → container with <code>prov:specializationOf</code>.</li>
+<li>Alternative: a node that lists policies with <code>odrl:hasPolicy</code>
+(or <code>dcat:hasPolicy</code>) <strong>and</strong> itself carries <code>dct:valid</code>
+is treated as a version container.</li>
+<li>Version data on each version:
+<code>dct:valid</code> — the period in which it applies;
+<code>dct:issued</code> — when it was published;
+<code>prov:wasRevisionOf</code> — the previous version.</li>
+<li>Status is computed, not stored: current / future / superseded / terminated.
+Terminated = the container has versions but none applies now.</li>
+<li>An old version does not need an ODRL type.
+It counts as a version if it carries one of the date properties above.
+It <strong>should</strong> still carry its own rules if you want people to read the old text.</li>
+</ul>
+
+<h2 id="6-what-degrades">6. What degrades</h2>
+<p>Nothing above makes the viewer crash when missing.
+The failure mode is always readability:</p>
+<table>
+<thead><tr><th>Missing</th><th>Result</th></tr></thead>
+<tbody>
+<tr><td>label on an IRI</td><td>IRI tail shown</td></tr>
+<tr><td>language tag</td><td>wrong-language label may show</td></tr>
+<tr><td>domain type on members</td><td>one flat member group</td></tr>
+<tr><td>version dates</td><td>no version navigator, no status</td></tr>
+<tr><td>same-IRI shared rules</td><td>duplicated rule text on every agreement</td></tr>
+<tr><td>type check on offer links</td><td>laws show up as offers</td></tr>
+</tbody>
+</table>
+<p>The rule of thumb behind all sections:
+<strong>everything a person needs to read the policy must be in the triples.</strong>
+If the viewer needs profile code to name or explain something,
+the data is incomplete — fix the data, not the viewer.</p>
+
+<h2 id="a-odrl-ap-nl-specific">A. ODRL-AP-NL specific</h2>
+<p>Two profile constructions get special rendering.
+All other ODRL-AP-NL patterns live in the ODRL-AP-NL specification;
+they render as normal labelled properties and need no mention here.</p>
+<h3 id="a1-purpose-rules">A.1 Purpose rules</h3>
+<ul>
+<li>The viewer shows a permission as a <strong>purpose</strong> rule
+(its own colour and word) when the action carries a refinement with
+<code>odrl:leftOperand odrl:purpose</code>. Use that pattern — not a
+profile-specific property — if you want purpose rendering.</li>
+<li>The purpose value (the right operand) <strong>needs</strong> a label.</li>
+</ul>
+<h3 id="a2-coverage">A.2 Coverage</h3>
+<ul>
+<li>A machine-enforced artifact (a policy bundle, Rego module, …) is typed
+(for example <code>apnl:PolicyArtifact</code>) and declares
+<code>prov:wasDerivedFrom &lt;rule-uid&gt;</code> for every rule it covers.
+The rules it points at <strong>need</strong> an <code>odrl:uid</code>.</li>
+<li>The viewer then marks each rule: "technically enforced · ‹artifact›"
+or "not technically enforced". Uncovered rules stay visible.</li>
+</ul>
+
+</main>
+</div>
+</body>
+</html>

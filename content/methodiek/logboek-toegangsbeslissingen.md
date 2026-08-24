@@ -31,14 +31,14 @@ type: 'chapter'
 {{< /chapter/header >}}
 
 {{< chapter/directnaar bg="bg-rhc-color-geel-neon">}}
-<a href="https://logius-standaarden.github.io/authorization-decision-log/" target="_blank">
+<a href="https://gitdocumentatie.logius.nl/publicatie/ftv/adl/" target="_blank">
     <div class="mt-2">
         <h3 style="text-decoration:underline" class="nl-heading nl-heading--level-3 rhc-heading">Authorization decision log</h3>
     </div>
     <div class="mt-2">
         <p class="utrecht-paragraph-small">Standaard voor Federatieve Toegangsverlening</p>
         <p class="utrecht-paragraph-small">Logius Standaard</p>
-        <p class="utrecht-paragraph-small">Draft 29 april 2025</p>
+        <p class="utrecht-paragraph-small">Definitieve versie</p>
     </div>
 </a>
 
@@ -85,12 +85,12 @@ Toegangsbeslissingen zijn deel van het grotere proces van gegevensuitwisseling. 
 Deze drie logboeken zijn met elkaar verbonden door een zogenaamde trace: een gedeelde identifier ([W3C Trace Context](https://www.w3.org/TR/trace-context/)) die het mogelijk maakt om alle logregels die bij dezelfde uitwisseling horen aan elkaar te koppelen.
 
 ### Status
-De huidige [versie van de standaard](https://logius-standaarden.github.io/authorization-decision-log/) is aangenomen door de eigen werkgroep, en voor beheer overgedragen aan Logius. Momenteel loopt de [openbare consultatieperiode](https://github.com/Logius-standaarden/Openbare-Consultaties/blob/master/2026-04-adl/README.md) tot 29 mei 2026.
+Versie 1.0 van Authorization Decision Log is **definitief**. De standaard is aangenomen door de eigen werkgroep, voor beheer overgedragen aan Logius, heeft de [openbare consultatie](https://github.com/Logius-standaarden/Openbare-Consultaties/blob/master/2026-04-adl/README.md) doorlopen en is vervolgens goedgekeurd door de Programmeringstafel GDI. De definitieve versie is gepubliceerd als [Authorization Decision Log](https://gitdocumentatie.logius.nl/publicatie/ftv/adl/).
 
 <br>
 
-<a href="https://logius-standaarden.github.io/authorization-decision-log/" class="utrecht-button utrecht-button--primary-action" target="_blank">
-            Bekijk de consultatieversie van Authorization Decision Log
+<a href="https://gitdocumentatie.logius.nl/publicatie/ftv/adl/" class="utrecht-button utrecht-button--primary-action" target="_blank">
+            Bekijk de standaard Authorization Decision Log
 </a>
 
 {{< /chapter/section >}}

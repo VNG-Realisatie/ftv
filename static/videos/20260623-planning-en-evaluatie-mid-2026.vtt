@@ -1,0 +1,781 @@
+WEBVTT
+
+00:00:13.041 --> 00:00:16.681
+<v Michiel Trimpe></v>
+
+00:00:19.701 --> 00:00:20.661
+<v Michiel Trimpe>als dat lukt.</v>
+
+00:00:23.881 --> 00:00:59.481
+<v Michiel Trimpe>Oké. Ehm nou, de voorbereiding vandaag was niet helemaal optimaal, dus ik heb de agenda net toegevoegd. Dus als je die eerder niet zag, dan eh klopt dat. Ehm, maar voor vandaag hebben we even hebben we twee punten op de planning staan. De roadmap FTV. Groot woord, maar eh het plan voor eh de de samenvatting van vorige keer en het plan voor komend jaar. En even een evaluatiepunt. Eh want waarschijnlijk is dit de laatste sessie voor de vakantieperiode, verwacht ik zo voor iedereen. Dus even terugkijken en vooruitkijken.</v>
+
+00:01:01.591 --> 00:01:16.151
+<v Michiel Trimpe>Ehm even kijken, er waren mogelijk nieuwe mensen, maar die zijn denk ik, nou ja, heeft één iemand aangegeven in de toekomst te gaan komen. Die konden vandaag niet bij zijn. Verder even allemaal bekende gezichten.</v>
+
+00:01:20.581 --> 00:01:25.421
+<v Michiel Trimpe>Dus de, nou, welkom en kennismaking is dan bij deze afgerond.</v>
+
+00:01:28.241 --> 00:01:38.380
+<v Michiel Trimpe>ik zo op willen beginnen met eh ik heb een presentatie opgezet om te proberen eh of te kijken of ik goed samen heb gevat wat we vorige keer</v>
+
+00:01:37.211 --> 00:01:37.291
+<v Igor van Haren>Ja.</v>
+
+00:01:38.380 --> 00:01:40.201
+<v Michiel Trimpe>hebben besloten.</v>
+
+00:01:42.721 --> 00:02:26.091
+<v Michiel Trimpe>Ehm in de vorige werkgroep is er eh een besluit geweest dat we een eh ODRL applicatieprofiel willen gaan of op gaan zetten. expliciet toegespitst op het Nederlandse stelsel en eh de implementatie van ODRL. En dat we een tweetal cases gaan beproeven, BRP en BRO, om die te ontwikkelen en te valideren. Eh ik zeg hier deliverables, maar dat is niet denk ik het juiste woord. Dat is meer een een roadmap van gaan we de juiste richting op en ook even samen spiegelen eh ja, raken we de juiste snaar en is dit inderdaad wat we willen doen. En allereerst, want dat is de basis, lijkt het te zijn, OpenFTV en ODRL-AP, het applicatieprofiel.</v>
+
+00:02:30.991 --> 00:02:32.471
+<v Michiel Trimpe>Ah, super, dat Hans er ook bij is. Top.</v>
+
+00:02:34.801 --> 00:02:37.921
+<v Michiel Trimpe>Welkom Hans, blij je blij je erbij te hebben.</v>
+
+00:02:44.201 --> 00:03:30.391
+<v Michiel Trimpe>Ja, eh dat komt straks. Dus ehm de afdronk die ik er had was eh eigenlijk dat ene of de de conclusies dat wij dat we een applicatieprofiel willen doen is dat het ODRL applicatieprofiel ergens ook het uitwisselformaat van OpenFTV zal zijn en worden. Dus waarschijnlijk dat ehm nou, dus de de structuur van het toegangsbeleid in OpenFTV wordt afgestemd op het applicatieprofiel. En andersom. En dat het toegangsbeleid dan dus ook exporteerbaar en importeerbaar zal worden van en naar ODRL. En OpenFTV eh kan dan een eh ja, gezien worden als een authoring omgeving voor het ODRL formaat.</v>
+
+00:03:35.901 --> 00:04:17.241
+<v Michiel Trimpe>Ehm daarbij willen we dan wel de uitvoerbaarheid van OpenFTV houden natuurlijk. Dus we zullen dan bijvoorbeeld ODRL uitbreiden met eh een conformsToPolicy operand die eh Rego, CEL en Cedar ondersteunt, zoals het momenteel ook de OpenFTV ondersteund wordt. En maar ook de andere kant, wanneer we eh ODRL profielen gebruiken, zoals bijvoorbeeld het geografisch profiel, of wanneer we ODRL uitbreiden voor een domein, dus eh bijvoorbeeld ehm met IBLZ ook besproken over een complexe tijdrelatie in een toegangsbeleid. Ehm dat we dat soort nieuw geïntroduceerde termen ook afdwingbaar zouden kunnen maken in OpenFTV.</v>
+
+00:04:19.831 --> 00:04:55.711
+<v Gideon Zegwaard>Ik zou ook denken dat eh de bijvoorbeeld de de de voorwaarden systematiek zoals nu in de BRP gehanteerd wordt, dat dat ook een positie zou kunnen hebben in zo'n ODRL definitie. Als een als een plugin. Dus in het concept wat je definieert en dan op basis van dat dat concept wat je gedefinieerd hebt, kan je dan een een enforcement regel hebben van dit en dit en dat moet technisch gecheckt worden. die dan uitgedrukt is als voorwaarderegel zoals nu door de eh LOBRP gedefinieerd is. Ja. Ja. Ja, zeker. LOBRP. Ja, had ik hier net hier ook zeker gezien.</v>
+
+00:05:00.411 --> 00:05:49.551
+<v Michiel Trimpe>bedenken als we daarvoor aan een eh een drietrapsniveau waarbij we eh dus het algemeen beleid per dataset eh kunnen delen. Dus dit zijn dan inderdaad voor de de standaard voorwaarden vanuit het LOBRP. Eh dat we ook afnemer specifiek beleid kunnen benoemen. Dus zoals de autorisatiebesluiten bij de BRP zijn momenteel. En dat we ook scheiding per doel/algoritme/verwerking mogelijk maken. Dus de de doelbinding. Eh dus dat is wat je in de BRP dan ziet in de uitgeschreven tekst van hé, per doelbinding mag je dit en per per deze doelbinding mag je dat, et cetera, et cetera. Ehm en dat we, nou ja, dat je dat ook als afnemer dan wel aanbieder kan, of je als afnemer kan scheiden.</v>
+
+00:05:51.991 --> 00:05:55.311
+<v Michiel Trimpe>Dus dat zijn dan de primaire de drie niveaus waar we aan zitten te denken.</v>
+
+00:05:58.191 --> 00:06:01.311
+<v Michiel Trimpe>Als hier feedback op zijn, hoor ik het trouwens graag ondertussen.</v>
+
+00:06:01.661 --> 00:06:23.071
+<v Ren&#233; Kint>Ja, Michiel, ik heb daar een vraag over. Ik heb het net ook even ergens kort even gemeld. Ehm in in eh ehm andere stelsels die ik zie wordt het woord licenties gebruikt. Zoals wij dat ook kennen in allerlei eh hè eh allerlei eh open source projecten bijvoorbeeld hè, daar heb je ook van dat noemen ze dan licenties.</v>
+
+00:06:25.471 --> 00:06:54.321
+<v Ren&#233; Kint>Als we interoperabel willen zijn met die wereld die zichzelf in licenties heeft ingebonden, ehm moeten wij dan niet, of het is het is ik stel hem als vraag, maar ik voel een actie aan, ik voel een soort handeling aankomen. Ehm moeten wij ons daar ook op voorbereiden dat er ook een wereld is die die eh zeg maar veel veel meer in in in licenties praat. Dus in algemene eh termen en die wel redelijk gestandaardiseerd zijn.</v>
+
+00:06:58.651 --> 00:07:16.491
+<v Ren&#233; Kint>Eh nou ja, kijk naar het gemiddelde open source project hè, dan zie je dus gewoon standaard licenties die je kunt aanklikken. En eh onder deze licentie wil ik het graag allemaal eh eh publiceren. Gaan gaan wij dat stellen wij als eis dat je ODRL praat of of gaan wij ook iets verder in FTV en zeggen we oké, misschien moeten we een aantal standaard licenties in ODRL in ieder geval kunnen uitwisselen. Dat we dat ook misschien als een</v>
+
+00:07:13.361 --> 00:07:13.441
+<v Gideon Zegwaard>Ja.</v>
+
+00:07:16.491 --> 00:07:32.481
+<v Ren&#233; Kint>ja, als een use case of als eh eh eh eis zien eh bij het ontwikkelen van ons eh eh profiel.</v>
+
+00:07:34.121 --> 00:07:34.521
+<v Gideon Zegwaard>Ja.</v>
+
+00:07:34.281 --> 00:07:34.641
+<v Ren&#233; Kint>Ja.</v>
+
+00:07:36.521 --> 00:07:59.751
+<v Michiel Trimpe>Ja, wat de de eh in de vorige sessie hebben we gekeken naar dus de verschillende ODRL profielen. En de de licenties zijn eh ja, een een klassiek voorbeeld van de de het gebruikelijke ODRL profiel waarbij eh het informatiemodel van ODRL specificaties uitgebreid wordt met nieuwe concepten.</v>
+
+00:07:58.981 --> 00:08:04.141
+<v Ren&#233; Kint>Dus dan krijg je Dus het is een uitbreiding. Dus het is wel een het is dan een plugin ofzo, een plugin eh licenties.</v>
+
+00:08:03.511 --> 00:08:30.071
+<v Michiel Trimpe>Ja, dit dit past en waar die dat stukje plugins stond, dat is waar dit past. En we hebben toen destijds dus vorige week besproken dat dat dat dat voor FTV en Nederlandse overheid niet de juiste is om op te standaardiseren, omdat wij eh vanuit FTV voor de overheid dan voornamelijk zou zeggen: nee, gebruik zoveel mogelijk bestaande licenties en definieer het zelf waar nodig, maar dat is per organisatie of per toepassing, per use case.</v>
+
+00:08:31.111 --> 00:08:31.991
+<v Ren&#233; Kint>Oké.</v>
+
+00:08:31.191 --> 00:08:32.711
+<v Ren&#233; Kint>Ja, maar dat is wel</v>
+
+00:08:32.031 --> 00:08:44.051
+<v Ren&#233; Kint>Ja, dat is wel wat beperkend. Ja, dat is wat beperkend hè. Ik ik sprak iemand van DSGO, dus gebouwde omgeving. En die hebben dus dat licentiemodel erin zitten.</v>
+
+00:08:43.841 --> 00:08:47.925
+<v Michiel Trimpe>Ja, we ondersteunen het dus wel, maar dat eh het applicatieprofiel wat we</v>
+
+00:08:45.471 --> 00:08:46.031
+<v Ren&#233; Kint>Ja.</v>
+
+00:08:47.925 --> 00:08:58.222
+<v Michiel Trimpe>vanuit FTV standaardiseren is meer dan gericht op de pragmatische stukjes zoals nou, hoe halen we het exporteerbaar, welke eh titels en beschrijvingen geven we en hoe werken we dus hoe mappen we die doelbinding op refinements.</v>
+
+00:08:56.031 --> 00:08:56.471
+<v Ren&#233; Kint>Ja.</v>
+
+00:08:58.222 --> 00:09:00.926
+<v Michiel Trimpe>Dus het Nederlands profiel is meer gefocust op</v>
+
+00:08:59.431 --> 00:08:59.831
+<v Ren&#233; Kint>Ja.</v>
+
+00:09:00.926 --> 00:09:03.745
+<v Michiel Trimpe>hoe kunnen we het uitwisselbaar maken en visualiserbaar.</v>
+
+00:09:03.101 --> 00:09:03.461
+<v Ren&#233; Kint>Ja.</v>
+
+00:09:03.745 --> 00:09:07.081
+<v Ren&#233; Kint>Ja, en DSGO is meer op hoe gebruiken we het dan.</v>
+
+00:09:08.951 --> 00:09:11.551
+<v Ren&#233; Kint>Ja.</v>
+
+00:09:12.251 --> 00:09:16.076
+<v Michiel Trimpe>Ja, maar dit kan dus wel hè. Dus je die profielen voeg je dan toe.</v>
+
+00:09:13.881 --> 00:09:14.321
+<v Ren&#233; Kint>Ja.</v>
+
+00:09:16.076 --> 00:09:19.624
+<v Michiel Trimpe>En dat is de de inhoud. Dus wij wij doen dan meer de envelop en de structuur.</v>
+
+00:09:17.391 --> 00:09:19.471
+<v Ren&#233; Kint>Ja.</v>
+
+00:09:19.624 --> 00:09:24.891
+<v Michiel Trimpe>de kapstok. En wat je eraan hangt, dat is nog steeds uitbreidbaar op basis van ODRL.</v>
+
+00:09:25.331 --> 00:09:31.101
+<v Ren&#233; Kint>Ja, maar misschien is het wel een mooie use case en misschien in een volgende fase ofzo van de doorontwikkeling.</v>
+
+00:09:29.521 --> 00:09:32.031
+<v Gideon Zegwaard>Ja.</v>
+
+00:09:31.101 --> 00:09:33.291
+<v Ren&#233; Kint>Omdat die interoperabiliteit tussen</v>
+
+00:09:33.961 --> 00:09:39.475
+<v Michiel Trimpe>Ja. Ik moet het sowieso hier duidelijker aan toevoegen, want dat heb ik inderdaad hier niet expliciet benoemd dat het ook</v>
+
+00:09:37.571 --> 00:09:40.544
+<v Ren&#233; Kint>Ja, het is een soort het is een soort juridische</v>
+
+00:09:39.475 --> 00:09:40.201
+<v Gideon Zegwaard>Ja.</v>
+
+00:09:40.544 --> 00:09:46.371
+<v Ren&#233; Kint>interoperabiliteit hè, die je dan implementeert tussen partijen. Ja.</v>
+
+00:09:46.731 --> 00:09:59.716
+<v Michiel Trimpe>Ja. Ja, maar ik denk dat dat qua standaardisatie zou dat dan betekenen dat we dan één van die standaarden kiezen en zeggen: hé, dit wordt ook een Nederlandse standaard. Dus het eh de Ja. Ja.</v>
+
+00:09:58.111 --> 00:09:59.231
+<v Ren&#233; Kint>Ja.</v>
+
+00:09:59.716 --> 00:10:06.051
+<v Gideon Zegwaard>nodig van ODRL eh en welke eh welke eh eh standaard invullingen zijn daarvan die die voor ons meerwaarde bieden en dan die aanwijzen als als je dit wil, dan doe je het zo.</v>
+
+00:10:06.401 --> 00:10:09.321
+<v Ren&#233; Kint>Ja.</v>
+
+00:10:09.071 --> 00:10:30.201
+<v Michiel Trimpe></v>
+
+00:10:32.291 --> 00:10:48.341
+<v Ren&#233; Kint>Ja, oké, maar iemand moet het ook even doen. En eh misschien is het één keer doen, hè, dus zo'n bestaande licentie hier pakken uit zo'n DSGO eh stelsel ofzo. En dan bewijzen dat het kan is misschien wel een goede voor de volgende fase, dat we dat kunnen zien. Laten zien dat we die interoperabiliteit dan ook voor elkaar hebben.</v>
+
+00:10:50.261 --> 00:10:57.581
+<v Michiel Trimpe>Ja, we hebben later ook de de use cases, wellicht kunnen we daar ook als één van de items gewoon toevoegen. Ik denk dat het daar ook wel van toepassing kan zijn.</v>
+
+00:10:59.951 --> 00:11:22.331
+<v Michiel Trimpe>door Open FTV wat we ook willen in ieder geval is dat we willen kijken naar een een viewer voor het ODRL beleid. Eh dus een beetje net zoals ala Redoc eh ook iets wat je mogelijk in eh data catalogie kan gebruiken, zoals eh catalogus.datastelsel.nl. Eventueel data overheid. Eh dus dat lijkt ons ook waardevol.</v>
+
+00:11:25.271 --> 00:11:26.871
+<v Marcel Molenaar>Mag ik even even vragen?</v>
+
+00:11:27.081 --> 00:11:27.601
+<v Michiel Trimpe>Ja.</v>
+
+00:11:27.321 --> 00:11:31.841
+<v Marcel Molenaar>Nee, ik had mijn handje opgestoken, maar die wordt niet gezien blijkbaar, dus ik denk ik doe het zo even.</v>
+
+00:11:31.661 --> 00:11:33.141
+<v Michiel Trimpe>Sorry, ik ben naar de volgende.</v>
+
+00:11:33.571 --> 00:11:34.051
+<v Marcel Molenaar>Eh</v>
+
+00:11:36.171 --> 00:12:06.641
+<v Marcel Molenaar>ik wil ja, ik ik ben er een paar keer niet bij geweest eh door omstandigheden. Dus dat vind ik een beetje jammer. Mijn mijn vraag is een beetje die ODRL, dat daarin gaan we dus eh de ik zie mijn vraag is, is dat dan een eh eh een een soort van basistaal die vertaald kan worden naar allerlei andere talen voor jullie eh waardoor het een eh ehm ja, dat je met verschillende tooling dat in kan vullen. Is dat het doel wat eh wat hier nou aan zit?</v>
+
+00:12:08.851 --> 00:12:52.438
+<v Michiel Trimpe>Ja, dus we hebben besproken dat ODRL eh de meest gepaste taal is voor eh in ieder geval het mens leesbare eh toegangsbeleid. Dus het is wel machine en machine leesbaar, maar ook eh dus niet per se uitvoerbaar. Dus dat hebben we al besproken. Daar is het gewoon het het juiste formaat voor. Ehm en het is eh ja, daar heeft de juiste flexibiliteit daarvoor. En wat we nu hier ook voorstellen is dat we een beetje het beste van beide werelden willen combineren. Dus dat we het nog steeds mogelijk maken om je beleid vrijelijk uit te drukken met alle vrijheidsgraden die ODRL biedt. Dus daar kan je je eigen termen introduceren, kan je alles wat link data kan, kan daar ook in. Ja. En dat we ook specifiek wel inderdaad ook specifiek vastleggen, dus ons ons echt uitvoerbaar beleid, dus zoals in Open FTV geïmplementeerd is met gewoon concrete Rego policies eh en die zaken.</v>
+
+00:12:48.011 --> 00:12:48.211
+<v Marcel Molenaar>Ja.</v>
+
+00:12:52.438 --> 00:12:57.410
+<v Michiel Trimpe>kan je ook dan nog steeds mappen en distribueren via zo'n ODRL.</v>
+
+00:12:54.131 --> 00:12:54.291
+<v Marcel Molenaar>Oké.</v>
+
+00:12:57.410 --> 00:13:05.561
+<v Gideon Zegwaard>Oké.</v>
+
+00:13:05.891 --> 00:14:12.561
+<v Marcel Molenaar>Goed, dan ehm en dan wat is het doel daarvan? Want ik zou zeggen de de de leverancier die gaat controleren, hé, is iets goed of niet. Dus ehm eh wil je die eh eh die policies, wil je die delen met anderen en wat is het doel van het delen? Eh is dat eh ik kan me er één bij voorstellen, want je moet er bijvoorbeeld eh eh waarschijnlijk ook eh attributen aanleveren, want eh bijvoorbeeld in in de federatieve context kan ik me daar iets bij voorstellen, weet je wel? Dat iemand een een dienstafnemer roept een dienst van een leverancier aan. Nou, maar die die moet eh natuurlijk eh de policy afdwingen, niet degene die eh aan de andere kant zit, niet de afnemer, want ja, dan dan moet je daarop gaan vertrouwen. Dus dat doe je al zo dicht mogelijk bij de bron. Dus mijn vraag is, wat is daarin dan die de bedoeling dat we dit als standaard hebben? Dat is meestal om te kunnen uitwisselen. En in welke gevallen gaan we uitwisselen?</v>
+
+00:14:15.401 --> 00:14:37.121
+<v Gideon Zegwaard>Ja, dat ik zal daar wel wat van zeggen. Eh een een basisbehoefte is is dat we in de catalogus inzichtelijk willen hebben van het aanbod wat de voorwaarden zijn waaronder eh</v>
+
+00:14:37.561 --> 00:14:39.441
+<v Marcel Molenaar>Ja.</v>
+
+00:14:39.121 --> 00:15:07.961
+<v Michiel Trimpe>Het het volgende niveau is als daar eenmaal eh tot een eh aansluiting is gekomen hè, dus een een aanbieder en een afnemer die hebben bedacht, wij gaan inderdaad informatie met elkaar uitwisselen. Eh kan het zijn dat daar specifieke condities zijn vastgesteld. En die specifieke condities die kunnen aan de kant van de aanbieder liggen hè, dus de aanbieder die die eh controleert dat een bepaalde vraag alleen gesteld wordt of dat er alleen bepaalde gegevens geleverd worden.</v>
+
+00:15:10.001 --> 00:15:33.571
+<v Michiel Trimpe>kan ook liggen aan de kant van de afnemer, dus dat de afnemer bijvoorbeeld inzichtelijk maakt eh dat hij zijn toegang eh verleent via een beperkt aantal applicaties of voor een beperkte gebruikersgroep. Eh hè, dus het kan zijn dat eh ook de waarborgen aan de afnemerskant eh eh ingericht zijn die eh eh die dan eh inzichtelijk gemaakt worden aan de aanbieder.</v>
+
+00:15:34.871 --> 00:16:44.081
+<v Marcel Molenaar>Nou, ik ik vraag het hè, omdat ehm zeg maar er wordt nu ook gewerkt aan een afsprakenstelsel, moet ik het even goed zeggen, IAM eh even kijken, rijksbreed. En mijn vraag aan hun is weer van hé, eh als je dat doet, want dan gaan ze en toegang en en eh en identiteit hebben ze, dat waren twee eerdere eh eh afsprakenstelsels, maar die hebben ze samengevoegd. Mijn en dit past daar natuurlijk heel goed in. En mijn vraag is in eh als je daarnaar kijkt, in is eh eh dat eh overheidsorganisaties in de keten wat van elkaar kunnen afnemen, hè, API's of wat dan ook. Nou, en eh hoe hoe past dit daarin? En dat was eigenlijk de achtergrond van mijn vraag. Hey, is ODRL is ja, wat ik daarin mis is eh hoe weet jij als afnemer welke eh attributen je moet meegeven eh aan die eh aan die aanbieder, hè, de dienstaanbieder. En nou ja, dus mijn dat dat is de achtergrond van mijn vraag een beetje. Ik hoop dat het, ik weet niet of dat duidelijk is, anders moet je maar even vragen wat ik even doorvragen, maar eh</v>
+
+00:16:47.041 --> 00:16:59.678
+<v Michiel Trimpe>Ja, er zit dus inderdaad wel een een eh relatie in als ik als ik kijk naar het concept eh context van het FDS, eh dat is eh organisatie-organisatie uitwisseling. Dus wat daar de gedachte is, is dat ehm het vervolgens weer toegang verlenen naar individuele medewerkers</v>
+
+00:16:57.261 --> 00:16:57.581
+<v Marcel Molenaar>Precies.</v>
+
+00:16:59.678 --> 00:17:32.961
+<v Michiel Trimpe>dat dat bij dat dat eh door de ontvangende, de afnemende organisatie wordt ingericht. Eh en dat de afnemende organisatie dus eh eh valideert dat eh een medewerker de toegang heeft tot die API. Maar dat moet u dus wel inrichten. En het kan zijn dat je dus met elkaar afspreekt dat je hoe je dat doet, welke welk toegangsbeleid je daarbij toepast, dat je daar ook dingen over in inzicht over verstrekt aan eh aan de aanbieder.</v>
+
+00:17:33.971 --> 00:18:02.731
+<v Marcel Molenaar>Ja ja, want ik zou hem heel anders verwachten. Ik zou zeggen, degene die de data levert is verantwoordelijk om eh op zo dicht mogelijk bij die data de de de de de autorisatie uit te voeren, want anders als je anders kan iemand anders een een organisatie hacken en eh en die die gaat daar dan die gaat naar andere gaat die andere diensten eh aanvragen. Dus dan wordt hij heel eh eh gevoelig voor de voor inbraken.</v>
+
+00:18:01.951 --> 00:18:02.231
+<v Gideon Zegwaard>Ja.</v>
+
+00:18:03.481 --> 00:18:10.041
+<v Marcel Molenaar>Dus eh ik zou zeggen, dat wil je veel liever bij de bij de bij de aanbieder, de dienstaanbieder houden.</v>
+
+00:18:11.041 --> 00:18:42.201
+<v Michiel Trimpe>Mooi, we hebben straks ook nog een stukje voor het BRP voorstel waar je een beetje je wilt ergens eh beide werelden. Dus je wilt het ook ook eh kaderen aan de aanleveringskant. Maar als bron of als leverancier van data mag je vaak niet weten voor welke doelbinding iets specifiek gebruikt wordt. Dus je kan niet een autorisatie per doelbinding op gaan zetten, want dan eh ja, dan lek je daarmee de de reden van de bevraging naar van afnemer naar aanbieder.</v>
+
+00:18:43.021 --> 00:18:54.481
+<v Marcel Molenaar>Oké, maar dat is een op zich een goed punt. Ik wil het ook niet uitwerken nu, maar maar dat is de achtergrond van mijn vraag een beetje, dus eh dat wilde ik even, ik zal ga jullie lekker nog laten doorgaan nou.</v>
+
+00:18:52.321 --> 00:19:22.521
+<v Michiel Trimpe>BRP case hebben we een een opzetje hoe we dat zouden kunnen beproeven. Dus dat komt zo terug. Ja, en er speelt meer ook bij hè, je wil geen informatie over medewerkers lekken naar de aanbieder. Eh je wil ook het het beheer over eh wie mag wat wil je ook niet bij de aanbieder moeten inrichten. Hè, dus als er een functiewijziging is van een medewerker ofzo, dat je dat bij allerhande aanbieders weer opnieuw moet administreren voor wie dat geldt. Dus de de de het zijn eh nou ja, hier speelt er heel veel.</v>
+
+00:19:22.581 --> 00:19:23.341
+<v Marcel Molenaar>Helemaal eens.</v>
+
+00:19:22.601 --> 00:19:26.171
+<v Michiel Trimpe>Het is een complexe wereld en eh eh hier speelt er heel veel.</v>
+
+00:19:27.061 --> 00:19:28.181
+<v Marcel Molenaar>Helemaal eens. Ja.</v>
+
+00:19:29.321 --> 00:19:30.241
+<v Gideon Zegwaard>Ja.</v>
+
+00:19:29.651 --> 00:19:34.371
+<v Marcel Molenaar>Nee, maar bedankt, het is voldoende antwoord. Dank je, dankjewel. Ik eh vooral doorgaan nu.</v>
+
+00:19:35.741 --> 00:19:43.381
+<v Michiel Trimpe></v>
+
+00:19:45.651 --> 00:20:23.571
+<v Michiel Trimpe>En dat is dat we de ja, de de autorisatiebesluiten als experiment meer naar de afnemer willen verleggen. Eh dus we stellen een soort een contour van een BRP experiment voor, waarbij de afnemer zelf de autorisatiebesluiten eigenlijk beheert. En dat doet door per doelbinding eh fijnmazige bevraging te definiëren en de eigen regels voor de toegang. Eh en dat de afnemer dus meerdere doelbindingen definieert. Dus de gemeente definieert, nou, een hele set van fijnmazige doelbindingen voor verschillende taken die ze uitvoeren als voorbeeld.</v>
+
+00:20:25.731 --> 00:20:37.731
+<v Michiel Trimpe>eh en dat zij inzage in dat beleid bieden. Dus dat de ODRL eh nog een beeld kan worden. Eh en ook inzage in gebruik op basis van authorization decision log.</v>
+
+00:20:42.401 --> 00:20:49.281
+<v Michiel Trimpe>Even kijken. Ik ben nou eventjes aan het worstelen met mijn scherm hier met een enkel scherm. Eh dus je krijgt als eh</v>
+
+00:20:51.601 --> 00:20:57.161
+<v Michiel Trimpe>Oh ja, en eh en dit is dan een mooi haakje naar jou Marcel. Dus eh als afnemer definieer je dan een aantal doelbindingen.</v>
+
+00:20:59.171 --> 00:21:48.451
+<v Michiel Trimpe>eh en daar definieer je dan bijvoorbeeld in de BRP case ook welke velden je voor die subdoelbinding mag bevragen. Eh dat geheel is dan beschikbaar als ODRL eh wordt beschikbaar gemaakt als ODRL aan RVIG. Dus RVIG heeft wel inzicht, mogelijk in de doelbindingen die jij definieert als gemeente. En kan op basis daarvan eh samenstellen, dit is het geheel aan velden wat jij mogelijk mag bevragen. Dus dit is eigenlijk precies hetzelfde als wat nu al gebeurt voor de BRP. Ehm maar dan eh dus dus met fijnmazige eh hokjes of vinkjes per veld per doelbinding wordt dan naar de afnemer verlegd.</v>
+
+00:21:49.831 --> 00:22:24.681
+<v Marcel Molenaar>Ik ik zie eh eh de term doelbinding heel anders en daar komt misschien ook een misverstand vandaan. Bij ons eh heb je bijvoorbeeld eh even een voorbeeld te geven. We hebben artsen, die hebben permissie om medische informatie te zien, maar maar niet van elke burger in Nederland. En de afscherming naar oh, voor deze burger wel en deze niet, want deze zit in jouw werkzaamheden, dus daar heb je dat dat noem ik graag doelbinding, maar misschien ik weet niet of dat de beste term is, maar zo gebruik ik hem al jaren. Dus vandaar dat ik hem zo interpreteer.</v>
+
+00:22:25.811 --> 00:22:38.641
+<v Michiel Trimpe>Ja, ja, de term is laden en daarom had ik ook net de doel/verwerking/algoritme et cetera. Ehm maar wacht even hier.</v>
+
+00:22:41.651 --> 00:22:47.691
+<v Michiel Trimpe>kijken. Dus dit is dan het voorbeeld van dus concreet van eh de BRP.</v>
+
+00:22:51.081 --> 00:23:21.126
+<v Michiel Trimpe>Ehm nou, dan heb je dus hier bijvoorbeeld, dit noem ik dan even dan een doelbinding in deze context. Dus dit is dan gemeente verzoekt eh voor het opsporen van strafbare feiten hooguit om de velden die opgenomen zijn in bijlage 4A. Nou, dan heb je dus een hele set van ook voor de hier voor de Huisvestingswet 2014. Dus dit zijn dan fijnmazige doelbindingen noem ik het even die onderaan de keten gelinkt zijn aan</v>
+
+00:23:18.261 --> 00:23:18.341
+<v Axel van der Minne></v>
+
+00:23:21.126 --> 00:23:35.611
+<v Michiel Trimpe>ja, bijlage 1 met een concrete set van gegevens. Dus we hadden net bijlage 4. Dus hier de gegevensset waardering onroerende zaken op verzoek bijvoorbeeld.</v>
+
+00:23:38.341 --> 00:24:22.641
+<v Marcel Molenaar>Ja, ik eh ik zou zeggen de persoon over wie dat gaat, dat maakt hem fijnmazig. Je hebt aan de ene kant de fijnmazigheid van welke bij welke velden. Ja, kan helemaal eens. Ehm ja, bij ons, ik ik gebruik dat nooit als doelbinding, maar ik zal ik snap je nu, dus dankjewel. Ehm maar eh hoe hoe gaan jullie om dan met hé, deze eh afnemer aan de gemeentekant mag de of die mag dat ehm dus wel voor deze persoon zien, maar niet voor een andere persoon. Hoe ga je daarmee om? Dat is eigenlijk eh want eh wij doen wij proberen dat in intern wel te doen. Dus als wij als UWV toegang gaan geven aan anderen, ja, dan moeten we natuurlijk wel eh eh de</v>
+
+00:24:24.891 --> 00:24:27.251
+<v Marcel Molenaar></v>
+
+00:24:26.511 --> 00:25:05.203
+<v Michiel Trimpe>hebt een doelbinding voor jouw eigen gebruik gedefinieerd. En even los van de term of dat de juiste term is in deze context doelbinding, maar ik weet geen betere term. Maar die heb je daar gedefinieerd en daarin kan jij dus vastleggen eh intern ontsluiten wij dit, ontsluiten wij dit verder als je eh een training X gevolgd hebt voor gevoeligheidsniveau Y en als je eh deel uitmaakt van afdeling X.</v>
+
+00:25:04.851 --> 00:25:05.051
+<v Axel van der Minne>Ja.</v>
+
+00:25:05.203 --> 00:25:06.611
+<v Michiel Trimpe>maakt van afdeling X.</v>
+
+00:25:08.281 --> 00:25:08.681
+<v Marcel Molenaar>Nee, ja</v>
+
+00:25:08.331 --> 00:25:09.891
+<v Michiel Trimpe>als je organisatie B bent die</v>
+
+00:25:11.261 --> 00:25:15.295
+<v Axel van der Minne>Nee, het voorbeeld wat ik wel mooi vind is voor de recherche.</v>
+
+00:25:11.751 --> 00:25:11.951
+<v Michiel Trimpe></v>
+
+00:25:15.295 --> 00:25:27.147
+<v Axel van der Minne>Hè, eh je moet een rechercheur zijn om bij bepaalde data te mogen, maar je moet ook toegewezen zijn aan die casus om bij die data te mogen. Hè, dus dat zijn twee regels die allebei een beperking vormen in de resultatenset die jij mag zien.</v>
+
+00:25:24.771 --> 00:25:25.171
+<v Marcel Molenaar>Ja.</v>
+
+00:25:27.147 --> 00:25:29.381
+<v Axel van der Minne>in de resultatenset die jij mag zien.</v>
+
+00:25:30.481 --> 00:25:41.797
+<v Michiel Trimpe>Ja, en die moeten hier dan inderdaad in opgenomen zijn. Of eh ergens in de keten, maar in ieder geval. Dus en dat eh is precies inderdaad dan een voorbeeld van de twee dingen die je in je ODRL beleid expliciet benoemt.</v>
+
+00:25:41.797 --> 00:25:48.441
+<v Gideon Zegwaard>Ja, en dat is ook allemaal informatie die je niet ter beschikking wil stellen aan de aanbieder. Dus die kan dat niet beoordelen.</v>
+
+00:25:49.691 --> 00:25:56.535
+<v Marcel Molenaar>Ja, dat dat ligt er een beetje aan hoe je dat doet hè. Ik bedoel, wij doen het wel voor onze interne eh eh interne medewerkers, dus</v>
+
+00:25:52.721 --> 00:25:53.201
+<v Axel van der Minne>Ja.</v>
+
+00:25:56.535 --> 00:26:08.149
+<v Marcel Molenaar>eh ik vind het heel ongemakkelijk om dan te zeggen: nou, als we dan ergens anders vandaan komen, hoef ik dat niet te doen. Het het voelt onprettig. Op de een of andere manier, misschien kan het wel,</v>
+
+00:26:08.051 --> 00:26:08.731
+<v Axel van der Minne>Ja.</v>
+
+00:26:08.149 --> 00:26:15.891
+<v Marcel Molenaar>maar je wordt wel dan afhankelijk van dat elke afnemer dat ook goed heeft ingeregeld hè. Dus en ja,</v>
+
+00:26:15.881 --> 00:26:15.961
+<v Axel van der Minne>Ja.</v>
+
+00:26:16.731 --> 00:26:27.492
+<v Marcel Molenaar>hoe hoe ga je dat voor elkaar krijgen en wie houdt toezicht? Eh want daar daar krijg je dan mee te maken hè. Je moet een vertrouwensrelatie hebben. En ehm iemand</v>
+
+00:26:26.191 --> 00:26:28.431
+<v Axel van der Minne>Maar daar is die PDP's voor en</v>
+
+00:26:27.492 --> 00:26:27.881
+<v Marcel Molenaar>iemand</v>
+
+00:26:30.151 --> 00:26:48.763
+<v Michiel Trimpe>Ja, en dit is juist wat die vertrouwensrelatie faciliteert. Dus momenteel heb je die in de praktijk ook gewoon eh vaak al, meestal al, vaak bijna altijd al. Alleen momenteel heb je dus geen inzicht op het toegangsbeleid wat verder in de keten gehandhaafd wordt. En dit is dus expliciete manier om dat toezicht wel te kunnen gaan.</v>
+
+00:26:48.763 --> 00:27:08.281
+<v Gideon Zegwaard>En het is en het is ook goed kijken naar waar de verantwoordelijkheid ligt, hè. Ligt het ligt de verantwoordelijkheid op het controleren of het inderdaad een eh een rechercheur is die op die zaak toegewezen is. Hè, ligt het controleren of dat het geval is, ligt dat bij de aanbieder of bij de afnemer? Dat zou je je moeten afvragen in dit geval.</v>
+
+00:27:14.481 --> 00:27:15.001
+<v Axel van der Minne>Ja.</v>
+
+00:27:15.391 --> 00:27:41.631
+<v Marcel Molenaar>dat is een terechte vraag natuurlijk, maar ik denk dat er dat er bepaalde verantwoordelijkheden aan beide kanten zitten. Eh je hebt gewoon als eh beheerder van die data heb je bepaalde verantwoordelijkheden en hoe kunnen we daar dan goed invulling aan geven? Ik denk dus dus dat aan die vertrouwensrelatie dat er eh dat daar heel heel belangrijke eh voorwaarden aan moeten worden eh gesteld. Maar goed, dat is eh gaat misschien te ver voor nu. Ik ik snap nu in ieder geval waar eh hoe hoe jullie denken, dus ik kan dat makkelijker volgen nu. Dankjewel.</v>
+
+00:27:43.501 --> 00:27:43.621
+<v Michiel Trimpe>Oké.</v>
+
+00:27:47.021 --> 00:28:20.551
+<v Michiel Trimpe>gaan we even verder met het laatste stukje van de eh PAP eh contourenvoorstel. Eh is dat we dan ook zouden willen simuleren eh hoe je statistieken of geaggregeerde statistieken zou kunnen delen. Eh dus dat je bijvoorbeeld wel afspreekt, ehm we hebben inzicht in eh hoeveel bevragingen per doelbinding, noem ik het nog maar even steeds, eh gedaan worden per dag. Dus dat je op die manier wel eh enige verantwoording kan bieden zonder eh geïndividuele gebruikersdata eh te delen.</v>
+
+00:28:23.331 --> 00:28:30.091
+<v Michiel Trimpe>Ehm dus dat is iets wat we ooit opgezet hebben. Ik weet niet of het iedereen goed lijkt om dat ook te te experimenteren en te beproeven.</v>
+
+00:28:33.681 --> 00:28:47.641
+<v Gideon Zegwaard>Dat is een vorm van invulling om dat vertrouwen vorm te geven. Ja. Je hebt een een soort van validatie nodig waarin je als afnemer kan verantwoorden aan de aanbieder dat je doet wat je zegt dat je doet.</v>
+
+00:28:51.671 --> 00:29:23.751
+<v Michiel Trimpe>Inderdaad. Dus dat zouden we willen beproeven. En dan ook wat belangrijk is dat we ook een een inzage API eh zouden willen opzetten in ieder geval in de basis voor het bevragen van individuele authorization decision log eh records. Dus stel dat je een trace langs ziet komen met een vermoeden van misbruik of wat dan ook.</v>
+
+00:29:26.291 --> 00:29:39.771
+<v Michiel Trimpe>Dus het zal wat anders zijn.</v>
+
+00:29:43.851 --> 00:29:56.681
+<v Marcel Molenaar>Nou dat dat lijkt mij heel interessant. Die valt denk ik dan weer onder dezelfde eh aanpak. Want dat is ook een API die je dan ook weer openstelt. Eh met ook gevoelige data.</v>
+
+00:29:55.271 --> 00:30:11.391
+<v Michiel Trimpe>Ja, ja, die zal zelfs nog waarschijnlijk interessanter zijn, want waarschijnlijk zal je daar ook een approval step in willen hebben. Niet eh dat je niet zomaar mag alles mag bevragen bij je afnemers, maar dat je aan je afnemer wil vragen of je het mag bevragen.</v>
+
+00:30:12.691 --> 00:30:25.571
+<v Marcel Molenaar>Ja, nee, kijk, ik ik denk dat het heel terecht is eh je moet fraudeonderzoek kunnen doen, hè. Want dat is eigenlijk wat je hiermee wil. En eh en daar moet je goede afspraken over maken. Maar ook ook daar zit weer die vertrouwensrelatie in, dus dat eh ja.</v>
+
+00:30:26.871 --> 00:30:38.791
+<v Michiel Trimpe>Zeker. Ja, daarom is het dus ook echt een simulatie en experiment. Dus dit eh zijn hoe zou het kunnen werken, even los van of eh de organisaties echt het zo in gaan regelen, in willen regelen.</v>
+
+00:30:42.511 --> 00:30:54.891
+<v Michiel Trimpe>Oké. Ehm als geheel is dit eh een goede contour voor wat we zouden kunnen simuleren met de BAP. Ik zie ook Hans gelukkig in de call. Ik ben heel benieuwd naar jouw eh afdronk.</v>
+
+00:30:58.371 --> 00:31:04.041
+<v Hans Hendrikman>Ik zit gewoon even heel aandachtig te luisteren. Eh ik denk dat het een prima plan is om het gewoon eh te proberen en kijken wat eruit komt.</v>
+
+00:31:05.731 --> 00:31:06.131
+<v Michiel Trimpe>Ja.</v>
+
+00:31:07.141 --> 00:31:11.381
+<v Hans Hendrikman>Als je niet begint, dan eh blijft het een papierexercitie, dus eh</v>
+
+00:31:12.431 --> 00:31:19.551
+<v Michiel Trimpe>Inderdaad. Dat was ook de vorige keer de uitkomst dat we teveel eh op het droge hebben zitten werken.</v>
+
+00:31:19.731 --> 00:31:22.171
+<v Hans Hendrikman>En misschien levert het ons ook nog verrassende inzichten op.</v>
+
+00:31:25.831 --> 00:31:29.801
+<v Michiel Trimpe>Dat eh hoop ik. Duimpje van Marcel.</v>
+
+00:31:33.851 --> 00:31:52.771
+<v Michiel Trimpe>Oké. Eh nou, dan ga ik door naar de, ja, dit is eigenlijk een samenvatting van hetzelfde, dus dat kunnen we op zich wel skippen. Eh voor de wat we ook willen proeven is de eh BRO-keten. En dan voornamelijk het geografisch toegangsbeleid van een bronhouder naar een landelijke voorziening toetsen.</v>
+
+00:31:55.711 --> 00:32:37.481
+<v Michiel Trimpe>Ehm en daarbij dus ook eh de geografisch toegangsbeleid toetsen. Dus het idee is dat we een aantal bronhouders simuleren die hun eigen geografisch gebaseerd toegangsbeleid hebben op de eigen dataset. Eh die definiëren dat in ODRL en die leveren dat aan aan een centrale landelijke voorziening. Eh dus maar de bronhouder blijft daar verantwoordelijk voor, kan het ook aanpassen, kan daar veranderingen in eh of kan dat veranderen en automatisch aanleveren. En de landelijke voorziening die handhaaft dan het toegangsbeleid van de bronhouder.</v>
+
+00:32:40.601 --> 00:33:02.561
+<v Michiel Trimpe>Ehm dat betekent dat we een policy enforcement point voor de geo-API zullen moeten schrijven. Eh dat willen we dan ook beproeven op eh tiles of map-gebaseerde API's, waar dus grote hoeveelheid features in kunnen zitten. Zodat we ook kunnen beproeven, werkt dit echt op nou ja, op schaal. Want dat is één van de grote uitdagingen van de geo-wereld altijd.</v>
+
+00:33:06.581 --> 00:33:36.751
+<v Michiel Trimpe>Ehm en ja, dus eigenlijk is dit dan heel kort, maar dat lijkt ons interessant als basis voor eh de BRO-keten. Dus een ODRL-vocabulaire, niet een standaard, maar gewoon voor ons voor de voor de simulatie voor geografisch toegangsbeleid. Eh een aantal gesimuleerde bronhouders met hun eigen toegangsbeleid. Een centraal ontsluitingspunt die die ODRL ontvangt en geo-API PEPs met redelijke performance en grote feature counts om dit geheel te beproeven.</v>
+
+00:33:40.791 --> 00:33:48.511
+<v Michiel Trimpe>Ehm hoe klinkt dat? Volgens mij René, je zit er van de ook deels van de geo-kant in. Hans</v>
+
+00:33:47.411 --> 00:33:54.431
+<v Ren&#233; Kint>Ja zeker, dit klinkt goed. Dit klinkt goed. Dit is precies wat wij ook wilden wilden uitproberen, dus het is klinkt heel goed.</v>
+
+00:33:55.281 --> 00:33:57.841
+<v Michiel Trimpe>Oké. Nice.</v>
+
+00:34:00.911 --> 00:34:07.031
+<v Michiel Trimpe>Hans, zit jij er ook nog steeds vanuit de de de geo-kant, Hans Gevers, vanuit de geo-kant in?</v>
+
+00:34:09.861 --> 00:34:14.381
+<v Hans Schevers>Ja, de vooral de de link data kant eh natuurlijk in combinatie met geo. Ehm dus eh dus</v>
+
+00:34:12.531 --> 00:34:13.811
+<v Michiel Trimpe></v>
+
+00:34:16.201 --> 00:34:20.321
+<v Hans Schevers></v>
+
+00:34:22.541 --> 00:34:24.341
+<v Michiel Trimpe></v>
+
+00:34:24.131 --> 00:34:25.771
+<v Ren&#233; Kint></v>
+
+00:34:27.961 --> 00:34:37.954
+<v Ren&#233; Kint>Want defensie in de in de dataspace fysieke leefomgeving waar ik dus met defensie ook eh over zit te stachelen.</v>
+
+00:34:34.251 --> 00:34:34.851
+<v Gideon Zegwaard>Ja.</v>
+
+00:34:37.954 --> 00:34:51.331
+<v Ren&#233; Kint>Die hebben het vaak hierover. Dus misschien is het wel handig om ze meteen mee te nemen, dan eh kunnen we dat meteen in één keer dat varkentje in één keer wassen.</v>
+
+00:34:49.451 --> 00:34:49.771
+<v Michiel Trimpe>Ja.</v>
+
+00:34:52.491 --> 00:34:53.971
+<v Michiel Trimpe>Ja, dat was de</v>
+
+00:34:53.021 --> 00:34:58.421
+<v Ren&#233; Kint>Ik heb wel, ik heb een contact. Ik heb een contact voor je, dus dat dat kunnen we vrij goed snel regelen.</v>
+
+00:34:59.341 --> 00:35:09.150
+<v Michiel Trimpe>Super. Dat was inderdaad de vervolgstap van hoe willen we dit aanvliegen en idealiter willen we natuurlijk gewoon de organisaties waar het over gaat aan gaan schrijven en betrekken.</v>
+
+00:35:09.150 --> 00:35:23.241
+<v Gideon Zegwaard>En vooral ook interessant als hier gewoon een aantal concrete policies uit kunnen komen hè. Dus dat het allemaal niet theoretisch is, maar dat je gewoon eentje een een aantal policies hebt die je ook die je ook daadwerkelijk in het veld tegen zou kunnen komen.</v>
+
+00:35:23.061 --> 00:35:25.141
+<v Ren&#233; Kint>En die hebben we al en die kennen we dus al. Ja.</v>
+
+00:35:26.041 --> 00:35:31.961
+<v Michiel Trimpe>Ja, precies. Die willen we echt ophalen aan beide kanten. Dus de BRO case en de BRP case.</v>
+
+00:35:34.111 --> 00:35:58.631
+<v Michiel Trimpe>Nou, van RVG weet ik wel wie ik kan benaderen als we daar eh verder mee willen. En dan ook voor de RVG eh voor de BRP-keten hebben we natuurlijk ook de afnemerskant en dat zijn lijkt ons hoogstwaarschijnlijk gemeentes. En waarschijnlijk wordt het dan of of Utrecht. Ik heb ook wel contact met Amsterdam, dus eh. Maar mocht eh iemand anders van de BRP-keten dit willen beproeven of mocht je iemand kennen en denkt: hé, dat die organisatie is daar misschien ook heel geïnteresseerd in, dan houden we ons aanbevolen.</v>
+
+00:36:05.631 --> 00:36:15.591
+<v Michiel Trimpe>Oké. Maar dan ehm ja, met akkoord van iedereen, dan is dit dan eh zijn dit de contouren voor wat we gaan beproeven in de tweede helft van het jaar.</v>
+
+00:36:21.281 --> 00:36:54.761
+<v Michiel Trimpe>Oké. En als we het dan hebben over eh eerste helft van het jaar en tweede helft van het jaar, dan is dit ook een mooi bruggetje naar het klassieke evaluatiepunt. Want we hebben het eerste half jaar er nu op zitten. En wij zijn als team erg benieuwd hoe is dat dit jaar ervaren. Eh ik zal zelf nog niet al te veel inkleuren, maar ik heb een Mirobord gemaakt. De link net in de chat gezet. Als het goed is, is het openbaar en kan iedereen hier in.</v>
+
+00:37:14.401 --> 00:37:24.801
+<v Michiel Trimpe>Dat is kapot en hij doet niet. Ehm. Nou, en dan wil ik iedereen uitnodigen om ehm eventjes klassiek, dus aan de linkerkant eh</v>
+
+00:37:27.801 --> 00:37:44.451
+<v Michiel Trimpe>even evaluatie. Dus wat ging er goed en wat kan er beter voor het afgelopen half jaar. En aan de rechterkant nou ja, wat zouden we kunnen veranderen? En de laatste is dan eh de laatste, wat gaan we anders doen, willen we samen in nadat de eerste drie ingevuld zijn.</v>
+
+00:37:49.021 --> 00:37:49.811
+<v Gideon Zegwaard>Ja.</v>
+
+00:41:03.381 --> 00:41:11.221
+<v Michiel Trimpe>rustiger te worden op het bord. Dus als je nog iets toe wil voegen, doe het nog even lekker.</v>
+
+00:42:55.681 --> 00:42:56.041
+<v Michiel Trimpe>als of eh</v>
+
+00:42:58.371 --> 00:43:00.051
+<v Michiel Trimpe>dat we die tijd bereikt hebben.</v>
+
+00:43:02.461 --> 00:43:03.461
+<v Michiel Trimpe>dan stel ik voor dat we</v>
+
+00:43:05.731 --> 00:43:06.724
+<v Michiel Trimpe>sticky.</v>
+
+00:43:06.724 --> 00:43:07.291
+<v Gideon Zegwaard>Nou.</v>
+
+00:43:20.221 --> 00:43:23.111
+<v Michiel Trimpe>Oké. Nou, gaan we even bespreken wat</v>
+
+00:43:25.251 --> 00:43:45.131
+<v Michiel Trimpe>de resultaten zijn. Dus wat ging er goed? Nou, het Mido proces. We zijn inderdaad eh met de vorige twee standaarden eh door de PTGU heen. Grotendeels. Het is nu als het goed is een hamerstuk of het is nu een hamerstuk geworden. Dat is heel mooi. Eh fijn dat de werkgroepen online zijn.</v>
+
+00:43:49.111 --> 00:44:10.841
+<v Michiel Trimpe>organisatie en actief en voortgang. We hebben veel kennis, de nieuwe inzichten op aan het doen. Open gesprekken en constructieve houding en een complex probleemgebied toch behoorlijk weten te concretiseren. Dankjewel daarvoor, want het is inderdaad een pittige kluif.</v>
+
+00:44:13.691 --> 00:44:22.481
+<v Michiel Trimpe>Nou, op zich een een goed duidelijk thema. Dus actief, open, lekker bezig en veel kennis.</v>
+
+00:44:25.191 --> 00:44:31.011
+<v Michiel Trimpe>Eh wat kan er beter? Ehm nou, een aantal keer kennisniveau.</v>
+
+00:44:33.181 --> 00:44:50.701
+<v Michiel Trimpe>Ik kan me daar wel wat bij voorstellen, want er zijn natuurlijk ondertussen best een langlopende werkgroep al, best veel sessies en we gaan in principe vaak uit van nou ja, dat dat men het geheel gevolgd heeft, maar dat zal ondertussen voor heel veel mensen niet of maar heel deels nog maar heel beperkt gelden.</v>
+
+00:44:56.241 --> 00:45:04.351
+<v Michiel Trimpe>Nou, we kunnen misschien, zodat ik met wat gaan we anders doen, kijken wat we daaraan kunnen doen. Misschien een keer een inventarisatie of</v>
+
+00:45:04.351 --> 00:45:05.284
+<v Gideon Zegwaard>Catch-up sessie.</v>
+
+00:45:05.284 --> 00:45:06.801
+<v Michiel Trimpe>Catch-up sessie inderdaad.</v>
+
+00:45:10.551 --> 00:45:24.441
+<v Michiel Trimpe>Maar in ieder geval dat kan ik me wat bij voorstellen. Nog meer denken/schetsen in de keten, end to end. Ehm, een gezamenlijk beeld van de eindarchitectuur opbouwen, inclusief de werking.</v>
+
+00:45:26.631 --> 00:45:31.431
+<v Michiel Trimpe>Ja, dus de vertrouwensrelatie tussen afnemende en aanbiedende partijen expliciet managen.</v>
+
+00:45:33.981 --> 00:45:37.141
+<v Michiel Trimpe>terugvinden informatie, agenda eerder.</v>
+
+00:45:39.731 --> 00:45:46.891
+<v Michiel Trimpe>praktische oplossing. Ik denk dat praktische oplossing veel met wat kunnen we veranderen van de theorie naar de praktijk te maken heeft.</v>
+
+00:45:50.101 --> 00:46:07.141
+<v Michiel Trimpe>de huidige sessie nog steeds onduidelijk. Ik weet niet wie dit geschreven had.</v>
+
+00:46:11.791 --> 00:46:34.484
+<v Remo van Rest>Ja, dat heb ik geschreven eh Michiel. Eh zeker met deze sessie, daar heb je inderdaad een aantal concrete casussen neergelegd. Dus dat daar ben ik heel benieuwd naar wat daar uitkomt natuurlijk. En voor ons eh zeg maar binnen de IbelZ is het echt wel even zoeken van oké, hoe gaan we dat ODRL nu echt eh inzetten?</v>
+
+00:46:32.051 --> 00:46:32.131
+<v Michiel Trimpe>Ja.</v>
+
+00:46:34.484 --> 00:46:36.231
+<v Remo van Rest>Ja, dat is nog wel een tijdje geleden en</v>
+
+00:46:41.011 --> 00:46:46.051
+<v Remo van Rest>Ja. Zeker het ODRL stuk ja. Ja.</v>
+
+00:46:41.131 --> 00:46:45.331
+<v Michiel Trimpe>Ja, ja, dat is net ODRL sessie.</v>
+
+00:46:47.991 --> 00:46:55.311
+<v Remo van Rest>Ja, we zijn natuurlijk heel druk bezig met het Authzen eh deel nog, om daar eh een goede plek aan te geven. Dus ja, we lopen er een beetje achteraan wat dat betreft.</v>
+
+00:47:01.121 --> 00:47:09.441
+<v Michiel Trimpe>welke impact heeft ODRL binnen jullie specifieke of ja, wat wat is er handig om binnen jullie context hiermee te doen?</v>
+
+00:47:06.311 --> 00:47:06.471
+<v Remo van Rest>Ja.</v>
+
+00:47:09.731 --> 00:47:10.891
+<v Remo van Rest>Precies dat. Ja.</v>
+
+00:47:10.161 --> 00:47:17.531
+<v Michiel Trimpe>Ja. Ja, ik weet niet of dat meer eh opvolging ook aan die sessie moeten geven, hadden kunnen geven.</v>
+
+00:47:18.351 --> 00:47:22.231
+<v Remo van Rest>Ja, dat moeten we ook zeker doen hoor. En het is ook een kwestie van eh tijd natuurlijk.</v>
+
+00:47:22.431 --> 00:47:30.096
+<v Michiel Trimpe>Ja, dat is ook wel interessant. Ik weet niet of Igor er ook, ja, Igor zit ook in de call. Ja, want ook ergens wat ik in deze sessie ook gedeeld heb is ergens ook</v>
+
+00:47:27.661 --> 00:47:27.981
+<v Remo van Rest>Ja.</v>
+
+00:47:30.096 --> 00:47:52.181
+<v Michiel Trimpe>teruggekomen op feedback die ik vorige keer aan de andere kant heb gegeven, want jullie hadden eh het voorstel voor dus die IbelZ tijdsrelatie in ODRL opnemen. Destijds zei ik in de meeting: oh, misschien is dat niet handig, maar ergens is dit juist de de samenvatting: oh, misschien is dat juist heel handig geweest. Dus dit is juist weer een eh een draai daarop. Dus dat we die richting wel meer op gaan.</v>
+
+00:47:51.161 --> 00:47:52.851
+<v Remo van Rest>Ja.</v>
+
+00:47:53.331 --> 00:48:03.331
+<v Michiel Trimpe>Ik zal sowieso met jullie dan eh of ja, dat we dat weer verder op gaan pakken. Dus die snap ik. Ik weet niet of jullie achtergrondgeluid hebben. Er is hier iemand aan het boren, dus ehm als je iets geks hoort, weet je dat.</v>
+
+00:48:06.181 --> 00:48:17.071
+<v Michiel Trimpe>Even kijken naar de wat kunnen we veranderen? Ehm ja, de informatievoorziening. Daar heb ik eh wat wat steekjes laten vallen. Dus we hebben altijd de oude pagina.</v>
+
+00:48:19.841 --> 00:48:42.221
+<v Michiel Trimpe>eh VNG realisatie. Dus de deze pagina, daar staat onder meedoen en de werkgroep. hebben we hier notulen. En hier wordt in principe eh alles bijgehouden. Ik heb de laatste weken heb ik zelf ja, eh iets te weinig tijd gehad, dus dat loopt een beetje achter.</v>
+
+00:48:41.731 --> 00:48:44.531
+<v Axel van der Minne>Misschien kun je die heel even in de chat zetten, Michiel.</v>
+
+00:48:46.381 --> 00:48:47.461
+<v Michiel Trimpe>Ja, dat zal ik sowieso doen.</v>
+
+00:48:51.841 --> 00:49:04.601
+<v Michiel Trimpe>En ook inderdaad de agenda's rondsturen. Ik ik stuurde probeer de agenda's vaak op de donderdag voor de werkgroep te sturen. Is dat ook al te laat? Willen mensen dat ook nog eerder? Of is het meer dat ik dat de laatste twee keer vergeten ben?</v>
+
+00:49:11.281 --> 00:49:35.841
+<v Marcel Molenaar>Nou, van mij uit eh is het niet eh ik zie daar niet zo'n probleem in, maar eh wat ik zelf merk, ik kan er niet altijd bij zijn en dan is het fijn om inderdaad iets iets terug te kunnen lezen ofzo, zodat ik ik heb het idee dat ik op sommige punten wat achterloop bij eh bij jullie en ehm en eh qua kennis en dat is een beetje lastig. Dus het liefst ga ik dat weer bijwerken dat ik dan</v>
+
+00:49:35.501 --> 00:49:35.621
+<v Michiel Trimpe>Ja.</v>
+
+00:49:37.351 --> 00:49:37.431
+<v Marcel Molenaar>Ja.</v>
+
+00:49:38.421 --> 00:49:57.581
+<v Michiel Trimpe>denk ik dat het voornamelijk is dus wat ik eh tot nu toe al dus de laatste weken heb ik even wat steekjes laten vallen. Excuses daarvoor, maar wat ik nu tot nu toe deed is de donderdag voor de werkgroep eh stuur ik een mailtje rond met een link naar de notulen van de vorige werkgroep en de agenda voor komende week.</v>
+
+00:50:01.771 --> 00:50:02.891
+<v Michiel Trimpe></v>
+
+00:50:05.211 --> 00:51:02.551
+<v Michiel Trimpe>liked it. Ja, dus een aantal dingen is gewoon veel inderdaad meer hands-on. Maar dat is denk ik ook wat we allemaal wel voelden. Het komt deels ook omdat we geen ontwikkelaars hadden, maar dat gaat als het goed is nu veranderen vanaf 1 juli. Eh en gewoon meer dingen doen. Ik denk dat dat gewoon iedereen, dat iedereen dat herkent. Eh dat het iets gewoon te droog en te theoretisch zijn geweest dit half jaar. Dat het tijd is om te gaan klussen. Check. Nou, volgens mij is dat eh heel duidelijk bij iedereen gedragen. Eh en dan een hackathon eh daarbij doen lijkt me een hele leuke. Deze samenhang met eh andere gerelateerde stelsels bekijken. Ja, die is van jou Marcel Molenaar denk ik. MM, ja.</v>
+
+00:51:05.051 --> 00:51:27.761
+<v Marcel Molenaar>Ja, dat eh dat klopt. Ik ik noemde er net al eentje hè, dus eh en en daar heb ik toevallig volgende week een overleg over. En bij hun heb ik juist weer zoiets: hé, eh ik zie daar nog heel weinig in juist over autorisaties. En ik ik ga kijken hoe ver ik dat bij elkaar kan krijgen. Dat dat eh dus eh misschien dat eh maar dan hoor je daar nog wel over.</v>
+
+00:51:29.261 --> 00:51:36.501
+<v Michiel Trimpe>Graag. Het blijft ons altijd moeilijk. Er zijn zoveel initiatieven en heel veel, nog veel meer initiatieven waar je eigenlijk bij aangehaakt hoort te zijn.</v>
+
+00:51:37.951 --> 00:51:38.031
+<v Marcel Molenaar>Ja.</v>
+
+00:51:38.151 --> 00:51:45.192
+<v Michiel Trimpe>je hebt overal waar we gekoppeld kunnen worden zodat we in ieder geval van elkaar weten, heel graag. Zeker inderdaad dat afsprakenstelsel IAM klinkt heel relevant voor ons.</v>
+
+00:51:42.881 --> 00:51:43.081
+<v Marcel Molenaar>Ja.</v>
+
+00:51:45.192 --> 00:51:46.591
+<v Michiel Trimpe>Dus dat eh</v>
+
+00:51:46.921 --> 00:51:47.121
+<v Marcel Molenaar>Ja.</v>
+
+00:51:47.771 --> 00:51:48.131
+<v Michiel Trimpe>eh</v>
+
+00:51:50.711 --> 00:52:06.181
+<v Ren&#233; Kint>Eh Marcel, ik ben ook heel erg geïnteresseerd in dat afsprakenstelsel IAM. Want eh in de dataspace waar ik me mee bezighoud, de fysieke leefomgeving, eh daar is dat plateau 1. Dat is het allerbelangrijkste wat we moeten regelen. Dus eh we gaan snel aanhaken.</v>
+
+00:52:07.061 --> 00:53:28.791
+<v Marcel Molenaar>Oké, nou ehm eh even kijken. Ik heb eh eh ik heb nu contact met eh eh eh hoe heet het? Met Anne Schreijer en met Niels Overbeek, even uit mijn hoofd gezegd, van van van het Rijk en die ehm ehm eh eh hoe heet het? Dit gaat dus ook uit van het Rijk. Het waren eerst twee aparte eh eh stelsels, zeg maar, eentje voor toegang, eentje voor identiteit, maar dat hebben ze nu samengevoegd. En ehm en daar hebben ze een 0.4 versie van hun van hun, sorry, van het eh het afsprakenstelsel nu geschreven en daarover ga ik, daar heb ik een review op gedaan. Toen hebben we afgesproken en ik heb met de vraag of wij een keer over konden praten. Dus dat eh dat ga ik nu volgende week doen. Dus ik zal eh en juist omdat ik eigenlijk eh ja, mijn vorm van doelbinding, sorry, daar eh daar ook in in miste, weet je wel. Dus daarom heb ik zoiets: ah, dit is één van de dingen ehm die daarin juist opgenomen moeten worden. Maar bij hun heb ik ook, hé, zij zijn ook een beetje in afzondering aan het kijken, terwijl ja, dit is ook een heel belangrijk iets en hoe hoe krijg je dat bij elkaar? Dus dat is een beetje mijn gedachte erbij. Ja. Dus eh nou, ik ik hoop dat ze hierbij op een gegeven moment misschien ook eens een keer aan kunnen sluiten. Ik zal wel vragen.</v>
+
+00:53:41.591 --> 00:53:56.831
+<v Michiel Trimpe>Ik heb een aantal dingen van wat gaan we veranderen er gelijk naar wat gaan we anders doen gesleept, omdat ik gewoon hele concrete voorstellen waren. Dus een een hackathon, eh echt ontwikkelen. Om zelf even betere agenda's en notulen doorsturen, wat meer netter oppakken.</v>
+
+00:54:00.691 --> 00:54:06.211
+<v Michiel Trimpe>Zijn er nog andere dingen van zeggen: hé, dat moeten we, dat willen we echt doen of anders doen komend jaar?</v>
+
+00:54:10.671 --> 00:54:13.424
+<v Axel van der Minne>Nee, ja, ik ik had een beetje een puntje van eh is het is het zinvol om te kijken wat andere FDS-werkgroepen doen?</v>
+
+00:54:10.691 --> 00:54:10.771
+<v Gideon Zegwaard>Nee.</v>
+
+00:54:13.424 --> 00:54:18.212
+<v Axel van der Minne>om daar de verbinding mee te leggen. Oh ja, die had ik die had ik die was niet van veranderen, maar het was een beetje zo van ja, is dat is dat een idee?</v>
+
+00:54:17.041 --> 00:54:17.681
+<v Gideon Zegwaard>Ja.</v>
+
+00:54:18.212 --> 00:54:40.661
+<v Axel van der Minne>Willen we dat? Zien we daar meerwaarde in? Want ik ik sta er een beetje ja, hè, in de werkgroep data inzicht loop ik wel te te roepen van over deze werkgroep, maar ik weet niet of dat of dat van deze kant ook weer behoefte gevoeld wordt naar andere werkgroepen. Dus ik gooi het gewoon even in de groep.</v>
+
+00:54:44.201 --> 00:54:44.761
+<v Gideon Zegwaard>Ja.</v>
+
+00:54:46.871 --> 00:54:53.191
+<v Gideon Zegwaard>met eh andere van Brussel en een keer met Danny eh kletsen. Die twee doen de meeste werkgroepen bij voor FDS in ieder geval.</v>
+
+00:54:54.021 --> 00:54:54.381
+<v Axel van der Minne>Ja.</v>
+
+00:54:55.151 --> 00:55:03.441
+<v Michiel Trimpe>Oké. Inderdaad, dat is een goede, dus dat we de degene die de de de andere FDS-werkgroepen</v>
+
+00:55:01.721 --> 00:55:01.801
+<v Axel van der Minne>Ja.</v>
+
+00:55:03.441 --> 00:55:06.221
+<v Michiel Trimpe>breder aansluiten, maar bij inzicht,</v>
+
+00:55:06.221 --> 00:55:13.511
+<v Gideon Zegwaard>dat heeft natuurlijk relatie met het inzichtelijk maken van de randvoorwaarden bijvoorbeeld.</v>
+
+00:55:13.381 --> 00:55:20.591
+<v Axel van der Minne>Nee, ik denk dat die regels heel heel veel gebruik kan maken van van van metadata die ergens vast in ergens vastgelegd is.</v>
+
+00:55:23.971 --> 00:55:25.931
+<v Axel van der Minne>en dat zit weer heel erg in data inzicht.</v>
+
+00:55:30.881 --> 00:55:48.701
+<v Michiel Trimpe>Ja, oké. Dat is een mooie om bij de anders doen op te nemen. Gaan we naar kijken. Nog meer laatste punten? Of ja, misschien kunnen we beter over naar de agenda of wat we doen met de agenda en de vakanties. Nog twee minuten.</v>
+
+00:55:51.151 --> 00:56:16.251
+<v Michiel Trimpe>Dus over het algemeen hebben we een vakantiestop. Volgens mij is Noord dit jaar vroeg en bij ons begint het volgens mij over twee eh is is de volgende al een vakantieperiode. Eh willen we eh wanneer willen we de werkgroepen de vakantie eh stop geven? Dus eh zijn er mensen die graag de volgende sessie nog wel door willen laten gaan? Of is dat al een goede om te starten?</v>
+
+00:56:18.641 --> 00:56:24.241
+<v Michiel Trimpe>om te starten met de te starten met de stop, dus om eh de vakantiestop al in te laten gaan.</v>
+
+00:56:29.851 --> 00:56:59.161
+<v Michiel Trimpe>Het voelt voor mij als een eh logisch moment dat wij onze ontwikkelaar binnen krijgen, eh ontwikkelaars, twee zelfs. Eh en dat wij dan ook gewoon echt wel eventjes wat kunnen klussen, eh opwerken tijdens de vakantie en dan na de vakantie terug kunnen komen. Zou wel betekenen dat de eerste werkgroep waarschijnlijk al tijdens de vakanties van eh Midden- en Zuid-Nederland vallen. Dus de en de laatste weken daarvan.</v>
+
+00:57:10.471 --> 00:57:10.871
+<v Michiel Trimpe>agenda</v>
+
+00:57:17.111 --> 00:57:18.671
+<v Michiel Trimpe>Nee, dit is geen goede kalender, maar</v>
+
+00:57:22.691 --> 00:57:33.331
+<v Michiel Trimpe>Dus dan de de volgende zou dan zijn 6, 20 en 3 zou wegvallen en dan zouden we 17 augustus weer beginnen. Of nee, 18 augustus weer beginnen.</v>
+
+00:57:38.151 --> 00:57:39.271
+<v Michiel Trimpe>Werkt dat voor iedereen?</v>
+
+00:57:40.431 --> 00:57:41.191
+<v Axel van der Minne>Bij mij is het wel.</v>
+
+00:57:42.251 --> 00:57:45.691
+<v Gideon Zegwaard>Ik ben dan nog vrij, maar dat eh laat het geen belemmering zijn.</v>
+
+00:57:53.911 --> 00:57:57.971
+<v Axel van der Minne>Jullie ook. Yo. Tot na de zomer. Hoi.</v>
