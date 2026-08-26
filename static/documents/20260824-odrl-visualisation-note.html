@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ODRL Visualisations</title>
+<title>ODRL Visualisations — basic version</title>
 <style>
   :root {
     --ground: #FBFCFD; --paper: #FFFFFF; --ink: #1E2933; --ink-soft: #52616E;
@@ -58,6 +58,19 @@
   .req.should { border: 1.5px solid var(--accent); color: var(--accent); }
   .issue-tag { color: var(--issue); }
   hr { border: none; border-top: 1px solid var(--line); margin: 2.5rem 0; }
+
+  /* Sectie-skelet: example-frame + gelabelde Enables/Without-regels, zodat de
+     opbouw requirements → example → enables → without → recommendation
+     zichtbaar is. Lichte Turtle-kleuring: subject, literal, commentaar. */
+  .ex { margin: 1.3rem 0; border: 1px solid var(--line); border-left: 4px solid var(--accent); border-radius: 6px; background: var(--paper); overflow: hidden; }
+  .ex .ex-tag { display: block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); padding: 0.45rem 1rem 0; }
+  .ex pre { margin: 0; border: none; border-radius: 0; background: transparent; padding: 0.5rem 1rem 0.9rem; font-size: 0.86rem; line-height: 1.55; }
+  .ex .tt-c { color: var(--ink-soft); font-style: italic; }
+  .ex .tt-s { color: var(--accent); font-weight: 650; }
+  .ex .tt-l { color: var(--issue); }
+  .kv { display: grid; grid-template-columns: 6.5rem 1fr; gap: 0.15rem 0.9rem; margin: 0.9rem 0; align-items: start; }
+  .kv .kv-tag { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); padding-top: 0.3rem; }
+  .kv p { margin: 0; }
 </style>
 </head>
 <body>
@@ -67,18 +80,19 @@
 <li><a href="#introduction">Introduction</a></li>
 <li><a href="#1-labels">1. Labels</a></li>
 <li><a href="#2-reusable-nodes">2. Reusable nodes</a></li>
-<li><a href="#3-collections-of-targets">3. Collections of targets</a></li>
-<li><a href="#4-links-between-offers-and-agreements">4. Links between offers and agreements</a></li>
+<li><a href="#3-named-collection-hierarchies">3. Named collection hierarchies</a></li>
+<li><a href="#4-links-between-policies">4. Links between policies</a></li>
 <li><a href="#5-versions-and-time">5. Versions and time</a></li>
-<li><a href="#6-what-degrades">6. What degrades</a></li>
-<li><a href="#a-odrl-ap-nl-specific">A. ODRL-AP-NL specific</a></li>
+<li><a href="#6-grouping-dimensions">6. Grouping dimensions</a></li>
+<li><a href="#7-realisation-links">7. Realisation links</a></li>
+<li><a href="#8-domain-forms">8. Domain forms</a></li>
 </ul>
-</div></nav>
+</div>
+</nav>
 <main>
-<p class="eyebrow">Unofficial Draft — basic version</p>
-<h1>ODRL Visualisations</h1>
-<p class="subtitle">The triples an ODRL policy needs, on top of valid ODRL, so a generic viewer can render it.</p>
-
+<p class="eyebrow">Unofficial Editor's Draft</p>
+<h1>ODRL Visualisations — basic version</h1>
+<p class="subtitle">Requirements and patterns for keeping ODRL policies renderable, explainable, and editable by generic tooling.</p>
 
 <h2 id="introduction">Introduction</h2>
 <p>The requirements below make it possible to visualise ODRL policies
@@ -86,123 +100,426 @@ with generic tooling: one viewer that renders any policy as a
 readable document, without code per profile or per dataset.</p>
 <p>This note assumes valid ODRL 2.2 policies.
 It lists only the triples a policy needs <strong>on top of that</strong>,
-so a viewer can name, group, date, link, and trace what it shows.
-Every requirement below is used by a working viewer today
-(the ODRL-AP-NL visualiser). Nothing here is speculative.</p>
-<p>Words used: <strong>needs</strong> = without this triple the feature does not work.
-<strong>should</strong> = without this triple the feature works but reads worse.</p>
-
+so a viewer can name, group, date, link, and trace what it shows.</p>
+<p>Examples are Turtle with the usual prefixes;
+<code>ex:</code> is an example namespace.</p>
+<p>Terms used: <strong>needs</strong> = without this triple the functionality
+does not work. <strong>should</strong> = it works, but reads worse.
+Nothing here is fatal when missing: the failure mode is
+always readability. Each section ends with what the triples
+enable and what is lost without them.</p>
 <h2 id="1-labels">1. Labels</h2>
-<p>The viewer never invents names. Names come from the data.</p>
+<p>Names come from the data — a tool cannot invent them.</p>
 <ul>
 <li>Every IRI shown to a person <strong>needs</strong> one of:
-<code>rdfs:label</code>, <code>skos:prefLabel</code>, or <code>dct:title</code>.</li>
+  <code>rdfs:label</code>, <code>skos:prefLabel</code>, or <code>dct:title</code>.</li>
 <li>This holds for: actions, targets, parties, left operands, operators,
-right-operand values, classes, and container documents.
-ODRL core terms are the exception: the viewer carries their words itself.</li>
-<li>Labels <strong>should</strong> carry a language tag (<code>@nl</code>, <code>@en</code>).
-The viewer picks the label that matches the user's language.
-In English mode: <code>@en</code>, then no tag, then <code>@nl</code>. In Dutch: the reverse.</li>
-<li>No label at all → the viewer shows the last segment of the IRI.</li>
-<li>A blank node with no label and no name-like property shows as
-"(anonymous)". This is honest but unreadable. Give things labels.</li>
+  right-operand values, classes, and policy identities (section 5).</li>
+<li>Labels <strong>should</strong> carry a language tag, so a tool can pick
+  the label that matches the reader's language preference.</li>
+<li>Labels <strong>need</strong> to sit in the same dataset or endpoint as the
+  policy data: tools resolve them together with the policy,
+  not from the open web.</li>
+<li>Terms <strong>should</strong> also carry a short definition
+  (<code>skos:definition</code>, <code>dct:description</code> or <code>rdfs:comment</code>, with a
+  language tag): tools can reveal it as an explanation on demand.
+  Like labels, definitions sit in the same dataset or endpoint as
+  the policy data.</li>
 </ul>
-<p>In SPARQL mode the viewer fetches labels <strong>one hop</strong> from the policy.
-So labels <strong>need</strong> to sit in the same endpoint as the policy data.</p>
-
+<p>Policies may assume that labels for the ODRL core vocabulary itself
+are present: for ODRL 2, visualisers ship a standard label bundle.</p>
+<div class="ex"><span class="ex-tag">Example</span><pre><code><span class="tt-s">ex:policy1</span> odrl:permission [ odrl:action ex:consult ] .
+<span class="tt-s">ex:consult</span> rdfs:label <span class="tt-l">"raadplegen"@nl</span> , <span class="tt-l">"consult"@en</span> .</code></pre></div>
+<div class="kv"><span class="kv-tag">Enables</span><p>Tools can show every part of a policy in human words
+instead of IRIs, in the reader's language, and readers can ask what
+a term means without leaving the document.</p></div>
+<div class="kv"><span class="kv-tag">Without it</span><p>Readers see an IRI;
+without a language tag, possibly a label in the wrong language;
+without a definition, a term is only its name.</p></div>
+<blockquote>
+<p><strong>Recommendation for ODRL 3</strong> — define the core vocabulary's
+labels as part of the vocabulary itself.</p>
+</blockquote>
 <h2 id="2-reusable-nodes">2. Reusable nodes</h2>
 <ul>
 <li>Rule nodes may be blank nodes, but reuse <strong>needs</strong> IRIs:
-a rule shared by an Offer and an Agreement <strong>needs</strong> to be
-the <em>same IRI node</em> in both.
-The viewer then folds it on the agreement card into one row:
-"from the offer (n duties)".
-With copied blank nodes the same text repeats on every agreement.</li>
+  a rule shared between policies (for example by an Offer and
+  the Agreements that accept it) <strong>needs</strong> to be
+  the <em>same IRI node</em> in all of them.</li>
 </ul>
+<div class="ex"><span class="ex-tag">Example</span><pre><code><span class="tt-s">ex:offer1</span>     a odrl:Offer ;     odrl:obligation ex:duty1 .
+<span class="tt-s">ex:agreement1</span> a odrl:Agreement ; odrl:obligation ex:duty1 .
 
-<h2 id="3-collections-of-targets">3. Collections of targets</h2>
+<span class="tt-s">ex:duty1</span> a odrl:Duty ; odrl:action ex:report .</code></pre></div>
+<div class="kv"><span class="kv-tag">Enables</span><p>Tools can show a shared offer term once,
+instead of repeating it in full on every agreement.</p></div>
+<div class="kv"><span class="kv-tag">Without it</span><p>The same rule text repeats on every
+agreement, and nothing shows that they all rest on
+a single offer term.</p></div>
+<h2 id="3-named-collection-hierarchies">3. Named collection hierarchies</h2>
+<p>The members of a large collection are rarely a flat list: they sit
+in a hierarchy of named levels from the domain — for example
+series, files, and records in an archive.</p>
 <ul>
-<li>A collection lists its members with <code>dct:hasPart</code>.</li>
-<li>Each member <strong>should</strong> have an <code>rdf:type</code> from the domain
-(for example <code>brp:Rubriek</code>), next to <code>odrl:Asset</code>.
-The viewer groups members under the label of that class.</li>
-<li>That domain class (the <code>rdf:type</code> value) <strong>needs</strong> a label per language
-(for example <code>brp:Rubriek</code> with "Rubriek"@nl, "Data item"@en).
-The class label becomes the group heading.</li>
-<li>Members without a domain type all land in one flat group. Nothing breaks.</li>
+<li>Each member <strong>should</strong> carry an <code>rdf:type</code> for its level,
+  next to <code>odrl:Asset</code> (for example <code>ex:Series</code>, <code>ex:File</code>,
+  <code>ex:Record</code>).</li>
+<li>Each of those domain classes <strong>needs</strong> a label per language
+  (for example <code>ex:File</code> with "File"@en, "Dossier"@nl).</li>
 </ul>
+<div class="ex"><span class="ex-tag">Example</span><pre><code><span class="tt-s">ex:series3</span> a odrl:Asset , ex:Series ; odrl:partOf ex:archive1 .
+<span class="tt-s">ex:file12</span>  a odrl:Asset , ex:File ;   odrl:partOf ex:series3 .
+<span class="tt-s">ex:record7</span> a odrl:Asset , ex:Record ; odrl:partOf ex:file12 .
 
-<h2 id="4-links-between-offers-and-agreements">4. Links between offers and agreements</h2>
-<ul>
-<li>Agreement → Offer: <code>prov:wasDerivedFrom</code> or <code>dct:references</code>,
-where the object is typed <code>odrl:Offer</code>.
-This gives the "agreements under this offer" list.
-The type check matters: the same predicates also point at laws
-and documents, and those must not show up as offers.</li>
-</ul>
-
-<h2 id="5-versions-and-time">5. Versions and time</h2>
-<p>The viewer shows one card per policy, with a version navigator.
-Plain ODRL has no version model, so all of this is extra.</p>
-<ul>
-<li>A version container is a node that links its versions:
-container → version with <code>dct:hasPart</code> or <code>pav:hasVersion</code>,
-or the inverse, version → container with <code>prov:specializationOf</code>.</li>
-<li>Alternative: a node that lists policies with <code>odrl:hasPolicy</code>
-(or <code>dcat:hasPolicy</code>) <strong>and</strong> itself carries <code>dct:valid</code>
-is treated as a version container.</li>
-<li>Version data on each version:
-<code>dct:valid</code> — the period in which it applies;
-<code>dct:issued</code> — when it was published;
-<code>prov:wasRevisionOf</code> — the previous version.</li>
-<li>Status is computed, not stored: current / future / superseded / terminated.
-Terminated = the container has versions but none applies now.</li>
-<li>An old version does not need an ODRL type.
-It counts as a version if it carries one of the date properties above.
-It <strong>should</strong> still carry its own rules if you want people to read the old text.</li>
-</ul>
-
-<h2 id="6-what-degrades">6. What degrades</h2>
-<p>Nothing above makes the viewer crash when missing.
-The failure mode is always readability:</p>
-<table>
-<thead><tr><th>Missing</th><th>Result</th></tr></thead>
+<span class="tt-s">ex:Series</span> rdfs:label <span class="tt-l">&quot;Series&quot;@en</span> .<span class="tt-c">   # labels: section 1</span>
+<span class="tt-s">ex:File</span>   rdfs:label <span class="tt-l">&quot;File&quot;@en</span> .
+<span class="tt-s">ex:Record</span> rdfs:label <span class="tt-l">&quot;Record&quot;@en</span> .</code></pre></div>
+<div class="kv"><span class="kv-tag">Enables</span><p>Tools can group the members of a large collection
+under meaningful headings.</p></div>
+<div class="kv"><span class="kv-tag">Without it</span><p>The members can only be shown
+as one flat group.</p></div>
+<h2 id="4-links-between-policies">4. Links between policies</h2>
+<p>A link between two policies is a <code>prov:wasDerivedFrom</code>
+between two nodes that are both typed as policies —
+any subclass of <code>odrl:Policy</code>: <code>odrl:Set</code>, <code>odrl:Offer</code>,
+<code>odrl:Agreement</code>, <code>odrl:Request</code>, <code>odrl:Ticket</code>,
+<code>odrl:Assertion</code>. The pair of types gives the link
+its meaning:</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>From</th>
+<th>To</th>
+<th>Meaning</th>
+</tr>
+</thead>
 <tbody>
-<tr><td>label on an IRI</td><td>IRI tail shown</td></tr>
-<tr><td>language tag</td><td>wrong-language label may show</td></tr>
-<tr><td>domain type on members</td><td>one flat member group</td></tr>
-<tr><td>version dates</td><td>no version navigator, no status</td></tr>
-<tr><td>same-IRI shared rules</td><td>duplicated rule text on every agreement</td></tr>
-<tr><td>type check on offer links</td><td>laws show up as offers</td></tr>
+<tr>
+<td><code>odrl:Agreement</code></td>
+<td><code>odrl:Offer</code></td>
+<td>the agreement accepts the offer</td>
+</tr>
+<tr>
+<td><code>odrl:Agreement</code></td>
+<td><code>odrl:Request</code></td>
+<td>the agreement answers the request</td>
+</tr>
+<tr>
+<td><code>odrl:Request</code></td>
+<td><code>odrl:Offer</code></td>
+<td>the request asks for the offer</td>
+</tr>
 </tbody>
-</table>
-<p>The rule of thumb behind all sections:
-<strong>everything a person needs to read the policy must be in the triples.</strong>
-If the viewer needs profile code to name or explain something,
-the data is incomplete — fix the data, not the viewer.</p>
+</table></div>
+<p>A pair that is not in this table still reads generically
+as "derived from that policy".</p>
+<div class="ex"><span class="ex-tag">Example</span><pre><code><span class="tt-s">ex:offer1</span>     a odrl:Offer .
 
-<h2 id="a-odrl-ap-nl-specific">A. ODRL-AP-NL specific</h2>
-<p>Two profile constructions get special rendering.
-All other ODRL-AP-NL patterns live in the ODRL-AP-NL specification;
-they render as normal labelled properties and need no mention here.</p>
-<h3 id="a1-purpose-rules">A.1 Purpose rules</h3>
-<ul>
-<li>The viewer shows a permission as a <strong>purpose</strong> rule
-(its own colour and word) when the action carries a refinement with
-<code>odrl:leftOperand odrl:purpose</code>. Use that pattern — not a
-profile-specific property — if you want purpose rendering.</li>
-<li>The purpose value (the right operand) <strong>needs</strong> a label.</li>
-</ul>
-<h3 id="a2-coverage">A.2 Coverage</h3>
-<ul>
-<li>A machine-enforced artifact (a policy bundle, Rego module, …) is typed
-(for example <code>apnl:PolicyArtifact</code>) and declares
-<code>prov:wasDerivedFrom &lt;rule-uid&gt;</code> for every rule it covers.
-The rules it points at <strong>need</strong> an <code>odrl:uid</code>.</li>
-<li>The viewer then marks each rule: "technically enforced · ‹artifact›"
-or "not technically enforced". Uncovered rules stay visible.</li>
-</ul>
+<span class="tt-s">ex:request1</span>   a odrl:Request ;
+    prov:wasDerivedFrom ex:offer1 .<span class="tt-c">               # asks for the offer</span>
 
+<span class="tt-s">ex:agreement1</span> a odrl:Agreement ;
+    prov:wasDerivedFrom ex:offer1 , ex:request1 .<span class="tt-c"> # accepts / answers</span></code></pre></div>
+<div class="kv"><span class="kv-tag">Enables</span><p>Tools can connect each agreement to the offer
+it accepts, to list the agreements under an offer, and to
+show where any policy came from.</p></div>
+<div class="kv"><span class="kv-tag">Without it</span><p>The reference reads
+as a plain document reference.</p></div>
+<blockquote>
+<p><strong>Recommendation for ODRL 3</strong> — define dedicated properties
+for these links.</p>
+</blockquote>
+<h2 id="5-versions-and-time">5. Versions and time</h2>
+<p>Plain ODRL has no version model, so all of this is extra.</p>
+<ul>
+<li>Every version of a policy is itself a full, typed policy.</li>
+<li>Each version points at the version-independent identity of
+  the policy with <code>prov:specializationOf</code>; that identity node
+  carries the <code>dct:title</code> shared by the versions.</li>
+<li><code>schema:validFrom</code> / <code>schema:validThrough</code> — the period in which
+  the version applies, typed <code>xsd:date</code>; the version in force
+  omits <code>schema:validThrough</code>. Status is computed by comparing
+  dates, which <strong>needs</strong> typed values.</li>
+<li><code>dct:issued</code> — when the version was published, as <code>xsd:date</code>
+  (or <code>xsd:dateTime</code>).</li>
+<li><code>prov:wasRevisionOf</code> — the previous version, by IRI.</li>
+<li>Status is computed, not stored: current / future / superseded /
+  terminated. Terminated = the identity has versions but none applies now.</li>
+</ul>
+<div class="ex"><span class="ex-tag">Example</span><pre><code><span class="tt-s">ex:policy-v2</span> a odrl:Agreement ;<span class="tt-c">              # in force</span>
+    prov:specializationOf ex:policy ;
+    prov:wasRevisionOf ex:policy-v1 ;
+    dct:issued <span class="tt-l">&quot;2026-01-15&quot;^^xsd:date</span> ;
+    schema:validFrom <span class="tt-l">&quot;2026-02-01&quot;^^xsd:date</span> .
+
+<span class="tt-s">ex:policy-v1</span> a odrl:Agreement ;<span class="tt-c">              # superseded</span>
+    prov:specializationOf ex:policy ;
+    dct:issued <span class="tt-l">&quot;2024-05-20&quot;^^xsd:date</span> ;
+    schema:validFrom <span class="tt-l">&quot;2024-06-01&quot;^^xsd:date</span> ;
+    schema:validThrough <span class="tt-l">&quot;2026-02-01&quot;^^xsd:date</span> .
+
+<span class="tt-s">ex:policy</span> a prov:Entity ;<span class="tt-c">                    # the identity</span>
+    dct:title <span class="tt-l">&quot;Access policy&quot;@en</span> .</code></pre></div>
+<div class="kv"><span class="kv-tag">Enables</span><p>Tools can present all versions of a policy as one whole,
+let the reader move between them, and show which version applies today.</p></div>
+<div class="kv"><span class="kv-tag">Without it</span><p>There is no version navigation
+and no status.</p></div>
+<blockquote>
+<p><strong>Recommendation for ODRL 3</strong> — bring versioning into the
+language itself: policies that change over time are the rule,
+not the exception, and today every profile has to assemble
+its own version model from outside vocabularies.</p>
+</blockquote>
+<h2 id="6-grouping-dimensions">6. Grouping dimensions</h2>
+<p>When a policy's rules vary along a common axis, the data
+can declare that axis:</p>
+<ul>
+<li>A left operand may be declared <code>a qb:DimensionProperty</code>
+  (a deliberate borrowing from the Data Cube vocabulary).
+  Tools then group sibling rules by the value of that
+  operand's refinement, one group per value.</li>
+<li>The dimension is expressed as a plain refinement on the
+  action, with a core left operand where one exists.</li>
+<li>The labels of the operand and its values (section 1)
+  become the level name and the group headings.</li>
+<li>Grouping <strong>needs</strong> unambiguous membership: per rule at most
+  one refinement on the declared dimension, with operator
+  <code>odrl:eq</code> and a single right operand.
+  Rules without the dimension stay outside the groups.</li>
+<li>With more than one dimension, <code>sh:order</code> on the operand
+  gives the nesting order — lowest order outermost. Dimensions
+  without <code>sh:order</code> follow, in a stable but unspecified order.
+  A reader may pivot that order in the tool; the declaration
+  states the default, not a constraint.</li>
+</ul>
+<div class="ex"><span class="ex-tag">Example</span><pre><code><span class="tt-s">ex:channel</span> a qb:DimensionProperty ; sh:order 1 ;
+    rdfs:label <span class="tt-l">&quot;channel&quot;@en</span> .<span class="tt-c">                    # labels: section 1</span>
+
+<span class="tt-s">ex:rule1</span> odrl:action ex:distribute-print .
+<span class="tt-s">ex:distribute-print</span> rdf:value odrl:distribute ;
+    odrl:refinement [
+        odrl:leftOperand  ex:channel ;
+        odrl:operator     odrl:eq ;
+        odrl:rightOperand ex:print ] .
+
+<span class="tt-s">ex:rule2</span> odrl:action ex:distribute-broadcast .<span class="tt-c">   # same shape, ex:broadcast</span></code></pre></div>
+<div class="kv"><span class="kv-tag">Enables</span><p>Tools can fold a flat list of rules into a
+hierarchy: one group per value of the dimension, with the
+variants beneath it.</p></div>
+<div class="kv"><span class="kv-tag">Without it</span><p>The rules show as a flat,
+repetitive list.</p></div>
+<blockquote>
+<p><strong>Recommendation for ODRL 3</strong> — define a native marker for
+left operands that are single-valued per rule
+(at most one <code>odrl:eq</code> refinement with a single value),
+so tools can group on them without the borrowed
+<code>qb:DimensionProperty</code> declaration.</p>
+</blockquote>
+<h2 id="7-realisation-links">7. Realisation links</h2>
+<p>A policy states what must hold; something else realises it —
+a technical artifact outside the policy, or another element
+of the policy. A realisation link records which node realises
+which element, so that relation can be shown instead of guessed.</p>
+<p>A realisation link is a <code>prov:wasDerivedFrom</code> whose <strong>target</strong>
+gives the link its meaning — the same doctrine as section 4,
+one level down, aimed at elements rather than at whole policies:</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>From</th>
+<th>To</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>any node</td>
+<td>rule with <code>odrl:uid</code></td>
+<td>the node realises the rule itself: assignee, action, target</td>
+</tr>
+<tr>
+<td>any node</td>
+<td>named condition</td>
+<td>the node enforces that condition</td>
+</tr>
+<tr>
+<td>named condition</td>
+<td><code>odrl:Duty</code></td>
+<td>the condition realises the duty</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>The reading comes from the target, not the source: deriving from a
+  rule or a named condition is what makes the link a realisation link.
+  The realising node itself needs only a label and, preferably, a type
+  and description from its own domain (sections 1 and 3) — a policy
+  bundle, a rule module, a materialised authorisation table. Which
+  classes those are is a matter for profiles, not for this note.</li>
+<li>A <strong>rule</strong> is a Permission, Prohibition or Duty with an <code>odrl:uid</code> —
+  those are the three subclasses of <code>odrl:Rule</code>. A Duty counts whichever
+  property carries it: <code>odrl:duty</code> on a permission, a policy-level
+  <code>odrl:obligation</code>, or a <code>consequence</code> or <code>remedy</code>.</li>
+<li>A <strong>named condition</strong> is a node typed <code>odrl:Constraint</code> or
+  <code>odrl:LogicalConstraint</code> sitting in <code>odrl:constraint</code> or in an
+  <code>odrl:refinement</code> — on a rule, on its action, or on a party or asset
+  collection.</li>
+<li>A derivation that points at a whole <strong>policy</strong> is not a realisation
+  link: realisation runs to rules and conditions, one by one. Links between
+  policies keep their section 4 meaning, and any other derivation stays plain
+  provenance.</li>
+<li>Conditions that are to be realisable <strong>need</strong> an IRI: a blank node
+  has no address to point at. Blank conditions stay allowed; they simply
+  cannot be pointed at, and tools say nothing about them.</li>
+<li>Both granularities are needed. A realising node mostly enforces single
+  conditions, so a link to the rule alone cannot tell a rule with one of
+  three conditions enforced from one with all three.</li>
+</ul>
+<p><strong>Markers on a rule or a condition.</strong> What may be <em>expected</em> of a rule or of
+one of its conditions is a separate question from what is <em>actually</em> realised,
+and the data can say it. Two markers borrowed from DPV (the W3C Data Privacy
+Vocabulary) do that — a deliberate borrowing like <code>qb:DimensionProperty</code> in
+section 6, and the same punning shape: an extra <code>rdf:type</code> on the instance.</p>
+<ul>
+<li><code>dpv:TechnicalMeasure</code> — a rule or condition typed this <strong>is</strong> the technical
+  measure. It delegates: what stands behind it is named by its IRI right
+  operand, so it is the natural carrier of the realisation links above — they
+  then sit in the policy, next to the rule they are about, and the thing behind
+  them stays purely descriptive (name, hash, download URL; how such a node is
+  presented: section 8). It is never itself the target of a realisation link
+  (that would be circular), and it does not count towards status. In practice a
+  condition carries it; on a rule it is the mirror image, and allowed.</li>
+<li><code>dpv:OrganisationalMeasure</code> — a rule or condition typed this is secured
+  outside the machinery: in a work instruction, when accounts are handed out, in
+  supervision. It applies undiminished and stays fully visible, but nothing has
+  been left undone, so it does not count towards status either.</li>
+<li>A <strong>rule</strong> typed with either marker is secured <strong>as a whole</strong> — not just some
+  aspect of it, but who bears it, what it prescribes and on what — so it falls
+  outside the status <strong>together with all of its named conditions</strong>: nothing is
+  expected of them either.</li>
+<li>An <strong>unmarked</strong> rule or named condition is ordinary normative content: it is
+  meant to be enforced technically, and it counts.</li>
+<li>Markers state what may be expected; <code>prov:wasDerivedFrom</code> stays the only
+  thing that records what is actually enforced. Marking something
+  organisational is not a way to make it disappear — the requirement stays in
+  the policy, only the expectation changes.</li>
+<li>Status per rule is computed, not stored: fully realised = the rule
+  itself and every <strong>counting</strong> named condition of it are realised; partly =
+  one of the two; not = neither. Counting = unmarked, so "fully realised"
+  means: everything that is meant to be enforceable is enforced. A marked rule
+  has no status at all — there is nothing to compute.</li>
+</ul>
+<div class="ex"><span class="ex-tag">Example</span><pre><code><span class="tt-s">ex:rule1</span> a odrl:Permission ; odrl:uid ex:rule1 ;
+    odrl:action [ rdf:value ex:consult ; odrl:refinement ex:measure1 ] ;
+    odrl:constraint ex:cond1 , ex:cond2 ,
+        [ odrl:leftOperand ex:trained ] .<span class="tt-c">        # blank: cannot be pointed at</span>
+
+<span class="tt-c"># The realising side, standing in the policy itself. Equally valid: hang the</span>
+<span class="tt-c"># same prov:wasDerivedFrom on ex:bundle1 — this section says "any node".</span>
+<span class="tt-s">ex:measure1</span> a odrl:Constraint , dpv:TechnicalMeasure ;
+    odrl:leftOperand  ex:request ;
+    odrl:operator     ex:conformsTo ;
+    odrl:rightOperand ex:bundle1 ;<span class="tt-c">               # what stands behind it</span>
+    prov:wasDerivedFrom ex:rule1 , ex:cond1 .
+
+<span class="tt-s">ex:bundle1</span> a ex:PolicyBundle ;<span class="tt-c">                   # its class is domain</span>
+    dct:title <span class="tt-l">"Access bundle"@en</span> .<span class="tt-c">               # vocabulary, not ODRL</span>
+
+<span class="tt-s">ex:cond1</span> a odrl:Constraint ;<span class="tt-c">                     # unmarked: counts, and is realised</span>
+    odrl:leftOperand  ex:searchType ;
+    odrl:operator     odrl:eq ;
+    odrl:rightOperand ex:byPostcode ;
+    prov:wasDerivedFrom ex:duty1 .<span class="tt-c">               # realises the duty</span>
+
+<span class="tt-s">ex:cond2</span> a odrl:Constraint , dpv:OrganisationalMeasure ;<span class="tt-c">   # applies, does not count</span>
+    odrl:leftOperand  ex:timeOfRequest ;
+    odrl:operator     ex:within ;
+    odrl:rightOperand ex:officeHours .
+
+<span class="tt-s">ex:duty1</span> a odrl:Duty ; odrl:action ex:restrictSearch .</code></pre></div>
+<div class="kv"><span class="kv-tag">Enables</span><p>Tools can show, per element, what realises it
+and what it realises in turn, and to walk that chain in both directions:
+from a realising node to the rules and conditions it carries, and from a
+duty back to the conditions that realise it. Conditions that nothing
+enforces stay visible, and the markers let a tool say <em>why</em> — technical
+measure, organisational measure, or simply not enforced.</p></div>
+<div class="kv"><span class="kv-tag">Without it</span><p>Realisation can only be guessed at the level of whole
+policies, so a partly enforced rule reads as either fully enforced or
+not at all; and without the markers every unenforced condition reads as an
+omission, including the ones nothing was ever going to enforce.</p></div>
+<blockquote>
+<p><strong>Recommendation for ODRL 3</strong> — define a dedicated property for
+realisation links (for example <code>realizes</code>, possibly a subproperty of
+<code>prov:wasDerivedFrom</code>): derivation is generic provenance, and
+"realises" is load-bearing enough to deserve its own name. Define native
+markers for a rule or condition that delegates to a technical measure and for
+one that is secured organisationally, so the borrowing from DPV is not needed.</p>
+</blockquote>
+<h2 id="8-domain-forms">8. Domain forms</h2>
+<p>A policy points at domain nodes a generic tool cannot know:
+the artifact behind a realisation link (section 7), a field
+collection, a register. Labels (section 1) name such a node;
+a <em>form shape</em> says how to present its properties.</p>
+<ul>
+<li>A domain node <strong>should</strong> come with a <code>sh:NodeShape</code> whose
+  <code>sh:targetClass</code> covers the node's class, so tools can render
+  it as a structured form instead of a bare property list.
+  Subclasses count: a shape on the profile's base class covers
+  the classes derived from it.</li>
+<li>The shape <strong>needs</strong> to sit in the same dataset or endpoint as
+  the node it describes: tools resolve it together with the data,
+  not from the open web — the same rule labels follow (section 1).</li>
+<li>Each <code>sh:property</code> <strong>needs</strong> <code>sh:name</code> per language and
+  <code>sh:order</code>; groups of fields <strong>should</strong> use <code>sh:group</code> with a
+  labelled <code>sh:PropertyGroup</code>. Groups and ungrouped properties sit
+  in one sequence, ordered by <code>sh:order</code>; a group takes the order
+  of its <code>sh:PropertyGroup</code>.</li>
+<li>Each <code>sh:property</code> <strong>should</strong> carry a widget hint from this
+  subset, using <code>dash:</code> terms (their <code>shui:</code> equivalents from
+  SHACL 1.2 UI are read as synonyms, with <code>shui:IRIViewer</code> for
+  <code>dash:URIViewer</code>):
+  <code>dash:viewer</code> with <code>dash:LiteralViewer</code>,
+  <code>dash:URIViewer</code>, <code>dash:LabelViewer</code>, or
+  <code>dash:LangStringViewer</code>; and <code>dash:propertyRole</code> with
+  <code>dash:LabelRole</code> (the node's title),
+  <code>dash:DescriptionRole</code> (its summary), or
+  <code>dash:KeyInfoRole</code> (shown next to the title).</li>
+<li><code>rdf:type</code> is an ordinary property: a shape that wants to show
+  the node's class lists it like any other, with a viewer and an
+  order. A tool picking one class over another, or moving it next
+  to the title, is presentation.</li>
+<li>Anything beyond this subset is presentation and stays with
+  the tool: colours, monospace, how a note block is boxed.</li>
+</ul>
+<div class="ex"><span class="ex-tag">Example</span><pre><code><span class="tt-s">ex:ArtifactShape</span> a sh:NodeShape ;
+  sh:targetClass ex:PolicyArtifact ;
+  sh:property [ sh:path rdfs:label ;
+    dash:propertyRole dash:LabelRole ] ;
+  sh:property [ sh:path rdf:type ;
+    sh:name <span class="tt-l">"Soort"@nl</span> , <span class="tt-l">"Kind"@en</span> ;
+    sh:order 0 ; dash:viewer dash:LabelViewer ] ;
+  sh:property [ sh:path dct:format ;
+    sh:name <span class="tt-l">"Formaat"@nl</span> , <span class="tt-l">"Format"@en</span> ;
+    sh:order 1 ; dash:viewer dash:LiteralViewer ] ;
+  sh:property [ sh:path dcat:downloadURL ;
+    sh:name <span class="tt-l">"Download"@nl</span> , <span class="tt-l">"Download"@en</span> ;
+    sh:order 2 ; dash:viewer dash:URIViewer ] ;
+  sh:property [ sh:path rdfs:comment ;
+    sh:name <span class="tt-l">"Noot"@nl</span> , <span class="tt-l">"Note"@en</span> ;
+    sh:order 9 ; dash:viewer dash:LangStringViewer ] .</code></pre></div>
+<div class="kv"><span class="kv-tag">Enables</span><p>Tools can show unknown domain nodes as a tidy,
+ordered, bilingual form — right fields, right order, links as
+links — without code per profile; when a profile adds a field,
+the form follows the shape.</p></div>
+<div class="kv"><span class="kv-tag">Without it</span><p>Tools fall back to a bare property list:
+every triple of the node, in arbitrary order, labelled by
+section 1 at best.</p></div>
+<blockquote>
+<p><strong>Recommendation</strong> — profiles that define domain classes
+(such as policy artifacts) should ship a form shape for them
+alongside the class labels, so every consumer renders the
+same form.</p>
+</blockquote>
 </main>
 </div>
 </body>
