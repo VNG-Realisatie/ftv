@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ODRL-AP-NL policyviewer</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">ODRL-AP-NL</span>
+      <span class="subtitle">policyviewer</span>
+    </div>
+    <div class="toolbar">
+      <label class="btn" title="Open lokale .ttl / .jsonld bestanden">
+        Bestand openen
+        <input id="file-input" type="file" accept=".ttl,.jsonld,.json,.turtle,.nt" multiple hidden>
+      </label>
+      <button class="btn" id="reload-examples" title="Laad de voorbeelden uit ../data/">Voorbeelden laden</button>
+      <button class="btn" id="btn-new-policy" title="Start een nieuw drietraps-skelet (Offer + Agreement + Permission)">Nieuw beleid</button>
+      <button class="btn btn-toggle" id="btn-edit-toggle" aria-pressed="false" title="Schakel de bewerken-modus in of uit">Bewerken</button>
+      <button class="btn" id="btn-export-ttl" title="Download de volledige graaf als Turtle">Turtle &#8595;</button>
+      <button class="btn" id="btn-export-jsonld" title="Download de volledige graaf als JSON-LD">JSON-LD &#8595;</button>
+      <span class="dirty" id="dirty-indicator"></span>
+      <span class="status" id="status"></span>
+    </div>
+  </header>
+
+  <main class="layout">
+    <nav class="pane pane-nav" id="nav" aria-label="Navigatie">
+      <div class="pane-head">Beleid</div>
+      <!-- Zoekveld: client-side filter op navigatielabels (schaal: 1.392
+           BRP-besluiten zijn zonder filter niet terug te vinden). -->
+      <div class="nav-filter">
+        <input type="search" id="nav-filter" placeholder="Filter op naam…"
+               aria-label="Filter de navigatie op naam">
+        <span class="nav-count muted" id="nav-count" aria-live="polite"></span>
+      </div>
+      <div class="nav-tree" id="nav-tree"></div>
+    </nav>
+
+    <section class="pane pane-doc" id="doc" aria-label="Weergave">
+      <div id="doc-content" class="doc-content"></div>
+    </section>
+
+    <aside class="pane pane-src" id="src" aria-label="Bron">
+      <div class="pane-head">
+        Bron
+        <span class="src-tabs" id="src-tabs"></span>
+        <span class="src-editbar" id="src-editbar"></span>
+      </div>
+      <div class="src-error" id="src-error" hidden></div>
+      <!-- Graaf-inspecteur (leesmodus): geopend via een "verken"-knop of de
+           Verkennen-tab; vervangt tijdelijk het Turtle/JSON-LD-fragment. -->
+      <div class="src-inspect insp" id="src-inspect" hidden></div>
+      <pre class="src-code" id="src-pre"><code id="src-code"></code></pre>
+      <textarea class="src-editor" id="src-editor" spellcheck="false" hidden></textarea>
+    </aside>
+  </main>
+
+  <datalist id="dl-labeled"></datalist>
+
+  <script type="module" src="assets/app.js"></script>
+</body>
+</html>

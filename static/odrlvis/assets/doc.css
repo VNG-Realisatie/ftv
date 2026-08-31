@@ -1,0 +1,1559 @@
+/* ODRL-AP-NL documentweergave (doc.html) — Swagger-UI-grammatica, eigen
+   huisstijl. Drie visuele lagen, elk met eigen kopstructuur:
+     1. Aanbod   — groot paneel, zware kop (collapsible)
+     2. Overeenkomst — sectiekop met accentrand (collapsible)
+     3. Regel    — getinte operation-rij (permission/obligation/verbod)
+   Licht/donker via prefers-color-scheme. */
+
+:root {
+  --bg: #ffffff;
+  --bg-alt: #f6f8fa;
+  --bg-head: #fbfcfd;
+  --fg: #1c2430;
+  --fg-soft: #5b6774;
+  --border: #e2e7ec;
+  --accent: #1c4e80;
+  --accent-soft: #e8f0f8;
+  --code-bg: #f6f8fa;
+  --code-fg: #24313f;
+  /* Turtle-syntaxpalet (licht) */
+  --tok-prefix: #205e9e; --tok-iri: #187a58; --tok-pname: #9a5b17;
+  --tok-string: #a1467e; --tok-kw: #6b4fa1; --tok-comment: #7a8694;
+  --tok-punct: #5b6774; --tok-num: #b06a10;
+  /* Regel-palet: ÉÉN vaste kleur per REGELTYPE. De eerdere deterministische
+     kleur per ACTIE (Swagger-methodekleur-idee) is vervallen: bij tientallen
+     acties werd het een regenboog waarin de kleur niets meer betekende. Nu
+     draagt de kleur het type van de regel — toestemming groen (élke
+     permission, met of zonder doelbinding), verbod rood, verplichting neutraal
+     leigrijs. */
+  --rule-toestemming: #2f8a4c;  /* groen */
+  --cduty: #5b6774; /* verplichting: neutraal leigrijs */
+  --verbod: #b3261e;
+  /* Overeenkomst-accent (kind-pill + kantlijn), los van het regel-palet. */
+  --kind-agreement: #2f8a4c;
+  /* Aanbod-accent: de kleur van de AANBOD-kind-pill, hergebruikt door de
+     samengevouwen aanbodrij op de overeenkomst. var()-indirectie, dus hij
+     volgt --accent automatisch in donkere modus. */
+  --kind-offer: var(--accent);
+  --kind-coll: #7a5cc7; /* collectie (PartyCollection/AssetCollection): paars */
+  /* Overervings-accent (odrl:inheritFrom): bewust GEEN kleur uit het
+     regel-palet en ook niet die van het aanbod — overerving is een eigen laag
+     en mag nooit als doorwerking lezen. */
+  --kind-inherit: #6b4fa1;
+  --mono: ui-monospace, "SFMono-Regular", "Menlo", "Consolas", monospace;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  /* Skeleton-placeholders: grondtoon + de lichtstreep van de shimmer. */
+  --skel-bg: #dee5ec;
+  --skel-hi: #f1f5f8;
+  /* Breedte van het rechterpaneel (inspecteur/invulling). Eén variabele,
+     want de pagina moet er precies evenveel voor inschuiven. */
+  --panel-w: 440px;
+  /* Het vlak van het CENTRALE element in het invulling-paneel: duidelijk
+     grijzer dan de paneelachtergrond, want het moet zich als vlak aftekenen. */
+  --panel-cur: #eceff3;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #12161c; --bg-alt: #1a2029; --bg-head: #151b22;
+    --fg: #dbe2ea; --fg-soft: #93a0ae; --border: #262e38;
+    --accent: #6ea8dc; --accent-soft: #1c2938;
+    --code-bg: #0d1117; --code-fg: #c9d3de;
+    --rule-toestemming: #63b97f;
+    --cduty: #8b98a8; --verbod: #e0655d;
+    --kind-agreement: #63b97f; --kind-coll: #a78bfa;
+    --kind-inherit: #b39ddb;
+    /* In donkere modus juist LICHTER dan het paneel — hetzelfde principe,
+       omgekeerde richting. */
+    --panel-cur: #222a34;
+    /* Turtle-syntaxpalet (donker) */
+    --tok-prefix: #7fa8d9; --tok-iri: #6cc6a8; --tok-pname: #d7a06b;
+    --tok-string: #c98fb0; --tok-kw: #b39ddb; --tok-comment: #667080;
+    --tok-punct: #8b98a8; --tok-num: #e0a35f;
+    --skel-bg: #232b35; --skel-hi: #303a47;
+  }
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  font-family: var(--sans); color: var(--fg); background: var(--bg);
+  font-size: 14px; line-height: 1.55;
+}
+
+/* Topbar + sticky ankermenu */
+.doc-topbar {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
+  padding: 10px 20px; border-bottom: 1px solid var(--border);
+  background: var(--bg-head); flex-wrap: wrap;
+}
+.brand { display: flex; align-items: baseline; gap: 8px; }
+.logo { font-weight: 700; color: var(--accent); letter-spacing: .3px; }
+.subtitle { color: var(--fg-soft); font-size: 13px; }
+.status { color: var(--fg-soft); font-size: 12px; }
+/* Het sticky ankermenu is verwijderd (beslissing eigenaar): navigatie loopt
+   via de policy-selector, het kaartenfilter en de sectiekoppen. */
+
+/* Hoofdkolom */
+.doc-main { max-width: 1000px; margin: 0 auto; padding: 28px 24px 120px; }
+.empty { color: var(--fg-soft); padding: 40px 8px; }
+.mono { font-family: var(--mono); font-size: 12.5px; }
+.muted { color: var(--fg-soft); }
+a { color: var(--accent); }
+
+/* Sleutelkolom groeit mee met lange (BRP-)predicaatnamen — geen overlap. */
+.kv { display: grid; grid-template-columns: minmax(150px, max-content) 1fr; gap: 4px 16px; margin: 10px 0; }
+.kv dt { color: var(--fg-soft); }
+.kv dd { margin: 0; overflow-wrap: anywhere; }
+ul.clean { list-style: none; margin: 4px 0 10px; padding: 0; }
+ul.clean li { padding: 3px 0; }
+
+/* ==== KAARTFAMILIE ======================================================
+   Aanbod, overeenkomst en beleidsset zijn ÉÉN kaartvorm (aug 2026, beslissing
+   eigenaar). Voorheen was de overeenkomst een "impliciete kaart": alleen een
+   groene kantlijn zonder rand of kopbalk, terwijl het aanbod een echte kaart
+   was — twee views in één pagina. Nu deelt alles dezelfde schil: rand,
+   afgeronde hoeken, kopbalk met eigen achtergrond, chevron rechts. Het
+   REGELTYPE spreekt nog steeds kleur, maar als ACCENT op de kaart (dikkere
+   linkerrand, in dezelfde kleur als de kind-pill), niet als eigen vorm.
+   Maatvoering: bewust compact. De overeenkomstenlijst telt 1.392+ rijen, dus
+   de ingeklapte kop houdt exact de oude binnenmaat (6px padding + 24,8px
+   regel = 36,8px) en de onderlinge marge gaat juist omláág (22px -> 8px). */
+.offer-group, .agr-group {
+  --card-accent: var(--border);
+  border: 1px solid var(--border); border-left: 3px solid var(--card-accent);
+  border-radius: 10px; background: var(--bg); margin: 0 0 8px;
+  box-shadow: 0 1px 2px rgba(16, 24, 32, .04);
+}
+.offer-group { --card-accent: var(--kind-offer); }
+.agr-group { --card-accent: var(--kind-agreement); }
+.offer-group.set-card, .offer-group.set-section { --card-accent: var(--cduty); }
+
+/* Kopbalk: identiek voor alle drie de niveaus; alleen de titelmaat verschilt
+   (aanbod 20px, overeenkomst/set 16px) — dát is de hiërarchie. */
+.offer-summary, .agr-summary {
+  display: flex; align-items: center; gap: 10px; flex-wrap: nowrap;
+  padding: 6px 14px; cursor: pointer; user-select: none; list-style: none;
+  background: var(--bg-head); border-radius: 8px;
+}
+.offer-summary::-webkit-details-marker,
+.agr-summary::-webkit-details-marker { display: none; }
+.offer-group[open] > .offer-summary,
+.agr-group[open] > .agr-summary {
+  border-bottom: 1px solid var(--border); border-radius: 8px 8px 0 0;
+}
+/* Swagger-hover: subtiele achtergrond op de hele kop. */
+.offer-summary:hover, .agr-summary:hover { background: var(--accent-soft); }
+.offer-title { font-size: 20px; font-weight: 700; letter-spacing: -.2px; flex: 1 1 auto; min-width: 0; }
+/* Zie het blok "TEKST IS OM TE KOPIËREN" onderaan dit bestand: elke
+   tekstdrager in een kopregel is selecteerbaar, de kopregel zelf niet. */
+.offer-summary .op-sum { font-size: 12.5px; white-space: nowrap; }
+
+/* ==== UITKLAP-CHEVRON ===================================================
+   Eén driehoekje voor álle inklapbare koppen, ALTIJD als laatste element van
+   de kopregel (rechts, ná versiechip/telling/verken-knop) — zoals Swagger.
+   Getekend als CSS-chevron in plaats van een tekstglyph: die was met 11px
+   veel te klein en verschilt per font. Het vierkantje met twee randen wordt
+   45° gedraaid; de absolute plaatsing compenseert dat de zichtbare "V" in
+   zo'n gedraaid vierkant onder het midden hangt, zodat de chevron exact in
+   zijn (ruime) klikvlak staat en bij het draaien niet verspringt. */
+.chev {
+  position: relative; flex: 0 0 auto; align-self: center; margin-left: auto;
+  width: 22px; height: 22px; color: var(--fg-soft);
+  transition: transform .15s ease, color .15s ease;
+}
+.chev::before {
+  content: ''; position: absolute; left: 50%; top: 50%;
+  width: 9px; height: 9px; margin: -7px 0 0 -4.5px;
+  border-right: 2px solid currentColor; border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+}
+/* Sectiekoppen: één maat groter. Geneste fold-outs: één maat kleiner. */
+.chev.chev-lg { width: 26px; height: 26px; }
+.chev.chev-lg::before { width: 11px; height: 11px; margin: -8.7px 0 0 -5.5px; border-width: 2.5px; }
+.chev.chev-sm { width: 16px; height: 16px; }
+.chev.chev-sm::before { width: 7px; height: 7px; margin: -5.3px 0 0 -3.5px; }
+/* Dicht = naar rechts, open = naar beneden (één regel voor alle niveaus). */
+details:not([open]) > summary > .chev { transform: rotate(-90deg); }
+summary:hover > .chev, details[open] > summary > .chev { color: var(--fg); }
+
+/* ==== CHIP-KAPITALISATIE (één centrale regel) ==============================
+   Elke chip/pil/badge leest in SENTENCE CASE: "Aanbod", "Toestemming",
+   "Doel", "Verzoek", "Vervallen", "Geërfd". Daarvoor stonden er drie stijlen
+   door elkaar — ALL-CAPS via text-transform (de soort-pillen, de aanbod- en
+   overervings-chip), helemaal kleine letters (de regeltype-chips, de
+   statuschips) en al-Kapitaal (de rolwoorden).
+
+   WAAROM IN CSS EN NIET IN DE RENDERCODE. Dit is presentatie, en alleen
+   presentatie: precies dezelfde woorden staan óók in lopende tekst en in
+   tellers ("5 toestemmingen", de statusregel) en moeten daar klein blijven.
+   Een capitalize-helper op de renderplek zou de kapitaal in de DOM-TEKST
+   bakken — dan wisselt het woord mee in kopieerbare tekst, in de
+   toegankelijke naam en in elke test die de chiptekst vergelijkt, en zou
+   elke nieuwe chipplek eraan moeten denken. Eén CSS-regel op de chipklasse
+   raakt de stringtabel niet, geldt automatisch voor nieuwe chips met dezelfde
+   klasse, en werkt in beide talen (::first-letter is taalonafhankelijk).
+
+   `lowercase` + `::first-letter: uppercase` in plaats van `capitalize`:
+   capitalize zet ELK woord met een hoofdletter ("Uit Het Aanbod") en laat
+   bestaande ALL-CAPS staan. De twee stappen samen geven precies één hoofd-
+   letter vooraan, ongeacht hoe het woord in de stringtabel staat.
+   ::first-letter vereist een blok-containerbox; alle drie de klassen zijn
+   daarom inline-block.
+
+   UITZONDERING — chips die een LABEL UIT DE DATA dragen (de niveau-chip van
+   een groeperingsdimensie: "Doelgroep", "Verstrekkingskanaal", maar net zo
+   goed "eIDAS-niveau" of "LO BRP"). Daar zou lowercase de kapitalisatie van
+   de bron vernielen; die houdt zijn eigen vorm. Zie de override bij
+   .op-row.niveau verderop. Om dezelfde reden vallen de chips die dataWAARDEN
+   tonen (.c-slot, .target-tag, .chip.format) hier helemaal buiten: die
+   dragen mediatypes, IRI-staarten en rubrieknamen. */
+.kind-pill, .method, .vchip { text-transform: lowercase; }
+.kind-pill::first-letter, .method::first-letter, .vchip::first-letter {
+  text-transform: uppercase;
+}
+
+.kind-pill {
+  display: inline-block;
+  font-size: 11px; font-weight: 700; letter-spacing: .3px;
+  padding: 3px 10px; border-radius: 4px; color: #fff; background: var(--accent);
+  white-space: nowrap;
+}
+.kind-pill.agreement { background: var(--kind-agreement); }
+.kind-pill.offer { background: var(--kind-offer); }
+.kind-pill.coll { background: var(--kind-coll); margin-right: 6px; }
+@media (prefers-color-scheme: dark) { .kind-pill { color: #10141a; } }
+
+/* Inhoud van een kaart krijgt een vaste kantlijn, gelijk aan de padding van
+   de kopbalk — zo staat alles op één kantlijn. */
+.offer-group > *:not(summary), .agr-group > *:not(summary) {
+  margin-left: 14px; margin-right: 14px;
+}
+/* :not(summary) is hier essentieel: een INGEKLAPTE kaart heeft de summary als
+   laatste kind, en die mag geen loze onderruimte krijgen — anders wordt elke
+   dichte rij in de lijst 14px hoger. */
+.offer-group > *:last-child:not(summary),
+.agr-group > *:last-child:not(summary) { margin-bottom: 14px; }
+.offer-group > .offer-head { margin-top: 14px; }
+
+/* Beschrijvingsteksten lopen over de VOLLE kaartbreedte (beslissing
+   eigenaar): de vroegere leesregel van 72ch liet op een 1460px-brede
+   pagina de halve breedte ongebruikt. */
+.offer-head { position: relative; }
+.offer-head .uid { font-size: 12px; margin-bottom: 8px; overflow-wrap: anywhere; }
+.offer-desc { white-space: pre-line; margin: 8px 0 10px; color: var(--fg-soft); }
+.editor-btn {
+  float: right; margin: 0 0 8px 16px;
+  font-size: 12.5px; text-decoration: none; color: var(--accent);
+  border: 1px solid var(--border); border-radius: 6px; padding: 5px 12px;
+  background: var(--bg);
+}
+.editor-btn:hover { border-color: var(--accent); background: var(--accent-soft); }
+
+/* "Server"-blokje: toegangspunten */
+.servers {
+  border: 1px solid var(--border); border-radius: 8px;
+  background: var(--bg-alt); padding: 10px 14px; margin: 14px 0;
+}
+.servers-label {
+  font-size: 11px; text-transform: uppercase; letter-spacing: .6px;
+  color: var(--fg-soft); margin-bottom: 4px; font-weight: 600;
+}
+.server-row { overflow-wrap: anywhere; }
+
+/* Sectiekop binnen een groep (bijv. "Overeenkomsten op dit aanbod") */
+.doc-sec {
+  display: flex; align-items: baseline; gap: 8px;
+  margin: 30px 20px 10px; padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+.offer-group > .doc-sec { margin-left: 14px; margin-right: 14px; }
+.doc-sec h3 { font-size: 16px; font-weight: 650; margin: 0; }
+.sec-count {
+  font-size: 11.5px; background: var(--bg-alt); border: 1px solid var(--border);
+  border-radius: 10px; padding: 0 8px;
+}
+
+/* ==== LAAG 2 · OVEREENKOMST =============================================
+   Zie de kaartfamilie hierboven: schil, kopbalk en chevron komen daarvandaan.
+   Hieronder alleen wat deze laag eigen is (titelmaat, afnemer, body). */
+.agr-titles { display: flex; align-items: baseline; gap: 10px; flex: 1 1 auto; min-width: 0; flex-wrap: wrap; }
+.agr-title { font-weight: 650; font-size: 16px; }
+.agr-assignee { font-size: 12.5px; }
+.agr-summary .op-sum { font-size: 12px; white-space: nowrap; }
+.agr-body { padding: 8px 0 2px; }
+.agr-desc { white-space: pre-line; margin: 4px 0 8px; }
+.agr-stub { margin: 8px 0 8px 17px; font-size: 13px; }
+.version-line { font-size: 12.5px; margin: 6px 0; }
+
+/* ==== LAAG 3 · REGEL (operation-rij) ==================================== */
+.op-list { margin: 14px 0; }
+.op-row {
+  border: 1px solid color-mix(in srgb, var(--mc, var(--border)) 45%, var(--border));
+  border-radius: 6px; margin: 6px 0;
+  background: color-mix(in srgb, var(--mc, var(--fg-soft)) 6%, var(--bg));
+}
+/* Kleur per REGELTYPE (geen kleurhash per actie meer, zie doc.js/ruleKind). */
+.op-row.toestemming { --mc: var(--rule-toestemming); }
+.op-row.duty { --mc: var(--cduty); }
+.op-row.verbod { --mc: var(--verbod); }
+.op-summary {
+  display: flex; align-items: center; gap: 12px; flex-wrap: nowrap;
+  padding: 8px 12px; cursor: pointer; user-select: none; list-style: none;
+  border-radius: 5px;
+}
+.op-summary::-webkit-details-marker { display: none; }
+/* Swagger-hover, ook op de regel-rijen: een tikje meer van de eigen tint. */
+.op-summary:hover { background: color-mix(in srgb, var(--mc, var(--fg-soft)) 13%, var(--bg)); }
+.op-row[open] > .op-summary { border-radius: 5px 5px 0 0; }
+.method {
+  display: inline-block; min-width: 96px; text-align: center;
+  padding: 4px 12px; border-radius: 4px; font-weight: 700; font-size: 12px;
+  color: #fff; background: var(--mc, var(--fg-soft)); letter-spacing: .3px;
+  white-space: nowrap;
+}
+@media (prefers-color-scheme: dark) { .method { color: #10141a; } }
+.op-title { flex: 1 1 auto; min-width: 0; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.op-name { font-weight: 600; }
+.op-path { font-size: 11.5px; }
+.op-sum { font-size: 12px; white-space: nowrap; }
+
+/* Dekking als UITKLAP onder de conformsToPolicy-voorwaarde (de tags op de
+   regelkoppen zijn vervallen, aug 2026). Bewust NEUTRAAL: "niet in deze lijst"
+   is een eerlijk feit (organisatorische plichten kunnen geen beslispunt
+   afdwingen), geen fout — dus geen amber/rood en geen chipkleur. */
+
+/* --- Dekking op VOORWAARDE-niveau -----------------------------------------
+   Het raderwiel is GEEN eigen knopsoort: het is de ⌕-verkenknop met een ander
+   glyph (klasse `verken-btn` staat er ook op), dus maat, rand, hover en
+   dark-mode komen daarvandaan. Alleen twee dingen zijn eigen: het ⚙ oogt bij
+   gelijke font-size optisch kleiner dan de ⌕, en de "deels"-stand kleurt amber.
+   De amber is dezelfde familie als de ontbreekt-chip (.c-slot.missing). */
+:root { --cov-partial: #9a6700; --cov-full: #2f7d52; }
+@media (prefers-color-scheme: dark) {
+  :root { --cov-partial: #e3b341; --cov-full: #6fbb8c; }
+}
+.cov-gear { font-size: 14px; }
+/* VOLLEDIG ingevuld: groen, maar gedempt — het is een stand, geen keurmerk. */
+.cov-gear.full { color: var(--cov-full); border-color: var(--cov-full); }
+.cov-gear.full:hover { color: var(--cov-full); border-color: var(--cov-full);
+  background: color-mix(in srgb, var(--cov-full) 14%, var(--bg)); }
+.cov-gear.partial { color: var(--cov-partial); border-color: var(--cov-partial); }
+.cov-gear.partial:hover { color: var(--cov-partial); border-color: var(--cov-partial);
+  background: color-mix(in srgb, var(--cov-partial) 14%, var(--bg)); }
+/* "niet uitgewerkt": de ongedekte voorwaarde die GEEN marker draagt en dus
+   technisch afgedwongen hoort te worden. Klein en gedempt in dezelfde
+   amber als de deels-stand van het raderwiel — een aanwijzing, geen
+   waarschuwing: de voorwaarde geldt onverkort, alleen organisatorisch geborgd.
+   Geen chipvorm (geen rand, geen vlak): het is een bijschrift bij de rij,
+   zoals de naam en de "geeft invulling aan"-link ernaast.
+   Zonder naam of keten-link ernaast duwt het merk zichzelf naar rechts, op
+   dezelfde plek waar die bijschriften anders staan (margin-left:auto, zoals
+   .c-note); staan die er wél, dan sluit het er met een gewone tussenruimte
+   op aan. */
+.cov-not-enforced { font-size: 11.5px; color: var(--cov-partial); flex: 0 0 auto;
+  white-space: nowrap; margin-left: auto; }
+.c-note + .cov-not-enforced { margin-left: 8px; }
+
+/* "organisatorisch geborgd": zelfde plek en maat als het merk hierboven, maar
+   GEDEMPT in plaats van in de statuskleur — er is niets blijven liggen, dus
+   hoort het merk niets te signaleren. */
+.cov-organisational { font-size: 11.5px; flex: 0 0 auto;
+  white-space: nowrap; margin-left: auto; }
+.c-note + .cov-organisational { margin-left: 8px; }
+
+/* De naam van een benoemde voorwaarde: CONTEXT, geen inhoud. Klein, gedempt en
+   RECHTS (vóór de knoppen), zodat elke voorwaarde-rij — benoemd of blank —
+   links met dezelfde chips begint en de rijen onder elkaar uitlijnen. */
+.c-note { font-size: 11.5px; color: var(--fg-soft); margin-left: auto;
+  flex: 0 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis;
+  white-space: nowrap; }
+
+/* Regel-dekking en voorwaarde-rijen in de uitklap onder de conformsToPolicy-
+   voorwaarde. Neutraal van kleur: "niet afgedwongen" is een eerlijk feit, geen
+   bevinding — het beslispunt kan organisatorisch geborgd zijn. */
+ul.cov-conds { margin: 0 0 4px; padding: 0 0 0 14px; list-style: none;
+  border-left: 2px solid var(--border); }
+.cov-cond { display: flex; align-items: center; gap: 6px; padding: 2px 0;
+  font-size: 12.5px; flex-wrap: wrap; }
+.cov-cond-off { opacity: .75; }
+/* Een logische voorwaarde houdt ook hier haar geneste rijen (geen platte zin);
+   die groep neemt de volle breedte van de rij. */
+.cov-cond > .c-group { flex: 1 1 100%; min-width: 0; }
+
+/* Samengevouwen aanbodrij ("Uit het aanbod (4 verplichtingen)"). Geen
+   regeltype-kleur: de rij staat voor de AANBOD-laag, dus draagt hij de kleur
+   van de AANBOD-kind-pill — in het formaat van de rij-chips, zodat hij met de
+   badges eronder uitlijnt. */
+.op-row.aanbod { --mc: var(--kind-offer); }
+.method.aanbod { font-size: 11px; }
+.op-row.aanbod .op-title a { color: var(--accent); }
+
+/* Samengevouwen OUDER-rij ("Geërfd van … (3 regels)", odrl:inheritFrom).
+   Zelfde vorm als de aanbodrij, maar bewust een ANDERE kleur: overerving
+   (verwijzing naar een ouderpolicy) en doorwerking (gedeelde regel-IRI) zijn
+   twee verschillende dingen en mogen nooit als één ding lezen. Paars, buiten
+   het regel-palet — het is geen regeltype maar een laag. Ontbreekt de ouder in
+   de bron, dan is de kantlijn gestippeld: dezelfde "niet hard bevestigd"-taal
+   als de uncovered dekking-chip hierboven. */
+.op-row.geerfd { --mc: var(--kind-inherit); }
+.method.geerfd { font-size: 11px; }
+.op-row.geerfd.ontbreekt { border-style: dashed; }
+/* Herkomst-woordje ("geërfd") achter de naam van een regel binnen de vouw. */
+.op-path.herkomst { font-style: italic; }
+
+/* Groepsrij (qb:DimensionProperty): "Doel — Gemeentelijke belastingen (5
+   varianten)", met daarin de rijen per kanaal en daaronder de gegevenssets.
+   Geen eigen kleur: de rij staat voor dezelfde regels die eronder hangen, dus
+   hij houdt hun regeltype-kleur; alleen de chip benoemt het NIVEAU in plaats
+   van het rijtype. Genest gaat de vulling terug naar de kaartachtergrond,
+   anders stapelt de kleurmenging zich per niveau donkerder op. */
+.op-row.niveau > .op-body { padding: 2px 10px 8px; }
+.op-row.niveau .op-list { margin: 8px 0 2px; }
+.op-row.niveau .op-row { background: var(--bg); }
+/* De niveau-chip draagt een naam uit de DATA ("Verstrekkingskanaal"), geen
+   vast woord: hij mag breder worden dan de vaste rijtype-chips, maar moet met
+   ze uitlijnen. En hij valt buiten de chip-kapitalisatie hierboven: de bron
+   bepaalt hoe zijn eigen label geschreven wordt (een acroniem of een
+   eigennaam mag niet omgezet worden). */
+.op-row.niveau > .op-summary > .method,
+.op-row.niveau > .op-summary > .method::first-letter { text-transform: none; letter-spacing: 0; }
+.op-body { padding: 0 14px 12px; border-top: 1px solid color-mix(in srgb, var(--mc, var(--border)) 30%, var(--border)); }
+.duty-sub { margin: 10px 0 4px; }
+/* Toelichting bij een regel/verplichting: volle breedte, zelfde toon als de
+   kaartbeschrijving. */
+.rule-desc { margin: 10px 0 6px; white-space: pre-line; color: var(--fg-soft); }
+
+/* Strip-koppen binnen een uitgeklapte regel (Parameters/Responses-idee) */
+.op-body h4 {
+  margin: 0 -14px 8px; padding: 7px 14px;
+  font-size: 11px; font-weight: 700; letter-spacing: .6px; text-transform: uppercase;
+  color: var(--fg-soft);
+  background: color-mix(in srgb, var(--mc, var(--fg-soft)) 4%, var(--bg-alt));
+  border-bottom: 1px solid var(--border);
+}
+.op-body h4:not(:first-child) { margin-top: 14px; border-top: 1px solid var(--border); }
+.op-body .kv { margin: 8px 0 10px; }
+.sentence { margin-right: 6px; }
+.constraint { padding: 4px 0; }
+
+/* Vindplaats (prov:hadPrimarySource): waar in het BRONDOCUMENT de regel staat.
+   Bewust anders dan de Grondslag (dct:source, wet-URI's), die als gewone link
+   in de kv-lijst staat: de vindplaats krijgt een documentmarkering en kleinere,
+   gedempte tekst — een verwijzing naar papier, geen normatieve bron. */
+.src-loc { font-size: 12.5px; color: var(--fg-soft); }
+/* Documentmarkering als CSS-vorm (een paginaatje met ezelsoor), niet als
+   emoji: een glyph hangt af van de fonts op de machine van de lezer en viel
+   in kale omgevingen terug op een leeg blokje. */
+.src-loc::before {
+  content: ""; display: inline-block; vertical-align: -1px;
+  width: 8px; height: 10px; margin-right: 6px;
+  border: 1px solid currentColor; border-radius: 1px; opacity: .55;
+}
+.src-loc a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
+.src-loc a:hover { color: var(--accent); text-decoration-style: solid; }
+/* Kenmerk (dct:identifier): korte, citeerbare documentcode — klein en
+   monospace, nooit prominenter dan de titel. */
+.doc-ref { font-size: 12.5px; }
+/* Verzoek (odrl:Request achter prov:wasDerivedFrom): kenmerk · datum ·
+   indiener op één compacte regel — hetzelfde gewicht als de Kenmerk- en
+   Vindplaats-regels, want het is herkomst-context bij het besluit.
+   Bewust GEEN inline-flex: de '·'-scheidingen zijn losse tekstknopen en die
+   worden in een flexcontainer tot ruimteloze flexitems geknepen. */
+.req-line { font-size: 12.5px; }
+.req-line .mono { font-size: 12.5px; }
+/* Request→Offer: "vraagt <aanbod> aan". Betekenis-zin, dus lopende tekst en
+   geen veldwaarde; op de verzoek-kaart een eigen regel, op de Verzoek-regel
+   van een overeenkomst één van de '·'-gescheiden brokjes. */
+.ask-line { margin: 2px 0 6px; font-size: 12.5px; }
+.asks-for { display: inline-flex; align-items: baseline; gap: 4px; flex-wrap: wrap; }
+.asks-offer { font-weight: 500; }
+/* Request←Agreement: "beantwoord door <overeenkomst>" op de verzoek-kaart —
+   dezelfde vorm als de aanvraag-zin hierboven, want het is dezelfde soort
+   betekenis-zin, één hop verder in de keten. */
+.answer-line { margin: 2px 0 6px; font-size: 12.5px; }
+.answered-by { display: inline-flex; align-items: baseline; gap: 4px; flex-wrap: wrap; }
+/* Compacte kop-regel van een verzoek-kaart: kenmerk · datum · indiener.
+   Zelfde maat als .req-line aan de overeenkomst-kant van de sprong. */
+.req-sub { margin: 0 0 6px; font-size: 12.5px; }
+.req-sub .mono { font-size: 12.5px; }
+/* Kruisverwijzing naar een kaart elders op de pagina. Ziet eruit als een link
+   (het IS er een: href="?policy=…"), maar springt bij een gewone klik binnen
+   de pagina. De onderstreping komt pas bij hover, zodat een samengestelde
+   regel (kenmerk · datum · indiener) niet als één streep leest. */
+.card-jump { color: inherit; cursor: pointer; }
+/* Samengestelde sprong (kenmerk · datum · indiener): niet blauw onderstrepen —
+   dat zou de drie brokjes tot één streep maken — maar een stippellijn als
+   affordance, die bij hover/focus de gewone link-uitstraling krijgt. */
+.req-line .card-jump { text-decoration: underline dotted var(--fg-soft); text-underline-offset: 3px; }
+.card-jump:hover, .card-jump:focus-visible {
+  text-decoration: underline; text-decoration-style: solid; color: var(--accent);
+}
+/* Sprong met één naam erin: gewoon een link. */
+.answered-by .card-jump { color: var(--accent); font-weight: 500; }
+
+/* Chips en tags */
+.chip {
+  display: inline-block; font-size: 11px; padding: 1px 8px; border-radius: 10px;
+  margin-left: 6px; background: var(--accent-soft); color: var(--accent);
+  white-space: nowrap; cursor: default;
+}
+.chip.format { margin-left: 8px; }
+/* De TYPE-pill van een artefact (CedarPolicySet, RegoModule, …): zelfde vorm
+   als de andere chips, maar met een rand — het is de SOORT van het ding, niet
+   een eigenschap ervan. */
+.chip.type { margin-left: 8px; border: 1px solid var(--border);
+  background: transparent; color: var(--fg-soft); }
+
+/* Voorwaarde als slot-chips: [grootheid] [operator] [waarde] */
+.c-chips { display: inline-flex; flex-wrap: wrap; gap: 4px; align-items: baseline; }
+/* Naamprefix van een benoemde constraint: gedempt en regulier gewicht —
+   de naam is context, de chips zijn de inhoud (feedback 25-8: niet vet). */
+.c-label { font-weight: 400; color: var(--fg-soft, #667); margin-right: 6px; flex: 0 0 auto; }
+.c-slot { display: inline-block; font-size: 12px; padding: 1px 8px; border-radius: 10px;
+  border: 1px solid var(--border); background: var(--bg-alt); }
+.c-slot.op { color: var(--fg-soft); font-style: italic; border-style: dashed; }
+/* De "… (n waarden)"-chip achter een ingekorte lijst: een MEDEDELING, geen
+   waarde — dus gedempt, zoals de operator-chip. De hover draagt de hele lijst. */
+.c-slot.more { color: var(--fg-soft); font-style: italic; }
+.c-slot.missing { background: rgba(230, 160, 30, .14); border-color: rgba(200, 140, 20, .55);
+  color: #9a6700; cursor: help; }
+@media (prefers-color-scheme: dark) { .c-slot.missing { color: #e3b341; } }
+.c-slot.missing { display: inline-flex; align-items: center; gap: 4px; }
+.c-warn { display: inline-flex; }
+/* Blad-regel: niets uit te klappen, dus geen chevron en geen klik-affordance. */
+.op-row.op-leaf > summary { cursor: default; }
+.op-row.op-leaf > summary .chev { display: none; }
+/* In het voorwaarde-kaartje: label smal, chips vullen de rest */
+ul.constraints .sentence.c-label { flex: 0 0 auto; }
+ul.constraints .c-chips { flex: 1 1 auto; }
+.blank-summary { color: var(--fg-soft); }
+.target-tag {
+  display: inline-block; font-size: 12px; padding: 1px 8px; border-radius: 10px;
+  margin: 1px 4px 1px 0; background: var(--bg); border: 1px solid var(--border);
+}
+
+/* Bronfragment */
+.src-block { margin-top: 10px; }
+.src-block > summary { cursor: pointer; user-select: none; font-size: 12.5px; color: var(--fg-soft); }
+.src-block pre.ttl {
+  margin: 6px 0 0; padding: 10px 12px; border-radius: 6px;
+  background: var(--code-bg); color: var(--code-fg);
+  font-family: var(--mono); font-size: 12px; line-height: 1.5;
+  overflow-x: auto;
+}
+
+/* Het artefactformulier (uitklap van een conformsToPolicy-rij). De sectie
+   "Machine-uitvoerbaar beleid" met dezelfde velden als losse kaart is
+   vervallen — zie doc.js/artifactForm. De velden zelf komen sinds aug 2026 uit
+   een SHACL-shape (assets/forms.js); wat hier staat is puur presentatie. */
+.artifact-title { font-weight: 600; font-size: 14.5px; }
+/* sh:group-kop. Alleen zichtbaar bij MEER DAN ÉÉN groep — bij één groep is het
+   kv-blok de groep en zou een kopje ruis zijn (zie doc.js/formBox). */
+.form-group-label { font-size: 11px; text-transform: uppercase;
+  letter-spacing: .05em; color: var(--fg-soft); margin: 10px 0 2px; }
+.hash { overflow-wrap: anywhere; }
+/* Het formulier staat in een smallere kolom; de kv-rijen breken daar vanzelf. */
+.art-fold-body .artifact-form { margin-top: 2px; }
+.art-fold-body .artifact-title { font-size: 13.5px; }
+/* Een KeyInfo-chip hoort NAAST de titel. In een voorwaardenlijst duwt
+   `ul.constraints .chip` elke chip naar rechts (daar is dat de badge-plek);
+   binnen het formulier geldt die regel niet. De meegeleverde artefact-shape
+   gebruikt dash:KeyInfoRole niet meer (de type-pill is vervallen); een eigen
+   shape mag hem wel zetten, en dan geldt deze regel. */
+.artifact-form .artifact-title .chip { margin-left: 8px; }
+/* De eerlijkheidsnoot (rdfs:comment): het voorbehoud bij de dekking. Klein en
+   gedempt, met een streepje ervoor zodat hij als NOOT leest en niet als nog
+   een veld. */
+.artifact-note { font-size: 12px; margin: 8px 0 0; padding-left: 10px;
+  border-left: 2px solid var(--border); }
+.artifact-note-label { font-weight: 650; }
+
+/* Losse overeenkomsten / overeenkomst-pagina (?policy=Agreement) */
+.offer-section { margin-bottom: 48px; }
+.offer-section > .offer-head { margin-top: 4px; }
+.title-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.title-row h1 { font-size: 24px; margin: 0; letter-spacing: -.2px; flex: 0 1 auto; }
+.title-row .editor-btn { float: none; margin-left: auto; }
+.offer-section .doc-sec { margin-left: 0; margin-right: 0; }
+
+@media (max-width: 640px) {
+  .kv { grid-template-columns: 1fr; gap: 0; }
+  .kv dd { margin-bottom: 6px; }
+  .method { min-width: 0; }
+  .offer-group > *:not(summary), .agr-group > *:not(summary) { margin-left: 12px; margin-right: 12px; }
+}
+
+/* Volle breedte (petstore-maat: brede wrapper met ruime kantlijnen) */
+.doc-main { max-width: 1460px; padding-left: 40px; padding-right: 40px; }
+.doc-topbar { padding-left: 40px; padding-right: 40px; }
+@media (max-width: 900px) {
+  .doc-main, .doc-topbar { padding-left: 16px; padding-right: 16px; }
+}
+
+/* Topbar-knop + bronnen-fold-out */
+.topbar-right { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.btn {
+  font: inherit; font-size: 13px; cursor: pointer; padding: 5px 12px;
+  border-radius: 6px; border: 1px solid var(--border);
+  background: var(--bg); color: var(--fg);
+}
+.btn:hover { background: var(--accent-soft); border-color: var(--accent); }
+.btn[aria-expanded="true"] { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+/* Taalkiezer "NL | EN" (audit-punt B16): één compacte pil met twee segmenten,
+   het actieve segment gevuld met de accentkleur. Bewust klein en rustig — de
+   taal is een instelling, geen navigatie. */
+.lang-switch {
+  display: inline-flex; align-items: stretch;
+  border: 1px solid var(--border); border-radius: 6px; overflow: hidden;
+}
+.lang-btn {
+  font: inherit; font-size: 12px; letter-spacing: .4px; cursor: pointer;
+  padding: 4px 9px; border: 0; background: var(--bg); color: var(--muted);
+}
+.lang-btn + .lang-btn { border-left: 1px solid var(--border); }
+.lang-btn:hover { background: var(--accent-soft); color: var(--fg); }
+.lang-btn.on { background: var(--accent); color: #fff; }
+.sources-panel { border-bottom: 1px solid var(--border); background: var(--bg-alt); }
+.sources-inner {
+  max-width: 1460px; margin: 0 auto; padding: 14px 40px 18px;
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px;
+}
+@media (max-width: 900px) { .sources-inner { grid-template-columns: 1fr; padding: 12px 16px; } }
+.sources-label {
+  font-size: 11px; text-transform: uppercase; letter-spacing: .6px;
+  font-weight: 600; color: var(--fg-soft); margin: 10px 0 6px;
+}
+.sources-col .sources-label:first-child { margin-top: 0; }
+.sources-list { list-style: none; margin: 0; padding: 0; font-size: 12.5px; }
+.sources-list li { padding: 2px 0; font-family: var(--mono); overflow-wrap: anywhere; }
+.sources-form { display: flex; gap: 8px; margin-bottom: 4px; }
+.sources-form input {
+  flex: 1 1 auto; min-width: 0; font: inherit; font-size: 13px;
+  padding: 5px 10px; border: 1px solid var(--border); border-radius: 6px;
+  background: var(--bg); color: var(--fg);
+}
+.sources-note { font-size: 12px; margin: 4px 0 0; }
+
+/* Regel-rijen: één regel, elisie met ellipsis in plaats van omloop */
+.op-summary { flex-wrap: nowrap; }
+.op-title { flex-wrap: nowrap; overflow: hidden; }
+.op-name, .op-path {
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.op-name { flex: 0 1 auto; min-width: 0; }
+.op-path { flex: 0 1 auto; min-width: 0; }
+.agr-titles { flex-wrap: nowrap; overflow: hidden; }
+.agr-title, .agr-assignee { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
+.offer-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.method { flex: 0 0 auto; }
+
+/* Voorwaarden als identificeerbare kaartjes (zin links, status-chip rechts) */
+ul.constraints { margin: 2px 0 10px; }
+ul.constraints .constraint {
+  display: flex; align-items: baseline; gap: 10px;
+  background: var(--bg); border: 1px solid var(--border); border-radius: 6px;
+  padding: 7px 12px; margin: 6px 0;
+}
+ul.constraints .sentence { flex: 1 1 auto; min-width: 0; margin: 0; }
+ul.constraints .chip { margin-left: auto; flex: 0 0 auto; }
+/* Doel/Gegevens direct onder de kop: iets meer lucht erboven */
+.op-body > .kv:first-child { margin-top: 12px; }
+
+/* Policy-selector in de topbar */
+.policy-select {
+  font: inherit; font-size: 13px; max-width: 340px;
+  padding: 5px 8px; border: 1px solid var(--border); border-radius: 6px;
+  background: var(--bg); color: var(--fg);
+}
+.policy-select:focus { outline: 2px solid var(--accent-soft); border-color: var(--accent); }
+
+/* Topsecties Aanbod / Overeenkomsten / Beleidssets / Machine-uitvoerbaar
+   beleid: INKLAPBAAR (details) met de h2 als summary-kop en hetzelfde
+   chevron-patroon als de kaarten; standaard open. Op de kop staan de telling
+   (compact — een ingeklapte sectie blijft zo informatief) en, bij de
+   lijstsecties, rechts het filtericoon. */
+.page-section { margin: 0 0 44px; }
+.page-sec-summary {
+  display: flex; align-items: center; gap: 10px;
+  cursor: pointer; user-select: none; list-style: none;
+  margin: 8px 0 18px; padding-bottom: 8px; border-bottom: 2px solid var(--border);
+}
+.page-sec-summary::-webkit-details-marker { display: none; }
+.page-sec-title {
+  font-size: 22px; font-weight: 700; letter-spacing: -.2px;
+  margin: 0; padding: 0; border: none;
+}
+/* De sectiechevron is dezelfde .chev als op de kaarten (één maat groter) en
+   staat, net als daar, achteraan de kopregel — ná het filtericoon. De
+   rechtermarge zet zijn hart op één lijn met de chevrons van de kaarten
+   eronder (kaart: 14px marge + halve 22px; sectie: halve 26px). */
+.page-sec-summary > .chev { margin-right: 12px; }
+/* De teller duwt het filtericoon naar rechts en blijft ALTIJD staan. */
+.page-sec-summary .set-index-count { flex: 1 1 auto; min-width: 0; white-space: normal; }
+
+/* Filterpaneel onder de sectiekop: alle filters van de sectie bijeen
+   (tekst, aanbod, status). Standaard dicht; het icoon op de kop opent het. */
+.sec-filter-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 30px; height: 30px; padding: 0; flex: 0 0 auto; cursor: pointer;
+  border: 1px solid var(--border); border-radius: 8px;
+  background: var(--bg); color: var(--fg-soft);
+}
+.sec-filter-btn:hover { background: var(--accent-soft); color: var(--accent); }
+.sec-filter-btn.on { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); }
+.sec-filter-btn:focus-visible { outline: 2px solid var(--accent-soft); }
+/* De rechtermarge houdt de filterrij vrij van het ×-knopje rechtsboven. */
+.sec-filter-panel {
+  position: relative;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px 22px;
+  margin: -8px 0 18px; padding: 12px 44px 12px 14px;
+  border: 1px solid var(--border); border-radius: 9px; background: var(--bg-alt);
+}
+.sec-filter-panel[hidden] { display: none; }
+/* Ingeklapte sectie: het paneel is de sectie UIT verhuisd (placeFilterPanel in
+   doc.js) en staat er nu als buurman achter. Dan geeft de sectie haar
+   ondermarge aan het paneel, zodat de filterrij tegen de kop blijft plakken en
+   de afstand tot de VOLGENDE sectie klopt. */
+.page-section.has-detached-filter:has(+ .sec-filter-panel:not([hidden])) { margin-bottom: 0; }
+.page-section.has-detached-filter + .sec-filter-panel:not([hidden]) { margin-bottom: 44px; }
+.sec-filter-item { display: flex; align-items: center; gap: 8px; }
+.sec-filter-lab { font-size: 12.5px; font-weight: 600; color: var(--fg-soft); }
+/* Status en aanbod zijn allebei een select: één vorm, dus één regel opmaak. */
+.sec-filter-status,
+.sec-filter-offer {
+  font: inherit; font-size: 13px; max-width: 300px;
+  padding: 5px 8px; border: 1px solid var(--border); border-radius: 7px;
+  background: var(--bg); color: var(--fg);
+}
+.sec-filter-status:focus,
+.sec-filter-offer:focus { outline: 2px solid var(--accent-soft); border-color: var(--accent); }
+/* Groepeerpad: de ACTIEVE dimensies als chips in nestvolgorde ("Doel › Doelgroep"),
+   elk met een × dat hem eruit haalt, plus een +-chip die er een toevoegt.
+   Zelfde hoogte en lijn als de status- en aanbod-selects ernaast. */
+.sec-filter-pivot { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.sec-filter-dim {
+  display: inline-flex; align-items: center; gap: 5px;
+  font: inherit; font-size: 13px; line-height: 1;
+  padding: 5px 6px 5px 10px; border: 1px solid var(--accent); border-radius: 13px;
+  background: var(--accent-soft); color: var(--accent);
+}
+/* Het scheidingsteken tussen twee niveaus: gedempt, het is leesteken. */
+.sec-filter-sep { font-size: 13px; color: var(--fg-soft); }
+/* × en + zijn gedempt tot je ze aanraakt: de chip zegt wat er is, de knopjes
+   zijn de handeling. */
+.sec-filter-dim-x,
+.sec-filter-dim-add {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 0; cursor: pointer; font: inherit; line-height: 1;
+  background: transparent; color: var(--fg-soft);
+}
+.sec-filter-dim-x {
+  width: 16px; height: 16px; font-size: 14px; border: 0; border-radius: 50%;
+}
+.sec-filter-dim-x:hover { background: var(--accent); color: var(--bg); }
+.sec-filter-dim-x:focus-visible { outline: 2px solid var(--accent); }
+.sec-filter-dim-add {
+  width: 26px; height: 26px; font-size: 15px;
+  border: 1px dashed var(--border); border-radius: 13px; background: var(--bg);
+}
+.sec-filter-dim-add:hover,
+.sec-filter-dim-add[aria-expanded="true"] {
+  border-style: solid; border-color: var(--accent); color: var(--accent);
+  background: var(--accent-soft);
+}
+.sec-filter-dim-add:focus-visible { outline: 2px solid var(--accent-soft); }
+/* Het menu hangt direct onder de +-chip. */
+.sec-filter-dim-wrap { position: relative; display: inline-flex; }
+.sec-filter-dim-menu {
+  position: absolute; top: calc(100% + 4px); left: 0; z-index: 30;
+  display: flex; flex-direction: column; min-width: 150px; padding: 4px;
+  border: 1px solid var(--border); border-radius: 8px; background: var(--bg);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .14);
+}
+.sec-filter-dim-menu[hidden] { display: none; }
+.sec-filter-dim-opt {
+  text-align: left; cursor: pointer; font: inherit; font-size: 13px;
+  padding: 5px 8px; border: 0; border-radius: 6px;
+  background: transparent; color: var(--fg);
+}
+.sec-filter-dim-opt:hover { background: var(--accent-soft); color: var(--accent); }
+.sec-filter-dim-opt:focus-visible { outline: 2px solid var(--accent-soft); }
+/* "Wis filters" als kruisje rechtsboven in het paneel: vaste plek, geen
+   regelruimte, en de toegankelijke naam zit in het aria-label. */
+.sec-filter-clear {
+  position: absolute; top: 8px; right: 8px;
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 24px; height: 24px; padding: 0; cursor: pointer;
+  font: inherit; font-size: 17px; line-height: 1;
+  border: 1px solid transparent; border-radius: 6px;
+  background: transparent; color: var(--fg-soft);
+}
+.sec-filter-clear:hover { background: var(--accent-soft); color: var(--accent); border-color: var(--accent); }
+.sec-filter-clear:focus-visible { outline: 2px solid var(--accent-soft); }
+.sec-filter-clear[hidden] { display: none; }
+/* Eerste-beeld-fase van de tweefasige ?sparql=-lading: het paneel staat er al
+   (de pagina heeft meteen zijn vorm), maar de filters die op de nog
+   onvolledige index steunen zijn uit. Gedempt, niet verborgen — zo is te zien
+   dát ze er zijn en dat er iets loopt; het zoekveld blijft wél bedienbaar. */
+.sec-filter-panel.is-loading { opacity: 0.62; }
+.sec-filter-panel.is-loading .sec-filter-status,
+.sec-filter-panel.is-loading .sec-filter-offer { cursor: progress; }
+.sec-filter-panel.is-loading .sec-filter-status:disabled,
+.sec-filter-panel.is-loading .sec-filter-offer:disabled { cursor: progress; }
+.agr-links { margin: 10px 14px 4px; font-size: 13px; }
+
+/* Subsectie binnen een overeenkomst: per overeengekomen aanbod */
+.agr-offer-sec {
+  margin: 18px 0 4px; padding-bottom: 4px;
+  font-size: 11.5px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase;
+  color: var(--fg-soft); border-bottom: 1px solid var(--border);
+}
+.agr-offer-sec a { text-transform: none; letter-spacing: 0; font-size: 12.5px; }
+.kind-pill.set { background: var(--cduty); }
+/* Verzoek: dezelfde vorm en toon als de set-pil (het staat in dezelfde
+   sectie), maar open — een verzoek is een aanvraag, nog geen vastgesteld
+   beleid; de omkering zegt dat zonder een nieuwe kleur te introduceren. */
+.kind-pill.set.request {
+  background: transparent; color: var(--cduty); box-shadow: inset 0 0 0 1.5px var(--cduty);
+}
+@media (prefers-color-scheme: dark) { .kind-pill.set.request { color: var(--cduty); } }
+
+/* Lange literals: afgekapte weergave met "toon meer"-knop (weergave-kwestie;
+   het model en het bronfragment blijven volledig). */
+.longtext { white-space: pre-wrap; overflow-wrap: anywhere; }
+button.toggle-more {
+  border: none; background: none; padding: 0; font: inherit; font-size: 12px;
+  color: var(--accent, #4a90d9); cursor: pointer; text-decoration: underline;
+}
+
+/* Verken-knop: ronde vergrootglas-affordance (chip-diameter, geen tekst) op
+   node-achtige elementen; opent de graaf-inspecteur als zijpaneel-overlay. */
+.verken-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 21px; height: 21px; padding: 0; margin-left: 6px; flex: 0 0 auto;
+  border: 1px solid var(--border); border-radius: 50%; background: var(--bg-alt);
+  color: var(--fg-soft); cursor: pointer; font: inherit; font-size: 15.5px;
+  line-height: 1; vertical-align: middle;
+}
+.verken-btn:hover { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); }
+/* Rechtsboven in kaart-kopregels (artefacten) en op de titelregel. */
+.artifact-title { display: flex; align-items: center; gap: 8px; }
+.artifact-title .verken-btn { margin-left: auto; }
+.title-row .verken-btn { margin-left: auto; }
+
+/* Rechterpaneel (graaf-inspecteur ⌕ én invulling ⚙; sluiten via ✕ of Esc); de
+   breadcrumb blijft staan terwijl er genavigeerd wordt.
+   HET DUWT, HET DEKT NIET AF (besluit eigenaar, aug 2026). Als overlay lag het
+   paneel over precies dat deel van het document waar je het vandaan opende:
+   de invulling lezen én de regel erbij zien kon niet tegelijk. Nu krijgt de
+   BODY een rechtermarge ter breedte van het paneel, zodat de hele pagina
+   (topbar, bronnen-fold-out, hoofdkolom) inschuift; het paneel zelf blijft
+   viewport-vast rechts met een eigen scroll. Geen backdrop en geen
+   scroll-lock: het document blijft scrollbaar en klikbaar, en een klik erin
+   sluit het paneel niet. */
+.insp-overlay {
+  position: fixed; top: 0; right: 0; bottom: 0; width: var(--panel-w);
+  background: var(--bg); border-left: 1px solid var(--border);
+  box-shadow: -10px 0 30px rgba(10, 16, 24, .16); z-index: 50;
+  display: flex; flex-direction: column;
+}
+.insp-overlay[hidden] { display: none; }
+/* De rechterkolom die het paneel vrijhoudt. Kort schuiven (150ms) zodat de
+   sprong niet als een herlading leest — uit bij prefers-reduced-motion. */
+body { transition: margin-right .15s ease; }
+body.panel-open { margin-right: var(--panel-w); }
+@media (prefers-reduced-motion: reduce) { body { transition: none; } }
+/* Smal scherm: geen ruimte om iets naast te zetten — daar blijft het paneel
+   de oude overlay die (bijna) het hele beeld pakt. */
+@media (max-width: 900px) {
+  body.panel-open { margin-right: 0; }
+  .insp-overlay { width: min(600px, 94vw); box-shadow: -10px 0 30px rgba(10, 16, 24, .25); }
+}
+.insp-head {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  padding: 10px 18px; border-bottom: 1px solid var(--border); background: var(--bg-head);
+}
+.insp-title { font-weight: 700; font-size: 12px; text-transform: uppercase;
+  letter-spacing: .6px; color: var(--fg-soft); }
+.insp-close { font: inherit; border: none; background: none; color: var(--fg-soft);
+  cursor: pointer; font-size: 15px; padding: 2px 8px; border-radius: 4px; }
+.insp-close:hover { background: var(--accent-soft); color: var(--accent); }
+.insp-body { overflow: auto; padding: 14px 18px 40px; flex: 1 1 auto; font-size: 13px; }
+
+/* --- De technische view: het invulling-paneel ------------------------------
+   Dezelfde overlay als de graaf-inspecteur, andere inhoud. De keten leest van
+   BOVEN NAAR BENEDEN, van technisch naar juridisch: ↑ wat dit element uitwerkt,
+   dan het element zelf, dan ↓ wat het invult. Bewust GEEN twee kolommen
+   (besluit eigenaar): het paneel is daarvoor te smal, en naast elkaar verliest
+   de keten haar richting. De klassen fill-up/fill-down zijn POSITIONEEL — zij
+   zeggen boven of onder het grijze vlak, net als de pijl in het randlabel. */
+.fill { display: flex; flex-direction: column; gap: 4px; }
+.fill-block { margin: 0; }
+.fill-head { font-size: 11.5px; font-weight: 650; color: var(--fg-soft);
+  margin: 8px 0 3px; letter-spacing: .01em; }
+.fill-subhead { font-size: 11px; font-weight: 600; margin: 6px 0 1px; }
+/* ELK ELEMENT ZIJN EIGEN BALKJE (besluit eigenaar, aug 2026). De rijen hingen
+   aan één doorlopende lijn per blok, en dan is een blok van vier rijen ook
+   visueel één ding: je ziet niet waar het ene element ophoudt en het volgende
+   begint. De lijn zit nu op de RIJ, met een kleine tussenruimte ertussen — het
+   blok blijft één kolom, maar elk element is te tellen. */
+ul.fill-list { margin: 0; padding: 0; list-style: none;
+  display: flex; flex-direction: column; gap: 7px; }
+.fill-row { display: flex; align-items: flex-start; gap: 6px;
+  padding: 3px 0 3px 10px; font-size: 12.5px; border-radius: 5px;
+  border-left: 2px solid var(--border); }
+/* Inhoud links (mag afbreken), uitgangen rechts (nooit). */
+.fill-content { display: flex; align-items: center; flex-wrap: wrap; gap: 6px;
+  flex: 1 1 auto; min-width: 0; }
+.fill-acts { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 2px;
+  margin-left: auto; }
+.fill-content > .method { flex: 0 0 auto; min-width: 84px; font-size: 11px; }
+.fill-content > .method.toestemming { --mc: var(--rule-toestemming); }
+.fill-content > .method.duty { --mc: var(--cduty); }
+.fill-content > .method.verbod { --mc: var(--verbod); }
+.fill-content > .op-name { min-width: 0; overflow-wrap: anywhere; }
+/* Het naam-bijschrift van een voorwaarde duwt zichzelf normaal naar rechts;
+   in het paneel staat rechts al de knoppenkolom, dus hier gewoon erachter. */
+.fill-content > .c-note { margin-left: 0; white-space: normal; }
+/* Een logische voorwaarde houdt ook hier haar geneste rijen. */
+.fill-content > .c-group { flex: 1 1 100%; min-width: 0; }
+.fill-row:hover { background: var(--bg-alt); }
+.fill-row:focus-visible { outline: 2px solid var(--accent-soft); outline-offset: 1px; }
+/* De rij is zelf klikbaar (enkelklik = springen, dubbelklik = verkennen, zie
+   doc.js/fillRowClicks), dus wijst de cursor dat ook aan. Het centrale element
+   niet: naar jezelf springen doet niets. De tekst blijft selecteerbaar. */
+.fill-row { cursor: pointer; }
+.fill-row.is-current { cursor: default; }
+/* HET CENTRALE ELEMENT (besluit eigenaar, aug 2026): een grijs vlak over de
+   VOLLE breedte van het paneel — randloos, van paneelrand tot paneelrand, dus
+   met negatieve marges die de padding van .insp-body (18px) opheffen. Zo is in
+   één oogopslag te zien waar het paneel op staat; de ↑- en ↓-rijen staan
+   erbuiten, op paneelachtergrond.
+   De twee bloklabels liggen ÓP de boven- en onderrand van dat vlak, als een
+   fieldset-legend: het label IS de grens tussen "wat dit element invullen"
+   (erboven) en "wat dit element invult" (eronder). Daarom heeft het vlak
+   ruime buitenmarge — de labels moeten er los van de rijen boven kunnen staan. */
+.fill-cur {
+  position: relative; margin: 26px -18px; padding: 14px 18px 12px;
+  background: var(--panel-cur); border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.fill-cur ul.fill-list { padding-left: 0; }
+/* Het centrale element staat al ín het grijze vlak: daar zou een balkje niets
+   afbakenen. */
+.fill-cur .fill-row { padding-left: 0; border-left: 0; }
+.fill-cur .fill-row:hover { background: transparent; }
+.fill-row.is-current { font-weight: 600; font-size: 13.5px; }
+.fill-origin { font-size: 11.5px; margin: 4px 0 0; }
+/* Het label op de rand: halverwege eroverheen, met de paneelachtergrond
+   eronder zodat de lijn erdoor onderbroken wordt. */
+.fill-edge {
+  position: absolute; left: 18px; margin: 0; padding: 0 8px;
+  background: var(--bg); color: var(--fg-soft);
+  font-size: 11.5px; font-weight: 650; letter-spacing: .01em; line-height: 1.4;
+}
+.fill-edge-up { top: 0; transform: translateY(-50%); }
+.fill-edge-down { bottom: 0; transform: translateY(50%); }
+/* INKLAPBAAR RANDLABEL (aug 2026). Het label is ook de knop die zijn blok
+   open- en dichtklapt; de chevron staat in CSS en niet in de DOM, want het
+   label is een leesbare zin en geen knoppenbalk. aria-expanded draagt de
+   stand — voor de schermlezer én voor deze regel. */
+.fill-edge.is-foldable { cursor: pointer; user-select: none; }
+.fill-edge.is-foldable::after {
+  content: '\25B8'; margin-left: 5px; font-size: 10px; color: var(--fg-soft);
+  display: inline-block; transition: transform .12s ease;
+}
+.fill-edge.is-foldable[aria-expanded="true"]::after { content: '\25BE'; }
+.fill-edge.is-foldable:hover { color: var(--fg); }
+.fill-edge.is-foldable:focus-visible { outline: 2px solid var(--accent-soft); outline-offset: 1px; }
+@media (prefers-reduced-motion: reduce) {
+  .fill-edge.is-foldable::after { transition: none; }
+}
+
+/* --- DE GRAAF-INSPECTEUR IN DEZELFDE KETEN-LAYOUT (aug 2026) --------------
+   Wat het Invulling-paneel doet met "wat vult dit in / wat vult dit", doet de
+   inspecteur met de twee richtingen van de graaf: de knoop waar je staat is
+   hetzelfde volle-breedte grijze vlak, met INKOMEND (subject → dit element)
+   erboven en UITGAAND eronder, en het randlabel op de rand ertussen. Eén
+   visuele taal voor beide panelen, dus dezelfde klassen: .insp-cur hergebruikt
+   de vorm van .fill-cur, de randlabels zijn letterlijk .fill-edge. */
+.insp-cur {
+  position: relative; margin: 26px -18px; padding: 14px 18px 12px;
+  background: var(--panel-cur); border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+/* Binnen het vlak begint het bronfragment direct: de ruime bovenmarge van
+   .insp-sec zou het label op de rand raken. */
+.insp-cur .insp-sec { margin-top: 10px; }
+.insp-cur .insp-node-head { margin: 0; }
+.insp-dir { margin: 0; }
+.insp-dir.insp-in { margin-bottom: 2px; }
+.insp-dir.insp-out { margin-top: 4px; }
+/* De fold-out draagt haar kop niet meer zelf: die staat op het randlabel. */
+.insp-fold-bare > summary { display: none; }
+/* DE OVERGANG bij het verzetten van het paneel (fillFlip in doc.js): de
+   gekozen rij schuift van haar oude plek naar het centrale vlak. De transitie
+   zet JavaScript zelf op de node (transform, ~200ms); hier staat alleen de
+   garantie dat wie prefers-reduced-motion aan heeft niets ziet bewegen — dan
+   blijft alleen de puls over. */
+@media (prefers-reduced-motion: reduce) {
+  .fill-row { transition: none !important; transform: none !important; }
+}
+/* De blokken erbuiten houden hun eigen ritme; het ↓-blok begint onder het
+   label dat op de onderrand ligt. */
+.fill-block.fill-up { margin-bottom: 2px; }
+.fill-block.fill-down { margin-top: 4px; }
+/* Herkomst-notitie op een rij in het paneel ("overgenomen van …", "via
+   voorwaarde ‘…’"): op een eigen regel onder de inhoud, klein en gedempt. */
+.fill-note { flex: 1 1 100%; font-size: 11px; margin-top: 1px; }
+/* De sprong terug naar de weergave: klein, tekstueel, geen tweede ronde knop
+   naast het raderwiel — anders staan er drie cirkels op één rij. */
+.fill-jump { margin-left: auto; flex: 0 0 auto; border: 0; background: none;
+  color: var(--fg-soft); cursor: pointer; font: inherit; font-size: 13px;
+  padding: 0 4px; border-radius: 4px; }
+.fill-jump:hover { color: var(--accent); background: var(--accent-soft); }
+.fill-off ul.cov-conds { padding-left: 12px; }
+.insp-crumbs { font-size: 12.5px; margin-bottom: 10px; line-height: 1.7; color: var(--fg-soft); }
+.crumb { cursor: pointer; color: var(--accent); text-decoration: underline dotted; }
+.crumb.current { color: var(--fg); font-weight: 600; text-decoration: none; cursor: default; }
+.insp-sep { color: var(--fg-soft); }
+.insp-label-row { display: flex; align-items: flex-start; gap: 6px; }
+.insp-label { font-weight: 700; font-size: 15px; flex: 1 1 auto; min-width: 0; }
+.insp-curie { font-size: 12px; color: var(--fg-soft); overflow-wrap: anywhere; }
+.insp-types { font-size: 11.5px; }
+/* "Toon in de weergave": spiegelbeeld van de verken-knop (terug naar de UI). */
+.toon-btn { margin-left: 0; }
+.insp-reveal-msg { font-size: 12px; margin: 6px 0 0; }
+.insp-reveal-msg[hidden] { display: none; }
+
+/* Korte oplichting van het element waar de terugsprong uit de inspecteur
+   landt (kaart, regel-rij of een los gestempeld element). */
+@keyframes ui-flash-pulse {
+  0%   { box-shadow: 0 0 0 3px var(--accent); }
+  70%  { box-shadow: 0 0 0 3px var(--accent-soft); }
+  100% { box-shadow: 0 0 0 3px transparent; }
+}
+.ui-flash { animation: ui-flash-pulse 1.6s ease-out; border-radius: 9px; }
+@media (prefers-reduced-motion: reduce) { .ui-flash { animation: none; outline: 2px solid var(--accent); } }
+.insp-sec { margin: 16px 0 6px; font-size: 11px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .6px; color: var(--fg-soft);
+  border-bottom: 1px solid var(--border); padding-bottom: 3px; }
+.insp-in-list { list-style: none; margin: 0; padding: 0; }
+.insp-in { cursor: pointer; padding: 4px 6px; border-radius: 5px; }
+.insp-in:hover { background: var(--accent-soft); }
+.insp-in-subj { text-decoration: underline dotted; color: var(--accent); }
+.insp-in-pred { font-size: 11.5px; }
+.insp-none { font-size: 12.5px; }
+.insp-ttl {
+  margin: 6px 0 0; padding: 10px 12px; border-radius: 6px;
+  background: var(--code-bg); color: var(--code-fg);
+  font-family: var(--mono); font-size: 12px; line-height: 1.5; overflow-x: auto;
+}
+.insp-ttl code { white-space: pre; display: block; }
+/* Inspecteur-fold-outs: "Verwijst naar (n)" / "Verwezen vanuit (n)" —
+   ingeklapt bij render, lijst lazy + gechunkt (zie renderInspector). */
+.insp-fold { display: block; margin: 10px 0; padding: 5px 10px;
+  border: 1px solid var(--border); border-radius: 8px; background: var(--bg-alt); }
+.insp-filter { display: block; width: 90%; margin: 8px 0 4px; }
+.insp-fold .ref-filter { font: inherit; font-size: 13px; padding: 5px 10px;
+  border: 1px solid var(--border); border-radius: 7px;
+  background: var(--bg); color: var(--fg); }
+.insp-fold .ref-filter:focus { outline: 2px solid var(--accent-soft); border-color: var(--accent); }
+.insp-fold .ref-more { display: block; margin: 8px auto 4px; }
+.insp-fold .ref-more[hidden] { display: none; }
+
+/* Turtle-highlightpalet (gedeelde highlighter uit assets/inspect.js) */
+.tok-prefix { color: var(--tok-prefix); }
+.tok-iri { color: var(--tok-iri); }
+.tok-pname { color: var(--tok-pname); }
+.tok-string { color: var(--tok-string); }
+.tok-kw { color: var(--tok-kw); font-weight: 600; }
+.tok-comment { color: var(--tok-comment); font-style: italic; }
+.tok-punct { color: var(--tok-punct); }
+.tok-num { color: var(--tok-num); }
+.tok-link { text-decoration: underline dotted; cursor: pointer; }
+.tok-link:hover { text-decoration-style: solid; }
+
+/* Foutmelding per bron in de bronnenlijst (o.a. RDF/XML niet ondersteund) */
+.sources-list li.src-error-li a, .sources-list li.src-error-li span:first-child { color: var(--verbod); }
+.sources-list .src-err { font-family: var(--sans); }
+/* Verwijderknop per bron (herbouwt de store uit de resterende bronnen). */
+.src-remove { font: inherit; font-size: 11px; line-height: 1; border: none;
+  background: none; color: var(--fg-soft); cursor: pointer; padding: 2px 4px;
+  border-radius: 4px; }
+.src-remove:hover { background: var(--accent-soft); color: var(--verbod, #b23); }
+
+/* Lazy kaartenlijst voor de lijstsecties: gechunkt bijladen via sentinel/
+   "Meer laden"-knop. Filterveld en teller zitten sinds aug 2026 op/onder de
+   sectiekop (zie .page-sec-summary / .sec-filter-panel). */
+.set-cards { margin: 12px 0; }
+.set-index-filter {
+  flex: 0 1 340px; min-width: 160px; font: inherit; font-size: 13px;
+  padding: 6px 10px; border: 1px solid var(--border); border-radius: 7px;
+  background: var(--bg); color: var(--fg);
+}
+.set-index-filter:focus { outline: 2px solid var(--accent-soft); border-color: var(--accent); }
+.set-index-count { font-size: 12.5px; white-space: nowrap; }
+
+.set-card-list, .agr-card-list { display: flex; flex-direction: column; }
+/* Dichte lijst: ingeklapte kaarten zijn alleen hun kop. De titelmaat zakt
+   naar die van de overeenkomst-kaart — in een lijst van honderden regels is
+   20px te zwaar, en zo lezen de twee lijstsecties identiek. */
+.set-card > .offer-summary .offer-title { font-size: 16px; font-weight: 650; letter-spacing: 0; }
+.set-card > .offer-summary .agr-assignee { font-size: 12.5px; }
+.card-sentinel { height: 1px; }
+.card-more { display: block; margin: 10px auto; }
+.card-more[hidden], .card-sentinel[hidden] { display: none; }
+/* ==== LADEN · spinner + skeleton-kaarten ================================
+   Eén component voor alle laadmomenten. Vroeger sprong hier alleen een
+   tekstregel om ("SPARQL-endpoint bevragen…", "Bron 2/3 inlezen: …"); nu
+   staat diezelfde tekst naast een klassieke ronde spinner, met daaronder
+   grijze placeholders in de vorm van de te tonen inhoud. */
+.load-status {
+  display: flex; align-items: center; gap: 10px;
+  color: var(--fg-soft); font-size: 13px; padding: 8px 0;
+}
+.load-status-text { overflow-wrap: anywhere; }
+.spinner {
+  flex: 0 0 auto; width: 17px; height: 17px; border-radius: 50%;
+  border: 2px solid color-mix(in srgb, var(--fg-soft) 30%, transparent);
+  border-top-color: var(--accent);
+  animation: spinner-turn .8s linear infinite;
+}
+@keyframes spinner-turn { to { transform: rotate(360deg); } }
+
+/* Skeleton-kaart: de gemiddelde kaartvorm (pill, titel, ondertitel, chip).
+   De rij is exact even hoog als een echte ingeklapte kaartregel
+   (.agr-summary: padding 6px + regelhoogte 24,8px = 36,8px) en de kaart draagt
+   dezelfde schil/marge als de kaartfamilie, zodat het wisselmoment
+   skeleton -> echte kaarten geen layout-sprong geeft. */
+.skel-list { margin: 6px 0 0; }
+.skel-card {
+  margin: 0 0 8px; padding: 6px 14px; border-radius: 10px;
+  border: 1px solid var(--border); border-left: 3px solid var(--border);
+  background: var(--bg-head);
+}
+.skel-row { display: flex; align-items: center; gap: 10px; height: 36.8px; }
+.skel {
+  display: inline-block; position: relative; overflow: hidden;
+  background: var(--skel-bg); border-radius: 5px;
+}
+/* Shimmer: één lichtstreep die over de placeholder loopt. */
+.skel::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(90deg, transparent 0%, var(--skel-hi) 50%, transparent 100%);
+  animation: skel-shimmer 1.6s ease-in-out infinite;
+}
+@keyframes skel-shimmer { from { transform: translateX(-100%); } to { transform: translateX(100%); } }
+
+.skel-pill { width: 76px; height: 20px; border-radius: 4px; flex: 0 0 auto; }
+.skel-title { width: 320px; max-width: 46%; height: 14px; flex: 0 1 auto; }
+.skel-sub { width: 150px; max-width: 20%; height: 11px; flex: 0 1 auto; }
+.skel-chip { width: 92px; height: 16px; border-radius: 999px; margin-left: auto; flex: 0 0 auto; }
+/* Lichte variatie in breedte en fase, anders oogt de lijst als een raster. */
+.skel-v1 .skel-title { width: 250px; } .skel-v2 .skel-title { width: 390px; }
+.skel-v1 .skel-sub { width: 110px; } .skel-v2 .skel-sub { width: 180px; }
+.skel-v1 .skel::after { animation-delay: .2s; }
+.skel-v2 .skel::after { animation-delay: .4s; }
+
+/* Kleinere variant in de BODY van één kaart terwijl zijn detail-CONSTRUCT
+   loopt (2–3 regels in plaats van een halve kaartenlijst). */
+.card-loading { padding: 4px 0 8px; }
+.skel-lines { display: flex; flex-direction: column; gap: 8px; padding: 2px 0 8px; max-width: 760px; }
+.skel-line { height: 12px; width: 100%; }
+.skel-line.skel-v1 { width: 84%; }
+.skel-line.skel-v2 { width: 61%; }
+.skel-line.skel-v1::after { animation-delay: .2s; }
+.skel-line.skel-v2::after { animation-delay: .4s; }
+
+/* Bewegingsgevoelige gebruikers: geen draai en geen shimmer, wél dezelfde
+   vorm — de spinner blijft als statische ring met accentsegment leesbaar. */
+@media (prefers-reduced-motion: reduce) {
+  .spinner { animation: none; }
+  .skel::after { display: none; animation: none; }
+}
+
+/* Telling-link op de Offer-kaartkop ("1.392 overeenkomsten"): springt naar de
+   Overeenkomsten-sectie met het filter voorgezet op dat aanbod. */
+.agr-count-link { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.agr-count-link:hover { color: var(--accent); }
+
+/* Ledenlijst van een target-gegevensset (AssetCollection): ingeklapte
+   fold-out met telling; uitgeklapt gegroepeerd (categorie/groep/rubriek). */
+.member-list { display: block; margin: 4px 0 2px; padding: 4px 10px;
+  border: 1px solid var(--border); border-radius: 8px; background: var(--bg-alt); }
+.member-group-head { font-size: 11.5px; text-transform: uppercase; letter-spacing: .04em;
+  margin: 6px 0 2px; }
+/* Ancestry-koppen: de keten BOVEN de leden (BRP: categorie > groep), buiten
+   deze gegevensset om. Bewust anders dan de type-kop hierboven — die zegt WAT
+   een lid is, deze zegt WAARONDER het valt. De buitenste kop krijgt een
+   scheidingslijn en de kleur van de tekst (hij is een tussenkop, geen bijschrift),
+   de sub-kop springt in en blijft gedempt. */
+.member-ancestry-head { font-size: 12px; font-weight: 600; color: var(--fg);
+  letter-spacing: .01em; margin: 10px 0 2px; padding-top: 5px;
+  border-top: 1px solid var(--border); }
+.member-ancestry-head:first-child { margin-top: 2px; padding-top: 0; border-top: 0; }
+.member-ancestry-sub { font-size: 11.5px; margin: 4px 0 2px 12px;
+  padding-left: 8px; border-left: 2px solid var(--border); }
+.member-ancestry-sub + .member-items { margin-left: 12px; padding-left: 10px;
+  border-left: 2px solid var(--border); }
+.member-items { margin: 0; padding: 0 0 0 2px; list-style: none;
+  columns: 2 260px; column-gap: 24px; }
+.member-item { padding: 1px 0; font-size: 12.5px; break-inside: avoid; }
+
+/* De ledenlijst is een doorlopende BOOM over de odrl:partOf-keten: een lid dat
+   zelf leden heeft is een geneste fold-out (.member-node). Twee keuzes:
+   - een niveau met uitklapbare knopen verlaat de tweekoloms-opmaak. Kolommen
+     en een boom verdragen elkaar niet — een knoop die uitklapt zou de kolom
+     laten herbreken en de rest van de lijst laten verspringen;
+   - de inspringing komt van een linkerlijn per niveau (zelfde idioom als de
+     geneste constraint-groepen hierboven), zodat de diepte afleesbaar blijft. */
+.member-items:has(> .member-item.branch) { columns: auto; }
+/* En ook níet in een dieper niveau: daar loopt links een geleidelijn mee, en
+   twee kolommen onder één lijn lezen als twee takken. Het WORTELniveau houdt
+   zijn kolommen — een platte gegevensset van duizenden rubrieken is daar nog
+   altijd mee gebaat. */
+.member-level .member-items { columns: auto; }
+.member-item.branch { padding: 0; }
+.member-node { display: block; }
+.member-summary { font-size: 12.5px; cursor: pointer; list-style: none;
+  display: flex; align-items: center; gap: 6px; padding: 1px 0; user-select: none; }
+.member-summary::-webkit-details-marker { display: none; }
+/* BOOM-idioom: in de ledenlijst staat het driehoekje LINKS van het lid, zoals
+   in elke verkenner — het hoort bij het label dat het openvouwt, niet bij de
+   rechterrand van de regel. Dat is bewust een ANDERE keuze dan op de kaarten
+   (aanbod/overeenkomst/set): die houden hun chevron rechts, Swagger-stijl, waar
+   hij de kopregel afsluit. De .vl-chevron duwt zichzelf normaal met
+   `order: 9; margin-left: auto` naar rechts; hier wordt dat teruggedraaid.
+   Klikvlak 22px — de summary is toch al helemaal klikbaar, maar het
+   driehoekje zelf moet ook zonder precisie te raken zijn. */
+.member-summary > .vl-chevron { order: 0; margin-left: 0; width: var(--tree-knob, 22px); height: var(--tree-knob, 22px); }
+.member-tree, .member-level { --tree-knob: 22px; --tree-indent: 28px; }
+/* Bladeren springen precies zo ver in als de chevron+gap breed is, zodat hun
+   tekst op DEZELFDE kolom begint als die van een uitklapbaar lid. Zonder deze
+   uitlijning leest een gemengd niveau als twee lijsten door elkaar.
+   Alleen wáár er iets uit te lijnen valt: in een lijst zonder uitklapbare
+   leden (de rubrieken onder een ancestry-subkop) zou de chevron-goot dode
+   ruimte zijn. Uitlijning is een eigenschap van het NIVEAU, niet van het lid. */
+.member-items:has(> .member-item.branch) > .member-item:not(.branch) {
+  padding-left: var(--tree-indent, 28px);
+}
+details:not([open]) > .member-summary > .vl-chevron { transform: rotate(-90deg); }
+.member-summary:hover > .vl-chevron { color: var(--fg); }
+.member-name { min-width: 0; }
+.member-level { margin: 2px 0 4px 4px; padding-left: 12px;
+  border-left: 2px solid var(--border); }
+.member-loading, .member-empty { font-size: 12px; padding: 2px 0; }
+/* Waarom de boom hier stopt: cykel of diepte-limiet. Neutrale mededeling,
+   geen waarschuwingskleur — het is data, geen fout. */
+.tree-note { font-size: 11.5px; margin-left: 6px; font-style: italic; }
+
+/* Geneste logische constraints (odrl:and/or/xone): groepskop + ingesprongen
+   leden; grote bomen starten ingeklapt als fold-out (c-fold). */
+.c-group { flex: 1 1 100%; min-width: 0; }
+.c-group-head { display: flex; align-items: baseline; gap: 6px; margin: 2px 0; }
+ul.c-group-items { margin: 2px 0 2px 4px; padding: 0 0 0 14px; list-style: none;
+  border-left: 2px solid var(--border); }
+.c-group-item { padding: 2px 0; }
+.c-leaf { display: inline-flex; gap: 6px; align-items: baseline; flex-wrap: wrap; }
+.c-fold { flex: 1 1 100%; }
+.c-fold-body { margin-top: 4px; }
+
+/* Fold-out-koptekst (inspecteur, ledenlijst, voorwaarde-fold) */
+.vl-summary { font-size: 12px; cursor: pointer; list-style: none; display: flex;
+  align-items: center; gap: 6px; padding: 2px 0; user-select: none; }
+.vl-summary::-webkit-details-marker { display: none; }
+/* Zelfde chevron-rechts-principe als op de kaarten, één maat kleiner. De span
+   staat in de DOM nog vóór de tekst — assets/inspect.js is gedeeld met de
+   drie-panelen-weergave en blijft daar ongemoeid — dus flex `order` en
+   `margin-left:auto` zetten hem hier visueel achteraan. De tekstglyph zelf
+   wordt weggeschaald (font-size 0); de vorm komt uit hetzelfde ::before-recept
+   als .chev. */
+.vl-chevron {
+  order: 9; margin-left: auto; flex: 0 0 auto; position: relative;
+  width: 16px; height: 16px; font-size: 0; line-height: 0; color: var(--fg-soft);
+  transition: transform .15s ease, color .15s ease;
+}
+.vl-chevron::before {
+  content: ''; position: absolute; left: 50%; top: 50%;
+  width: 7px; height: 7px; margin: -5.3px 0 0 -3.5px;
+  border-right: 2px solid currentColor; border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+}
+details:not([open]) > .vl-summary > .vl-chevron { transform: rotate(-90deg); }
+.vl-summary:hover > .vl-chevron { color: var(--fg); }
+
+/* Versienavigator (temporele versie-containers; zie TEMPORAL_VOCABS in
+   parse.js): compacte chip rechtsboven in de kaartkop — ‹ datum › — plus
+   het uitklapmenu met alle versies. */
+/* COMPACT (beslissing eigenaar, aug 2026): de chip staat nu op ELKE kaartkop
+   in de lijst, dus hij moet zo min mogelijk ruimte kosten — kleinere letter,
+   krappere padding, smallere pijlknoppen. Maatvoering zo gekozen dat de
+   chiphoogte ONDER de regelhoogte van een kop zonder chip blijft: de
+   kaartregel wordt er dus niet hoger van. Dezelfde maten staan in styles.css
+   (driepanelen-viewer), zodat de chip overal identiek oogt. */
+.vnav-wrap { position: relative; display: inline-flex; align-items: center;
+  gap: 6px; white-space: nowrap; }
+.vnav { display: inline-flex; align-items: center; gap: 0;
+  border: 1px solid var(--border); border-radius: 999px;
+  background: var(--bg-alt); padding: 0 1px; }
+.vnav.busy { opacity: .55; }
+.vnav-arrow, .vnav-date {
+  font: inherit; color: var(--fg-soft); background: none; border: 0;
+  border-radius: 999px; cursor: pointer; padding: 0 3px; line-height: 1.5;
+}
+.vnav-arrow { font-size: 12px; padding: 0 4px; }
+/* Lege sleuf bij de oudste/nieuwste versie: houdt de breedte, zodat de datum
+   en de andere pijl niet verspringen tijdens het doorlopen van de versies.
+   Het element blijft een (disabled) button die de klik opvangt — bewust GEEN
+   visibility:hidden: dat maakt de sleuf doorlaatbaar, waarna de klik op de
+   <summary> eronder landde en de kaart in-/uitklapte. Gedempt via opacity in
+   plaats van volledig onzichtbaar: de chip staat nu ook op kaarten zónder
+   versiehistorie, en daar leest een leeg gat als "kapot" — een grijze pijl
+   zegt "deze kant op is er niets". */
+.vnav-arrow-off { opacity: .35; cursor: default; }
+.vnav-date { font-family: var(--mono); font-size: 10.5px; letter-spacing: -.3px;
+  min-width: 9ch; text-align: center; }
+.vnav-arrow:not(:disabled):hover, .vnav-date:hover { background: var(--accent-soft); color: var(--accent); }
+.vnav-arrow:focus-visible, .vnav-date:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.vnav-menu {
+  position: absolute; z-index: 20; top: calc(100% + 4px); right: 0;
+  min-width: 260px; max-width: 420px; max-height: 320px; overflow: auto;
+  padding: 6px; background: var(--bg); border: 1px solid var(--border);
+  border-radius: 8px; box-shadow: 0 6px 18px rgba(16, 24, 32, .18);
+  white-space: normal; text-align: left;
+}
+.vnav-menu[hidden] { display: none; }
+.vnav-menu-head { display: flex; align-items: center; gap: 6px; font-size: 12px; padding: 2px 6px; }
+.vnav-menu-sub { font-size: 11.5px; padding: 0 6px 4px; }
+.vnav-mi {
+  display: flex; align-items: baseline; gap: 8px; width: 100%;
+  font: inherit; font-size: 12.5px; color: var(--fg); text-align: left;
+  background: none; border: 0; border-radius: 6px; padding: 3px 6px; cursor: pointer;
+}
+.vnav-mi:hover { background: var(--accent-soft); }
+.vnav-mi.shown { font-weight: 600; }
+.vnav-mi-date { font-family: var(--mono); font-size: 11.5px; white-space: nowrap; }
+.vnav-mi-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.vchip { display: inline-block; font-size: 10.5px; line-height: 1.6; padding: 0 7px;
+  border-radius: 999px; border: 1px solid transparent; white-space: nowrap; }
+.vchip.current { background: #e2f4e6; color: #1b6b34; border-color: #bfe3c8; }
+.vchip.superseded { background: #ececec; color: #666; border-color: #ddd; }
+/* Beëindigd: laatste versie van een besluit dat is afgelopen (geen opvolger). */
+.vchip.terminated { background: #fbeaea; color: #8c2f2f; border-color: #f0cdcd; }
+.vchip.future { background: #e5effb; color: #1e56a0; border-color: #c9ddf5; }
+@media (prefers-color-scheme: dark) {
+  .vchip.current { background: #16301f; color: #7fd39a; border-color: #24462f; }
+  .vchip.superseded { background: #21272f; color: #9aa6b3; border-color: #303945; }
+  .vchip.terminated { background: #33201f; color: #e39a95; border-color: #4c2c2a; }
+  .vchip.future { background: #182634; color: #79b3e6; border-color: #24384c; }
+}
+.si-versions { text-align: right; }
+
+/* Alleen voor schermlezers: de laadmelding is visueel vervangen door de
+   skeleton-shimmer, maar blijft aankondigbaar. */
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Intensioneel gedefinieerde collectie: geen ledenlijst maar een of meer
+   refinements. Die dragen dezelfde slot-chips als de Voorwaarden-rijen van een
+   regel; elk refinement krijgt een eigen regel (impliciete EN — de sectiebalk
+   erboven zegt dat, dus geen voegwoorden tussen de rijen). */
+.coll-refinements { margin: 4px 0 2px; padding: 0; list-style: none; }
+.coll-refinement { padding: 1px 0; }
+.party-coll { display: inline-block; }
+
+/* De BODY van een collectie heeft dezelfde opbouw als de body van een regelrij:
+   een kv-veld met de bron, daaronder een sectiebalk met de afbakening. Iets
+   compacter dan .op-body, en de balk draagt de collectiekleur (--mc) in plaats
+   van die van de regel waarin de waarde toevallig staat. */
+.coll-body { --mc: var(--kind-coll); display: block; font-size: 12.5px;
+  margin: 2px 0; padding: 0 10px; }
+.coll-body h4 {
+  margin: 0 -10px 4px; padding: 5px 10px;
+  font-size: 11px; font-weight: 700; letter-spacing: .6px; text-transform: uppercase;
+  color: var(--fg-soft);
+  background: color-mix(in srgb, var(--mc) 6%, var(--bg-alt));
+  border-bottom: 1px solid var(--border);
+}
+.coll-body h4:not(:first-child) { margin-top: 8px; border-top: 1px solid var(--border); }
+.coll-body .kv { margin: 6px 0 8px; grid-template-columns: minmax(90px, max-content) 1fr;
+  gap: 2px 12px; }
+
+/* Soortchip ("Groep"/"Verzameling") is een kind-pill zoals Set/Toestemming:
+   alle native ODRL-entiteiten dragen dat formaat, met een eigen kleur. */
+.coll-source-line { display: inline-block; }
+.coll-source-name { font-weight: 500; }
+/* Benoemde collectie: de afbakening zit ingeklapt achter de naam. Zelfde
+   fold-out-idioom als de ledenlijst — chevron rechts, kader eromheen — zodat de
+   twee uitklappen op een kaart gelijk ogen, en dezelfde kop/body-opbouw als een
+   regelrij. */
+.coll-fold { display: block; margin: 2px 0; padding: 2px 10px 0;
+  border: 1px solid var(--border); border-radius: 8px; background: var(--bg-alt); }
+.coll-summary { gap: 4px; flex-wrap: wrap; }
+.coll-fold-body { margin: 2px -10px 0; padding: 0 10px 6px;
+  border-top: 1px solid var(--border); }
+
+/* --- BRON <-> DUPLICAAT ---------------------------------------------------
+   De rijen in het invulling-paneel (en de voorwaardenlijst op een
+   artefactkaart) zijn duplicaten van rijen in het document. Hoveren (of
+   focussen) van zo'n duplicaat markeert bron én duplicaat:
+   een zachte accent-vlek met een randje, geen kleurverandering van de tekst —
+   het gaat om "deze twee horen bij elkaar", niet om een status.
+   Het duplicaat is toetsenbord-bereikbaar (tabindex), dus het krijgt ook een
+   nette focus-ring in plaats van de standaard outline op een <li>. */
+.cov-cond { border-radius: 5px; margin-left: -5px;
+  padding-left: 5px; padding-right: 5px; outline-offset: -1px; }
+.is-ref-hl { background: var(--accent-soft);
+  box-shadow: inset 0 0 0 1px var(--accent); }
+.op-summary.is-ref-hl { border-radius: 5px; }
+.cov-cond:focus-visible { outline: 2px solid var(--accent); }
+
+/* OMHULSEL in plaats van de bron zelf: de bron zit in een dichte vouw, dus we
+   markeren de kop van die vouw. Gestippeld en zonder vlak — "hij zit hierin",
+   niet "dit is hem". */
+.is-ref-box { background: none;
+  box-shadow: none; outline: 1.5px dashed var(--accent); outline-offset: -1px;
+  border-radius: 5px; }
+
+/* Bron buiten het scrollvenster: een accentbalk met pijl aan de rand waar hij
+   ligt. Hoveren scrollt bewust NIET (dat doet pas de →-knop); dit is alleen
+   de hint "daarboven"/"daaronder". De balk pulst drie keer en blijft dan
+   staan zolang de muis op de rij staat. */
+.ref-edge {
+  position: fixed; left: 0; right: 0; height: 5px; z-index: 60;
+  background: var(--accent); pointer-events: none;
+  display: flex; align-items: center; justify-content: center;
+  animation: ref-edge-pulse .55s ease-in-out 3;
+}
+.ref-edge[hidden] { display: none; }
+.ref-edge.edge-top { top: 0; }
+.ref-edge.edge-bottom { bottom: 0; }
+.ref-edge-arrow {
+  position: absolute; font-size: 10px; line-height: 1; color: var(--bg);
+  background: var(--accent); padding: 2px 8px; border-radius: 3px;
+}
+.ref-edge.edge-top .ref-edge-arrow { top: 5px; border-radius: 0 0 3px 3px; }
+.ref-edge.edge-bottom .ref-edge-arrow { bottom: 5px; border-radius: 3px 3px 0 0; }
+/* Het paneel duwt het document opzij: de indicator hoort bij het DOCUMENT en
+   loopt dus niet onder het paneel door. */
+body.panel-open .ref-edge { right: var(--panel-w); }
+@media (max-width: 900px) { body.panel-open .ref-edge { right: 0; } }
+@keyframes ref-edge-pulse { 0%, 100% { opacity: .3; } 50% { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  .ref-edge { animation: none; opacity: 1; }
+}
+
+
+/* ==== TEKST IS OM TE KOPIËREN =============================================
+   Een <summary> mag niet meeslepen als je erin selecteert, dus de KOPREGELS
+   staan op `user-select: none`. Tot aug 2026 gold de uitzondering daarop
+   alleen voor de kaart- en regeltitels; alle andere tekst in een kop — de
+   soortwoord-pill, de chips van een voorwaarde, de Groep-pill met haar naam,
+   een IRI in mono, de telling — was niet te kopiëren, terwijl dat juist de
+   tekst is die een lezer in een ticket of een mail plakt.
+   De regel is nu: de kopregel zelf selecteert niet, ELKE TEKSTDRAGER erin wel,
+   en alleen de knoppen en chevrons blijven onselecteerbaar. De andere helft —
+   de vouw niet laten omklappen terwijl je selecteert — zit in summaryEl() in
+   doc.js, waar sinds deze slag élke <summary> van deze weergave doorheen komt.
+   Buiten de koppen is tekst altijd al selecteerbaar; de tekstdragers krijgen
+   het hier toch expliciet, zodat een nieuwe `user-select: none` op een ouder
+   ze niet stilletjes meeneemt. */
+:where(.op-summary, .offer-summary, .agr-summary, .page-sec-summary,
+       .member-summary, .vl-summary, .src-block > summary) :where(
+  .method, .kind-pill, .chip, .vchip, .c-slot, .c-chips, .c-note, .sentence,
+  .op-name, .op-title, .op-sum, .op-path, .uid, .mono, .hash, .target-tag,
+  .offer-title, .agr-title, .agr-assignee, .page-sec-title, .set-index-count,
+  .member-name, .coll-name, .herkomst, .doc-ref, .vnav-date, .cov-count,
+  .artifact-title, .tree-note, .geerfd, .muted) {
+  -webkit-user-select: text; user-select: text; cursor: text;
+}
+/* Dezelfde dragers buiten een kopregel (rijen in de body, de dekkings- en
+   paneelrijen, de velden van het artefactformulier). Geen `cursor: text`:
+   daar is de gewone tekstcursor er al. */
+.method, .kind-pill, .chip, .vchip, .c-slot, .c-chips, .c-note, .sentence,
+.op-name, .op-title, .op-sum, .op-path, .uid, .mono, .hash, .target-tag,
+.member-name, .coll-name, .herkomst, .doc-ref, .constraint, .cov-cond,
+.fill-row, .fill-content, .fill-head, .artifact-form, .artifact-title,
+.kv dt, .kv dd, .insp-body, .art-fold-body {
+  -webkit-user-select: text; user-select: text;
+}
+/* Alleen de bediening niet: knoppen, chevrons en de decoratieve glyphs. Een
+   selectie die over een knop heen loopt zou anders "⌕ ⚙ ▸" meenemen. */
+.verken-btn, .cov-gear, .cov-status, .fill-jump, .chev, .vl-chevron,
+.insp-close, .btn, .lang-btn, .vnav-arrow, button {
+  -webkit-user-select: none; user-select: none; cursor: pointer;
+}
+
+/* AANKOMST NA EEN →-SPRONG uit het zijpaneel: dezelfde markering als bron <->
+   duplicaat, maar even pulserend, zodat je ziet wáár je landde. Geen tweede
+   kleurtaal erbij — alleen de dekking van de bestaande markering ademt. */
+.is-ref-pulse { animation: ref-pulse .6s ease-in-out 3; }
+@keyframes ref-pulse {
+  0%, 100% { box-shadow: inset 0 0 0 1px var(--accent); }
+  50% { box-shadow: inset 0 0 0 2px var(--accent); background: var(--accent-soft); }
+}
+@media (prefers-reduced-motion: reduce) { .is-ref-pulse { animation: none; } }
+
+/* INGEKLAPT = GEEN VLAK (correctie aug 2026). Een richtingblok draagt zijn kop
+   niet meer zelf (die staat op het randlabel), dus een dichtgeklapte fold-out
+   liet een leeg omrand vakje achter: rand, padding en marge zonder inhoud. Dat
+   las als "hier is niets" in plaats van "dit staat dicht". Dicht neemt daarom
+   GEEN ruimte in — het randlabel met zijn telling en chevron is het hele
+   signaal, en dat zegt precies wat er te halen valt en dat het dicht staat. */
+.insp-fold-bare:not([open]) {
+  margin: 0; padding: 0; border: 0; background: none;
+}
+/* En de chevron mag gezien worden: hij is de enige aanwijzing dat het label
+   een knop is. Iets groter dan een voetnoot, en in de kleur van het label
+   zelf in plaats van nog een tint gedempter. */
+.fill-edge.is-foldable::after { font-size: 11px; color: inherit; }
+
+/* --- UITLEG-TOOLTIP (Visualisation Note §1) ---------------------------------
+   Een term die een DEFINITIE in de data heeft (skos:definition,
+   dct:description, rdfs:comment) krijgt twee dingen: een fijne gestippelde
+   onderstreping als affordance, en een paneeltje op verlengde hover of bij
+   focus. Zie assets/tooltip.js voor het gedrag; hier staat alleen de vorm.
+   Zelfde blok in assets/styles.css — de graaf-inspecteur wordt door beide
+   pagina's gebruikt, dus beide stylesheets moeten hem kennen. */
+/* GEEN ZICHTBARE AANDUIDING VOORAF (besluit eigenaar, aug 2026). Een
+   gestippelde onderstreping op elke gedefinieerde term maakte de pagina
+   streperig — en een uitleg is navraag, geen waarschuwing. De tooltip komt
+   gewoon op hover en op focus; .has-tip is daarom alleen nog een haakje voor
+   het gedrag (assets/tooltip.js) en voor de focusring hieronder.
+   Wel een focusring: wie tabt moet zien wáár hij staat. */
+.has-tip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.term-tip {
+  position: fixed; z-index: 70; top: 0; left: 0;
+  max-inline-size: 40ch;
+  padding: 7px 10px;
+  border: 1px solid var(--border); border-radius: 6px;
+  background: var(--bg-head, var(--bg-alt)); color: var(--fg);
+  font-family: var(--sans); font-size: 12.5px; line-height: 1.45;
+  box-shadow: 0 6px 20px rgba(10, 16, 24, .18);
+  /* Het paneel vangt zelf geen muis: eroverheen bewegen mag de term niet
+     verlaten en er valt niets in aan te klikken. */
+  pointer-events: none;
+  opacity: 0; transform: translateY(-2px);
+  transition: opacity .12s ease, transform .12s ease;
+}
+.term-tip[hidden] { display: none; }
+/* KOPREGEL — de tekst die vroeger als native `title` op dit element stond (de
+   naam van een voorwaarde, een IRI). Zwaarder en iets kleiner dan de uitleg
+   eronder, zodat het paneeltje leest als "dit ding — en dit betekent het". */
+.term-tip-head { display: block; font-weight: 650; font-size: 12px; overflow-wrap: anywhere; }
+.term-tip-head + .term-tip-body { display: block; margin-top: 3px; }
+.term-tip.is-open { opacity: 1; transform: none; }
+/* Boven de term geplaatst: dezelfde beweging, andere kant op. */
+.term-tip.is-above:not(.is-open) { transform: translateY(2px); }
+/* prefers-reduced-motion: geen fade, geen schuif — meteen staan waar hij
+   hoort. De klasse zet tooltip.js erbij; de media-query is de vangrail voor
+   het geval matchMedia niets zegt. */
+.term-tip.no-fade { transition: none; }
+@media (prefers-reduced-motion: reduce) {
+  .term-tip { transition: none; transform: none; }
+  .term-tip.is-above:not(.is-open) { transform: none; }
+}

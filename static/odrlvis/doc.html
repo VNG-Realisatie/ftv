@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ODRL Visualizer</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="assets/doc.css">
+</head>
+<body>
+  <header class="doc-topbar">
+    <div class="brand">
+      <span class="logo">ODRL Visualizer</span>
+      <span class="subtitle">ODRL-AP-NL</span>
+    </div>
+    <div class="topbar-right">
+      <!-- De policy-dropdown is vervallen (beslissing eigenaar, aug 2026):
+           navigeren gaat via de secties/filters; ?policy=-deeplinks blijven
+           werken en renderPolicySelect() is zonder dit element een no-op. -->
+      <!-- Taalkiezer (audit-punt B16): ?lang=nl|en, default nl. De labels
+           hieronder zijn de enige tekst in deze pagina die NIET uit
+           assets/i18n.js komt — "NL"/"EN" zijn in beide talen gelijk. -->
+      <div class="lang-switch" id="lang-switch" role="group" aria-label="Taal van de weergave">
+        <button class="lang-btn on" type="button" data-lang="nl" aria-pressed="true">NL</button>
+        <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button class="btn" id="btn-sources" type="button" aria-expanded="false">Bronnen ▾</button>
+    </div>
+  </header>
+
+  <!-- Fold-out: geladen RDF-bronnen + extra bronnen toevoegen (petstore-idee:
+       de "explore"-balk, maar dan voor TTL-URL's en een SPARQL-endpoint). -->
+  <section class="sources-panel" id="sources-panel" hidden>
+    <div class="sources-inner">
+      <div class="sources-col">
+        <div class="sources-label" id="label-sources-loaded">Geladen bronnen</div>
+        <ul class="sources-list" id="sources-list"></ul>
+        <p class="status" id="doc-status"></p>
+      </div>
+      <div class="sources-col">
+        <!-- Eén veld voor alle brontypen: het type (Turtle/JSON-LD-bestand of
+             SPARQL-endpoint) wordt automatisch gedetecteerd, zie
+             assets/source-detect.js. -->
+        <div class="sources-label" id="label-sources-add">Bron toevoegen</div>
+        <form class="sources-form" id="form-add-src">
+          <input type="text" id="input-src"
+                 placeholder="https://…/beleid.ttl of https://…/sparql" required>
+          <button class="btn" id="btn-add-src" type="submit">Toevoegen</button>
+        </form>
+        <p class="sources-note muted" id="src-detect-msg" hidden></p>
+      </div>
+    </div>
+  </section>
+
+  <main class="doc-main" id="doc-main"></main>
+
+  <script type="module" src="assets/doc.js"></script>
+</body>
+</html>

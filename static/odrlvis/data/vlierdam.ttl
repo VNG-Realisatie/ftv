@@ -1,0 +1,894 @@
+# ============================================================================
+# Voorbeeldgemeente Vlierdam: vocabulaire, velden, beleid en OpenFTV
+#
+# SAMENGEVOEGD BESTAND — niet met de hand bewerken.
+# Bron: https://github.com/VNG-Realisatie/odrlvis (map data/), samengevoegd
+# op 2026-08-31 voor publicatie op de FTV-site. Bronbestanden, met de datum
+# van hun laatste wijziging:
+#   data/vlierdam/vocabulaire.ttl  (2026-08-28)
+#   data/vlierdam/velden.ttl  (2026-08-26)
+#   data/vlierdam/beleid.ttl  (2026-08-29)
+#   data/vlierdam/openftv.ttl  (2026-08-28)
+#
+# De @prefix-declaraties van alle bronbestanden staan hieronder in één blok;
+# per bronbestand volgt daarna de onveranderde inhoud met een kopregel.
+# ============================================================================
+
+@prefix apnl:     <https://standaarden.overheid.nl/odrl-ap-nl/> .
+@prefix dcat:     <http://www.w3.org/ns/dcat#> .
+@prefix dct:      <http://purl.org/dc/terms/> .
+@prefix dpv:      <https://w3id.org/dpv#> .
+@prefix odrl:     <http://www.w3.org/ns/odrl/2/> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix prov:     <http://www.w3.org/ns/prov#> .
+@prefix qb:       <http://purl.org/linked-data/cube#> .
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:   <https://schema.org/> .
+@prefix sh:       <http://www.w3.org/ns/shacl#> .
+@prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
+@prefix vlierdam: <https://vlierdam.example/odrl/> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+
+
+# ############################################################################
+# ### BRON: data/vlierdam/vocabulaire.ttl   (2026-08-28)
+# ############################################################################
+
+# =============================================================================
+# Gemeente Vlierdam (FICTIEF, OpenFTV-demonstratiecasus) — domeinvocabulaire.
+# Eén ontmoetingspunt voor beleid en verzoek: de ODRL-Sets in beleid.ttl
+# gebruiken deze IRI's als left operands en waarden; context.jsonld mapt de
+# AuthZEN-request van de OpenFTV-stack op dezelfde IRI's.
+# Bron: open-ftv testdata/apps/gemeente-vlierdam (IAM- en RvVA-dataspace).
+# =============================================================================
+
+# ---- Left operands (kenmerken van verzoeker, verzoek en gegeven) ------------
+#
+# GEEN TOETSBAARHEIDSMARKER MEER (aug 2026). Tot dan droeg een deel van deze
+# operanden apnl:TechnischToetsbaar, als globale uitspraak "deze grootheid is
+# voor een beslispunt zichtbaar". Die marker is uit het profiel geschrapt: wat
+# een lezer bij een ongedekte voorwaarde wil weten, zegt sindsdien de
+# VOORWAARDE zelf met dpv:TechnicalMeasure / dpv:OrganisationalMeasure
+# (beleid.ttl). Dat is de juiste korrel — dezelfde grootheid is bij het ene
+# beslispunt wel en bij het andere niet beschikbaar.
+
+vlierdam:afdeling a odrl:LeftOperand , skos:Concept ;
+    rdfs:label "afdeling"@nl , "department"@en ;
+    skos:definition "Afdeling van de gemeente waar de medewerker werkt (IAM gebruiker.afdeling)."@nl ,
+                    "Municipal department the employee works in (IAM gebruiker.afdeling)."@en .
+
+vlierdam:functie a odrl:LeftOperand , skos:Concept ;
+    rdfs:label "functie"@nl , "role"@en ;
+    skos:definition "Functie van de medewerker binnen de gemeente."@nl ,
+                    "The employee's position within the municipality."@en .
+
+# De PIP van OpenFTV levert de opleidingsdatum aan (testdata/pip/attributes),
+# dus een PDP zou de eis kunnen uitrekenen — de access.rego van de frontend doet
+# dat niet en codeert een oordeel per gebruiker. De voorwaarde erop
+# (vw-app-opleiding) blijft dus ongedekt en ongemarkeerd: hier is een uitwerking
+# blijven liggen.
+vlierdam:laadpaalopleiding a odrl:LeftOperand , skos:Concept ;
+    rdfs:label "laatste laadpaalopleiding"@nl , "last charging-station training"@en ;
+    skos:definition "Datum waarop de medewerker voor het laatst de laadpaalopleiding volgde (IAM gebruiker.laadpaal-opleiding)."@nl ,
+                    "Date of the employee's most recent charging-station training (IAM gebruiker.laadpaal-opleiding)."@en .
+
+vlierdam:ingezeteneVan a odrl:LeftOperand , skos:Concept ;
+    rdfs:label "ingezetene van"@nl , "resident of"@en ;
+    skos:definition "Gemeente van inschrijving van de ingeschrevene over wie gegevens worden gevraagd (BRP 09.10)."@nl ,
+                    "Municipality of registration of the person whose data is requested (BRP 09.10)."@en .
+
+vlierdam:diplomatiekKenteken a odrl:LeftOperand , skos:Concept ;
+    rdfs:label "diplomatiek kenteken"@nl , "diplomatic licence plate"@en ;
+    skos:definition "Waarde van het filter 'diplomatiek' in de bevraging van de BRV: alleen voertuigen zonder (false) of ook met (true) diplomatiek kenteken."@nl ,
+                    "Value of the 'diplomatic' filter in the BRV query: only vehicles without (false) or also with (true) a diplomatic licence plate."@en .
+
+vlierdam:zoektype a odrl:LeftOperand , skos:Concept ;
+    rdfs:label "zoektype"@nl , "query type"@en ;
+    skos:definition "Het HaalCentraal-BRP-zoektype van de bevraging (context.body.type)."@nl ,
+                    "The HaalCentraal BRP query type of the request (context.body.type)."@en .
+
+# TECHNISCH AFDWINGBAAR (aug 2026). De planningsapp van de gemeente is de PIP
+# die zegt of de vragende medewerker op dat moment werkelijk aan het werk is;
+# het moment van bevraging is dus voor een beslispunt beschikbaar. Dat de
+# access.rego van de frontend er niets mee doet, is een uitwerking die is blijven
+# liggen — en precies wat de voorwaarde vw-app-werktijd (beleid.ttl) als
+# ongemarkeerde voorwaarde meldt.
+vlierdam:momentVanBevraging a odrl:LeftOperand , skos:Concept ;
+    rdfs:label "moment van bevraging"@nl , "time of request"@en ;
+    skos:definition "Tijdstip waarop de bevraging wordt gedaan."@nl ,
+                    "Moment at which the request is made."@en .
+
+# Koppelvlak-kenmerk: het OpenFTV-afsprakenstelsel eist dat elke bevraging over
+# een koppelvlak een trace-identificatie meedraagt. De PEP van OpenFTV zet hem
+# als context.traceparent in het AuthZEN-verzoek (eam/pep/headers.go).
+vlierdam:traceparent a odrl:LeftOperand , skos:Concept ;
+    rdfs:label "traceparent (W3C Trace Context)"@nl , "traceparent (W3C Trace Context)"@en ;
+    skos:definition "De trace-identificatie van het verzoek volgens W3C Trace Context; de PEP van OpenFTV levert hem aan als context.traceparent."@nl ,
+                    "The request's trace identifier per W3C Trace Context; the OpenFTV PEP supplies it as context.traceparent."@en .
+
+# ---- Profiel-operatoren (juridische formulering; berekening bij de PDP) -----
+
+vlierdam:nietOuderDan a odrl:Operator , skos:Concept ;
+    rdfs:label "niet ouder dan"@nl , "not older than"@en ;
+    skos:definition "Geldt als de datum in de left operand niet verder terugligt dan de periode (xsd:duration) in de right operand, gerekend vanaf het moment van bevraging. Hoe dat wordt uitgerekend is aan het uitvoerende beleid."@nl ,
+                    "Holds when the date in the left operand lies no further back than the period (xsd:duration) in the right operand, counted from the time of the request. How that is computed is up to the enforcing policy."@en .
+
+vlierdam:binnen a odrl:Operator , skos:Concept ;
+    rdfs:label "binnen"@nl , "within"@en ;
+    skos:definition "Geldt als het tijdstip in de left operand valt binnen het benoemde tijdvenster in de right operand."@nl ,
+                    "Holds when the moment in the left operand falls within the named time window in the right operand."@en .
+
+# Aanwezigheidstoets: de zwakste toets die er is — de left operand MOET in het
+# verzoek voorkomen, over de waarde zegt zij niets. Right operand is true.
+vlierdam:aanwezig a odrl:Operator , skos:Concept ;
+    rdfs:label "is opgegeven"@nl , "is present"@en ;
+    skos:definition "Geldt als de left operand in het verzoek voorkomt; over de waarde ervan zegt deze operator niets. De right operand is true."@nl ,
+                    "Holds when the left operand occurs in the request; it says nothing about its value. The right operand is true."@en .
+
+# ---- Acties (profieleigen, naast de ODRL-kernacties) ------------------------
+# Twee acties voor de koppelvlakverplichtingen van het OpenFTV-afsprakenstelsel.
+# Bewust GEEN skos:broader odrl:use: het zijn geen vormen van gebruik van het
+# gegeven maar handelingen op het verzoek zelf, en een verzonnen plaats in de
+# ODRL-actiehiërarchie zou meer beweren dan we weten.
+
+vlierdam:traceren a odrl:Action , skos:Concept ;
+    rdfs:label "traceerbaar maken"@nl , "make traceable"@en ;
+    skos:definition "Het verzoek voorzien van de gegevens waarmee het achteraf door de keten te volgen is."@nl ,
+                    "Supplying the request with the data that makes it traceable through the chain afterwards."@en .
+
+vlierdam:vermelden a odrl:Action , skos:Concept ;
+    rdfs:label "vermelden"@nl , "state"@en ;
+    skos:definition "In het verzoek expliciet opgeven waarvoor het wordt gedaan."@nl ,
+                    "Explicitly stating in the request what it is made for."@en .
+
+# ---- Partijen ---------------------------------------------------------------
+
+vlierdam:GemeenteVlierdam a odrl:Party ;
+    rdfs:label "Gemeente Vlierdam"@nl , "Municipality of Vlierdam"@en ;
+    dct:identifier "001" .   # BRP-gemeentecode in de demo
+
+vlierdam:RvIG a odrl:Party ;
+    rdfs:label "Rijksdienst voor Identiteitsgegevens (RvIG)"@nl , "National Identity Data Agency (RvIG)"@en .
+
+vlierdam:RDW a odrl:Party ;
+    rdfs:label "RDW"@nl , "RDW (Netherlands Vehicle Authority)"@en .
+
+# Het afsprakenstelsel zelf als partij: niet een van de deelnemers, maar de
+# stelselhouder die de koppelvlakvoorwaarden vaststelt waar elke inway/outway
+# zich aan houdt.
+vlierdam:OpenFTV a odrl:Party ;
+    rdfs:label "OpenFTV-afsprakenstelsel"@nl , "OpenFTV agreement framework"@en .
+
+# ---- Basisverzameling van partijen (de afnemer-collecties in beleid*.ttl zijn
+# hier refinements van: odrl:source + odrl:refinement) --------------------------
+
+vlierdam:medewerkers a odrl:PartyCollection ;
+    rdfs:label "medewerkers van Gemeente Vlierdam"@nl , "employees of the Municipality of Vlierdam"@en .
+
+# ---- Begrippen (waarden) ----------------------------------------------------
+
+vlierdam:Burgerzaken a skos:Concept ;
+    rdfs:label "Burgerzaken"@nl , "Civil Affairs"@en .
+
+vlierdam:gemeentesecretaris a skos:Concept ;
+    rdfs:label "gemeentesecretaris"@nl , "municipal clerk"@en .
+
+vlierdam:werktijden a skos:Concept ;
+    rdfs:label "werktijden"@nl , "working hours"@en ;
+    skos:definition "Het tijdvenster 'werktijden' zoals de PIP het aanlevert (testdata/pip/attributes/werktijden.yaml: ma–vr 09:00–17:00, za 10:00–14:00)."@nl ,
+                    "The 'working hours' window as supplied by the PIP (testdata/pip/attributes/werktijden.yaml: Mon–Fri 09:00–17:00, Sat 10:00–14:00)."@en .
+
+vlierdam:doelbinding-registratie-laadpalen a skos:Concept ;
+    rdfs:label "Registratie van laadpalen"@nl , "Registration of charging stations"@en ;
+    dct:identifier "7fc3d429-2435-4d5f-864e-62e444fcd906" ;
+    skos:definition "Doelbinding uit het RvVA-register van Gemeente Vlierdam."@nl ,
+                    "Purpose from the Vlierdam RvVA register."@en .
+
+vlierdam:activiteit-bsn-bepalen a skos:Concept ;
+    rdfs:label "BSN bepalen vanuit postcode/huisnummer"@nl , "Determine BSN from postcode/house number"@en ;
+    dct:identifier "372ddc5d-d093-4272-b485-d7f158775909" ;
+    skos:broader vlierdam:doelbinding-registratie-laadpalen .
+
+vlierdam:activiteit-kentekens-opvragen a skos:Concept ;
+    rdfs:label "Kentekens opvragen met BSN"@nl , "Retrieve licence plates by BSN"@en ;
+    dct:identifier "b4911124-e92a-482f-80b4-eb02383378ae" ;
+    skos:broader vlierdam:doelbinding-registratie-laadpalen .
+
+# De GEBEURTENIS waarop de vernietigingsplicht van de twee inways aanslaat
+# (odrl:event eq …). Zij speelt zich af in het zaaksysteem van de gemeente en
+# is voor geen enkel koppelvlak zichtbaar — vandaar dat de voorwaarde erop
+# dpv:OrganisationalMeasure draagt (beleid.ttl).
+vlierdam:afhandeling-afgerond a skos:Concept ;
+    rdfs:label "afhandeling van de aanvraag afgerond"@nl ,
+               "settlement of the application completed"@en ;
+    skos:definition "Het moment waarop de laadpaalaanvraag in het zaaksysteem van Gemeente Vlierdam is afgehandeld; vanaf dan zijn de opgehaalde BRP- en BRV-gegevens niet meer nodig."@nl ,
+                    "The moment the charging-station application is settled in the case system of the Municipality of Vlierdam; from then on the retrieved BRP and BRV data are no longer needed."@en .
+
+vlierdam:ZoekMetPostcodeEnHuisnummer a skos:Concept ;
+    rdfs:label "zoeken met postcode en huisnummer"@nl , "search by postcode and house number"@en .
+
+vlierdam:RaadpleegMetBurgerservicenummer a skos:Concept ;
+    rdfs:label "raadplegen met burgerservicenummer"@nl , "consult by citizen service number"@en .
+
+vlierdam:KentekensOpBsn a skos:Concept ;
+    rdfs:label "kentekens opvragen op burgerservicenummer"@nl , "licence plates by citizen service number"@en .
+
+# ---- Targets buiten de veldcollecties ---------------------------------------
+
+vlierdam:laadpalenapplicatie a odrl:Asset ;
+    rdfs:label "laadpalenapplicatie"@nl , "charging-station application"@en .
+
+vlierdam:brp-personen a odrl:Asset ;
+    rdfs:label "BRP personen (HaalCentraal)"@nl , "BRP persons (HaalCentraal)"@en .
+
+vlierdam:brv-voertuigen a odrl:Asset ;
+    rdfs:label "BRV voertuigen"@nl , "BRV vehicles"@en .
+
+# ---- Klasse voor veldniveau (Visualisation Note §3) -------------------------
+
+vlierdam:Veld a owl:Class ;
+    rdfs:label "Veld"@nl , "Field"@en .
+
+# ---- Groeperingsdimensie (zelfde qb-hack als de Breda-proef) ----------------
+
+# Punning op een left-operand-instantie: qb:DimensionProperty ordent de
+# weergave (één groep per doelbinding). Dat de doelbinding ook toetsbaar is —
+# OpenFTV zet haar als context.doelbinding in het verwerkingsverzoek — stond
+# hier tot aug 2026 als tweede marker (apnl:TechnischToetsbaar); die is uit het
+# profiel geschrapt, de doel-voorwaarden op de beslispunten laten het zelf zien.
+odrl:purpose a qb:DimensionProperty ;
+    sh:order 1 .
+
+
+# ############################################################################
+# ### BRON: data/vlierdam/velden.ttl   (2026-08-26)
+# ############################################################################
+
+# Dataminimalisatie als TARGET: de toegestane velden zijn AssetCollections;
+# een bevraging buiten de collectie valt buiten de permission.
+# BRP: doorsnede van wat de laadpaalaanvraag nodig heeft en de allowedFields
+# van de PIP-entiteit `doelbinding/burgerzaken.yaml` (die `burgerzaken.cedar`
+# uitleest); `gemeenteVanInschrijving` staat alleen onder `raadplegen`, de
+# overige velden onder zowel `zoeken` als `raadplegen`. BRV: brv/schema.yaml.
+
+vlierdam:brp-velden-laadpalen a odrl:AssetCollection ;
+    rdfs:label "BRP-velden voor registratie van laadpalen"@nl ,
+               "BRP fields for registration of charging stations"@en ;
+    dct:source <https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/open-ftv/-/blob/main/testdata/pip/entities/doelbinding/burgerzaken.yaml> .
+
+vlierdam:veld-brp-burgerservicenummer a odrl:Asset , vlierdam:Veld ;
+    odrl:partOf vlierdam:brp-velden-laadpalen ;
+    rdfs:label "burgerservicenummer"@nl , "citizen service number"@en .
+vlierdam:veld-brp-naam a odrl:Asset , vlierdam:Veld ;
+    odrl:partOf vlierdam:brp-velden-laadpalen ;
+    rdfs:label "naam"@nl , "name"@en .
+vlierdam:veld-brp-naam-voornamen a odrl:Asset , vlierdam:Veld ;
+    odrl:partOf vlierdam:veld-brp-naam ;
+    rdfs:label "voornamen"@nl , "given names"@en .
+vlierdam:veld-brp-naam-geslachtsnaam a odrl:Asset , vlierdam:Veld ;
+    odrl:partOf vlierdam:veld-brp-naam ;
+    rdfs:label "geslachtsnaam"@nl , "surname"@en .
+vlierdam:veld-brp-adressering a odrl:Asset , vlierdam:Veld ;
+    odrl:partOf vlierdam:brp-velden-laadpalen ;
+    rdfs:label "adressering"@nl , "address lines"@en .
+vlierdam:veld-brp-adressering-adresregel1 a odrl:Asset , vlierdam:Veld ;
+    odrl:partOf vlierdam:veld-brp-adressering ;
+    rdfs:label "adresregel 1"@nl , "address line 1"@en .
+vlierdam:veld-brp-adressering-adresregel2 a odrl:Asset , vlierdam:Veld ;
+    odrl:partOf vlierdam:veld-brp-adressering ;
+    rdfs:label "adresregel 2"@nl , "address line 2"@en .
+vlierdam:veld-brp-geboorte-datum a odrl:Asset , vlierdam:Veld ;
+    odrl:partOf vlierdam:brp-velden-laadpalen ;
+    rdfs:label "geboortedatum"@nl , "date of birth"@en .
+vlierdam:veld-brp-gemeenteVanInschrijving a odrl:Asset , vlierdam:Veld ;
+    odrl:partOf vlierdam:brp-velden-laadpalen ;
+    rdfs:label "gemeente van inschrijving"@nl , "municipality of registration"@en .
+
+vlierdam:brv-velden-laadpalen a odrl:AssetCollection ;
+    rdfs:label "BRV-velden voor registratie van laadpalen"@nl ,
+               "BRV fields for registration of charging stations"@en ;
+    dct:source <https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/open-ftv/-/blob/main/testdata/apps/rdw/dataspace/brv/schema.yaml> .
+
+vlierdam:veld-brv-kenteken a odrl:Asset , vlierdam:Veld ;
+    odrl:partOf vlierdam:brv-velden-laadpalen ;
+    rdfs:label "kenteken"@nl , "licence plate"@en .
+vlierdam:veld-brv-klasse a odrl:Asset , vlierdam:Veld ;
+    odrl:partOf vlierdam:brv-velden-laadpalen ;
+    rdfs:label "uitstootklasse"@nl , "emission class"@en .
+# 'diplomatiek' staat hier bewust NIET als veld: het is een filter op de
+# bevraging (een kenmerk van het verzoek), geen gegeven dat wordt opgevraagd.
+
+
+# ############################################################################
+# ### BRON: data/vlierdam/beleid.ttl   (2026-08-29)
+# ############################################################################
+
+# LEEN uit DPV (Data Privacy Vocabulary, W3C Data Privacy Vocabularies and
+# Controls CG). Twee markers op een REGEL of op een VOORWAARDE, als extra
+# rdf:type — punning, hetzelfde patroon als qb:DimensionProperty op een left
+# operand:
+#   dpv:TechnicalMeasure      — deze regel/voorwaarde IS de technische borging:
+#                               zij delegeert naar het artefact in haar
+#                               rightOperand, draagt de realisatielinks, en
+#                               telt niet mee in de status van haar regel;
+#   dpv:OrganisationalMeasure — deze regel/voorwaarde is organisatorisch
+#                               geborgd: zij geldt onverkort en blijft
+#                               zichtbaar, maar er valt technisch niets uit te
+#                               werken.
+# Een ONGEMARKEERDE benoemde voorwaarde is gewone normatieve inhoud: die hoort
+# technisch afgedwongen te worden en telt dus mee. Staat de marker op de REGEL,
+# dan is die regel ALS GEHEEL geborgd: zij telt zelf niet mee én haar benoemde
+# voorwaarden evenmin.
+
+# =============================================================================
+# Gemeente Vlierdam (FICTIEF) — het laadpalenbeleid als vijf odrl:Sets. Vier
+# daarvan zijn gesneden op wat er werkelijk beslist wordt; de vijfde,
+# set-openftv-koppelvlak, staat er BOVEN: zij draagt de twee verplichtingen die
+# het OpenFTV-afsprakenstelsel aan elk koppelvlak stelt, en de twee inway-Sets
+# nemen haar met odrl:inheritFrom over. Drie van de vier zijn een AuthZEN-beslispunt in
+# de OpenFTV-stack: de Vlierdam-outway, de RvIG-inway (BRP) en de RDW-inway
+# (BRV) — elke Set is het antwoord op "wat hoort deze PDP te beslissen bij een
+# AuthZEN-request?". De vierde Set gaat over de laadpalenapplicatie zelf: dat is
+# een INTERNE applicatie van Vlierdam. De outway beslist alleen over UITGAANDE
+# bevragingen (BRP, BRV) en heeft over het gebruik van de applicatie niets te
+# zeggen; wie de applicatie mag gebruiken is een eigen beslissing, die in de
+# OpenFTV-stack geen beslispunt heeft.
+#
+# Elke regel draagt de voorwaarde dat het verwerkingsverzoek moet voldoen aan het
+# uitvoerende artefact van zijn Set (openftv.ttl). Die voorwaarde is HET ANKER:
+# zij staat in het beleid en is daarmee de REALISERENDE KANT (Visualisatie-note
+# §7). Zij draagt daarvoor de marker dpv:TechnicalMeasure — dít is de technische
+# borging zelf. Sinds aug 2026 is elk anker daarom een BENOEMDE knoop
+# (vlierdam:anker-…), één per regel, en draagt het anker ZELF de realisatielinks:
+# prov:wasDerivedFrom naar de regel en naar de voorwaarden die op dit beslispunt
+# werkelijk worden afgedwongen. Het artefact in openftv.ttl is puur beschrijvend
+# geworden (metadata + eerlijkheidsnoot); wie wat uitwerkt staat hier.
+# Omdat elke Set één beslissing is, hoort bij elke Set precies één artefact.
+#
+# De dekking werkt op TWEE KORRELS. Naast de REGEL zelf (wie mag wat met welk
+# doelwit) is elke inhoudelijke VOORWAARDE een eigen IRI-knoop
+# (vlierdam:vw-…), zodat een uitwerking haar afzonderlijk kan dekken. Dat is
+# nodig omdat een Cedar-bundle vooral voorwaarden uitwerkt: zonder die tweede
+# korrel zou regel-app-gebruik volledig gedekt lijken, terwijl de access.rego
+# van de frontend noch de opleidingsdatum, noch het werktijdvenster uitrekent.
+# Het anker is zelf nooit dekkingsdoel: het WIJST de uitwerking aan en telt niet
+# mee in de status van de regel — dat is precies wat dpv:TechnicalMeasure zegt.
+# Een voorwaarde met dpv:OrganisationalMeasure telt evenmin mee: zij is buiten de
+# techniek geborgd — in deze casus het moment waarop de aanvraag is afgehandeld
+# (vlierdam:vw-vernietiging-moment). Dezelfde marker mag op een REGEL staan:
+# vlierdam:plicht-vernietiging is als geheel organisatorisch geborgd en valt
+# daarmee met al haar voorwaarden buiten de status — geen te realiseren regel,
+# geen te realiseren voorwaarde. Wat overblijft — de ONGEMARKEERDE benoemde
+# voorwaarden — hoort technisch afgedwongen te worden, en "volledig
+# gerealiseerd" betekent dan ook: alles wat technisch hoort te kunnen, is
+# gerealiseerd.
+# ODRL zegt hier wat de regel is; hoe hij wordt uitgerekend is aan Cedar of Rego.
+#
+# De dct:description van elke Set is bewust burgertaal: wat mag er, en onder
+# welke voorwaarden — zonder jargon.
+# =============================================================================
+
+# ---- Stelselniveau: de koppelvlakvoorwaarden van OpenFTV -------------------
+# Een Set BOVEN de beslispunten. Zij is van niemands PDP: het
+# OpenFTV-afsprakenstelsel stelt haar vast, en elke inway/outway die op het
+# stelsel is aangesloten neemt haar over met odrl:inheritFrom (ODRL 2.2 §2.6:
+# ouder- en kindregels gelden SAMEN). Zo staat een stelselverplichting één keer
+# in de bron, en niet vier keer overgeschreven per beslispunt.
+#
+# Twee VERPLICHTINGEN op SET-NIVEAU (odrl:obligation, geen assignee): zij
+# gelden voor elke bevraging over een OpenFTV-koppelvlak, ongeacht welke regel
+# van de kind-Set de toegang verleent. Een assignee zou hen aan één partij
+# binden; dat is precies niet de bedoeling — de plicht rust op wie de bevraging
+# doet, en dat is per kind-Set een andere partij.
+
+vlierdam:set-openftv-koppelvlak a odrl:Set ;
+    odrl:uid vlierdam:set-openftv-koppelvlak ;
+    dct:title "Koppelvlakvoorwaarden OpenFTV"@nl ,
+              "OpenFTV interface conditions"@en ;
+    dct:description "Elke bevraging over een OpenFTV-koppelvlak draagt een trace-identificatie en vermeldt de doelbinding waarvoor zij wordt gedaan."@nl ,
+                    "Every query over an OpenFTV interface carries a trace identifier and states the purpose for which it is made."@en ;
+    dct:source <https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/open-ftv/-/blob/main/eam/pep/headers.go> ;
+    odrl:assigner vlierdam:OpenFTV ;
+    dct:publisher vlierdam:OpenFTV ;
+    dct:issued "2026-08-26"^^xsd:date ;
+    odrl:obligation vlierdam:plicht-traceparent , vlierdam:plicht-doelbinding .
+
+vlierdam:plicht-traceparent a odrl:Duty ;
+    odrl:uid vlierdam:plicht-traceparent ;
+    dct:title "Trace-identificatie meegeven"@nl , "Carry a trace identifier"@en ;
+    dct:description "Elke bevraging over het koppelvlak draagt een W3C-traceparent, zodat verzoeken door de keten heen te volgen en te correleren zijn — voor audit en incidentonderzoek."@nl ,
+                    "Every request across the interface carries a W3C traceparent, so requests can be traced and correlated along the chain — for audit and incident analysis."@en ;
+    odrl:action vlierdam:traceren ;
+    odrl:constraint vlierdam:vw-traceparent .
+
+# Benoemd, dus dekbaar: een PDP kan letterlijk toetsen dat de header er is.
+vlierdam:vw-traceparent a odrl:Constraint ;
+    rdfs:label "Traceparent is opgegeven"@nl , "Traceparent is present"@en ;
+    odrl:leftOperand vlierdam:traceparent ; odrl:operator vlierdam:aanwezig ;
+    odrl:rightOperand true .
+
+vlierdam:plicht-doelbinding a odrl:Duty ;
+    odrl:uid vlierdam:plicht-doelbinding ;
+    dct:title "Doelbinding vermelden"@nl , "State the purpose"@en ;
+    dct:description "Elke bevraging vermeldt de doelbinding waarvoor zij wordt gedaan; zonder opgegeven doel valt niet te toetsen of de verstrekking binnen de doelbinding blijft."@nl ,
+                    "Every request states the purpose it serves; without a stated purpose there is no way to test whether the disclosure stays within its purpose limitation."@en ;
+    # Geen eigen voorwaarde: wat de plicht vraagt ("er is een doelbinding
+    # genoemd") wordt ingevuld door de doel-voorwaarden (odrl:eq) op de regels
+    # van de beslispunten — die zeggen bovendien wélk doel toelaatbaar is.
+    odrl:action vlierdam:vermelden .
+
+# ---- De laadpalenapplicatie zelf: intern, geen beslispunt in de stack -------
+
+vlierdam:set-laadpalenapplicatie a odrl:Set ;
+    odrl:uid vlierdam:set-laadpalenapplicatie ;
+    dct:title "Laadpalenapplicatie: toegang voor medewerkers"@nl ,
+              "Charging-station application: access for employees"@en ;
+    dct:description "Alleen medewerkers van Burgerzaken die in het afgelopen jaar de laadpaalopleiding hebben gevolgd, mogen tijdens werktijd de laadpalenapplicatie gebruiken."@nl ,
+                    "Only Civil Affairs employees who have completed the charging-station training in the past year may use the charging-station application during working hours."@en ;
+    dct:source <https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/open-ftv/-/blob/main/testdata/apps/gemeente-vlierdam/beleid/policies/laadpalen/frontend/access.rego> ;
+    skos:editorialNote "De werktijdvoorwaarde in deze Set komt uit het OpenFGA-demomodel vlierdam3 (conditie werktijd_check), niet uit de casusbeschrijving; dat model draait niet in de OpenFTV-stack zelf."@nl ,
+                       "The working-hours condition in this policy comes from the OpenFGA demo model vlierdam3 (condition werktijd_check), not from the case description; that model does not run in the OpenFTV stack itself."@en ;
+    odrl:assigner vlierdam:GemeenteVlierdam ;
+    dct:publisher vlierdam:GemeenteVlierdam ;
+    dct:issued "2026-08-25"^^xsd:date ;
+    odrl:permission vlierdam:regel-app-gebruik .
+
+# De partijcollectie waar de gebruiksregel (Set laadpalenapplicatie) zich toe richt.
+vlierdam:medewerkers-burgerzaken a odrl:PartyCollection ;
+    rdfs:label "medewerkers Burgerzaken"@nl , "Civil Affairs employees"@en ;
+    odrl:source vlierdam:medewerkers ;
+    odrl:refinement [ a odrl:Constraint ;
+        odrl:leftOperand vlierdam:afdeling ; odrl:operator odrl:eq ;
+        odrl:rightOperand vlierdam:Burgerzaken ] .
+
+vlierdam:regel-app-gebruik a odrl:Permission ;
+    odrl:uid vlierdam:regel-app-gebruik ;
+    dct:title "Gebruik van de laadpalenapplicatie door opgeleide medewerkers Burgerzaken"@nl ,
+              "Use of the charging-station application by trained Civil Affairs employees"@en ;
+    odrl:assignee vlierdam:medewerkers-burgerzaken ;
+    odrl:target vlierdam:laadpalenapplicatie ;
+    odrl:action [ rdf:value odrl:use ;
+        odrl:refinement vlierdam:vw-app-doel , vlierdam:anker-app ] ;
+    odrl:constraint vlierdam:vw-app-opleiding , vlierdam:vw-app-werktijd .
+
+# HET ANKER van de gebruiksregel. Het realiseert alleen de REGEL zelf: de
+# access.rego codeert een oordeel per gebruiker en dwingt geen van de drie
+# benoemde voorwaarden af (zie hieronder en openftv.ttl).
+vlierdam:anker-app a odrl:Constraint , dpv:TechnicalMeasure ;
+    odrl:leftOperand apnl:verwerkingsverzoek ; odrl:operator apnl:conformsToPolicy ;
+    odrl:rightOperand vlierdam:beleid-laadpalen-frontend ;
+    prov:wasDerivedFrom vlierdam:regel-app-gebruik .
+
+# Benoemde doelvoorwaarde van de gebruiksregel: ONGEMARKEERD, dus gewone
+# normatieve inhoud die technisch afgedwongen hoort te worden — maar access.rego
+# toetst hem niet (bewust ongedekt, zie openftv.ttl). Telt dus mee in de status.
+vlierdam:vw-app-doel a odrl:Constraint ;
+    rdfs:label "Doel is registratie van laadpalen"@nl , "Purpose is registration of charging stations"@en ;
+    odrl:leftOperand odrl:purpose ; odrl:operator odrl:eq ;
+    odrl:rightOperand vlierdam:doelbinding-registratie-laadpalen .
+
+# De twee inhoudelijke voorwaarden hieronder zijn eveneens BEWUST ONGEDEKT:
+# de access.rego van de frontend codeert een oordeel per gebruiker en rekent
+# noch de opleidingsdatum, noch het werktijdvenster uit. Ze gelden onverkort,
+# en ze zijn allebei ONGEMARKEERD: bij allebei is een uitwerking blijven liggen.
+#
+# De opleidingseis hoort technisch te worden afgedwongen — de PIP van OpenFTV
+# levert de opleidingsdatum aan (testdata/pip/attributes), dus een PDP zou haar
+# kunnen uitrekenen. Dat gebeurt niet: hier is een uitwerking blijven liggen, en
+# de voorwaarde telt onverkort mee in de status.
+vlierdam:vw-app-opleiding a odrl:Constraint ;
+    rdfs:label "Laadpaalopleiding niet ouder dan een jaar"@nl ,
+               "Charging-station training not older than one year"@en ;
+    odrl:leftOperand vlierdam:laadpaalopleiding ; odrl:operator vlierdam:nietOuderDan ;
+    odrl:rightOperand "P1Y"^^xsd:duration .
+
+# TECHNISCH AFDWINGBAAR, MAAR NIET UITGEWERKT — dus ONGEMARKEERD (aug 2026).
+# Het werktijdvenster komt uit het OpenFGA-demomodel (conditie werktijd_check)
+# dat niet in de stack draait, maar de eis is wel degelijk aan een beslispunt te
+# stellen: de planningsapp van de gemeente is de PIP die zegt of de vragende
+# medewerker op dat moment werkelijk aan het werk is. De access.rego van de
+# frontend vraagt dat niet op en rekent het venster niet uit — hier is dus een
+# uitwerking blijven liggen, en de voorwaarde telt mee in de realisatiestatus.
+vlierdam:vw-app-werktijd a odrl:Constraint ;
+    rdfs:label "Bevraging binnen werktijden"@nl , "Query within working hours"@en ;
+    odrl:leftOperand vlierdam:momentVanBevraging ; odrl:operator vlierdam:binnen ;
+    odrl:rightOperand vlierdam:werktijden .
+
+# ---- Beslispunt 1: de outway van Gemeente Vlierdam (uitgaande bevragingen) --
+
+vlierdam:set-vlierdam-outway a odrl:Set ;
+    odrl:uid vlierdam:set-vlierdam-outway ;
+    dct:title "Beslispunt Vlierdam-outway: uitgaande bevragingen"@nl ,
+              "Decision point Vlierdam outway: outgoing queries"@en ;
+    dct:description "Voor de registratie van laadpalen mag Gemeente Vlierdam van iemand het burgerservicenummer opzoeken bij de bevolkingsregistratie, en daarmee de kentekens en uitstootklasse van diens auto's opvragen. Auto's met een diplomatiek kenteken blijven daarbij buiten beeld, tenzij de gemeentesecretaris zelf de vraag stelt."@nl ,
+                    "For the registration of charging stations the municipality of Vlierdam may look up someone's citizen service number in the population register, and use it to retrieve the licence plates and emission class of their vehicles. Vehicles with a diplomatic licence plate stay out of view, unless the municipal clerk asks the question herself."@en ;
+    dct:source <https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/open-ftv/-/blob/main/testdata/apps/gemeente-vlierdam/kong/conf.yaml> ;
+    odrl:assigner vlierdam:GemeenteVlierdam ;
+    dct:publisher vlierdam:GemeenteVlierdam ;
+    dct:issued "2026-08-25"^^xsd:date ;
+    # DEZELFDE KNOOP als in de koppelvlak-Set (Visualisatie-note §2, hergebruik):
+    # de outway erft niet, hij draagt de stelselplicht als EIGEN verplichting.
+    # Zo staat één duty in drie Sets — geërfd bij de twee inways, eigen hier —
+    # zonder dat de regel ergens is overgeschreven. Alleen plicht-doelbinding:
+    # de traceparent-header wordt door de PEP van het koppelvlak gezet, niet
+    # door de outway die de bevraging opstelt.
+    odrl:obligation vlierdam:plicht-doelbinding ;
+    odrl:permission vlierdam:regel-outway-brp , vlierdam:regel-outway-brv .
+
+vlierdam:regel-outway-brp a odrl:Permission ;
+    odrl:uid vlierdam:regel-outway-brp ;
+    dct:title "BSN bepalen vanuit postcode/huisnummer"@nl , "Determine BSN from postcode/house number"@en ;
+    dct:identifier "372ddc5d-d093-4272-b485-d7f158775909" ;
+    # Dataminimalisatie op de activiteit: alleen het BSN als resultaat, en alleen
+    # via een zoekvraag op postcode/huisnummer.
+    odrl:target vlierdam:veld-brp-burgerservicenummer ;
+    odrl:action [ rdf:value odrl:read ;
+        # Het ANKER is een BENOEMDE knoop (aug 2026): het is de META-voorwaarde
+        # die naar de uitwerking wijst — nooit dekkingsdoel — maar het draagt
+        # zelf wél de realisatielinks van deze regel.
+        odrl:refinement vlierdam:vw-brp-doel , vlierdam:vw-brp-zoektype ,
+                        vlierdam:anker-outway-brp ] .
+
+# De outway ziet het uitgaande verzoek in zijn geheel — doel én zoektype staan
+# erin — dus dwingt zijn bundel beide voorwaarden af, naast de regel zelf.
+vlierdam:anker-outway-brp a odrl:Constraint , dpv:TechnicalMeasure ;
+    odrl:leftOperand apnl:verwerkingsverzoek ; odrl:operator apnl:conformsToPolicy ;
+    odrl:rightOperand vlierdam:bundle-vlierdam-pdp1 ;
+    prov:wasDerivedFrom vlierdam:regel-outway-brp ,
+        vlierdam:vw-brp-doel , vlierdam:vw-brp-zoektype .
+
+vlierdam:vw-brp-doel a odrl:Constraint ;
+    rdfs:label "Doel is registratie van laadpalen"@nl ,
+               "Purpose is registration of charging stations"@en ;
+    odrl:leftOperand odrl:purpose ; odrl:operator odrl:eq ;
+    odrl:rightOperand vlierdam:doelbinding-registratie-laadpalen ;
+    # De KETEN, tweede stap met hetzelfde predicaat: wie odrl:purpose = <dit
+    # doel> afdwingt, dwingt daarmee de stelselplicht "vermeld de doelbinding"
+    # mee af. Deze schakel hoort bij de VOORWAARDE, niet bij het anker.
+    prov:wasDerivedFrom vlierdam:plicht-doelbinding .
+
+vlierdam:vw-brp-zoektype a odrl:Constraint ;
+    rdfs:label "Zoeken op postcode met huisnummer"@nl ,
+               "Search by postcode with house number"@en ;
+    odrl:leftOperand vlierdam:zoektype ; odrl:operator odrl:eq ;
+    odrl:rightOperand vlierdam:ZoekMetPostcodeEnHuisnummer .
+
+# De diplomatiek-eis is Vlierdams eigen beleid op zijn UITGAANDE bevraging: het
+# filter 'diplomatiek' staat in het verzoek, dus de outway-PDP kan het toetsen.
+# De uitzondering voor de gemeentesecretaris is een materiële implicatie: "wie
+# geen gemeentesecretaris is, MOET met diplomatiek=false filteren". ODRL kent
+# geen if-then, dus staat hij hier in de equivalente of-vorm — een
+# odrl:LogicalConstraint met odrl:or over "functie is gemeentesecretaris" en
+# "diplomatiekKenteken is false". Dat scheelt een tweede, bijna identieke regel.
+vlierdam:regel-outway-brv a odrl:Permission ;
+    odrl:uid vlierdam:regel-outway-brv ;
+    dct:title "Kentekens opvragen met BSN"@nl ,
+              "Retrieve licence plates by BSN"@en ;
+    dct:identifier "b4911124-e92a-482f-80b4-eb02383378ae" ;
+    odrl:target vlierdam:brv-velden-laadpalen ;
+    odrl:action [ rdf:value odrl:read ;
+        odrl:refinement vlierdam:vw-brv-doel , vlierdam:vw-brv-zoektype ,
+                        vlierdam:anker-outway-brv ] ;
+    odrl:constraint vlierdam:vw-brv-diplomatiek-of-secretaris .
+
+# Ook het diplomatiek-filter staat in het uitgaande verzoek, dus de outway-PDP
+# kan het toetsen. De LogicalConstraint wordt als GEHEEL gerealiseerd: de
+# implicatie "gemeentesecretaris OF diplomatiek=false" is één toets.
+vlierdam:anker-outway-brv a odrl:Constraint , dpv:TechnicalMeasure ;
+    odrl:leftOperand apnl:verwerkingsverzoek ; odrl:operator apnl:conformsToPolicy ;
+    odrl:rightOperand vlierdam:bundle-vlierdam-pdp1 ;
+    prov:wasDerivedFrom vlierdam:regel-outway-brv ,
+        vlierdam:vw-brv-doel , vlierdam:vw-brv-zoektype ,
+        vlierdam:vw-brv-diplomatiek-of-secretaris .
+
+vlierdam:vw-brv-doel a odrl:Constraint ;
+    rdfs:label "Doel is registratie van laadpalen"@nl ,
+               "Purpose is registration of charging stations"@en ;
+    odrl:leftOperand odrl:purpose ; odrl:operator odrl:eq ;
+    odrl:rightOperand vlierdam:doelbinding-registratie-laadpalen ;
+    # Idem: deze scherpere doel-voorwaarde werkt de stelselplicht uit.
+    prov:wasDerivedFrom vlierdam:plicht-doelbinding .
+
+vlierdam:vw-brv-zoektype a odrl:Constraint ;
+    rdfs:label "Kentekens opvragen op burgerservicenummer"@nl ,
+               "Retrieve licence plates by citizen service number"@en ;
+    odrl:leftOperand vlierdam:zoektype ; odrl:operator odrl:eq ;
+    odrl:rightOperand vlierdam:KentekensOpBsn .
+
+# De LogicalConstraint krijgt zelf een IRI — zij is als geheel de voorwaarde
+# die een uitwerking kan afdwingen. De twee leden van de odrl:or blijven blank
+# nodes: los van elkaar betekenen ze niets, en een dekking van alleen het ene
+# lid zou de implicatie stukmaken.
+vlierdam:vw-brv-diplomatiek-of-secretaris a odrl:LogicalConstraint ;
+    rdfs:label "Gemeentesecretaris, of geen diplomatiek kenteken"@nl ,
+               "Municipal clerk, or no diplomatic licence plate"@en ;
+    odrl:or ( [ a odrl:Constraint ; odrl:leftOperand vlierdam:functie ; odrl:operator odrl:eq ; odrl:rightOperand vlierdam:gemeentesecretaris ]
+              [ a odrl:Constraint ; odrl:leftOperand vlierdam:diplomatiekKenteken ; odrl:operator odrl:eq ; odrl:rightOperand false ] ) .
+
+# ---- Gedeelde verplichting van de twee inways: vernietiging na afhandeling --
+#
+# HET KLASSIEKE ORGANISATORISCHE GEVAL. Wat de gemeente met de opgehaalde
+# gegevens doet NADAT het koppelvlak ze heeft geleverd, ziet geen enkel
+# beslispunt: dat gebeurt in de werkomgeving van Vlierdam, buiten elk
+# AuthZEN-verzoek om. De plicht geldt onverkort — zij is bij het uitdelen van de
+# accounts en in de werkinstructie geborgd — en draagt daarom ZELF de marker
+# dpv:OrganisationalMeasure. Niet alleen haar voorwaarde: het is de plicht ALS
+# GEHEEL die organisatorisch is geborgd. Er is dus niets blijven liggen, en de
+# plicht valt met al haar voorwaarden buiten de realisatiestatus.
+# Bewust ZONDER realisatielinks: er valt technisch niets uit te werken.
+#
+# DE MARKER OP DE VOORWAARDE BLIJFT STAAN, en is geen dubbelop. De regelmarker
+# leidt hem weliswaar af, maar (a) een lezer of tool die bij de voorwaarde
+# begint hoeft niet eerst omhoog te lopen om te weten waarom niemand haar
+# afdwingt, en (b) een implementatie die alléén de oudere voorwaarde-marker
+# kent — de baseline tot deze slag — blijft zonder valse "niet uitgewerkt"
+# draaien. Wat de regelmarker toevoegt is de uitspraak over de REGEL zelf
+# (assignee/action/target), en die kon een voorwaarde-marker niet doen.
+#
+# ÉÉN KNOOP IN TWEE SETS (Visualisatie-note §2). De RvIG-inway en de RDW-inway
+# leggen dezelfde plicht op; zij staat daarom één keer in de bron en beide Sets
+# wijzen ernaar. Niet overgeschreven en niet geërfd — hergebruikt, zodat een
+# lezer ziet dat het om dezelfde verplichting gaat.
+
+vlierdam:plicht-vernietiging a odrl:Duty , dpv:OrganisationalMeasure ;
+    odrl:uid vlierdam:plicht-vernietiging ;
+    dct:title "Opgehaalde gegevens na afhandeling vernietigen"@nl ,
+              "Destroy retrieved data once the application is settled"@en ;
+    dct:description "Opgehaalde persoons- en voertuiggegevens worden vernietigd zodra de aanvraag is afgehandeld; ze worden niet langer bewaard dan de behandeling vergt."@nl ,
+                    "Retrieved personal and vehicle data are destroyed once the application is settled; they are kept no longer than handling them requires."@en ;
+    odrl:action odrl:delete ;
+    # Beide veldencollecties: wat via de BRP-inway is opgehaald én wat via de
+    # BRV-inway is opgehaald valt onder dezelfde vernietigingsplicht.
+    odrl:target vlierdam:brp-velden-laadpalen , vlierdam:brv-velden-laadpalen ;
+    odrl:constraint vlierdam:vw-vernietiging-moment .
+
+# ORGANISATORISCH GEBORGD (dpv:OrganisationalMeasure). Het moment waarop de
+# aanvraag is afgehandeld is een gebeurtenis in het zaaksysteem van de gemeente;
+# geen koppelvlak en geen PDP kan haar zien, laat staan afdwingen dat er daarna
+# iets wordt weggegooid. De voorwaarde blijft volledig zichtbaar en geldt
+# onverkort, maar telt niet mee in de realisatiestatus.
+vlierdam:vw-vernietiging-moment a odrl:Constraint , dpv:OrganisationalMeasure ;
+    rdfs:label "Zodra de aanvraag is afgehandeld"@nl ,
+               "Once the application has been settled"@en ;
+    odrl:leftOperand odrl:event ; odrl:operator odrl:eq ;
+    odrl:rightOperand vlierdam:afhandeling-afgerond .
+
+# ---- Beslispunt 2: de inway van RvIG (BRP) ----------------------------------
+
+vlierdam:set-rvig-inway a odrl:Set ;
+    odrl:uid vlierdam:set-rvig-inway ;
+    # Aangesloten op het OpenFTV-afsprakenstelsel: de twee koppelvlak-
+    # verplichtingen gelden hier onverkort mee (ODRL 2.2 §2.6).
+    odrl:inheritFrom vlierdam:set-openftv-koppelvlak ;
+    dct:title "Beslispunt RvIG-inway: bevraging van de BRP"@nl ,
+              "Decision point RvIG inway: querying the BRP"@en ;
+    dct:description "Gemeente Vlierdam mag in de bevolkingsregistratie gegevens opvragen van mensen die in Vlierdam wonen, en alleen de gegevens die voor een laadpaal nodig zijn. Zoeken mag op postcode met huisnummer of op burgerservicenummer, en niet op iets anders. De opgehaalde gegevens worden na afhandeling van de aanvraag vernietigd."@nl ,
+                    "The municipality of Vlierdam may retrieve data from the population register about people living in Vlierdam, and only the data needed for a charging station. Searching is allowed by postcode with house number or by citizen service number, and by nothing else. Retrieved data is destroyed once the application has been settled."@en ;
+    dct:source <https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/open-ftv/-/blob/main/testdata/apps/rvig/kong/conf.yaml> ;
+    odrl:assigner vlierdam:RvIG ;
+    dct:publisher vlierdam:RvIG ;
+    dct:issued "2026-08-25"^^xsd:date ;
+    # Naast de twee geërfde stelselplichten een EIGEN verplichting, gedeeld met
+    # de RDW-inway: dezelfde knoop in twee Sets (zie hierboven).
+    odrl:obligation vlierdam:plicht-vernietiging ;
+    odrl:permission vlierdam:regel-inway-brp .
+
+vlierdam:regel-inway-brp a odrl:Permission ;
+    odrl:uid vlierdam:regel-inway-brp ;
+    dct:title "Lezen van de toegestane BRP-velden voor eigen ingezetenen"@nl ,
+              "Reading the permitted BRP fields for own residents"@en ;
+    odrl:assignee vlierdam:GemeenteVlierdam ;
+    odrl:target vlierdam:brp-velden-laadpalen ;
+    odrl:action [ rdf:value odrl:read ;
+        odrl:refinement vlierdam:vw-inway-brp-doel , vlierdam:vw-inway-brp-zoektype ,
+                        vlierdam:anker-inway-brp ] ;
+    odrl:constraint vlierdam:vw-inway-brp-ingezetene .
+
+# Het anker van de RvIG-inway. Naast de regel en haar drie voorwaarden realiseert
+# het ook de STELSELPLICHT plicht-traceparent met haar voorwaarde: de
+# traceparent-header staat in het inkomende verzoek, dus de inway kan haar
+# rechtstreeks toetsen. Dat de plicht via odrl:inheritFrom van de koppelvlak-Set
+# komt maakt niet uit — zij wordt op DIT beslispunt afgedwongen, en dus staat de
+# link op het anker van dít beslispunt.
+vlierdam:anker-inway-brp a odrl:Constraint , dpv:TechnicalMeasure ;
+    odrl:leftOperand apnl:verwerkingsverzoek ; odrl:operator apnl:conformsToPolicy ;
+    odrl:rightOperand vlierdam:bundle-rvig-pdp1 ;
+    prov:wasDerivedFrom vlierdam:regel-inway-brp ,
+        vlierdam:vw-inway-brp-doel , vlierdam:vw-inway-brp-zoektype ,
+        vlierdam:vw-inway-brp-ingezetene ,
+        vlierdam:plicht-traceparent , vlierdam:vw-traceparent .
+
+# De UITWERKING van de stelselplicht plicht-doelbinding op dit beslispunt: het
+# stelsel eist dát er een doelbinding staat, RvIG eist WELKE. Wie deze
+# voorwaarde afdwingt, dwingt daarmee ook de stelselplicht af — de tweede stap
+# van de keten, met hetzelfde predicaat, hier op de voorwaarde zelf.
+vlierdam:vw-inway-brp-doel a odrl:Constraint ;
+    rdfs:label "Doel is registratie van laadpalen"@nl ,
+               "Purpose is registration of charging stations"@en ;
+    odrl:leftOperand odrl:purpose ; odrl:operator odrl:eq ;
+    odrl:rightOperand vlierdam:doelbinding-registratie-laadpalen ;
+    prov:wasDerivedFrom vlierdam:plicht-doelbinding .
+
+vlierdam:vw-inway-brp-zoektype a odrl:Constraint ;
+    rdfs:label "Alleen zoeken op postcode+huisnummer of op burgerservicenummer"@nl ,
+               "Search only by postcode+house number or by citizen service number"@en ;
+    odrl:leftOperand vlierdam:zoektype ; odrl:operator odrl:isAnyOf ;
+    odrl:rightOperand ( vlierdam:ZoekMetPostcodeEnHuisnummer vlierdam:RaadpleegMetBurgerservicenummer ) .
+
+vlierdam:vw-inway-brp-ingezetene a odrl:Constraint ;
+    rdfs:label "Alleen personen die in Vlierdam wonen"@nl ,
+               "Only people residing in Vlierdam"@en ;
+    odrl:leftOperand vlierdam:ingezeteneVan ; odrl:operator odrl:eq ;
+    odrl:rightOperand vlierdam:GemeenteVlierdam .
+
+# ---- Beslispunt 3: de inway van RDW (BRV) -----------------------------------
+
+vlierdam:set-rdw-inway a odrl:Set ;
+    odrl:uid vlierdam:set-rdw-inway ;
+    # Aangesloten op het OpenFTV-afsprakenstelsel: de twee koppelvlak-
+    # verplichtingen gelden hier onverkort mee (ODRL 2.2 §2.6).
+    odrl:inheritFrom vlierdam:set-openftv-koppelvlak ;
+    dct:title "Beslispunt RDW-inway: bevraging van de BRV"@nl ,
+              "Decision point RDW inway: querying the BRV"@en ;
+    dct:description "Gemeente Vlierdam mag van de auto's van iemand het kenteken en de uitstootklasse opvragen, op basis van het burgerservicenummer. De opgehaalde gegevens worden na afhandeling van de aanvraag vernietigd."@nl ,
+                    "The municipality of Vlierdam may retrieve the licence plate and emission class of someone's vehicles, on the basis of the citizen service number. Retrieved data is destroyed once the application has been settled."@en ;
+    dct:source <https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/open-ftv/-/blob/main/testdata/apps/rdw/kong/conf.yaml> ;
+    odrl:assigner vlierdam:RDW ;
+    dct:publisher vlierdam:RDW ;
+    dct:issued "2026-08-25"^^xsd:date ;
+    # Dezelfde gedeelde vernietigingsplicht als bij de RvIG-inway.
+    odrl:obligation vlierdam:plicht-vernietiging ;
+    odrl:permission vlierdam:regel-inway-brv .
+
+vlierdam:regel-inway-brv a odrl:Permission ;
+    odrl:uid vlierdam:regel-inway-brv ;
+    dct:title "Lezen van de toegestane BRV-velden"@nl , "Reading the permitted BRV fields"@en ;
+    odrl:assignee vlierdam:GemeenteVlierdam ;
+    odrl:target vlierdam:brv-velden-laadpalen ;
+    odrl:action [ rdf:value odrl:read ;
+        odrl:refinement vlierdam:vw-inway-brv-doel , vlierdam:anker-inway-brv ] .
+
+# Het anker van de RDW-inway: de regel, haar doelvoorwaarde en — net als bij
+# RvIG — de stelselplicht plicht-traceparent met haar voorwaarde. De
+# diplomatiek-eis hoort bewust bij de outway van Vlierdam en niet hier: het RDW
+# kent de Vlierdamse functie "gemeentesecretaris" niet en kan er niet op toetsen.
+vlierdam:anker-inway-brv a odrl:Constraint , dpv:TechnicalMeasure ;
+    odrl:leftOperand apnl:verwerkingsverzoek ; odrl:operator apnl:conformsToPolicy ;
+    odrl:rightOperand vlierdam:bundle-rdw-pdp1 ;
+    prov:wasDerivedFrom vlierdam:regel-inway-brv , vlierdam:vw-inway-brv-doel ,
+        vlierdam:plicht-traceparent , vlierdam:vw-traceparent .
+
+# Idem aan RvIG-kant: de uitwerking van plicht-doelbinding op dit beslispunt.
+vlierdam:vw-inway-brv-doel a odrl:Constraint ;
+    rdfs:label "Doel is registratie van laadpalen"@nl ,
+               "Purpose is registration of charging stations"@en ;
+    odrl:leftOperand odrl:purpose ; odrl:operator odrl:eq ;
+    odrl:rightOperand vlierdam:doelbinding-registratie-laadpalen ;
+    prov:wasDerivedFrom vlierdam:plicht-doelbinding .
+
+
+# ############################################################################
+# ### BRON: data/vlierdam/openftv.ttl   (2026-08-28)
+# ############################################################################
+
+# =============================================================================
+# De ARTEFACTEN bij beleid.ttl: drie Cedar-bundles, één per PDP, plus één
+# Rego-module voor de laadpalenapplicatie zelf — die applicatie is intern en
+# heeft in de OpenFTV-stack geen PDP en geen bundle. Elk artefact hoort bij
+# precies één Set.
+#
+# DIT BESTAND IS PUUR BESCHRIJVEND (aug 2026). De realisatielinks stonden hier
+# tot deze slag als prov:wasDerivedFrom vanaf de artefacten; ze zijn verhuisd
+# naar de ANKERS in beleid.ttl (vlierdam:anker-…), de conformsToPolicy-
+# voorwaarden die in het beleid zelf staan. Reden: het anker is de realiserende
+# kant (Visualisatie-note §7) — het staat in de policy, hoort bij precies
+# één regel, en zegt in dezelfde adem "dit verzoek moet aan ‹bundle› voldoen"
+# én "en daarmee zijn déze regel en déze voorwaarden uitgewerkt". Wat hier
+# overblijft is wat een artefact van zichzelf weet: waar het staat, hoe het
+# heet, welke hash het heeft — plus de eerlijkheidsnoot hieronder.
+#
+# EERLIJKHEID: de realisatie beschrijft de BEOOGDE implementatie-
+# verantwoordelijkheid. De Cedar in open-ftv testdata/apps/*/pdp1/policies/
+# generic.cedar is op 25-8-2026 een permit-everything-placeholder; de
+# apnl:sha256 is de werkelijke hash van dat bestand en is voor alle drie de
+# PDP's identiek. Wat een bron niet kan zien, realiseert zij niet — zie de
+# bewust ongerealiseerde voorwaarden bij de Rego-module hieronder.
+# =============================================================================
+
+# ---- De laadpalenapplicatie: Rego, NAAST de OpenFTV-stack -------------------
+# Dit artefact hoort bij geen enkele PDP en zit in geen enkele bundle: het is de
+# access.rego van de frontend van de laadpalenapplicatie, die de applicatie zelf
+# uitvoert. Het staat daarmee náást de OpenFTV-stack (Kong/AuthZEN/Cedar).
+
+vlierdam:beleid-laadpalen-frontend a apnl:RegoModule , schema:SoftwareSourceCode ;
+    rdfs:label "Toegangsregels laadpalenapplicatie (frontend, Rego)"@nl ,
+               "Access rules charging-station application (frontend, Rego)"@en ;
+    dct:identifier "laadpalen/frontend/access.rego" ;
+    schema:programmingLanguage "Rego" ;
+    dct:source <https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/open-ftv/-/blob/main/testdata/apps/gemeente-vlierdam/beleid/policies/laadpalen/frontend/access.rego> ;
+    dct:format "application/vnd.rego" ;
+    dcat:downloadURL <https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/open-ftv/-/raw/main/testdata/apps/gemeente-vlierdam/beleid/policies/laadpalen/frontend/access.rego> ;
+    apnl:entrypoint "data.authz.allow" ;
+    apnl:sha256 "e9ba8093c01c2430a1c9a28afae430f5d53dea4f46b769f15f71e39d7aae58e1" ;
+    rdfs:comment "Dit is de enige regel in open-ftv die de medewerkerregel echt uitvoert — maar hij codeert het OORDEEL per gebruiker (Beth toegestaan, Jerry 'certification expired', Morty 'not certified'), niet de regel (afdeling Burgerzaken, opleiding ≤ 1 jaar, werktijd). Dekking beschrijft de beoogde verantwoordelijkheid. Het artefact staat náást de OpenFTV-stack: geen PDP, geen bundle."@nl ,
+                 "This is the only rule in open-ftv that actually enforces the employee rule — but it encodes the JUDGEMENT per user (Beth allowed, Jerry 'certification expired', Morty 'not certified'), not the rule (Civil Affairs department, training ≤ 1 year, working hours). Coverage describes the intended responsibility. The artifact sits alongside the OpenFTV stack: no PDP, no bundle."@en .
+    # REALISATIE: zie vlierdam:anker-app in beleid.ttl. Dat anker realiseert
+    # alleen de gebruiksregel zelf. De drie benoemde voorwaarden vw-app-doel,
+    # vw-app-opleiding en vw-app-werktijd zijn BEWUST ONGEREALISEERD:
+    # access.rego codeert een oordeel per gebruiker (Beth toegestaan, Jerry
+    # 'certification expired', Morty 'not certified') en rekent noch de
+    # opleidingsdatum, noch het werktijdvenster uit. Ze blijven onverkort gelden
+    # — de gemeente borgt ze organisatorisch, bij het uitdelen van de accounts.
+
+# ---- De drie Cedar-bundles, één per AuthZEN-beslispunt ----------------------
+
+vlierdam:bundle-vlierdam-pdp1 a apnl:CedarPolicySet , schema:SoftwareSourceCode ;
+    rdfs:label "Cedar-bundle Gemeente Vlierdam (pdp1, outway)"@nl , "Cedar bundle Municipality of Vlierdam (pdp1, outway)"@en ;
+    dct:identifier "pdp1@gemeente-vlierdam" ;
+    schema:programmingLanguage "Cedar" ;
+    dct:source <https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/open-ftv/-/blob/main/testdata/apps/gemeente-vlierdam/manager/bundles/pdp1.yaml> ;
+    dct:format "application/vnd.cedar" ;
+    dcat:downloadURL <https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/open-ftv/-/raw/main/testdata/apps/gemeente-vlierdam/pdp1/policies/generic.cedar> ;
+    apnl:entrypoint "pdp1" ;
+    apnl:sha256 "1a73579eb8821b1780a8b3366801459862f3f870fb3153b795187c1aa9764e35" ;
+    rdfs:comment "Beoogde implementatieverantwoordelijkheid. De Cedar in testdata/apps/gemeente-vlierdam/pdp1/policies/generic.cedar is op 25-8-2026 een permit-everything-placeholder; de dekking beschrijft welke PDP deze regels hoort te handhaven, niet dat hij dat al doet."@nl ,
+                 "Intended implementation responsibility. As of 2026-08-25 the Cedar in testdata/apps/gemeente-vlierdam/pdp1/policies/generic.cedar is a permit-everything placeholder; coverage states which PDP should enforce these rules, not that it already does."@en .
+    # REALISATIE: zie vlierdam:anker-outway-brp en vlierdam:anker-outway-brv in
+    # beleid.ttl — beide regels zelf én alle vier de inhoudelijke voorwaarden.
+
+vlierdam:bundle-rvig-pdp1 a apnl:CedarPolicySet , schema:SoftwareSourceCode ;
+    rdfs:label "Cedar-bundle RvIG (pdp1, inway BRP)"@nl , "Cedar bundle RvIG (pdp1, inway BRP)"@en ;
+    dct:identifier "pdp1@rvig" ;
+    schema:programmingLanguage "Cedar" ;
+    dct:source <https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/open-ftv/-/blob/main/testdata/apps/rvig/manager/bundles/pdp1.yaml> ;
+    dct:format "application/vnd.cedar" ;
+    dcat:downloadURL <https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/open-ftv/-/raw/main/testdata/apps/rvig/pdp1/policies/generic.cedar> ;
+    apnl:entrypoint "pdp1" ;
+    apnl:sha256 "1a73579eb8821b1780a8b3366801459862f3f870fb3153b795187c1aa9764e35" ;
+    rdfs:comment "Beoogde implementatieverantwoordelijkheid. De Cedar in testdata/apps/rvig/pdp1/policies/generic.cedar is op 25-8-2026 een permit-everything-placeholder; de dekking beschrijft welke PDP deze regels hoort te handhaven, niet dat hij dat al doet."@nl ,
+                 "Intended implementation responsibility. As of 2026-08-25 the Cedar in testdata/apps/rvig/pdp1/policies/generic.cedar is a permit-everything placeholder; coverage states which PDP should enforce these rules, not that it already does."@en .
+    # REALISATIE: zie vlierdam:anker-inway-brp in beleid.ttl — de regel zelf, haar
+    # drie voorwaarden en de stelselplicht plicht-traceparent met haar voorwaarde.
+    # De ingezetene-eis kan de RvIG-inway toetsen omdat RvIG de gemeente van
+    # inschrijving zelf houdt — hij is de enige partij die dat kán. (Het
+    # handhavingsmoment blijft lastig, zie README "Waar het wringt": de gemeente
+    # van inschrijving blijkt pas uit het antwoord.)
+
+vlierdam:bundle-rdw-pdp1 a apnl:CedarPolicySet , schema:SoftwareSourceCode ;
+    rdfs:label "Cedar-bundle RDW (pdp1, inway BRV)"@nl , "Cedar bundle RDW (pdp1, inway BRV)"@en ;
+    dct:identifier "pdp1@rdw" ;
+    schema:programmingLanguage "Cedar" ;
+    dct:source <https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/open-ftv/-/blob/main/testdata/apps/rdw/manager/bundles/pdp1.yaml> ;
+    dct:format "application/vnd.cedar" ;
+    dcat:downloadURL <https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/open-ftv/-/raw/main/testdata/apps/rdw/pdp1/policies/generic.cedar> ;
+    apnl:entrypoint "pdp1" ;
+    apnl:sha256 "1a73579eb8821b1780a8b3366801459862f3f870fb3153b795187c1aa9764e35" ;
+    rdfs:comment "Beoogde implementatieverantwoordelijkheid. De Cedar in testdata/apps/rdw/pdp1/policies/generic.cedar is op 25-8-2026 een permit-everything-placeholder; de dekking beschrijft welke PDP deze regels hoort te handhaven, niet dat hij dat al doet."@nl ,
+                 "Intended implementation responsibility. As of 2026-08-25 the Cedar in testdata/apps/rdw/pdp1/policies/generic.cedar is a permit-everything placeholder; coverage states which PDP should enforce these rules, not that it already does."@en .
+    # REALISATIE: zie vlierdam:anker-inway-brv in beleid.ttl — de regel zelf, haar
+    # doelvoorwaarde en de stelselplicht plicht-traceparent met haar voorwaarde.
+
+# ---- De keten: anker -> voorwaarde -> stelselplicht -------------------------
+# plicht-doelbinding (Set set-openftv-koppelvlak) wordt door GEEN ENKEL anker
+# rechtstreeks gerealiseerd, en dat is juist: geen PDP toetst "er staat een
+# doelbinding in het verzoek" als losse regel. Wat de PDP's wél toetsen is de
+# scherpere doel-voorwaarde van hun eigen regel — en wie odrl:purpose = <dit
+# doel> afdwingt, dwingt daarmee ook af dát er een doel staat.
+#
+# Die relatie is dezelfde als tussen anker en regel: "X is de uitwerking van Y".
+# Daarom hetzelfde predicaat, prov:wasDerivedFrom, alleen nu vanaf een
+# VOORWAARDE in plaats van vanaf een anker. Zo ontstaat een keten van twee
+# stappen, elke stap met hetzelfde predicaat:
+#
+#   anker-inway-brp --wasDerivedFrom--> vw-inway-brp-doel
+#                           vw-inway-brp-doel --wasDerivedFrom--> plicht-doelbinding
+#
+# Beide stappen staan sinds aug 2026 in beleid.ttl, bij het anker respectievelijk
+# bij de voorwaarde zelf: de tweede stap is een uitspraak van de VOORWAARDE over
+# de plicht, en hoort dus waar de voorwaarde staat. De weergave leest de keten
+# terug als "uitgewerkt via <voorwaarde> — afgedwongen door <bundle>"; de plicht
+# blijft zichtbaar geborgd zonder dat er ergens een realisatieclaim wordt gedaan
+# die geen enkele Cedar-regel waarmaakt. (Merk op dat plicht-traceparent WÉL
+# rechtstreeks door de twee inway-ankers wordt gerealiseerd: die plicht IS één
+# toets, "context has traceparent", en heeft geen scherpere voorwaarde nodig.)

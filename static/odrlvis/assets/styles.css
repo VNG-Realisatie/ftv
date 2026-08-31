@@ -1,0 +1,548 @@
+:root {
+  --bg: #ffffff;
+  --bg-alt: #f6f8fa;
+  --bg-nav: #fbfcfd;
+  --bg-src: #f6f8fa;
+  --src-head-fg: #5b6774;
+  --src-head-border: #e2e7ec;
+  /* Turtle-syntaxpalet (licht) */
+  --tok-prefix: #205e9e; --tok-iri: #187a58; --tok-pname: #9a5b17;
+  --tok-string: #a1467e; --tok-kw: #6b4fa1; --tok-comment: #7a8694;
+  --tok-punct: #5b6774; --tok-num: #b06a10;
+  --fg: #1c2430;
+  --fg-soft: #5b6774;
+  --border: #e2e7ec;
+  --accent: #1c4e80;
+  --accent-soft: #e8f0f8;
+  --offer: #6b4fa1;
+  --agreement: #1c7a5b;
+  /* Regel-palet: ÉÉN vaste kleur per REGELTYPE (zelfde besluit als in
+     doc.css): doel groen, toestemming blauw — dezelfde familie, wel
+     onderscheidend; verbod rood, verplichting neutraal. */
+  --rule-doel: #2f8a4c;
+  --rule-toestemming: #0e7d84;
+  --attention: #b25e13;   /* wijzigingsmarkering in bewerkmodus */
+  --artifact: #a11d47;
+  /* Overervings-accent (odrl:inheritFrom), zie doc.css: geen regeltype-kleur. */
+  --kind-inherit: #6b4fa1;
+  --code-fg: #24313f;
+  --mono: ui-monospace, "SFMono-Regular", "Menlo", "Consolas", monospace;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #12161c; --bg-alt: #1a2029; --bg-nav: #151b22; --bg-src: #0d1117;
+    --fg: #dbe2ea; --fg-soft: #93a0ae; --border: #262e38;
+    --accent: #6ea8dc; --accent-soft: #1c2938;
+    --offer: #b39ddb; --agreement: #6ec6a5; --artifact: #e6789e;
+    --rule-doel: #63b97f; --rule-toestemming: #4fb2ba; --attention: #e0a35f;
+    --kind-inherit: #b39ddb;
+    --code-fg: #c9d3de;
+    --src-head-fg: #8b98a8;
+    --src-head-border: #222b36;
+    /* Turtle-syntaxpalet (donker) */
+    --tok-prefix: #7fa8d9; --tok-iri: #6cc6a8; --tok-pname: #d7a06b;
+    --tok-string: #c98fb0; --tok-kw: #b39ddb; --tok-comment: #667080;
+    --tok-punct: #8b98a8; --tok-num: #e0a35f;
+  }
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body {
+  font-family: var(--sans);
+  color: var(--fg);
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Topbar */
+.topbar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 8px 16px; border-bottom: 1px solid var(--border);
+  background: var(--bg-nav); flex: 0 0 auto; gap: 12px; flex-wrap: wrap;
+}
+.brand { display: flex; align-items: baseline; gap: 8px; }
+.logo { font-weight: 700; color: var(--accent); letter-spacing: .3px; }
+.subtitle { color: var(--fg-soft); font-size: 13px; }
+.toolbar { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.btn {
+  font: inherit; cursor: pointer; padding: 5px 12px; border-radius: 6px;
+  border: 1px solid var(--border); background: var(--bg); color: var(--fg);
+}
+.btn:hover { background: var(--accent-soft); border-color: var(--accent); }
+.status { color: var(--fg-soft); font-size: 12px; }
+
+/* Layout */
+.layout { flex: 1 1 auto; display: grid; grid-template-columns: 300px 1fr 40%; min-height: 0; }
+.pane { overflow: auto; min-width: 0; }
+.pane-nav { border-right: 1px solid var(--border); background: var(--bg-nav); }
+.pane-doc { background: var(--bg); }
+.pane-src { border-left: 1px solid var(--border); background: var(--bg-src); }
+.pane-head {
+  position: sticky; top: 0; z-index: 1; padding: 8px 14px;
+  font-size: 12px; text-transform: uppercase; letter-spacing: .5px;
+  color: var(--fg-soft); background: inherit; border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+}
+.pane-src .pane-head { color: var(--src-head-fg); border-color: var(--src-head-border); background: var(--bg-src); }
+
+/* Nav tree */
+/* Zoekveld boven de navigatieboom (klein, dependency-vrij). */
+.nav-filter {
+  display: flex; align-items: center; gap: 8px;
+  padding: 6px 10px; border-bottom: 1px solid var(--border);
+}
+.nav-filter input {
+  flex: 1 1 auto; min-width: 0; font: inherit; font-size: 12.5px;
+  padding: 4px 8px; border: 1px solid var(--border); border-radius: 6px;
+  background: var(--bg); color: var(--fg);
+}
+.nav-filter input:focus { outline: 2px solid var(--accent-soft); border-color: var(--accent); }
+.nav-count { font-size: 11.5px; white-space: nowrap; }
+.nav-tree { padding: 6px 0 40px; }
+.nav-node > .nav-row {
+  display: flex; align-items: center; gap: 6px; padding: 4px 10px;
+  cursor: pointer; border-left: 3px solid transparent; user-select: none;
+}
+.nav-row:hover { background: var(--accent-soft); }
+.nav-row.selected { background: var(--accent-soft); border-left-color: var(--accent); font-weight: 600; }
+.nav-toggle { width: 14px; flex: 0 0 14px; color: var(--fg-soft); text-align: center; font-size: 10px; }
+.nav-label { flex: 1 1 auto; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.nav-children { display: block; }
+.nav-children.collapsed { display: none; }
+.depth-1 .nav-row { padding-left: 20px; }
+.depth-2 .nav-row { padding-left: 34px; }
+.depth-3 .nav-row { padding-left: 48px; }
+
+/* CHIP-KAPITALISATIE, editorzijde. Zelfde uitgangspunt als in doc.css: een
+   badge leest in sentence case ("Doel", "Toestemming", "Geërfd"). Hier
+   ALLEEN de ::first-letter-stap en NIET de lowercase-stap ervoor: in de
+   editor draagt dezelfde .badge-klasse zowel vaste woorden als LABELS UIT DE
+   DATA (de niveau-badge van een groeperingsdimensie). Lowercase zou de
+   kapitalisatie van zo'n bronlabel vernielen; alleen de eerste letter lichten
+   kan geen acroniem of eigennaam kapotmaken. De statuschip (.vchip) heeft wél
+   een vaste woordenlijst en krijgt dus beide stappen. */
+.badge {
+  display: inline-block;
+  font-size: 10px; padding: 1px 6px; border-radius: 10px; font-weight: 600;
+  white-space: nowrap; color: #fff; background: var(--fg-soft);
+}
+.badge::first-letter { text-transform: uppercase; }
+.vchip { text-transform: lowercase; }
+.vchip::first-letter { text-transform: uppercase; }
+.badge.dataset { background: #4a5763; }
+.badge.offer { background: var(--offer); }
+.badge.agreement, .badge.afnemer { background: var(--agreement); }
+.badge.doel { background: var(--rule-doel); }
+.badge.toestemming { background: var(--rule-toestemming); }
+.badge.artifact, .badge.bundel { background: var(--artifact); }
+.badge.verbod { background: #b3261e; }
+
+/* Doc pane */
+.doc-content { padding: 20px 28px 80px; max-width: 900px; }
+.doc-content h1 { font-size: 22px; margin: 0 0 4px; }
+.doc-content h2 { font-size: 15px; margin: 26px 0 8px; color: var(--accent);
+  border-bottom: 1px solid var(--border); padding-bottom: 4px; }
+.doc-content h3 { font-size: 14px; margin: 18px 0 6px; }
+.role-line { color: var(--fg-soft); font-size: 12px; margin-bottom: 12px; }
+.pill { display: inline-block; font-size: 11px; padding: 1px 8px; border-radius: 10px;
+  background: var(--accent-soft); color: var(--accent); margin-right: 4px; }
+/* Rolpil ("Aanbod", "Overeenkomst"): vaste woordenlijst, dus dezelfde
+   sentence-case-behandeling als de statuschip. */
+.pill { text-transform: lowercase; }
+.pill::first-letter { text-transform: uppercase; }
+.mono { font-family: var(--mono); font-size: 12.5px; }
+.muted { color: var(--fg-soft); }
+a { color: var(--accent); }
+
+/* Sleutelkolom groeit mee met lange (BRP-)predicaatnamen — geen overlap. */
+.kv { display: grid; grid-template-columns: minmax(160px, max-content) 1fr; gap: 4px 14px; margin: 8px 0; }
+.kv dt { color: var(--fg-soft); }
+.kv dd { margin: 0; }
+
+.card { border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px;
+  margin: 10px 0; background: var(--bg-alt); }
+.card.doel { border-left: 4px solid var(--rule-doel); }
+.card.toestemming { border-left: 4px solid var(--rule-toestemming); }
+.card.artifact { border-left: 4px solid var(--artifact); }
+.card.verbod { border-left: 4px solid #b3261e; }
+/* Overervings-kaart (odrl:inheritFrom): eigen kleur, buiten het regel-palet —
+   overerving is een LAAG, geen regeltype. Ontbreekt de ouder in de bron, dan
+   is de kantlijn gestippeld: de verwijzing staat er, de regels niet. */
+.card.geerfd { border-left: 4px solid var(--kind-inherit, #6b4fa1); }
+/* Groepskaart (qb:DimensionProperty): een doel/koppelvlak met de varianten
+   eronder. De geneste kaarten springen in en verliezen hun eigen marge,
+   zodat het niveau zichtbaar blijft zonder kaart-in-kaart-randenspel. */
+.card.regelgroep > summary { cursor: pointer; list-style: none; }
+.card.regelgroep > summary::-webkit-details-marker { display: none; }
+.card.regelgroep > .card { margin-left: 14px; }
+.card.geerfd.ontbreekt { border-left-style: dashed; }
+.badge.geerfd { background: var(--kind-inherit, #6b4fa1); }
+.card-title { font-weight: 600; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+
+.chip { font-size: 11px; padding: 1px 7px; border-radius: 4px; border: 1px solid var(--border);
+  background: var(--bg); color: var(--fg-soft); }
+
+/* Voorwaarde als slot-chips: [grootheid] [operator] [waarde] */
+.c-chips { display: inline-flex; flex-wrap: wrap; gap: 4px; align-items: baseline; }
+.c-label { font-weight: 400; color: var(--fg-soft, #667); }
+.c-slot { display: inline-block; font-size: 12px; padding: 1px 8px; border-radius: 10px;
+  border: 1px solid var(--border); background: var(--bg); }
+.c-slot.op { color: var(--fg-soft); font-style: italic; border-style: dashed; }
+.c-slot.missing { background: rgba(230, 160, 30, .14); border-color: rgba(200, 140, 20, .55);
+  color: #9a6700; cursor: help; }
+@media (prefers-color-scheme: dark) { .c-slot.missing { color: #e3b341; } }
+
+/* Duty-detailrijen (overige eigenschappen, geneste verplichtingen) */
+.duty-extra { margin: 2px 0 2px 12px; font-size: 12.5px; }
+.blank-summary { color: var(--fg-soft); }
+
+ul.clean { list-style: none; padding: 0; margin: 6px 0; }
+ul.clean li { padding: 3px 0; }
+.constraint { display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+.constraint .sentence { }
+.target-tag { display: inline-block; font-family: var(--mono); font-size: 11.5px;
+  background: var(--bg); border: 1px solid var(--border); border-radius: 4px;
+  padding: 1px 6px; margin: 2px 4px 2px 0; }
+
+.linkish { cursor: pointer; color: var(--accent); text-decoration: underline dotted; }
+.hash { font-family: var(--mono); font-size: 11px; word-break: break-all; }
+
+.empty { color: var(--fg-soft); padding: 40px 28px; }
+
+/* Source pane */
+.src-code { margin: 0; padding: 14px 16px 60px; overflow: auto; }
+.src-code code { font-family: var(--mono); font-size: 12px; color: var(--code-fg);
+  white-space: pre; display: block; }
+.src-tabs { display: flex; gap: 4px; }
+.src-tab { font-size: 11px; padding: 1px 8px; border-radius: 4px; cursor: pointer;
+  border: 1px solid var(--src-head-border); color: var(--src-head-fg); background: transparent; }
+.src-tab.active { color: #fff; background: var(--accent); border-color: var(--accent); }
+
+/* Turtle syntax highlight (kleuren per thema via :root-variabelen) */
+.tok-prefix { color: var(--tok-prefix); }
+.tok-iri { color: var(--tok-iri); }
+.tok-pname { color: var(--tok-pname); }
+.tok-string { color: var(--tok-string); }
+.tok-kw { color: var(--tok-kw); font-weight: 600; }
+.tok-comment { color: var(--tok-comment); font-style: italic; }
+.tok-punct { color: var(--tok-punct); }
+.tok-num { color: var(--tok-num); }
+
+/* Bewerken-modus */
+.btn-toggle[aria-pressed="true"], .btn.active {
+  background: var(--accent); color: #fff; border-color: var(--accent);
+}
+.dirty { font-size: 11px; color: var(--fg-soft); white-space: nowrap; }
+.dirty.changed { color: var(--attention); font-weight: 600; }
+
+.edit-section {
+  border: 1px dashed var(--accent); border-radius: 8px;
+  padding: 10px 14px; margin: 14px 0; background: var(--accent-soft);
+}
+.edit-section.edit-inline { margin: 10px 0 2px; padding: 8px 12px; }
+.edit-title { font-weight: 600; font-size: 12px; text-transform: uppercase;
+  letter-spacing: .5px; color: var(--accent); margin-bottom: 6px; }
+.edit-form { display: grid; grid-template-columns: 170px 1fr; gap: 6px 10px;
+  align-items: start; margin: 8px 0; }
+.edit-form > label { color: var(--fg-soft); padding-top: 4px; font-size: 13px; }
+.edit-input {
+  font: inherit; font-size: 13px; padding: 4px 7px; width: 100%;
+  border: 1px solid var(--border); border-radius: 5px;
+  background: var(--bg); color: var(--fg); box-sizing: border-box;
+}
+textarea.edit-input { min-height: 64px; resize: vertical; }
+.iri-picker { display: flex; flex-direction: column; gap: 4px; }
+.add-row { display: flex; gap: 6px; align-items: center; margin-top: 4px; }
+.editbar { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; margin: 8px 0 2px; }
+.btn-sm { padding: 3px 9px; font-size: 12px; }
+.btn-danger { color: #b3261e; border-color: #b3261e; }
+.btn-danger:hover { background: #b3261e; color: #fff; }
+.form-msg { color: #b3261e; font-size: 12px; }
+.edit-link { font-size: 11px; margin-left: 4px; }
+.edit-link.danger { color: #b3261e; }
+.constraint-edit { flex-basis: 100%; }
+
+/* Rights-view (samenvattingstabel per Agreement) */
+.table-scroll { overflow-x: auto; }
+  border: 1px solid var(--border); padding: 4px 9px;
+  vertical-align: top; text-align: left;
+}
+
+/* Bronpaneel: raw-RDF-bewerken (laag 3) */
+.src-editbar { display: flex; gap: 4px; }
+.src-editor {
+  width: 100%; min-height: 320px; box-sizing: border-box; display: block;
+  background: var(--bg-src); color: var(--code-fg);
+  font-family: var(--mono); font-size: 12px; line-height: 1.5;
+  border: none; outline: none; padding: 14px 16px; resize: vertical;
+}
+.src-editor[hidden], .src-code[hidden], .src-error[hidden] { display: none; }
+.src-error { color: #ff8a80; padding: 8px 16px; font-family: var(--mono);
+  font-size: 12px; white-space: pre-wrap; border-bottom: 1px solid var(--src-head-border); }
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; grid-auto-rows: minmax(180px, auto); }
+  .pane-src { border-left: none; border-top: 1px solid var(--border); }
+  .pane-nav { border-right: none; border-bottom: 1px solid var(--border); }
+}
+
+
+/* Standalone-permalink in de kopregel */
+.role-line a.permalink { margin-left: 10px; font-size: 12px; color: var(--fg-soft); text-decoration: none; }
+.role-line a.permalink:hover { color: var(--accent, #4a90d9); text-decoration: underline; }
+
+/* Lange literals: afgekapte weergave met "toon meer"-knop (weergave-kwestie;
+   het model en het bronfragment blijven volledig). */
+.longtext { white-space: pre-wrap; overflow-wrap: anywhere; }
+button.toggle-more {
+  border: none; background: none; padding: 0; font: inherit; font-size: 12px;
+  color: var(--accent, #4a90d9); cursor: pointer; text-decoration: underline;
+}
+
+/* Verken-knop: ronde vergrootglas-affordance (chip-diameter, geen tekst) op
+   node-achtige elementen; opent de graaf-inspecteur in het bronpaneel. */
+.verken-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 21px; height: 21px; padding: 0; margin-left: 6px; flex: 0 0 auto;
+  border: 1px solid var(--border); border-radius: 50%; background: var(--bg-alt);
+  color: var(--fg-soft); cursor: pointer; font: inherit; font-size: 14px;
+  line-height: 1; vertical-align: middle;
+}
+.verken-btn:hover { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); }
+/* Rechts uitgelijnd op kaart-kopregels: de knop hoort visueel bij de kaart. */
+.card-title .verken-btn { margin-left: auto; }
+
+/* Graaf-inspecteur in het (donkere) bronpaneel */
+.src-inspect { padding: 12px 16px 60px; font-size: 13px; color: var(--code-fg); }
+.src-inspect[hidden] { display: none; }
+.src-inspect .muted { color: var(--src-head-fg); }
+.insp-crumbs { font-size: 12px; margin-bottom: 10px; line-height: 1.7; color: var(--src-head-fg); }
+.src-inspect .crumb { cursor: pointer; color: #7fa8d9; text-decoration: underline dotted; }
+.src-inspect .crumb.current { color: var(--code-fg); font-weight: 600; text-decoration: none; cursor: default; }
+.insp-sep { color: #566072; }
+.insp-label { font-weight: 700; font-size: 14px; }
+.src-inspect .insp-curie { color: #d7a06b; font-size: 12px; overflow-wrap: anywhere; }
+.src-inspect .insp-types { font-size: 11.5px; }
+.insp-sec { margin: 14px 0 4px; font-size: 11px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: .5px; color: var(--src-head-fg);
+  border-bottom: 1px solid var(--src-head-border); padding-bottom: 3px; }
+.insp-in-list { list-style: none; margin: 0; padding: 0; }
+.insp-in { cursor: pointer; padding: 3px 6px; border-radius: 4px; }
+.src-inspect .insp-in:hover { background: #26303d; }
+.src-inspect .insp-in-subj { color: var(--code-fg); text-decoration: underline dotted; }
+.src-inspect .insp-in-pred { font-size: 11.5px; }
+.insp-none { font-size: 12.5px; }
+.src-inspect .insp-ttl { margin: 6px 0 0; overflow: auto; }
+.src-inspect .insp-ttl code { font-family: var(--mono); font-size: 12px;
+  color: var(--code-fg); white-space: pre; display: block; }
+
+/* Klikbare termen in het gehighlighte fragment (subjects in de graaf) */
+.tok-link { text-decoration: underline dotted; cursor: pointer; }
+.tok-link:hover { filter: brightness(1.3); }
+
+/* Inspecteur-fold-outs: "Verwijst naar (n)" / "Verwezen vanuit (n)" —
+   ingeklapt bij render, lijst lazy + gechunkt (zie renderInspector). */
+.insp-fold { display: block; margin: 10px 0; padding: 5px 10px;
+  border: 1px solid #33404f; border-radius: 8px; }
+details.insp-fold[open] > .vl-summary .vl-chevron { transform: rotate(90deg); }
+.insp-fold .vl-summary { color: var(--src-head-fg); }
+.insp-filter { display: block; width: 90%; margin: 8px 0 4px; }
+.insp-fold .ref-more { font-size: 12px; }
+
+/* KETEN-LAYOUT (aug 2026): de knoop waar je staat als vlak, met de twee
+   richtingen erboven en eronder en het randlabel op de rand ertussen —
+   dezelfde vorm als het Invulling-paneel in doc.css. Het bronpaneel is donker,
+   dus het "grijze" vlak is hier een tint lichter dan de achtergrond. */
+.src-inspect .insp-cur {
+  position: relative; margin: 24px 0; padding: 12px 12px 10px;
+  background: #222b36; border-top: 1px solid #33404f; border-bottom: 1px solid #33404f;
+}
+.src-inspect .insp-cur .insp-sec { margin-top: 8px; }
+.src-inspect .insp-dir.insp-in { margin-bottom: 2px; }
+.src-inspect .insp-dir.insp-out { margin-top: 4px; }
+.insp-fold-bare > summary { display: none; }
+.src-inspect .fill-edge {
+  position: absolute; left: 12px; margin: 0; padding: 0 6px;
+  background: var(--code-bg, #1b222c); color: var(--src-head-fg);
+  font-size: 11.5px; font-weight: 650; line-height: 1.4;
+}
+.src-inspect .fill-edge-up { top: 0; transform: translateY(-50%); }
+.src-inspect .fill-edge-down { bottom: 0; transform: translateY(50%); }
+.src-inspect .fill-edge.is-foldable { cursor: pointer; user-select: none; }
+.src-inspect .fill-edge.is-foldable::after {
+  content: '\25B8'; margin-left: 5px; font-size: 10px;
+}
+.src-inspect .fill-edge.is-foldable[aria-expanded="true"]::after { content: '\25BE'; }
+
+/* Schaalbare terugverwijzings-lijst (bijv. >10 overeenkomsten op één aanbod):
+   fold-out in versie-kiezer-stijl; uitgeklapt filterveld + gechunkte lijst
+   met "Meer tonen"-knop (zie refListBlock in app.js). */
+.ref-list { margin: 10px 0; padding: 6px 12px; border: 1px solid var(--border);
+  border-radius: 8px; background: var(--bg-alt); }
+details.ref-list[open] > .vl-summary .vl-chevron { transform: rotate(90deg); }
+.ref-bar { display: flex; align-items: center; gap: 12px; margin: 8px 0 6px; }
+.ref-filter { flex: 0 1 320px; min-width: 160px; font: inherit; font-size: 13px;
+  padding: 5px 10px; border: 1px solid var(--border); border-radius: 7px;
+  background: var(--bg); color: var(--fg); }
+.ref-filter:focus { outline: 2px solid var(--accent-soft); border-color: var(--accent); }
+.ref-count { font-size: 12px; white-space: nowrap; }
+.ref-items { margin: 4px 0; padding: 0; list-style: none; }
+.ref-item { padding: 2px 0; font-size: 13px; }
+.ref-more { display: block; margin: 8px auto 4px; }
+.ref-more[hidden] { display: none; }
+
+/* Ledenlijst van een target-gegevensset (AssetCollection): ingeklapte
+   fold-out met telling; uitgeklapt gegroepeerd (categorie/groep/rubriek). */
+.member-list { display: block; margin: 4px 0 2px; padding: 4px 10px;
+  border: 1px solid var(--border); border-radius: 8px; background: var(--bg-alt); }
+details.member-list[open] > .vl-summary .vl-chevron { transform: rotate(90deg); }
+.member-group-head { font-size: 11.5px; text-transform: uppercase; letter-spacing: .04em;
+  margin: 6px 0 2px; }
+.member-items { margin: 0; padding: 0 0 0 2px; list-style: none;
+  columns: 2 260px; column-gap: 24px; }
+.member-item { padding: 1px 0; font-size: 12.5px; break-inside: avoid; }
+
+/* Geneste logische constraints (odrl:and/or/xone): groepskop + ingesprongen
+   leden; grote bomen starten ingeklapt als fold-out (c-fold). */
+.c-group { flex: 1 1 100%; min-width: 0; }
+.c-group-head { display: flex; align-items: baseline; gap: 6px; margin: 2px 0; }
+ul.c-group-items { margin: 2px 0 2px 4px; padding: 0 0 0 14px; list-style: none;
+  border-left: 2px solid var(--border); }
+.c-group-item { padding: 2px 0; }
+.c-leaf { display: inline-flex; gap: 6px; align-items: baseline; flex-wrap: wrap; }
+.c-fold { flex: 1 1 100%; }
+details.c-fold[open] > .vl-summary .vl-chevron { transform: rotate(90deg); }
+.c-fold-body { margin-top: 4px; }
+
+/* Fold-out-koptekst (inspecteur, ledenlijst, verwijzingslijst, voorwaarde-fold) */
+.vl-summary { font-size: 12px; cursor: pointer; list-style: none; display: flex;
+  align-items: baseline; gap: 6px; padding: 2px 0; user-select: none; }
+.vl-summary::-webkit-details-marker { display: none; }
+.vl-chevron { font-size: 10px; transition: transform .12s ease; }
+
+/* Versienavigator (temporele versie-containers; zie TEMPORAL_VOCABS in
+   parse.js): compacte chip in de kop van de kaart — ‹ datum › — plus het
+   uitklapmenu met alle versies. Zelfde vorm als in de documentweergave. */
+.vnav-wrap { position: relative; display: inline-flex; align-items: center;
+  gap: 6px; white-space: nowrap; }
+/* Compacte maatvoering — identiek aan doc.css (zie de toelichting daar): de
+   chip staat op elke kaartkop en mag de regel niet hoger maken. */
+.vnav { display: inline-flex; align-items: center; gap: 0;
+  border: 1px solid var(--border); border-radius: 999px;
+  background: var(--bg-alt); padding: 0 1px; }
+.vnav-arrow, .vnav-date {
+  font: inherit; color: var(--fg-soft); background: none; border: 0;
+  border-radius: 999px; cursor: pointer; padding: 0 3px; line-height: 1.5;
+}
+.vnav-arrow { font-size: 12px; padding: 0 4px; }
+/* Lege sleuf bij de oudste/nieuwste versie: houdt de breedte, zodat de datum
+   en de andere pijl niet verspringen tijdens het doorlopen van de versies. */
+.vnav-arrow-off { opacity: .35; cursor: default; }
+.vnav-date { font-family: var(--mono); font-size: 10.5px; letter-spacing: -.3px;
+  min-width: 9ch; text-align: center; }
+.vnav-arrow:hover, .vnav-date:hover { background: var(--accent-soft); color: var(--accent); }
+.vnav-arrow:focus-visible, .vnav-date:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.vnav-menu {
+  position: absolute; z-index: 20; top: calc(100% + 4px); left: 0;
+  min-width: 260px; max-width: 420px; max-height: 320px; overflow: auto;
+  padding: 6px; background: var(--bg); border: 1px solid var(--border);
+  border-radius: 8px; box-shadow: 0 6px 18px rgba(16, 24, 32, .18);
+  white-space: normal; text-align: left;
+}
+.vnav-menu[hidden] { display: none; }
+.vnav-menu-head { display: flex; align-items: center; gap: 6px; font-size: 12px; padding: 2px 6px; }
+.vnav-menu-sub { font-size: 11.5px; padding: 0 6px 4px; }
+.vnav-mi {
+  display: flex; align-items: baseline; gap: 8px; width: 100%;
+  font: inherit; font-size: 12.5px; color: var(--fg); text-align: left;
+  background: none; border: 0; border-radius: 6px; padding: 3px 6px; cursor: pointer;
+}
+.vnav-mi:hover { background: var(--accent-soft); }
+.vnav-mi.shown { font-weight: 600; }
+.vnav-mi-date { font-family: var(--mono); font-size: 11.5px; white-space: nowrap; }
+.vnav-mi-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.vchip { display: inline-block; font-size: 10.5px; line-height: 1.6; padding: 0 7px;
+  border-radius: 999px; border: 1px solid transparent; white-space: nowrap; }
+.vchip.current { background: #e2f4e6; color: #1b6b34; border-color: #bfe3c8; }
+.vchip.superseded { background: #ececec; color: #666; border-color: #ddd; }
+/* Beëindigd: laatste versie van een besluit dat is afgelopen (geen opvolger). */
+.vchip.terminated { background: #fbeaea; color: #8c2f2f; border-color: #f0cdcd; }
+.vchip.future { background: #e5effb; color: #1e56a0; border-color: #c9ddf5; }
+@media (prefers-color-scheme: dark) {
+  .vchip.current { background: #16301f; color: #7fd39a; border-color: #24462f; }
+  .vchip.superseded { background: #21272f; color: #9aa6b3; border-color: #303945; }
+  .vchip.terminated { background: #33201f; color: #e39a95; border-color: #4c2c2a; }
+  .vchip.future { background: #182634; color: #79b3e6; border-color: #24384c; }
+}
+
+/* Intensioneel gedefinieerde collectie (zie doc.css) */
+.coll-intension { display: block; margin: 2px 0; font-size: 12px; }
+.coll-source { font-size: 11px; margin-left: 6px; }
+.party-coll { display: inline-block; }
+
+/* INGEKLAPT = GEEN VLAK (correctie aug 2026). Een richtingblok draagt zijn kop
+   niet meer zelf (die staat op het randlabel), dus een dichtgeklapte fold-out
+   liet een leeg omrand vakje achter: rand, padding en marge zonder inhoud. Dat
+   las als "hier is niets" in plaats van "dit staat dicht". Dicht neemt daarom
+   GEEN ruimte in — het randlabel met zijn telling en chevron is het hele
+   signaal, en dat zegt precies wat er te halen valt en dat het dicht staat. */
+.insp-fold-bare:not([open]) {
+  margin: 0; padding: 0; border: 0; background: none;
+}
+/* En de chevron mag gezien worden: hij is de enige aanwijzing dat het label
+   een knop is. Iets groter dan een voetnoot, en in de kleur van het label
+   zelf in plaats van nog een tint gedempter. */
+.fill-edge.is-foldable::after { font-size: 11px; color: inherit; }
+
+/* --- UITLEG-TOOLTIP (Visualisation Note §1) ---------------------------------
+   Een term die een DEFINITIE in de data heeft (skos:definition,
+   dct:description, rdfs:comment) krijgt twee dingen: een fijne gestippelde
+   onderstreping als affordance, en een paneeltje op verlengde hover of bij
+   focus. Zie assets/tooltip.js voor het gedrag; hier staat alleen de vorm.
+   Zelfde blok in assets/styles.css — de graaf-inspecteur wordt door beide
+   pagina's gebruikt, dus beide stylesheets moeten hem kennen. */
+/* GEEN ZICHTBARE AANDUIDING VOORAF (besluit eigenaar, aug 2026). Een
+   gestippelde onderstreping op elke gedefinieerde term maakte de pagina
+   streperig — en een uitleg is navraag, geen waarschuwing. De tooltip komt
+   gewoon op hover en op focus; .has-tip is daarom alleen nog een haakje voor
+   het gedrag (assets/tooltip.js) en voor de focusring hieronder.
+   Wel een focusring: wie tabt moet zien wáár hij staat. */
+.has-tip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.term-tip {
+  position: fixed; z-index: 70; top: 0; left: 0;
+  max-inline-size: 40ch;
+  padding: 7px 10px;
+  border: 1px solid var(--border); border-radius: 6px;
+  background: var(--bg-head, var(--bg-alt)); color: var(--fg);
+  font-family: var(--sans); font-size: 12.5px; line-height: 1.45;
+  box-shadow: 0 6px 20px rgba(10, 16, 24, .18);
+  /* Het paneel vangt zelf geen muis: eroverheen bewegen mag de term niet
+     verlaten en er valt niets in aan te klikken. */
+  pointer-events: none;
+  opacity: 0; transform: translateY(-2px);
+  transition: opacity .12s ease, transform .12s ease;
+}
+.term-tip[hidden] { display: none; }
+/* KOPREGEL — de tekst die vroeger als native `title` op dit element stond (de
+   naam van een voorwaarde, een IRI). Zwaarder en iets kleiner dan de uitleg
+   eronder, zodat het paneeltje leest als "dit ding — en dit betekent het". */
+.term-tip-head { display: block; font-weight: 650; font-size: 12px; overflow-wrap: anywhere; }
+.term-tip-head + .term-tip-body { display: block; margin-top: 3px; }
+.term-tip.is-open { opacity: 1; transform: none; }
+/* Boven de term geplaatst: dezelfde beweging, andere kant op. */
+.term-tip.is-above:not(.is-open) { transform: translateY(2px); }
+/* prefers-reduced-motion: geen fade, geen schuif — meteen staan waar hij
+   hoort. De klasse zet tooltip.js erbij; de media-query is de vangrail voor
+   het geval matchMedia niets zegt. */
+.term-tip.no-fade { transition: none; }
+@media (prefers-reduced-motion: reduce) {
+  .term-tip { transition: none; transform: none; }
+  .term-tip.is-above:not(.is-open) { transform: none; }
+}

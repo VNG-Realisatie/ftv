@@ -1,0 +1,1565 @@
+# ============================================================================
+# Gedeelde basis: profielontologie ODRL-AP-NL + labelbundels
+#
+# SAMENGEVOEGD BESTAND — niet met de hand bewerken.
+# Bron: https://github.com/VNG-Realisatie/odrlvis (map data/), samengevoegd
+# op 2026-08-31 voor publicatie op de FTV-site. Bronbestanden, met de datum
+# van hun laatste wijziging:
+#   data/odrl-ap-nl.ttl  (2026-08-29)
+#   data/labels-odrl.ttl  (2026-08-31)
+#   data/labels-tooi.ttl  (2026-08-26)
+#
+# De @prefix-declaraties van alle bronbestanden staan hieronder in één blok;
+# per bronbestand volgt daarna de onveranderde inhoud met een kopregel.
+# ============================================================================
+
+@prefix apnl: <https://standaarden.overheid.nl/odrl-ap-nl/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix dpv:  <https://w3id.org/dpv#> .
+@prefix gem:  <https://identifier.overheid.nl/tooi/id/gemeente/> .
+@prefix min:  <https://identifier.overheid.nl/tooi/id/ministerie/> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix oorg: <https://identifier.overheid.nl/tooi/id/oorg/> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix role: <http://www.w3.org/ns/dx/prof/role/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+
+# ############################################################################
+# ### BRON: data/odrl-ap-nl.ttl   (2026-08-29)
+# ############################################################################
+
+# =============================================================================
+# ODRL-AP-NL — Applicatieprofiel voor toegangsbeleid Nederlandse overheid
+#
+# Werkgroep Federatieve Toegangsverlening (FTV).
+# Status: WERKVERSIE voor simulaties — namespace nog niet uitgegeven.
+#
+# Dit bestand bevat:
+#   (1) de profieldeclaratie apnl:profiel (odrl:Profile + prof:Profile) die
+#       policies via odrl:profile aanhalen, met PROF-resourcebeschrijvingen;
+#   (2) de OWL/RDFS-vocabulaire van het profiel (klassen, properties, left
+#       operand, operator), conform ODRL 2.2 §3.3: elke profielterm is een
+#       skos:Concept met skos:definition. De begrippenlaag volgt NL-SBB
+#       (voorkeursterm, definitie, kader-lidmaatschap, verankering) en is
+#       gevalideerd tegen het NL-SBB-SHACL-profiel;
+#   (3) de SKOS-Collections per termsoort (Profile Best Practices §6) die
+#       machineleesbaar afbakenen welke deelverzameling van ODRL dit profiel
+#       gebruikt.
+#
+# Profiel-IRI ≠ namespace-IRI (bewuste splitsing, Profile Best Practices):
+#   - profiel-IRI  : https://standaarden.overheid.nl/odrl-ap-nl/profiel
+#                    (de waarde van odrl:profile in policies)
+#   - namespace    : https://standaarden.overheid.nl/odrl-ap-nl/  (prefix apnl:)
+#                    (de termen; tevens de ontologie-IRI)
+#
+# Ontwerpuitgangspunt (bindend): het profiel definieert GEEN eigen generieke
+# begrippen (doelbinding, organisatie, dataset). Die worden hergebruikt uit
+# TOOI, DPV, DCAT-AP-NL en NL-SBB. ODRL-AP-NL definieert uitsluitend de
+# ODRL-mappings die nodig zijn om die begrippen in policies te gebruiken.
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 0a. De profieldeclaratie (het ding dat in odrl:profile staat)
+# -----------------------------------------------------------------------------
+
+apnl:profiel a odrl:Profile , prof:Profile ;
+    dct:title "ODRL-AP-NL — Applicatieprofiel toegangsbeleid"@nl ;
+    dct:description """Pragmatisch ODRL 2.2-applicatieprofiel voor het beschrijven
+en delen van toegangsbeleid binnen de Nederlandse overheid. Ontwikkeld in de
+werkgroep Federatieve Toegangsverlening (FTV) als uitwisselformaat voor het
+Register Toegangsbeleid, in samenhang met NLGov AuthZEN (het vraag/antwoord-model)
+en de Authorization Decision Log (verantwoording achteraf)."""@nl ;
+    # Werkversie-plaatshouder: de werkgroep FTV heeft geen eigen TOOI-
+    # identificatie; BZK als stelselverantwoordelijke. (De eerdere waarde
+    # oorg10101 bleek het Nederlands Forensisch Instituut — een vergissing
+    # die onzichtbaar bleef zolang register-URI's ongelabeld getoond werden;
+    # zie examples/labels-tooi.ttl.)
+    dct:publisher <https://identifier.overheid.nl/tooi/id/ministerie/mnre1034> ;
+    dct:issued "2026-07-08"^^xsd:date ;
+    owl:versionInfo "0.2.0-wv" ;
+    prof:isProfileOf <http://www.w3.org/ns/odrl/2/> ;
+    dct:conformsTo <http://www.w3.org/ns/odrl/2/> ;
+    prof:hasToken "odrl-ap-nl" ;
+    rdfs:seeAlso <https://www.w3.org/TR/odrl-model/> , apnl: ;
+    # PROF-resourcebeschrijvingen: welke artefacten horen bij dit profiel en in
+    # welke rol. De artefact-URL's zijn plaatshouders (namespace nog niet
+    # uitgegeven); relatief aan de repository-root: index.html, ontology/,
+    # shapes/, context.jsonld.
+    prof:hasResource [ a prof:ResourceDescriptor ;
+        rdfs:label "Specificatie (mensleesbaar)"@nl ;
+        prof:hasRole role:specification ;
+        dct:format "text/html" ;
+        prof:hasArtifact <https://standaarden.overheid.nl/odrl-ap-nl/index.html> ] ;
+    prof:hasResource [ a prof:ResourceDescriptor ;
+        rdfs:label "Vocabulaire (OWL/RDFS + SKOS)"@nl ;
+        prof:hasRole role:vocabulary ;
+        dct:format "text/turtle" ;
+        prof:hasArtifact <https://standaarden.overheid.nl/odrl-ap-nl/ontology/odrl-ap-nl.ttl> ] ;
+    prof:hasResource [ a prof:ResourceDescriptor ;
+        rdfs:label "SHACL-shapes per conformiteitsverrijking (orthogonaal, elk zelfstandig toetsbaar; afnemer.ttl bevat ook de obligation-doorwerking)"@nl ;
+        prof:hasRole role:validation ;
+        dct:format "text/turtle" ;
+        prof:hasArtifact <https://standaarden.overheid.nl/odrl-ap-nl/shapes/leesbaar.ttl> ,
+            <https://standaarden.overheid.nl/odrl-ap-nl/shapes/afnemer.ttl> ,
+            <https://standaarden.overheid.nl/odrl-ap-nl/shapes/doelbinding.ttl> ,
+            <https://standaarden.overheid.nl/odrl-ap-nl/shapes/uitvoerbaar.ttl> ] ;
+    prof:hasResource [ a prof:ResourceDescriptor ;
+        rdfs:label "JSON-LD-context"@nl ;
+        prof:hasRole role:context ;
+        dct:format "application/ld+json" ;
+        prof:hasArtifact <https://standaarden.overheid.nl/odrl-ap-nl/context.jsonld> ] .
+    # Voorzien maar nog niet geleverd: UI-shapes (formulierdefinities) als aparte
+    # resource met rol role:guidance — zie de sectie Governance van de spec.
+
+# -----------------------------------------------------------------------------
+# 0b. De vocabulaire/namespace (de ontologie-IRI; NIET de profiel-IRI)
+# -----------------------------------------------------------------------------
+
+apnl: a owl:Ontology , skos:ConceptScheme ;
+    dct:title "ODRL-AP-NL-vocabulaire"@nl ;
+    dct:description """De termen (klassen, properties, left operand, operator) van
+het applicatieprofiel ODRL-AP-NL. De profieldeclaratie die policies in
+odrl:profile aanhalen is apnl:profiel; deze namespace-IRI identificeert
+uitsluitend de vocabulaire."""@nl ;
+    # Werkversie-plaatshouder: de werkgroep FTV heeft geen eigen TOOI-
+    # identificatie; BZK als stelselverantwoordelijke. (De eerdere waarde
+    # oorg10101 bleek het Nederlands Forensisch Instituut — een vergissing
+    # die onzichtbaar bleef zolang register-URI's ongelabeld getoond werden;
+    # zie examples/labels-tooi.ttl.)
+    dct:publisher <https://identifier.overheid.nl/tooi/id/ministerie/mnre1034> ;
+    dct:issued "2026-07-08"^^xsd:date ;
+    owl:versionInfo "0.2.0-wv" ;
+    owl:imports <http://www.w3.org/ns/odrl/2/> ;
+    # De begrippenlaag van dit vocabulaire is een begrippenkader conform NL-SBB
+    # (Standaard voor het beschrijven van begrippen, Geonovum 2024): elk begrip
+    # draagt skos:prefLabel@nl, skos:definition@nl en skos:inScheme, en is
+    # verankerd als topbegrip of via skos:broader/skos:related. Gevalideerd
+    # tegen het NL-SBB-SHACL-profiel (shapes/extern/skos-ap-nl.ttl).
+    dct:conformsTo <http://nlbegrip.nl/def/skosapnl#> ;
+    skos:hasTopConcept
+        apnl:PolicyArtifact , apnl:verwerkingsverzoek ,
+        apnl:Verwerkingsdoel ,
+        odrl:use , odrl:purpose , odrl:dateTime , odrl:deliveryChannel ,
+        odrl:eq , odrl:isA , odrl:isAnyOf , odrl:gteq , odrl:lteq ;
+    rdfs:seeAlso apnl:profiel .
+
+# =============================================================================
+# 1. Machine-uitvoerbaar beleid: PolicyArtifact en PolicyBundle
+#
+# conformsToPolicy koppelt een ODRL-beschrijving (het WAT/WAAROM) aan een
+# machine-uitvoerbare regelset (het HOE). Sluit aan op het residual-policy-
+# mechanisme van de FTV-standaard (allowed_residual_policy_types /
+# residual-policy-accept) en op audit_identifiers.policy_version.
+# =============================================================================
+
+apnl:PolicyArtifact a owl:Class , skos:Concept ;
+    rdfs:label "Policy-artefact"@nl ;
+    skos:prefLabel "policy-artefact"@nl ;
+    skos:topConceptOf apnl: ;
+    skos:definition """Een machine-uitvoerbare regelset die een deel van een
+ODRL-AP-NL-policy afdwingbaar maakt. Een artefact is een als Linked Data ontsloten
+verwijzing naar een concreet bestand (Rego-module, Cedar-policyset, OpenFGA-model)
+met een mediatype (dct:format), een downloadlocatie (dcat:downloadURL), een
+entrypoint (apnl:entrypoint) en een integriteitshash (apnl:sha256)."""@nl ;
+    skos:inScheme apnl: ;
+    rdfs:seeAlso apnl:PolicyBundle .
+
+apnl:RegoModule a owl:Class , skos:Concept ;
+    rdfs:subClassOf apnl:PolicyArtifact ;
+    rdfs:label "Rego-module"@nl ;
+    skos:prefLabel "Rego-module"@nl ;
+    skos:broader apnl:PolicyArtifact ;
+    skos:definition "Een OPA/Rego-module als policy-artefact."@nl ;
+    skos:note """Verwacht dct:format \"application/vnd.rego\" en een apnl:entrypoint
+dat naar het te evalueren document/regelpad wijst (bijv.
+\"data.doelbinding.burgerzaken.allow\")."""@nl ;
+    skos:inScheme apnl: .
+
+apnl:CedarPolicySet a owl:Class , skos:Concept ;
+    rdfs:subClassOf apnl:PolicyArtifact ;
+    rdfs:label "Cedar-policyset"@nl ;
+    skos:prefLabel "Cedar-policyset"@nl ;
+    skos:broader apnl:PolicyArtifact ;
+    skos:definition "Een Amazon Cedar-policyset als policy-artefact."@nl ;
+    skos:note "Verwacht dct:format \"application/vnd.cedar\"."@nl ;
+    skos:inScheme apnl: .
+
+apnl:OpenFGAModel a owl:Class , skos:Concept ;
+    rdfs:subClassOf apnl:PolicyArtifact ;
+    rdfs:label "OpenFGA-autorisatiemodel"@nl ;
+    skos:prefLabel "OpenFGA-autorisatiemodel"@nl ;
+    skos:broader apnl:PolicyArtifact ;
+    skos:definition "Een OpenFGA/Zanzibar-relatiemodel als policy-artefact."@nl ;
+    skos:note "Verwacht dct:format \"application/vnd.openfga\"."@nl ;
+    skos:inScheme apnl: .
+
+apnl:PolicyBundle a owl:Class , skos:Concept ;
+    rdfs:label "Policy-bundel"@nl ;
+    skos:prefLabel "policy-bundel"@nl ;
+    skos:related apnl:PolicyArtifact ;
+    skos:definition """Een bundel van policy-artefacten, gemodelleerd als Linked
+Data-entiteit. Correspondeert typisch met een OPA-bundle (.tar.gz) die meerdere
+Rego-modules en databestanden bevat."""@nl ;
+    skos:note """Een bundel bundelt artefacten via apnl:bundles en draagt zelf een
+dct:format, dcat:downloadURL, apnl:entrypoint en apnl:sha256, plus versionering
+via prov:wasRevisionOf."""@nl ;
+    skos:inScheme apnl: ;
+    rdfs:seeAlso apnl:PolicyArtifact .
+
+apnl:bundles a owl:ObjectProperty , skos:Concept ;
+    rdfs:domain apnl:PolicyBundle ;
+    rdfs:range apnl:PolicyArtifact ;
+    rdfs:label "bundelt"@nl ;
+    skos:prefLabel "bundelt"@nl ;
+    skos:related apnl:PolicyBundle ;
+    skos:definition "Koppelt een apnl:PolicyBundle aan de apnl:PolicyArtifact-en die hij bevat."@nl ;
+    skos:inScheme apnl: .
+
+apnl:entrypoint a owl:DatatypeProperty , skos:Concept ;
+    rdfs:range xsd:string ;
+    rdfs:label "entrypoint"@nl ;
+    skos:prefLabel "entrypoint"@nl ;
+    skos:related apnl:PolicyArtifact ;
+    skos:definition """Het instappunt waarop de evaluator het artefact of de bundel
+aanroept. Voor Rego/OPA het query-pad naar het beslisdocument, bijv.
+\"data.doelbinding.burgerzaken.allow\"."""@nl ;
+    skos:inScheme apnl: .
+
+apnl:sha256 a owl:DatatypeProperty , skos:Concept ;
+    rdfs:range xsd:string ;
+    rdfs:label "sha256"@nl ;
+    skos:prefLabel "sha256"@nl ;
+    skos:related apnl:PolicyArtifact ;
+    skos:definition "De SHA-256-hash (hexadecimaal, 64 tekens) van het artefact of de bundel."@nl ;
+    skos:note """Maakt integriteitscontrole en herleidbaarheid mogelijk; kan als
+audit_identifiers.policy_version in een AuthZEN-antwoord worden opgenomen."""@nl ;
+    skos:inScheme apnl: .
+
+# --- GESCHRAPT (aug 2026): apnl:TechnischToetsbaar --------------------------
+# Het profiel kende een marker op de LEFT OPERAND ("kan een beslispunt deze
+# grootheid uberhaupt zien?"). Zij is vervallen. De vraag die zij beantwoordde
+# — wat mag ik van een ongedekte voorwaarde verwachten? — wordt beantwoord door
+# de twee DPV-markers op de VOORWAARDE zelf (dpv:TechnicalMeasure en
+# dpv:OrganisationalMeasure, zie de sectie conformsToPolicy). Die zitten op de
+# juiste korrel: toetsbaarheid is geen eigenschap van een grootheid maar van
+# een voorwaarde bij een beslispunt — dezelfde grootheid is bij de ene PDP wel
+# en bij de andere niet beschikbaar. Twee markeringen die op hetzelfde
+# neerkwamen maar elkaar konden tegenspreken, is er één te veel.
+
+# =============================================================================
+# 2. Left operands
+#
+# Het profiel legt vast dat een inkomend verwerkingsverzoek (een AuthZEN-
+# verzoek) als left operand mag optreden. Dit adresseert het interoperabiliteits-
+# probleem dat evaluatoren (zoals FORCE/UGent) een whitelist van toegestane
+# leftOperands hanteren waarin domeinspecifieke operands ontbreken.
+# =============================================================================
+
+apnl:verwerkingsverzoek a odrl:LeftOperand , skos:Concept ;
+    rdfs:label "verwerkingsverzoek"@nl ;
+    skos:prefLabel "verwerkingsverzoek"@nl ;
+    skos:topConceptOf apnl: ;
+    skos:definition """Het volledige inkomende verwerkingsverzoek (het NLGov
+AuthZEN-verzoek: subject, action, resource, context) als evalueerbare grootheid."""@nl ;
+    skos:note """Gebruikt in het conformsToPolicy-patroon: het verzoek MOET voldoen
+aan de machine-uitvoerbare policy in de rightOperand. Omdat het verwerkingsverzoek
+per definitie het evaluatieverzoek zelf is (en niet de toestand van de wereld),
+staat deze constraint conform de ODRL Formal Semantics in refinement-positie op
+de action (odrl:refinement), niet als odrl:constraint op de rule."""@nl ;
+    skos:inScheme apnl: ;
+    rdfs:seeAlso apnl:conformsToPolicy .
+
+apnl:rolAanvrager a odrl:LeftOperand , skos:Concept ;
+    rdfs:label "rol van de aanvrager"@nl ;
+    skos:prefLabel "rol van de aanvrager"@nl ;
+    skos:definition """De rol die de aanvrager (de persoon of dienst namens wie
+het verwerkingsverzoek wordt gedaan) draagt in het autorisatiesysteem van de
+afnemer, als evalueerbare grootheid."""@nl ;
+    skos:note """Gedeeld constraint-type voor rolgebonden toegang ("aanvrager
+heeft de rol belastingmedewerker"): de LOGISCHE toegangseis, los van de
+technische afdwinging. Dat diezelfde eis ook technisch afgedwongen kan worden
+(bijv. een JWT-rolcheck in een Rego-module via het conformsToPolicy-patroon)
+is secundair; het logische beleid hoort leesbaar in de policy zelf te staan.
+Omdat de rol een eigenschap van het verwerkingsverzoek is (subject-attribuut
+in het NLGov AuthZEN-verzoek), staat deze toets conform de ODRL Formal
+Semantics in refinement-positie op de action, net als odrl:purpose en
+apnl:verwerkingsverzoek."""@nl ;
+    skos:editorialNote """Ter discussie in de werkgroep: rolgebonden toegang is
+generiek genoeg dat hergebruik van een bestaand rol-/functievocabulaire de
+voorkeur verdient boven een profieleigen term; onderzoek loopt (zie de sectie
+Governance). Tot die uitkomst is deze term de werkversie-conventie."""@nl ;
+    skos:inScheme apnl: ;
+    skos:related apnl:verwerkingsverzoek ;
+    rdfs:seeAlso apnl:verwerkingsverzoek .
+
+# =============================================================================
+# 3. Operatoren
+# =============================================================================
+
+apnl:conformsToPolicy a odrl:Operator , skos:Concept ;
+    rdfs:label "voldoet aan policy"@nl ;
+    skos:prefLabel "voldoet aan policy"@nl ;
+    skos:related apnl:verwerkingsverzoek ;
+    skos:definition """Operator die geldt indien de leftOperand (een
+apnl:verwerkingsverzoek) voldoet aan de in de rightOperand aangehaalde
+apnl:PolicyArtifact of apnl:PolicyBundle."""@nl ;
+    skos:note """De evaluatie van deze operator wordt gedelegeerd aan de
+betreffende engine (OPA, Cedar, OpenFGA). In termen van de ODRL Formal Semantics:
+de satisfaction state van de refinement is satisfied dan en slechts dan als de
+gedelegeerde engine voor het verwerkingsverzoek toestemming (allow) teruggeeft."""@nl ;
+    skos:inScheme apnl: ;
+    rdfs:seeAlso apnl:verwerkingsverzoek , apnl:PolicyArtifact .
+
+# =============================================================================
+# 4. Compositie: Offer→Agreement-koppeling
+#
+# Het profiel definieert hiervoor GEEN eigen properties: de Agreement verwijst
+# naar het Offer met één standaardrelatie — prov:wasDerivedFrom (MOET;
+# SHACL-getoetst in shapes/afnemer.ttl, de verrijking "per afnemer"), naar een
+# odrl:Offer-getypeerd doelwit. Het eerdere duplicaat dct:references naar
+# datzelfde aanbod (de koppeling uit de ODRL Implementation Best Practices) is
+# geschrapt. De obligation-doorwerking Offer→Agreement wordt
+# eveneens in shapes/afnemer.ttl getoetst; scope-opheffing is een open ontwerpvraag (zie de
+# sectie Compositie van de spec).
+# =============================================================================
+
+# =============================================================================
+# 5. Doelbinding (purpose)
+#
+# Doelbinding wordt NIET als eigen begrip gedefinieerd. Het profiel hergebruikt
+# odrl:purpose als leftOperand en verwijst met de rightOperand naar een DPV-
+# purpose en/of een verwerkingsregister-URI. apnl:Verwerkingsdoel is uitsluitend
+# het klasse-anker dat zulke doel-URI's als doel herkenbaar maakt (voor
+# waardelijsten, editors en SHACL); het doel zelf komt uit het
+# verwerkingsregister van de afnemer of uit DPV.
+# =============================================================================
+
+apnl:Verwerkingsdoel a owl:Class , skos:Concept ;
+    rdfs:subClassOf dpv:Purpose ;
+    rdfs:label "Verwerkingsdoel"@nl ;
+    skos:prefLabel "verwerkingsdoel"@nl ;
+    skos:topConceptOf apnl: ;
+    skos:definition """Klasse-anker voor doel-URI's die als rightOperand van een
+odrl:purpose-refinement optreden: een verwerkingsdoel uit een Register van
+Verwerkingsactiviteiten en/of een DPV-purpose."""@nl ;
+    skos:note """Geen nieuw generiek begrip: de subklasse van dpv:Purpose maakt
+alleen machineleesbaar dat een URI als doel in een purpose-refinement mag
+optreden, zodat editors een doelenlijst kunnen tonen en shapes erop kunnen
+mikken. De doel-URI MOET overeenkomen met
+action.properties.dpl.core.processing_activity_id in het corresponderende NLGov
+AuthZEN-verzoek. Instanties dragen bij voorkeur een dct:title en een verwijzing
+naar de wettelijke grondslag (dpv:hasLegalBasis, BWB/Juriconnect)."""@nl ;
+    skos:inScheme apnl: ;
+    rdfs:seeAlso dpv:Purpose .
+
+apnl:doelbindingsverwijzing a owl:AnnotationProperty , skos:Concept ;
+    rdfs:label "doelbindingsverwijzing"@nl ;
+    skos:prefLabel "doelbindingsverwijzing"@nl ;
+    skos:related apnl:Verwerkingsdoel ;
+    skos:definition """Documentatie-annotatie (geen nieuw begrip): de rightOperand
+van een odrl:purpose-refinement verwijst naar een DPV-purpose (dpv:Purpose) en/of
+een verwerkingsregister-URI."""@nl ;
+    skos:note """Deze doel-URI MOET overeenkomen met
+action.properties.dpl.core.processing_activity_id in het corresponderende NLGov
+AuthZEN-verzoek. Niet-normatief; wordt in voorbeelden niet als predicaat
+gebruikt."""@nl ;
+    skos:inScheme apnl: ;
+    rdfs:seeAlso apnl:Verwerkingsdoel .
+
+
+# =============================================================================
+# 5b. NL-SBB-annotaties bij de overgenomen ODRL-kerntermen
+#
+# NL-SBB staat toe (en moedigt aan) dat een begrippenkader begrippen uit andere
+# bronnen hergebruikt: een begrip kan via skos:inScheme in meerdere kaders
+# zitten. De hier overgenomen ODRL 2.2-kerntermen krijgen daarom een
+# Nederlandse voorkeursterm en definitie en een plek in het kader, zodat het
+# kader als geheel NL-SBB-conform is en editors/viewers Nederlandse labels
+# hebben. De Engelstalige bron blijft het ODRL 2.2-vocabulaire; machineleesbaar
+# als Turtle op https://www.w3.org/ns/odrl/2/ODRL22.ttl (de term-IRI's zelf
+# resolven met content negotiation).
+# De actiehiërarchie (skos:broader) volgt odrl:includedIn.
+# =============================================================================
+
+odrl:use a skos:Concept ;
+    skos:prefLabel "gebruiken"@nl ;
+    skos:definition "De asset op enigerlei wijze gebruiken; de algemene actie waar de overige acties van dit profiel onder vallen."@nl ;
+    dct:source <https://www.w3.org/TR/odrl-vocab/#term-use> ;
+    skos:inScheme apnl: ; skos:topConceptOf apnl: .
+
+odrl:read a skos:Concept ;
+    skos:prefLabel "raadplegen"@nl ;
+    skos:definition "Gegevens uit de asset verkrijgen zonder deze te wijzigen."@nl ;
+    dct:source <https://www.w3.org/TR/odrl-vocab/#term-read> ;
+    skos:inScheme apnl: ; skos:broader odrl:use .
+
+odrl:distribute a skos:Concept ;
+    skos:prefLabel "verstrekken"@nl ;
+    skos:definition "De asset of kopieën daarvan aan derden beschikbaar stellen."@nl ;
+    dct:source <https://www.w3.org/TR/odrl-vocab/#term-distribute> ;
+    skos:inScheme apnl: ; skos:broader odrl:use .
+
+odrl:inform a skos:Concept ;
+    skos:prefLabel "informeren"@nl ;
+    skos:definition "Een partij in kennis stellen van een gebruik van de asset (plicht-actie, o.a. de inlichtingenplicht)."@nl ;
+    dct:source <https://www.w3.org/TR/odrl-vocab/#term-inform> ;
+    skos:inScheme apnl: ; skos:broader odrl:use .
+
+odrl:purpose a skos:Concept ;
+    skos:prefLabel "doelbinding"@nl ;
+    skos:definition "Left operand: het doel waarvoor de verwerking plaatsvindt (de rightOperand is een verwerkingsdoel)."@nl ;
+    dct:source <https://www.w3.org/TR/odrl-vocab/#term-purpose> ;
+    skos:inScheme apnl: ; skos:topConceptOf apnl: .
+
+odrl:dateTime a skos:Concept ;
+    skos:prefLabel "datum en tijd"@nl ;
+    skos:definition "Left operand: het tijdstip van evaluatie; gebruikt voor tijdvensters (geldig vanaf/tot)."@nl ;
+    dct:source <https://www.w3.org/TR/odrl-vocab/#term-dateTime> ;
+    skos:inScheme apnl: ; skos:topConceptOf apnl: .
+
+odrl:deliveryChannel a skos:Concept ;
+    skos:prefLabel "verstrekkingskanaal"@nl ;
+    skos:definition "Left operand: het kanaal waarlangs de asset wordt geleverd of geraadpleegd."@nl ;
+    dct:source <https://www.w3.org/TR/odrl-vocab/#term-deliveryChannel> ;
+    skos:inScheme apnl: ; skos:topConceptOf apnl: .
+
+odrl:eq a skos:Concept ;
+    skos:prefLabel "is gelijk aan"@nl ;
+    skos:definition "Operator: de left operand is exact gelijk aan de right operand."@nl ;
+    dct:source <https://www.w3.org/TR/odrl-vocab/#term-eq> ;
+    skos:inScheme apnl: ; skos:topConceptOf apnl: .
+
+odrl:isA a skos:Concept ;
+    skos:prefLabel "is een"@nl ;
+    skos:definition "Operator: de left operand is een instantie of verbijzondering van de right operand (taxonomische match, o.a. de DPV-doelhiërarchie)."@nl ;
+    dct:source <https://www.w3.org/TR/odrl-vocab/#term-isA> ;
+    skos:inScheme apnl: ; skos:topConceptOf apnl: .
+
+odrl:isAnyOf a skos:Concept ;
+    skos:prefLabel "is een van"@nl ;
+    skos:definition "Operator: de left operand komt voor in de waardenlijst van de right operand."@nl ;
+    dct:source <https://www.w3.org/TR/odrl-vocab/#term-isAnyOf> ;
+    skos:inScheme apnl: ; skos:topConceptOf apnl: .
+
+odrl:gteq a skos:Concept ;
+    skos:prefLabel "groter dan of gelijk aan"@nl ;
+    skos:definition "Operator: de left operand is groter dan of gelijk aan de right operand (o.a. begin van een tijdvenster)."@nl ;
+    dct:source <https://www.w3.org/TR/odrl-vocab/#term-gteq> ;
+    skos:inScheme apnl: ; skos:topConceptOf apnl: .
+
+odrl:lteq a skos:Concept ;
+    skos:prefLabel "kleiner dan of gelijk aan"@nl ;
+    skos:definition "Operator: de left operand is kleiner dan of gelijk aan de right operand (o.a. einde van een tijdvenster)."@nl ;
+    dct:source <https://www.w3.org/TR/odrl-vocab/#term-lteq> ;
+    skos:inScheme apnl: ; skos:topConceptOf apnl: .
+
+# Brondocument-beschrijvingen (NL-SBB: een bron draagt een naam).
+<https://www.w3.org/TR/odrl-vocab/#term-use> dct:title "ODRL Vocabulary & Expression 2.2: use"@en .
+<https://www.w3.org/TR/odrl-vocab/#term-read> dct:title "ODRL Vocabulary & Expression 2.2: read"@en .
+<https://www.w3.org/TR/odrl-vocab/#term-distribute> dct:title "ODRL Vocabulary & Expression 2.2: distribute"@en .
+<https://www.w3.org/TR/odrl-vocab/#term-inform> dct:title "ODRL Vocabulary & Expression 2.2: inform"@en .
+<https://www.w3.org/TR/odrl-vocab/#term-purpose> dct:title "ODRL Vocabulary & Expression 2.2: purpose"@en .
+<https://www.w3.org/TR/odrl-vocab/#term-dateTime> dct:title "ODRL Vocabulary & Expression 2.2: dateTime"@en .
+<https://www.w3.org/TR/odrl-vocab/#term-deliveryChannel> dct:title "ODRL Vocabulary & Expression 2.2: deliveryChannel"@en .
+<https://www.w3.org/TR/odrl-vocab/#term-eq> dct:title "ODRL Vocabulary & Expression 2.2: eq"@en .
+<https://www.w3.org/TR/odrl-vocab/#term-isA> dct:title "ODRL Vocabulary & Expression 2.2: isA"@en .
+<https://www.w3.org/TR/odrl-vocab/#term-isAnyOf> dct:title "ODRL Vocabulary & Expression 2.2: isAnyOf"@en .
+<https://www.w3.org/TR/odrl-vocab/#term-gteq> dct:title "ODRL Vocabulary & Expression 2.2: gteq"@en .
+<https://www.w3.org/TR/odrl-vocab/#term-lteq> dct:title "ODRL Vocabulary & Expression 2.2: lteq"@en .
+
+# =============================================================================
+# 6. SKOS-Collections per termsoort (Profile Best Practices §6)
+#
+# De collecties bevatten zowel de door dit profiel GEDEFINIEERDE termen als de
+# uit ODRL 2.2 OVERGENOMEN kerntermen. Daarmee is machineleesbaar welke
+# deelverzameling van ODRL een NL-evaluator moet kennen (ODRL 2.2 §3.2).
+# Domeinprofielen (zoals ODRL-BRP) breiden deze collecties uit met eigen
+# acties, operatoren en left operands.
+# =============================================================================
+
+apnl:TermenCollectie a skos:Collection ;
+    skos:prefLabel "ODRL-AP-NL: alle profieltermen"@nl ;
+    skos:definition "Alle door ODRL-AP-NL gedefinieerde en overgenomen termen."@nl ;
+    skos:member
+        # gedefinieerd
+        apnl:PolicyArtifact , apnl:RegoModule , apnl:CedarPolicySet ,
+        apnl:OpenFGAModel , apnl:PolicyBundle , apnl:Verwerkingsdoel ,
+        apnl:bundles , apnl:entrypoint , apnl:sha256 ,
+        apnl:verwerkingsverzoek , apnl:rolAanvrager , apnl:conformsToPolicy ,
+        apnl:doelbindingsverwijzing ,
+        # overgenomen (zie de deelcollecties hieronder)
+        odrl:read , odrl:use , odrl:distribute , odrl:inform ,
+        odrl:purpose , odrl:dateTime , odrl:deliveryChannel ,
+        odrl:eq , odrl:isA , odrl:isAnyOf , odrl:gteq , odrl:lteq .
+
+apnl:ActieCollectie a skos:Collection ;
+    skos:prefLabel "ODRL-AP-NL: acties"@nl ;
+    skos:definition """De ODRL-kernacties die dit profiel overneemt. Het profiel
+definieert géén eigen acties; domeinprofielen (zoals ODRL-BRP met de
+verstrekkingsvormen) voegen de hunne toe als odrl:Action met odrl:includedIn."""@nl ;
+    skos:member odrl:read , odrl:use , odrl:distribute , odrl:inform .
+
+apnl:LeftOperandCollectie a skos:Collection ;
+    skos:prefLabel "ODRL-AP-NL: left operands"@nl ;
+    skos:definition """De left operands van dit profiel: de profieleigen
+apnl:verwerkingsverzoek en apnl:rolAanvrager (rolgebonden toegang) plus de
+overgenomen kerntermen odrl:purpose (doelbinding), odrl:dateTime
+(tijdvensters) en odrl:deliveryChannel (verstrekkingskanaal)."""@nl ;
+    skos:member apnl:verwerkingsverzoek , apnl:rolAanvrager , odrl:purpose ,
+        odrl:dateTime , odrl:deliveryChannel .
+
+apnl:OperatorCollectie a skos:Collection ;
+    skos:prefLabel "ODRL-AP-NL: operatoren"@nl ;
+    skos:definition """De operatoren van dit profiel: het profieleigen
+apnl:conformsToPolicy plus de overgenomen kerntermen odrl:eq (exacte match),
+odrl:isA (taxonomische match, o.a. DPV-doelhiërarchie), odrl:isAnyOf
+(waardenlijst) en odrl:gteq/odrl:lteq (tijdvensters)."""@nl ;
+    skos:member apnl:conformsToPolicy , odrl:eq , odrl:isA , odrl:isAnyOf ,
+        odrl:gteq , odrl:lteq .
+
+
+# ############################################################################
+# ### BRON: data/labels-odrl.ttl   (2026-08-31)
+# ############################################################################
+
+# =============================================================================
+# labels-odrl.ttl — Nederlandse en Engelse labels EN definities voor de
+# ODRL 2.2-KERNTERMEN
+#
+# WAT DIT IS
+# Eén rdfs:label per taal (@nl en @en) voor elke term uit het ODRL 2.2-
+# vocabulaire: de klassen (Policy, Permission, Constraint, …), alle acties
+# (use, read, execute, …), alle operatoren (eq, isAnyOf, …) en logische
+# operatoren (and, or, xone, andSequence), alle left operands (purpose,
+# dateTime, spatial, …), de kernproperties die een viewer als veldnaam toont
+# (target, assigner, assignee, action, constraint, …) en de conflict- en
+# undefined-termen (perm, prohibit, invalid, support, ignore).
+# En, in de tweede helft van dit bestand, bij ELK van die termen een
+# skos:definition in beide talen: één feitelijke zin over wat de ODRL-term
+# betekent.
+#
+# BRON
+# "ODRL Vocabulary & Expression 2.2" (W3C Recommendation, 15 februari 2018),
+# https://www.w3.org/TR/odrl-vocab/ — machineleesbaar als
+# https://www.w3.org/ns/odrl/2/ODRL22.ttl. Dat vocabulaire draagt zelf alleen
+# ENGELSE rdfs:labels in Title Case ("Use", "Read"); dit fragment geeft per
+# term een Nederlands label én een Engels label in de schrijfwijze van de
+# viewer (kleine letter, werkwoord voor een actie, zinwoord voor een operator),
+# zodat een actie in een regelzin leest als "raadplegen" / "read" en niet als
+# de kale localName.
+#
+# WAAR DIT BESTAND THUISHOORT
+# CANONIEK is odrlvis/data/labels-odrl.ttl (keuze aug 2026). Bron en generator
+# horen bij de consument: de viewer is de enige die de bundel gebruikt, en
+# `node tools/genereer-odrl-labels.mjs` schrijft daar
+# viewer/assets/odrl-core-labels.js uit dit bestand. In
+# odrl-ap-nl/examples/labels-odrl.ttl staat een IDENTIEKE kopie, als
+# registerfragment bij de standaard; wijzigingen beginnen in odrlvis en worden
+# daarheen gesynchroniseerd.
+#
+# DE VIEWER LEVERT DIT INGEBOUWD MEE
+# De viewer gebruikt de gegenereerde bundel in labelFor() en in
+# descriptionFor(). Een bron hoeft ODRL-labels dus NIET mee te leveren: dat is
+# precies wat de Visualisation Note (docs/odrl-visualisation-note.md §1) van een
+# ODRL 2-visualisatie vraagt ("visualisers ship a standard label bundle").
+# Dit fragment hoeft daarom normaal niet als ?src= meegeladen te worden; het
+# staat hier als leesbare, valideerbare bron van de ingebouwde bundel (en is
+# als registerfragment bruikbaar in andere tooling).
+#
+# LABELS: DATA EERST. DEFINITIES VAN odrl:-TERMEN: BUNDEL EERST.
+# Een LABEL uit de geladen data wint altijd — draagt een bron (of de
+# odrl-ap-nl-ontologie) een eigen rdfs:label/skos:prefLabel voor een ODRL-term,
+# dan toont de viewer dat; de bundel is de laatste terugval vóór de kale
+# localName. Voor een DEFINITIE van een term IN DE ODRL-NAMESPACE ligt dat
+# andersom: daar wint deze bundel van de data. De betekenis van odrl:purpose,
+# odrl:assignee of odrl:Duty ligt in ODRL 2.2 vast en is vocabulaire-neutraal;
+# een profiel dat er in zijn domein een eigen invulling aan geeft (een
+# wetsartikel, een doelbinding) beschrijft niet meer de ODRL-term, en die
+# invulling hoort niet in de uitleg-tooltip van de kernterm terecht te komen.
+# Voor elke NIET-odrl:-term wint de data ook bij definities. Zie descriptionFor
+# in viewer/assets/parse.js.
+#
+# AFSTEMMING
+# De woorden zijn afgestemd op wat de rest van de standaard al zegt: de
+# NL-SBB-begrippenlaag (ontology/odrl-ap-nl.ttl: "gebruiken", "raadplegen",
+# "verstrekken", "informeren") en de stringtabel van de viewer
+# (viewer/assets/i18n.js: de `op.*`-operatorzinwoorden en de `left.*`-
+# left-operandwoorden, zonder lidwoord: "doel", "is één van"). Wijkt een
+# vertaling hier af van een van die twee, dan is dat een fout: parse.test.mjs
+# bewaakt de gelijkheid met i18n.js.
+#
+# DEPRECATED TERMEN
+# ODRL 2.2 markeert een reeks acties als deprecated (share, copy, pay, …).
+# Ze staan hieronder in een eigen blok: derden-data gebruikt ze nog, en een
+# viewer die zulke data leest hoort ze leesbaar te tonen. Nieuwe data hoort ze
+# niet te schrijven.
+# =============================================================================
+
+
+# --- Klassen -----------------------------------------------------------------
+
+odrl:Policy             rdfs:label "beleid"@nl , "policy"@en .
+odrl:Set                rdfs:label "beleidsset"@nl , "policy set"@en .
+odrl:Offer              rdfs:label "aanbod"@nl , "offer"@en .
+odrl:Agreement          rdfs:label "overeenkomst"@nl , "agreement"@en .
+odrl:Request            rdfs:label "verzoek"@nl , "request"@en .
+odrl:Ticket             rdfs:label "ticket"@nl , "ticket"@en .
+odrl:Assertion          rdfs:label "assertie"@nl , "assertion"@en .
+odrl:Privacy            rdfs:label "privacybeleid"@nl , "privacy policy"@en .
+odrl:Rule               rdfs:label "regel"@nl , "rule"@en .
+odrl:Permission         rdfs:label "toestemming"@nl , "permission"@en .
+odrl:Prohibition        rdfs:label "verbod"@nl , "prohibition"@en .
+odrl:Duty               rdfs:label "verplichting"@nl , "duty"@en .
+# Asset/AssetCollection: de KLASSENAMEN zoals de viewer ze al hanteert
+# (i18n.js `term.asset`/`term.assetCollection`) — NL "informatieobject",
+# EN "asset"; de property odrl:target heet "doelobject"/"target".
+odrl:Asset              rdfs:label "informatieobject"@nl , "asset"@en .
+odrl:AssetCollection    rdfs:label "informatieobjectcollectie"@nl , "asset collection"@en .
+odrl:Party              rdfs:label "partij"@nl , "party"@en .
+odrl:PartyCollection    rdfs:label "partijverzameling"@nl , "party collection"@en .
+odrl:Action             rdfs:label "actie"@nl , "action"@en .
+odrl:Constraint         rdfs:label "voorwaarde"@nl , "constraint"@en .
+odrl:LogicalConstraint  rdfs:label "logische voorwaarde"@nl , "logical constraint"@en .
+odrl:LeftOperand        rdfs:label "left operand"@nl , "left operand"@en .
+odrl:RightOperand       rdfs:label "right operand"@nl , "right operand"@en .
+odrl:Operator           rdfs:label "operator"@nl , "operator"@en .
+odrl:ConflictTerm       rdfs:label "conflictterm"@nl , "conflict term"@en .
+odrl:UndefinedTerm      rdfs:label "term voor onbekende termen"@nl , "undefined term"@en .
+# PartyScope/AssetScope zijn in ODRL 2.2 deprecated, maar komen in bestaande
+# data nog voor.
+odrl:PartyScope         rdfs:label "partijbereik"@nl , "party scope"@en .
+odrl:AssetScope         rdfs:label "assetbereik"@nl , "asset scope"@en .
+
+# --- Kernproperties ----------------------------------------------------------
+# De namen zoals de viewer ze als VELDNAAM toont; de veldkoppen van de
+# leesweergave zelf (Afnemer, Aanbieder, Doelobjecten) staan in i18n.js.
+
+odrl:uid                rdfs:label "identificatie"@nl , "identifier"@en .
+odrl:profile            rdfs:label "profiel"@nl , "profile"@en .
+odrl:permission         rdfs:label "toestemming"@nl , "permission"@en .
+odrl:prohibition        rdfs:label "verbod"@nl , "prohibition"@en .
+odrl:obligation         rdfs:label "verplichting"@nl , "obligation"@en .
+odrl:duty               rdfs:label "verplichting"@nl , "duty"@en .
+odrl:consequence        rdfs:label "gevolg"@nl , "consequence"@en .
+odrl:remedy             rdfs:label "herstelplicht"@nl , "remedy"@en .
+odrl:action             rdfs:label "actie"@nl , "action"@en .
+odrl:target             rdfs:label "doelobject"@nl , "target"@en .
+odrl:output             rdfs:label "resultaat"@nl , "output"@en .
+odrl:assigner           rdfs:label "aanbieder"@nl , "assigner"@en .
+odrl:assignee           rdfs:label "afnemer"@nl , "assignee"@en .
+odrl:assignerOf         rdfs:label "aanbieder van"@nl , "assigner of"@en .
+odrl:assigneeOf         rdfs:label "afnemer van"@nl , "assignee of"@en .
+odrl:function           rdfs:label "rol van de partij"@nl , "party function"@en .
+odrl:constraint         rdfs:label "voorwaarde"@nl , "constraint"@en .
+odrl:refinement         rdfs:label "verbijzondering"@nl , "refinement"@en .
+odrl:leftOperand        rdfs:label "left operand"@nl , "left operand"@en .
+odrl:operator           rdfs:label "operator"@nl , "operator"@en .
+odrl:rightOperand       rdfs:label "right operand"@nl , "right operand"@en .
+odrl:rightOperandReference rdfs:label "verwijzing naar de right operand"@nl , "right operand reference"@en .
+odrl:unit               rdfs:label "eenheid"@nl , "unit"@en .
+odrl:status             rdfs:label "status"@nl , "status"@en .
+odrl:inheritFrom        rdfs:label "erft van"@nl , "inherits from"@en .
+odrl:inheritRelation    rdfs:label "overervingsrelatie"@nl , "inherit relation"@en .
+odrl:inheritAllowed     rdfs:label "overerving toegestaan"@nl , "inherit allowed"@en .
+odrl:partOf             rdfs:label "maakt deel uit van"@nl , "part of"@en .
+odrl:source             rdfs:label "bron"@nl , "source"@en .
+odrl:relation           rdfs:label "relatie"@nl , "relation"@en .
+odrl:hasPolicy          rdfs:label "heeft beleid"@nl , "has policy"@en .
+odrl:includedIn         rdfs:label "valt onder"@nl , "included in"@en .
+odrl:implies            rdfs:label "impliceert"@nl , "implies"@en .
+odrl:conflict           rdfs:label "conflictstrategie"@nl , "conflict strategy"@en .
+odrl:undefined          rdfs:label "omgang met onbekende termen"@nl , "undefined term handling"@en .
+odrl:proximity          rdfs:label "nabijheid"@nl , "proximity"@en .
+
+# Partijrollen bij een specifieke actie (ODRL 2.2 §2.5).
+odrl:attributedParty    rdfs:label "partij die vermeld wordt"@nl , "attributed party"@en .
+odrl:attributingParty   rdfs:label "partij die vermeldt"@nl , "attributing party"@en .
+odrl:compensatedParty   rdfs:label "partij die vergoed wordt"@nl , "compensated party"@en .
+odrl:compensatingParty  rdfs:label "partij die vergoedt"@nl , "compensating party"@en .
+odrl:consentedParty     rdfs:label "partij waarvoor toestemming geldt"@nl , "consented party"@en .
+odrl:consentingParty    rdfs:label "partij die toestemming geeft"@nl , "consenting party"@en .
+odrl:informedParty      rdfs:label "partij die geïnformeerd wordt"@nl , "informed party"@en .
+odrl:informingParty     rdfs:label "partij die informeert"@nl , "informing party"@en .
+odrl:trackedParty       rdfs:label "partij die gevolgd wordt"@nl , "tracked party"@en .
+odrl:trackingParty      rdfs:label "partij die volgt"@nl , "tracking party"@en .
+odrl:contractedParty    rdfs:label "partij waarmee gecontracteerd is"@nl , "contracted party"@en .
+odrl:contractingParty   rdfs:label "partij die contracteert"@nl , "contracting party"@en .
+
+# --- Acties ------------------------------------------------------------------
+# Nederlands als WERKWOORD (de regel zegt wat er mag/moet), afgestemd op
+# ontology/odrl-ap-nl.ttl voor de vier profielacties.
+
+odrl:use                rdfs:label "gebruiken"@nl , "use"@en .
+odrl:transfer           rdfs:label "eigendom overdragen"@nl , "transfer ownership"@en .
+odrl:read               rdfs:label "raadplegen"@nl , "read"@en .
+odrl:distribute         rdfs:label "verstrekken"@nl , "distribute"@en .
+odrl:inform             rdfs:label "informeren"@nl , "inform"@en .
+odrl:reproduce          rdfs:label "verveelvoudigen"@nl , "reproduce"@en .
+odrl:modify             rdfs:label "wijzigen"@nl , "modify"@en .
+odrl:delete             rdfs:label "verwijderen"@nl , "delete"@en .
+odrl:play               rdfs:label "afspelen"@nl , "play"@en .
+odrl:display            rdfs:label "weergeven"@nl , "display"@en .
+odrl:print              rdfs:label "afdrukken"@nl , "print"@en .
+odrl:execute            rdfs:label "uitvoeren"@nl , "execute"@en .
+odrl:stream             rdfs:label "streamen"@nl , "stream"@en .
+odrl:present            rdfs:label "presenteren"@nl , "present"@en .
+odrl:index              rdfs:label "indexeren"@nl , "index"@en .
+odrl:extract            rdfs:label "delen overnemen"@nl , "extract"@en .
+odrl:aggregate          rdfs:label "samenvoegen"@nl , "aggregate"@en .
+odrl:annotate           rdfs:label "annoteren"@nl , "annotate"@en .
+odrl:anonymize          rdfs:label "anonimiseren"@nl , "anonymize"@en .
+odrl:archive            rdfs:label "archiveren"@nl , "archive"@en .
+odrl:attribute          rdfs:label "bron vermelden"@nl , "attribute"@en .
+odrl:compensate         rdfs:label "vergoeden"@nl , "compensate"@en .
+odrl:concurrentUse      rdfs:label "gelijktijdig gebruiken"@nl , "concurrent use"@en .
+odrl:derive             rdfs:label "afgeleid werk maken"@nl , "derive"@en .
+odrl:digitize           rdfs:label "digitaliseren"@nl , "digitize"@en .
+odrl:ensureExclusivity  rdfs:label "exclusiviteit waarborgen"@nl , "ensure exclusivity"@en .
+odrl:give               rdfs:label "schenken"@nl , "give"@en .
+odrl:grantUse           rdfs:label "gebruiksrecht verlenen"@nl , "grant use"@en .
+odrl:include            rdfs:label "mede opnemen"@nl , "include"@en .
+odrl:install            rdfs:label "installeren"@nl , "install"@en .
+odrl:lend               rdfs:label "uitlenen"@nl , "lend"@en .
+odrl:move               rdfs:label "verplaatsen"@nl , "move"@en .
+odrl:nextPolicy         rdfs:label "vervolgbeleid meegeven"@nl , "next policy"@en .
+odrl:obtainConsent      rdfs:label "toestemming verkrijgen"@nl , "obtain consent"@en .
+odrl:reviewPolicy       rdfs:label "beleid laten toetsen"@nl , "review policy"@en .
+odrl:sell               rdfs:label "verkopen"@nl , "sell"@en .
+odrl:synchronize        rdfs:label "synchroniseren"@nl , "synchronize"@en .
+odrl:textToSpeech       rdfs:label "voorlezen"@nl , "text-to-speech"@en .
+odrl:transform          rdfs:label "converteren"@nl , "transform"@en .
+odrl:translate          rdfs:label "vertalen"@nl , "translate"@en .
+odrl:uninstall          rdfs:label "deïnstalleren"@nl , "uninstall"@en .
+odrl:watermark          rdfs:label "watermerk aanbrengen"@nl , "watermark"@en .
+odrl:acceptTracking     rdfs:label "tracking accepteren"@nl , "accept tracking"@en .
+
+# Deprecated in ODRL 2.2 — alleen om bestaande data leesbaar te tonen.
+odrl:adHocShare         rdfs:label "ad hoc delen"@nl , "ad-hoc share"@en .
+odrl:append             rdfs:label "aanvullen"@nl , "append"@en .
+odrl:appendTo           rdfs:label "toevoegen aan"@nl , "append to"@en .
+odrl:attachPolicy       rdfs:label "beleid meeleveren"@nl , "attach policy"@en .
+odrl:attachSource       rdfs:label "bron meeleveren"@nl , "attach source"@en .
+odrl:commercialize      rdfs:label "commercieel exploiteren"@nl , "commercialize"@en .
+odrl:copy               rdfs:label "kopiëren"@nl , "copy"@en .
+odrl:export             rdfs:label "exporteren"@nl , "export"@en .
+odrl:extractChar        rdfs:label "tekens overnemen"@nl , "extract characters"@en .
+odrl:extractPage        rdfs:label "pagina's overnemen"@nl , "extract pages"@en .
+odrl:extractWord        rdfs:label "woorden overnemen"@nl , "extract words"@en .
+odrl:lease              rdfs:label "leasen"@nl , "lease"@en .
+odrl:license            rdfs:label "in licentie geven"@nl , "license"@en .
+odrl:pay                rdfs:label "betalen"@nl , "pay"@en .
+odrl:secondaryUse       rdfs:label "secundair gebruiken"@nl , "secondary use"@en .
+odrl:share              rdfs:label "delen"@nl , "share"@en .
+odrl:shareAlike         rdfs:label "gelijk delen"@nl , "share alike"@en .
+
+# --- Operatoren --------------------------------------------------------------
+# Letterlijk de zinwoorden uit viewer/assets/i18n.js (`op.*`), zodat een
+# operator in een voorwaarde-zin en als losse term hetzelfde woord krijgt.
+
+odrl:eq                 rdfs:label "is gelijk aan"@nl , "equals"@en .
+odrl:neq                rdfs:label "is niet gelijk aan"@nl , "does not equal"@en .
+odrl:gt                 rdfs:label "is groter dan"@nl , "is greater than"@en .
+odrl:gteq               rdfs:label "is groter dan of gelijk aan"@nl , "is greater than or equal to"@en .
+odrl:lt                 rdfs:label "is kleiner dan"@nl , "is less than"@en .
+odrl:lteq               rdfs:label "is kleiner dan of gelijk aan"@nl , "is less than or equal to"@en .
+odrl:isA                rdfs:label "is een"@nl , "is a"@en .
+odrl:hasPart            rdfs:label "bevat"@nl , "has part"@en .
+odrl:isPartOf           rdfs:label "maakt deel uit van"@nl , "is part of"@en .
+odrl:isAllOf            rdfs:label "is alle van"@nl , "is all of"@en .
+odrl:isAnyOf            rdfs:label "is één van"@nl , "is any of"@en .
+odrl:isNoneOf           rdfs:label "is geen van"@nl , "is none of"@en .
+
+# Logische operatoren — de kopwoorden uit i18n.js (`logicalHead.*`).
+odrl:and                rdfs:label "alle van"@nl , "all of"@en .
+odrl:andSequence        rdfs:label "alle van, in volgorde"@nl , "all of, in order"@en .
+odrl:or                 rdfs:label "één van"@nl , "any of"@en .
+odrl:xone               rdfs:label "precies één van"@nl , "exactly one of"@en .
+
+# --- Left operands -----------------------------------------------------------
+# Met lidwoord, want een left operand is het ONDERWERP van een voorwaardezin
+# ("doel is gelijk aan …"); letterlijk de `left.*`-woorden uit i18n.js waar
+# die bestaan.
+
+odrl:absolutePosition         rdfs:label "absolute positie"@nl , "absolute position"@en .
+odrl:absoluteSize             rdfs:label "absolute grootte"@nl , "absolute size"@en .
+odrl:absoluteSpatialPosition  rdfs:label "absolute geografische positie"@nl , "absolute spatial position"@en .
+odrl:absoluteTemporalPosition rdfs:label "absolute tijdstip"@nl , "absolute temporal position"@en .
+odrl:count                    rdfs:label "aantal"@nl , "count"@en .
+odrl:dateTime                 rdfs:label "tijdstip"@nl , "date and time"@en .
+odrl:delayPeriod              rdfs:label "wachttijd"@nl , "delay period"@en .
+odrl:deliveryChannel          rdfs:label "verstrekkingskanaal"@nl , "delivery channel"@en .
+odrl:elapsedTime              rdfs:label "verstreken tijd"@nl , "elapsed time"@en .
+odrl:event                    rdfs:label "gebeurtenis"@nl , "event"@en .
+odrl:fileFormat               rdfs:label "bestandsformaat"@nl , "file format"@en .
+odrl:industry                 rdfs:label "bedrijfstak"@nl , "industry"@en .
+odrl:language                 rdfs:label "taal"@nl , "language"@en .
+odrl:media                    rdfs:label "medium"@nl , "medium"@en .
+odrl:meteredTime              rdfs:label "gemeten gebruiksduur"@nl , "metered time"@en .
+odrl:payAmount                rdfs:label "bedrag"@nl , "pay amount"@en .
+odrl:percentage               rdfs:label "percentage"@nl , "percentage"@en .
+odrl:product                  rdfs:label "product"@nl , "product"@en .
+odrl:purpose                  rdfs:label "doel"@nl , "purpose"@en .
+odrl:recipient                rdfs:label "ontvanger"@nl , "recipient"@en .
+odrl:relativePosition         rdfs:label "relatieve positie"@nl , "relative position"@en .
+odrl:relativeSize             rdfs:label "relatieve grootte"@nl , "relative size"@en .
+odrl:relativeSpatialPosition  rdfs:label "relatieve geografische positie"@nl , "relative spatial position"@en .
+odrl:relativeTemporalPosition rdfs:label "relatieve tijdstip"@nl , "relative temporal position"@en .
+odrl:resolution               rdfs:label "resolutie"@nl , "resolution"@en .
+odrl:spatial                  rdfs:label "locatie"@nl , "location"@en .
+odrl:spatialCoordinates       rdfs:label "coördinaten"@nl , "spatial coordinates"@en .
+odrl:systemDevice             rdfs:label "systeem of apparaat"@nl , "system device"@en .
+odrl:timeInterval             rdfs:label "tijdsinterval"@nl , "time interval"@en .
+odrl:unitOfCount              rdfs:label "teleenheid"@nl , "unit of count"@en .
+odrl:version                  rdfs:label "versie"@nl , "version"@en .
+odrl:virtualLocation          rdfs:label "virtuele locatie"@nl , "virtual location"@en .
+
+# --- Conflict-, undefined- en statustermen -----------------------------------
+
+odrl:perm               rdfs:label "toestemming gaat voor"@nl , "permission overrides"@en .
+odrl:prohibit           rdfs:label "verbod gaat voor"@nl , "prohibition overrides"@en .
+odrl:invalid            rdfs:label "beleid is ongeldig"@nl , "policy is void"@en .
+odrl:support            rdfs:label "onbekende termen ondersteunen"@nl , "support undefined terms"@en .
+odrl:ignore             rdfs:label "onbekende termen negeren"@nl , "ignore undefined terms"@en .
+odrl:policyUsage        rdfs:label "gebruik van het beleid"@nl , "policy usage event"@en .
+# =============================================================================
+# DEFINITIES — wat elke term BETEKENT
+#
+# WAT DIT IS
+# Een korte definitie (skos:definition, @nl én @en) bij ELKE term die hierboven
+# een label heeft, plus bij de handvol niet-ODRL-termen die de viewer als
+# veldkop toont. Eén feitelijke zin per term, geparafraseerd uit de
+# specificatie die de term definieert: ODRL 2.2 Vocabulary & Expression en het
+# ODRL 2.2 Information Model voor de odrl:-termen, DCMI Metadata Terms, PROV-O,
+# DCAT, DPV en SKOS voor de rest.
+#
+# VOCABULAIRE-NEUTRAAL
+# Een definitie hier gaat over de ODRL-TERM ZELF, niet over wat een profiel er
+# in een bepaald domein mee doet. Geen wetsartikelen, geen doelbinding, geen
+# AVG, geen BRP: dat is profieltaal, en die hoort in de ontologie van het
+# profiel (odrl-ap-nl) of in de data. Wie odrl:purpose leest hoort hier "het
+# doel waarvoor de handeling van de regel wordt uitgevoerd" te krijgen — de
+# ODRL-betekenis — en niet de invulling die één profiel eraan geeft.
+#
+# WAAROM DE VIEWER ZE MEELEVERT
+# Visualisation Note §1 vraagt van elke getoonde term een label (needs) en een
+# korte definitie (should). Bij de kerntermen is er geen data om die uitleg uit
+# te halen: het WOORD is van de viewer en de TERM erachter is een kernterm die
+# geen enkele beleidsbron zelf definieert. Zoals de viewer voor die termen al
+# een standaard LABELbundel meelevert (zie boven), levert hij hier hun
+# definitie mee.
+#
+# VOORRANG (zie descriptionFor in viewer/assets/parse.js)
+# Voor een IRI in de ODRL-namespace WINT DEZE BUNDEL van een definitie in de
+# geladen data: de ODRL-betekenis van een kernterm ligt in ODRL 2.2 vast en is
+# niet aan een bron om te herschrijven. Voor elke andere IRI — profieltermen,
+# begrippen uit de data — wint de DATA, precies zoals bij labels.
+#
+# NIET-ODRL-TERMEN STAAN HIER OOK
+# De labelblokken hierboven zijn strikt ODRL 2.2; het laatste definitieblok is
+# dat bewust niet. Het volgt de VELDKOPPEN van de viewer, en een paar daarvan
+# (Uitgegeven, Vervangt, Kenmerk, Bron, Grondslag, Vindplaats, Afgeleid van,
+# Toegangspunten) hangen aan dct:, prov:, dcat: of dpv:. Ze in een tweede
+# bestand zetten zou dezelfde lijst over twee plekken verdelen zonder dat er
+# iets aan te winnen valt.
+# =============================================================================
+
+
+# --- Klassen -----------------------------------------------------------------
+
+odrl:Policy skos:definition
+  "Een niet-lege groep regels — toestemmingen, verboden en verplichtingen — die samen als één geheel wordt uitgedrukt."@nl ,
+  "A non-empty group of rules — permissions, prohibitions and duties — expressed together as one whole."@en .
+odrl:Set skos:definition
+  "De standaardsoort beleid: het drukt regels over een informatieobject uit zonder aan enige partij rechten te verlenen."@nl ,
+  "The default kind of policy: it expresses rules over an asset without granting privileges to any party."@en .
+odrl:Offer skos:definition
+  "Beleid waarin een aanbieder regels over een informatieobject voorstelt; het verleent nog geen enkele partij rechten."@nl ,
+  "A policy in which an assigner proposes rules over an asset; it grants no party any privileges yet."@en .
+odrl:Agreement skos:definition
+  "Beleid waarin een aanbieder regels over een informatieobject aan een afnemer verleent; beide partijen zijn erin benoemd."@nl ,
+  "A policy in which an assigner grants rules over an asset to an assignee; both parties are named in it."@en .
+odrl:Request skos:definition
+  "Beleid waarin een afnemer regels over een informatieobject voorstelt; het verleent nog geen enkele partij rechten."@nl ,
+  "A policy in which an assignee proposes rules over an asset; it grants no party any privileges."@en .
+odrl:Ticket skos:definition
+  "Beleid dat zijn regels verleent aan wie het ticket houdt, zonder dat de afnemer bij naam genoemd wordt."@nl ,
+  "A policy that grants its rules to whoever holds the ticket, without naming the assignee."@en .
+odrl:Assertion skos:definition
+  "Beleid waarin partijen vastleggen welke regels zij over een informatieobject zeggen te hebben, zonder die regels te verlenen."@nl ,
+  "A policy in which parties state which rules they claim over an asset, without granting those rules."@en .
+odrl:Privacy skos:definition
+  "Beleid over een informatieobject dat persoonsgegevens bevat, met ten minste één verplichting voor de aanbieder over het beheer daarvan."@nl ,
+  "A policy over an asset containing personal information, carrying at least one duty on the assigner about managing it."@en .
+odrl:Rule skos:definition
+  "De abstracte bovenklasse van toestemming, verbod en verplichting: wat die drie gemeen hebben."@nl ,
+  "The abstract superclass of permission, prohibition and duty: what the three have in common."@en .
+odrl:Permission skos:definition
+  "Een regel die de mogelijkheid geeft een handeling op een informatieobject te verrichten, mits aan de voorwaarden en verplichtingen eromheen is voldaan."@nl ,
+  "A rule granting the ability to perform an action over an asset, provided the constraints and duties attached to it are satisfied."@en .
+odrl:Prohibition skos:definition
+  "Een regel die de mogelijkheid ontzegt een handeling op een informatieobject te verrichten."@nl ,
+  "A rule denying the ability to perform an action over an asset."@en .
+odrl:Duty skos:definition
+  "Een regel die tot het verrichten van een handeling verplicht."@nl ,
+  "A rule that obliges an action to be performed."@en .
+odrl:Asset skos:definition
+  "Een informatiebron, of een verzameling informatiebronnen, waar een regel over gaat."@nl ,
+  "A resource, or a collection of resources, that a rule is about."@en .
+odrl:AssetCollection skos:definition
+  "Een informatieobject dat zelf een verzameling afzonderlijke informatiebronnen is, eventueel afgebakend uit een bron met een verbijzondering."@nl ,
+  "An asset that is itself a collection of individual resources, optionally carved out of a source by a refinement."@en .
+odrl:Party skos:definition
+  "Een entiteit of verzameling entiteiten die een rol vervult in een regel: een persoon, een groep, een organisatie of een agent."@nl ,
+  "An entity, or collection of entities, undertaking a role in a rule: a person, group, organisation or agent."@en .
+odrl:PartyCollection skos:definition
+  "Een partij die zelf een groep afzonderlijke entiteiten is, eventueel afgebakend uit een bron met een verbijzondering."@nl ,
+  "A party that is itself a group of individual entities, optionally carved out of a source by a refinement."@en .
+odrl:Action skos:definition
+  "Een bewerking op een informatieobject: wat een toestemming toestaat, een verbod uitsluit of een verplichting voorschrijft."@nl ,
+  "An operation on an asset: what a permission allows, a prohibition disallows or a duty requires."@en .
+odrl:Constraint skos:definition
+  "Een booleaanse expressie die bepaalt of een regel van kracht is, of die de betekenis van een handeling of van een verzameling inperkt."@nl ,
+  "A boolean expression that determines whether a rule applies, or that refines the meaning of an action or a collection."@en .
+odrl:LogicalConstraint skos:definition
+  "Een logische expressie die meerdere voorwaarden met en, of, precies-één of volgorde tot één toets samenvoegt."@nl ,
+  "A logical expression combining several constraints into a single test using and, or, exactly-one, or sequence."@en .
+odrl:LeftOperand skos:definition
+  "De klasse van termen die als linkerkant van een voorwaarde kunnen staan: de grootheid die getoetst wordt."@nl ,
+  "The class of terms that can stand as the left operand of a constraint: the quantity being tested."@en .
+odrl:RightOperand skos:definition
+  "De klasse van termen die als rechterkant van een voorwaarde kunnen staan: de waarde waartegen getoetst wordt."@nl ,
+  "The class of terms that can stand as the right operand of a constraint: the value tested against."@en .
+odrl:Operator skos:definition
+  "De klasse van vergelijkingsoperatoren die de linker- en de rechterkant van een voorwaarde met elkaar in verband brengen."@nl ,
+  "The class of relational operators relating the left and right operands of a constraint."@en .
+odrl:ConflictTerm skos:definition
+  "De klasse van strategieën om een conflict tussen een toestemming en een verbod in hetzelfde beleid op te lossen."@nl ,
+  "The class of strategies for resolving a conflict between a permission and a prohibition in the same policy."@en .
+odrl:UndefinedTerm skos:definition
+  "De klasse van strategieën voor het omgaan met handelingen die in geen enkel gebruikt vocabulaire of profiel voorkomen."@nl ,
+  "The class of strategies for handling actions that occur in no vocabulary or profile in use."@en .
+odrl:PartyScope skos:definition
+  "Verouderd: de klasse van bereiktermen voor de scope-eigenschap van een partij."@nl ,
+  "Deprecated: the class of scope terms for the scope property of a party."@en .
+odrl:AssetScope skos:definition
+  "Verouderd: de klasse van bereiktermen voor de scope-eigenschap van een informatieobject."@nl ,
+  "Deprecated: the class of scope terms for the scope property of an asset."@en .
+
+# --- Kernproperties ----------------------------------------------------------
+
+odrl:uid skos:definition
+  "De ondubbelzinnige identificatie van een beleid, regel, informatieobject, partij of voorwaarde."@nl ,
+  "The unambiguous identifier of a policy, rule, asset, party or constraint."@en .
+odrl:profile skos:definition
+  "Het ODRL-profiel waaraan dit beleid voldoet; verplicht zodra het beleid termen buiten de kern gebruikt."@nl ,
+  "The ODRL profile this policy conforms to; required as soon as the policy uses terms beyond the core."@en .
+odrl:permission skos:definition
+  "Koppelt een afzonderlijke toestemming aan een beleid."@nl ,
+  "Relates an individual permission to a policy."@en .
+odrl:prohibition skos:definition
+  "Koppelt een afzonderlijk verbod aan een beleid."@nl ,
+  "Relates an individual prohibition to a policy."@en .
+odrl:obligation skos:definition
+  "Koppelt een verplichting aan het beleid als geheel: een eis die hoe dan ook moet worden nagekomen."@nl ,
+  "Relates a duty to the policy as a whole: a requirement that must be fulfilled regardless."@en .
+odrl:duty skos:definition
+  "Koppelt een verplichting aan een toestemming: een voorwaarde vooraf die vervuld moet zijn om de toestemming te verkrijgen."@nl ,
+  "Relates a duty to a permission: a pre-condition that must be fulfilled to obtain the permission."@en .
+odrl:consequence skos:definition
+  "Koppelt aan een verplichting een tweede verplichting, die erbij komt wanneer de eerste niet wordt nagekomen."@nl ,
+  "Relates a duty to a second duty, which is added when the first is not fulfilled."@en .
+odrl:remedy skos:definition
+  "Koppelt aan een verbod een verplichting die moet worden nagekomen wanneer het verbod is overtreden."@nl ,
+  "Relates a prohibition to a duty that must be fulfilled when the prohibition has been violated."@en .
+odrl:action skos:definition
+  "De bewerking op het informatieobject waarop de regel betrekking heeft."@nl ,
+  "The operation on the asset that the rule concerns."@en .
+odrl:target skos:definition
+  "Het informatieobject waarop de handeling van de regel rechtstreeks slaat."@nl ,
+  "The asset the rule's action directly applies to."@en .
+odrl:output skos:definition
+  "Het informatieobject dat als resultaat van de handeling ontstaat."@nl ,
+  "The asset created as the output of the action."@en .
+odrl:assigner skos:definition
+  "De partij die de regel uitvaardigt."@nl ,
+  "The party issuing the rule."@en .
+odrl:assignee skos:definition
+  "De partij tot wie de regel gericht is."@nl ,
+  "The party the rule is directed at."@en .
+odrl:assignerOf skos:definition
+  "Wijst het beleid aan waarin deze partij in alle regels de rol van aanbieder vervult."@nl ,
+  "Identifies the policy in which this party undertakes the assigner role in all of its rules."@en .
+odrl:assigneeOf skos:definition
+  "Wijst het beleid aan waarin deze partij in alle regels de rol van afnemer vervult."@nl ,
+  "Identifies the policy in which this party undertakes the assignee role in all of its rules."@en .
+odrl:function skos:definition
+  "De abstracte eigenschap waarvan de subeigenschappen de rollen benoemen die een partij in een regel kan vervullen."@nl ,
+  "The abstract property whose sub-properties name the functional roles a party may fulfil in a rule."@en .
+odrl:constraint skos:definition
+  "Een voorwaarde die bepaalt of de regel van kracht is; alle voorwaarden op een regel gelden samen."@nl ,
+  "A constraint determining whether the rule is active; all constraints on a rule apply together."@en .
+odrl:refinement skos:definition
+  "Een voorwaarde die de betekenis van een handeling of van een partij- of objectverzameling inperkt, niet die van de regel zelf."@nl ,
+  "A constraint refining the meaning of an action, or of a party or asset collection, rather than of the rule itself."@en .
+odrl:leftOperand skos:definition
+  "De linkerkant van een voorwaarde: de grootheid die getoetst wordt."@nl ,
+  "The left operand of a constraint: the quantity being tested."@en .
+odrl:operator skos:definition
+  "De vergelijkingsfunctie die op de operanden van een voorwaarde wordt toegepast."@nl ,
+  "The comparison function applied to the operands of a constraint."@en .
+odrl:rightOperand skos:definition
+  "De waarde aan de rechterkant van een voorwaarde; bij verzamelingsoperatoren mogen dat er meer zijn."@nl ,
+  "The value of the right operand of a constraint; set-based operators allow a list of values."@en .
+odrl:rightOperandReference skos:definition
+  "Een verwijzing naar een webbron die de waarde aan de rechterkant van een voorwaarde levert."@nl ,
+  "A reference to a web resource providing the value of the right operand of a constraint."@en .
+odrl:unit skos:definition
+  "De meeteenheid van de waarde aan de rechterkant van een voorwaarde."@nl ,
+  "The unit of measurement of the value of the right operand of a constraint."@en .
+odrl:status skos:definition
+  "De waarde die uit de linkerkant van een voorwaarde volgt en die in de vergelijking wordt gebruikt."@nl ,
+  "The value generated from the left operand that is used as the reference in the comparison."@en .
+odrl:inheritFrom skos:definition
+  "Het bovenliggende beleid waarvan dit beleid de regels overerft."@nl ,
+  "The parent policy whose rules this policy inherits."@en .
+odrl:inheritRelation skos:definition
+  "De aard van de overerving tussen dit beleid en het beleid waarvan het erft."@nl ,
+  "The type of inheritance between this policy and the one it inherits from."@en .
+odrl:inheritAllowed skos:definition
+  "Of dit beleid door een ander beleid overgeërfd mag worden."@nl ,
+  "Whether this policy may be inherited by another policy."@en .
+odrl:partOf skos:definition
+  "De verzameling waarvan dit informatieobject of deze partij lid is."@nl ,
+  "The collection this asset or party is a member of."@en .
+odrl:source skos:definition
+  "De verzameling waaruit deze verzameling wordt afgebakend: de leden zijn precies die leden van de bron die aan de verbijzondering voldoen."@nl ,
+  "The collection this one is carved out of: its members are exactly those members of the source that meet the refinement."@en .
+odrl:relation skos:definition
+  "De abstracte eigenschap waarvan de subeigenschappen bepalen op welke manier een handeling en een informatieobject met elkaar verbonden zijn."@nl ,
+  "The abstract property whose sub-properties define the nature of the link between an action and an asset."@en .
+odrl:hasPolicy skos:definition
+  "Het beleid waarin dit informatieobject in alle regels het doelobject is."@nl ,
+  "The policy in which this asset is the target of all of the rules."@en .
+odrl:includedIn skos:definition
+  "De ruimere handeling die de betekenis van deze handeling omvat."@nl ,
+  "The broader action whose operational semantics encompass those of this action."@en .
+odrl:implies skos:definition
+  "De handeling die niet verboden mag zijn, wil deze handeling haar werking behouden."@nl ,
+  "The action that must not be prohibited for this action to have its effect."@en .
+odrl:conflict skos:definition
+  "De strategie waarmee een conflict tussen toestemming en verbod in dit beleid wordt opgelost; zonder opgave is het beleid ongeldig."@nl ,
+  "The strategy for resolving a conflict between permission and prohibition in this policy; if none is given, the policy is void."@en .
+odrl:undefined skos:definition
+  "De strategie voor het omgaan met handelingen die het verwerkende systeem niet kent; zonder opgave is het beleid ongeldig."@nl ,
+  "The strategy for handling actions the processing system does not know; if none is given, the policy is void."@en .
+odrl:proximity skos:definition
+  "Verouderde term uit de OMA-specificatie voor een mate van nabijheid."@nl ,
+  "Deprecated term from the OMA specification indicating closeness or nearness."@en .
+
+# --- Partijrollen bij een specifieke actie -----------------------------------
+
+odrl:attributedParty skos:definition
+  "De partij die vermeld moet worden; hoort bij de handeling bron vermelden."@nl ,
+  "The party to be attributed; used with the attribute action."@en .
+odrl:attributingParty skos:definition
+  "De partij die de vermelding verzorgt; hoort bij de handeling bron vermelden."@nl ,
+  "The party who undertakes the attribution; used with the attribute action."@en .
+odrl:compensatedParty skos:definition
+  "De partij die de vergoeding ontvangt; hoort bij de handeling vergoeden."@nl ,
+  "The party who receives the compensation; used with the compensate action."@en .
+odrl:compensatingParty skos:definition
+  "De partij die de vergoeding verstrekt; hoort bij de handeling vergoeden."@nl ,
+  "The party who provides the compensation; used with the compensate action."@en .
+odrl:consentedParty skos:definition
+  "De partij die de toestemming verkrijgt; hoort bij de handeling toestemming verkrijgen."@nl ,
+  "The party who obtains the consent; used with the obtainConsent action."@en .
+odrl:consentingParty skos:definition
+  "De partij van wie de toestemming verkregen moet worden; hoort bij de handeling toestemming verkrijgen."@nl ,
+  "The party from whom the consent is to be obtained; used with the obtainConsent action."@en .
+odrl:informedParty skos:definition
+  "De partij die geïnformeerd moet worden; hoort bij de handeling informeren."@nl ,
+  "The party to be informed; used with the inform action."@en .
+odrl:informingParty skos:definition
+  "De partij die de melding verstrekt; hoort bij de handeling informeren."@nl ,
+  "The party who provides the notification; used with the inform action."@en .
+odrl:trackedParty skos:definition
+  "De partij van wie het gebruik gevolgd wordt; hoort bij de handeling tracking accepteren."@nl ,
+  "The party whose usage is being tracked; used with the acceptTracking action."@en .
+odrl:trackingParty skos:definition
+  "De partij die het gebruik volgt; hoort bij de handeling tracking accepteren."@nl ,
+  "The party who is tracking the usage; used with the acceptTracking action."@en .
+odrl:contractedParty skos:definition
+  "De partij met wie het contract wordt aangegaan."@nl ,
+  "The party who is being contracted."@en .
+odrl:contractingParty skos:definition
+  "De partij die het contract aanbiedt."@nl ,
+  "The party who is offering the contract."@en .
+
+# --- Acties ------------------------------------------------------------------
+
+odrl:use skos:definition
+  "De meest algemene handeling voor gebruik dat niet aan derden ten goede komt."@nl ,
+  "The most generic action, covering all use that does not benefit a third party."@en .
+odrl:transfer skos:definition
+  "De eigendom van het informatieobject blijvend overdragen."@nl ,
+  "To transfer ownership of the asset in perpetuity."@en .
+odrl:read skos:definition
+  "Gegevens uit het informatieobject verkrijgen."@nl ,
+  "To obtain data from the asset."@en .
+odrl:distribute skos:definition
+  "Het informatieobject aan derden leveren."@nl ,
+  "To supply the asset to third parties."@en .
+odrl:inform skos:definition
+  "Melden dat er een handeling op of met betrekking tot het informatieobject is verricht."@nl ,
+  "To report that an action has been performed on, or in relation to, the asset."@en .
+odrl:reproduce skos:definition
+  "Het informatieobject in enige materiële vorm vermenigvuldigen."@nl ,
+  "To make duplicate copies of the asset in any material form."@en .
+odrl:modify skos:definition
+  "Bestaande inhoud van het informatieobject wijzigen zonder dat er een nieuw object ontstaat."@nl ,
+  "To change existing content of the asset without a new asset being created."@en .
+odrl:delete skos:definition
+  "Alle exemplaren van het informatieobject na gebruik blijvend verwijderen."@nl ,
+  "To permanently remove all copies of the asset after it has been used."@en .
+odrl:play skos:definition
+  "Een opeenvolgende, vluchtige weergave van het informatieobject maken, zoals het afspelen van beeld of geluid."@nl ,
+  "To create a sequential and transient rendition of the asset, such as playing a video or audio track."@en .
+odrl:display skos:definition
+  "Een statische, vluchtige weergave van het informatieobject maken, zoals het tonen op een scherm."@nl ,
+  "To create a static and transient rendition of the asset, such as showing an image on a screen."@en .
+odrl:print skos:definition
+  "Een tastbare, blijvende weergave van het informatieobject maken."@nl ,
+  "To create a tangible and permanent rendition of the asset."@en .
+odrl:execute skos:definition
+  "Het informatieobject als computerprogramma uitvoeren."@nl ,
+  "To run the asset as a computer program."@en .
+odrl:stream skos:definition
+  "Het informatieobject in realtime leveren."@nl ,
+  "To deliver the asset in real time."@en .
+odrl:present skos:definition
+  "Het informatieobject in het openbaar uitvoeren of openbaar maken."@nl ,
+  "To publicly perform or communicate the asset."@en .
+odrl:index skos:definition
+  "Het informatieobject in een index opnemen."@nl ,
+  "To record the asset in an index."@en .
+odrl:extract skos:definition
+  "Delen uit het informatieobject halen en als nieuw informatieobject gebruiken."@nl ,
+  "To extract parts of the asset and use them as a new asset."@en .
+odrl:aggregate skos:definition
+  "Het informatieobject of delen ervan opnemen in een samengestelde verzameling."@nl ,
+  "To use the asset, or parts of it, as part of a composite collection."@en .
+odrl:annotate skos:definition
+  "Toelichtingen bij het informatieobject plaatsen zonder het verder te wijzigen."@nl ,
+  "To add explanatory notes to the asset without modifying it in any other way."@en .
+odrl:anonymize skos:definition
+  "Het informatieobject geheel of gedeeltelijk anonimiseren."@nl ,
+  "To anonymize all or parts of the asset."@en .
+odrl:archive skos:definition
+  "Het informatieobject in niet-vluchtige vorm bewaren."@nl ,
+  "To store the asset in a non-transient form."@en .
+odrl:attribute skos:definition
+  "Bij het gebruik van het informatieobject de bron ervan vermelden."@nl ,
+  "To attribute the use of the asset to its source."@en .
+odrl:compensate skos:definition
+  "Voor het gebruik of de verkoop van het informatieobject een waarde overdragen als vergoeding."@nl ,
+  "To compensate by transferring some amount of value for using or selling the asset."@en .
+odrl:concurrentUse skos:definition
+  "Meerdere exemplaren van het informatieobject maken die gelijktijdig in gebruik zijn."@nl ,
+  "To create multiple copies of the asset that are used concurrently."@en .
+odrl:derive skos:definition
+  "Uit het informatieobject een nieuw, afgeleid object maken en dat bewerken."@nl ,
+  "To create a new derivative asset from this asset and edit or modify it."@en .
+odrl:digitize skos:definition
+  "Van het informatieobject in analoge vorm een digitale versie maken."@nl ,
+  "To produce a digital copy of the asset from its analogue form."@en .
+odrl:ensureExclusivity skos:definition
+  "Waarborgen dat de regel op het informatieobject exclusief is."@nl ,
+  "To ensure that the rule on the asset is exclusive."@en .
+odrl:give skos:definition
+  "De eigendom van het informatieobject om niet aan een derde overdragen en het origineel verwijderen."@nl ,
+  "To transfer ownership of the asset to a third party without compensation, deleting the original."@en .
+odrl:grantUse skos:definition
+  "Derden het gebruik van het informatieobject toestaan."@nl ,
+  "To grant the use of the asset to third parties."@en .
+odrl:include skos:definition
+  "Andere, verwante informatieobjecten in het informatieobject opnemen."@nl ,
+  "To include other related assets in the asset."@en .
+odrl:install skos:definition
+  "Het informatieobject als computerprogramma op een opslagmedium plaatsen zodat het uitgevoerd kan worden."@nl ,
+  "To load the asset as a computer program onto a storage device so that it can be run."@en .
+odrl:lend skos:definition
+  "Het informatieobject voor een bepaalde tijd zonder tegenprestatie aan een derde beschikbaar stellen."@nl ,
+  "To make the asset available to a third party for a fixed period without exchange of value."@en .
+odrl:move skos:definition
+  "Het informatieobject naar een andere digitale locatie verplaatsen en het oorspronkelijke exemplaar verwijderen."@nl ,
+  "To move the asset to another digital location, deleting the original copy."@en .
+odrl:nextPolicy skos:definition
+  "Aan een derde het aangewezen vervolgbeleid meegeven voor diens gebruik van het informatieobject."@nl ,
+  "To grant the specified policy to a third party for their use of the asset."@en .
+odrl:obtainConsent skos:definition
+  "Aantoonbare toestemming verkrijgen voor de gevraagde handeling op het informatieobject."@nl ,
+  "To obtain verifiable consent for the requested action on the asset."@en .
+odrl:reviewPolicy skos:definition
+  "Het beleid dat op het informatieobject van toepassing is laten beoordelen, doorgaans door een mens."@nl ,
+  "To have the policy applicable to the asset reviewed, typically by a human."@en .
+odrl:sell skos:definition
+  "De eigendom van het informatieobject tegen vergoeding aan een derde overdragen en het origineel verwijderen."@nl ,
+  "To transfer ownership of the asset to a third party with compensation, deleting the original."@en .
+odrl:synchronize skos:definition
+  "Het informatieobject in vaste tijdsverhouding met beeld- of geluidselementen van een ander informatieobject gebruiken."@nl ,
+  "To use the asset in timed relation with the audio or visual elements of another asset."@en .
+odrl:textToSpeech skos:definition
+  "Een tekstueel informatieobject hardop laten voorlezen."@nl ,
+  "To have a text asset read out loud."@en .
+odrl:transform skos:definition
+  "Het informatieobject naar een ander formaat omzetten."@nl ,
+  "To convert the asset into a different format."@en .
+odrl:translate skos:definition
+  "Het informatieobject in een andere natuurlijke taal overzetten, waarmee een afgeleid object ontstaat."@nl ,
+  "To translate the asset into another natural language, thereby creating a derivative asset."@en .
+odrl:uninstall skos:definition
+  "Het informatieobject als computerprogramma van een opslagmedium verwijderen en het onbruikbaar maken."@nl ,
+  "To unload and delete the asset as a computer program from a storage device, disabling it."@en .
+odrl:watermark skos:definition
+  "Een watermerk op het informatieobject aanbrengen."@nl ,
+  "To apply a watermark to the asset."@en .
+odrl:acceptTracking skos:definition
+  "Aanvaarden dat het gebruik van het informatieobject gevolgd wordt."@nl ,
+  "To accept that the use of the asset may be tracked."@en .
+
+# --- Acties die ODRL 2.2 als deprecated markeert -----------------------------
+
+odrl:adHocShare skos:definition
+  "Verouderd: het informatieobject delen met partijen in de directe nabijheid van de eigenaar."@nl ,
+  "Deprecated: to share the asset with parties in close proximity to the owner."@en .
+odrl:append skos:definition
+  "Verouderd: aan het einde van het informatieobject toevoegen."@nl ,
+  "Deprecated: the act of adding to the end of the asset."@en .
+odrl:appendTo skos:definition
+  "Verouderd: gegevens aan het informatieobject toevoegen zonder het verder te wijzigen."@nl ,
+  "Deprecated: to append data to the asset without modifying it in any other way."@en .
+odrl:attachPolicy skos:definition
+  "Verouderd: de beleidsmelding bij het informatieobject houden."@nl ,
+  "Deprecated: to keep the policy notice with the asset."@en .
+odrl:attachSource skos:definition
+  "Verouderd: de bron van het informatieobject en zijn afgeleiden meeleveren."@nl ,
+  "Deprecated: to attach the source of the asset and its derivatives."@en .
+odrl:commercialize skos:definition
+  "Verouderd: het informatieobject in een zakelijke omgeving gebruiken."@nl ,
+  "Deprecated: to use the asset in a business environment."@en .
+odrl:copy skos:definition
+  "Verouderd: een exacte reproductie van het informatieobject maken."@nl ,
+  "Deprecated: to make an exact reproduction of the asset."@en .
+odrl:export skos:definition
+  "Verouderd: het informatieobject in een nieuwe vorm omzetten."@nl ,
+  "Deprecated: to transform the asset into a new form."@en .
+odrl:extractChar skos:definition
+  "Verouderd: ongewijzigde tekens uit het informatieobject overnemen."@nl ,
+  "Deprecated: to extract unchanged characters from the asset."@en .
+odrl:extractPage skos:definition
+  "Verouderd: ongewijzigde pagina's uit het informatieobject overnemen."@nl ,
+  "Deprecated: to extract unchanged pages from the asset."@en .
+odrl:extractWord skos:definition
+  "Verouderd: ongewijzigde woorden uit het informatieobject overnemen."@nl ,
+  "Deprecated: to extract unchanged words from the asset."@en .
+odrl:lease skos:definition
+  "Verouderd: het informatieobject voor een bepaalde tijd tegen vergoeding aan een derde beschikbaar stellen."@nl ,
+  "Deprecated: to make the asset available to a third party for a fixed period with exchange of value."@en .
+odrl:license skos:definition
+  "Verouderd: een derde het recht verlenen het informatieobject te gebruiken."@nl ,
+  "Deprecated: to grant a third party the right to use the asset."@en .
+odrl:pay skos:definition
+  "Verouderd: een geldbedrag aan een partij betalen voor het gebruik van het informatieobject."@nl ,
+  "Deprecated: to pay a financial amount to a party for use of the asset."@en .
+odrl:secondaryUse skos:definition
+  "Verouderd: het informatieobject gebruiken voor een ander doel dan waarvoor het bestemd was."@nl ,
+  "Deprecated: to use the asset for a purpose other than the one it was intended for."@en .
+odrl:share skos:definition
+  "Verouderd: het informatieobject niet-commercieel verveelvoudigen en aan derden verstrekken."@nl ,
+  "Deprecated: the non-commercial reproduction and distribution of the asset to third parties."@en .
+odrl:shareAlike skos:definition
+  "Verouderd: een afgeleid informatieobject onder dezelfde voorwaarden verspreiden als het origineel."@nl ,
+  "Deprecated: to distribute a derivative asset under the same terms as the original."@en .
+
+# --- Operatoren --------------------------------------------------------------
+
+odrl:eq skos:definition
+  "De getoetste waarde is gelijk aan de rechterkant van de voorwaarde."@nl ,
+  "The value tested equals the right operand of the constraint."@en .
+odrl:neq skos:definition
+  "De getoetste waarde is niet gelijk aan de rechterkant van de voorwaarde."@nl ,
+  "The value tested does not equal the right operand of the constraint."@en .
+odrl:gt skos:definition
+  "De getoetste waarde is groter dan de rechterkant van de voorwaarde."@nl ,
+  "The value tested is greater than the right operand of the constraint."@en .
+odrl:gteq skos:definition
+  "De getoetste waarde is groter dan of gelijk aan de rechterkant van de voorwaarde."@nl ,
+  "The value tested is greater than or equal to the right operand of the constraint."@en .
+odrl:lt skos:definition
+  "De getoetste waarde is kleiner dan de rechterkant van de voorwaarde."@nl ,
+  "The value tested is less than the right operand of the constraint."@en .
+odrl:lteq skos:definition
+  "De getoetste waarde is kleiner dan of gelijk aan de rechterkant van de voorwaarde."@nl ,
+  "The value tested is less than or equal to the right operand of the constraint."@en .
+odrl:isA skos:definition
+  "Verzamelingsoperator: de getoetste waarde is een exemplaar van de rechterkant van de voorwaarde."@nl ,
+  "A set-based operator: the value tested is an instance of the right operand of the constraint."@en .
+odrl:hasPart skos:definition
+  "Verzamelingsoperator: de getoetste waarde bevat de rechterkant van de voorwaarde."@nl ,
+  "A set-based operator: the value tested contains the right operand of the constraint."@en .
+odrl:isPartOf skos:definition
+  "Verzamelingsoperator: de getoetste waarde wordt omvat door de rechterkant van de voorwaarde."@nl ,
+  "A set-based operator: the value tested is contained by the right operand of the constraint."@en .
+odrl:isAllOf skos:definition
+  "Verzamelingsoperator: de getoetste waarde is alle waarden van de rechterkant van de voorwaarde."@nl ,
+  "A set-based operator: the value tested is all of the right operand of the constraint."@en .
+odrl:isAnyOf skos:definition
+  "Verzamelingsoperator: de getoetste waarde is een van de waarden van de rechterkant van de voorwaarde."@nl ,
+  "A set-based operator: the value tested is any of the right operand of the constraint."@en .
+odrl:isNoneOf skos:definition
+  "Verzamelingsoperator: de getoetste waarde is geen van de waarden van de rechterkant van de voorwaarde."@nl ,
+  "A set-based operator: the value tested is none of the right operand of the constraint."@en .
+
+# --- Logische operatoren -----------------------------------------------------
+
+odrl:and skos:definition
+  "De logische voorwaarde is vervuld wanneer alle onderliggende voorwaarden vervuld zijn."@nl ,
+  "The logical constraint is satisfied when all of its constraints are satisfied."@en .
+odrl:andSequence skos:definition
+  "De logische voorwaarde is vervuld wanneer alle onderliggende voorwaarden in de opgegeven volgorde vervuld zijn."@nl ,
+  "The logical constraint is satisfied when all of its constraints are satisfied in the order given."@en .
+odrl:or skos:definition
+  "De logische voorwaarde is vervuld wanneer ten minste één van de onderliggende voorwaarden vervuld is."@nl ,
+  "The logical constraint is satisfied when at least one of its constraints is satisfied."@en .
+odrl:xone skos:definition
+  "De logische voorwaarde is vervuld wanneer precies één van de onderliggende voorwaarden vervuld is."@nl ,
+  "The logical constraint is satisfied when exactly one of its constraints is satisfied."@en .
+
+# --- Left operands -----------------------------------------------------------
+
+odrl:absolutePosition skos:definition
+  "De positie van het doelobject, uitgedrukt in absolute coördinaten."@nl ,
+  "The position of the target asset, expressed in absolute coordinates."@en .
+odrl:absoluteSize skos:definition
+  "De afmetingen van het doelobject langs één of meer assen, in absolute maten."@nl ,
+  "The measurements of the target asset along one or more axes, in absolute terms."@en .
+odrl:absoluteSpatialPosition skos:definition
+  "De absolute hoekcoördinaten van het vlak of de ruimte waarbinnen het doelobject moet passen."@nl ,
+  "The absolute corner coordinates of the area or space the target asset has to fit within."@en .
+odrl:absoluteTemporalPosition skos:definition
+  "De absolute plaats in een mediastroom die het doelobject moet innemen."@nl ,
+  "The absolute position in a media stream that the target asset has to occupy."@en .
+odrl:count skos:definition
+  "Het aantal keren dat de handeling van de regel is uitgevoerd."@nl ,
+  "The number of times the action of the rule has been executed."@en .
+odrl:dateTime skos:definition
+  "De datum, en eventueel het tijdstip, waarop de handeling van de regel wordt uitgevoerd."@nl ,
+  "The date, and optionally the time, at which the action of the rule is exercised."@en .
+odrl:delayPeriod skos:definition
+  "De wachttijd die verstrijkt voordat de handeling van de regel wordt uitgevoerd."@nl ,
+  "The delay period that passes before the action of the rule is exercised."@en .
+odrl:deliveryChannel skos:definition
+  "Het kanaal waarlangs de handeling van de regel wordt uitgevoerd."@nl ,
+  "The delivery channel over which the action of the rule is exercised."@en .
+odrl:elapsedTime skos:definition
+  "De aaneengesloten tijdsduur waarin de handeling van de regel wordt uitgevoerd."@nl ,
+  "The continuous elapsed period of time over which the action of the rule is exercised."@en .
+odrl:event skos:definition
+  "De gebeurtenis die de context vormt waarin de handeling van de regel wordt uitgevoerd."@nl ,
+  "The event setting the context in which the action of the rule is exercised."@en .
+odrl:fileFormat skos:definition
+  "Het bestandsformaat waarnaar het doelobject wordt omgezet."@nl ,
+  "The file format the target asset is transformed into."@en .
+odrl:industry skos:definition
+  "De bedrijfstak die de context vormt waarin de handeling van de regel wordt uitgevoerd."@nl ,
+  "The industry sector setting the context in which the action of the rule is exercised."@en .
+odrl:language skos:definition
+  "De natuurlijke taal van het doelobject."@nl ,
+  "The natural language used by the target asset."@en .
+odrl:media skos:definition
+  "De mediacategorie die de context vormt waarin de handeling van de regel wordt uitgevoerd."@nl ,
+  "The category of media setting the context in which the action of the rule is exercised."@en .
+odrl:meteredTime skos:definition
+  "De opgetelde gemeten tijd waarin de handeling van de regel is uitgevoerd."@nl ,
+  "The accumulated metered time over which the action of the rule has been exercised."@en .
+odrl:payAmount skos:definition
+  "Het bedrag van een betaling."@nl ,
+  "The amount of a financial payment."@en .
+odrl:percentage skos:definition
+  "Het percentage van het doelobject waarop de handeling van de regel betrekking heeft."@nl ,
+  "The percentage of the target asset relevant for exercising the action of the rule."@en .
+odrl:product skos:definition
+  "De product- of dienstcategorie die de context vormt waarin de handeling van de regel wordt uitgevoerd."@nl ,
+  "The category of product or service setting the context in which the action of the rule is exercised."@en .
+odrl:purpose skos:definition
+  "Het doel waarvoor de handeling van de regel wordt uitgevoerd."@nl ,
+  "The defined purpose for exercising the action of the rule."@en .
+odrl:recipient skos:definition
+  "De partij die het resultaat van de handeling van de regel ontvangt."@nl ,
+  "The party receiving the outcome of exercising the action of the rule."@en .
+odrl:relativePosition skos:definition
+  "De positie van het doelobject, uitgedrukt in coördinaten die op de volle maat betrokken zijn."@nl ,
+  "The position of the target asset, expressed in coordinates relative to full measures."@en .
+odrl:relativeSize skos:definition
+  "De afmetingen van het doelobject langs één of meer assen, als percentage van de volle maat."@nl ,
+  "The measurements of the target asset along one or more axes, as percentages of full values."@en .
+odrl:relativeSpatialPosition skos:definition
+  "De hoekcoördinaten van het vlak of de ruimte waarbinnen het doelobject moet passen, als percentage van de volle maat."@nl ,
+  "The corner coordinates of the area or space the target asset has to fit within, as percentages of full values."@en .
+odrl:relativeTemporalPosition skos:definition
+  "De plaats in een mediastroom die het doelobject moet innemen, als percentage van de volle lengte."@nl ,
+  "The position in a media stream that the target asset has to occupy, as a percentage of its full length."@en .
+odrl:resolution skos:definition
+  "De resolutie waarin het doelobject wordt weergegeven."@nl ,
+  "The resolution of the rendition of the target asset."@en .
+odrl:spatial skos:definition
+  "Het benoemde geografische gebied met vastgelegde grenzen waarbinnen de handeling van de regel wordt uitgevoerd."@nl ,
+  "The named geospatial area with defined borders within which the action of the rule is exercised."@en .
+odrl:spatialCoordinates skos:definition
+  "De coördinaten die de grenzen afbakenen van het geografische gebied waarbinnen de handeling van de regel wordt uitgevoerd."@nl ,
+  "The coordinates bounding the geospatial area within which the action of the rule is exercised."@en .
+odrl:systemDevice skos:definition
+  "Het computersysteem of apparaat waarmee de handeling van de regel wordt uitgevoerd."@nl ,
+  "The computing system or device used for exercising the action of the rule."@en .
+odrl:timeInterval skos:definition
+  "De terugkerende tijdsperiode tussen twee uitvoeringen van de handeling van de regel."@nl ,
+  "The recurring period of time between executions of the action of the rule."@en .
+odrl:unitOfCount skos:definition
+  "De eenheid waarin de uitvoeringen van de handeling van de regel geteld worden."@nl ,
+  "The unit of measure used for counting the executions of the action of the rule."@en .
+odrl:version skos:definition
+  "De versie van het doelobject."@nl ,
+  "The version of the target asset."@en .
+odrl:virtualLocation skos:definition
+  "De plaats in de digitale communicatieruimte waar de handeling van de regel wordt uitgevoerd, zoals een domein of een IP-bereik."@nl ,
+  "The location in the IT communication space where the action of the rule is exercised, such as a domain or an IP range."@en .
+
+# --- Conflict-, undefined- en statustermen -----------------------------------
+
+odrl:perm skos:definition
+  "Conflictstrategie: botsen een toestemming en een verbod, dan gaat de toestemming voor."@nl ,
+  "Conflict strategy: where a permission and a prohibition clash, the permission takes precedence."@en .
+odrl:prohibit skos:definition
+  "Conflictstrategie: botsen een toestemming en een verbod, dan gaat het verbod voor."@nl ,
+  "Conflict strategy: where a permission and a prohibition clash, the prohibition takes precedence."@en .
+odrl:invalid skos:definition
+  "Conflictstrategie: botsen een toestemming en een verbod, dan is het beleid als geheel ongeldig."@nl ,
+  "Conflict strategy: where a permission and a prohibition clash, the policy as a whole is void."@en .
+odrl:support skos:definition
+  "Strategie voor onbekende termen: een handeling die het systeem niet kent wordt toch ondersteund en het beleid blijft geldig."@nl ,
+  "Undefined-term strategy: an action the system does not know is supported anyway and the policy remains valid."@en .
+odrl:ignore skos:definition
+  "Strategie voor onbekende termen: een handeling die het systeem niet kent wordt genegeerd en het beleid blijft geldig."@nl ,
+  "Undefined-term strategy: an action the system does not know is ignored and the policy remains valid."@en .
+odrl:policyUsage skos:definition
+  "Het feitelijke tijdstip waarop de handeling van de regel is uitgevoerd, bruikbaar als rechterkant van een tijdsvoorwaarde."@nl ,
+  "The actual datetime the action of the rule was exercised, usable as the right operand of a temporal constraint."@en .
+
+# --- Veldkoppen buiten ODRL (dct:, dpv:, prov:, dcat:, skos:) ----------------
+# Deze termen hebben hierboven geen label — de viewer formuleert hun veldkop
+# zelf (Uitgegeven, Kenmerk, Bron, Grondslag, …). Hun definitie is
+# geparafraseerd uit DCMI Metadata Terms, PROV-O, DCAT, DPV en SKOS. Anders dan
+# bij de odrl:-termen wint hier een definitie uit de geladen data.
+
+dct:issued skos:definition
+  "De datum waarop dit stuk formeel is uitgegeven."@nl ,
+  "The date on which this item was formally issued."@en .
+dct:identifier skos:definition
+  "Het kenmerk waaronder dit stuk bij de uitgever bekend is."@nl ,
+  "The reference under which the publisher registers this item."@en .
+# dct:source is de HERKOMST van de verklaring, niet haar grondslag (besluit
+# aug 2026). De wet waarop een regel rust staat sinds die scheiding op
+# dpv:hasLegalBasis (hieronder); dct:source wijst naar het stuk waaruit deze
+# verklaring is overgenomen — een besluit, een configuratiebestand, een
+# registerrij. Ze kunnen naast elkaar staan op dezelfde regel.
+dct:source skos:definition
+  "Het stuk waaruit deze verklaring is overgenomen: het besluit, het bestand of de registerrij waar zij vandaan komt — niet de wet waarop de regel rust."@nl ,
+  "The item this statement was taken from: the decision, file or register entry it originates in — not the law the rule rests on."@en .
+dct:title skos:definition
+  "De naam waaronder dit stuk bekendstaat."@nl ,
+  "The name by which this item is known."@en .
+dpv:hasLegalBasis skos:definition
+  "De wettelijke grondslag waarop deze regel rust: de wet, het artikel of het besluit dat de handeling toestaat of verplicht."@nl ,
+  "The legal basis this rule rests on: the law, article or decision that permits or requires the action."@en .
+prov:wasDerivedFrom skos:definition
+  "Het stuk waaruit dit is afgeleid — de herkomst, niet de kopie."@nl ,
+  "The item this one was derived from — its origin, not a copy of it."@en .
+prov:wasRevisionOf skos:definition
+  "De vorige versie van dit stuk, die door deze wordt vervangen."@nl ,
+  "The earlier version of this item, which this one replaces."@en .
+prov:hadPrimarySource skos:definition
+  "De plek in het brondocument waar dit vandaan komt: de vindplaats."@nl ,
+  "The place in the source document this comes from: where to find it."@en .
+dcat:accessURL skos:definition
+  "Het adres waarop de gegevens te benaderen zijn — een toegangspunt, geen bestand."@nl ,
+  "The address at which the data can be accessed — an access point, not a file."@en .
+skos:editorialNote skos:definition
+  "Een kanttekening voor redacteuren van deze term, niet voor de lezer van het beleid."@nl ,
+  "A note for editors of this term, not for readers of the policy."@en .
+
+
+# ############################################################################
+# ### BRON: data/labels-tooi.ttl   (2026-08-26)
+# ############################################################################
+
+# =============================================================================
+# Registerfragment TOOI — labels voor de register-URI's in de voorbeelden
+#
+# Register-URI's (partijen, organisaties) zijn in policies bewust opaak: het
+# label hoort niet in elke policy gedupliceerd te worden, maar komt uit het
+# register zelf (TOOI). Dit bestand is zo'n registerfragment: een kleine
+# companion-graaf die tooling naast de policies laadt, zodat viewers en
+# editors "gemeente Appingedam" kunnen tonen in plaats van "gem:gm0003".
+# De viewer geeft rdfs:label/dct:title uit de geladen graaf voorrang; de
+# editor-dropdowns nemen alles met een rdfs:label op.
+#
+# Labels overgenomen uit TOOI (identifier.overheid.nl, geraadpleegd
+# 2026-08-17); bij twijfel is het register leidend, niet dit bestand.
+# =============================================================================
+
+
+gem:gm0003
+    rdfs:label "gemeente Appingedam"@nl ;
+    skos:prefLabel "gemeente Appingedam"@nl ;
+    dct:source <https://identifier.overheid.nl/tooi/id/gemeente/gm0003> .
+
+gem:gm0014
+    rdfs:label "gemeente Groningen"@nl ;
+    skos:prefLabel "gemeente Groningen"@nl ;
+    dct:source <https://identifier.overheid.nl/tooi/id/gemeente/gm0014> .
+
+gem:gm0344
+    rdfs:label "gemeente Utrecht"@nl ;
+    skos:prefLabel "gemeente Utrecht"@nl ;
+    dct:source <https://identifier.overheid.nl/tooi/id/gemeente/gm0344> .
+
+oorg:oorg10103
+    rdfs:label "Rijksdienst voor Identiteitsgegevens"@nl ;
+    skos:prefLabel "Rijksdienst voor Identiteitsgegevens"@nl ;
+    skos:altLabel "RvIG"@nl ;
+    dct:source <https://identifier.overheid.nl/tooi/id/oorg/oorg10103> .
+
+min:mnre1034
+    rdfs:label "ministerie van Binnenlandse Zaken en Koninkrijksrelaties"@nl ;
+    skos:prefLabel "ministerie van Binnenlandse Zaken en Koninkrijksrelaties"@nl ;
+    skos:altLabel "BZK"@nl ;
+    dct:source <https://identifier.overheid.nl/tooi/id/ministerie/mnre1034> .
+
+# Provincies uit de BRO-simulatie (gederefereerd op identifier.overheid.nl,
+# 2026-08-18).
+<https://identifier.overheid.nl/tooi/id/provincie/pv26>
+    rdfs:label "provincie Utrecht"@nl ;
+    skos:prefLabel "provincie Utrecht"@nl ;
+    dct:source <https://identifier.overheid.nl/tooi/id/provincie/pv26> .
+
+<https://identifier.overheid.nl/tooi/id/provincie/pv28>
+    rdfs:label "provincie Zuid-Holland"@nl ;
+    skos:prefLabel "provincie Zuid-Holland"@nl ;
+    dct:source <https://identifier.overheid.nl/tooi/id/provincie/pv28> .
