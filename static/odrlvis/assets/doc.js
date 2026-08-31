@@ -306,12 +306,11 @@ function ensureInspOverlay() {
   const close = h('button', { class: 'insp-close', type: 'button', title: t('insp.close'), text: '✕' });
   close.addEventListener('click', () => closeInspect());
   const title = h('span', { class: 'insp-title', text: t('insp.title') });
-  // AL HET OVERIGE IN HET PANEEL: randlabels, de herkomst-regel, kopjes, de
-  // witruimte tussen de blokken. Zij hebben geen eigen element, dus valt de
-  // dubbelklik terug op het element waar het paneel op staat — precies wat het
-  // centrale vlak toont. Rijen met een eigen data-ref stoppen hun dubbelklik
-  // hierboven af (stopPropagation in panelDblclickOn), dus die komen hier niet.
-  panelDblclickOn(body, () => panelOwnTarget());
+  // GEEN GEDELEGEERDE DUBBELKLIK OP DE BODY (besluit eigenaar, aug 2026). Hij
+  // ving alles op wat geen rij is — randlabels, de herkomst-regel, kopjes,
+  // witruimte — en opende daar de graaf-inspecteur op het centrale element.
+  // Een dubbelklik NAAST een rij hoort niets te doen: er is geen element om
+  // heen te gaan, en van modus wisselen doet het paneel alleen op het ⌕.
   const overlay = h('aside', {
     class: 'insp-overlay', role: 'dialog', 'aria-label': t('insp.title'),
   }, [
@@ -2124,6 +2123,14 @@ function coverageRuleSummary(rule, nDuties = 0) {
 // beleidsset gelden — rechtstreeks gedekt, of via een voorwaarde van DEZE
 // regel. Zonder dit zou een bundel die de stelselplicht afdwingt daar in de
 // uitklap niets over zeggen, terwijl het precies de vraag van de lezer is.
+//
+// RECHTSTREEKS OF VIA — DAT VERSCHIL REIST MEE (aug 2026). `direct` zegt of
+// DEZE knoop de plicht zelf realiseert (prov:wasDerivedFrom van de knoop naar
+// de plicht). Zo niet, dan komt zij hier alleen binnen omdat een VOORWAARDE
+// van deze regel haar uitwerkt, en dan hoort de weergave die tussenstap te
+// tonen — zie fillFulfils. De vlag staat hier en niet in de weergave, zodat
+// "is dit een keten?" één antwoord heeft en niet uit een lege lijst hoeft te
+// worden afgeleid.
 function foldDuties(entries, nodeIri, scope) {
   const out = [];
   for (const { duty, from } of entries || []) {
@@ -2131,7 +2138,7 @@ function foldDuties(entries, nodeIri, scope) {
     const via = viaEntries(duty, scope)
       .filter((v) => v.artefacts.some((a) => a.iri === nodeIri));
     if (!direct && !via.length) continue;
-    out.push({ duty, from, via: direct ? [] : via });
+    out.push({ duty, from, direct, via: direct ? [] : via });
   }
   return out;
 }
@@ -2323,15 +2330,25 @@ function fillFulfils(desc, scope) {
     // keten leesbaar is; in één platte lijst viel het weg.
     const plichten = [];
     const notes = {};
-    for (const { duty, from, via } of foldDuties(desc.duties, desc.nodeIri, eigen)) {
+    for (const { duty, from, via, direct } of foldDuties(desc.duties, desc.nodeIri, eigen)) {
       if (!duty.iri || plichten.includes(duty.iri)) continue;
       plichten.push(duty.iri);
       const delen = [];
       if (from) delen.push(t('cov.dutyFrom', { parent: from }));
-      // Ontdubbelen: dezelfde voorwaarde kan via meer artefacten schakelen, en
-      // dan stond zij drie keer in dezelfde notitie.
-      for (const naam of [...new Set(via.map((v) => condWordOf(v.constraint)).filter(Boolean))]) {
-        delen.push(t('cov.dutyViaCond', { cond: naam }));
+      // DE TUSSENSTAP IS NIET OPTIONEEL (besluit eigenaar, aug 2026). Een
+      // plicht die deze knoop alleen VIA een voorwaarde invult, mag nooit als
+      // kale rij tussen de rechtstreekse invullingen staan: dan leest zij als
+      // een realisatieclaim die in de data niet staat \u2014 precies de klacht
+      // "het anker lijkt de doelbindingsplicht zelf te realiseren". Ontdubbelen
+      // hoort erbij: dezelfde voorwaarde kan via meer artefacten schakelen, en
+      // dan stond zij drie keer in dezelfde notitie. En kan de tussenstap niet
+      // bij naam worden genoemd (een voorwaarde zonder label, zonder grootheid
+      // en zonder zin), dan zegt de rij nog steeds D\u00c1T er een stap tussen zit:
+      // liever een naamloze tussenstap dan een stilzwijgend platgeslagen keten.
+      if (!direct) {
+        const namen = [...new Set(via.map((v) => condWordOf(v.constraint)).filter(Boolean))];
+        for (const naam of namen) delen.push(t('cov.dutyViaCond', { cond: naam }));
+        if (!namen.length) delen.push(t('cov.dutyViaCondAnon'));
       }
       if (delen.length) notes[duty.iri] = delen.join(' \u00b7 ');
     }
@@ -2573,34 +2590,26 @@ function fillRow(ref, { scope = null, current = false, note = null } = {}) {
     });
     acts.appendChild(jump);
     // ⌕ NAAST → EN ⚙ (aug 2026): dezelfde drie uitgangen als een rij in het
-    // document. Zonder de verkenknop had de dubbelklik hieronder geen
-    // zichtbare tegenhanger, en dat is precies wat een sneltoets onvindbaar
-    // maakt.
+    // document. Sinds de dubbelklik het PANEEL verzet (zie fillRowClicks) is
+    // het ⌕ de enige weg naar de graaf-inspecteur — dus moet hij op elke rij
+    // staan, ook op het centrale vlak hieronder.
     appendIf(acts, verkenBtn(fillVerkenTarget(desc)));
     appendIf(acts, fillGear(ref, { scope, status: fillStatus(desc) }));
     li.appendChild(acts);
     fillRowClicks(li, ref, scope, desc);
   } else {
-    // HET CENTRALE VLAK DOET DEZELFDE DUBBELKLIK. Het draagt geen →/⚙ (naar
-    // jezelf springen en het paneel op jezelf zetten doen niets), maar "verken
-    // dit element" is er wél zinnig — en zonder dit was het juist het grootste
-    // vlak in het paneel waar een dubbelklik niets deed.
-    panelDblclickOn(li, () => fillVerkenTarget(desc));
+    // HET CENTRALE VLAK: geen → en geen ⚙ (naar jezelf springen en het paneel
+    // op jezelf zetten doen niets), maar wél het ⌕ — "verken dit element" is
+    // hier zinnig, en het is de enige route naar de graaf-inspecteur. Een
+    // dubbelklik doet hier niets: hercentreren op jezelf is een no-op.
+    const acts = h('span', { class: 'fill-acts' });
+    const verken = verkenBtn(fillVerkenTarget(desc));
+    if (verken) { acts.appendChild(verken); li.appendChild(acts); }
   }
   // titleAsTip ALS LAATSTE: hij hangt eigen hover-listeners op de rij, en de
   // markering van bron <-> duplicaat (fillDuplicate) hoort de eerste te zijn
   // die op een mouseenter reageert.
   return titleAsTip(fillDuplicate(li, ref, scope));
-}
-
-// Het element waar het PANEEL zelf op staat — het centrale vlak. De terugval
-// voor een dubbelklik naast een rij. Alleen in de invulling-modus: in de
-// inspecteur-modus navigeer je met de klik-links in het bronfragment, en een
-// dubbelklik daar hoort niets extra's te doen.
-function panelOwnTarget() {
-  if (!state.panel || state.panel.mode !== 'fill' || !state.fillIndex) return null;
-  const desc = state.fillIndex.get(state.panel.ref);
-  return desc ? fillVerkenTarget(desc) : null;
 }
 
 // De knoop waar de ⌕ van een paneelrij naartoe gaat. Een voorwaarde mag blank
@@ -2613,13 +2622,15 @@ function fillVerkenTarget(desc) {
 }
 
 // KLIKKEN OP EEN PANEELRIJ (besluit eigenaar, aug 2026):
-//   ENKELKLIK  = het → : spring naar dit element in de hoofdweergave;
-//   DUBBELKLIK = het ⌕ : open de graaf-inspecteur erop.
-// De rij zelf doet dus precies wat haar knoppen doen. Tot deze slag deed een
-// enkelklik niets en opende een dubbelklik het ⚙ (het paneel op dit element);
-// dat laatste bleef onvindbaar én verplaatste het paneel onder je vinger,
-// terwijl de vraag bij het aanwijzen van een rij bijna altijd "waar staat dit?"
-// is. Het ⚙ houdt zijn eigen knop.
+//   ENKELKLIK  = het → : verzet het DOCUMENT naar dit element; het paneel
+//                blijft staan waar het staat;
+//   DUBBELKLIK = het ⚙ : verzet het PANEEL naar dit element (hercentreren).
+// Twee keer dezelfde beweging, één keer in het document en één keer in het
+// paneel — en allebei BINNEN de modus waarin het paneel staat. Een dubbelklik
+// wisselt dus nooit van invulling naar graaf-inspecteur; die stap zet je
+// bewust, met het ⌕. Tot deze slag opende de dubbelklik de inspecteur, en dan
+// stond je na een gebaar dat "ga hierheen" bedoelde ineens in een ander
+// paneel, met de keten kwijt.
 //
 // SELECTIE WINT, MAAR ALLEEN ALS ZIJ ER AL LAG. Een dubbelklik op een woord
 // selecteert dat woord — dus "is er een selectie?" op het moment van de
@@ -2644,32 +2655,33 @@ function fillRowClicks(li, ref, scope, desc) {
     if (e && e.preventDefault) e.preventDefault();
     gearGo(null, ref, { scope });
   });
-  panelDblclickOn(li, () => fillVerkenTarget(desc), () => selAtPress,
+  panelDblclickOn(li, () => fillGo(li, ref, scope), () => selAtPress,
     () => { selAtPress = false; });
 }
 
-// DE AFSPRAAK, IN ÉÉN REGEL: overal in het Invulling-paneel is enkelklik = →
-// (spring in het document; het paneel blijft staan) en dubbelklik = ⌕ (de
-// graaf-inspecteur op het element van de rij waar je op staat, of op het
-// centrale element als je naast een rij klikt); knoppen houden hun eigen klik.
+// DE AFSPRAAK, IN ÉÉN REGEL: in het Invulling-paneel is enkelklik op een rij
+// = → (het document gaat erheen, het paneel blijft staan) en dubbelklik = ⚙
+// (het paneel gaat erheen). Beide blijven binnen de modus van het paneel;
+// naast een rij — randlabel, herkomst-regel, witruimte, het centrale vlak —
+// doet een dubbelklik NIETS, want er is dan geen element om heen te gaan.
+// Knoppen houden hun eigen klik, en het ⌕ is de enige weg naar de
+// graaf-inspecteur.
 //
-// WAT ER MIS WAS. De dubbelklik hing uitsluitend aan de rijen van de ↑- en
-// ↓-blokken. Klikte je op het centrale grijze vlak, een randlabel, de
-// herkomst-regel of een rij onder "Niet afgedwongen", dan gebeurde er niets —
-// en op een rij gebeurde er juist te véél, want de enkelklik-sprong vuurde er
-// nog twee keer bij. Vandaar "soms": het hing af van waar in het paneel je
-// toevallig landde. Nu geldt bovenstaande regel voor het hele paneel: elke rij
-// met een data-ref handelt zichzelf af, en één gedelegeerde luisteraar op de
-// paneelbody vangt al het overige af (zie ensureInspOverlay).
-function panelDblclickOn(node, doelFn, selAtPress, resetSel) {
+// WAT ER MIS WAS. De dubbelklik opende de graaf-inspecteur: één gebaar dat
+// "ga hierheen" bedoelt, wisselde het hele paneel van soort. Erger nog: dat
+// gold ook voor het centrale vlak en (via een gedelegeerde luisteraar op de
+// paneelbody) voor alles eromheen, dus je kon de invulling-weergave kwijtraken
+// door naast een rij te dubbelklikken. Beide zijn weg; wie de graaf in wil,
+// klikt het ⌕ van de rij (of van het centrale vlak, dat er sinds deze slag
+// zelf één draagt).
+function panelDblclickOn(node, actie, selAtPress, resetSel) {
   node.addEventListener('dblclick', (e) => {
     if (e && e.preventDefault) e.preventDefault();
     if (e && e.stopPropagation) e.stopPropagation();
     if (isButtonTarget(e)) return;
     if (selAtPress && selAtPress()) { if (resetSel) resetSel(); return; }
     clearSelection();
-    const doel = doelFn();
-    if (doel) openInspect(doel);
+    actie();
   });
 }
 

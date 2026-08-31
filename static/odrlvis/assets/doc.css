@@ -1468,8 +1468,12 @@ body.panel-open .ref-edge { right: var(--panel-w); }
   .offer-title, .agr-title, .agr-assignee, .page-sec-title, .set-index-count,
   .member-name, .coll-name, .herkomst, .doc-ref, .vnav-date, .cov-count,
   .artifact-title, .tree-note, .geerfd, .muted) {
-  -webkit-user-select: text; user-select: text; cursor: text;
+  -webkit-user-select: text; user-select: text;
 }
+/* De tekst in een kopregel is te selecteren, maar de kop blijft in de eerste
+   plaats klikbaar: de cursor blijft dus de klik-hand van de <summary> en wordt
+   geen tekstbalkje. (Selecteren werkt gewoon; alleen de cursor verraadt het
+   niet.) */
 /* Dezelfde dragers buiten een kopregel (rijen in de body, de dekkings- en
    paneelrijen, de velden van het artefactformulier). Geen `cursor: text`:
    daar is de gewone tekstcursor er al. */

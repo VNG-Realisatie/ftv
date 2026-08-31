@@ -370,6 +370,9 @@ const STRINGS = {
     'cov.subDuties': 'Verplichtingen:',
     'cov.dutyFrom': 'overgenomen van {parent}',
     'cov.dutyViaCond': 'via voorwaarde “{cond}”',
+    // Terugval als de tussenstap geen naam heeft: de keten blijft zichtbaar,
+    // ook zonder dat de voorwaarde bij naam kan worden genoemd.
+    'cov.dutyViaCondAnon': 'via een voorwaarde',
     'cov.enforcedHead': 'Afgedwongen voorwaarden',
     'cov.notEnforcedHead': 'Niet afgedwongen',
     'cov.enforced': 'technisch afgedwongen',
@@ -856,6 +859,7 @@ const STRINGS = {
     'cov.subDuties': 'Obligations:',
     'cov.dutyFrom': 'inherited from {parent}',
     'cov.dutyViaCond': 'via condition “{cond}”',
+    'cov.dutyViaCondAnon': 'via a condition',
     'cov.enforcedHead': 'Enforced conditions',
     'cov.notEnforcedHead': 'Not enforced',
     'cov.enforced': 'technically enforced',
