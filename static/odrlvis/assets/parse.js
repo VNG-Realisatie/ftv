@@ -1055,8 +1055,12 @@ export function prunePrefixes(ttl) {
   return header + body.replace(/^\n+/, '');
 }
 
-// --- Graaf-inspecteur: gedeelde, DOM-vrije logica ---------------------------
-// (gebruikt door assets/inspect.js in beide weergaven)
+// --- Graafnavigatie: gedeelde, DOM-vrije logica ----------------------------
+// Sinds aug 2026 heeft de UI geen graaf-inspecteur meer (inspectie gebeurt in
+// een generieke RDF-verkenner, zie assets/verken.js). Deze functies blijven
+// staan als algemene graafhulpjes: nodeSummary/subjectTurtle worden nog voor
+// serialisatie en export gebruikt, incomingRefs/outgoingRefs zijn de
+// DOM-vrije, geteste beschrijving van de twee richtingen van een knoop.
 
 // Turtle-token -> volle IRI: "<https://…>" of "prefix:local" (bekende
 // prefixes, statisch én brongedreven). Al het andere (literals, keywords,
@@ -1077,7 +1081,7 @@ export function isGraphSubject(store, iri) {
   return !!iri && store.getQuads(namedNode(iri), null, null, null).length > 0;
 }
 
-// Kopgegevens van een node voor de inspecteur (label + curie + typen).
+// Kopgegevens van een node (label + curie + typen).
 export function nodeSummary(store, term) {
   const t = typeof term === 'string' ? namedNode(term) : term;
   return {
@@ -1122,7 +1126,7 @@ export function incomingRefs(store, term) {
 
 // Goedkope telling van de inkomende verwijzingen (gededupliceerd per
 // (subject, predicaat), zelfverwijzingen uitgezonderd) — voor de fold-out-kop
-// van de inspecteur, zónder labels op te bouwen.
+// van een knoop, zónder labels op te bouwen.
 export function incomingRefCount(store, term) {
   const t = typeof term === 'string' ? namedNode(term) : term;
   const seen = new Set();
@@ -1177,6 +1181,37 @@ export function outgoingRefCount(store, term) {
     seen.add(q.predicate.value + '|' + q.object.termType + ':' + q.object.value);
   }
   return seen.size;
+}
+
+// De WAARDEN van een knoop: zijn literal-objecten, per predicaat. De twee
+// richtingsfuncties hierboven laten literals bewust weg — je kunt er niet
+// heen navigeren — maar voor een leesbare weergave van één knoop zijn ze
+// juist de inhoud ("wat zegt deze knoop over zichzelf"). Gededupliceerd per
+// (predicaat, waarde, taal, datatype); de volgorde is die van de bron.
+export function literalValues(store, term) {
+  const t = typeof term === 'string' ? namedNode(term) : term;
+  const seen = new Set();
+  const out = [];
+  for (const q of store.getQuads(t, null, null, null)) {
+    if (q.object.termType !== 'Literal') continue;
+    const dt = (q.object.datatype && q.object.datatype.value) || null;
+    const key = q.predicate.value + '|' + q.object.value + '|'
+      + (q.object.language || '') + '|' + (dt || '');
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push({
+      value: q.object.value,
+      lang: q.object.language || null,
+      datatype: dt,
+      predicate: {
+        iri: q.predicate.value,
+        curie: curie(q.predicate.value),
+        label: labelFor(store, namedNode(q.predicate.value)),
+        desc: descriptionFor(store, q.predicate.value),
+      },
+    });
+  }
+  return out;
 }
 
 // --- Modelopbouw ------------------------------------------------------------
@@ -1863,7 +1898,7 @@ function readPermission(store, permTerm, targetPreds, caches) {
         iri: t.value, curie: curie(t.value), label: labelFor(store, t),
         desc: descOfTerm(store, t),
         // Anonieme collecties (DOME zet de hele collectie als blanke knoop in
-        // de regel) hebben geen bruikbare IRI: de inspecteur moet dan op de
+        // de regel) hebben geen bruikbare IRI: de weergave moet dan op de
         // TERM aangesproken worden, niet op t.value (een intern parser-id).
         anon: t.termType !== 'NamedNode', term: t,
         ...collectionRef(store, t),
@@ -1979,7 +2014,7 @@ function isTechnicalMeasure(store, cTerm) {
 }
 
 // Draagt de voorwaarde de OPERATOR van het profiel? Alleen dan leest haar rij
-// als de vaste zin "het verwerkingsverzoek moet voldoen aan ‹artefact›"; een
+// als de vaste zin "het verwerkingsverzoek voldoet aan beleid ‹artefact›"; een
 // technische borging in een andere vorm toont gewoon haar eigen chips.
 function isConformsOperator(store, cTerm) {
   const op = obj(store, cTerm, ODRL + 'operator');
@@ -2226,7 +2261,7 @@ function collectionMembers(store, collTerm) {
 //     cykel, en beide takken mogen hem tonen.
 //  2. DIEPTE-LIMIET. Ook zonder cykel kan een keten lang zijn. Onder
 //     MEMBER_TREE_MAX_DEPTH niveaus stopt de boom en verwijst hij door naar de
-//     graaf-inspecteur ("verder verkennen"), die geen limiet kent. Vier
+//     RDF-verkenner ("verder verkennen"), die geen limiet kent. Vier
 //     niveaus dekt het archiefvoorbeeld (archief/serie/dossier/stuk) en het
 //     BRP-informatiemodel (categorie/groep/rubriek) ruim; dieper wordt een
 //     ingesprongen lijst toch onleesbaar.
@@ -2289,7 +2324,7 @@ const ANCESTRY_MAX_CHAIN = 8;
 // categorie), binnenste = de DIRECTE ouder (de groep). Vallen die samen — een
 // keten van één — dan blijft het bij één kop. Een derde niveau zou de leden
 // zo ver naar rechts duwen dat de lijst zelf niet meer leest; de rest van de
-// keten is één klik verderop in de graaf-inspecteur.
+// keten is één klik verderop in de RDF-verkenner.
 export const MEMBER_ANCESTRY_HEAD_LEVELS = 2;
 
 // Alle ouders van een knoop, in BEIDE lidmaatschapsrichtingen — spiegelbeeld

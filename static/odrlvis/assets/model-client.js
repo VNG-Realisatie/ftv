@@ -97,8 +97,8 @@ export function hydrateInto(store, { termText, termOffsets, quadTable }, { chunk
 }
 
 // Een model uit de worker draagt kale { id }-handles waar op de hoofddraad
-// N3-termen stonden (structured clone verliest het prototype). De inspecteur
-// is de enige plek die echte termen nodig heeft: normaliseer daar.
+// N3-termen stonden (structured clone verliest het prototype). Waar echte
+// termen nodig zijn (de collectie-boom), normaliseer je ermee.
 export function asTerm(termOrIri) {
   if (termOrIri && typeof termOrIri === 'object' && !termOrIri.termType
       && typeof termOrIri.id === 'string') {

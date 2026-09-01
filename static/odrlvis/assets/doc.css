@@ -14,12 +14,6 @@
   --border: #e2e7ec;
   --accent: #1c4e80;
   --accent-soft: #e8f0f8;
-  --code-bg: #f6f8fa;
-  --code-fg: #24313f;
-  /* Turtle-syntaxpalet (licht) */
-  --tok-prefix: #205e9e; --tok-iri: #187a58; --tok-pname: #9a5b17;
-  --tok-string: #a1467e; --tok-kw: #6b4fa1; --tok-comment: #7a8694;
-  --tok-punct: #5b6774; --tok-num: #b06a10;
   /* Regel-palet: ÉÉN vaste kleur per REGELTYPE. De eerdere deterministische
      kleur per ACTIE (Swagger-methodekleur-idee) is vervallen: bij tientallen
      acties werd het een regenboog waarin de kleur niets meer betekende. Nu
@@ -45,7 +39,7 @@
   /* Skeleton-placeholders: grondtoon + de lichtstreep van de shimmer. */
   --skel-bg: #dee5ec;
   --skel-hi: #f1f5f8;
-  /* Breedte van het rechterpaneel (inspecteur/invulling). Eén variabele,
+  /* Breedte van het rechterpaneel (invulling). Eén variabele,
      want de pagina moet er precies evenveel voor inschuiven. */
   --panel-w: 440px;
   /* Het vlak van het CENTRALE element in het invulling-paneel: duidelijk
@@ -57,7 +51,6 @@
     --bg: #12161c; --bg-alt: #1a2029; --bg-head: #151b22;
     --fg: #dbe2ea; --fg-soft: #93a0ae; --border: #262e38;
     --accent: #6ea8dc; --accent-soft: #1c2938;
-    --code-bg: #0d1117; --code-fg: #c9d3de;
     --rule-toestemming: #63b97f;
     --cduty: #8b98a8; --verbod: #e0655d;
     --kind-agreement: #63b97f; --kind-coll: #a78bfa;
@@ -65,10 +58,6 @@
     /* In donkere modus juist LICHTER dan het paneel — hetzelfde principe,
        omgekeerde richting. */
     --panel-cur: #222a34;
-    /* Turtle-syntaxpalet (donker) */
-    --tok-prefix: #7fa8d9; --tok-iri: #6cc6a8; --tok-pname: #d7a06b;
-    --tok-string: #c98fb0; --tok-kw: #b39ddb; --tok-comment: #667080;
-    --tok-punct: #8b98a8; --tok-num: #e0a35f;
     --skel-bg: #232b35; --skel-hi: #303a47;
   }
 }
@@ -532,16 +521,6 @@ ul.constraints .c-chips { flex: 1 1 auto; }
   margin: 1px 4px 1px 0; background: var(--bg); border: 1px solid var(--border);
 }
 
-/* Bronfragment */
-.src-block { margin-top: 10px; }
-.src-block > summary { cursor: pointer; user-select: none; font-size: 12.5px; color: var(--fg-soft); }
-.src-block pre.ttl {
-  margin: 6px 0 0; padding: 10px 12px; border-radius: 6px;
-  background: var(--code-bg); color: var(--code-fg);
-  font-family: var(--mono); font-size: 12px; line-height: 1.5;
-  overflow-x: auto;
-}
-
 /* Het artefactformulier (uitklap van een conformsToPolicy-rij). De sectie
    "Machine-uitvoerbaar beleid" met dezelfde velden als losse kaart is
    vervallen — zie doc.js/artifactForm. De velden zelf komen sinds aug 2026 uit
@@ -820,15 +799,18 @@ ul.constraints .chip { margin-left: auto; flex: 0 0 auto; }
 @media (prefers-color-scheme: dark) { .kind-pill.set.request { color: var(--cduty); } }
 
 /* Lange literals: afgekapte weergave met "toon meer"-knop (weergave-kwestie;
-   het model en het bronfragment blijven volledig). */
+   het model blijft volledig). */
 .longtext { white-space: pre-wrap; overflow-wrap: anywhere; }
 button.toggle-more {
   border: none; background: none; padding: 0; font: inherit; font-size: 12px;
   color: var(--accent, #4a90d9); cursor: pointer; text-decoration: underline;
 }
 
-/* Verken-knop: ronde vergrootglas-affordance (chip-diameter, geen tekst) op
-   node-achtige elementen; opent de graaf-inspecteur als zijpaneel-overlay. */
+/* ⌕: ronde vergrootglas-affordance (chip-diameter, geen tekst) op node-achtige
+   elementen. Sinds aug 2026 een LINK en geen knop die een paneel opent; sinds
+   sep 2026 wijst hij naar de VERKENNER-STAND van deze pagina zelf
+   (?verken=<IRI>, assets/verken-view.js) in plaats van naar een extern
+   tabblad — de vorm is bewust ongewijzigd gebleven. */
 .verken-btn {
   display: inline-flex; align-items: center; justify-content: center;
   width: 21px; height: 21px; padding: 0; margin-left: 6px; flex: 0 0 auto;
@@ -836,14 +818,14 @@ button.toggle-more {
   color: var(--fg-soft); cursor: pointer; font: inherit; font-size: 15.5px;
   line-height: 1; vertical-align: middle;
 }
+.verken-btn { text-decoration: none; }
 .verken-btn:hover { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); }
 /* Rechtsboven in kaart-kopregels (artefacten) en op de titelregel. */
 .artifact-title { display: flex; align-items: center; gap: 8px; }
 .artifact-title .verken-btn { margin-left: auto; }
 .title-row .verken-btn { margin-left: auto; }
 
-/* Rechterpaneel (graaf-inspecteur ⌕ én invulling ⚙; sluiten via ✕ of Esc); de
-   breadcrumb blijft staan terwijl er genavigeerd wordt.
+/* Rechterpaneel (invulling ⚙; sluiten via ✕ of Esc).
    HET DUWT, HET DEKT NIET AF (besluit eigenaar, aug 2026). Als overlay lag het
    paneel over precies dat deel van het document waar je het vandaan opende:
    de invulling lezen én de regel erbij zien kon niet tegelijk. Nu krijgt de
@@ -882,7 +864,7 @@ body.panel-open { margin-right: var(--panel-w); }
 .insp-body { overflow: auto; padding: 14px 18px 40px; flex: 1 1 auto; font-size: 13px; }
 
 /* --- De technische view: het invulling-paneel ------------------------------
-   Dezelfde overlay als de graaf-inspecteur, andere inhoud. De keten leest van
+   De keten leest van
    BOVEN NAAR BENEDEN, van technisch naar juridisch: ↑ wat dit element uitwerkt,
    dan het element zelf, dan ↓ wat het invult. Bewust GEEN twee kolommen
    (besluit eigenaar): het paneel is daarvoor te smal, en naast elkaar verliest
@@ -971,27 +953,6 @@ ul.fill-list { margin: 0; padding: 0; list-style: none;
   .fill-edge.is-foldable::after { transition: none; }
 }
 
-/* --- DE GRAAF-INSPECTEUR IN DEZELFDE KETEN-LAYOUT (aug 2026) --------------
-   Wat het Invulling-paneel doet met "wat vult dit in / wat vult dit", doet de
-   inspecteur met de twee richtingen van de graaf: de knoop waar je staat is
-   hetzelfde volle-breedte grijze vlak, met INKOMEND (subject → dit element)
-   erboven en UITGAAND eronder, en het randlabel op de rand ertussen. Eén
-   visuele taal voor beide panelen, dus dezelfde klassen: .insp-cur hergebruikt
-   de vorm van .fill-cur, de randlabels zijn letterlijk .fill-edge. */
-.insp-cur {
-  position: relative; margin: 26px -18px; padding: 14px 18px 12px;
-  background: var(--panel-cur); border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-/* Binnen het vlak begint het bronfragment direct: de ruime bovenmarge van
-   .insp-sec zou het label op de rand raken. */
-.insp-cur .insp-sec { margin-top: 10px; }
-.insp-cur .insp-node-head { margin: 0; }
-.insp-dir { margin: 0; }
-.insp-dir.insp-in { margin-bottom: 2px; }
-.insp-dir.insp-out { margin-top: 4px; }
-/* De fold-out draagt haar kop niet meer zelf: die staat op het randlabel. */
-.insp-fold-bare > summary { display: none; }
 /* DE OVERGANG bij het verzetten van het paneel (fillFlip in doc.js): de
    gekozen rij schuift van haar oude plek naar het centrale vlak. De transitie
    zet JavaScript zelf op de node (transform, ~200ms); hier staat alleen de
@@ -1014,21 +975,9 @@ ul.fill-list { margin: 0; padding: 0; list-style: none;
   padding: 0 4px; border-radius: 4px; }
 .fill-jump:hover { color: var(--accent); background: var(--accent-soft); }
 .fill-off ul.cov-conds { padding-left: 12px; }
-.insp-crumbs { font-size: 12.5px; margin-bottom: 10px; line-height: 1.7; color: var(--fg-soft); }
-.crumb { cursor: pointer; color: var(--accent); text-decoration: underline dotted; }
-.crumb.current { color: var(--fg); font-weight: 600; text-decoration: none; cursor: default; }
-.insp-sep { color: var(--fg-soft); }
-.insp-label-row { display: flex; align-items: flex-start; gap: 6px; }
-.insp-label { font-weight: 700; font-size: 15px; flex: 1 1 auto; min-width: 0; }
-.insp-curie { font-size: 12px; color: var(--fg-soft); overflow-wrap: anywhere; }
-.insp-types { font-size: 11.5px; }
-/* "Toon in de weergave": spiegelbeeld van de verken-knop (terug naar de UI). */
-.toon-btn { margin-left: 0; }
-.insp-reveal-msg { font-size: 12px; margin: 6px 0 0; }
-.insp-reveal-msg[hidden] { display: none; }
 
-/* Korte oplichting van het element waar de terugsprong uit de inspecteur
-   landt (kaart, regel-rij of een los gestempeld element). */
+/* Korte oplichting van het element waar een sprong binnen de pagina landt
+   (kaart, regel-rij of een los gestempeld element). */
 @keyframes ui-flash-pulse {
   0%   { box-shadow: 0 0 0 3px var(--accent); }
   70%  { box-shadow: 0 0 0 3px var(--accent-soft); }
@@ -1036,45 +985,6 @@ ul.fill-list { margin: 0; padding: 0; list-style: none;
 }
 .ui-flash { animation: ui-flash-pulse 1.6s ease-out; border-radius: 9px; }
 @media (prefers-reduced-motion: reduce) { .ui-flash { animation: none; outline: 2px solid var(--accent); } }
-.insp-sec { margin: 16px 0 6px; font-size: 11px; font-weight: 700;
-  text-transform: uppercase; letter-spacing: .6px; color: var(--fg-soft);
-  border-bottom: 1px solid var(--border); padding-bottom: 3px; }
-.insp-in-list { list-style: none; margin: 0; padding: 0; }
-.insp-in { cursor: pointer; padding: 4px 6px; border-radius: 5px; }
-.insp-in:hover { background: var(--accent-soft); }
-.insp-in-subj { text-decoration: underline dotted; color: var(--accent); }
-.insp-in-pred { font-size: 11.5px; }
-.insp-none { font-size: 12.5px; }
-.insp-ttl {
-  margin: 6px 0 0; padding: 10px 12px; border-radius: 6px;
-  background: var(--code-bg); color: var(--code-fg);
-  font-family: var(--mono); font-size: 12px; line-height: 1.5; overflow-x: auto;
-}
-.insp-ttl code { white-space: pre; display: block; }
-/* Inspecteur-fold-outs: "Verwijst naar (n)" / "Verwezen vanuit (n)" —
-   ingeklapt bij render, lijst lazy + gechunkt (zie renderInspector). */
-.insp-fold { display: block; margin: 10px 0; padding: 5px 10px;
-  border: 1px solid var(--border); border-radius: 8px; background: var(--bg-alt); }
-.insp-filter { display: block; width: 90%; margin: 8px 0 4px; }
-.insp-fold .ref-filter { font: inherit; font-size: 13px; padding: 5px 10px;
-  border: 1px solid var(--border); border-radius: 7px;
-  background: var(--bg); color: var(--fg); }
-.insp-fold .ref-filter:focus { outline: 2px solid var(--accent-soft); border-color: var(--accent); }
-.insp-fold .ref-more { display: block; margin: 8px auto 4px; }
-.insp-fold .ref-more[hidden] { display: none; }
-
-/* Turtle-highlightpalet (gedeelde highlighter uit assets/inspect.js) */
-.tok-prefix { color: var(--tok-prefix); }
-.tok-iri { color: var(--tok-iri); }
-.tok-pname { color: var(--tok-pname); }
-.tok-string { color: var(--tok-string); }
-.tok-kw { color: var(--tok-kw); font-weight: 600; }
-.tok-comment { color: var(--tok-comment); font-style: italic; }
-.tok-punct { color: var(--tok-punct); }
-.tok-num { color: var(--tok-num); }
-.tok-link { text-decoration: underline dotted; cursor: pointer; }
-.tok-link:hover { text-decoration-style: solid; }
-
 /* Foutmelding per bron in de bronnenlijst (o.a. RDF/XML niet ondersteund) */
 .sources-list li.src-error-li a, .sources-list li.src-error-li span:first-child { color: var(--verbod); }
 .sources-list .src-err { font-family: var(--sans); }
@@ -1260,13 +1170,12 @@ ul.c-group-items { margin: 2px 0 2px 4px; padding: 0 0 0 14px; list-style: none;
 .c-fold { flex: 1 1 100%; }
 .c-fold-body { margin-top: 4px; }
 
-/* Fold-out-koptekst (inspecteur, ledenlijst, voorwaarde-fold) */
+/* Fold-out-koptekst (ledenlijst, voorwaarde-fold) */
 .vl-summary { font-size: 12px; cursor: pointer; list-style: none; display: flex;
   align-items: center; gap: 6px; padding: 2px 0; user-select: none; }
 .vl-summary::-webkit-details-marker { display: none; }
 /* Zelfde chevron-rechts-principe als op de kaarten, één maat kleiner. De span
-   staat in de DOM nog vóór de tekst — assets/inspect.js is gedeeld met de
-   drie-panelen-weergave en blijft daar ongemoeid — dus flex `order` en
+   staat in de DOM nog vóór de tekst, dus flex `order` en
    `margin-left:auto` zetten hem hier visueel achteraan. De tekstglyph zelf
    wordt weggeschaald (font-size 0); de vorm komt uit hetzelfde ::before-recept
    als .chev. */
@@ -1462,7 +1371,7 @@ body.panel-open .ref-edge { right: var(--panel-w); }
    het hier toch expliciet, zodat een nieuwe `user-select: none` op een ouder
    ze niet stilletjes meeneemt. */
 :where(.op-summary, .offer-summary, .agr-summary, .page-sec-summary,
-       .member-summary, .vl-summary, .src-block > summary) :where(
+       .member-summary, .vl-summary) :where(
   .method, .kind-pill, .chip, .vchip, .c-slot, .c-chips, .c-note, .sentence,
   .op-name, .op-title, .op-sum, .op-path, .uid, .mono, .hash, .target-tag,
   .offer-title, .agr-title, .agr-assignee, .page-sec-title, .set-index-count,
@@ -1501,16 +1410,7 @@ body.panel-open .ref-edge { right: var(--panel-w); }
 }
 @media (prefers-reduced-motion: reduce) { .is-ref-pulse { animation: none; } }
 
-/* INGEKLAPT = GEEN VLAK (correctie aug 2026). Een richtingblok draagt zijn kop
-   niet meer zelf (die staat op het randlabel), dus een dichtgeklapte fold-out
-   liet een leeg omrand vakje achter: rand, padding en marge zonder inhoud. Dat
-   las als "hier is niets" in plaats van "dit staat dicht". Dicht neemt daarom
-   GEEN ruimte in — het randlabel met zijn telling en chevron is het hele
-   signaal, en dat zegt precies wat er te halen valt en dat het dicht staat. */
-.insp-fold-bare:not([open]) {
-  margin: 0; padding: 0; border: 0; background: none;
-}
-/* En de chevron mag gezien worden: hij is de enige aanwijzing dat het label
+/* De chevron mag gezien worden: hij is de enige aanwijzing dat het label
    een knop is. Iets groter dan een voetnoot, en in de kleur van het label
    zelf in plaats van nog een tint gedempter. */
 .fill-edge.is-foldable::after { font-size: 11px; color: inherit; }
@@ -1520,8 +1420,8 @@ body.panel-open .ref-edge { right: var(--panel-w); }
    dct:description, rdfs:comment) krijgt twee dingen: een fijne gestippelde
    onderstreping als affordance, en een paneeltje op verlengde hover of bij
    focus. Zie assets/tooltip.js voor het gedrag; hier staat alleen de vorm.
-   Zelfde blok in assets/styles.css — de graaf-inspecteur wordt door beide
-   pagina's gebruikt, dus beide stylesheets moeten hem kennen. */
+   Zelfde blok in assets/styles.css — de tooltip wordt door beide pagina's
+   gebruikt, dus beide stylesheets moeten hem kennen. */
 /* GEEN ZICHTBARE AANDUIDING VOORAF (besluit eigenaar, aug 2026). Een
    gestippelde onderstreping op elke gedefinieerde term maakte de pagina
    streperig — en een uitleg is navraag, geen waarschuwing. De tooltip komt
@@ -1560,4 +1460,89 @@ body.panel-open .ref-edge { right: var(--panel-w); }
 @media (prefers-reduced-motion: reduce) {
   .term-tip { transition: none; transform: none; }
   .term-tip.is-above:not(.is-open) { transform: none; }
+}
+
+/* --- DE VERKENNER: de tweede full-page stand van deze pagina ---------------
+   ?verken=<IRI> zet #doc-main op hidden en dit <main> ervoor in de plaats.
+   NOOIT ALLEBEI: dat de machineleesbare graaf niet naast de mensleesbare
+   weergave mag staan, is de dragende eis achter deze vorm — vandaar één
+   volledige kolom en geen paneel.
+
+   De VISUELE TAAL is die van het Invulling-paneel: de knoop waar je staat is
+   een grijs vlak over de volle breedte, met de twee richtingen als blokken
+   erboven (wat naar hem verwijst) en eronder (waar hij zelf naar verwijst) en
+   het randlabel ÓP de rand van dat vlak. Zo leest een stap door de graaf
+   hetzelfde als een stap door de keten. De randlabels hergebruiken daarom
+   letterlijk .fill-edge (inclusief de chevron uit CSS). */
+.verken-main[hidden] { display: none; }
+.verken { max-width: 780px; margin: 0 auto; }
+
+/* Het centrale vlak: van kolomrand tot kolomrand, met ruime buitenmarge zodat
+   de twee randlabels er los van de blokken op kunnen liggen. */
+.verken-cur {
+  position: relative; margin: 30px 0; padding: 16px 18px 14px;
+  background: var(--panel-cur); border: 1px solid var(--border); border-radius: 10px;
+}
+.verken-edge { left: 16px; }
+.verken-title-row { display: flex; align-items: baseline; gap: 12px; }
+.verken-label {
+  font-size: 20px; font-weight: 700; margin: 0; line-height: 1.3;
+  overflow-wrap: anywhere; flex: 1 1 auto;
+}
+.verken-back { flex: 0 0 auto; text-decoration: none; white-space: nowrap; }
+.verken-types { font-size: 12px; margin-top: 4px; }
+.verken-curie { margin-top: 2px; overflow-wrap: anywhere; }
+.verken-status { font-size: 12.5px; margin: 8px 0 0; }
+.verken-err { color: var(--verbod, #b23); }
+.verken-none { font-size: 12.5px; margin: 10px 0 0; }
+
+/* De WAARDEN van de knoop (zijn literals): label/waarde-rijen, twee kolommen
+   zolang er ruimte is. Dit is wat de knoop over zichzelf zegt. */
+.verken-values {
+  display: grid; grid-template-columns: minmax(120px, 12em) 1fr; gap: 4px 14px;
+  margin: 12px 0 0; font-size: 13px;
+}
+.verken-val-key { color: var(--fg-soft); overflow-wrap: anywhere; }
+.verken-val { margin: 0; overflow-wrap: anywhere; white-space: pre-wrap; }
+@media (max-width: 640px) {
+  .verken-values { grid-template-columns: 1fr; gap: 0 0; }
+  .verken-val { margin: 0 0 8px; }
+}
+
+/* De uitgang naar de EXTERNE client (Comunica): een bescheiden tekstlink
+   onderin het vlak, niet een tweede knop naast de titel. Het is een
+   hulpmiddel in een ander tabblad, geen tweede weergave. */
+.verken-tools { margin: 12px 0 0; font-size: 12.5px; }
+.verken-sparql { color: var(--fg-soft); }
+.verken-sparql:hover { color: var(--accent); }
+
+/* De twee richtingblokken. De <details> zelf draagt geen eigen kop meer — het
+   randlabel op het vlak klapt hem open en dicht — maar een <details> zonder
+   summary krijgt van de browser zijn eigen "Details"-regel terug, dus staat
+   hij er wel en verbergt CSS hem. */
+/* De rijen buiten het vlak lijnen uit op de binnenkant ervan: 10px hier plus
+   de 8px padding van de rij zelf is de 18px van .verken-cur. */
+.verken-dir { margin: 0; padding: 0 10px; }
+.verken-fold > summary.verken-fold-sum { display: none; }
+.verken-ref-list { margin: 0; padding: 0; }
+.verken-ref {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px;
+  padding: 5px 8px; border-radius: 6px; font-size: 13px;
+}
+.verken-ref:hover { background: var(--bg-alt); }
+.verken-ref-link {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px;
+  color: inherit; text-decoration: none; flex: 1 1 auto; min-width: 0;
+}
+.verken-ref-link:hover .verken-ref-name { color: var(--accent); text-decoration: underline; }
+.verken-ref-name { overflow-wrap: anywhere; }
+.verken-ref-pred { font-size: 11.5px; }
+/* Een blanke knoop is geen link: hij heeft buiten dit document geen adres.
+   Gedempt, zodat de rij eerlijk zegt dat er niets achter zit. */
+.verken-ref-anon .verken-ref-name { color: var(--fg-soft); }
+.verken-filter {
+  display: block; width: min(340px, 100%); margin: 6px 0 8px;
+  font: inherit; font-size: 13px; padding: 6px 10px;
+  border: 1px solid var(--border); border-radius: 7px;
+  background: var(--bg); color: var(--fg);
 }

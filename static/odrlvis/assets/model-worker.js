@@ -11,9 +11,8 @@
 // Het model gaat vóór de graaf de deur uit zodat de eerste render niet op de
 // (relatief dure) graaf-overdracht wacht. De worker-grens is schoon: het
 // model/nav is structured-clone-baar (N3-termen verliezen hun prototype en
-// reizen als kale { id }-handles; de enige consument daarvan op de hoofddraad
-// — de graaf-inspecteur — hydrateert ze via termFromId, zie asTerm in
-// model-client.js). De graaf zelf gaat als termtabel (één string + offsets,
+// reizen als kale { id }-handles; wie op de hoofddraad een echte term nodig
+// heeft, hydrateert ze via termFromId, zie asTerm in model-client.js). De graaf zelf gaat als termtabel (één string + offsets,
 // goedkope clone) + Uint32Array-quadtabel (transferable) over, waaruit de
 // hoofddraad zijn eigen N3.Store in stukjes opbouwt (hydrateInto).
 import { loadSources, scopeNavToSet, knownSourcePrefixes } from './parse.js';

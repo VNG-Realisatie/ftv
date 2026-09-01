@@ -26,11 +26,25 @@ import {
 import { t, num, setLang, getLang, normalizeLang, LANGS } from './i18n.js';
 import {
   sparqlSelect, sparqlConstruct, policyListQuery, policyListFirstQuery, policyDetailQuery,
-  nodeDetailQuery, listSkeletonTurtle, remoteIncoming as sparqlRemoteIncoming,
+  listSkeletonTurtle,
   containerListQuery, containerSkeletonTurtle, collectionLevelQuery,
-  decomposedIndexRows, isEndpointTimeout,
+  decomposedIndexRows, isEndpointTimeout, nodeRefsQuery,
 } from './sparql.js';
-import { createInspector, renderInspector, verkenButton } from './inspect.js';
+// TWEE STANDEN, NOOIT TEGELIJK (sep 2026, besluit eigenaar). De weergave van
+// deze pagina is mensleesbaar; de machineleesbare graaf mag er niet naast
+// staan — geen paneel, geen tweede kolom. Het ⌕ zet de pagina daarom in de
+// VERKENNER-STAND: #doc-main gaat op hidden en #verken-main komt ervoor in de
+// plaats. Dat gebeurt zonder herladen (de bronnen blijven staan) en met
+// pushState, zodat de URL (?verken=<IRI>) deelbaar is en browser-terug/vooruit
+// over beide standen heen werkt. Zie assets/verken-view.js.
+//
+// De EXTERNE client (Comunica, meegeleverd in ../comunica/) blijft bestaan als
+// hulpmiddel: de verkenner biedt hem per knoop aan als "Bevraag met SPARQL",
+// in een nieuw tabblad. verken.js bouwt die URL (verkenHref/verkenSources).
+import { verkenHref, verkenLink, iriOf } from './verken.js';
+import {
+  verkenNode, renderVerken, verkenIriFromSearch, verkenSearch, resetVerkenFolds,
+} from './verken-view.js';
 // UITLEG OP VERZOEK (note §1): termen die een definitie in de data dragen
 // krijgen een gestippelde onderstreping en een tooltip. Zie assets/tooltip.js.
 import { explained } from './tooltip.js';
@@ -38,7 +52,7 @@ import { useWorkerFor, loadSourcesInWorker, hydrateInto, createStore, asTerm } f
 // Configuratie (data, geen kern-code): default-democorpus (gedeeld met
 // index.html/app.js), per-endpoint graph-uitsluitingen en het
 // default-registerfragment met prefixafkortingen.
-import { DEFAULT_EXAMPLES, EXAMPLES_BASE } from './default-corpus.js';
+import { DEFAULT_EXAMPLES, EXAMPLES_BASE, COMUNICA_BASE } from './default-corpus.js';
 import { excludeGraphsFor } from './endpoint-config.js';
 import { DEFAULT_REGISTER_PREFIXES } from './register-prefixes.js';
 import { DEFAULT_PROPERTY_LABEL_KEYS } from './register-labels.js';
@@ -84,11 +98,11 @@ const state = {
   // (regel, voorwaarde, conformsToPolicy-rij). Wordt bij elke render opnieuw
   // gebouwd (buildFillIndex).
   fillIndex: new Map(),
-  // Wat er in het rechterpaneel staat: { mode: 'inspect' } of
-  // { mode: 'fill', ref, scope }. Overleeft een herrender/taalwissel via
+  // Wat er in het rechterpaneel staat: { mode: 'fill', ref, scope } of null.
+  // Overleeft een herrender/taalwissel via
   // captureListUi/restoreListUi.
   panel: null,
-  // Terugsprong vanuit de graaf-inspecteur (revealInUi): per hoofdsectie een
+  // Sprong naar een kaart elders in de pagina (revealInUi): per hoofdsectie een
   // resolver die de kaart van een IRI tevoorschijn haalt (sectie openen, filter
   // wissen, lazy chunks doorrenderen). Wordt bij elke render opnieuw gevuld.
   revealSections: [],
@@ -111,6 +125,13 @@ const state = {
   // — zelfde patroon als de filterkeuzes, die ook in de control leven en de URL
   // alleen als deelbare weerslag gebruiken.
   groupBy: null,
+  // DE VERKENNER-STAND (?verken=<IRI>). null = documentweergave. Zolang deze
+  // gevuld is, staat #doc-main op hidden en #verken-main in beeld — nooit
+  // allebei. Zie openVerken/showDoc.
+  verkenIri: null,
+  verkenLoaded: new Set(),  // IRI's waarvan de knoop-CONSTRUCT al is opgehaald
+  verkenBusy: false,        // endpoint-modus: er loopt een knoop-CONSTRUCT
+  verkenError: '',          // laatste ophaalfout, als mededeling in de weergave
 };
 let extraNote = '';
 
@@ -193,7 +214,7 @@ function chevron(size) {
 
 // --- Laadstatus: één spinner-component + skeletons ---------------------------
 // Alle laadmomenten (initiële lijst-SELECT, detail-CONSTRUCT bij kaart-uitklap
-// of versiewissel, inspecteur-bijladen, bron toevoegen) tonen dezelfde
+// of versiewissel, bron toevoegen) tonen dezelfde
 // klassieke ronde spinner naast een korte statustekst. De bestaande
 // voortgangsinformatie ("policylijst, 12.561 rijen", worker-voortgang per
 // bron) blijft dus staan — alleen de presentatie is rustiger dan de vroegere
@@ -285,34 +306,32 @@ function renderEmpty(msg) {
 
 function byIri(list, iri) { return list.find((x) => x.iri === iri); }
 
-// --- Graaf-inspecteur: zijpaneel rechts --------------------------------------
-// Geopend via een "verken"-knop op een node-achtig element; de breadcrumb
-// blijft persistent zolang het paneel openstaat (navigeren herrendert alleen
-// de inhoud). Sluiten: ✕-knop of Esc.
-// ÉÉN PANEEL, TWEE MODI (aug 2026). Naast het verkennen van de graaf (⌕) toont
-// hetzelfde paneel sinds de technische view ook de INVULLING van een element
-// (⚙): zelfde positie, zelfde breedte, zelfde sluitgedrag (✕/Esc). Een tweede
-// overlay ernaast zou twee soorten "rechterpaneel" opleveren die elkaar
-// overlappen; een tabbladenbalk erboven zou een keuze suggereren die er niet is
-// (je opent het paneel altijd vanaf een knop die de modus al bepaalt). Wat
-// wisselt is dus alleen de KOP en de inhoud. Het paneel DEKT HET DOCUMENT NIET
-// AF maar duwt het opzij — zie setPanelOpen() hieronder.
+// --- Invulling-paneel: zijpaneel rechts --------------------------------------
+// Geopend via het ⚙ op een regel/voorwaarde of een dubbelklik op zo'n rij.
+// Sluiten: ✕-knop of Esc.
+// ÉÉN PANEEL, ÉÉN MODUS (aug 2026). Het paneel had er twee: de INVULLING van
+// een element (⚙) en de graaf-inspecteur (⌕). Die tweede is vervallen — de
+// machineleesbare weergaven horen niet meer in deze pagina thuis; het ⌕ is nu
+// een link naar de verkenner-stand van deze pagina (verken-view.js).
+// Wat bleef: de kop, de positie, de breedte, en dat het paneel HET DOCUMENT
+// NIET AFDEKT maar opzij duwt — zie setPanelOpen() hieronder. De klassenamen
+// (insp-*) zijn de oude gebleven: ze horen bij de paneelvórm, niet bij de
+// inspecteur, en zitten zo ook in de CSS.
 let inspEls = null;   // { overlay, body, title }
-let inspModel = null;
 
 function ensureInspOverlay() {
   if (inspEls) return inspEls;
   const body = h('div', { class: 'insp-body insp' });
-  const close = h('button', { class: 'insp-close', type: 'button', title: t('insp.close'), text: '✕' });
-  close.addEventListener('click', () => closeInspect());
-  const title = h('span', { class: 'insp-title', text: t('insp.title') });
+  const close = h('button', { class: 'insp-close', type: 'button', title: t('panel.close'), text: '✕' });
+  close.addEventListener('click', () => closePanel());
+  const title = h('span', { class: 'insp-title', text: t('fill.title') });
   // GEEN GEDELEGEERDE DUBBELKLIK OP DE BODY (besluit eigenaar, aug 2026). Hij
   // ving alles op wat geen rij is — randlabels, de herkomst-regel, kopjes,
-  // witruimte — en opende daar de graaf-inspecteur op het centrale element.
+  // witruimte — en deed daar iets met het centrale element.
   // Een dubbelklik NAAST een rij hoort niets te doen: er is geen element om
-  // heen te gaan, en van modus wisselen doet het paneel alleen op het ⌕.
+  // heen te gaan.
   const overlay = h('aside', {
-    class: 'insp-overlay', role: 'dialog', 'aria-label': t('insp.title'),
+    class: 'insp-overlay', role: 'dialog', 'aria-label': t('fill.title'),
   }, [
     h('div', { class: 'insp-head' }, [title, close]),
     body,
@@ -320,49 +339,32 @@ function ensureInspOverlay() {
   overlay.hidden = true;
   if (document.body) document.body.appendChild(overlay);
   if (document.addEventListener) {
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeInspect(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closePanel(); });
   }
   inspEls = { overlay, body, title };
   return inspEls;
 }
 
-// --- INKLAPBARE RICHTINGEN, IN BEIDE PANELEN -------------------------------
-// De ↑/↓-blokken van het Invulling-paneel en de twee richtingblokken van de
-// graaf-inspecteur klappen open en dicht via hun randlabel. De stand hoort bij
-// de MODUS, niet bij het element: wie de inkomende verwijzingen dichtklapt en
-// dan een knoop verder loopt, wil ze dicht houden.
+// --- INKLAPBARE RICHTINGEN IN HET PANEEL ------------------------------------
+// De ↑/↓-blokken van het Invulling-paneel klappen open en dicht via hun
+// randlabel. De stand hoort bij de MODUS, niet bij het element: wie een
+// richting dichtklapt en dan een ander element opent, wil hem dicht houden.
 //
 // KEUZE: de stand staat in een gewone module-variabele, niet in
 // captureListUi/restoreListUi. Die twee bewaren de open-staat van <details> in
 // het DOCUMENT over een herrender heen (op data-open-key); het paneel rendert
-// zichzelf uit een eigen functie en heeft er niets aan. Twee sleutels per modus
-// is te weinig om er een mechaniek voor op te tuigen — en zo overleeft de stand
-// ook een taalwissel en een stap door de graaf, wat captureListUi niet zou doen.
+// zichzelf uit een eigen functie en heeft er niets aan. Twee sleutels is te
+// weinig om er een mechaniek voor op te tuigen — en zo overleeft de stand ook
+// een taalwissel, wat captureListUi niet zou doen.
 // Sessiegebonden: een herladen van de pagina begint weer bij de standaard.
 //
-// STANDAARD. Invulling: beide blokken OPEN — daar is de keten de inhoud van het
-// paneel.
-//
-// Inspecteur: ÓÓK OPEN (correctie aug 2026). De richtingblokken begonnen dicht
-// — de stand van de fold-outs die zij vervolgden — maar een dichtgeklapt blok
-// zonder eigen kop toont letterlijk niets: wie ⌕ indrukte zag twee lege
-// stroken met een randlabel, en las dat als "deze knoop heeft geen
-// verwijzingen". Dat is precies het omgekeerde van wat het paneel moet zeggen.
-// De blokken staan daarom open zodra de lijst in één keer te overzien is.
-//
-// De REDEN voor de dichte stand blijft wel staan: op een knoop met duizenden
-// inkomende verwijzingen (BRP: 1.392 wasDerivedFrom's op één Offer) hoort de
-// lijst niet ongevraagd gebouwd te worden. Boven REF_AUTO_OPEN_MAX begint het
-// blok daarom nog steeds dicht — de telling in het randlabel zegt dan al wat
-// er te halen valt, en één klik haalt het. De grens is één chunk: precies wat
-// de lijst bij de eerste opbouw toch al tekent.
+// STANDAARD: beide blokken OPEN — de keten is de inhoud van het paneel.
 //
 // `null` = de lezer heeft dit blok in deze paneelsessie nog niet zelf gezet;
 // daarna wint zijn keuze, ongeacht de lengte.
 const REF_AUTO_OPEN_MAX = CARD_CHUNK_SIZE;
 const PANEL_FOLDS = {
   fill: { up: true, down: true },
-  inspect: { in: null, out: null },
 };
 function panelFoldOpen(mode, key, count = null) {
   const m = PANEL_FOLDS[mode];
@@ -375,9 +377,7 @@ function setPanelFold(mode, key, open) {
 }
 
 // Het randlabel op de rand van het grijze vlak, met chevron: klikken klapt het
-// bijbehorende blok open of dicht. `blok` is het element dat verborgen wordt
-// (Invulling-paneel); de inspecteur heeft zijn eigen variant omdat daar een
-// <details> de lazy opbouw draagt (zie inspect.js/edgeLabel).
+// bijbehorende blok open of dicht. `blok` is het element dat verborgen wordt.
 function foldEdge(labelText, blok, mode, key, cls) {
   const open = panelFoldOpen(mode, key);
   if (blok) blok.hidden = !open;
@@ -425,75 +425,7 @@ function setPanelOpen(open) {
   if (b && b.classList) b.classList[open ? 'add' : 'remove']('panel-open');
 }
 
-async function openInspect(termOrIri) {
-  if (!state.store || !termOrIri) return;
-  // Worker-model: termen reizen als kale { id }-handles — normaliseer.
-  termOrIri = asTerm(termOrIri);
-  // Wordt de store nog in stukjes opgebouwd (worker-pad), wacht dan even met
-  // een melding in het paneel; daarna gewoon inspecteren.
-  if (state.storeReady && !state.storeHydrated) {
-    const els = ensureInspOverlay();
-    els.body.innerHTML = '';
-    els.body.appendChild(skeletonLines(4));
-    setPanelOpen(true);
-    await state.storeReady;
-  }
-  // Endpoint-modus: een aangeklikte node zonder eigen triples in de store
-  // wordt on demand bijgeladen (zelfde CONSTRUCT-sluitingspatroon als de
-  // policy-details; werkt ook voor niet-policies zoals rubrieken/afnemers).
-  const iri = typeof termOrIri === 'string'
-    ? termOrIri
-    : (termOrIri.termType === 'NamedNode' ? termOrIri.value : null);
-  if (iri && state.sparqlEndpoint && !isGraphSubject(state.store, iri)) {
-    // Bijladen kan een ronde naar het endpoint kosten: laat het paneel
-    // intussen dezelfde spinner + skeletonregels tonen als de kaart-body.
-    const els = ensureInspOverlay();
-    els.body.textContent = '';
-    els.body.appendChild(skeletonLines(4));
-    setPanelOpen(true);
-    try { await ensureNodeDetail(iri); }
-    catch (e) { /* toon gewoon wat er wél in de store zit */ }
-  }
-  const { body } = ensureInspOverlay();
-  panelMode('insp.title');
-  state.panel = { mode: 'inspect' };
-  inspModel = createInspector(state.store, termOrIri);
-  renderInspector(body, inspModel, inspectorOpts());
-  setPanelOpen(true);
-}
-
-// Node-detail (CONSTRUCT-sluiting) van het endpoint de store in — gedeeld
-// door openInspect en de ensureNode-hook van de inspecteur zelf.
-async function ensureNodeDetail(iri) {
-  const ttl = await sparqlConstruct(state.sparqlEndpoint,
-    nodeDetailQuery(iri, { excludeGraphs: state.excludeGraphs }));
-  if (ttl && ttl.trim()) {
-    addSource(state.store, ttl, 'ttl');
-    if (state.sources) {
-      state.sources.push({ name: iri + ' (SPARQL-detail)', content: ttl, format: 'ttl', fromSparql: true });
-    }
-  }
-}
-
-// Inspecteur-opties: in endpoint-modus komen de inkomende verwijzingen
-// gepagineerd (LIMIT/OFFSET + apart COUNT) van het endpoint, en worden
-// aangeklikte onbekende nodes eerst bijgeladen. revealInUi is de terugweg: de
-// inspecteur is de uitgang naar de graaf, deze hook het spiegelbeeld ervan.
-function inspectorOpts() {
-  const base = {
-    revealInUi: (iri) => revealInUi(iri),
-    // De inklap-stand van de twee richtingblokken; zie PANEL_FOLDS.
-    folds: { get: panelFoldOpen, set: setPanelFold },
-  };
-  if (!state.sparqlEndpoint) return base;
-  return {
-    ...base,
-    remoteIncoming: sparqlRemoteIncoming(state.sparqlEndpoint),
-    ensureNode: (iri) => ensureNodeDetail(iri),
-  };
-}
-
-// --- Terugsprong: van de graaf-inspecteur terug naar de WEERGAVE -------------
+// --- Sprong binnen de pagina: naar de kaart/rij van een IRI ------------------
 // Best-effort, van specifiek naar generiek:
 //   a. de IRI is een policy met een eigen kaart -> de omvattende (inklapbare)
 //      sectie openen, de kaart laten renderen (lazy chunks doorrenderen; een
@@ -503,10 +435,11 @@ function inspectorOpts() {
 //      omvattende policy-kaart als in (a), daarna de rij zelf;
 //   c. anders (partij, doel-concept, artefact, gegevensset) -> het eerste
 //      element in de weergave met die data-iri-stempel.
-// Niets gevonden -> false, waarna de inspecteur een nette melding toont. Er
-// wordt NOOIT automatisch van scope gewisseld (?policy=): in sparql-modus kan
-// een knoop buiten de geladen kaarten vallen (bv. een onderdrukte bron-Set) en
-// dat zou de context van de gebruiker weggooien. De inspecteur blijft open.
+// Niets gevonden -> false; de aanroeper (een kruisverwijzing in de pagina)
+// laat de lezer dan gewoon staan waar hij stond. Er wordt NOOIT automatisch
+// van scope gewisseld (?policy=): in sparql-modus kan een knoop buiten de
+// geladen kaarten vallen (bv. een onderdrukte bron-Set) en dat zou de context
+// van de gebruiker weggooien.
 function findPathByDataIri(root, iri) {
   if (!root || !iri) return null;
   const path = [];
@@ -524,8 +457,8 @@ function findPathByDataIri(root, iri) {
 // Zelfde zoektocht, maar op de sleutel waarop de OPEN/DICHT-staat hersteld
 // wordt. Die mag breder zijn dan data-iri: fold-outs zonder eigen identiteit
 // (een ledenlijst, een tak in de partOf-boom) krijgen een data-open-key, en
-// die mag niet meetellen voor de terugsprong uit de inspecteur — anders landt
-// een sprong naar een regel in de ledenlijst eronder.
+// die mag niet meetellen voor de sprong zelf — anders landt een sprong naar
+// een regel in de ledenlijst eronder.
 function findPathByOpenKey(root, key) {
   if (!root || !key) return null;
   const path = [];
@@ -564,7 +497,7 @@ const MAX_SMOOTH_JUMP_SCREENS = 4;
 
 // `smooth`: geanimeerd scrollen (het eased gedrag van applyExpandScroll), met
 // dezelfde reduced-motion-uitzondering én het afstandsplafond hierboven.
-// Default UIT — de terugsprong uit de graaf-inspecteur kan overal landen. De
+// Default UIT — een sprong naar een willekeurige kaart kan overal landen. De
 // KRUISVERWIJZING binnen de pagina (Verzoek-regel → verzoek-kaart en terug)
 // zet hem wél aan: daar is de sprong een leesbeweging langs de keten, en
 // zonder animatie verliest de lezer waar hij vandaan kwam.
@@ -709,7 +642,14 @@ async function resolveCardFor(iri) {
   return null;
 }
 
-async function revealInUi(iri, { smooth = false } = {}) {
+// GEËXPORTEERD VOOR DE TESTS (zoals expandScrollTarget). Sinds de
+// graaf-inspecteur weg is, is de enige UI-route hiernaartoe de
+// kruisverwijzing binnen de pagina (jumpAnchor: Verzoek-regel → verzoek-kaart,
+// dekkingsuitklap → regel-rij). Die route is corpus-afhankelijk; de
+// machinerie zelf — sectie openen, filter wissen, lazy chunks doorrenderen,
+// de rij binnen de kaart vinden — is te belangrijk om alleen indirect te
+// toetsen, dus de test drijft haar rechtstreeks aan.
+export async function revealInUi(iri, { smooth = false } = {}) {
   if (!iri || !state.model) return false;
   const ownerIri = policyOfRule(iri);   // niet-null als de IRI een REGEL is
   const card = await resolveCardFor(ownerIri || iri);
@@ -787,15 +727,166 @@ function jumpLink(iri, text, title, cls = null) {
   return a;
 }
 
-function closeInspect() {
+function closePanel() {
   if (inspEls) setPanelOpen(false);
   state.panel = null;
 }
 
-// Kleine, uniforme "verken"-knop voor node-achtige elementen.
+// Het ⌕ op een node-achtig element: een LINK naar de VERKENNER-STAND van deze
+// pagina (?verken=<IRI>), in hetzelfde tabblad. De href is een echte,
+// deelbare URL — middelklik en "openen in nieuw tabblad" werken gewoon — maar
+// een gewone klik wisselt de pagina van stand zónder te herladen: de store
+// blijft staan, dus heen en weer springen is instant.
+//
+// GEEN ⌕ ZONDER ADRES. Een blanke knoop (een naamloze regel, een anonieme
+// policy) heeft buiten dit document geen IRI en is dus niet aan te wijzen —
+// niet in een externe verkenner en niet in een deelbare URL; daar valt de knop
+// weg in plaats van dood te staan. De aanroepers hangen hem daarom met
+// appendIf() op, nooit blind.
 function verkenBtn(termOrIri, title) {
   if (!termOrIri) return null;
-  return verkenButton(() => openInspect(termOrIri), title);
+  const iri = iriOf(termOrIri);
+  if (!iri) return null;
+  return verkenLink(verkenUrl(iri), title, () => openVerken(iri));
+}
+
+// De deelbare URL van de verkenner-stand op één knoop, resp. van de
+// documentweergave. Alle overige parameters van deze pagina (?src=, ?policy=,
+// ?lang=, filters) reizen mee: een gedeelde verkenner-link laadt dus dezelfde
+// bronnen als de pagina waar hij vandaan komt.
+function verkenUrl(iri) {
+  return verkenSearch(typeof location !== 'undefined' ? location.search : '', iri);
+}
+
+function docUrl() {
+  const s = verkenSearch(typeof location !== 'undefined' ? location.search : '', null);
+  return s || (typeof location !== 'undefined' ? location.pathname : '');
+}
+
+// De URL van deze pagina, als basis voor het absoluut maken van bron-URL's en
+// van het pad naar de verkenner. Onder node (tests) is er geen location.href.
+function pageUrl() {
+  return (typeof location !== 'undefined' && location.href) ? location.href : null;
+}
+
+// --- DE VERKENNER-STAND ------------------------------------------------------
+// Twee <main>'s in doc.html, waarvan er altijd precies ÉÉN zichtbaar is. Dat
+// is geen vormvoorkeur maar de dragende eis: de mensleesbare weergave en de
+// machineleesbare graaf mogen niet samen op het scherm staan. Daarom gaat bij
+// het openen van de verkenner ook het Invulling-zijpaneel dicht — dat toont
+// documentinhoud en zou anders naast de graaf blijven hangen.
+
+function showDocPane(verken) {
+  const doc = el('doc-main');
+  const vk = el('verken-main');
+  if (doc) doc.hidden = !!verken;
+  if (vk) vk.hidden = !verken;
+  if (!verken && vk) vk.innerHTML = '';
+}
+
+// Naar de verkenner, op één knoop. `push`: een nieuwe stap in de
+// browsergeschiedenis (elke klik in de verkenner is er een), zodat terug en
+// vooruit over document én verkenner heen lopen.
+function openVerken(iri, { push = true } = {}) {
+  if (!iri) return Promise.resolve(false);
+  const eerste = !state.verkenIri;
+  state.verkenIri = iri;
+  state.verkenError = '';
+  // Een NIEUWE verkennersessie begint met de standaardstand van de twee
+  // richtingblokken; binnen één sessie wint de keuze van de lezer.
+  if (eerste) resetVerkenFolds();
+  closePanel();
+  if (push && typeof history !== 'undefined' && history.pushState) {
+    history.pushState({ verken: iri }, '', verkenUrl(iri));
+  }
+  showDocPane(true);
+  if (typeof window !== 'undefined' && window.scrollTo) window.scrollTo(0, 0);
+  renderVerkenNow();
+  return ensureVerkenNode(iri);
+}
+
+// Terug naar het document, bij deze knoop. Geen herlading: het document staat
+// er nog, alleen verborgen — dus dit is een tonen plus een sprong (revealInUi).
+function showInDoc(iri) {
+  state.verkenIri = null;
+  if (typeof history !== 'undefined' && history.pushState) {
+    history.pushState(null, '', docUrl());
+  }
+  showDocPane(false);
+  if (!iri) return;
+  Promise.resolve(revealInUi(iri, { smooth: false })).then((ok) => {
+    // Niet elke knoop heeft een eigen plek in het document (een partij, een
+    // gegevensveld, of in ?src=<endpoint>-modus een kaart die niet geladen is).
+    // Dan blijft de weergave staan waar zij stond en zegt de statusregel dat.
+    if (!ok) setStatus(t('verken.notInDoc'));
+  }).catch(() => { /* de weergave blijft staan */ });
+}
+
+// De stand die de URL beschrijft aanzetten. Wordt aangeroepen bij het laden
+// (?verken= in de adresbalk) en bij browser-terug/vooruit.
+function applyVerkenFromUrl() {
+  const iri = verkenIriFromSearch(typeof location !== 'undefined' ? location.search : '');
+  if (iri === state.verkenIri) return;
+  if (iri) openVerken(iri, { push: false });
+  else { state.verkenIri = null; showDocPane(false); }
+}
+
+if (typeof window !== 'undefined' && window.addEventListener) {
+  window.addEventListener('popstate', () => applyVerkenFromUrl());
+}
+
+// De verkenner opnieuw tekenen uit de huidige store. Goedkoop: het model van
+// één knoop is een paar store-scans, en de twee richtingblokken bouwen hun
+// lijst pas bij het openklappen.
+function renderVerkenNow() {
+  const box = el('verken-main');
+  if (!box || !state.verkenIri || !state.store) return;
+  renderVerken(box, verkenNode(state.store, state.verkenIri), {
+    onNavigate: (iri) => openVerken(iri),
+    hrefFor: (iri) => verkenUrl(iri),
+    onShowInDoc: (iri) => showInDoc(iri),
+    docHref: docUrl(),
+    comunicaHref: verkenHref(state.verkenIri, state, {
+      base: COMUNICA_BASE, pageUrl: pageUrl(),
+    }),
+    status: { loading: state.verkenBusy, error: state.verkenError },
+  });
+}
+
+// ?src=<endpoint>-modus: de geladen graaf is op POLICIES gericht en zegt over
+// een willekeurige knoop hooguit dat er naar verwezen wordt. Per navigatiestap
+// halen we daarom beide richtingen van die ene knoop op (één CONSTRUCT, zie
+// sparql.js/nodeRefsQuery) en MENGEN we het resultaat in de store vóór het
+// renderen. Eén keer per knoop: daarna staat hij er.
+async function ensureVerkenNode(iri) {
+  if (!iri || !state.sparqlEndpoint || state.verkenLoaded.has(iri)) return false;
+  state.verkenLoaded.add(iri);
+  state.verkenBusy = true;
+  state.verkenError = '';
+  renderVerkenNow();
+  try {
+    const ttl = await sparqlConstruct(state.sparqlEndpoint,
+      nodeRefsQuery(iri, { excludeGraphs: state.excludeGraphs }));
+    // Worker-pad: wacht tot de hoofddraad-store vol is (zelfde voorwaarde als
+    // bij ensureDetail) voordat we er iets bij mengen.
+    if (state.storeReady && !state.storeHydrated) await state.storeReady;
+    addSource(state.store, ttl, 'ttl');
+    // Ook in state.sources, zodat een her-ingest (bron toevoegen/verwijderen)
+    // de reeds opgehaalde knopen niet kwijtraakt.
+    if (state.sources) {
+      state.sources.push({
+        name: iri + ' (SPARQL-knoop)', content: ttl, format: 'ttl', fromSparql: true,
+      });
+    }
+  } catch (e) {
+    // Opnieuw proberen mag: de knoop is niet geladen.
+    state.verkenLoaded.delete(iri);
+    state.verkenError = t('verken.loadFailed', { msg: e.message });
+  } finally {
+    state.verkenBusy = false;
+  }
+  if (state.verkenIri === iri) renderVerkenNow();
+  return !state.verkenError;
 }
 
 // --- Laden (zelfde URL-parameters als de viewer) -----------------------------
@@ -879,7 +970,7 @@ function renderLoading(msg) {
 async function ingestViaWorker(sources) {
   const progress = (txt) => { setStatus(txt, true); renderLoading(txt); };
   progress(t('load.processing'));
-  // De hoofddraad-store (inspecteur/detail-bijlaadbron) begint leeg en wordt
+  // De hoofddraad-store (detail-bijlaadbron) begint leeg en wordt
   // ná de eerste render in stukjes gevuld vanuit de graaf-overdracht; de
   // eerste render wacht alleen op het model.
   const store = createStore();
@@ -1335,7 +1426,7 @@ function ref(agent) {
     ...(agent.label && agent.label !== agent.curie
       ? [explained(h('span', { text: agent.label }), agent.desc), ' '] : []),
     h('span', { class: 'mono muted', text: iri ? agent.curie : '' }),
-    // Partijen (en andere verwezen nodes) zijn verkenbaar in de inspecteur.
+    // Partijen (en andere verwezen nodes) zijn verkenbaar in de RDF-verkenner.
     verkenBtn(iri || agent.term),
   ]);
   // Een odrl:PartyCollection is meer dan een naam: hij draagt zijn leden
@@ -1440,7 +1531,7 @@ function identifierValue(p) {
 // gescheiden door '·'. Bewust hetzelfde gewicht als de Kenmerk- en
 // Vindplaats-regels: het verzoek is herkomst-context bij het besluit, geen
 // tweede beleidsstuk op de kaart. De verken-knop opent de verzoek-node in de
-// graaf-inspecteur, zodat de volledige aanvraag altijd één klik weg is —
+// RDF-verkenner, zodat de volledige aanvraag altijd één klik weg is —
 // ook als hij (als mini-stub) geen eigen kaart in de lijst heeft.
 // Het kenmerk staat monospace (zoals identifierValue), de rest gewoon.
 //
@@ -1449,7 +1540,7 @@ function identifierValue(p) {
 // eigen kaart, dus een klik hoeft de pagina niet te verlaten: de sectie gaat
 // open, de kaart wordt gerenderd en opengeklapt, en de pagina scrolt er
 // geanimeerd naartoe. De verken-knop ernaast blijft de route naar de RAUWE
-// knoop in de graaf-inspecteur — twee verschillende vragen, twee knoppen.
+// knoop in de RDF-verkenner — twee verschillende vragen, twee knoppen.
 function requestValue(list) {
   const items = (list || []).filter(Boolean);
   if (!items.length) return null;
@@ -1485,7 +1576,7 @@ function requestValue(list) {
       row.appendChild(document.createTextNode(' · '));
       row.appendChild(vraagt);
     }
-    row.appendChild(verkenBtn(r.iri, t('request.title')));
+    appendIf(row, verkenBtn(r.iri, t('request.title')));
     return row;
   };
   return h('span', {}, items.flatMap((r, i) => [i ? '; ' : '', one(r)]));
@@ -2155,7 +2246,7 @@ function foldDuties(entries, nodeIri, scope) {
 // BELEID wilde lezen.
 //
 // Sinds deze slag staat het verhaal op ÉÉN plek: het rechterpaneel, in
-// dezelfde overlay als de graaf-inspecteur (zie ensureInspOverlay). Het ⚙ op
+// het rechterpaneel (zie ensureInspOverlay). Het ⚙ op
 // een element is de opener; het paneel toont de keten rond dat element:
 //
 //     ↑ Wordt ingevuld door     (wat dit element uitwerkt)
@@ -2590,9 +2681,9 @@ function fillRow(ref, { scope = null, current = false, note = null } = {}) {
     });
     acts.appendChild(jump);
     // ⌕ NAAST → EN ⚙ (aug 2026): dezelfde drie uitgangen als een rij in het
-    // document. Sinds de dubbelklik het PANEEL verzet (zie fillRowClicks) is
-    // het ⌕ de enige weg naar de graaf-inspecteur — dus moet hij op elke rij
-    // staan, ook op het centrale vlak hieronder.
+    // document. Het ⌕ is de enige weg naar de graaf (de verkenner-stand van
+    // deze pagina) — dus moet hij op elke rij staan, ook op het
+    // centrale vlak hieronder.
     appendIf(acts, verkenBtn(fillVerkenTarget(desc)));
     appendIf(acts, fillGear(ref, { scope, status: fillStatus(desc) }));
     li.appendChild(acts);
@@ -2600,7 +2691,7 @@ function fillRow(ref, { scope = null, current = false, note = null } = {}) {
   } else {
     // HET CENTRALE VLAK: geen → en geen ⚙ (naar jezelf springen en het paneel
     // op jezelf zetten doen niets), maar wél het ⌕ — "verken dit element" is
-    // hier zinnig, en het is de enige route naar de graaf-inspecteur. Een
+    // hier zinnig, en het is de enige route naar de RDF-verkenner. Een
     // dubbelklik doet hier niets: hercentreren op jezelf is een no-op.
     const acts = h('span', { class: 'fill-acts' });
     const verken = verkenBtn(fillVerkenTarget(desc));
@@ -2626,11 +2717,11 @@ function fillVerkenTarget(desc) {
 //                blijft staan waar het staat;
 //   DUBBELKLIK = het ⚙ : verzet het PANEEL naar dit element (hercentreren).
 // Twee keer dezelfde beweging, één keer in het document en één keer in het
-// paneel — en allebei BINNEN de modus waarin het paneel staat. Een dubbelklik
-// wisselt dus nooit van invulling naar graaf-inspecteur; die stap zet je
-// bewust, met het ⌕. Tot deze slag opende de dubbelklik de inspecteur, en dan
-// stond je na een gebaar dat "ga hierheen" bedoelde ineens in een ander
-// paneel, met de keten kwijt.
+// paneel. Een dubbelklik haalt je dus nooit uit de invulling weg; de ruwe
+// triples zijn een aparte pagina, en die stap zet je bewust met het ⌕. Tot
+// aug 2026 opende de dubbelklik een graaf-inspecteur in hetzelfde paneel, en
+// dan stond je na een gebaar dat "ga hierheen" bedoelde ineens in iets
+// anders, met de keten kwijt.
 //
 // SELECTIE WINT, MAAR ALLEEN ALS ZIJ ER AL LAG. Een dubbelklik op een woord
 // selecteert dat woord — dus "is er een selectie?" op het moment van de
@@ -2664,16 +2755,16 @@ function fillRowClicks(li, ref, scope, desc) {
 // (het paneel gaat erheen). Beide blijven binnen de modus van het paneel;
 // naast een rij — randlabel, herkomst-regel, witruimte, het centrale vlak —
 // doet een dubbelklik NIETS, want er is dan geen element om heen te gaan.
-// Knoppen houden hun eigen klik, en het ⌕ is de enige weg naar de
-// graaf-inspecteur.
+// Knoppen houden hun eigen klik, en het ⌕ is de enige weg naar de ruwe
+// triples (de verkenner-stand van deze pagina).
 //
-// WAT ER MIS WAS. De dubbelklik opende de graaf-inspecteur: één gebaar dat
-// "ga hierheen" bedoelt, wisselde het hele paneel van soort. Erger nog: dat
-// gold ook voor het centrale vlak en (via een gedelegeerde luisteraar op de
-// paneelbody) voor alles eromheen, dus je kon de invulling-weergave kwijtraken
-// door naast een rij te dubbelklikken. Beide zijn weg; wie de graaf in wil,
-// klikt het ⌕ van de rij (of van het centrale vlak, dat er sinds deze slag
-// zelf één draagt).
+// WAT ER MIS WAS. De dubbelklik opende een graaf-inspecteur in hetzelfde
+// paneel: één gebaar dat "ga hierheen" bedoelt, wisselde het hele paneel van
+// soort. Erger nog: dat gold ook voor het centrale vlak en (via een
+// gedelegeerde luisteraar op de paneelbody) voor alles eromheen, dus je kon de
+// invulling-weergave kwijtraken door naast een rij te dubbelklikken. Alles
+// daarvan is weg; wie de graaf in wil, klikt het ⌕ van de rij (of van het
+// centrale vlak, dat er zelf één draagt).
 function panelDblclickOn(node, actie, selAtPress, resetSel) {
   node.addEventListener('dblclick', (e) => {
     if (e && e.preventDefault) e.preventDefault();
@@ -2875,7 +2966,7 @@ function gearFlashPanel(node) {
 }
 
 // Het paneel openen (of, als het al openstaat, verzetten naar een ander
-// element). Zelfde overlay als de inspecteur, andere kop en andere inhoud.
+// element). Het rechterpaneel van de pagina; zie ensureInspOverlay.
 function openFill(ref, scope = null, { from = null } = {}) {
   if (!ref) return;
   const { body } = ensureInspOverlay();
@@ -2948,7 +3039,7 @@ function constraintsSection(list, { rule = null, ctx = null } = {}) {
 // `mark`: klein herkomst-woordje achter de naam (bv. "geërfd" binnen een
 // overervings-vouw) — zelfde vorm als het "aanvullend" van `extra`.
 function obligationRow(d, { extra = false, mark = null, scope = null } = {}) {
-  // data-iri: generieke stempel waarop de terugsprong vanuit de inspecteur
+  // data-iri: generieke stempel waarop een sprong binnen de pagina
   // (revealInUi) een regel-rij in de weergave terugvindt.
   const row = h('details', { class: 'op-row duty', 'data-iri': d.iri || null });
   // Compacte parameterregel: WAT de maatregel is (actie, geïnformeerde
@@ -3505,7 +3596,7 @@ function constraintItem(c, { rule = null, ctx = null } = {}) {
     // Het artefact zit niet in de geladen graaf: dan blijft het de gewone
     // chip-rij — er valt niets te openen en we verzinnen geen leeg formulier.
     li.appendChild(wrap);
-    if (c.term) li.appendChild(verkenBtn(c.term));
+    appendIf(li, verkenBtn(c.term));
     appendIf(li, gear);
     return li;
   }
@@ -3520,7 +3611,7 @@ function constraintItem(c, { rule = null, ctx = null } = {}) {
     // laag niet thuis, en samen met de uitklap vertelden ze het verhaal drie
     // keer half. De rij houdt haar twee uitgangen: ⌕ naar de graaf, ⚙ naar de
     // invulling.
-    if (c.term) li.appendChild(verkenBtn(c.term));
+    appendIf(li, verkenBtn(c.term));
     appendIf(li, conditionGear(c, ctx && ctx.scope));
     return li;
   }
@@ -3550,7 +3641,7 @@ function constraintItem(c, { rule = null, ctx = null } = {}) {
     } else {
       li.appendChild(constraintNode(c));
     }
-    if (c.term) li.appendChild(verkenBtn(c.term));
+    appendIf(li, verkenBtn(c.term));
     appendIf(li, conditionGear(c, ctx && ctx.scope));
     return li;
   }
@@ -3561,7 +3652,7 @@ function constraintItem(c, { rule = null, ctx = null } = {}) {
   if (c.label) li.setAttribute('title', constraintTitle(c));
   li.appendChild(constraintChips(c));
   appendIf(li, constraintNote(c));
-  if (c.term) li.appendChild(verkenBtn(c.term));
+  appendIf(li, verkenBtn(c.term));
   appendIf(li, conditionGear(c, ctx && ctx.scope));
   return li;
 }
@@ -3608,7 +3699,7 @@ async function loadCollectionLevel(iri) {
 
 // Eén lid als BLAD: naam + verken-knop, en waar van toepassing de reden dat de
 // boom hier stopt (cykel of diepte-limiet). Beide zijn neutrale mededelingen
-// met een uitgang naar de graaf-inspecteur — die kent geen diepte-limiet.
+// met een uitgang naar de RDF-verkenner — die kent geen diepte-limiet.
 function memberLeaf(m, { deeper = false } = {}) {
   // De rij houdt de IRI als native title; de naam draagt de uitleg.
   const li = titleAsTip(h('li', { class: 'member-item', title: m.iri },
@@ -3618,7 +3709,7 @@ function memberLeaf(m, { deeper = false } = {}) {
   } else if (deeper) {
     li.appendChild(h('span', { class: 'tree-note muted', title: t('tree.deeperTitle'), text: t('tree.deeper') }));
   }
-  li.appendChild(verkenBtn(m.iri));
+  appendIf(li, verkenBtn(m.iri));
   return li;
 }
 
@@ -3689,7 +3780,7 @@ function memberItemsUl(items, { kind, ancestors, depth }) {
   const ul = h('ul', { class: 'clean member-items' });
   for (const m of items) {
     // Diepte-limiet: onder MEMBER_TREE_MAX_DEPTH stopt de boom en verwijst
-    // hij door naar de graaf-inspecteur (zie tree.deeper).
+    // hij door naar de RDF-verkenner (zie tree.deeper).
     const li = (m.hasChildren && depth < MEMBER_TREE_MAX_DEPTH)
       ? h('li', { class: 'member-item branch' },
         [memberBranch(m, { kind, ancestors, depth: depth + 1 })])
@@ -4003,7 +4094,7 @@ function permissionRow(p, {
     const val = h('span', { class: 'targets' });
     for (const tgt of p.targets) {
       // Een anonieme collectie (DOME zet hem als blanke knoop in de regel)
-      // heeft geen IRI om op te hangen: dan de TERM naar de inspecteur, en
+      // heeft geen IRI om op te hangen: dan de TERM, en
       // geen data-iri/title met een intern parser-id.
       // De naam-tag houdt haar native title (de volle IRI); de UITLEG hangt
       // aan de naamtekst binnenin, zodat de twee elkaar niet in de weg zitten.
@@ -4070,7 +4161,7 @@ function permissionRow(p, {
   }
 
   // Het vroegere inklapbare "Bronfragment (Turtle)"-blok is vervangen door de
-  // verken-knop (graaf-inspecteur) op de rij-kop.
+  // verken-knop (RDF-verkenner) op de rij-kop.
   // Niets uit te klappen (bv. een kale prohibition waarvan de actie al de
   // titel is): markeer als blad — CSS verbergt de chevron en de klik-preventer
   // hieronder houdt de loze toggle tegen.
@@ -4964,7 +5055,7 @@ function sectionFilterControl(opts = {}) {
     },
     active: () => anyActive(),
     // Alles wissen zonder onChange (de aanroeper herstelt zelf; gebruikt door
-    // de terugsprong vanuit de inspecteur, die een verborgen kaart moet tonen).
+    // een sprong binnen de pagina, die een verborgen kaart moet tonen).
     reset: resetAll,
     matches: (status) => selected.has(status || 'active'),
     // Achtervoegsel voor de teller: "· aanbod: X · alleen actieve".
@@ -5159,7 +5250,7 @@ function agreementsListView(agrs, agrAnchor, offerLink, offers) {
   };
 
   // Haal de kaart van één overeenkomst tevoorschijn (terugsprong vanuit de
-  // inspecteur): sectie openen, een filter dat hem verbergt wissen en de lazy
+  // pagina): sectie openen, een filter dat hem verbergt wissen en de lazy
   // chunks doorrenderen tot de kaart in de DOM staat.
   api.resolveCard = (iri) => {
     if (!items.some((it) => it.agr.iri === iri)) return null;
@@ -5252,11 +5343,11 @@ function fillAgreementPage(sec, agr, onVersion) {
 }
 
 // Knop naar de drie-panelen-editor met behoud van de huidige query.
-// AFWIJKING VAN DE REPO-VERSIE (site-kopie, FTV-site): zonder ?src= in de
-// adresbalk kreeg de editor alleen ?policy=<IRI> mee en probeerde die IRI te
-// dereferencen — die IRI's zijn niet opvraagbaar, dus dat liep op een foutmelding
-// uit. Op deze statische publicatie zetten we het standaardcorpus dan expliciet
-// in de link, zodat de editor dezelfde bronnen ziet als de documentweergave.
+//
+// AFWIJKING VAN DE REPO-VERSIE (site-kopie, FTV-site): zonder bronparameters
+// draait deze pagina op het standaardcorpus, en dat corpus moet de editor
+// expliciet meekrijgen — anders opent hij leeg. De repo-versie hoeft dat niet:
+// daar laadt de editor zonder parameters hetzelfde default-corpus.
 function editorButton(policyIri) {
   const u = new URLSearchParams(location.search);
   if (!u.getAll('src').length && !u.getAll('ttl').length && !u.get('sparql')) {
@@ -6295,6 +6386,14 @@ function formValueNode(v, { mono = false } = {}) {
   if (v.kind === 'link') {
     return h('a', { href: v.text, target: '_blank', rel: 'noopener', text: v.text });
   }
+  // dash:LabelViewer = "a hyperlink to that URI based on the display label":
+  // de linktekst is het label, de bestemming de IRI. Alleen voor een knoop die
+  // buiten de geladen data ligt (forms.js zet `external`), en alleen voor een
+  // schema dat een browser kan volgen — dezelfde regel en dezelfde vorm als de
+  // Bron-rij in extraPropsBlock.
+  if (v.kind === 'label' && v.external && /^https?:/.test(v.iri || '')) {
+    return h('a', { href: v.iri, target: '_blank', rel: 'noopener', text: v.text });
+  }
   const cls = [mono ? 'mono' : '', longToken(v.text) ? 'hash' : ''].filter(Boolean).join(' ');
   return h('span', cls ? { class: cls, text: v.text } : { text: v.text });
 }
@@ -6389,7 +6488,23 @@ function artifactForm(a, { head = true } = {}) {
 // policy-selector in de topbar, het filterveld van de kaartenlijst en de
 // sectiekoppen; de section-/kaart-id's blijven bestaan als ankerdoelen voor
 // interne kruisverwijzingen ("Op aanbod:", artefact-links).
+// Eén render van de PAGINA: het document opnieuw opbouwen en daarna de stand
+// waarin de pagina staat aanzetten. Staat de verkenner aan (een taalwissel,
+// een bron erbij, een bijgeladen detail), dan blijft het document verborgen en
+// tekent de verkenner zichzelf opnieuw — anders zou de lezer bij elke
+// herrender terug in het document staan.
 function renderAll() {
+  renderDoc();
+  showDocPane(!!state.verkenIri);
+  if (!state.verkenIri) return;
+  renderVerkenNow();
+  // Endpoint-modus: de knoop uit de URL is bij het opstarten nog niet
+  // opgehaald. ensureVerkenNode doet per knoop precies één CONSTRUCT en is
+  // verder een no-op, dus dit mag bij elke herrender langskomen.
+  ensureVerkenNode(state.verkenIri).catch(() => { /* de weergave meldt het */ });
+}
+
+function renderDoc() {
   const main = el('doc-main');
   main.innerHTML = '';
   state.revealSections = [];
@@ -7110,6 +7225,11 @@ const legacySparql = params.get('sparql');
 state.policyScope = params.get('policy') || null;
 state.setScope = params.get('set') || null;
 state.groupBy = groupByFromUrl();
+// ?verken=<IRI>: de pagina start in de VERKENNER-STAND. De bronnen worden
+// gewoon geladen (het document staat er dus, verborgen), zodat "Toon in
+// document" meteen werkt en een gedeelde verkenner-link geen tweede lading
+// nodig heeft. renderAll() zet de stand aan zodra het model er is.
+state.verkenIri = params.get('verken') || null;
 
 async function bootFromParams() {
   const tFetch0 = performance.now();

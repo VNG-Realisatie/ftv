@@ -179,24 +179,52 @@ function propDescription(dataStore, ps) {
     || null;
 }
 
+// Wijst deze IRI BUITEN het geladen corpus? Dat is de vraag of de knoop hier
+// beschreven wordt: staat hij als SUBJECT in de store, dan leeft hij in de
+// data en heeft de weergave er zelf al een plek voor. Staat hij er niet, dan is
+// de IRI alles wat we van hem hebben en mag hij als verwijzing naar buiten
+// gelezen worden.
+//
+// Deze vraag hoort HIER en niet in de weergave: het is een uitspraak over de
+// GRAAF, geen presentatiekeuze. Wat de weergave er vervolgens mee doet — er een
+// anker van maken, en alleen voor schema's die een browser kan volgen — blijft
+// aan doc.js.
+function pointsOutside(dataStore, term) {
+  if (!term || term.termType !== 'NamedNode') return false;
+  return dataStore.countQuads(term, null, null, null) === 0;
+}
+
 // Eén waarde als weergave-item. `kind` zegt hoe doc.js hem tekent:
 //   text  — letterlijk (dash:LiteralViewer)
 //   link  — de IRI zelf, als link (dash:URIViewer / shui:IRIViewer)
 //   label — het label van de doelknoop (dash:LabelViewer), met de IRI erbij
 //           zodat een weergave er desgewenst naartoe kan springen
+//
+// LABEL ALS HYPERLINK. DASH omschrijft dash:LabelViewer als "a hyperlink to
+// that URI based on the display label of the resource" — linktekst het label,
+// bestemming de IRI. Dat geldt alléén voor een knoop die hier niet beschreven
+// wordt: interne IRI's staan in deze viewer nergens als naakte link, want
+// daarvoor is de weergave zelf de plek. Het item draagt daarom `external`; de
+// tekst blijft in beide gevallen het label.
 function valueItem(dataStore, term, ps) {
+  const labelItem = () => ({
+    kind: 'label',
+    text: labelFor(dataStore, term),
+    iri: term.termType === 'NamedNode' ? term.value : null,
+    external: pointsOutside(dataStore, term),
+  });
   switch (ps.viewer) {
     case 'URIViewer':
     case 'HyperlinkViewer':
       return { kind: 'link', text: term.value, iri: term.termType === 'NamedNode' ? term.value : null };
     case 'LabelViewer':
-      return { kind: 'label', text: labelFor(dataStore, term), iri: term.termType === 'NamedNode' ? term.value : null };
+      return labelItem();
     case 'LiteralViewer':
       return { kind: 'text', text: term.value, iri: null };
     default:
       // Geen widget aangewezen: een IRI leest als label, een literal letterlijk.
       return term.termType === 'NamedNode'
-        ? { kind: 'label', text: labelFor(dataStore, term), iri: term.value }
+        ? labelItem()
         : { kind: 'text', text: term.value, iri: null };
   }
 }

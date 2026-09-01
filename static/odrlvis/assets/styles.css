@@ -2,13 +2,6 @@
   --bg: #ffffff;
   --bg-alt: #f6f8fa;
   --bg-nav: #fbfcfd;
-  --bg-src: #f6f8fa;
-  --src-head-fg: #5b6774;
-  --src-head-border: #e2e7ec;
-  /* Turtle-syntaxpalet (licht) */
-  --tok-prefix: #205e9e; --tok-iri: #187a58; --tok-pname: #9a5b17;
-  --tok-string: #a1467e; --tok-kw: #6b4fa1; --tok-comment: #7a8694;
-  --tok-punct: #5b6774; --tok-num: #b06a10;
   --fg: #1c2430;
   --fg-soft: #5b6774;
   --border: #e2e7ec;
@@ -25,25 +18,17 @@
   --artifact: #a11d47;
   /* Overervings-accent (odrl:inheritFrom), zie doc.css: geen regeltype-kleur. */
   --kind-inherit: #6b4fa1;
-  --code-fg: #24313f;
   --mono: ui-monospace, "SFMono-Regular", "Menlo", "Consolas", monospace;
   --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #12161c; --bg-alt: #1a2029; --bg-nav: #151b22; --bg-src: #0d1117;
+    --bg: #12161c; --bg-alt: #1a2029; --bg-nav: #151b22;
     --fg: #dbe2ea; --fg-soft: #93a0ae; --border: #262e38;
     --accent: #6ea8dc; --accent-soft: #1c2938;
     --offer: #b39ddb; --agreement: #6ec6a5; --artifact: #e6789e;
     --rule-doel: #63b97f; --rule-toestemming: #4fb2ba; --attention: #e0a35f;
     --kind-inherit: #b39ddb;
-    --code-fg: #c9d3de;
-    --src-head-fg: #8b98a8;
-    --src-head-border: #222b36;
-    /* Turtle-syntaxpalet (donker) */
-    --tok-prefix: #7fa8d9; --tok-iri: #6cc6a8; --tok-pname: #d7a06b;
-    --tok-string: #c98fb0; --tok-kw: #b39ddb; --tok-comment: #667080;
-    --tok-punct: #8b98a8; --tok-num: #e0a35f;
   }
 }
 
@@ -77,18 +62,16 @@ body {
 .status { color: var(--fg-soft); font-size: 12px; }
 
 /* Layout */
-.layout { flex: 1 1 auto; display: grid; grid-template-columns: 300px 1fr 40%; min-height: 0; }
+.layout { flex: 1 1 auto; display: grid; grid-template-columns: 300px 1fr; min-height: 0; }
 .pane { overflow: auto; min-width: 0; }
 .pane-nav { border-right: 1px solid var(--border); background: var(--bg-nav); }
 .pane-doc { background: var(--bg); }
-.pane-src { border-left: 1px solid var(--border); background: var(--bg-src); }
 .pane-head {
   position: sticky; top: 0; z-index: 1; padding: 8px 14px;
   font-size: 12px; text-transform: uppercase; letter-spacing: .5px;
   color: var(--fg-soft); background: inherit; border-bottom: 1px solid var(--border);
   display: flex; align-items: center; justify-content: space-between; gap: 8px;
 }
-.pane-src .pane-head { color: var(--src-head-fg); border-color: var(--src-head-border); background: var(--bg-src); }
 
 /* Nav tree */
 /* Zoekveld boven de navigatieboom (klein, dependency-vrij). */
@@ -214,25 +197,6 @@ ul.clean li { padding: 3px 0; }
 
 .empty { color: var(--fg-soft); padding: 40px 28px; }
 
-/* Source pane */
-.src-code { margin: 0; padding: 14px 16px 60px; overflow: auto; }
-.src-code code { font-family: var(--mono); font-size: 12px; color: var(--code-fg);
-  white-space: pre; display: block; }
-.src-tabs { display: flex; gap: 4px; }
-.src-tab { font-size: 11px; padding: 1px 8px; border-radius: 4px; cursor: pointer;
-  border: 1px solid var(--src-head-border); color: var(--src-head-fg); background: transparent; }
-.src-tab.active { color: #fff; background: var(--accent); border-color: var(--accent); }
-
-/* Turtle syntax highlight (kleuren per thema via :root-variabelen) */
-.tok-prefix { color: var(--tok-prefix); }
-.tok-iri { color: var(--tok-iri); }
-.tok-pname { color: var(--tok-pname); }
-.tok-string { color: var(--tok-string); }
-.tok-kw { color: var(--tok-kw); font-weight: 600; }
-.tok-comment { color: var(--tok-comment); font-style: italic; }
-.tok-punct { color: var(--tok-punct); }
-.tok-num { color: var(--tok-num); }
-
 /* Bewerken-modus */
 .btn-toggle[aria-pressed="true"], .btn.active {
   background: var(--accent); color: #fff; border-color: var(--accent);
@@ -273,21 +237,8 @@ textarea.edit-input { min-height: 64px; resize: vertical; }
   vertical-align: top; text-align: left;
 }
 
-/* Bronpaneel: raw-RDF-bewerken (laag 3) */
-.src-editbar { display: flex; gap: 4px; }
-.src-editor {
-  width: 100%; min-height: 320px; box-sizing: border-box; display: block;
-  background: var(--bg-src); color: var(--code-fg);
-  font-family: var(--mono); font-size: 12px; line-height: 1.5;
-  border: none; outline: none; padding: 14px 16px; resize: vertical;
-}
-.src-editor[hidden], .src-code[hidden], .src-error[hidden] { display: none; }
-.src-error { color: #ff8a80; padding: 8px 16px; font-family: var(--mono);
-  font-size: 12px; white-space: pre-wrap; border-bottom: 1px solid var(--src-head-border); }
-
 @media (max-width: 900px) {
   .layout { grid-template-columns: 1fr; grid-auto-rows: minmax(180px, auto); }
-  .pane-src { border-left: none; border-top: 1px solid var(--border); }
   .pane-nav { border-right: none; border-bottom: 1px solid var(--border); }
 }
 
@@ -297,15 +248,17 @@ textarea.edit-input { min-height: 64px; resize: vertical; }
 .role-line a.permalink:hover { color: var(--accent, #4a90d9); text-decoration: underline; }
 
 /* Lange literals: afgekapte weergave met "toon meer"-knop (weergave-kwestie;
-   het model en het bronfragment blijven volledig). */
+   het model blijft volledig). */
 .longtext { white-space: pre-wrap; overflow-wrap: anywhere; }
 button.toggle-more {
   border: none; background: none; padding: 0; font: inherit; font-size: 12px;
   color: var(--accent, #4a90d9); cursor: pointer; text-decoration: underline;
 }
 
-/* Verken-knop: ronde vergrootglas-affordance (chip-diameter, geen tekst) op
-   node-achtige elementen; opent de graaf-inspecteur in het bronpaneel. */
+/* ⌕: ronde vergrootglas-affordance (chip-diameter, geen tekst) op node-achtige
+   elementen. Sinds aug 2026 een LINK naar de generieke RDF-verkenner in een
+   ander tabblad (assets/verken.js), niet meer een knop die een paneel opent —
+   de vorm is bewust ongewijzigd gebleven. */
 .verken-btn {
   display: inline-flex; align-items: center; justify-content: center;
   width: 21px; height: 21px; padding: 0; margin-left: 6px; flex: 0 0 auto;
@@ -313,71 +266,10 @@ button.toggle-more {
   color: var(--fg-soft); cursor: pointer; font: inherit; font-size: 14px;
   line-height: 1; vertical-align: middle;
 }
+.verken-btn { text-decoration: none; }
 .verken-btn:hover { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); }
 /* Rechts uitgelijnd op kaart-kopregels: de knop hoort visueel bij de kaart. */
 .card-title .verken-btn { margin-left: auto; }
-
-/* Graaf-inspecteur in het (donkere) bronpaneel */
-.src-inspect { padding: 12px 16px 60px; font-size: 13px; color: var(--code-fg); }
-.src-inspect[hidden] { display: none; }
-.src-inspect .muted { color: var(--src-head-fg); }
-.insp-crumbs { font-size: 12px; margin-bottom: 10px; line-height: 1.7; color: var(--src-head-fg); }
-.src-inspect .crumb { cursor: pointer; color: #7fa8d9; text-decoration: underline dotted; }
-.src-inspect .crumb.current { color: var(--code-fg); font-weight: 600; text-decoration: none; cursor: default; }
-.insp-sep { color: #566072; }
-.insp-label { font-weight: 700; font-size: 14px; }
-.src-inspect .insp-curie { color: #d7a06b; font-size: 12px; overflow-wrap: anywhere; }
-.src-inspect .insp-types { font-size: 11.5px; }
-.insp-sec { margin: 14px 0 4px; font-size: 11px; font-weight: 600;
-  text-transform: uppercase; letter-spacing: .5px; color: var(--src-head-fg);
-  border-bottom: 1px solid var(--src-head-border); padding-bottom: 3px; }
-.insp-in-list { list-style: none; margin: 0; padding: 0; }
-.insp-in { cursor: pointer; padding: 3px 6px; border-radius: 4px; }
-.src-inspect .insp-in:hover { background: #26303d; }
-.src-inspect .insp-in-subj { color: var(--code-fg); text-decoration: underline dotted; }
-.src-inspect .insp-in-pred { font-size: 11.5px; }
-.insp-none { font-size: 12.5px; }
-.src-inspect .insp-ttl { margin: 6px 0 0; overflow: auto; }
-.src-inspect .insp-ttl code { font-family: var(--mono); font-size: 12px;
-  color: var(--code-fg); white-space: pre; display: block; }
-
-/* Klikbare termen in het gehighlighte fragment (subjects in de graaf) */
-.tok-link { text-decoration: underline dotted; cursor: pointer; }
-.tok-link:hover { filter: brightness(1.3); }
-
-/* Inspecteur-fold-outs: "Verwijst naar (n)" / "Verwezen vanuit (n)" —
-   ingeklapt bij render, lijst lazy + gechunkt (zie renderInspector). */
-.insp-fold { display: block; margin: 10px 0; padding: 5px 10px;
-  border: 1px solid #33404f; border-radius: 8px; }
-details.insp-fold[open] > .vl-summary .vl-chevron { transform: rotate(90deg); }
-.insp-fold .vl-summary { color: var(--src-head-fg); }
-.insp-filter { display: block; width: 90%; margin: 8px 0 4px; }
-.insp-fold .ref-more { font-size: 12px; }
-
-/* KETEN-LAYOUT (aug 2026): de knoop waar je staat als vlak, met de twee
-   richtingen erboven en eronder en het randlabel op de rand ertussen —
-   dezelfde vorm als het Invulling-paneel in doc.css. Het bronpaneel is donker,
-   dus het "grijze" vlak is hier een tint lichter dan de achtergrond. */
-.src-inspect .insp-cur {
-  position: relative; margin: 24px 0; padding: 12px 12px 10px;
-  background: #222b36; border-top: 1px solid #33404f; border-bottom: 1px solid #33404f;
-}
-.src-inspect .insp-cur .insp-sec { margin-top: 8px; }
-.src-inspect .insp-dir.insp-in { margin-bottom: 2px; }
-.src-inspect .insp-dir.insp-out { margin-top: 4px; }
-.insp-fold-bare > summary { display: none; }
-.src-inspect .fill-edge {
-  position: absolute; left: 12px; margin: 0; padding: 0 6px;
-  background: var(--code-bg, #1b222c); color: var(--src-head-fg);
-  font-size: 11.5px; font-weight: 650; line-height: 1.4;
-}
-.src-inspect .fill-edge-up { top: 0; transform: translateY(-50%); }
-.src-inspect .fill-edge-down { bottom: 0; transform: translateY(50%); }
-.src-inspect .fill-edge.is-foldable { cursor: pointer; user-select: none; }
-.src-inspect .fill-edge.is-foldable::after {
-  content: '\25B8'; margin-left: 5px; font-size: 10px;
-}
-.src-inspect .fill-edge.is-foldable[aria-expanded="true"]::after { content: '\25BE'; }
 
 /* Schaalbare terugverwijzings-lijst (bijv. >10 overeenkomsten op één aanbod):
    fold-out in versie-kiezer-stijl; uitgeklapt filterveld + gechunkte lijst
@@ -419,7 +311,7 @@ ul.c-group-items { margin: 2px 0 2px 4px; padding: 0 0 0 14px; list-style: none;
 details.c-fold[open] > .vl-summary .vl-chevron { transform: rotate(90deg); }
 .c-fold-body { margin-top: 4px; }
 
-/* Fold-out-koptekst (inspecteur, ledenlijst, verwijzingslijst, voorwaarde-fold) */
+/* Fold-out-koptekst (ledenlijst, verwijzingslijst, voorwaarde-fold) */
 .vl-summary { font-size: 12px; cursor: pointer; list-style: none; display: flex;
   align-items: baseline; gap: 6px; padding: 2px 0; user-select: none; }
 .vl-summary::-webkit-details-marker { display: none; }
@@ -486,27 +378,13 @@ details.c-fold[open] > .vl-summary .vl-chevron { transform: rotate(90deg); }
 .coll-source { font-size: 11px; margin-left: 6px; }
 .party-coll { display: inline-block; }
 
-/* INGEKLAPT = GEEN VLAK (correctie aug 2026). Een richtingblok draagt zijn kop
-   niet meer zelf (die staat op het randlabel), dus een dichtgeklapte fold-out
-   liet een leeg omrand vakje achter: rand, padding en marge zonder inhoud. Dat
-   las als "hier is niets" in plaats van "dit staat dicht". Dicht neemt daarom
-   GEEN ruimte in — het randlabel met zijn telling en chevron is het hele
-   signaal, en dat zegt precies wat er te halen valt en dat het dicht staat. */
-.insp-fold-bare:not([open]) {
-  margin: 0; padding: 0; border: 0; background: none;
-}
-/* En de chevron mag gezien worden: hij is de enige aanwijzing dat het label
-   een knop is. Iets groter dan een voetnoot, en in de kleur van het label
-   zelf in plaats van nog een tint gedempter. */
-.fill-edge.is-foldable::after { font-size: 11px; color: inherit; }
-
 /* --- UITLEG-TOOLTIP (Visualisation Note §1) ---------------------------------
    Een term die een DEFINITIE in de data heeft (skos:definition,
    dct:description, rdfs:comment) krijgt twee dingen: een fijne gestippelde
    onderstreping als affordance, en een paneeltje op verlengde hover of bij
    focus. Zie assets/tooltip.js voor het gedrag; hier staat alleen de vorm.
-   Zelfde blok in assets/styles.css — de graaf-inspecteur wordt door beide
-   pagina's gebruikt, dus beide stylesheets moeten hem kennen. */
+   Zelfde blok in assets/doc.css — de tooltip wordt door beide pagina's
+   gebruikt, dus beide stylesheets moeten hem kennen. */
 /* GEEN ZICHTBARE AANDUIDING VOORAF (besluit eigenaar, aug 2026). Een
    gestippelde onderstreping op elke gedefinieerde term maakte de pagina
    streperig — en een uitleg is navraag, geen waarschuwing. De tooltip komt

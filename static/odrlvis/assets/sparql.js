@@ -1164,62 +1164,58 @@ WHERE {
 `;
 }
 
-// On-demand bijladen van een willekeurige node in de graaf-inspecteur:
-// hetzelfde sluitingspatroon werkt ook voor niet-policies (het pad mag leeg
-// matchen; container-/versietakken en labels blijven gewoon meekomen).
-export function nodeDetailQuery(iri, opts) {
-  return policyDetailQuery(iri, opts);
-}
+// --- De verkenner: één knoop, BEIDE richtingen -------------------------------
+// De verkenner-modus van doc.html (assets/verken-view.js) toont per knoop wat
+// hij zelf zegt én wie naar hem verwijst. In ?src=<endpoint>-modus is de
+// geladen graaf daarvoor per definitie onvolledig: het lijst-skelet en de
+// detail-CONSTRUCTs zijn op POLICIES gericht, en een willekeurige knoop
+// (een partij, een doel-concept, een gegevensveld) staat er hooguit als
+// verwijzing in. Per navigatiestap haalt de verkenner daarom deze ENE
+// CONSTRUCT op en mengt het resultaat in de store vóór het renderen.
+//
+// VORM. Dezelfde twee richtingen als de query die het ⌕ aan de externe client
+// meegeeft (verken.js/nodeQuery), plus de LABELS van de buren: zonder die
+// labels zou elke rij in de lijst een kale curie zijn, terwijl de weergave
+// juist om leesbare namen draait. De labeltriples hangen in een OPTIONAL, dus
+// een buur zonder label valt gewoon weg.
+//
+// PAGINEREN VIA EEN SUB-SELECT MET LIMIT. Een druk bezochte knoop (een Offer
+// met 1.392 wasDerivedFrom's) mag één navigatiestap niet in tienduizenden
+// triples laten lopen. De limiet zit per RICHTING in een sub-SELECT, zodat
+// het afkappen gebeurt vóór de labels erbij gezocht worden — anders zou één
+// buur met vijf labels vijf plaatsen van de limiet opeten.
+export const NODE_REFS_LIMIT = 400;
 
-// --- Inkomende verwijzingen (graaf-inspecteur, ?src=<endpoint>-modus) --------
-// Een druk bezochte knoop (een Offer met 1.392 wasDerivedFrom's, een
-// doelenregister-doel met duizenden purpose-verwijzingen) mag nooit in één
-// klik integraal opgehaald worden: de lijst is gepagineerd (LIMIT/OFFSET,
-// "meer laden" haalt de volgende pagina) en de telling komt uit een apart,
-// goedkoop COUNT. Gededupliceerd per (subject, predicaat); alleen
-// IRI-subjecten (blanke knopen zijn over queries heen niet adresseerbaar).
-export const INCOMING_REFS_PAGE = 60;
-
-export function incomingRefsQuery(iri, { limit = INCOMING_REFS_PAGE, offset = 0 } = {}) {
+export function nodeRefsQuery(iri, {
+  limit = NODE_REFS_LIMIT, excludeGraphs = DEFAULT_EXCLUDE_GRAPHS,
+} = {}) {
   const P = iriRef(iri);
   const lim = Math.max(1, limit | 0);
-  const off = Math.max(0, offset | 0);
+  const scoped = (gVar, body) => (excludeGraphs && excludeGraphs.length
+    ? `GRAPH ${gVar} { ${body} }
+    ${graphFilter(gVar, excludeGraphs)}`
+    : body);
+  const LABEL_PREDS = 'FILTER(?lp IN (rdfs:label, skos:prefLabel, dct:title, rdf:type))';
   return `${PREFIXES_SPARQL}
-SELECT ?s ?p (SAMPLE(?l) AS ?label) WHERE {
-  ?s ?p ${P} .
-  FILTER(isIRI(?s) && ?s != ${P})
-  OPTIONAL { ?s rdfs:label|skos:prefLabel|dct:title ?l }
+CONSTRUCT {
+  ${P} ?uit ?object .
+  ?subject ?in ${P} .
+  ?object ?lp ?ll .
+  ?subject ?lp ?ll .
 }
-GROUP BY ?s ?p
-ORDER BY ?s ?p
-LIMIT ${lim} OFFSET ${off}
-`;
-}
-
-// Kant-en-klare host-adapter voor renderInspector's opts.remoteIncoming:
-// telling + pagina's van de inkomende verwijzingen van een node op het
-// endpoint (rijen als { iri, predicate, label }).
-export function remoteIncoming(endpoint, fetchImpl) {
-  return {
-    count: async (iri) => {
-      const rows = await sparqlSelect(endpoint, incomingRefCountQuery(iri), fetchImpl);
-      return rows.length && rows[0].n ? Number(rows[0].n.value) : 0;
-    },
-    page: async (iri, offset, limit) => {
-      const rows = await sparqlSelect(endpoint, incomingRefsQuery(iri, { offset, limit }), fetchImpl);
-      return rows.map((r) => ({
-        iri: r.s.value,
-        predicate: r.p.value,
-        label: (r.label && r.label.value) || null,
-      }));
-    },
-  };
-}
-
-export function incomingRefCountQuery(iri) {
-  const P = iriRef(iri);
-  return `SELECT (COUNT(*) AS ?n) WHERE {
-  SELECT DISTINCT ?s ?p WHERE { ?s ?p ${P} . FILTER(isIRI(?s) && ?s != ${P}) }
+WHERE {
+  {
+    # a. wat deze knoop zelf zegt (literals en verwijzingen), met de labels
+    #    van de knopen waarnaar hij wijst.
+    { SELECT ?uit ?object WHERE { ${P} ?uit ?object } LIMIT ${lim} }
+    OPTIONAL { ${scoped('?g1', `?object ?lp ?ll .
+      ${LABEL_PREDS}`)} }
+  } UNION {
+    # b. wie naar deze knoop verwijst, met hún labels.
+    { SELECT ?in ?subject WHERE { ?subject ?in ${P} . FILTER(isIRI(?subject)) } LIMIT ${lim} }
+    OPTIONAL { ${scoped('?g2', `?subject ?lp ?ll .
+      ${LABEL_PREDS}`)} }
+  }
 }
 `;
 }
@@ -1253,7 +1249,7 @@ const KIND_CLASS = {
 // dct:valid-periodeknoop leverde: de query heeft ze dan al tot ?from/?to
 // genormaliseerd (validityOptionals/COALESCE), en het skelet is een
 // viewer-intern tussenformaat — daar één vorm aanhouden houdt de skeletgraaf
-// vlak en de graaf-inspecteur leesbaar. De periodeknoop uit een niet-gemigreerde
+// vlak en de weergave leesbaar. De periodeknoop uit een niet-gemigreerde
 // bron overleeft dus niet als knoop; zijn DATUMS wel, en die zijn wat de
 // weergave toont. (Voor de VOLLEDIGE graaf van één policy geldt dat niet: het
 // detail-CONSTRUCT haalt de bron-triples ongewijzigd op, knoop en al.)

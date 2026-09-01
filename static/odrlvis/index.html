@@ -41,23 +41,16 @@
       <div class="nav-tree" id="nav-tree"></div>
     </nav>
 
+    <!-- TWEE PANELEN (aug 2026): navigatie + documentweergave. Het derde
+         paneel toonde de machineleesbare bron (Turtle / JSON-LD / verkennen)
+         naast de mensleesbare weergave; dat is vervallen. De ruwe triples zijn
+         te bekijken via het ⌕ (RDF-verkenner; in de documentweergave een tweede
+         full-page stand van die pagina, hier de meegeleverde Comunica-client
+         in een ander tabblad) en te
+         downloaden met de export-knoppen hierboven. -->
     <section class="pane pane-doc" id="doc" aria-label="Weergave">
       <div id="doc-content" class="doc-content"></div>
     </section>
-
-    <aside class="pane pane-src" id="src" aria-label="Bron">
-      <div class="pane-head">
-        Bron
-        <span class="src-tabs" id="src-tabs"></span>
-        <span class="src-editbar" id="src-editbar"></span>
-      </div>
-      <div class="src-error" id="src-error" hidden></div>
-      <!-- Graaf-inspecteur (leesmodus): geopend via een "verken"-knop of de
-           Verkennen-tab; vervangt tijdelijk het Turtle/JSON-LD-fragment. -->
-      <div class="src-inspect insp" id="src-inspect" hidden></div>
-      <pre class="src-code" id="src-pre"><code id="src-code"></code></pre>
-      <textarea class="src-editor" id="src-editor" spellcheck="false" hidden></textarea>
-    </aside>
   </main>
 
   <datalist id="dl-labeled"></datalist>

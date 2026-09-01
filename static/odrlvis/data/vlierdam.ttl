@@ -3,12 +3,12 @@
 #
 # SAMENGEVOEGD BESTAND — niet met de hand bewerken.
 # Bron: https://github.com/VNG-Realisatie/odrlvis (map data/), samengevoegd
-# op 2026-08-31 voor publicatie op de FTV-site. Bronbestanden, met de datum
+# op 2026-09-01 voor publicatie op de FTV-site. Bronbestanden, met de datum
 # van hun laatste wijziging:
-#   data/vlierdam/vocabulaire.ttl  (2026-08-28)
-#   data/vlierdam/velden.ttl  (2026-08-26)
-#   data/vlierdam/beleid.ttl  (2026-08-29)
-#   data/vlierdam/openftv.ttl  (2026-08-28)
+#   data/vlierdam/vocabulaire.ttl  (2026-09-01)
+#   data/vlierdam/velden.ttl  (2026-08-28)
+#   data/vlierdam/beleid.ttl  (2026-09-01)
+#   data/vlierdam/openftv.ttl  (2026-09-01)
 #
 # De @prefix-declaraties van alle bronbestanden staan hieronder in één blok;
 # per bronbestand volgt daarna de onveranderde inhoud met een kopregel.
@@ -32,7 +32,7 @@
 
 
 # ############################################################################
-# ### BRON: data/vlierdam/vocabulaire.ttl   (2026-08-28)
+# ### BRON: data/vlierdam/vocabulaire.ttl   (2026-09-01)
 # ############################################################################
 
 # =============================================================================
@@ -127,7 +127,9 @@ vlierdam:aanwezig a odrl:Operator , skos:Concept ;
                     "Holds when the left operand occurs in the request; it says nothing about its value. The right operand is true."@en .
 
 # ---- Acties (profieleigen, naast de ODRL-kernacties) ------------------------
-# Twee acties voor de koppelvlakverplichtingen van het OpenFTV-afsprakenstelsel.
+# Twee acties op het verzoek zelf: traceren voor de koppelvlakverplichting van
+# het OpenFTV-afsprakenstelsel, vermelden voor de eigen doelbindingsplicht van
+# de Vlierdam-outway (het doel blijft aan de vragende kant, zie beleid.ttl).
 # Bewust GEEN skos:broader odrl:use: het zijn geen vormen van gebruik van het
 # gegeven maar handelingen op het verzoek zelf, en een verzonnen plaats in de
 # ODRL-actiehiërarchie zou meer beweren dan we weten.
@@ -236,13 +238,14 @@ vlierdam:Veld a owl:Class ;
 # weergave (één groep per doelbinding). Dat de doelbinding ook toetsbaar is —
 # OpenFTV zet haar als context.doelbinding in het verwerkingsverzoek — stond
 # hier tot aug 2026 als tweede marker (apnl:TechnischToetsbaar); die is uit het
-# profiel geschrapt, de doel-voorwaarden op de beslispunten laten het zelf zien.
+# profiel geschrapt, de doel-voorwaarden op de outway laten het zelf zien. Alleen
+# daar: het doel staat in het UITGAANDE verzoek en gaat niet mee naar de inways.
 odrl:purpose a qb:DimensionProperty ;
     sh:order 1 .
 
 
 # ############################################################################
-# ### BRON: data/vlierdam/velden.ttl   (2026-08-26)
+# ### BRON: data/vlierdam/velden.ttl   (2026-08-28)
 # ############################################################################
 
 # Dataminimalisatie als TARGET: de toegestane velden zijn AssetCollections;
@@ -301,7 +304,7 @@ vlierdam:veld-brv-klasse a odrl:Asset , vlierdam:Veld ;
 
 
 # ############################################################################
-# ### BRON: data/vlierdam/beleid.ttl   (2026-08-29)
+# ### BRON: data/vlierdam/beleid.ttl   (2026-09-01)
 # ############################################################################
 
 # LEEN uit DPV (Data Privacy Vocabulary, W3C Data Privacy Vocabularies and
@@ -324,7 +327,7 @@ vlierdam:veld-brv-klasse a odrl:Asset , vlierdam:Veld ;
 # =============================================================================
 # Gemeente Vlierdam (FICTIEF) — het laadpalenbeleid als vijf odrl:Sets. Vier
 # daarvan zijn gesneden op wat er werkelijk beslist wordt; de vijfde,
-# set-openftv-koppelvlak, staat er BOVEN: zij draagt de twee verplichtingen die
+# set-openftv-koppelvlak, staat er BOVEN: zij draagt de verplichting die
 # het OpenFTV-afsprakenstelsel aan elk koppelvlak stelt, en de twee inway-Sets
 # nemen haar met odrl:inheritFrom over. Drie van de vier zijn een AuthZEN-beslispunt in
 # de OpenFTV-stack: de Vlierdam-outway, de RvIG-inway (BRP) en de RDW-inway
@@ -376,23 +379,33 @@ vlierdam:veld-brv-klasse a odrl:Asset , vlierdam:Veld ;
 # ouder- en kindregels gelden SAMEN). Zo staat een stelselverplichting één keer
 # in de bron, en niet vier keer overgeschreven per beslispunt.
 #
-# Twee VERPLICHTINGEN op SET-NIVEAU (odrl:obligation, geen assignee): zij
-# gelden voor elke bevraging over een OpenFTV-koppelvlak, ongeacht welke regel
-# van de kind-Set de toegang verleent. Een assignee zou hen aan één partij
-# binden; dat is precies niet de bedoeling — de plicht rust op wie de bevraging
-# doet, en dat is per kind-Set een andere partij.
+# ÉÉN VERPLICHTING op SET-NIVEAU (odrl:obligation, geen assignee): zij geldt
+# voor elke bevraging over een OpenFTV-koppelvlak, ongeacht welke regel van de
+# kind-Set de toegang verleent. Een assignee zou haar aan één partij binden; dat
+# is precies niet de bedoeling — de plicht rust op wie de bevraging doet, en dat
+# is per kind-Set een andere partij.
+#
+# WAAROM ALLEEN DE TRACE-IDENTIFICATIE, EN NIET DE DOELBINDING. Het trace-id
+# reist de hele keten door: het is betekenisloos zonder de logs eromheen, en
+# juist daarom mag — en moet — elke schakel het zien. Het DOEL van een bevraging
+# is dat niet. Wie het doel kent, weet waarom een gemeente naar deze burger
+# vraagt, en dat is precies wat een verstrekker als RvIG of RDW niet hoort te
+# weten. Dataminimalisatie werkt hier richting de verstrekker: de doelbinding
+# blijft aan de VRAGENDE kant (zie vlierdam:plicht-doelbinding bij de outway) en
+# komt bij de inways niet mee. Een stelselbrede plicht "vermeld je doel" zou dat
+# doorbreken, want zij zou over élk koppelvlak gelden.
 
 vlierdam:set-openftv-koppelvlak a odrl:Set ;
     odrl:uid vlierdam:set-openftv-koppelvlak ;
     dct:title "Koppelvlakvoorwaarden OpenFTV"@nl ,
               "OpenFTV interface conditions"@en ;
-    dct:description "Elke bevraging over een OpenFTV-koppelvlak draagt een trace-identificatie en vermeldt de doelbinding waarvoor zij wordt gedaan."@nl ,
-                    "Every query over an OpenFTV interface carries a trace identifier and states the purpose for which it is made."@en ;
+    dct:description "Elke bevraging over een OpenFTV-koppelvlak draagt een trace-identificatie, zodat verzoeken door de keten heen te volgen zijn."@nl ,
+                    "Every query over an OpenFTV interface carries a trace identifier, so requests can be followed along the chain."@en ;
     dct:source <https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/open-ftv/-/blob/main/eam/pep/headers.go> ;
     odrl:assigner vlierdam:OpenFTV ;
     dct:publisher vlierdam:OpenFTV ;
     dct:issued "2026-08-26"^^xsd:date ;
-    odrl:obligation vlierdam:plicht-traceparent , vlierdam:plicht-doelbinding .
+    odrl:obligation vlierdam:plicht-traceparent .
 
 vlierdam:plicht-traceparent a odrl:Duty ;
     odrl:uid vlierdam:plicht-traceparent ;
@@ -407,16 +420,6 @@ vlierdam:vw-traceparent a odrl:Constraint ;
     rdfs:label "Traceparent is opgegeven"@nl , "Traceparent is present"@en ;
     odrl:leftOperand vlierdam:traceparent ; odrl:operator vlierdam:aanwezig ;
     odrl:rightOperand true .
-
-vlierdam:plicht-doelbinding a odrl:Duty ;
-    odrl:uid vlierdam:plicht-doelbinding ;
-    dct:title "Doelbinding vermelden"@nl , "State the purpose"@en ;
-    dct:description "Elke bevraging vermeldt de doelbinding waarvoor zij wordt gedaan; zonder opgegeven doel valt niet te toetsen of de verstrekking binnen de doelbinding blijft."@nl ,
-                    "Every request states the purpose it serves; without a stated purpose there is no way to test whether the disclosure stays within its purpose limitation."@en ;
-    # Geen eigen voorwaarde: wat de plicht vraagt ("er is een doelbinding
-    # genoemd") wordt ingevuld door de doel-voorwaarden (odrl:eq) op de regels
-    # van de beslispunten — die zeggen bovendien wélk doel toelaatbaar is.
-    odrl:action vlierdam:vermelden .
 
 # ---- De laadpalenapplicatie zelf: intern, geen beslispunt in de stack -------
 
@@ -496,6 +499,24 @@ vlierdam:vw-app-werktijd a odrl:Constraint ;
     odrl:rightOperand vlierdam:werktijden .
 
 # ---- Beslispunt 1: de outway van Gemeente Vlierdam (uitgaande bevragingen) --
+#
+# DE DOELBINDING HOORT AAN DE VRAGENDE KANT. Gemeente Vlierdam stelt de
+# bevraging op, en zij is de enige partij die weet — en hoort te weten — waarom
+# zij die stelt. De plicht hieronder is daarom haar EIGEN verplichting op haar
+# eigen outway, geen stelselplicht: het doel staat in het uitgaande verzoek en
+# wordt door de outway-PDP getoetst, en daar houdt het op. Naar RvIG en RDW
+# reist het niet mee; hun inways kennen het waarom niet en toetsen er dus ook
+# niet op (zie de inway-Sets verderop).
+
+vlierdam:plicht-doelbinding a odrl:Duty ;
+    odrl:uid vlierdam:plicht-doelbinding ;
+    dct:title "Doelbinding vermelden"@nl , "State the purpose"@en ;
+    dct:description "Elke uitgaande bevraging van Gemeente Vlierdam vermeldt de doelbinding waarvoor zij wordt gedaan; zonder opgegeven doel kan de outway niet toetsen of de bevraging binnen de doelbinding blijft. Het doel blijft bij de gemeente en gaat niet mee naar de verstrekker."@nl ,
+                    "Every outgoing query by the municipality of Vlierdam states the purpose it serves; without a stated purpose the outway cannot test whether the query stays within its purpose limitation. The purpose stays with the municipality and is not passed on to the provider."@en ;
+    # Geen eigen voorwaarde: wat de plicht vraagt ("er is een doelbinding
+    # genoemd") wordt ingevuld door de doel-voorwaarden (odrl:eq) op de twee
+    # outway-regels — die zeggen bovendien wélk doel toelaatbaar is.
+    odrl:action vlierdam:vermelden .
 
 vlierdam:set-vlierdam-outway a odrl:Set ;
     odrl:uid vlierdam:set-vlierdam-outway ;
@@ -507,12 +528,12 @@ vlierdam:set-vlierdam-outway a odrl:Set ;
     odrl:assigner vlierdam:GemeenteVlierdam ;
     dct:publisher vlierdam:GemeenteVlierdam ;
     dct:issued "2026-08-25"^^xsd:date ;
-    # DEZELFDE KNOOP als in de koppelvlak-Set (Visualisatie-note §2, hergebruik):
-    # de outway erft niet, hij draagt de stelselplicht als EIGEN verplichting.
-    # Zo staat één duty in drie Sets — geërfd bij de twee inways, eigen hier —
-    # zonder dat de regel ergens is overgeschreven. Alleen plicht-doelbinding:
-    # de traceparent-header wordt door de PEP van het koppelvlak gezet, niet
-    # door de outway die de bevraging opstelt.
+    # DE ENIGE SET MET DE DOELBINDINGSPLICHT. De outway erft niet van de
+    # koppelvlak-Set: de traceparent-header wordt door de PEP van het koppelvlak
+    # gezet, niet door de outway die de bevraging opstelt. Wat hij wél draagt is
+    # zijn eigen doelbindingsplicht — hier opgeschreven, hier getoetst, en
+    # nergens anders. De twee inways zien het doel niet en dragen de plicht dus
+    # ook niet.
     odrl:obligation vlierdam:plicht-doelbinding ;
     odrl:permission vlierdam:regel-outway-brp , vlierdam:regel-outway-brv .
 
@@ -544,8 +565,9 @@ vlierdam:vw-brp-doel a odrl:Constraint ;
     odrl:leftOperand odrl:purpose ; odrl:operator odrl:eq ;
     odrl:rightOperand vlierdam:doelbinding-registratie-laadpalen ;
     # De KETEN, tweede stap met hetzelfde predicaat: wie odrl:purpose = <dit
-    # doel> afdwingt, dwingt daarmee de stelselplicht "vermeld de doelbinding"
-    # mee af. Deze schakel hoort bij de VOORWAARDE, niet bij het anker.
+    # doel> afdwingt, dwingt daarmee de verplichting "vermeld de doelbinding"
+    # van deze Set mee af. Deze schakel hoort bij de VOORWAARDE, niet bij het
+    # anker.
     prov:wasDerivedFrom vlierdam:plicht-doelbinding .
 
 vlierdam:vw-brp-zoektype a odrl:Constraint ;
@@ -587,7 +609,8 @@ vlierdam:vw-brv-doel a odrl:Constraint ;
                "Purpose is registration of charging stations"@en ;
     odrl:leftOperand odrl:purpose ; odrl:operator odrl:eq ;
     odrl:rightOperand vlierdam:doelbinding-registratie-laadpalen ;
-    # Idem: deze scherpere doel-voorwaarde werkt de stelselplicht uit.
+    # Idem: deze scherpere doel-voorwaarde werkt de eigen doelbindingsplicht
+    # van de outway uit.
     prov:wasDerivedFrom vlierdam:plicht-doelbinding .
 
 vlierdam:vw-brv-zoektype a odrl:Constraint ;
@@ -655,11 +678,21 @@ vlierdam:vw-vernietiging-moment a odrl:Constraint , dpv:OrganisationalMeasure ;
     odrl:rightOperand vlierdam:afhandeling-afgerond .
 
 # ---- Beslispunt 2: de inway van RvIG (BRP) ----------------------------------
+#
+# GEEN DOELVOORWAARDE OP DIT BESLISPUNT, EN DAT IS EEN UITGANGSPUNT — geen
+# omissie. RvIG mag niet weten WAAROM Gemeente Vlierdam deze burger bevraagt.
+# Het doel staat in het uitgaande verzoek dat de Vlierdam-outway toetst en reist
+# niet mee over het koppelvlak; de inway ziet het dus niet en kan er niet op
+# toetsen. Dat is dataminimalisatie richting de VERSTREKKER: hij krijgt precies
+# genoeg om te beslissen of hij mag leveren — wie vraagt, welke velden, welk
+# zoektype, welke ingezetenen — en niets over de aanleiding. Wat de inway wél
+# ziet is de trace-identificatie: die is zonder de logs eromheen betekenisloos
+# en verraadt niets over het waarom.
 
 vlierdam:set-rvig-inway a odrl:Set ;
     odrl:uid vlierdam:set-rvig-inway ;
-    # Aangesloten op het OpenFTV-afsprakenstelsel: de twee koppelvlak-
-    # verplichtingen gelden hier onverkort mee (ODRL 2.2 §2.6).
+    # Aangesloten op het OpenFTV-afsprakenstelsel: de koppelvlakverplichting
+    # geldt hier onverkort mee (ODRL 2.2 §2.6).
     odrl:inheritFrom vlierdam:set-openftv-koppelvlak ;
     dct:title "Beslispunt RvIG-inway: bevraging van de BRP"@nl ,
               "Decision point RvIG inway: querying the BRP"@en ;
@@ -669,7 +702,7 @@ vlierdam:set-rvig-inway a odrl:Set ;
     odrl:assigner vlierdam:RvIG ;
     dct:publisher vlierdam:RvIG ;
     dct:issued "2026-08-25"^^xsd:date ;
-    # Naast de twee geërfde stelselplichten een EIGEN verplichting, gedeeld met
+    # Naast de geërfde stelselplicht een EIGEN verplichting, gedeeld met
     # de RDW-inway: dezelfde knoop in twee Sets (zie hierboven).
     odrl:obligation vlierdam:plicht-vernietiging ;
     odrl:permission vlierdam:regel-inway-brp .
@@ -681,11 +714,11 @@ vlierdam:regel-inway-brp a odrl:Permission ;
     odrl:assignee vlierdam:GemeenteVlierdam ;
     odrl:target vlierdam:brp-velden-laadpalen ;
     odrl:action [ rdf:value odrl:read ;
-        odrl:refinement vlierdam:vw-inway-brp-doel , vlierdam:vw-inway-brp-zoektype ,
+        odrl:refinement vlierdam:vw-inway-brp-zoektype ,
                         vlierdam:anker-inway-brp ] ;
     odrl:constraint vlierdam:vw-inway-brp-ingezetene .
 
-# Het anker van de RvIG-inway. Naast de regel en haar drie voorwaarden realiseert
+# Het anker van de RvIG-inway. Naast de regel en haar twee voorwaarden realiseert
 # het ook de STELSELPLICHT plicht-traceparent met haar voorwaarde: de
 # traceparent-header staat in het inkomende verzoek, dus de inway kan haar
 # rechtstreeks toetsen. Dat de plicht via odrl:inheritFrom van de koppelvlak-Set
@@ -695,20 +728,9 @@ vlierdam:anker-inway-brp a odrl:Constraint , dpv:TechnicalMeasure ;
     odrl:leftOperand apnl:verwerkingsverzoek ; odrl:operator apnl:conformsToPolicy ;
     odrl:rightOperand vlierdam:bundle-rvig-pdp1 ;
     prov:wasDerivedFrom vlierdam:regel-inway-brp ,
-        vlierdam:vw-inway-brp-doel , vlierdam:vw-inway-brp-zoektype ,
+        vlierdam:vw-inway-brp-zoektype ,
         vlierdam:vw-inway-brp-ingezetene ,
         vlierdam:plicht-traceparent , vlierdam:vw-traceparent .
-
-# De UITWERKING van de stelselplicht plicht-doelbinding op dit beslispunt: het
-# stelsel eist dát er een doelbinding staat, RvIG eist WELKE. Wie deze
-# voorwaarde afdwingt, dwingt daarmee ook de stelselplicht af — de tweede stap
-# van de keten, met hetzelfde predicaat, hier op de voorwaarde zelf.
-vlierdam:vw-inway-brp-doel a odrl:Constraint ;
-    rdfs:label "Doel is registratie van laadpalen"@nl ,
-               "Purpose is registration of charging stations"@en ;
-    odrl:leftOperand odrl:purpose ; odrl:operator odrl:eq ;
-    odrl:rightOperand vlierdam:doelbinding-registratie-laadpalen ;
-    prov:wasDerivedFrom vlierdam:plicht-doelbinding .
 
 vlierdam:vw-inway-brp-zoektype a odrl:Constraint ;
     rdfs:label "Alleen zoeken op postcode+huisnummer of op burgerservicenummer"@nl ,
@@ -723,11 +745,18 @@ vlierdam:vw-inway-brp-ingezetene a odrl:Constraint ;
     odrl:rightOperand vlierdam:GemeenteVlierdam .
 
 # ---- Beslispunt 3: de inway van RDW (BRV) -----------------------------------
+#
+# Ook hier GEEN DOELVOORWAARDE, om dezelfde reden als bij RvIG: het RDW hoort
+# niet te weten waarom Vlierdam naar de auto's van deze persoon vraagt. Wat hij
+# beslist is of hij deze velden aan deze afnemer mag leveren; de aanleiding is
+# niet aan hem. Deze regel houdt daardoor één benoemde voorwaarde over — de
+# trace-identificatie uit de geërfde stelselplicht — en verder alleen de regel
+# zelf: wie, welke handeling, welke velden.
 
 vlierdam:set-rdw-inway a odrl:Set ;
     odrl:uid vlierdam:set-rdw-inway ;
-    # Aangesloten op het OpenFTV-afsprakenstelsel: de twee koppelvlak-
-    # verplichtingen gelden hier onverkort mee (ODRL 2.2 §2.6).
+    # Aangesloten op het OpenFTV-afsprakenstelsel: de koppelvlakverplichting
+    # geldt hier onverkort mee (ODRL 2.2 §2.6).
     odrl:inheritFrom vlierdam:set-openftv-koppelvlak ;
     dct:title "Beslispunt RDW-inway: bevraging van de BRV"@nl ,
               "Decision point RDW inway: querying the BRV"@en ;
@@ -747,29 +776,23 @@ vlierdam:regel-inway-brv a odrl:Permission ;
     odrl:assignee vlierdam:GemeenteVlierdam ;
     odrl:target vlierdam:brv-velden-laadpalen ;
     odrl:action [ rdf:value odrl:read ;
-        odrl:refinement vlierdam:vw-inway-brv-doel , vlierdam:anker-inway-brv ] .
+        odrl:refinement vlierdam:anker-inway-brv ] .
 
-# Het anker van de RDW-inway: de regel, haar doelvoorwaarde en — net als bij
-# RvIG — de stelselplicht plicht-traceparent met haar voorwaarde. De
-# diplomatiek-eis hoort bewust bij de outway van Vlierdam en niet hier: het RDW
-# kent de Vlierdamse functie "gemeentesecretaris" niet en kan er niet op toetsen.
+# Het anker van de RDW-inway: de regel zelf en — net als bij RvIG — de
+# stelselplicht plicht-traceparent met haar voorwaarde. Twee eisen staan hier
+# bewust NIET. De diplomatiek-eis hoort bij de outway van Vlierdam: het RDW kent
+# de Vlierdamse functie "gemeentesecretaris" niet en kan er niet op toetsen. En
+# een doelvoorwaarde ontbreekt omdat het doel het koppelvlak niet oversteekt —
+# de verstrekker mag het waarom niet kennen.
 vlierdam:anker-inway-brv a odrl:Constraint , dpv:TechnicalMeasure ;
     odrl:leftOperand apnl:verwerkingsverzoek ; odrl:operator apnl:conformsToPolicy ;
     odrl:rightOperand vlierdam:bundle-rdw-pdp1 ;
-    prov:wasDerivedFrom vlierdam:regel-inway-brv , vlierdam:vw-inway-brv-doel ,
+    prov:wasDerivedFrom vlierdam:regel-inway-brv ,
         vlierdam:plicht-traceparent , vlierdam:vw-traceparent .
-
-# Idem aan RvIG-kant: de uitwerking van plicht-doelbinding op dit beslispunt.
-vlierdam:vw-inway-brv-doel a odrl:Constraint ;
-    rdfs:label "Doel is registratie van laadpalen"@nl ,
-               "Purpose is registration of charging stations"@en ;
-    odrl:leftOperand odrl:purpose ; odrl:operator odrl:eq ;
-    odrl:rightOperand vlierdam:doelbinding-registratie-laadpalen ;
-    prov:wasDerivedFrom vlierdam:plicht-doelbinding .
 
 
 # ############################################################################
-# ### BRON: data/vlierdam/openftv.ttl   (2026-08-28)
+# ### BRON: data/vlierdam/openftv.ttl   (2026-09-01)
 # ############################################################################
 
 # =============================================================================
@@ -849,7 +872,10 @@ vlierdam:bundle-rvig-pdp1 a apnl:CedarPolicySet , schema:SoftwareSourceCode ;
     rdfs:comment "Beoogde implementatieverantwoordelijkheid. De Cedar in testdata/apps/rvig/pdp1/policies/generic.cedar is op 25-8-2026 een permit-everything-placeholder; de dekking beschrijft welke PDP deze regels hoort te handhaven, niet dat hij dat al doet."@nl ,
                  "Intended implementation responsibility. As of 2026-08-25 the Cedar in testdata/apps/rvig/pdp1/policies/generic.cedar is a permit-everything placeholder; coverage states which PDP should enforce these rules, not that it already does."@en .
     # REALISATIE: zie vlierdam:anker-inway-brp in beleid.ttl — de regel zelf, haar
-    # drie voorwaarden en de stelselplicht plicht-traceparent met haar voorwaarde.
+    # twee voorwaarden en de stelselplicht plicht-traceparent met haar voorwaarde.
+    # Een DOELvoorwaarde staat er bewust niet bij: het doel van de bevraging
+    # steekt het koppelvlak niet over, dus RvIG ziet het niet en kan er niet op
+    # toetsen (zie beleid.ttl bij beslispunt 2).
     # De ingezetene-eis kan de RvIG-inway toetsen omdat RvIG de gemeente van
     # inschrijving zelf houdt — hij is de enige partij die dat kán. (Het
     # handhavingsmoment blijft lastig, zie README "Waar het wringt": de gemeente
@@ -866,29 +892,37 @@ vlierdam:bundle-rdw-pdp1 a apnl:CedarPolicySet , schema:SoftwareSourceCode ;
     apnl:sha256 "1a73579eb8821b1780a8b3366801459862f3f870fb3153b795187c1aa9764e35" ;
     rdfs:comment "Beoogde implementatieverantwoordelijkheid. De Cedar in testdata/apps/rdw/pdp1/policies/generic.cedar is op 25-8-2026 een permit-everything-placeholder; de dekking beschrijft welke PDP deze regels hoort te handhaven, niet dat hij dat al doet."@nl ,
                  "Intended implementation responsibility. As of 2026-08-25 the Cedar in testdata/apps/rdw/pdp1/policies/generic.cedar is a permit-everything placeholder; coverage states which PDP should enforce these rules, not that it already does."@en .
-    # REALISATIE: zie vlierdam:anker-inway-brv in beleid.ttl — de regel zelf, haar
-    # doelvoorwaarde en de stelselplicht plicht-traceparent met haar voorwaarde.
+    # REALISATIE: zie vlierdam:anker-inway-brv in beleid.ttl — de regel zelf en de
+    # stelselplicht plicht-traceparent met haar voorwaarde. Ook hier geen
+    # doelvoorwaarde: het RDW hoort het waarom van de bevraging niet te kennen.
 
-# ---- De keten: anker -> voorwaarde -> stelselplicht -------------------------
-# plicht-doelbinding (Set set-openftv-koppelvlak) wordt door GEEN ENKEL anker
-# rechtstreeks gerealiseerd, en dat is juist: geen PDP toetst "er staat een
-# doelbinding in het verzoek" als losse regel. Wat de PDP's wél toetsen is de
-# scherpere doel-voorwaarde van hun eigen regel — en wie odrl:purpose = <dit
-# doel> afdwingt, dwingt daarmee ook af dát er een doel staat.
+# ---- De keten: anker -> voorwaarde -> verplichting --------------------------
+# plicht-doelbinding (de EIGEN verplichting van set-vlierdam-outway) wordt door
+# GEEN ENKEL anker rechtstreeks gerealiseerd, en dat is juist: geen PDP toetst
+# "er staat een doelbinding in het verzoek" als losse regel. Wat de outway-PDP
+# wél toetst is de scherpere doel-voorwaarde van zijn eigen regels — en wie
+# odrl:purpose = <dit doel> afdwingt, dwingt daarmee ook af dát er een doel
+# staat.
 #
 # Die relatie is dezelfde als tussen anker en regel: "X is de uitwerking van Y".
 # Daarom hetzelfde predicaat, prov:wasDerivedFrom, alleen nu vanaf een
 # VOORWAARDE in plaats van vanaf een anker. Zo ontstaat een keten van twee
 # stappen, elke stap met hetzelfde predicaat:
 #
-#   anker-inway-brp --wasDerivedFrom--> vw-inway-brp-doel
-#                           vw-inway-brp-doel --wasDerivedFrom--> plicht-doelbinding
+#   anker-outway-brp --wasDerivedFrom--> vw-brp-doel
+#                           vw-brp-doel --wasDerivedFrom--> plicht-doelbinding
 #
 # Beide stappen staan sinds aug 2026 in beleid.ttl, bij het anker respectievelijk
 # bij de voorwaarde zelf: de tweede stap is een uitspraak van de VOORWAARDE over
 # de plicht, en hoort dus waar de voorwaarde staat. De weergave leest de keten
 # terug als "uitgewerkt via <voorwaarde> — afgedwongen door <bundle>"; de plicht
 # blijft zichtbaar geborgd zonder dat er ergens een realisatieclaim wordt gedaan
-# die geen enkele Cedar-regel waarmaakt. (Merk op dat plicht-traceparent WÉL
-# rechtstreeks door de twee inway-ankers wordt gerealiseerd: die plicht IS één
-# toets, "context has traceparent", en heeft geen scherpere voorwaarde nodig.)
+# die geen enkele Cedar-regel waarmaakt.
+#
+# DE KETEN LOOPT ALLEEN OVER DE OUTWAY, en dat is geen toeval: het doel van een
+# bevraging blijft aan de vragende kant. RvIG en RDW krijgen het niet te zien,
+# dus dragen hun bundles er ook geen uitwerking van. (Merk op dat
+# plicht-traceparent WÉL rechtstreeks door de twee inway-ankers wordt
+# gerealiseerd: die plicht IS één toets, "context has traceparent", en heeft
+# geen scherpere voorwaarde nodig — en het trace-id verraadt, anders dan het
+# doel, niets over de aanleiding.)

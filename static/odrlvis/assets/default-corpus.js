@@ -19,3 +19,8 @@ export const DEFAULT_EXAMPLES = [
   // Vlierdam: vocabulaire, velden, beleid en OpenFTV in vijf Sets.
   'vlierdam.ttl',
 ];
+
+// AFWIJKING VAN DE REPO-VERSIE (site-kopie, FTV-site): daar staat de
+// Comunica-bundel een niveau boven de viewer (`../comunica/`, want de pagina's
+// zitten in viewer/); hier liggen doc.html en index.html náást comunica/.
+export const COMUNICA_BASE = 'comunica/';
