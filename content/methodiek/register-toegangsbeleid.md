@@ -18,7 +18,7 @@ type: 'chapter'
 </div>
 <div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-groen-25">
    <p>
-      <a href="../logboek-toegangsbeslissingen">Logboek</a>
+      <a href="../ADL">ADL</a>
    </p>
 </div> 
 <div class="sub-navigation-tab-selected utrecht-paragraph pt-1 sub-navigation-tab">
@@ -68,5 +68,5 @@ De standaard is in ontwikkeling. Sinds februari 2026 werkt de werkgroep aan de v
 
 {{< /chapter/section >}}
 
-{{< chapter/nextprevious  bg="bg-rhc-color-groen-25" previouslink="../logboek-toegangsbeslissingen" previoustitle="Logboek" >}}
+{{< chapter/nextprevious  bg="bg-rhc-color-groen-25" previouslink="../adl" previoustitle="Logboek" >}}
 {{< /chapter/nextprevious >}}

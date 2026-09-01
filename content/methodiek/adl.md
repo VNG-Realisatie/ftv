@@ -18,7 +18,7 @@ type: 'chapter'
 </div>
 <div class="sub-navigation-tab-selected utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-groen-25">
    <p>
-      Logboek
+      ADL
    </p>
 </div> 
 <div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-groen-25">
@@ -44,7 +44,7 @@ type: 'chapter'
 
 {{< /chapter/directnaar >}}
 
-{{< chapter/section title="Authorization Decision Log">}}
+{{< chapter/section title="Authorization Decision Log (ADL)">}}
 
 ### Doel
 

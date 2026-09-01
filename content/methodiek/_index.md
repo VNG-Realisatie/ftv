@@ -36,9 +36,9 @@ FTV bouwt voort op internationale en open standaarden.
         </a>
     </div>
     <div class="section-home-box">
-        <a href="logboek-toegangsbeslissingen">
+        <a href="adl">
            <h2 class="nl-heading nl-heading--level-4 rhc-heading">
-              Authorization Decision Log
+              Authorization Decision Log (ADL)
            </h2>
             <p class="utrecht-paragraph">
                 De standaard voor verantwoording van genomen beslissingen.<br><br><br>
@@ -68,7 +68,7 @@ Standaardisatie is bij uitstek het middel om aansluiting en uitwisseling tussen 
 
 Daarvoor heeft FTV het [NLGOv AuthZEN profiel](authzen-nlgov) opgesteld: een Nederlands profiel op de internationale OpenID standaard [AuthZEN](https://openid.net/wg/authzen/) die het EAM-architectuurpatroon standaardiseert.
 
-Om het mogelijk te maken om verleende toegangsbeslissingen te verantwoorden werkt FTV ook aan het [Logboek Toegangsbeslissingen](logboek-toegangsbeslissingen) (Authorization Decision Log). Deze gebruikt het AuthZEN informatiemodel om historische beslissingen te kunnen verantwoorden zonder onnodig beslisgegevens te dupliceren.
+Om het mogelijk te maken om verleende toegangsbeslissingen te verantwoorden werkt FTV ook aan het [Logboek Toegangsbeslissingen](adl) (Authorization Decision Log). Deze gebruikt het AuthZEN informatiemodel om historische beslissingen te kunnen verantwoorden zonder onnodig beslisgegevens te dupliceren.
 
 Om organisaties, afdelingen en deelnemers aan (federatieve) stelsels inzicht te bieden in wederzijds toegangsbeleid zal FTV in 2026 ook de standaard [Register Toegangsbeleid](register-toegangsbeleid) ontwikkelen.
 {{< /chapter/section >}}

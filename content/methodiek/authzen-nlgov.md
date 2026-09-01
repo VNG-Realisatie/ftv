@@ -18,7 +18,7 @@ type: 'chapter'
 </div>
 <div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-groen-25">
    <p>
-      <a href="../logboek-toegangsbeslissingen">Logboek</a>
+      <a href="../adl">ADL</a>
    </p>
 </div> 
 <div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-groen-25">
@@ -125,6 +125,6 @@ OAuth gaat primair over delegatie: een applicatie toestemming geven om namens ee
 
 {{< /chapter/section >}}
 
-{{< chapter/nextprevious  bg="bg-rhc-color-groen-25" previouslink="../principes" previoustitle="Principes" nextlink="../logboek-toegangsbeslissingen" nexttitle="Logboek">}}
+{{< chapter/nextprevious  bg="bg-rhc-color-groen-25" previouslink="../principes" previoustitle="Principes" nextlink="../adl" nexttitle="ADL">}}
 {{< /chapter/nextprevious >}}
 
