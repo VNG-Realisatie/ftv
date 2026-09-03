@@ -319,7 +319,6 @@ const STRINGS = {
     'anon': '(anoniem)',
     'anonTyped': '(anonieme {type})',
     'anonAction': '(anonieme actie)',
-    'anonNode': '(anonieme node)',
     'noPurpose': '(geen doel)',
     'unknownQuantity': '(onbekende grootheid)',
     'unknownOperator': '(operator?)',
@@ -335,7 +334,7 @@ const STRINGS = {
     'constraint.compound': 'Samengestelde voorwaarde',
     'constraint.foldSummary': { one: '{label} — {head} ({n} voorwaarde)', other: '{label} — {head} ({n} voorwaarden)' },
     'conforms.left': 'verwerkingsverzoek',
-    'conforms.op': 'moet voldoen aan',
+    'conforms.op': 'voldoet aan beleid',
 
     // -- Dekking: een knoop verklaart de uitwerking van deze regel te zijn.
     // Bewust NIET meer "technisch afgedwongen": de detectie kijkt sinds de
@@ -370,6 +369,9 @@ const STRINGS = {
     'cov.subDuties': 'Verplichtingen:',
     'cov.dutyFrom': 'overgenomen van {parent}',
     'cov.dutyViaCond': 'via voorwaarde “{cond}”',
+    // Terugval als de tussenstap geen naam heeft: de keten blijft zichtbaar,
+    // ook zonder dat de voorwaarde bij naam kan worden genoemd.
+    'cov.dutyViaCondAnon': 'via een voorwaarde',
     'cov.enforcedHead': 'Afgedwongen voorwaarden',
     'cov.notEnforcedHead': 'Niet afgedwongen',
     'cov.enforced': 'technisch afgedwongen',
@@ -492,10 +494,10 @@ const STRINGS = {
     'tree.expand': 'Toon de leden van deze knoop',
     'tree.loading': 'leden laden…',
     'tree.empty': 'geen leden gevonden',
-    // Diepte-limiet: de boom stopt, de graaf-inspecteur gaat verder.
+    // Diepte-limiet: de boom stopt, de RDF-verkenner gaat verder.
     'tree.deeper': 'verder verkennen',
     'tree.deeperTitle': 'Deze knoop heeft zelf leden, maar valt buiten de diepte '
-      + 'van de boom — open hem in de graaf-inspecteur om verder te gaan.',
+      + 'van de boom — open hem in de RDF-verkenner om verder te gaan.',
     // Cykel: dezelfde knoop staat al hoger in dit pad. Neutrale mededeling,
     // geen foutmelding — een ring in odrl:partOf is data, geen crash.
     'tree.cycle': 'komt hierboven al voor',
@@ -521,7 +523,7 @@ const STRINGS = {
     'coll.refinementSection': 'Afbakening',
     // Soortchip vóór een collectie-waarde: WAT voor verzameling dit is. Kort
     // en alledaags — de klassenaam (PartyCollection) staat een klik verder in
-    // de inspecteur en zegt de lezer niets.
+    // de RDF-verkenner en zegt de lezer niets.
     'coll.kindParty': 'Groep',
     'coll.kindAsset': 'Verzameling',
     // Nog in gebruik in de LIJST-weergave (assets/app.js), die de bron als
@@ -574,34 +576,35 @@ const STRINGS = {
     'select.allPolicies': 'Alle policies',
     'select.publications': 'Beleidspublicaties',
 
-    // -- Graaf-inspecteur
-    'insp.title': 'Graaf-inspecteur',
-    'insp.close': 'Sluiten (Esc)',
-    'insp.explore': 'Verkennen',
-    'insp.exploreAria': 'Verken in de graaf-inspecteur',
-    'insp.showInView': 'Toon in de weergave',
-    'insp.showInViewAria': 'Toon deze knoop in de weergave',
-    'insp.notInView': 'Niet in de huidige weergave; wel in de graaf.',
-    'insp.sourceFragment': 'Bronfragment (Turtle)',
-    'insp.serializeError': '# kon bron niet serialiseren: {msg}',
-    'insp.noTriples':
-      'Deze node heeft geen eigen triples in de geladen graaf (komt alleen als verwijzing voor).',
-    'insp.outgoing': '→ Verwijst naar',
-    'insp.incoming': '← Verwezen vanuit',
-    // De randlabels van de keten-layout: zonder pijl in de tekst, want die zet
-    // de weergave er zelf voor (↑ boven het grijze vlak, ↓ eronder) — net als
-    // in het Invulling-paneel.
-    'insp.edgeIn': 'Verwezen vanuit',
-    'insp.edgeOut': 'Verwijst naar',
-    'insp.noneInGraph': '{label}: geen in de geladen graaf.',
-    'insp.foldCount': '{label} ({n})',
-    'insp.countPending': '{label} (…)',
-    'insp.countFailed': '{label} (endpoint-telling mislukt)',
-    'insp.filterPlaceholder': 'Filter op naam of predicaat…',
-    'insp.filterAria': '{label}: filter op naam of predicaat',
-    'insp.loadingEndpoint': 'Laden van het endpoint…',
-    'insp.loadRefsFailed': 'Kon verwijzingen niet laden van het endpoint: {msg}',
-    'insp.noIncoming': 'Geen inkomende verwijzingen op het endpoint.',
+    // -- Het ⌕ en DE VERKENNER (tweede full-page stand van deze pagina)
+    // Het ⌕ opent de knoop in de verkenner; die vervangt de documentweergave
+    // volledig (nooit allebei tegelijk in beeld) en wisselt zonder herladen —
+    // de bronnen blijven staan. Vandaar "hetzelfde tabblad": de oude tekst
+    // beloofde een nieuw tabblad, en dat is precies wat niet meer gebeurt.
+    'verken.title': 'Verkennen in de RDF-verkenner',
+    'verken.aria': 'Open deze knoop in de RDF-verkenner',
+    'verken.back': 'Toon in document',
+    'verken.backTitle': 'Terug naar de documentweergave, bij deze knoop',
+    'verken.notInDoc': 'Deze knoop heeft geen eigen plek in het document; '
+      + 'de weergave staat waar zij stond.',
+    // De randlabels van de keten-layout: zonder pijl in de tekst, want die
+    // zet de weergave er zelf voor (↑ boven het grijze vlak, ↓ eronder).
+    'verken.edgeIn': 'Verwezen vanuit',
+    'verken.edgeOut': 'Verwijst naar',
+    'verken.foldCount': '{label} ({n})',
+    'verken.filterPlaceholder': 'Filter op naam of predicaat…',
+    'verken.filterAria': '{label}: filter op naam of predicaat',
+    'verken.noTriples': 'Deze knoop heeft geen eigen triples in de geladen graaf '
+      + '(hij komt alleen als verwijzing voor).',
+    'verken.anonTitle': 'Een blanke knoop heeft buiten dit document geen adres '
+      + 'en is dus niet aan te wijzen.',
+    'verken.sparql': 'Bevraag met SPARQL (Comunica)',
+    'verken.sparqlTitle': 'Open deze knoop in de meegeleverde SPARQL-client (nieuw tabblad)',
+    'verken.loading': 'Knoop ophalen van het endpoint…',
+    'verken.loadFailed': 'Kon de knoop niet ophalen van het endpoint: {msg}',
+
+    // -- Rechterpaneel (invulling)
+    'panel.close': 'Sluiten (Esc)',
 
     // -- Bronnen-paneel
     'src.toggle': 'Bronnen ▾',
@@ -817,7 +820,6 @@ const STRINGS = {
     'anon': '(anonymous)',
     'anonTyped': '(anonymous {type})',
     'anonAction': '(anonymous action)',
-    'anonNode': '(anonymous node)',
     'noPurpose': '(no purpose)',
     'unknownQuantity': '(unknown quantity)',
     'unknownOperator': '(operator?)',
@@ -833,7 +835,7 @@ const STRINGS = {
     'constraint.compound': 'Compound constraint',
     'constraint.foldSummary': { one: '{label} — {head} ({n} constraint)', other: '{label} — {head} ({n} constraints)' },
     'conforms.left': 'processing request',
-    'conforms.op': 'must conform to',
+    'conforms.op': 'conforms to policy',
 
     // -- Coverage: a node declares it is the working-out of this rule.
     // Deliberately no longer "technically enforced": detection now looks only
@@ -856,6 +858,7 @@ const STRINGS = {
     'cov.subDuties': 'Obligations:',
     'cov.dutyFrom': 'inherited from {parent}',
     'cov.dutyViaCond': 'via condition “{cond}”',
+    'cov.dutyViaCondAnon': 'via a condition',
     'cov.enforcedHead': 'Enforced conditions',
     'cov.notEnforcedHead': 'Not enforced',
     'cov.enforced': 'technically enforced',
@@ -961,7 +964,7 @@ const STRINGS = {
     'tree.empty': 'no members found',
     'tree.deeper': 'explore further',
     'tree.deeperTitle': 'This node has members of its own but falls outside the depth '
-      + 'of the tree — open it in the graph inspector to go further.',
+      + 'of the tree — open it in the RDF explorer to go further.',
     'tree.cycle': 'already appears above',
     'tree.cycleTitle': 'This node already appears higher up in the same partOf chain; '
       + 'the tree stops here so it does not keep going round.',
@@ -1024,31 +1027,29 @@ const STRINGS = {
     'select.allPolicies': 'All policies',
     'select.publications': 'Policy publications',
 
-    // -- Graph inspector
-    'insp.title': 'Graph inspector',
-    'insp.close': 'Close (Esc)',
-    'insp.explore': 'Explore',
-    'insp.exploreAria': 'Explore in the graph inspector',
-    'insp.showInView': 'Show in the view',
-    'insp.showInViewAria': 'Show this node in the view',
-    'insp.notInView': 'Not in the current view; present in the graph.',
-    'insp.sourceFragment': 'Source fragment (Turtle)',
-    'insp.serializeError': '# could not serialise source: {msg}',
-    'insp.noTriples':
-      'This node has no triples of its own in the loaded graph (it only occurs as a reference).',
-    'insp.outgoing': '→ References',
-    'insp.incoming': '← Referenced from',
-    'insp.edgeIn': 'Referenced from',
-    'insp.edgeOut': 'References',
-    'insp.noneInGraph': '{label}: none in the loaded graph.',
-    'insp.foldCount': '{label} ({n})',
-    'insp.countPending': '{label} (…)',
-    'insp.countFailed': '{label} (endpoint count failed)',
-    'insp.filterPlaceholder': 'Filter by name or predicate…',
-    'insp.filterAria': '{label}: filter by name or predicate',
-    'insp.loadingEndpoint': 'Loading from the endpoint…',
-    'insp.loadRefsFailed': 'Could not load references from the endpoint: {msg}',
-    'insp.noIncoming': 'No incoming references on the endpoint.',
+    // -- The ⌕ and THE EXPLORER (second full-page state of this page)
+    'verken.title': 'Explore in the RDF explorer',
+    'verken.aria': 'Open this node in the RDF explorer',
+    'verken.back': 'Show in document',
+    'verken.backTitle': 'Back to the document view, at this node',
+    'verken.notInDoc': 'This node has no place of its own in the document; '
+      + 'the view stayed where it was.',
+    'verken.edgeIn': 'Referenced from',
+    'verken.edgeOut': 'References',
+    'verken.foldCount': '{label} ({n})',
+    'verken.filterPlaceholder': 'Filter by name or predicate…',
+    'verken.filterAria': '{label}: filter by name or predicate',
+    'verken.noTriples': 'This node has no triples of its own in the loaded graph '
+      + '(it only occurs as a reference).',
+    'verken.anonTitle': 'A blank node has no address outside this document and '
+      + 'therefore cannot be pointed at.',
+    'verken.sparql': 'Query with SPARQL (Comunica)',
+    'verken.sparqlTitle': 'Open this node in the bundled SPARQL client (new tab)',
+    'verken.loading': 'Fetching the node from the endpoint…',
+    'verken.loadFailed': 'Could not fetch the node from the endpoint: {msg}',
+
+    // -- Right-hand panel (fill-in)
+    'panel.close': 'Close (Esc)',
 
     // -- Sources panel
     'src.toggle': 'Sources ▾',

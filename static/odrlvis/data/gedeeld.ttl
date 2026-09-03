@@ -3,9 +3,9 @@
 #
 # SAMENGEVOEGD BESTAND — niet met de hand bewerken.
 # Bron: https://github.com/VNG-Realisatie/odrlvis (map data/), samengevoegd
-# op 2026-08-31 voor publicatie op de FTV-site. Bronbestanden, met de datum
+# op 2026-09-01 voor publicatie op de FTV-site. Bronbestanden, met de datum
 # van hun laatste wijziging:
-#   data/odrl-ap-nl.ttl  (2026-08-29)
+#   data/odrl-ap-nl.ttl  (2026-09-01)
 #   data/labels-odrl.ttl  (2026-08-31)
 #   data/labels-tooi.ttl  (2026-08-26)
 #
@@ -32,7 +32,7 @@
 
 
 # ############################################################################
-# ### BRON: data/odrl-ap-nl.ttl   (2026-08-29)
+# ### BRON: data/odrl-ap-nl.ttl   (2026-09-01)
 # ############################################################################
 
 # =============================================================================
@@ -304,8 +304,8 @@ Governance). Tot die uitkomst is deze term de werkversie-conventie."""@nl ;
 # =============================================================================
 
 apnl:conformsToPolicy a odrl:Operator , skos:Concept ;
-    rdfs:label "voldoet aan policy"@nl ;
-    skos:prefLabel "voldoet aan policy"@nl ;
+    rdfs:label "voldoet aan beleid"@nl ;
+    skos:prefLabel "voldoet aan beleid"@nl ;
     skos:related apnl:verwerkingsverzoek ;
     skos:definition """Operator die geldt indien de leftOperand (een
 apnl:verwerkingsverzoek) voldoet aan de in de rightOperand aangehaalde

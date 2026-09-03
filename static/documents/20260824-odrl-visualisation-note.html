@@ -479,7 +479,9 @@ a <em>form shape</em> says how to present its properties.</p>
   SHACL 1.2 UI are read as synonyms, with <code>shui:IRIViewer</code> for
   <code>dash:URIViewer</code>):
   <code>dash:viewer</code> with <code>dash:LiteralViewer</code>,
-  <code>dash:URIViewer</code>, <code>dash:LabelViewer</code>, or
+  <code>dash:URIViewer</code>, <code>dash:LabelViewer</code> (the node's label,
+  rendered as a hyperlink when the IRI points outside the
+  loaded data), or
   <code>dash:LangStringViewer</code>; and <code>dash:propertyRole</code> with
   <code>dash:LabelRole</code> (the node's title),
   <code>dash:DescriptionRole</code> (its summary), or
@@ -488,6 +490,18 @@ a <em>form shape</em> says how to present its properties.</p>
   the node's class lists it like any other, with a viewer and an
   order. A tool picking one class over another, or moving it next
   to the title, is presentation.</li>
+<li>A form shape <strong>may</strong> also target a profile subclass of
+  <code>odrl:Policy</code> (such as an authorisation decision typed next to
+  <code>odrl:Agreement</code>). A tool that renders the policy in a view of
+  its own, such as a card, uses the shape only for the properties
+  that view does not already place: their names, order, groups,
+  and viewers. The view keeps its own title, version line, and
+  rules; property roles are ignored there, and a shape row whose
+  path the view already shows <strong>may</strong> be skipped.</li>
+<li>Only a <code>sh:NodeShape</code> with at least one presentation term from
+  this subset (<code>sh:name</code>, <code>dash:viewer</code>, <code>dash:propertyRole</code>)
+  counts as a form shape; a plain validation shape on the same
+  class is not a form.</li>
 <li>Anything beyond this subset is presentation and stays with
   the tool: colours, monospace, how a note block is boxed.</li>
 </ul>

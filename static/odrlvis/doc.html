@@ -54,6 +54,13 @@
 
   <main class="doc-main" id="doc-main"></main>
 
+  <!-- DE VERKENNER: de TWEEDE full-page stand van deze pagina (?verken=<IRI>).
+       Precies één van deze twee <main>'s is zichtbaar — de andere staat op
+       hidden. Het document en de machineleesbare graaf komen dus nooit naast
+       elkaar te staan; je wisselt van stand, zonder de bronnen te herladen.
+       Zie assets/verken-view.js. -->
+  <main class="doc-main verken-main" id="verken-main" hidden></main>
+
   <script type="module" src="assets/doc.js"></script>
 </body>
 </html>

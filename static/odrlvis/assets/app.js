@@ -1,20 +1,31 @@
-// ODRL-AP-NL viewer — UI-laag. Rendert de drie panelen op basis van het
-// weergavemodel uit parse.js; bewerken-modus muteert de graaf via edit.js.
+// ODRL-AP-NL viewer — UI-laag van de EDITOR (index.html): navigatie links,
+// documentweergave rechts. Rendert op basis van het weergavemodel uit
+// parse.js; bewerken-modus muteert de graaf via edit.js.
 // Alle graaf-/modellogica zit in parse.js en edit.js (DOM-vrij).
+//
+// Het derde paneel (de Turtle-/JSON-LD-bronweergave) is in aug 2026 vervallen:
+// machineleesbare weergaven horen niet meer naast de mensleesbare te staan.
+// Wat ervoor in de plaats komt: het ⌕ opent de knoop in een generieke
+// RDF-verkenner (ander tabblad), en de export-knoppen in de topbalk
+// downloaden de volledige graaf als Turtle of JSON-LD.
 import {
-  loadSources, addSource, subjectTurtle, subjectJsonLd, curie, detectFormat,
-  PREFIXES, buildModel, buildNav, scopeNavToPolicy, FOLLOW_NAMED_PREDS,
+  loadSources, addSource, curie, detectFormat,
+  PREFIXES, buildModel, buildNav, scopeNavToPolicy,
   policyAssignee, filterNav, countNavRows, compactDate, dayDate,
   cardChunk, refListCollapsed, filterRefItems, groupCollectionMembers, memberSummary,
   registerPrefixes, registerLabelKeys, statusWord, versionNavModel, versionNavDate,
   groupRules, PROFILE_PATTERNS,
 } from './parse.js';
-import {
-  highlightTurtle, highlightJson, createInspector, renderInspector, verkenButton,
-} from './inspect.js';
+// GEEN MACHINELEESBARE WEERGAVE MEER IN DE EDITOR (aug 2026, besluit
+// eigenaar). Het Turtle-/JSON-LD-bronpaneel naast het document is vervallen;
+// de editor is navigatie + documentweergave. Wie de ruwe triples wil zien,
+// klikt het ⌕ — een link naar een generieke RDF-verkenner (Comunica) in een
+// ander tabblad; wie ze wil meenemen, gebruikt de export-knoppen in de
+// topbalk (download). Zie assets/verken.js.
+import { verkenHref, verkenLink } from './verken.js';
 import {
   sparqlSelect, sparqlConstruct, policyListQuery, policyDetailQuery,
-  listSkeletonTurtle, remoteIncoming as sparqlRemoteIncoming,
+  listSkeletonTurtle,
 } from './sparql.js';
 // Deze viewer is NL-only (vaste Nederlandse chrome); alleen de gedeelde
 // collectie-zinnen komen uit de stringtabel, zodat ze exact gelijk luiden aan
@@ -23,7 +34,7 @@ import { t } from './i18n.js';
 import * as edit from './edit.js';
 // Configuratie (data, geen kern-code): default-democorpus, per-endpoint
 // graph-uitsluitingen en het default-registerfragment met prefixafkortingen.
-import { DEFAULT_EXAMPLES, EXAMPLES_BASE } from './default-corpus.js';
+import { DEFAULT_EXAMPLES, EXAMPLES_BASE, COMUNICA_BASE } from './default-corpus.js';
 import { excludeGraphsFor } from './endpoint-config.js';
 import { DEFAULT_REGISTER_PREFIXES } from './register-prefixes.js';
 import { DEFAULT_PROPERTY_LABEL_KEYS } from './register-labels.js';
@@ -47,6 +58,9 @@ registerLabelKeys(DEFAULT_PROPERTY_LABEL_KEYS);
 const el = (id) => document.getElementById(id);
 const state = {
   store: null, model: null, nav: null, selected: null,
+  // De geladen bronnen van de laatste ingest (naam, URL, formaat) — alleen
+  // nodig om de ⌕-link zijn datasources te geven.
+  sources: [],
   editMode: false, dirty: false, opts: null,
   // Deep link (?policy=<IRI>): beperk de navigatie tot die ene policy.
   policyScope: null,
@@ -80,11 +94,15 @@ function h(tag, attrs = {}, children = []) {
   return node;
 }
 
+// Hang een kind op als het er is. Nodig sinds verkenBtn() null kan geven (een
+// blanke knoop heeft geen adres voor de RDF-verkenner).
+function appendIf(parent, node) { if (node) parent.appendChild(node); return parent; }
+
 function setStatus(msg) { el('status').textContent = msg; }
 
 // Lange literals (bv. een volledige licentietekst als cc:legalcode) niet
 // integraal uitschrijven: kap in de WEERGAVE af met een "toon meer"-uitklap.
-// Het model en het bronfragment blijven volledig.
+// Het model blijft volledig.
 const LONG_TEXT_LIMIT = 600;
 function longText(text) {
   const s = String(text ?? '');
@@ -116,7 +134,7 @@ async function loadFromExamples() {
     try {
       const res = await fetch(EXAMPLES_BASE + name);
       if (!res.ok) throw new Error('HTTP ' + res.status);
-      sources.push({ name, content: await res.text(), format: detectFormat(name) });
+      sources.push({ name, url: EXAMPLES_BASE + name, content: await res.text(), format: detectFormat(name) });
     } catch (e) { failed.push(name); }
   }
   if (!sources.length) {
@@ -135,7 +153,7 @@ async function loadFromUrl(url) {
   try {
     const res = await fetch(url);
     const content = await res.text();
-    ingest([{ name: url, content, format: detectFormat(url, content) }], '');
+    ingest([{ name: url, url, content, format: detectFormat(url, content) }], '');
   } catch (e) {
     renderEmpty('Kon ?src niet laden: ' + e.message);
   }
@@ -159,6 +177,12 @@ function applyPolicyScope() {
 
 function ingest(sources, note) {
   const result = loadSources(sources);
+  // De bronnenlijst wordt bewaard voor de ⌕-link: die geeft de verkenner
+  // precies de bronnen mee die deze pagina zelf geladen heeft (zie
+  // verkenSources in assets/verken.js). Lokaal geopende bestanden hebben geen
+  // URL en kunnen dus niet mee — het ⌕ levert dan een voorgevulde query zonder
+  // datasources.
+  state.sources = sources;
   state.store = result.store;
   state.model = result.model;
   state.nav = result.nav;
@@ -359,11 +383,10 @@ async function loadDetailAndSelect(node) {
   }
 }
 
-// --- Documentweergave (midden) ---------------------------------------------
+// --- Documentweergave (rechterhelft) ----------------------------------------
 function renderEmpty(msg) {
   el('doc-content').innerHTML = '';
   el('doc-content').appendChild(h('div', { class: 'empty', text: msg }));
-  el('src-code').textContent = '';
 }
 
 function byIri(list, iri) { return list.find((x) => x.iri === iri); }
@@ -371,39 +394,25 @@ function byIri(list, iri) { return list.find((x) => x.iri === iri); }
 function renderDoc(node) {
   const doc = el('doc-content');
   doc.innerHTML = '';
-  let sourceSubject = node.id;
 
   if (node.kind === 'dataset') {
     const ds = byIri(state.model.datasets, node.id);
     doc.appendChild(datasetView(ds));
   } else if (node.kind === 'offer') {
-    const o = byIri(state.model.offers, node.id);
-    doc.appendChild(offerView(o));
-    // Blank-node-policy: geef het bron-paneel de echte term (het interne
-    // parser-id is geen IRI en mag nergens getoond worden).
-    if (o.anon) sourceSubject = o.term;
+    doc.appendChild(offerView(byIri(state.model.offers, node.id)));
   } else if (node.kind === 'agreement') {
-    const a = byIri(state.model.agreements, node.id);
-    doc.appendChild(agreementView(a));
-    if (a.anon) sourceSubject = a.term;
+    doc.appendChild(agreementView(byIri(state.model.agreements, node.id)));
   } else if (node.kind === 'set') {
-    const s = byIri(state.model.sets, node.id);
-    doc.appendChild(setView(s));
-    if (s.anon) sourceSubject = s.term;
+    doc.appendChild(setView(byIri(state.model.sets, node.id)));
   } else if (node.kind === 'permission') {
     const agr = byIri(state.model.agreements, node.agreementIri);
     doc.appendChild(permissionFocusView(agr, node.permIndex));
-    // Benoemde permission: toon (en bewerk) de eigen subject-sluiting.
-    sourceSubject = node.sourceIri || node.agreementIri;
   } else if (node.kind === 'artifact' || node.kind === 'bundle') {
     const art = byIri(state.model.artifacts.concat(state.model.bundles), node.id);
     doc.appendChild(artifactView(art));
   } else if (node.kind === 'group') {
     doc.appendChild(h('div', { class: 'empty', text: 'Kies een item uit deze groep in de navigatie.' }));
-    renderSource(null);
-    return;
   }
-  renderSource(sourceSubject);
 }
 
 function heading(title, role, curieStr, policyIri, inspectTarget) {
@@ -415,7 +424,7 @@ function heading(title, role, curieStr, policyIri, inspectTarget) {
   const line = h('div', { class: 'role-line' });
   if (role) line.appendChild(h('span', { class: 'pill', text: role }));
   if (curieStr) line.appendChild(h('span', { class: 'mono muted', text: curieStr }));
-  if (inspectTarget) line.appendChild(verkenBtn(inspectTarget));
+  appendIf(line, verkenBtn(inspectTarget));
   // Versienavigator: alleen zichtbaar als deze policy versie is binnen een
   // temporele container (anders null).
   const vnav = versionNav(policyIri);
@@ -453,7 +462,7 @@ function ref(agent) {
   const tag = (iri) => h('span', {}, [
     agent.label && agent.label !== agent.curie ? agent.label + ' ' : '',
     h('span', { class: 'mono muted', text: iri ? agent.curie : '' }),
-    // Partijen (en andere verwezen nodes) zijn verkenbaar in de inspecteur.
+    // Partijen (en andere verwezen nodes) zijn verkenbaar in de RDF-verkenner.
     verkenBtn(iri || agent.term),
   ]);
   // Een odrl:PartyCollection draagt meer dan een naam: zijn leden en/of de
@@ -548,8 +557,8 @@ function permissionCard(p, { titleForDoel, owner, ownerAssignee, index, shownDim
   } else {
     title.appendChild(document.createTextNode(name || p.title || `Toestemming ${index + 1}`));
   }
-  if (badgeIri) title.appendChild(verkenBtn(badgeIri));
-  title.appendChild(verkenBtn(p.iri || p.term));
+  appendIf(title, verkenBtn(badgeIri));
+  appendIf(title, verkenBtn(p.iri || p.term));
   card.appendChild(title);
   card.appendChild(permissionBody(p, owner, ownerAssignee, { shownDims, ownName: name }));
   return card;
@@ -718,7 +727,7 @@ function constraintList(constraints, ruleTerm, predIri = ODRL + 'constraint') {
     if (c.conformsOp && c.conformsTo) {
       const art = byIri(state.model.artifacts.concat(state.model.bundles), c.conformsTo);
       li.appendChild(h('span', { class: 'sentence' }, [
-        'Verwerkingsverzoek moet voldoen aan policy ',
+        'Verwerkingsverzoek voldoet aan beleid ',
         h('span', {
           class: 'linkish', text: art ? art.title : curie(c.conformsTo),
           onclick: () => { if (art) selectNav({ id: art.iri, kind: art.kind }); },
@@ -733,7 +742,7 @@ function constraintList(constraints, ruleTerm, predIri = ODRL + 'constraint') {
     } else {
       li.appendChild(h('span', { class: 'sentence', text: (c.label ? c.label + ': ' : '') + c.sentence }));
     }
-    if (c.term) li.appendChild(verkenBtn(c.term));
+    appendIf(li, verkenBtn(c.term));
     if (state.editMode && ruleTerm && c.term) {
       const formBox = h('div', { class: 'constraint-edit' });
       formBox.hidden = true;
@@ -1018,7 +1027,7 @@ function prohibitionsSection(prohibitions) {
     const title = h('div', { class: 'card-title' });
     title.appendChild(h('span', { class: 'badge verbod', text: 'Verbod' }));
     title.appendChild(document.createTextNode(p.action ? p.action.label : `Verbod ${i + 1}`));
-    title.appendChild(verkenBtn(p.iri || p.term));
+    appendIf(title, verkenBtn(p.iri || p.term));
     card.appendChild(title);
     card.appendChild(permissionBody(p));
     frag.appendChild(card);
@@ -1653,168 +1662,25 @@ function artifactView(a) {
   return frag;
 }
 
-// --- Bronpaneel (rechts) ----------------------------------------------------
-let srcFormat = 'turtle'; // 'turtle' | 'jsonld'
-let srcSubject = null;    // subject-IRI van het getoonde fragment
-
-// Laag 3: het Turtle-fragment (subject-sluiting) direct bewerken en round-trip-
-// veilig terug de graaf in mergen. Parsefouten laten de graaf onaangetast.
-function startSrcEdit() {
-  const ta = el('src-editor');
-  const pre = el('src-pre');
-  if (!ta || !pre || !srcSubject) return;
-  // Bewerken werkt altijd op de strikte sluiting van het geselecteerde
-  // vertrekpunt; een open inspecteur (leesmodus) gaat dicht.
-  closeInspect();
-  ta.value = subjectTurtle(state.store, srcSubject).trimEnd();
-  pre.hidden = true;
-  ta.hidden = false;
-  const err = el('src-error');
-  if (err) { err.hidden = true; err.textContent = ''; }
-  renderSrcEditbar(true);
-}
-
-function endSrcEdit() {
-  const ta = el('src-editor');
-  const pre = el('src-pre');
-  if (ta) ta.hidden = true;
-  if (pre) pre.hidden = false;
-  const err = el('src-error');
-  if (err) { err.hidden = true; err.textContent = ''; }
-  renderSrcEditbar(false);
-}
-
-function applySrcEdit() {
-  const ta = el('src-editor');
-  if (!ta || !srcSubject) return;
-  const res = edit.replaceSubjectClosure(state.store, srcSubject, ta.value);
-  const err = el('src-error');
-  if (!res.ok) {
-    if (err) { err.textContent = 'Parsefout: ' + res.error; err.hidden = false; }
-    return;
-  }
-  endSrcEdit();
-  rebuild(currentDocId());
-}
-
-function renderSrcEditbar(editing) {
-  const bar = el('src-editbar');
-  if (!bar) return;
-  bar.innerHTML = '';
-  if (!state.editMode || !srcSubject) return;
-  if (!editing) {
-    bar.appendChild(h('span', { class: 'src-tab', text: 'Bron bewerken', onclick: startSrcEdit }));
-  } else {
-    bar.appendChild(h('span', { class: 'src-tab active', text: 'Toepassen', onclick: applySrcEdit }));
-    bar.appendChild(h('span', { class: 'src-tab', text: 'Annuleren', onclick: endSrcEdit }));
-  }
-}
-
-// Graaf-inspecteur (leesmodus bovenop het bronpaneel): "verken" opent hem,
-// navigatie verandert alleen de inspecteur — srcSubject (het bewerkdoel)
-// blijft ALTIJD de strikte sluiting van het geselecteerde vertrekpunt.
-let inspector = null;
-
-function inspectBox() { return el('src-inspect'); }
-
-// Inspecteur-opties: in endpoint-modus komen inkomende verwijzingen
-// gepagineerd van het endpoint en worden aangeklikte, nog onbekende nodes
-// eerst bijgeladen (detail-CONSTRUCT).
-function inspectorOpts() {
-  if (!state.sparqlEndpoint) return {};
-  const ep = state.sparqlEndpoint;
-  return {
-    remoteIncoming: sparqlRemoteIncoming(ep),
-    ensureNode: async (iri) => {
-      const ttl = await sparqlConstruct(ep,
-        policyDetailQuery(iri, { excludeGraphs: state.excludeGraphs }));
-      if (ttl && ttl.trim()) addSource(state.store, ttl, 'ttl');
-    },
-  };
-}
-
-function openInspect(termOrIri) {
-  const box = inspectBox();
-  if (!box || !state.store || !termOrIri) return;
-  endSrcEdit();
-  inspector = createInspector(state.store, termOrIri);
-  renderInspector(box, inspector, inspectorOpts());
-  box.hidden = false;
-  const pre = el('src-pre');
-  if (pre) pre.hidden = true;
-  renderSrcTabs();
-}
-
-function closeInspect() {
-  if (!inspector) return;
-  inspector = null;
-  const box = inspectBox();
-  if (box) { box.hidden = true; box.innerHTML = ''; }
-  const pre = el('src-pre');
-  if (pre) pre.hidden = false;
-  renderSrcTabs();
-}
-
-// Kleine "verken"-knop voor node-achtige elementen in de weergave.
+// --- Het ⌕: uitgang naar de generieke RDF-verkenner -------------------------
+// Het bronpaneel rechts (Turtle | JSON-LD | ⌕ Verkennen, plus "Bron bewerken")
+// is vervallen: deze pagina toont geen machineleesbare weergave meer. Het ⌕ op
+// een node-achtig element is nu een LINK naar een generieke RDF-verkenner
+// (Comunica, statisch meegeleverd in ../comunica/), met de bronnen van deze
+// pagina als datasources en een query op de aangeklikte knoop — zie
+// assets/verken.js. De volledige graaf blijft downloadbaar via de
+// Turtle-/JSON-LD-knoppen in de topbalk.
+//
+// GEEN ⌕ ZONDER ADRES: een blanke knoop heeft buiten dit document geen IRI en
+// is in een generieke verkenner niet aan te wijzen; de knop valt dan weg.
 function verkenBtn(termOrIri) {
   if (!termOrIri) return null;
-  return verkenButton(() => openInspect(termOrIri));
+  const href = verkenHref(termOrIri, state, {
+    base: COMUNICA_BASE,
+    pageUrl: (typeof location !== 'undefined' && location.href) ? location.href : null,
+  });
+  return href ? verkenLink(href) : null;
 }
-
-let renderSrcTabs = () => {};
-
-function renderSource(subjectIri) {
-  const tabs = el('src-tabs');
-  const code = el('src-code');
-  srcSubject = subjectIri || null;
-  closeInspect();
-  endSrcEdit();
-  tabs.innerHTML = '';
-  if (!subjectIri) { code.textContent = ''; renderSrcTabs = () => {}; return; }
-
-  const show = () => {
-    try {
-      if (srcFormat === 'jsonld') {
-        code.innerHTML = highlightJson(subjectJsonLd(state.store, subjectIri, FOLLOW_NAMED_PREDS));
-      } else {
-        // Weergave: neem ook de benoemde bouwstenen (constraints/duties) mee,
-        // zodat het fragment niets verzwijgt; bewerken gebruikt de strikte
-        // sluiting.
-        code.innerHTML = highlightTurtle(
-          subjectTurtle(state.store, subjectIri, FOLLOW_NAMED_PREDS).trimEnd());
-      }
-    } catch (e) {
-      code.textContent = '# kon bron niet serialiseren: ' + e.message;
-    }
-    renderSrcTabs();
-  };
-
-  // Tabs: Turtle | JSON-LD | ⌕ Verkennen (de inspecteur als derde leesmodus).
-  renderSrcTabs = () => {
-    tabs.innerHTML = '';
-    for (const [fmt, label] of [['turtle', 'Turtle'], ['jsonld', 'JSON-LD']]) {
-      tabs.appendChild(h('span', {
-        class: 'src-tab' + (!inspector && srcFormat === fmt ? ' active' : ''),
-        'data-fmt': fmt, text: label,
-        onclick: () => { closeInspect(); srcFormat = fmt; show(); },
-      }));
-    }
-    tabs.appendChild(h('span', {
-      class: 'src-tab' + (inspector ? ' active' : ''), 'data-fmt': 'inspect',
-      text: '⌕ Verkennen',
-      onclick: () => { if (!inspector) openInspect(srcSubject); },
-    }));
-    tabs.appendChild(h('span', {
-      class: 'mono muted', style: 'font-size:11px',
-      // Blank-node-subject (term i.p.v. IRI-string): geen parser-id tonen.
-      text: typeof subjectIri === 'string' ? curie(subjectIri) : '(anonieme policy)',
-    }));
-  };
-  show();
-}
-
-// Syntax-highlighting (highlightTurtle/highlightJson) is verhuisd naar
-// assets/inspect.js, zodat ook doc.html hem gebruikt.
 
 // --- Export -----------------------------------------------------------------
 function download(name, text, mime) {
@@ -1871,12 +1737,12 @@ async function loadFromSparql() {
       const ttl = await sparqlConstruct(ep,
         policyDetailQuery(state.policyScope, { excludeGraphs: state.excludeGraphs }));
       state.detailLoaded.add(state.policyScope);
-      ingest([{ name: ep + ' (policy-detail)', content: ttl, format: 'ttl' }], '');
+      ingest([{ name: ep + ' (policy-detail)', content: ttl, format: 'ttl', fromSparql: true }], '');
     } else {
       const rows = await sparqlSelect(ep, policyListQuery());
       ingest([{
         name: ep + ` (policylijst, ${rows.length.toLocaleString('nl-NL')} rijen)`,
-        content: listSkeletonTurtle(rows), format: 'ttl',
+        content: listSkeletonTurtle(rows), format: 'ttl', fromSparql: true,
       }], '');
     }
   } catch (e) {
@@ -1918,7 +1784,7 @@ async function bootFromParams() {
       const r = await fetch(u);
       if (!r.ok) throw new Error('HTTP ' + r.status + ' bij ' + u);
       const content = await r.text();
-      dataSources.push({ name: u, content, format: detectFormat(u, content) });
+      dataSources.push({ name: u, url: u, content, format: detectFormat(u, content) });
     } catch (e) { errors.push({ url: u, message: e.message }); }
   }
   if (legacySparql) endpoints.push(legacySparql);
@@ -1939,7 +1805,7 @@ if (srcParams.length || legacyTtl.length || legacySparql) {
   fetch(state.policyScope)
     .then((r) => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.text(); })
     .then((content) => ingest([{
-      name: state.policyScope, content,
+      name: state.policyScope, url: state.policyScope, content,
       format: detectFormat(state.policyScope, content),
     }], ''))
     .catch((e) => renderEmpty(

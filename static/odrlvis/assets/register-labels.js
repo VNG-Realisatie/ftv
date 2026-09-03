@@ -28,7 +28,7 @@ export const DEFAULT_PROPERTY_LABEL_KEYS = {
   // De geldigheidsperiode op een document-/versienode. De EIGEN vorm is het
   // schema-PAAR schema:validFrom/validThrough (zie temporal.js); schema.org
   // publiceert geen rdfs:labels in een van onze bronnen, dus zonder deze twee
-  // regels staat er in de graaf-inspecteur kaal "validFrom".
+  // regels staat er in de weergave kaal "validFrom".
   'https://schema.org/validFrom': 'prop.schemaValidFrom',
   'https://schema.org/validThrough': 'prop.schemaValidThrough',
   // dct:valid + dcat:startDate/endDate — de TOLERANTE terugvalvorm (een
@@ -40,7 +40,7 @@ export const DEFAULT_PROPERTY_LABEL_KEYS = {
   // dct:source — de HERKOMST van de verklaring: het besluit, het
   // configuratiebestand of de registerrij waar zij uit komt. De leesweergave
   // (doc.js) toont hem als "Bron" (field.origin); dit is de terugval elders
-  // (bv. in de editor-app en de graaf-inspecteur).
+  // (bv. in de editor-app).
   'http://purl.org/dc/terms/source': 'prop.dctSource',
   // dpv:hasLegalBasis — de WETTELIJKE GRONDSLAG waarop een regel rust (DPV
   // 2.0). Sinds aug 2026 gescheiden van dct:source; doc.js toont hem als

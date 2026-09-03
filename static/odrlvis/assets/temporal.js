@@ -132,7 +132,7 @@ export const TEMPORAL_DOC_PREDS = [SCHEMA + 'validFrom', DCT + 'valid'];
 // vorm was machineleesbaar maar duur in gebruik: elke datum kostte een extra
 // hop over een blanke knoop, in SPARQL een geneste OPTIONAL, in het
 // detail-CONSTRUCT een eigen tak om de knoop überhaupt mee te krijgen, en in
-// de graaf-inspecteur een tussenknoop zonder eigen betekenis. Het paar zet de
+// elke graafweergave een tussenknoop zonder eigen betekenis. Het paar zet de
 // twee datums waar ze horen: op de versie.
 //
 // RANGORDE BIJ HET LEZEN (readValidity in parse.js), van sterk naar zwak:
