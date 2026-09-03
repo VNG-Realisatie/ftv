@@ -47,12 +47,13 @@ De werkgroep vindt elke twee weken plaats op **dinsdag van 10:00 tot 11:00**, on
 
 Data komende werkgroepen (na de zomerstop):
 
-- [18 augustus](https://realisatieibds.nl/events/view/59a679f4-092c-448a-8e2e-a50ea8b56922/werkgroep-federatieve-toegangsverlening)
+- [15 september](https://realisatieibds.nl/events/view/6819911e-acae-4b28-81b8-7cb2d42e0a19/werkgroep-federatieve-toegangsverlening-odrl-deep-dive)
 
 ### Notulen
 
 2026
 
+- 1 september: Voortgang AuthZEN working group
 - 18 augustus: Voortgang ODRL-AP-NL ([Notulen]({{% relref "voortgang-odrl-ap-nl" %}}))
 - 23 juni: Planning en evaluatie mid 2026 ([Notulen]({{% relref "planning-en-evaluatie-mid-2026" %}}))
 -  9 juni: Roadmap register toegangsbeleid ([Notulen]({{% relref "roadmap-register-toegangsbeleid" %}}))
