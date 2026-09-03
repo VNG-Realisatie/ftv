@@ -1,0 +1,886 @@
+WEBVTT
+
+00:00:05.199 --> 00:00:10.159
+<v Michiel Trimpe>Ja, dan zie ik ook wat gezichtjes.</v>
+
+00:00:18.339 --> 00:00:24.859
+<v Michiel Trimpe>Nou, welkom allemaal bij de eh 26e werkgroep alweer.</v>
+
+00:00:27.949 --> 00:01:33.749
+<v Michiel Trimpe>Ehm nou ja, de de agenda voor vandaag is de agenda is allereerst welkom en kennismaking. Zullen we zo even doen. En zoals ik al besproken in de mail die ik rond heb gestuurd, is vandaag eh een eh IAM gefocuste versie van de werkgroep. Dus we gaan we even op en af een eh een IAM eh is een klassieke toegangsverlenings eh focus. En eh meer ODRL link data. Dus de volgende werkgroep zal eh meer over link data gaan. Dus in principe wil ik proberen om het hierover te houden. Ik zal beginnen met een eh update te geven van de voortgang van de AuthZEN working group. Eh er zijn een hoop verschillende dingen eh in ontwikkeling als eh profielen en riders naast AuthZEN. Eh dus daar wil ik jullie allemaal in meenemen. En ik wil ook even ruimte laten voor eh rondvraag en updates van deelnemers. Eh in principe is eh het was om daar de hele meeting mee vol te maken. Maar mocht er echt niks meer gezegd kunnen worden dan kunnen we alvast een voorschot nemen op eh het werk van de volgende sessie, maar in principe niet dus.</v>
+
+00:01:36.389 --> 00:01:39.269
+<v Michiel Trimpe>Nou, allereerst eh welkom en kennismaking.</v>
+
+00:01:41.599 --> 00:01:50.699
+<v Michiel Trimpe>Dit is een moment waarop nieuwe deelnemers eh zichzelf voor kunnen stellen. Volgens mij zag ik een nieuwe deelnemer in de club.</v>
+
+00:01:53.229 --> 00:01:54.749
+<v Joyce Leijen-Kouwenberg>Ja, ik denk dat je mij bedoelt.</v>
+
+00:01:55.079 --> 00:01:55.679
+<v Michiel Trimpe>Ja.</v>
+
+00:01:56.369 --> 00:02:13.469
+<v Joyce Leijen-Kouwenberg>Ehm hoi, goedemorgen. Eh ik ben Joyce Leijen. Ehm ik werk bij het Zorginstituut, ben collega van Remo. Eh ben informatieanalist in het team voor eh voor iWLZ. En eh vanuit die kant betrokken bij de ontwikkeling van het netwerkmodel en ga Remo ondersteunen in de technische technische kant ervan.</v>
+
+00:02:16.919 --> 00:02:46.669
+<v Michiel Trimpe>Welkom. Ik zie niet steeds natuurlijk maar. Verder alleen maar bekende gezichten. Op zich weten de nieuwe mensen dan nog niet natuurlijk wie de andere wel is. Dat zat ik inderdaad ook over na te denken. Maar ik bedenk me dat jij in de notule altijd wel opent met de aanwezigen. Ja. En daar staat dan ook bij waar die aan werken. Dus Joyce, je kan de notule van vorige week keer weer kijken en zien eh ja, wie dat allemaal zijn die hier zitten.</v>
+
+00:02:48.869 --> 00:02:49.669
+<v Joyce Leijen-Kouwenberg>Dat is helemaal goed.</v>
+
+00:02:49.109 --> 00:02:49.389
+<v Michiel Trimpe>Welkom.</v>
+
+00:02:53.909 --> 00:03:05.429
+<v Michiel Trimpe>En dat je ook eventueel welkom bent meestal onder fysiek bij te zitten zoals Gideon nu bij ons is in een zaal in Utrecht zitten elke twee weken in Hoog Catharijne hiervoor.</v>
+
+00:03:12.629 --> 00:03:20.429
+<v Michiel Trimpe>Nee, ik ben een ja, had je mij moeten admitten. Oh, heb ik jou niet geadmit? Ik ga nog een keer mezelf eh</v>
+
+00:03:21.149 --> 00:03:23.389
+<v Niels Dequeker>Ik ik voeg ze wel toe, Michiel.</v>
+
+00:03:22.759 --> 00:03:23.839
+<v Michiel Trimpe>Ah, Niels voegt ze toe. Super.</v>
+
+00:03:25.989 --> 00:03:26.109
+<v Michiel Trimpe>Oké.</v>
+
+00:03:28.679 --> 00:04:18.719
+<v Michiel Trimpe>Dat is het einde van de presentatie, niet het begin. Nou, dan hebben jullie alles gelijk maar gezien. Ehm ja, dus we beginnen even met een een voorstel of een voorstel of een introductie waar eh oh ja, waar AuthZEN allemaal mee bezig is geweest. Dus ehm eind vorig jaar, begin dit jaar is AuthZEN 1.0 eh als final bestempeld door de OpenID Foundation. Dat betekent dat het eh het basisdocument eh finaal is. Eh je merkt dat daarna eh het aan veel kanten meer is gaan leven. En er zijn een hoop mensen toegetreden tot de werkgroep. Eh ook een aantal ehm nou ja, grote eh voormalig CTO's van grote eh IAM bedrijven en eh alles.</v>
+
+00:04:20.759 --> 00:04:35.349
+<v Michiel Trimpe>De eerste paar waren COAZ, of het wordt gebrand als Cozy, maar dat lukt nog niet altijd. Dus eh eh en dat is even kijken, een basis voor ook een een model context protocol binding.</v>
+
+00:04:37.669 --> 00:05:00.559
+<v Michiel Trimpe>Eh er zijn eh ARAP en AROP. Dat zijn twee manieren om eh toegang te vragen waar het in eerste instantie afgewezen is. Dus dat is zeg maar de de step-up achtige dingen. En daarna een drietal voor de issuance, token exchange en claims.</v>
+
+00:05:04.079 --> 00:05:13.559
+<v Michiel Trimpe>ja, en nee, dus ik denk ehm</v>
+
+00:05:15.849 --> 00:05:17.249
+<v Michiel Trimpe>punten waar het komt.</v>
+
+00:05:19.999 --> 00:05:20.279
+<v Michiel Trimpe>wat</v>
+
+00:05:23.299 --> 00:05:26.669
+<v Michiel Trimpe>Ja, je moet je doen, want inderdaad de dingen die toch altijd discussie staan als die hier geraakt worden</v>
+
+00:05:29.589 --> 00:07:40.869
+<v Michiel Trimpe>van de van de van de tafels of ze mee willen doen. Inderdaad. Ik had al de Max zei het net al eh voordat in de in de stand-up hiervoor, maar eigenlijk mist mist hij nog een slide van eh de status van deze dingen. Dus ehm al deze documenten eh zijn in de scope van de AuthZEN werkgroep opgenomen. Maar de documenten zelf en de structuur ervan staat nog volledig ter discussie. Dus... eigenlijk een soort van wijzigingsverzoeken op AuthZEN om dadelijk naar AuthZEN 2.0 te... Nee nee nee, het zijn allemaal profielen bovenop. Oh, het zijn losse modules als het ware erbovenop. Ja. Inderdaad. Ehm en eh dus dan eh dus dat voor elke module geldt dat de werkgroep heeft gezegd: dit aandachtsgebied eh zijn we het mee eens en hier willen wij een profiel voor maken. En eh hiervoorstel is: dankjewel voor het voorstel, maar we gaan er naar kijken. En voor sommige is er eigenlijk al best grote consensus, dus dat Cozy, daar zeggen we van nou, dat is prima. Staat gewoon op zichzelf, kan je goed gebruiken en wordt naar verwachting niet heel veel meer aan veranderd. Eh de laatste drie bijvoorbeeld voor OAuth zijn expliciet opgenomen in de zin van: ja, dit is heel erg belangrijk voor de scope, maar we hebben nogal wat vragen bij de structuur die nu voorgesteld wordt en waarschijnlijk, dus 99% zeker, komen daar nog best stevige veranderingen in, worden dingen samengevoegd, uitgesplitst, anders aangepakt. Dus die kunnen echt eh onderling weer in de posten ook eh zijn en dat is natuurlijk ook... Ja. Inderdaad. Dus dit zijn eh als aandachtsgebieden ingebracht met een voorstel om dat in te vullen, maar ehm nog... Ja. Maar gegeven deze zullen leiden tot een nieuwe versie van basis AuthZEN... Nee, helemaal geen breaking change. Dus het zijn allemaal toevoegingen die los onafhankelijk van elkaar kunnen worden goedgekeurd door de werkgroep. Ja. Zullen niet leiden tot een AuthZEN release. Nee. Oké. Zijn er wel dingen die eh op de agenda staan die tot een nieuwe release van AuthZEN zouden kunnen bereiken? Nou, er zijn discussies over wanneer wat we zouden willen. Dus aan het helemaal aan het einde is er ehm dus men is in AuthZEN 1.0 zat geen capability negotiation. En daar merken we van dat hadden we misschien beter wel kunnen doen.</v>
+
+00:07:43.719 --> 00:08:25.719
+<v Michiel Trimpe>capability negotiation. En daar merken we van dat hadden we misschien beter wel kunnen doen. Eh er is in de eerste versie gezegd dat we daar de eh de context voor gaan gebruiken, het contextveld. Ehm dus er zijn discussies, willen we dat eh alsnog daarbuiten trekken en in 1.1 gaan lanceren, maar de consensus lijkt meer te zijn: nee, we blijven bij onze oorspronkelijke lijn. En we gaan de context gebruiken voor capability negotiation. Ja, ik bedoel, het is ook een extension. Ja, ja, dat is helemaal aan het einde. De de de grote ontbrekende hier is obligations. Dus daar is veel over gesproken. Het leeft heel erg.</v>
+
+00:08:29.549 --> 00:09:02.389
+<v Michiel Trimpe>Dus de laatste slide is de conclusie dat eh daar dus net besloten is dat we de capability negotiation apart gaan trekken. Dus dat dat een eigen profiel gaat worden, dus hoe eh hoe dwing je als PDP af dat de PEP jouw eh capability ondersteunt. Ja. Eh en dat als dat er staat, eh dat dan de verwachting is dat de obligations daarop redelijk makkelijk toegevoegd kunnen worden. Ehm Michiel, zijn bij die OAuth zijn er ook is er ook een bijvoorbeeld een alliantie van</v>
+
+00:09:04.679 --> 00:09:10.559
+<v Michiel Trimpe>eh authorization server leveranciers betrokken die ook die vraag hebben gesteld, want op dit moment wordt dat al die dingen niet ondersteund in eh</v>
+
+00:09:15.779 --> 00:09:29.899
+<v Igor van Haren>eh is is het een theoretische zeg maar eh vraagstuk die ligt of</v>
+
+00:09:34.829 --> 00:09:38.429
+<v Igor van Haren></v>
+
+00:09:41.129 --> 00:09:52.559
+<v Igor van Haren></v>
+
+00:09:48.639 --> 00:09:48.999
+<v Michiel Trimpe></v>
+
+00:09:54.499 --> 00:09:55.579
+<v Igor van Haren></v>
+
+00:09:56.909 --> 00:10:04.309
+<v Michiel Trimpe>op elkaar. En dan door naar het volgende plaatje, dan wordt het wat beter uitgelegd.</v>
+
+00:10:06.929 --> 00:10:13.089
+<v Michiel Trimpe>die komen vanuit de O server, vanuit een O leverancier.</v>
+
+00:10:15.209 --> 00:10:19.369
+<v Michiel Trimpe>dan doe ik het maar een beetje uit volgorde, maar dan begin ik gewoon met de introductie daarvan.</v>
+
+00:10:21.989 --> 00:10:35.979
+<v Michiel Trimpe>is eigenlijk voor het het geval je verzoek is afgewezen, maar als jij nog extra nog iets extra's doet qua authenticatie voornamelijk, dan zal het goedgekeurd kunnen worden.</v>
+
+00:10:38.069 --> 00:10:59.589
+<v Michiel Trimpe>eh nou ja, zo'n klassieke dus je moet je moet nog eventjes met DigiD inloggen eh voor het eh bevestigen van deze specifieke stap. Eh hup. skip ik er even door. ARAP staat voor de Access Request and Approval Profile.</v>
+
+00:11:03.929 --> 00:11:58.109
+<v Michiel Trimpe>dus nou ja, dit is dan eh dus de slide heeft het een beetje uitgelegd, dus je hebt normaal allow en deny, maar vaak is dat geen final deny. Eh is het iets wat je dan kan adresseren. Eh nou, momenteel is dat maatwerk, dus ook één van de leveranciers die dit wil implementeren, zei: ik wil hier een standaard voor. Hey, Authzen lijkt me een goede standaard een goede standaard om dit op te baseren. Eh dus eh die hebben dat ook ingediend. Ja, inderdaad. Je hebt ehm</v>
+
+00:12:00.579 --> 00:12:43.579
+<v Michiel Trimpe>Dus je hebt eh dus de de PEP doet een access evaluation, die krijgt decision false, maar in de context zit een access request token. Als jij dat eh dit profiel implementeert, dan weet je dat dat betekent ehm nou ja, een template kan bijvoorbeeld een string zijn eh zeg maar FC manager stap en dan kan je UI gewoon redirecten. Eh het kan een form URL zijn, dus dan stuur je iemand naar een formulier waar ze het formulier in moeten vullen. Tik tik tik tik tik tik tik. Eh nou, menselijke variant. Eh een request schema kan zijn eh meer voor een AI agent als idee of een andere applicatie van oké, hier is een JSON schema en als ik dat invul, dan krijg ik toegang.</v>
+
+00:12:46.539 --> 00:13:00.079
+<v Michiel Trimpe>stel dat je type velden hebt die gebruikt worden in het schema, dan kan je die hier ophalen. Dus als je dropdowns en zo nodig hebt. Ik weet niet of dat het gaat halen, maar. Ja, dat is inderdaad het idee. Dus je kan eh een present een</v>
+
+00:13:02.209 --> 00:13:13.149
+<v Michiel Trimpe>meegeven wat nodig zal zijn om dit te krijgen. En de binding token is dan eh een unieke binding identifier voor deze goedkeuring.</v>
+
+00:13:17.599 --> 00:14:13.059
+<v Michiel Trimpe>introduceert het concept van een access request service waar je eh dan het resultaat naartoe kan sturen. Krijg je een eh pending status terug. Eh dat gaat naar iets, dus inderdaad of het formulier of een eh JSON of de de manager UI. Ondertussen kan je als PEP eh pollen met een backoff. Dus eh je kan gewoon blijven vragen: hé, wat is er aan de hand? Wat is er aan de hand? En dan zegt hij eh nog niet, kom terug over 10 seconden, nog niet, kom terug over 1 minuut. Eh kan je zo back pressure doen. En als hij eenmaal zijn resultaat gegeven heeft, dan krijg je een approval token. Dat kan je als PEP in je vervolgverzoek stoppen. En naar verwachting krijg je dan een decision true terug. Dus dit is het generieke patroon en dit kan je inderdaad dus ook voor eh bijvoorbeeld FC eh approval stappen gebruiken. Dat is ARAP.</v>
+
+00:14:17.819 --> 00:14:26.619
+<v Michiel Trimpe>dit zijn dan dus de vormen. Dus je hebt hier een eh een binding token. De binding token dat kun je dan</v>
+
+00:14:32.519 --> 00:14:35.439
+<v Michiel Trimpe>Oh wacht, nee, je krijgt een binding token</v>
+
+00:14:38.419 --> 00:14:43.739
+<v Michiel Trimpe>een binding token, op basis daarvan als die compleet is, krijg je een</v>
+
+00:14:45.779 --> 00:15:44.059
+<v Michiel Trimpe>is binnen de Oth context. En ehm dat is grotendeels hetzelfde. Ehm maar dan eh voor die backend challenge zijn er een aantal relatief standaard Oth eh patronen. Hè dus eh CIBA, dat is de client initiated back channel. Dus dat is ehm wanneer er bijvoorbeeld een ping naar je mobiel gestuurd wordt om even snel met DigiD in te loggen. En maar de website blijft doorpollen van hé, wat is er aan de hand? Eh transaction authorization is de variant waarbij de de resource server van tevoren al iets mee kan geven. Ik heb hier een token en hier heb je mijn gesigneerde token en die krijg je direct mee. Eh en de deferred token response is een voorstel voor Oth wat diezelfde, degene die A ingediend heeft bij Ozen ook bij Oth heeft ingediend. Dus dat is dan de leverancier die zegt eh Nee, ik wil deze deferral cycle mogelijk maken.</v>
+
+00:15:47.709 --> 00:15:56.959
+<v Michiel Trimpe>En het idee is dat niks dat dit allemaal kan met standaard Oth termen. Dus eh</v>
+
+00:16:00.769 --> 00:16:02.169
+<v Michiel Trimpe>Dat is A en A.</v>
+
+00:16:05.689 --> 00:16:06.009
+<v Michiel Trimpe>Ja.</v>
+
+00:16:08.589 --> 00:16:15.379
+<v Michiel Trimpe>Ja, inderdaad. Het is een mix van een eh een Oth en een Ozen profiel. Toch even een vraagje stellen?</v>
+
+00:16:14.709 --> 00:16:16.989
+<v Marcel Molenaar>Toch even een vraagje stellen? Oh, sorry.</v>
+
+00:16:16.479 --> 00:16:17.839
+<v Michiel Trimpe>Ja, tuurlijk, daar zijn we voor.</v>
+
+00:16:18.319 --> 00:16:24.639
+<v Marcel Molenaar>Ja, nee. Ehm even kijken, die die die die A is dus geen Oth? Is dat wat je</v>
+
+00:16:25.649 --> 00:16:27.689
+<v Michiel Trimpe>Dat is het generieke profiel voor het patroon.</v>
+
+00:16:28.419 --> 00:16:29.259
+<v Marcel Molenaar>Ah, oké.</v>
+
+00:16:28.619 --> 00:16:32.419
+<v Michiel Trimpe>Ja. Nou, is te ver terug, maar dus eh</v>
+
+00:16:31.509 --> 00:16:39.909
+<v Marcel Molenaar>Dus dus eigenlijk is A de invulling van A binnen Oth. Is dat correct? Ah, goed, dank je. Die had ik even nodig.</v>
+
+00:16:37.129 --> 00:16:45.209
+<v Michiel Trimpe>Ja. Dus stel dat FC dit zou doen, dan zouden zij A implementeren in FC.</v>
+
+00:16:46.059 --> 00:16:46.379
+<v Marcel Molenaar>Ja, ja.</v>
+
+00:16:47.169 --> 00:16:50.169
+<v Michiel Trimpe>En A. En die heeft ook wel A, want ze gebruiken ook wel A.</v>
+
+00:16:55.649 --> 00:16:55.969
+<v Michiel Trimpe>Ja.</v>
+
+00:16:58.009 --> 00:16:58.489
+<v Marcel Molenaar>Dankjewel.</v>
+
+00:17:01.089 --> 00:17:03.169
+<v Michiel Trimpe>Dus dat is eh A en A.</v>
+
+00:17:07.339 --> 00:17:09.219
+<v Michiel Trimpe>Zijn hier nog meer vragen over? Want anders dan eh</v>
+
+00:17:11.789 --> 00:17:12.109
+<v Michiel Trimpe>de</v>
+
+00:17:16.259 --> 00:17:35.499
+<v Michiel Trimpe>beoordeling opname van A bij de Oth werkgroep. Is dat gecoördineerd? Dat ze allebei of gaat A door de Ozen werkgroep? Eh A en A gaan door de Ozen werkgroep. Die DTR, deferred token response, die gaat naar de Oth. Oké. Is er ook een beetje in aansluiting van wat jij vroeg Igor?</v>
+
+00:17:37.289 --> 00:17:42.529
+<v Igor van Haren>Ehm ja, ik ik eh begrijp dat er één partij deze vragen gesteld heeft.</v>
+
+00:17:48.019 --> 00:18:01.133
+<v Igor van Haren>Maar eh uiteindelijk moet de implementatie dan breder eh eh worden geaccepteerd eh en en doorgevoerd. En maar ik heb eigenlijk nog niet per se over deze, maar vooral over die volgende eh die drie.</v>
+
+00:17:53.949 --> 00:17:54.109
+<v Michiel Trimpe>Ja.</v>
+
+00:18:01.133 --> 00:18:04.469
+<v Igor van Haren>eh die drie.</v>
+
+00:18:06.649 --> 00:18:20.589
+<v Michiel Trimpe>Ja. Ja, ik kan er wel alvast trouwens op antwoorden. Ehm dat die die volgende drie, daar is dus ook nog het meeste discussie over over de inhoud. Tenminste, daar heeft eigenlijk de werkgroep gezegd: we zijn het eens met de scope, maar dit voorstel vinden we nog niet gepast.</v>
+
+00:18:22.859 --> 00:18:33.059
+<v Michiel Trimpe>Ehm wat wat betreft de adoptie bij eh Oth providers et cetera. Eh Keycloak ondersteunt Oth als protocol, maar dat is ook vanuit Keycloak als PDP.</v>
+
+00:18:34.609 --> 00:18:35.009
+<v Igor van Haren>Ja.</v>
+
+00:18:35.109 --> 00:18:44.619
+<v Michiel Trimpe>En zij spreken ook mee en zij gaan naar verwachting dus ook dit wel implementeren. Eh voor de polis voor de authentication providers is de voornaamste update dat ehm</v>
+
+00:18:40.549 --> 00:18:40.669
+<v Igor van Haren>Ja.</v>
+
+00:18:46.469 --> 00:19:39.079
+<v Michiel Trimpe>een een een bewust niet gestandaardiseerde versie eh op Gartner vorig jaar in november of oktober, ook door volgens mij acht authentication providers is aangetoond dat je Ozen kan gebruiken in hun product om dit te doen. Dus dat hebben en daar hebben ze allemaal zelf aan meegedaan. Dus ze hebben zelf iemand genomen, zelf iemand die dat geïntegreerd heeft en gedemonstreerd en dat hebben ze daar gepresenteerd. Dus eh in die zin is het in een bepaalde mate al best eh degelijk gedragen. Maar daar was dus nog een niet gestandaardiseerde versie. Dus eh duidelijk als wij wij tonen dat het kan op basis van Ozen. Maar iedereen deed het op zijn eigen manier zonder een eh standaard daarin. Ja. elkaars eh eh implementaties te gebruiken. Ja. Ja, iedereen komt met zijn eigen spullenboel volgens de standaard doen.</v>
+
+00:19:41.229 --> 00:19:45.548
+<v Michiel Trimpe>Ja, iedereen komt met zijn eigen spullenboel volgens de standaard doen.</v>
+
+00:19:43.729 --> 00:19:44.169
+<v Igor van Haren>Ja.</v>
+
+00:19:45.548 --> 00:20:03.349
+<v Michiel Trimpe>gekozen hebben. Toch terugkomen en zeggen: ik wil dat gestandaardiseerd. Ik doe mee met de standaardisatie. Hadden ze ook kunnen doen, zeg maar. En wel een eh teken dat de werkgroep eh ja, bereid is om aan het positieve te werken.</v>
+
+00:20:04.389 --> 00:20:06.509
+<v Igor van Haren>Ja. Ja, zeker.</v>
+
+00:20:06.619 --> 00:20:10.486
+<v Michiel Trimpe>Steek je nek wel een beetje uit als je je eigen puntoplossing eh ter discussie stelt.</v>
+
+00:20:08.079 --> 00:20:08.239
+<v Igor van Haren>Ja.</v>
+
+00:20:10.486 --> 00:20:23.019
+<v Michiel Trimpe>Ja. Ja, maar ze zien het vaak gewoon als een een extra vorm van het zijn vaak grote organisaties die overal hun vinkjes willen zetten en die zijn blij als ze gewoon kunnen zeggen: oké, ja, we integreren met PDP's. Ja, met al deze PDP's. Check.</v>
+
+00:20:26.219 --> 00:20:28.299
+<v Michiel Trimpe></v>
+
+00:20:26.909 --> 00:20:40.219
+<v HAG BXP Rood 4.002>Michiel, ik had ook nog een vraagje. Ehm, weet jij toevallig voor die handel en eh en token, waarom ze hebben gekozen voor alleen sender constraint? Weet je wat voor discussie daar aan vooraf is gegaan?</v>
+
+00:20:42.659 --> 00:20:45.379
+<v Michiel Trimpe>Is dat wat je bedoelt of?</v>
+
+00:20:46.349 --> 00:20:50.869
+<v HAG BXP Rood 4.002>sender constraint betekent vaak DPoP, maar of MTLS.</v>
+
+00:20:48.949 --> 00:20:49.429
+<v Michiel Trimpe>Ja.</v>
+
+00:20:55.039 --> 00:21:00.119
+<v Michiel Trimpe>Nou ja, als je dit wil gaan federeren, dan dan heb je een hele nieuwe can of worms die je opentrekt.</v>
+
+00:21:03.089 --> 00:21:21.369
+<v Michiel Trimpe>Dus het idee is inderdaad dat dit gewoon binnen één domein blijft en gebeurt, zodat je dat ook onder controle had houdt. Je hebt ook die tokens die staat bijhouden, want je moet ze blijven pollen. Ik snap niet dus stel je voor dat of vraag je waarom dit niet gefedereerd is gedaan gelijk of?</v>
+
+00:21:23.699 --> 00:21:35.549
+<v HAG BXP Rood 4.002>Ik zou waarom zou je niet ehm zonder sender constraint tokens het nog steeds in een federatieve opzet kunnen doen? Die snap ik even niet.</v>
+
+00:21:40.749 --> 00:21:45.789
+<v Michiel Trimpe>Dan zou je het approval token wat je van de ene service krijgt, bij de andere service terug in moeten kunnen dienen.</v>
+
+00:21:47.159 --> 00:21:47.799
+<v HAG BXP Rood 4.002>Ja.</v>
+
+00:21:48.709 --> 00:22:07.469
+<v Michiel Trimpe>Met de aanname is nu, dat is waarschijnlijk een een pragmatische versimpelende aanname, dat dat eh token vanuit hetzelfde domein komt, dus dat dat token ook gewoon opgehaald kan worden. Dus dat het echt een token, het niet een self-verifying token is, maar gewoon een identifier die je kan checken tegen je eigen database bestaat in je eigen domein.</v>
+
+00:22:10.979 --> 00:22:17.699
+<v Michiel Trimpe>Dus het is geen cryptografisch geverifieerd token, het is echt gewoon een identifier token wat je op kan halen. Dus daarom is het sender constrained.</v>
+
+00:22:19.149 --> 00:22:19.349
+<v HAG BXP Rood 4.002>Oké.</v>
+
+00:22:25.329 --> 00:22:26.049
+<v Michiel Trimpe>Meer vragen?</v>
+
+00:22:30.169 --> 00:22:50.349
+<v Michiel Trimpe>Oké, dan ga ik door naar eh Cozy. Of eh of Coaz, zoals sommige mensen het obstinaat blijven noemen in de werkgroep. Ehm, dat is eh dus Cozy en Cozy MCP. Eh en dat is een eh generieke basis om wel te mappen en dan voornamelijk toegepast op het MCP protocol.</v>
+
+00:22:54.099 --> 00:23:06.179
+<v Michiel Trimpe>Ah, eh MCP is eh Model Context Protocol. Dus dat is het standaard eh protocol waarmee AI agents externe tools aanroepen.</v>
+
+00:23:12.339 --> 00:23:31.229
+<v Michiel Trimpe>Nou, en wat je dus ziet, het probleem momenteel is ehm elk domein heeft zijn eigen PEP nodig. Dus eh de PDP kan generiek zijn, maar als jij een eh een aftekenpunt, een een PEP moet bouwen, dan bouw je dat specifiek op jouw domeincontext, jouw subject action resource en dan moet je dat zelf invullen.</v>
+
+00:23:34.329 --> 00:24:00.939
+<v Michiel Trimpe>Ehm is op zich niet het einde van de wereld. Is ergens ook wel goed dat bij elke applicatie dat je nadenkt over je eigen PEP en dat je dat meeschrijft en dat je dat informatiemoduleert. Eh het is ook één van de dingen die wij trouwens in onze standaard zeggen, dat je dat moet informatiemoduleren. Ehm maar het is wel werk en het is iets wat je niet altijd zelf in de hand hebt. Dus eh vaak krijg je een applicatie aangeleverd die gewoon iets doet en het is wat het is. Veel plezier ermee.</v>
+
+00:24:03.819 --> 00:24:08.979
+<v Michiel Trimpe>Er zijn echter ook best een aantal gevallen waarbij je de input hebt die je</v>
+
+00:24:11.589 --> 00:24:37.889
+<v Michiel Trimpe>Nee. Eh de input hebt die eh eigenlijk relatief makkelijk wel te mappen is op een AuthZEN verzoek. Dus eh je hebt gewoon alle juiste velden in een eh platte JSON en je kan deze in subject zetten, die in action, die in resource en op die manier een AuthZEN verzoek samenstellen. Wat Cozy is, is eh een manier om die eh misschien kan ik even beginnen met een</v>
+
+00:24:39.979 --> 00:24:52.659
+<v Michiel Trimpe></v>
+
+00:24:54.909 --> 00:25:47.879
+<v Michiel Trimpe>of Zen request kan vullen. Dus je hebt bijvoorbeeld deze, als je zegt eh ik krijg iets binnen en dat wil ik graag eh mappen op zo'n manier dat eh dit verzoek als subject het type identity heeft, maar de identifier halen wij uit het token.sub veld in onze bron. En dan wil ik een aantal evaluations doen, namelijk action read of folder, request.source. En action write of folder request.destination. En dan deze mapping kan jij eh of in je database opslaan eh of in je request meegeven. En die wordt dan automatisch gemapt op een PDP verzoek en dat wordt dan naar de policy decision point gestuurd.</v>
+
+00:25:50.149 --> 00:26:00.909
+<v Michiel Trimpe>Ja.</v>
+
+00:26:05.209 --> 00:26:11.329
+<v Michiel Trimpe>Information, ja. Ja.</v>
+
+00:26:12.799 --> 00:26:31.799
+<v Marcel Molenaar>En in in in wat voor gevallen is dat zinvol? Want als je de applicatie hebt, dan ga je natuurlijk gewoon vanuit je applicatielogica dat vullen denk ik. Maar ik kan me voorstellen bijvoorbeeld als je een integratieplatform hebt ofzo, dat je dat je dat daarin eh wil doen. Is het daarvoor bedoeld of?</v>
+
+00:26:32.809 --> 00:27:03.299
+<v Michiel Trimpe>Ja, ehm, integratieplatformen eh is eh die doen dit vaak. Dus dat dan heb je inderdaad een integratieplatform en die hebben een mapping tooltje. En dan in dat mapping tooltje converteer je dingen naar, nou ja, bijvoorbeeld een een PEP verzoek. Dus ik weet niet meer wat het was. Boomi, dat is Marcel's geval, ja. Ja, dat is misschien degene die dat inderdaad al doet. En dan heb je er een mooie UI voor. En maar dit is eigenlijk wanneer je niet zo'n standaard integratie eh server klaar hebt staan.</v>
+
+00:26:58.589 --> 00:26:58.709
+<v Marcel Molenaar>Ja, precies.</v>
+
+00:27:03.299 --> 00:27:06.499
+<v Michiel Trimpe></v>
+
+00:27:09.519 --> 00:27:14.479
+<v Michiel Trimpe>en de mapping is relatief makkelijk technisch uit te drukken en je hebt mensen die dat technisch uit kunnen drukken.</v>
+
+00:27:16.739 --> 00:28:19.749
+<v Michiel Trimpe>Dan kan je dit gebruiken. Typisch in de AI situatie ook wel hè, dat je een heleboel legacy tools hebt of nou niet legacy, maar een heleboel tools hebt die iets specifieks en aangepast, maar die wel redelijk voorspelbaar zijn, maar de dataset die ze hebben... Nou ja, wat dit ook getriggerd heeft, dat is misschien een mooie eh doorspring, is eh COAZ-MCP. Dus als we het hebben over adoptie en in hoeverre komt het uit het veld zelf, is dit bijvoorbeeld waarbij het eh niet uit het veld zelf kwam. Eh dus eh nadat AuthZEN geïntroduceerd was, zijn ze bij de MCP eh werkgroepen aangehaakt en gezegd: 'Kijk eens, we hebben een hele mooie autorisatiestandaard, kunnen jullie dit integreren?' Toen zei MCP helaas eh nee, eh we hebben veel andere belangrijkere dingen. Het kan vast wel en het klinkt prima, maar hier gaan we geen tijd aan besteden. Korte de bocht. Dan hebben jullie gezegd. Ehm en eh wat de AuthZEN werkgroep en een aantal evangelisten daarin toen realiseerden is dat je met Model Context Protocol...</v>
+
+00:28:21.859 --> 00:28:29.779
+<v Michiel Trimpe></v>
+
+00:28:34.289 --> 00:28:35.249
+<v Michiel Trimpe></v>
+
+00:28:38.369 --> 00:30:37.139
+<v Michiel Trimpe>header meegeven, de X-Authzen-mapping, die dus in dit profiel gedefinieerd wordt. Eh en in die mapping staat dan eh deze cozy binding. Eh en die komt automatisch mee terug. Kan je gewoon configureren. En je MCP-client respecteert dat gewoon. Dus die doet daarna dan een tool call met de eh X-Authzen-mapping. Die wordt naar een PDP gestuurd of naar een PEP gestuurd. Eh die PEP ontvangt dat. Eh die mapt die tool call op een Authzen request. Stuurt het door naar de PDP, krijgt een permit of deny en gaat verder door met de AI call of niet. Dus dit is een manier waarop jij eh allerlei verschillende AI tool calls kan blijven definiëren, zolang je die maar mapt op een Authzen verzoek. Eh en op die manier kan je AI gebruiken over heel je organisatie, wel autoriseren met je standaard autorisatie-infrastructuur. Je MCP-servers moeten dat dan ondersteunen. Ja, alleen dat is dus wel een standaard MCP-protocol feature. Van je kan in de tools list een header meegeven die doorgestuurd wordt aan je uiteindelijke tool call. Dat is standaard functionaliteit van de MCP. En wat eh Cozy MCP doet is die mapping daarin meegeven of laten definiëren. Die wordt meegestuurd. En op die manier kan je de rest van de keten... En wie heeft die mapping dan? Wie moet die mapping dan administreren op welk level is? Dat moet jouw eh corporate AI platform doen. Dus je over het algemeen... Die helemaal links, die agent. MCP-server. Oh nee. Dus die agent doet een tools list en jouw MCP-server, dus dan heb je bijvoorbeeld een een MCP-server binnen je organisatie die zegt eh je mag vanuit je AI tool mag je Outlook aanroepen.</v>
+
+00:30:40.629 --> 00:30:40.869
+<v Michiel Trimpe>Ja.</v>
+
+00:30:42.879 --> 00:30:56.749
+<v Michiel Trimpe>En die moet dan ook weten wat de Authzen mapping is en dan kan hij het teruggeven en dan kan die... Ja. Ja, precies. Dus dan heb je bijvoorbeeld eh Outlook/readmail. En dan is het nou eh map het conversation ID op resource, map subject op dit...</v>
+
+00:30:58.899 --> 00:31:04.019
+<v Michiel Trimpe>Ja. En dat kan dan door naar de PDP. En op die manier kan je als PDP het eh...</v>
+
+00:31:06.419 --> 00:31:09.699
+<v Michiel Trimpe>agent tool gebruik autoriseren.</v>
+
+00:31:13.419 --> 00:31:14.659
+<v Michiel Trimpe>Dus eh...</v>
+
+00:31:14.849 --> 00:31:22.019
+<v Marcel Molenaar>En ik ik kon het niet helemaal eh zeg maar de de vragen niet helemaal goed eh verstaan. Dat viel af en toe een beetje weg. Even eh even kijken. Dus de...</v>
+
+00:31:21.119 --> 00:31:21.279
+<v Michiel Trimpe>Ja.</v>
+
+00:31:22.019 --> 00:31:32.549
+<v Marcel Molenaar>de MCP-server is degene die de de autorisatie eigenlijk afhandelt en op basis daarvan alleen de goede tools teruglevert. Is is dat correct eh?</v>
+
+00:31:34.909 --> 00:31:41.029
+<v Michiel Trimpe>Nee, dus de MCP-server, die heeft een catalogus van alle tools die hij aanbiedt.</v>
+
+00:31:41.139 --> 00:31:41.419
+<v Marcel Molenaar>Ja.</v>
+
+00:31:42.799 --> 00:31:54.279
+<v Michiel Trimpe>Eh daarbij eh komt die Authzen mapping dus mee. En de MCP-gateway die ervoor zit, die kan met behulp van die mapping eh dan af alles afdwingen op basis van je...</v>
+
+00:31:55.069 --> 00:32:06.349
+<v Marcel Molenaar>Oh ja, ja ja, oké, logisch. Ja, de gateway. Die eh snap ik. Ja, oké, de... Ik moest hem eventjes eh doorzien. Dat was even teveel om in ene te zien. Dankjewel. Dat had ik wel even nodig.</v>
+
+00:32:06.789 --> 00:32:23.269
+<v Michiel Trimpe>Nee, nee, maar dat dat is dus ook ergens het het trucje wat ze gebruikt hebben om dit eh met standaard het standaard Model Context Protocol eh mogelijk te maken. Dus dat het hier in de catalogus opgenomen wordt. Dan meegegeven wordt naar de agent, terug naar jou en op die manier door.</v>
+
+00:32:24.439 --> 00:32:25.559
+<v Marcel Molenaar>Oké, dank je.</v>
+
+00:32:25.309 --> 00:33:35.779
+<v Michiel Trimpe>Is dat ook niet het idee dat die mappings ook met elkaar gedeeld worden? Dus dat je een e-mail mapping hebt en dat je verschillende domeinen op verschillende toepassingen mappings hebt die je dan beschikbaar stelt als service van Authzen of... Dat alle mailprogramma's hetzelfde mapping hanteren. In de ideale wereld waarschijnlijk wel. Ja, dat is niet, dat is denk ik, dat is net zeg maar nog een stap te ver voor om dat ook als een archief binnen Authzen te doen. Nee, het is wel interessant voor ons, omdat wij dus domein eh overheidsdomein eh specifieke mappings gaan... Als iemand die maakt, dat anderen die dan ook willen gebruiken. Als iets in het sociale domein of iets in het eh nou, wat dan ook. Ja, het kan best interessant zijn om voor een aantal domeinen als als een cozy mapping volstaat, dat gewoon als cozy mapping te definiëren. Ik realiseerde me net dat dat misschien een beetje bijt met onze Authzen spec dat je alles netjes moet informatiemodelleren.</v>
+
+00:33:37.879 --> 00:34:00.909
+<v Michiel Trimpe>heeft het allemaal die uitdagingen hebben dat ze AI agents komen vragen in het tweede datastelsel en metadata willen weten en eh ja. Zo'n dienst eh kan dan eh nuttig zijn.</v>
+
+00:34:03.269 --> 00:34:25.899
+<v Marcel Molenaar>Ik heb nog geen aanvullende vraag. Even kijken of ik het totale plaatje goed snap, want dit gaat over het MCP stukje. Ehm eh maar eh via eh de MCP eh gaat hij daarna de tool aanroepen. En eh dat is bijvoorbeeld of je eh een een browser of het is een een systeem wat jij eh hebt opengesteld daarvoor.</v>
+
+00:34:28.109 --> 00:34:46.349
+<v Marcel Molenaar>hoe heet het? En de en dat tool zelf moet weer zijn eigen eh eh hoe heet het? zijn eigen AuthZEN bericht doen om om eventueel ook weer wat eh te als hij zeg maar P-back nodig heeft, dan is dat weer zijn eigen verantwoordelijkheid hè? Dat eh zie ik dat goed?</v>
+
+00:34:47.439 --> 00:34:52.026
+<v Michiel Trimpe>Ja, dat klopt ja. En dan is het vaak de meestal de de MCP server die dan de autorisatie heeft.</v>
+
+00:34:48.869 --> 00:34:49.629
+<v Marcel Molenaar>Ja.</v>
+
+00:34:52.026 --> 00:35:14.579
+<v Michiel Trimpe>Dan ben je vaak de dan heb je de de agent als een eh een identifier. Ja, dat weet ik ook niet precies. Misschien komt dan zelfs ook de de agent identity mee, maar inderdaad hier zit tussendoorzetten en resultaat staat nu gewoon een eh eh een een lege ruimte, maar in de praktijk zitten hier dan inderdaad vaak andere servers achter die ook weer een eigen PDP kunnen hebben.</v>
+
+00:35:15.099 --> 00:35:47.859
+<v Marcel Molenaar>Want het is natuurlijk MCP is natuurlijk bedoeld om die tools aan te roepen, zoals je had verteld. Eh en maar dan zit het ging mij er even om, hé, wie heeft welke verantwoordelijkheid in in in deze hele en dan is die tool is eigenlijk voor mijn context, dat ik hem goed snap, wel belangrijk, want ik vind namelijk dat de tool zelf, ehm dat kan een applicatie bij ons zijn die iets moet doen of zo, ja, die moet dan eh die houdt nog steeds zijn eigen verantwoordelijkheid om bijvoorbeeld een fijnmazige autorisatie eh nog toe te passen of zo. Dus eh ja. Toch?</v>
+
+00:35:47.039 --> 00:36:08.229
+<v Michiel Trimpe>Ja, zeker. Ik heb eh niet eh ehm ik heb me niet diep in het MCP protocol ingelezen. Eh maar waarschijnlijk is daar inderdaad ook een manier om dan autorisatie mee te geven op de call zelf. Maar dit eh deze dit perspectief gaat meer over dat je je AI gebruikt als het al in het algemeen.</v>
+
+00:36:10.399 --> 00:36:16.039
+<v Michiel Trimpe>En dat meer op organisatieniveau dat je in kan regelen dat al jouw tools een AuthZEN mapping hebben en dat er een eh SP gateway voor staat.</v>
+
+00:36:19.669 --> 00:36:20.549
+<v Marcel Molenaar>Ja, oké.</v>
+
+00:36:22.709 --> 00:36:34.909
+<v Michiel Trimpe>Ja. onderwerp. om naar drie te gaan. Ja, nou ja, op zich denk ik dat het eigenlijk wel meevalt qua eh tijd, want we hebben er nog drie te gaan. Maar die wil 25 minuten openlaten voor vragen.</v>
+
+00:36:37.879 --> 00:36:41.519
+<v Michiel Trimpe>Nou, en de laatste, dat zijn dus de de de issuance</v>
+
+00:36:44.509 --> 00:38:21.179
+<v Michiel Trimpe>de het is het token exchange en claims protocollen. En issuance is eigenlijk het voorstel voor ehm ik denk de vraag van van Igor. Eh er komt een verzoek binnen bij een eh OAuth provider en die moet gewoon beslissen: gaan we dit token geven of niet? En eh dat is momenteel eh definieert de OAuth spec eh dit moet je doen op basis van eh de policies van je eigen organisatie. Maar is dat gewoon een textueel statement. Het voorstel hiervan is: laten we dit op basis van AuthZEN doen. Dus laten we gewoon een specifieke AuthZEN profiel definiëren waar elke OAuth server de relevante informatie naartoe kan sturen en een antwoord terugkrijgen en dan ook eh definiëren wat er moet gebeuren met een aantal veel voorkomende velden. Dus bijvoorbeeld eh het concept van mag versmallen, niet verbreden. Dus dat je dan ook weet, hé, ik heb een een granted scope en een token lifetime en een audience en authorization details en die mag ik vernauwen, maar niet verbreden. Want het is natuurlijk niet de bedoeling dat een PDP call in één keer audiences toe gaat voegen of de token lifetime extend. En dat eigenlijk is het een soort van semantiek op de AuthZEN uitwisselingsmechanisme specifiek voor uitdelen van tokens binnen OAuth. Ja, zodat elke OAuth provider een standaard spec heeft waar ze naar kunnen kijken. Zo doen we het, zo sturen we het naar de PDP.</v>
+
+00:38:26.119 --> 00:39:33.469
+<v Michiel Trimpe>dit eh als als concept ondersteunen we het helemaal. Ehm maar de voorgestelde eh opsplitsing met ehm meerdere of met een evaluations call en specifieke action types die gedaan is. Daar is men het niet helemaal mee eens. Eh dus dan zeggen van ja, nee, maar dit zijn niet echt drie evaluations. Het is misschien meer één evaluation. Nou ja. Deze structuur die hier staat is men het dus expliciet nog niet over eens. Wat geeft aan dat er iets is om te redigeren? Ja, als je erbij kijk blijkbaar over kan discussiëren. Zeker. Nou, en dat is dan dus voor issuance. Ik denk dat we hier dus ook omdat men het er niet over eens is dat we ook hier niet echt naar het formaat hoeven te kijken. Eh nou, voor token exchange is dan eigenlijk hetzelfde gedaan, maar dan voor eh situatie situatie waarbij je een token ontvangt en je wil dat doorgeven als een ander token. Dus je wilt verder in de keten, je ontvangt een gebruikers token, je wilt een applicatie token van maken. Eh en dat soort situaties. Dus daar moet ook een beslissing komen, maar die is net anders.</v>
+
+00:39:36.339 --> 00:39:50.579
+<v Michiel Trimpe>Ja, het heet dat het is token transformatie, maar het heet token exchange. Dus je je krijgt iets binnen van de ene, maar je wil het een een stap verder aan een andere applicatie doorgeven en die heeft bijvoorbeeld dan niet meer de user identity nodig. Dus je stript de user identity er vandaan, vanaf.</v>
+
+00:39:52.639 --> 00:40:08.429
+<v Michiel Trimpe>Ja, hoe doe je dat? Ehm ook daar weer hetzelfde is gezegd: ja, dit is inderdaad goed om te standaardiseren. Eh maar weer dezelfde de evaluations call en eh custom gedefinieerde types. Dit was men niet zo blij mee.</v>
+
+00:40:12.179 --> 00:40:22.459
+<v Marcel Molenaar>is het zo dat eh dat die eh die issuance en deze laatste, die token exchange eigenlijk eh eh ongeveer hetzelfde protocol zijn, alleen met een vanuit een andere eh</v>
+
+00:40:25.779 --> 00:40:36.429
+<v Marcel Molenaar>eh eh reden aangeroepen. Eh want het is allemaal het verkleinen van de scope van de van eh van de token. Klopt dat? Heb ik dat goed begrepen?</v>
+
+00:40:36.569 --> 00:40:40.409
+<v Michiel Trimpe>Nee, de de eerste gaat over het uitgeven van het initiële token.</v>
+
+00:40:41.099 --> 00:40:42.059
+<v Marcel Molenaar>Ah, oké.</v>
+
+00:40:42.859 --> 00:40:52.038
+<v Michiel Trimpe>En daar is het van nou meer ehm zeg maar eh als als O provider zonder context van de PDP zeg ik het mag deze scope zijn.</v>
+
+00:40:50.769 --> 00:40:51.089
+<v Marcel Molenaar>Ja.</v>
+
+00:40:52.038 --> 00:41:03.883
+<v Michiel Trimpe>Dan mag de PDP de de opzet van de O provider alleen vernauwen, maar aan de binnen er was nog steeds geen token om binnen te komen. Dus je gaat echt vanuit een een oververzoek en je krijgt je eerste token.</v>
+
+00:41:03.639 --> 00:41:03.919
+<v Marcel Molenaar>Ja.</v>
+
+00:41:03.883 --> 00:41:12.339
+<v Michiel Trimpe>En de O server zegt: het mag zoveel data hebben. En de PDP zegt: nou, dat vind ik een beetje veel. Laten we het nog iets kleiner maken en dan gaat het naar de client.</v>
+
+00:41:13.019 --> 00:41:13.259
+<v Marcel Molenaar>Oké.</v>
+
+00:41:14.109 --> 00:41:27.469
+<v Michiel Trimpe>En die tweede is inderdaad, je hebt een token. Eh het is al geldig in ons domein, maar je moet het eh transformeren naar een ander audience, een kleinere scope. Eh er moet iets mee gebeuren om het naar de volgende hop in je in je keten door te geven.</v>
+
+00:41:25.229 --> 00:41:37.389
+<v Marcel Molenaar>Ja. Ja. Dus eigenlijk die eerste is meer voor de IDP en de andere is meer voor de autorisatieserver. Is dat correct? Eh of is dat een te te te versimpeld?</v>
+
+00:41:39.889 --> 00:41:44.769
+<v Michiel Trimpe>Eh ja, volgens mij is ook in het eerste geval het technisch de authorization server die het uitgeeft.</v>
+
+00:41:43.699 --> 00:41:45.219
+<v Marcel Molenaar>Oh, oké. Oké.</v>
+
+00:41:46.429 --> 00:41:52.989
+<v Michiel Trimpe>Het zijn het zijn in ieder geval twee andere O endpoints. Dat is denk ik de twee dingen zijn.</v>
+
+00:41:49.649 --> 00:41:59.495
+<v Marcel Molenaar>Ja. Oké. Ja, dan gaan we nog eens naar kijken. Dankjewel. Ik ga eh ik moet nog eventjes mijn mijn hoofd eh even goed eh dat ik dat helemaal goed heb kunnen doorzien.</v>
+
+00:41:58.129 --> 00:41:58.529
+<v Michiel Trimpe>Precies.</v>
+
+00:41:59.495 --> 00:42:00.359
+<v Marcel Molenaar>Ja.</v>
+
+00:41:59.619 --> 00:42:02.659
+<v Michiel Trimpe>Nou, ik vind hem met name interessant</v>
+
+00:42:01.029 --> 00:42:21.396
+<v Marcel Molenaar>En ik vind hem met name interessant omdat wij dit patroon ook willen toepassen. En eh binnen binnen UWV zeg maar eh rond we zijn natuurlijk je weet, we zijn met die autorisatieserver bezig. Dus daar ben ik erg geïnteresseerd ehm eh zeg maar waar dat kan.</v>
+
+00:42:21.119 --> 00:42:21.199
+<v Michiel Trimpe>Ja.</v>
+
+00:42:21.396 --> 00:42:29.509
+<v Marcel Molenaar>En met name dat eh dat de PDP dat daar de policies in komen voor wat er precies aan claims in mogen enzo. Ja, dat is juist heel mooi eh vind ik hieraan. Dus</v>
+
+00:42:29.859 --> 00:42:33.379
+<v Michiel Trimpe>Ja, maar dat is benieuwd hoe dat eh</v>
+
+00:42:30.769 --> 00:42:35.049
+<v Marcel Molenaar>in de praktijk dan uit gaat werken. Ja.</v>
+
+00:42:35.649 --> 00:43:27.269
+<v Michiel Trimpe>custom eh configuraties die je in je O provider toe moet voegen. En dit is het voorstel voor eh wat Zen om daar dan in dit geval als het voorstel om de search API's voor te gebruiken. Wederom is de vraag of dat of men het daarmee eens is. Maar het is in ieder geval het idee dus eh die die claim enrichment, dus het verzamelen van extra claims om toe te voegen. Dat kan natuurlijk ook op basis van Ozen gebeuren. Ehm en dan kan je op basis van je policies kan je eh redelijk dynamisch zeggen eh deze heeft die claim, deze heeft die, deze heeft die en stop dit er allemaal bij.</v>
+
+00:43:29.609 --> 00:43:41.289
+<v Michiel Trimpe>En dat is dit voorstel dat we dan drie claims doen, groups, roles en entitlements. Maar wederom hier of dit nou de juiste granulariteit en manier is eh is men er nog over aan het eh discussiëren.</v>
+
+00:43:44.169 --> 00:43:45.009
+<v Michiel Trimpe>En dat was hem.</v>
+
+00:43:47.169 --> 00:43:56.729
+<v Michiel Trimpe>Oh ja, en dan die hebben we al behandeld. Obligations is men heel hard aan het werk, maar die is dus nu uiteindelijk afgesplitst naar een capability negotiation spec eerst. En dat hebben we al besproken in het begin.</v>
+
+00:43:59.599 --> 00:44:28.929
+<v Michiel Trimpe>Ben ik wel uitgelopen in de tijd, maar ik denk dat het op zich ook wel betekent dat het wel interessant was voor de aanwezigen. We hebben nog een een kwartier. Ehm en ja, de agenda was dat ook om eens een keer een rondvraag en update van deelnemers te doen. Wat ook uitgevraagd was als iemand iets wilde presenteren van ik heb iets klaar staan of een case en ik wil even wat laten zien van waar we staan, dan was daar ook ruimte voor. Allereerst de presentaties, heeft iemand echt iets eh voorbereid?</v>
+
+00:44:31.569 --> 00:44:49.549
+<v Michiel Trimpe>verwacht ik niet, dat is op zich wel een open uitnodiging, maar Nou eh dan doen we gewoon lekker een eh rondvraag. Dus nou, mede op basis van wat je hier gehoord hebt, maar ook op basis van ja, wat er allemaal speelt en wat we over een maand dan of over vier weken zouden kunnen bespreken.</v>
+
+00:44:51.739 --> 00:44:53.619
+<v Michiel Trimpe>Wat wat denk je?</v>
+
+00:44:53.299 --> 00:44:57.259
+<v Igor van Haren>Ik zie in de chat staat wel dat Mark eh iets zou kunnen laten zien eh</v>
+
+00:44:53.589 --> 00:44:54.069
+<v Niels Dequeker></v>
+
+00:44:58.499 --> 00:44:58.859
+<v Michiel Trimpe>Oké.</v>
+
+00:45:00.339 --> 00:45:07.059
+<v Marcel Molenaar>Ja, ik ik zou ook iets kunnen laten zien zoals wij dat bij UWV nu van plan zijn als dat interessant is.</v>
+
+00:45:11.839 --> 00:45:12.959
+<v Michiel Trimpe>Ja, lijkt me wel.</v>
+
+00:45:13.339 --> 00:45:13.619
+<v Igor van Haren>Hm hm.</v>
+
+00:45:16.659 --> 00:45:22.419
+<v Michiel Trimpe>Misschien dat we 5, 6 minuten gewoon even een korte update van allebei. Dus dan Marcel dat jij hem eerst pakt.</v>
+
+00:45:26.109 --> 00:45:33.661
+<v Marcel Molenaar>Oh eh ja, dat is goed. Nou eh laat Mark hem maar doen, want ik moet hem nog eventjes erbij pakken, want ik had niks voorbereid, dus ik zoek hem even.</v>
+
+00:45:29.809 --> 00:45:30.129
+<v Michiel Trimpe></v>
+
+00:45:33.661 --> 00:45:34.949
+<v Marcel Molenaar>Mark eh</v>
+
+00:45:35.509 --> 00:45:37.069
+<v Michiel Trimpe>6 minuten, Mark.</v>
+
+00:45:37.789 --> 00:45:41.629
+<v Mark Westbroek>Oké. Eh ik heb hetzelfde. Ik moet hem ook even erbij pakken. Maar ehm</v>
+
+00:45:42.119 --> 00:45:42.519
+<v Michiel Trimpe></v>
+
+00:45:43.709 --> 00:45:49.309
+<v Mark Westbroek>Ik had de vorige keer al gezegd dat ik ehm dat het gaat wel over ODRL. Dat is meer mijn focus.</v>
+
+00:45:50.359 --> 00:45:58.039
+<v Michiel Trimpe>Oeh, Mark, vind je het dan erg om dat naar de volgende te tillen wel? Dat we dat is echt het idee dat we dan specifiek dat we een krijgen van</v>
+
+00:45:56.309 --> 00:46:01.029
+<v Mark Westbroek>Ja, want het is een heel eh onderwerp hè. Dat maar goed, omdat je het open gooit.</v>
+
+00:45:59.449 --> 00:46:02.079
+<v Michiel Trimpe>Eh in de vorige</v>
+
+00:46:02.749 --> 00:46:06.079
+<v Mark Westbroek>Hij is wel pas over vier weken de volgende, begrijp ik.</v>
+
+00:46:06.249 --> 00:46:09.784
+<v Michiel Trimpe>Nee, over twee weken. Dus over twee weken is de ODRL variant en over vier weken is er weer een</v>
+
+00:46:07.629 --> 00:46:08.469
+<v Mark Westbroek>Oh, over twee weken.</v>
+
+00:46:09.784 --> 00:46:14.449
+<v Michiel Trimpe>een Authzen eh Nee, nee, ik het is pas over vier weken dacht ik überhaupt een meeting en dan vond ik het heel lang.</v>
+
+00:46:10.259 --> 00:46:19.118
+<v Mark Westbroek>Oh nee, nee, ik dacht dat het over twee weken is goed. Nee, dan doe ik dat. Dan kan ik het rustig voorbereiden ook. Ja, perfect.</v>
+
+00:46:17.999 --> 00:46:18.639
+<v Michiel Trimpe></v>
+
+00:46:19.118 --> 00:46:26.219
+<v Mark Westbroek>En nu hebben we de tijd volgepraat tot het intro en de muziek begint.</v>
+
+00:46:30.509 --> 00:46:34.419
+<v Mark Westbroek>Ja. Waar zitten jullie in Utrecht trouwens? Is dat lijkt wel een klaslokaal.</v>
+
+00:46:35.179 --> 00:46:37.019
+<v Michiel Trimpe>Ja, we zitten</v>
+
+00:46:35.789 --> 00:46:39.669
+<v Mark Westbroek>of zo met met eh met met met</v>
+
+00:46:40.259 --> 00:47:01.739
+<v Michiel Trimpe>Wonders of Work en daar hebben we altijd kleine, daar huren we elke dinsdag eh kleine zaaltjes. En dit keer was er een wel een heel klein zaaltje voor de werkgroep gehuurd. Dus eh Tonne Tonne kan blijkbaar goed sweet talken, dus die vroeg eh is er iets mogelijk? Dus nu zitten we heel luxe ineens. Nou, we de hele dag blijven zitten. Blijft sowieso duidelijk</v>
+
+00:46:59.789 --> 00:46:59.869
+<v Mark Westbroek>Ja.</v>
+
+00:47:01.739 --> 00:47:07.559
+<v Michiel Trimpe>trouwens dus als iedereen iemand eh hier fysiek aanwezig wil zijn, je bent meer dan welkom. Eh het is ook fijn als je dat dan iets van tevoren aangeeft, dus dat we kunnen zorgen dat we niet in een tweepersoonshokje zitten met zijn eh</v>
+
+00:47:06.329 --> 00:47:06.569
+<v Mark Westbroek>Ja.</v>
+
+00:47:07.559 --> 00:47:13.179
+<v Michiel Trimpe>met zijn achten. Ja, dus als je voorzichtig we missen nog steeds de vloer heel erg.</v>
+
+00:47:13.849 --> 00:47:15.049
+<v Mark Westbroek>Ja, dus als je voorzichtig</v>
+
+00:47:13.899 --> 00:47:16.699
+<v Michiel Trimpe>We missen nog steeds de vloer heel erg, dus</v>
+
+00:47:18.449 --> 00:47:18.489
+<v Mark Westbroek></v>
+
+00:47:18.709 --> 00:47:21.629
+<v Michiel Trimpe>Ja, dus als je voorzichtig</v>
+
+00:47:21.349 --> 00:47:23.589
+<v Mark Westbroek>We missen nog steeds de vloer heel erg.</v>
+
+00:47:26.099 --> 00:47:29.919
+<v Michiel Trimpe>Ja, dus als je voorzichtig</v>
+
+00:47:29.029 --> 00:48:57.949
+<v Marcel Molenaar>Ik heb iets gevonden wat ik eventueel kan laten zien. Dus eh ik zal hem eventjes eh delen. Ehm dit is ehm eh eh hoe hoe wij nu binnen UWV, wij zijn met een project bezig voor het modernisering van de IAM. En daar hebben we eh Mark en Michiel zijn ook eh bij ons geweest om ons ook weer eh te helpen daarbij. En dat is eigenlijk ehm ja, we eh zowel eh de de hele O-off kant en alles als eh als P-bak komt hier een beetje in terug in één structuur. Dus ik hopelijk hebben jullie eh hier ook wat aan. Dus eh eigenlijk een meer een technische scope van wat wij noemen externalized authorization management, dat is EAM en Cloud en federatie. Dat is een project bij ons wat een identity broker neerzet. Ehm nou ja, eh even hieronder heb je een eh ehm ja, iets de de aansluiters, de applicaties die security nodig hebben. Laten we het zo zeggen. Heb je een client, een server, een eh andere component wat erachter zit en nog een component en eventueel data en die kunnen nou dat kan natuurlijk heel uitgebreid zijn. Ehm dit is voor eh ik laat hem even zien voor ons eh aan de internet kant, maar voor intranet is even even goed. Nou, wij gaan O-off eh doen hè, dat deden we in het verleden nog niet. Dus je krijgt automatisch dat je aan de voorkant allemaal libraries hebt eh die met O-off en dat soort dingen kunnen omgaan.</v>
+
+00:48:59.979 --> 00:49:25.509
+<v Marcel Molenaar>Nou, eh even kijken. We we wij hebben dan met de buitenwereld dan te maken, dus met DigiD, eHerkenning en eventueel andere IDP's. Ehm wij hebben dan een identity broker die die zijn we nu aan het neerzetten. Die identity broker die praat OpenID Connect of SAML of wat dan ook aan de buitenkant. En dan aan de binnenkant vooral eh O-off, OpenID Connect.</v>
+
+00:49:27.549 --> 00:50:24.459
+<v Marcel Molenaar>eh ehm ja, ik nou ja goed, ik ik moet eigenlijk veel meer inleiding er eh misschien bij geven. Zo meteen krijg je dingen waarvan ik misschien nog even een toelichting daarbij moet geven. Ehm op een gegeven moment heb je dus eh in je ja, de de de KIA client en server is eigenlijk je je front-end, waarbij een stukje natuurlijk op de client staat en een stukje op de server. En op een gegeven moment heeft die server heeft zijn access token en zijn eh ID token en zijn ehm eh zijn refresh token. Hij kan naar de achterkant mag je alleen access token eh doorgeven. Nou, en wat wij eigenlijk zeggen is, nou, we kunnen van DigiD en eh DigiD machtigen en ook van eHerkenning kunnen we ook allemaal machtigingen en vertegenwoordigingsinformatie eh krijgen. Nou, dat is best wel een probleem, want in O-off wordt dat gewoon niet opgelost.</v>
+
+00:50:26.559 --> 00:51:07.369
+<v Marcel Molenaar>eh eh eh welke welke gebruiker welke applicatie gebruikt, dat heb je wel, het on behalf of ding, maar dat zegt niks over die hele keten van van eh van machtigingen die erachter zitten. Dus op dit moment houden we de optie open om een sessie bij te houden om de ID eh of die vertegenwoordigingsgegevens uit ID token enzo eh om die daarin vast te houden. Of we dat zo gaan toepassen of dat het uiteindelijk toch in een token terecht gaat komen, daar moet dat dat moet nog besloten worden, maar in ieder geval daarom staat deze sessie er. Dat ding gaat ook loggen. En ehm die identity broker eh</v>
+
+00:51:09.419 --> 00:53:12.579
+<v Marcel Molenaar>die te bereiken zijn vanuit de aansluiters. En eh de en die met de buitenwereld te maken hebben en je hebt wat achtergrondvoorzieningen. Nou, die sessie krijgt niemand wat mee te maken en die log ook niet, want dat doen wij allemaal zelf. Dus we wat waar moet je aan de log denken? Een eh eh hoe heet dat? Gewoon een operationeel log, maar ook een eh eh een incident eh log eh voor je SIEM en dat soort dingen en een ehm eh hoe heet dat? Compliance log, een audit trail zeg maar. Nou, eh als jij door wil naar de als die KIA server door wil naar die COA hier, die eh dan moet hij wat ons betreft kan hij dat access token niet zomaar doorgeven, maar moet hij eerst een token exchange doen. Nou, dat is waarom ik eh net even op inging hè. Eh van waar hebben we het over? Nou, die token exchange gaat naar de autorisatieserver. Die autorisatieserver heeft natuurlijk een trust met de identity broker in dit geval, want die heeft eh eh het token afgegeven. Ehm nou, en daar krijg je dan die ja, die dingen waar Michiel het net over had, dat gaat hier allemaal spelen. En ik weet nog niet precies wat waar speelt, dus dat dat vind ik heel interessant. Nou, die autorisatieserver die eh gaat eventueel in die sessie ook kijken van eh heb ik daar nog dingen uit nodig? Is die überhaupt geldig die sessie? Hij gaat ook wat loggen en kan dan een eh een token teruggeven die bedoeld is dan eh om door te geven aan die COA. Hier zit dus ook authenticatie in principe in, dus in principe moet alles een certificaat hebben, zodat je ehm of een andere eh of of of DPoP of wat we er dan ook gaan doen, zodat je zeker weet dat het een vertrouwd component is. Ehm nou, als die eh als die COA weer naar de volgende door wil, moet hij ook weer eerst een token exchange doen. Dat is eigenlijk een wat door de hele keten dan doorgaat. Ehm</v>
+
+00:53:16.629 --> 00:54:29.089
+<v Marcel Molenaar>Alle rode dingen, dat zijn de PEP's eigenlijk. Die die komen zo meteen dan terug. Maar die kan via Authzen naar de eh naar de PDP. Dus als die COA een fijnmazige autorisatie nodig heeft ofzo, dan gaat hij nou, via Authzen naar de PDP. Die kan via de PIP kan hij extra data ophalen. Een deel daarvan komt uit die sessie, want daar daar hebben we dan die ehm die vertegenwoordigingsinformatie in. Hey, mag jij wel aan van aan de data van deze klant komen, van deze burger komen. Nou ja, als dat je daar in die vertegenwoordiging dat goed zit, dan mag dat. En hij kan natuurlijk allerlei andere attributen ophalen die we dan van tevoren klaar moeten zetten, maar dat dat is eigenlijk de dat hele verhaal. Nou, wat er nu nog komt, moet ik even kijken. Ehm ja, die eh de de PEP die die eh die kan je ook al eh in eh kan je eigenlijk in alle componenten zetten. Dus ook eh in al die en die kunnen dus allemaal die PDP aanroepen en op die manier een fijnmazige autorisatie ofzo uitvoeren. Maar ook die autorisatieserver die moest ook die PDP kunnen aanroepen. Dat is wat ik net eh aangaf. En eigenlijk die identity broker ook. En ehm nou ja, dus vandaar al mijn vragen net.</v>
+
+00:54:31.659 --> 00:55:37.209
+<v Marcel Molenaar>even kijken. Wat Nou ja, eh vervolgens kun je tussen al je componenten kun je ook integratiecomponenten hebben. We hebben API gateways, maar we hebben hier wat wij noemen iPaas hè, dus eh eh integratieplatform as a service heet dat bij ons. Daar zijn we nu mee bezig met Boomi, waar we het net over waar jullie het net over hadden. Nou, en daar wil je dus ook allemaal die PEP automatisch in kunnen laten integreren. Wat ik hier met DVL zeg is een data virtualisatielaag. Eh hebben we wel eens over gehad. Eh gaan we dat doen? Weet ik niet. Maar ook die zou dat moeten kunnen, zodat je daar ook een eh die kan ook die PDP dan allemaal aanroepen. Dus dat is eigenlijk het ehm het plaatje zoals nou ja, wat we nu aan het eh aan het invullen zijn. Dus identity broker, autorisatieserver en het en en we zijn met de de keuze nu bezig voor een P-back mechanisme. Nou, dan moeten we nog een een technologiekeuze doen. En ja, dit is hoe het ongeveer moet samenhangen. Ja, dit was hem eh ja, dus dat wou ik nog even laten zien.</v>
+
+00:55:36.409 --> 00:55:45.312
+<v Michiel Trimpe>Nou, we hebben het natuurlijk ook gezien, maar het is sowieso leuk om te zien dat jullie hier zo eh</v>
+
+00:55:40.389 --> 00:55:41.029
+<v Marcel Molenaar></v>
+
+00:55:45.312 --> 00:55:48.209
+<v Michiel Trimpe>degelijk mee bezig zijn.</v>
+
+00:55:49.139 --> 00:55:49.219
+<v Marcel Molenaar>Ja.</v>
+
+00:55:51.179 --> 00:55:56.619
+<v Mark Westbroek>Wil je het plaatje ook delen? Is altijd leuk om wat wat wat plaat te hebben van hoe anderen het doen.</v>
+
+00:55:57.349 --> 00:55:58.709
+<v Marcel Molenaar>Ik zou eens kijken ja, of ik dat eh</v>
+
+00:56:00.199 --> 00:56:03.163
+<v Michiel Trimpe>Mag ik aan de de opnames worden sowieso gedeeld, daar kan je mee</v>
+
+00:56:02.769 --> 00:56:03.169
+<v Mark Westbroek>Ja.</v>
+
+00:56:03.163 --> 00:56:05.580
+<v Michiel Trimpe>snijden.</v>
+
+00:56:05.199 --> 00:56:05.279
+<v Mark Westbroek>Ja.</v>
+
+00:56:05.580 --> 00:56:07.679
+<v Michiel Trimpe>Ja, dat is goed.</v>
+
+00:56:08.139 --> 00:56:08.259
+<v Mark Westbroek>Ja.</v>
+
+00:56:08.219 --> 00:56:24.579
+<v Marcel Molenaar></v>
+
+00:56:28.649 --> 00:56:31.089
+<v HAG BXP Rood 4.002>Sorry Marcel, kan ik nog een vraagje aan je stellen?</v>
+
+00:56:28.879 --> 00:56:28.999
+<v Igor van Haren></v>
+
+00:56:32.739 --> 00:56:45.819
+<v HAG BXP Rood 4.002>Ik was benieuwd, want je hebt het over OOT en eh waar jullie dan gebruik van maken binnen UV. En is dat dan de normale OOT specificatie of is dat bijvoorbeeld een variant zoals de I Golf of de Golf standaard?</v>
+
+00:56:48.609 --> 00:56:57.419
+<v Marcel Molenaar>Eh eh even kijken, voor de duidelijkheid, wij zijn dit nu aan het inrichten. Dus we gaan het doen. Ehm en dat betekent dus ook dat we nog daar als we alle</v>
+
+00:56:59.659 --> 00:57:07.459
+<v Marcel Molenaar>die die centrale componenten hebben klaar staan, hebben we daarna nog een hele migratie te gaan hè. Dus dit duurt allemaal nog, maar we gaan helemaal uit van standaarden.</v>
+
+00:57:05.599 --> 00:57:05.999
+<v HAG BXP Rood 4.002></v>
+
+00:57:07.459 --> 00:57:16.234
+<v Marcel Molenaar>En ehm en en dat betekent dus ook de NL Golf standaard. Die geldt natuurlijk vooral aan de buitenkant hè. Die geldt niet</v>
+
+00:57:14.029 --> 00:57:14.509
+<v Michiel Trimpe></v>
+
+00:57:16.234 --> 00:57:19.099
+<v Marcel Molenaar>per se van aan eh binnen je eigen</v>
+
+00:57:21.529 --> 00:57:58.929
+<v Marcel Molenaar>eh eh hoe heet dat eh eh datacenter. Dat daar heb jij zelf natuurlijk nog de hand in. Maar wij willen dat zoveel mogelijk wel gaan gebruiken tenzij er iets in de weg zit ofzo, weet je wel. Maar in principe is het helemaal onze idee om volledig op open standaarden. Want wij hebben bijvoorbeeld nu ook een product gekozen voorlopig ping, maar dat hebben we al gekozen voordat we wisten dat het eh ja, dat Amerika echt een probleem was. En wij willen zoveel mogelijk eigenlijk de producten die we gebruiken eh ook uitwisselbaar maken terwijl de de standaarden door iedereen ondersteund worden. Dus dat is een beetje uitgangspunt.</v>
+
+00:58:01.129 --> 00:58:07.129
+<v Marcel Molenaar>Het moet allemaal open standaarden zijn die door zoveel mogelijk producten ondersteund worden. Helpt dat?</v>
+
+00:58:08.159 --> 00:58:09.959
+<v HAG BXP Rood 4.002>Ja, dat helpt genoeg. Dankjewel.</v>
+
+00:58:13.879 --> 00:58:17.997
+<v Michiel Trimpe>Ehm, even dus voor de, het is 11 uur, dus iedereen die eh die door moet gaan, voel je vrij om eh af te haken.</v>
+
+00:58:15.939 --> 00:58:16.219
+<v Mark Westbroek></v>
+
+00:58:17.997 --> 00:58:21.439
+<v Michiel Trimpe>Dankjewel voor je aanwezigheid. Eh was ja, een leuke sessie.</v>
+
+00:58:20.059 --> 00:58:20.139
+<v Marcel Molenaar></v>
+
+00:58:22.989 --> 00:58:23.069
+<v Igor van Haren></v>
+
+00:58:23.019 --> 00:58:23.659
+<v Michiel Trimpe>Yes.</v>
+
+00:58:23.989 --> 00:58:24.269
+<v Igor van Haren></v>
+
+00:58:24.209 --> 00:58:30.579
+<v Michiel Trimpe>En als je niet iedereen die nog wil blijven hangen, dus Frankie had een vraag. Als je nog tijd hebt kan je ook eh blijven hangen.</v>
+
+00:58:31.339 --> 00:58:34.139
+<v Marcel Molenaar>Ik ga er vandoor. Fijne dag.</v>
+
+00:58:34.799 --> 00:58:36.199
+<v Mark Westbroek>Ik had juist de vraag nog aan Marcel, maar</v>
+
+00:58:36.949 --> 00:58:39.006
+<v Marcel Molenaar>Dan wil ik nog heel even dan blijven hangen als je wilt.</v>
+
+00:58:37.369 --> 00:58:38.249
+<v Michiel Trimpe>Ja.</v>
+
+00:58:38.459 --> 00:58:40.609
+<v Mark Westbroek>Ja, qua qua qua je had het over logging.</v>
+
+00:58:39.006 --> 00:58:39.509
+<v Marcel Molenaar>Ja.</v>
+
+00:58:40.609 --> 00:58:48.379
+<v Mark Westbroek>Eh je je je kent logboek dataverwerking toch? Dat dat dus er wordt ook over nagedacht. Want je hebt natuurlijk twee soorten logging, technische en meer inhoudelijke.</v>
+
+00:58:45.179 --> 00:58:45.259
+<v Marcel Molenaar></v>
+
+00:58:49.659 --> 00:58:55.219
+<v Marcel Molenaar>Ja, nou binnen UVV zijn we nu bezig met een eh eh een algemeen observability</v>
+
+00:58:57.539 --> 00:59:07.462
+<v Marcel Molenaar>eh eh eh doelarchitectuur. En daarin worden eigenlijk wel wel zes of zeven eh log doelen onder eh eh onderscheiden.</v>
+
+00:59:04.769 --> 00:59:04.969
+<v Mark Westbroek></v>
+
+00:59:07.462 --> 00:59:26.009
+<v Marcel Molenaar>Nou, en daar horen deze natuurlijk ook bij. En dus ook daarbij moeten we precies kijken van hoe gaan we dat voor elkaar krijgen. Maar de zeg maar de degene die voor compliance is, ja, die gaat natuurlijk echt wel daaraan voldoen. Dat eh dat is voor ons ook gewoon heel fijn dat we dus ja, dat klopt.</v>
+
+00:59:25.269 --> 00:59:29.949
+<v Mark Westbroek>Ja, en de pap mis ik, maar dat is die zit ergens verborgen onder andere naam of eh</v>
+
+00:59:30.129 --> 00:59:44.569
+<v Marcel Molenaar>Ja, weet je, dat dat is eigenlijk gedaan om omdat die natuurlijk eh die moet aanleveren aan de PDP eh zijn policies. En dat ja, dat dat gebeurt niet op op runtime. Dus daarom heb ik die daar buiten gelaten.</v>
+
+00:59:47.389 --> 00:59:49.989
+<v Marcel Molenaar>Ja.</v>
+
+00:59:47.509 --> 00:59:47.749
+<v Mark Westbroek>Ja.</v>
+
+00:59:48.679 --> 00:59:50.079
+<v Michiel Trimpe>Dankjewel.</v>
+
+00:59:49.279 --> 00:59:49.839
+<v Mark Westbroek>Ja.</v>
+
+00:59:50.679 --> 00:59:53.239
+<v Frank Terpstra>Ja, ik ik had nog een eh een vraagje.</v>
+
+00:59:53.229 --> 00:59:53.349
+<v Marcel Molenaar>Ja.</v>
+
+00:59:55.099 --> 00:59:59.619
+<v Frank Terpstra>Ehm eh DigiD eh eh en trouwens e-herkenning ook leveren op dit moment alleen Sammel aan. Eh</v>
+
+01:00:01.939 --> 01:00:06.259
+<v Frank Terpstra>zou het jullie helpen als ze direct O eh volgens Open ID Connect konden leveren?</v>
+
+01:00:09.839 --> 01:00:15.079
+<v Marcel Molenaar>Eh zeg maar op dit moment zijn we al aan het aansluiten. Dus ik denk niet dat het</v>
+
+01:00:29.009 --> 01:00:29.329
+<v Frank Terpstra>Ja.</v>
+
+01:00:29.399 --> 01:00:37.726
+<v Marcel Molenaar>eh voor ons uitmaken. Wij wij eh we hebben die eh we hebben juist die eh broker ertussen gezet, omdat we eigenlijk onafhankelijk willen zijn van wat er aan de buitenkant eh gebeurt, weet je wel, zodat je er maar dingen in kunnen doen. Op dit moment weet ik niet of we als we dat van tevoren hadden geweten, zeg maar, dat daar mogelijkheden in waren.</v>
+
+01:00:36.479 --> 01:00:38.319
+<v Frank Terpstra>Nee, die mogelijkheid is er niet, maar</v>
+
+01:00:37.726 --> 01:00:39.959
+<v Marcel Molenaar>Oh oké, oké, oké.</v>
+
+01:00:40.169 --> 01:00:47.289
+<v Frank Terpstra>of nog nog veel erger, het is een beetje, het is echt letterlijk een paarse krokodil, zeg maar. Hij is er voor de belastingdienst en verder voor niemand anders.</v>
+
+01:00:48.269 --> 01:01:07.217
+<v Marcel Molenaar>Oké, ja ja. Nou, ik heb ik heb vroeger bij eh bij E-herkenning gezeten en daar was er al een specificatie natuurlijk voor O. En eh maar ja, die is eh die werd ook niet gebruikt.</v>
+
+01:01:06.019 --> 01:01:06.539
+<v Frank Terpstra>Ja.</v>
+
+01:01:07.217 --> 01:01:12.039
+<v Marcel Molenaar>kant over. Daar eh komt het in feite op neer. Ja.</v>
+
+01:01:11.919 --> 01:01:12.159
+<v Frank Terpstra>Dus.</v>
+
+01:01:12.919 --> 01:01:13.039
+<v Marcel Molenaar>Ja.</v>
+
+01:01:13.639 --> 01:01:28.719
+<v Frank Terpstra>en mocht je voor logboek dataverwerkingen nog een keer hulp nodig hebben, dan kan je contact opnemen met mij of met eh met Logius, de beheerder. Dan eh komen we graag langs om eh te laten zien wat wij allemaal al hebben uitgewerkt en eh wat er aan referentie-implementaties is die je misschien kan hergebruiken.</v>
+
+01:01:29.159 --> 01:01:49.969
+<v Marcel Molenaar>Oh cool. Ja, daar ga ik wel eens eh even eh daar gaan we even naar kijken. We hadden natuurlijk in dit overleg hadden we ook eerder wel eens eh ehm daar eh daarover gehad hè. Michiel heeft daar heel veel toen over verteld. Dus eh maar ik ik denk dat dat echt wel uiteindelijk kan helpen, want voor ons is dat nog het stuk waar we nu volop mee bezig zijn, dus. Dankjewel.</v>
+
+01:01:50.959 --> 01:01:51.199
+<v Frank Terpstra>Ja.</v>
+
+01:01:52.679 --> 01:01:55.479
+<v Marcel Molenaar>Oké, ik ga ervandoor. Fijne dag.</v>
+
+01:01:54.709 --> 01:01:54.989
+<v Mark Westbroek>Dank je.</v>
+
+01:01:55.399 --> 01:01:57.119
+<v Frank Terpstra>Ik ga er ook vandoor.</v>
