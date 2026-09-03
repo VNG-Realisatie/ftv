@@ -36,7 +36,7 @@ De werkgroep heeft, op basis van de evaluatie eind juni en eerdere suggesties, g
 
 De volgende bijeenkomst is op dinsdag 9 september van 10:00 tot 11:00 uur. Op de agenda staat  de reikwijdte FTV-standaarden.
 
-Kijk voor aanmelden op de [website van IBDS](https://realisatieibds.nl/events/view/9840b6d9-2f39-49e7-8a8e-e37a465616e0/werkgroep-federatieve-toegangsverlening-reikwijdte-en-rebac).
+Kijk voor aanmelden op de website van IBDS.
 
 {{< /chapter/section >}}
 

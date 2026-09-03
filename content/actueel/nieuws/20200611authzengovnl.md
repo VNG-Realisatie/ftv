@@ -27,7 +27,7 @@ Kijk op de FTV-webste voor:
 
 {{< chapter/section title="Volgende bijeenkomst" level="4">}}
 De volgende bijeenkomst is op dinsdag 17 juni van 10:00 tot 11:00 uur. Op de agenda staat  FTV en Linked Data met ontsluitingsvormen zoals SPARQL en GraphQL.
-Kijk voor aanmelden op de [website](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/b33b2387-0764-400f-a245-49a31c1859e5/werkgroep-federatieve-toegangsverlening-sparql-graphql-en-linked-data) van IBDS.
+Kijk voor aanmelden op de website van IBDS.
 {{< /chapter/section >}}
 
 {{< chapter/section title="Ook meedoen?" level="4">}}

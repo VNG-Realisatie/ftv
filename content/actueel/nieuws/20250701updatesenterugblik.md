@@ -40,7 +40,7 @@ Zo wordt duidelijk of de gekozen aanpak ook echt werkt in de praktijk. Daarnaast
 
 {{< chapter/section title="Zomerstop werkgroep" level="3">}}
 In verband met de zomervakantie vindt de volgende werkgroep vindt plaats op dinsdag 26 augustus.   
-Kijk voor aanmelden op de [website van IBDS](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/9e60e28e-66b4-4114-92b4-29dc8e7baac7/werkgroep-federatieve-toegangsverlening). 
+Kijk voor aanmelden op de website van IBDS. 
 {{< /chapter/section >}}
 
 {{< chapter/section title="Meer weten of meedoen?" level="3">}}

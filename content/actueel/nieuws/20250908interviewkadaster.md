@@ -46,7 +46,6 @@ Dat zou een grote stap vooruit zijn. Niet omdat de systemen meer kunnen, maar om
 
 {{< chapter/section title="Meer weten?" level="3">}}
 - https://data.kkg.kadaster.nl/ (Kadaster Knowledge Graph website)
-- https://labs.kadaster.nl/innovatie/querybuilder/demonstrator/ (query builder tool)
 - https://labs.test.kadaster.nl/kkg/demonstrator/
 - https://labs.kadaster.nl/   (Kadaster Datascience team website)
 

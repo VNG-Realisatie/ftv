@@ -39,7 +39,7 @@ De werkgroep kreeg korte terugkoppelingen van twee subwerkgroepen:
 
 {{< chapter/section title="Volgende bijeenkomst" level="3">}}
 De volgende bijeenkomst is op dinsdag 1 juli van 10:00 tot 11:00 uur. Op de agenda staat het bespreken van de NLGov AuthZEN-profiel, Decision Log standaard en de informatiemodellering van subjecten.  
-Kijk voor aanmelden op de [website van IBDS](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/3a2f79a8-e4ed-4a6b-aa52-1d88f2498e7f/werkgroep-federatieve-toegangsverlening). 
+Kijk voor aanmelden op de website van IBDS
 {{< /chapter/section >}}
 
 {{< chapter/section title="Meer weten of meedoen?" level="3">}}
