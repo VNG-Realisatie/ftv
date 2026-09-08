@@ -46,7 +46,7 @@ Title: AuthZEN update
 
 {{< chapter/section title="Opening en kennismaking" >}}
 
-*Michiel Trimpe* opent de 27e werkgroepsessie. Deze sessie richt zich op IAM (klassieke toegangsverlening); de volgende sessie gaat over ODRL en linked data. *Joyce Leijen-Kouwenberg* stelt zich voor als nieuwe deelnemer: zij werkt bij het Zorginstituut als informatieanalist in het iWlz-team, is collega van Remo van Rest en gaat hem ondersteunen bij de technische kant van het netwerkmodel.
+*Michiel Trimpe* opent de 26e werkgroepsessie. Deze sessie richt zich op IAM (klassieke toegangsverlening); de volgende sessie gaat over ODRL en linked data. *Joyce Leijen-Kouwenberg* stelt zich voor als nieuwe deelnemer: zij werkt bij het Zorginstituut als informatieanalist in het iWlz-team, is collega van Remo van Rest en gaat hem ondersteunen bij de technische kant van het netwerkmodel.
 
 *Michiel* nodigt deelnemers uit om ook eens fysiek aan te sluiten bij de werkgroep in Utrecht (Hoog Catharijne); graag vooraf even aangeven, zodat een passende zaal geregeld kan worden.
 
