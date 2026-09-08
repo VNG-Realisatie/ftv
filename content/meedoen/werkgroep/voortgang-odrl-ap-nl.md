@@ -28,13 +28,14 @@ Title: Voortgang ODRL-AP-NL
 
 - [Opname](https://github.com/VNG-Realisatie/ftv/raw/refs/heads/main/static/videos/20260818-odrl-ap-nl.mp4)
 - [Presentatie](/ftv/documents/20260818-odrl-ap-nl.pdf)
+- [ODRL Visualisation Note](/ftv/documents/20260824-odrl-visualisation-note.html)
 
 {{< /chapter/section >}}
 
 {{< chapter/section title="Agenda" >}}
 - Opening en voorstelronde
 - Open oproep: waar heeft de werkgroep behoefte aan?
-- Verslag ODRL3-workshop (Londen)
+- Verslag ODRL 3-workshop (Londen)
 - Voorstel Visualisation Note en demo ODRL-visualizer
 - ODRL-AP-NL: de Nederlandse toevoegingen
 - Vervolgstappen
@@ -58,9 +59,9 @@ Title: Voortgang ODRL-AP-NL
 
 {{< /chapter/section >}}
 
-{{< chapter/section title="Verslag ODRL3-workshop" >}}
+{{< chapter/section title="Verslag ODRL 3-workshop" >}}
 
-*Michiel* doet verslag van de ODRL3-workshop, een maand geleden in Londen — de W3C-manier om een nieuwe versie van een standaard aan te kondigen. Een relatief kleine club van zo'n dertig deelnemers, maar met diverse insteken: evaluatie van ODRL, media, legal, data marketplaces. Opvallend weinig vertegenwoordiging vanuit de data spaces. De workshop leek grotendeels afgetrapt doordat **JP Morgan ODRL actief heeft omarmd** voor zijn marktdata. Als afdronk: een sterke academische inslag — vooral academici, mensen van JP Morgan en een drietal consultants die hun geld verdienen met ODRL; de vendor-/productbouwerscultuur van bijvoorbeeld OpenID ontbreekt hier.
+*Michiel* doet verslag van de ODRL 3-workshop, een maand geleden in Londen — de W3C-manier om een nieuwe versie van een standaard aan te kondigen. Een relatief kleine club van zo'n dertig deelnemers, maar met diverse insteken: evaluatie van ODRL, media, legal, data marketplaces. Opvallend weinig vertegenwoordiging vanuit de data spaces. De workshop leek grotendeels afgetrapt doordat **JP Morgan ODRL actief heeft omarmd** voor zijn marktdata. Als afdronk: een sterke academische inslag — vooral academici, mensen van JP Morgan en een drietal consultants die hun geld verdienen met ODRL; de vendor-/productbouwerscultuur van bijvoorbeeld OpenID ontbreekt hier.
 
 Aan het einde van de twee dagen zijn de voorgestelde deliverables voor ODRL 3 uitgewerkt (zie de presentatie voor het overzicht). De belangrijkste voor de werkgroep: een geactualiseerd **Policy Model**, een normatieve **Evaluation**-standaard (zodat ODRL zelf een evalueerbare policytaal wordt) en **Architecture & Protocols** — voor FTV extra relevant omdat NLGov AuthZEN precies zo'n protocol in zo'n architectuur is. Wanneer dat werk start, is het zaak te zorgen dat het protocol dat daar gekozen wordt AuthZEN is, of er één-op-één op te mappen valt.
 
@@ -70,7 +71,7 @@ Omdat *Michiel* aanwezig was, heeft hij een **Visualisation Note** kunnen aandra
 
 {{< chapter/section title="Visualisation Note en demo" >}}
 
-*Michiel* licht het voorstel toe: FTV biedt aan die Visualisation Note te schrijven. Het is geen software maar een specificatie-regime: waar moet ODRL aan voldoen om visualiseerbaar (en indirect bewerkbaar) te zijn. Kern is een **labelling-regime** (elk begrip een label, definitie en de metadata om te kunnen visualiseren), **drie lagen** (generiek ODRL; profiel-gedeclareerd via UI-shapes; en een raw vangnet voor data die nergens getoond wordt) en het verwijzen naar de **registers** waar labels uit voortkomen. De basis wil men internationaal krijgen, zodat het geen Nederlands-specifiek verhaal blijft.
+*Michiel* licht het voorstel toe: FTV biedt aan die [Visualisation Note](/ftv/documents/20260824-odrl-visualisation-note.html) te schrijven. Het is geen software maar een specificatie-regime: waar moet ODRL aan voldoen om visualiseerbaar (en indirect bewerkbaar) te zijn. Kern is een **labelling-regime** (elk begrip een label, definitie en de metadata om te kunnen visualiseren), **drie lagen** (generiek ODRL; profiel-gedeclareerd via UI-shapes; en een raw vangnet voor data die nergens getoond wordt) en het verwijzen naar de **registers** waar labels uit voortkomen. De basis wil men internationaal krijgen, zodat het geen Nederlands-specifiek verhaal blijft.
 
 *Hans Schevers* herkent er een SHACL-model in: een toetsbaar regime waarop je vervolgens een visualisator specificeert. *Michiel* bevestigt: SHACL dwingt af welke relaties nodig zijn, en in de middenlaag koppelen DASH en SHUI de SHACL-structuren aan formulierstructuren.
 
@@ -98,7 +99,7 @@ Over het verder uitbreiden met Europese vocabulaires (org voor rollen, CPSV voor
 
 *Danny Greefhorst* stelt de scopevraag: staat visualisatie niet ver af van toegang? *Michiel* beargumenteert van niet: het register toegangsbeleid heeft als doel toegangsbeleid inzichtelijk te maken, en ODRL zonder visualisatie is "maar linked data" — bij eerdere presentaties (onder meer bij iWlz) bleek dat een RDF-weergave de vraag opriep "wat koop ik hiervoor als organisatie?". Zonder ODRL-visualisatie is ODRL gebruiken voor inzicht in toegangsbeleid tussen organisaties niet te doen; het is een harde vereiste. Wel is het een scope-uitbreiding — mede daarom wordt de koppeling met Open FTV gezocht: al het Open FTV-beleid moet in ieder geval naar dit formaat geëxporteerd kunnen worden, en idealiter kan de FTV-editor het direct bewerken.
 
-*Govert Claus* bevestigt dat GBO tegen hetzelfde visualisatievraagstuk aanloopt en het zeer interessant vindt, al staat de gedetailleerde uitwerking verder van zijn bed. Hij licht op vraag van *Mark Westbroek* kort de GBO-aanpak toe: via één GraphQL-API gegevens beschikbaar stellen aan verschillende gegevensstromen — waarbij je qua toegang niet ontkomt aan een FTV-achtige oplossing. Er is een demo (link volgt) en het idee is volgend jaar pilots in te richten.
+*Govert Claus* bevestigt dat GBO tegen hetzelfde visualisatievraagstuk aanloopt en het zeer interessant vindt, al staat de gedetailleerde uitwerking verder van zijn bed. Hij licht op vraag van *Mark Westbroek* kort de GBO-aanpak toe: via één GraphQL-API gegevens beschikbaar stellen aan verschillende gegevensstromen — waarbij je qua toegang niet ontkomt aan een FTV-achtige oplossing. Er is een [demo-omgeving](https://gbo.simulatie.datastelsel.nl) en het idee is volgend jaar pilots in te richten.
 
 **Rondvraag.** Op de vraag waar deelnemers nu concreet staan geven *Axel van der Minne* en *Hugo Mostard* aan dat dit voor hun organisaties nog een stap te ver is — het past in het grote plaatje dat zij aan het tekenen zijn, maar concreet werk eraan is er nog niet (inschatting: minstens twee jaar). *René Kint* noemt als meest levende aspect **conditionele toegang**: het aan- en uitzetten van toegang, ook geografisch gebonden — binnen zoveel kilometer van een militaire luchthaven mag bepaalde data wél of juist niet getoond worden, vooral in combinatie met eisen van Defensie die momenteel een grote stempel drukken op toegang. De vraag hoe je die "tenzij" modelleert en dynamisch, real-time uitwisselt is voor hem een interessant onderdeel. Tot slot vraagt *René* of de getoonde tooling ergens anders dan op localhost staat; *Michiel* zegt toe de code te publiceren zodra hij hem zelf voldoende doorgrondt, met een duidelijke LLM-disclaimer.
 
@@ -106,7 +107,7 @@ Afgesproken vervolgstappen:
 
 - **Cadans terug naar de basis**: naast het ODRL-spoor weer sessies over autorisatie in het algemeen en hoe het er bij concrete systemen (zoals GBO) aan toegaat — daar wordt instemmend op gereageerd.
 - **Linked-data-spoor deels scheiden**: het diepe linked-data-werk (mede voor Igor, Robert, Hugo, Axel) apart organiseren en de partijen die daarin actief zijn aanhaken, zodat de rest van de werkgroep de aansluiting niet verliest.
-- Mogelijk **GBO-presentatie** in een komende sessie; *Govert* deelt alvast een link naar de demo.
+- Mogelijk **GBO-presentatie** in een komende sessie; *Govert* deelt alvast de link naar de [demo-omgeving](https://gbo.simulatie.datastelsel.nl).
 - Een **iWlz-update** van Igor en Guus in een komende sessie; afstemming loopt buiten de sessie om.
 - *Marc* neemt contact op met *Danny* over de JAGA-gegevensleveringscontacten bij J&V.
 - *Mark Westbroek* mailt *Danny* over zijn tekstdiagram-aanpak.
