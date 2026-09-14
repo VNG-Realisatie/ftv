@@ -77,7 +77,7 @@ De opstelling bij de gemeente kunnen we verder detailleren als volgt:
 
 - **Policy Information Point (PIP)**
 
-  Als PIP wordt ook OpenFTV gebruikt, met het bestandssyteem voor opslag.
+  Als PIP wordt ook OpenFTV gebruikt, met PostgreSQL voor opslag.
 
 - **Authorization decision log (ADL)**
 
