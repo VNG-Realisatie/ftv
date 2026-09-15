@@ -1,0 +1,910 @@
+WEBVTT
+
+00:00:06.349 --> 00:00:15.589
+<v Ruimte FR4-01>wel focus nodig aan de data.</v>
+
+00:00:18.529 --> 00:00:21.369
+<v Ruimte FR4-01>even de agenda tevoorschijn halen.</v>
+
+00:00:36.929 --> 00:00:39.369
+<v Ruimte FR4-01>de background klaar staan dan normaal, maar</v>
+
+00:00:41.989 --> 00:00:42.469
+<v Ruimte FR4-01>Ja, mee.</v>
+
+00:00:46.409 --> 00:00:49.929
+<v Ruimte FR4-01>de 27e week of volgens mij, als ik de tel kwijt te raken.</v>
+
+00:00:51.959 --> 00:01:28.499
+<v Ruimte FR4-01>hoop al. Ehm nou ja, zoals eh besproken staat deze echt in het teken van ODRL en link data. Eh volgende keer zal weer over eh ja, IAM, eh, technische kant gaan. afwisselend. De agenda voor vandaag is allereerst welkomst en kennismaking. En dan gaan we kijken naar de ODRL visualization note en de viewer. Daarna willen we eh scope bepalen voor eh ODRL APNL, even als werktitel. En eh afsluiten met een planning van het vervolg.</v>
+
+00:01:30.849 --> 00:01:41.659
+<v Ruimte FR4-01>Ehm nou, allereerst welkomst en kennismaking. Dus daar laten we wat ruimte voor nieuwe gezichten om zichzelf te introduceren. En ik zie er in ieder geval één, Jan.</v>
+
+00:01:43.799 --> 00:01:44.879
+<v Ruimte FR4-01>je wilt introduceren.</v>
+
+00:01:46.159 --> 00:02:20.249
+<v Jan Klopper>Ja, zeker. Eh ik zag mijn collega Floris hier ook al eh rondhangen. Eh ik eh ben Jan Klopper. Eh implementatieadviseur bij ehm developer overheid. En ik hou me bezig met ehm nou ja, met eigenlijk alles rond internetstandaarden op de pas toe of leg uitlijst. En ik ben aangehaakt bij eh bij dit groepje ook omdat ehm ik bezig ben met policy as code ehm rond eigenlijk alles wat eh ja, toetst of iemand wel of niet zou moeten meedoen aan de hand van eh zijn security posture.</v>
+
+00:02:24.589 --> 00:02:24.989
+<v Jan Klopper>Dat was hem.</v>
+
+00:02:28.609 --> 00:02:29.209
+<v Ruimte FR4-01>Welkom.</v>
+
+00:02:33.409 --> 00:02:42.489
+<v Ruimte FR4-01>verder geen nieuwe gezichten. Ik denk dat je Floris ook kende, Floris al een tijdje rond. Dus die kan je ook eh verder in de details bij praten als je wil, neem ik aan.</v>
+
+00:02:46.239 --> 00:02:47.599
+<v Ruimte FR4-01>Ehm nou en dan bij</v>
+
+00:02:51.109 --> 00:02:52.429
+<v Ruimte FR4-01>de visualization</v>
+
+00:03:07.329 --> 00:03:54.099
+<v Ruimte FR4-01>Dus eh nou eh ik heb een presentatie voorbereid. Ehm dus allereerst de de visualization note. En we zitten al een tijdje te worstelen met wat doen we nou precies met ODRL APNL. Eh want een groot stuk gaat eigenlijk over het eh zichtbaar eh of het inzichtelijk kunnen maken van toegangsbeleid. Dus ODRL is een ja, een degelijk formaat. Het heeft heel veel mogelijkheden, heel flexibel. Je kan heel flexibel toegangsbeleid uitdrukken. Eh maar er was nog geen visualisatie tool die het ook echt kon tonen. We zagen eigenlijk altijd dat eh nou ja, zeker beleidsmakers, ehm zeker niet technische mensen, maar ook technische mensen eh natuurlijk heel erg terugschrokken van het zien van triples en data.</v>
+
+00:03:56.499 --> 00:04:33.099
+<v Ruimte FR4-01>Ehm nou, we zijn daar eh onder naar de W3C eh Digital Policy Working Group kickoff geweest in London. En daar hebben wij voorgesteld om aan de scope voor ODRL 3 een visualization note toe te laten voegen. Dus het is eh geen officiële deliverable, maar wel een other deliverable. Wat betekent dat zij er niet expliciet capaciteit voor inplannen, maar dat wanneer wij dat aanleveren en afgestemd eh krijgen</v>
+
+00:04:36.119 --> 00:05:28.909
+<v Ruimte FR4-01>heen, nooit zin. En dat werden wij dus ook internationaal aan gaan dragen, voorgedragen. het is een visualization, maar editor staat bovenaan dat ook erbij hoort. Ja. Ja. Ehm, dus het gaat twee, of ja, het gaat twee kanten op. Dus op basis van dezelfde visualization aspecten kan je ook een editor maken. We zijn ook eh te kijken of we de viewer en de editor om kunnen bouwen. Daar zijn we zijn we ook aan aan het werk. Ehm, maar nu is de primaire focus vanuit het visualiseren geschreven. Maar alles werkt op twee kanten op tot dusver. Dus alle, je moet, je moet de structuur kaderen en op het moment dat je dat hebt, kan je ook nou, editors ervoor maken.</v>
+
+00:05:32.379 --> 00:05:33.499
+<v Ruimte FR4-01>laten zien.</v>
+
+00:05:37.909 --> 00:05:39.069
+<v Ruimte FR4-01>Nou, dan zal ik daar even</v>
+
+00:05:41.329 --> 00:06:15.629
+<v Ruimte FR4-01>Dit is de visualization note. Hier op localhost, maar in de mail staat hij ook eh linkje beschikbaar. We introduceren daar eigenlijk een aantal eh ja, eh shackle shackle eisen die je in kan, of ja, vereisten, shackle elementen die je in kan vullen. En als je dat doet, dan wordt een functionaliteit unlocked. Allereerste is eh labeling. Want in principe is ODRL eh gewoon weer eh URI's en dat zegt dat niks over hoe je dat moet tonen.</v>
+
+00:06:17.669 --> 00:06:41.059
+<v Ruimte FR4-01>Dus wat wij eh gedaan hebben is dat je voor ja, ik zo mee. Eh dat je bijvoorbeeld voor de ODRL action, dat er daar een Nederlandse label actie voor hebben gedefinieerd. Voor target, een Nederlandse label doelobjecten. En dat we aan allerlei technische termen met behulp van labels geïnternationaliseren</v>
+
+00:06:44.309 --> 00:06:48.149
+<v Ruimte FR4-01>URI's geïnternationaliseerde labels kunnen hangen. Dus het werkt ook in Nederlands en Engels.</v>
+
+00:06:50.329 --> 00:06:55.289
+<v Ruimte FR4-01>En dat is zowel voor de ODRL elementen als voor elementen die je zelf definieert.</v>
+
+00:07:00.189 --> 00:07:40.429
+<v Ruimte FR4-01>En een ander belangrijk stuk is dat we gedefinieerd hebben hoe we omgaan met eh hergebruik van eh URI, zeg maar van link data informatieelementen. Dus bijvoorbeeld wanneer jij een eh aanbod hebt met een verplichting en in een eh overeenkomst accepteer jij die verplichting, dan kan je naar die verplichting verwijzen. Maar omdat dat fysiek dezelfde verplichting is met dezelfde identifier, kunnen we dan bijvoorbeeld tonen, deze aanbod, of deze verplichting komt uit het aanbod. Dus op die manier kan je eh nodes hergebruiken en ook als je ze dan één keer aanpast, dan ze overal mee.</v>
+
+00:07:45.109 --> 00:08:12.979
+<v Ruimte FR4-01>Eh een ander aspect is dat eh waar je toegang op verleent, dat zijn soms eh ja, complexe hiërarchieën. Eh dus bijvoorbeeld series, dossiers, stukken. Eh in de BRP is het categorieën, rubrieken, nummers, nummers. Ehm nou, en dat als je dat gewoon als een platte lijst toont, dan is dat niet overzichtelijk. Eh dus we hebben ook een manier geïntroduceerd om een hiërarchie aan te brengen daarin. En die kan je bijvoorbeeld zo tonen en uitklappen.</v>
+
+00:08:15.959 --> 00:08:44.019
+<v Ruimte FR4-01>Maar dit zijn uitbreidingen eh binnen de ODRL syntax. Dus in je profiel heb je dus een manier bedacht om named collection hierarchies te maken. Ja, dus we hebben dus je hebt de basis ODRL syntax. Wij zeggen: als jij daar extra link data elementen aan toevoegt, dan eh dus bijvoorbeeld een keten van RDF types in de hiërarchie.</v>
+
+00:08:47.339 --> 00:08:58.179
+<v Ruimte FR4-01>Als je zegt hier eh een serie is, of een je hebt een asset van het type serie en dat is een ODRL part of een archive.</v>
+
+00:09:01.079 --> 00:09:08.079
+<v Ruimte FR4-01>En dan heb je een asset file en die is part of een serie. En dan heb je een asset record en die is part of een file.</v>
+
+00:09:10.329 --> 00:09:25.269
+<v Ruimte FR4-01>dan ook nog labelt, kunnen wij die metadata kunnen wij gebruiken om de hiërarchie te tonen. Dus het is altijd extra link data</v>
+
+00:09:37.859 --> 00:09:45.009
+<v Gideon Zegwaard>in ODRL? Of introduceer je die?</v>
+
+00:09:44.829 --> 00:09:48.259
+<v Ruimte FR4-01>eh die die is al gedefinieerd.</v>
+
+00:09:48.529 --> 00:09:58.289
+<v Gideon Zegwaard>Oké. Want eh nou ja, ik moet meteen denken, want volgens mij zit in Dublin Core ook al een is part of. Dus eh maar dat ODRL heeft zijn eigen varianten van.</v>
+
+00:09:55.989 --> 00:09:56.869
+<v Ruimte FR4-01>Ja.</v>
+
+00:09:59.249 --> 00:11:14.779
+<v Ruimte FR4-01>Ja, we hebben in deze visualization note bewust nog gekozen om eh bestaande vocabulaires te hergebruiken. Zo dicht mogelijk bij eh de bron. Dus wel als er een ODRL is, dan gebruiken we ODRL. Als hier niet is, dan gebruiken we inderdaad bijvoorbeeld Dublin Core Core of Provenance. Dat hebben we ook her en der. Ehm en we hebben hier recommendations for ODRL 3. We hebben nog een aanraden om het in ODRL 3 als een officieel element op te nemen. Dat is misschien een bruggetje naar de Ja, deze even benoemen. Ehm wat we toegevoegd hebben en dat is wel een soort van ODRL core toevoeging is ook links tussen eh offer, agreement en request. Want als je in ja, in de B-keten heb je dan het aanbod, LOB, eh je hebt de overeenkomsten, je hebt verzoeken. En dat kan allemaal op ODRL gemapt worden. Alleen de relatie daartussen, dus dit verzoek of deze overeenkomst is gebaseerd op dit verzoek en accepteert dat aanbod. Dat kon nog niet. Die is lastig te vinden. Die is lastig te vinden. Ja, nou, die link hebben we eh dus wel toegevoegd. Dus dan dat is misschien wel leuk als ik toch wel even de viewer erbij ga pakken.</v>
+
+00:11:19.819 --> 00:11:22.209
+<v Gideon Zegwaard>doe je dat dan met prof of verzin je zelf wat?</v>
+
+00:11:26.389 --> 00:11:28.949
+<v Gideon Zegwaard>Prof heeft wel wel wat afleiding dingen natuurlijk.</v>
+
+00:11:27.569 --> 00:11:30.219
+<v Ruimte FR4-01>Ja.</v>
+
+00:11:34.389 --> 00:11:40.409
+<v Ruimte FR4-01>Eh maar die komt inderdaad van ehm prof volgens mij. Ja. Staat hier samen in ieder geval. Prof was derived from.</v>
+
+00:12:02.429 --> 00:12:02.589
+<v Ruimte FR4-01>Hans?</v>
+
+00:12:03.919 --> 00:12:32.999
+<v Hans Schevers | BIM-Connected>Ja, een klein vraagje over die eh die labels hè. Dus je wil eigenlijk een shackle model hebben. Ik heb altijd een gevecht met die labels. Maar waarschijnlijk ben ik de enige. Hè, dus ehm als je dus een language tag, hè, is geen string, hè, dus dus je forceert een language tag. Dus dan ehm wil dat eigenlijk zeggen dat je een shackle model hebt voor alle talen, hè. Dus als je Nederlands wil hebben, dan heb je een shackle model die op Nederlandse language tags eh controleert. Of zie jij dat anders?</v>
+
+00:12:37.799 --> 00:12:51.319
+<v Ruimte FR4-01>Ehm. Ik weet niet of jij hier dieper in zit dan ik op dat vlak, dan. We hebben we hebben niet, ik denk dat ik de labels hebben we volgens mij ook niet echt als shackle, omdat dat ook optioneel is.</v>
+
+00:12:55.359 --> 00:13:09.759
+<v Hans Schevers | BIM-Connected>Ja, het is het is volgens mij heel handig om om te zeggen van hé, ik vind het eh fijn dat elke objectje wat we willen visualiseren een naam heeft. Hè, dat dat dat lijkt me fijn, want dan ben je gegarandeerd dat er een label is en dan eh kun je dat visualiseren.</v>
+
+00:13:05.369 --> 00:13:05.809
+<v Ruimte FR4-01>Ja.</v>
+
+00:13:11.329 --> 00:13:37.180
+<v Hans Schevers | BIM-Connected>Ehm nou en dan is de vraag van eh nou, accepteer je een string of accepteer je een een language tag of beide. Hè, language string, hè, dus een een eh nou, als je een language string zegt, hè, dan dan zeg je eigenlijk van eh nou, ik wil dat elk object een de Nederlandse een labeltje heeft in het Nederlands. Dus dan moet je een shackle modelletje hebben die elk object controleert of er daadwerkelijk een hè, een stringetje aanwezig is met eh met de Nederlandse tag.</v>
+
+00:13:35.249 --> 00:13:35.529
+<v Ruimte FR4-01>Ja.</v>
+
+00:13:37.180 --> 00:13:48.340
+<v Hans Schevers | BIM-Connected>Nou, dat is alles op zich heel simpel. Eh wil je dat in het Engels, dan zul je een shackle modelletje moeten hebben die checkt of elk objectje een stringetje heeft in het Engels. Eh dus dan krijg je ehm ja, ik weet niet hoe hoe je dat ziet, hè. Dus dan zou je een Nederlandse shackle krijgen die checkt op Nederlandse language tags of die aanwezig zijn.</v>
+
+00:13:46.379 --> 00:13:46.779
+<v Ruimte FR4-01>Ja.</v>
+
+00:13:48.340 --> 00:13:57.719
+<v Hans Schevers | BIM-Connected>Ja. Ja, ik denk we hebben eh in de viewer hebben we het zo gedaan dat je een een</v>
+
+00:14:00.459 --> 00:14:02.699
+<v Ruimte FR4-01>Ja, ik denk we hebben</v>
+
+00:14:01.159 --> 00:14:02.199
+<v Hans Schevers | BIM-Connected>Ja, precies, dat hè. Ja.</v>
+
+00:14:04.579 --> 00:14:25.899
+<v Ruimte FR4-01>eh in in de viewer hebben we het zo gedaan dat je een een voorkeurstalenlijst hebt. Dus dan zeg je, ik heb bij voorkeur NL, dan eh Engels, dan taalloos en dan de rest. Dan kan me voorstellen dat je dan inderdaad, dat kan best zijn dat je daar dedicated shackles voor moet maken, dat je inderdaad zegt, er moet of NL of N of taalloos hebben.</v>
+
+00:14:27.289 --> 00:14:30.609
+<v Hans Schevers | BIM-Connected>Ja, precies, dat hè. Ja. Ja.</v>
+
+00:14:34.949 --> 00:14:35.309
+<v Ruimte FR4-01>Ja.</v>
+
+00:14:41.769 --> 00:14:46.684
+<v Gideon Zegwaard>tussen deze internationale visualization note en wat je eventueel in die ODRL APNL eh zet.</v>
+
+00:14:41.849 --> 00:14:41.969
+<v Ruimte FR4-01></v>
+
+00:14:46.684 --> 00:14:48.929
+<v Gideon Zegwaard>zet.</v>
+
+00:14:52.009 --> 00:14:57.889
+<v Gideon Zegwaard>Want de internationale ga je niet zeggen van ik ik ik maak een checkel die Nederlands vereist. Dat is een beetje gek.</v>
+
+00:14:58.819 --> 00:15:01.499
+<v Ruimte FR4-01>Nee, nee, dat niet. Nee.</v>
+
+00:15:00.019 --> 00:15:06.259
+<v Gideon Zegwaard>Dus dat dus dus die Nederlandse vereisten dat dat is eventueel iets voor voor een Nederlands profiel.</v>
+
+00:15:08.019 --> 00:15:10.699
+<v Ruimte FR4-01>Ja, wel verwijzend naar de visualization note.</v>
+
+00:15:11.319 --> 00:15:23.279
+<v Gideon Zegwaard>Ja, waar je dan wat kan zeggen over dat er überhaupt een een default language moet zijn. Misschien dat je zegt van er moet überhaupt altijd Engels zijn eh omdat je dat dan altijd als default gebruikt. Dus daar moet je dan iets over zeggen.</v>
+
+00:15:27.069 --> 00:15:34.161
+<v Hans Schevers | BIM-Connected>Ja, je zou een RDFS label string kunnen vereisen, hè. Dus geen language tag. Hè, jij noemde dat eh taalloos.</v>
+
+00:15:31.019 --> 00:15:31.139
+<v Gideon Zegwaard>Hè?</v>
+
+00:15:34.161 --> 00:15:51.059
+<v Hans Schevers | BIM-Connected>Hè, je zou kunnen zeggen: nou, daar zet ik een restrictie op, die moet aanwezig zijn. En ehm ehm en dan zou je in software kunnen zeggen: nou, als er Nederlands aanwezig is, hartstikke fijn, pakken we Nederlands. Zo niet, dan hebben we een fallback. En eh dat is eh ja, de RDFS label eh taalloos.</v>
+
+00:15:52.079 --> 00:15:52.689
+<v Gideon Zegwaard>Ja, zoiets.</v>
+
+00:15:52.679 --> 00:15:52.999
+<v Hans Schevers | BIM-Connected>Ja.</v>
+
+00:15:57.249 --> 00:16:24.579
+<v Ruimte FR4-01>Nou, ik heb de viewer voor me, dus voor de de relaties. Ehm dus we hebben relaties tussen aanbod en overeenkomsten. Dus je kan bijvoorbeeld zien voor eh nou ja, het aanbod spontane verstrekking zijn er 716 overeenkomsten. Hier gefilterd. Dan zie je deze gemeentes of afnemers gebruiken dit type aanbod. Dus als je die relaties legt, dan eh nou, kun je er ook op filteren, kun je dat ook mogelijk maken.</v>
+
+00:16:28.079 --> 00:17:16.609
+<v Ruimte FR4-01>Ehm voor ons is versionering ook belangrijk. Ehm daar is, er was een ODRL temporal eh profiel, maar dat is deprecated eh ten faveure van een aanpak waarbij je het begin- en eindtijd opneemt op je toegangsbeleid. Dus eh je ziet het als een document. Dus eigenlijk zoals een autorisatiebesluit. Dit is ingegaan op dat moment. Ehm en is geldig van dan tot dan. Dus dat hebben wij ook uitgewerkt. Eh en eh nou, daar ook dan een versie viewer voor gemaakt. Dus je kan eh beleid nou, de verschillende versies van een beleid zien. En we verwijzen dan op basis van die prof inderdaad naar één generieke eh node. En die node bevat dan de naam die hier staat wordt.</v>
+
+00:17:20.869 --> 00:17:32.509
+<v Gideon Zegwaard>Ja, is dat een is dat een enkele tijdslijn met gewoon als het ware alleen geldigheid? Of zit daar ook nog een soort eh eh revision eh mechanisme dat je voor dezelfde geldigheidsperiode eh eh revisies gehad kan hebben?</v>
+
+00:17:35.449 --> 00:17:43.289
+<v Ruimte FR4-01>Ehm, het is een een een document tijdslijn. Dus dat is waar eh ODRL uit is gekomen. Dus je ziet het als een een document. Dus die heeft wel ook een issue date.</v>
+
+00:17:46.199 --> 00:17:48.304
+<v Gideon Zegwaard>Maar dan kan dus van datzelfde document kunnen er verschillende versies zijn.</v>
+
+00:17:46.449 --> 00:17:46.769
+<v Ruimte FR4-01>Maar</v>
+
+00:17:48.304 --> 00:17:49.419
+<v Gideon Zegwaard>zijn.</v>
+
+00:17:50.639 --> 00:17:57.359
+<v Ruimte FR4-01>Ja, dus je zou hetzelfde document nog een keer kunnen issueën en met een aangepaste van tot tijd.</v>
+
+00:17:58.669 --> 00:18:00.249
+<v Gideon Zegwaard>Ja, of dezelfde van tot tijd.</v>
+
+00:18:02.989 --> 00:18:07.345
+<v Gideon Zegwaard>Ik zit er vooral te denken. Ja, en en dat betekent dus dat je eh dat je voor het gebruik moet refereren naar de naar het geversioneerde document.</v>
+
+00:18:03.219 --> 00:18:04.059
+<v Ruimte FR4-01>Ja.</v>
+
+00:18:07.345 --> 00:18:21.709
+<v Gideon Zegwaard>Want als er meerdere kunnen zijn van hetzelfde document, dan moet je iets van een versie hebben die je aanwijst van oké, welke heb ik dan gebruikt als ik iets toegepast heb.</v>
+
+00:18:23.909 --> 00:18:33.629
+<v Ruimte FR4-01>Ja, nou, je moet dat is wel altijd met temporeel, je moet er net kiezen of je verwijst naar de keten of de laatste instantie van een keten of een specifieke instantie van de keten.</v>
+
+00:18:34.349 --> 00:18:51.709
+<v Gideon Zegwaard>Ja, en dat is dat verschilt waarschijnlijk met eh kijk, als je een catalogus hebt, dan wijs je gewoon naar de naar de naar de actuele, om het zo maar te zeggen. Eh maar als je eh eh traceerbaar wil zijn, dan moet je wijzen naar degene die je ook daadwerkelijk hebt gebruikt. Wat eventueel niet meer de actuele is.</v>
+
+00:18:54.789 --> 00:18:59.837
+<v Marcel Molenaar>Mag ik even een vraag wat het eh wat het doel is om voor dezelfde periode dus er meerdere te hebben, want jij hebt daar een gedachte achter van wat je daarmee doet.</v>
+
+00:18:54.839 --> 00:18:55.599
+<v Ruimte FR4-01>Ja.</v>
+
+00:18:59.837 --> 00:19:03.223
+<v Marcel Molenaar>Alleen ik kan hem nog even niet volgen. Is dat eh kun je toelichting geven?</v>
+
+00:19:02.309 --> 00:19:02.549
+<v Ruimte FR4-01>Ja.</v>
+
+00:19:03.223 --> 00:19:09.009
+<v Marcel Molenaar>geven?</v>
+
+00:19:10.339 --> 00:19:21.209
+<v Gideon Zegwaard>Nou, als jij als jij nu een eh een toegangsbeleid uitbrengt en je zegt die is eh eh eh vanaf eh volgende week maandag tot eh eh een jaar geldig.</v>
+
+00:19:23.289 --> 00:19:38.119
+<v Gideon Zegwaard>En eh je komt op een gegeven moment eh voordat het volgende week maandag is en je hebt die je hebt hem al gepubliceerd. En je komt erachter van ja, nee, eh ik wil toch niet dat hij volgende week maandag ingaat of ik wil wel dat hij volgende week maandag ingaat, maar niet op die manier. Ja, dan ga je een nieuwe issueën.</v>
+
+00:19:39.619 --> 00:19:43.400
+<v Marcel Molenaar>geldig of</v>
+
+00:19:39.819 --> 00:19:40.339
+<v Gideon Zegwaard></v>
+
+00:19:43.400 --> 00:19:45.179
+<v Marcel Molenaar></v>
+
+00:19:44.289 --> 00:19:46.089
+<v Gideon Zegwaard>Nee, maar hij is wel geregistreerd geweest.</v>
+
+00:19:47.029 --> 00:19:49.509
+<v Marcel Molenaar>Ja, ja ja, oké, oké.</v>
+
+00:19:49.329 --> 00:19:52.289
+<v Gideon Zegwaard>En en daardoor misschien gebruikt ergens om iets mee te doen.</v>
+
+00:19:52.979 --> 00:19:57.759
+<v Marcel Molenaar>Oké, dank je. Ja, nee, dan snap ik even wat eh wat de gedachte erachter is. Dank je.</v>
+
+00:20:01.349 --> 00:20:17.849
+<v Ruimte FR4-01>dus de de verwijzingen in de data lossen wij niet actief op. Waarbij nou adopteren we dus het voorgestelde model van 3 waarbij je het als een document ziet met inderdaad een een ingangsdatum en een geldigheids tijdsrange.</v>
+
+00:20:21.709 --> 00:20:38.619
+<v Ruimte FR4-01>de ingangsdatum, maar je ja, je zal je kan dus ook versies krijgen waarbij je zou zeggen: nee, ik wil een query op geldigheid op dat moment of de viewer is niet in ieder geval, maar dan dat zou wel kunnen.</v>
+
+00:20:44.939 --> 00:21:00.859
+<v Ruimte FR4-01></v>
+
+00:21:03.389 --> 00:21:34.609
+<v Ruimte FR4-01></v>
+
+00:21:47.269 --> 00:21:49.469
+<v Ruimte FR4-01></v>
+
+00:21:54.849 --> 00:22:06.289
+<v Ruimte FR4-01></v>
+
+00:22:08.419 --> 00:22:09.619
+<v Ruimte FR4-01></v>
+
+00:22:09.979 --> 00:22:18.219
+<v Karl de Boer></v>
+
+00:22:18.919 --> 00:22:26.559
+<v Ruimte FR4-01></v>
+
+00:22:40.189 --> 00:22:41.549
+<v Ruimte FR4-01></v>
+
+00:22:45.189 --> 00:22:47.349
+<v Ruimte FR4-01></v>
+
+00:22:51.909 --> 00:22:52.629
+<v Ruimte FR4-01></v>
+
+00:22:56.339 --> 00:23:24.019
+<v Ruimte FR4-01></v>
+
+00:23:30.079 --> 00:23:30.599
+<v Ruimte FR4-01></v>
+
+00:23:33.099 --> 00:23:34.339
+<v Karl de Boer></v>
+
+00:23:38.919 --> 00:24:18.149
+<v Ruimte FR4-01></v>
+
+00:24:20.499 --> 00:24:22.819
+<v Ruimte FR4-01></v>
+
+00:24:32.459 --> 00:24:52.789
+<v Ruimte FR4-01>ketens modelleren. Dus je kan ook zeggen ehm deze wat is het? eh deze vereiste geeft invulling aan doelgroep is gelijk aan en doorropping is gelijk aan, geeft invulling aan de verplichting om je doelbinding te administreren.</v>
+
+00:24:55.019 --> 00:25:09.219
+<v Ruimte FR4-01>niet technisch af te dwingen is, maar wel organisatorisch afgedwongen wordt, dus bijvoorbeeld archivering, kan je dat ook markeren met een DPV organizational measure waarin je zegt niet technisch afgedwongen, maar wel organisatorisch geborgd.</v>
+
+00:25:17.619 --> 00:25:18.539
+<v Ruimte FR4-01>duidelijk?</v>
+
+00:25:21.539 --> 00:25:36.509
+<v Marcel Molenaar>ik heb er eh één vraagje bij, maar dat is echt mijn totale onbekendheid met ODRL. Eh ik zie eh eh een aantal eh vergelijkingen daar. Eh is dat allemaal N? Of kan het ook of zijn? Hoe hoe hoe werkt dat?</v>
+
+00:25:38.219 --> 00:25:47.059
+<v Ruimte FR4-01>op dit niveau is het allemaal N. Eh je hebt, je kan ook een of hebben, maar dan is het hier een eh een of vergelijking. Die heb ik geen voorbeeld van klaar staan.</v>
+
+00:25:47.649 --> 00:25:51.409
+<v Marcel Molenaar>Oké, dat is gewoon het eh de de voorbeelden alleen. Ik denk van</v>
+
+00:25:51.989 --> 00:25:52.309
+<v Ruimte FR4-01>Ja.</v>
+
+00:25:52.699 --> 00:26:00.269
+<v Marcel Molenaar>Want je maakt het niet expliciet. Je je moet dat eh erin lezen blijkbaar en dat eh vandaar dat ik even</v>
+
+00:26:02.009 --> 00:26:03.289
+<v Ruimte FR4-01>Helemaal.</v>
+
+00:26:06.399 --> 00:26:11.459
+<v Ruimte FR4-01>Helemaal gelijk. Kunnen we beter modelleren.</v>
+
+00:26:18.299 --> 00:26:24.139
+<v Gideon Zegwaard>Dat is misschien ook iets voor de visualizer hè, om dat in de bij de visualisatie duidelijk te maken dat de standaard zo werkt.</v>
+
+00:26:24.999 --> 00:26:27.368
+<v Marcel Molenaar>Nee, nee, maar het gaat er meer om</v>
+
+00:26:25.419 --> 00:26:25.859
+<v Ruimte FR4-01>Nee, ik denk</v>
+
+00:26:27.368 --> 00:26:48.779
+<v Marcel Molenaar>eh hoe hoe ik het bedoel is van als iemand dit probeert te interpreteren, wat zeggen we nou eigenlijk? Ehm wat wat doen we nou eigenlijk? Dan wil je hem denk ik wel zien. Dat was mijn gedachte. Maar heb ik gelijk, dat is weer wat anders hè. Misschien heb ik eh ik zeg al, ik ben totaal nieuw met ODRL, dus misschien heb ik een heel verkeerd beeld erbij. Dat eh zou zomaar kunnen.</v>
+
+00:26:48.589 --> 00:26:49.549
+<v Ruimte FR4-01>Nee, je hebt</v>
+
+00:26:52.719 --> 00:27:06.879
+<v Ruimte FR4-01>Ja, je hebt dat het belangrijkste perspectief, want dat is waar we invulling aan moeten geven. Mensen die hier voor het eerst opkomen. Dus dat moet zeker in die eh, het is goed om in de UI expliciet te benoemen voorwaarden en of hoe ja, hoe we dat ook precies doen.</v>
+
+00:27:08.089 --> 00:27:15.289
+<v Gideon Zegwaard>En je zou tussen de blok tussen het blokje zou je steeds N kunnen zetten bijvoorbeeld. Maar dat is die dat is echt een visualisatie eh eh dingetje. Ja.</v>
+
+00:27:13.379 --> 00:27:13.659
+<v Ruimte FR4-01>Ja.</v>
+
+00:27:16.829 --> 00:27:17.429
+<v Gideon Zegwaard>Ja.</v>
+
+00:27:18.259 --> 00:27:18.619
+<v Marcel Molenaar>Ja.</v>
+
+00:27:18.449 --> 00:27:28.169
+<v Ruimte FR4-01>Dit is een een voorbeeld van een or. Dus hier heb je één van onderstaande twee voorwaarden. Of functie is gelijk aan gemeentesecretaris of eh diplomatiek kenteken is gelijk aan</v>
+
+00:27:27.969 --> 00:27:34.289
+<v Marcel Molenaar>Ja, duidelijk, duidelijk. Ja, nee, maar dan wordt hij veel duidelijker. Als je dat eenmaal weet dan eh dan kun je dat pletten, dus eh dankjewel.</v>
+
+00:27:39.789 --> 00:27:59.059
+<v Ruimte FR4-01>laatste hebben wij eh domeinformulieren met SHACL en DASH toegevoegd. Eh dus je kan met SHACL kan je, SHACL, kun je domeinstructuren eh definiëren. En dan heb je een andere standaard DASH waarmee je daar ook een formulier voor kan maken.</v>
+
+00:28:03.099 --> 00:28:29.229
+<v Ruimte FR4-01>Nou, dit is dan een voorbeeld van zo'n formulier. Dus hier kan je zelf de orde, de de volgorde bepalen. Je kan zelf bepalen, ook in de editor bijvoorbeeld wat de toegestane waardes zijn, zodat je een dropdown kan tonen. Je kan er een titel aan geven. Voor die, je kan het ook in secties opsplitsen. Dus nou, dan kan je een gestructureerd formulier maken voor een bepaald element.</v>
+
+00:28:34.089 --> 00:28:38.329
+<v Ruimte FR4-01>Dus dat is wat wij allemaal in de visualization note hebben toegevoegd.</v>
+
+00:28:40.799 --> 00:28:50.629
+<v Ruimte FR4-01>Nou, en ons voorstel is dus om eh een basis ODRL AP te maken die daar naartoe vereist, dan ook wat extra dingen toevoegt.</v>
+
+00:28:53.299 --> 00:29:03.759
+<v Ruimte FR4-01>Ehm nou ja, dus primair de eisen uit de visualisatienotitie. Eh sowieso zullen ook een aantal andere dingen opgenomen worden. Dus bijvoorbeeld het gebruik van DPV voor doel en grondslag.</v>
+
+00:29:05.899 --> 00:29:08.539
+<v Ruimte FR4-01>hoe wij aansluiten op DCAT-AP-NL.</v>
+
+00:29:10.889 --> 00:29:20.889
+<v Ruimte FR4-01>Voor ons is die conforms to policy operand heel belangrijk. Dus het kunnen koppelen aan fysieke policies en op die manier de naar de consentketen met de modellering daarbij.</v>
+
+00:29:25.119 --> 00:29:25.679
+<v Ruimte FR4-01></v>
+
+00:29:27.929 --> 00:29:54.429
+<v Ruimte FR4-01>deze deze dingen moet je markeren als iets wat in een eh filter kan belanden. Dus we willen ook eh nou ja, voor de Europese vocabulaire basisaanbod definiëren van filters. Dus bijvoorbeeld eh het doel als DPV purpose. En nou ja, verwerkingsverzoek mogelijk als eh RVVA identifier. Dat soort zaken.</v>
+
+00:30:02.069 --> 00:30:09.429
+<v Ruimte FR4-01>en eh ja, dit is dan zeg maar een eh minimale interpretatie van ODRL APNL.</v>
+
+00:30:12.219 --> 00:30:13.539
+<v Ruimte FR4-01>ik zit mooi op de tijd.</v>
+
+00:30:17.379 --> 00:30:38.529
+<v Ruimte FR4-01>zijn natuurlijk ook nog kijken van is dit de gehele scope of willen we die verder uitbreiden met nou, bijvoorbeeld gegevensleveringsovereenkomsten. Voordat ik daar naartoe ga, wil ik eerst even met deze, ik heb nu een hoop uitgestort over jullie. Ehm, wat is de, ja, hoe landt dit? Wat wat denken jullie hiervan? Klinkt dit?</v>
+
+00:30:44.309 --> 00:31:07.719
+<v Gideon Zegwaard>Ja, het ziet er goed uit. Ik ehm in DCAT-AP-NL eh bieden ze ook eh shacles aan eh die checken op die eh die aanbevelingen. Dus ik denk dat dat ook handig is hiervoor. Dus dat er eh dat je vanuit de APNL een shacle aanbiedt die eh controleert of het eh of of je gemaakte eh policy of de verbinding of dat ook zo gedaan is als je voorschrijft.</v>
+
+00:31:11.149 --> 00:31:18.009
+<v Ruimte FR4-01>deze aanvullende vijf eh stel je ook voor in dit eh AP eh te nemen. Ja, ja, ik wil dat ze nemen. Ja.</v>
+
+00:31:20.329 --> 00:31:57.039
+<v Ruimte FR4-01>minimale APNL zijn. wat je wat je er sowieso wil benoemen. Eh met een verwijzing naar de visualization note als eigenlijk de grootste koppeling. En inderdaad maar mogelijk eh shacles hiervoor. Maar die je dit dan ook in? Is dit ook iets wat ze dan eh? Visualization note is wat we internationaal indienen. Ja. En APNL blijft Nederlands. Oké. Is er iets specifieks Nederlands aan dan nu? Voor EU? Eh ja, we zouden we zouden het als een EU standaard kunnen zien en indienen. Dat is wel even. Maar ik heb niet echt een forum waar ik dat aan kan bieden direct.</v>
+
+00:31:59.379 --> 00:31:59.899
+<v Ruimte FR4-01>Rens?</v>
+
+00:32:02.689 --> 00:32:46.799
+<v Rens Kievit>Ja, nee, als eerste denk ik dat het hartstikke goed eruit ziet. Eh sowieso volgens mij is die visualisator die je net laat zien al een stuk inzichtelijker dan ruwe turtle files inderdaad. Dus ik ben ook wel benieuwd hoe de niet-technische mensen daar eh daar uiteindelijk naar gaan kijken als je dit soort dingen voor ze voor ze neerschotelt. En dan voor DCAT APNL stukje had ik eigenlijk wel dezelfde vraag als die Mark net opgooit. Alles wat hier staat voelt best wel EU generiek toepasbaar, zeg maar. Eh maar zijn er bijvoorbeeld Nederlands specifieke wetten of iets dergelijks of Nederlands specifieke shackle shapes die we moeten definiëren eh om hem echt NL specifiek te maken. Eh en is dat überhaupt nodig hè? Misschien is het EU generiek al meer dan goed genoeg eh om neer te zetten.</v>
+
+00:32:49.269 --> 00:32:59.029
+<v Ruimte FR4-01>Ja, nee, ehm nee, het is eh eigenlijk is het inderdaad een een soort iGov, een government profiel. Maar dat kan, wat hier staat kan net zo goed eh EU government profiel zijn.</v>
+
+00:33:03.139 --> 00:33:16.799
+<v Ruimte FR4-01>Ja, nou ik zou zeggen, ik weet niet direct waar we dat waar je dat aan kan bieden en of wij van naar Forum Standaardisatie een EU profiel aan zouden willen dragen of dat nut heeft. Dus dat dat is een positioneringsvraagstuk.</v>
+
+00:33:19.489 --> 00:33:40.009
+<v Gideon Zegwaard>Eh ja, wat ik me voor kan stellen dat nog Nederlands is is als je in in zo'n policy eh verwijst naar een persoon of naar een Nederlandse burger ofzo, dat je dan iets zegt hoe je dat dan met een BSN doet. En als je eh een Nederlandse organisatie aanwijst, hoe je dat met een KVK doet of een Nederlandse overheidsorganisatie, hoe je dat met een TOOI ID doet, hè. Dus er zijn nog wel een paar dingetjes die je specifiek Nederlands kan maken.</v>
+
+00:33:41.769 --> 00:33:42.089
+<v Ruimte FR4-01>Ehm</v>
+
+00:33:43.969 --> 00:34:03.599
+<v Gideon Zegwaard>Eh en wat betreft die Europese eh ja, je zou eh eh in de CENELEC hoek eh iets kunnen eh beginnen, maar ik denk dat dat eh dat iets is als eh dit een eh een daverend succes is, dat je kijkt eh hoe eh hoe je het kan promoten naar iets wat meer wat eh wat meer Europees opereert.</v>
+
+00:34:05.569 --> 00:34:22.899
+<v Ruimte FR4-01>Ja, ja, we kunnen binnen onze werkgroep daar wellicht inderdaad dit een keer pitchen. Er is soms ruimte voor presentaties. Dus dat kunnen we een keer tonen van hé, we hebben dit, we willen binden, we willen jullie hier iets mee. Dan zou dat extra de Europese Commissieleden opgepakt moeten worden.</v>
+
+00:34:24.289 --> 00:34:57.346
+<v Hans Schevers | BIM-Connected>regel hè. Dus ehm zonder deze eisen is een profiel geldig, maar niet toonbaar. Nou ja, ik snap eh je balans daar, dus eh maar in principe ehm kan ik me voorstellen dat dat je op een gegeven moment gaat zeggen: hé, ik wil het wel visualiseren. Dus gij zult een ODRL eh dataset aanleveren inclusief eh de benodigdheden voor visualisatie. En daarmee ga je eigenlijk ehm een een ja, wat ga je doen? Eh de de ODRL toch een een een Nederlands smaakje geven.</v>
+
+00:34:53.729 --> 00:34:54.089
+<v Ruimte FR4-01>Ja.</v>
+
+00:34:57.346 --> 00:35:08.953
+<v Hans Schevers | BIM-Connected>Ehm hè, om omdat je toch een extra data vereiste hebt. Ik zou daar ook fan van zijn, kan ik je verklappen, zonder al te veel eh, is meer een intuïtie, maar daarmee heb je gewoon een hele strakke dataset waarbij je</v>
+
+00:35:06.889 --> 00:35:07.329
+<v Ruimte FR4-01>Ja.</v>
+
+00:35:08.953 --> 00:35:18.879
+<v Hans Schevers | BIM-Connected>nou ja, in principe gegarandeerd bent dat eh dat stukje software wat je hebt gemaakt gaat werken. Ehm</v>
+
+00:35:21.369 --> 00:35:35.449
+<v Hans Schevers | BIM-Connected>maar je zit eigenlijk wel een beetje wat mij betreft voelt het als een als een moeilijke balans. Hè, want je wil niet die status van de Nederlandse ehm extensie eh eh ehm dus dus het is valide als je het niet doet. Ehm</v>
+
+00:35:37.419 --> 00:35:41.564
+<v Ruimte FR4-01>Ja, ik zit er na te denken, ik denk dat eigenlijk dat we ook wel echt een Nederlands</v>
+
+00:35:37.849 --> 00:35:37.929
+<v Hans Schevers | BIM-Connected>Ja.</v>
+
+00:35:41.564 --> 00:36:21.679
+<v Ruimte FR4-01>door de die eh ehm zeg maar ook aansluiting op DCAT-AP-NL. Daar zit ook weer specifiek Nederlandse dingen in, dat DCAT-AP-NL de policy ook alleen op een bepaalde plek plaatst en niet op een andere. Ehm, is misschien ook een mooi bruggetje naar de volgende sectie, want dit is de de basis. Eh en de scope eh kan ook nog een stuk breder gemaakt worden. Die wellicht wat meer uiteindelijk het hele doel indekt. En dan krijg je sowieso eh ja, misschien in ieder geval echt Nederlandse standaarden. Maar dat is eventjes dus, ik denk dat hier hebben zijn we dan de scope allemaal van oké, sowieso goed om dit als basis neer te zetten, als ik het zo proef.</v>
+
+00:36:23.729 --> 00:36:38.289
+<v Ruimte FR4-01>mede maar Danny aangedragen, die er zelf niet bij kan zijn helaas. Ehm is er ook het idee om het uit te breiden met eh in ieder geval gegevensleveringsovereenkomsten. Eh dus er is een eh JenV-informatiemodel voor gegevensdelingsbeleid.</v>
+
+00:36:42.289 --> 00:36:58.279
+<v Ruimte FR4-01>Ehm dat gaat eigenlijk over eh een informatiemodel voor gegevensleveringsovereenkomsten. Dus de data sharing agreements uit het Engels. Eh dit informatiemodel eh schijnt genomen te worden als de basis voor een rijksbreed informatiemodel.</v>
+
+00:37:00.479 --> 00:37:06.009
+<v Ruimte FR4-01>Ehm dus één van de dingen die wij ook kunnen doen is ehm ja, dat ook die mantel ook op ons pakken.</v>
+
+00:37:08.969 --> 00:37:19.849
+<v Ruimte FR4-01>Dat heeft eh even kort daar doorheen lopen, want ik denk dat het sowieso goed is voor iedereen om dat dan te kunnen plaatsen. Eh dus dat introduceert een overeenkomst eh met eh partijen, rollen, doel en grondslag.</v>
+
+00:37:21.959 --> 00:37:26.479
+<v Ruimte FR4-01>Eh dat is dan één overeenkomst met een code, status en geldigheidsduur.</v>
+
+00:37:29.829 --> 00:37:48.559
+<v Ruimte FR4-01>die heeft een verstrekker en een ontvanger, elk met een eigen eh rolobject en doel. Eh daarin omschrijf je de grondslag tot op artikel, lid en besluit. Die bevat een akkoordverklaring namens beide rollen. Eh dat is ook mooi te combineren met waarschijnlijk met een digitaal ondertekend FSC-contract.</v>
+
+00:37:50.799 --> 00:37:57.359
+<v Ruimte FR4-01>Ehm en die bevat ook een noodzaakbeoordeling. Dus een eh data minimalisatie check.</v>
+
+00:38:01.879 --> 00:38:03.239
+<v Ruimte FR4-01>Ik staat op mute.</v>
+
+00:38:02.299 --> 00:38:13.299
+<v @1>Ja, ik heb even ja, ik heb even een kort vraagje. Je zei van dit dit wordt een rijksbreed eh gegevensmodel. Ik weet dat het rijksbreed beleid is, maar eh eh dat gegevensmodel dat het rijksbreed is, dat is voor mij nieuw.</v>
+
+00:38:14.959 --> 00:38:16.079
+<v Ruimte FR4-01>Dus de ja, dat is ehm</v>
+
+00:38:18.209 --> 00:38:20.689
+<v Ruimte FR4-01>Even kijken. Gideon, weet jij daar de laatste status van, want</v>
+
+00:38:23.589 --> 00:38:25.309
+<v Ruimte FR4-01>in ieder geval</v>
+
+00:38:25.489 --> 00:38:59.519
+<v Gideon Zegwaard>Ehm de in ieder geval het gerucht of in ieder geval Ik ben ook nog in blijde afwachting van de de van een publicatie ergens van het eh eh rijksbrede eh eh gegevensbeleid, want ehm als we want ik wil er ook bij de afspraken van FDS eh naar verwijzen als voorbeeld. Eh alleen het ik ik kwam erachter dat het nog niet ergens gepubliceerd is. Dus dat eh dat helpt niet heel erg in eh in het eh in het aanwijzen en adopteren, maar daar moeten we dus nog even achteraan. En volgens mij wordt daar daarin gesproken inderdaad over een GLP en een GLS, dus een gegevensleveringsprotocol en een gegevensleveringsspecificatie.</v>
+
+00:38:56.679 --> 00:38:57.199
+<v @1>Ja.</v>
+
+00:39:01.049 --> 00:39:07.094
+<v Gideon Zegwaard>Ehm maar wat daar precies over in terecht gekomen is, dat</v>
+
+00:39:01.579 --> 00:39:01.699
+<v @1>Ja.</v>
+
+00:39:07.094 --> 00:39:09.849
+<v Gideon Zegwaard>dat weet ik niet.</v>
+
+00:39:08.509 --> 00:39:59.339
+<v @1>beleid eh of een gegevensdelingsbeleid. Ehm hè, dat dat hebben we binnen DUO inmiddels ook geadopteerd. Hè, ook ook daar moet nog steeds een formele klap op gegeven worden, maar goed, dat dat gaat er wel komen. En we zijn ondertussen ook bezig met het invullen van oké, hoe zien wij als DUO dan het invullen van de GLP en de GLS. Hè, maar daar zitten we nog heel erg op een formulieren manier naar te kijken. Hè, en en ehm en en ik zie wel dat we in de toekomst zeg maar daar veel meer richting een soort gegevensboekhouding gaan die daarachter zit en dan komen we dus en dan raken we deze wereld ook uit. Hè, maar ik was even ik werd even getriggerd door het feit dat dit dat dit model ook eh kennelijk in de route zit om om rijksbreed eh uit uitgerold te worden. Daar was ik even nieuwsgierig naar van van was dat een verspreking of was dat of is is is gaat het model ook een andere status krijgen?</v>
+
+00:40:02.459 --> 00:40:14.539
+<v Ruimte FR4-01>Ja, we weten dus niet echt, we weten niet echt wat de officiële status is, maar wat wij daar naar verluid is dus eh is er een rijksbreed model in ontwikkeling wat hierop gebaseerd zou zijn.</v>
+
+00:40:14.899 --> 00:40:15.219
+<v @1>Oké.</v>
+
+00:40:17.859 --> 00:40:18.859
+<v @1>Nou, goed om te horen.</v>
+
+00:40:19.499 --> 00:40:19.859
+<v Ruimte FR4-01>Ja.</v>
+
+00:40:21.519 --> 00:40:22.119
+<v @1>Dankjewel.</v>
+
+00:40:23.749 --> 00:40:43.369
+<v Ruimte FR4-01>Ehm nou, dan dus voor de voor de anderen die dit nog niet in detail kennen of eh niet kennen. Nou ehm in het informatiemodel eh zijn wel toestemmingen, verboden en plichten opgenomen. Eh er wordt daar niet echt onderscheid in gemaakt. Eh dat kunnen wij wanneer we het gaan eh wanneer we het zouden gaan mappen naar ons APNL profiel natuurlijk wel gaan doen.</v>
+
+00:40:46.539 --> 00:41:27.719
+<v Ruimte FR4-01>Ehm er zit ook modelclausules in die wij uit zouden kunnen werken. Ik vergeten ODRL vertalingen. Ja, wat zij dus hebben is ook gegevensleveringsspecificaties. Dus dat zijn dan eh leveringen van sets van gegevens. En dat kan dus een subset zijn, dat kan een levering fysiek zijn, maar ook via een API. Eh maar dat is in ieder geval een ja, een gedetailleerdere omschrijving dan alleen eh hier is onze OpenAPI spec of hier is ons XML formaat. Eh maar dat is echt voor met jullie hebben we afgesproken dat wij dit en dat leveren. Dus dit lijkt wel op de de kruisjeslijst van de BRP bijvoorbeeld.</v>
+
+00:41:31.949 --> 00:41:42.189
+<v Ruimte FR4-01>En wat er ook in benoemd wordt is de structuur en veldlaag. Dus ook echt welke begrippenkader moet gebruikt, welke gegevenstypen zijn er, eh welke gegevensvelden worden geleverd eh en op dat niveau.</v>
+
+00:41:44.249 --> 00:41:44.889
+<v Ruimte FR4-01>Ehm</v>
+
+00:41:48.519 --> 00:41:49.599
+<v Ruimte FR4-01>dit</v>
+
+00:41:49.239 --> 00:41:57.652
+<v Marcel Molenaar>Mag ik er even een vraagje tussendoor stellen? Ja, ik had mijn handje opgestoken, maar die was eh die heb ik per ongeluk eh niet gezien denk ik, maar eh nee, ik heb even een eh een vraag over de context.</v>
+
+00:41:54.639 --> 00:41:55.679
+<v Ruimte FR4-01>Oh sorry, had ik niet gezien.</v>
+
+00:41:57.652 --> 00:42:01.129
+<v Marcel Molenaar>Die eh eh ehm zo'n contract is hartstikke handig.</v>
+
+00:42:03.369 --> 00:42:44.719
+<v Marcel Molenaar>Bij bij ons, bij UWV, daar wordt dat vaak gebruikt voor bestanden. Ik ben erg erg tegenstander van het leveren van bestanden. Eh want eh dat betekent dat ze op twee plekken gaan worden bijgehouden en dat soort dingen. Ze zijn nooit up-to-date en dat soort dingen. Dus ik ben er heel erg op tegen. Nou, als je FSC hebt, dan ga je juist op eh op eh eh zeg maar op serviceniveau ga je iets leveren en dat dat kan je wel bijhouden. Wat eh ik wilde even weten of deze wat je hier vertelt, of dat voor beide geldt of alleen maar is dat voor of alleen maar voor voor eh bestanden en dus nou ja, die die context.</v>
+
+00:42:44.319 --> 00:43:02.679
+<v Ruimte FR4-01>Deze deze wereld heeft daar niet echt een mening over. Eh je je hebt een leverings eh leveringsset en die heeft een leveringsmechanisme en daar kan je aangeven dit is een een API of een Excel. Dus deze omschrijving houdt zich daar neutraal van, zeg maar. Stuurt dat niet links of rechts, maar</v>
+
+00:43:03.229 --> 00:43:04.149
+<v Marcel Molenaar>Oké, dankjewel.</v>
+
+00:43:07.379 --> 00:43:16.739
+<v Ruimte FR4-01>Nou, en het het technische stuk wordt hier dus niet echt uitgewerkt. Dus eh de vertaling naar verwerkingsverzoeken, wat zijn et cetera. Eh zou van ons zijn dan.</v>
+
+00:43:18.409 --> 00:43:21.971
+<v @1>Ja, mag ik er even aanvullen? In in de in de beleidsgroep hebben we deze discussie ook gehad.</v>
+
+00:43:19.049 --> 00:43:19.129
+<v Ruimte FR4-01>Ja.</v>
+
+00:43:21.971 --> 00:43:40.879
+<v @1>Van gaat dit alleen gaan want het beleid gaat echt over het leveren van bestanden. Hè, en en toen daar hebben we inderdaad een aantal mensen hebben er bezwaar tegen gemaakt van ja, maar we kennen ook andere andere manieren. Hè, en en en dat werd een beetje in dat beleid een beetje uitgesloten. Het staat er nu staat er nu een beetje half in. Dus het kan nu voor beide, maar het ademt nog wel redelijk bestandsdelen uit.</v>
+
+00:43:43.799 --> 00:43:44.479
+<v Marcel Molenaar></v>
+
+00:43:49.509 --> 00:44:18.089
+<v Ruimte FR4-01>vragen. Nou, en dus dit eh zo'n gegevensleveringsovereenkomst kunnen wij ook in onze scope betrekken. Dus eh volgens mij van Axela en dit is nog heel erg formulieren gebaseerd qua achtergrond. Ehm maar dit kan ook goed in de link data en ODRL wereld gevangen worden. Eh dus je kan bijvoorbeeld de datasets kan je op DCAT baseren.</v>
+
+00:44:24.719 --> 00:44:33.809
+<v Ruimte FR4-01>met de de catalogus, een dataset concept en een dataset die dan een datadienst of distributie heeft eh waar dan beleid op kan zitten.</v>
+
+00:44:37.599 --> 00:44:46.639
+<v Ruimte FR4-01>eh DPROD als eh ontologie kan je ook gebruiken voor wanneer je wel afgeleide dataproducten gaat maken. video.</v>
+
+00:44:49.609 --> 00:44:50.569
+<v Gideon Zegwaard>ehm</v>
+
+00:44:53.499 --> 00:44:57.659
+<v Gideon Zegwaard>ODRL beleid kan ook op een datadienst toch? Of</v>
+
+00:44:59.119 --> 00:45:14.819
+<v Ruimte FR4-01>Dat is wat frictie met DCAT APNL. Dus daar zijn dan specifiek Nederlands dingen. DCAT APNL heeft het nu alleen op distributie gedefinieerd. Ehm maar daar moeten we Ja, dus daar moeten we even kijken met eh de DCAT APNL.</v>
+
+00:45:13.949 --> 00:45:18.309
+<v Gideon Zegwaard>Want ook op een datadienst kan je policies definiëren natuurlijk.</v>
+
+00:45:18.749 --> 00:45:19.269
+<v Ruimte FR4-01>Zeker.</v>
+
+00:45:20.419 --> 00:45:34.929
+<v Gideon Zegwaard>Dus dan denk ik dat we daar wat aan moeten doen. Is het zo dat want ik neem aan dat eh eh DCAT APNL iets zegt over het wel of niet aanwezig zijn van has policy op distributie, maar niet uitsluit dat je het toepast op een datadienst.</v>
+
+00:45:38.549 --> 00:45:44.329
+<v Ruimte FR4-01>impliceert dat momenteel wel. Maar daar moeten we het gesprek over aangaan met</v>
+
+00:45:46.019 --> 00:45:56.569
+<v Gideon Zegwaard>Ja, want eh als we vanuit een vanuit de FDS eh bril kijken, eh eh voor FDS is alles gewoon datadiensten. We doen we doen in ieder geval vooralsnog niet aan distributies.</v>
+
+00:45:57.589 --> 00:46:06.870
+<v Ruimte FR4-01>Ja. Dus eh en ik heb het een beetje neutraal gelaten of of we moeten inderdaad eh bij DCAT APNL van hé, we willen inderdaad 3.1 die ruimte maakt, ruimte laat voor het ook toevoegen daar. Of misschien dat er een ODRL APNL gaan maken die</v>
+
+00:46:05.679 --> 00:46:05.959
+<v Gideon Zegwaard>Ja.</v>
+
+00:46:06.870 --> 00:46:13.359
+<v Ruimte FR4-01>de conflicteert met DCAT APNL, maar dat ja.</v>
+
+00:46:13.839 --> 00:46:19.359
+<v Gideon Zegwaard>het is pas conflicterend als als APNL zegt dat je het niet moet doen, maar</v>
+
+00:46:21.039 --> 00:46:23.879
+<v Ruimte FR4-01>En ieder geval daar eh daar daar moeten we Ja.</v>
+
+00:46:21.849 --> 00:46:25.249
+<v Gideon Zegwaard>Ja, daar daar daar er is aandacht, daar moet aandacht voor zijn.</v>
+
+00:46:30.999 --> 00:46:47.879
+<v Ruimte FR4-01>Oké, nou, DPROD kan je dus ehm afgeleide dataproducten modelleren. Eh dus bijvoorbeeld in de BRP wereld de Haal Centraal producten die met de naamgeving dan toegevoegd wordt. Ja, Haal Centraal is inmiddels ingehaald door de BRP API. Ja, sorry, ik ben nog eh</v>
+
+00:46:51.689 --> 00:47:09.819
+<v Ruimte FR4-01>Ja, ik heb de periode dat die naam eruit ging heb ik net gemist, dus het zit bij mij nog iets actief in mijn hoofd. Ja, op dit moment BRP API met gebeurtenissen en informatieproducten. Ja. Nou, dus informatieproducten kan je modelleren op basis van een DPROD standaard. Je kan ook andere manieren om dat te doen, maar dat kan in ieder geval.</v>
+
+00:47:11.839 --> 00:47:34.439
+<v Ruimte FR4-01>eh DCAT eh de working group is ook bezig met de een VVD. Vocabulary for variable description. Nou, die gebaseerd is op DDI CDI. Dus dat is de standaard die je ook kan gebruiken om echt eh het hele variabele niveau af te duiken. Jim. conceptueel, presenteerde variabele, instantie variabele.</v>
+
+00:47:37.259 --> 00:47:55.849
+<v Ruimte FR4-01>En we hebben natuurlijk binnen Nederland en daar wordt het natuurlijk echt een Nederlands profiel ook een MIM. overlappen een beetje met eh CDI DDI. En MIM richt zich voornamelijk op ja, niveau 1, 2 en 3, dus begrippen, kaders, conceptueel informatiemodel, logisch informatiemodel.</v>
+
+00:47:58.059 --> 00:48:00.499
+<v Ruimte FR4-01>waar eh DDI en CDI</v>
+
+00:48:03.059 --> 00:48:13.639
+<v Ruimte FR4-01>Ja, ik pak wel op een vat, maar wat technisch gegevensmodel wel bevat, maar min dat niet heeft. Moet er helaas vandoor.</v>
+
+00:48:15.769 --> 00:48:22.439
+<v Ruimte FR4-01>Oké, dankjewel. Ik eh wij gaan</v>
+
+00:48:26.459 --> 00:48:50.239
+<v Ruimte FR4-01>waarbij we dus ook een profielvulling kunnen maken, waarbij we zeggen een gegevensleveringsovereenkomst vul je op deze manier in eh met link data vocabularies. Dus dan kunnen we de de tekstuele definitie van het het GEV formulier model om het dan even zo te noemen, kunnen wij vormgeven in een link data vocabulaire.</v>
+
+00:48:51.549 --> 00:48:56.709
+<v @1>Ehm Michiel, jij jij jij ziet MIM ook voor begrippen. Daar hebben we toch het NLSBB eh profiel voor?</v>
+
+00:49:00.009 --> 00:49:04.009
+<v Ruimte FR4-01>Ja, ik eh ik bedoel dat inderdaad, die hoort hier ook bij.</v>
+
+00:49:04.989 --> 00:49:05.429
+<v @1>Ja.</v>
+
+00:49:05.319 --> 00:49:15.479
+<v Ruimte FR4-01>Die had ik eigenlijk bij de de basisset van ODRL en B ook moeten noemen, maar die ben ik daar daar vergeten, realiseer ik me. Want die hoort sowieso Ja. die hoort sowieso in de basisset.</v>
+
+00:49:13.759 --> 00:49:13.839
+<v @1>Ja.</v>
+
+00:49:17.349 --> 00:49:27.574
+<v Gideon Zegwaard>Ja, MIM benoemt via niveaus, maar dekt er maar twee. Dus eh niveau 1 wordt wel benoemd in MIM, maar niet bepaald of uitgewerkt.</v>
+
+00:49:22.839 --> 00:49:23.199
+<v Ruimte FR4-01>Ja.</v>
+
+00:49:24.689 --> 00:49:24.769
+<v @1>Ja.</v>
+
+00:49:27.574 --> 00:49:30.459
+<v Gideon Zegwaard>En daar heb je weer NLSBB/eh SKOS voor.</v>
+
+00:49:31.039 --> 00:49:31.239
+<v @1>Ja.</v>
+
+00:49:33.149 --> 00:49:50.089
+<v Hans Schevers | BIM-Connected>Ik ik als ik in de link data wereld eh kijk naar eh hè, naar documentatie en alles wat daar geschreven wordt, dan dan dan zie ik eigenlijk nooit echt die niveaus terugkomen. Eh hoe zie jij dat Michiel? Hè, hoe map jij die niveaus op link data en hoe past dat überhaupt?</v>
+
+00:49:51.879 --> 00:49:56.279
+<v Ruimte FR4-01>Nou ja, op zich die VVD eh vocabulaire doet dat wel dus.</v>
+
+00:49:58.599 --> 00:50:10.919
+<v Ruimte FR4-01>En ja, vaak wordt het dan wel gezien als eh dat de je je je OWL en je vocabulaire is laag X en dan kan je met verwijzingen daar laag Y weer boven hangen.</v>
+
+00:50:12.979 --> 00:50:19.619
+<v Ruimte FR4-01>Het wordt over het algemeen wel inderdaad met je hand-wavy weggedaan van hier kan het moduleren, dus moduleer het maar als het voor jou past.</v>
+
+00:50:23.969 --> 00:50:37.089
+<v Ruimte FR4-01>Voor deze context zou ik er aan te denken om een klein stukje daarvan af te pennen en ook dat, dus als we dit in scope nemen, moeten we hier ook echt met goede, ja, link data specialisten samen gaan zitten om te nemen van wat willen we daar precies doen.</v>
+
+00:50:35.659 --> 00:50:36.059
+<v @1>Ja.</v>
+
+00:50:38.529 --> 00:50:59.079
+<v Ruimte FR4-01>Maar hier zouden we dus voor Nederland een opzet kunnen maken van wij vinden dat je het zo moet moduleren. Maar dan moeten we dus deze twee werelden ook naast elkaar gaan leggen en hoe hoe integreer je die? Ga je ze beide doen? Koppel je ze aan elkaar? Precies die vraag is wat we dan echt samen uit zullen moeten werken als we deze kant op gaan.</v>
+
+00:51:00.139 --> 00:51:02.329
+<v @1>Loopt dat dan niet via DCAT?</v>
+
+00:51:03.129 --> 00:51:08.838
+<v Ruimte FR4-01>Dit is DCAT. MIM en DDI-CDI is van de DCAT Data Exchange Working Group die DCAT beheert.</v>
+
+00:51:05.079 --> 00:51:06.079
+<v @1>Oh, binnen DCAT, oké.</v>
+
+00:51:08.838 --> 00:51:10.009
+<v Ruimte FR4-01>die DCAT beheert.</v>
+
+00:51:10.379 --> 00:51:10.699
+<v @1>Oké.</v>
+
+00:51:15.439 --> 00:51:41.969
+<v Gideon Zegwaard>Ja, ik heb er ook al wat op zitten worstelen. Ehm, volgens mij kan je in de link data wereld kan je eh prima niveaus 2, 3 en 4 met link data uitdrukken. En dan moet je dus aangeven op welk niveau je het aan het modelleren bent. Enige eh aandachtspunt wel is dat in die zeker in niveau 4 ehm heb je ook hebben we ook gewoon te maken met met andere eh beschrijvingsmechanismes, bijvoorbeeld ehm ehm eh OAS, Open API specificatie.</v>
+
+00:51:44.289 --> 00:52:02.649
+<v Gideon Zegwaard>En de link daaraan, dat is nog een missende schakel hè. Dus als je bijvoorbeeld een datadienst hebt die eh die die plain JSON aanbiedt en een Open API specificatie heeft, dan dan hebben we daar nog niet iets voor om dat dan weer te verbinden aan een</v>
+
+00:52:04.769 --> 00:52:17.012
+<v Gideon Zegwaard>ehm link data met link data beschreven eh eh datamodel. Kan je nog wel weer trucs voor verzinnen, want eh JSON kan ook weer JSON-LD zijn, maar de</v>
+
+00:52:14.529 --> 00:52:15.849
+<v Ruimte FR4-01>Ja, wat wij</v>
+
+00:52:17.012 --> 00:52:17.599
+<v Gideon Zegwaard>de mogelijkheden zijn er, maar het is niet gestandaardiseerd of uitgewerkt.</v>
+
+00:52:18.569 --> 00:52:41.809
+<v Ruimte FR4-01>Wat wat wij daarin voorstellen, zeker wat ook vanuit ODRL komt, eh is dat wij natuurlijk het Authzen en NL Gov profiel hebben waarin we wel aangeven dat je dat ook naar eh dat je daar link data context mee moet geven. mee hoort te geven. Dus dat je het op die manier wel kan koppelen. Dus het Authzen verzoek wat zo'n API verzoek representeert, kunnen we wel in de keten netjes opnemen.</v>
+
+00:52:43.849 --> 00:52:51.969
+<v Gideon Zegwaard>Maar dan zou je dus ergens iets moeten reguleren over dat als je iets met JSON doet via een API, dat je dan een context ook moet hebben. En dat moet ergens staan dat je dat zo ook moet doen.</v>
+
+00:52:53.489 --> 00:53:00.649
+<v Ruimte FR4-01>Ja. Ja. Ja, dus de de Authzen kant die hebben we dus wel dichtgetikt, maar inderdaad de Open API specs zouden we ook kunnen kijken wat daar mogelijk is.</v>
+
+00:53:03.209 --> 00:53:08.689
+<v Gideon Zegwaard>Want dat zit weer in de in de eh de API design rules eh</v>
+
+00:53:09.569 --> 00:53:39.169
+<v Ruimte FR4-01>En dat is denk ik wel een mooi window voor eh ja, de besluitvorming hierover, want dit zijn natuurlijk opties. Eh het is nou ja, het kiezen van de scope. En wat vinden wij als werkgroep dat we hiervan eh willen doen? Ehm je zou de scope ook nog verder op kunnen trekken met bijvoorbeeld eh op een kat-achtig beleid of de DQV kwaliteitseisen. En dat lijkt me wellicht een beetje ver gaan.</v>
+
+00:53:42.289 --> 00:53:52.089
+<v Ruimte FR4-01>misschien eventjes Jan. Ik weet niet of jij, want jij jouw afdronk is nu van oh, eh dat zou ik ook heel graag voor OpenKat willen of dat je nou, vandaag niet.</v>
+
+00:53:49.529 --> 00:53:49.609
+<v Jan Klopper></v>
+
+00:53:53.729 --> 00:54:04.169
+<v Jan Klopper>Nee, ik denk dat het goed is om eventjes eerst eventjes beter te te zien wat jullie doen en dan eh en dan te kijken waar het raakvlak heeft en potentieel dan het verder uit te leggen voor de rest van de groep.</v>
+
+00:54:05.829 --> 00:54:41.559
+<v Ruimte FR4-01>eh dus dat kan later wellicht in de presentatie worden. En ik denk dat we voor nu dan voor het laatst wat wat willen wij? Willen wij eh ODRL APNL minimale profiel neerzetten, dus de visualization note en een aantal vereisten zoals opgenomen plus eh en dan SPB. Of willen wij ook eh met de werkgroep de gegevensleveringsovereenkomsten induiken. Kijken of we dat voor vocabuleren op kunnen op kunnen nemen en dan ODRL APNL iets meer gegevensdelings invullen.</v>
+
+00:54:40.649 --> 00:54:41.529
+<v Rens Kievit>Gideon?</v>
+
+00:54:45.809 --> 00:55:06.249
+<v Gideon Zegwaard>Ja, mijn voorkeur zou hebben om gewoon de basis gewoon echt goed uit te werken en eh en die andere aspecten die voorbij komen eh te verkennen om gewoon te kijken van wat zijn de mogelijkheden, wat welke kansen zien we en om daar dan in een in een volgende iteratie als het ware dat eh eh dat toe te voegen als dat inderdaad eh eh kansrijk of eh veelbelovend eruit ziet.</v>
+
+00:55:10.129 --> 00:55:10.289
+<v Ruimte FR4-01>Rens?</v>
+
+00:55:11.809 --> 00:55:30.649
+<v Rens Kievit>Eh ja, ik had het al gezegd tegen Gideon, maar vanuit mijn perspectief zou het erg interessant zijn om wel juist ook na te gaan denken alvast over hoe je ODRL of whatever zou kunnen gaan toezetten voor die dataspace wereld. Eh om daarop voort te sorteren, want dat wordt wel gewoon een grote een groot aspect gaat worden, zeg maar. Alleen ik kan natuurlijk niet spreken over jullie eh capaciteit daarin.</v>
+
+00:55:33.319 --> 00:55:40.481
+<v Ruimte FR4-01>denk ik denk andere deelnemers, Mark is ook voorstander van het verder trekken.</v>
+
+00:55:40.099 --> 00:55:42.339
+<v Mark Westbroek>Ja, dan eh zeker. Ja.</v>
+
+00:55:40.481 --> 00:55:43.719
+<v Ruimte FR4-01>Amen op de trends.</v>
+
+00:55:53.759 --> 00:56:06.649
+<v Mark Westbroek>Nou, in ons domein eh Common Ground is het gewoon echt belangrijk dat we kunnen koppelen met met gegevens modellen op verschillende niveaus. Het liefst op logisch, maar eventueel ook op API niveau.</v>
+
+00:56:08.849 --> 00:56:10.129
+<v Mark Westbroek>Dus eh fysiek.</v>
+
+00:56:09.959 --> 00:56:11.359
+<v Ruimte FR4-01>Marcel?</v>
+
+00:56:13.149 --> 00:56:44.567
+<v Marcel Molenaar>Ja, ik heb niet echt een eh een hele sterke mening erover. Eh omdat ik dit is toch voor mij een vrij eh ja, dit is iets verder van mijn eh van van mijn dagelijkse werkzaamheden af zeg maar, van vanuit security. Wat ik wel heb is eh van wat ik net al zei, ik ben niet zo voor bestanden uitwisselen. Dus ik vind dat het in ieder geval als je het al koppelt, dan moet je het koppelen aan je eh aan aan aan services.</v>
+
+00:56:42.509 --> 00:56:43.029
+<v @1>Ja.</v>
+
+00:56:44.567 --> 00:57:09.390
+<v Marcel Molenaar>En dat je dan ook voor andere dingen gebruikt, vind ik best hè, dat kan ik me heel goed voorstellen. Maar dat dat lijkt me voorwaarde. En dan als je dat hebt, ik kan me voorstellen, ja, voor de data uitwisseling, daarvoor is het misschien juist handig om eh om om die die data eh component daar wel wel verder vanuit te werken. Dat kan ik me voorstellen, maar dit is echt eh ik heb er geen eh vastomlijnde mening over. Dat eh ik heb er te weinig verstand van, denk ik.</v>
+
+00:57:09.289 --> 00:57:09.409
+<v Ruimte FR4-01>Ja.</v>
+
+00:57:09.390 --> 00:57:09.959
+<v Marcel Molenaar>Oké.</v>
+
+00:57:11.279 --> 00:57:11.959
+<v Ruimte FR4-01>Axel?</v>
+
+00:57:11.329 --> 00:57:14.389
+<v @1>Ja, ik ik ik heb nog ik zie de laatste minuut heb. Ehm</v>
+
+00:57:16.489 --> 00:57:35.874
+<v @1>eh ik ik ik zou ik ik zou inderdaad ik ben wel geïnteresseerd in de koppeling tussen tussen zeg maar de de toegangsregels en en de dataset en de dataservices. Waarbij ik inderdaad even de dataset en dataservice als als een abstract ding zie. Dus niet als een bestand, maar gewoon als een set die je beschikbaar stelt of levert of wat dan ook. Dus dat we zeg maar hè, dan dan dan wordt het voor mij wat transparant van hè, hoe hoe wat betekenen deze regels nou voor het sturen op</v>
+
+00:57:32.469 --> 00:57:32.669
+<v Ruimte FR4-01>Ja.</v>
+
+00:57:35.874 --> 00:57:41.329
+<v @1>eh ons eh eh verstrekken van data.</v>
+
+00:57:43.849 --> 00:58:02.409
+<v Ruimte FR4-01>Oké. Als ik dan eventjes de afronding proef is eh het grootste belang om de basis degelijk degelijk neer te zetten ook eh project dat ook een keer ten einde. Maar zeker wel ook animo om de diepte in te duiken en te kijken wat daar mogelijk is. Vat ik het zo goed samen van iedereen?</v>
+
+00:58:03.759 --> 00:58:04.119
+<v @1>Ja.</v>
+
+00:58:05.129 --> 00:58:05.369
+<v Ruimte FR4-01>Oké.</v>
+
+00:58:07.399 --> 00:58:16.999
+<v Ruimte FR4-01>waarschijnlijk voor eh GraphQL autorisatie staat waarschijnlijk op de planning.</v>
+
+00:58:19.209 --> 00:58:24.449
+<v Ruimte FR4-01>Dus eh zijn Remco kom gerust even bij mij eh de lijn als je daar nog eh inzicht over hebt.</v>
+
+00:58:25.459 --> 00:58:29.579
+<v Floris Deutekom>Ik wil nog even erbij Michiel, eh ik heb vooral meegeluisterd en niet veel gezegd vandaag,</v>
+
+00:58:25.679 --> 00:58:26.199
+<v Ruimte FR4-01>En dan</v>
+
+00:58:29.579 --> 00:58:35.129
+<v Floris Deutekom>maar eh ik ben onder de indruk van wat je allemaal hebt voorbereid. Ik vind het er echt gedegen uitzien.</v>
+
+00:58:37.429 --> 00:58:38.669
+<v Ruimte FR4-01>Fijn om te horen. Dankjewel.</v>
+
+00:58:40.799 --> 00:58:41.279
+<v Ruimte FR4-01>Altijd graag.</v>
+
+00:58:43.799 --> 00:59:08.559
+<v Marcel Molenaar>Ja, nee, zeker. Ik vind ik ook. Ik zal ook eh zeg maar ehm mijn eh eh zeg maar ik heb eh eh architect collega's die meer over data gaan. Eh die zal ik hier ook in eh in eh gaan betrekken, want die hun zeggen bepaalde dingen wat meer. Als daar nog wat over terugkomt, zal ik dat ook terugmelden. Of ik nodig ze gewoon uit, gewoon bij de bij een volgende keer als hierover gaat.</v>
+
+00:59:05.169 --> 00:59:07.419
+<v Ruimte FR4-01>We zijn al over tijd, ik wil je de ruimte geven om te vertrekken, maar ik zou ook nog een beetje</v>
+
+00:59:09.509 --> 00:59:31.109
+<v Ruimte FR4-01>We zijn al over tijd, ik wil je de ruimte geven om te vertrekken, maar ik zou ook nog een beetje aansturen op dat zeg maar als we hier dan de diepte in duiken, dan lijkt het me ook goed om daar gewoon af en toe fysiek samen te zitten met de mensen die hier echt de diepte in willen gaan. Dus dan zal ik even expliciet in de mail vragen of wie daar tijd en beschikbaarheid voor heeft, zodat we een datumprikker kunnen sturen. En tot over twee weken dan allemaal. Of vier weken als je echt voor de diepte... wanneer er komt.</v>
+
+00:59:32.769 --> 00:59:34.049
+<v Marcel Molenaar>Oké, bedankt. Fijne dag.</v>
+
+00:59:32.799 --> 00:59:35.639
+<v Mark Westbroek>Dank.</v>
+
+00:59:36.029 --> 00:59:37.049
+<v Hans Schevers | BIM-Connected>Dank.</v>
+
+00:59:37.119 --> 00:59:37.639
+<v Rens Kievit>Dank.</v>
+
+00:59:37.499 --> 00:59:37.819
+<v Floris Deutekom>Yo.</v>
