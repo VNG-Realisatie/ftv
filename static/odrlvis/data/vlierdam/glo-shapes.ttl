@@ -1,0 +1,1184 @@
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix sh:     <http://www.w3.org/ns/shacl#> .
+@prefix dash:   <http://datashapes.org/dash#> .
+@prefix odrl:   <http://www.w3.org/ns/odrl/2/> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix dprod:  <https://www.omg.org/spec/DPROD/dprod/> .
+@prefix cdi:    <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/> .
+@prefix gd:     <https://gegevensdeling.example/def/> .
+
+# =============================================================================
+# Formulier-shapes bij glo-vocabulaire.ttl (Visualisatie-note §8).
+#
+# WAT ZE DOEN. Deze shapes beschrijven WEERGAVE en toetsen niets: welke
+# eigenschappen van een knoop een generieke viewer toont, in welke volgorde,
+# onder welke kop en met welke widget. Zij dragen geen sh:message en leveren dus
+# geen eis. Zonder deze shapes staan de knopen van een
+# gegevensleveringsovereenkomst er wel, maar zonder veldkoppen en zonder vouwen:
+# de GLS-kaart klapt dan niet open naar haar leverset, haar gegevensmiddel en
+# haar veldlaag.
+#
+# WAAROM EEN EIGEN BESTAND. Het beleidscorpus van Vlierdam (beleid.ttl,
+# velden.ttl, vocabulaire.ttl, openftv.ttl) heeft deze vormen niet nodig. Wie
+# alleen dat corpus laadt, laadt dit bestand niet en heeft er dus geen last van;
+# wie de overeenkomst erbij laadt, laadt dit bestand mee.
+#
+# DE SUBSET IS DE GRENS. Gebruikt wordt precies wat de Visualisatie-note §8
+# vastlegt: sh:NodeShape + sh:targetClass (met subklasse-sluiting), sh:property
+# met sh:path (ook [ sh:inversePath … ]), sh:name, sh:description, sh:order,
+# sh:group + sh:PropertyGroup, dash:viewer en dash:propertyRole. Drie grenzen
+# volgen daaruit:
+#
+#   1. GEEN SEQUENCE PATHS. De DDI-CDI-veldlaag legt naam, code, beschrijving en
+#      waardetype achter een gestructureerd datatype (cdi:ObjectName,
+#      cdi:Identifier, cdi:InternationalString, cdi:ControlledVocabularyEntry).
+#      Die waarden liggen één hop te diep voor een enkelvoudig pad. De
+#      veldlaagformulieren tonen daarom wat in één stap wél bereikbaar is: de
+#      relaties naar andere knopen. Een rij die op de tussenknoop zou uitkomen
+#      is weggelaten in plaats van als "(anoniem)" getoond.
+#   2. ÉÉN sh:targetClass PER SHAPE. Een lezer neemt de eerste doelklasse; een
+#      shape met drie doelen zou er twee laten liggen. De drie afspraaksoorten
+#      krijgen daarom elk hun eigen formulier.
+#   3. GEEN SHAPE-OVERERVING. sh:node zit niet in de subset, dus wat Verstrekker
+#      en Ontvanger delen staat in beide shapes; de samenvattende klasse
+#      Overeenkomstrol krijgt een derde, volledige shape voor wie alleen die
+#      zet.
+#
+# DE KOP VAN EEN VELDLAAGKNOOP komt van rdfs:label wanneer de knoop er een
+# draagt, en valt anders terug op de staart van de IRI — de naam achter
+# cdi:ObjectName is door grens 1 onbereikbaar. De knopen van het voorbeeld
+# dragen daarom een rdfs:label.
+#
+# DE FORMULIEREN ZIJN LEVERINGSVORM-NEUTRAAL, net als het vocabulaire: geen rij
+# hieronder veronderstelt een bevraging of juist een bestandslevering. De
+# rij "Leverritme" op het gegevensmiddelformulier blijft bij levering op verzoek
+# eenvoudig leeg.
+# =============================================================================
+
+# --- De groepen waarin de rijen vallen ---------------------------------------
+# Eén reeks koppen voor alle formulieren hieronder, zodat een lezer die van een
+# overeenkomst naar een specificatie, een leverset en een gegevensmiddel
+# doorklikt telkens dezelfde indeling ziet. De sh:order van de groep bepaalt
+# haar plaats tussen de andere blokken, de sh:order van de rij haar plaats
+# binnen de groep; de rijnummers lopen daarom per shape op in tientallen die de
+# groepsvolgorde volgen.
+
+gd:GroepKenmerken a sh:PropertyGroup ;
+    rdfs:label "Kenmerken"@nl , "Characteristics"@en ;
+    sh:order 0 .
+gd:GroepInhoud a sh:PropertyGroup ;
+    rdfs:label "Inhoud en afbakening"@nl , "Content and scope"@en ;
+    sh:order 1 .
+gd:GroepStructuur a sh:PropertyGroup ;
+    rdfs:label "Structuur en modellen"@nl , "Structure and models"@en ;
+    sh:order 2 .
+gd:GroepLevering a sh:PropertyGroup ;
+    rdfs:label "Levering"@nl , "Delivery"@en ;
+    sh:order 3 .
+gd:GroepAfspraken a sh:PropertyGroup ;
+    rdfs:label "Afspraken"@nl , "Clauses"@en ;
+    sh:order 4 .
+gd:GroepVerantwoordelijkheid a sh:PropertyGroup ;
+    rdfs:label "Rollen en verantwoordelijkheid"@nl , "Roles and responsibility"@en ;
+    sh:order 5 .
+gd:GroepSamenhang a sh:PropertyGroup ;
+    rdfs:label "Samenhang"@nl , "Context"@en ;
+    sh:order 6 .
+gd:GroepHerkomst a sh:PropertyGroup ;
+    rdfs:label "Herkomst en verwijzingen"@nl , "Provenance and references"@en ;
+    sh:order 7 .
+
+# =============================================================================
+# A. De overeenkomst en wat eraan hangt
+# =============================================================================
+
+# De kaartweergave plaatst titel, geldigheid en regels zelf; deze shape benoemt
+# en ordent de velden die de kaart niet plaatst. De drie paden die de
+# overeenkomst met de rol-objecten deelt — doelVerstrekker, akkoordverklaring en
+# het verwerkingsbelang als de grond van het geheel — staan hier onder dezelfde
+# kop en met hetzelfde rijnummer als op het rolformulier, zodat wie doorklikt
+# hetzelfde blok terugziet. Het gat op 53 is de eindverantwoordelijke functie:
+# die hangt aan de rol en niet aan de overeenkomst.
+#
+# Twee rijen staan met opzet elders dan hun naamgenoot op de GLS-kaart.
+# gd:noodzaak valt onder "Inhoud en afbakening" omdat de noodzaakbeoordeling de
+# deling afbakent — zij is hier wat de populatiebeschrijving op de GLS-kaart is.
+# En dct:conformsTo staat onder "Herkomst en verwijzingen" in plaats van onder
+# "Structuur en modellen": op de GLS wijst dat pad naar het begrippenkader en
+# het gegevensmodel, op de overeenkomst naar het modeldocument waarnaar zij is
+# opgesteld.
+gd:GloFormShape a sh:NodeShape ;
+    sh:targetClass gd:Gegevensleveringsovereenkomst ;
+    rdfs:label "Formulier gegevensleveringsovereenkomst"@nl , "Data delivery agreement form"@en ;
+    sh:property [
+        sh:path gd:heeftStatus ;
+        sh:name "Status"@nl , "Status"@en ;
+        sh:group gd:GroepKenmerken ; sh:order 10 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path gd:noodzaak ;
+        sh:name "Noodzaak"@nl , "Necessity"@en ;
+        sh:description """Waarom deze gegevens voor dit doel nodig zijn, en waarom
+niet meer dan deze."""@nl ;
+        sh:group gd:GroepInhoud ; sh:order 20 ;
+        dash:viewer dash:LangStringViewer ;
+    ] ;
+    sh:property [
+        sh:path gd:gegevensleveringsspecificatie ;
+        sh:name "Gegevensleveringsspecificatie"@nl , "Data delivery specification"@en ;
+        sh:group gd:GroepLevering ; sh:order 40 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path gd:heeftRol ;
+        sh:name "Rollen"@nl , "Roles"@en ;
+        sh:description """De verstrekkers- en de ontvangersrol van deze
+overeenkomst, elk met een eigen partij, doel, grondslag, akkoordverklaring en
+eindverantwoordelijke functie."""@nl ;
+        sh:group gd:GroepVerantwoordelijkheid ; sh:order 50 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path gd:doelVerstrekker ;
+        sh:name "Doel verstrekker"@nl , "Provider purpose"@en ;
+        sh:group gd:GroepVerantwoordelijkheid ; sh:order 51 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path gd:verwerkingsbelang ;
+        sh:name "Verwerkingsbelang"@nl , "Processing interest"@en ;
+        sh:group gd:GroepVerantwoordelijkheid ; sh:order 52 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path gd:akkoordverklaring ;
+        sh:name "Akkoordverklaringen"@nl , "Declarations of agreement"@en ;
+        sh:group gd:GroepVerantwoordelijkheid ; sh:order 54 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path dct:conformsTo ;
+        sh:name "Voldoet aan"@nl , "Conforms to"@en ;
+        sh:group gd:GroepHerkomst ; sh:order 70 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path dct:references ;
+        sh:name "Verwijzingen"@nl , "References"@en ;
+        sh:group gd:GroepHerkomst ; sh:order 71 ;
+        dash:viewer dash:LabelViewer ;
+    ] .
+
+gd:AkkoordverklaringFormShape a sh:NodeShape ;
+    sh:targetClass gd:Akkoordverklaring ;
+    rdfs:label "Akkoordverklaringsformulier"@nl , "Declaration form"@en ;
+    sh:property [
+        sh:path rdfs:label ;
+        dash:propertyRole dash:LabelRole ;
+        sh:order 0 ;
+    ] ;
+    sh:property [
+        sh:path gd:namens ;
+        sh:name "Namens"@nl , "On behalf of"@en ;
+        sh:order 1 ; dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path prov:wasAssociatedWith ;
+        sh:name "Afgelegd door"@nl , "Declared by"@en ;
+        sh:order 2 ; dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path dct:date ;
+        sh:name "Datum"@nl , "Date"@en ;
+        sh:order 3 ; dash:viewer dash:LiteralViewer ;
+    ] .
+
+# --- De rol-objecten ---------------------------------------------------------
+#
+# Drie shapes voor twee klassen plus hun samenvattende bovenklasse. Wie alleen
+# gd:Overeenkomstrol zet krijgt het volledige formulier met beide doelrijen — de
+# lege verdwijnt vanzelf; wie de verbijzondering zet krijgt de rij die bij zijn
+# kant hoort, met de naam die daarbij past. De partij staat als kerngegeven
+# boven aan de kaart: zonder haar is een rol een lege huls.
+
+gd:OvereenkomstrolFormShape a sh:NodeShape ;
+    sh:targetClass gd:Overeenkomstrol ;
+    rdfs:label "Rolformulier"@nl , "Agreement role form"@en ;
+    sh:property [
+        sh:path rdfs:label ;
+        dash:propertyRole dash:LabelRole ;
+        sh:order 0 ;
+    ] ;
+    sh:property [
+        sh:path gd:partij ;
+        sh:name "Partij"@nl , "Party"@en ;
+        dash:propertyRole dash:KeyInfoRole ;
+        sh:order 1 ; dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path gd:doelVerstrekker ;
+        sh:name "Doel verstrekker"@nl , "Provider purpose"@en ;
+        sh:group gd:GroepVerantwoordelijkheid ; sh:order 50 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path gd:doelOntvanger ;
+        sh:name "Doel ontvanger"@nl , "Recipient purpose"@en ;
+        sh:group gd:GroepVerantwoordelijkheid ; sh:order 51 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path gd:heeftGrondslag ;
+        sh:name "Grondslag"@nl , "Legal basis"@en ;
+        sh:group gd:GroepVerantwoordelijkheid ; sh:order 52 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path gd:eindverantwoordelijkeFunctie ;
+        sh:name "Eindverantwoordelijke functie"@nl , "Accountable role"@en ;
+        sh:group gd:GroepVerantwoordelijkheid ; sh:order 53 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path gd:akkoordverklaring ;
+        sh:name "Akkoordverklaring"@nl , "Declaration of agreement"@en ;
+        sh:group gd:GroepVerantwoordelijkheid ; sh:order 54 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath gd:heeftRol ] ;
+        sh:name "Rol in"@nl , "Role in"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 60 ;
+        dash:viewer dash:LabelViewer ;
+    ] .
+
+gd:VerstrekkerFormShape a sh:NodeShape ;
+    sh:targetClass gd:Verstrekker ;
+    rdfs:label "Verstrekkersrol-formulier"@nl , "Provider role form"@en ;
+    sh:property [
+        sh:path rdfs:label ;
+        dash:propertyRole dash:LabelRole ;
+        sh:order 0 ;
+    ] ;
+    sh:property [
+        sh:path gd:partij ;
+        sh:name "Verstrekkende partij"@nl , "Providing party"@en ;
+        sh:description """De partij die de gegevens levert; zij is de odrl:assigner
+van de overeenkomst."""@nl ;
+        dash:propertyRole dash:KeyInfoRole ;
+        sh:order 1 ; dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path gd:doelVerstrekker ;
+        sh:name "Doel verstrekker"@nl , "Provider purpose"@en ;
+        sh:group gd:GroepVerantwoordelijkheid ; sh:order 50 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path gd:heeftGrondslag ;
+        sh:name "Grondslag"@nl , "Legal basis"@en ;
+        sh:group gd:GroepVerantwoordelijkheid ; sh:order 52 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path gd:eindverantwoordelijkeFunctie ;
+        sh:name "Eindverantwoordelijke functie"@nl , "Accountable role"@en ;
+        sh:group gd:GroepVerantwoordelijkheid ; sh:order 53 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path gd:akkoordverklaring ;
+        sh:name "Akkoordverklaring"@nl , "Declaration of agreement"@en ;
+        sh:group gd:GroepVerantwoordelijkheid ; sh:order 54 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath gd:heeftRol ] ;
+        sh:name "Rol in"@nl , "Role in"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 60 ;
+        dash:viewer dash:LabelViewer ;
+    ] .
+
+gd:OntvangerFormShape a sh:NodeShape ;
+    sh:targetClass gd:Ontvanger ;
+    rdfs:label "Ontvangersrol-formulier"@nl , "Recipient role form"@en ;
+    sh:property [
+        sh:path rdfs:label ;
+        dash:propertyRole dash:LabelRole ;
+        sh:order 0 ;
+    ] ;
+    sh:property [
+        sh:path gd:partij ;
+        sh:name "Ontvangende partij"@nl , "Receiving party"@en ;
+        sh:description """De partij die de gegevens ontvangt; zij is de
+odrl:assignee van de overeenkomst."""@nl ;
+        dash:propertyRole dash:KeyInfoRole ;
+        sh:order 1 ; dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path gd:doelOntvanger ;
+        sh:name "Doel ontvanger"@nl , "Recipient purpose"@en ;
+        sh:group gd:GroepVerantwoordelijkheid ; sh:order 51 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path gd:heeftGrondslag ;
+        sh:name "Grondslag"@nl , "Legal basis"@en ;
+        sh:group gd:GroepVerantwoordelijkheid ; sh:order 52 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path gd:eindverantwoordelijkeFunctie ;
+        sh:name "Eindverantwoordelijke functie"@nl , "Accountable role"@en ;
+        sh:group gd:GroepVerantwoordelijkheid ; sh:order 53 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path gd:akkoordverklaring ;
+        sh:name "Akkoordverklaring"@nl , "Declaration of agreement"@en ;
+        sh:group gd:GroepVerantwoordelijkheid ; sh:order 54 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath gd:heeftRol ] ;
+        sh:name "Rol in"@nl , "Role in"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 60 ;
+        dash:viewer dash:LabelViewer ;
+    ] .
+
+# =============================================================================
+# B. Het datasetniveau van de gegevensleveringsspecificatie
+# =============================================================================
+
+gd:GlsFormShape a sh:NodeShape ;
+    sh:targetClass gd:Gegevensleveringsspecificatie ;
+    rdfs:label "GLS-formulier"@nl , "GLS form"@en ;
+    sh:property [
+        sh:path dct:title ;
+        dash:propertyRole dash:LabelRole ;
+        sh:order 0 ;
+    ] ;
+    sh:property [
+        sh:path dct:description ;
+        sh:name "Beschrijving"@nl , "Description"@en ;
+        dash:propertyRole dash:DescriptionRole ;
+        sh:order 1 ;
+    ] ;
+    sh:property [
+        sh:path dct:identifier ;
+        sh:name "GLS-code"@nl , "GLS code"@en ;
+        dash:propertyRole dash:KeyInfoRole ;
+        sh:order 2 ; dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path rdf:type ;
+        sh:name "Soort"@nl , "Kind"@en ;
+        sh:group gd:GroepKenmerken ; sh:order 10 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path owl:versionInfo ;
+        sh:name "Versie"@nl , "Version"@en ;
+        sh:group gd:GroepKenmerken ; sh:order 11 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path gd:populatiebeschrijving ;
+        sh:name "Populatiebeschrijving"@nl , "Population description"@en ;
+        sh:group gd:GroepInhoud ; sh:order 20 ;
+        dash:viewer dash:LangStringViewer ;
+    ] ;
+    sh:property [
+        sh:path gd:classificatie ;
+        sh:name "Classificaties"@nl , "Classifications"@en ;
+        sh:description """De classificaties van de gegevensdeling als geheel; een
+gegevensleverset kan daar met eigen classificaties van afwijken."""@nl ;
+        sh:group gd:GroepInhoud ; sh:order 21 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path dct:conformsTo ;
+        sh:name "Voldoet aan"@nl , "Conforms to"@en ;
+        sh:description """Het begrippenkader met de termen van deze deling en het
+logisch gegevensmodel met haar gegevenstypen."""@nl ;
+        sh:group gd:GroepStructuur ; sh:order 30 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path dprod:outputDataset ;
+        sh:name "Gegevensleversetspecificaties"@nl , "Delivery set specifications"@en ;
+        sh:group gd:GroepLevering ; sh:order 40 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path dprod:outputPort ;
+        sh:name "Leverkanaal"@nl , "Delivery channel"@en ;
+        sh:group gd:GroepLevering ; sh:order 41 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path gd:heeftAfspraak ;
+        sh:name "GLS-afspraken"@nl , "GLS clauses"@en ;
+        sh:group gd:GroepAfspraken ; sh:order 50 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path odrl:hasPolicy ;
+        sh:name "Gegevensleveringsovereenkomst"@nl , "Data delivery agreement"@en ;
+        sh:group gd:GroepVerantwoordelijkheid ; sh:order 55 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path gd:contactpersoon ;
+        sh:name "Contactpersonen"@nl , "Contact persons"@en ;
+        sh:group gd:GroepVerantwoordelijkheid ; sh:order 56 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path dct:source ;
+        sh:name "Vindplaats"@nl , "Location"@en ;
+        sh:group gd:GroepHerkomst ; sh:order 70 ;
+        dash:viewer dash:URIViewer ;
+    ] ;
+    sh:property [
+        sh:path dct:references ;
+        sh:name "Verwijzingen"@nl , "References"@en ;
+        sh:group gd:GroepHerkomst ; sh:order 71 ;
+        dash:viewer dash:LabelViewer ;
+    ] .
+
+gd:LeversetspecificatieFormShape a sh:NodeShape ;
+    sh:targetClass gd:Gegevensleversetspecificatie ;
+    rdfs:label "Gegevensleversetspecificatie-formulier"@nl , "Delivery set specification form"@en ;
+    sh:property [
+        sh:path rdfs:label ;
+        dash:propertyRole dash:LabelRole ;
+        sh:order 0 ;
+    ] ;
+    sh:property [
+        sh:path dct:description ;
+        sh:name "Beschrijving"@nl , "Description"@en ;
+        dash:propertyRole dash:DescriptionRole ;
+        sh:order 1 ;
+    ] ;
+    sh:property [
+        sh:path dct:identifier ;
+        sh:name "Leversetcode"@nl , "Delivery set code"@en ;
+        dash:propertyRole dash:KeyInfoRole ;
+        sh:order 2 ; dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path gd:populatiebeschrijving ;
+        sh:name "Populatiebeschrijving"@nl , "Population description"@en ;
+        sh:description "De afbakening van déze leverset binnen de populatie van de gegevensdeling."@nl ;
+        sh:group gd:GroepInhoud ; sh:order 20 ;
+        dash:viewer dash:LangStringViewer ;
+    ] ;
+    sh:property [
+        sh:path gd:classificatie ;
+        sh:name "Classificaties"@nl , "Classifications"@en ;
+        sh:group gd:GroepInhoud ; sh:order 21 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path dct:accessRights ;
+        sh:name "Rubricering"@nl , "Security marking"@en ;
+        sh:group gd:GroepInhoud ; sh:order 22 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path dct:conformsTo ;
+        sh:name "Voldoet aan"@nl , "Conforms to"@en ;
+        sh:description "Het logisch gegevensmodel van deze leverset."@nl ;
+        sh:group gd:GroepStructuur ; sh:order 30 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path gd:filtertOpGegevenstype ;
+        sh:name "Filtert op gegevenstype"@nl , "Filtered on data type"@en ;
+        sh:group gd:GroepStructuur ; sh:order 31 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path dcat:distribution ;
+        sh:name "Gegevensmiddelspecificaties"@nl , "Delivery medium specifications"@en ;
+        sh:group gd:GroepLevering ; sh:order 40 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path gd:heeftAfspraak ;
+        sh:name "Gegevensleversetafspraken"@nl , "Delivery set clauses"@en ;
+        sh:group gd:GroepAfspraken ; sh:order 50 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath dprod:outputDataset ] ;
+        sh:name "Onderdeel van"@nl , "Part of"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 60 ;
+        dash:viewer dash:LabelViewer ;
+    ] .
+
+gd:MiddelspecificatieFormShape a sh:NodeShape ;
+    sh:targetClass gd:Gegevensmiddelspecificatie ;
+    rdfs:label "Gegevensmiddelspecificatie-formulier"@nl , "Delivery medium specification form"@en ;
+    sh:property [
+        sh:path dct:title ;
+        dash:propertyRole dash:LabelRole ;
+        sh:order 0 ;
+    ] ;
+    sh:property [
+        sh:path dct:description ;
+        sh:name "Beschrijving"@nl , "Description"@en ;
+        dash:propertyRole dash:DescriptionRole ;
+        sh:order 1 ;
+    ] ;
+    sh:property [
+        sh:path dct:identifier ;
+        sh:name "Gegevensmiddelcode"@nl , "Delivery medium code"@en ;
+        dash:propertyRole dash:KeyInfoRole ;
+        sh:order 2 ; dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path dcat:mediaType ;
+        sh:name "Mediatype"@nl , "Media type"@en ;
+        sh:group gd:GroepKenmerken ; sh:order 10 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path dct:conformsTo ;
+        sh:name "Voldoet aan"@nl , "Conforms to"@en ;
+        sh:description "Het technisch gegevensmodel van dit gegevensmiddel."@nl ;
+        sh:group gd:GroepStructuur ; sh:order 30 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    # De tweede brug naar de veldlaag. Het gegevensmiddel is aan de DPROD-kant de
+    # distributie en aan de DDI-CDI-kant de fysieke dataset op dezelfde IRI, en
+    # het is de fysieke dataset die haar instantievariabelen opsomt. Deze rij
+    # blijft leeg zolang een bron alleen het datasetniveau beschrijft, en vult
+    # zich zodra de veldlaag erbij komt.
+    sh:property [
+        sh:path cdi:PhysicalDataSet_has_InstanceVariable ;
+        sh:name "Gegevensvelden"@nl , "Data fields"@en ;
+        sh:description "De gegevensvelden die in dit gegevensmiddel worden overgedragen."@nl ;
+        sh:group gd:GroepStructuur ; sh:order 31 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path gd:heeftAfspraak ;
+        sh:name "Gegevensmiddelafspraken"@nl , "Delivery medium clauses"@en ;
+        sh:group gd:GroepAfspraken ; sh:order 50 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath dcat:distribution ] ;
+        sh:name "Onderdeel van"@nl , "Part of"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 60 ;
+        dash:viewer dash:LabelViewer ;
+    ] .
+
+# HET LEVERKANAAL. De uitvoerpoort had tot nu toe geen formulier: zij is een
+# kale dcat:DataService en de viewer toonde haar als naamloos doel van
+# dprod:outputPort, terwijl de knoop in vlierdam-glo.ttl titel, beschrijving,
+# eindpunt, protocol, beveiligingsschema én het beleid draagt dat op het
+# koppelvlak beslist. Dat laatste is hier het interessantst: de poort is de
+# plek waar de overeenkomst en het beleid elkaar raken.
+#
+# De rijen zijn precies wat deze bestanden dragen. Een profiel dat zich
+# conform DCAT-AP-NL 3.0 verklaart heeft dezelfde shape met meer rijen
+# (toegangsniveau, thema, licentie, eindpuntbeschrijving, uitgever,
+# contactpunt), want dat profiel moet die eigenschappen vullen. Deze
+# bestanden claimen geen toepassingsprofiel en krijgen die rijen dus niet —
+# een lege rij is geen dekking.
+gd:LeverkanaalFormShape a sh:NodeShape ;
+    sh:targetClass dcat:DataService ;
+    rdfs:label "Leverkanaalformulier"@nl , "Delivery channel form"@en ;
+    sh:property [
+        sh:path dct:title ;
+        dash:propertyRole dash:LabelRole ;
+        sh:order 0 ;
+    ] ;
+    sh:property [
+        sh:path dct:description ;
+        sh:name "Beschrijving"@nl , "Description"@en ;
+        dash:propertyRole dash:DescriptionRole ;
+        sh:order 1 ;
+    ] ;
+    sh:property [
+        sh:path dcat:endpointURL ;
+        sh:name "Eindpunt-URL"@nl , "Endpoint URL"@en ;
+        dash:propertyRole dash:KeyInfoRole ;
+        sh:order 2 ; dash:viewer dash:URIViewer ;
+    ] ;
+    sh:property [
+        sh:path dprod:protocol ;
+        sh:name "Protocol"@nl , "Protocol"@en ;
+        sh:group gd:GroepLevering ; sh:order 40 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path dprod:securitySchemaType ;
+        sh:name "Beveiligingsschema"@nl , "Security schema"@en ;
+        sh:group gd:GroepLevering ; sh:order 41 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path odrl:hasPolicy ;
+        sh:name "Beslispunt op dit koppelvlak"@nl , "Decision point on this interface"@en ;
+        sh:group gd:GroepVerantwoordelijkheid ; sh:order 50 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path dprod:isAccessServiceOf ;
+        sh:name "Ontsluit gegevensmiddel"@nl , "Serves delivery medium"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 60 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath dprod:outputPort ] ;
+        sh:name "Onderdeel van"@nl , "Part of"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 61 ;
+        dash:viewer dash:LabelViewer ;
+    ] .
+
+# De drie afspraaksoorten, elk met een eigen shape (grens 2). Het onderwerp is
+# het kerngegeven: het zegt waarover de afspraak gaat voordat de tekst dat doet.
+
+gd:GlsAfspraakFormShape a sh:NodeShape ;
+    sh:targetClass gd:glsafspraak ;
+    rdfs:label "GLS-afspraakformulier"@nl , "GLS clause form"@en ;
+    sh:property [
+        sh:path rdfs:label ;
+        dash:propertyRole dash:LabelRole ;
+        sh:order 0 ;
+    ] ;
+    sh:property [
+        sh:path dct:description ;
+        sh:name "Afspraaktekst"@nl , "Clause text"@en ;
+        dash:propertyRole dash:DescriptionRole ;
+        sh:order 1 ;
+    ] ;
+    sh:property [
+        sh:path dct:subject ;
+        sh:name "Onderwerp"@nl , "Topic"@en ;
+        dash:propertyRole dash:KeyInfoRole ;
+        sh:order 2 ; dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path odrl:assignee ;
+        sh:name "Gebonden partijen"@nl , "Bound parties"@en ;
+        sh:group gd:GroepVerantwoordelijkheid ; sh:order 50 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath gd:heeftAfspraak ] ;
+        sh:name "Onderdeel van"@nl , "Part of"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 60 ;
+        dash:viewer dash:LabelViewer ;
+    ] .
+
+gd:LeversetafspraakFormShape a sh:NodeShape ;
+    sh:targetClass gd:leversetafspraak ;
+    rdfs:label "Gegevensleversetafspraak-formulier"@nl , "Delivery set clause form"@en ;
+    sh:property [
+        sh:path rdfs:label ;
+        dash:propertyRole dash:LabelRole ;
+        sh:order 0 ;
+    ] ;
+    sh:property [
+        sh:path dct:description ;
+        sh:name "Afspraaktekst"@nl , "Clause text"@en ;
+        dash:propertyRole dash:DescriptionRole ;
+        sh:order 1 ;
+    ] ;
+    sh:property [
+        sh:path dct:subject ;
+        sh:name "Onderwerp"@nl , "Topic"@en ;
+        dash:propertyRole dash:KeyInfoRole ;
+        sh:order 2 ; dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path odrl:assignee ;
+        sh:name "Gebonden partijen"@nl , "Bound parties"@en ;
+        sh:group gd:GroepVerantwoordelijkheid ; sh:order 50 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath gd:heeftAfspraak ] ;
+        sh:name "Onderdeel van"@nl , "Part of"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 60 ;
+        dash:viewer dash:LabelViewer ;
+    ] .
+
+gd:MiddelafspraakFormShape a sh:NodeShape ;
+    sh:targetClass gd:middelafspraak ;
+    rdfs:label "Gegevensmiddelafspraak-formulier"@nl , "Delivery medium clause form"@en ;
+    sh:property [
+        sh:path rdfs:label ;
+        dash:propertyRole dash:LabelRole ;
+        sh:order 0 ;
+    ] ;
+    sh:property [
+        sh:path dct:description ;
+        sh:name "Afspraaktekst"@nl , "Clause text"@en ;
+        dash:propertyRole dash:DescriptionRole ;
+        sh:order 1 ;
+    ] ;
+    sh:property [
+        sh:path dct:subject ;
+        sh:name "Onderwerp"@nl , "Topic"@en ;
+        dash:propertyRole dash:KeyInfoRole ;
+        sh:order 2 ; dash:viewer dash:LabelViewer ;
+    ] ;
+    # Leeg bij een levering op verzoek, gevuld bij een levering met een vast
+    # ritme. De rij staat hier omdat de frequentie-afspraak het machineleesbare
+    # ritme draagt wanneer er een is.
+    sh:property [
+        sh:path dprod:recurrence ;
+        sh:name "Leverritme (RRULE)"@nl , "Recurrence (RRULE)"@en ;
+        sh:group gd:GroepKenmerken ; sh:order 10 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path odrl:assignee ;
+        sh:name "Gebonden partijen"@nl , "Bound parties"@en ;
+        sh:group gd:GroepVerantwoordelijkheid ; sh:order 50 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath gd:heeftAfspraak ] ;
+        sh:name "Onderdeel van"@nl , "Part of"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 60 ;
+        dash:viewer dash:LabelViewer ;
+    ] .
+
+# =============================================================================
+# C. De veldlaag
+#
+# Begrippenkader en term staan op SKOS en tonen daarom hun eigen naam en
+# definitie. Wat op DDI-CDI staat kan dat niet: naam, code, beschrijving en
+# waardetype liggen achter een sequence path (grens 1). Deze formulieren tonen
+# daar wat in één stap bereikbaar is — de relaties — zodat de veldlaag ten
+# minste doorklikbaar is: gegevensset → gegevenstype → waardedomein →
+# gegevensveld → technisch gegevensmodel.
+# =============================================================================
+
+gd:BegrippenkaderFormShape a sh:NodeShape ;
+    sh:targetClass gd:Begrippenkader ;
+    rdfs:label "Begrippenkaderformulier"@nl , "Terminology form"@en ;
+    sh:property [
+        sh:path dct:title ;
+        dash:propertyRole dash:LabelRole ;
+        sh:order 0 ;
+    ] ;
+    sh:property [
+        sh:path dct:identifier ;
+        sh:name "Begrippenkadercode"@nl , "Terminology code"@en ;
+        dash:propertyRole dash:KeyInfoRole ;
+        sh:order 1 ; dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath skos:inScheme ] ;
+        sh:name "Termen"@nl , "Terms"@en ;
+        sh:group gd:GroepInhoud ; sh:order 20 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath dct:conformsTo ] ;
+        sh:name "Gebruikt door"@nl , "Used by"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 60 ;
+        dash:viewer dash:LabelViewer ;
+    ] .
+
+gd:TermFormShape a sh:NodeShape ;
+    sh:targetClass gd:Term ;
+    rdfs:label "Termformulier"@nl , "Term form"@en ;
+    sh:property [
+        sh:path skos:prefLabel ;
+        dash:propertyRole dash:LabelRole ;
+        sh:order 0 ;
+    ] ;
+    sh:property [
+        sh:path skos:definition ;
+        sh:name "Termbeschrijving"@nl , "Term description"@en ;
+        dash:propertyRole dash:DescriptionRole ;
+        sh:order 1 ;
+    ] ;
+    sh:property [
+        sh:path skos:inScheme ;
+        sh:name "Begrippenkader"@nl , "Terminology"@en ;
+        sh:group gd:GroepStructuur ; sh:order 30 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath cdi:Concept-externalDefinition ] ;
+        sh:name "Gebruikt door gegevenstype"@nl , "Used by data type"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 60 ;
+        dash:viewer dash:LabelViewer ;
+    ] .
+
+gd:GegevenssetFormShape a sh:NodeShape ;
+    sh:targetClass gd:Gegevensset ;
+    rdfs:label "Gegevenssetformulier"@nl , "Data set form"@en ;
+    sh:property [
+        sh:path rdfs:label ;
+        dash:propertyRole dash:LabelRole ;
+        sh:order 0 ;
+    ] ;
+    sh:property [
+        sh:path cdi:VariableCollection_has_ConceptualVariable ;
+        sh:name "Gegevenstypen"@nl , "Data types"@en ;
+        sh:group gd:GroepInhoud ; sh:order 20 ;
+        dash:viewer dash:LabelViewer ;
+    ] .
+
+gd:GegevenstypeFormShape a sh:NodeShape ;
+    sh:targetClass gd:Gegevenstype ;
+    rdfs:label "Gegevenstypeformulier"@nl , "Data type form"@en ;
+    sh:property [
+        sh:path rdfs:label ;
+        dash:propertyRole dash:LabelRole ;
+        sh:order 0 ;
+    ] ;
+    sh:property [
+        sh:path rdf:type ;
+        sh:name "Soort"@nl , "Kind"@en ;
+        sh:group gd:GroepKenmerken ; sh:order 10 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path gd:classificatie ;
+        sh:name "Classificaties"@nl , "Classifications"@en ;
+        sh:group gd:GroepInhoud ; sh:order 20 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path cdi:Concept-externalDefinition ;
+        sh:name "Term uit het begrippenkader"@nl , "Term from the terminology"@en ;
+        sh:group gd:GroepInhoud ; sh:order 21 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path cdi:RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain ;
+        sh:name "Waardedomein"@nl , "Value domain"@en ;
+        sh:group gd:GroepStructuur ; sh:order 30 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path cdi:RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain ;
+        sh:name "Ontbrekendwaarden"@nl , "Sentinel values"@en ;
+        sh:description """Het waardedomein van de waarden die "geen waarde"
+betekenen; DDI-CDI houdt die gescheiden van de geldige waarden."""@nl ;
+        sh:group gd:GroepStructuur ; sh:order 31 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath cdi:VariableCollection_has_ConceptualVariable ] ;
+        sh:name "In gegevensset"@nl , "In data set"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 60 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath cdi:DataStructureComponent_isDefinedBy_RepresentedVariable ] ;
+        sh:name "Component in het logisch gegevensmodel"@nl , "Component in the logical data model"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 61 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath cdi:VariableRelationship_hasSource_ConceptualVariable ] ;
+        sh:name "Gegevenstypemappings"@nl , "Data type mappings"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 62 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath gd:filtertOpGegevenstype ] ;
+        sh:name "Filtert de gegevensleverset"@nl , "Filters the delivery set"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 63 ;
+        dash:viewer dash:LabelViewer ;
+    ] .
+
+# Het categorische gegevenstype is een verbijzondering, en een lezer kiest de
+# meest specifieke doelklasse: deze shape wint zodra de knoop
+# gd:GegevenstypeCategorisch draagt, en herhaalt daarom de rijen van de vorige.
+# Het verschil zit in de naam van de waardedomeinrij — bij een categorisch type
+# is dat het waardebereik.
+gd:GegevenstypeCategorischFormShape a sh:NodeShape ;
+    sh:targetClass gd:GegevenstypeCategorisch ;
+    rdfs:label "Formulier categorisch gegevenstype"@nl , "Categorical data type form"@en ;
+    sh:property [
+        sh:path rdfs:label ;
+        dash:propertyRole dash:LabelRole ;
+        sh:order 0 ;
+    ] ;
+    sh:property [
+        sh:path rdf:type ;
+        sh:name "Soort"@nl , "Kind"@en ;
+        sh:group gd:GroepKenmerken ; sh:order 10 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path gd:classificatie ;
+        sh:name "Classificaties"@nl , "Classifications"@en ;
+        sh:group gd:GroepInhoud ; sh:order 20 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path cdi:Concept-externalDefinition ;
+        sh:name "Term uit het begrippenkader"@nl , "Term from the terminology"@en ;
+        sh:group gd:GroepInhoud ; sh:order 21 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path cdi:RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain ;
+        sh:name "Waardebereik"@nl , "Value range"@en ;
+        sh:description """Het substantieve waardedomein; bij een categorisch
+gegevenstype leidt het naar de opsomming van toegestane waarden."""@nl ;
+        sh:group gd:GroepStructuur ; sh:order 30 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path cdi:RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain ;
+        sh:name "Ontbrekendwaarden"@nl , "Sentinel values"@en ;
+        sh:group gd:GroepStructuur ; sh:order 31 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath cdi:VariableCollection_has_ConceptualVariable ] ;
+        sh:name "In gegevensset"@nl , "In data set"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 60 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath cdi:DataStructureComponent_isDefinedBy_RepresentedVariable ] ;
+        sh:name "Component in het logisch gegevensmodel"@nl , "Component in the logical data model"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 61 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath cdi:VariableRelationship_hasSource_ConceptualVariable ] ;
+        sh:name "Gegevenstypemappings"@nl , "Data type mappings"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 62 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath gd:filtertOpGegevenstype ] ;
+        sh:name "Filtert de gegevensleverset"@nl , "Filters the delivery set"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 63 ;
+        dash:viewer dash:LabelViewer ;
+    ] .
+
+# De waardedomeinen, zodat de stap van gegevenstype naar opsomming niet
+# doodloopt. Doelklasse is de DDI-CDI-klasse: het vocabulaire munt hier geen
+# eigen term, en het formulier hoeft er ook geen.
+gd:WaardedomeinFormShape a sh:NodeShape ;
+    sh:targetClass cdi:SubstantiveValueDomain ;
+    rdfs:label "Waardedomeinformulier"@nl , "Value domain form"@en ;
+    sh:property [
+        sh:path rdfs:label ;
+        dash:propertyRole dash:LabelRole ;
+        sh:order 0 ;
+    ] ;
+    sh:property [
+        sh:path cdi:SubstantiveValueDomain_takesValuesFrom_EnumerationDomain ;
+        sh:name "Opgesomd waardedomein"@nl , "Enumeration domain"@en ;
+        sh:group gd:GroepInhoud ; sh:order 20 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath cdi:RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain ] ;
+        sh:name "Waardedomein van"@nl , "Value domain of"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 60 ;
+        dash:viewer dash:LabelViewer ;
+    ] .
+
+gd:OntbrekendwaardedomeinFormShape a sh:NodeShape ;
+    sh:targetClass cdi:SentinelValueDomain ;
+    rdfs:label "Formulier ontbrekendwaardedomein"@nl , "Sentinel value domain form"@en ;
+    sh:property [
+        sh:path rdfs:label ;
+        dash:propertyRole dash:LabelRole ;
+        sh:order 0 ;
+    ] ;
+    sh:property [
+        sh:path cdi:SentinelValueDomain_takesValuesFrom_EnumerationDomain ;
+        sh:name "Opgesomd waardedomein"@nl , "Enumeration domain"@en ;
+        sh:group gd:GroepInhoud ; sh:order 20 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath cdi:RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain ] ;
+        sh:name "Ontbrekendwaarden van"@nl , "Sentinel values of"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 60 ;
+        dash:viewer dash:LabelViewer ;
+    ] .
+
+# De codelijst is de laatste stap: zonder haar formulier houdt het doorklikken
+# op bij het waardedomein en blijven de toegestane waarden onzichtbaar.
+gd:CodelijstFormShape a sh:NodeShape ;
+    sh:targetClass cdi:CodeList ;
+    rdfs:label "Codelijstformulier"@nl , "Code list form"@en ;
+    sh:property [
+        sh:path rdfs:label ;
+        dash:propertyRole dash:LabelRole ;
+        sh:order 0 ;
+    ] ;
+    sh:property [
+        sh:path cdi:CodeList_has_Code ;
+        sh:name "Codes"@nl , "Codes"@en ;
+        sh:group gd:GroepInhoud ; sh:order 20 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path cdi:EnumerationDomain_references_CategorySet ;
+        sh:name "Categorieverzameling"@nl , "Category set"@en ;
+        sh:group gd:GroepStructuur ; sh:order 30 ;
+        dash:viewer dash:LabelViewer ;
+    ] .
+
+gd:GegevensveldFormShape a sh:NodeShape ;
+    sh:targetClass gd:Gegevensveld ;
+    rdfs:label "Gegevensveldformulier"@nl , "Data field form"@en ;
+    sh:property [
+        sh:path rdfs:label ;
+        dash:propertyRole dash:LabelRole ;
+        sh:order 0 ;
+    ] ;
+    sh:property [
+        sh:path cdi:InstanceVariable_has_PhysicalSegmentLayout ;
+        sh:name "Technisch gegevensmodel"@nl , "Technical data model"@en ;
+        sh:group gd:GroepStructuur ; sh:order 30 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath cdi:PhysicalDataSet_has_InstanceVariable ] ;
+        sh:name "In gegevensmiddel"@nl , "In delivery medium"@en ;
+        sh:group gd:GroepLevering ; sh:order 40 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath cdi:VariableRelationship_hasTarget_ConceptualVariable ] ;
+        sh:name "Gegevenstypemapping"@nl , "Data type mapping"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 60 ;
+        dash:viewer dash:LabelViewer ;
+    ] .
+
+# De gegevenstypemapping is het scharnier tussen gegevenstype en gegevensveld;
+# zonder formulier is zij in een weergave een knoop zonder inhoud.
+gd:GegevenstypemappingFormShape a sh:NodeShape ;
+    sh:targetClass cdi:VariableRelationship ;
+    rdfs:label "Gegevenstypemappingformulier"@nl , "Data type mapping form"@en ;
+    sh:property [
+        sh:path rdfs:label ;
+        dash:propertyRole dash:LabelRole ;
+        sh:order 0 ;
+    ] ;
+    sh:property [
+        sh:path cdi:VariableRelationship_hasSource_ConceptualVariable ;
+        sh:name "Gegevenstype"@nl , "Data type"@en ;
+        sh:group gd:GroepStructuur ; sh:order 30 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path cdi:VariableRelationship_hasTarget_ConceptualVariable ;
+        sh:name "Gegevensveld"@nl , "Data field"@en ;
+        sh:group gd:GroepStructuur ; sh:order 31 ;
+        dash:viewer dash:LabelViewer ;
+    ] .
+
+gd:LogischGegevensmodelFormShape a sh:NodeShape ;
+    sh:targetClass gd:LogischGegevensmodel ;
+    rdfs:label "Formulier logisch gegevensmodel"@nl , "Logical data model form"@en ;
+    sh:property [
+        sh:path rdfs:label ;
+        dash:propertyRole dash:LabelRole ;
+        sh:order 0 ;
+    ] ;
+    sh:property [
+        sh:path dct:identifier ;
+        sh:name "LGM-code"@nl , "Logical data model code"@en ;
+        dash:propertyRole dash:KeyInfoRole ;
+        sh:order 1 ; dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path cdi:DataStructure_has_DataStructureComponent ;
+        sh:name "Componenten"@nl , "Components"@en ;
+        sh:group gd:GroepStructuur ; sh:order 30 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath dct:conformsTo ] ;
+        sh:name "Gebruikt door"@nl , "Used by"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 60 ;
+        dash:viewer dash:LabelViewer ;
+    ] .
+
+# De component is de brug van het logisch gegevensmodel naar de veldlaag. Zonder
+# haar formulier toont de Componenten-rij hierboven platte labels en houdt de
+# documentweergave daar op: alles wat eronder hangt — gegevenstype,
+# waardedomein, gegevensset, gegevenstypemapping, gegevensveld en het technisch
+# gegevensmodel — is dan een onbereikbaar eiland.
+#
+# Doelklasse is de bovenklasse cdi:DataStructureComponent, zodat elke
+# componentrol onder hetzelfde formulier valt. Een lezer sluit sh:targetClass af
+# over rdfs:subClassOf in de GEGEVENSgraaf; de twee axioma's die die sluiting
+# dragen staan in glo-vocabulaire.ttl.
+gd:ComponentFormShape a sh:NodeShape ;
+    sh:targetClass cdi:DataStructureComponent ;
+    rdfs:label "Componentformulier"@nl , "Component form"@en ;
+    sh:property [
+        sh:path rdfs:label ;
+        dash:propertyRole dash:LabelRole ;
+        sh:order 0 ;
+    ] ;
+    sh:property [
+        sh:path rdf:type ;
+        sh:name "Rol in de structuur"@nl , "Role in the structure"@en ;
+        dash:propertyRole dash:KeyInfoRole ;
+        sh:order 1 ; dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path cdi:DataStructureComponent_isDefinedBy_RepresentedVariable ;
+        sh:name "Gegevenstype"@nl , "Data type"@en ;
+        sh:description """Het gegevenstype waarvan deze component de rol in het
+logisch gegevensmodel vastlegt."""@nl ;
+        sh:group gd:GroepStructuur ; sh:order 30 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath cdi:DataStructure_has_DataStructureComponent ] ;
+        sh:name "Component in"@nl , "Component of"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 60 ;
+        dash:viewer dash:LabelViewer ;
+    ] .
+
+gd:TechnischGegevensmodelFormShape a sh:NodeShape ;
+    sh:targetClass gd:TechnischGegevensmodel ;
+    rdfs:label "Formulier technisch gegevensmodel"@nl , "Technical data model form"@en ;
+    sh:property [
+        sh:path rdfs:label ;
+        dash:propertyRole dash:LabelRole ;
+        sh:order 0 ;
+    ] ;
+    sh:property [
+        sh:path dct:identifier ;
+        sh:name "TGM-code"@nl , "Technical data model code"@en ;
+        dash:propertyRole dash:KeyInfoRole ;
+        sh:order 1 ; dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath cdi:InstanceVariable_has_PhysicalSegmentLayout ] ;
+        sh:name "Gegevensvelden"@nl , "Data fields"@en ;
+        sh:group gd:GroepStructuur ; sh:order 30 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath dct:conformsTo ] ;
+        sh:name "Gebruikt door"@nl , "Used by"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 60 ;
+        dash:viewer dash:LabelViewer ;
+    ] .

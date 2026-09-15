@@ -1,0 +1,294 @@
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix vlmim:  <https://vlierdam.example/mim/> .
+@prefix glo:    <https://vlierdam.example/glo/> .
+@prefix vlierdam: <https://vlierdam.example/odrl/> .
+
+# =============================================================================
+# DE AFLEIDING: WAT VAN DE GEPUBLICEERDE OVEREENKOMST EEN MIM-BRON HEEFT,
+# EN — VEEL BELANGRIJKER — WAT NIET.
+#
+# HOE DIT BESTAND TE LEZEN. Elke tripel hieronder zegt: deze knoop uit de
+# gepubliceerde gegevensleveringsovereenkomst is AFGELEID van die knoop uit de
+# MIM-instantiegraaf. De richting volgt de aanbevolen gedaante uit de synthese
+# (§4c): het MIM-model is de BRON, de gepubliceerde stapel is het afgeleide
+# artefact. Dat is dezelfde lijn die alle vier de onderzochte
+# MIM-praktijkmodellen volgen — IMEV, IMGeluid, IMKL en IMKAD leveren elk hun
+# XSD, JSON-schema of GML uit een MIM-bronmodel, en geen van vieren publiceert
+# het model zelf als mim-graaf.
+#
+# HET LEGE DEEL IS DE DEMONSTRATIE. Sectie 3 hieronder somt op wat géén
+# afleidingsrelatie heeft. Dat is geen onaf werk en geen tijdgebrek: het is de
+# uitkomst van paragraaf 3 van de synthese, gemeten in knopen. Van de vijf
+# lagen van een gegevensleveringsovereenkomst heeft er precies één een
+# MIM-bron. De andere vier worden hieronder bij naam genoemd, met de grond uit
+# de standaard zelf erbij, zodat een lezer het verschil kan zien in plaats van
+# moeten geloven.
+#
+# `prov:wasDerivedFrom` is in dit corpus de bestaande relatie voor "hier komt
+# dit vandaan" (vlierdam-glo.ttl gebruikt hem al tussen aanbod en
+# overeenkomst); er komt voor deze demonstratie geen nieuwe term bij.
+#
+# Alles is fictief; zie README.md.
+# =============================================================================
+
+# =============================================================================
+# 1. DE STRUCTUURLAAG — HIER IS DE AFLEIDING COMPLEET
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 1a. De zeven gegevenstypen ← de zeven attribuutsoorten.
+#
+# Dit is de kern van de winst. Wat in de gepubliceerde veldlaag een
+# `gd:Gegevenstype` is met zijn naam, code en definitie achter geneste
+# DDI-CDI-knopen, is in de bron een `mim:Attribuutsoort` met platte,
+# Nederlandstalige properties. De IRI's blijven die van `velden.ttl`: het zijn
+# dezelfde velden, niet nieuwe.
+# -----------------------------------------------------------------------------
+
+vlierdam:veld-brp-burgerservicenummer
+    prov:wasDerivedFrom vlmim:attribuutsoort-burgerservicenummer .
+vlierdam:veld-brp-naam-voornamen
+    prov:wasDerivedFrom vlmim:attribuutsoort-voornamen .
+vlierdam:veld-brp-naam-geslachtsnaam
+    prov:wasDerivedFrom vlmim:attribuutsoort-geslachtsnaam .
+vlierdam:veld-brp-adressering-adresregel1
+    prov:wasDerivedFrom vlmim:attribuutsoort-adresregel1 .
+vlierdam:veld-brp-adressering-adresregel2
+    prov:wasDerivedFrom vlmim:attribuutsoort-adresregel2 .
+vlierdam:veld-brp-geboorte-datum
+    prov:wasDerivedFrom vlmim:attribuutsoort-geboortedatum .
+vlierdam:veld-brp-gemeenteVanInschrijving
+    prov:wasDerivedFrom vlmim:attribuutsoort-gemeente-van-inschrijving .
+
+# -----------------------------------------------------------------------------
+# 1b. Het logisch gegevensmodel ← het objecttype.
+#
+# De `cdi:WideDataStructure` van de gepubliceerde veldlaag beschrijft één brede
+# rij per persoon; het MIM-objecttype beschrijft diezelfde persoon als
+# getypeerde groep objecten. De COMPONENTROLLEN van de structuur
+# (`cdi:IdentifierComponent` naast zes `cdi:MeasureComponent`) hebben geen
+# eigen tegenhanger: MIM zegt hetzelfde met één metagegeven,
+# `mim:identificerend` op de attribuutsoort. Dat is winst en verlies tegelijk —
+# korter, maar de rol is geen ding meer waar iets anders naar kan wijzen.
+# -----------------------------------------------------------------------------
+
+glo:lgm-brp-laadpalen
+    prov:wasDerivedFrom vlmim:objecttype-ingeschreven-persoon .
+
+# De eenheid waarover gemeten wordt is in MIM hetzelfde ding als het
+# objecttype; DDI-CDI splitst die twee, MIM niet.
+glo:unittype-natuurlijk-persoon
+    prov:wasDerivedFrom vlmim:objecttype-ingeschreven-persoon .
+
+# -----------------------------------------------------------------------------
+# 1c. De gegevensset ← het informatiemodel.
+#
+# De `gd:Gegevensset` groepeert de zeven gegevenstypen met een eigen naam en
+# code (E82). In MIM is die groepering de package: hier het informatiemodel
+# zelf, omdat de leverset in deze casus precies één objecttype telt.
+# -----------------------------------------------------------------------------
+
+glo:gegevensset-brp-laadpalen
+    prov:wasDerivedFrom vlmim:im-brp-levering-laadpalen .
+
+# -----------------------------------------------------------------------------
+# 1d. De waardedomeinen ← de datatypen.
+#
+# `cdi:SubstantiveValueDomain` met zijn `ValueAndConceptDescription` wordt een
+# `mim:PrimitiefDatatype` met `mim:lengte`, `mim:patroon` en
+# `mim:formeelPatroon` (E87).
+# -----------------------------------------------------------------------------
+
+glo:waardedomein-bsn
+    prov:wasDerivedFrom vlmim:datatype-burgerservicenummer .
+glo:waardedomein-naamtekst
+    prov:wasDerivedFrom vlmim:datatype-naamtekst .
+glo:waardedomein-adresregel
+    prov:wasDerivedFrom vlmim:datatype-adresregel .
+glo:waardedomein-geboortedatum
+    prov:wasDerivedFrom vlmim:datatype-kalenderdatum .
+
+# -----------------------------------------------------------------------------
+# 1e. De opgesomde bereiken ← de enumeratie en de codelijst.
+#
+# LET OP DE ASYMMETRIE, want zij is de kunstgreep van E88 in één regel. Het
+# SENTINEL-waardedomein van de geboortedatum heeft géén eigen tegenhanger: in
+# MIM is de ontbrekendwaarde geen apart domein maar een tak van de
+# `mim:Keuze`, plus het metagegeven `mim:mogelijkGeenWaarde`. De codelijst
+# eronder wordt wel netjes een enumeratie.
+# -----------------------------------------------------------------------------
+
+glo:codelijst-onvolledige-datum
+    prov:wasDerivedFrom vlmim:enumeratie-onvolledige-datum .
+glo:code-datum-onbekend
+    prov:wasDerivedFrom vlmim:enumeratiewaarde-datum-onbekend .
+glo:code-dag-onbekend
+    prov:wasDerivedFrom vlmim:enumeratiewaarde-dag-onbekend .
+
+# De gemeentelijst is in MIM een CODELIJST en geen enumeratie: zij wordt buiten
+# het model beheerd en het model beschrijft haar structuur niet. Daardoor
+# hebben `glo:code-gemeente-vlierdam` en `glo:code-gemeente-elders` geen
+# tegenhanger — zij staan in het bronmodel alleen in de toelichting van de
+# codelijst. Dat is het verlies dat tegenover de winst van 1e staat.
+glo:codelijst-gemeenten
+    prov:wasDerivedFrom vlmim:codelijst-gemeenten .
+
+# -----------------------------------------------------------------------------
+# 1f. Het begrippenkader is GEEN afleiding maar een VERWIJZING.
+#
+# Beschouwingsniveau 1 (model van begrippen) valt buiten de scope van MIM. Het
+# kader blijft dus staan waar het staat, in SKOS, en het bronmodel wijst er met
+# `mim:begrip` naar. Daarom staat `glo:begrippenkader-brp-laadpalen` hieronder
+# niet met een `prov:wasDerivedFrom`: er is niets om het van af te leiden, en
+# dat is hier geen gat maar de afgesproken werkverdeling. Het MIM
+# 2.0-visiedocument wil die aansluiting (op NL-SBB) juist verstevigen.
+# -----------------------------------------------------------------------------
+
+# =============================================================================
+# 2. DE TELLING
+# =============================================================================
+
+vlmim:im-brp-levering-laadpalen
+    rdfs:comment "Achttien knopen van de gepubliceerde gegevensleveringsovereenkomst hebben een MIM-bron: zeven gegevenstypen, het logisch gegevensmodel, de eenheid, de gegevensset, vier waardedomeinen, twee opgesomde bereiken en twee codes. Alle achttien liggen in de structuur- en veldlaag boven de berichtgrens. Sectie 3 van dit bestand somt op wat er niet bij staat."@nl .
+
+# =============================================================================
+# 3. WAT GEEN AFLEIDINGSRELATIE HEEFT — EN WAAROM NIET
+#
+# Dit is de kern van de demonstratie. Hieronder staat geen enkele tripel, en
+# dat is de bedoeling: elke regel noemt een knoop die in de gepubliceerde
+# overeenkomst bestaat en in de MIM-instantiegraaf geen tegenhanger heeft.
+# De gronden zijn die van paragraaf 3 van `mim-synthese.md`; de termtellingen
+# komen uit `mim-materiaal.md` §4.2 en zijn gedaan op de volledige tekst van
+# MIM 1.2.
+#
+# -----------------------------------------------------------------------------
+# 3a. DE OVEREENKOMST ZELF (synthese §2a, E1–E7, E9, E10, E23–E26)
+#
+#   glo:glo-rvig-vlierdam-2026        de overeenkomst
+#   glo:aanbod-brp-gemeenten          het aanbod waaruit zij voortkomt
+#   glo:rol-verstrekker               de rol van RvIG in de afspraak
+#   glo:rol-ontvanger                 de rol van de gemeente in de afspraak
+#   glo:akkoord-rvig, glo:akkoord-vlierdam    de twee akkoordverklaringen
+#   glo:pif-veenstra, glo:pif-brouwer, glo:pif-said   de personen in functie
+#
+# GROND. Dit zijn INSTANTIES. MIM typeert per eigen normatieve keuze alleen
+# modellen; een object is volgens hoofdstuk 2 "geen modelelement". Het FORMULIER
+# van deze laag heeft wél een MIM-bron — zie blok B van
+# vlierdam-mim-bronmodel.ttl, met het objecttype
+# Gegevensleveringsovereenkomst, de statusenumeratie en twee relatiesoorten
+# naar partijen — maar dat formulier is niet de afspraak. Een akkoordverklaring
+# is bovendien een gebeurtenis, en paragraaf 1.5.2 sluit dat uit: "scheiding
+# proces en informatie, het proces is niet in scope van deze standaard".
+#
+# -----------------------------------------------------------------------------
+# 3b. DE NORMATIEVE LAAG (synthese §2b, E34–E42, E48–E50)
+#
+#   glo:toestemming-gebruik           de toestemming
+#   glo:verbod-doorlevering           het verbod
+#   glo:plicht-beschikbaarstelling    de plicht
+#   vlierdam:plicht-vernietiging      de vernietigingsplicht uit het beleid
+#   glo:afspraak-*                    de acht afspraken van de overeenkomst
+#   glo:doel-verstrekking-brp         het doel van de verstrekker
+#   vlierdam:doelbinding-registratie-laadpalen   de doelbinding
+#   glo:belang-verantwoording         het verwerkingsbelang
+#
+# GROND. De deontische termtelling in MIM 1.2 is nul over de hele linie:
+# verplichting nul, verbod nul, toestemming nul, doelbinding nul. Het
+# dichtstbijzijnde construct, `mim:Constraint`, is "een conditie of een
+# beperking, die voor één of meerdere modelelementen uit het informatiemodel
+# geldt" — een uitspraak over het MODEL, niet een norm die een partij bindt.
+# `mim:Keuze`, dat in dit bronmodel de datum-of-onbekend draagt, is een XOR
+# tussen modelelementen en geen keuze die iemand mag maken.
+#
+# -----------------------------------------------------------------------------
+# 3c. DE LEVERINGSLAAG (synthese §2c, E56–E71)
+#
+#   glo:gls-brp-laadpalen             de gegevensleveringsspecificatie
+#   vlierdam:brp-velden-laadpalen     de leverset als dataset-met-afspraken
+#   glo:middel-brp-antwoord           het gegevensmiddel / de distributie
+#   glo:leversetafspraak-*            bewaartermijn, toegang, beveiliging
+#   glo:middelafspraak-*              initiatie, frequentie, actualiteit, …
+#   glo:glsafspraak-*                 de zeven specificatie-afspraken
+#
+# GROND. "Dataset" komt viermaal voor in MIM 1.2 en elke keer om te zeggen dat
+# MIM daar niet voor is; "distributie" nul, "levering" nul, "frequentie" nul.
+# De spec: "Het MIM is niet bedoeld om vervolgens in termen van dit
+# informatiemodel een concrete dataset te vormen." De POPULATIEBESCHRIJVING is
+# de enige uitzondering en zij staat in het bronmodel, op `mim:populatie` van
+# het objecttype — met de kanttekening dat zij daar aan het TYPE hangt en niet
+# aan deze levering.
+#
+# -----------------------------------------------------------------------------
+# 3d. DE TECHNISCHE ONTSLUITING (synthese §2e en §3, E103–E117)
+#
+#   glo:poort-rvig-inway              de dienst / het koppelvlak
+#   vlierdam:set-rvig-inway           het beslispunt dat de levering bewaakt
+#   vlierdam:bundle-rvig-pdp1         het uitvoerend artefact
+#   vlierdam:anker-*                  de borgingsankers
+#
+# GROND. Hier is de grond het scherpst, want de extensieroute is hier
+# uitdrukkelijk DICHT: "Een metamodelextensie is expliciet niet bedoeld voor
+# aanvullende constructies die alleen spelen op het niveau van implementatie,
+# of op het niveau van afgeleide technische modellen t.b.v. specifieke
+# interfaces." Wie dit in MIM zou bouwen, bouwt het per definitie buiten MIM.
+# Termtellingen: endpoint nul, API eenmaal (in een opsomming van formaten),
+# "service" viermaal en steeds als afgeleid product.
+#
+# -----------------------------------------------------------------------------
+# 3e. HET BERICHT — DE ONDERKANT VAN DEZELFDE VELDLAAG (E92–E98)
+#
+#   glo:record-persoon                het logisch record in het antwoord
+#   glo:tgm-brp-antwoord              het technisch gegevensmodel (JSON-schema)
+#   glo:gegevensveld-*                de zeven gegevensvelden in het bericht
+#   glo:mapping-*                     de zeven mappings logisch ↔ technisch
+#   glo:variabelestructuur-brp-laadpalen   de structuur van die mappings
+#   glo:component-*                   de zeven componentrollen
+#
+# GROND. Dit is de zichtbaarste knip van de hele demonstratie, want hij loopt
+# MIDDEN DOOR ÉÉN LAAG. Beschouwingsniveau 4 valt buiten de scope van MIM:
+# "wel staat MIM een model-gedreven werkwijze voor waarbij de modellen van
+# niveau 4 gegenereerd kunnen worden vanuit niveau 2 of 3" (paragraaf 1.7). Er
+# is geen construct voor de veldlengte in een bericht, voor de encoding of voor
+# de mapping tussen logisch en fysiek; die mapping bestaat in de MIM-wereld
+# alleen impliciet, in de generator. De gepubliceerde stapel heeft hier één
+# doorlopende beschrijving en de MIM-bron houdt halverwege op.
+#
+# De componentrollen zijn een randgeval: zij verdwijnen niet omdat MIM ze niet
+# kan, maar omdat MIM ze ANDERS zegt — als `mim:identificerend` op de
+# attribuutsoort (zie 1b).
+# =============================================================================
+
+<https://vlierdam.example/mim/afleiding>
+    dct:title "Afleidingsrelaties tussen de MIM-bron en de gepubliceerde gegevensleveringsovereenkomst"@nl ,
+              "Derivation relations between the MIM source model and the published data delivery agreement"@en ;
+    dct:description "Per element van de structuurlaag een prov:wasDerivedFrom naar zijn MIM-tegenhanger; voor de overeenkomstlaag, de normatieve laag, de leveringslaag, de technische ontsluiting en het bericht staat er niets, en dat ontbreken is de demonstratie. Sectie 3 van dit bestand noemt elke ontbrekende knoop bij naam, met de grond uit MIM 1.2 erbij."@nl ,
+                    "For each element of the structural layer a prov:wasDerivedFrom to its MIM counterpart; for the agreement layer, the normative layer, the delivery layer, the technical access layer and the message there is nothing, and that absence is the demonstration. Section 3 of this file names every missing node, with the grounds from MIM 1.2."@en ;
+    dct:source <https://docs.geostandaarden.nl/mim/mim/> .
+
+# =============================================================================
+# 4. DE AANHECHTING — de GLS voldoet aan het MIM-informatiemodel
+#
+# Eén tripel, en hij doet twee dingen tegelijk.
+#
+# INHOUDELIJK: de gegevensleveringsspecificatie voldoet aan het
+# MIM-informatiemodel waaruit haar veldlaag is afgeleid — conformiteitsgrond 2
+# van MIM 1.2 §1.9 (transformeerbaarheid). Dat is een uitspraak over deze
+# casus, en daarom staat hij in dit bestand en niet in glo-mim-shapes.ttl; dat
+# is een weergavebestand.
+#
+# PRAKTISCH: hij is ook de INGANG. De documentweergave daalt af langs de rijen
+# van de formulieren, en `dct:conformsTo` is de rij "Voldoet aan" die het
+# formulier van glo-shapes.ttl al toont. Zonder deze tripel is de hele
+# MIM-graaf in de viewer onbereikbaar — nul vouwen, nul formulieren — want geen
+# van die formulieren toont `prov:wasDerivedFrom`, de relatie die sectie 2
+# hierboven legt. Eén tripel op een BESTAAND pad voegt alleen een waarde toe en
+# neemt niets weg; een tweede formulier-shape op
+# gd:Gegevensleveringsspecificatie zou het rijke formulier kunnen verdringen.
+#
+# IDEMPOTENT: staat dezelfde uitspraak ook in het bronmodel, dan is het één
+# tripel in de samengevoegde graaf en verandert er niets.
+# =============================================================================
+
+glo:gls-brp-laadpalen dct:conformsTo vlmim:im-brp-levering-laadpalen .

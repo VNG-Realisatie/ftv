@@ -1,0 +1,246 @@
+@prefix odrl:   <http://www.w3.org/ns/odrl/2/> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix dpv:    <https://w3id.org/dpv#> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix apnl:   <https://standaarden.overheid.nl/odrl-ap-nl/> .
+@prefix qb:     <http://purl.org/linked-data/cube#> .
+@prefix sh:     <http://www.w3.org/ns/shacl#> .
+@prefix brp:    <https://data.rijksoverheid.nl/brp/def#> .
+@prefix brprub: <https://data.rijksoverheid.nl/brp/rubriek/> .
+@prefix brpgrp: <https://data.rijksoverheid.nl/brp/groep/> .
+@prefix brpcat: <https://data.rijksoverheid.nl/brp/categorie/> .
+@prefix brpafn: <https://data.rijksoverheid.nl/brp/afnemer/> .
+@prefix brpaut: <https://data.rijksoverheid.nl/brp/autorisatie/> .
+@prefix oorg:   <https://identifier.overheid.nl/tooi/id/oorg/> .
+@prefix apb:    <https://data.rijksoverheid.nl/brp/ap-nl/> .
+@prefix apaanbod: <https://data.rijksoverheid.nl/brp/ap-nl/aanbod/> .
+@prefix apovk:  <https://data.rijksoverheid.nl/brp/ap-nl/overeenkomst/> .
+@prefix apper:  <https://data.rijksoverheid.nl/brp/ap-nl/permissie/> .
+@prefix apset:  <https://data.rijksoverheid.nl/brp/ap-nl/gegevensset/> .
+@prefix apcon:  <https://data.rijksoverheid.nl/brp/ap-nl/voorwaarde/> .
+@prefix apdoel: <https://data.rijksoverheid.nl/brp/ap-nl/doel/> .
+@prefix apdoc:  <https://data.rijksoverheid.nl/brp/ap-nl/besluitdocument/> .
+@prefix apvz:   <https://data.rijksoverheid.nl/brp/ap-nl/verzoek/> .
+@prefix apkan:  <https://data.rijksoverheid.nl/brp/ap-nl/kanaal/> .
+@prefix apdg:   <https://data.rijksoverheid.nl/brp/ap-nl/doelgroep/> .
+
+
+# =============================================================================
+# PROEF-TTL (A) — AANBOD IN REFINEMENT-VORM
+# Eén juridisch Offer "systematische verstrekking van gegevens uit de BRP"
+# (Wet BRP art. 3.1/3.2); het koppelvlak is GEEN actie-onderscheid maar een
+# odrl:deliveryChannel-refinement uit een codelijst.
+#
+# Handmatig geschreven proefmateriaal voor de koppelvlak-refinement-analyse
+# — GEEN productiebestand, niet gegenereerd door generator/genereer.py.
+#
+# De vier duties (apaanbod:duty-*) en de aanbodsvoorwaarde
+# apaanbod:doelgroepbeginsel zijn ONGEWIJZIGD en staan in ttl/offers.ttl; ze
+# worden hier alleen aangehaald. Valideer daarom samen met ttl/offers.ttl.
+# =============================================================================
+
+# --- groeperingsdimensies: welke dimensies ordenen de regels? -----------------
+# TWEE declaraties, met BESTAANDE W3C-termen en zonder eigen vocabulaire:
+# qb:DimensionProperty uit RDF Data Cube (W3C Rec 2014) markeert de left operand
+# waarvan de refinement-dimensie de broer-regels groepeert, en sh:order uit
+# SHACL (W3C Rec 2017) zegt in welke volgorde die dimensies NESTEN: de laagste
+# order is het buitenste niveau. Hier dus doel buiten, doelgroep daarbinnen, en
+# in elke doelgroep de regels.
+#
+# Zonder sh:order zegt de declaratie alleen DAT een dimensie ordent en kiest de
+# viewer een stabiele maar willekeurige nestvolgorde; met sh:order is de
+# leesorde die van de bron. De LEZER mag hem in de viewer omdraaien (per
+# doelgroep de doelen in plaats van per doel de doelgroepen) — dat is weergave
+# en verandert niets aan deze declaratie.
+#
+# odrl:deliveryChannel is NIET gedeclareerd: die blijft gewoon een refinement en
+# levert samen met de gegevensset de variantnamen van de bladrijen.
+#
+# PUNNING-KANTTEKENING. qb:DimensionProperty is in RDF Data Cube een subklasse
+# van rdf:Property, terwijl odrl:purpose hier een INDIVIDU is (het staat als
+# object van odrl:leftOperand). De assertie is dus punning: bewust en
+# onschadelijk — geen reasoner in deze keten leidt er iets uit af, en de
+# bedoeling van de term ("dit is de ordenende dimensie") is precies de onze.
+# Overwogen alternatieven: een EIGEN klasse in een odrlvis:-vocabulaire
+# (afgevallen: een nieuwe term verzinnen voor iets dat een W3C-Recommendation
+# al benoemt, met een namespace die nog niet resolvet) en owl:hasKey
+# (afgevallen: identiteitssemantiek, waarop een reasoner de varianten juist mag
+# SAMENVOEGEN; bovendien klasse-gebonden en zonder weergavebedoeling).
+#
+# De declaratie staat HIER, bij de data waarover ze gaat, zodat deze
+# proefbestanden zonder extra vocabulairebestand al de juiste leesorde dragen.
+# De rdfs:labels zijn de niveaunamen die een viewer boven zo'n uitklap zet.
+
+odrl:purpose a qb:DimensionProperty ;
+    sh:order 1 ;
+    rdfs:label "Doel"@nl , "Purpose"@en .
+
+apaanbod:doelgroepVanIngeschrevene a qb:DimensionProperty ;
+    sh:order 2 ;
+    rdfs:label "Doelgroep"@nl , "Data subject group"@en .
+
+odrl:deliveryChannel
+    rdfs:label "Verstrekkingskanaal"@nl , "Delivery channel"@en .
+
+
+# --- doelen (uittreksel uit het doelenregister) -------------------------------
+# De vier taken waarvoor proef-breda-refinement.ttl permissions bevat. Overgenomen
+# uit brp-ap-nl/ttl/doelenregister.ttl (gegenereerd uit de besluit-PDF's), zodat
+# de proef zelfstandig leesbaar is: zonder deze labels toont een viewer de kale
+# URI-staart als kop boven de doelgroep.
+
+apdoel:gemeentelijke-belastingen a skos:Concept , dpv:Purpose ;
+    skos:prefLabel "Gemeentelijke belastingen"@nl ;
+    rdfs:label "Gemeentelijke belastingen"@nl ;
+    dpv:hasLegalBasis <https://wetten.overheid.nl/BWBR0005416> .
+
+apdoel:huisvestingsvergunningen a skos:Concept , dpv:Purpose ;
+    skos:prefLabel "Huisvestingsvergunningen"@nl ;
+    rdfs:label "Huisvestingsvergunningen"@nl ;
+    dpv:hasLegalBasis <https://wetten.overheid.nl/BWBR0035303> .
+
+apdoel:handhaving-toezicht-en-opsporing a skos:Concept , dpv:Purpose ;
+    skos:prefLabel "Handhaving, toezicht en opsporing"@nl ;
+    rdfs:label "Handhaving, toezicht en opsporing"@nl .
+
+apdoel:burgerlijke-stand a skos:Concept , dpv:Purpose ;
+    skos:prefLabel "Burgerlijke stand"@nl ;
+    rdfs:label "Burgerlijke stand"@nl .
+
+
+# --- codelijst verstrekkingskanalen ------------------------------------------
+# Bron: Aanvullende toelichting autorisatie gemeenten, bijlage B
+# "Toelichting verstrekkingswijzen" (RvIG, juli 2024) — vier vormen; en de
+# kolomkoppen van de GABA Matrix, tabblad (2)/(3).
+
+apkan: a skos:ConceptScheme ;
+    dct:title "Verstrekkingskanalen BRP"@nl ;
+    dct:description "De wijzen waarop de systematische verstrekking uit de BRP plaatsvindt; waardenlijst voor de rechterzijde van een odrl:deliveryChannel-refinement."@nl ;
+    dct:publisher oorg:oorg10103 ;
+    dct:source <https://publicaties.rvig.nl/sites/default/files/2025-05/Aanvullende%20toelichting%20autorisatie%20gemeenten.pdf> , <https://www.rvig.nl/sites/default/files/2026-03/GABA%20Matrix.xlsx> .
+
+
+apkan:spontaan a skos:Concept ;
+    skos:prefLabel "spontane verstrekking"@nl ;
+    skos:definition "Bij een spontane verstrekking staat een afnemersindicatie op de persoonslijst en ontvangt de afnemer een bericht bij elke mutatie in de gegevens waarvoor hij is geautoriseerd (Aanvullende toelichting, bijlage B)."@nl ;
+    skos:inScheme apkan: ;
+    rdfs:seeAlso brp:spontaneVerstrekking .
+
+apkan:adhoc a skos:Concept ;
+    skos:prefLabel "ad hoc verstrekking (verstrekking op verzoek)"@nl ;
+    skos:definition "Bij een ad hoc verstrekking verzoekt de afnemer om de geautoriseerde gegevens op de persoonslijst van de ingeschrevene en ontvangt die direct: een vraag-antwoordbericht (Aanvullende toelichting, bijlage B)."@nl ;
+    skos:inScheme apkan: ;
+    rdfs:seeAlso brp:adHocVerstrekking .
+
+apkan:adhocAdres a skos:Concept ;
+    skos:prefLabel "ad hoc adresverstrekking"@nl ;
+    skos:definition "Bij een ad hoc adresverstrekking zoekt de afnemer op adres en ontvangt hij alle persoonslijsten waarop dat adres als actueel adres is opgenomen (Aanvullende toelichting, bijlage B)."@nl ;
+    skos:inScheme apkan: ;
+    rdfs:seeAlso brp:adresVraag .
+
+apkan:adhocAdresTijdelijkVerblijfadres a skos:Concept ;
+    skos:prefLabel "ad hoc adresverstrekking op tijdelijk verblijfadres"@nl ;
+    skos:definition "Een ad hoc adresvraag op een tijdelijk verblijfadres levert alle personen die bij inschrijving in de RNI dat adres als tijdelijk verblijfadres hebben opgegeven (Aanvullende toelichting, bijlage B)."@nl ;
+    skos:inScheme apkan: ;
+    rdfs:seeAlso brp:adresVraag .
+
+apkan:selectie a skos:Concept ;
+    skos:prefLabel "selectieverstrekking"@nl ;
+    skos:definition "Eenmalige of periodieke levering van alle persoonslijsten die aan de selectievoorwaarde voldoen. Komt in de GABA NIET voor als verstrekkingsvorm: de Aanvullende toelichting kent alleen de vier bovenstaande vormen, en het besluit bepaalt dat afnemersindicaties uitsluitend op verzoek worden geplaatst."@nl ;
+    skos:inScheme apkan: ;
+    rdfs:seeAlso brp:selectieGegevensVerstrekking .
+
+
+# --- doelgroepen (uittreksel; bron: Matrix tabblad (3), kolom Doelgroep) ------
+
+apdg: a skos:ConceptScheme ;
+    dct:title "Doelgroepen GABA"@nl ;
+    dct:description "De categorieen van personen waarover een gemeente per taak gegevens mag ontvangen; 68 rijen in tabblad (3) van de GABA Matrix, 69 doelgroeprijen in de Aanvullende toelichting."@nl ;
+    dct:publisher oorg:oorg10103 ;
+    dct:source <https://www.rvig.nl/sites/default/files/2026-03/GABA%20Matrix.xlsx> , <https://publicaties.rvig.nl/sites/default/files/2025-05/Aanvullende%20toelichting%20autorisatie%20gemeenten.pdf> .
+
+apdg:belastingplichtige a skos:Concept ;
+    skos:prefLabel "belastingplichtige"@nl ;
+    skos:definition "Persoon die belasting schuldig is aan de gemeente"@nl ;
+    skos:inScheme apdg: ;
+    dct:source <https://www.rvig.nl/sites/default/files/2026-03/GABA%20Matrix.xlsx> .
+
+apdg:erfgenaam-belastingplichtige a skos:Concept ;
+    skos:prefLabel "erfgenaam belastingplichtige"@nl ;
+    skos:definition "Erfgenaam overleden persoon die ten tijde van zijn overlijden belasting schuldig was aan de gemeente"@nl ;
+    skos:inScheme apdg: ;
+    dct:source <https://www.rvig.nl/sites/default/files/2026-03/GABA%20Matrix.xlsx> .
+
+apdg:aanvrager-huisvestingsvergunning a skos:Concept ;
+    skos:prefLabel "aanvrager huisvestingsvergunning/urgentieverklaring"@nl ;
+    skos:definition "De aanvrager van een huisvestingsvergunning of urgentieverklaring"@nl ;
+    skos:inScheme apdg: ;
+    dct:source <https://www.rvig.nl/sites/default/files/2026-03/GABA%20Matrix.xlsx> .
+
+apdg:houder-huisvestingsvergunning a skos:Concept ;
+    skos:prefLabel "houder huisvestingsvergunning/urgentieverklaring"@nl ;
+    skos:definition "De houder van een huisvestingsvergunning of urgentieverklaring"@nl ;
+    skos:inScheme apdg: ;
+    dct:source <https://www.rvig.nl/sites/default/files/2026-03/GABA%20Matrix.xlsx> .
+
+apdg:betrokkene-toezicht-handhaving a skos:Concept ;
+    skos:prefLabel "betrokkene bij toezicht en/of bestuursrechtelijke handhaving"@nl ;
+    skos:definition "Persoon die betrokken is bij de uitvoering van toezicht en/of bestuursrechtelijke handhaving door de gemeente"@nl ;
+    skos:inScheme apdg: ;
+    dct:source <https://www.rvig.nl/sites/default/files/2026-03/GABA%20Matrix.xlsx> .
+
+apdg:niet-ingezetene-toezicht-handhaving a skos:Concept ;
+    skos:prefLabel "niet-ingezetene betrokken bij toezicht of bestuursrechtelijke handhaving"@nl ;
+    skos:definition "Niet-ingezetene die betrokken is bij toezicht of bestuursrechtelijke handhaving door de gemeente"@nl ;
+    skos:inScheme apdg: ;
+    dct:source <https://www.rvig.nl/sites/default/files/2026-03/GABA%20Matrix.xlsx> .
+
+apdg:persoon-akte-burgerlijke-stand a skos:Concept ;
+    skos:prefLabel "persoon van wie gegevens nodig zijn voor akte, latere vermelding of verstrekking"@nl ;
+    skos:definition "De persoon wiens gegevens nodig zijn voor het opmaken van een akte, een latere vermelding of een verstrekking uit de burgerlijke stand"@nl ;
+    skos:inScheme apdg: ;
+    dct:source <https://www.rvig.nl/sites/default/files/2026-03/GABA%20Matrix.xlsx> .
+
+
+# --- het ene juridische aanbod ------------------------------------------------
+
+apb:brpDataset odrl:hasPolicy apaanbod:systematischeVerstrekking .
+
+apaanbod:systematischeVerstrekking a odrl:Offer ;
+    odrl:uid apaanbod:systematischeVerstrekking ;
+    dct:title "Systematische verstrekking van gegevens uit de basisregistratie personen"@nl ;
+    dct:description "De RvIG verstrekt een geautoriseerde afnemer systematisch gegevens uit de basisregistratie personen (artikel 3.1 en 3.2 Wet BRP). Welke gegevens dat zijn, voor welke taak, over welke categorieen van personen en langs welk kanaal, staat per afnemer in het autorisatiebesluit. Het kanaal is geen aparte bevoegdheid maar een uitvoeringsvorm van dezelfde systematische verstrekking: het autorisatiebesluit zelf noemt spontane gegevensverstrekking, gegevensverstrekking op verzoek en adresverstrekking op verzoek in een adem. Voor elke aangesloten afnemer gelden daarnaast de aansluitvoorwaarden van het BRP-stelsel (Logisch Ontwerp BRP, Wet BRP)."@nl ;
+    skos:editorialNote "Proefmodellering: dit ene Offer vervangt de zes kanaal-Offers (apaanbod:spontaan, -adhoc, -adhocplaatsing, -selectie, -selectieplaatsing, -selectieverwijderen). Het kanaal is verplaatst van de action naar een odrl:deliveryChannel-refinement met een codelijst (apkan:)."@nl ,
+        "Grondslag voor de bundeling: artikel 1.1, onder g, Wet BRP definieert de systematische verstrekking als een; het GABA-besluit zegt in paragraaf 4.2 letterlijk: \"De systematische verstrekking aan de gemeente vindt plaats door middel van spontane gegevensverstrekking, gegevensverstrekking op verzoek en adresverstrekking op verzoek.\""@nl ;
+    dct:publisher oorg:oorg10103 ;
+    dct:issued "2026-08-24"^^xsd:date ;
+    odrl:profile apnl:profiel ;
+    prov:wasDerivedFrom <https://wetten.overheid.nl/jci1.3:c:BWBR0033715&artikel=3.1> ,
+        <https://wetten.overheid.nl/jci1.3:c:BWBR0033715&artikel=3.2> ,
+        <https://wetten.overheid.nl/jci1.3:c:BWBR0033715&artikel=1.1> ;
+    odrl:assigner oorg:oorg10103 ;
+    odrl:obligation
+        apaanbod:duty-inlichtingenplicht ,
+        apaanbod:duty-aansluitvoorwaarden ,
+        apaanbod:duty-protocollering ,
+        apaanbod:duty-geheimhouding ;
+    odrl:permission [ a odrl:Permission ;
+        rdfs:comment "Aanbod-permission op datasetniveau: verstrekken langs een van de kanalen van de codelijst. Het geautoriseerde maximum per afnemer, per doel, per doelgroep en per kanaal staat in de Agreement."@nl ;
+        odrl:action [ rdf:value odrl:distribute ;
+            odrl:refinement [ a odrl:Constraint ;
+                rdfs:comment "Het aanbod staat alle kanalen van de codelijst toe; de Agreement perkt per permission in tot een."@nl ;
+                odrl:leftOperand odrl:deliveryChannel ;
+                odrl:operator odrl:isAnyOf ;
+                odrl:rightOperand apkan:spontaan , apkan:adhoc , apkan:adhocAdres ,
+                    apkan:adhocAdresTijdelijkVerblijfadres , apkan:selectie ] ] ;
+        odrl:target apb:gbav ] ;
+    odrl:permission [ a odrl:Permission ;
+        rdfs:comment "Ondersteunende handeling, geen verstrekking: het plaatsen of verwijderen van een afnemersindicatie. In het BRP-domeinprofiel valt brp:adHocPlaatsing onder odrl:use, niet onder odrl:distribute; het kanaal-refinement is hier dus niet van toepassing. De gegevens die daarop volgen lopen via apkan:spontaan."@nl ;
+        odrl:action brp:adHocPlaatsing ;
+        odrl:target apb:gbav ;
+        odrl:constraint apaanbod:doelgroepbeginsel ] .

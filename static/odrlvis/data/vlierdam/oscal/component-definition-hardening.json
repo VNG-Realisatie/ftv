@@ -1,0 +1,175 @@
+{
+  "component-definition": {
+    "uuid": "316903ab-e3b2-4f2f-9aa2-6be112a8298c",
+    "metadata": {
+      "title": "Hardeningsprofiel laadpalenketen Gemeente Vlierdam (FICTIEF)",
+      "last-modified": "2026-09-14T00:00:00Z",
+      "version": "1.0.0",
+      "oscal-version": "1.1.3",
+      "remarks": "DE NORM ALS DATA. Dit bestand is de tweede van drie lagen in het hardeningsvoorbeeld van Gemeente Vlierdam, een FICTIEVE casus. De eerste laag is de AFSPRAAK: data/vlierdam/hardening-beleid.ttl, een ODRL-beleidsset met dezelfde twee regels als hieronder, plus de uitzondering-met-bewijs die in deze OSCAL-laag geen plek heeft. De derde laag is de CHECK: de Check_Id-properties hieronder wijzen naar OpenKAT-boefjes. Die boefje-ids zijn VERZONNEN maar volgen de vorm die OpenKAT gebruikt; er draait geen OpenKAT achter dit voorbeeld. De conventieproperties Rule_Id, Rule_Description, Check_Id, Check_Description, Parameter_Id en Parameter_Value komen uit Compliance-to-Policy (C2P) van het OSCAL-Compass-project; zij binden een OSCAL-componentdefinitie aan een policy-engine of scanner. RvIG en RDW zijn echte instituten in een fictieve casus, net als OpenKAT en NIST; Gemeente Vlierdam, de laadpalenapplicatie en alle identificatoren hieronder zijn verzonnen.",
+      "roles": [
+        {
+          "id": "normsteller",
+          "title": "Normsteller",
+          "description": "De partij die de hardeningsnorm vaststelt. Bij een beveiligingspolicy is de tweede partij een normsteller en geen wederpartij; er wordt niets onderhandeld en niets aangeboden."
+        },
+        {
+          "id": "beheerder",
+          "title": "Beheerder",
+          "description": "De partij die de betrokken systemen in bedrijf heeft en de norm moet waarmaken."
+        }
+      ],
+      "parties": [
+        {
+          "uuid": "e2e76b08-9988-4504-89a7-e95a820059fa",
+          "type": "organization",
+          "name": "Gemeente Vlierdam, CISO-bureau (FICTIEF)"
+        },
+        {
+          "uuid": "e0eb2c3c-ba51-4e05-b70c-e0a4e7437ae3",
+          "type": "organization",
+          "name": "Gemeente Vlierdam, beheer laadpalenketen (FICTIEF)"
+        }
+      ],
+      "responsible-parties": [
+        {
+          "role-id": "normsteller",
+          "party-uuids": ["e2e76b08-9988-4504-89a7-e95a820059fa"]
+        },
+        {
+          "role-id": "beheerder",
+          "party-uuids": ["e0eb2c3c-ba51-4e05-b70c-e0a4e7437ae3"]
+        }
+      ]
+    },
+    "components": [
+      {
+        "uuid": "90ed7b8f-9bbf-4125-b865-abab935b8237",
+        "type": "service",
+        "title": "Laadpalenketen Vlierdam",
+        "description": "De OpenFTV-koppelvlakken waarover Gemeente Vlierdam de BRP en de BRV bevraagt, en de pods waarop haar laadpalenapplicatie draait. Eén component, bewust grof gesneden: dit voorbeeld gaat over de VORM van de binding tussen norm, check en afspraak, niet over een volledig hardeningsprofiel.",
+        "props": [
+          {
+            "name": "Rule_Id",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "vlierdam_hsts_koppelvlak",
+            "remarks": "rule_set_hsts"
+          },
+          {
+            "name": "Rule_Description",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "Elk antwoord over een OpenFTV-koppelvlak van de Vlierdam-keten draagt een Strict-Transport-Security-header, met includeSubDomains en met een max-age van ten minste een jaar.",
+            "remarks": "rule_set_hsts"
+          },
+          {
+            "name": "Check_Id",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "hsts-settings-vlierdam",
+            "remarks": "rule_set_hsts"
+          },
+          {
+            "name": "Check_Description",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "FICTIEF OpenKAT-boefje: haalt van elk koppelvlak de HTTP-antwoordheaders op; de bijbehorende bit leest Strict-Transport-Security uit en toetst max-age en includeSubDomains tegen de ingestelde waarden.",
+            "remarks": "rule_set_hsts"
+          },
+          {
+            "name": "Parameter_Id",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "hsts_max_age_minimum",
+            "remarks": "rule_set_hsts"
+          },
+          {
+            "name": "Parameter_Description",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "De minimale geldigheidsduur van de HSTS-policy, in seconden. De norm staat vast; deze drempel is per organisatie af te stellen — dat is precies het catalogus/profiel-onderscheid van OSCAL.",
+            "remarks": "rule_set_hsts"
+          },
+          {
+            "name": "Rule_Id",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "vlierdam_poort_22_pods",
+            "remarks": "rule_set_poort22"
+          },
+          {
+            "name": "Rule_Description",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "Geen pod van de laadpalenapplicatie is op TCP-poort 22 bereikbaar van buiten zijn eigen namespace.",
+            "remarks": "rule_set_poort22"
+          },
+          {
+            "name": "Check_Id",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "pod-poortblootstelling-vlierdam",
+            "remarks": "rule_set_poort22"
+          },
+          {
+            "name": "Check_Description",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "FICTIEF OpenKAT-boefje: stelt per pod vast welke TCP-poorten van buiten de namespace bereikbaar zijn; de bijbehorende bit classificeert 22 als beheerpoort en levert een bevinding van het type KAT-OPEN-SYSADMIN-PORT.",
+            "remarks": "rule_set_poort22"
+          },
+          {
+            "name": "Parameter_Id",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "beheerpoorten",
+            "remarks": "rule_set_poort22"
+          },
+          {
+            "name": "Parameter_Description",
+            "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+            "value": "De TCP-poorten die als beheerpoort tellen en dus dicht horen te staan.",
+            "remarks": "rule_set_poort22"
+          }
+        ],
+        "control-implementations": [
+          {
+            "uuid": "b13be9ee-5e71-4382-ac35-77787131d348",
+            "source": "https://vlierdam.example/oscal/profiel-hardening-vlierdam.json",
+            "description": "Het hardeningsprofiel van Gemeente Vlierdam. FICTIEF, en bewust geen aanhaling van een bestaand kader: BIO2 en de NCSC-richtlijnen voor TLS en webapplicaties bestaan vandaag als TEKST en niet als OSCAL-catalogus, dus een control-id dat ernaar wijst zou een machineleesbare band suggereren die er niet is. De inhoudelijke herkomst staat daarom in de remarks per eis.",
+            "set-parameters": [
+              {
+                "param-id": "hsts_max_age_minimum",
+                "values": ["31536000"],
+                "remarks": "Eén jaar in seconden. Dezelfde drempel staat in hardening-beleid.ttl als odrl:gteq-voorwaarde op de plicht; de ODRL-kant zegt WAT is afgesproken, deze kant hoe de check wordt afgesteld."
+              },
+              {
+                "param-id": "beheerpoorten",
+                "values": ["22"],
+                "remarks": "Alleen SSH. OpenKAT rekent in zijn eigen poortclassificatie 21, 22, 23 en 5900 tot de beheerpoorten; dit profiel beperkt de eis tot 22, omdat de andere drie in deze keten niet voorkomen."
+              }
+            ],
+            "implemented-requirements": [
+              {
+                "uuid": "28d551a9-140b-4b0e-88b0-b5825deebabf",
+                "control-id": "vlierdam-hard-transport",
+                "description": "Verkeer over de koppelvlakken van de keten wordt afgedwongen versleuteld, ook bij een volgend bezoek en op onderliggende namen.",
+                "props": [
+                  {
+                    "name": "Rule_Id",
+                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+                    "value": "vlierdam_hsts_koppelvlak"
+                  }
+                ],
+                "remarks": "Inhoudelijke herkomst: de NCSC-richtlijnen voor TLS en voor webapplicaties, met internet.nl als scanner ernaast. Die norm woont vandaag in de richtlijnentekst en in de scannercode, in twee exemplaren; deze regel is de derde plek, en de enige die als data uitwisselbaar is."
+              },
+              {
+                "uuid": "18a18e40-3177-41ff-996c-4dfff95a08d2",
+                "control-id": "vlierdam-hard-beheerpoorten",
+                "description": "Beheerpoorten zijn niet bereikbaar van buiten de omgeving waarin zij worden gebruikt.",
+                "props": [
+                  {
+                    "name": "Rule_Id",
+                    "ns": "https://oscal-compass.github.io/compliance-trestle/schemas/oscal/cd",
+                    "value": "vlierdam_poort_22_pods"
+                  }
+                ],
+                "remarks": "DE UITZONDERING STAAT HIER NIET, EN DAT IS DE VONDST. Het beheer van Vlierdam heeft één pod waarop 22 open moet blijven, met een bevestigd bewijsstuk en een einddatum. OSCAL heeft daar wel een plek voor, maar op de ASSESSMENT-laag: een POA&M-item met risico, deviation, herstelplan en dispositiestatus — dus pas nadat de scan de afwijking heeft gevonden. In de NORM-laag, waar deze regel staat, is er geen uitzonderingsobject, en een verifieerbaar bewijsstuk als drager van de goedkeuring kent OSCAL nergens. Zie vlierdam:uitzondering-poort-22 in hardening-beleid.ttl voor de ODRL-kant van diezelfde uitzondering."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

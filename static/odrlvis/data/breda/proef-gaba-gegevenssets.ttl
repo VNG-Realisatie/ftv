@@ -1,0 +1,1059 @@
+@prefix odrl:   <http://www.w3.org/ns/odrl/2/> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix apnl:   <https://standaarden.overheid.nl/odrl-ap-nl/> .
+@prefix brp:    <https://data.rijksoverheid.nl/brp/def#> .
+@prefix brprub: <https://data.rijksoverheid.nl/brp/rubriek/> .
+@prefix brpgrp: <https://data.rijksoverheid.nl/brp/groep/> .
+@prefix brpcat: <https://data.rijksoverheid.nl/brp/categorie/> .
+@prefix brpafn: <https://data.rijksoverheid.nl/brp/afnemer/> .
+@prefix brpaut: <https://data.rijksoverheid.nl/brp/autorisatie/> .
+@prefix oorg:   <https://identifier.overheid.nl/tooi/id/oorg/> .
+@prefix apb:    <https://data.rijksoverheid.nl/brp/ap-nl/> .
+@prefix apaanbod: <https://data.rijksoverheid.nl/brp/ap-nl/aanbod/> .
+@prefix apovk:  <https://data.rijksoverheid.nl/brp/ap-nl/overeenkomst/> .
+@prefix apper:  <https://data.rijksoverheid.nl/brp/ap-nl/permissie/> .
+@prefix apset:  <https://data.rijksoverheid.nl/brp/ap-nl/gegevensset/> .
+@prefix apcon:  <https://data.rijksoverheid.nl/brp/ap-nl/voorwaarde/> .
+@prefix apdoel: <https://data.rijksoverheid.nl/brp/ap-nl/doel/> .
+@prefix apdoc:  <https://data.rijksoverheid.nl/brp/ap-nl/besluitdocument/> .
+@prefix apvz:   <https://data.rijksoverheid.nl/brp/ap-nl/verzoek/> .
+@prefix apkan:  <https://data.rijksoverheid.nl/brp/ap-nl/kanaal/> .
+@prefix apdg:   <https://data.rijksoverheid.nl/brp/ap-nl/doelgroep/> .
+
+
+
+# =============================================================================
+# PROEF-TTL (B) — DE GEGEVENSSETS ALS EXTERN GEDEFINIEERDE REGISTERENTITEITEN
+#
+# De 22 genummerde gegevenssets uit het Gegevensoverzicht gemeenten / de GABA
+# Matrix, elk als EEN benoemde, herbruikbare IRI met bronverwijzing en versie —
+# in plaats van per besluit herhaalde collecties (apset:<ai>-v<n>-<kanaal>).
+#
+# Grondslag voor het hergebruik staat in het besluit zelf:
+#   art. 1, onder r: "het Gegevensoverzicht gemeenten: het overzicht dat als
+#     bijlage bij dit besluit is opgenomen en waarin alle gegevens worden
+#     weergegeven die aan de gemeente worden verstrekt";
+#   art. 1, onder s: "een gegevensset: een gegevensset die is opgenomen in het
+#     gegevensoverzicht gemeenten";
+#   toelichting par. 6: "De bijlagen met de verschillende gegevenssets behorende
+#     bij de verschillende taken zijn vervangen door het Gegevensoverzicht
+#     gemeenten."
+#
+# Versionering volgt het bestaande temporele-containerpatroon van de besluiten
+# (apovk:510149 / apovk:510149-v13): apset:gaba-set<n> is de versieloze
+# identiteit (prov:Entity), apset:gaba-set<n>-v11 de collectie zoals die luidt
+# in versie 1.1 van de Matrix (documentversie "1.1", tabblad 1).
+#
+# Handmatig proefmateriaal voor de koppelvlak-refinement-analyse.
+# =============================================================================
+
+apdoc:gegevensoverzicht-gemeenten a prov:Entity ;
+    dct:title "Gegevensoverzicht gemeenten (bijlage bij het GABA-autorisatiebesluit)"@nl ;
+    dct:description "Het overzicht waarnaar artikel 1, onder r en s, van elk gemeentelijk GABA-autorisatiebesluit verwijst en waarin de genummerde gegevenssets zijn vastgelegd. Openbaar beschikbaar als 'Matrix taken, doelgroepen en gegevenssets GABA' (xlsx) op rvig.nl, met de Aanvullende toelichting autorisatie gemeenten als begeleidend document."@nl ;
+    dct:publisher oorg:oorg10103 ;
+    dct:hasVersion apdoc:gegevensoverzicht-gemeenten-v11 .
+
+apdoc:gegevensoverzicht-gemeenten-v11 a prov:Entity ;
+    dct:title "Matrix taken, doelgroepen en gegevenssets GABA, versie 1.1"@nl ;
+    dct:identifier "1.1" ;
+    dct:modified "2026-02-25"^^xsd:date ;
+    dct:issued "2026-03-01"^^xsd:date ;
+    prov:specializationOf apdoc:gegevensoverzicht-gemeenten ;
+    dct:hasFormat <https://www.rvig.nl/sites/default/files/2026-03/GABA%20Matrix.xlsx> ;
+    rdfs:seeAlso <https://publicaties.rvig.nl/sites/default/files/2025-05/Aanvullende%20toelichting%20autorisatie%20gemeenten.pdf> ;
+    rdfs:comment "Tabblad (1) Toelichting document geeft 'Versie document 1.1'; de laatste wijzigingsdatum in de bestandseigenschappen is 2026-02-25, publicatiepad /2026-03/."@nl .
+
+
+apset:gaba-set1 a prov:Entity ;
+    dct:title "Gegevensset 1 (ad hoc)"@nl ;
+    rdfs:comment "Versieloze identiteit van de gegevensset; de versies verwijzen hierheen met prov:specializationOf."@nl ;
+    dct:hasVersion apset:gaba-set1-v11 .
+
+apset:gaba-set1-v11 a odrl:AssetCollection ;
+    dct:title "Gegevensset 1 (ad hoc) — Gegevensoverzicht gemeenten v1.1"@nl ;
+    dct:description "De 10 rubrieken van gegevensset 1 uit het Gegevensoverzicht gemeenten, tabblad (2) Gegevens per set. Deze set is voor alle gemeentelijke GABA-autorisatiebesluiten dezelfde: de besluiten verwijzen er met het nummer naar (\"een gegeven in gegevensset 1\")."@nl ;
+    skos:editorialNote "Verstrekkingsvorm zit in de setdefinitie zelf: het Gegevensoverzicht typeert set 1 als 'ad hoc'. Deze set hoort daarom bij kanaal apkan:adhoc."@nl ;
+    prov:specializationOf apset:gaba-set1 ;
+    prov:wasDerivedFrom apdoc:gegevensoverzicht-gemeenten-v11 ;
+    dct:source <https://www.rvig.nl/sites/default/files/2026-03/GABA%20Matrix.xlsx> ;
+    dct:isVersionOf apset:gaba-set1 .
+
+brprub:anummerPersoon odrl:partOf apset:gaba-set1-v11 .   # 01.01.10 A-nummer
+brprub:burgerservicenummerPersoon odrl:partOf apset:gaba-set1-v11 .   # 01.01.20 Burgerservicenummer
+brprub:voornamenPersoon odrl:partOf apset:gaba-set1-v11 .   # 01.02.10 Voornamen
+brprub:voorvoegselGeslachtsnaamPersoon odrl:partOf apset:gaba-set1-v11 .   # 01.02.30 Voorvoegsel geslachtsnaam
+brprub:geslachtsnaamPersoon odrl:partOf apset:gaba-set1-v11 .   # 01.02.40 Geslachtsnaam
+brprub:geboortedatumPersoon odrl:partOf apset:gaba-set1-v11 .   # 01.03.10 Geboortedatum
+brprub:geslachtsaanduidingPersoon odrl:partOf apset:gaba-set1-v11 .   # 01.04.10 Geslachtsaanduiding
+brprub:datumOverlijdenOverlijden odrl:partOf apset:gaba-set1-v11 .   # 06.08.10 Datum Overlijden
+brprub:indicatieGeheimInschrijving odrl:partOf apset:gaba-set1-v11 .   # 07.70.10 Indicatie geheim
+brprub:gemeenteVanInschrijvingVerblijfplaats odrl:partOf apset:gaba-set1-v11 .   # 08.09.10 Gemeente van inschrijving
+
+
+apset:gaba-set2 a prov:Entity ;
+    dct:title "Gegevensset 2 (ad hoc)"@nl ;
+    rdfs:comment "Versieloze identiteit van de gegevensset; de versies verwijzen hierheen met prov:specializationOf."@nl ;
+    dct:hasVersion apset:gaba-set2-v11 .
+
+apset:gaba-set2-v11 a odrl:AssetCollection ;
+    dct:title "Gegevensset 2 (ad hoc) — Gegevensoverzicht gemeenten v1.1"@nl ;
+    dct:description "De 10 rubrieken van gegevensset 2 uit het Gegevensoverzicht gemeenten, tabblad (2) Gegevens per set. Deze set is voor alle gemeentelijke GABA-autorisatiebesluiten dezelfde: de besluiten verwijzen er met het nummer naar (\"een gegeven in gegevensset 2\")."@nl ;
+    skos:editorialNote "Verstrekkingsvorm zit in de setdefinitie zelf: het Gegevensoverzicht typeert set 2 als 'ad hoc'. Deze set hoort daarom bij kanaal apkan:adhoc."@nl ;
+    prov:specializationOf apset:gaba-set2 ;
+    prov:wasDerivedFrom apdoc:gegevensoverzicht-gemeenten-v11 ;
+    dct:source <https://www.rvig.nl/sites/default/files/2026-03/GABA%20Matrix.xlsx> ;
+    dct:isVersionOf apset:gaba-set2 .
+
+brprub:voornamenPersoon odrl:partOf apset:gaba-set2-v11 .   # 01.02.10 Voornamen
+brprub:adellijkeTitelPredicaatPersoon odrl:partOf apset:gaba-set2-v11 .   # 01.02.20 Adellijke titel/predikaat
+brprub:voorvoegselGeslachtsnaamPersoon odrl:partOf apset:gaba-set2-v11 .   # 01.02.30 Voorvoegsel geslachtsnaam
+brprub:geslachtsnaamPersoon odrl:partOf apset:gaba-set2-v11 .   # 01.02.40 Geslachtsnaam
+brprub:geslachtsaanduidingPersoon odrl:partOf apset:gaba-set2-v11 .   # 01.04.10 Geslachtsaanduiding
+brprub:aanduidingNaamgebruikPersoon odrl:partOf apset:gaba-set2-v11 .   # 01.61.10 Aanduiding naamgebruik
+brprub:voorvoegselGeslachtsnaamPartner odrl:partOf apset:gaba-set2-v11 .   # 05.02.30 Voorvoegsel geslachtsnaam
+brprub:geslachtsnaamPartner odrl:partOf apset:gaba-set2-v11 .   # 05.02.40 Geslachtsnaam
+brprub:datumHuwelijkssluitingPartner odrl:partOf apset:gaba-set2-v11 .   # 05.06.10 Datum huwelijkssluiting/aangaan partnerschap
+brprub:datumOntbindingHuwelijkPartner odrl:partOf apset:gaba-set2-v11 .   # 05.07.10 Datum ontbinding huwelijk/partnerschap
+
+
+apset:gaba-set3 a prov:Entity ;
+    dct:title "Gegevensset 3 (ad hoc)"@nl ;
+    rdfs:comment "Versieloze identiteit van de gegevensset; de versies verwijzen hierheen met prov:specializationOf."@nl ;
+    dct:hasVersion apset:gaba-set3-v11 .
+
+apset:gaba-set3-v11 a odrl:AssetCollection ;
+    dct:title "Gegevensset 3 (ad hoc) — Gegevensoverzicht gemeenten v1.1"@nl ;
+    dct:description "De 17 rubrieken van gegevensset 3 uit het Gegevensoverzicht gemeenten, tabblad (2) Gegevens per set. Deze set is voor alle gemeentelijke GABA-autorisatiebesluiten dezelfde: de besluiten verwijzen er met het nummer naar (\"een gegeven in gegevensset 3\")."@nl ;
+    skos:editorialNote "Verstrekkingsvorm zit in de setdefinitie zelf: het Gegevensoverzicht typeert set 3 als 'ad hoc'. Deze set hoort daarom bij kanaal apkan:adhoc."@nl ;
+    prov:specializationOf apset:gaba-set3 ;
+    prov:wasDerivedFrom apdoc:gegevensoverzicht-gemeenten-v11 ;
+    dct:source <https://www.rvig.nl/sites/default/files/2026-03/GABA%20Matrix.xlsx> ;
+    dct:isVersionOf apset:gaba-set3 .
+
+brprub:functieAdresVerblijfplaats odrl:partOf apset:gaba-set3-v11 .   # 08.10.10 Functie adres
+brprub:datumAanvangAdreshoudingVerblijfplaats odrl:partOf apset:gaba-set3-v11 .   # 08.10.30 Datum aanvang adreshouding
+brprub:straatnaamVerblijfplaats odrl:partOf apset:gaba-set3-v11 .   # 08.11.10 Straatnaam
+brprub:naamOpenbareRuimteVerblijfplaats odrl:partOf apset:gaba-set3-v11 .   # 08.11.15 Naam openbare ruimte
+brprub:huisnummerVerblijfplaats odrl:partOf apset:gaba-set3-v11 .   # 08.11.20 Huisnummer
+brprub:huisletterVerblijfplaats odrl:partOf apset:gaba-set3-v11 .   # 08.11.30 Huisletter
+brprub:huisnummertoevoegingVerblijfplaats odrl:partOf apset:gaba-set3-v11 .   # 08.11.40 Huisnummertoevoeging
+brprub:aanduidingBijHuisnummerVerblijfplaats odrl:partOf apset:gaba-set3-v11 .   # 08.11.50 Aanduiding bij huisnummer
+brprub:postcodeVerblijfplaats odrl:partOf apset:gaba-set3-v11 .   # 08.11.60 Postcode
+brprub:woonplaatsnaamVerblijfplaats odrl:partOf apset:gaba-set3-v11 .   # 08.11.70 Woonplaatsnaam
+brprub:identificatiecodeVerblijfplaatsVerblijfplaats odrl:partOf apset:gaba-set3-v11 .   # 08.11.80 Identificatiecode verblijfplaats
+brprub:identificatiecodeNummeraanduidingVerblijfplaats odrl:partOf apset:gaba-set3-v11 .   # 08.11.90 Identificatiecode nummeraanduiding
+brprub:locatiebeschrijvingVerblijfplaats odrl:partOf apset:gaba-set3-v11 .   # 08.12.10 Locatiebeschrijving
+brprub:landAdresBuitenlandVerblijfplaats odrl:partOf apset:gaba-set3-v11 .   # 08.13.10 Land adres buitenland
+brprub:regel1AdresBuitenlandVerblijfplaats odrl:partOf apset:gaba-set3-v11 .   # 08.13.30 Regel 1 adres buitenland
+brprub:regel2AdresBuitenlandVerblijfplaats odrl:partOf apset:gaba-set3-v11 .   # 08.13.40 Regel 2 adres buitenland
+brprub:regel3AdresBuitenlandVerblijfplaats odrl:partOf apset:gaba-set3-v11 .   # 08.13.50 Regel 3 adres buitenland
+
+
+apset:gaba-set4 a prov:Entity ;
+    dct:title "Gegevensset 4 (ad hoc)"@nl ;
+    rdfs:comment "Versieloze identiteit van de gegevensset; de versies verwijzen hierheen met prov:specializationOf."@nl ;
+    dct:hasVersion apset:gaba-set4-v11 .
+
+apset:gaba-set4-v11 a odrl:AssetCollection ;
+    dct:title "Gegevensset 4 (ad hoc) — Gegevensoverzicht gemeenten v1.1"@nl ;
+    dct:description "De 36 rubrieken van gegevensset 4 uit het Gegevensoverzicht gemeenten, tabblad (2) Gegevens per set. Deze set is voor alle gemeentelijke GABA-autorisatiebesluiten dezelfde: de besluiten verwijzen er met het nummer naar (\"een gegeven in gegevensset 4\")."@nl ;
+    skos:editorialNote "Verstrekkingsvorm zit in de setdefinitie zelf: het Gegevensoverzicht typeert set 4 als 'ad hoc'. Deze set hoort daarom bij kanaal apkan:adhoc."@nl ;
+    prov:specializationOf apset:gaba-set4 ;
+    prov:wasDerivedFrom apdoc:gegevensoverzicht-gemeenten-v11 ;
+    dct:source <https://www.rvig.nl/sites/default/files/2026-03/GABA%20Matrix.xlsx> ;
+    dct:isVersionOf apset:gaba-set4 .
+
+brprub:gemeenteVanInschrijvingTijdelijkVerblijf odrl:partOf apset:gaba-set4-v11 .   # 16.09.10 Gemeente van inschrijving
+brprub:datumInschrijvingTijdelijkVerblijf odrl:partOf apset:gaba-set4-v11 .   # 16.09.20 Datum inschrijving in de gemeente
+brprub:straatnaamTijdelijkVerblijf odrl:partOf apset:gaba-set4-v11 .   # 16.11.10 Straatnaam
+brprub:naamOpenbareRuimteTijdelijkVerblijf odrl:partOf apset:gaba-set4-v11 .   # 16.11.15 Naam openbare ruimte
+brprub:huisnummerTijdelijkVerblijf odrl:partOf apset:gaba-set4-v11 .   # 16.11.20 Huisnummer
+brprub:huisletterTijdelijkVerblijf odrl:partOf apset:gaba-set4-v11 .   # 16.11.30 Huisletter
+brprub:huisnummertoevoegingTijdelijkVerblijf odrl:partOf apset:gaba-set4-v11 .   # 16.11.40 Huisnummertoevoeging
+brprub:aanduidingBijHuisnummerTijdelijkVerblijf odrl:partOf apset:gaba-set4-v11 .   # 16.11.50 Aanduiding bij huisnummer
+brprub:postcodeTijdelijkVerblijf odrl:partOf apset:gaba-set4-v11 .   # 16.11.60 Postcode
+brprub:woonplaatsnaamTijdelijkVerblijf odrl:partOf apset:gaba-set4-v11 .   # 16.11.70 Woonplaatsnaam
+brprub:identificatiecodeVerblijfplaatsTijdelijkVerblijf odrl:partOf apset:gaba-set4-v11 .   # 16.11.80 Identificatiecode verblijfplaats
+brprub:identificatiecodeNummeraanduidingTijdelijkVerblijf odrl:partOf apset:gaba-set4-v11 .   # 16.11.90 Identificatiecode nummeraanduiding
+brprub:einddatumGeldigheidTijdelijkVerblijf odrl:partOf apset:gaba-set4-v11 .   # 16.18.10 Einddatum geldigheid
+brprub:ingangsdatumGeldigheidTijdelijkVerblijf odrl:partOf apset:gaba-set4-v11 .   # 16.85.10 Ingangsdatum geldigheid 
+brprub:datumVanOpnemingTijdelijkVerblijf odrl:partOf apset:gaba-set4-v11 .   # 16.86.10 Datum opneming
+brprub:gemeenteVanInschrijvingTijdelijkVerblijfHist odrl:partOf apset:gaba-set4-v11 .   # 66.09.10 Gemeente van inschrijving
+brprub:datumInschrijvingTijdelijkVerblijfHist odrl:partOf apset:gaba-set4-v11 .   # 66.09.20 Datum inschrijving in de gemeente
+brprub:straatnaamTijdelijkVerblijfHist odrl:partOf apset:gaba-set4-v11 .   # 66.11.10 Straatnaam
+brprub:naamOpenbareRuimteTijdelijkVerblijfHist odrl:partOf apset:gaba-set4-v11 .   # 66.11.15 Naam openbare ruimte
+brprub:huisnummerTijdelijkVerblijfHist odrl:partOf apset:gaba-set4-v11 .   # 66.11.20 Huisnummer
+brprub:huisletterTijdelijkVerblijfHist odrl:partOf apset:gaba-set4-v11 .   # 66.11.30 Huisletter
+brprub:huisnummertoevoegingTijdelijkVerblijfHist odrl:partOf apset:gaba-set4-v11 .   # 66.11.40 Huisnummertoevoeging
+brprub:aanduidingBijHuisnummerTijdelijkVerblijfHist odrl:partOf apset:gaba-set4-v11 .   # 66.11.50 Aanduiding bij huisnummer
+brprub:postcodeTijdelijkVerblijfHist odrl:partOf apset:gaba-set4-v11 .   # 66.11.60 Postcode
+brprub:woonplaatsnaamTijdelijkVerblijfHist odrl:partOf apset:gaba-set4-v11 .   # 66.11.70 Woonplaatsnaam
+brprub:identificatiecodeVerblijfplaatsTijdelijkVerblijfHist odrl:partOf apset:gaba-set4-v11 .   # 66.11.80 Identificatiecode verblijfplaats
+brprub:identificatiecodeNummeraanduidingTijdelijkVerblijfHist odrl:partOf apset:gaba-set4-v11 .   # 66.11.90 Identificatiecode nummeraanduiding
+brprub:einddatumGeldigheidTijdelijkVerblijfHist odrl:partOf apset:gaba-set4-v11 .   # 66.18.10 Einddatum geldigheid
+brprub:ingangsdatumGeldigheidTijdelijkVerblijfHist odrl:partOf apset:gaba-set4-v11 .   # 66.85.10 Ingangsdatum geldigheid
+brprub:datumVanOpnemingTijdelijkVerblijfHist odrl:partOf apset:gaba-set4-v11 .   # 66.86.10 Datum opneming 
+brprub:telefoonnummerContactgegevens odrl:partOf apset:gaba-set4-v11 .   # 17.16.10 Telefoonnummer
+brprub:verificatieIndicatieTelefoonContactgegevens odrl:partOf apset:gaba-set4-v11 .   # 17.16.20 Verificatie-indicatie
+brprub:geldigVanafTelefoonContactgegevens odrl:partOf apset:gaba-set4-v11 .   # 17.16.30 Geldig vanaf
+brprub:emailadresContactgegevens odrl:partOf apset:gaba-set4-v11 .   # 17.17.10 Emailadres
+brprub:verificatieIndicatieEmailContactgegevens odrl:partOf apset:gaba-set4-v11 .   # 17.17.20 Verificatie-indicatie
+brprub:geldigVanafEmailContactgegevens odrl:partOf apset:gaba-set4-v11 .   # 17.17.30 Geldig vanaf
+
+
+apset:gaba-set5 a prov:Entity ;
+    dct:title "Gegevensset 5 (ad hoc)"@nl ;
+    rdfs:comment "Versieloze identiteit van de gegevensset; de versies verwijzen hierheen met prov:specializationOf."@nl ;
+    dct:hasVersion apset:gaba-set5-v11 .
+
+apset:gaba-set5-v11 a odrl:AssetCollection ;
+    dct:title "Gegevensset 5 (ad hoc) — Gegevensoverzicht gemeenten v1.1"@nl ;
+    dct:description "De 37 rubrieken van gegevensset 5 uit het Gegevensoverzicht gemeenten, tabblad (2) Gegevens per set. Deze set is voor alle gemeentelijke GABA-autorisatiebesluiten dezelfde: de besluiten verwijzen er met het nummer naar (\"een gegeven in gegevensset 5\")."@nl ;
+    skos:editorialNote "Verstrekkingsvorm zit in de setdefinitie zelf: het Gegevensoverzicht typeert set 5 als 'ad hoc'. Deze set hoort daarom bij kanaal apkan:adhoc."@nl ;
+    prov:specializationOf apset:gaba-set5 ;
+    prov:wasDerivedFrom apdoc:gegevensoverzicht-gemeenten-v11 ;
+    dct:source <https://www.rvig.nl/sites/default/files/2026-03/GABA%20Matrix.xlsx> ;
+    dct:isVersionOf apset:gaba-set5 .
+
+brprub:functieAdresVerblijfplaats odrl:partOf apset:gaba-set5-v11 .   # 08.10.10 Functie adres
+brprub:datumAanvangAdreshoudingVerblijfplaats odrl:partOf apset:gaba-set5-v11 .   # 08.10.30 Datum aanvang adreshouding
+brprub:straatnaamVerblijfplaats odrl:partOf apset:gaba-set5-v11 .   # 08.11.10 Straatnaam
+brprub:naamOpenbareRuimteVerblijfplaats odrl:partOf apset:gaba-set5-v11 .   # 08.11.15 Naam openbare ruimte
+brprub:huisnummerVerblijfplaats odrl:partOf apset:gaba-set5-v11 .   # 08.11.20 Huisnummer
+brprub:huisletterVerblijfplaats odrl:partOf apset:gaba-set5-v11 .   # 08.11.30 Huisletter
+brprub:huisnummertoevoegingVerblijfplaats odrl:partOf apset:gaba-set5-v11 .   # 08.11.40 Huisnummertoevoeging
+brprub:aanduidingBijHuisnummerVerblijfplaats odrl:partOf apset:gaba-set5-v11 .   # 08.11.50 Aanduiding bij huisnummer
+brprub:postcodeVerblijfplaats odrl:partOf apset:gaba-set5-v11 .   # 08.11.60 Postcode
+brprub:woonplaatsnaamVerblijfplaats odrl:partOf apset:gaba-set5-v11 .   # 08.11.70 Woonplaatsnaam
+brprub:identificatiecodeVerblijfplaatsVerblijfplaats odrl:partOf apset:gaba-set5-v11 .   # 08.11.80 Identificatiecode verblijfplaats
+brprub:identificatiecodeNummeraanduidingVerblijfplaats odrl:partOf apset:gaba-set5-v11 .   # 08.11.90 Identificatiecode nummeraanduiding
+brprub:locatiebeschrijvingVerblijfplaats odrl:partOf apset:gaba-set5-v11 .   # 08.12.10 Locatiebeschrijving
+brprub:landAdresBuitenlandVerblijfplaats odrl:partOf apset:gaba-set5-v11 .   # 08.13.10 Land adres buitenland
+brprub:datumAanvangAdresBuitenlandVerblijfplaats odrl:partOf apset:gaba-set5-v11 .   # 08.13.20 Datum adres buitenland
+brprub:regel1AdresBuitenlandVerblijfplaats odrl:partOf apset:gaba-set5-v11 .   # 08.13.30 Regel 1 adres buitenland
+brprub:regel2AdresBuitenlandVerblijfplaats odrl:partOf apset:gaba-set5-v11 .   # 08.13.40 Regel 2 adres buitenland
+brprub:regel3AdresBuitenlandVerblijfplaats odrl:partOf apset:gaba-set5-v11 .   # 08.13.50 Regel 3 adres buitenland
+brprub:gemeenteVanInschrijvingVerblijfplaatsHist odrl:partOf apset:gaba-set5-v11 .   # 58.09.10 Gemeente van inschrijving
+brprub:functieAdresVerblijfplaatsHist odrl:partOf apset:gaba-set5-v11 .   # 58.10.10 Functie adres
+brprub:datumAanvangAdreshoudingVerblijfplaatsHist odrl:partOf apset:gaba-set5-v11 .   # 58.10.30 Datum aanvang adreshouding
+brprub:straatnaamVerblijfplaatsHist odrl:partOf apset:gaba-set5-v11 .   # 58.11.10 Straatnaam
+brprub:naamOpenbareRuimteVerblijfplaatsHist odrl:partOf apset:gaba-set5-v11 .   # 58.11.15 Naam openbare ruimte
+brprub:huisnummerVerblijfplaatsHist odrl:partOf apset:gaba-set5-v11 .   # 58.11.20 Huisnummer
+brprub:huisletterVerblijfplaatsHist odrl:partOf apset:gaba-set5-v11 .   # 58.11.30 Huisletter
+brprub:huisnummertoevoegingVerblijfplaatsHist odrl:partOf apset:gaba-set5-v11 .   # 58.11.40 Huisnummertoevoeging
+brprub:aanduidingBijHuisnummerVerblijfplaatsHist odrl:partOf apset:gaba-set5-v11 .   # 58.11.50 Aanduiding bij huisnummer
+brprub:postcodeVerblijfplaatsHist odrl:partOf apset:gaba-set5-v11 .   # 58.11.60 Postcode
+brprub:woonplaatsnaamVerblijfplaatsHist odrl:partOf apset:gaba-set5-v11 .   # 58.11.70 Woonplaatsnaam
+brprub:identificatiecodeVerblijfplaatsVerblijfplaatsHist odrl:partOf apset:gaba-set5-v11 .   # 58.11.80 Identificatiecode verblijfplaats
+brprub:identificatiecodeNummeraanduidingVerblijfplaatsHist odrl:partOf apset:gaba-set5-v11 .   # 58.11.90 Identificatiecode nummeraanduiding
+brprub:locatiebeschrijvingVerblijfplaatsHist odrl:partOf apset:gaba-set5-v11 .   # 58.12.10 Locatiebeschrijving
+brprub:landAdresBuitenlandVerblijfplaatsHist odrl:partOf apset:gaba-set5-v11 .   # 58.13.10 Land adres buitenland
+brprub:datumAanvangAdresBuitenlandVerblijfplaatsHist odrl:partOf apset:gaba-set5-v11 .   # 58.13.20 Datum adres buitenland
+brprub:regel1AdresBuitenlandVerblijfplaatsHist odrl:partOf apset:gaba-set5-v11 .   # 58.13.30 Regel 1 adres buitenland
+brprub:regel2AdresBuitenlandVerblijfplaatsHist odrl:partOf apset:gaba-set5-v11 .   # 58.13.40 Regel 2 adres buitenland
+brprub:regel3AdresBuitenlandVerblijfplaatsHist odrl:partOf apset:gaba-set5-v11 .   # 58.13.50 Regel 3 adres buitenland
+
+
+apset:gaba-set6 a prov:Entity ;
+    dct:title "Gegevensset 6 (ad hoc)"@nl ;
+    rdfs:comment "Versieloze identiteit van de gegevensset; de versies verwijzen hierheen met prov:specializationOf."@nl ;
+    dct:hasVersion apset:gaba-set6-v11 .
+
+apset:gaba-set6-v11 a odrl:AssetCollection ;
+    dct:title "Gegevensset 6 (ad hoc) — Gegevensoverzicht gemeenten v1.1"@nl ;
+    dct:description "De 8 rubrieken van gegevensset 6 uit het Gegevensoverzicht gemeenten, tabblad (2) Gegevens per set. Deze set is voor alle gemeentelijke GABA-autorisatiebesluiten dezelfde: de besluiten verwijzen er met het nummer naar (\"een gegeven in gegevensset 6\")."@nl ;
+    skos:editorialNote "Verstrekkingsvorm zit in de setdefinitie zelf: het Gegevensoverzicht typeert set 6 als 'ad hoc'. Deze set hoort daarom bij kanaal apkan:adhoc."@nl ;
+    prov:specializationOf apset:gaba-set6 ;
+    prov:wasDerivedFrom apdoc:gegevensoverzicht-gemeenten-v11 ;
+    dct:source <https://www.rvig.nl/sites/default/files/2026-03/GABA%20Matrix.xlsx> ;
+    dct:isVersionOf apset:gaba-set6 .
+
+brprub:gemeenteVanInschrijvingVerblijfplaats odrl:partOf apset:gaba-set6-v11 .   # 08.09.10 Gemeente van inschrijving
+brprub:datumInschrijvingVerblijfplaats odrl:partOf apset:gaba-set6-v11 .   # 08.09.20 Datum inschrijving in de gemeente
+brprub:datumAanvangAdresBuitenlandVerblijfplaats odrl:partOf apset:gaba-set6-v11 .   # 08.13.20 Datum adres buitenland
+brprub:datumVestigingInNederlandVerblijfplaats odrl:partOf apset:gaba-set6-v11 .   # 08.14.20 Datum vestiging in Nederland
+brprub:gemeenteVanInschrijvingVerblijfplaatsHist odrl:partOf apset:gaba-set6-v11 .   # 58.09.10 Gemeente van inschrijving
+brprub:datumInschrijvingVerblijfplaatsHist odrl:partOf apset:gaba-set6-v11 .   # 58.09.20 Datum inschrijving in de gemeente
+brprub:datumAanvangAdresBuitenlandVerblijfplaatsHist odrl:partOf apset:gaba-set6-v11 .   # 58.13.20 Datum adres buitenland
+brprub:datumVestigingInNederlandVerblijfplaatsHist odrl:partOf apset:gaba-set6-v11 .   # 58.14.20 Datum vestiging in Nederland
+
+
+apset:gaba-set7 a prov:Entity ;
+    dct:title "Gegevensset 7 (ad hoc)"@nl ;
+    rdfs:comment "Versieloze identiteit van de gegevensset; de versies verwijzen hierheen met prov:specializationOf."@nl ;
+    dct:hasVersion apset:gaba-set7-v11 .
+
+apset:gaba-set7-v11 a odrl:AssetCollection ;
+    dct:title "Gegevensset 7 (ad hoc) — Gegevensoverzicht gemeenten v1.1"@nl ;
+    dct:description "De 7 rubrieken van gegevensset 7 uit het Gegevensoverzicht gemeenten, tabblad (2) Gegevens per set. Deze set is voor alle gemeentelijke GABA-autorisatiebesluiten dezelfde: de besluiten verwijzen er met het nummer naar (\"een gegeven in gegevensset 7\")."@nl ;
+    skos:editorialNote "Verstrekkingsvorm zit in de setdefinitie zelf: het Gegevensoverzicht typeert set 7 als 'ad hoc'. Deze set hoort daarom bij kanaal apkan:adhoc."@nl ;
+    prov:specializationOf apset:gaba-set7 ;
+    prov:wasDerivedFrom apdoc:gegevensoverzicht-gemeenten-v11 ;
+    dct:source <https://www.rvig.nl/sites/default/files/2026-03/GABA%20Matrix.xlsx> ;
+    dct:isVersionOf apset:gaba-set7 .
+
+brprub:anummerPersoonHist odrl:partOf apset:gaba-set7-v11 .   # 51.01.10 A-nummer
+brprub:burgerservicenummerPersoonHist odrl:partOf apset:gaba-set7-v11 .   # 51.01.20 Burgerservicenummer
+brprub:voornamenPersoonHist odrl:partOf apset:gaba-set7-v11 .   # 51.02.10 Voornamen
+brprub:adellijkeTitelPredicaatPersoonHist odrl:partOf apset:gaba-set7-v11 .   # 51.02.20 Adellijke titel/predikaat
+brprub:voorvoegselGeslachtsnaamPersoonHist odrl:partOf apset:gaba-set7-v11 .   # 51.02.30 Voorvoegsel geslachtsnaam
+brprub:geslachtsnaamPersoonHist odrl:partOf apset:gaba-set7-v11 .   # 51.02.40 Geslachtsnaam
+brprub:aanduidingNaamgebruikPersoonHist odrl:partOf apset:gaba-set7-v11 .   # 51.61.10 Aanduiding naamgebruik
+
+
+apset:gaba-set8 a prov:Entity ;
+    dct:title "Gegevensset 8 (ad hoc)"@nl ;
+    rdfs:comment "Versieloze identiteit van de gegevensset; de versies verwijzen hierheen met prov:specializationOf."@nl ;
+    dct:hasVersion apset:gaba-set8-v11 .
+
+apset:gaba-set8-v11 a odrl:AssetCollection ;
+    dct:title "Gegevensset 8 (ad hoc) — Gegevensoverzicht gemeenten v1.1"@nl ;
+    dct:description "De 12 rubrieken van gegevensset 8 uit het Gegevensoverzicht gemeenten, tabblad (2) Gegevens per set. Deze set is voor alle gemeentelijke GABA-autorisatiebesluiten dezelfde: de besluiten verwijzen er met het nummer naar (\"een gegeven in gegevensset 8\")."@nl ;
+    skos:editorialNote "Verstrekkingsvorm zit in de setdefinitie zelf: het Gegevensoverzicht typeert set 8 als 'ad hoc'. Deze set hoort daarom bij kanaal apkan:adhoc."@nl ;
+    prov:specializationOf apset:gaba-set8 ;
+    prov:wasDerivedFrom apdoc:gegevensoverzicht-gemeenten-v11 ;
+    dct:source <https://www.rvig.nl/sites/default/files/2026-03/GABA%20Matrix.xlsx> ;
+    dct:isVersionOf apset:gaba-set8 .
+
+brprub:nationaliteitNationaliteit odrl:partOf apset:gaba-set8-v11 .   # 04.05.10 Nationaliteit
+brprub:aanduidingBijzonderNederlanderschapNationaliteit odrl:partOf apset:gaba-set8-v11 .   # 04.65.10 Aanduiding bijzonder Nederlanderschap
+brprub:aanduidingVerblijfstitelVerblijfstitel odrl:partOf apset:gaba-set8-v11 .   # 10.39.10 Aanduiding Verblijfstitel
+brprub:datumEindeVerblijfstitelVerblijfstitel odrl:partOf apset:gaba-set8-v11 .   # 10.39.20 Datum einde Verblijfstitel
+brprub:ingangsdatumVerblijfstitelVerblijfstitel odrl:partOf apset:gaba-set8-v11 .   # 10.39.30 Ingangsdatum Verblijfstitel
+brprub:ingangsdatumGeldigheidVerblijfstitel odrl:partOf apset:gaba-set8-v11 .   # 10.85.10 Ingangsdatum geldigheid
+brprub:datumVanOpnemingVerblijfstitel odrl:partOf apset:gaba-set8-v11 .   # 10.86.10 Datum opneming
+brprub:aanduidingVerblijfstitelVerblijfstitelHist odrl:partOf apset:gaba-set8-v11 .   # 60.39.10 Aanduiding Verblijfstitel
+brprub:datumEindeVerblijfstitelVerblijfstitelHist odrl:partOf apset:gaba-set8-v11 .   # 60.39.20 Datum einde Verblijfstitel
+brprub:ingangsdatumVerblijfstitelVerblijfstitelHist odrl:partOf apset:gaba-set8-v11 .   # 60.39.30 Ingangsdatum Verblijfstitel
+brprub:ingangsdatumGeldigheidVerblijfstitelHist odrl:partOf apset:gaba-set8-v11 .   # 60.85.10 Ingangsdatum geldigheid
+brprub:datumVanOpnemingVerblijfstitelHist odrl:partOf apset:gaba-set8-v11 .   # 60.86.10 Datum opneming
+
+
+apset:gaba-set9 a prov:Entity ;
+    dct:title "Gegevensset 9 (ad hoc)"@nl ;
+    rdfs:comment "Versieloze identiteit van de gegevensset; de versies verwijzen hierheen met prov:specializationOf."@nl ;
+    dct:hasVersion apset:gaba-set9-v11 .
+
+apset:gaba-set9-v11 a odrl:AssetCollection ;
+    dct:title "Gegevensset 9 (ad hoc) — Gegevensoverzicht gemeenten v1.1"@nl ;
+    dct:description "De 2 rubrieken van gegevensset 9 uit het Gegevensoverzicht gemeenten, tabblad (2) Gegevens per set. Deze set is voor alle gemeentelijke GABA-autorisatiebesluiten dezelfde: de besluiten verwijzen er met het nummer naar (\"een gegeven in gegevensset 9\")."@nl ;
+    skos:editorialNote "Verstrekkingsvorm zit in de setdefinitie zelf: het Gegevensoverzicht typeert set 9 als 'ad hoc'. Deze set hoort daarom bij kanaal apkan:adhoc."@nl ;
+    prov:specializationOf apset:gaba-set9 ;
+    prov:wasDerivedFrom apdoc:gegevensoverzicht-gemeenten-v11 ;
+    dct:source <https://www.rvig.nl/sites/default/files/2026-03/GABA%20Matrix.xlsx> ;
+    dct:isVersionOf apset:gaba-set9 .
+
+brprub:geboorteplaatsPersoon odrl:partOf apset:gaba-set9-v11 .   # 01.03.20 Geboorteplaats
+brprub:geboortelandPersoon odrl:partOf apset:gaba-set9-v11 .   # 01.03.30 Geboorteland
+
+
+apset:gaba-set10 a prov:Entity ;
+    dct:title "Gegevensset 10 (ad hoc)"@nl ;
+    rdfs:comment "Versieloze identiteit van de gegevensset; de versies verwijzen hierheen met prov:specializationOf."@nl ;
+    dct:hasVersion apset:gaba-set10-v11 .
+
+apset:gaba-set10-v11 a odrl:AssetCollection ;
+    dct:title "Gegevensset 10 (ad hoc) — Gegevensoverzicht gemeenten v1.1"@nl ;
+    dct:description "De 4 rubrieken van gegevensset 10 uit het Gegevensoverzicht gemeenten, tabblad (2) Gegevens per set. Deze set is voor alle gemeentelijke GABA-autorisatiebesluiten dezelfde: de besluiten verwijzen er met het nummer naar (\"een gegeven in gegevensset 10\")."@nl ;
+    skos:editorialNote "Verstrekkingsvorm zit in de setdefinitie zelf: het Gegevensoverzicht typeert set 10 als 'ad hoc'. Deze set hoort daarom bij kanaal apkan:adhoc."@nl ;
+    prov:specializationOf apset:gaba-set10 ;
+    prov:wasDerivedFrom apdoc:gegevensoverzicht-gemeenten-v11 ;
+    dct:source <https://www.rvig.nl/sites/default/files/2026-03/GABA%20Matrix.xlsx> ;
+    dct:isVersionOf apset:gaba-set10 .
+
+brprub:geboorteplaatsOuder1 odrl:partOf apset:gaba-set10-v11 .   # 02.03.20 Geboorteplaats
+brprub:geboortelandOuder1 odrl:partOf apset:gaba-set10-v11 .   # 02.03.30 Geboorteland
+brprub:geboorteplaatsOuder2 odrl:partOf apset:gaba-set10-v11 .   # 03.03.20 Geboorteplaats
+brprub:geboortelandOuder2 odrl:partOf apset:gaba-set10-v11 .   # 03.03.30 Geboorteland
+
+
+apset:gaba-set11 a prov:Entity ;
+    dct:title "Gegevensset 11 (ad hoc)"@nl ;
+    rdfs:comment "Versieloze identiteit van de gegevensset; de versies verwijzen hierheen met prov:specializationOf."@nl ;
+    dct:hasVersion apset:gaba-set11-v11 .
+
+apset:gaba-set11-v11 a odrl:AssetCollection ;
+    dct:title "Gegevensset 11 (ad hoc) — Gegevensoverzicht gemeenten v1.1"@nl ;
+    dct:description "De 1 rubrieken van gegevensset 11 uit het Gegevensoverzicht gemeenten, tabblad (2) Gegevens per set. Deze set is voor alle gemeentelijke GABA-autorisatiebesluiten dezelfde: de besluiten verwijzen er met het nummer naar (\"een gegeven in gegevensset 11\")."@nl ;
+    skos:editorialNote "Verstrekkingsvorm zit in de setdefinitie zelf: het Gegevensoverzicht typeert set 11 als 'ad hoc'. Deze set hoort daarom bij kanaal apkan:adhoc."@nl ;
+    prov:specializationOf apset:gaba-set11 ;
+    prov:wasDerivedFrom apdoc:gegevensoverzicht-gemeenten-v11 ;
+    dct:source <https://www.rvig.nl/sites/default/files/2026-03/GABA%20Matrix.xlsx> ;
+    dct:isVersionOf apset:gaba-set11 .
+
+brprub:indicatieCurateleregisterGezagsverhouding odrl:partOf apset:gaba-set11-v11 .   # 11.33.10 Indicatie curateleregister
+
+
+apset:gaba-set12 a prov:Entity ;
+    dct:title "Gegevensset 12 (ad hoc)"@nl ;
+    rdfs:comment "Versieloze identiteit van de gegevensset; de versies verwijzen hierheen met prov:specializationOf."@nl ;
+    dct:hasVersion apset:gaba-set12-v11 .
+
+apset:gaba-set12-v11 a odrl:AssetCollection ;
+    dct:title "Gegevensset 12 (ad hoc) — Gegevensoverzicht gemeenten v1.1"@nl ;
+    dct:description "De 1 rubrieken van gegevensset 12 uit het Gegevensoverzicht gemeenten, tabblad (2) Gegevens per set. Deze set is voor alle gemeentelijke GABA-autorisatiebesluiten dezelfde: de besluiten verwijzen er met het nummer naar (\"een gegeven in gegevensset 12\")."@nl ;
+    skos:editorialNote "Verstrekkingsvorm zit in de setdefinitie zelf: het Gegevensoverzicht typeert set 12 als 'ad hoc'. Deze set hoort daarom bij kanaal apkan:adhoc."@nl ;
+    prov:specializationOf apset:gaba-set12 ;
+    prov:wasDerivedFrom apdoc:gegevensoverzicht-gemeenten-v11 ;
+    dct:source <https://www.rvig.nl/sites/default/files/2026-03/GABA%20Matrix.xlsx> ;
+    dct:isVersionOf apset:gaba-set12 .
+
+brprub:indicatieGezagMinderjarigeGezagsverhouding odrl:partOf apset:gaba-set12-v11 .   # 11.32.10 Indicatie gezag minderjarige
+
+
+apset:gaba-set13 a prov:Entity ;
+    dct:title "Gegevensset 13 (ad hoc)"@nl ;
+    rdfs:comment "Versieloze identiteit van de gegevensset; de versies verwijzen hierheen met prov:specializationOf."@nl ;
+    dct:hasVersion apset:gaba-set13-v11 .
+
+apset:gaba-set13-v11 a odrl:AssetCollection ;
+    dct:title "Gegevensset 13 (ad hoc) — Gegevensoverzicht gemeenten v1.1"@nl ;
+    dct:description "De 12 rubrieken van gegevensset 13 uit het Gegevensoverzicht gemeenten, tabblad (2) Gegevens per set. Deze set is voor alle gemeentelijke GABA-autorisatiebesluiten dezelfde: de besluiten verwijzen er met het nummer naar (\"een gegeven in gegevensset 13\")."@nl ;
+    skos:editorialNote "Verstrekkingsvorm zit in de setdefinitie zelf: het Gegevensoverzicht typeert set 13 als 'ad hoc'. Deze set hoort daarom bij kanaal apkan:adhoc."@nl ;
+    prov:specializationOf apset:gaba-set13 ;
+    prov:wasDerivedFrom apdoc:gegevensoverzicht-gemeenten-v11 ;
+    dct:source <https://www.rvig.nl/sites/default/files/2026-03/GABA%20Matrix.xlsx> ;
+    dct:isVersionOf apset:gaba-set13 .
+
+brprub:anummerOuder1 odrl:partOf apset:gaba-set13-v11 .   # 02.01.10 A-nummer
+brprub:burgerservicenummerOuder1 odrl:partOf apset:gaba-set13-v11 .   # 02.01.20 Burgerservicenummer
+brprub:voornamenOuder1 odrl:partOf apset:gaba-set13-v11 .   # 02.02.10 Voornamen
+brprub:voorvoegselGeslachtsnaamOuder1 odrl:partOf apset:gaba-set13-v11 .   # 02.02.30 Voorvoegsel geslachtsnaam
+brprub:geslachtsnaamOuder1 odrl:partOf apset:gaba-set13-v11 .   # 02.02.40 Geslachtsnaam
+brprub:geboortedatumOuder1 odrl:partOf apset:gaba-set13-v11 .   # 02.03.10 Geboortedatum
+brprub:anummerOuder2 odrl:partOf apset:gaba-set13-v11 .   # 03.01.10 A-nummer
+brprub:burgerservicenummerOuder2 odrl:partOf apset:gaba-set13-v11 .   # 03.01.20 Burgerservicenummer
+brprub:voornamenOuder2 odrl:partOf apset:gaba-set13-v11 .   # 03.02.10 Voornamen
+brprub:voorvoegselGeslachtsnaamOuder2 odrl:partOf apset:gaba-set13-v11 .   # 03.02.30 Voorvoegsel geslachtsnaam
+brprub:geslachtsnaamOuder2 odrl:partOf apset:gaba-set13-v11 .   # 03.02.40 Geslachtsnaam
+brprub:geboortedatumOuder2 odrl:partOf apset:gaba-set13-v11 .   # 03.03.10 Geboortedatum
+
+
+apset:gaba-set14 a prov:Entity ;
+    dct:title "Gegevensset 14 (ad hoc)"@nl ;
+    rdfs:comment "Versieloze identiteit van de gegevensset; de versies verwijzen hierheen met prov:specializationOf."@nl ;
+    dct:hasVersion apset:gaba-set14-v11 .
+
+apset:gaba-set14-v11 a odrl:AssetCollection ;
+    dct:title "Gegevensset 14 (ad hoc) — Gegevensoverzicht gemeenten v1.1"@nl ;
+    dct:description "De 8 rubrieken van gegevensset 14 uit het Gegevensoverzicht gemeenten, tabblad (2) Gegevens per set. Deze set is voor alle gemeentelijke GABA-autorisatiebesluiten dezelfde: de besluiten verwijzen er met het nummer naar (\"een gegeven in gegevensset 14\")."@nl ;
+    skos:editorialNote "Verstrekkingsvorm zit in de setdefinitie zelf: het Gegevensoverzicht typeert set 14 als 'ad hoc'. Deze set hoort daarom bij kanaal apkan:adhoc."@nl ;
+    prov:specializationOf apset:gaba-set14 ;
+    prov:wasDerivedFrom apdoc:gegevensoverzicht-gemeenten-v11 ;
+    dct:source <https://www.rvig.nl/sites/default/files/2026-03/GABA%20Matrix.xlsx> ;
+    dct:isVersionOf apset:gaba-set14 .
+
+brprub:anummerPartner odrl:partOf apset:gaba-set14-v11 .   # 05.01.10 A-nummer
+brprub:burgerservicenummerPartner odrl:partOf apset:gaba-set14-v11 .   # 05.01.20 Burgerservicenummer
+brprub:voornamenPartner odrl:partOf apset:gaba-set14-v11 .   # 05.02.10 Voornamen
+brprub:voorvoegselGeslachtsnaamPartner odrl:partOf apset:gaba-set14-v11 .   # 05.02.30 Voorvoegsel geslachtsnaam
+brprub:geslachtsnaamPartner odrl:partOf apset:gaba-set14-v11 .   # 05.02.40 Geslachtsnaam
+brprub:geboortedatumPartner odrl:partOf apset:gaba-set14-v11 .   # 05.03.10 Geboortedatum
+brprub:datumHuwelijkssluitingPartner odrl:partOf apset:gaba-set14-v11 .   # 05.06.10 Datum huwelijkssluiting/aangaan partnerschap
+brprub:datumOntbindingHuwelijkPartner odrl:partOf apset:gaba-set14-v11 .   # 05.07.10 Datum ontbinding huwelijk/partnerschap
+
+
+apset:gaba-set15 a prov:Entity ;
+    dct:title "Gegevensset 15 (ad hoc)"@nl ;
+    rdfs:comment "Versieloze identiteit van de gegevensset; de versies verwijzen hierheen met prov:specializationOf."@nl ;
+    dct:hasVersion apset:gaba-set15-v11 .
+
+apset:gaba-set15-v11 a odrl:AssetCollection ;
+    dct:title "Gegevensset 15 (ad hoc) — Gegevensoverzicht gemeenten v1.1"@nl ;
+    dct:description "De 6 rubrieken van gegevensset 15 uit het Gegevensoverzicht gemeenten, tabblad (2) Gegevens per set. Deze set is voor alle gemeentelijke GABA-autorisatiebesluiten dezelfde: de besluiten verwijzen er met het nummer naar (\"een gegeven in gegevensset 15\")."@nl ;
+    skos:editorialNote "Verstrekkingsvorm zit in de setdefinitie zelf: het Gegevensoverzicht typeert set 15 als 'ad hoc'. Deze set hoort daarom bij kanaal apkan:adhoc."@nl ;
+    prov:specializationOf apset:gaba-set15 ;
+    prov:wasDerivedFrom apdoc:gegevensoverzicht-gemeenten-v11 ;
+    dct:source <https://www.rvig.nl/sites/default/files/2026-03/GABA%20Matrix.xlsx> ;
+    dct:isVersionOf apset:gaba-set15 .
+
+brprub:anummerKind odrl:partOf apset:gaba-set15-v11 .   # 09.01.10 A-nummer
+brprub:burgerservicenummerKind odrl:partOf apset:gaba-set15-v11 .   # 09.01.20 Burgerservicenummer
+brprub:voornamenKind odrl:partOf apset:gaba-set15-v11 .   # 09.02.10 Voornamen
+brprub:voorvoegselGeslachtsnaamKind odrl:partOf apset:gaba-set15-v11 .   # 09.02.30 Voorvoegsel geslachtsnaam
+brprub:geslachtsnaamKind odrl:partOf apset:gaba-set15-v11 .   # 09.02.40 Geslachtsnaam
+brprub:geboortedatumKind odrl:partOf apset:gaba-set15-v11 .   # 09.03.10 Geboortedatum
+
+
+apset:gaba-set16 a prov:Entity ;
+    dct:title "Gegevensset 16 (ad hoc)"@nl ;
+    rdfs:comment "Versieloze identiteit van de gegevensset; de versies verwijzen hierheen met prov:specializationOf."@nl ;
+    dct:hasVersion apset:gaba-set16-v11 .
+
+apset:gaba-set16-v11 a odrl:AssetCollection ;
+    dct:title "Gegevensset 16 (ad hoc) — Gegevensoverzicht gemeenten v1.1"@nl ;
+    dct:description "De 2 rubrieken van gegevensset 16 uit het Gegevensoverzicht gemeenten, tabblad (2) Gegevens per set. Deze set is voor alle gemeentelijke GABA-autorisatiebesluiten dezelfde: de besluiten verwijzen er met het nummer naar (\"een gegeven in gegevensset 16\")."@nl ;
+    skos:editorialNote "Verstrekkingsvorm zit in de setdefinitie zelf: het Gegevensoverzicht typeert set 16 als 'ad hoc'. Deze set hoort daarom bij kanaal apkan:adhoc."@nl ;
+    prov:specializationOf apset:gaba-set16 ;
+    prov:wasDerivedFrom apdoc:gegevensoverzicht-gemeenten-v11 ;
+    dct:source <https://www.rvig.nl/sites/default/files/2026-03/GABA%20Matrix.xlsx> ;
+    dct:isVersionOf apset:gaba-set16 .
+
+brprub:aanduidingUitgeslotenKiesrechtKiesrecht odrl:partOf apset:gaba-set16-v11 .   # 13.38.10 Aanduiding uitgesloten kiesrecht
+brprub:einddatumUitsluitingKiesrechtKiesrecht odrl:partOf apset:gaba-set16-v11 .   # 13.38.20 Einddatum uitsluiting kiesrecht
+
+
+apset:gaba-set17 a prov:Entity ;
+    dct:title "Gegevensset 17 (ad hoc)"@nl ;
+    rdfs:comment "Versieloze identiteit van de gegevensset; de versies verwijzen hierheen met prov:specializationOf."@nl ;
+    dct:hasVersion apset:gaba-set17-v11 .
+
+apset:gaba-set17-v11 a odrl:AssetCollection ;
+    dct:title "Gegevensset 17 (ad hoc) — Gegevensoverzicht gemeenten v1.1"@nl ;
+    dct:description "De 3 rubrieken van gegevensset 17 uit het Gegevensoverzicht gemeenten, tabblad (2) Gegevens per set. Deze set is voor alle gemeentelijke GABA-autorisatiebesluiten dezelfde: de besluiten verwijzen er met het nummer naar (\"een gegeven in gegevensset 17\")."@nl ;
+    skos:editorialNote "Verstrekkingsvorm zit in de setdefinitie zelf: het Gegevensoverzicht typeert set 17 als 'ad hoc'. Deze set hoort daarom bij kanaal apkan:adhoc."@nl ;
+    prov:specializationOf apset:gaba-set17 ;
+    prov:wasDerivedFrom apdoc:gegevensoverzicht-gemeenten-v11 ;
+    dct:source <https://www.rvig.nl/sites/default/files/2026-03/GABA%20Matrix.xlsx> ;
+    dct:isVersionOf apset:gaba-set17 .
+
+brprub:adellijkeTitelPredicaatPartner odrl:partOf apset:gaba-set17-v11 .   # 05.02.20 Adellijke titel/predikaat
+brprub:datumOntbindingHuwelijkPartner odrl:partOf apset:gaba-set17-v11 .   # 05.07.10 Datum ontbinding huwelijk/partnerschap
+brprub:datumHuwelijkssluitingPartnerHist odrl:partOf apset:gaba-set17-v11 .   # 55.06.10 Datum huwelijkssluiting/aangaan partnerschap
+
+
+apset:gaba-set18 a prov:Entity ;
+    dct:title "Gegevensset 18 (ad hoc)"@nl ;
+    rdfs:comment "Versieloze identiteit van de gegevensset; de versies verwijzen hierheen met prov:specializationOf."@nl ;
+    dct:hasVersion apset:gaba-set18-v11 .
+
+apset:gaba-set18-v11 a odrl:AssetCollection ;
+    dct:title "Gegevensset 18 (ad hoc) — Gegevensoverzicht gemeenten v1.1"@nl ;
+    dct:description "De 252 rubrieken van gegevensset 18 uit het Gegevensoverzicht gemeenten, tabblad (2) Gegevens per set. Deze set is voor alle gemeentelijke GABA-autorisatiebesluiten dezelfde: de besluiten verwijzen er met het nummer naar (\"een gegeven in gegevensset 18\")."@nl ;
+    skos:editorialNote "Verstrekkingsvorm zit in de setdefinitie zelf: het Gegevensoverzicht typeert set 18 als 'ad hoc'. Deze set hoort daarom bij kanaal apkan:adhoc."@nl ;
+    prov:specializationOf apset:gaba-set18 ;
+    prov:wasDerivedFrom apdoc:gegevensoverzicht-gemeenten-v11 ;
+    dct:source <https://www.rvig.nl/sites/default/files/2026-03/GABA%20Matrix.xlsx> ;
+    dct:isVersionOf apset:gaba-set18 .
+
+brprub:anummerPersoon odrl:partOf apset:gaba-set18-v11 .   # 01.01.10 A-nummer
+brprub:burgerservicenummerPersoon odrl:partOf apset:gaba-set18-v11 .   # 01.01.20 Burgerservicenummer
+brprub:voornamenPersoon odrl:partOf apset:gaba-set18-v11 .   # 01.02.10 Voornamen
+brprub:adellijkeTitelPredicaatPersoon odrl:partOf apset:gaba-set18-v11 .   # 01.02.20 Adellijke titel/predikaat
+brprub:voorvoegselGeslachtsnaamPersoon odrl:partOf apset:gaba-set18-v11 .   # 01.02.30 Voorvoegsel geslachtsnaam
+brprub:geslachtsnaamPersoon odrl:partOf apset:gaba-set18-v11 .   # 01.02.40 Geslachtsnaam
+brprub:geboortedatumPersoon odrl:partOf apset:gaba-set18-v11 .   # 01.03.10 Geboortedatum
+brprub:geboorteplaatsPersoon odrl:partOf apset:gaba-set18-v11 .   # 01.03.20 Geboorteplaats
+brprub:geboortelandPersoon odrl:partOf apset:gaba-set18-v11 .   # 01.03.30 Geboorteland
+brprub:geslachtsaanduidingPersoon odrl:partOf apset:gaba-set18-v11 .   # 01.04.10 Geslachtsaanduiding
+brprub:aanduidingNaamgebruikPersoon odrl:partOf apset:gaba-set18-v11 .   # 01.61.10 Aanduiding naamgebruik
+brprub:registergemeenteAktePersoon odrl:partOf apset:gaba-set18-v11 .   # 01.81.10 Registergemeente akte
+brprub:aktenummerPersoon odrl:partOf apset:gaba-set18-v11 .   # 01.81.20 Aktenummer
+brprub:gemeenteDocumentPersoon odrl:partOf apset:gaba-set18-v11 .   # 01.82.10 Gemeente ontlening
+brprub:datumDocumentPersoon odrl:partOf apset:gaba-set18-v11 .   # 01.82.20 Datum ontlening
+brprub:beschrijvingDocumentPersoon odrl:partOf apset:gaba-set18-v11 .   # 01.82.30 Beschrijving document
+brprub:ingangsdatumGeldigheidPersoon odrl:partOf apset:gaba-set18-v11 .   # 01.85.10 Ingangsdatum geldigheid
+brprub:datumVanOpnemingPersoon odrl:partOf apset:gaba-set18-v11 .   # 01.86.10 Datum opneming
+brprub:anummerPersoonHist odrl:partOf apset:gaba-set18-v11 .   # 51.01.10 A-nummer
+brprub:burgerservicenummerPersoonHist odrl:partOf apset:gaba-set18-v11 .   # 51.01.20 Burgerservicenummer
+brprub:voornamenPersoonHist odrl:partOf apset:gaba-set18-v11 .   # 51.02.10 Voornamen
+brprub:adellijkeTitelPredicaatPersoonHist odrl:partOf apset:gaba-set18-v11 .   # 51.02.20 Adellijke titel/predikaat
+brprub:voorvoegselGeslachtsnaamPersoonHist odrl:partOf apset:gaba-set18-v11 .   # 51.02.30 Voorvoegsel geslachtsnaam
+brprub:geslachtsnaamPersoonHist odrl:partOf apset:gaba-set18-v11 .   # 51.02.40 Geslachtsnaam
+brprub:geslachtsaanduidingPersoonHist odrl:partOf apset:gaba-set18-v11 .   # 51.04.10 Geslachtsaanduiding
+brprub:registergemeenteAktePersoonHist odrl:partOf apset:gaba-set18-v11 .   # 51.81.10 Registergemeente akte
+brprub:aktenummerPersoonHist odrl:partOf apset:gaba-set18-v11 .   # 51.81.20 Aktenummer
+brprub:gemeenteDocumentPersoonHist odrl:partOf apset:gaba-set18-v11 .   # 51.82.10 Gemeente ontlening
+brprub:datumDocumentPersoonHist odrl:partOf apset:gaba-set18-v11 .   # 51.82.20 Datum ontlening
+brprub:beschrijvingDocumentPersoonHist odrl:partOf apset:gaba-set18-v11 .   # 51.82.30 Beschrijving document
+brprub:ingangsdatumGeldigheidPersoonHist odrl:partOf apset:gaba-set18-v11 .   # 51.85.10 Ingangsdatum geldigheid
+brprub:datumVanOpnemingPersoonHist odrl:partOf apset:gaba-set18-v11 .   # 51.86.10 Datum opneming
+brprub:anummerOuder1 odrl:partOf apset:gaba-set18-v11 .   # 02.01.10 A-nummer
+brprub:burgerservicenummerOuder1 odrl:partOf apset:gaba-set18-v11 .   # 02.01.20 Burgerservicenummer
+brprub:voornamenOuder1 odrl:partOf apset:gaba-set18-v11 .   # 02.02.10 Voornamen
+brprub:adellijkeTitelPredicaatOuder1 odrl:partOf apset:gaba-set18-v11 .   # 02.02.20 Adellijke titel/predikaat
+brprub:voorvoegselGeslachtsnaamOuder1 odrl:partOf apset:gaba-set18-v11 .   # 02.02.30 Voorvoegsel geslachtsnaam
+brprub:geslachtsnaamOuder1 odrl:partOf apset:gaba-set18-v11 .   # 02.02.40 Geslachtsnaam
+brprub:geboortedatumOuder1 odrl:partOf apset:gaba-set18-v11 .   # 02.03.10 Geboortedatum
+brprub:geboorteplaatsOuder1 odrl:partOf apset:gaba-set18-v11 .   # 02.03.20 Geboorteplaats
+brprub:geboortelandOuder1 odrl:partOf apset:gaba-set18-v11 .   # 02.03.30 Geboorteland
+brprub:geslachtsaanduidingOuder1 odrl:partOf apset:gaba-set18-v11 .   # 02.04.10 Geslachtsaanduiding
+brprub:datumIngangFamilierechtelijkeBetrekkingOuder1 odrl:partOf apset:gaba-set18-v11 .   # 02.62.10 Datum ingang familierechtelijke betrekking
+brprub:registergemeenteAkteOuder1 odrl:partOf apset:gaba-set18-v11 .   # 02.81.10 Registergemeente akte
+brprub:aktenummerOuder1 odrl:partOf apset:gaba-set18-v11 .   # 02.81.20 Aktenummer
+brprub:gemeenteDocumentOuder1 odrl:partOf apset:gaba-set18-v11 .   # 02.82.10 Gemeente ontlening
+brprub:datumDocumentOuder1 odrl:partOf apset:gaba-set18-v11 .   # 02.82.20 Datum ontlening
+brprub:beschrijvingDocumentOuder1 odrl:partOf apset:gaba-set18-v11 .   # 02.82.30 Beschrijving document
+brprub:ingangsdatumGeldigheidOuder1 odrl:partOf apset:gaba-set18-v11 .   # 02.85.10 Ingangsdatum geldigheid
+brprub:datumVanOpnemingOuder1 odrl:partOf apset:gaba-set18-v11 .   # 02.86.10 Datum opneming
+brprub:anummerOuder1Hist odrl:partOf apset:gaba-set18-v11 .   # 52.01.10 A-nummer
+brprub:burgerservicenummerOuder1Hist odrl:partOf apset:gaba-set18-v11 .   # 52.01.20 Burgerservicenummer
+brprub:voornamenOuder1Hist odrl:partOf apset:gaba-set18-v11 .   # 52.02.10 Voornamen
+brprub:adellijkeTitelPredicaatOuder1Hist odrl:partOf apset:gaba-set18-v11 .   # 52.02.20 Adellijke titel/predikaat
+brprub:voorvoegselGeslachtsnaamOuder1Hist odrl:partOf apset:gaba-set18-v11 .   # 52.02.30 Voorvoegsel geslachtsnaam
+brprub:geslachtsnaamOuder1Hist odrl:partOf apset:gaba-set18-v11 .   # 52.02.40 Geslachtsnaam
+brprub:geboortedatumOuder1Hist odrl:partOf apset:gaba-set18-v11 .   # 52.03.10 Geboortedatum
+brprub:geboorteplaatsOuder1Hist odrl:partOf apset:gaba-set18-v11 .   # 52.03.20 Geboorteplaats
+brprub:geboortelandOuder1Hist odrl:partOf apset:gaba-set18-v11 .   # 52.03.30 Geboorteland
+brprub:geslachtsaanduidingOuder1Hist odrl:partOf apset:gaba-set18-v11 .   # 52.04.10 Geslachtsaanduiding
+brprub:datumIngangFamilierechtelijkeBetrekkingOuder1Hist odrl:partOf apset:gaba-set18-v11 .   # 52.62.10 Datum ingang familierechtelijke betrekking
+brprub:registergemeenteAkteOuder1Hist odrl:partOf apset:gaba-set18-v11 .   # 52.81.10 Registergemeente akte
+brprub:aktenummerOuder1Hist odrl:partOf apset:gaba-set18-v11 .   # 52.81.20 Aktenummer
+brprub:gemeenteDocumentOuder1Hist odrl:partOf apset:gaba-set18-v11 .   # 52.82.10 Gemeente ontlening
+brprub:datumDocumentOuder1Hist odrl:partOf apset:gaba-set18-v11 .   # 52.82.20 Datum ontlening
+brprub:beschrijvingDocumentOuder1Hist odrl:partOf apset:gaba-set18-v11 .   # 52.82.30 Beschrijving document
+brprub:ingangsdatumGeldigheidOuder1Hist odrl:partOf apset:gaba-set18-v11 .   # 52.85.10 Ingangsdatum geldigheid
+brprub:datumVanOpnemingOuder1Hist odrl:partOf apset:gaba-set18-v11 .   # 52.86.10 Datum opneming
+brprub:anummerOuder2 odrl:partOf apset:gaba-set18-v11 .   # 03.01.10 A-nummer
+brprub:burgerservicenummerOuder2 odrl:partOf apset:gaba-set18-v11 .   # 03.01.20 Burgerservicenummer
+brprub:voornamenOuder2 odrl:partOf apset:gaba-set18-v11 .   # 03.02.10 Voornamen
+brprub:adellijkeTitelPredicaatOuder2 odrl:partOf apset:gaba-set18-v11 .   # 03.02.20 Adellijke titel/predikaat
+brprub:voorvoegselGeslachtsnaamOuder2 odrl:partOf apset:gaba-set18-v11 .   # 03.02.30 Voorvoegsel geslachtsnaam
+brprub:geslachtsnaamOuder2 odrl:partOf apset:gaba-set18-v11 .   # 03.02.40 Geslachtsnaam
+brprub:geboortedatumOuder2 odrl:partOf apset:gaba-set18-v11 .   # 03.03.10 Geboortedatum
+brprub:geboorteplaatsOuder2 odrl:partOf apset:gaba-set18-v11 .   # 03.03.20 Geboorteplaats
+brprub:geboortelandOuder2 odrl:partOf apset:gaba-set18-v11 .   # 03.03.30 Geboorteland
+brprub:geslachtsaanduidingOuder2 odrl:partOf apset:gaba-set18-v11 .   # 03.04.10 Geslachtsaanduiding
+brprub:datumIngangFamilierechtelijkeBetrekkingOuder2 odrl:partOf apset:gaba-set18-v11 .   # 03.62.10 Datum ingang familierechtelijke betrekking
+brprub:registergemeenteAkteOuder2 odrl:partOf apset:gaba-set18-v11 .   # 03.81.10 Registergemeente akte
+brprub:aktenummerOuder2 odrl:partOf apset:gaba-set18-v11 .   # 03.81.20 Aktenummer
+brprub:gemeenteDocumentOuder2 odrl:partOf apset:gaba-set18-v11 .   # 03.82.10 Gemeente ontlening
+brprub:datumDocumentOuder2 odrl:partOf apset:gaba-set18-v11 .   # 03.82.20 Datum ontlening
+brprub:beschrijvingDocumentOuder2 odrl:partOf apset:gaba-set18-v11 .   # 03.82.30 Beschrijving document
+brprub:ingangsdatumGeldigheidOuder2 odrl:partOf apset:gaba-set18-v11 .   # 03.85.10 Ingangsdatum geldigheid
+brprub:datumVanOpnemingOuder2 odrl:partOf apset:gaba-set18-v11 .   # 03.86.10 Datum opneming
+brprub:anummerOuder2Hist odrl:partOf apset:gaba-set18-v11 .   # 53.01.10 A-nummer
+brprub:burgerservicenummerOuder2Hist odrl:partOf apset:gaba-set18-v11 .   # 53.01.20 Burgerservicenummer
+brprub:voornamenOuder2Hist odrl:partOf apset:gaba-set18-v11 .   # 53.02.10 Voornamen
+brprub:adellijkeTitelPredicaatOuder2Hist odrl:partOf apset:gaba-set18-v11 .   # 53.02.20 Adellijke titel/predikaat
+brprub:voorvoegselGeslachtsnaamOuder2Hist odrl:partOf apset:gaba-set18-v11 .   # 53.02.30 Voorvoegsel geslachtsnaam
+brprub:geslachtsnaamOuder2Hist odrl:partOf apset:gaba-set18-v11 .   # 53.02.40 Geslachtsnaam
+brprub:geboortedatumOuder2Hist odrl:partOf apset:gaba-set18-v11 .   # 53.03.10 Geboortedatum
+brprub:geboorteplaatsOuder2Hist odrl:partOf apset:gaba-set18-v11 .   # 53.03.20 Geboorteplaats
+brprub:geboortelandOuder2Hist odrl:partOf apset:gaba-set18-v11 .   # 53.03.30 Geboorteland
+brprub:geslachtsaanduidingOuder2Hist odrl:partOf apset:gaba-set18-v11 .   # 53.04.10 Geslachtsaanduiding
+brprub:datumIngangFamilierechtelijkeBetrekkingOuder2Hist odrl:partOf apset:gaba-set18-v11 .   # 53.62.10 Datum ingang familierechtelijke betrekking
+brprub:registergemeenteAkteOuder2Hist odrl:partOf apset:gaba-set18-v11 .   # 53.81.10 Registergemeente akte
+brprub:aktenummerOuder2Hist odrl:partOf apset:gaba-set18-v11 .   # 53.81.20 Aktenummer
+brprub:gemeenteDocumentOuder2Hist odrl:partOf apset:gaba-set18-v11 .   # 53.82.10 Gemeente ontlening
+brprub:datumDocumentOuder2Hist odrl:partOf apset:gaba-set18-v11 .   # 53.82.20 Datum ontlening
+brprub:beschrijvingDocumentOuder2Hist odrl:partOf apset:gaba-set18-v11 .   # 53.82.30 Beschrijving document
+brprub:ingangsdatumGeldigheidOuder2Hist odrl:partOf apset:gaba-set18-v11 .   # 53.85.10 Ingangsdatum geldigheid
+brprub:datumVanOpnemingOuder2Hist odrl:partOf apset:gaba-set18-v11 .   # 53.86.10 Datum opneming
+brprub:nationaliteitNationaliteit odrl:partOf apset:gaba-set18-v11 .   # 04.05.10 Nationaliteit
+brprub:redenOpnameNationaliteitNationaliteit odrl:partOf apset:gaba-set18-v11 .   # 04.63.10 Reden opname nationaliteit
+brprub:redenBeeindigingNationaliteitNationaliteit odrl:partOf apset:gaba-set18-v11 .   # 04.64.10 Reden beëindiging nationaliteit
+brprub:aanduidingBijzonderNederlanderschapNationaliteit odrl:partOf apset:gaba-set18-v11 .   # 04.65.10 Aanduiding bijzonder Nederlanderschap
+brprub:gemeenteDocumentNationaliteit odrl:partOf apset:gaba-set18-v11 .   # 04.82.10 Gemeente ontlening
+brprub:datumDocumentNationaliteit odrl:partOf apset:gaba-set18-v11 .   # 04.82.20 Datum ontlening
+brprub:beschrijvingDocumentNationaliteit odrl:partOf apset:gaba-set18-v11 .   # 04.82.30 Beschrijving document
+brprub:ingangsdatumGeldigheidNationaliteit odrl:partOf apset:gaba-set18-v11 .   # 04.85.10 Ingangsdatum geldigheid
+brprub:datumVanOpnemingNationaliteit odrl:partOf apset:gaba-set18-v11 .   # 04.86.10 Datum opneming
+brprub:nationaliteitNationaliteitHist odrl:partOf apset:gaba-set18-v11 .   # 54.05.10 Nationaliteit
+brprub:redenOpnameNationaliteitNationaliteitHist odrl:partOf apset:gaba-set18-v11 .   # 54.63.10 Reden opname nationaliteit
+brprub:redenBeeindigingNationaliteitNationaliteitHist odrl:partOf apset:gaba-set18-v11 .   # 54.64.10 Reden beëindiging nationaliteit
+brprub:aanduidingBijzonderNederlanderschapNationaliteitHist odrl:partOf apset:gaba-set18-v11 .   # 54.65.10 Aanduiding bijzonder Nederlanderschap
+brprub:gemeenteDocumentNationaliteitHist odrl:partOf apset:gaba-set18-v11 .   # 54.82.10 Gemeente ontlening
+brprub:datumDocumentNationaliteitHist odrl:partOf apset:gaba-set18-v11 .   # 54.82.20 Datum ontlening
+brprub:beschrijvingDocumentNationaliteitHist odrl:partOf apset:gaba-set18-v11 .   # 54.82.30 Beschrijving document
+brprub:ingangsdatumGeldigheidNationaliteitHist odrl:partOf apset:gaba-set18-v11 .   # 54.85.10 Ingangsdatum geldigheid
+brprub:datumVanOpnemingNationaliteitHist odrl:partOf apset:gaba-set18-v11 .   # 54.86.10 Datum opneming
+brprub:anummerPartner odrl:partOf apset:gaba-set18-v11 .   # 05.01.10 A-nummer
+brprub:burgerservicenummerPartner odrl:partOf apset:gaba-set18-v11 .   # 05.01.20 Burgerservicenummer
+brprub:voornamenPartner odrl:partOf apset:gaba-set18-v11 .   # 05.02.10 Voornamen
+brprub:adellijkeTitelPredicaatPartner odrl:partOf apset:gaba-set18-v11 .   # 05.02.20 Adellijke titel/predikaat
+brprub:voorvoegselGeslachtsnaamPartner odrl:partOf apset:gaba-set18-v11 .   # 05.02.30 Voorvoegsel geslachtsnaam
+brprub:geslachtsnaamPartner odrl:partOf apset:gaba-set18-v11 .   # 05.02.40 Geslachtsnaam
+brprub:geboortedatumPartner odrl:partOf apset:gaba-set18-v11 .   # 05.03.10 Geboortedatum
+brprub:geboorteplaatsPartner odrl:partOf apset:gaba-set18-v11 .   # 05.03.20 Geboorteplaats
+brprub:geboortelandPartner odrl:partOf apset:gaba-set18-v11 .   # 05.03.30 Geboorteland
+brprub:geslachtsaanduidingPartner odrl:partOf apset:gaba-set18-v11 .   # 05.04.10 Geslachtsaanduiding
+brprub:datumHuwelijkssluitingPartner odrl:partOf apset:gaba-set18-v11 .   # 05.06.10 Datum huwelijkssluiting/aangaan partnerschap
+brprub:plaatsHuwelijkssluitingPartner odrl:partOf apset:gaba-set18-v11 .   # 05.06.20 Plaats huwelijkssluiting/aangaan partnerschap
+brprub:landHuwelijkssluitingPartner odrl:partOf apset:gaba-set18-v11 .   # 05.06.30 Land huwelijkssluiting/aangaan partnerschap
+brprub:datumOntbindingHuwelijkPartner odrl:partOf apset:gaba-set18-v11 .   # 05.07.10 Datum ontbinding huwelijk/partnerschap
+brprub:plaatsOntbindingHuwelijkPartner odrl:partOf apset:gaba-set18-v11 .   # 05.07.20 Plaats ontbinding huwelijk/partnerschap
+brprub:landOntbindingHuwelijkPartner odrl:partOf apset:gaba-set18-v11 .   # 05.07.30 Land ontbinding huwelijk/partnerschap
+brprub:redenOntbindingHuwelijkPartner odrl:partOf apset:gaba-set18-v11 .   # 05.07.40 Reden ontbinding huwelijk/partnerschap
+brprub:soortVerbintenisPartner odrl:partOf apset:gaba-set18-v11 .   # 05.15.10 Soort verbintenis
+brprub:registergemeenteAktePartner odrl:partOf apset:gaba-set18-v11 .   # 05.81.10 Registergemeente akte
+brprub:aktenummerPartner odrl:partOf apset:gaba-set18-v11 .   # 05.81.20 Aktenummer
+brprub:gemeenteDocumentPartner odrl:partOf apset:gaba-set18-v11 .   # 05.82.10 Gemeente ontlening
+brprub:datumDocumentPartner odrl:partOf apset:gaba-set18-v11 .   # 05.82.20 Datum ontlening
+brprub:beschrijvingDocumentPartner odrl:partOf apset:gaba-set18-v11 .   # 05.82.30 Beschrijving document
+brprub:ingangsdatumGeldigheidPartner odrl:partOf apset:gaba-set18-v11 .   # 05.85.10 Ingangsdatum geldigheid
+brprub:datumVanOpnemingPartner odrl:partOf apset:gaba-set18-v11 .   # 05.86.10 Datum opneming
+brprub:anummerPartnerHist odrl:partOf apset:gaba-set18-v11 .   # 55.01.10 A-nummer
+brprub:burgerservicenummerPartnerHist odrl:partOf apset:gaba-set18-v11 .   # 55.01.20 Burgerservicenummer
+brprub:voornamenPartnerHist odrl:partOf apset:gaba-set18-v11 .   # 55.02.10 Voornamen
+brprub:adellijkeTitelPredicaatPartnerHist odrl:partOf apset:gaba-set18-v11 .   # 55.02.20 Adellijke titel/predikaat
+brprub:voorvoegselGeslachtsnaamPartnerHist odrl:partOf apset:gaba-set18-v11 .   # 55.02.30 Voorvoegsel geslachtsnaam
+brprub:geslachtsnaamPartnerHist odrl:partOf apset:gaba-set18-v11 .   # 55.02.40 Geslachtsnaam
+brprub:geslachtsaanduidingPartnerHist odrl:partOf apset:gaba-set18-v11 .   # 55.04.10 Geslachtsaanduiding
+brprub:datumHuwelijkssluitingPartnerHist odrl:partOf apset:gaba-set18-v11 .   # 55.06.10 Datum huwelijkssluiting/aangaan partnerschap
+brprub:plaatsHuwelijkssluitingPartnerHist odrl:partOf apset:gaba-set18-v11 .   # 55.06.20 Plaats huwelijkssluiting/aangaan partnerschap
+brprub:landHuwelijkssluitingPartnerHist odrl:partOf apset:gaba-set18-v11 .   # 55.06.30 Land huwelijkssluiting/aangaan partnerschap
+brprub:datumOntbindingHuwelijkPartnerHist odrl:partOf apset:gaba-set18-v11 .   # 55.07.10 Datum ontbinding huwelijk/partnerschap
+brprub:plaatsOntbindingHuwelijkPartnerHist odrl:partOf apset:gaba-set18-v11 .   # 55.07.20 Plaats ontbinding huwelijk/partnerschap
+brprub:landOntbindingHuwelijkPartnerHist odrl:partOf apset:gaba-set18-v11 .   # 55.07.30 Land ontbinding huwelijk/partnerschap
+brprub:redenOntbindingHuwelijkPartnerHist odrl:partOf apset:gaba-set18-v11 .   # 55.07.40 Reden ontbinding huwelijk/partnerschap
+brprub:soortVerbintenisPartnerHist odrl:partOf apset:gaba-set18-v11 .   # 55.15.10 Soort verbintenis
+brprub:registergemeenteAktePartnerHist odrl:partOf apset:gaba-set18-v11 .   # 55.81.10 Registergemeente akte
+brprub:aktenummerPartnerHist odrl:partOf apset:gaba-set18-v11 .   # 55.81.20 Aktenummer
+brprub:gemeenteDocumentPartnerHist odrl:partOf apset:gaba-set18-v11 .   # 55.82.10 Gemeente ontlening
+brprub:datumDocumentPartnerHist odrl:partOf apset:gaba-set18-v11 .   # 55.82.20 Datum ontlening
+brprub:beschrijvingDocumentPartnerHist odrl:partOf apset:gaba-set18-v11 .   # 55.82.30 Beschrijving document
+brprub:ingangsdatumGeldigheidPartnerHist odrl:partOf apset:gaba-set18-v11 .   # 55.85.10 Ingangsdatum geldigheid
+brprub:datumVanOpnemingPartnerHist odrl:partOf apset:gaba-set18-v11 .   # 55.86.10 Datum opneming
+brprub:datumOverlijdenOverlijden odrl:partOf apset:gaba-set18-v11 .   # 06.08.10 Datum Overlijden
+brprub:datumEersteInschrijvingBRPInschrijving odrl:partOf apset:gaba-set18-v11 .   # 07.68.10 Datum eerste inschrijving GBA
+brprub:gemeenteWaarDePKZichBevindtInschrijving odrl:partOf apset:gaba-set18-v11 .   # 07.69.10 Gemeente waar de PK zich bevindt
+brprub:indicatieGeheimInschrijving odrl:partOf apset:gaba-set18-v11 .   # 07.70.10 Indicatie geheim
+brprub:pkGegevensMeegeconverteerdInschrijving odrl:partOf apset:gaba-set18-v11 .   # 07.87.10 PK-gegevens volledig meegeconverteerd
+brprub:gemeenteVanInschrijvingVerblijfplaats odrl:partOf apset:gaba-set18-v11 .   # 08.09.10 Gemeente van inschrijving
+brprub:datumInschrijvingVerblijfplaats odrl:partOf apset:gaba-set18-v11 .   # 08.09.20 Datum inschrijving in de gemeente
+brprub:functieAdresVerblijfplaats odrl:partOf apset:gaba-set18-v11 .   # 08.10.10 Functie adres
+brprub:datumAanvangAdreshoudingVerblijfplaats odrl:partOf apset:gaba-set18-v11 .   # 08.10.30 Datum aanvang adreshouding
+brprub:straatnaamVerblijfplaats odrl:partOf apset:gaba-set18-v11 .   # 08.11.10 Straatnaam
+brprub:naamOpenbareRuimteVerblijfplaats odrl:partOf apset:gaba-set18-v11 .   # 08.11.15 Naam openbare ruimte
+brprub:huisnummerVerblijfplaats odrl:partOf apset:gaba-set18-v11 .   # 08.11.20 Huisnummer
+brprub:huisletterVerblijfplaats odrl:partOf apset:gaba-set18-v11 .   # 08.11.30 Huisletter
+brprub:huisnummertoevoegingVerblijfplaats odrl:partOf apset:gaba-set18-v11 .   # 08.11.40 Huisnummertoevoeging
+brprub:aanduidingBijHuisnummerVerblijfplaats odrl:partOf apset:gaba-set18-v11 .   # 08.11.50 Aanduiding bij huisnummer
+brprub:postcodeVerblijfplaats odrl:partOf apset:gaba-set18-v11 .   # 08.11.60 Postcode
+brprub:woonplaatsnaamVerblijfplaats odrl:partOf apset:gaba-set18-v11 .   # 08.11.70 Woonplaatsnaam
+brprub:identificatiecodeVerblijfplaatsVerblijfplaats odrl:partOf apset:gaba-set18-v11 .   # 08.11.80 Identificatiecode verblijfplaats
+brprub:identificatiecodeNummeraanduidingVerblijfplaats odrl:partOf apset:gaba-set18-v11 .   # 08.11.90 Identificatiecode nummeraanduiding
+brprub:locatiebeschrijvingVerblijfplaats odrl:partOf apset:gaba-set18-v11 .   # 08.12.10 Locatiebeschrijving
+brprub:landAdresBuitenlandVerblijfplaats odrl:partOf apset:gaba-set18-v11 .   # 08.13.10 Land adres buitenland
+brprub:regel1AdresBuitenlandVerblijfplaats odrl:partOf apset:gaba-set18-v11 .   # 08.13.30 Regel 1 adres buitenland
+brprub:regel2AdresBuitenlandVerblijfplaats odrl:partOf apset:gaba-set18-v11 .   # 08.13.40 Regel 2 adres buitenland
+brprub:regel3AdresBuitenlandVerblijfplaats odrl:partOf apset:gaba-set18-v11 .   # 08.13.50 Regel 3 adres buitenland
+brprub:datumVestigingInNederlandVerblijfplaats odrl:partOf apset:gaba-set18-v11 .   # 08.14.20 Datum vestiging in Nederland
+brprub:gemeenteVanInschrijvingVerblijfplaatsHist odrl:partOf apset:gaba-set18-v11 .   # 58.09.10 Gemeente van inschrijving
+brprub:datumInschrijvingVerblijfplaatsHist odrl:partOf apset:gaba-set18-v11 .   # 58.09.20 Datum inschrijving in de gemeente
+brprub:functieAdresVerblijfplaatsHist odrl:partOf apset:gaba-set18-v11 .   # 58.10.10 Functie adres
+brprub:datumAanvangAdreshoudingVerblijfplaatsHist odrl:partOf apset:gaba-set18-v11 .   # 58.10.30 Datum aanvang adreshouding
+brprub:straatnaamVerblijfplaatsHist odrl:partOf apset:gaba-set18-v11 .   # 58.11.10 Straatnaam
+brprub:naamOpenbareRuimteVerblijfplaatsHist odrl:partOf apset:gaba-set18-v11 .   # 58.11.15 Naam openbare ruimte
+brprub:huisnummerVerblijfplaatsHist odrl:partOf apset:gaba-set18-v11 .   # 58.11.20 Huisnummer
+brprub:huisletterVerblijfplaatsHist odrl:partOf apset:gaba-set18-v11 .   # 58.11.30 Huisletter
+brprub:huisnummertoevoegingVerblijfplaatsHist odrl:partOf apset:gaba-set18-v11 .   # 58.11.40 Huisnummertoevoeging
+brprub:aanduidingBijHuisnummerVerblijfplaatsHist odrl:partOf apset:gaba-set18-v11 .   # 58.11.50 Aanduiding bij huisnummer
+brprub:postcodeVerblijfplaatsHist odrl:partOf apset:gaba-set18-v11 .   # 58.11.60 Postcode
+brprub:woonplaatsnaamVerblijfplaatsHist odrl:partOf apset:gaba-set18-v11 .   # 58.11.70 Woonplaatsnaam
+brprub:identificatiecodeVerblijfplaatsVerblijfplaatsHist odrl:partOf apset:gaba-set18-v11 .   # 58.11.80 Identificatiecode verblijfplaats
+brprub:identificatiecodeNummeraanduidingVerblijfplaatsHist odrl:partOf apset:gaba-set18-v11 .   # 58.11.90 Identificatiecode nummeraanduiding
+brprub:locatiebeschrijvingVerblijfplaatsHist odrl:partOf apset:gaba-set18-v11 .   # 58.12.10 Locatiebeschrijving
+brprub:datumVestigingInNederlandVerblijfplaatsHist odrl:partOf apset:gaba-set18-v11 .   # 58.14.20 Datum vestiging in Nederland
+brprub:anummerKind odrl:partOf apset:gaba-set18-v11 .   # 09.01.10 A-nummer
+brprub:burgerservicenummerKind odrl:partOf apset:gaba-set18-v11 .   # 09.01.20 Burgerservicenummer
+brprub:voornamenKind odrl:partOf apset:gaba-set18-v11 .   # 09.02.10 Voornamen
+brprub:adellijkeTitelPredicaatKind odrl:partOf apset:gaba-set18-v11 .   # 09.02.20 Adellijke titel/predikaat
+brprub:voorvoegselGeslachtsnaamKind odrl:partOf apset:gaba-set18-v11 .   # 09.02.30 Voorvoegsel geslachtsnaam
+brprub:geslachtsnaamKind odrl:partOf apset:gaba-set18-v11 .   # 09.02.40 Geslachtsnaam
+brprub:geboortedatumKind odrl:partOf apset:gaba-set18-v11 .   # 09.03.10 Geboortedatum
+brprub:geboorteplaatsKind odrl:partOf apset:gaba-set18-v11 .   # 09.03.20 Geboorteplaats
+brprub:geboortelandKind odrl:partOf apset:gaba-set18-v11 .   # 09.03.30 Geboorteland
+brprub:registergemeenteAkteKind odrl:partOf apset:gaba-set18-v11 .   # 09.81.10 Registergemeente akte
+brprub:aktenummerKind odrl:partOf apset:gaba-set18-v11 .   # 09.81.20 Aktenummer
+brprub:gemeenteDocumentKind odrl:partOf apset:gaba-set18-v11 .   # 09.82.10 Gemeente ontlening
+brprub:datumDocumentKind odrl:partOf apset:gaba-set18-v11 .   # 09.82.20 Datum ontlening
+brprub:beschrijvingDocumentKind odrl:partOf apset:gaba-set18-v11 .   # 09.82.30 Beschrijving document
+brprub:ingangsdatumGeldigheidKind odrl:partOf apset:gaba-set18-v11 .   # 09.85.10 Ingangsdatum geldigheid
+brprub:datumVanOpnemingKind odrl:partOf apset:gaba-set18-v11 .   # 09.86.10 Datum opneming
+brprub:registratieBetrekkingKind odrl:partOf apset:gaba-set18-v11 .   # 09.89.10 Registratie betrekking
+brprub:anummerKindHist odrl:partOf apset:gaba-set18-v11 .   # 59.01.10 A-nummer
+brprub:burgerservicenummerKindHist odrl:partOf apset:gaba-set18-v11 .   # 59.01.20 Burgerservicenummer
+brprub:voornamenKindHist odrl:partOf apset:gaba-set18-v11 .   # 59.02.10 Voornamen
+brprub:adellijkeTitelPredicaatKindHist odrl:partOf apset:gaba-set18-v11 .   # 59.02.20 Adellijke titel/predikaat
+brprub:voorvoegselGeslachtsnaamKindHist odrl:partOf apset:gaba-set18-v11 .   # 59.02.30 Voorvoegsel geslachtsnaam
+brprub:geslachtsnaamKindHist odrl:partOf apset:gaba-set18-v11 .   # 59.02.40 Geslachtsnaam
+brprub:registergemeenteAkteKindHist odrl:partOf apset:gaba-set18-v11 .   # 59.81.10 Registergemeente akte
+brprub:aktenummerKindHist odrl:partOf apset:gaba-set18-v11 .   # 59.81.20 Aktenummer
+brprub:gemeenteDocumentKindHist odrl:partOf apset:gaba-set18-v11 .   # 59.82.10 Gemeente ontlening
+brprub:datumDocumentKindHist odrl:partOf apset:gaba-set18-v11 .   # 59.82.20 Datum ontlening
+brprub:beschrijvingDocumentKindHist odrl:partOf apset:gaba-set18-v11 .   # 59.82.30 Beschrijving document
+brprub:ingangsdatumGeldigheidKindHist odrl:partOf apset:gaba-set18-v11 .   # 59.85.10 Ingangsdatum geldigheid
+brprub:datumVanOpnemingKindHist odrl:partOf apset:gaba-set18-v11 .   # 59.86.10 Datum opneming
+brprub:aanduidingVerblijfstitelVerblijfstitel odrl:partOf apset:gaba-set18-v11 .   # 10.39.10 Aanduiding Verblijfstitel
+brprub:datumEindeVerblijfstitelVerblijfstitel odrl:partOf apset:gaba-set18-v11 .   # 10.39.20 Datum einde Verblijfstitel
+brprub:ingangsdatumVerblijfstitelVerblijfstitel odrl:partOf apset:gaba-set18-v11 .   # 10.39.30 Ingangsdatum Verblijfstitel
+brprub:ingangsdatumGeldigheidVerblijfstitel odrl:partOf apset:gaba-set18-v11 .   # 10.85.10 Ingangsdatum geldigheid
+brprub:datumVanOpnemingVerblijfstitel odrl:partOf apset:gaba-set18-v11 .   # 10.86.10 Datum opneming
+brprub:aanduidingVerblijfstitelVerblijfstitelHist odrl:partOf apset:gaba-set18-v11 .   # 60.39.10 Aanduiding Verblijfstitel
+brprub:datumEindeVerblijfstitelVerblijfstitelHist odrl:partOf apset:gaba-set18-v11 .   # 60.39.20 Datum einde Verblijfstitel
+brprub:ingangsdatumVerblijfstitelVerblijfstitelHist odrl:partOf apset:gaba-set18-v11 .   # 60.39.30 Ingangsdatum Verblijfstitel
+brprub:ingangsdatumGeldigheidVerblijfstitelHist odrl:partOf apset:gaba-set18-v11 .   # 60.85.10 Ingangsdatum geldigheid
+brprub:datumVanOpnemingVerblijfstitelHist odrl:partOf apset:gaba-set18-v11 .   # 60.86.10 Datum opneming
+brprub:indicatieGezagMinderjarigeGezagsverhouding odrl:partOf apset:gaba-set18-v11 .   # 11.32.10 Indicatie gezag minderjarige
+brprub:indicatieCurateleregisterGezagsverhouding odrl:partOf apset:gaba-set18-v11 .   # 11.33.10 Indicatie curateleregister
+
+
+apset:gaba-set19 a prov:Entity ;
+    dct:title "Gegevensset 19 (ad hoc)"@nl ;
+    rdfs:comment "Versieloze identiteit van de gegevensset; de versies verwijzen hierheen met prov:specializationOf."@nl ;
+    dct:hasVersion apset:gaba-set19-v11 .
+
+apset:gaba-set19-v11 a odrl:AssetCollection ;
+    dct:title "Gegevensset 19 (ad hoc) — Gegevensoverzicht gemeenten v1.1"@nl ;
+    dct:description "De 68 rubrieken van gegevensset 19 uit het Gegevensoverzicht gemeenten, tabblad (2) Gegevens per set. Deze set is voor alle gemeentelijke GABA-autorisatiebesluiten dezelfde: de besluiten verwijzen er met het nummer naar (\"een gegeven in gegevensset 19\")."@nl ;
+    skos:editorialNote "Verstrekkingsvorm zit in de setdefinitie zelf: het Gegevensoverzicht typeert set 19 als 'ad hoc'. Deze set hoort daarom bij kanaal apkan:adhoc."@nl ;
+    prov:specializationOf apset:gaba-set19 ;
+    prov:wasDerivedFrom apdoc:gegevensoverzicht-gemeenten-v11 ;
+    dct:source <https://www.rvig.nl/sites/default/files/2026-03/GABA%20Matrix.xlsx> ;
+    dct:isVersionOf apset:gaba-set19 .
+
+brprub:anummerPersoon odrl:partOf apset:gaba-set19-v11 .   # 01.01.10 A-nummer
+brprub:burgerservicenummerPersoon odrl:partOf apset:gaba-set19-v11 .   # 01.01.20 Burgerservicenummer
+brprub:voornamenPersoon odrl:partOf apset:gaba-set19-v11 .   # 01.02.10 Voornamen
+brprub:adellijkeTitelPredicaatPersoon odrl:partOf apset:gaba-set19-v11 .   # 01.02.20 Adellijke titel/predikaat
+brprub:voorvoegselGeslachtsnaamPersoon odrl:partOf apset:gaba-set19-v11 .   # 01.02.30 Voorvoegsel geslachtsnaam
+brprub:geslachtsnaamPersoon odrl:partOf apset:gaba-set19-v11 .   # 01.02.40 Geslachtsnaam
+brprub:geboortedatumPersoon odrl:partOf apset:gaba-set19-v11 .   # 01.03.10 Geboortedatum
+brprub:geboorteplaatsPersoon odrl:partOf apset:gaba-set19-v11 .   # 01.03.20 Geboorteplaats
+brprub:geboortelandPersoon odrl:partOf apset:gaba-set19-v11 .   # 01.03.30 Geboorteland
+brprub:geslachtsaanduidingPersoon odrl:partOf apset:gaba-set19-v11 .   # 01.04.10 Geslachtsaanduiding
+brprub:aanduidingNaamgebruikPersoon odrl:partOf apset:gaba-set19-v11 .   # 01.61.10 Aanduiding naamgebruik
+brprub:anummerOuder1 odrl:partOf apset:gaba-set19-v11 .   # 02.01.10 A-nummer
+brprub:burgerservicenummerOuder1 odrl:partOf apset:gaba-set19-v11 .   # 02.01.20 Burgerservicenummer
+brprub:voornamenOuder1 odrl:partOf apset:gaba-set19-v11 .   # 02.02.10 Voornamen
+brprub:voorvoegselGeslachtsnaamOuder1 odrl:partOf apset:gaba-set19-v11 .   # 02.02.30 Voorvoegsel geslachtsnaam
+brprub:geslachtsnaamOuder1 odrl:partOf apset:gaba-set19-v11 .   # 02.02.40 Geslachtsnaam
+brprub:geboortedatumOuder1 odrl:partOf apset:gaba-set19-v11 .   # 02.03.10 Geboortedatum
+brprub:anummerOuder2 odrl:partOf apset:gaba-set19-v11 .   # 03.01.10 A-nummer
+brprub:burgerservicenummerOuder2 odrl:partOf apset:gaba-set19-v11 .   # 03.01.20 Burgerservicenummer
+brprub:voornamenOuder2 odrl:partOf apset:gaba-set19-v11 .   # 03.02.10 Voornamen
+brprub:voorvoegselGeslachtsnaamOuder2 odrl:partOf apset:gaba-set19-v11 .   # 03.02.30 Voorvoegsel geslachtsnaam
+brprub:geslachtsnaamOuder2 odrl:partOf apset:gaba-set19-v11 .   # 03.02.40 Geslachtsnaam
+brprub:geboortedatumOuder2 odrl:partOf apset:gaba-set19-v11 .   # 03.03.10 Geboortedatum
+brprub:nationaliteitNationaliteit odrl:partOf apset:gaba-set19-v11 .   # 04.05.10 Nationaliteit
+brprub:aanduidingBijzonderNederlanderschapNationaliteit odrl:partOf apset:gaba-set19-v11 .   # 04.65.10 Aanduiding bijzonder Nederlanderschap
+brprub:anummerPartner odrl:partOf apset:gaba-set19-v11 .   # 05.01.10 A-nummer
+brprub:burgerservicenummerPartner odrl:partOf apset:gaba-set19-v11 .   # 05.01.20 Burgerservicenummer
+brprub:voornamenPartner odrl:partOf apset:gaba-set19-v11 .   # 05.02.10 Voornamen
+brprub:voorvoegselGeslachtsnaamPartner odrl:partOf apset:gaba-set19-v11 .   # 05.02.30 Voorvoegsel geslachtsnaam
+brprub:geslachtsnaamPartner odrl:partOf apset:gaba-set19-v11 .   # 05.02.40 Geslachtsnaam
+brprub:geboortedatumPartner odrl:partOf apset:gaba-set19-v11 .   # 05.03.10 Geboortedatum
+brprub:datumHuwelijkssluitingPartner odrl:partOf apset:gaba-set19-v11 .   # 05.06.10 Datum huwelijkssluiting/aangaan partnerschap
+brprub:datumOntbindingHuwelijkPartner odrl:partOf apset:gaba-set19-v11 .   # 05.07.10 Datum ontbinding huwelijk/partnerschap
+brprub:datumOverlijdenOverlijden odrl:partOf apset:gaba-set19-v11 .   # 06.08.10 Datum Overlijden
+brprub:indicatieGeheimInschrijving odrl:partOf apset:gaba-set19-v11 .   # 07.70.10 Indicatie geheim
+brprub:gemeenteVanInschrijvingVerblijfplaats odrl:partOf apset:gaba-set19-v11 .   # 08.09.10 Gemeente van inschrijving
+brprub:datumInschrijvingVerblijfplaats odrl:partOf apset:gaba-set19-v11 .   # 08.09.20 Datum inschrijving in de gemeente
+brprub:landAdresBuitenlandVerblijfplaats odrl:partOf apset:gaba-set19-v11 .   # 08.13.10 Land adres buitenland
+brprub:regel1AdresBuitenlandVerblijfplaats odrl:partOf apset:gaba-set19-v11 .   # 08.13.30 Regel 1 adres buitenland
+brprub:regel2AdresBuitenlandVerblijfplaats odrl:partOf apset:gaba-set19-v11 .   # 08.13.40 Regel 2 adres buitenland
+brprub:regel3AdresBuitenlandVerblijfplaats odrl:partOf apset:gaba-set19-v11 .   # 08.13.50 Regel 3 adres buitenland
+brprub:gemeenteVanInschrijvingVerblijfplaatsHist odrl:partOf apset:gaba-set19-v11 .   # 58.09.10 Gemeente van inschrijving
+brprub:datumInschrijvingVerblijfplaatsHist odrl:partOf apset:gaba-set19-v11 .   # 58.09.20 Datum inschrijving in de gemeente
+brprub:anummerKind odrl:partOf apset:gaba-set19-v11 .   # 09.01.10 A-nummer
+brprub:burgerservicenummerKind odrl:partOf apset:gaba-set19-v11 .   # 09.01.20 Burgerservicenummer
+brprub:voornamenKind odrl:partOf apset:gaba-set19-v11 .   # 09.02.10 Voornamen
+brprub:voorvoegselGeslachtsnaamKind odrl:partOf apset:gaba-set19-v11 .   # 09.02.30 Voorvoegsel geslachtsnaam
+brprub:geslachtsnaamKind odrl:partOf apset:gaba-set19-v11 .   # 09.02.40 Geslachtsnaam
+brprub:geboortedatumKind odrl:partOf apset:gaba-set19-v11 .   # 09.03.10 Geboortedatum
+brprub:aanduidingVerblijfstitelVerblijfstitel odrl:partOf apset:gaba-set19-v11 .   # 10.39.10 Aanduiding Verblijfstitel
+brprub:datumEindeVerblijfstitelVerblijfstitel odrl:partOf apset:gaba-set19-v11 .   # 10.39.20 Datum einde Verblijfstitel
+brprub:ingangsdatumVerblijfstitelVerblijfstitel odrl:partOf apset:gaba-set19-v11 .   # 10.39.30 Ingangsdatum Verblijfstitel
+brprub:ingangsdatumGeldigheidVerblijfstitel odrl:partOf apset:gaba-set19-v11 .   # 10.85.10 Ingangsdatum geldigheid
+brprub:indicatieGezagMinderjarigeGezagsverhouding odrl:partOf apset:gaba-set19-v11 .   # 11.32.10 Indicatie gezag minderjarige
+brprub:indicatieCurateleregisterGezagsverhouding odrl:partOf apset:gaba-set19-v11 .   # 11.33.10 Indicatie curateleregister
+brprub:soortNederlandsReisdocumentReisdocument odrl:partOf apset:gaba-set19-v11 .   # 12.35.10 Soort Nederlands reisdocument
+brprub:nummerNederlandsReisdocumentReisdocument odrl:partOf apset:gaba-set19-v11 .   # 12.35.20 Nummer Nederlands reisdocument
+brprub:datumUitgifteNederlandsReisdocumentReisdocument odrl:partOf apset:gaba-set19-v11 .   # 12.35.30 Datum uitgifte Nederlands reisdocument
+brprub:autoriteitVanAfgifteNederlandsReisdocumentReisdocument odrl:partOf apset:gaba-set19-v11 .   # 12.35.40 Autoriteit van afgifte Nederlands reisdocument
+brprub:datumEindeGeldigheidNederlandsReisdocumentReisdocument odrl:partOf apset:gaba-set19-v11 .   # 12.35.50 Datum einde geldigheid Nederlands reisdocument
+brprub:datumInhoudingVermissingNederlandsReisdocumentReisdocument odrl:partOf apset:gaba-set19-v11 .   # 12.35.60 Datum inhouding/vermissing Nederlands reisdocument
+brprub:aanduidingInhoudingVermissingNederlandsReisdocumentReisdocument odrl:partOf apset:gaba-set19-v11 .   # 12.35.70 Aanduiding inhouding/vermissing Nederlands reisdocument
+brprub:signaleringSreisdocumentReisdocument odrl:partOf apset:gaba-set19-v11 .   # 12.36.10 Signalering Nederlands reisdocument
+brprub:gemeenteDocumentReisdocument odrl:partOf apset:gaba-set19-v11 .   # 12.82.10 Gemeente waar het paspoortdossier zich bevindt
+brprub:datumDocumentReisdocument odrl:partOf apset:gaba-set19-v11 .   # 12.82.20 Datum van opname in het paspoortdossier
+brprub:beschrijvingDocumentReisdocument odrl:partOf apset:gaba-set19-v11 .   # 12.82.30 Beschrijving dossier paspoortgegevens
+brprub:ingangsdatumGeldigheidReisdocument odrl:partOf apset:gaba-set19-v11 .   # 12.85.10 Ingangsdatum geldigheid
+brprub:datumVanOpnemingReisdocument odrl:partOf apset:gaba-set19-v11 .   # 12.86.10 Datum opneming
+
+
+apset:gaba-set20 a prov:Entity ;
+    dct:title "Gegevensset 20 (ad hoc adres)"@nl ;
+    rdfs:comment "Versieloze identiteit van de gegevensset; de versies verwijzen hierheen met prov:specializationOf."@nl ;
+    dct:hasVersion apset:gaba-set20-v11 .
+
+apset:gaba-set20-v11 a odrl:AssetCollection ;
+    dct:title "Gegevensset 20 (ad hoc adres) — Gegevensoverzicht gemeenten v1.1"@nl ;
+    dct:description "De 22 rubrieken van gegevensset 20 uit het Gegevensoverzicht gemeenten, tabblad (2) Gegevens per set. Deze set is voor alle gemeentelijke GABA-autorisatiebesluiten dezelfde: de besluiten verwijzen er met het nummer naar (\"een gegeven in gegevensset 20\")."@nl ;
+    skos:editorialNote "Verstrekkingsvorm zit in de setdefinitie zelf: het Gegevensoverzicht typeert set 20 als 'ad hoc adres'. Deze set hoort daarom bij kanaal apkan:adhocAdres."@nl ;
+    prov:specializationOf apset:gaba-set20 ;
+    prov:wasDerivedFrom apdoc:gegevensoverzicht-gemeenten-v11 ;
+    dct:source <https://www.rvig.nl/sites/default/files/2026-03/GABA%20Matrix.xlsx> ;
+    dct:isVersionOf apset:gaba-set20 .
+
+brprub:anummerPersoon odrl:partOf apset:gaba-set20-v11 .   # 01.01.10 A-nummer
+brprub:burgerservicenummerPersoon odrl:partOf apset:gaba-set20-v11 .   # 01.01.20 Burgerservicenummer
+brprub:voornamenPersoon odrl:partOf apset:gaba-set20-v11 .   # 01.02.10 Voornamen
+brprub:adellijkeTitelPredicaatPersoon odrl:partOf apset:gaba-set20-v11 .   # 01.02.20 Adellijke titel/predikaat
+brprub:voorvoegselGeslachtsnaamPersoon odrl:partOf apset:gaba-set20-v11 .   # 01.02.30 Voorvoegsel geslachtsnaam
+brprub:geslachtsnaamPersoon odrl:partOf apset:gaba-set20-v11 .   # 01.02.40 Geslachtsnaam
+brprub:geboortedatumPersoon odrl:partOf apset:gaba-set20-v11 .   # 01.03.10 Geboortedatum
+brprub:geslachtsaanduidingPersoon odrl:partOf apset:gaba-set20-v11 .   # 01.04.10 Geslachtsaanduiding
+brprub:indicatieGeheimInschrijving odrl:partOf apset:gaba-set20-v11 .   # 07.70.10 Indicatie geheim
+brprub:gemeenteVanInschrijvingVerblijfplaats odrl:partOf apset:gaba-set20-v11 .   # 08.09.10 Gemeente van inschrijving
+brprub:functieAdresVerblijfplaats odrl:partOf apset:gaba-set20-v11 .   # 08.10.10 Functie adres
+brprub:straatnaamVerblijfplaats odrl:partOf apset:gaba-set20-v11 .   # 08.11.10 Straatnaam
+brprub:naamOpenbareRuimteVerblijfplaats odrl:partOf apset:gaba-set20-v11 .   # 08.11.15 Naam openbare ruimte
+brprub:huisnummerVerblijfplaats odrl:partOf apset:gaba-set20-v11 .   # 08.11.20 Huisnummer
+brprub:huisletterVerblijfplaats odrl:partOf apset:gaba-set20-v11 .   # 08.11.30 Huisletter
+brprub:huisnummertoevoegingVerblijfplaats odrl:partOf apset:gaba-set20-v11 .   # 08.11.40 Huisnummertoevoeging
+brprub:aanduidingBijHuisnummerVerblijfplaats odrl:partOf apset:gaba-set20-v11 .   # 08.11.50 Aanduiding bij huisnummer
+brprub:postcodeVerblijfplaats odrl:partOf apset:gaba-set20-v11 .   # 08.11.60 Postcode
+brprub:woonplaatsnaamVerblijfplaats odrl:partOf apset:gaba-set20-v11 .   # 08.11.70 Woonplaatsnaam
+brprub:identificatiecodeVerblijfplaatsVerblijfplaats odrl:partOf apset:gaba-set20-v11 .   # 08.11.80 Identificatiecode verblijfplaats
+brprub:identificatiecodeNummeraanduidingVerblijfplaats odrl:partOf apset:gaba-set20-v11 .   # 08.11.90 Identificatiecode nummeraanduiding
+brprub:locatiebeschrijvingVerblijfplaats odrl:partOf apset:gaba-set20-v11 .   # 08.12.10 Locatiebeschrijving
+
+
+apset:gaba-set21 a prov:Entity ;
+    dct:title "Gegevensset 21 (ad hoc adres voor tijdelijk verblijfadres)"@nl ;
+    rdfs:comment "Versieloze identiteit van de gegevensset; de versies verwijzen hierheen met prov:specializationOf."@nl ;
+    dct:hasVersion apset:gaba-set21-v11 .
+
+apset:gaba-set21-v11 a odrl:AssetCollection ;
+    dct:title "Gegevensset 21 (ad hoc adres voor tijdelijk verblijfadres) — Gegevensoverzicht gemeenten v1.1"@nl ;
+    dct:description "De 19 rubrieken van gegevensset 21 uit het Gegevensoverzicht gemeenten, tabblad (2) Gegevens per set. Deze set is voor alle gemeentelijke GABA-autorisatiebesluiten dezelfde: de besluiten verwijzen er met het nummer naar (\"een gegeven in gegevensset 21\")."@nl ;
+    skos:editorialNote "Verstrekkingsvorm zit in de setdefinitie zelf: het Gegevensoverzicht typeert set 21 als 'ad hoc adres voor tijdelijk verblijfadres'. Deze set hoort daarom bij kanaal apkan:adhocAdresTijdelijkVerblijfadres."@nl ;
+    prov:specializationOf apset:gaba-set21 ;
+    prov:wasDerivedFrom apdoc:gegevensoverzicht-gemeenten-v11 ;
+    dct:source <https://www.rvig.nl/sites/default/files/2026-03/GABA%20Matrix.xlsx> ;
+    dct:isVersionOf apset:gaba-set21 .
+
+brprub:anummerPersoon odrl:partOf apset:gaba-set21-v11 .   # 01.01.10 A-nummer
+brprub:burgerservicenummerPersoon odrl:partOf apset:gaba-set21-v11 .   # 01.01.20 Burgerservicenummer
+brprub:voornamenPersoon odrl:partOf apset:gaba-set21-v11 .   # 01.02.10 Voornamen
+brprub:voorvoegselGeslachtsnaamPersoon odrl:partOf apset:gaba-set21-v11 .   # 01.02.30 Voorvoegsel geslachtsnaam
+brprub:geslachtsnaamPersoon odrl:partOf apset:gaba-set21-v11 .   # 01.02.40 Geslachtsnaam
+brprub:geboortedatumPersoon odrl:partOf apset:gaba-set21-v11 .   # 01.03.10 Geboortedatum
+brprub:geslachtsaanduidingPersoon odrl:partOf apset:gaba-set21-v11 .   # 01.04.10 Geslachtsaanduiding
+brprub:gemeenteVanInschrijvingTijdelijkVerblijf odrl:partOf apset:gaba-set21-v11 .   # 16.09.10 Gemeente van inschrijving
+brprub:datumInschrijvingTijdelijkVerblijf odrl:partOf apset:gaba-set21-v11 .   # 16.09.20 Datum inschrijving in de gemeente
+brprub:straatnaamTijdelijkVerblijf odrl:partOf apset:gaba-set21-v11 .   # 16.11.10 Straatnaam
+brprub:naamOpenbareRuimteTijdelijkVerblijf odrl:partOf apset:gaba-set21-v11 .   # 16.11.15 Naam openbare ruimte
+brprub:huisnummerTijdelijkVerblijf odrl:partOf apset:gaba-set21-v11 .   # 16.11.20 Huisnummer
+brprub:huisletterTijdelijkVerblijf odrl:partOf apset:gaba-set21-v11 .   # 16.11.30 Huisletter
+brprub:huisnummertoevoegingTijdelijkVerblijf odrl:partOf apset:gaba-set21-v11 .   # 16.11.40 Huisnummertoevoeging
+brprub:aanduidingBijHuisnummerTijdelijkVerblijf odrl:partOf apset:gaba-set21-v11 .   # 16.11.50 Aanduiding bij huisnummer
+brprub:postcodeTijdelijkVerblijf odrl:partOf apset:gaba-set21-v11 .   # 16.11.60 Postcode
+brprub:woonplaatsnaamTijdelijkVerblijf odrl:partOf apset:gaba-set21-v11 .   # 16.11.70 Woonplaatsnaam
+brprub:identificatiecodeVerblijfplaatsTijdelijkVerblijf odrl:partOf apset:gaba-set21-v11 .   # 16.11.80 Identificatiecode verblijfplaats
+brprub:identificatiecodeNummeraanduidingTijdelijkVerblijf odrl:partOf apset:gaba-set21-v11 .   # 16.11.90 Identificatiecode nummeraanduiding
+
+
+apset:gaba-set22 a prov:Entity ;
+    dct:title "Gegevensset 22 (spontane verstrekkingen)"@nl ;
+    rdfs:comment "Versieloze identiteit van de gegevensset; de versies verwijzen hierheen met prov:specializationOf."@nl ;
+    dct:hasVersion apset:gaba-set22-v11 .
+
+apset:gaba-set22-v11 a odrl:AssetCollection ;
+    dct:title "Gegevensset 22 (spontane verstrekkingen) — Gegevensoverzicht gemeenten v1.1"@nl ;
+    dct:description "De 33 rubrieken van gegevensset 22 uit het Gegevensoverzicht gemeenten, tabblad (2) Gegevens per set. Deze set is voor alle gemeentelijke GABA-autorisatiebesluiten dezelfde: de besluiten verwijzen er met het nummer naar (\"een gegeven in gegevensset 22\")."@nl ;
+    skos:editorialNote "Verstrekkingsvorm zit in de setdefinitie zelf: het Gegevensoverzicht typeert set 22 als 'spontane verstrekkingen'. Deze set hoort daarom bij kanaal apkan:spontaan."@nl ;
+    prov:specializationOf apset:gaba-set22 ;
+    prov:wasDerivedFrom apdoc:gegevensoverzicht-gemeenten-v11 ;
+    dct:source <https://www.rvig.nl/sites/default/files/2026-03/GABA%20Matrix.xlsx> ;
+    dct:isVersionOf apset:gaba-set22 .
+
+brprub:anummerPersoon odrl:partOf apset:gaba-set22-v11 .   # 01.01.10 A-nummer
+brprub:burgerservicenummerPersoon odrl:partOf apset:gaba-set22-v11 .   # 01.01.20 Burgerservicenummer
+brprub:voornamenPersoon odrl:partOf apset:gaba-set22-v11 .   # 01.02.10 Voornamen
+brprub:adellijkeTitelPredicaatPersoon odrl:partOf apset:gaba-set22-v11 .   # 01.02.20 Adellijke titel/predikaat
+brprub:voorvoegselGeslachtsnaamPersoon odrl:partOf apset:gaba-set22-v11 .   # 01.02.30 Voorvoegsel geslachtsnaam
+brprub:geslachtsnaamPersoon odrl:partOf apset:gaba-set22-v11 .   # 01.02.40 Geslachtsnaam
+brprub:geboortedatumPersoon odrl:partOf apset:gaba-set22-v11 .   # 01.03.10 Geboortedatum
+brprub:geslachtsaanduidingPersoon odrl:partOf apset:gaba-set22-v11 .   # 01.04.10 Geslachtsaanduiding
+brprub:aanduidingNaamgebruikPersoon odrl:partOf apset:gaba-set22-v11 .   # 01.61.10 Aanduiding naamgebruik
+brprub:voorvoegselGeslachtsnaamPartner odrl:partOf apset:gaba-set22-v11 .   # 05.02.30 Voorvoegsel geslachtsnaam
+brprub:geslachtsnaamPartner odrl:partOf apset:gaba-set22-v11 .   # 05.02.40 Geslachtsnaam
+brprub:datumHuwelijkssluitingPartner odrl:partOf apset:gaba-set22-v11 .   # 05.06.10 Datum huwelijkssluiting/aangaan partnerschap
+brprub:datumOntbindingHuwelijkPartner odrl:partOf apset:gaba-set22-v11 .   # 05.07.10 Datum ontbinding huwelijk/partnerschap
+brprub:datumOverlijdenOverlijden odrl:partOf apset:gaba-set22-v11 .   # 06.08.10 Datum Overlijden
+brprub:indicatieGeheimInschrijving odrl:partOf apset:gaba-set22-v11 .   # 07.70.10 Indicatie geheim
+brprub:gemeenteVanInschrijvingVerblijfplaats odrl:partOf apset:gaba-set22-v11 .   # 08.09.10 Gemeente van inschrijving
+brprub:functieAdresVerblijfplaats odrl:partOf apset:gaba-set22-v11 .   # 08.10.10 Functie adres
+brprub:datumAanvangAdreshoudingVerblijfplaats odrl:partOf apset:gaba-set22-v11 .   # 08.10.30 Datum aanvang adreshouding
+brprub:straatnaamVerblijfplaats odrl:partOf apset:gaba-set22-v11 .   # 08.11.10 Straatnaam
+brprub:naamOpenbareRuimteVerblijfplaats odrl:partOf apset:gaba-set22-v11 .   # 08.11.15 Naam openbare ruimte
+brprub:huisnummerVerblijfplaats odrl:partOf apset:gaba-set22-v11 .   # 08.11.20 Huisnummer
+brprub:huisletterVerblijfplaats odrl:partOf apset:gaba-set22-v11 .   # 08.11.30 Huisletter
+brprub:huisnummertoevoegingVerblijfplaats odrl:partOf apset:gaba-set22-v11 .   # 08.11.40 Huisnummertoevoeging
+brprub:aanduidingBijHuisnummerVerblijfplaats odrl:partOf apset:gaba-set22-v11 .   # 08.11.50 Aanduiding bij huisnummer
+brprub:postcodeVerblijfplaats odrl:partOf apset:gaba-set22-v11 .   # 08.11.60 Postcode
+brprub:woonplaatsnaamVerblijfplaats odrl:partOf apset:gaba-set22-v11 .   # 08.11.70 Woonplaatsnaam
+brprub:identificatiecodeVerblijfplaatsVerblijfplaats odrl:partOf apset:gaba-set22-v11 .   # 08.11.80 Identificatiecode verblijfplaats
+brprub:identificatiecodeNummeraanduidingVerblijfplaats odrl:partOf apset:gaba-set22-v11 .   # 08.11.90 Identificatiecode nummeraanduiding
+brprub:locatiebeschrijvingVerblijfplaats odrl:partOf apset:gaba-set22-v11 .   # 08.12.10 Locatiebeschrijving
+brprub:landAdresBuitenlandVerblijfplaats odrl:partOf apset:gaba-set22-v11 .   # 08.13.10 Land adres buitenland
+brprub:regel1AdresBuitenlandVerblijfplaats odrl:partOf apset:gaba-set22-v11 .   # 08.13.30 Regel 1 adres buitenland
+brprub:regel2AdresBuitenlandVerblijfplaats odrl:partOf apset:gaba-set22-v11 .   # 08.13.40 Regel 2 adres buitenland
+brprub:regel3AdresBuitenlandVerblijfplaats odrl:partOf apset:gaba-set22-v11 .   # 08.13.50 Regel 3 adres buitenland
+
+
+# -----------------------------------------------------------------------------
+# COMPOSIETEN — de unie die een besluitartikel noemt ("een gegeven in
+# gegevensset 1, 2, 3, 5 of 6"). Benoemd naar hun INHOUD, niet naar taak of
+# gemeente, zodat elke gemeente en elke taak met dezelfde combinatie dezelfde
+# IRI hergebruikt. Over de 336 onderzochte GABA-besluiten zijn er 110 distincte
+# (taak, kanaal, setcombinatie)-cellen en daarbinnen slechts een handvol
+# distincte setcombinaties.
+# Lidmaatschap staat op het lid (odrl:partOf), conform apnl:CollectieLidmaatschapShape.
+# -----------------------------------------------------------------------------
+
+
+apset:gaba-combi-01-02-03-05-06-v11 a odrl:AssetCollection ;
+    dct:title "Gegevenssets 1, 2, 3, 5 en 6 (ad hoc)"@nl ;
+    dct:description "De unie van de gegevenssets 1, 2, 3, 5 en 6 uit het Gegevensoverzicht gemeenten v1.1; samen ten hoogste 82 rubrieken. Deze combinatie wordt door een besluitartikel als geheel toegekend."@nl ;
+    prov:wasDerivedFrom apdoc:gegevensoverzicht-gemeenten-v11 ;
+    dct:source <https://www.rvig.nl/sites/default/files/2026-03/GABA%20Matrix.xlsx> .
+
+apset:gaba-set1-v11 odrl:partOf apset:gaba-combi-01-02-03-05-06-v11 .
+apset:gaba-set2-v11 odrl:partOf apset:gaba-combi-01-02-03-05-06-v11 .
+apset:gaba-set3-v11 odrl:partOf apset:gaba-combi-01-02-03-05-06-v11 .
+apset:gaba-set5-v11 odrl:partOf apset:gaba-combi-01-02-03-05-06-v11 .
+apset:gaba-set6-v11 odrl:partOf apset:gaba-combi-01-02-03-05-06-v11 .
+
+
+apset:gaba-combi-13-14-15-v11 a odrl:AssetCollection ;
+    dct:title "Gegevenssets 13, 14 en 15 (ad hoc)"@nl ;
+    dct:description "De unie van de gegevenssets 13, 14 en 15 uit het Gegevensoverzicht gemeenten v1.1; samen ten hoogste 26 rubrieken. Deze combinatie wordt door een besluitartikel als geheel toegekend."@nl ;
+    prov:wasDerivedFrom apdoc:gegevensoverzicht-gemeenten-v11 ;
+    dct:source <https://www.rvig.nl/sites/default/files/2026-03/GABA%20Matrix.xlsx> .
+
+apset:gaba-set13-v11 odrl:partOf apset:gaba-combi-13-14-15-v11 .
+apset:gaba-set14-v11 odrl:partOf apset:gaba-combi-13-14-15-v11 .
+apset:gaba-set15-v11 odrl:partOf apset:gaba-combi-13-14-15-v11 .
+
+
+apset:gaba-combi-01-02-03-05-06-08-11-12-13-14-15-v11 a odrl:AssetCollection ;
+    dct:title "Gegevenssets 1, 2, 3, 5, 6, 8, 11, 12, 13, 14 en 15 (ad hoc)"@nl ;
+    dct:description "De unie van de gegevenssets 1, 2, 3, 5, 6, 8, 11, 12, 13, 14 en 15 uit het Gegevensoverzicht gemeenten v1.1; samen ten hoogste 122 rubrieken. Deze combinatie wordt door een besluitartikel als geheel toegekend."@nl ;
+    prov:wasDerivedFrom apdoc:gegevensoverzicht-gemeenten-v11 ;
+    dct:source <https://www.rvig.nl/sites/default/files/2026-03/GABA%20Matrix.xlsx> .
+
+apset:gaba-set1-v11 odrl:partOf apset:gaba-combi-01-02-03-05-06-08-11-12-13-14-15-v11 .
+apset:gaba-set2-v11 odrl:partOf apset:gaba-combi-01-02-03-05-06-08-11-12-13-14-15-v11 .
+apset:gaba-set3-v11 odrl:partOf apset:gaba-combi-01-02-03-05-06-08-11-12-13-14-15-v11 .
+apset:gaba-set5-v11 odrl:partOf apset:gaba-combi-01-02-03-05-06-08-11-12-13-14-15-v11 .
+apset:gaba-set6-v11 odrl:partOf apset:gaba-combi-01-02-03-05-06-08-11-12-13-14-15-v11 .
+apset:gaba-set8-v11 odrl:partOf apset:gaba-combi-01-02-03-05-06-08-11-12-13-14-15-v11 .
+apset:gaba-set11-v11 odrl:partOf apset:gaba-combi-01-02-03-05-06-08-11-12-13-14-15-v11 .
+apset:gaba-set12-v11 odrl:partOf apset:gaba-combi-01-02-03-05-06-08-11-12-13-14-15-v11 .
+apset:gaba-set13-v11 odrl:partOf apset:gaba-combi-01-02-03-05-06-08-11-12-13-14-15-v11 .
+apset:gaba-set14-v11 odrl:partOf apset:gaba-combi-01-02-03-05-06-08-11-12-13-14-15-v11 .
+apset:gaba-set15-v11 odrl:partOf apset:gaba-combi-01-02-03-05-06-08-11-12-13-14-15-v11 .
+
+
+apset:gaba-combi-01-02-03-04-05-v11 a odrl:AssetCollection ;
+    dct:title "Gegevenssets 1, 2, 3, 4 en 5 (ad hoc)"@nl ;
+    dct:description "De unie van de gegevenssets 1, 2, 3, 4 en 5 uit het Gegevensoverzicht gemeenten v1.1; samen ten hoogste 110 rubrieken. Deze combinatie wordt door een besluitartikel als geheel toegekend."@nl ;
+    prov:wasDerivedFrom apdoc:gegevensoverzicht-gemeenten-v11 ;
+    dct:source <https://www.rvig.nl/sites/default/files/2026-03/GABA%20Matrix.xlsx> .
+
+apset:gaba-set1-v11 odrl:partOf apset:gaba-combi-01-02-03-04-05-v11 .
+apset:gaba-set2-v11 odrl:partOf apset:gaba-combi-01-02-03-04-05-v11 .
+apset:gaba-set3-v11 odrl:partOf apset:gaba-combi-01-02-03-04-05-v11 .
+apset:gaba-set4-v11 odrl:partOf apset:gaba-combi-01-02-03-04-05-v11 .
+apset:gaba-set5-v11 odrl:partOf apset:gaba-combi-01-02-03-04-05-v11 .

@@ -1,0 +1,816 @@
+@prefix mim:    <http://modellen.mim-standaard.nl/def/mim#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix vlmim:  <https://vlierdam.example/mim/> .
+@prefix glo:    <https://vlierdam.example/glo/> .
+
+# =============================================================================
+# Gemeente Vlierdam (FICTIEF) — DE MIM-INSTANTIEGRAAF VAN DE BEVRAGINGSCASUS.
+#
+# WAT DIT BESTAND IS. De structuurlaag van de BRP-bevraging voor laadpalen,
+# gemodelleerd in het Metamodel Informatie Modellering (MIM 1.2, Geonovum),
+# uitgedrukt in de Linked-Data-taalbinding van hoofdstuk 4 van die standaard.
+# Het is de demonstratie van de aanbevolen gedaante uit de synthese (§4c, MIM
+# als BRONMODEL): de structuurlaag wordt in MIM gemodelleerd, de gepubliceerde
+# gegevensleveringsovereenkomst blijft staan zoals zij is, en
+# `vlierdam-mim-afleiding.ttl` legt de band tussen beide.
+#
+# HET NIVEAUVERSCHIL DAT ALLES KLEURT (synthese §1). Een MIM-model in RDF is
+# een INSTANTIEGRAAF VAN DE MIM-ONTOLOGIE, geen ontologie waarmee data te
+# typeren valt. `vlmim:objecttype-ingeschreven-persoon a mim:Objecttype` is een
+# individu, geen klasse; om er gegevens mee te typeren is een afzonderlijke
+# transformatie naar RDFS/OWL/SHACL nodig. De MIM 1.2-specificatie zegt het
+# zelf: "het toepassen van het MIM in RDF [levert] geen ontologie of
+# vocabulaire waarin RDF kan worden uitgedrukt: slechts het informatiemodel
+# zelf is op deze manier in RDF uitgedrukt."
+#
+# Daarom staan hier twee blokken naast elkaar.
+#   A. HET LEVERSETMODEL — het objecttype van de bevraagde persoon met zijn
+#      zeven attribuutsoorten, waardedomeinen, de Keuze voor
+#      datum-of-onbekend en de codelijst van gemeenten. Dit is de laag waar
+#      MIM als gelijke concurreert met de huidige drager (DDI-CDI).
+#   B. HET ADMINISTRATIEMODEL VAN DE OVEREENKOMST — objecttype
+#      Gegevensleveringsovereenkomst, de statusenumeratie en twee
+#      relatiesoorten naar partijen. Dit blok staat er om TASTBAAR TE MAKEN
+#      WAT MIM VAN DE OVEREENKOMSTLAAG WEL EN NIET LEVERT: het formulier
+#      waarop een overeenkomst kan worden vastgelegd, en niet de afspraak
+#      zelf. `glo:glo-rvig-vlierdam-2026` — met haar eigen IRI, datums,
+#      statuswaarde en handtekeningen — is in MIM-termen een OBJECT in het
+#      beschouwde domein, en een object is per hoofdstuk 2 van de standaard
+#      uitdrukkelijk "geen modelelement".
+#
+# NAMESPACE-WAARSCHUWING. De MIM-namespace dereferenceert per 14 september
+# 2026 niet (HTTP 404, verlopen certificaat). De Nederlandse labels op de
+# gebruikte mim-termen reizen daarom met de dataset mee; zij staan in
+# `glo-mim-shapes.ttl` en niet hier, zodat dit bestand zuiver de
+# instantiegraaf blijft.
+#
+# EXTENSIE. Noodzaak per veld en de classificaties staan NIET in dit bestand
+# maar in `vlierdam-mim-extensie.ttl`. Dat is geen ordeningskwestie: MIM kent
+# er geen metagegeven voor, dus zij horen per definitie buiten de
+# MIM-instantiegraaf. Wat hier staat is dus zuiver MIM 1.2, en het valideert
+# als zodanig tegen `mim.ttl` en `mim-shapes.ttl` uit de MIM-Werkomgeving.
+#
+# EEN VALIDATIE VAN DIT BESTAND HEEFT WEL HET CORPUS ERBIJ NODIG. `mim:begrip`
+# eist `sh:class skos:Concept`, en de zeven termknopen waarnaar verwezen wordt
+# staan in `vlierdam-glo.ttl` (getypeerd als `gd:Term`, dat in
+# `glo-vocabulaire.ttl` een subklasse van `skos:Concept` is). De datagraaf van
+# de validatie is daarom deze drie nieuwe bestanden plus de bestaande
+# vlierdam-bestanden die zij aanhalen.
+#
+# TWEETALIGHEID. `rdfs:label` draagt nl en en, zoals het hele vlierdam-corpus.
+# De MIM-metagegevens zelf (naam, definitie, populatie, toelichting) zijn
+# Nederlandstalig, zoals MIM dat zelf is; `mim:populatie`, `mim:lengte`,
+# `mim:patroon` en `mim:kardinaliteit` zijn per `mim-shapes.ttl` bovendien
+# `xsd:string` en kunnen geen taalmarkering dragen.
+#
+# Alles is fictief; RvIG figureert in dit corpus als fictieve ketenpartner
+# (zie README.md).
+# =============================================================================
+
+# =============================================================================
+# 0. HET INFORMATIEMODEL (de package)
+# =============================================================================
+
+vlmim:im-brp-levering-laadpalen a mim:Informatiemodel ;
+    rdfs:label "Informatiemodel BRP-bevraging laadpalen"@nl ,
+               "Information model for charging-station population register queries"@en ;
+    mim:basisUri "https://vlierdam.example/mim/"^^xsd:anyURI ;
+    mim:identificatie "https://vlierdam.example/mim/im-brp-levering-laadpalen"^^xsd:anyURI ;
+    mim:naam "Informatiemodel BRP-bevraging laadpalen"@nl ;
+    mim:alias "IM-VLD-BRP-001"@nl ;
+    # BESCHOUWINGSNIVEAU 3. De leverset beschrijft hoe de gegevens logisch zijn
+    # geordend, niet hoe zij in het bericht staan; dat laatste is niveau 4 en
+    # valt buiten de scope van MIM (§1.7). Het technisch gegevensmodel
+    # TGM-VLD-BRP-001 heeft daarom geen MIM-tegenhanger.
+    mim:informatiemodeltype mim:LogischInformatiemodel ;
+    mim:informatiedomein "Identiteitsgegevens" ;
+    # ALTERNATIEF 1 van de standaard: de relatiesoort is leidend, niet de
+    # relatierol. Dit is het enige keuzepunt dat MIM 1.2 kent.
+    mim:relatiemodelleringstype mim:RelatiesoortLeidend ;
+    mim:mimversie "1.2" ;
+    mim:mimextensie "https://gegevensdeling.example/def/mim-ext/" ;
+    mim:mimtaal "Nederlands" ;
+    mim:tekstopmaak "Geen" ;
+    mim:datumOpname "2026-09-14"^^xsd:date ;
+    mim:bevatModelelement
+        vlmim:objecttype-ingeschreven-persoon ,
+        vlmim:attribuutsoort-burgerservicenummer ,
+        vlmim:attribuutsoort-voornamen ,
+        vlmim:attribuutsoort-geslachtsnaam ,
+        vlmim:attribuutsoort-adresregel1 ,
+        vlmim:attribuutsoort-adresregel2 ,
+        vlmim:attribuutsoort-geboortedatum ,
+        vlmim:attribuutsoort-gemeente-van-inschrijving ,
+        vlmim:datatype-burgerservicenummer ,
+        vlmim:datatype-naamtekst ,
+        vlmim:datatype-adresregel ,
+        vlmim:datatype-kalenderdatum ,
+        vlmim:keuze-datum-of-onbekend ,
+        vlmim:enumeratie-onvolledige-datum ,
+        vlmim:enumeratiewaarde-datum-onbekend ,
+        vlmim:enumeratiewaarde-dag-onbekend ,
+        vlmim:codelijst-gemeenten ,
+        vlmim:objecttype-gegevensleveringsovereenkomst ,
+        vlmim:objecttype-partij ,
+        vlmim:attribuutsoort-overeenkomstcode ,
+        vlmim:attribuutsoort-overeenkomststatus ,
+        vlmim:attribuutsoort-ingangsdatum ,
+        vlmim:attribuutsoort-einddatum ,
+        vlmim:attribuutsoort-partijnaam ,
+        vlmim:datatype-code ,
+        vlmim:datatype-organisatienaam ,
+        vlmim:enumeratie-overeenkomststatus ,
+        vlmim:enumeratiewaarde-status-concept ,
+        vlmim:enumeratiewaarde-status-akkoord ,
+        vlmim:enumeratiewaarde-status-opgeschort ,
+        vlmim:enumeratiewaarde-status-opgezegd ,
+        vlmim:enumeratiewaarde-status-verlopen ,
+        vlmim:relatiesoort-verstrekker ,
+        vlmim:relatiesoort-ontvanger ,
+        vlmim:relatierol-verstrekker ,
+        vlmim:relatierol-ontvanger .
+
+# =============================================================================
+# A. HET LEVERSETMODEL
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# A1. Het objecttype
+#
+# `mim:populatie` draagt de populatiebeschrijving. Zij is in MIM een
+# metagegeven van het MODELELEMENT, niet van een levering: twee leveringen met
+# verschillende populaties op hetzelfde objecttype zijn er niet mee uit elkaar
+# te houden. Dat is de kunstgreep die de synthese bij E58 noemt, en zij is hier
+# zichtbaar doordat de tekst hieronder de filterregel van DEZE ene bevraging
+# beschrijft terwijl zij aan het type hangt.
+# -----------------------------------------------------------------------------
+
+vlmim:objecttype-ingeschreven-persoon a mim:Objecttype ;
+    rdfs:label "Ingeschreven persoon"@nl , "Registered person"@en ;
+    mim:identificatie "https://vlierdam.example/mim/objecttype-ingeschreven-persoon"^^xsd:anyURI ;
+    mim:naam "Ingeschreven persoon"@nl ;
+    mim:definitie "De natuurlijke persoon die in de basisregistratie personen staat ingeschreven en over wie de bevraging gaat."@nl ;
+    mim:herkomst "Basisregistratie personen"@nl ;
+    mim:herkomstDefinitie "Begrippenkader BRP-bevraging laadpalen, BK-VLD-BRP-001"@nl ;
+    mim:begripsterm "natuurlijk persoon"@nl ;
+    mim:datumOpname "2026-09-14"^^xsd:date ;
+    mim:indicatieAbstractObject false ;
+    mim:populatie "Natuurlijke personen die in de basisregistratie personen staan ingeschreven met gemeente Vlierdam als gemeente van inschrijving. De verstrekker beantwoordt een bevraging alleen voor die groep: een zoekvraag die een persoon buiten Vlierdam zou opleveren, levert geen antwoord op. Overleden personen en personen met een verstrekkingsbeperking blijven buiten het antwoord." ;
+    mim:kwaliteit "De gegevens zijn de stand van de basisregistratie personen op het moment van bevraging; er wordt geen historie meegeleverd." ;
+    mim:toelichting "Eén object per bevraagde persoon; een antwoord bevat nul of meer van deze objecten."@nl ;
+    mim:attribuut
+        vlmim:attribuutsoort-burgerservicenummer ,
+        vlmim:attribuutsoort-voornamen ,
+        vlmim:attribuutsoort-geslachtsnaam ,
+        vlmim:attribuutsoort-adresregel1 ,
+        vlmim:attribuutsoort-adresregel2 ,
+        vlmim:attribuutsoort-geboortedatum ,
+        vlmim:attribuutsoort-gemeente-van-inschrijving .
+
+# -----------------------------------------------------------------------------
+# A2. De zeven attribuutsoorten
+#
+# DIT IS DE WINST DIE DE SYNTHESE BIJ E83/E84/E86 BESCHRIJFT: naam, definitie,
+# type, kardinaliteit, lengte en patroon zijn PLATTE, NEDERLANDSTALIGE
+# PROPERTIES op de attribuutsoort. In de gepubliceerde veldlaag liggen dezelfde
+# gegevens één hop dieper, achter gestructureerde DDI-CDI-knopen
+# (`cdi:Concept-name` → `cdi:ObjectName-name`), zodat een generieke viewer daar
+# relaties toont waar een lezer waarden verwacht.
+#
+# `mim:begrip` verwijst naar de bestaande termknopen van het begrippenkader in
+# `vlierdam-glo.ttl`. Het begrippenkader ZELF blijft daar: beschouwingsniveau 1
+# (model van begrippen) valt buiten de scope van MIM, en `mim:begrip` is
+# precies de verwijzing die de standaard daarvoor biedt.
+# -----------------------------------------------------------------------------
+
+# 1 — burgerservicenummer. Identificerend, met formeel patroon.
+#
+# `mim:identificerend` zegt in één property wat DDI-CDI met een aparte
+# `cdi:IdentifierComponent`-knoop in de datastructuur zegt (E96).
+vlmim:attribuutsoort-burgerservicenummer a mim:Attribuutsoort ;
+    rdfs:label "burgerservicenummer"@nl , "citizen service number"@en ;
+    mim:identificatie "https://vlierdam.example/mim/attribuutsoort-burgerservicenummer"^^xsd:anyURI ;
+    mim:naam "burgerservicenummer"@nl ;
+    mim:alias "BSN"@nl ;
+    mim:definitie "Het burgerservicenummer van de bevraagde persoon."@nl ;
+    mim:begrip glo:term-burgerservicenummer ;
+    mim:begripsterm "burgerservicenummer"@nl ;
+    mim:herkomst "Basisregistratie personen"@nl ;
+    mim:herkomstDefinitie "Begrippenkader BRP-bevraging laadpalen, BK-VLD-BRP-001"@nl ;
+    mim:datumOpname "2026-09-14"^^xsd:date ;
+    mim:type vlmim:datatype-burgerservicenummer ;
+    mim:lengte "9" ;
+    mim:patroon "Negen cijfers, elfproef-geldig." ;
+    mim:formeelPatroon "[0-9]{9}" ;
+    mim:kardinaliteit "1..1" ;
+    mim:identificerend true ;
+    mim:authentiek mim:Authentiek ;
+    mim:indicatieAfleidbaar false ;
+    mim:indicatieClassificerend false ;
+    mim:mogelijkGeenWaarde false ;
+    mim:heeftTijdlijnGeldigheid false ;
+    mim:heeftTijdlijnRegistratie false ;
+    mim:indicatieMaterieleHistorie false ;
+    mim:indicatieFormeleHistorie false .
+
+vlmim:datatype-burgerservicenummer a mim:PrimitiefDatatype ;
+    rdfs:label "Burgerservicenummer"@nl , "Citizen service number"@en ;
+    mim:identificatie "https://vlierdam.example/mim/datatype-burgerservicenummer"^^xsd:anyURI ;
+    mim:naam "Burgerservicenummer"@nl ;
+    mim:definitie "Een tekstwaarde van negen cijfers die de elfproef doorstaat."@nl ;
+    mim:herkomst "Basisregistratie personen"@nl ;
+    mim:datumOpname "2026-09-14"^^xsd:date ;
+    mim:lengte "9" ;
+    mim:patroon "Negen cijfers, elfproef-geldig." ;
+    mim:formeelPatroon "[0-9]{9}" .
+
+# 2 — voornamen. Niet elke ingeschrevene heeft voornamen, vandaar 0..1.
+vlmim:attribuutsoort-voornamen a mim:Attribuutsoort ;
+    rdfs:label "voornamen"@nl , "given names"@en ;
+    mim:identificatie "https://vlierdam.example/mim/attribuutsoort-voornamen"^^xsd:anyURI ;
+    mim:naam "voornamen"@nl ;
+    mim:definitie "De voornamen van de bevraagde persoon, in de vastgelegde volgorde."@nl ;
+    mim:begrip glo:term-voornamen ;
+    mim:begripsterm "voornamen"@nl ;
+    mim:herkomst "Basisregistratie personen"@nl ;
+    mim:herkomstDefinitie "Begrippenkader BRP-bevraging laadpalen, BK-VLD-BRP-001"@nl ;
+    mim:datumOpname "2026-09-14"^^xsd:date ;
+    mim:type vlmim:datatype-naamtekst ;
+    mim:lengte "200" ;
+    mim:patroon "Vrije tekst, ten hoogste 200 tekens; diakritische tekens blijven staan." ;
+    mim:kardinaliteit "0..1" ;
+    mim:identificerend false ;
+    mim:authentiek mim:Authentiek ;
+    mim:indicatieAfleidbaar false ;
+    mim:indicatieClassificerend false ;
+    mim:mogelijkGeenWaarde false ;
+    mim:heeftTijdlijnGeldigheid false ;
+    mim:heeftTijdlijnRegistratie false ;
+    mim:indicatieMaterieleHistorie false ;
+    mim:indicatieFormeleHistorie false .
+
+# 3 — geslachtsnaam.
+vlmim:attribuutsoort-geslachtsnaam a mim:Attribuutsoort ;
+    rdfs:label "geslachtsnaam"@nl , "surname"@en ;
+    mim:identificatie "https://vlierdam.example/mim/attribuutsoort-geslachtsnaam"^^xsd:anyURI ;
+    mim:naam "geslachtsnaam"@nl ;
+    mim:definitie "De geslachtsnaam van de bevraagde persoon, met voorvoegsel."@nl ;
+    mim:begrip glo:term-geslachtsnaam ;
+    mim:begripsterm "geslachtsnaam"@nl ;
+    mim:herkomst "Basisregistratie personen"@nl ;
+    mim:herkomstDefinitie "Begrippenkader BRP-bevraging laadpalen, BK-VLD-BRP-001"@nl ;
+    mim:datumOpname "2026-09-14"^^xsd:date ;
+    mim:type vlmim:datatype-naamtekst ;
+    mim:lengte "200" ;
+    mim:patroon "Vrije tekst, ten hoogste 200 tekens; diakritische tekens blijven staan." ;
+    mim:kardinaliteit "1..1" ;
+    mim:identificerend false ;
+    mim:authentiek mim:Authentiek ;
+    mim:indicatieAfleidbaar false ;
+    mim:indicatieClassificerend false ;
+    mim:mogelijkGeenWaarde false ;
+    mim:heeftTijdlijnGeldigheid false ;
+    mim:heeftTijdlijnRegistratie false ;
+    mim:indicatieMaterieleHistorie false ;
+    mim:indicatieFormeleHistorie false .
+
+vlmim:datatype-naamtekst a mim:PrimitiefDatatype ;
+    rdfs:label "Naamtekst"@nl , "Name text"@en ;
+    mim:identificatie "https://vlierdam.example/mim/datatype-naamtekst"^^xsd:anyURI ;
+    mim:naam "Naamtekst"@nl ;
+    mim:definitie "Vrije tekst zoals in de registratie vastgelegd, ten hoogste 200 tekens, met behoud van diakritische tekens."@nl ;
+    mim:herkomst "Basisregistratie personen"@nl ;
+    mim:datumOpname "2026-09-14"^^xsd:date ;
+    mim:lengte "200" .
+
+# 4 en 5 — de twee adresregels. Zij delen hun begrip en hun datatype; wat ze
+# onderscheidt is hun plaats in het bericht — en die plaats is nu juist wat MIM
+# niet uitdrukt, want de volgorde in het antwoordbericht hoort bij
+# beschouwingsniveau 4.
+vlmim:attribuutsoort-adresregel1 a mim:Attribuutsoort ;
+    rdfs:label "adresregel 1"@nl , "address line 1"@en ;
+    mim:identificatie "https://vlierdam.example/mim/attribuutsoort-adresregel1"^^xsd:anyURI ;
+    mim:naam "adresregel 1"@nl ;
+    mim:definitie "De eerste adresregel: straatnaam en huisnummer met toevoeging."@nl ;
+    mim:begrip glo:term-adresregel ;
+    mim:begripsterm "adresregel"@nl ;
+    mim:herkomst "Basisregistratie personen"@nl ;
+    mim:herkomstDefinitie "Begrippenkader BRP-bevraging laadpalen, BK-VLD-BRP-001"@nl ;
+    mim:datumOpname "2026-09-14"^^xsd:date ;
+    mim:type vlmim:datatype-adresregel ;
+    mim:lengte "80" ;
+    mim:patroon "Vrije tekst, ten hoogste 80 tekens, opgemaakt volgens de postale schrijfwijze." ;
+    mim:kardinaliteit "1..1" ;
+    mim:identificerend false ;
+    mim:authentiek mim:Authentiek ;
+    mim:indicatieAfleidbaar false ;
+    mim:indicatieClassificerend false ;
+    mim:mogelijkGeenWaarde false ;
+    mim:heeftTijdlijnGeldigheid false ;
+    mim:heeftTijdlijnRegistratie false ;
+    mim:indicatieMaterieleHistorie false ;
+    mim:indicatieFormeleHistorie false .
+
+vlmim:attribuutsoort-adresregel2 a mim:Attribuutsoort ;
+    rdfs:label "adresregel 2"@nl , "address line 2"@en ;
+    mim:identificatie "https://vlierdam.example/mim/attribuutsoort-adresregel2"^^xsd:anyURI ;
+    mim:naam "adresregel 2"@nl ;
+    mim:definitie "De tweede adresregel: postcode en woonplaats."@nl ;
+    mim:begrip glo:term-adresregel ;
+    mim:begripsterm "adresregel"@nl ;
+    mim:herkomst "Basisregistratie personen"@nl ;
+    mim:herkomstDefinitie "Begrippenkader BRP-bevraging laadpalen, BK-VLD-BRP-001"@nl ;
+    mim:datumOpname "2026-09-14"^^xsd:date ;
+    mim:type vlmim:datatype-adresregel ;
+    mim:lengte "80" ;
+    mim:patroon "Vrije tekst, ten hoogste 80 tekens, opgemaakt volgens de postale schrijfwijze." ;
+    mim:kardinaliteit "1..1" ;
+    mim:identificerend false ;
+    mim:authentiek mim:Authentiek ;
+    mim:indicatieAfleidbaar false ;
+    mim:indicatieClassificerend false ;
+    mim:mogelijkGeenWaarde false ;
+    mim:heeftTijdlijnGeldigheid false ;
+    mim:heeftTijdlijnRegistratie false ;
+    mim:indicatieMaterieleHistorie false ;
+    mim:indicatieFormeleHistorie false .
+
+vlmim:datatype-adresregel a mim:PrimitiefDatatype ;
+    rdfs:label "Adresregel"@nl , "Address line"@en ;
+    mim:identificatie "https://vlierdam.example/mim/datatype-adresregel"^^xsd:anyURI ;
+    mim:naam "Adresregel"@nl ;
+    mim:definitie "Eén regel van een adres, opgemaakt volgens de postale schrijfwijze, ten hoogste 80 tekens."@nl ;
+    mim:herkomst "Basisregistratie personen"@nl ;
+    mim:datumOpname "2026-09-14"^^xsd:date ;
+    mim:lengte "80" .
+
+# 6 — geboortedatum. DE KUNSTGREEP VAN E88, ZICHTBAAR GEMAAKT.
+#
+# De gepubliceerde veldlaag scheidt geldige waarden en ontbrekendwaarden in
+# twee domeinen: een `cdi:SubstantiveValueDomain` naast een
+# `cdi:SentinelValueDomain` met een eigen codelijst. MIM kent die scheiding
+# niet. Het heeft twee losse voorzieningen die er samen omheen komen:
+#
+#   - `mim:mogelijkGeenWaarde true` — het expliciete onderscheid tussen
+#     "kenmerk ontbreekt" (kardinaliteit 0) en "kenmerk bestaat maar de waarde
+#     is onbekend";
+#   - `mim:Keuze` — een XOR tussen twee datatypen, hier kalenderdatum óf een
+#     enumeratie van onvolledigheidscodes.
+#
+# Wat daarmee NIET is uitgedrukt, is dat de tweede tak een ontbrekendwaarde IS.
+# Voor MIM zijn het twee gelijkwaardige takken van een keuze; dat de ene een
+# waarde draagt en de andere de afwezigheid ervan markeert, leeft in de
+# definitie hieronder en dus in een conventie. Dat is precies wat de synthese
+# "dekt met kunstgreep" noemt.
+vlmim:attribuutsoort-geboortedatum a mim:Attribuutsoort ;
+    rdfs:label "geboortedatum"@nl , "date of birth"@en ;
+    mim:identificatie "https://vlierdam.example/mim/attribuutsoort-geboortedatum"^^xsd:anyURI ;
+    mim:naam "geboortedatum"@nl ;
+    mim:definitie "De geboortedatum van de bevraagde persoon. De datum kan onvolledig zijn wanneer zij bij de inschrijving niet volledig bekend was; in dat geval draagt het gegeven een onvolledigheidscode in plaats van een kalenderdatum."@nl ;
+    mim:begrip glo:term-geboortedatum ;
+    mim:begripsterm "geboortedatum"@nl ;
+    mim:herkomst "Basisregistratie personen"@nl ;
+    mim:herkomstDefinitie "Begrippenkader BRP-bevraging laadpalen, BK-VLD-BRP-001"@nl ;
+    mim:datumOpname "2026-09-14"^^xsd:date ;
+    mim:type vlmim:keuze-datum-of-onbekend ;
+    mim:patroon "Kalenderdatum JJJJ-MM-DD, niet in de toekomst ten opzichte van het moment van bevraging; of een code uit de enumeratie onvolledige datum." ;
+    mim:kardinaliteit "1..1" ;
+    mim:identificerend false ;
+    mim:authentiek mim:Authentiek ;
+    mim:indicatieAfleidbaar false ;
+    mim:indicatieClassificerend false ;
+    mim:mogelijkGeenWaarde true ;
+    mim:heeftTijdlijnGeldigheid false ;
+    mim:heeftTijdlijnRegistratie false ;
+    mim:indicatieMaterieleHistorie false ;
+    mim:indicatieFormeleHistorie false ;
+    mim:toelichting "De scheiding tussen geldige waarden en ontbrekendwaarden, die de gepubliceerde veldlaag met een apart sentinel-waardedomein maakt, leeft hier in een conventie: MIM kent geen sentinel-domein."@nl .
+
+vlmim:keuze-datum-of-onbekend a mim:Keuze ;
+    rdfs:label "Keuze: kalenderdatum of onvolledigheidscode"@nl ,
+               "Choice: calendar date or incompleteness code"@en ;
+    mim:identificatie "https://vlierdam.example/mim/keuze-datum-of-onbekend"^^xsd:anyURI ;
+    mim:naam "Kalenderdatum of onvolledigheidscode"@nl ;
+    mim:definitie "Een keuze tussen twee datatypen: een volledige kalenderdatum, óf een code die aangeeft welk deel van de datum onbekend is. Er is er altijd precies één van toepassing."@nl ;
+    mim:herkomst "Basisregistratie personen"@nl ;
+    mim:datumOpname "2026-09-14"^^xsd:date ;
+    mim:type vlmim:datatype-kalenderdatum , vlmim:enumeratie-onvolledige-datum .
+
+vlmim:datatype-kalenderdatum a mim:PrimitiefDatatype ;
+    rdfs:label "Kalenderdatum"@nl , "Calendar date"@en ;
+    mim:identificatie "https://vlierdam.example/mim/datatype-kalenderdatum"^^xsd:anyURI ;
+    mim:naam "Kalenderdatum"@nl ;
+    mim:definitie "Vierscijferig jaar, tweecijferige maand en tweecijferige dag, geschreven als JJJJ-MM-DD conform ISO 8601."@nl ;
+    mim:herkomst "MIM Metamodel, primitief datatype Date"@nl ;
+    mim:datumOpname "2026-09-14"^^xsd:date ;
+    mim:lengte "10" ;
+    mim:patroon "JJJJ-MM-DD" ;
+    mim:formeelPatroon "[0-9]{4}-[0-9]{2}-[0-9]{2}" .
+
+vlmim:enumeratie-onvolledige-datum a mim:Enumeratie ;
+    rdfs:label "Onvolledige datum"@nl , "Incomplete date"@en ;
+    mim:identificatie "https://vlierdam.example/mim/enumeratie-onvolledige-datum"^^xsd:anyURI ;
+    mim:naam "Onvolledige datum"@nl ;
+    mim:definitie "De limitatief opgesomde codes waarmee een geboortedatum wordt geleverd waarvan een deel bij de inschrijving niet is vastgesteld."@nl ;
+    mim:datumOpname "2026-09-14"^^xsd:date ;
+    mim:waarde vlmim:enumeratiewaarde-datum-onbekend ,
+               vlmim:enumeratiewaarde-dag-onbekend .
+
+vlmim:enumeratiewaarde-datum-onbekend a mim:Enumeratiewaarde ;
+    rdfs:label "datum onbekend"@nl , "date unknown"@en ;
+    mim:identificatie "https://vlierdam.example/mim/enumeratiewaarde-datum-onbekend"^^xsd:anyURI ;
+    mim:naam "datum onbekend"@nl ;
+    mim:definitie "De geboortedatum is bij de inschrijving niet vastgesteld."@nl ;
+    mim:code "0000-00-00" ;
+    mim:datumOpname "2026-09-14"^^xsd:date .
+
+vlmim:enumeratiewaarde-dag-onbekend a mim:Enumeratiewaarde ;
+    rdfs:label "dag onbekend"@nl , "day unknown"@en ;
+    mim:identificatie "https://vlierdam.example/mim/enumeratiewaarde-dag-onbekend"^^xsd:anyURI ;
+    mim:naam "dag onbekend"@nl ;
+    mim:definitie "Jaar en maand zijn bekend, de dag niet."@nl ;
+    mim:code "JJJJ-MM-00" ;
+    mim:datumOpname "2026-09-14"^^xsd:date .
+
+# 7 — gemeente van inschrijving. CATEGORISCH, met een codelijst.
+#
+# MIM kent drie gradaties waar de eis er één vraagt (E89): enumeratie (de lijst
+# staat in het model), referentielijst (de lijst wordt buiten het model beheerd
+# maar haar structuur staat er wel), en codelijst (de lijst wordt buiten het
+# model beheerd en haar structuur ook). De gemeentelijst is een landelijk
+# beheerde lijst, dus een codelijst.
+#
+# De PRIJS van die keuze staat hieronder in de toelichting: een codelijst heeft
+# in MIM per definitie geen waarde-items in het model, dus de twee waarden die
+# de gepubliceerde veldlaag met twee `cdi:Code`-knopen toont — en de reden dat
+# de tweede in een antwoord niet voorkomt — zijn hier proza en geen structuur.
+vlmim:attribuutsoort-gemeente-van-inschrijving a mim:Attribuutsoort ;
+    rdfs:label "gemeente van inschrijving"@nl , "municipality of registration"@en ;
+    mim:identificatie "https://vlierdam.example/mim/attribuutsoort-gemeente-van-inschrijving"^^xsd:anyURI ;
+    mim:naam "gemeente van inschrijving"@nl ;
+    mim:definitie "De gemeente waar de bevraagde persoon als ingezetene staat ingeschreven."@nl ;
+    mim:begrip glo:term-gemeente-van-inschrijving ;
+    mim:begripsterm "gemeente van inschrijving"@nl ;
+    mim:herkomst "Basisregistratie personen"@nl ;
+    mim:herkomstDefinitie "Begrippenkader BRP-bevraging laadpalen, BK-VLD-BRP-001"@nl ;
+    mim:datumOpname "2026-09-14"^^xsd:date ;
+    mim:type vlmim:codelijst-gemeenten ;
+    mim:lengte "4" ;
+    mim:patroon "Viercijferige gemeentecode." ;
+    mim:formeelPatroon "[0-9]{4}" ;
+    mim:kardinaliteit "1..1" ;
+    mim:identificerend false ;
+    mim:authentiek mim:Authentiek ;
+    mim:indicatieAfleidbaar false ;
+    # DIT IS HET GEGEVEN WAAROP DE POPULATIE IS AFGEBAKEND. `beleid.ttl` eist op
+    # de inway van de verstrekker dat de bevraagde persoon ingezetene van
+    # Vlierdam is; `mim:indicatieClassificerend` is het dichtstbijzijnde
+    # MIM-metagegeven voor "dit gegeven deelt de populatie in".
+    mim:indicatieClassificerend true ;
+    mim:mogelijkGeenWaarde false ;
+    mim:heeftTijdlijnGeldigheid false ;
+    mim:heeftTijdlijnRegistratie false ;
+    mim:indicatieMaterieleHistorie false ;
+    mim:indicatieFormeleHistorie false .
+
+vlmim:codelijst-gemeenten a mim:Codelijst ;
+    rdfs:label "Gemeenten"@nl , "Municipalities"@en ;
+    mim:identificatie "https://vlierdam.example/mim/codelijst-gemeenten"^^xsd:anyURI ;
+    mim:naam "Gemeenten"@nl ;
+    mim:definitie "De landelijk beheerde lijst van gemeentecodes, zoals gebruikt in de basisregistratie personen."@nl ;
+    mim:herkomst "Basisregistratie personen"@nl ;
+    mim:locatie "https://vlierdam.example/glo/codelijst-gemeenten" ;
+    mim:datumOpname "2026-09-14"^^xsd:date ;
+    mim:toelichting "In deze bevraging komen twee waarden voor: 0001 (Vlierdam) en 9999 (buiten Vlierdam). Alleen de eerste komt in een antwoord terecht; de tweede staat in het model om zichtbaar te maken dat dat een beslissing van de verstrekker is en geen onmogelijkheid. Een codelijst draagt die twee waarden niet als modelelement — dat is per MIM 1.2 het onderscheid met een enumeratie — dus deze zin is de enige plaats waar zij staan."@nl .
+
+# =============================================================================
+# B. HET ADMINISTRATIEMODEL VAN DE OVEREENKOMST
+#
+# WAAROM DIT BLOK ER STAAT. Het antwoord op de eigenaarsvraag is dat MIM de
+# gegevensleveringsovereenkomst niet kan dragen. Dat is met een lege plek
+# slecht te tonen en met dit blok goed: hier staat wat MIM van de
+# overeenkomstlaag WEL levert — het FORMULIER. Een objecttype met een
+# statusattribuut uit vijf waarden, een geldigheidsduur en twee relatiesoorten
+# naar partijen is keurig MIM-conform en volstrekt bruikbaar.
+#
+# WAT ER NIET STAAT, EN NIET KAN STAAN: dat RvIG en gemeente Vlierdam op 14
+# september 2026 déze levering zijn overeengekomen, dat de overeenkomst de
+# status "akkoord" heeft, dat zij van 1 oktober 2026 tot 30 september 2029
+# geldt, en wie namens wie heeft getekend. Dat zijn uitspraken over één geval.
+# Hoofdstuk 2 van MIM 1.2 noemt zo'n geval een OBJECT en zegt er in één zin bij
+# dat een object "geen modelelement" is; de scope-uitspraak in de spec is
+# even bondig: "Het MIM is niet bedoeld om vervolgens in termen van dit
+# informatiemodel een concrete dataset te vormen."
+#
+# De overeenkomst zelf staat dus in `vlierdam-glo.ttl`, als
+# `glo:glo-rvig-vlierdam-2026`, en zij komt in `vlierdam-mim-afleiding.ttl`
+# niet voor — er is niets om haar van af te leiden.
+# =============================================================================
+
+vlmim:objecttype-gegevensleveringsovereenkomst a mim:Objecttype ;
+    rdfs:label "Gegevensleveringsovereenkomst"@nl , "Data delivery agreement"@en ;
+    mim:identificatie "https://vlierdam.example/mim/objecttype-gegevensleveringsovereenkomst"^^xsd:anyURI ;
+    mim:naam "Gegevensleveringsovereenkomst"@nl ;
+    mim:definitie "De vastlegging van de afspraak tussen een verstrekkende en een ontvangende partij over het leveren van een omschreven verzameling gegevens voor een omschreven doel."@nl ;
+    mim:herkomst "Overeenkomstenadministratie gegevensdeling"@nl ;
+    mim:herkomstDefinitie "Model gegevensleveringsovereenkomst v2"@nl ;
+    mim:datumOpname "2026-09-14"^^xsd:date ;
+    mim:indicatieAbstractObject false ;
+    mim:populatie "Alle gegevensleveringsovereenkomsten die in de overeenkomstenadministratie zijn opgenomen, ongeacht hun status." ;
+    mim:toelichting "Dit objecttype is het FORMULIER van een overeenkomst. Eén ingevulde overeenkomst is een object in het beschouwde domein en daarmee geen modelelement; zij staat in vlierdam-glo.ttl."@nl ;
+    mim:attribuut
+        vlmim:attribuutsoort-overeenkomstcode ,
+        vlmim:attribuutsoort-overeenkomststatus ,
+        vlmim:attribuutsoort-ingangsdatum ,
+        vlmim:attribuutsoort-einddatum .
+
+vlmim:attribuutsoort-overeenkomstcode a mim:Attribuutsoort ;
+    rdfs:label "overeenkomstcode"@nl , "agreement code"@en ;
+    mim:identificatie "https://vlierdam.example/mim/attribuutsoort-overeenkomstcode"^^xsd:anyURI ;
+    mim:naam "overeenkomstcode"@nl ;
+    mim:definitie "De code waarmee de overeenkomst in de administratie wordt aangeduid."@nl ;
+    mim:herkomst "Overeenkomstenadministratie gegevensdeling"@nl ;
+    mim:herkomstDefinitie "Model gegevensleveringsovereenkomst v2"@nl ;
+    mim:datumOpname "2026-09-14"^^xsd:date ;
+    mim:type vlmim:datatype-code ;
+    mim:lengte "24" ;
+    mim:patroon "GLO-<verstrekker>-<ontvanger>-<jaar>-<volgnummer>" ;
+    mim:kardinaliteit "1..1" ;
+    mim:identificerend true ;
+    mim:authentiek mim:OverigeAuthenticiteit ;
+    mim:indicatieAfleidbaar false ;
+    mim:indicatieClassificerend false ;
+    mim:mogelijkGeenWaarde false ;
+    mim:heeftTijdlijnGeldigheid false ;
+    mim:heeftTijdlijnRegistratie false ;
+    mim:indicatieMaterieleHistorie false ;
+    mim:indicatieFormeleHistorie false .
+
+vlmim:attribuutsoort-overeenkomststatus a mim:Attribuutsoort ;
+    rdfs:label "status"@nl , "status"@en ;
+    mim:identificatie "https://vlierdam.example/mim/attribuutsoort-overeenkomststatus"^^xsd:anyURI ;
+    mim:naam "status"@nl ;
+    mim:definitie "De stand van de overeenkomst in haar levensloop."@nl ;
+    mim:herkomst "Overeenkomstenadministratie gegevensdeling"@nl ;
+    mim:herkomstDefinitie "Model gegevensleveringsovereenkomst v2"@nl ;
+    mim:datumOpname "2026-09-14"^^xsd:date ;
+    mim:type vlmim:enumeratie-overeenkomststatus ;
+    mim:kardinaliteit "1..1" ;
+    mim:identificerend false ;
+    mim:authentiek mim:OverigeAuthenticiteit ;
+    mim:indicatieAfleidbaar false ;
+    mim:indicatieClassificerend false ;
+    mim:mogelijkGeenWaarde false ;
+    # De statuswisseling zelf — wanneer een overeenkomst van concept naar
+    # akkoord ging — is een gebeurtenis, en het proces is per paragraaf 1.5.2
+    # van MIM 1.2 buiten scope. De tijdlijn-metagegevens kunnen wel zeggen DAT
+    # er historie wordt bijgehouden, niet wat er gebeurde.
+    mim:heeftTijdlijnGeldigheid true ;
+    mim:heeftTijdlijnRegistratie false ;
+    mim:indicatieMaterieleHistorie true ;
+    mim:indicatieFormeleHistorie false .
+
+vlmim:enumeratie-overeenkomststatus a mim:Enumeratie ;
+    rdfs:label "Overeenkomststatus"@nl , "Agreement status"@en ;
+    mim:identificatie "https://vlierdam.example/mim/enumeratie-overeenkomststatus"^^xsd:anyURI ;
+    mim:naam "Overeenkomststatus"@nl ;
+    mim:definitie "De limitatief opgesomde standen die een gegevensleveringsovereenkomst in haar levensloop kan hebben."@nl ;
+    mim:datumOpname "2026-09-14"^^xsd:date ;
+    mim:waarde
+        vlmim:enumeratiewaarde-status-concept ,
+        vlmim:enumeratiewaarde-status-akkoord ,
+        vlmim:enumeratiewaarde-status-opgeschort ,
+        vlmim:enumeratiewaarde-status-opgezegd ,
+        vlmim:enumeratiewaarde-status-verlopen .
+
+vlmim:enumeratiewaarde-status-concept a mim:Enumeratiewaarde ;
+    rdfs:label "concept"@nl , "draft"@en ;
+    mim:identificatie "https://vlierdam.example/mim/enumeratiewaarde-status-concept"^^xsd:anyURI ;
+    mim:naam "concept"@nl ;
+    mim:definitie "De overeenkomst is opgesteld maar nog niet door beide partijen akkoord verklaard."@nl ;
+    mim:code "concept" ;
+    mim:datumOpname "2026-09-14"^^xsd:date .
+
+vlmim:enumeratiewaarde-status-akkoord a mim:Enumeratiewaarde ;
+    rdfs:label "akkoord"@nl , "agreed"@en ;
+    mim:identificatie "https://vlierdam.example/mim/enumeratiewaarde-status-akkoord"^^xsd:anyURI ;
+    mim:naam "akkoord"@nl ;
+    mim:definitie "Beide partijen hebben de overeenkomst akkoord verklaard en zij is van kracht."@nl ;
+    mim:code "akkoord" ;
+    mim:datumOpname "2026-09-14"^^xsd:date .
+
+vlmim:enumeratiewaarde-status-opgeschort a mim:Enumeratiewaarde ;
+    rdfs:label "opgeschort"@nl , "suspended"@en ;
+    mim:identificatie "https://vlierdam.example/mim/enumeratiewaarde-status-opgeschort"^^xsd:anyURI ;
+    mim:naam "opgeschort"@nl ;
+    mim:definitie "De levering is tijdelijk stilgelegd; de overeenkomst blijft bestaan."@nl ;
+    mim:code "opgeschort" ;
+    mim:datumOpname "2026-09-14"^^xsd:date .
+
+vlmim:enumeratiewaarde-status-opgezegd a mim:Enumeratiewaarde ;
+    rdfs:label "opgezegd"@nl , "terminated"@en ;
+    mim:identificatie "https://vlierdam.example/mim/enumeratiewaarde-status-opgezegd"^^xsd:anyURI ;
+    mim:naam "opgezegd"@nl ;
+    mim:definitie "Een van beide partijen heeft de overeenkomst beëindigd voor het einde van haar looptijd."@nl ;
+    mim:code "opgezegd" ;
+    mim:datumOpname "2026-09-14"^^xsd:date .
+
+vlmim:enumeratiewaarde-status-verlopen a mim:Enumeratiewaarde ;
+    rdfs:label "verlopen"@nl , "expired"@en ;
+    mim:identificatie "https://vlierdam.example/mim/enumeratiewaarde-status-verlopen"^^xsd:anyURI ;
+    mim:naam "verlopen"@nl ;
+    mim:definitie "De looptijd van de overeenkomst is verstreken zonder verlenging."@nl ;
+    mim:code "verlopen" ;
+    mim:datumOpname "2026-09-14"^^xsd:date .
+
+vlmim:attribuutsoort-ingangsdatum a mim:Attribuutsoort ;
+    rdfs:label "ingangsdatum"@nl , "start date"@en ;
+    mim:identificatie "https://vlierdam.example/mim/attribuutsoort-ingangsdatum"^^xsd:anyURI ;
+    mim:naam "ingangsdatum"@nl ;
+    mim:definitie "De datum waarop de levering op grond van de overeenkomst mag beginnen."@nl ;
+    mim:herkomst "Overeenkomstenadministratie gegevensdeling"@nl ;
+    mim:herkomstDefinitie "Model gegevensleveringsovereenkomst v2"@nl ;
+    mim:datumOpname "2026-09-14"^^xsd:date ;
+    mim:type vlmim:datatype-kalenderdatum ;
+    mim:kardinaliteit "1..1" ;
+    mim:identificerend false ;
+    mim:authentiek mim:OverigeAuthenticiteit ;
+    mim:indicatieAfleidbaar false ;
+    mim:indicatieClassificerend false ;
+    mim:mogelijkGeenWaarde false ;
+    mim:heeftTijdlijnGeldigheid false ;
+    mim:heeftTijdlijnRegistratie false ;
+    mim:indicatieMaterieleHistorie false ;
+    mim:indicatieFormeleHistorie false .
+
+vlmim:attribuutsoort-einddatum a mim:Attribuutsoort ;
+    rdfs:label "einddatum"@nl , "end date"@en ;
+    mim:identificatie "https://vlierdam.example/mim/attribuutsoort-einddatum"^^xsd:anyURI ;
+    mim:naam "einddatum"@nl ;
+    mim:definitie "De datum waarop de overeenkomst van rechtswege eindigt. Een overeenkomst voor onbepaalde tijd draagt dit gegeven niet."@nl ;
+    mim:herkomst "Overeenkomstenadministratie gegevensdeling"@nl ;
+    mim:herkomstDefinitie "Model gegevensleveringsovereenkomst v2"@nl ;
+    mim:datumOpname "2026-09-14"^^xsd:date ;
+    mim:type vlmim:datatype-kalenderdatum ;
+    mim:kardinaliteit "0..1" ;
+    mim:identificerend false ;
+    mim:authentiek mim:OverigeAuthenticiteit ;
+    mim:indicatieAfleidbaar false ;
+    mim:indicatieClassificerend false ;
+    mim:mogelijkGeenWaarde false ;
+    mim:heeftTijdlijnGeldigheid false ;
+    mim:heeftTijdlijnRegistratie false ;
+    mim:indicatieMaterieleHistorie false ;
+    mim:indicatieFormeleHistorie false .
+
+vlmim:datatype-code a mim:PrimitiefDatatype ;
+    rdfs:label "Code"@nl , "Code"@en ;
+    mim:identificatie "https://vlierdam.example/mim/datatype-code"^^xsd:anyURI ;
+    mim:naam "Code"@nl ;
+    mim:definitie "Een korte, door de administratie toegekende tekstwaarde waarmee een object binnen die administratie wordt aangeduid."@nl ;
+    mim:herkomst "Overeenkomstenadministratie gegevensdeling"@nl ;
+    mim:datumOpname "2026-09-14"^^xsd:date ;
+    mim:lengte "24" .
+
+# -----------------------------------------------------------------------------
+# De partij en de twee relatiesoorten.
+#
+# HIER ZIT HET SCHERPSTE VERSCHIL MET DE GEPUBLICEERDE STAPEL. `mim:Relatierol`
+# typeert de rol van een OBJECT in een relatie tussen objecten. De rollaag van
+# de gepubliceerde overeenkomst (`gd:heeftRol` naar rol-objecten met elk hun
+# eigen doel, grondslag, akkoordverklaring en eindverantwoordelijke functie)
+# typeert de rol van een PARTIJ IN EEN AFSPRAAK, met eigenschappen die aan die
+# rol hangen. Dat is een ander soort ding; "partij" komt in MIM 1.2 vijfmaal
+# voor en geen van die vijf keer in deze betekenis.
+#
+# Wat hieronder staat is dus het maximum: dat een overeenkomst een verstrekker
+# en een ontvanger heeft, elk precies één. Waarom die verstrekker mag
+# verstrekken, en op welke grondslag de ontvanger ontvangt, staat niet in dit
+# model en kan er niet in.
+# -----------------------------------------------------------------------------
+
+vlmim:objecttype-partij a mim:Objecttype ;
+    rdfs:label "Partij"@nl , "Party"@en ;
+    mim:identificatie "https://vlierdam.example/mim/objecttype-partij"^^xsd:anyURI ;
+    mim:naam "Partij"@nl ;
+    mim:definitie "Een organisatie die een gegevensleveringsovereenkomst aangaat."@nl ;
+    mim:herkomst "Overeenkomstenadministratie gegevensdeling"@nl ;
+    mim:herkomstDefinitie "Model gegevensleveringsovereenkomst v2"@nl ;
+    mim:datumOpname "2026-09-14"^^xsd:date ;
+    mim:indicatieAbstractObject false ;
+    mim:populatie "Organisaties die in de overeenkomstenadministratie als verstrekkende of ontvangende partij zijn opgenomen." ;
+    mim:attribuut vlmim:attribuutsoort-partijnaam .
+
+vlmim:attribuutsoort-partijnaam a mim:Attribuutsoort ;
+    rdfs:label "partijnaam"@nl , "party name"@en ;
+    mim:identificatie "https://vlierdam.example/mim/attribuutsoort-partijnaam"^^xsd:anyURI ;
+    mim:naam "partijnaam"@nl ;
+    mim:definitie "De naam waaronder de organisatie in het handelsverkeer en in de overeenkomst optreedt."@nl ;
+    mim:herkomst "Overeenkomstenadministratie gegevensdeling"@nl ;
+    mim:herkomstDefinitie "Model gegevensleveringsovereenkomst v2"@nl ;
+    mim:datumOpname "2026-09-14"^^xsd:date ;
+    mim:type vlmim:datatype-organisatienaam ;
+    mim:lengte "200" ;
+    mim:kardinaliteit "1..1" ;
+    mim:identificerend false ;
+    mim:authentiek mim:OverigeAuthenticiteit ;
+    mim:indicatieAfleidbaar false ;
+    mim:indicatieClassificerend false ;
+    mim:mogelijkGeenWaarde false ;
+    mim:heeftTijdlijnGeldigheid false ;
+    mim:heeftTijdlijnRegistratie false ;
+    mim:indicatieMaterieleHistorie false ;
+    mim:indicatieFormeleHistorie false .
+
+vlmim:datatype-organisatienaam a mim:PrimitiefDatatype ;
+    rdfs:label "Organisatienaam"@nl , "Organisation name"@en ;
+    mim:identificatie "https://vlierdam.example/mim/datatype-organisatienaam"^^xsd:anyURI ;
+    mim:naam "Organisatienaam"@nl ;
+    mim:definitie "Vrije tekst van ten hoogste 200 tekens waarmee een organisatie wordt aangeduid."@nl ;
+    mim:herkomst "Overeenkomstenadministratie gegevensdeling"@nl ;
+    mim:datumOpname "2026-09-14"^^xsd:date ;
+    mim:lengte "200" .
+
+vlmim:relatiesoort-verstrekker a mim:Relatiesoort ;
+    rdfs:label "heeft als verstrekker"@nl , "has as provider"@en ;
+    mim:identificatie "https://vlierdam.example/mim/relatiesoort-verstrekker"^^xsd:anyURI ;
+    mim:naam "heeft als verstrekker"@nl ;
+    mim:definitie "De partij die de gegevens op grond van de overeenkomst levert."@nl ;
+    mim:herkomst "Overeenkomstenadministratie gegevensdeling"@nl ;
+    mim:herkomstDefinitie "Model gegevensleveringsovereenkomst v2"@nl ;
+    mim:datumOpname "2026-09-14"^^xsd:date ;
+    mim:bron vlmim:objecttype-gegevensleveringsovereenkomst ;
+    mim:doel vlmim:objecttype-partij ;
+    mim:relatierol vlmim:relatierol-verstrekker ;
+    mim:kardinaliteit "1..1" ;
+    mim:kardinaliteitRelatieBron "0..*" ;
+    mim:unidirectioneel true ;
+    mim:aggregatietype mim:Geen ;
+    mim:identificerend false ;
+    mim:authentiek mim:OverigeAuthenticiteit ;
+    mim:indicatieAfleidbaar false ;
+    mim:mogelijkGeenWaarde false ;
+    mim:heeftTijdlijnGeldigheid false ;
+    mim:heeftTijdlijnRegistratie false ;
+    mim:indicatieMaterieleHistorie false ;
+    mim:indicatieFormeleHistorie false .
+
+vlmim:relatierol-verstrekker a mim:Relatierol ;
+    rdfs:label "verstrekker"@nl , "provider"@en ;
+    mim:identificatie "https://vlierdam.example/mim/relatierol-verstrekker"^^xsd:anyURI ;
+    mim:naam "verstrekker"@nl ;
+    mim:definitie "De manier waarop een partij aan een overeenkomst deelneemt: als leverancier van de gegevens."@nl ;
+    mim:herkomst "Overeenkomstenadministratie gegevensdeling"@nl ;
+    mim:herkomstDefinitie "Model gegevensleveringsovereenkomst v2"@nl ;
+    mim:datumOpname "2026-09-14"^^xsd:date ;
+    mim:kardinaliteit "1..1" ;
+    mim:identificerend false ;
+    mim:authentiek mim:OverigeAuthenticiteit ;
+    mim:mogelijkGeenWaarde false ;
+    mim:heeftTijdlijnGeldigheid false ;
+    mim:heeftTijdlijnRegistratie false ;
+    mim:indicatieMaterieleHistorie false ;
+    mim:indicatieFormeleHistorie false .
+
+vlmim:relatiesoort-ontvanger a mim:Relatiesoort ;
+    rdfs:label "heeft als ontvanger"@nl , "has as recipient"@en ;
+    mim:identificatie "https://vlierdam.example/mim/relatiesoort-ontvanger"^^xsd:anyURI ;
+    mim:naam "heeft als ontvanger"@nl ;
+    mim:definitie "De partij die de gegevens op grond van de overeenkomst ontvangt en gebruikt."@nl ;
+    mim:herkomst "Overeenkomstenadministratie gegevensdeling"@nl ;
+    mim:herkomstDefinitie "Model gegevensleveringsovereenkomst v2"@nl ;
+    mim:datumOpname "2026-09-14"^^xsd:date ;
+    mim:bron vlmim:objecttype-gegevensleveringsovereenkomst ;
+    mim:doel vlmim:objecttype-partij ;
+    mim:relatierol vlmim:relatierol-ontvanger ;
+    mim:kardinaliteit "1..1" ;
+    mim:kardinaliteitRelatieBron "0..*" ;
+    mim:unidirectioneel true ;
+    mim:aggregatietype mim:Geen ;
+    mim:identificerend false ;
+    mim:authentiek mim:OverigeAuthenticiteit ;
+    mim:indicatieAfleidbaar false ;
+    mim:mogelijkGeenWaarde false ;
+    mim:heeftTijdlijnGeldigheid false ;
+    mim:heeftTijdlijnRegistratie false ;
+    mim:indicatieMaterieleHistorie false ;
+    mim:indicatieFormeleHistorie false .
+
+vlmim:relatierol-ontvanger a mim:Relatierol ;
+    rdfs:label "ontvanger"@nl , "recipient"@en ;
+    mim:identificatie "https://vlierdam.example/mim/relatierol-ontvanger"^^xsd:anyURI ;
+    mim:naam "ontvanger"@nl ;
+    mim:definitie "De manier waarop een partij aan een overeenkomst deelneemt: als afnemer van de gegevens."@nl ;
+    mim:herkomst "Overeenkomstenadministratie gegevensdeling"@nl ;
+    mim:herkomstDefinitie "Model gegevensleveringsovereenkomst v2"@nl ;
+    mim:datumOpname "2026-09-14"^^xsd:date ;
+    mim:kardinaliteit "1..1" ;
+    mim:identificerend false ;
+    mim:authentiek mim:OverigeAuthenticiteit ;
+    mim:mogelijkGeenWaarde false ;
+    mim:heeftTijdlijnGeldigheid false ;
+    mim:heeftTijdlijnRegistratie false ;
+    mim:indicatieMaterieleHistorie false ;
+    mim:indicatieFormeleHistorie false .

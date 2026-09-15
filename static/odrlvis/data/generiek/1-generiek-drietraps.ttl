@@ -1,0 +1,237 @@
+@prefix apnl:   <https://standaarden.overheid.nl/odrl-ap-nl/> .
+@prefix odrl:   <http://www.w3.org/ns/odrl/2/> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix dpv:    <https://w3id.org/dpv#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix gem:    <https://identifier.overheid.nl/tooi/id/gemeente/> .
+@prefix oorg:   <https://identifier.overheid.nl/tooi/id/oorg/> .
+@prefix bwb:    <https://wetten.overheid.nl/> .
+@prefix ex:     <https://example.gov.nl/brf/> .
+
+# =============================================================================
+# ODRL-AP-NL — Voorbeeld 1: generiek drietraps-voorbeeld (FICTIEF)
+#
+# Fictieve dataset "Basisregistratie Fietsdiefstal (BRF)", aangeboden door een
+# fictieve landelijke voorziening. Twee afnemers (Gemeente Utrecht en de
+# Nationale Politie), elk met twee doelen.
+#
+#   Trap A: ex:brfAanbod        — odrl:Offer door de aanbieder
+#   Trap B: ex:overeenkomst-*   — odrl:Agreement per afnemer
+#   Trap C: per doel een eigen, identificeerbare Permission
+#                      (odrl:uid) met odrl:purpose-refinement, doelspecifieke
+#                      target en eigen wettelijke grondslag
+#                      (dpv:hasLegalBasis)
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Fictieve partijen
+#
+# Bewust géén verzonnen codes in echte registernamespaces (TOOI): een
+# niet-bestaande registercode is een onzichtbare verwijzingsfout (zie de
+# subsectie "Register-URI's en registerfragmenten" in de spec). Fictieve
+# partijen krijgen daarom een eigen namespace mét label; echte partijen
+# (gem:gm0344) krijgen hun label via examples/labels-tooi.ttl.
+# N.B. de Nationale Politie heeft geen TOOI-oorg-code (alleen een OIN in het
+# Register Overheidsorganisaties); ook daarom hier een fictieve verwijzing.
+# -----------------------------------------------------------------------------
+
+ex:landelijke-voorziening-brf
+    rdfs:label "Landelijke Voorziening BRF (fictieve aanbieder)"@nl .
+
+ex:nationale-politie
+    rdfs:label "Nationale Politie (fictieve verwijzing)"@nl .
+
+# Fictieve wettelijke grondslag: labelen in het voorbeeld zelf (echte wetten
+# krijgen hun label via examples/labels-wetten.ttl).
+bwb:BWBR0000000
+    rdfs:label "Fictieve wet basisregistratie fietsdiefstal (plaatshouder)"@nl .
+
+# -----------------------------------------------------------------------------
+# DCAT-dataset + distributie (het WAAROVER); gekoppeld via odrl:hasPolicy
+# (DCAT 3 §6.4.22 — dcat:hasPolicy bestaat niet)
+# -----------------------------------------------------------------------------
+
+ex:dataset a dcat:Dataset ;
+    dct:title "Basisregistratie Fietsdiefstal (BRF)"@nl ;
+    dct:description "Fictieve registratie van gestolen en teruggevonden fietsen."@nl ;
+    dcat:distribution ex:distributie ;
+    odrl:hasPolicy ex:brfAanbod .
+
+ex:distributie a dcat:Distribution ;
+    dct:title "BRF Bevragen API"@nl ;
+    dcat:accessURL <https://api.example.gov.nl/brf/v1> .
+
+# -----------------------------------------------------------------------------
+# Verwerkingsdoelen van de afnemers (dpv:Purpose typeert het doel; het doel
+# zelf komt uit het verwerkingsregister van de afnemer)
+# -----------------------------------------------------------------------------
+
+<https://register.utrecht.nl/verwerkingen/handhaving-openbare-ruimte>
+    a dpv:Purpose ;
+    dct:title "Handhaving openbare ruimte"@nl .
+
+<https://register.politie.nl/verwerkingen/heling-analyse>
+    a dpv:Purpose ;
+    dct:title "Heling-analyse"@nl .
+
+# -----------------------------------------------------------------------------
+# Herbruikbare named constraints (bouwstenen)
+# -----------------------------------------------------------------------------
+
+ex:alleenEigenGemeente a odrl:Constraint ;
+    rdfs:label "Alleen eigen gemeente"@nl ;
+    rdfs:comment "Beperkt tot fietsen geregistreerd in het werkgebied van de afnemer."@nl ;
+    odrl:leftOperand ex:registratiegemeente ;
+    odrl:operator odrl:eq ;
+    odrl:rightOperand ex:werkgebiedAfnemer .
+
+ex:alleenOpenstaandeAangiften a odrl:Constraint ;
+    rdfs:label "Alleen openstaande aangiften"@nl ;
+    odrl:leftOperand ex:aangiftestatus ;
+    odrl:operator odrl:eq ;
+    odrl:rightOperand "open" .
+
+# -----------------------------------------------------------------------------
+# Stelselbrede verplichting (obligation) op het Offer.
+# Werkt door in elke afgeleide Agreement (zie composition.md); de Agreements
+# herhalen de obligation-set één-op-één (SHACL-toetsbaar via sh:equals in
+# shapes/afnemer.ttl, de verrijking per afnemer).
+# -----------------------------------------------------------------------------
+
+ex:duty-protocollering a odrl:Duty ;
+    rdfs:label "Protocolleringsplicht"@nl ;
+    odrl:action [ rdf:value odrl:inform ;
+        odrl:informedParty ex:toezichthouder ] .
+
+# -----------------------------------------------------------------------------
+# TRAP A — odrl:Offer (datasetbeleid door de aanbieder)
+# -----------------------------------------------------------------------------
+
+ex:brfAanbod a odrl:Offer ;
+    dct:title "Aanbod BRF-gegevens"@nl ;
+    dct:description """Landelijk aanbod van BRF-gegevens aan overheidsorganen met
+een wettelijke taak. Standaard geldt beperking tot het eigen werkgebied en tot
+openstaande aangiften. Elke afnemer sluit per doel een overeenkomst."""@nl ;
+    dct:publisher ex:landelijke-voorziening-brf ;
+    dct:issued "2026-01-15"^^xsd:date ;
+    odrl:profile apnl:profiel ;
+    odrl:uid ex:brfAanbod ;
+    prov:wasDerivedFrom bwb:BWBR0000000 ;    # fictieve wettelijke grondslag (Juriconnect/BWB-plaatshouder)
+    odrl:assigner ex:landelijke-voorziening-brf ;
+    odrl:obligation ex:duty-protocollering ;
+    odrl:permission [ a odrl:Permission ;
+        odrl:action odrl:read ;
+        odrl:target ex:distributie ;
+        odrl:constraint ex:alleenEigenGemeente, ex:alleenOpenstaandeAangiften ] .
+
+# -----------------------------------------------------------------------------
+# TRAP B — odrl:Agreement voor Gemeente Utrecht (assignee = TOOI)
+# TRAP C — per doel een identificeerbare Permission
+#
+# De Agreement verwijst naar het Offer via EEN standaardrelatie:
+# prov:wasDerivedFrom (MOET; PROV-tooling en de afnemer-shape), naar een
+# odrl:Offer-getypeerd doelwit. Geen duplicaat dct:references ernaast.
+# -----------------------------------------------------------------------------
+
+ex:overeenkomst-utrecht a odrl:Agreement ;
+    dct:title "BRF-overeenkomst Gemeente Utrecht"@nl ;
+    dct:description """Afnemerspecifieke overeenkomst met Gemeente Utrecht voor
+twee doelen: handhaving openbare ruimte en subsidie fietsenstalling."""@nl ;
+    dct:publisher ex:landelijke-voorziening-brf ;
+    dct:issued "2026-02-01"^^xsd:date ;
+    odrl:profile apnl:profiel ;
+    odrl:uid ex:overeenkomst-utrecht ;
+    prov:wasDerivedFrom ex:brfAanbod ;
+    odrl:assigner ex:landelijke-voorziening-brf ;
+    odrl:assignee gem:gm0344 ;               # Gemeente Utrecht (TOOI)
+    # Kritieke Offer-obligation expliciet herhaald conform de werkafspraak in
+    # composition.md ("kopieer kritieke obligations in de Agreement").
+    odrl:obligation ex:duty-protocollering ;
+    odrl:permission ex:permissie-utrecht-handhaving , ex:permissie-utrecht-stallingsubsidie .
+
+# Doel 1: handhaving openbare ruimte — verwerkingsregister-URI = doel-URI.
+# De permission is zelfstandig identificeerbaar (odrl:uid): aanhaalbaar in
+# protocollering en per doel in te trekken/te versioneren.
+ex:permissie-utrecht-handhaving a odrl:Permission ;
+    odrl:uid ex:permissie-utrecht-handhaving ;
+    dct:title "Utrecht — handhaving openbare ruimte"@nl ;
+    dpv:hasLegalBasis bwb:BWBR0000000 ;  # grondslag van dít doel (fictief wetsartikel)
+    odrl:action [ rdf:value odrl:read ;
+        odrl:refinement [ a odrl:Constraint ;
+            odrl:leftOperand odrl:purpose ;
+            odrl:operator odrl:isA ;
+            odrl:rightOperand <https://register.utrecht.nl/verwerkingen/handhaving-openbare-ruimte> ] ] ;
+    odrl:target ex:distributie ;
+    odrl:constraint ex:alleenEigenGemeente, ex:alleenOpenstaandeAangiften .
+
+# Doel 2: subsidie fietsenstalling — DPV-purpose direct
+ex:permissie-utrecht-stallingsubsidie a odrl:Permission ;
+    odrl:uid ex:permissie-utrecht-stallingsubsidie ;
+    dct:title "Utrecht — subsidie fietsenstalling"@nl ;
+    dpv:hasLegalBasis bwb:BWBR0000000 ;
+    odrl:action [ rdf:value odrl:read ;
+        odrl:refinement [ a odrl:Constraint ;
+            odrl:leftOperand odrl:purpose ;
+            odrl:operator odrl:isA ;
+            odrl:rightOperand dpv:FulfilmentOfObligation ] ] ;
+    odrl:target ex:distributie ;
+    odrl:constraint ex:alleenEigenGemeente, ex:alleenOpenstaandeAangiften .
+
+# -----------------------------------------------------------------------------
+# TRAP B — odrl:Agreement voor de Nationale Politie
+# Toont het open scope-opheffingsvraagstuk (zie de sectie Compositie): de
+# Offer-constraint ex:alleenEigenGemeente is in deze Agreement WEGGELATEN
+# (landelijke opsporing). Het profiel kent geen gedeclareerd
+# versoepelingsmechanisme; de weglating is hier alleen in de mensleesbare
+# beleidstekst (dct:description) gedocumenteerd. De andere constraint blijft
+# staan.
+# -----------------------------------------------------------------------------
+
+ex:overeenkomst-politie a odrl:Agreement ;
+    dct:title "BRF-overeenkomst Nationale Politie"@nl ;
+    dct:description """Afnemerspecifieke overeenkomst met de Nationale Politie voor
+twee doelen: opsporing (landelijk) en heling-analyse. De standaardbeperking tot
+het eigen werkgebied uit het aanbod is in deze overeenkomst door de aanbieder
+weggelaten omdat opsporing landelijk plaatsvindt."""@nl ;
+    dct:publisher ex:landelijke-voorziening-brf ;
+    dct:issued "2026-02-10"^^xsd:date ;
+    odrl:profile apnl:profiel ;
+    odrl:uid ex:overeenkomst-politie ;
+    prov:wasDerivedFrom ex:brfAanbod ;
+    odrl:assigner ex:landelijke-voorziening-brf ;
+    odrl:assignee ex:nationale-politie ;     # fictieve verwijzing (zie blok Fictieve partijen)
+    # Kritieke Offer-obligation expliciet herhaald conform de werkafspraak in
+    # composition.md ("kopieer kritieke obligations in de Agreement").
+    odrl:obligation ex:duty-protocollering ;
+    odrl:permission ex:permissie-politie-opsporing , ex:permissie-politie-heling .
+
+# Doel 1: opsporing — landelijk (werkgebied-constraint weggelaten)
+ex:permissie-politie-opsporing a odrl:Permission ;
+    odrl:uid ex:permissie-politie-opsporing ;
+    dct:title "Politie — opsporing (landelijk)"@nl ;
+    dpv:hasLegalBasis bwb:BWBR0000000 ;
+    odrl:action [ rdf:value odrl:read ;
+        odrl:refinement [ a odrl:Constraint ;
+            odrl:leftOperand odrl:purpose ;
+            odrl:operator odrl:isA ;
+            odrl:rightOperand dpv:FraudPreventionAndDetection ] ] ;
+    odrl:target ex:distributie ;
+    odrl:constraint ex:alleenOpenstaandeAangiften .
+
+# Doel 2: heling-analyse — landelijk
+ex:permissie-politie-heling a odrl:Permission ;
+    odrl:uid ex:permissie-politie-heling ;
+    dct:title "Politie — heling-analyse"@nl ;
+    dpv:hasLegalBasis bwb:BWBR0000000 ;
+    odrl:action [ rdf:value odrl:read ;
+        odrl:refinement [ a odrl:Constraint ;
+            odrl:leftOperand odrl:purpose ;
+            odrl:operator odrl:isA ;
+            odrl:rightOperand <https://register.politie.nl/verwerkingen/heling-analyse> ] ] ;
+    odrl:target ex:distributie ;
+    odrl:constraint ex:alleenOpenstaandeAangiften .

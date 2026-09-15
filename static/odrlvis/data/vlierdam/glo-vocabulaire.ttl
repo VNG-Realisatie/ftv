@@ -1,0 +1,1073 @@
+@prefix odrl:   <http://www.w3.org/ns/odrl/2/> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix dpv:    <https://w3id.org/dpv#> .
+@prefix org:    <http://www.w3.org/ns/org#> .
+@prefix schema: <https://schema.org/> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix dprod:  <https://www.omg.org/spec/DPROD/dprod/> .
+@prefix cdi:    <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/> .
+@prefix gd:     <https://gegevensdeling.example/def/> .
+@prefix gdstatus: <https://gegevensdeling.example/def/status/> .
+@prefix gdafspraak: <https://gegevensdeling.example/def/afspraak/> .
+@prefix gdonderwerp: <https://gegevensdeling.example/def/afspraak/onderwerp/> .
+@prefix gdgrondslag: <https://gegevensdeling.example/def/grondslag/> .
+@prefix gdvrijwillig: <https://gegevensdeling.example/def/grondslag/Vrijwillig/> .
+@prefix gdnamens: <https://gegevensdeling.example/def/namens/> .
+@prefix gdglsonderwerp: <https://gegevensdeling.example/def/glsonderwerp/> .
+@prefix gdwaardetype: <https://gegevensdeling.example/def/waardetype/> .
+@prefix gdglsrol: <https://gegevensdeling.example/def/glsrol/> .
+@prefix gdc:    <https://gegevensdeling.example/def/classificatie/> .
+
+# =============================================================================
+# Vocabulaire gegevensleveringsovereenkomst — GENERIEK EN CASUSNEUTRAAL.
+#
+# WAT HIER STAAT. De klassen, properties en waardelijsten die een
+# gegevensleveringsovereenkomst (GLO) en de gegevensleveringsspecificatie (GLS)
+# eronder nodig hebben, en die geen publieke standaard al draagt. Het
+# vocabulaire staat los van elke casus: de instanties van een concrete levering
+# staan in een eigen bestand, onder een eigen namespace.
+#
+# WAT NIET GESPIEGELD WORDT. Alles wat een baseline al heeft, wordt
+# rechtstreeks gebruikt en krijgt hier GEEN eigen term: ODRL 2.2 en ODRL-AP-NL
+# voor de overeenkomst en haar regels, DCAT en DPROD voor het datasetniveau van
+# de specificatie, DDI-CDI voor haar veldlaag, en verder DPV (doelen en
+# grondslagen), ORG (persoon in functie), PROV, SKOS en schema.org
+# (geldigheidsduur). Een term hier betekent dus: die baselines hebben hier niets
+# voor.
+#
+# HET VOCABULAIRE IS LEVERINGSVORM-NEUTRAAL. Geen klasse en geen property
+# hieronder veronderstelt dat de ontvanger de levering initieert (bevraging,
+# "pull") dan wel de verstrekker (bestandslevering, "push"). Wie er begint is
+# een kenmerk van de LEVERING en niet van het model: dat legt een
+# gegevensmiddelafspraak met het onderwerp gdglsonderwerp:gegevensleveringsinitiatie
+# vast, naast de frequentie. gd:Gegevensmiddelspecificatie spreekt daarom over
+# "overdragen" en niet over verzenden of opvragen, en de verplichte
+# leverkanaal-relatie (dprod:outputPort) is een dcat:DataService die beide
+# vormen dekt. Dezelfde overeenkomst-, rol- en veldlaag past dus zonder
+# aanpassing op een pushlevering.
+#
+# NAMESPACE. https://gegevensdeling.example/def/ is een voorbeeldnamespace;
+# .example is gereserveerd en resolvet bewust niet. De padsegmenten onder de
+# namespace dragen de waardelijsten (…/status/, …/afspraak/onderwerp/,
+# …/glsonderwerp/, …/waardetype/, …/glsrol/, …/grondslag/, …/classificatie/),
+# zodat elk lijstniveau een eigen, gelabelde IRI heeft.
+#
+# DE FORMULIEREN bij deze klassen staan in glo-shapes.ttl: zonder die shapes
+# toont een generieke viewer de knopen wel, maar zonder veldkoppen en zonder
+# vouwen.
+# =============================================================================
+
+# =============================================================================
+# 1. KLASSEN EN PROPERTIES
+# =============================================================================
+
+gd:profiel a odrl:Profile , owl:Ontology ;
+    dct:title "Profiel gegevensleveringsovereenkomst"@nl ,
+              "Data delivery agreement profile"@en ;
+    dct:description """Een generiek profiel voor de gegevensleveringsovereenkomst
+tussen een verstrekkende en een ontvangende organisatie, en voor de
+gegevensleveringsspecificatie eronder. Uitgedrukt in vier baselines: ODRL 2.2
+met ODRL-AP-NL voor de overeenkomst, DCAT met DPROD voor het datasetniveau van
+de specificatie, DDI-CDI voor haar veldlaag. Alleen wat die baselines niet
+dragen krijgt hier een eigen term."""@nl ,
+        """A generic profile for the data delivery agreement between a providing
+and a receiving organisation, and for the data delivery specification beneath
+it."""@en ;
+    owl:versionInfo "1.0" ;
+    # Bij tegenstrijdige regels wint het verbod.
+    odrl:conflict odrl:prohibit .
+
+# ---- 1a. Klassen van de overeenkomst ----------------------------------------
+
+gd:Gegevensleveringsovereenkomst a owl:Class , skos:Concept ;
+    rdfs:subClassOf odrl:Agreement ;
+    rdfs:isDefinedBy gd:profiel ;
+    rdfs:label "Gegevensleveringsovereenkomst"@nl , "Data delivery agreement"@en ;
+    skos:prefLabel "gegevensleveringsovereenkomst"@nl ;
+    skos:altLabel "GLO"@nl ;
+    skos:definition """Het geheel van regels en afspraken dat van toepassing is op
+één bepaalde gegevensdeling, vastgelegd als ODRL-overeenkomst tussen de
+verstrekker (odrl:assigner) en de ontvanger (odrl:assignee). De klasse dekt de
+hele levenscyclus; "concept" is daarin een gewone statuswaarde."""@nl .
+
+gd:Overeenkomstrol a owl:Class , skos:Concept ;
+    rdfs:isDefinedBy gd:profiel ;
+    rdfs:label "Overeenkomstrol"@nl , "Agreement role"@en ;
+    skos:prefLabel "overeenkomstrol"@nl ;
+    skos:definition """De rol die een partij in een gegevensleveringsovereenkomst
+vervult: verstrekker of ontvanger. Het rol-object staat in relatie met precies
+één partij (gd:partij) en draagt het doel van die kant, de grondslag, de
+akkoordverklaring en de eindverantwoordelijke functie."""@nl .
+
+gd:Verstrekker a owl:Class , skos:Concept ;
+    rdfs:subClassOf gd:Overeenkomstrol ;
+    rdfs:isDefinedBy gd:profiel ;
+    rdfs:label "Verstrekker"@nl , "Provider"@en ;
+    skos:prefLabel "verstrekker"@nl ;
+    skos:definition """De rol van de partij die de gegevens levert. De partij zelf
+staat in gd:partij en is de odrl:assigner van de overeenkomst."""@nl .
+
+gd:Ontvanger a owl:Class , skos:Concept ;
+    rdfs:subClassOf gd:Overeenkomstrol ;
+    rdfs:isDefinedBy gd:profiel ;
+    rdfs:label "Ontvanger"@nl , "Recipient"@en ;
+    skos:prefLabel "ontvanger"@nl ;
+    skos:definition """De rol van de partij die de gegevens ontvangt. De partij
+zelf staat in gd:partij en is de odrl:assignee van de overeenkomst."""@nl .
+
+gd:Akkoordverklaring a owl:Class , skos:Concept ;
+    rdfs:subClassOf prov:Activity ;
+    rdfs:isDefinedBy gd:profiel ;
+    rdfs:label "Akkoordverklaring"@nl , "Declaration of agreement"@en ;
+    skos:prefLabel "akkoordverklaring"@nl ;
+    skos:definition """Formele goedkeuring van een gegevensleveringsovereenkomst
+namens de verstrekker of de ontvanger, door de eindverantwoordelijke
+functionaris. Draagt de partij (gd:namens), de persoon in functie
+(prov:wasAssociatedWith) en de datum (dct:date)."""@nl .
+
+gd:afspraak a owl:Class , skos:Concept ;
+    rdfs:subClassOf odrl:Duty ;
+    owl:disjointWith odrl:Permission , odrl:Prohibition ;
+    rdfs:isDefinedBy gd:profiel ;
+    rdfs:label "Overeenkomstafspraak"@nl , "Agreement clause"@en ;
+    skos:prefLabel "overeenkomstafspraak"@nl ;
+    skos:definition """Een afspraak tussen verstrekker en ontvanger over een
+onderwerp dat in de overeenkomst zelf thuishoort. Vastgelegd als plicht
+(odrl:Duty) met een onderwerp uit gdafspraak:onderwerp, een tekst
+(dct:description) en de gebonden partij(en) (odrl:assignee)."""@nl ;
+    skos:note """Het type onderscheidt de overeengekomen afspraken van
+modelclausules: een standaardafspraak in een aanbod is nog geen afspraak tussen
+partijen en draagt dit type niet."""@nl .
+
+gdgrondslag:Wettelijk a owl:Class , skos:Concept ;
+    rdfs:subClassOf dpv:LegalBasis ;
+    rdfs:isDefinedBy gd:profiel ;
+    rdfs:label "Wettelijke grondslag"@nl , "Legal basis in law"@en ;
+    skos:prefLabel "wettelijke grondslag"@nl ;
+    skos:definition """Een grondslag die berust op specifieke wet- of regelgeving,
+of op een besluit dat daarop berust. De verwijzing naar de regeling staat in
+dct:source, bij voorkeur als BWB/Juriconnect-URI die artikel, lid en sub al
+draagt."""@nl .
+
+gdgrondslag:Vrijwillig a owl:Class , skos:Concept ;
+    rdfs:subClassOf dpv:LegalBasis ;
+    rdfs:isDefinedBy gd:profiel ;
+    rdfs:label "Grondslag op basis van vrijwilligheid"@nl , "Voluntary basis"@en ;
+    skos:prefLabel "grondslag op basis van vrijwilligheid"@nl ;
+    skos:definition """Een grondslag waarbij er geen beperkingen gelden op basis
+van wet- en regelgeving. Draagt een verantwoording
+(gdvrijwillig:verantwoording) die dat onderbouwt."""@nl .
+
+gd:grondslag a skos:Collection ;
+    rdfs:label "Grondslagsoorten"@nl , "Kinds of legal basis"@en ;
+    skos:definition "De twee grondslagsoorten van dit profiel: de wettelijke grondslag en de grondslag op basis van vrijwilligheid."@nl ;
+    rdfs:seeAlso dpv:LegalBasis ;
+    skos:member gdgrondslag:Wettelijk , gdgrondslag:Vrijwillig .
+
+# ---- 1b. Klassen van de gegevensleveringsspecificatie ------------------------
+
+gd:Gegevensleveringsspecificatie a owl:Class , skos:Concept ;
+    rdfs:subClassOf dprod:DataProduct ;
+    rdfs:isDefinedBy gd:profiel ;
+    rdfs:label "Gegevensleveringsspecificatie"@nl , "Data delivery specification"@en ;
+    skos:prefLabel "gegevensleveringsspecificatie"@nl ;
+    skos:altLabel "GLS"@nl ;
+    skos:definition """De beschrijving van de technische en semantische
+eigenschappen van een gegevensdeling: populatie, begrippenkader, logisch
+gegevensmodel, classificaties, afspraken en ten minste één
+gegevensleversetspecificatie. Uitgedrukt als DPROD-dataproduct waaraan de
+overeenkomst als beleid hangt (odrl:hasPolicy)."""@nl .
+
+gd:Gegevensleversetspecificatie a owl:Class , skos:Concept ;
+    rdfs:subClassOf dcat:Dataset ;
+    rdfs:isDefinedBy gd:profiel ;
+    rdfs:label "Gegevensleversetspecificatie"@nl , "Delivery set specification"@en ;
+    skos:prefLabel "gegevensleversetspecificatie"@nl ;
+    skos:definition """De beschrijving van alle kenmerken van één gegevensleverset
+— de gegevens die als één geheel worden geleverd — zowel de vorm als de
+bijbehorende afspraken. Uitgedrukt als dcat:Dataset; dezelfde knoop is in de
+overeenkomst het voorwerp van de regels (odrl:target)."""@nl .
+
+gd:Gegevensmiddelspecificatie a owl:Class , skos:Concept ;
+    rdfs:subClassOf dcat:Distribution ;
+    rdfs:isDefinedBy gd:profiel ;
+    rdfs:label "Gegevensmiddelspecificatie"@nl , "Delivery medium specification"@en ;
+    skos:prefLabel "gegevensmiddelspecificatie"@nl ;
+    skos:definition """Een volledige beschrijving van de inhoud en samenstelling
+van één gegevensmiddel: de technische vorm waarin de gegevensleverset wordt
+overgedragen."""@nl .
+
+gd:Begrippenkader a owl:Class , skos:Concept ;
+    rdfs:subClassOf skos:ConceptScheme ;
+    rdfs:isDefinedBy gd:profiel ;
+    rdfs:label "Begrippenkader"@nl , "Terminology"@en ;
+    skos:prefLabel "begrippenkader"@nl ;
+    skos:definition """De verzameling begrippen die in de context van een
+gegevensdeling relevant zijn: alle termen die de gegevenstypen van de
+specificatie gebruiken."""@nl .
+
+gd:Term a owl:Class , skos:Concept ;
+    rdfs:subClassOf skos:Concept ;
+    rdfs:isDefinedBy gd:profiel ;
+    rdfs:label "Term"@nl , "Term"@en ;
+    skos:prefLabel "term"@nl ;
+    skos:definition """Een begrip uit het begrippenkader van een
+gegevensleveringsspecificatie, met een naam en een beschrijving. Een
+gegevenstype verwijst naar de term die het verbijzondert."""@nl .
+
+gd:Gegevensset a owl:Class , skos:Concept ;
+    rdfs:subClassOf cdi:VariableCollection ;
+    rdfs:isDefinedBy gd:profiel ;
+    rdfs:label "Gegevensset"@nl , "Data set"@en ;
+    skos:prefLabel "gegevensset"@nl ;
+    skos:definition """Een groepering van gegevenstypen die in een gegevensdeling
+samen betekenis dragen. Uitgedrukt als cdi:VariableCollection."""@nl .
+
+gd:Gegevenstype a owl:Class , skos:Concept ;
+    rdfs:subClassOf cdi:RepresentedVariable ;
+    rdfs:isDefinedBy gd:profiel ;
+    rdfs:label "Gegevenstype"@nl , "Data type"@en ;
+    skos:prefLabel "gegevenstype"@nl ;
+    skos:definition """Het type van een verzameling gegevens met gelijke
+eigenschappen; het beschrijft en normeert een eigenschap van een klasse objecten
+in de werkelijkheid, los van de fysieke implementatie. Uitgedrukt als
+cdi:RepresentedVariable — het niveau van de DDI-CDI-variabelecascade waar
+begrip en waardedomein samenkomen."""@nl .
+
+gd:GegevenstypeCategorisch a owl:Class , skos:Concept ;
+    rdfs:subClassOf gd:Gegevenstype ;
+    rdfs:isDefinedBy gd:profiel ;
+    rdfs:label "Categorisch gegevenstype"@nl , "Categorical data type"@en ;
+    skos:prefLabel "categorisch gegevenstype"@nl ;
+    skos:definition """Een gegevenstype waarvan de waarden uit een vooraf bepaalde
+opsomming komen: het substantieve waardedomein is dan een opgesomd domein
+(cdi:CodeList)."""@nl .
+
+gd:Gegevensveld a owl:Class , skos:Concept ;
+    rdfs:subClassOf cdi:InstanceVariable ;
+    rdfs:isDefinedBy gd:profiel ;
+    rdfs:label "Gegevensveld"@nl , "Data field"@en ;
+    skos:prefLabel "gegevensveld"@nl ;
+    skos:definition """De specifieke locatie binnen een gegevensmiddel waarin een
+soort gegeven wordt opgeslagen: de kleinste betekenisvolle eenheid in het
+technisch gegevensmodel."""@nl .
+
+gd:LogischGegevensmodel a owl:Class , skos:Concept ;
+    rdfs:subClassOf cdi:DataStructure ;
+    rdfs:isDefinedBy gd:profiel ;
+    rdfs:label "Logisch gegevensmodel"@nl , "Logical data model"@en ;
+    skos:altLabel "LGM"@nl ;
+    skos:prefLabel "logisch gegevensmodel"@nl ;
+    skos:definition """De beschrijving van de lay-out van een gegevensleverset in
+relationele vorm: de gegevenstypen, hun onderlinge relaties en hun
+identificerende kenmerken, met een component per gegevenstype."""@nl .
+
+gd:TechnischGegevensmodel a owl:Class , skos:Concept ;
+    rdfs:subClassOf cdi:PhysicalSegmentLayout ;
+    rdfs:isDefinedBy gd:profiel ;
+    rdfs:label "Technisch gegevensmodel"@nl , "Technical data model"@en ;
+    skos:altLabel "TGM"@nl ;
+    skos:prefLabel "technisch gegevensmodel"@nl ;
+    skos:definition """De beschrijving van de lay-out van het gegevensmiddel in de
+vorm waarin het wordt overgedragen: de gegevensvelden, inclusief de technische
+metagegevens eromheen."""@nl .
+
+gd:glsafspraak a owl:Class , skos:Concept ;
+    rdfs:subClassOf odrl:Duty ;
+    owl:disjointWith odrl:Permission , odrl:Prohibition ;
+    rdfs:isDefinedBy gd:profiel ;
+    rdfs:label "GLS-afspraak"@nl , "GLS clause"@en ;
+    skos:prefLabel "GLS-afspraak"@nl ;
+    skos:definition """Een afspraak over een onderwerp dat thuishoort in de
+gegevensleveringsspecificatie als geheel: kwaliteit, communicatie, foutherstel
+en maatregelen tegen herleidbaarheid."""@nl .
+
+gd:leversetafspraak a owl:Class , skos:Concept ;
+    rdfs:subClassOf odrl:Duty ;
+    owl:disjointWith odrl:Permission , odrl:Prohibition ;
+    rdfs:isDefinedBy gd:profiel ;
+    rdfs:label "Gegevensleversetafspraak"@nl , "Delivery set clause"@en ;
+    skos:prefLabel "gegevensleversetafspraak"@nl ;
+    skos:definition """Een afspraak over een aspect van de gegevensdeling dat
+betrekking heeft op de gegevens in één bepaalde gegevensleverset:
+beveiligingsmaatregelen, tijdslijnen, bewaartermijnen en
+toegangsgerechtigden."""@nl .
+
+gd:middelafspraak a owl:Class , skos:Concept ;
+    rdfs:subClassOf odrl:Duty ;
+    owl:disjointWith odrl:Permission , odrl:Prohibition ;
+    rdfs:isDefinedBy gd:profiel ;
+    rdfs:label "Gegevensmiddelafspraak"@nl , "Delivery medium clause"@en ;
+    skos:prefLabel "gegevensmiddelafspraak"@nl ;
+    skos:definition """Een afspraak over een aspect dat bepalend is voor de vorm
+van een gegevensmiddel en voor de logistiek eromheen: initiatie, frequentie,
+actualiteit, wijze van leveren, transport, middeltype, samenstelling en
+interpretatie."""@nl .
+
+# ---- 1c. Properties ---------------------------------------------------------
+
+gd:heeftStatus a owl:ObjectProperty , skos:Concept ;
+    rdfs:domain gd:Gegevensleveringsovereenkomst ; rdfs:range skos:Concept ;
+    rdfs:label "status"@nl , "status"@en ;
+    skos:definition """De huidige toestand van een gegevensleveringsovereenkomst;
+een waarde uit gd:status. "Verlopen" is afleidbaar uit schema:validThrough en
+wordt bij voorkeur berekend in plaats van vastgelegd."""@nl .
+
+gd:noodzaak a owl:DatatypeProperty , skos:Concept ;
+    rdfs:domain gd:Gegevensleveringsovereenkomst ; rdfs:range rdf:langString ;
+    rdfs:label "noodzaak"@nl , "necessity"@en ;
+    skos:definition """De beoordeling waarom de gegevens in de gegevensdeling voor
+het bepaalde doel nodig zijn, en of daadwerkelijk alle gegevens nodig
+zijn."""@nl .
+
+# Geen rdfs:domain: het doel hangt aan de verstrekkersrol én, als
+# snelkoppeling, aan de overeenkomst zelf. Twee domeinaxioma's zouden een
+# doorsnede betekenen.
+gd:doelVerstrekker a owl:ObjectProperty , skos:Concept ;
+    rdfs:range dpv:Purpose ;
+    rdfs:label "doel verstrekker"@nl , "provider purpose"@en ;
+    skos:related gd:Verstrekker ;
+    skos:definition """Het doel dat de verstrekker met de gegevensdeling nastreeft:
+een verwijzing naar de vermelding in zijn verwerkingsregister, getypeerd
+dpv:Purpose, met de grondslagen op die vermelding (dpv:hasLegalBasis)."""@nl .
+
+gd:doelOntvanger a owl:ObjectProperty , skos:Concept ;
+    rdfs:domain gd:Ontvanger ; rdfs:range dpv:Purpose ;
+    rdfs:label "doel ontvanger"@nl , "recipient purpose"@en ;
+    skos:related gd:Ontvanger ;
+    skos:definition """Het doel dat de ontvanger met de gegevensdeling nastreeft.
+Deze property vervangt de doelbinding niet: het normatieve mechanisme blijft het
+AP-NL-patroon, odrl:purpose als leftOperand van een refinement op de verleende
+actie. Dat de twee hetzelfde doel noemen is toetsbaar en geen aanname."""@nl .
+
+gd:heeftRol a owl:ObjectProperty , skos:Concept ;
+    rdfs:domain gd:Gegevensleveringsovereenkomst ; rdfs:range gd:Overeenkomstrol ;
+    rdfs:label "rol"@nl , "role"@en ;
+    skos:definition """Verbindt een gegevensleveringsovereenkomst met de twee
+rol-objecten die erbij horen: precies één verstrekkersrol en precies één
+ontvangersrol."""@nl .
+
+gd:partij a owl:ObjectProperty , skos:Concept ;
+    rdfs:domain gd:Overeenkomstrol ; rdfs:range odrl:Party ;
+    rdfs:label "partij van de rol"@nl , "party of the role"@en ;
+    skos:definition """De partij die de rol vervult: precies één. Voor de
+verstrekkersrol dezelfde partij als de odrl:assigner van de overeenkomst, voor
+de ontvangersrol dezelfde als de odrl:assignee."""@nl .
+
+gd:heeftGrondslag a owl:ObjectProperty , skos:Concept ;
+    rdfs:domain gd:Overeenkomstrol ; rdfs:range dpv:LegalBasis ;
+    rdfs:label "grondslag van de rol"@nl , "legal basis of the role"@en ;
+    skos:definition """De grondslag waarop deze kant van de gegevensdeling berust.
+Het normatieve pad naar de grondslag blijft dpv:hasLegalBasis op het doel; deze
+property maakt de rolkant zichtbaar, zodat grondslag-verstrekker en
+grondslag-ontvanger uit elkaar te houden zijn."""@nl .
+
+gd:eindverantwoordelijkeFunctie a owl:ObjectProperty , skos:Concept ;
+    rdfs:domain gd:Overeenkomstrol ; rdfs:range org:Role ;
+    rdfs:label "eindverantwoordelijke functie"@nl , "accountable role"@en ;
+    skos:definition """De functie die voor deze kant van de gegevensdeling
+eindverantwoordelijk is. De functie zelf is een org:Role; de persoon die haar
+bij het akkoord bekleedde staat op de akkoordverklaring."""@nl .
+
+gd:verwerkingsbelang a owl:ObjectProperty , skos:Concept ;
+    rdfs:domain gd:Gegevensleveringsovereenkomst ; rdfs:range dpv:LegalBasis ;
+    rdfs:label "verwerkingsbelang"@nl , "processing interest"@en ;
+    skos:definition """Een op wet- of regelgeving gebaseerd belang dat met de
+verwerkingen van deze deling is gemoeid, zoals het verantwoordingsbelang uit de
+Archiefwet. De afspraken die eruit volgen — bewaartermijn, vernietiging —
+verwijzen zo naar hun grond."""@nl .
+
+# Geen rdfs:domain, om dezelfde reden als bij gd:doelVerstrekker: de
+# akkoordverklaring hangt aan het rol-object én aan de overeenkomst.
+gd:akkoordverklaring a owl:ObjectProperty , skos:Concept ;
+    rdfs:subPropertyOf prov:wasGeneratedBy ;
+    rdfs:range gd:Akkoordverklaring ;
+    rdfs:label "akkoordverklaring"@nl , "declaration of agreement"@en ;
+    skos:definition """Verbindt een gegevensleveringsovereenkomst of een rol-object
+met een akkoordverklaring. Bij status "akkoord" horen er ten minste twee: één
+namens de verstrekker en één namens de ontvanger."""@nl .
+
+gd:namens a owl:ObjectProperty , skos:Concept ;
+    rdfs:domain gd:Akkoordverklaring ; rdfs:range odrl:Party ;
+    rdfs:label "namens"@nl , "on behalf of"@en ;
+    skos:definition "De partij namens wie de akkoordverklaring is afgelegd. De rol staat in de subproperty: gdnamens:verstrekker of gdnamens:ontvanger."@nl .
+
+gdnamens:verstrekker a owl:ObjectProperty , skos:Concept ;
+    rdfs:subPropertyOf gd:namens ;
+    rdfs:domain gd:Akkoordverklaring ; rdfs:range odrl:Party ;
+    rdfs:label "namens verstrekker"@nl , "on behalf of the provider"@en ;
+    skos:definition "De verstrekkende partij namens wie de akkoordverklaring is afgelegd; zij hoort de odrl:assigner van de overeenkomst te zijn."@nl .
+
+gdnamens:ontvanger a owl:ObjectProperty , skos:Concept ;
+    rdfs:subPropertyOf gd:namens ;
+    rdfs:domain gd:Akkoordverklaring ; rdfs:range odrl:Party ;
+    rdfs:label "namens ontvanger"@nl , "on behalf of the recipient"@en ;
+    skos:definition "De ontvangende partij namens wie de akkoordverklaring is afgelegd; zij hoort de odrl:assignee van de overeenkomst te zijn."@nl .
+
+gdvrijwillig:verantwoording a owl:DatatypeProperty , skos:Concept ;
+    rdfs:domain gdgrondslag:Vrijwillig ; rdfs:range rdf:langString ;
+    rdfs:label "verantwoording vrijwilligheid"@nl , "substantiation of voluntary basis"@en ;
+    skos:definition "Verantwoording dat bij een grondslag op basis van vrijwilligheid geen beperkingen bestaan op basis van wet- en regelgeving."@nl .
+
+gd:gegevensleveringsspecificatie a owl:ObjectProperty , skos:Concept ;
+    rdfs:domain gd:Gegevensleveringsovereenkomst ;
+    rdfs:range gd:Gegevensleveringsspecificatie ;
+    rdfs:label "gegevensleveringsspecificatie"@nl , "data delivery specification"@en ;
+    skos:definition "Verbindt een gegevensleveringsovereenkomst met de specificatie(s) die de leveringen functioneel en technisch beschrijven."@nl .
+
+# Geen rdfs:domain: de property draagt drie subjecten — de specificatie, de
+# leversetspecificatie en het gegevenstype. Welke objecten haar dragen staat in
+# de shapes, niet in een domeinaxioma.
+gd:classificatie a owl:ObjectProperty , skos:Concept ;
+    rdfs:range skos:Concept ;
+    rdfs:label "classificatie"@nl , "classification"@en ;
+    skos:definition """Een classificatiewaarde die van toepassing is op een
+gegevensdeling, een gegevensleverset of een gegevenstype. Het classificatietype
+van de waarde is het begrippenkader (skos:inScheme) waartoe zij behoort."""@nl .
+
+gd:populatiebeschrijving a owl:DatatypeProperty , skos:Concept ;
+    rdfs:range rdf:langString ;
+    rdfs:label "populatiebeschrijving"@nl , "population description"@en ;
+    skos:definition """Een informele beschrijving in verhalende vorm van de inhoud
+van de gegevensdeling of van één gegevensleverset daarbinnen, met zo nodig de
+filterregels waarmee de populatie is afgebakend. Geen rdfs:domain: zij geldt op
+beide niveaus."""@nl .
+
+gd:heeftAfspraak a owl:ObjectProperty , skos:Concept ;
+    rdfs:range odrl:Duty ;
+    rdfs:label "heeft afspraak"@nl , "has clause"@en ;
+    skos:definition """Verbindt een gegevensleveringsspecificatie, een
+gegevensleversetspecificatie of een gegevensmiddelspecificatie met de afspraken
+die op dat niveau gelden. De soort ligt al vast in de klasse van de
+afspraak."""@nl .
+
+gd:filtertOpGegevenstype a owl:ObjectProperty , skos:Concept ;
+    rdfs:domain gd:Gegevensleversetspecificatie ; rdfs:range gd:Gegevenstype ;
+    rdfs:label "filtert op gegevenstype"@nl , "filters on data type"@en ;
+    skos:definition """Wijst het gegevenstype aan waarop een filterregel de
+gegevensleverset afbakent. De regel zelf staat in de populatiebeschrijving of in
+een gegevensleversetafspraak."""@nl .
+
+gd:contactpersoon a owl:ObjectProperty , skos:Concept ;
+    rdfs:domain gd:Gegevensleveringsspecificatie ; rdfs:range org:Membership ;
+    rdfs:label "contactpersoon"@nl , "contact person"@en ;
+    skos:definition """Verbindt een gegevensleveringsspecificatie met een persoon
+in functie die als contactpersoon optreedt. De rol van die contactpersoon staat
+als org:role op de org:Membership, met een waarde uit gd:glsrol."""@nl .
+
+# =============================================================================
+# 2. WAARDELIJST: STATUS VAN DE OVEREENKOMST
+# =============================================================================
+
+gd:status a skos:ConceptScheme ;
+    rdfs:label "Statussen van de overeenkomst"@nl , "Agreement statuses"@en ;
+    dct:title "Statussen van de overeenkomst"@nl , "Agreement statuses"@en ;
+    skos:definition "De vijf toestanden waarin een gegevensleveringsovereenkomst zich kan bevinden."@nl .
+
+gdstatus:concept a skos:Concept ;
+    rdfs:label "concept"@nl , "draft"@en ; skos:prefLabel "concept"@nl ;
+    skos:definition "De overeenkomst is opgesteld maar nog niet door beide partijen aanvaard."@nl ;
+    skos:inScheme gd:status ; skos:topConceptOf gd:status .
+
+gdstatus:akkoord a skos:Concept ;
+    rdfs:label "akkoord"@nl , "agreed"@en ; skos:prefLabel "akkoord"@nl ;
+    skos:definition "Beide partijen hebben de overeenkomst aanvaard; zij is van kracht binnen haar geldigheidsduur."@nl ;
+    skos:inScheme gd:status ; skos:topConceptOf gd:status .
+
+gdstatus:opgeschort a skos:Concept ;
+    rdfs:label "opgeschort"@nl , "suspended"@en ; skos:prefLabel "opgeschort"@nl ;
+    skos:definition "De werking van de overeenkomst is tijdelijk stilgelegd; zij is niet beëindigd."@nl ;
+    skos:inScheme gd:status ; skos:topConceptOf gd:status .
+
+gdstatus:opgezegd a skos:Concept ;
+    rdfs:label "opgezegd"@nl , "terminated"@en ; skos:prefLabel "opgezegd"@nl ;
+    skos:definition "Een van de partijen heeft de overeenkomst beëindigd."@nl ;
+    skos:inScheme gd:status ; skos:topConceptOf gd:status .
+
+gdstatus:verlopen a skos:Concept ;
+    rdfs:label "verlopen"@nl , "expired"@en ; skos:prefLabel "verlopen"@nl ;
+    skos:definition "De geldigheidsduur is voorbij. Deze waarde is afleidbaar uit schema:validThrough en wordt bij voorkeur berekend in plaats van vastgelegd."@nl ;
+    skos:inScheme gd:status ; skos:topConceptOf gd:status .
+
+# =============================================================================
+# 3. WAARDELIJST: ONDERWERPEN VAN OVEREENKOMSTAFSPRAKEN (dct:subject)
+# =============================================================================
+
+gdafspraak:onderwerp a skos:ConceptScheme ;
+    rdfs:label "Onderwerpen van overeenkomstafspraken"@nl , "Agreement clause topics"@en ;
+    dct:title "Onderwerpen van overeenkomstafspraken"@nl , "Agreement clause topics"@en ;
+    skos:definition "De acht onderwerpen waarover in een gegevensleveringsovereenkomst afspraken worden vastgelegd."@nl .
+
+gdonderwerp:documentdoelstelling a skos:Concept ;
+    rdfs:label "documentdoelstelling"@nl , "document objective"@en ;
+    skos:prefLabel "documentdoelstelling"@nl ;
+    skos:definition "Afspraak die beschrijft waarop de overeenkomst gericht is."@nl ;
+    skos:inScheme gdafspraak:onderwerp ; skos:topConceptOf gdafspraak:onderwerp .
+
+gdonderwerp:geschillen a skos:Concept ;
+    rdfs:label "geschillen"@nl , "disputes"@en ;
+    skos:prefLabel "geschillen"@nl ;
+    skos:definition "Afspraak over de behandeling van geschillen rond de gegevensdeling."@nl ;
+    skos:inScheme gdafspraak:onderwerp ; skos:topConceptOf gdafspraak:onderwerp .
+
+gdonderwerp:opschorten-opzeggen a skos:Concept ;
+    rdfs:label "opschorten of opzeggen"@nl , "suspension or termination"@en ;
+    skos:prefLabel "opschorten of opzeggen"@nl ;
+    skos:definition "Afspraak over de manieren waarop de gegevensdeling kan worden opgeschort of opgezegd."@nl ;
+    skos:inScheme gdafspraak:onderwerp ; skos:topConceptOf gdafspraak:onderwerp .
+
+gdonderwerp:tussentijdse-evaluatie a skos:Concept ;
+    rdfs:label "tussentijdse evaluatie"@nl , "interim evaluation"@en ;
+    skos:prefLabel "tussentijdse evaluatie"@nl ;
+    skos:definition "Afspraak over de manier waarop de controle op de afspraken wordt uitgevoerd gedurende de geldigheidsduur."@nl ;
+    skos:inScheme gdafspraak:onderwerp ; skos:topConceptOf gdafspraak:onderwerp .
+
+gdonderwerp:verplichtingen-ontvanger a skos:Concept ;
+    rdfs:label "verantwoordelijkheden en verplichtingen ontvanger"@nl ,
+               "responsibilities and obligations of the recipient"@en ;
+    skos:prefLabel "verantwoordelijkheden en verplichtingen ontvanger"@nl ;
+    skos:definition "Afspraak over de verantwoordelijkheden en verplichtingen waaraan de ontvanger zich bindt."@nl ;
+    skos:inScheme gdafspraak:onderwerp ; skos:topConceptOf gdafspraak:onderwerp .
+
+gdonderwerp:verplichtingen-verstrekker a skos:Concept ;
+    rdfs:label "verantwoordelijkheden en verplichtingen verstrekker"@nl ,
+               "responsibilities and obligations of the provider"@en ;
+    skos:prefLabel "verantwoordelijkheden en verplichtingen verstrekker"@nl ;
+    skos:definition "Afspraak over de verantwoordelijkheden en verplichtingen waaraan de verstrekker zich bindt."@nl ;
+    skos:inScheme gdafspraak:onderwerp ; skos:topConceptOf gdafspraak:onderwerp .
+
+gdonderwerp:wijzigingsprocedure a skos:Concept ;
+    rdfs:label "wijzigingsprocedure"@nl , "amendment procedure"@en ;
+    skos:prefLabel "wijzigingsprocedure"@nl ;
+    skos:definition "Afspraak over de werkwijze bij wijzigingen van de overeenkomst."@nl ;
+    skos:inScheme gdafspraak:onderwerp ; skos:topConceptOf gdafspraak:onderwerp .
+
+gdonderwerp:financieel a skos:Concept ;
+    rdfs:label "financiële afspraak"@nl , "financial agreement"@en ;
+    skos:prefLabel "financiële afspraak"@nl ;
+    skos:definition "Afspraak over een eventuele financiële vergoeding met betrekking tot de gegevensdeling."@nl ;
+    skos:inScheme gdafspraak:onderwerp ; skos:topConceptOf gdafspraak:onderwerp .
+
+# =============================================================================
+# 4. WAARDELIJST: ONDERWERPEN VAN GLS-AFSPRAKEN
+#
+# Eén lijst met drie deelverzamelingen: de GLS-afspraak, de
+# gegevensleversetafspraak en de gegevensmiddelafspraak gebruiken elk hun eigen
+# deel. De deelverzamelingen staan onderaan deze sectie als skos:Collection.
+# =============================================================================
+
+gd:glsonderwerp a skos:ConceptScheme ;
+    rdfs:label "Onderwerpen van GLS-afspraken"@nl , "GLS clause topics"@en ;
+    dct:title "Onderwerpen van GLS-afspraken"@nl , "GLS clause topics"@en ;
+    skos:definition "De 22 onderwerpen waarover in een gegevensleveringsspecificatie afspraken worden vastgelegd, verdeeld over de GLS-afspraak, de gegevensleversetafspraak en de gegevensmiddelafspraak."@nl .
+
+# ---- 4a. Deel van de GLS-afspraak (7) ---------------------------------------
+
+gdglsonderwerp:administratieve-kwaliteit a skos:Concept ;
+    rdfs:label "administratieve kwaliteit"@nl , "administrative quality"@en ;
+    skos:prefLabel "administratieve kwaliteit"@nl ;
+    skos:definition "Afspraak die beschrijft op welke manier de kwaliteit van de procesgang en de administratie daarvan wordt geborgd en bewaakt."@nl ;
+    skos:inScheme gd:glsonderwerp ; skos:topConceptOf gd:glsonderwerp .
+
+gdglsonderwerp:communicatie-normale-levering a skos:Concept ;
+    rdfs:label "communicatie bij normale levering"@nl , "communication during normal delivery"@en ;
+    skos:prefLabel "communicatie bij normale levering"@nl ;
+    skos:definition "Afspraak over de berichten die partijen bij een gewone levering uitwisselen, en over het moment waarop een levering als voltooid geldt."@nl ;
+    skos:inScheme gd:glsonderwerp ; skos:topConceptOf gd:glsonderwerp .
+
+gdglsonderwerp:communicatie-afwijkende-levering a skos:Concept ;
+    rdfs:label "communicatie bij afwijkende levering"@nl , "communication during deviating delivery"@en ;
+    skos:prefLabel "communicatie bij afwijkende levering"@nl ;
+    skos:definition "Afspraak over de manier waarop partijen elkaar informeren als een levering uitblijft, mislukt of afwijkt van wat is afgesproken."@nl ;
+    skos:inScheme gd:glsonderwerp ; skos:topConceptOf gd:glsonderwerp .
+
+gdglsonderwerp:communicatie-over-kwaliteit a skos:Concept ;
+    rdfs:label "communicatie over kwaliteit"@nl , "communication about quality"@en ;
+    skos:prefLabel "communicatie over kwaliteit"@nl ;
+    skos:definition "Afspraak over de manier waarop kwaliteitsproblemen buiten de vastgelegde afspraken worden gemeld en opgelost."@nl ;
+    skos:inScheme gd:glsonderwerp ; skos:topConceptOf gd:glsonderwerp .
+
+gdglsonderwerp:foutherstel-hernieuwde-levering a skos:Concept ;
+    rdfs:label "foutherstel door hernieuwde levering"@nl , "error correction by redelivery"@en ;
+    skos:prefLabel "foutherstel door hernieuwde levering"@nl ;
+    skos:definition "Afspraak over de manier waarop een onvolledige of onjuiste levering wordt hersteld."@nl ;
+    skos:inScheme gd:glsonderwerp ; skos:topConceptOf gd:glsonderwerp .
+
+gdglsonderwerp:gegevenskwaliteit a skos:Concept ;
+    rdfs:label "gegevenskwaliteit"@nl , "data quality"@en ;
+    skos:prefLabel "gegevenskwaliteit"@nl ;
+    skos:definition "Afspraak over de eisen die aan de inhoud van de geleverde gegevens worden gesteld: juistheid, volledigheid en actualiteit."@nl ;
+    skos:inScheme gd:glsonderwerp ; skos:topConceptOf gd:glsonderwerp .
+
+gdglsonderwerp:maatregelen-herleidbaarheid a skos:Concept ;
+    rdfs:label "maatregelen tegen herleidbaarheid"@nl , "measures against traceability"@en ;
+    skos:prefLabel "maatregelen tegen herleidbaarheid"@nl ;
+    skos:definition "Afspraak over de maatregelen die voorkomen dat gegevens tot een persoon herleidbaar worden door verrijking of publicatie."@nl ;
+    skos:inScheme gd:glsonderwerp ; skos:topConceptOf gd:glsonderwerp .
+
+# ---- 4b. Deel van de gegevensleversetafspraak (4) ----------------------------
+
+gdglsonderwerp:beveiligingsmaatregelen a skos:Concept ;
+    rdfs:label "beveiligingsmaatregelen"@nl , "security measures"@en ;
+    skos:prefLabel "beveiligingsmaatregelen"@nl ;
+    skos:definition "Afspraak over de maatregelen die de gegevens in de gegevensleverset beschermen tegen verlies en onbevoegde toegang."@nl ;
+    skos:inScheme gd:glsonderwerp ; skos:topConceptOf gd:glsonderwerp .
+
+gdglsonderwerp:bewaartermijnen a skos:Concept ;
+    rdfs:label "bewaartermijnen"@nl , "retention periods"@en ;
+    skos:prefLabel "bewaartermijnen"@nl ;
+    skos:definition "Afspraak die aangeeft onder welke condities de bewaartermijn van de gegevens start of eindigt, en hoe de vernietiging wordt uitgevoerd."@nl ;
+    skos:inScheme gd:glsonderwerp ; skos:topConceptOf gd:glsonderwerp .
+
+gdglsonderwerp:tijdslijnen a skos:Concept ;
+    rdfs:label "tijdslijnen"@nl , "timelines"@en ;
+    skos:prefLabel "tijdslijnen"@nl ;
+    skos:definition "Afspraak over de termijnen waarbinnen de partijen hun verplichtingen rond de gegevensleverset nakomen."@nl ;
+    skos:inScheme gd:glsonderwerp ; skos:topConceptOf gd:glsonderwerp .
+
+gdglsonderwerp:toegangsgerechtigden a skos:Concept ;
+    rdfs:label "toegangsgerechtigden"@nl , "authorised parties"@en ;
+    skos:prefLabel "toegangsgerechtigden"@nl ;
+    skos:definition "Afspraak over wie bij de ontvanger toegang heeft tot de geleverde gegevens."@nl ;
+    skos:inScheme gd:glsonderwerp ; skos:topConceptOf gd:glsonderwerp .
+
+# ---- 4c. Deel van de gegevensmiddelafspraak (11) -----------------------------
+
+gdglsonderwerp:gegevensleveringsinitiatie a skos:Concept ;
+    rdfs:label "gegevensleveringsinitiatie"@nl , "delivery initiation"@en ;
+    skos:prefLabel "gegevensleveringsinitiatie"@nl ;
+    skos:definition "Afspraak die vastlegt wie een levering in gang zet: de ontvanger met een bevraging, of de verstrekker uit eigen beweging."@nl ;
+    skos:inScheme gd:glsonderwerp ; skos:topConceptOf gd:glsonderwerp .
+
+gdglsonderwerp:gegevensleveringsfrequentie a skos:Concept ;
+    rdfs:label "gegevensleveringsfrequentie"@nl , "delivery frequency"@en ;
+    skos:prefLabel "gegevensleveringsfrequentie"@nl ;
+    skos:definition "Afspraak over hoe vaak of op welke momenten er geleverd wordt; bij levering op verzoek: binnen welke openstelling en met welke volumegrens."@nl ;
+    skos:inScheme gd:glsonderwerp ; skos:topConceptOf gd:glsonderwerp .
+
+gdglsonderwerp:actualiteit-gegevensmiddel a skos:Concept ;
+    rdfs:label "actualiteit van het gegevensmiddel"@nl , "currency of the delivery medium"@en ;
+    skos:prefLabel "actualiteit van het gegevensmiddel"@nl ;
+    skos:definition "Afspraak over de peildatum van de geleverde gegevens: op welk moment zij aan de bron zijn onttrokken."@nl ;
+    skos:inScheme gd:glsonderwerp ; skos:topConceptOf gd:glsonderwerp .
+
+gdglsonderwerp:deltaverwerking a skos:Concept ;
+    rdfs:label "deltaverwerking"@nl , "delta processing"@en ;
+    skos:prefLabel "deltaverwerking"@nl ;
+    skos:definition "Afspraak over de vraag of een levering de volledige stand bevat of alleen de wijzigingen sinds de vorige levering."@nl ;
+    skos:inScheme gd:glsonderwerp ; skos:topConceptOf gd:glsonderwerp .
+
+gdglsonderwerp:deelleveringen a skos:Concept ;
+    rdfs:label "deelleveringen"@nl , "partial deliveries"@en ;
+    skos:prefLabel "deelleveringen"@nl ;
+    skos:definition "Afspraak over de vraag of een levering in delen mag worden aangeboden, en hoe die delen samenhangen."@nl ;
+    skos:inScheme gd:glsonderwerp ; skos:topConceptOf gd:glsonderwerp .
+
+gdglsonderwerp:wijze-van-leveren a skos:Concept ;
+    rdfs:label "wijze van leveren"@nl , "method of delivery"@en ;
+    skos:prefLabel "wijze van leveren"@nl ;
+    skos:definition "Afspraak over de manier waarop het gegevensmiddel bij de ontvanger terechtkomt, en wie het kanaal beheert."@nl ;
+    skos:inScheme gd:glsonderwerp ; skos:topConceptOf gd:glsonderwerp .
+
+gdglsonderwerp:transportkarakteristieken a skos:Concept ;
+    rdfs:label "transportkarakteristieken"@nl , "transport characteristics"@en ;
+    skos:prefLabel "transportkarakteristieken"@nl ;
+    skos:definition "Afspraak over het transportprotocol, de authenticatie en de versleuteling waarmee het gegevensmiddel wordt overgedragen."@nl ;
+    skos:inScheme gd:glsonderwerp ; skos:topConceptOf gd:glsonderwerp .
+
+gdglsonderwerp:gegevensmiddeltype a skos:Concept ;
+    rdfs:label "gegevensmiddeltype"@nl , "delivery medium type"@en ;
+    skos:prefLabel "gegevensmiddeltype"@nl ;
+    skos:definition "Afspraak over de technische vorm van het gegevensmiddel: het formaat, de tekencodering en de notatieconventies."@nl ;
+    skos:inScheme gd:glsonderwerp ; skos:topConceptOf gd:glsonderwerp .
+
+gdglsonderwerp:samenstelling-gegevensmiddel a skos:Concept ;
+    rdfs:label "samenstelling van het gegevensmiddel"@nl , "composition of the delivery medium"@en ;
+    skos:prefLabel "samenstelling van het gegevensmiddel"@nl ;
+    skos:definition "Afspraak over de opbouw van het gegevensmiddel: kop- en voetgegevens, de ordening van de inhoud en eventuele bundeling."@nl ;
+    skos:inScheme gd:glsonderwerp ; skos:topConceptOf gd:glsonderwerp .
+
+gdglsonderwerp:naamgevingsconventies a skos:Concept ;
+    rdfs:label "naamgevingsconventies"@nl , "naming conventions"@en ;
+    skos:prefLabel "naamgevingsconventies"@nl ;
+    skos:definition "Afspraak over de namen waaronder gegevensmiddelen en hun onderdelen worden aangeboden."@nl ;
+    skos:inScheme gd:glsonderwerp ; skos:topConceptOf gd:glsonderwerp .
+
+gdglsonderwerp:interpretatie-gegevensmiddel a skos:Concept ;
+    rdfs:label "interpretatie van het gegevensmiddel"@nl , "interpretation of the delivery medium"@en ;
+    skos:prefLabel "interpretatie van het gegevensmiddel"@nl ;
+    skos:definition "Afspraak over de betekenis van bijzondere waarden en van het ontbreken van een waarde in het gegevensmiddel."@nl ;
+    skos:inScheme gd:glsonderwerp ; skos:topConceptOf gd:glsonderwerp .
+
+# ---- 4d. De drie deelverzamelingen ------------------------------------------
+
+gd:glsafspraak\/onderwerpen a skos:Collection ;
+    rdfs:label "Onderwerpen van de GLS-afspraak"@nl , "Topics of the GLS clause"@en ;
+    skos:member gdglsonderwerp:administratieve-kwaliteit ,
+        gdglsonderwerp:communicatie-normale-levering ,
+        gdglsonderwerp:communicatie-afwijkende-levering ,
+        gdglsonderwerp:communicatie-over-kwaliteit ,
+        gdglsonderwerp:foutherstel-hernieuwde-levering ,
+        gdglsonderwerp:gegevenskwaliteit ,
+        gdglsonderwerp:maatregelen-herleidbaarheid .
+
+gd:leversetafspraak\/onderwerpen a skos:Collection ;
+    rdfs:label "Onderwerpen van de gegevensleversetafspraak"@nl ,
+               "Topics of the delivery set clause"@en ;
+    skos:member gdglsonderwerp:beveiligingsmaatregelen ,
+        gdglsonderwerp:bewaartermijnen , gdglsonderwerp:tijdslijnen ,
+        gdglsonderwerp:toegangsgerechtigden .
+
+gd:middelafspraak\/onderwerpen a skos:Collection ;
+    rdfs:label "Onderwerpen van de gegevensmiddelafspraak"@nl ,
+               "Topics of the delivery medium clause"@en ;
+    skos:member gdglsonderwerp:gegevensleveringsinitiatie ,
+        gdglsonderwerp:gegevensleveringsfrequentie ,
+        gdglsonderwerp:actualiteit-gegevensmiddel ,
+        gdglsonderwerp:deltaverwerking , gdglsonderwerp:deelleveringen ,
+        gdglsonderwerp:wijze-van-leveren ,
+        gdglsonderwerp:transportkarakteristieken ,
+        gdglsonderwerp:gegevensmiddeltype ,
+        gdglsonderwerp:samenstelling-gegevensmiddel ,
+        gdglsonderwerp:naamgevingsconventies ,
+        gdglsonderwerp:interpretatie-gegevensmiddel .
+
+# =============================================================================
+# 5. WAARDELIJST: WAARDETYPEN VAN EEN GEGEVENSTYPE
+#
+# De waarde staat op het gegevenstype als DDI-CDI-vocabulairewaarde
+# (cdi:RepresentedVariable-hasIntendedDataType), met deze lijst als vocabulaire.
+# =============================================================================
+
+gd:waardetype a skos:ConceptScheme ;
+    rdfs:label "Waardetypen"@nl , "Value types"@en ;
+    dct:title "Waardetypen"@nl , "Value types"@en ;
+    skos:definition "De waardetypen die een gegevenstype kan hebben. De waarde 'Categorical' schakelt door naar een categorisch gegevenstype met een opgesomd waardebereik."@nl .
+
+gdwaardetype:blob a skos:Concept ; skos:prefLabel "Blob"@nl ; rdfs:label "Blob"@nl , "Blob"@en ;
+    skos:definition "Een ongestructureerde reeks bytes."@nl ;
+    skos:inScheme gd:waardetype ; skos:topConceptOf gd:waardetype .
+gdwaardetype:boolean a skos:Concept ; skos:prefLabel "Boolean"@nl ; rdfs:label "Boolean"@nl , "Boolean"@en ;
+    skos:definition "Een waarheidswaarde: waar of onwaar."@nl ;
+    skos:inScheme gd:waardetype ; skos:topConceptOf gd:waardetype .
+gdwaardetype:byte a skos:Concept ; skos:prefLabel "Byte"@nl ; rdfs:label "Byte"@nl , "Byte"@en ;
+    skos:definition "Eén byte."@nl ;
+    skos:inScheme gd:waardetype ; skos:topConceptOf gd:waardetype .
+gdwaardetype:categorical a skos:Concept ; skos:prefLabel "Categorical"@nl ; rdfs:label "Categorisch"@nl , "Categorical"@en ;
+    skos:definition "Een waarde uit een vooraf bepaalde opsomming; het gegevenstype is dan een categorisch gegevenstype."@nl ;
+    skos:inScheme gd:waardetype ; skos:topConceptOf gd:waardetype .
+gdwaardetype:date a skos:Concept ; skos:prefLabel "Date"@nl ; rdfs:label "Datum"@nl , "Date"@en ;
+    skos:definition "Een kalenderdatum zonder tijd."@nl ;
+    skos:inScheme gd:waardetype ; skos:topConceptOf gd:waardetype .
+gdwaardetype:datetime a skos:Concept ; skos:prefLabel "DateTime"@nl ; rdfs:label "Datum en tijd"@nl , "DateTime"@en ;
+    skos:definition "Een tijdstip: datum met tijd."@nl ;
+    skos:inScheme gd:waardetype ; skos:topConceptOf gd:waardetype .
+gdwaardetype:decimal a skos:Concept ; skos:prefLabel "Decimal"@nl ; rdfs:label "Decimaal getal"@nl , "Decimal"@en ;
+    skos:definition "Een getal met een vaste decimale precisie."@nl ;
+    skos:inScheme gd:waardetype ; skos:topConceptOf gd:waardetype .
+gdwaardetype:double a skos:Concept ; skos:prefLabel "Double"@nl ; rdfs:label "Double"@nl , "Double"@en ;
+    skos:definition "Een drijvendekommagetal met dubbele precisie."@nl ;
+    skos:inScheme gd:waardetype ; skos:topConceptOf gd:waardetype .
+gdwaardetype:duration a skos:Concept ; skos:prefLabel "Duration"@nl ; rdfs:label "Tijdsduur"@nl , "Duration"@en ;
+    skos:definition "Een tijdsduur."@nl ;
+    skos:inScheme gd:waardetype ; skos:topConceptOf gd:waardetype .
+gdwaardetype:float a skos:Concept ; skos:prefLabel "Float"@nl ; rdfs:label "Float"@nl , "Float"@en ;
+    skos:definition "Een drijvendekommagetal met enkele precisie."@nl ;
+    skos:inScheme gd:waardetype ; skos:topConceptOf gd:waardetype .
+gdwaardetype:integer a skos:Concept ; skos:prefLabel "Integer"@nl ; rdfs:label "Geheel getal"@nl , "Integer"@en ;
+    skos:definition "Een geheel getal."@nl ;
+    skos:inScheme gd:waardetype ; skos:topConceptOf gd:waardetype .
+gdwaardetype:list a skos:Concept ; skos:prefLabel "List"@nl ; rdfs:label "Lijst"@nl , "List"@en ;
+    skos:definition "Een geordende reeks waarden."@nl ;
+    skos:inScheme gd:waardetype ; skos:topConceptOf gd:waardetype .
+gdwaardetype:string a skos:Concept ; skos:prefLabel "String"@nl ; rdfs:label "Tekst"@nl , "String"@en ;
+    skos:definition "Een reeks tekens."@nl ;
+    skos:inScheme gd:waardetype ; skos:topConceptOf gd:waardetype .
+gdwaardetype:time a skos:Concept ; skos:prefLabel "Time"@nl ; rdfs:label "Tijd"@nl , "Time"@en ;
+    skos:definition "Een tijdstip binnen een dag, zonder datum."@nl ;
+    skos:inScheme gd:waardetype ; skos:topConceptOf gd:waardetype .
+
+# =============================================================================
+# 6. WAARDELIJST: ROLLEN VAN EEN CONTACTPERSOON BIJ DE SPECIFICATIE
+#
+# De rol staat als org:role op de org:Membership die persoon, organisatie en
+# functie verenigt; de waarden zijn daarom zelf ook org:Role.
+# =============================================================================
+
+gd:glsrol a skos:ConceptScheme ;
+    rdfs:label "Rollen van contactpersonen"@nl , "Contact person roles"@en ;
+    dct:title "Rollen van contactpersonen"@nl , "Contact person roles"@en ;
+    skos:definition "De rollen waarin een contactpersoon bij een gegevensleveringsspecificatie kan optreden."@nl .
+
+gdglsrol:gegevensverantwoordelijke a skos:Concept , org:Role ;
+    rdfs:label "gegevensverantwoordelijke"@nl , "data owner"@en ;
+    skos:prefLabel "gegevensverantwoordelijke"@nl ;
+    skos:definition "Degene die verantwoordelijk is voor de inhoud en de kwaliteit van de geleverde gegevens."@nl ;
+    skos:inScheme gd:glsrol ; skos:topConceptOf gd:glsrol .
+gdglsrol:data-steward a skos:Concept , org:Role ;
+    rdfs:label "data steward"@nl , "data steward"@en ;
+    skos:prefLabel "data steward"@nl ;
+    skos:definition "Degene die de betekenis en de beschrijving van de gegevens beheert."@nl ;
+    skos:inScheme gd:glsrol ; skos:topConceptOf gd:glsrol .
+gdglsrol:leveringsuitvoerder a skos:Concept , org:Role ;
+    rdfs:label "leveringsuitvoerder"@nl , "delivery operator"@en ;
+    skos:prefLabel "leveringsuitvoerder"@nl ;
+    skos:definition "Degene die bij de verstrekker de levering uitvoert en bewaakt."@nl ;
+    skos:inScheme gd:glsrol ; skos:topConceptOf gd:glsrol .
+gdglsrol:ontvangstbeheerder a skos:Concept , org:Role ;
+    rdfs:label "ontvangstbeheerder"@nl , "receipt manager"@en ;
+    skos:prefLabel "ontvangstbeheerder"@nl ;
+    skos:definition "Degene die bij de ontvanger de ontvangst en de verwerking van de levering beheert."@nl ;
+    skos:inScheme gd:glsrol ; skos:topConceptOf gd:glsrol .
+gdglsrol:privacy-officer a skos:Concept , org:Role ;
+    rdfs:label "privacy officer"@nl , "privacy officer"@en ;
+    skos:prefLabel "privacy officer"@nl ;
+    skos:definition "Degene die toeziet op de bescherming van persoonsgegevens in deze gegevensdeling."@nl ;
+    skos:inScheme gd:glsrol ; skos:topConceptOf gd:glsrol .
+gdglsrol:anders a skos:Concept , org:Role ;
+    rdfs:label "anders"@nl , "other"@en ;
+    skos:prefLabel "anders"@nl ;
+    skos:definition "Een rol die niet in deze lijst staat; de aanduiding staat dan op de org:Membership zelf."@nl ;
+    skos:inScheme gd:glsrol ; skos:topConceptOf gd:glsrol .
+
+# =============================================================================
+# 7. CLASSIFICATIE-REFERENTIELIJSTEN
+#
+# Per classificatietype één skos:ConceptScheme, per waarde één skos:Concept,
+# genest via padsegmenten (…/classificatie/<lijst>/<waarde>). Een
+# gegevensdeling, een gegevensleverset of een gegevenstype verwijst ernaar met
+# gd:classificatie; het classificatietype van een waarde is haar skos:inScheme.
+#
+# De lijsten hieronder zijn de GENERIEKE, domeinoverstijgende classificaties:
+# de aanwezigheid en het type persoonsgegevens, de drie BIO-schalen met het
+# beveiligingsniveau dat eruit volgt, het rubriceringsniveau en het
+# verantwoordingsbelang. Een keten met een eigen domein voegt haar eigen lijsten
+# toe in haar eigen namespace; dit vocabulaire schrijft er geen voor.
+# =============================================================================
+
+<https://gegevensdeling.example/def/classificatie> a skos:Collection ;
+    rdfs:label "Classificatie-referentielijsten"@nl , "Classification reference lists"@en ;
+    skos:definition "De referentielijsten van de gegevensclassificaties, elk als eigen begrippenkader met de mogelijke waarden als concepten."@nl ;
+    skos:member gdc:persoonsgegevens-aanwezig , gdc:type-persoonsgegevens ,
+        gdc:biv-beschikbaarheid , gdc:biv-integriteit , gdc:biv-vertrouwelijkheid ,
+        gdc:bbn , gdc:rubriceringsniveau , gdc:verantwoordingsbelang .
+
+gdc:persoonsgegevens-aanwezig a skos:ConceptScheme ;
+    rdfs:label "Classificatie aanwezigheid persoonsgegevens"@nl , "Presence of personal data"@en ;
+    skos:definition "Geeft aan of een gegevenstype, gegevensleverset of gegevensdeling persoonsgegevens bevat."@nl .
+gdc:persoonsgegevens-aanwezig\/bevat-persoonsgegevens a skos:Concept ;
+    skos:inScheme gdc:persoonsgegevens-aanwezig ;
+    rdfs:label "Persoonsgegevens: bevat persoonsgegevens"@nl , "Personal data: contains personal data"@en ;
+    skos:prefLabel "Persoonsgegevens: bevat persoonsgegevens"@nl ;
+    skos:altLabel "bevat persoonsgegevens"@nl ;
+    skos:definition "De informatie bevat gegevens over een geïdentificeerde of identificeerbare natuurlijke persoon."@nl .
+gdc:persoonsgegevens-aanwezig\/bevat-geen-persoonsgegevens a skos:Concept ;
+    skos:inScheme gdc:persoonsgegevens-aanwezig ;
+    rdfs:label "Persoonsgegevens: bevat geen persoonsgegevens"@nl , "Personal data: contains no personal data"@en ;
+    skos:prefLabel "Persoonsgegevens: bevat geen persoonsgegevens"@nl ;
+    skos:altLabel "bevat geen persoonsgegevens"@nl ;
+    skos:definition "De informatie bevat geen gegevens over een geïdentificeerde of identificeerbare natuurlijke persoon."@nl .
+
+gdc:type-persoonsgegevens a skos:ConceptScheme ;
+    rdfs:label "Classificatie type persoonsgegevens"@nl , "Type of personal data"@en ;
+    skos:definition "Geeft aan van welke soort de persoonsgegevens zijn die de informatie bevat."@nl .
+gdc:type-persoonsgegevens\/bevat-gewone-persoonsgegevens a skos:Concept ;
+    skos:inScheme gdc:type-persoonsgegevens ;
+    rdfs:label "Type persoonsgegevens: bevat gewone persoonsgegevens"@nl , "Type of personal data: contains ordinary personal data"@en ;
+    skos:prefLabel "Type persoonsgegevens: bevat gewone persoonsgegevens"@nl ;
+    skos:altLabel "bevat gewone persoonsgegevens"@nl ;
+    skos:definition "De informatie bevat persoonsgegevens die geen bijzondere of gevoelige categorie vormen."@nl .
+gdc:type-persoonsgegevens\/bevat-bijzondere-persoonsgegevens a skos:Concept ;
+    skos:inScheme gdc:type-persoonsgegevens ;
+    rdfs:label "Type persoonsgegevens: bevat bijzondere persoonsgegevens"@nl , "Type of personal data: contains special categories"@en ;
+    skos:prefLabel "Type persoonsgegevens: bevat bijzondere persoonsgegevens"@nl ;
+    skos:altLabel "bevat bijzondere persoonsgegevens"@nl ;
+    skos:definition "De informatie bevat persoonsgegevens uit een bijzondere categorie, waarvoor een zwaarder regime geldt."@nl .
+gdc:type-persoonsgegevens\/bevat-nationale-identificatienummers a skos:Concept ;
+    skos:inScheme gdc:type-persoonsgegevens ;
+    rdfs:label "Type persoonsgegevens: bevat nationale identificatienummers"@nl , "Type of personal data: contains national identification numbers"@en ;
+    skos:prefLabel "Type persoonsgegevens: bevat nationale identificatienummers"@nl ;
+    skos:altLabel "bevat nationale identificatienummers"@nl ;
+    skos:definition "De informatie bevat een bij wet voorgeschreven persoonsnummer."@nl .
+
+gdc:biv-beschikbaarheid a skos:ConceptScheme ;
+    rdfs:label "Classificatie beschikbaarheid"@nl , "Availability classification"@en ;
+    skos:definition "De mate waarin de informatie op het afgesproken moment beschikbaar moet zijn."@nl .
+gdc:biv-beschikbaarheid\/laag a skos:Concept ; skos:inScheme gdc:biv-beschikbaarheid ;
+    rdfs:label "Beschikbaarheid: laag"@nl , "Availability: low"@en ;
+    skos:prefLabel "Beschikbaarheid: laag"@nl ; skos:altLabel "Laag"@nl ;
+    skos:definition "Uitval heeft beperkte gevolgen; herstel binnen de normale werkdag volstaat."@nl .
+gdc:biv-beschikbaarheid\/midden a skos:Concept ; skos:inScheme gdc:biv-beschikbaarheid ;
+    rdfs:label "Beschikbaarheid: midden"@nl , "Availability: medium"@en ;
+    skos:prefLabel "Beschikbaarheid: midden"@nl ; skos:altLabel "Midden"@nl ;
+    skos:definition "Uitval hindert de uitvoering van de taak; herstel is aan een termijn gebonden."@nl .
+gdc:biv-beschikbaarheid\/hoog a skos:Concept ; skos:inScheme gdc:biv-beschikbaarheid ;
+    rdfs:label "Beschikbaarheid: hoog"@nl , "Availability: high"@en ;
+    skos:prefLabel "Beschikbaarheid: hoog"@nl ; skos:altLabel "Hoog"@nl ;
+    skos:definition "Uitval verhindert de uitvoering van de taak; onmiddellijk herstel is vereist."@nl .
+
+gdc:biv-integriteit a skos:ConceptScheme ;
+    rdfs:label "Classificatie integriteit"@nl , "Integrity classification"@en ;
+    skos:definition "De mate waarin de informatie juist en volledig moet zijn."@nl .
+gdc:biv-integriteit\/laag a skos:Concept ; skos:inScheme gdc:biv-integriteit ;
+    rdfs:label "Integriteit: laag"@nl , "Integrity: low"@en ;
+    skos:prefLabel "Integriteit: laag"@nl ; skos:altLabel "Laag"@nl ;
+    skos:definition "Een onjuistheid heeft beperkte gevolgen en is eenvoudig te herstellen."@nl .
+gdc:biv-integriteit\/midden a skos:Concept ; skos:inScheme gdc:biv-integriteit ;
+    rdfs:label "Integriteit: midden"@nl , "Integrity: medium"@en ;
+    skos:prefLabel "Integriteit: midden"@nl ; skos:altLabel "Midden"@nl ;
+    skos:definition "Een onjuistheid leidt tot een onjuiste uitvoering van de taak."@nl .
+gdc:biv-integriteit\/hoog a skos:Concept ; skos:inScheme gdc:biv-integriteit ;
+    rdfs:label "Integriteit: hoog"@nl , "Integrity: high"@en ;
+    skos:prefLabel "Integriteit: hoog"@nl ; skos:altLabel "Hoog"@nl ;
+    skos:definition "Een onjuistheid leidt tot een besluit met rechtsgevolg dat op onjuiste gegevens berust."@nl .
+
+gdc:biv-vertrouwelijkheid a skos:ConceptScheme ;
+    rdfs:label "Classificatie vertrouwelijkheid"@nl , "Confidentiality classification"@en ;
+    skos:definition "De mate waarin de informatie alleen toegankelijk mag zijn voor wie daartoe bevoegd is."@nl .
+gdc:biv-vertrouwelijkheid\/laag a skos:Concept ; skos:inScheme gdc:biv-vertrouwelijkheid ;
+    rdfs:label "Vertrouwelijkheid: laag"@nl , "Confidentiality: low"@en ;
+    skos:prefLabel "Vertrouwelijkheid: laag"@nl ; skos:altLabel "Laag"@nl ;
+    skos:definition "Openbaarmaking heeft geen noemenswaardige gevolgen."@nl .
+gdc:biv-vertrouwelijkheid\/midden a skos:Concept ; skos:inScheme gdc:biv-vertrouwelijkheid ;
+    rdfs:label "Vertrouwelijkheid: midden"@nl , "Confidentiality: medium"@en ;
+    skos:prefLabel "Vertrouwelijkheid: midden"@nl ; skos:altLabel "Midden"@nl ;
+    skos:definition "Openbaarmaking schaadt de betrokkene of de organisatie in beperkte mate."@nl .
+gdc:biv-vertrouwelijkheid\/hoog a skos:Concept ; skos:inScheme gdc:biv-vertrouwelijkheid ;
+    rdfs:label "Vertrouwelijkheid: hoog"@nl , "Confidentiality: high"@en ;
+    skos:prefLabel "Vertrouwelijkheid: hoog"@nl ; skos:altLabel "Hoog"@nl ;
+    skos:definition "Openbaarmaking schaadt de betrokkene of de organisatie ernstig."@nl .
+
+gdc:bbn a skos:ConceptScheme ;
+    rdfs:label "Classificatie beveiligingsniveau"@nl , "Baseline security level"@en ;
+    skos:definition "Het beveiligingsniveau dat uit de drie BIO-schalen volgt en dat de te treffen maatregelen bepaalt."@nl .
+gdc:bbn\/bbn1 a skos:Concept ; skos:inScheme gdc:bbn ;
+    rdfs:label "Beveiligingsniveau 1"@nl , "Security level 1"@en ;
+    skos:prefLabel "Beveiligingsniveau 1"@nl ; skos:altLabel "BBN1"@nl ;
+    skos:definition "Het basisniveau: de standaardmaatregelen volstaan."@nl .
+gdc:bbn\/bbn2 a skos:Concept ; skos:inScheme gdc:bbn ;
+    rdfs:label "Beveiligingsniveau 2"@nl , "Security level 2"@en ;
+    skos:prefLabel "Beveiligingsniveau 2"@nl ; skos:altLabel "BBN2"@nl ;
+    skos:definition "Verhoogd niveau: aanvullende maatregelen bovenop het basisniveau."@nl .
+gdc:bbn\/bbn3 a skos:Concept ; skos:inScheme gdc:bbn ;
+    rdfs:label "Beveiligingsniveau 3"@nl , "Security level 3"@en ;
+    skos:prefLabel "Beveiligingsniveau 3"@nl ; skos:altLabel "BBN3"@nl ;
+    skos:definition "Hoogste niveau: zware maatregelen, met rubricering van de informatie."@nl .
+
+gdc:rubriceringsniveau a skos:ConceptScheme ;
+    rdfs:label "Classificatie rubriceringsniveau"@nl , "Security marking"@en ;
+    skos:definition "Het rubriceringsniveau van de informatie. Het niveau heeft daarnaast een DCAT-thuis en staat op de leverset ook als dct:accessRights."@nl .
+gdc:rubriceringsniveau\/ongerubriceerd a skos:Concept ; skos:inScheme gdc:rubriceringsniveau ;
+    rdfs:label "Rubricering: ongerubriceerd"@nl , "Marking: unclassified"@en ;
+    skos:prefLabel "Rubricering: ongerubriceerd"@nl ; skos:altLabel "Ongerubriceerd"@nl ;
+    skos:definition "De informatie is niet gerubriceerd; er gelden geen bijzondere behandelvoorschriften."@nl .
+gdc:rubriceringsniveau\/intern a skos:Concept ; skos:inScheme gdc:rubriceringsniveau ;
+    rdfs:label "Rubricering: intern"@nl , "Marking: internal"@en ;
+    skos:prefLabel "Rubricering: intern"@nl ; skos:altLabel "Intern"@nl ;
+    skos:definition "De informatie is bestemd voor gebruik binnen de betrokken organisaties en wordt niet extern verspreid."@nl .
+gdc:rubriceringsniveau\/vertrouwelijk a skos:Concept ; skos:inScheme gdc:rubriceringsniveau ;
+    rdfs:label "Rubricering: vertrouwelijk"@nl , "Marking: confidential"@en ;
+    skos:prefLabel "Rubricering: vertrouwelijk"@nl ; skos:altLabel "Vertrouwelijk"@nl ;
+    skos:definition "De informatie is alleen toegankelijk voor wie haar voor zijn taak nodig heeft; verspreiding vergt toestemming van de eigenaar."@nl .
+
+gdc:verantwoordingsbelang a skos:ConceptScheme ;
+    rdfs:label "Classificatie verantwoordingsbelang"@nl , "Accountability interest"@en ;
+    skos:definition "Geeft aan of de informatie voor verantwoording moet worden bewaard, en voor hoe lang."@nl .
+gdc:verantwoordingsbelang\/geen-verantwoordingsbelang a skos:Concept ; skos:inScheme gdc:verantwoordingsbelang ;
+    rdfs:label "Verantwoordingsbelang: geen"@nl , "Accountability interest: none"@en ;
+    skos:prefLabel "Verantwoordingsbelang: geen"@nl ; skos:altLabel "geen verantwoordingsbelang"@nl ;
+    skos:definition "Er is geen verantwoordingsbelang dat bewaren vergt."@nl .
+gdc:verantwoordingsbelang\/ja-moet-tijdelijk-worden-bewaard a skos:Concept ; skos:inScheme gdc:verantwoordingsbelang ;
+    rdfs:label "Verantwoordingsbelang: ja, moet tijdelijk worden bewaard"@nl , "Accountability interest: yes, retain temporarily"@en ;
+    skos:prefLabel "Verantwoordingsbelang: ja, moet tijdelijk worden bewaard"@nl ;
+    skos:altLabel "ja, moet tijdelijk worden bewaard"@nl ;
+    skos:definition "Er is een verantwoordingsbelang; de informatie wordt voor een bepaalde termijn bewaard en daarna vernietigd."@nl .
+gdc:verantwoordingsbelang\/ja-moet-blijvend-worden-bewaard a skos:Concept ; skos:inScheme gdc:verantwoordingsbelang ;
+    rdfs:label "Verantwoordingsbelang: ja, moet blijvend worden bewaard"@nl , "Accountability interest: yes, retain permanently"@en ;
+    skos:prefLabel "Verantwoordingsbelang: ja, moet blijvend worden bewaard"@nl ;
+    skos:altLabel "ja, moet blijvend worden bewaard"@nl ;
+    skos:definition "Er is een verantwoordingsbelang dat blijvende bewaring vergt."@nl .
+
+# =============================================================================
+# 8. TWEE AXIOMA'S UIT DE DDI-CDI-ONTOLOGIE
+#
+# De componentrollen zijn in DDI-CDI specialisaties van
+# cdi:DataStructureComponent. Deze twee regels zeggen dus niets nieuws; zij
+# halen naar dit bestand wat de ontologie al vastlegt, en een corpus dat de
+# ontologiemodules niet meelaadt heeft ze nodig voor de WEERGAVE: het
+# componentformulier staat op de bovenklasse, en een lezer sluit sh:targetClass
+# af over rdfs:subClassOf in de gegevensgraaf. Zonder deze axioma's valt dat
+# formulier niet op een identificerende of gemeten component, en houdt de stap
+# van het logisch gegevensmodel naar de veldlaag op bij een plat label.
+# =============================================================================
+
+cdi:IdentifierComponent rdfs:subClassOf cdi:DataStructureComponent .
+cdi:MeasureComponent rdfs:subClassOf cdi:DataStructureComponent .
+
+# =============================================================================
+# 9. WEERGAVELABELS VOOR DE GEBRUIKTE BASELINE-TERMEN
+#
+# Labels horen in dezelfde dataset als de data (Visualisatie-note §1). De
+# Engelse termnamen en de definities staan in DCAT, DPROD en de
+# DDI-CDI-ontologie; deze labels vervangen die niet maar geven de viewer een
+# Nederlandse veldkop.
+# =============================================================================
+
+dct:conformsTo rdfs:label "voldoet aan"@nl , "conforms to"@en .
+dct:references rdfs:label "verwijst naar"@nl , "references"@en .
+dct:hasPart rdfs:label "omvat"@nl , "comprises"@en .
+dct:accessRights rdfs:label "toegangsrechten (rubricering)"@nl , "access rights (security marking)"@en .
+dct:subject rdfs:label "onderwerp"@nl , "subject"@en .
+dpv:Purpose rdfs:label "verwerkingsdoel"@nl , "purpose"@en .
+dpv:LegalBasis rdfs:label "grondslag"@nl , "legal basis"@en .
+org:Membership rdfs:label "persoon in functie"@nl , "person in role"@en .
+org:Role rdfs:label "functie"@nl , "role"@en .
+org:member rdfs:label "persoon"@nl , "member"@en .
+org:organization rdfs:label "organisatie"@nl , "organization"@en .
+org:role rdfs:label "functie"@nl , "role"@en .
+schema:validFrom rdfs:label "geldig vanaf"@nl , "valid from"@en .
+schema:validThrough rdfs:label "geldig tot en met"@nl , "valid through"@en .
+dprod:DataProduct rdfs:label "dataproduct"@nl , "data product"@en .
+dprod:purpose rdfs:label "doel van het dataproduct"@nl , "purpose"@en .
+dprod:domain rdfs:label "domein"@nl , "domain"@en .
+dprod:dataProductOwner rdfs:label "eigenaar van het dataproduct"@nl , "data product owner"@en .
+dprod:outputDataset rdfs:label "uitvoerdataset"@nl , "output dataset"@en .
+dprod:outputPort rdfs:label "uitvoerpoort"@nl , "output port"@en .
+dprod:isDistributionOf rdfs:label "is distributie van"@nl , "is distribution of"@en .
+dprod:isAccessServiceOf rdfs:label "is toegangsdienst van"@nl , "is access service of"@en .
+dprod:protocol rdfs:label "protocol"@nl , "protocol"@en .
+dprod:securitySchemaType rdfs:label "beveiligingsschema"@nl , "security schema type"@en .
+dprod:recurrence rdfs:label "leverritme (RRULE)"@nl , "recurrence (RRULE)"@en .
+dcat:Dataset rdfs:label "dataset"@nl , "dataset"@en .
+dcat:Distribution rdfs:label "distributie"@nl , "distribution"@en .
+dcat:DataService rdfs:label "datadienst"@nl , "data service"@en .
+dcat:distribution rdfs:label "distributie"@nl , "distribution"@en .
+dcat:mediaType rdfs:label "mediatype"@nl , "media type"@en .
+dcat:endpointURL rdfs:label "eindpunt-URL"@nl , "endpoint URL"@en .
+cdi:ConceptualVariable rdfs:label "conceptuele variabele"@nl , "ConceptualVariable"@en .
+cdi:RepresentedVariable rdfs:label "representatievariabele (gegevenstype)"@nl , "RepresentedVariable"@en .
+cdi:InstanceVariable rdfs:label "instantievariabele (gegevensveld)"@nl , "InstanceVariable"@en .
+cdi:SubstantiveValueDomain rdfs:label "substantief waardedomein"@nl , "SubstantiveValueDomain"@en .
+cdi:SentinelValueDomain rdfs:label "waardedomein voor ontbrekendwaarden"@nl , "SentinelValueDomain"@en .
+cdi:CodeList rdfs:label "codelijst"@nl , "CodeList"@en .
+cdi:Code rdfs:label "code"@nl , "Code"@en .
+cdi:Category rdfs:label "categorie"@nl , "Category"@en .
+cdi:CategorySet rdfs:label "categorieverzameling"@nl , "CategorySet"@en .
+cdi:UnitType rdfs:label "eenheidstype"@nl , "UnitType"@en .
+cdi:VariableCollection rdfs:label "variabelenverzameling (gegevensset)"@nl , "VariableCollection"@en .
+cdi:VariableRelationship rdfs:label "variabelenrelatie (gegevenstypemapping)"@nl , "VariableRelationship"@en .
+cdi:VariableStructure rdfs:label "variabelenstructuur"@nl , "VariableStructure"@en .
+cdi:WideDataStructure rdfs:label "brede datastructuur (logisch gegevensmodel)"@nl , "WideDataStructure"@en .
+cdi:DataStructureComponent rdfs:label "structuurcomponent"@nl , "DataStructureComponent"@en .
+cdi:IdentifierComponent rdfs:label "identificerende component"@nl , "IdentifierComponent"@en .
+cdi:MeasureComponent rdfs:label "meetcomponent"@nl , "MeasureComponent"@en .
+cdi:LogicalRecord rdfs:label "logisch record"@nl , "LogicalRecord"@en .
+cdi:PhysicalSegmentLayout rdfs:label "fysieke opmaak (technisch gegevensmodel)"@nl , "PhysicalSegmentLayout"@en .
+cdi:PhysicalDataSet rdfs:label "fysieke dataset"@nl , "PhysicalDataSet"@en .
+cdi:ValueAndConceptDescription rdfs:label "waarde- en begripsbeschrijving"@nl , "ValueAndConceptDescription"@en .

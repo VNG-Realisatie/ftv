@@ -1,0 +1,1293 @@
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix sh:     <http://www.w3.org/ns/shacl#> .
+@prefix dash:   <http://datashapes.org/dash#> .
+@prefix gd:     <https://gegevensdeling.example/def/> .
+@prefix mim:    <http://modellen.mim-standaard.nl/def/mim#> .
+@prefix mimx:   <https://gegevensdeling.example/def/mim-ext/> .
+@prefix vlmim:  <https://vlierdam.example/mim/> .
+
+# =============================================================================
+# Formulier-shapes en weergavelabels voor de MIM-laag van de Vlierdam-casus.
+#
+# WAT DIT BESTAND DOET. Het beschrijft WEERGAVE en toetst niets: welke
+# metagegevens van een MIM-knoop een generieke viewer toont, in welke volgorde,
+# onder welke kop en met welke widget — plus de Nederlandse en Engelse labels
+# van de gebruikte mim:-termen zelf. Zonder dit bestand staan de knopen van
+# vlierdam-mim-bronmodel.ttl er wel, maar zonder veldkoppen en zonder vouwen:
+# het informatiemodel klapt dan niet open naar zijn objecttype, zijn
+# attribuutsoorten, zijn enumeratie en zijn codelijst.
+#
+# WAAROM HET MOET. MIM 1.2 kent zelf een SHACL-shapegraph (mim-shapes.ttl uit de
+# MIM-Werkomgeving), maar die VALIDEERT: zij zegt welke metagegevens een
+# attribuutsoort mag en moet dragen, niet in welke volgorde, onder welke kop of
+# met welke widget zij getoond horen te worden. Dat is precies de bevinding van
+# de synthese (§2e, E117, "dekt niet"): weergave-shapes zijn met de hand
+# geschreven, aan beide zijden van de vergelijking. Dit bestand is die hand.
+#
+# DEZELFDE SUBSET EN DEZELFDE GROEPEN als glo-shapes.ttl (Visualisatie-note §8):
+# sh:NodeShape + sh:targetClass, sh:property met sh:path (ook sh:inversePath),
+# sh:name, sh:description, sh:order, sh:group, dash:viewer en dash:propertyRole.
+# De acht kopgroepen zelf worden hier NIET opnieuw gedefinieerd; zij komen uit
+# glo-shapes.ttl, dat met dit bestand samen wordt geladen. Zelfde afspraak als
+# glo-brv-shapes.ttl.
+#
+# ÉÉN sh:targetClass PER SHAPE, en geen enkele shape leunt op een
+# rdfs:subClassOf-sluiting: de MIM-ontologie (mim.ttl) reist niet met de data
+# mee, dus de subklasse-axioma's die mim:Enumeratie onder mim:Datatype hangen
+# staan niet in de graaf. Elke gebruikte MIM-klasse krijgt daarom haar eigen,
+# volledige formulier.
+#
+# DE KOP VAN EEN MIM-KNOOP. Binnen het formulier komt zij van
+# dash:LabelRole op mim:naam. Daarbuiten — in de rij van een ándere knoop, en
+# op de dichte vouw — leest een viewer de eigen naam-literal van de knoop
+# (rdfs:label, skos:prefLabel, dct:title); mim:naam is geen van drieën. De
+# knopen van het bronmodel dragen daarom naast mim:naam ook een rdfs:label,
+# net als de veldlaagknopen van glo-shapes.ttl dat doen.
+#
+# DE LABELS REIZEN MEE (§2 van dit bestand). De MIM-namespace dereferenceert
+# per 14 september 2026 niet: https://modellen.mim-standaard.nl/def/mim geeft
+# HTTP 404 en het certificaat van het domein is verlopen. Een viewer die
+# mim:kardinaliteit tegenkomt kan het label dus nergens ophalen en zou
+# "kardinaliteit" uit de IRI-staart moeten raden — en bij mim:Objecttype of
+# mim:CharacterString zou hij de Nederlandse term helemaal missen. Daarom staan
+# de labels en definities van de gebruikte mim:-termen hier in de dataset zelf,
+# letterlijk overgenomen uit de werkomgeving.
+#
+# BRON EN VERSIE VAN DE MIM-TERMEN: media/mim.ttl uit
+# github.com/Geonovum/MIM-Werkomgeving, commit
+# 4f3fc35e538c0a000580b8449993a6a6bea53740 (owl:versionInfo "1.2",
+# owl:versionIRI http://modellen.mim-standaard.nl/def/mim/1.2), opgehaald
+# 14 september 2026. De @nl-labels en de definities zijn LETTERLIJK die van
+# mim.ttl; de @en-labels zijn vertalingen in dit bestand, want MIM levert er
+# zelf geen (het metamodel is Nederlandstalig van zichzelf — synthese §2e,
+# E116). Wie de MIM-versie wisselt, ververst dit blok.
+# =============================================================================
+
+# =============================================================================
+# 1. DE FORMULIEREN
+# =============================================================================
+
+# --- Het informatiemodel -----------------------------------------------------
+#
+# Het instappunt van de MIM-kant: één package dat alle modelelementen bevat.
+# Het kerngegeven is de MIM-versie — bij een metamodel-instantiegraaf is de
+# eerste vraag van een lezer tegen wélk metamodel hij aankijkt, en het antwoord
+# past op een chip.
+vlmim:InformatiemodelFormShape a sh:NodeShape ;
+    sh:targetClass mim:Informatiemodel ;
+    rdfs:label "Formulier informatiemodel"@nl , "Information model form"@en ;
+    sh:property [
+        sh:path mim:naam ;
+        dash:propertyRole dash:LabelRole ;
+        sh:order 0 ;
+    ] ;
+    sh:property [
+        sh:path mim:definitie ;
+        sh:name "Definitie"@nl , "Definition"@en ;
+        dash:propertyRole dash:DescriptionRole ;
+        sh:order 1 ;
+    ] ;
+    sh:property [
+        sh:path mim:mimversie ;
+        sh:name "MIM-versie"@nl , "MIM version"@en ;
+        dash:propertyRole dash:KeyInfoRole ;
+        sh:order 2 ; dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:informatiemodeltype ;
+        sh:name "Informatiemodeltype"@nl , "Information model type"@en ;
+        sh:description """Het beschouwingsniveau waarop dit model staat.
+MIM 1.2 kent er vier; alleen niveau 2 (conceptueel) en 3 (logisch) vallen
+binnen de scope van de standaard."""@nl ;
+        sh:group gd:GroepKenmerken ; sh:order 10 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:informatiedomein ;
+        sh:name "Informatiedomein"@nl , "Information domain"@en ;
+        sh:group gd:GroepKenmerken ; sh:order 11 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:mimtaal ;
+        sh:name "MIM-taal"@nl , "MIM language"@en ;
+        sh:group gd:GroepKenmerken ; sh:order 12 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:mimextensie ;
+        sh:name "MIM-extensie"@nl , "MIM extension"@en ;
+        sh:description """De extensie waarmee dit model het metamodel uitbreidt.
+Een extensie wordt buiten MIM beheerd en mag niets vervangen wat al in MIM
+staat."""@nl ;
+        sh:group gd:GroepKenmerken ; sh:order 13 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:relatiemodelleringstype ;
+        sh:name "Relatiemodelleringstype"@nl , "Relationship modelling type"@en ;
+        sh:description """Het enige keuzepunt dat MIM zelf openlaat: is de
+relatiesoort leidend of de relatierol?"""@nl ;
+        sh:group gd:GroepKenmerken ; sh:order 14 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:toelichting ;
+        sh:name "Toelichting"@nl , "Explanatory note"@en ;
+        sh:group gd:GroepInhoud ; sh:order 20 ;
+        dash:viewer dash:LangStringViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:bevatModelelement ;
+        sh:name "Modelelementen"@nl , "Model elements"@en ;
+        sh:description """Alles wat dit informatiemodel bevat: objecttypen,
+attribuutsoorten, datatypen, waardelijsten en relatiesoorten."""@nl ;
+        sh:group gd:GroepStructuur ; sh:order 30 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:basisUri ;
+        sh:name "Basis-URI"@nl , "Base URI"@en ;
+        sh:group gd:GroepHerkomst ; sh:order 70 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:identificatie ;
+        sh:name "Identificatie"@nl , "Identification"@en ;
+        sh:group gd:GroepHerkomst ; sh:order 71 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:herkomst ;
+        sh:name "Herkomst"@nl , "Origin"@en ;
+        sh:group gd:GroepHerkomst ; sh:order 72 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:datumOpname ;
+        sh:name "Datum opname"@nl , "Date added"@en ;
+        sh:group gd:GroepHerkomst ; sh:order 73 ;
+        dash:viewer dash:LiteralViewer ;
+    ] .
+
+# --- Het objecttype ----------------------------------------------------------
+#
+# De knoop waar de structuurlaag begint. Drie omgekeerde paden maken hem tot
+# een kruispunt in plaats van een eindpunt: het informatiemodel waarin hij
+# staat, en de relatiesoorten die hem als bron dan wel als doel hebben — die
+# wijzen in de data van de relatiesoort naar het objecttype, dus zonder
+# omkering blijft het objecttype er onwetend van.
+#
+# GEEN KERNGEGEVEN. Een objecttype heeft in MIM geen korte, altijd aanwezige
+# sleutel: de populatiebeschrijving is proza en de identificatie is een IRI.
+# Een chip zonder inhoud zegt minder dan geen chip.
+vlmim:ObjecttypeFormShape a sh:NodeShape ;
+    sh:targetClass mim:Objecttype ;
+    rdfs:label "Objecttypeformulier"@nl , "Object type form"@en ;
+    sh:property [
+        sh:path mim:naam ;
+        dash:propertyRole dash:LabelRole ;
+        sh:order 0 ;
+    ] ;
+    sh:property [
+        sh:path mim:definitie ;
+        sh:name "Definitie"@nl , "Definition"@en ;
+        dash:propertyRole dash:DescriptionRole ;
+        sh:order 1 ;
+    ] ;
+    sh:property [
+        sh:path mim:alias ;
+        sh:name "Alias"@nl , "Alias"@en ;
+        sh:group gd:GroepKenmerken ; sh:order 10 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:indicatieAbstractObject ;
+        sh:name "Abstract objecttype"@nl , "Abstract object type"@en ;
+        sh:group gd:GroepKenmerken ; sh:order 11 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:populatie ;
+        sh:name "Populatie"@nl , "Population"@en ;
+        sh:description """De beschrijving van welke exemplaren van dit
+objecttype in de registratie voorhanden zijn. Dit is het metagegeven waarmee
+MIM de populatiebeschrijving van een levering benadert — aan het modelelement,
+niet aan de levering."""@nl ;
+        sh:group gd:GroepInhoud ; sh:order 20 ;
+        dash:viewer dash:LangStringViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:kwaliteit ;
+        sh:name "Kwaliteit"@nl , "Quality"@en ;
+        sh:group gd:GroepInhoud ; sh:order 21 ;
+        dash:viewer dash:LangStringViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:begrip ;
+        sh:name "Begrip"@nl , "Concept"@en ;
+        sh:description """De term uit het begrippenkader waarop dit modelelement
+is gebaseerd. MIM legt het begrippenkader zelf buiten zijn scope en levert
+alleen deze verwijzing."""@nl ;
+        sh:group gd:GroepInhoud ; sh:order 22 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:toelichting ;
+        sh:name "Toelichting"@nl , "Explanatory note"@en ;
+        sh:group gd:GroepInhoud ; sh:order 23 ;
+        dash:viewer dash:LangStringViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:attribuut ;
+        sh:name "Attribuutsoorten"@nl , "Attribute types"@en ;
+        sh:description """De gegevens die voor dit objecttype van toepassing
+zijn, elk met naam, definitie, type en kardinaliteit als directe
+metagegevens."""@nl ;
+        sh:group gd:GroepStructuur ; sh:order 30 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:gegevensgroep ;
+        sh:name "Gegevensgroepen"@nl , "Data groups"@en ;
+        sh:group gd:GroepStructuur ; sh:order 31 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:constraint ;
+        sh:name "Constraints"@nl , "Constraints"@en ;
+        sh:group gd:GroepStructuur ; sh:order 32 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath mim:bevatModelelement ] ;
+        sh:name "In informatiemodel"@nl , "In information model"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 60 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath mim:bron ] ;
+        sh:name "Relatiesoorten vanuit dit objecttype"@nl ,
+                "Relationship types from this object type"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 61 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath mim:doel ] ;
+        sh:name "Relatiesoorten naar dit objecttype"@nl ,
+                "Relationship types to this object type"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 62 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    # DE AFLEIDING, TERUG GELEZEN. vlierdam-mim-afleiding.ttl legt
+    # prov:wasDerivedFrom van de GEPUBLICEERDE knoop naar zijn MIM-tegenhanger;
+    # vanaf de MIM-kant is dat dus een omgekeerd pad. Blijft deze rij leeg, dan
+    # zegt dat iets: voor de normatieve laag, de leveringslaag en de
+    # ontsluiting bestaat er geen MIM-bron (synthese §3).
+    sh:property [
+        sh:path [ sh:inversePath prov:wasDerivedFrom ] ;
+        sh:name "Gepubliceerd als"@nl , "Published as"@en ;
+        sh:description """De knoop in de gepubliceerde GLO-veldlaag die van dit
+modelelement is afgeleid."""@nl ;
+        sh:group gd:GroepHerkomst ; sh:order 70 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:herkomst ;
+        sh:name "Herkomst"@nl , "Origin"@en ;
+        sh:group gd:GroepHerkomst ; sh:order 71 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:herkomstDefinitie ;
+        sh:name "Herkomst definitie"@nl , "Definition origin"@en ;
+        sh:group gd:GroepHerkomst ; sh:order 72 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:identificatie ;
+        sh:name "Identificatie"@nl , "Identification"@en ;
+        sh:group gd:GroepHerkomst ; sh:order 73 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:datumOpname ;
+        sh:name "Datum opname"@nl , "Date added"@en ;
+        sh:group gd:GroepHerkomst ; sh:order 74 ;
+        dash:viewer dash:LiteralViewer ;
+    ] .
+
+# --- De attribuutsoort -------------------------------------------------------
+#
+# Het rijkste formulier van dit bestand, en de plek waar de winst van de
+# MIM-gedaante te zien is: naam, definitie, type, kardinaliteit, lengte en
+# patroon staan als PLATTE metagegevens op één knoop, waar de gepubliceerde
+# veldlaag ze achter gestructureerde DDI-CDI-datatypen legt en de formulieren
+# daar relaties tonen in plaats van waarden (synthese §4b, E122).
+#
+# HET KERNGEGEVEN IS DE KARDINALITEIT (ruling). Twee kandidaten uit de brief:
+# het type en de kardinaliteit. De kardinaliteit wint omdat zij op élke
+# attribuutsoort staat, altijd kort is ("1..1", "0..1") en op de dichte vouw
+# de vraag beantwoordt die een lezer van een leveringsspecificatie het eerst
+# stelt: moet dit veld er zijn? Het type is als terugval de tweede
+# KeyInfoRole-rij — een viewer neemt de eerste die gevuld is — en staat
+# bovendien als eigen rij onder Structuur.
+vlmim:AttribuutsoortFormShape a sh:NodeShape ;
+    sh:targetClass mim:Attribuutsoort ;
+    rdfs:label "Attribuutsoortformulier"@nl , "Attribute type form"@en ;
+    sh:property [
+        sh:path mim:naam ;
+        dash:propertyRole dash:LabelRole ;
+        sh:order 0 ;
+    ] ;
+    sh:property [
+        sh:path mim:definitie ;
+        sh:name "Definitie"@nl , "Definition"@en ;
+        dash:propertyRole dash:DescriptionRole ;
+        sh:order 1 ;
+    ] ;
+    sh:property [
+        sh:path mim:kardinaliteit ;
+        sh:name "Kardinaliteit"@nl , "Cardinality"@en ;
+        dash:propertyRole dash:KeyInfoRole ;
+        sh:order 2 ; dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:type ;
+        dash:propertyRole dash:KeyInfoRole ;
+        sh:order 3 ; dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:identificerend ;
+        sh:name "Identificerend"@nl , "Identifying"@en ;
+        sh:description """Aanduiding dat dit kenmerk uniek identificerend is
+voor alle objecten in de populatie — wat MIM het dichtst bij een sleutel
+kent."""@nl ;
+        sh:group gd:GroepKenmerken ; sh:order 10 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:mogelijkGeenWaarde ;
+        sh:name "Mogelijk geen waarde"@nl , "May have no value"@en ;
+        sh:description """Het MIM-onderscheid tussen "het kenmerk ontbreekt"
+(kardinaliteit 0) en "het kenmerk bestaat maar de waarde is onbekend". MIM
+kent hiervoor een indicator en geen apart ontbrekendwaardedomein; de scheiding
+die de gepubliceerde veldlaag met een sentinel-domein maakt, leeft hier in
+deze indicator plus een mim:Keuze (synthese §2d, E88)."""@nl ;
+        sh:group gd:GroepKenmerken ; sh:order 11 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:authentiek ;
+        sh:name "Authenticiteit"@nl , "Authenticity"@en ;
+        sh:description """De wettelijke status van het gegeven, uit de vijf
+waarden die MIM normatief opsomt."""@nl ;
+        sh:group gd:GroepKenmerken ; sh:order 12 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:indicatieAfleidbaar ;
+        sh:name "Afleidbaar"@nl , "Derivable"@en ;
+        sh:group gd:GroepKenmerken ; sh:order 13 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:indicatieClassificerend ;
+        sh:name "Classificerend"@nl , "Classifying"@en ;
+        sh:group gd:GroepKenmerken ; sh:order 14 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:alias ;
+        sh:name "Alias"@nl , "Alias"@en ;
+        sh:group gd:GroepKenmerken ; sh:order 15 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    # De twee extensie-metagegevens. Zij staan onder "Inhoud en afbakening" en
+    # niet onder "Kenmerken", want zij zeggen iets over de DELING van dit veld
+    # en niet over zijn vorm. De noodzaak per veld heeft hier voor het eerst een
+    # eigen term in plaats van een skos:scopeNote (synthese §2d, E91).
+    sh:property [
+        sh:path mimx:noodzaak ;
+        sh:name "Noodzaak"@nl , "Necessity"@en ;
+        sh:description """Waarom dit veld voor het doel van de levering nodig
+is. Extensie-metagegeven: MIM 1.2 kent er geen term voor."""@nl ;
+        sh:group gd:GroepInhoud ; sh:order 20 ;
+        dash:viewer dash:LangStringViewer ;
+    ] ;
+    sh:property [
+        sh:path mimx:classificatie ;
+        sh:name "Classificatie"@nl , "Classification"@en ;
+        sh:description """De classificatie van dit gegeven, bijvoorbeeld als
+persoonsgegeven. Extensie-metagegeven: MIM 1.2 kent alleen authenticiteit, en
+die betekent iets anders."""@nl ;
+        sh:group gd:GroepInhoud ; sh:order 21 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:begrip ;
+        sh:name "Begrip"@nl , "Concept"@en ;
+        sh:group gd:GroepInhoud ; sh:order 22 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:begripsterm ;
+        sh:name "Begripsterm"@nl , "Concept term"@en ;
+        sh:group gd:GroepInhoud ; sh:order 23 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:toelichting ;
+        sh:name "Toelichting"@nl , "Explanatory note"@en ;
+        sh:group gd:GroepInhoud ; sh:order 24 ;
+        dash:viewer dash:LangStringViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:type ;
+        sh:name "Type"@nl , "Data type"@en ;
+        sh:description """Het datatype waarmee waarden van dit kenmerk worden
+vastgelegd: een primitief datatype, een enumeratie, een codelijst of een
+referentielijst."""@nl ;
+        sh:group gd:GroepStructuur ; sh:order 30 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:datatypekeuze ;
+        sh:name "Datatypekeuze"@nl , "Data type choice"@en ;
+        sh:description """Een mim:Keuze in plaats van één type: er is er precies
+één tegelijk van toepassing."""@nl ;
+        sh:group gd:GroepStructuur ; sh:order 31 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:lengte ;
+        sh:name "Lengte"@nl , "Length"@en ;
+        sh:group gd:GroepStructuur ; sh:order 32 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:patroon ;
+        sh:name "Patroon"@nl , "Pattern"@en ;
+        sh:description "Het waardenbereik in woorden."@nl ;
+        sh:group gd:GroepStructuur ; sh:order 33 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:formeelPatroon ;
+        sh:name "Formeel patroon"@nl , "Formal pattern"@en ;
+        sh:description "Hetzelfde waardenbereik als reguliere expressie."@nl ;
+        sh:group gd:GroepStructuur ; sh:order 34 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:minimumwaardeInclusief ;
+        sh:name "Minimumwaarde (inclusief)"@nl , "Minimum value (inclusive)"@en ;
+        sh:group gd:GroepStructuur ; sh:order 35 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:maximumwaardeInclusief ;
+        sh:name "Maximumwaarde (inclusief)"@nl , "Maximum value (inclusive)"@en ;
+        sh:group gd:GroepStructuur ; sh:order 36 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:eenheid ;
+        sh:name "Eenheid"@nl , "Unit"@en ;
+        sh:group gd:GroepStructuur ; sh:order 37 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:heeftTijdlijnGeldigheid ;
+        sh:name "Tijdlijn geldigheid"@nl , "Validity timeline"@en ;
+        sh:group gd:GroepStructuur ; sh:order 38 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:heeftTijdlijnRegistratie ;
+        sh:name "Tijdlijn registratie"@nl , "Registration timeline"@en ;
+        sh:group gd:GroepStructuur ; sh:order 39 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    # HET OMGEKEERDE PAD DAT DE ATTRIBUUTSOORT AAN HAAR OBJECTTYPE HANGT.
+    # mim:attribuut loopt van objecttype naar attribuutsoort; zonder omkering
+    # is een attribuutsoort een knoop zonder ouder en houdt het doorklikken
+    # aan deze kant op.
+    sh:property [
+        sh:path [ sh:inversePath mim:attribuut ] ;
+        sh:name "Attribuutsoort van"@nl , "Attribute type of"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 60 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath mim:bevatModelelement ] ;
+        sh:name "In informatiemodel"@nl , "In information model"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 61 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath prov:wasDerivedFrom ] ;
+        sh:name "Gepubliceerd als"@nl , "Published as"@en ;
+        sh:description """Het gegevenstype in de gepubliceerde GLO-veldlaag dat
+van deze attribuutsoort is afgeleid."""@nl ;
+        sh:group gd:GroepHerkomst ; sh:order 70 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:herkomst ;
+        sh:name "Herkomst"@nl , "Origin"@en ;
+        sh:group gd:GroepHerkomst ; sh:order 71 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:herkomstDefinitie ;
+        sh:name "Herkomst definitie"@nl , "Definition origin"@en ;
+        sh:group gd:GroepHerkomst ; sh:order 72 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:identificatie ;
+        sh:name "Identificatie"@nl , "Identification"@en ;
+        sh:group gd:GroepHerkomst ; sh:order 73 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:datumOpname ;
+        sh:name "Datum opname"@nl , "Date added"@en ;
+        sh:group gd:GroepHerkomst ; sh:order 74 ;
+        dash:viewer dash:LiteralViewer ;
+    ] .
+
+# --- De waardelijsten --------------------------------------------------------
+#
+# Drie formulieren die samen de doorklik tot en met de enumeratiewaarden
+# dragen: enumeratie → enumeratiewaarde, en de codelijst als de variant die
+# haar waarden buiten het model laat beheren. Zonder het derde formulier houdt
+# het doorklikken op bij de lijst en blijven de toegestane waarden onzichtbaar
+# — dezelfde reden waarom glo-shapes.ttl een codelijstformulier heeft.
+
+vlmim:EnumeratieFormShape a sh:NodeShape ;
+    sh:targetClass mim:Enumeratie ;
+    rdfs:label "Enumeratieformulier"@nl , "Enumeration form"@en ;
+    sh:property [
+        sh:path mim:naam ;
+        dash:propertyRole dash:LabelRole ;
+        sh:order 0 ;
+    ] ;
+    sh:property [
+        sh:path mim:definitie ;
+        sh:name "Definitie"@nl , "Definition"@en ;
+        dash:propertyRole dash:DescriptionRole ;
+        sh:order 1 ;
+    ] ;
+    sh:property [
+        sh:path mim:waarde ;
+        sh:name "Enumeratiewaarden"@nl , "Enumeration values"@en ;
+        sh:description """De limitatieve lijst: alleen deze waarden mogen
+voorkomen."""@nl ;
+        sh:group gd:GroepInhoud ; sh:order 20 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:toelichting ;
+        sh:name "Toelichting"@nl , "Explanatory note"@en ;
+        sh:group gd:GroepInhoud ; sh:order 21 ;
+        dash:viewer dash:LangStringViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath mim:type ] ;
+        sh:name "Type van"@nl , "Data type of"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 60 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath mim:bevatModelelement ] ;
+        sh:name "In informatiemodel"@nl , "In information model"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 61 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath prov:wasDerivedFrom ] ;
+        sh:name "Gepubliceerd als"@nl , "Published as"@en ;
+        sh:group gd:GroepHerkomst ; sh:order 70 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:identificatie ;
+        sh:name "Identificatie"@nl , "Identification"@en ;
+        sh:group gd:GroepHerkomst ; sh:order 71 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:datumOpname ;
+        sh:name "Datum opname"@nl , "Date added"@en ;
+        sh:group gd:GroepHerkomst ; sh:order 72 ;
+        dash:viewer dash:LiteralViewer ;
+    ] .
+
+# De code is het kerngegeven: zij is wat er in de registratie terechtkomt, en
+# zij past op een chip naast de naam.
+vlmim:EnumeratiewaardeFormShape a sh:NodeShape ;
+    sh:targetClass mim:Enumeratiewaarde ;
+    rdfs:label "Enumeratiewaardeformulier"@nl , "Enumeration value form"@en ;
+    sh:property [
+        sh:path mim:naam ;
+        dash:propertyRole dash:LabelRole ;
+        sh:order 0 ;
+    ] ;
+    sh:property [
+        sh:path mim:definitie ;
+        sh:name "Definitie"@nl , "Definition"@en ;
+        dash:propertyRole dash:DescriptionRole ;
+        sh:order 1 ;
+    ] ;
+    sh:property [
+        sh:path mim:code ;
+        sh:name "Code"@nl , "Code"@en ;
+        dash:propertyRole dash:KeyInfoRole ;
+        sh:order 2 ; dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:toelichting ;
+        sh:name "Toelichting"@nl , "Explanatory note"@en ;
+        sh:group gd:GroepInhoud ; sh:order 20 ;
+        dash:viewer dash:LangStringViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:begrip ;
+        sh:name "Begrip"@nl , "Concept"@en ;
+        sh:group gd:GroepInhoud ; sh:order 21 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath mim:waarde ] ;
+        sh:name "Waarde in"@nl , "Value in"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 60 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath prov:wasDerivedFrom ] ;
+        sh:name "Gepubliceerd als"@nl , "Published as"@en ;
+        sh:group gd:GroepHerkomst ; sh:order 70 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:identificatie ;
+        sh:name "Identificatie"@nl , "Identification"@en ;
+        sh:group gd:GroepHerkomst ; sh:order 71 ;
+        dash:viewer dash:LiteralViewer ;
+    ] .
+
+vlmim:CodelijstFormShape a sh:NodeShape ;
+    sh:targetClass mim:Codelijst ;
+    rdfs:label "Codelijstformulier (MIM)"@nl , "Code list form (MIM)"@en ;
+    sh:property [
+        sh:path mim:naam ;
+        dash:propertyRole dash:LabelRole ;
+        sh:order 0 ;
+    ] ;
+    sh:property [
+        sh:path mim:definitie ;
+        sh:name "Definitie"@nl , "Definition"@en ;
+        dash:propertyRole dash:DescriptionRole ;
+        sh:order 1 ;
+    ] ;
+    sh:property [
+        sh:path mim:locatie ;
+        sh:name "Vindplaats van de waardelijst"@nl , "Location of the value list"@en ;
+        sh:description """Een codelijst wordt buiten het informatiemodel
+beheerd; dit is waar de waarden staan. Het model beschrijft ze niet zelf — dat
+is het verschil met een referentielijst."""@nl ;
+        sh:group gd:GroepKenmerken ; sh:order 10 ;
+        dash:viewer dash:URIViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:toelichting ;
+        sh:name "Toelichting"@nl , "Explanatory note"@en ;
+        sh:group gd:GroepInhoud ; sh:order 20 ;
+        dash:viewer dash:LangStringViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:begrip ;
+        sh:name "Begrip"@nl , "Concept"@en ;
+        sh:group gd:GroepInhoud ; sh:order 21 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath mim:type ] ;
+        sh:name "Type van"@nl , "Data type of"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 60 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath mim:bevatModelelement ] ;
+        sh:name "In informatiemodel"@nl , "In information model"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 61 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath prov:wasDerivedFrom ] ;
+        sh:name "Gepubliceerd als"@nl , "Published as"@en ;
+        sh:group gd:GroepHerkomst ; sh:order 70 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:herkomst ;
+        sh:name "Herkomst"@nl , "Origin"@en ;
+        sh:group gd:GroepHerkomst ; sh:order 71 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:identificatie ;
+        sh:name "Identificatie"@nl , "Identification"@en ;
+        sh:group gd:GroepHerkomst ; sh:order 72 ;
+        dash:viewer dash:LiteralViewer ;
+    ] .
+
+# --- De keuze ----------------------------------------------------------------
+#
+# De kunstgreep uit synthese §2d (E88) heeft een eigen formulier nodig, anders
+# is zij in de weergave een knoop zonder inhoud. mim:type draagt hier de
+# alternatieven (minimaal twee, per mim-shapes.ttl); het omgekeerde pad wijst
+# terug naar de attribuutsoort die de keuze gebruikt.
+vlmim:KeuzeFormShape a sh:NodeShape ;
+    sh:targetClass mim:Keuze ;
+    rdfs:label "Keuzeformulier"@nl , "Choice form"@en ;
+    sh:property [
+        sh:path mim:naam ;
+        dash:propertyRole dash:LabelRole ;
+        sh:order 0 ;
+    ] ;
+    sh:property [
+        sh:path mim:definitie ;
+        sh:name "Definitie"@nl , "Definition"@en ;
+        dash:propertyRole dash:DescriptionRole ;
+        sh:order 1 ;
+    ] ;
+    sh:property [
+        sh:path mim:type ;
+        sh:name "Keuze uit"@nl , "Choice between"@en ;
+        sh:description """De datatypen waaruit gekozen wordt; er is er precies
+één tegelijk van toepassing."""@nl ;
+        sh:group gd:GroepStructuur ; sh:order 30 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:toelichting ;
+        sh:name "Toelichting"@nl , "Explanatory note"@en ;
+        sh:group gd:GroepInhoud ; sh:order 20 ;
+        dash:viewer dash:LangStringViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath mim:datatypekeuze ] ;
+        sh:name "Keuze van"@nl , "Choice of"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 60 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath mim:bevatModelelement ] ;
+        sh:name "In informatiemodel"@nl , "In information model"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 61 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:identificatie ;
+        sh:name "Identificatie"@nl , "Identification"@en ;
+        sh:group gd:GroepHerkomst ; sh:order 71 ;
+        dash:viewer dash:LiteralViewer ;
+    ] .
+
+# --- Het primitieve datatype -------------------------------------------------
+#
+# Voor een eigen primitief datatype in het bronmodel. De MIM-standaard levert
+# er zelf elf (mim:CharacterString, mim:Date, …); die staan in mim.ttl en niet
+# in deze graaf, dus zij krijgen geen vouw maar wel een label (§2).
+vlmim:PrimitiefDatatypeFormShape a sh:NodeShape ;
+    sh:targetClass mim:PrimitiefDatatype ;
+    rdfs:label "Formulier primitief datatype"@nl , "Primitive data type form"@en ;
+    sh:property [
+        sh:path mim:naam ;
+        dash:propertyRole dash:LabelRole ;
+        sh:order 0 ;
+    ] ;
+    sh:property [
+        sh:path mim:definitie ;
+        sh:name "Definitie"@nl , "Definition"@en ;
+        dash:propertyRole dash:DescriptionRole ;
+        sh:order 1 ;
+    ] ;
+    sh:property [
+        sh:path mim:lengte ;
+        sh:name "Lengte"@nl , "Length"@en ;
+        sh:group gd:GroepStructuur ; sh:order 30 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:patroon ;
+        sh:name "Patroon"@nl , "Pattern"@en ;
+        sh:group gd:GroepStructuur ; sh:order 31 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:formeelPatroon ;
+        sh:name "Formeel patroon"@nl , "Formal pattern"@en ;
+        sh:group gd:GroepStructuur ; sh:order 32 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath mim:type ] ;
+        sh:name "Type van"@nl , "Data type of"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 60 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:identificatie ;
+        sh:name "Identificatie"@nl , "Identification"@en ;
+        sh:group gd:GroepHerkomst ; sh:order 71 ;
+        dash:viewer dash:LiteralViewer ;
+    ] .
+
+# --- De relatiesoort ---------------------------------------------------------
+#
+# Het administratiemodel van de overeenkomst zelf gebruikt relatiesoorten naar
+# de twee partijen. De kardinaliteit is het kerngegeven, om dezelfde reden als
+# bij de attribuutsoort.
+vlmim:RelatiesoortFormShape a sh:NodeShape ;
+    sh:targetClass mim:Relatiesoort ;
+    rdfs:label "Relatiesoortformulier"@nl , "Relationship type form"@en ;
+    sh:property [
+        sh:path mim:naam ;
+        dash:propertyRole dash:LabelRole ;
+        sh:order 0 ;
+    ] ;
+    sh:property [
+        sh:path mim:definitie ;
+        sh:name "Definitie"@nl , "Definition"@en ;
+        dash:propertyRole dash:DescriptionRole ;
+        sh:order 1 ;
+    ] ;
+    sh:property [
+        sh:path mim:kardinaliteit ;
+        sh:name "Kardinaliteit"@nl , "Cardinality"@en ;
+        dash:propertyRole dash:KeyInfoRole ;
+        sh:order 2 ; dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:kardinaliteitRelatieBron ;
+        sh:name "Kardinaliteit aan bronzijde"@nl , "Source cardinality"@en ;
+        sh:group gd:GroepKenmerken ; sh:order 10 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:unidirectioneel ;
+        sh:name "Unidirectioneel"@nl , "Unidirectional"@en ;
+        sh:group gd:GroepKenmerken ; sh:order 11 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:aggregatietype ;
+        sh:name "Aggregatietype"@nl , "Aggregation type"@en ;
+        sh:group gd:GroepKenmerken ; sh:order 12 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:toelichting ;
+        sh:name "Toelichting"@nl , "Explanatory note"@en ;
+        sh:group gd:GroepInhoud ; sh:order 20 ;
+        dash:viewer dash:LangStringViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:bron ;
+        sh:name "Bron"@nl , "Source"@en ;
+        sh:group gd:GroepStructuur ; sh:order 30 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:doel ;
+        sh:name "Doel"@nl , "Target"@en ;
+        sh:group gd:GroepStructuur ; sh:order 31 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:relatierol ;
+        sh:name "Relatierol"@nl , "Relationship role"@en ;
+        sh:group gd:GroepStructuur ; sh:order 32 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath mim:bevatModelelement ] ;
+        sh:name "In informatiemodel"@nl , "In information model"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 60 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath prov:wasDerivedFrom ] ;
+        sh:name "Gepubliceerd als"@nl , "Published as"@en ;
+        sh:group gd:GroepHerkomst ; sh:order 70 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:identificatie ;
+        sh:name "Identificatie"@nl , "Identification"@en ;
+        sh:group gd:GroepHerkomst ; sh:order 71 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:datumOpname ;
+        sh:name "Datum opname"@nl , "Date added"@en ;
+        sh:group gd:GroepHerkomst ; sh:order 72 ;
+        dash:viewer dash:LiteralViewer ;
+    ] .
+
+# --- De relatierol -----------------------------------------------------------
+#
+# Het administratiemodel gebruikt het alternatief niet — de relatiesoort is
+# leidend — maar benoemt de rol wél. Zonder eigen formulier is de rol een dood
+# label aan het eind van de relatiesoort, en juist daar wil een lezer kunnen
+# zien wat MIM met "rol" bedoelt: de manier waarop een OBJECT deelneemt aan een
+# relatie tussen objecten, en niet de rol van een partij in een afspraak
+# (synthese §2a).
+vlmim:RelatierolFormShape a sh:NodeShape ;
+    sh:targetClass mim:Relatierol ;
+    rdfs:label "Relatierolformulier"@nl , "Relationship role form"@en ;
+    sh:property [
+        sh:path mim:naam ;
+        dash:propertyRole dash:LabelRole ;
+        sh:order 0 ;
+    ] ;
+    sh:property [
+        sh:path mim:definitie ;
+        sh:name "Definitie"@nl , "Definition"@en ;
+        dash:propertyRole dash:DescriptionRole ;
+        sh:order 1 ;
+    ] ;
+    sh:property [
+        sh:path mim:kardinaliteit ;
+        sh:name "Kardinaliteit"@nl , "Cardinality"@en ;
+        dash:propertyRole dash:KeyInfoRole ;
+        sh:order 2 ; dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:identificerend ;
+        sh:name "Identificerend"@nl , "Identifying"@en ;
+        sh:group gd:GroepKenmerken ; sh:order 10 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:authentiek ;
+        sh:name "Authenticiteit"@nl , "Authenticity"@en ;
+        sh:group gd:GroepKenmerken ; sh:order 11 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:toelichting ;
+        sh:name "Toelichting"@nl , "Explanatory note"@en ;
+        sh:group gd:GroepInhoud ; sh:order 20 ;
+        dash:viewer dash:LangStringViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath mim:relatierol ] ;
+        sh:name "Rol in relatiesoort"@nl , "Role in relationship type"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 60 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:herkomst ;
+        sh:name "Herkomst"@nl , "Origin"@en ;
+        sh:group gd:GroepHerkomst ; sh:order 71 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:identificatie ;
+        sh:name "Identificatie"@nl , "Identification"@en ;
+        sh:group gd:GroepHerkomst ; sh:order 72 ;
+        dash:viewer dash:LiteralViewer ;
+    ] .
+
+# --- De constraint -----------------------------------------------------------
+#
+# MIM's enige drager voor een voorwaarde. Hij staat hier om te laten zien
+# hoever die reikt: een constraint is een uitspraak OVER HET MODEL, geen norm
+# die een partij bindt (synthese §2b).
+vlmim:ConstraintFormShape a sh:NodeShape ;
+    sh:targetClass mim:Constraint ;
+    rdfs:label "Constraintformulier"@nl , "Constraint form"@en ;
+    sh:property [
+        sh:path mim:naam ;
+        dash:propertyRole dash:LabelRole ;
+        sh:order 0 ;
+    ] ;
+    sh:property [
+        sh:path mim:specificatieTekst ;
+        sh:name "Specificatie (tekst)"@nl , "Specification (text)"@en ;
+        dash:propertyRole dash:DescriptionRole ;
+        sh:order 1 ;
+    ] ;
+    sh:property [
+        sh:path mim:specificatieFormeel ;
+        sh:name "Specificatie (formeel)"@nl , "Specification (formal)"@en ;
+        sh:description "De constraint in OCL."@nl ;
+        sh:group gd:GroepStructuur ; sh:order 30 ;
+        dash:viewer dash:LiteralViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath mim:constraint ] ;
+        sh:name "Geldt voor"@nl , "Applies to"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 60 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path mim:identificatie ;
+        sh:name "Identificatie"@nl , "Identification"@en ;
+        sh:group gd:GroepHerkomst ; sh:order 71 ;
+        dash:viewer dash:LiteralViewer ;
+    ] .
+
+# =============================================================================
+# 2. DE LABELS VAN DE MIM-TERMEN
+#
+# Nederlandse labels en definities LETTERLIJK uit media/mim.ttl van de
+# MIM-Werkomgeving (commit 4f3fc35e538c0a000580b8449993a6a6bea53740, MIM 1.2);
+# de Engelse labels zijn vertalingen in dit bestand. Zonder dit blok toont een
+# viewer die deze data zonder de MIM-ontologie laadt de IRI-staart, want de
+# namespace dereferenceert niet.
+#
+# ALLEEN LABELS EN DEFINITIES, geen rdf:type en geen rdfs:subClassOf: deze
+# termen zijn hier weergavemateriaal en geen knopen met een eigen formulier.
+# Wie de MIM-ontologie erbij laadt, krijgt haar axioma's daarvandaan.
+#
+# DE KEUZE VAN DE TERMEN is de gebruikte verzameling: de klassen en
+# metagegevens die de formulieren hierboven aanwijzen, plus de MIM-instanties
+# waar het bronmodel naar verwijst (de primitieve datatypen en de drie
+# waardelijsten van het metamodel zelf).
+# =============================================================================
+
+# --- Klassen -----------------------------------------------------------------
+
+mim:Informatiemodel rdfs:label "Informatiemodel"@nl , "Information model"@en ;
+    rdfs:comment "De groepering van alle modelelementen waaruit het informatiemodel is opgebouwd. Het informatiemodel als geheel."@nl .
+mim:Package rdfs:label "Package"@nl , "Package"@en ;
+    rdfs:comment "Een package is een benoemde en begrensde verzameling/groepering van modelelementen."@nl .
+mim:Modelelement rdfs:label "Modelelement"@nl , "Model element"@en ;
+    rdfs:comment "Een modelelement uit het Metamodel voor Informatie Modellering (MIM)"@nl .
+mim:Objecttype rdfs:label "Objecttype"@nl , "Object type"@en ;
+    rdfs:comment "De typering van een groep objecten die binnen een domein relevant zijn en als gelijksoortig worden beschouwd."@nl .
+mim:Attribuutsoort rdfs:label "Attribuutsoort"@nl , "Attribute type"@en ;
+    rdfs:comment "De typering van gelijksoortige gegevens die voor een objecttype van toepassing is."@nl .
+mim:Gegevensgroep rdfs:label "Gegevensgroep"@nl , "Data group"@en ;
+    rdfs:comment "Een typering van een groep van gelijksoortige gegevens die voor een objecttype van toepassing is."@nl .
+mim:Gegevensgroeptype rdfs:label "Gegevensgroeptype"@nl , "Data group type"@en ;
+    rdfs:comment "Een groep van met elkaar samenhangende attribuutsoorten. Een gegevensgroeptype is altijd een type van een gegevensgroep."@nl .
+mim:Relatiesoort rdfs:label "Relatiesoort"@nl , "Relationship type"@en ;
+    rdfs:comment "De typering van het structurele verband tussen een object van een objecttype en een (ander) object van een ander (of hetzelfde) objecttype."@nl .
+mim:Relatierol rdfs:label "Relatierol"@nl , "Relationship role"@en ;
+    rdfs:comment "De benaming van de manier waarop een object deelneemt aan een relatie met een ander object."@nl .
+mim:RelatierolBron rdfs:label "Relatierol bron"@nl , "Source relationship role"@en ;
+    rdfs:comment "De relatierol die de rol beschrijft van de bron van de relatie."@nl .
+mim:RelatierolDoel rdfs:label "Relatierol doel"@nl , "Target relationship role"@en ;
+    rdfs:comment "De relatierol die de rol beschrijft van het doel van de relatie."@nl .
+mim:Datatype rdfs:label "Datatype"@nl , "Data type"@en ;
+    rdfs:comment "Een beschrijving van de structuur waaraan een waarde, oftewel de data zelf, aan moet voldoen."@nl .
+mim:PrimitiefDatatype rdfs:label "Primitief datatype"@nl , "Primitive data type"@en ;
+    rdfs:comment "Een primitief datatype is een datatype met een eenvoudige basisstructuur, oftewel enkelvoudig en zonder gelaagdheid."@nl .
+mim:GestructureerdDatatype rdfs:label "Gestructureerd datatype"@nl , "Structured data type"@en ;
+    rdfs:comment "Specifiek benoemd datatype dat de structuur van een gegeven beschrijft, samengesteld uit minimaal twee elementen die in samenhang betekenisvol zijn."@nl .
+mim:Enumeratie rdfs:label "Enumeratie"@nl , "Enumeration"@en ;
+    rdfs:comment "Een datatype waarvan de mogelijke waarden limitatief zijn opgesomd in een statische lijst."@nl .
+mim:Enumeratiewaarde rdfs:label "Enumeratiewaarde"@nl , "Enumeration value"@en ;
+    rdfs:comment "Een gedefinieerde waarde, in de vorm van een eenmalig vastgesteld constant gegeven."@nl .
+mim:Codelijst rdfs:label "Codelijst"@nl , "Code list"@en ;
+    rdfs:comment "De representatie van een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. De representatie bevat geen kenmerken, voor alle kenmerken wordt verwezen naar de specificatie van de externe waardelijst."@nl .
+mim:Referentielijst rdfs:label "Referentielijst"@nl , "Reference list"@en ;
+    rdfs:comment "De representatie van een lijst met een opsomming van de mogelijke domeinwaarden van een attribuutsoort, die buiten het model in een externe waardenlijst worden beheerd. De representatie bevat een aantal kenmerken, die overgenomen zijn van de specificatie van de externe waardelijst."@nl .
+mim:Keuze rdfs:label "Keuze"@nl , "Choice"@en ;
+    rdfs:comment "Een opsomming van meerdere modelelementen, waarbij er maar van één tegelijkertijd sprake kan zijn."@nl .
+mim:Constraint rdfs:label "Constraint"@nl , "Constraint"@en ;
+    rdfs:comment "Een constraint is een conditie of een beperking, die over een of meerdere modelelementen uit het informatiemodel geldt."@nl .
+mim:Generalisatie rdfs:label "Generalisatie"@nl , "Generalisation"@en ;
+    rdfs:comment "De typering van het hiërarchische verband tussen een meer generiek en een meer specifiek modelelement van hetzelfde soort, waarbij het meer specifieke modelelement eigenschappen van het meer generieke modelelement overerft. Dit verband is alleen gedefinieerd voor objecttypen en datatypen."@nl .
+
+# --- Metagegevens ------------------------------------------------------------
+
+mim:naam rdfs:label "naam"@nl , "name"@en ;
+    rdfs:comment "De naam van een modelelement."@nl .
+mim:alias rdfs:label "alias"@nl , "alias"@en ;
+    rdfs:comment "De weergave van de naam van een modelelement in natuurlijke taal (niet technisch)."@nl .
+mim:definitie rdfs:label "definitie"@nl , "definition"@en ;
+    rdfs:comment "De beschrijving van de betekenis van dit modelelement."@nl .
+mim:toelichting rdfs:label "toelichting"@nl , "explanatory note"@en ;
+    rdfs:comment "Een inhoudelijke toelichting op de definitie, ter verheldering of nadere duiding."@nl .
+mim:herkomst rdfs:label "herkomst"@nl , "origin"@en ;
+    rdfs:comment "De registratie of het informatiemodel waaraan het modelelement ontleend is dan wel de eigen organisatie indien het door de eigen organisatie toegevoegd is."@nl .
+mim:herkomstDefinitie rdfs:label "herkomst definitie"@nl , "definition origin"@en ;
+    rdfs:comment "De registratie of het informatiemodel waaruit de definitie is overgenomen dan wel een aanduiding die aangeeft uit welke bronnen de definitie is samengesteld."@nl .
+mim:datumOpname rdfs:label "datum opname"@nl , "date added"@en ;
+    rdfs:comment "De datum waarop het modelelement is opgenomen in het informatiemodel."@nl .
+mim:identificatie rdfs:label "Identificatie"@nl , "identification"@en ;
+    rdfs:comment "De identificatie van een modelelement."@nl .
+mim:basisUri rdfs:label "Basis-URI"@nl , "base URI"@en ;
+    rdfs:comment "De standaard basis-URI voor elk element in dit informatiemodel."@nl .
+mim:begrip rdfs:label "begrip"@nl , "concept"@en ;
+    rdfs:comment "Verwijzing naar een begrip, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd."@nl .
+mim:begripsterm rdfs:label "begripsterm"@nl , "concept term"@en ;
+    rdfs:comment "Verwijzing naar een begrip in de vorm van een term, vanuit een modelelement, waarmee wordt aangegeven op welk begrip, of begrippen, het informatiemodel element is gebaseerd."@nl .
+mim:attribuut rdfs:label "attribuut"@nl , "attribute"@en ;
+    rdfs:comment "De binding van een attribuutsoort als eigenschap aan een objecttype."@nl .
+mim:gegevensgroep rdfs:label "gegevensgroep"@nl , "data group"@en ;
+    rdfs:comment "De binding van een gegevensgroep als groep van eigenschappen aan een objecttype of gegevensgroeptype."@nl .
+mim:bevatModelelement rdfs:label "bevat modelelement"@nl , "contains model element"@en ;
+    rdfs:comment "De binding tussen een package en een modelelement dat zich in dat package bevindt."@nl .
+mim:type rdfs:label "type"@nl , "data type"@en ;
+    rdfs:comment "Het datatype waarmee waarden van dit modelelement worden vastgelegd."@nl .
+mim:datatypekeuze rdfs:label "datatypekeuze"@nl , "data type choice"@en ;
+    rdfs:comment "De binding van een keuze uit datatypen aan een attribuutsoort."@nl .
+mim:kardinaliteit rdfs:label "kardinaliteit"@nl , "cardinality"@en ;
+    rdfs:comment "De kardinaliteit geeft aan hoeveel keer waarden van dit kenmerk van een object kunnen voorkomen bij een object van het betreffende objecttype."@nl .
+mim:kardinaliteitRelatieBron rdfs:label "kardinaliteit relatie bron"@nl , "source cardinality"@en ;
+    rdfs:comment "De kardinaliteit relatie bron geeft bij een relatiesoort aan hoeveel instanties van het bron objecttype in een relatie met één instantie van het doel objecttype verbonden kunnen zijn."@nl .
+mim:lengte rdfs:label "lengte"@nl , "length"@en ;
+    rdfs:comment "De aanduiding van de lengte van een gegeven, volgens de aangegeven notatiewijze."@nl .
+mim:patroon rdfs:label "patroon"@nl , "pattern"@en ;
+    rdfs:comment "De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur."@nl .
+mim:formeelPatroon rdfs:label "formeel patroon"@nl , "formal pattern"@en ;
+    rdfs:comment "Zoals patroon, formeel vastgelegd, uitgedrukt in een formele taal die door de computer wordt herkend."@nl .
+mim:minimumwaardeInclusief rdfs:label "minimumwaarde inclusief"@nl , "minimum value inclusive"@en .
+mim:maximumwaardeInclusief rdfs:label "maximumwaarde inclusief"@nl , "maximum value inclusive"@en .
+mim:eenheid rdfs:label "eenheid"@nl , "unit"@en ;
+    rdfs:comment "Aanduiding van de eenheid die bij een meting of waarneming hoort."@nl .
+mim:identificerend rdfs:label "identificerend"@nl , "identifying"@en ;
+    rdfs:comment "Een aanduiding dat een kenmerk of een combinatie van kenmerken van een objecttype uniek identificerend is voor alle objecten in de populatie van objecten van dit objecttype, of de aanduiding dat een referentie element uniek identificerend is voor alle lijst items in een referentielijst."@nl .
+mim:mogelijkGeenWaarde rdfs:label "mogelijk geen waarde"@nl , "may have no value"@en ;
+    rdfs:comment "Aanduiding dat van een aspect geen waarde is geregistreerd, maar dat onduidelijk is of de waarde er werkelijk ook niet is."@nl .
+mim:authentiek rdfs:label "authentiek"@nl , "authenticity"@en ;
+    rdfs:comment "Aanduiding of het kenmerk een authentiek gegeven betreft."@nl .
+mim:indicatieAfleidbaar rdfs:label "indicatie afleidbaar"@nl , "derivable"@en ;
+    rdfs:comment "Aanduiding dat gegeven afleidbaar is uit andere attribuut- en/of relatiesoorten."@nl .
+mim:indicatieClassificerend rdfs:label "indicatie classificerend"@nl , "classifying"@en ;
+    rdfs:comment "Indicatie dat een attribuutsoort het objecttype waar het bij hoort classificeert in (sub)typen."@nl .
+mim:indicatieAbstractObject rdfs:label "indicatie abstract object"@nl , "abstract object"@en ;
+    rdfs:comment "Een indicatie die aangeeft of er objecten kunnen bestaan die getypeerd worden als zijnde objecten (instanties) van alleen dit objecttype."@nl .
+mim:heeftTijdlijnGeldigheid rdfs:label "heeft tijdlijn geldigheid"@nl , "has validity timeline"@en ;
+    rdfs:comment "Indicatie of voor dit kenmerk een tijdlijn geldigheid bijgehouden wordt en te bevragen is."@nl .
+mim:heeftTijdlijnRegistratie rdfs:label "heeft tijdlijn registratie"@nl , "has registration timeline"@en ;
+    rdfs:comment "Indicatie of voor dit kenmerk een tijdlijn registratie bijgehouden wordt en te bevragen is."@nl .
+mim:indicatieMaterieleHistorie rdfs:label "Indicatie materiële historie"@nl , "material history"@en ;
+    rdfs:comment "Indicatie of de materiële historie van het kenmerk van het object te bevragen is."@nl .
+mim:indicatieFormeleHistorie rdfs:label "Indicatie formele historie"@nl , "formal history"@en ;
+    rdfs:comment "Indicatie of de formele historie van het kenmerk van het object bijgehouden wordt en te bevragen is."@nl .
+mim:populatie rdfs:label "populatie"@nl , "population"@en ;
+    rdfs:comment "Voor objecttypen die deel uitmaken van een (basis)registratie betreft dit de beschrijving van de exemplaren van het gedefinieerde objecttype die in de desbetreffende (basis)registratie voorhanden zijn."@nl .
+mim:kwaliteit rdfs:label "kwaliteit"@nl , "quality"@en ;
+    rdfs:comment "Beschrijving van de mate waarin in de registratie opgenomen objecten van het desbetreffende type volledig, juist, actueel, nauwkeurig en betrouwbaar zijn."@nl .
+mim:locatie rdfs:label "locatie"@nl , "location"@en ;
+    rdfs:comment "Als het type van het attribuutsoort een waardenlijst is, dan wordt hier de locatie waar deze te vinden is opgegeven."@nl .
+mim:code rdfs:label "code"@nl , "code"@en ;
+    rdfs:comment "De in een registratie of informatiemodel aan de enumeratiewaarde toegekend unieke code"@nl .
+mim:waarde rdfs:label "waarde"@nl , "value"@en ;
+    rdfs:comment "De binding van een enumeratiewaarde aan een enumeratie."@nl .
+mim:bron rdfs:label "bron"@nl , "source"@en ;
+    rdfs:comment "Aanduiding van het bronobject in een relatie tussen objecten. Een bronobject heeft middels een relatiesoort een relatie met een doelobject."@nl .
+mim:doel rdfs:label "doel"@nl , "target"@en ;
+    rdfs:comment "Aanduiding van het gerelateerde objecttype die het eindpunt van de relatie aangeeft. Naar objecten van dit objecttype wordt verwezen."@nl .
+mim:unidirectioneel rdfs:label "unidirectioneel"@nl , "unidirectional"@en ;
+    rdfs:comment "De richting van een relatie, welke betekenis geeft aan de relatie vanuit het perspectief van de eigenaar van de relatie."@nl .
+mim:aggregatietype rdfs:label "aggregatietype"@nl , "aggregation type"@en ;
+    rdfs:comment "Aanduiding of het objecttype die de eigenaar is van een relatie het doel van relatie ziet als een samen te voegen onderdeel die bij het objecttype hoort."@nl .
+mim:relatierol rdfs:label "relatierol"@nl , "relationship role"@en .
+mim:constraint rdfs:label "constraint"@nl , "constraint"@en ;
+    rdfs:comment "De binding van een constraint aan een modelelement."@nl .
+mim:specificatieTekst rdfs:label "specificatie tekst"@nl , "specification text"@en ;
+    rdfs:comment "De specificatie van de constraint in normale tekst."@nl .
+mim:specificatieFormeel rdfs:label "specificatie formeel"@nl , "formal specification"@en ;
+    rdfs:comment "De beschrijving van de constraint in een formele specificatietaal, in OCL"@nl .
+mim:informatiedomein rdfs:label "informatiedomein"@nl , "information domain"@en ;
+    rdfs:comment "Aanduiding van het functionele domein waartoe het informatiemodel behoort."@nl .
+mim:informatiemodeltype rdfs:label "informatiemodeltype"@nl , "information model type"@en ;
+    rdfs:comment "De beschrijving van de aard van het informatiemodel, hoe het geïnterpreteerd moet worden."@nl .
+mim:relatiemodelleringstype rdfs:label "relatiemodelleringstype"@nl , "relationship modelling type"@en ;
+    rdfs:comment "Aanduiding van een in MIM gedefinieerd alternatief voor een modelleringswijze, en welke keuze hierbij is gemaakt."@nl .
+mim:mimversie rdfs:label "MIM versie"@nl , "MIM version"@en ;
+    rdfs:comment "De versie van de MIM specificatie die gebruikt is om het informatiemodel in uit te drukken."@nl .
+mim:mimextensie rdfs:label "MIM extensie"@nl , "MIM extension"@en ;
+    rdfs:comment "De aanduiding van een extensie op MIM."@nl .
+mim:mimtaal rdfs:label "MIM taal"@nl , "MIM language"@en ;
+    rdfs:comment "De aanduiding van de taal die gebruikt is voor de modelelementen."@nl .
+mim:tekstopmaak rdfs:label "Tekstopmaak"@nl , "text formatting"@en ;
+    rdfs:comment "De specificatie van de opmaak van een tekstuele beschrijving in het model."@nl .
+
+# --- Instanties uit het metamodel zelf ---------------------------------------
+#
+# De elf primitieve datatypen die MIM meelevert, en de drie waardelijsten van
+# het metamodel (authenticiteit, aggregatietype, informatiemodeltype,
+# relatiemodelleringstype). Het bronmodel verwijst ernaar; zonder deze labels
+# staat er een IRI-staart in de rij "Type" of "Authenticiteit".
+
+mim:CharacterString rdfs:label "CharacterString"@nl , "CharacterString"@en .
+mim:Integer rdfs:label "Integer"@nl , "Integer"@en .
+mim:Real rdfs:label "Real"@nl , "Real"@en .
+mim:Decimal rdfs:label "Decimal"@nl , "Decimal"@en .
+mim:Boolean rdfs:label "Boolean"@nl , "Boolean"@en .
+mim:Date rdfs:label "Date"@nl , "Date"@en ;
+    rdfs:comment "4-cijferig jaar, 2-cijferig maand, 2-cijferig dag uitgedrukt in yyyy-mm-dd conform ISO 8601"@nl .
+mim:DateTime rdfs:label "DateTime"@nl , "DateTime"@en .
+mim:Year rdfs:label "Year"@nl , "Year"@en .
+mim:Month rdfs:label "Month"@nl , "Month"@en .
+mim:Day rdfs:label "Day"@nl , "Day"@en .
+mim:URI rdfs:label "URI"@nl , "URI"@en .
+
+mim:Authentiek rdfs:label "Authentiek"@nl , "Authentic"@en ;
+    rdfs:comment "In een basisregistratie opgenomen gegeven dat bij wettelijk voorschrift als authentiek is aangemerkt."@nl .
+mim:Basisgegeven rdfs:label "Basisgegeven"@nl , "Base registry datum"@en ;
+    rdfs:comment "Een in een basisregistratie opgenomen gegeven."@nl .
+mim:WettelijkGegeven rdfs:label "Wettelijk gegeven"@nl , "Statutory datum"@en ;
+    rdfs:comment "Gegeven behorende bij een wettelijke registratie, niet zijnde een basisregistratie"@nl .
+mim:LandelijkKerngegeven rdfs:label "Landelijk kerngegeven"@nl , "National core datum"@en .
+mim:OverigeAuthenticiteit rdfs:label "Overige authenticiteit"@nl , "Other authenticity"@en .
+
+mim:Geen rdfs:label "Geen"@nl , "None"@en .
+mim:Compositie rdfs:label "Compositie"@nl , "Composition"@en .
+mim:Gedeeld rdfs:label "Gedeeld"@nl , "Shared"@en .
+
+mim:ConceptueelInformatiemodel rdfs:label "Conceptueel informatiemodel"@nl , "Conceptual information model"@en .
+mim:LogischInformatiemodel rdfs:label "Logisch informatiemodel"@nl , "Logical information model"@en .
+mim:TechnischInformatiemodel rdfs:label "Technisch informatiemodel"@nl , "Technical information model"@en .
+
+mim:RelatiesoortLeidend rdfs:label "Relatiesoort leidend"@nl , "Relationship type leading"@en .
+mim:RelatierolLeidend rdfs:label "Relatierol leidend"@nl , "Relationship role leading"@en .
+
+# --- De extensietermen -------------------------------------------------------
+#
+# De twee metagegevens van vlierdam-mim-extensie.ttl krijgen hun labels en
+# definities in dat bestand — het is de extensie zelf en zij beheert haar eigen
+# vocabulaire. Wat hier staat is alleen de weergave ervan (§1, het
+# attribuutsoortformulier).
+
+# =============================================================================
+# 3. DE AANHECHTING — verhuisd naar vlierdam-mim-afleiding.ttl
+#
+# HET PROBLEEM staat hieronder beschreven en is echt: de documentweergave daalt
+# af langs de rijen van de formulieren, dus een knoop die door geen enkele
+# GETOONDE rij wordt aangewezen komt niet in het document — en zonder
+# aanhechting is de hele MIM-graaf onbereikbaar (nul vouwen, nul formulieren).
+# De OPLOSSING is ook ongewijzigd: één tripel op dct:conformsTo (de rij
+# "Voldoet aan" die het bestaande formulier al toont), niet een tweede
+# formulier-shape die het rijke formulier van glo-shapes.ttl zou kunnen
+# verdringen.
+#
+# WAT DE FOLD VERANDERD HEEFT (14 sep 2026): de tripel zelf staat niet meer in
+# DIT bestand maar in `vlierdam-mim-afleiding.ttl`. Dit is een WEERGAVEbestand
+# — formulier-shapes en labels — en de uitspraak "deze gegevensleverings-
+# specificatie voldoet aan dit informatiemodel" is een uitspraak over de CASUS,
+# niet over de weergave. Zij hoort bij de tweeëntwintig
+# `prov:wasDerivedFrom`-uitspraken die daar al staan en precies dezelfde vraag
+# beantwoorden: hoe verhouden de gepubliceerde stapel en de MIM-bron zich tot
+# elkaar. De lane bood deze verhuizing zelf als alternatief aan; de fold heeft
+# hem overgenomen.
+#
+# VEILIG, want de twee bestanden reizen samen: `docker/fuseki/load.sh` laadt
+# `data/vlierdam/*.ttl` met een glob, en een lezer die de MIM-shapes laadt
+# zonder de MIM-data houdt sowieso een leeg formulier over.
+# =============================================================================

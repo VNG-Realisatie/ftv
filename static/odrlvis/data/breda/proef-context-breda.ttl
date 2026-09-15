@@ -1,0 +1,3187 @@
+# Context voor de Breda-proef: ledenstructuur (labels, typen, groep/categorie-keten)
+# uit brp-odrl/ttl/informatiemodel.ttl en de vier aanbod-duties uit brp-ap-nl/ttl/offers.ttl.
+# GEGENEREERD uittreksel — bron blijft leidend.
+@prefix odrl: <http://www.w3.org/ns/odrl/2/>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix dpv: <https://w3id.org/dpv#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix brp: <https://data.rijksoverheid.nl/brp/def#>.
+@prefix brprub: <https://data.rijksoverheid.nl/brp/rubriek/>.
+@prefix brpgrp: <https://data.rijksoverheid.nl/brp/groep/>.
+@prefix brpcat: <https://data.rijksoverheid.nl/brp/categorie/>.
+@prefix brpelm: <https://data.rijksoverheid.nl/brp/element/>.
+@prefix apaanbod: <https://data.rijksoverheid.nl/brp/ap-nl/aanbod/>.
+
+brprub:anummerPersoon rdfs:label "A-nummer (Persoon)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:persoon-identificatienummers;
+    brp:behoortTotGroep brpgrp:persoon-identificatienummers;
+    brp:element brpelm:anummer;
+    brp:rubrieknummer "01.01.10".
+brp:Rubriek rdfs:label "Data item"@en, "Rubriek"@nl.
+brpgrp:persoon-identificatienummers rdfs:label "Identificatienummers"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:persoon;
+    skos:notation "01.01";
+    brp:behoortTotCategorie brpcat:persoon.
+brpelm:anummer rdfs:label "A-nummer"@nl;
+    a brp:Element;
+    rdfs:comment "Het administratienummer (A-nummer), bedoeld in artikel 4.9 van de Wet BRP. Een uniek 10-cijferig nummer dat een persoonslijst identificeert."@nl.
+brprub:burgerservicenummerPersoon rdfs:label "Burgerservicenummer (Persoon)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:persoon-identificatienummers;
+    brp:behoortTotGroep brpgrp:persoon-identificatienummers;
+    brp:element brpelm:burgerservicenummer;
+    brp:rubrieknummer "01.01.20".
+brpelm:burgerservicenummer rdfs:label "Burgerservicenummer"@nl;
+    a brp:Element;
+    rdfs:comment "Het burgerservicenummer (BSN), bedoeld in artikel 1.1 van de Wet algemene bepalingen burgerservicenummer."@nl.
+brprub:voornamenPersoon rdfs:label "Voornamen (Persoon)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:persoon-naam;
+    brp:behoortTotGroep brpgrp:persoon-naam;
+    brp:element brpelm:voornamen;
+    brp:rubrieknummer "01.02.10".
+brpgrp:persoon-naam rdfs:label "Naam"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:persoon;
+    skos:notation "01.02";
+    brp:behoortTotCategorie brpcat:persoon.
+brpelm:voornamen rdfs:label "Voornamen"@nl;
+    a brp:Element;
+    rdfs:comment "De voornamen, gescheiden door spaties, voorafgaand aan de geslachtsnaam."@nl.
+brprub:voorvoegselGeslachtsnaamPersoon rdfs:label "Voorvoegsel geslachtsnaam (Persoon)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:persoon-naam;
+    brp:behoortTotGroep brpgrp:persoon-naam;
+    brp:element brpelm:voorvoegselGeslachtsnaam;
+    brp:rubrieknummer "01.02.30".
+brpelm:voorvoegselGeslachtsnaam rdfs:label "Voorvoegsel geslachtsnaam"@nl;
+    a brp:Element;
+    rdfs:comment "Het deel van de geslachtsnaam dat voorkomt in Tabel 36 (Voorvoegseltabel), voorafgaand aan de rest van de geslachtsnaam."@nl.
+brprub:geslachtsnaamPersoon rdfs:label "Geslachtsnaam (Persoon)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:persoon-naam;
+    brp:behoortTotGroep brpgrp:persoon-naam;
+    brp:element brpelm:geslachtsnaam;
+    brp:rubrieknummer "01.02.40".
+brpelm:geslachtsnaam rdfs:label "Geslachtsnaam"@nl;
+    a brp:Element;
+    rdfs:comment "De geslachtsnaam waarvan eventueel aanwezige voorvoegsels en adellijke titel/predicaat zijn afgesplitst."@nl.
+brprub:geboortedatumPersoon rdfs:label "Geboortedatum (Persoon)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:persoon-geboorte;
+    brp:behoortTotGroep brpgrp:persoon-geboorte;
+    brp:element brpelm:geboortedatum;
+    brp:rubrieknummer "01.03.10".
+brpgrp:persoon-geboorte rdfs:label "Geboorte"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:persoon;
+    skos:notation "01.03";
+    brp:behoortTotCategorie brpcat:persoon.
+brpelm:geboortedatum rdfs:label "Geboortedatum"@nl;
+    a brp:Element;
+    rdfs:comment "De datum waarop de persoon is geboren."@nl.
+brprub:geslachtsaanduidingPersoon rdfs:label "Geslachtsaanduiding (Persoon)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:persoon-geslacht;
+    brp:behoortTotGroep brpgrp:persoon-geslacht;
+    brp:element brpelm:geslachtsaanduiding;
+    brp:rubrieknummer "01.04.10".
+brpgrp:persoon-geslacht rdfs:label "Geslacht"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:persoon;
+    skos:notation "01.04";
+    brp:behoortTotCategorie brpcat:persoon.
+brpelm:geslachtsaanduiding rdfs:label "Geslachtsaanduiding"@nl;
+    a brp:Element;
+    rdfs:comment "Een aanduiding die aangeeft of de ingeschrevene een man (M), vrouw (V) of onbekend (O) is."@nl.
+brprub:datumOverlijdenOverlijden rdfs:label "Datum overlijden (Overlijden)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:overlijden-overlijden;
+    brp:behoortTotGroep brpgrp:overlijden-overlijden;
+    brp:element brpelm:datumOverlijden;
+    brp:rubrieknummer "06.08.10".
+brpgrp:overlijden-overlijden rdfs:label "Overlijden"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:overlijden;
+    skos:notation "06.08";
+    brp:behoortTotCategorie brpcat:overlijden.
+brpelm:datumOverlijden rdfs:label "Datum overlijden"@nl;
+    a brp:Element;
+    rdfs:comment "De datum waarop de ingeschrevene is overleden."@nl.
+brprub:indicatieGeheimInschrijving rdfs:label "Indicatie geheim (Inschrijving)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:inschrijving-geheim;
+    brp:behoortTotGroep brpgrp:inschrijving-geheim;
+    brp:element brpelm:indicatieGeheim;
+    brp:rubrieknummer "07.70.10".
+brpgrp:inschrijving-geheim rdfs:label "Geheim"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:inschrijving;
+    skos:notation "07.70";
+    brp:behoortTotCategorie brpcat:inschrijving.
+brpelm:indicatieGeheim rdfs:label "Indicatie geheim"@nl;
+    a brp:Element;
+    rdfs:comment "Indicatie geheim: geeft aan of de ingeschrevene om geheimhouding heeft verzocht (0=niet geheim, 1-7=wel geheim)."@nl.
+brprub:gemeenteVanInschrijvingVerblijfplaats rdfs:label "Gemeente van inschrijving (Verblijfplaats)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaats-gemeente;
+    brp:behoortTotGroep brpgrp:verblijfplaats-gemeente;
+    brp:element brpelm:gemeenteVanInschrijving;
+    brp:rubrieknummer "08.09.10".
+brpgrp:verblijfplaats-gemeente rdfs:label "Gemeente van inschrijving"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:verblijfplaats;
+    skos:notation "08.09";
+    brp:behoortTotCategorie brpcat:verblijfplaats.
+brpelm:gemeenteVanInschrijving rdfs:label "Gemeente van inschrijving"@nl;
+    a brp:Element;
+    rdfs:comment "Een 4-cijferige code uit Tabel 33 (Gemeententabel) van de gemeente waar de ingeschrevene staat ingeschreven."@nl;
+    rdfs:range brp:Gemeente.
+brprub:adellijkeTitelPredicaatPersoon rdfs:label "Adellijke titel/predicaat (Persoon)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:persoon-naam;
+    brp:behoortTotGroep brpgrp:persoon-naam;
+    brp:element brpelm:adellijkeTitelPredicaat;
+    brp:rubrieknummer "01.02.20".
+brpelm:adellijkeTitelPredicaat rdfs:label "Adellijke titel/predicaat"@nl;
+    a brp:Element;
+    rdfs:comment "Een code uit Tabel 38 (Adellijke titel/predicaat) die aangeeft welke titel of welk predicaat tot de naam behoort."@nl.
+brprub:aanduidingNaamgebruikPersoon rdfs:label "Aanduiding naamgebruik (Persoon)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:persoon-naamgebruik;
+    brp:behoortTotGroep brpgrp:persoon-naamgebruik;
+    brp:element brpelm:aanduidingNaamgebruik;
+    brp:rubrieknummer "01.61.10".
+brpgrp:persoon-naamgebruik rdfs:label "Naamgebruik"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:persoon;
+    skos:notation "01.61";
+    brp:behoortTotCategorie brpcat:persoon.
+brpelm:aanduidingNaamgebruik rdfs:label "Aanduiding naamgebruik"@nl;
+    a brp:Element;
+    rdfs:comment "Aanduiding naamgebruik: hoe de naam in het maatschappelijk verkeer wordt gebruikt (E, P, V, N)."@nl.
+brprub:voorvoegselGeslachtsnaamPartner rdfs:label "Voorvoegsel geslachtsnaam (Huwelijk/geregistreerd partnerschap)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschap-naam;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschap-naam;
+    brp:element brpelm:voorvoegselGeslachtsnaam;
+    brp:rubrieknummer "05.02.30".
+brpgrp:huwelijkPartnerschap-naam rdfs:label "Naam"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:huwelijkPartnerschap;
+    skos:notation "05.02";
+    brp:behoortTotCategorie brpcat:huwelijkPartnerschap.
+brprub:geslachtsnaamPartner rdfs:label "Geslachtsnaam (Huwelijk/geregistreerd partnerschap)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschap-naam;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschap-naam;
+    brp:element brpelm:geslachtsnaam;
+    brp:rubrieknummer "05.02.40".
+brprub:datumHuwelijkssluitingPartner rdfs:label "Datum huwelijkssluiting/aangaan geregistreerd partnerschap (Huwelijk/geregistreerd partnerschap)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschap-huwelijkssluiting;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschap-huwelijkssluiting;
+    brp:element brpelm:datumHuwelijkssluiting;
+    brp:rubrieknummer "05.06.10".
+brpgrp:huwelijkPartnerschap-huwelijkssluiting rdfs:label "Huwelijkssluiting/aangaan geregistreerd partnerschap"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:huwelijkPartnerschap;
+    skos:notation "05.06";
+    brp:behoortTotCategorie brpcat:huwelijkPartnerschap.
+brpelm:datumHuwelijkssluiting rdfs:label "Datum huwelijkssluiting/aangaan geregistreerd partnerschap"@nl;
+    a brp:Element;
+    rdfs:comment "De datum waarop het huwelijk is voltrokken of het partnerschap is aangegaan."@nl.
+brprub:datumOntbindingHuwelijkPartner rdfs:label "Datum ontbinding huwelijk/geregistreerd partnerschap (Huwelijk/geregistreerd partnerschap)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschap-ontbindingHuwelijk;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschap-ontbindingHuwelijk;
+    brp:element brpelm:datumOntbindingHuwelijk;
+    brp:rubrieknummer "05.07.10".
+brpgrp:huwelijkPartnerschap-ontbindingHuwelijk rdfs:label "Ontbinding huwelijk/geregistreerd partnerschap"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:huwelijkPartnerschap;
+    skos:notation "05.07";
+    brp:behoortTotCategorie brpcat:huwelijkPartnerschap.
+brpelm:datumOntbindingHuwelijk rdfs:label "Datum ontbinding huwelijk/geregistreerd partnerschap"@nl;
+    a brp:Element;
+    rdfs:comment "De datum waarop het huwelijk of geregistreerd partnerschap is ontbonden."@nl.
+brprub:functieAdresVerblijfplaats rdfs:label "Functie adres (Verblijfplaats)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaats-adreshouding;
+    brp:behoortTotGroep brpgrp:verblijfplaats-adreshouding;
+    brp:element brpelm:functieAdres;
+    brp:rubrieknummer "08.10.10".
+brpgrp:verblijfplaats-adreshouding rdfs:label "Adreshouding"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:verblijfplaats;
+    skos:notation "08.10";
+    brp:behoortTotCategorie brpcat:verblijfplaats.
+brpelm:functieAdres rdfs:label "Functie adres"@nl;
+    a brp:Element;
+    rdfs:comment "Geeft aan of het adres een woonadres (W) of een briefadres (B) betreft."@nl.
+brprub:datumAanvangAdreshoudingVerblijfplaats rdfs:label "Datum aanvang adreshouding (Verblijfplaats)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaats-adreshouding;
+    brp:behoortTotGroep brpgrp:verblijfplaats-adreshouding;
+    brp:element brpelm:datumAanvangAdreshouding;
+    brp:rubrieknummer "08.10.30".
+brpelm:datumAanvangAdreshouding rdfs:label "Datum aanvang adreshouding"@nl;
+    a brp:Element;
+    rdfs:comment "De datum waarop de adreshouding op het huidige adres is aangevangen."@nl.
+brprub:straatnaamVerblijfplaats rdfs:label "Straatnaam (Verblijfplaats)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaats-adres;
+    brp:behoortTotGroep brpgrp:verblijfplaats-adres;
+    brp:element brpelm:straatnaam;
+    brp:rubrieknummer "08.11.10".
+brpgrp:verblijfplaats-adres rdfs:label "Adres"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:verblijfplaats;
+    skos:notation "08.11";
+    brp:behoortTotCategorie brpcat:verblijfplaats.
+brpelm:straatnaam rdfs:label "Straatnaam"@nl;
+    a brp:Element;
+    rdfs:comment "De naam van de straat conform de BAG."@nl.
+brprub:naamOpenbareRuimteVerblijfplaats rdfs:label "Naam openbare ruimte (Verblijfplaats)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaats-adres;
+    brp:behoortTotGroep brpgrp:verblijfplaats-adres;
+    brp:element brpelm:naamOpenbareRuimte;
+    brp:rubrieknummer "08.11.15".
+brpelm:naamOpenbareRuimte rdfs:label "Naam openbare ruimte"@nl;
+    a brp:Element;
+    rdfs:comment "De naam van de openbare ruimte conform de BAG."@nl.
+brprub:huisnummerVerblijfplaats rdfs:label "Huisnummer (Verblijfplaats)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaats-adres;
+    brp:behoortTotGroep brpgrp:verblijfplaats-adres;
+    brp:element brpelm:huisnummer;
+    brp:rubrieknummer "08.11.20".
+brpelm:huisnummer rdfs:label "Huisnummer"@nl;
+    a brp:Element;
+    rdfs:comment "Het huisnummer conform de BAG."@nl.
+brprub:huisletterVerblijfplaats rdfs:label "Huisletter (Verblijfplaats)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaats-adres;
+    brp:behoortTotGroep brpgrp:verblijfplaats-adres;
+    brp:element brpelm:huisletter;
+    brp:rubrieknummer "08.11.30".
+brpelm:huisletter rdfs:label "Huisletter"@nl;
+    a brp:Element;
+    rdfs:comment "De huisletter conform de BAG."@nl.
+brprub:huisnummertoevoegingVerblijfplaats rdfs:label "Huisnummertoevoeging (Verblijfplaats)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaats-adres;
+    brp:behoortTotGroep brpgrp:verblijfplaats-adres;
+    brp:element brpelm:huisnummertoevoeging;
+    brp:rubrieknummer "08.11.40".
+brpelm:huisnummertoevoeging rdfs:label "Huisnummertoevoeging"@nl;
+    a brp:Element;
+    rdfs:comment "De huisnummertoevoeging conform de BAG."@nl.
+brprub:aanduidingBijHuisnummerVerblijfplaats rdfs:label "Aanduiding bij huisnummer (Verblijfplaats)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaats-adres;
+    brp:behoortTotGroep brpgrp:verblijfplaats-adres;
+    brp:element brpelm:aanduidingBijHuisnummer;
+    brp:rubrieknummer "08.11.50".
+brpelm:aanduidingBijHuisnummer rdfs:label "Aanduiding bij huisnummer"@nl;
+    a brp:Element;
+    rdfs:comment "Een aanduiding bij het huisnummer (by = tegenover, to = naast)."@nl.
+brprub:postcodeVerblijfplaats rdfs:label "Postcode (Verblijfplaats)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaats-adres;
+    brp:behoortTotGroep brpgrp:verblijfplaats-adres;
+    brp:element brpelm:postcode;
+    brp:rubrieknummer "08.11.60".
+brpelm:postcode rdfs:label "Postcode"@nl;
+    a brp:Element;
+    rdfs:comment "De postcode van het adres (4 cijfers + 2 letters)."@nl.
+brprub:woonplaatsnaamVerblijfplaats rdfs:label "Woonplaatsnaam (Verblijfplaats)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaats-adres;
+    brp:behoortTotGroep brpgrp:verblijfplaats-adres;
+    brp:element brpelm:woonplaatsnaam;
+    brp:rubrieknummer "08.11.70".
+brpelm:woonplaatsnaam rdfs:label "Woonplaatsnaam"@nl;
+    a brp:Element;
+    rdfs:comment "De naam van de woonplaats conform de BAG."@nl.
+brprub:identificatiecodeVerblijfplaatsVerblijfplaats rdfs:label "Identificatiecode verblijfplaats (Verblijfplaats)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaats-adres;
+    brp:behoortTotGroep brpgrp:verblijfplaats-adres;
+    brp:element brpelm:identificatiecodeVerblijfplaats;
+    brp:rubrieknummer "08.11.80".
+brpelm:identificatiecodeVerblijfplaats rdfs:label "Identificatiecode verblijfplaats"@nl;
+    a brp:Element;
+    rdfs:comment "De identificatiecode verblijfplaats (nummeraanduiding-ID) conform de BAG."@nl.
+brprub:identificatiecodeNummeraanduidingVerblijfplaats rdfs:label "Identificatiecode nummeraanduiding (Verblijfplaats)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaats-adres;
+    brp:behoortTotGroep brpgrp:verblijfplaats-adres;
+    brp:element brpelm:identificatiecodeNummeraanduiding;
+    brp:rubrieknummer "08.11.90".
+brpelm:identificatiecodeNummeraanduiding rdfs:label "Identificatiecode nummeraanduiding"@nl;
+    a brp:Element;
+    rdfs:comment "De identificatiecode nummeraanduiding conform de BAG."@nl.
+brprub:locatiebeschrijvingVerblijfplaats rdfs:label "Locatiebeschrijving (Verblijfplaats)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaats-locatie;
+    brp:behoortTotGroep brpgrp:verblijfplaats-locatie;
+    brp:element brpelm:locatiebeschrijving;
+    brp:rubrieknummer "08.12.10".
+brpgrp:verblijfplaats-locatie rdfs:label "Locatie"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:verblijfplaats;
+    skos:notation "08.12";
+    brp:behoortTotCategorie brpcat:verblijfplaats.
+brpelm:locatiebeschrijving rdfs:label "Locatiebeschrijving"@nl;
+    a brp:Element;
+    rdfs:comment "Een beschrijving van de locatie als er geen BAG-adres beschikbaar is."@nl.
+brprub:landAdresBuitenlandVerblijfplaats rdfs:label "Land adres buitenland (Verblijfplaats)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaats-adresBuitenland;
+    brp:behoortTotGroep brpgrp:verblijfplaats-adresBuitenland;
+    brp:element brpelm:landAdresBuitenland;
+    brp:rubrieknummer "08.13.10".
+brpgrp:verblijfplaats-adresBuitenland rdfs:label "Adres buitenland"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:verblijfplaats;
+    skos:notation "08.13";
+    brp:behoortTotCategorie brpcat:verblijfplaats.
+brpelm:landAdresBuitenland rdfs:label "Land adres buitenland"@nl;
+    a brp:Element;
+    rdfs:comment "Een code uit Tabel 34 (Landentabel) van het land waar het buitenlands adres zich bevindt."@nl;
+    rdfs:range brp:Land.
+brprub:regel1AdresBuitenlandVerblijfplaats rdfs:label "Regel 1 adres buitenland (Verblijfplaats)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaats-adresBuitenland;
+    brp:behoortTotGroep brpgrp:verblijfplaats-adresBuitenland;
+    brp:element brpelm:regel1AdresBuitenland;
+    brp:rubrieknummer "08.13.30".
+brpelm:regel1AdresBuitenland rdfs:label "Regel 1 adres buitenland"@nl;
+    a brp:Element;
+    rdfs:comment "Eerste regel van het buitenlands adres."@nl.
+brprub:regel2AdresBuitenlandVerblijfplaats rdfs:label "Regel 2 adres buitenland (Verblijfplaats)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaats-adresBuitenland;
+    brp:behoortTotGroep brpgrp:verblijfplaats-adresBuitenland;
+    brp:element brpelm:regel2AdresBuitenland;
+    brp:rubrieknummer "08.13.40".
+brpelm:regel2AdresBuitenland rdfs:label "Regel 2 adres buitenland"@nl;
+    a brp:Element;
+    rdfs:comment "Tweede regel van het buitenlands adres."@nl.
+brprub:regel3AdresBuitenlandVerblijfplaats rdfs:label "Regel 3 adres buitenland (Verblijfplaats)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaats-adresBuitenland;
+    brp:behoortTotGroep brpgrp:verblijfplaats-adresBuitenland;
+    brp:element brpelm:regel3AdresBuitenland;
+    brp:rubrieknummer "08.13.50".
+brpelm:regel3AdresBuitenland rdfs:label "Regel 3 adres buitenland"@nl;
+    a brp:Element;
+    rdfs:comment "Derde regel van het buitenlands adres."@nl.
+brprub:gemeenteVanInschrijvingTijdelijkVerblijf rdfs:label "Gemeente van inschrijving (Tijdelijk verblijfsadres)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:tijdelijkVerblijfsadres-gemeente;
+    brp:behoortTotGroep brpgrp:tijdelijkVerblijfsadres-gemeente;
+    brp:element brpelm:gemeenteVanInschrijving;
+    brp:rubrieknummer "16.09.10".
+brpgrp:tijdelijkVerblijfsadres-gemeente rdfs:label "Gemeente van inschrijving"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:tijdelijkVerblijfsadres;
+    skos:notation "16.09";
+    brp:behoortTotCategorie brpcat:tijdelijkVerblijfsadres.
+brprub:datumInschrijvingTijdelijkVerblijf rdfs:label "Datum inschrijving (Tijdelijk verblijfsadres)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:tijdelijkVerblijfsadres-gemeente;
+    brp:behoortTotGroep brpgrp:tijdelijkVerblijfsadres-gemeente;
+    brp:element brpelm:datumInschrijving;
+    brp:rubrieknummer "16.09.20".
+brpelm:datumInschrijving rdfs:label "Datum inschrijving"@nl;
+    a brp:Element;
+    rdfs:comment "De datum waarop de ingeschrijving in de huidige gemeente is ingegaan."@nl.
+brprub:straatnaamTijdelijkVerblijf rdfs:label "Straatnaam (Tijdelijk verblijfsadres)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:tijdelijkVerblijfsadres-adres;
+    brp:behoortTotGroep brpgrp:tijdelijkVerblijfsadres-adres;
+    brp:element brpelm:straatnaam;
+    brp:rubrieknummer "16.11.10".
+brpgrp:tijdelijkVerblijfsadres-adres rdfs:label "Adres"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:tijdelijkVerblijfsadres;
+    skos:notation "16.11";
+    brp:behoortTotCategorie brpcat:tijdelijkVerblijfsadres.
+brprub:naamOpenbareRuimteTijdelijkVerblijf rdfs:label "Naam openbare ruimte (Tijdelijk verblijfsadres)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:tijdelijkVerblijfsadres-adres;
+    brp:behoortTotGroep brpgrp:tijdelijkVerblijfsadres-adres;
+    brp:element brpelm:naamOpenbareRuimte;
+    brp:rubrieknummer "16.11.15".
+brprub:huisnummerTijdelijkVerblijf rdfs:label "Huisnummer (Tijdelijk verblijfsadres)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:tijdelijkVerblijfsadres-adres;
+    brp:behoortTotGroep brpgrp:tijdelijkVerblijfsadres-adres;
+    brp:element brpelm:huisnummer;
+    brp:rubrieknummer "16.11.20".
+brprub:huisletterTijdelijkVerblijf rdfs:label "Huisletter (Tijdelijk verblijfsadres)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:tijdelijkVerblijfsadres-adres;
+    brp:behoortTotGroep brpgrp:tijdelijkVerblijfsadres-adres;
+    brp:element brpelm:huisletter;
+    brp:rubrieknummer "16.11.30".
+brprub:huisnummertoevoegingTijdelijkVerblijf rdfs:label "Huisnummertoevoeging (Tijdelijk verblijfsadres)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:tijdelijkVerblijfsadres-adres;
+    brp:behoortTotGroep brpgrp:tijdelijkVerblijfsadres-adres;
+    brp:element brpelm:huisnummertoevoeging;
+    brp:rubrieknummer "16.11.40".
+brprub:aanduidingBijHuisnummerTijdelijkVerblijf rdfs:label "Aanduiding bij huisnummer (Tijdelijk verblijfsadres)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:tijdelijkVerblijfsadres-adres;
+    brp:behoortTotGroep brpgrp:tijdelijkVerblijfsadres-adres;
+    brp:element brpelm:aanduidingBijHuisnummer;
+    brp:rubrieknummer "16.11.50".
+brprub:postcodeTijdelijkVerblijf rdfs:label "Postcode (Tijdelijk verblijfsadres)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:tijdelijkVerblijfsadres-adres;
+    brp:behoortTotGroep brpgrp:tijdelijkVerblijfsadres-adres;
+    brp:element brpelm:postcode;
+    brp:rubrieknummer "16.11.60".
+brprub:woonplaatsnaamTijdelijkVerblijf rdfs:label "Woonplaatsnaam (Tijdelijk verblijfsadres)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:tijdelijkVerblijfsadres-adres;
+    brp:behoortTotGroep brpgrp:tijdelijkVerblijfsadres-adres;
+    brp:element brpelm:woonplaatsnaam;
+    brp:rubrieknummer "16.11.70".
+brprub:identificatiecodeVerblijfplaatsTijdelijkVerblijf rdfs:label "Identificatiecode verblijfplaats (Tijdelijk verblijfsadres)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:tijdelijkVerblijfsadres-adres;
+    brp:behoortTotGroep brpgrp:tijdelijkVerblijfsadres-adres;
+    brp:element brpelm:identificatiecodeVerblijfplaats;
+    brp:rubrieknummer "16.11.80".
+brprub:identificatiecodeNummeraanduidingTijdelijkVerblijf rdfs:label "Identificatiecode nummeraanduiding (Tijdelijk verblijfsadres)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:tijdelijkVerblijfsadres-adres;
+    brp:behoortTotGroep brpgrp:tijdelijkVerblijfsadres-adres;
+    brp:element brpelm:identificatiecodeNummeraanduiding;
+    brp:rubrieknummer "16.11.90".
+brprub:einddatumGeldigheidTijdelijkVerblijf rdfs:label "Einddatum geldigheid (Tijdelijk verblijfsadres)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:tijdelijkVerblijfsadres-einddatumGeldigheid;
+    brp:behoortTotGroep brpgrp:tijdelijkVerblijfsadres-einddatumGeldigheid;
+    brp:element brpelm:einddatumGeldigheid;
+    brp:rubrieknummer "16.18.10".
+brpgrp:tijdelijkVerblijfsadres-einddatumGeldigheid rdfs:label "Einddatum geldigheid"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:tijdelijkVerblijfsadres;
+    skos:notation "16.18";
+    brp:behoortTotCategorie brpcat:tijdelijkVerblijfsadres.
+brpelm:einddatumGeldigheid rdfs:label "Einddatum geldigheid"@nl;
+    a brp:Element;
+    rdfs:comment "Einddatum geldigheid van het tijdelijk verblijfsadres."@nl.
+brprub:ingangsdatumGeldigheidTijdelijkVerblijf rdfs:label "Ingangsdatum geldigheid (Tijdelijk verblijfsadres)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:tijdelijkVerblijfsadres-geldigheid;
+    brp:behoortTotGroep brpgrp:tijdelijkVerblijfsadres-geldigheid;
+    brp:element brpelm:ingangsdatumGeldigheid;
+    brp:rubrieknummer "16.85.10".
+brpgrp:tijdelijkVerblijfsadres-geldigheid rdfs:label "Geldigheid"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:tijdelijkVerblijfsadres;
+    skos:notation "16.85";
+    brp:behoortTotCategorie brpcat:tijdelijkVerblijfsadres.
+brpelm:ingangsdatumGeldigheid rdfs:label "Ingangsdatum geldigheid"@nl;
+    a brp:Element;
+    rdfs:comment "De ingangsdatum geldigheid van de gegevensgroep."@nl.
+brprub:datumVanOpnemingTijdelijkVerblijf rdfs:label "Datum van opneming (Tijdelijk verblijfsadres)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:tijdelijkVerblijfsadres-opneming;
+    brp:behoortTotGroep brpgrp:tijdelijkVerblijfsadres-opneming;
+    brp:element brpelm:datumVanOpneming;
+    brp:rubrieknummer "16.86.10".
+brpgrp:tijdelijkVerblijfsadres-opneming rdfs:label "Opneming"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:tijdelijkVerblijfsadres;
+    skos:notation "16.86";
+    brp:behoortTotCategorie brpcat:tijdelijkVerblijfsadres.
+brpelm:datumVanOpneming rdfs:label "Datum van opneming"@nl;
+    a brp:Element;
+    rdfs:comment "De datum waarop het gegeven in de administratie is opgenomen."@nl.
+brprub:gemeenteVanInschrijvingTijdelijkVerblijfHist rdfs:label "Gemeente van inschrijving (Tijdelijk verblijfsadres, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:tijdelijkVerblijfsadresHist-gemeente;
+    brp:behoortTotGroep brpgrp:tijdelijkVerblijfsadresHist-gemeente;
+    brp:element brpelm:gemeenteVanInschrijving;
+    brp:rubrieknummer "66.09.10";
+    brp:historischeVariantVan brprub:gemeenteVanInschrijvingTijdelijkVerblijf.
+brpgrp:tijdelijkVerblijfsadresHist-gemeente rdfs:label "Gemeente van inschrijving"@nl, "Gemeente van inschrijving (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:tijdelijkVerblijfsadresHist;
+    brp:historischeVariantVan brpgrp:tijdelijkVerblijfsadres-gemeente;
+    skos:notation "66.09";
+    brp:behoortTotCategorie brpcat:tijdelijkVerblijfsadresHist.
+brprub:datumInschrijvingTijdelijkVerblijfHist rdfs:label "Datum inschrijving (Tijdelijk verblijfsadres, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:tijdelijkVerblijfsadresHist-gemeente;
+    brp:behoortTotGroep brpgrp:tijdelijkVerblijfsadresHist-gemeente;
+    brp:element brpelm:datumInschrijving;
+    brp:rubrieknummer "66.09.20";
+    brp:historischeVariantVan brprub:datumInschrijvingTijdelijkVerblijf.
+brprub:straatnaamTijdelijkVerblijfHist rdfs:label "Straatnaam (Tijdelijk verblijfsadres, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:tijdelijkVerblijfsadresHist-adres;
+    brp:behoortTotGroep brpgrp:tijdelijkVerblijfsadresHist-adres;
+    brp:element brpelm:straatnaam;
+    brp:rubrieknummer "66.11.10";
+    brp:historischeVariantVan brprub:straatnaamTijdelijkVerblijf.
+brpgrp:tijdelijkVerblijfsadresHist-adres rdfs:label "Adres"@nl, "Adres (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:tijdelijkVerblijfsadresHist;
+    brp:historischeVariantVan brpgrp:tijdelijkVerblijfsadres-adres;
+    skos:notation "66.11";
+    brp:behoortTotCategorie brpcat:tijdelijkVerblijfsadresHist.
+brprub:naamOpenbareRuimteTijdelijkVerblijfHist rdfs:label "Naam openbare ruimte (Tijdelijk verblijfsadres, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:tijdelijkVerblijfsadresHist-adres;
+    brp:behoortTotGroep brpgrp:tijdelijkVerblijfsadresHist-adres;
+    brp:element brpelm:naamOpenbareRuimte;
+    brp:rubrieknummer "66.11.15";
+    brp:historischeVariantVan brprub:naamOpenbareRuimteTijdelijkVerblijf.
+brprub:huisnummerTijdelijkVerblijfHist rdfs:label "Huisnummer (Tijdelijk verblijfsadres, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:tijdelijkVerblijfsadresHist-adres;
+    brp:behoortTotGroep brpgrp:tijdelijkVerblijfsadresHist-adres;
+    brp:element brpelm:huisnummer;
+    brp:rubrieknummer "66.11.20";
+    brp:historischeVariantVan brprub:huisnummerTijdelijkVerblijf.
+brprub:huisletterTijdelijkVerblijfHist rdfs:label "Huisletter (Tijdelijk verblijfsadres, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:tijdelijkVerblijfsadresHist-adres;
+    brp:behoortTotGroep brpgrp:tijdelijkVerblijfsadresHist-adres;
+    brp:element brpelm:huisletter;
+    brp:rubrieknummer "66.11.30";
+    brp:historischeVariantVan brprub:huisletterTijdelijkVerblijf.
+brprub:huisnummertoevoegingTijdelijkVerblijfHist rdfs:label "Huisnummertoevoeging (Tijdelijk verblijfsadres, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:tijdelijkVerblijfsadresHist-adres;
+    brp:behoortTotGroep brpgrp:tijdelijkVerblijfsadresHist-adres;
+    brp:element brpelm:huisnummertoevoeging;
+    brp:rubrieknummer "66.11.40";
+    brp:historischeVariantVan brprub:huisnummertoevoegingTijdelijkVerblijf.
+brprub:aanduidingBijHuisnummerTijdelijkVerblijfHist rdfs:label "Aanduiding bij huisnummer (Tijdelijk verblijfsadres, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:tijdelijkVerblijfsadresHist-adres;
+    brp:behoortTotGroep brpgrp:tijdelijkVerblijfsadresHist-adres;
+    brp:element brpelm:aanduidingBijHuisnummer;
+    brp:rubrieknummer "66.11.50";
+    brp:historischeVariantVan brprub:aanduidingBijHuisnummerTijdelijkVerblijf.
+brprub:postcodeTijdelijkVerblijfHist rdfs:label "Postcode (Tijdelijk verblijfsadres, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:tijdelijkVerblijfsadresHist-adres;
+    brp:behoortTotGroep brpgrp:tijdelijkVerblijfsadresHist-adres;
+    brp:element brpelm:postcode;
+    brp:rubrieknummer "66.11.60";
+    brp:historischeVariantVan brprub:postcodeTijdelijkVerblijf.
+brprub:woonplaatsnaamTijdelijkVerblijfHist rdfs:label "Woonplaatsnaam (Tijdelijk verblijfsadres, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:tijdelijkVerblijfsadresHist-adres;
+    brp:behoortTotGroep brpgrp:tijdelijkVerblijfsadresHist-adres;
+    brp:element brpelm:woonplaatsnaam;
+    brp:rubrieknummer "66.11.70";
+    brp:historischeVariantVan brprub:woonplaatsnaamTijdelijkVerblijf.
+brprub:identificatiecodeVerblijfplaatsTijdelijkVerblijfHist rdfs:label "Identificatiecode verblijfplaats (Tijdelijk verblijfsadres, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:tijdelijkVerblijfsadresHist-adres;
+    brp:behoortTotGroep brpgrp:tijdelijkVerblijfsadresHist-adres;
+    brp:element brpelm:identificatiecodeVerblijfplaats;
+    brp:rubrieknummer "66.11.80";
+    brp:historischeVariantVan brprub:identificatiecodeVerblijfplaatsTijdelijkVerblijf.
+brprub:identificatiecodeNummeraanduidingTijdelijkVerblijfHist rdfs:label "Identificatiecode nummeraanduiding (Tijdelijk verblijfsadres, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:tijdelijkVerblijfsadresHist-adres;
+    brp:behoortTotGroep brpgrp:tijdelijkVerblijfsadresHist-adres;
+    brp:element brpelm:identificatiecodeNummeraanduiding;
+    brp:rubrieknummer "66.11.90";
+    brp:historischeVariantVan brprub:identificatiecodeNummeraanduidingTijdelijkVerblijf.
+brprub:einddatumGeldigheidTijdelijkVerblijfHist rdfs:label "Einddatum geldigheid (Tijdelijk verblijfsadres, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:tijdelijkVerblijfsadresHist-einddatumGeldigheid;
+    brp:behoortTotGroep brpgrp:tijdelijkVerblijfsadresHist-einddatumGeldigheid;
+    brp:element brpelm:einddatumGeldigheid;
+    brp:rubrieknummer "66.18.10";
+    brp:historischeVariantVan brprub:einddatumGeldigheidTijdelijkVerblijf.
+brpgrp:tijdelijkVerblijfsadresHist-einddatumGeldigheid rdfs:label "Einddatum geldigheid"@nl, "Einddatum geldigheid (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:tijdelijkVerblijfsadresHist;
+    brp:historischeVariantVan brpgrp:tijdelijkVerblijfsadres-einddatumGeldigheid;
+    skos:notation "66.18";
+    brp:behoortTotCategorie brpcat:tijdelijkVerblijfsadresHist.
+brprub:ingangsdatumGeldigheidTijdelijkVerblijfHist rdfs:label "Ingangsdatum geldigheid (Tijdelijk verblijfsadres, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:tijdelijkVerblijfsadresHist-geldigheid;
+    brp:behoortTotGroep brpgrp:tijdelijkVerblijfsadresHist-geldigheid;
+    brp:element brpelm:ingangsdatumGeldigheid;
+    brp:rubrieknummer "66.85.10";
+    brp:historischeVariantVan brprub:ingangsdatumGeldigheidTijdelijkVerblijf.
+brpgrp:tijdelijkVerblijfsadresHist-geldigheid rdfs:label "Geldigheid"@nl, "Geldigheid (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:tijdelijkVerblijfsadresHist;
+    brp:historischeVariantVan brpgrp:tijdelijkVerblijfsadres-geldigheid;
+    skos:notation "66.85";
+    brp:behoortTotCategorie brpcat:tijdelijkVerblijfsadresHist.
+brprub:datumVanOpnemingTijdelijkVerblijfHist rdfs:label "Datum van opneming (Tijdelijk verblijfsadres, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:tijdelijkVerblijfsadresHist-opneming;
+    brp:behoortTotGroep brpgrp:tijdelijkVerblijfsadresHist-opneming;
+    brp:element brpelm:datumVanOpneming;
+    brp:rubrieknummer "66.86.10";
+    brp:historischeVariantVan brprub:datumVanOpnemingTijdelijkVerblijf.
+brpgrp:tijdelijkVerblijfsadresHist-opneming rdfs:label "Opneming"@nl, "Opneming (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:tijdelijkVerblijfsadresHist;
+    brp:historischeVariantVan brpgrp:tijdelijkVerblijfsadres-opneming;
+    skos:notation "66.86";
+    brp:behoortTotCategorie brpcat:tijdelijkVerblijfsadresHist.
+brprub:telefoonnummerContactgegevens rdfs:label "Telefoonnummer (Contactgegevens)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:contactgegevens-telefoon;
+    brp:behoortTotGroep brpgrp:contactgegevens-telefoon;
+    brp:element brpelm:telefoonnummer;
+    brp:rubrieknummer "17.16.10".
+brpgrp:contactgegevens-telefoon rdfs:label "Telefoonnummer"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:contactgegevens;
+    skos:notation "17.16";
+    brp:behoortTotCategorie brpcat:contactgegevens.
+brpelm:telefoonnummer rdfs:label "Telefoonnummer"@nl;
+    a brp:Element;
+    rdfs:comment "Het telefoonnummer waarop de ingeschrevene bereikbaar is."@nl.
+brprub:verificatieIndicatieTelefoonContactgegevens rdfs:label "Verificatie-indicatie telefoon (Contactgegevens)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:contactgegevens-telefoon;
+    brp:behoortTotGroep brpgrp:contactgegevens-telefoon;
+    brp:element brpelm:verificatieIndicatieTelefoon;
+    brp:rubrieknummer "17.16.20".
+brpelm:verificatieIndicatieTelefoon rdfs:label "Verificatie-indicatie telefoon"@nl;
+    a brp:Element;
+    rdfs:comment "Verificatie-indicatie bij het telefoonnummer."@nl.
+brprub:geldigVanafTelefoonContactgegevens rdfs:label "Geldig vanaf telefoon (Contactgegevens)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:contactgegevens-telefoon;
+    brp:behoortTotGroep brpgrp:contactgegevens-telefoon;
+    brp:element brpelm:geldigVanafTelefoon;
+    brp:rubrieknummer "17.16.30".
+brpelm:geldigVanafTelefoon rdfs:label "Geldig vanaf telefoon"@nl;
+    a brp:Element;
+    rdfs:comment "Datum vanaf wanneer het telefoonnummer geldig is."@nl.
+brprub:emailadresContactgegevens rdfs:label "E-mailadres (Contactgegevens)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:contactgegevens-email;
+    brp:behoortTotGroep brpgrp:contactgegevens-email;
+    brp:element brpelm:emailadres;
+    brp:rubrieknummer "17.17.10".
+brpgrp:contactgegevens-email rdfs:label "E-mailadres"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:contactgegevens;
+    skos:notation "17.17";
+    brp:behoortTotCategorie brpcat:contactgegevens.
+brpelm:emailadres rdfs:label "E-mailadres"@nl;
+    a brp:Element;
+    rdfs:comment "Het e-mailadres van de ingeschrevene."@nl.
+brprub:verificatieIndicatieEmailContactgegevens rdfs:label "Verificatie-indicatie e-mail (Contactgegevens)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:contactgegevens-email;
+    brp:behoortTotGroep brpgrp:contactgegevens-email;
+    brp:element brpelm:verificatieIndicatieEmail;
+    brp:rubrieknummer "17.17.20".
+brpelm:verificatieIndicatieEmail rdfs:label "Verificatie-indicatie e-mail"@nl;
+    a brp:Element;
+    rdfs:comment "Verificatie-indicatie bij het e-mailadres."@nl.
+brprub:geldigVanafEmailContactgegevens rdfs:label "Geldig vanaf e-mail (Contactgegevens)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:contactgegevens-email;
+    brp:behoortTotGroep brpgrp:contactgegevens-email;
+    brp:element brpelm:geldigVanafEmail;
+    brp:rubrieknummer "17.17.30".
+brpelm:geldigVanafEmail rdfs:label "Geldig vanaf e-mail"@nl;
+    a brp:Element;
+    rdfs:comment "Datum vanaf wanneer het e-mailadres geldig is."@nl.
+brprub:datumAanvangAdresBuitenlandVerblijfplaats rdfs:label "Datum aanvang adres buitenland (Verblijfplaats)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaats-adresBuitenland;
+    brp:behoortTotGroep brpgrp:verblijfplaats-adresBuitenland;
+    brp:element brpelm:datumAanvangAdresBuitenland;
+    brp:rubrieknummer "08.13.20".
+brpelm:datumAanvangAdresBuitenland rdfs:label "Datum aanvang adres buitenland"@nl;
+    a brp:Element;
+    rdfs:comment "De datum waarop het verblijf op het buitenlands adres is aangevangen."@nl.
+brprub:gemeenteVanInschrijvingVerblijfplaatsHist rdfs:label "Gemeente van inschrijving (Verblijfplaats, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaatsHist-gemeente;
+    brp:behoortTotGroep brpgrp:verblijfplaatsHist-gemeente;
+    brp:element brpelm:gemeenteVanInschrijving;
+    brp:rubrieknummer "58.09.10";
+    brp:historischeVariantVan brprub:gemeenteVanInschrijvingVerblijfplaats.
+brpgrp:verblijfplaatsHist-gemeente rdfs:label "Gemeente van inschrijving"@nl, "Gemeente van inschrijving (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:verblijfplaatsHist;
+    brp:historischeVariantVan brpgrp:verblijfplaats-gemeente;
+    skos:notation "58.09";
+    brp:behoortTotCategorie brpcat:verblijfplaatsHist.
+brprub:functieAdresVerblijfplaatsHist rdfs:label "Functie adres (Verblijfplaats, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaatsHist-adreshouding;
+    brp:behoortTotGroep brpgrp:verblijfplaatsHist-adreshouding;
+    brp:element brpelm:functieAdres;
+    brp:rubrieknummer "58.10.10";
+    brp:historischeVariantVan brprub:functieAdresVerblijfplaats.
+brpgrp:verblijfplaatsHist-adreshouding rdfs:label "Adreshouding"@nl, "Adreshouding (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:verblijfplaatsHist;
+    brp:historischeVariantVan brpgrp:verblijfplaats-adreshouding;
+    skos:notation "58.10";
+    brp:behoortTotCategorie brpcat:verblijfplaatsHist.
+brprub:datumAanvangAdreshoudingVerblijfplaatsHist rdfs:label "Datum aanvang adreshouding (Verblijfplaats, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaatsHist-adreshouding;
+    brp:behoortTotGroep brpgrp:verblijfplaatsHist-adreshouding;
+    brp:element brpelm:datumAanvangAdreshouding;
+    brp:rubrieknummer "58.10.30";
+    brp:historischeVariantVan brprub:datumAanvangAdreshoudingVerblijfplaats.
+brprub:straatnaamVerblijfplaatsHist rdfs:label "Straatnaam (Verblijfplaats, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaatsHist-adres;
+    brp:behoortTotGroep brpgrp:verblijfplaatsHist-adres;
+    brp:element brpelm:straatnaam;
+    brp:rubrieknummer "58.11.10";
+    brp:historischeVariantVan brprub:straatnaamVerblijfplaats.
+brpgrp:verblijfplaatsHist-adres rdfs:label "Adres"@nl, "Adres (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:verblijfplaatsHist;
+    brp:historischeVariantVan brpgrp:verblijfplaats-adres;
+    skos:notation "58.11";
+    brp:behoortTotCategorie brpcat:verblijfplaatsHist.
+brprub:naamOpenbareRuimteVerblijfplaatsHist rdfs:label "Naam openbare ruimte (Verblijfplaats, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaatsHist-adres;
+    brp:behoortTotGroep brpgrp:verblijfplaatsHist-adres;
+    brp:element brpelm:naamOpenbareRuimte;
+    brp:rubrieknummer "58.11.15";
+    brp:historischeVariantVan brprub:naamOpenbareRuimteVerblijfplaats.
+brprub:huisnummerVerblijfplaatsHist rdfs:label "Huisnummer (Verblijfplaats, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaatsHist-adres;
+    brp:behoortTotGroep brpgrp:verblijfplaatsHist-adres;
+    brp:element brpelm:huisnummer;
+    brp:rubrieknummer "58.11.20";
+    brp:historischeVariantVan brprub:huisnummerVerblijfplaats.
+brprub:huisletterVerblijfplaatsHist rdfs:label "Huisletter (Verblijfplaats, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaatsHist-adres;
+    brp:behoortTotGroep brpgrp:verblijfplaatsHist-adres;
+    brp:element brpelm:huisletter;
+    brp:rubrieknummer "58.11.30";
+    brp:historischeVariantVan brprub:huisletterVerblijfplaats.
+brprub:huisnummertoevoegingVerblijfplaatsHist rdfs:label "Huisnummertoevoeging (Verblijfplaats, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaatsHist-adres;
+    brp:behoortTotGroep brpgrp:verblijfplaatsHist-adres;
+    brp:element brpelm:huisnummertoevoeging;
+    brp:rubrieknummer "58.11.40";
+    brp:historischeVariantVan brprub:huisnummertoevoegingVerblijfplaats.
+brprub:aanduidingBijHuisnummerVerblijfplaatsHist rdfs:label "Aanduiding bij huisnummer (Verblijfplaats, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaatsHist-adres;
+    brp:behoortTotGroep brpgrp:verblijfplaatsHist-adres;
+    brp:element brpelm:aanduidingBijHuisnummer;
+    brp:rubrieknummer "58.11.50";
+    brp:historischeVariantVan brprub:aanduidingBijHuisnummerVerblijfplaats.
+brprub:postcodeVerblijfplaatsHist rdfs:label "Postcode (Verblijfplaats, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaatsHist-adres;
+    brp:behoortTotGroep brpgrp:verblijfplaatsHist-adres;
+    brp:element brpelm:postcode;
+    brp:rubrieknummer "58.11.60";
+    brp:historischeVariantVan brprub:postcodeVerblijfplaats.
+brprub:woonplaatsnaamVerblijfplaatsHist rdfs:label "Woonplaatsnaam (Verblijfplaats, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaatsHist-adres;
+    brp:behoortTotGroep brpgrp:verblijfplaatsHist-adres;
+    brp:element brpelm:woonplaatsnaam;
+    brp:rubrieknummer "58.11.70";
+    brp:historischeVariantVan brprub:woonplaatsnaamVerblijfplaats.
+brprub:identificatiecodeVerblijfplaatsVerblijfplaatsHist rdfs:label "Identificatiecode verblijfplaats (Verblijfplaats, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaatsHist-adres;
+    brp:behoortTotGroep brpgrp:verblijfplaatsHist-adres;
+    brp:element brpelm:identificatiecodeVerblijfplaats;
+    brp:rubrieknummer "58.11.80";
+    brp:historischeVariantVan brprub:identificatiecodeVerblijfplaatsVerblijfplaats.
+brprub:identificatiecodeNummeraanduidingVerblijfplaatsHist rdfs:label "Identificatiecode nummeraanduiding (Verblijfplaats, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaatsHist-adres;
+    brp:behoortTotGroep brpgrp:verblijfplaatsHist-adres;
+    brp:element brpelm:identificatiecodeNummeraanduiding;
+    brp:rubrieknummer "58.11.90";
+    brp:historischeVariantVan brprub:identificatiecodeNummeraanduidingVerblijfplaats.
+brprub:locatiebeschrijvingVerblijfplaatsHist rdfs:label "Locatiebeschrijving (Verblijfplaats, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaatsHist-locatie;
+    brp:behoortTotGroep brpgrp:verblijfplaatsHist-locatie;
+    brp:element brpelm:locatiebeschrijving;
+    brp:rubrieknummer "58.12.10";
+    brp:historischeVariantVan brprub:locatiebeschrijvingVerblijfplaats.
+brpgrp:verblijfplaatsHist-locatie rdfs:label "Locatie"@nl, "Locatie (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:verblijfplaatsHist;
+    brp:historischeVariantVan brpgrp:verblijfplaats-locatie;
+    skos:notation "58.12";
+    brp:behoortTotCategorie brpcat:verblijfplaatsHist.
+brprub:landAdresBuitenlandVerblijfplaatsHist rdfs:label "Land adres buitenland (Verblijfplaats, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaatsHist-adresBuitenland;
+    brp:behoortTotGroep brpgrp:verblijfplaatsHist-adresBuitenland;
+    brp:element brpelm:landAdresBuitenland;
+    brp:rubrieknummer "58.13.10";
+    brp:historischeVariantVan brprub:landAdresBuitenlandVerblijfplaats.
+brpgrp:verblijfplaatsHist-adresBuitenland rdfs:label "Adres buitenland"@nl, "Adres buitenland (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:verblijfplaatsHist;
+    brp:historischeVariantVan brpgrp:verblijfplaats-adresBuitenland;
+    skos:notation "58.13";
+    brp:behoortTotCategorie brpcat:verblijfplaatsHist.
+brprub:datumAanvangAdresBuitenlandVerblijfplaatsHist rdfs:label "Datum aanvang adres buitenland (Verblijfplaats, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaatsHist-adresBuitenland;
+    brp:behoortTotGroep brpgrp:verblijfplaatsHist-adresBuitenland;
+    brp:element brpelm:datumAanvangAdresBuitenland;
+    brp:rubrieknummer "58.13.20";
+    brp:historischeVariantVan brprub:datumAanvangAdresBuitenlandVerblijfplaats.
+brprub:regel1AdresBuitenlandVerblijfplaatsHist rdfs:label "Regel 1 adres buitenland (Verblijfplaats, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaatsHist-adresBuitenland;
+    brp:behoortTotGroep brpgrp:verblijfplaatsHist-adresBuitenland;
+    brp:element brpelm:regel1AdresBuitenland;
+    brp:rubrieknummer "58.13.30";
+    brp:historischeVariantVan brprub:regel1AdresBuitenlandVerblijfplaats.
+brprub:regel2AdresBuitenlandVerblijfplaatsHist rdfs:label "Regel 2 adres buitenland (Verblijfplaats, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaatsHist-adresBuitenland;
+    brp:behoortTotGroep brpgrp:verblijfplaatsHist-adresBuitenland;
+    brp:element brpelm:regel2AdresBuitenland;
+    brp:rubrieknummer "58.13.40";
+    brp:historischeVariantVan brprub:regel2AdresBuitenlandVerblijfplaats.
+brprub:regel3AdresBuitenlandVerblijfplaatsHist rdfs:label "Regel 3 adres buitenland (Verblijfplaats, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaatsHist-adresBuitenland;
+    brp:behoortTotGroep brpgrp:verblijfplaatsHist-adresBuitenland;
+    brp:element brpelm:regel3AdresBuitenland;
+    brp:rubrieknummer "58.13.50";
+    brp:historischeVariantVan brprub:regel3AdresBuitenlandVerblijfplaats.
+brprub:datumInschrijvingVerblijfplaats rdfs:label "Datum inschrijving (Verblijfplaats)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaats-gemeente;
+    brp:behoortTotGroep brpgrp:verblijfplaats-gemeente;
+    brp:element brpelm:datumInschrijving;
+    brp:rubrieknummer "08.09.20".
+brprub:datumVestigingInNederlandVerblijfplaats rdfs:label "Datum vestiging in Nederland (Verblijfplaats)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaats-immigratie;
+    brp:behoortTotGroep brpgrp:verblijfplaats-immigratie;
+    brp:element brpelm:datumVestigingInNederland;
+    brp:rubrieknummer "08.14.20".
+brpgrp:verblijfplaats-immigratie rdfs:label "Immigratie"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:verblijfplaats;
+    skos:notation "08.14";
+    brp:behoortTotCategorie brpcat:verblijfplaats.
+brpelm:datumVestigingInNederland rdfs:label "Datum vestiging in Nederland"@nl;
+    a brp:Element;
+    rdfs:comment "De datum waarop de ingeschrevene zich voor het eerst in Nederland heeft gevestigd."@nl.
+brprub:datumInschrijvingVerblijfplaatsHist rdfs:label "Datum inschrijving (Verblijfplaats, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaatsHist-gemeente;
+    brp:behoortTotGroep brpgrp:verblijfplaatsHist-gemeente;
+    brp:element brpelm:datumInschrijving;
+    brp:rubrieknummer "58.09.20";
+    brp:historischeVariantVan brprub:datumInschrijvingVerblijfplaats.
+brprub:datumVestigingInNederlandVerblijfplaatsHist rdfs:label "Datum vestiging in Nederland (Verblijfplaats, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfplaatsHist-immigratie;
+    brp:behoortTotGroep brpgrp:verblijfplaatsHist-immigratie;
+    brp:element brpelm:datumVestigingInNederland;
+    brp:rubrieknummer "58.14.20";
+    brp:historischeVariantVan brprub:datumVestigingInNederlandVerblijfplaats.
+brpgrp:verblijfplaatsHist-immigratie rdfs:label "Immigratie"@nl, "Immigratie (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:verblijfplaatsHist;
+    brp:historischeVariantVan brpgrp:verblijfplaats-immigratie;
+    skos:notation "58.14";
+    brp:behoortTotCategorie brpcat:verblijfplaatsHist.
+brprub:anummerPersoonHist rdfs:label "A-nummer (Persoon, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:persoonHist-identificatienummers;
+    brp:behoortTotGroep brpgrp:persoonHist-identificatienummers;
+    brp:element brpelm:anummer;
+    brp:rubrieknummer "51.01.10";
+    brp:historischeVariantVan brprub:anummerPersoon.
+brpgrp:persoonHist-identificatienummers rdfs:label "Identificatienummers"@nl, "Identificatienummers (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:persoonHist;
+    brp:historischeVariantVan brpgrp:persoon-identificatienummers;
+    skos:notation "51.01";
+    brp:behoortTotCategorie brpcat:persoonHist.
+brprub:burgerservicenummerPersoonHist rdfs:label "Burgerservicenummer (Persoon, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:persoonHist-identificatienummers;
+    brp:behoortTotGroep brpgrp:persoonHist-identificatienummers;
+    brp:element brpelm:burgerservicenummer;
+    brp:rubrieknummer "51.01.20";
+    brp:historischeVariantVan brprub:burgerservicenummerPersoon.
+brprub:voornamenPersoonHist rdfs:label "Voornamen (Persoon, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:persoonHist-naam;
+    brp:behoortTotGroep brpgrp:persoonHist-naam;
+    brp:element brpelm:voornamen;
+    brp:rubrieknummer "51.02.10";
+    brp:historischeVariantVan brprub:voornamenPersoon.
+brpgrp:persoonHist-naam rdfs:label "Naam"@nl, "Naam (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:persoonHist;
+    brp:historischeVariantVan brpgrp:persoon-naam;
+    skos:notation "51.02";
+    brp:behoortTotCategorie brpcat:persoonHist.
+brprub:adellijkeTitelPredicaatPersoonHist rdfs:label "Adellijke titel/predicaat (Persoon, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:persoonHist-naam;
+    brp:behoortTotGroep brpgrp:persoonHist-naam;
+    brp:element brpelm:adellijkeTitelPredicaat;
+    brp:rubrieknummer "51.02.20";
+    brp:historischeVariantVan brprub:adellijkeTitelPredicaatPersoon.
+brprub:voorvoegselGeslachtsnaamPersoonHist rdfs:label "Voorvoegsel geslachtsnaam (Persoon, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:persoonHist-naam;
+    brp:behoortTotGroep brpgrp:persoonHist-naam;
+    brp:element brpelm:voorvoegselGeslachtsnaam;
+    brp:rubrieknummer "51.02.30";
+    brp:historischeVariantVan brprub:voorvoegselGeslachtsnaamPersoon.
+brprub:geslachtsnaamPersoonHist rdfs:label "Geslachtsnaam (Persoon, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:persoonHist-naam;
+    brp:behoortTotGroep brpgrp:persoonHist-naam;
+    brp:element brpelm:geslachtsnaam;
+    brp:rubrieknummer "51.02.40";
+    brp:historischeVariantVan brprub:geslachtsnaamPersoon.
+brprub:aanduidingNaamgebruikPersoonHist rdfs:label "Aanduiding naamgebruik (Persoon, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:persoonHist-naamgebruik;
+    brp:behoortTotGroep brpgrp:persoonHist-naamgebruik;
+    brp:element brpelm:aanduidingNaamgebruik;
+    brp:rubrieknummer "51.61.10";
+    brp:historischeVariantVan brprub:aanduidingNaamgebruikPersoon.
+brpgrp:persoonHist-naamgebruik rdfs:label "Naamgebruik"@nl, "Naamgebruik (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:persoonHist;
+    brp:historischeVariantVan brpgrp:persoon-naamgebruik;
+    skos:notation "51.61";
+    brp:behoortTotCategorie brpcat:persoonHist.
+brprub:nationaliteitNationaliteit rdfs:label "Nationaliteit (Nationaliteit)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:nationaliteit-nationaliteit;
+    brp:behoortTotGroep brpgrp:nationaliteit-nationaliteit;
+    brp:element brpelm:nationaliteit;
+    brp:rubrieknummer "04.05.10".
+brpgrp:nationaliteit-nationaliteit rdfs:label "Nationaliteit"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:nationaliteit;
+    skos:notation "04.05";
+    brp:behoortTotCategorie brpcat:nationaliteit.
+brpelm:nationaliteit rdfs:label "Nationaliteit"@nl;
+    a brp:Element;
+    rdfs:comment "Een code uit Tabel 32 (Nationaliteitentabel) die aangeeft welke nationaliteit de ingeschrevene bezit."@nl;
+    rdfs:range brp:Nationaliteit.
+brprub:aanduidingBijzonderNederlanderschapNationaliteit rdfs:label "Aanduiding bijzonder Nederlanderschap (Nationaliteit)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:nationaliteit-bijzonderNederlanderschap;
+    brp:behoortTotGroep brpgrp:nationaliteit-bijzonderNederlanderschap;
+    brp:element brpelm:aanduidingBijzonderNederlanderschap;
+    brp:rubrieknummer "04.65.10".
+brpgrp:nationaliteit-bijzonderNederlanderschap rdfs:label "Bijzonder Nederlanderschap"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:nationaliteit;
+    skos:notation "04.65";
+    brp:behoortTotCategorie brpcat:nationaliteit.
+brpelm:aanduidingBijzonderNederlanderschap rdfs:label "Aanduiding bijzonder Nederlanderschap"@nl;
+    a brp:Element;
+    rdfs:comment "Aanduiding bijzonder Nederlanderschap: B (behandeld als Nederlander) of V (vastgesteld niet-Nederlander)."@nl.
+brprub:aanduidingVerblijfstitelVerblijfstitel rdfs:label "Aanduiding verblijfstitel (Verblijfstitel)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfstitel-verblijfstitel;
+    brp:behoortTotGroep brpgrp:verblijfstitel-verblijfstitel;
+    brp:element brpelm:aanduidingVerblijfstitel;
+    brp:rubrieknummer "10.39.10".
+brpgrp:verblijfstitel-verblijfstitel rdfs:label "Verblijfstitel"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:verblijfstitel;
+    skos:notation "10.39";
+    brp:behoortTotCategorie brpcat:verblijfstitel.
+brpelm:aanduidingVerblijfstitel rdfs:label "Aanduiding verblijfstitel"@nl;
+    a brp:Element;
+    rdfs:comment "De aanduiding van de verblijfstitel (code uit Tabel 56)."@nl;
+    rdfs:range brp:VerblijfstitelType.
+brprub:datumEindeVerblijfstitelVerblijfstitel rdfs:label "Datum einde verblijfstitel (Verblijfstitel)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfstitel-verblijfstitel;
+    brp:behoortTotGroep brpgrp:verblijfstitel-verblijfstitel;
+    brp:element brpelm:datumEindeVerblijfstitel;
+    brp:rubrieknummer "10.39.20".
+brpelm:datumEindeVerblijfstitel rdfs:label "Datum einde verblijfstitel"@nl;
+    a brp:Element;
+    rdfs:comment "De datum waarop de verblijfstitel eindigt."@nl.
+brprub:ingangsdatumVerblijfstitelVerblijfstitel rdfs:label "Ingangsdatum verblijfstitel (Verblijfstitel)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfstitel-verblijfstitel;
+    brp:behoortTotGroep brpgrp:verblijfstitel-verblijfstitel;
+    brp:element brpelm:ingangsdatumVerblijfstitel;
+    brp:rubrieknummer "10.39.30".
+brpelm:ingangsdatumVerblijfstitel rdfs:label "Ingangsdatum verblijfstitel"@nl;
+    a brp:Element;
+    rdfs:comment "De ingangsdatum van de verblijfstitel."@nl.
+brprub:ingangsdatumGeldigheidVerblijfstitel rdfs:label "Ingangsdatum geldigheid (Verblijfstitel)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfstitel-geldigheid;
+    brp:behoortTotGroep brpgrp:verblijfstitel-geldigheid;
+    brp:element brpelm:ingangsdatumGeldigheid;
+    brp:rubrieknummer "10.85.10".
+brpgrp:verblijfstitel-geldigheid rdfs:label "Geldigheid"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:verblijfstitel;
+    skos:notation "10.85";
+    brp:behoortTotCategorie brpcat:verblijfstitel.
+brprub:datumVanOpnemingVerblijfstitel rdfs:label "Datum van opneming (Verblijfstitel)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfstitel-opneming;
+    brp:behoortTotGroep brpgrp:verblijfstitel-opneming;
+    brp:element brpelm:datumVanOpneming;
+    brp:rubrieknummer "10.86.10".
+brpgrp:verblijfstitel-opneming rdfs:label "Opneming"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:verblijfstitel;
+    skos:notation "10.86";
+    brp:behoortTotCategorie brpcat:verblijfstitel.
+brprub:aanduidingVerblijfstitelVerblijfstitelHist rdfs:label "Aanduiding verblijfstitel (Verblijfstitel, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfstitelHist-verblijfstitel;
+    brp:behoortTotGroep brpgrp:verblijfstitelHist-verblijfstitel;
+    brp:element brpelm:aanduidingVerblijfstitel;
+    brp:rubrieknummer "60.39.10";
+    brp:historischeVariantVan brprub:aanduidingVerblijfstitelVerblijfstitel.
+brpgrp:verblijfstitelHist-verblijfstitel rdfs:label "Verblijfstitel"@nl, "Verblijfstitel (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:verblijfstitelHist;
+    brp:historischeVariantVan brpgrp:verblijfstitel-verblijfstitel;
+    skos:notation "60.39";
+    brp:behoortTotCategorie brpcat:verblijfstitelHist.
+brprub:datumEindeVerblijfstitelVerblijfstitelHist rdfs:label "Datum einde verblijfstitel (Verblijfstitel, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfstitelHist-verblijfstitel;
+    brp:behoortTotGroep brpgrp:verblijfstitelHist-verblijfstitel;
+    brp:element brpelm:datumEindeVerblijfstitel;
+    brp:rubrieknummer "60.39.20";
+    brp:historischeVariantVan brprub:datumEindeVerblijfstitelVerblijfstitel.
+brprub:ingangsdatumVerblijfstitelVerblijfstitelHist rdfs:label "Ingangsdatum verblijfstitel (Verblijfstitel, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfstitelHist-verblijfstitel;
+    brp:behoortTotGroep brpgrp:verblijfstitelHist-verblijfstitel;
+    brp:element brpelm:ingangsdatumVerblijfstitel;
+    brp:rubrieknummer "60.39.30";
+    brp:historischeVariantVan brprub:ingangsdatumVerblijfstitelVerblijfstitel.
+brprub:ingangsdatumGeldigheidVerblijfstitelHist rdfs:label "Ingangsdatum geldigheid (Verblijfstitel, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfstitelHist-geldigheid;
+    brp:behoortTotGroep brpgrp:verblijfstitelHist-geldigheid;
+    brp:element brpelm:ingangsdatumGeldigheid;
+    brp:rubrieknummer "60.85.10";
+    brp:historischeVariantVan brprub:ingangsdatumGeldigheidVerblijfstitel.
+brpgrp:verblijfstitelHist-geldigheid rdfs:label "Geldigheid"@nl, "Geldigheid (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:verblijfstitelHist;
+    brp:historischeVariantVan brpgrp:verblijfstitel-geldigheid;
+    skos:notation "60.85";
+    brp:behoortTotCategorie brpcat:verblijfstitelHist.
+brprub:datumVanOpnemingVerblijfstitelHist rdfs:label "Datum van opneming (Verblijfstitel, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:verblijfstitelHist-opneming;
+    brp:behoortTotGroep brpgrp:verblijfstitelHist-opneming;
+    brp:element brpelm:datumVanOpneming;
+    brp:rubrieknummer "60.86.10";
+    brp:historischeVariantVan brprub:datumVanOpnemingVerblijfstitel.
+brpgrp:verblijfstitelHist-opneming rdfs:label "Opneming"@nl, "Opneming (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:verblijfstitelHist;
+    brp:historischeVariantVan brpgrp:verblijfstitel-opneming;
+    skos:notation "60.86";
+    brp:behoortTotCategorie brpcat:verblijfstitelHist.
+brprub:geboorteplaatsPersoon rdfs:label "Geboorteplaats (Persoon)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:persoon-geboorte;
+    brp:behoortTotGroep brpgrp:persoon-geboorte;
+    brp:element brpelm:geboorteplaats;
+    brp:rubrieknummer "01.03.20".
+brpelm:geboorteplaats rdfs:label "Geboorteplaats"@nl;
+    a brp:Element;
+    rdfs:comment "Een code uit Tabel 33 (Gemeententabel) of een buitenlandse plaatsbepaling die aangeeft waar de persoon is geboren."@nl.
+brprub:geboortelandPersoon rdfs:label "Geboorteland (Persoon)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:persoon-geboorte;
+    brp:behoortTotGroep brpgrp:persoon-geboorte;
+    brp:element brpelm:geboorteland;
+    brp:rubrieknummer "01.03.30".
+brpelm:geboorteland rdfs:label "Geboorteland"@nl;
+    a brp:Element;
+    rdfs:comment "Een code uit Tabel 34 (Landentabel) die het land aangeeft waar de persoon is geboren."@nl;
+    rdfs:range brp:Land.
+brprub:geboorteplaatsOuder1 rdfs:label "Geboorteplaats (Ouder1)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder1-geboorte;
+    brp:behoortTotGroep brpgrp:ouder1-geboorte;
+    brp:element brpelm:geboorteplaats;
+    brp:rubrieknummer "02.03.20".
+brpgrp:ouder1-geboorte rdfs:label "Geboorte"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:ouder1;
+    skos:notation "02.03";
+    brp:behoortTotCategorie brpcat:ouder1.
+brprub:geboortelandOuder1 rdfs:label "Geboorteland (Ouder1)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder1-geboorte;
+    brp:behoortTotGroep brpgrp:ouder1-geboorte;
+    brp:element brpelm:geboorteland;
+    brp:rubrieknummer "02.03.30".
+brprub:geboorteplaatsOuder2 rdfs:label "Geboorteplaats (Ouder2)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder2-geboorte;
+    brp:behoortTotGroep brpgrp:ouder2-geboorte;
+    brp:element brpelm:geboorteplaats;
+    brp:rubrieknummer "03.03.20".
+brpgrp:ouder2-geboorte rdfs:label "Geboorte"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:ouder2;
+    skos:notation "03.03";
+    brp:behoortTotCategorie brpcat:ouder2.
+brprub:geboortelandOuder2 rdfs:label "Geboorteland (Ouder2)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder2-geboorte;
+    brp:behoortTotGroep brpgrp:ouder2-geboorte;
+    brp:element brpelm:geboorteland;
+    brp:rubrieknummer "03.03.30".
+brprub:indicatieCurateleregisterGezagsverhouding rdfs:label "Indicatie curateleregister (Gezagsverhouding)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:gezagsverhouding-curatele;
+    brp:behoortTotGroep brpgrp:gezagsverhouding-curatele;
+    brp:element brpelm:indicatieCurateleregister;
+    brp:rubrieknummer "11.33.10".
+brpgrp:gezagsverhouding-curatele rdfs:label "Curateleregister"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:gezagsverhouding;
+    skos:notation "11.33";
+    brp:behoortTotCategorie brpcat:gezagsverhouding.
+brpelm:indicatieCurateleregister rdfs:label "Indicatie curateleregister"@nl;
+    a brp:Element;
+    rdfs:comment "Indicatie of de ingeschrevene onder curatele is gesteld."@nl.
+brprub:indicatieGezagMinderjarigeGezagsverhouding rdfs:label "Indicatie gezag minderjarige (Gezagsverhouding)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:gezagsverhouding-gezagMinderjarige;
+    brp:behoortTotGroep brpgrp:gezagsverhouding-gezagMinderjarige;
+    brp:element brpelm:indicatieGezagMinderjarige;
+    brp:rubrieknummer "11.32.10".
+brpgrp:gezagsverhouding-gezagMinderjarige rdfs:label "Gezag minderjarige"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:gezagsverhouding;
+    skos:notation "11.32";
+    brp:behoortTotCategorie brpcat:gezagsverhouding.
+brpelm:indicatieGezagMinderjarige rdfs:label "Indicatie gezag minderjarige"@nl;
+    a brp:Element;
+    rdfs:comment "Indicatie gezag minderjarige: wie het gezag over de minderjarige uitoefent."@nl.
+brprub:anummerOuder1 rdfs:label "A-nummer (Ouder1)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder1-identificatienummers;
+    brp:behoortTotGroep brpgrp:ouder1-identificatienummers;
+    brp:element brpelm:anummer;
+    brp:rubrieknummer "02.01.10".
+brpgrp:ouder1-identificatienummers rdfs:label "Identificatienummers"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:ouder1;
+    skos:notation "02.01";
+    brp:behoortTotCategorie brpcat:ouder1.
+brprub:burgerservicenummerOuder1 rdfs:label "Burgerservicenummer (Ouder1)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder1-identificatienummers;
+    brp:behoortTotGroep brpgrp:ouder1-identificatienummers;
+    brp:element brpelm:burgerservicenummer;
+    brp:rubrieknummer "02.01.20".
+brprub:voornamenOuder1 rdfs:label "Voornamen (Ouder1)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder1-naam;
+    brp:behoortTotGroep brpgrp:ouder1-naam;
+    brp:element brpelm:voornamen;
+    brp:rubrieknummer "02.02.10".
+brpgrp:ouder1-naam rdfs:label "Naam"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:ouder1;
+    skos:notation "02.02";
+    brp:behoortTotCategorie brpcat:ouder1.
+brprub:voorvoegselGeslachtsnaamOuder1 rdfs:label "Voorvoegsel geslachtsnaam (Ouder1)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder1-naam;
+    brp:behoortTotGroep brpgrp:ouder1-naam;
+    brp:element brpelm:voorvoegselGeslachtsnaam;
+    brp:rubrieknummer "02.02.30".
+brprub:geslachtsnaamOuder1 rdfs:label "Geslachtsnaam (Ouder1)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder1-naam;
+    brp:behoortTotGroep brpgrp:ouder1-naam;
+    brp:element brpelm:geslachtsnaam;
+    brp:rubrieknummer "02.02.40".
+brprub:geboortedatumOuder1 rdfs:label "Geboortedatum (Ouder1)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder1-geboorte;
+    brp:behoortTotGroep brpgrp:ouder1-geboorte;
+    brp:element brpelm:geboortedatum;
+    brp:rubrieknummer "02.03.10".
+brprub:anummerOuder2 rdfs:label "A-nummer (Ouder2)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder2-identificatienummers;
+    brp:behoortTotGroep brpgrp:ouder2-identificatienummers;
+    brp:element brpelm:anummer;
+    brp:rubrieknummer "03.01.10".
+brpgrp:ouder2-identificatienummers rdfs:label "Identificatienummers"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:ouder2;
+    skos:notation "03.01";
+    brp:behoortTotCategorie brpcat:ouder2.
+brprub:burgerservicenummerOuder2 rdfs:label "Burgerservicenummer (Ouder2)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder2-identificatienummers;
+    brp:behoortTotGroep brpgrp:ouder2-identificatienummers;
+    brp:element brpelm:burgerservicenummer;
+    brp:rubrieknummer "03.01.20".
+brprub:voornamenOuder2 rdfs:label "Voornamen (Ouder2)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder2-naam;
+    brp:behoortTotGroep brpgrp:ouder2-naam;
+    brp:element brpelm:voornamen;
+    brp:rubrieknummer "03.02.10".
+brpgrp:ouder2-naam rdfs:label "Naam"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:ouder2;
+    skos:notation "03.02";
+    brp:behoortTotCategorie brpcat:ouder2.
+brprub:voorvoegselGeslachtsnaamOuder2 rdfs:label "Voorvoegsel geslachtsnaam (Ouder2)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder2-naam;
+    brp:behoortTotGroep brpgrp:ouder2-naam;
+    brp:element brpelm:voorvoegselGeslachtsnaam;
+    brp:rubrieknummer "03.02.30".
+brprub:geslachtsnaamOuder2 rdfs:label "Geslachtsnaam (Ouder2)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder2-naam;
+    brp:behoortTotGroep brpgrp:ouder2-naam;
+    brp:element brpelm:geslachtsnaam;
+    brp:rubrieknummer "03.02.40".
+brprub:geboortedatumOuder2 rdfs:label "Geboortedatum (Ouder2)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder2-geboorte;
+    brp:behoortTotGroep brpgrp:ouder2-geboorte;
+    brp:element brpelm:geboortedatum;
+    brp:rubrieknummer "03.03.10".
+brprub:anummerPartner rdfs:label "A-nummer (Huwelijk/geregistreerd partnerschap)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschap-identificatienummers;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschap-identificatienummers;
+    brp:element brpelm:anummer;
+    brp:rubrieknummer "05.01.10".
+brpgrp:huwelijkPartnerschap-identificatienummers rdfs:label "Identificatienummers"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:huwelijkPartnerschap;
+    skos:notation "05.01";
+    brp:behoortTotCategorie brpcat:huwelijkPartnerschap.
+brprub:burgerservicenummerPartner rdfs:label "Burgerservicenummer (Huwelijk/geregistreerd partnerschap)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschap-identificatienummers;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschap-identificatienummers;
+    brp:element brpelm:burgerservicenummer;
+    brp:rubrieknummer "05.01.20".
+brprub:voornamenPartner rdfs:label "Voornamen (Huwelijk/geregistreerd partnerschap)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschap-naam;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschap-naam;
+    brp:element brpelm:voornamen;
+    brp:rubrieknummer "05.02.10".
+brprub:geboortedatumPartner rdfs:label "Geboortedatum (Huwelijk/geregistreerd partnerschap)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschap-geboorte;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschap-geboorte;
+    brp:element brpelm:geboortedatum;
+    brp:rubrieknummer "05.03.10".
+brpgrp:huwelijkPartnerschap-geboorte rdfs:label "Geboorte"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:huwelijkPartnerschap;
+    skos:notation "05.03";
+    brp:behoortTotCategorie brpcat:huwelijkPartnerschap.
+brprub:anummerKind rdfs:label "A-nummer (Kind)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:kind-identificatienummers;
+    brp:behoortTotGroep brpgrp:kind-identificatienummers;
+    brp:element brpelm:anummer;
+    brp:rubrieknummer "09.01.10".
+brpgrp:kind-identificatienummers rdfs:label "Identificatienummers"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:kind;
+    skos:notation "09.01";
+    brp:behoortTotCategorie brpcat:kind.
+brprub:burgerservicenummerKind rdfs:label "Burgerservicenummer (Kind)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:kind-identificatienummers;
+    brp:behoortTotGroep brpgrp:kind-identificatienummers;
+    brp:element brpelm:burgerservicenummer;
+    brp:rubrieknummer "09.01.20".
+brprub:voornamenKind rdfs:label "Voornamen (Kind)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:kind-naam;
+    brp:behoortTotGroep brpgrp:kind-naam;
+    brp:element brpelm:voornamen;
+    brp:rubrieknummer "09.02.10".
+brpgrp:kind-naam rdfs:label "Naam"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:kind;
+    skos:notation "09.02";
+    brp:behoortTotCategorie brpcat:kind.
+brprub:voorvoegselGeslachtsnaamKind rdfs:label "Voorvoegsel geslachtsnaam (Kind)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:kind-naam;
+    brp:behoortTotGroep brpgrp:kind-naam;
+    brp:element brpelm:voorvoegselGeslachtsnaam;
+    brp:rubrieknummer "09.02.30".
+brprub:geslachtsnaamKind rdfs:label "Geslachtsnaam (Kind)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:kind-naam;
+    brp:behoortTotGroep brpgrp:kind-naam;
+    brp:element brpelm:geslachtsnaam;
+    brp:rubrieknummer "09.02.40".
+brprub:geboortedatumKind rdfs:label "Geboortedatum (Kind)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:kind-geboorte;
+    brp:behoortTotGroep brpgrp:kind-geboorte;
+    brp:element brpelm:geboortedatum;
+    brp:rubrieknummer "09.03.10".
+brpgrp:kind-geboorte rdfs:label "Geboorte"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:kind;
+    skos:notation "09.03";
+    brp:behoortTotCategorie brpcat:kind.
+brprub:aanduidingUitgeslotenKiesrechtKiesrecht rdfs:label "Aanduiding uitgesloten kiesrecht (Kiesrecht)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:kiesrecht-uitsluitingKiesrecht;
+    brp:behoortTotGroep brpgrp:kiesrecht-uitsluitingKiesrecht;
+    brp:element brpelm:aanduidingUitgeslotenKiesrecht;
+    brp:rubrieknummer "13.38.10".
+brpgrp:kiesrecht-uitsluitingKiesrecht rdfs:label "Uitsluiting kiesrecht"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:kiesrecht;
+    skos:notation "13.38";
+    brp:behoortTotCategorie brpcat:kiesrecht.
+brpelm:aanduidingUitgeslotenKiesrecht rdfs:label "Aanduiding uitgesloten kiesrecht"@nl;
+    a brp:Element;
+    rdfs:comment "Aanduiding of de ingeschrevene is uitgesloten van het kiesrecht."@nl.
+brprub:einddatumUitsluitingKiesrechtKiesrecht rdfs:label "Einddatum uitsluiting kiesrecht (Kiesrecht)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:kiesrecht-uitsluitingKiesrecht;
+    brp:behoortTotGroep brpgrp:kiesrecht-uitsluitingKiesrecht;
+    brp:element brpelm:einddatumUitsluitingKiesrecht;
+    brp:rubrieknummer "13.38.20".
+brpelm:einddatumUitsluitingKiesrecht rdfs:label "Einddatum uitsluiting kiesrecht"@nl;
+    a brp:Element;
+    rdfs:comment "Einddatum van de uitsluiting van het kiesrecht."@nl.
+brprub:adellijkeTitelPredicaatPartner rdfs:label "Adellijke titel/predicaat (Huwelijk/geregistreerd partnerschap)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschap-naam;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschap-naam;
+    brp:element brpelm:adellijkeTitelPredicaat;
+    brp:rubrieknummer "05.02.20".
+brprub:datumHuwelijkssluitingPartnerHist rdfs:label "Datum huwelijkssluiting/aangaan geregistreerd partnerschap (Huwelijk/geregistreerd partnerschap, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschapHist-huwelijkssluiting;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschapHist-huwelijkssluiting;
+    brp:element brpelm:datumHuwelijkssluiting;
+    brp:rubrieknummer "55.06.10";
+    brp:historischeVariantVan brprub:datumHuwelijkssluitingPartner.
+brpgrp:huwelijkPartnerschapHist-huwelijkssluiting rdfs:label "Huwelijkssluiting/aangaan geregistreerd partnerschap"@nl, "Huwelijkssluiting/aangaan geregistreerd partnerschap (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:huwelijkPartnerschapHist;
+    brp:historischeVariantVan brpgrp:huwelijkPartnerschap-huwelijkssluiting;
+    skos:notation "55.06";
+    brp:behoortTotCategorie brpcat:huwelijkPartnerschapHist.
+brprub:registergemeenteAktePersoon rdfs:label "Registergemeente akte (Persoon)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:persoon-akte;
+    brp:behoortTotGroep brpgrp:persoon-akte;
+    brp:element brpelm:registergemeenteAkte;
+    brp:rubrieknummer "01.81.10".
+brpgrp:persoon-akte rdfs:label "Akte"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:persoon;
+    skos:notation "01.81";
+    brp:behoortTotCategorie brpcat:persoon.
+brpelm:registergemeenteAkte rdfs:label "Registergemeente akte"@nl;
+    a brp:Element.
+brprub:aktenummerPersoon rdfs:label "Aktenummer (Persoon)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:persoon-akte;
+    brp:behoortTotGroep brpgrp:persoon-akte;
+    brp:element brpelm:aktenummer;
+    brp:rubrieknummer "01.81.20".
+brpelm:aktenummer rdfs:label "Aktenummer"@nl;
+    a brp:Element.
+brprub:gemeenteDocumentPersoon rdfs:label "Gemeente document (Persoon)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:persoon-document;
+    brp:behoortTotGroep brpgrp:persoon-document;
+    brp:element brpelm:gemeenteDocument;
+    brp:rubrieknummer "01.82.10".
+brpgrp:persoon-document rdfs:label "Document"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:persoon;
+    skos:notation "01.82";
+    brp:behoortTotCategorie brpcat:persoon.
+brpelm:gemeenteDocument rdfs:label "Gemeente document"@nl;
+    a brp:Element.
+brprub:datumDocumentPersoon rdfs:label "Datum document (Persoon)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:persoon-document;
+    brp:behoortTotGroep brpgrp:persoon-document;
+    brp:element brpelm:datumDocument;
+    brp:rubrieknummer "01.82.20".
+brpelm:datumDocument rdfs:label "Datum document"@nl;
+    a brp:Element.
+brprub:beschrijvingDocumentPersoon rdfs:label "Beschrijving document (Persoon)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:persoon-document;
+    brp:behoortTotGroep brpgrp:persoon-document;
+    brp:element brpelm:beschrijvingDocument;
+    brp:rubrieknummer "01.82.30".
+brpelm:beschrijvingDocument rdfs:label "Beschrijving document"@nl;
+    a brp:Element.
+brprub:ingangsdatumGeldigheidPersoon rdfs:label "Ingangsdatum geldigheid (Persoon)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:persoon-geldigheid;
+    brp:behoortTotGroep brpgrp:persoon-geldigheid;
+    brp:element brpelm:ingangsdatumGeldigheid;
+    brp:rubrieknummer "01.85.10".
+brpgrp:persoon-geldigheid rdfs:label "Geldigheid"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:persoon;
+    skos:notation "01.85";
+    brp:behoortTotCategorie brpcat:persoon.
+brprub:datumVanOpnemingPersoon rdfs:label "Datum van opneming (Persoon)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:persoon-opneming;
+    brp:behoortTotGroep brpgrp:persoon-opneming;
+    brp:element brpelm:datumVanOpneming;
+    brp:rubrieknummer "01.86.10".
+brpgrp:persoon-opneming rdfs:label "Opneming"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:persoon;
+    skos:notation "01.86";
+    brp:behoortTotCategorie brpcat:persoon.
+brprub:geslachtsaanduidingPersoonHist rdfs:label "Geslachtsaanduiding (Persoon, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:persoonHist-geslacht;
+    brp:behoortTotGroep brpgrp:persoonHist-geslacht;
+    brp:element brpelm:geslachtsaanduiding;
+    brp:rubrieknummer "51.04.10";
+    brp:historischeVariantVan brprub:geslachtsaanduidingPersoon.
+brpgrp:persoonHist-geslacht rdfs:label "Geslacht"@nl, "Geslacht (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:persoonHist;
+    brp:historischeVariantVan brpgrp:persoon-geslacht;
+    skos:notation "51.04";
+    brp:behoortTotCategorie brpcat:persoonHist.
+brprub:registergemeenteAktePersoonHist rdfs:label "Registergemeente akte (Persoon, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:persoonHist-akte;
+    brp:behoortTotGroep brpgrp:persoonHist-akte;
+    brp:element brpelm:registergemeenteAkte;
+    brp:rubrieknummer "51.81.10";
+    brp:historischeVariantVan brprub:registergemeenteAktePersoon.
+brpgrp:persoonHist-akte rdfs:label "Akte"@nl, "Akte (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:persoonHist;
+    brp:historischeVariantVan brpgrp:persoon-akte;
+    skos:notation "51.81";
+    brp:behoortTotCategorie brpcat:persoonHist.
+brprub:aktenummerPersoonHist rdfs:label "Aktenummer (Persoon, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:persoonHist-akte;
+    brp:behoortTotGroep brpgrp:persoonHist-akte;
+    brp:element brpelm:aktenummer;
+    brp:rubrieknummer "51.81.20";
+    brp:historischeVariantVan brprub:aktenummerPersoon.
+brprub:gemeenteDocumentPersoonHist rdfs:label "Gemeente document (Persoon, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:persoonHist-document;
+    brp:behoortTotGroep brpgrp:persoonHist-document;
+    brp:element brpelm:gemeenteDocument;
+    brp:rubrieknummer "51.82.10";
+    brp:historischeVariantVan brprub:gemeenteDocumentPersoon.
+brpgrp:persoonHist-document rdfs:label "Document"@nl, "Document (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:persoonHist;
+    brp:historischeVariantVan brpgrp:persoon-document;
+    skos:notation "51.82";
+    brp:behoortTotCategorie brpcat:persoonHist.
+brprub:datumDocumentPersoonHist rdfs:label "Datum document (Persoon, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:persoonHist-document;
+    brp:behoortTotGroep brpgrp:persoonHist-document;
+    brp:element brpelm:datumDocument;
+    brp:rubrieknummer "51.82.20";
+    brp:historischeVariantVan brprub:datumDocumentPersoon.
+brprub:beschrijvingDocumentPersoonHist rdfs:label "Beschrijving document (Persoon, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:persoonHist-document;
+    brp:behoortTotGroep brpgrp:persoonHist-document;
+    brp:element brpelm:beschrijvingDocument;
+    brp:rubrieknummer "51.82.30";
+    brp:historischeVariantVan brprub:beschrijvingDocumentPersoon.
+brprub:ingangsdatumGeldigheidPersoonHist rdfs:label "Ingangsdatum geldigheid (Persoon, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:persoonHist-geldigheid;
+    brp:behoortTotGroep brpgrp:persoonHist-geldigheid;
+    brp:element brpelm:ingangsdatumGeldigheid;
+    brp:rubrieknummer "51.85.10";
+    brp:historischeVariantVan brprub:ingangsdatumGeldigheidPersoon.
+brpgrp:persoonHist-geldigheid rdfs:label "Geldigheid"@nl, "Geldigheid (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:persoonHist;
+    brp:historischeVariantVan brpgrp:persoon-geldigheid;
+    skos:notation "51.85";
+    brp:behoortTotCategorie brpcat:persoonHist.
+brprub:datumVanOpnemingPersoonHist rdfs:label "Datum van opneming (Persoon, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:persoonHist-opneming;
+    brp:behoortTotGroep brpgrp:persoonHist-opneming;
+    brp:element brpelm:datumVanOpneming;
+    brp:rubrieknummer "51.86.10";
+    brp:historischeVariantVan brprub:datumVanOpnemingPersoon.
+brpgrp:persoonHist-opneming rdfs:label "Opneming"@nl, "Opneming (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:persoonHist;
+    brp:historischeVariantVan brpgrp:persoon-opneming;
+    skos:notation "51.86";
+    brp:behoortTotCategorie brpcat:persoonHist.
+brprub:adellijkeTitelPredicaatOuder1 rdfs:label "Adellijke titel/predicaat (Ouder1)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder1-naam;
+    brp:behoortTotGroep brpgrp:ouder1-naam;
+    brp:element brpelm:adellijkeTitelPredicaat;
+    brp:rubrieknummer "02.02.20".
+brprub:geslachtsaanduidingOuder1 rdfs:label "Geslachtsaanduiding (Ouder1)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder1-geslacht;
+    brp:behoortTotGroep brpgrp:ouder1-geslacht;
+    brp:element brpelm:geslachtsaanduiding;
+    brp:rubrieknummer "02.04.10".
+brpgrp:ouder1-geslacht rdfs:label "Geslacht"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:ouder1;
+    skos:notation "02.04";
+    brp:behoortTotCategorie brpcat:ouder1.
+brprub:datumIngangFamilierechtelijkeBetrekkingOuder1 rdfs:label "Datum ingang familierechtelijke betrekking (Ouder1)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder1-familierechtelijkeBetrekking;
+    brp:behoortTotGroep brpgrp:ouder1-familierechtelijkeBetrekking;
+    brp:element brpelm:datumIngangFamilierechtelijkeBetrekking;
+    brp:rubrieknummer "02.62.10".
+brpgrp:ouder1-familierechtelijkeBetrekking rdfs:label "Familierechtelijke betrekking"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:ouder1;
+    skos:notation "02.62";
+    brp:behoortTotCategorie brpcat:ouder1.
+brpelm:datumIngangFamilierechtelijkeBetrekking rdfs:label "Datum ingang familierechtelijke betrekking"@nl;
+    a brp:Element;
+    rdfs:comment "De datum waarop de familierechtelijke betrekking met de ouder is ingegaan."@nl.
+brprub:registergemeenteAkteOuder1 rdfs:label "Registergemeente akte (Ouder1)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder1-akte;
+    brp:behoortTotGroep brpgrp:ouder1-akte;
+    brp:element brpelm:registergemeenteAkte;
+    brp:rubrieknummer "02.81.10".
+brpgrp:ouder1-akte rdfs:label "Akte"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:ouder1;
+    skos:notation "02.81";
+    brp:behoortTotCategorie brpcat:ouder1.
+brprub:aktenummerOuder1 rdfs:label "Aktenummer (Ouder1)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder1-akte;
+    brp:behoortTotGroep brpgrp:ouder1-akte;
+    brp:element brpelm:aktenummer;
+    brp:rubrieknummer "02.81.20".
+brprub:gemeenteDocumentOuder1 rdfs:label "Gemeente document (Ouder1)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder1-document;
+    brp:behoortTotGroep brpgrp:ouder1-document;
+    brp:element brpelm:gemeenteDocument;
+    brp:rubrieknummer "02.82.10".
+brpgrp:ouder1-document rdfs:label "Document"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:ouder1;
+    skos:notation "02.82";
+    brp:behoortTotCategorie brpcat:ouder1.
+brprub:datumDocumentOuder1 rdfs:label "Datum document (Ouder1)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder1-document;
+    brp:behoortTotGroep brpgrp:ouder1-document;
+    brp:element brpelm:datumDocument;
+    brp:rubrieknummer "02.82.20".
+brprub:beschrijvingDocumentOuder1 rdfs:label "Beschrijving document (Ouder1)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder1-document;
+    brp:behoortTotGroep brpgrp:ouder1-document;
+    brp:element brpelm:beschrijvingDocument;
+    brp:rubrieknummer "02.82.30".
+brprub:ingangsdatumGeldigheidOuder1 rdfs:label "Ingangsdatum geldigheid (Ouder1)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder1-geldigheid;
+    brp:behoortTotGroep brpgrp:ouder1-geldigheid;
+    brp:element brpelm:ingangsdatumGeldigheid;
+    brp:rubrieknummer "02.85.10".
+brpgrp:ouder1-geldigheid rdfs:label "Geldigheid"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:ouder1;
+    skos:notation "02.85";
+    brp:behoortTotCategorie brpcat:ouder1.
+brprub:datumVanOpnemingOuder1 rdfs:label "Datum van opneming (Ouder1)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder1-opneming;
+    brp:behoortTotGroep brpgrp:ouder1-opneming;
+    brp:element brpelm:datumVanOpneming;
+    brp:rubrieknummer "02.86.10".
+brpgrp:ouder1-opneming rdfs:label "Opneming"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:ouder1;
+    skos:notation "02.86";
+    brp:behoortTotCategorie brpcat:ouder1.
+brprub:anummerOuder1Hist rdfs:label "A-nummer (Ouder1, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder1Hist-identificatienummers;
+    brp:behoortTotGroep brpgrp:ouder1Hist-identificatienummers;
+    brp:element brpelm:anummer;
+    brp:rubrieknummer "52.01.10";
+    brp:historischeVariantVan brprub:anummerOuder1.
+brpgrp:ouder1Hist-identificatienummers rdfs:label "Identificatienummers"@nl, "Identificatienummers (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:ouder1Hist;
+    brp:historischeVariantVan brpgrp:ouder1-identificatienummers;
+    skos:notation "52.01";
+    brp:behoortTotCategorie brpcat:ouder1Hist.
+brprub:burgerservicenummerOuder1Hist rdfs:label "Burgerservicenummer (Ouder1, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder1Hist-identificatienummers;
+    brp:behoortTotGroep brpgrp:ouder1Hist-identificatienummers;
+    brp:element brpelm:burgerservicenummer;
+    brp:rubrieknummer "52.01.20";
+    brp:historischeVariantVan brprub:burgerservicenummerOuder1.
+brprub:voornamenOuder1Hist rdfs:label "Voornamen (Ouder1, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder1Hist-naam;
+    brp:behoortTotGroep brpgrp:ouder1Hist-naam;
+    brp:element brpelm:voornamen;
+    brp:rubrieknummer "52.02.10";
+    brp:historischeVariantVan brprub:voornamenOuder1.
+brpgrp:ouder1Hist-naam rdfs:label "Naam"@nl, "Naam (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:ouder1Hist;
+    brp:historischeVariantVan brpgrp:ouder1-naam;
+    skos:notation "52.02";
+    brp:behoortTotCategorie brpcat:ouder1Hist.
+brprub:adellijkeTitelPredicaatOuder1Hist rdfs:label "Adellijke titel/predicaat (Ouder1, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder1Hist-naam;
+    brp:behoortTotGroep brpgrp:ouder1Hist-naam;
+    brp:element brpelm:adellijkeTitelPredicaat;
+    brp:rubrieknummer "52.02.20";
+    brp:historischeVariantVan brprub:adellijkeTitelPredicaatOuder1.
+brprub:voorvoegselGeslachtsnaamOuder1Hist rdfs:label "Voorvoegsel geslachtsnaam (Ouder1, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder1Hist-naam;
+    brp:behoortTotGroep brpgrp:ouder1Hist-naam;
+    brp:element brpelm:voorvoegselGeslachtsnaam;
+    brp:rubrieknummer "52.02.30";
+    brp:historischeVariantVan brprub:voorvoegselGeslachtsnaamOuder1.
+brprub:geslachtsnaamOuder1Hist rdfs:label "Geslachtsnaam (Ouder1, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder1Hist-naam;
+    brp:behoortTotGroep brpgrp:ouder1Hist-naam;
+    brp:element brpelm:geslachtsnaam;
+    brp:rubrieknummer "52.02.40";
+    brp:historischeVariantVan brprub:geslachtsnaamOuder1.
+brprub:geboortedatumOuder1Hist rdfs:label "Geboortedatum (Ouder1, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder1Hist-geboorte;
+    brp:behoortTotGroep brpgrp:ouder1Hist-geboorte;
+    brp:element brpelm:geboortedatum;
+    brp:rubrieknummer "52.03.10";
+    brp:historischeVariantVan brprub:geboortedatumOuder1.
+brpgrp:ouder1Hist-geboorte rdfs:label "Geboorte"@nl, "Geboorte (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:ouder1Hist;
+    brp:historischeVariantVan brpgrp:ouder1-geboorte;
+    skos:notation "52.03";
+    brp:behoortTotCategorie brpcat:ouder1Hist.
+brprub:geboorteplaatsOuder1Hist rdfs:label "Geboorteplaats (Ouder1, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder1Hist-geboorte;
+    brp:behoortTotGroep brpgrp:ouder1Hist-geboorte;
+    brp:element brpelm:geboorteplaats;
+    brp:rubrieknummer "52.03.20";
+    brp:historischeVariantVan brprub:geboorteplaatsOuder1.
+brprub:geboortelandOuder1Hist rdfs:label "Geboorteland (Ouder1, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder1Hist-geboorte;
+    brp:behoortTotGroep brpgrp:ouder1Hist-geboorte;
+    brp:element brpelm:geboorteland;
+    brp:rubrieknummer "52.03.30";
+    brp:historischeVariantVan brprub:geboortelandOuder1.
+brprub:geslachtsaanduidingOuder1Hist rdfs:label "Geslachtsaanduiding (Ouder1, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder1Hist-geslacht;
+    brp:behoortTotGroep brpgrp:ouder1Hist-geslacht;
+    brp:element brpelm:geslachtsaanduiding;
+    brp:rubrieknummer "52.04.10";
+    brp:historischeVariantVan brprub:geslachtsaanduidingOuder1.
+brpgrp:ouder1Hist-geslacht rdfs:label "Geslacht"@nl, "Geslacht (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:ouder1Hist;
+    brp:historischeVariantVan brpgrp:ouder1-geslacht;
+    skos:notation "52.04";
+    brp:behoortTotCategorie brpcat:ouder1Hist.
+brprub:datumIngangFamilierechtelijkeBetrekkingOuder1Hist rdfs:label "Datum ingang familierechtelijke betrekking (Ouder1, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder1Hist-familierechtelijkeBetrekking;
+    brp:behoortTotGroep brpgrp:ouder1Hist-familierechtelijkeBetrekking;
+    brp:element brpelm:datumIngangFamilierechtelijkeBetrekking;
+    brp:rubrieknummer "52.62.10";
+    brp:historischeVariantVan brprub:datumIngangFamilierechtelijkeBetrekkingOuder1.
+brpgrp:ouder1Hist-familierechtelijkeBetrekking rdfs:label "Familierechtelijke betrekking"@nl, "Familierechtelijke betrekking (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:ouder1Hist;
+    brp:historischeVariantVan brpgrp:ouder1-familierechtelijkeBetrekking;
+    skos:notation "52.62";
+    brp:behoortTotCategorie brpcat:ouder1Hist.
+brprub:registergemeenteAkteOuder1Hist rdfs:label "Registergemeente akte (Ouder1, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder1Hist-akte;
+    brp:behoortTotGroep brpgrp:ouder1Hist-akte;
+    brp:element brpelm:registergemeenteAkte;
+    brp:rubrieknummer "52.81.10";
+    brp:historischeVariantVan brprub:registergemeenteAkteOuder1.
+brpgrp:ouder1Hist-akte rdfs:label "Akte"@nl, "Akte (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:ouder1Hist;
+    brp:historischeVariantVan brpgrp:ouder1-akte;
+    skos:notation "52.81";
+    brp:behoortTotCategorie brpcat:ouder1Hist.
+brprub:aktenummerOuder1Hist rdfs:label "Aktenummer (Ouder1, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder1Hist-akte;
+    brp:behoortTotGroep brpgrp:ouder1Hist-akte;
+    brp:element brpelm:aktenummer;
+    brp:rubrieknummer "52.81.20";
+    brp:historischeVariantVan brprub:aktenummerOuder1.
+brprub:gemeenteDocumentOuder1Hist rdfs:label "Gemeente document (Ouder1, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder1Hist-document;
+    brp:behoortTotGroep brpgrp:ouder1Hist-document;
+    brp:element brpelm:gemeenteDocument;
+    brp:rubrieknummer "52.82.10";
+    brp:historischeVariantVan brprub:gemeenteDocumentOuder1.
+brpgrp:ouder1Hist-document rdfs:label "Document"@nl, "Document (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:ouder1Hist;
+    brp:historischeVariantVan brpgrp:ouder1-document;
+    skos:notation "52.82";
+    brp:behoortTotCategorie brpcat:ouder1Hist.
+brprub:datumDocumentOuder1Hist rdfs:label "Datum document (Ouder1, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder1Hist-document;
+    brp:behoortTotGroep brpgrp:ouder1Hist-document;
+    brp:element brpelm:datumDocument;
+    brp:rubrieknummer "52.82.20";
+    brp:historischeVariantVan brprub:datumDocumentOuder1.
+brprub:beschrijvingDocumentOuder1Hist rdfs:label "Beschrijving document (Ouder1, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder1Hist-document;
+    brp:behoortTotGroep brpgrp:ouder1Hist-document;
+    brp:element brpelm:beschrijvingDocument;
+    brp:rubrieknummer "52.82.30";
+    brp:historischeVariantVan brprub:beschrijvingDocumentOuder1.
+brprub:ingangsdatumGeldigheidOuder1Hist rdfs:label "Ingangsdatum geldigheid (Ouder1, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder1Hist-geldigheid;
+    brp:behoortTotGroep brpgrp:ouder1Hist-geldigheid;
+    brp:element brpelm:ingangsdatumGeldigheid;
+    brp:rubrieknummer "52.85.10";
+    brp:historischeVariantVan brprub:ingangsdatumGeldigheidOuder1.
+brpgrp:ouder1Hist-geldigheid rdfs:label "Geldigheid"@nl, "Geldigheid (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:ouder1Hist;
+    brp:historischeVariantVan brpgrp:ouder1-geldigheid;
+    skos:notation "52.85";
+    brp:behoortTotCategorie brpcat:ouder1Hist.
+brprub:datumVanOpnemingOuder1Hist rdfs:label "Datum van opneming (Ouder1, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder1Hist-opneming;
+    brp:behoortTotGroep brpgrp:ouder1Hist-opneming;
+    brp:element brpelm:datumVanOpneming;
+    brp:rubrieknummer "52.86.10";
+    brp:historischeVariantVan brprub:datumVanOpnemingOuder1.
+brpgrp:ouder1Hist-opneming rdfs:label "Opneming"@nl, "Opneming (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:ouder1Hist;
+    brp:historischeVariantVan brpgrp:ouder1-opneming;
+    skos:notation "52.86";
+    brp:behoortTotCategorie brpcat:ouder1Hist.
+brprub:adellijkeTitelPredicaatOuder2 rdfs:label "Adellijke titel/predicaat (Ouder2)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder2-naam;
+    brp:behoortTotGroep brpgrp:ouder2-naam;
+    brp:element brpelm:adellijkeTitelPredicaat;
+    brp:rubrieknummer "03.02.20".
+brprub:geslachtsaanduidingOuder2 rdfs:label "Geslachtsaanduiding (Ouder2)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder2-geslacht;
+    brp:behoortTotGroep brpgrp:ouder2-geslacht;
+    brp:element brpelm:geslachtsaanduiding;
+    brp:rubrieknummer "03.04.10".
+brpgrp:ouder2-geslacht rdfs:label "Geslacht"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:ouder2;
+    skos:notation "03.04";
+    brp:behoortTotCategorie brpcat:ouder2.
+brprub:datumIngangFamilierechtelijkeBetrekkingOuder2 rdfs:label "Datum ingang familierechtelijke betrekking (Ouder2)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder2-familierechtelijkeBetrekking;
+    brp:behoortTotGroep brpgrp:ouder2-familierechtelijkeBetrekking;
+    brp:element brpelm:datumIngangFamilierechtelijkeBetrekking;
+    brp:rubrieknummer "03.62.10".
+brpgrp:ouder2-familierechtelijkeBetrekking rdfs:label "Familierechtelijke betrekking"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:ouder2;
+    skos:notation "03.62";
+    brp:behoortTotCategorie brpcat:ouder2.
+brprub:registergemeenteAkteOuder2 rdfs:label "Registergemeente akte (Ouder2)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder2-akte;
+    brp:behoortTotGroep brpgrp:ouder2-akte;
+    brp:element brpelm:registergemeenteAkte;
+    brp:rubrieknummer "03.81.10".
+brpgrp:ouder2-akte rdfs:label "Akte"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:ouder2;
+    skos:notation "03.81";
+    brp:behoortTotCategorie brpcat:ouder2.
+brprub:aktenummerOuder2 rdfs:label "Aktenummer (Ouder2)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder2-akte;
+    brp:behoortTotGroep brpgrp:ouder2-akte;
+    brp:element brpelm:aktenummer;
+    brp:rubrieknummer "03.81.20".
+brprub:gemeenteDocumentOuder2 rdfs:label "Gemeente document (Ouder2)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder2-document;
+    brp:behoortTotGroep brpgrp:ouder2-document;
+    brp:element brpelm:gemeenteDocument;
+    brp:rubrieknummer "03.82.10".
+brpgrp:ouder2-document rdfs:label "Document"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:ouder2;
+    skos:notation "03.82";
+    brp:behoortTotCategorie brpcat:ouder2.
+brprub:datumDocumentOuder2 rdfs:label "Datum document (Ouder2)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder2-document;
+    brp:behoortTotGroep brpgrp:ouder2-document;
+    brp:element brpelm:datumDocument;
+    brp:rubrieknummer "03.82.20".
+brprub:beschrijvingDocumentOuder2 rdfs:label "Beschrijving document (Ouder2)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder2-document;
+    brp:behoortTotGroep brpgrp:ouder2-document;
+    brp:element brpelm:beschrijvingDocument;
+    brp:rubrieknummer "03.82.30".
+brprub:ingangsdatumGeldigheidOuder2 rdfs:label "Ingangsdatum geldigheid (Ouder2)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder2-geldigheid;
+    brp:behoortTotGroep brpgrp:ouder2-geldigheid;
+    brp:element brpelm:ingangsdatumGeldigheid;
+    brp:rubrieknummer "03.85.10".
+brpgrp:ouder2-geldigheid rdfs:label "Geldigheid"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:ouder2;
+    skos:notation "03.85";
+    brp:behoortTotCategorie brpcat:ouder2.
+brprub:datumVanOpnemingOuder2 rdfs:label "Datum van opneming (Ouder2)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder2-opneming;
+    brp:behoortTotGroep brpgrp:ouder2-opneming;
+    brp:element brpelm:datumVanOpneming;
+    brp:rubrieknummer "03.86.10".
+brpgrp:ouder2-opneming rdfs:label "Opneming"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:ouder2;
+    skos:notation "03.86";
+    brp:behoortTotCategorie brpcat:ouder2.
+brprub:anummerOuder2Hist rdfs:label "A-nummer (Ouder2, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder2Hist-identificatienummers;
+    brp:behoortTotGroep brpgrp:ouder2Hist-identificatienummers;
+    brp:element brpelm:anummer;
+    brp:rubrieknummer "53.01.10";
+    brp:historischeVariantVan brprub:anummerOuder2.
+brpgrp:ouder2Hist-identificatienummers rdfs:label "Identificatienummers"@nl, "Identificatienummers (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:ouder2Hist;
+    brp:historischeVariantVan brpgrp:ouder2-identificatienummers;
+    skos:notation "53.01";
+    brp:behoortTotCategorie brpcat:ouder2Hist.
+brprub:burgerservicenummerOuder2Hist rdfs:label "Burgerservicenummer (Ouder2, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder2Hist-identificatienummers;
+    brp:behoortTotGroep brpgrp:ouder2Hist-identificatienummers;
+    brp:element brpelm:burgerservicenummer;
+    brp:rubrieknummer "53.01.20";
+    brp:historischeVariantVan brprub:burgerservicenummerOuder2.
+brprub:voornamenOuder2Hist rdfs:label "Voornamen (Ouder2, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder2Hist-naam;
+    brp:behoortTotGroep brpgrp:ouder2Hist-naam;
+    brp:element brpelm:voornamen;
+    brp:rubrieknummer "53.02.10";
+    brp:historischeVariantVan brprub:voornamenOuder2.
+brpgrp:ouder2Hist-naam rdfs:label "Naam"@nl, "Naam (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:ouder2Hist;
+    brp:historischeVariantVan brpgrp:ouder2-naam;
+    skos:notation "53.02";
+    brp:behoortTotCategorie brpcat:ouder2Hist.
+brprub:adellijkeTitelPredicaatOuder2Hist rdfs:label "Adellijke titel/predicaat (Ouder2, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder2Hist-naam;
+    brp:behoortTotGroep brpgrp:ouder2Hist-naam;
+    brp:element brpelm:adellijkeTitelPredicaat;
+    brp:rubrieknummer "53.02.20";
+    brp:historischeVariantVan brprub:adellijkeTitelPredicaatOuder2.
+brprub:voorvoegselGeslachtsnaamOuder2Hist rdfs:label "Voorvoegsel geslachtsnaam (Ouder2, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder2Hist-naam;
+    brp:behoortTotGroep brpgrp:ouder2Hist-naam;
+    brp:element brpelm:voorvoegselGeslachtsnaam;
+    brp:rubrieknummer "53.02.30";
+    brp:historischeVariantVan brprub:voorvoegselGeslachtsnaamOuder2.
+brprub:geslachtsnaamOuder2Hist rdfs:label "Geslachtsnaam (Ouder2, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder2Hist-naam;
+    brp:behoortTotGroep brpgrp:ouder2Hist-naam;
+    brp:element brpelm:geslachtsnaam;
+    brp:rubrieknummer "53.02.40";
+    brp:historischeVariantVan brprub:geslachtsnaamOuder2.
+brprub:geboortedatumOuder2Hist rdfs:label "Geboortedatum (Ouder2, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder2Hist-geboorte;
+    brp:behoortTotGroep brpgrp:ouder2Hist-geboorte;
+    brp:element brpelm:geboortedatum;
+    brp:rubrieknummer "53.03.10";
+    brp:historischeVariantVan brprub:geboortedatumOuder2.
+brpgrp:ouder2Hist-geboorte rdfs:label "Geboorte"@nl, "Geboorte (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:ouder2Hist;
+    brp:historischeVariantVan brpgrp:ouder2-geboorte;
+    skos:notation "53.03";
+    brp:behoortTotCategorie brpcat:ouder2Hist.
+brprub:geboorteplaatsOuder2Hist rdfs:label "Geboorteplaats (Ouder2, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder2Hist-geboorte;
+    brp:behoortTotGroep brpgrp:ouder2Hist-geboorte;
+    brp:element brpelm:geboorteplaats;
+    brp:rubrieknummer "53.03.20";
+    brp:historischeVariantVan brprub:geboorteplaatsOuder2.
+brprub:geboortelandOuder2Hist rdfs:label "Geboorteland (Ouder2, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder2Hist-geboorte;
+    brp:behoortTotGroep brpgrp:ouder2Hist-geboorte;
+    brp:element brpelm:geboorteland;
+    brp:rubrieknummer "53.03.30";
+    brp:historischeVariantVan brprub:geboortelandOuder2.
+brprub:geslachtsaanduidingOuder2Hist rdfs:label "Geslachtsaanduiding (Ouder2, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder2Hist-geslacht;
+    brp:behoortTotGroep brpgrp:ouder2Hist-geslacht;
+    brp:element brpelm:geslachtsaanduiding;
+    brp:rubrieknummer "53.04.10";
+    brp:historischeVariantVan brprub:geslachtsaanduidingOuder2.
+brpgrp:ouder2Hist-geslacht rdfs:label "Geslacht"@nl, "Geslacht (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:ouder2Hist;
+    brp:historischeVariantVan brpgrp:ouder2-geslacht;
+    skos:notation "53.04";
+    brp:behoortTotCategorie brpcat:ouder2Hist.
+brprub:datumIngangFamilierechtelijkeBetrekkingOuder2Hist rdfs:label "Datum ingang familierechtelijke betrekking (Ouder2, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder2Hist-familierechtelijkeBetrekking;
+    brp:behoortTotGroep brpgrp:ouder2Hist-familierechtelijkeBetrekking;
+    brp:element brpelm:datumIngangFamilierechtelijkeBetrekking;
+    brp:rubrieknummer "53.62.10";
+    brp:historischeVariantVan brprub:datumIngangFamilierechtelijkeBetrekkingOuder2.
+brpgrp:ouder2Hist-familierechtelijkeBetrekking rdfs:label "Familierechtelijke betrekking"@nl, "Familierechtelijke betrekking (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:ouder2Hist;
+    brp:historischeVariantVan brpgrp:ouder2-familierechtelijkeBetrekking;
+    skos:notation "53.62";
+    brp:behoortTotCategorie brpcat:ouder2Hist.
+brprub:registergemeenteAkteOuder2Hist rdfs:label "Registergemeente akte (Ouder2, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder2Hist-akte;
+    brp:behoortTotGroep brpgrp:ouder2Hist-akte;
+    brp:element brpelm:registergemeenteAkte;
+    brp:rubrieknummer "53.81.10";
+    brp:historischeVariantVan brprub:registergemeenteAkteOuder2.
+brpgrp:ouder2Hist-akte rdfs:label "Akte"@nl, "Akte (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:ouder2Hist;
+    brp:historischeVariantVan brpgrp:ouder2-akte;
+    skos:notation "53.81";
+    brp:behoortTotCategorie brpcat:ouder2Hist.
+brprub:aktenummerOuder2Hist rdfs:label "Aktenummer (Ouder2, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder2Hist-akte;
+    brp:behoortTotGroep brpgrp:ouder2Hist-akte;
+    brp:element brpelm:aktenummer;
+    brp:rubrieknummer "53.81.20";
+    brp:historischeVariantVan brprub:aktenummerOuder2.
+brprub:gemeenteDocumentOuder2Hist rdfs:label "Gemeente document (Ouder2, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder2Hist-document;
+    brp:behoortTotGroep brpgrp:ouder2Hist-document;
+    brp:element brpelm:gemeenteDocument;
+    brp:rubrieknummer "53.82.10";
+    brp:historischeVariantVan brprub:gemeenteDocumentOuder2.
+brpgrp:ouder2Hist-document rdfs:label "Document"@nl, "Document (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:ouder2Hist;
+    brp:historischeVariantVan brpgrp:ouder2-document;
+    skos:notation "53.82";
+    brp:behoortTotCategorie brpcat:ouder2Hist.
+brprub:datumDocumentOuder2Hist rdfs:label "Datum document (Ouder2, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder2Hist-document;
+    brp:behoortTotGroep brpgrp:ouder2Hist-document;
+    brp:element brpelm:datumDocument;
+    brp:rubrieknummer "53.82.20";
+    brp:historischeVariantVan brprub:datumDocumentOuder2.
+brprub:beschrijvingDocumentOuder2Hist rdfs:label "Beschrijving document (Ouder2, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder2Hist-document;
+    brp:behoortTotGroep brpgrp:ouder2Hist-document;
+    brp:element brpelm:beschrijvingDocument;
+    brp:rubrieknummer "53.82.30";
+    brp:historischeVariantVan brprub:beschrijvingDocumentOuder2.
+brprub:ingangsdatumGeldigheidOuder2Hist rdfs:label "Ingangsdatum geldigheid (Ouder2, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder2Hist-geldigheid;
+    brp:behoortTotGroep brpgrp:ouder2Hist-geldigheid;
+    brp:element brpelm:ingangsdatumGeldigheid;
+    brp:rubrieknummer "53.85.10";
+    brp:historischeVariantVan brprub:ingangsdatumGeldigheidOuder2.
+brpgrp:ouder2Hist-geldigheid rdfs:label "Geldigheid"@nl, "Geldigheid (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:ouder2Hist;
+    brp:historischeVariantVan brpgrp:ouder2-geldigheid;
+    skos:notation "53.85";
+    brp:behoortTotCategorie brpcat:ouder2Hist.
+brprub:datumVanOpnemingOuder2Hist rdfs:label "Datum van opneming (Ouder2, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:ouder2Hist-opneming;
+    brp:behoortTotGroep brpgrp:ouder2Hist-opneming;
+    brp:element brpelm:datumVanOpneming;
+    brp:rubrieknummer "53.86.10";
+    brp:historischeVariantVan brprub:datumVanOpnemingOuder2.
+brpgrp:ouder2Hist-opneming rdfs:label "Opneming"@nl, "Opneming (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:ouder2Hist;
+    brp:historischeVariantVan brpgrp:ouder2-opneming;
+    skos:notation "53.86";
+    brp:behoortTotCategorie brpcat:ouder2Hist.
+brprub:redenOpnameNationaliteitNationaliteit rdfs:label "Reden opname nationaliteit (Nationaliteit)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:nationaliteit-verkrijgingNationaliteit;
+    brp:behoortTotGroep brpgrp:nationaliteit-verkrijgingNationaliteit;
+    brp:element brpelm:redenOpnameNationaliteit;
+    brp:rubrieknummer "04.63.10".
+brpgrp:nationaliteit-verkrijgingNationaliteit rdfs:label "Verkrijging nationaliteit"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:nationaliteit;
+    skos:notation "04.63";
+    brp:behoortTotCategorie brpcat:nationaliteit.
+brpelm:redenOpnameNationaliteit rdfs:label "Reden opname nationaliteit"@nl;
+    a brp:Element;
+    rdfs:comment "Reden van opname van de nationaliteit (code uit Tabel 37)."@nl.
+brprub:redenBeeindigingNationaliteitNationaliteit rdfs:label "Reden beeindiging nationaliteit (Nationaliteit)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:nationaliteit-verliesNationaliteit;
+    brp:behoortTotGroep brpgrp:nationaliteit-verliesNationaliteit;
+    brp:element brpelm:redenBeeindigingNationaliteit;
+    brp:rubrieknummer "04.64.10".
+brpgrp:nationaliteit-verliesNationaliteit rdfs:label "Verlies nationaliteit"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:nationaliteit;
+    skos:notation "04.64";
+    brp:behoortTotCategorie brpcat:nationaliteit.
+brpelm:redenBeeindigingNationaliteit rdfs:label "Reden beeindiging nationaliteit"@nl;
+    a brp:Element;
+    rdfs:comment "Reden van beeindiging van de nationaliteit (code uit Tabel 37)."@nl.
+brprub:gemeenteDocumentNationaliteit rdfs:label "Gemeente document (Nationaliteit)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:nationaliteit-document;
+    brp:behoortTotGroep brpgrp:nationaliteit-document;
+    brp:element brpelm:gemeenteDocument;
+    brp:rubrieknummer "04.82.10".
+brpgrp:nationaliteit-document rdfs:label "Document"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:nationaliteit;
+    skos:notation "04.82";
+    brp:behoortTotCategorie brpcat:nationaliteit.
+brprub:datumDocumentNationaliteit rdfs:label "Datum document (Nationaliteit)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:nationaliteit-document;
+    brp:behoortTotGroep brpgrp:nationaliteit-document;
+    brp:element brpelm:datumDocument;
+    brp:rubrieknummer "04.82.20".
+brprub:beschrijvingDocumentNationaliteit rdfs:label "Beschrijving document (Nationaliteit)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:nationaliteit-document;
+    brp:behoortTotGroep brpgrp:nationaliteit-document;
+    brp:element brpelm:beschrijvingDocument;
+    brp:rubrieknummer "04.82.30".
+brprub:ingangsdatumGeldigheidNationaliteit rdfs:label "Ingangsdatum geldigheid (Nationaliteit)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:nationaliteit-geldigheid;
+    brp:behoortTotGroep brpgrp:nationaliteit-geldigheid;
+    brp:element brpelm:ingangsdatumGeldigheid;
+    brp:rubrieknummer "04.85.10".
+brpgrp:nationaliteit-geldigheid rdfs:label "Geldigheid"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:nationaliteit;
+    skos:notation "04.85";
+    brp:behoortTotCategorie brpcat:nationaliteit.
+brprub:datumVanOpnemingNationaliteit rdfs:label "Datum van opneming (Nationaliteit)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:nationaliteit-opneming;
+    brp:behoortTotGroep brpgrp:nationaliteit-opneming;
+    brp:element brpelm:datumVanOpneming;
+    brp:rubrieknummer "04.86.10".
+brpgrp:nationaliteit-opneming rdfs:label "Opneming"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:nationaliteit;
+    skos:notation "04.86";
+    brp:behoortTotCategorie brpcat:nationaliteit.
+brprub:nationaliteitNationaliteitHist rdfs:label "Nationaliteit (Nationaliteit, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:nationaliteitHist-nationaliteit;
+    brp:behoortTotGroep brpgrp:nationaliteitHist-nationaliteit;
+    brp:element brpelm:nationaliteit;
+    brp:rubrieknummer "54.05.10";
+    brp:historischeVariantVan brprub:nationaliteitNationaliteit.
+brpgrp:nationaliteitHist-nationaliteit rdfs:label "Nationaliteit"@nl, "Nationaliteit (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:nationaliteitHist;
+    brp:historischeVariantVan brpgrp:nationaliteit-nationaliteit;
+    skos:notation "54.05";
+    brp:behoortTotCategorie brpcat:nationaliteitHist.
+brprub:redenOpnameNationaliteitNationaliteitHist rdfs:label "Reden opname nationaliteit (Nationaliteit, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:nationaliteitHist-verkrijgingNationaliteit;
+    brp:behoortTotGroep brpgrp:nationaliteitHist-verkrijgingNationaliteit;
+    brp:element brpelm:redenOpnameNationaliteit;
+    brp:rubrieknummer "54.63.10";
+    brp:historischeVariantVan brprub:redenOpnameNationaliteitNationaliteit.
+brpgrp:nationaliteitHist-verkrijgingNationaliteit rdfs:label "Verkrijging nationaliteit"@nl, "Verkrijging nationaliteit (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:nationaliteitHist;
+    brp:historischeVariantVan brpgrp:nationaliteit-verkrijgingNationaliteit;
+    skos:notation "54.63";
+    brp:behoortTotCategorie brpcat:nationaliteitHist.
+brprub:redenBeeindigingNationaliteitNationaliteitHist rdfs:label "Reden beeindiging nationaliteit (Nationaliteit, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:nationaliteitHist-verliesNationaliteit;
+    brp:behoortTotGroep brpgrp:nationaliteitHist-verliesNationaliteit;
+    brp:element brpelm:redenBeeindigingNationaliteit;
+    brp:rubrieknummer "54.64.10";
+    brp:historischeVariantVan brprub:redenBeeindigingNationaliteitNationaliteit.
+brpgrp:nationaliteitHist-verliesNationaliteit rdfs:label "Verlies nationaliteit"@nl, "Verlies nationaliteit (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:nationaliteitHist;
+    brp:historischeVariantVan brpgrp:nationaliteit-verliesNationaliteit;
+    skos:notation "54.64";
+    brp:behoortTotCategorie brpcat:nationaliteitHist.
+brprub:aanduidingBijzonderNederlanderschapNationaliteitHist rdfs:label "Aanduiding bijzonder Nederlanderschap (Nationaliteit, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:nationaliteitHist-bijzonderNederlanderschap;
+    brp:behoortTotGroep brpgrp:nationaliteitHist-bijzonderNederlanderschap;
+    brp:element brpelm:aanduidingBijzonderNederlanderschap;
+    brp:rubrieknummer "54.65.10";
+    brp:historischeVariantVan brprub:aanduidingBijzonderNederlanderschapNationaliteit.
+brpgrp:nationaliteitHist-bijzonderNederlanderschap rdfs:label "Bijzonder Nederlanderschap"@nl, "Bijzonder Nederlanderschap (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:nationaliteitHist;
+    brp:historischeVariantVan brpgrp:nationaliteit-bijzonderNederlanderschap;
+    skos:notation "54.65";
+    brp:behoortTotCategorie brpcat:nationaliteitHist.
+brprub:gemeenteDocumentNationaliteitHist rdfs:label "Gemeente document (Nationaliteit, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:nationaliteitHist-document;
+    brp:behoortTotGroep brpgrp:nationaliteitHist-document;
+    brp:element brpelm:gemeenteDocument;
+    brp:rubrieknummer "54.82.10";
+    brp:historischeVariantVan brprub:gemeenteDocumentNationaliteit.
+brpgrp:nationaliteitHist-document rdfs:label "Document"@nl, "Document (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:nationaliteitHist;
+    brp:historischeVariantVan brpgrp:nationaliteit-document;
+    skos:notation "54.82";
+    brp:behoortTotCategorie brpcat:nationaliteitHist.
+brprub:datumDocumentNationaliteitHist rdfs:label "Datum document (Nationaliteit, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:nationaliteitHist-document;
+    brp:behoortTotGroep brpgrp:nationaliteitHist-document;
+    brp:element brpelm:datumDocument;
+    brp:rubrieknummer "54.82.20";
+    brp:historischeVariantVan brprub:datumDocumentNationaliteit.
+brprub:beschrijvingDocumentNationaliteitHist rdfs:label "Beschrijving document (Nationaliteit, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:nationaliteitHist-document;
+    brp:behoortTotGroep brpgrp:nationaliteitHist-document;
+    brp:element brpelm:beschrijvingDocument;
+    brp:rubrieknummer "54.82.30";
+    brp:historischeVariantVan brprub:beschrijvingDocumentNationaliteit.
+brprub:ingangsdatumGeldigheidNationaliteitHist rdfs:label "Ingangsdatum geldigheid (Nationaliteit, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:nationaliteitHist-geldigheid;
+    brp:behoortTotGroep brpgrp:nationaliteitHist-geldigheid;
+    brp:element brpelm:ingangsdatumGeldigheid;
+    brp:rubrieknummer "54.85.10";
+    brp:historischeVariantVan brprub:ingangsdatumGeldigheidNationaliteit.
+brpgrp:nationaliteitHist-geldigheid rdfs:label "Geldigheid"@nl, "Geldigheid (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:nationaliteitHist;
+    brp:historischeVariantVan brpgrp:nationaliteit-geldigheid;
+    skos:notation "54.85";
+    brp:behoortTotCategorie brpcat:nationaliteitHist.
+brprub:datumVanOpnemingNationaliteitHist rdfs:label "Datum van opneming (Nationaliteit, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:nationaliteitHist-opneming;
+    brp:behoortTotGroep brpgrp:nationaliteitHist-opneming;
+    brp:element brpelm:datumVanOpneming;
+    brp:rubrieknummer "54.86.10";
+    brp:historischeVariantVan brprub:datumVanOpnemingNationaliteit.
+brpgrp:nationaliteitHist-opneming rdfs:label "Opneming"@nl, "Opneming (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:nationaliteitHist;
+    brp:historischeVariantVan brpgrp:nationaliteit-opneming;
+    skos:notation "54.86";
+    brp:behoortTotCategorie brpcat:nationaliteitHist.
+brprub:geboorteplaatsPartner rdfs:label "Geboorteplaats (Huwelijk/geregistreerd partnerschap)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschap-geboorte;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschap-geboorte;
+    brp:element brpelm:geboorteplaats;
+    brp:rubrieknummer "05.03.20".
+brprub:geboortelandPartner rdfs:label "Geboorteland (Huwelijk/geregistreerd partnerschap)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschap-geboorte;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschap-geboorte;
+    brp:element brpelm:geboorteland;
+    brp:rubrieknummer "05.03.30".
+brprub:geslachtsaanduidingPartner rdfs:label "Geslachtsaanduiding (Huwelijk/geregistreerd partnerschap)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschap-geslacht;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschap-geslacht;
+    brp:element brpelm:geslachtsaanduiding;
+    brp:rubrieknummer "05.04.10".
+brpgrp:huwelijkPartnerschap-geslacht rdfs:label "Geslacht"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:huwelijkPartnerschap;
+    skos:notation "05.04";
+    brp:behoortTotCategorie brpcat:huwelijkPartnerschap.
+brprub:plaatsHuwelijkssluitingPartner rdfs:label "Plaats huwelijkssluiting/aangaan geregistreerd partnerschap (Huwelijk/geregistreerd partnerschap)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschap-huwelijkssluiting;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschap-huwelijkssluiting;
+    brp:element brpelm:plaatsHuwelijkssluiting;
+    brp:rubrieknummer "05.06.20".
+brpelm:plaatsHuwelijkssluiting rdfs:label "Plaats huwelijkssluiting/aangaan geregistreerd partnerschap"@nl;
+    a brp:Element;
+    rdfs:comment "Een code of plaatsbepaling die aangeeft waar het huwelijk is voltrokken of het partnerschap is aangegaan."@nl.
+brprub:landHuwelijkssluitingPartner rdfs:label "Land huwelijkssluiting/aangaan geregistreerd partnerschap (Huwelijk/geregistreerd partnerschap)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschap-huwelijkssluiting;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschap-huwelijkssluiting;
+    brp:element brpelm:landHuwelijkssluiting;
+    brp:rubrieknummer "05.06.30".
+brpelm:landHuwelijkssluiting rdfs:label "Land huwelijkssluiting/aangaan geregistreerd partnerschap"@nl;
+    a brp:Element;
+    rdfs:comment "Een code uit Tabel 34 (Landentabel) die het land aangeeft waar het huwelijk is voltrokken of het partnerschap is aangegaan."@nl;
+    rdfs:range brp:Land.
+brprub:plaatsOntbindingHuwelijkPartner rdfs:label "Plaats ontbinding huwelijk/geregistreerd partnerschap (Huwelijk/geregistreerd partnerschap)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschap-ontbindingHuwelijk;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschap-ontbindingHuwelijk;
+    brp:element brpelm:plaatsOntbindingHuwelijk;
+    brp:rubrieknummer "05.07.20".
+brpelm:plaatsOntbindingHuwelijk rdfs:label "Plaats ontbinding huwelijk/geregistreerd partnerschap"@nl;
+    a brp:Element;
+    rdfs:comment "Een code of plaatsbepaling die aangeeft waar het huwelijk of geregistreerd partnerschap is ontbonden."@nl.
+brprub:landOntbindingHuwelijkPartner rdfs:label "Land ontbinding huwelijk/geregistreerd partnerschap (Huwelijk/geregistreerd partnerschap)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschap-ontbindingHuwelijk;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschap-ontbindingHuwelijk;
+    brp:element brpelm:landOntbindingHuwelijk;
+    brp:rubrieknummer "05.07.30".
+brpelm:landOntbindingHuwelijk rdfs:label "Land ontbinding huwelijk/geregistreerd partnerschap"@nl;
+    a brp:Element;
+    rdfs:comment "Een code uit Tabel 34 (Landentabel) die aangeeft in welk land het huwelijk of geregistreerd partnerschap is ontbonden."@nl;
+    rdfs:range brp:Land.
+brprub:redenOntbindingHuwelijkPartner rdfs:label "Reden ontbinding huwelijk/geregistreerd partnerschap (Huwelijk/geregistreerd partnerschap)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschap-ontbindingHuwelijk;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschap-ontbindingHuwelijk;
+    brp:element brpelm:redenOntbindingHuwelijk;
+    brp:rubrieknummer "05.07.40".
+brpelm:redenOntbindingHuwelijk rdfs:label "Reden ontbinding huwelijk/geregistreerd partnerschap"@nl;
+    a brp:Element;
+    rdfs:comment "Een code die de reden van ontbinding aangeeft (bijv. overlijden, echtscheiding)."@nl.
+brprub:soortVerbintenisPartner rdfs:label "Soort verbintenis (Huwelijk/geregistreerd partnerschap)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschap-soortVerbintenis;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschap-soortVerbintenis;
+    brp:element brpelm:soortVerbintenis;
+    brp:rubrieknummer "05.15.10".
+brpgrp:huwelijkPartnerschap-soortVerbintenis rdfs:label "Soort verbintenis"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:huwelijkPartnerschap;
+    skos:notation "05.15";
+    brp:behoortTotCategorie brpcat:huwelijkPartnerschap.
+brpelm:soortVerbintenis rdfs:label "Soort verbintenis"@nl;
+    a brp:Element;
+    rdfs:comment "Geeft aan of het een huwelijk (H) of geregistreerd partnerschap (P) betreft."@nl.
+brprub:registergemeenteAktePartner rdfs:label "Registergemeente akte (Huwelijk/geregistreerd partnerschap)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschap-akte;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschap-akte;
+    brp:element brpelm:registergemeenteAkte;
+    brp:rubrieknummer "05.81.10".
+brpgrp:huwelijkPartnerschap-akte rdfs:label "Akte"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:huwelijkPartnerschap;
+    skos:notation "05.81";
+    brp:behoortTotCategorie brpcat:huwelijkPartnerschap.
+brprub:aktenummerPartner rdfs:label "Aktenummer (Huwelijk/geregistreerd partnerschap)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschap-akte;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschap-akte;
+    brp:element brpelm:aktenummer;
+    brp:rubrieknummer "05.81.20".
+brprub:gemeenteDocumentPartner rdfs:label "Gemeente document (Huwelijk/geregistreerd partnerschap)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschap-document;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschap-document;
+    brp:element brpelm:gemeenteDocument;
+    brp:rubrieknummer "05.82.10".
+brpgrp:huwelijkPartnerschap-document rdfs:label "Document"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:huwelijkPartnerschap;
+    skos:notation "05.82";
+    brp:behoortTotCategorie brpcat:huwelijkPartnerschap.
+brprub:datumDocumentPartner rdfs:label "Datum document (Huwelijk/geregistreerd partnerschap)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschap-document;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschap-document;
+    brp:element brpelm:datumDocument;
+    brp:rubrieknummer "05.82.20".
+brprub:beschrijvingDocumentPartner rdfs:label "Beschrijving document (Huwelijk/geregistreerd partnerschap)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschap-document;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschap-document;
+    brp:element brpelm:beschrijvingDocument;
+    brp:rubrieknummer "05.82.30".
+brprub:ingangsdatumGeldigheidPartner rdfs:label "Ingangsdatum geldigheid (Huwelijk/geregistreerd partnerschap)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschap-geldigheid;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschap-geldigheid;
+    brp:element brpelm:ingangsdatumGeldigheid;
+    brp:rubrieknummer "05.85.10".
+brpgrp:huwelijkPartnerschap-geldigheid rdfs:label "Geldigheid"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:huwelijkPartnerschap;
+    skos:notation "05.85";
+    brp:behoortTotCategorie brpcat:huwelijkPartnerschap.
+brprub:datumVanOpnemingPartner rdfs:label "Datum van opneming (Huwelijk/geregistreerd partnerschap)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschap-opneming;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschap-opneming;
+    brp:element brpelm:datumVanOpneming;
+    brp:rubrieknummer "05.86.10".
+brpgrp:huwelijkPartnerschap-opneming rdfs:label "Opneming"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:huwelijkPartnerschap;
+    skos:notation "05.86";
+    brp:behoortTotCategorie brpcat:huwelijkPartnerschap.
+brprub:anummerPartnerHist rdfs:label "A-nummer (Huwelijk/geregistreerd partnerschap, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschapHist-identificatienummers;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschapHist-identificatienummers;
+    brp:element brpelm:anummer;
+    brp:rubrieknummer "55.01.10";
+    brp:historischeVariantVan brprub:anummerPartner.
+brpgrp:huwelijkPartnerschapHist-identificatienummers rdfs:label "Identificatienummers"@nl, "Identificatienummers (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:huwelijkPartnerschapHist;
+    brp:historischeVariantVan brpgrp:huwelijkPartnerschap-identificatienummers;
+    skos:notation "55.01";
+    brp:behoortTotCategorie brpcat:huwelijkPartnerschapHist.
+brprub:burgerservicenummerPartnerHist rdfs:label "Burgerservicenummer (Huwelijk/geregistreerd partnerschap, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschapHist-identificatienummers;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschapHist-identificatienummers;
+    brp:element brpelm:burgerservicenummer;
+    brp:rubrieknummer "55.01.20";
+    brp:historischeVariantVan brprub:burgerservicenummerPartner.
+brprub:voornamenPartnerHist rdfs:label "Voornamen (Huwelijk/geregistreerd partnerschap, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschapHist-naam;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschapHist-naam;
+    brp:element brpelm:voornamen;
+    brp:rubrieknummer "55.02.10";
+    brp:historischeVariantVan brprub:voornamenPartner.
+brpgrp:huwelijkPartnerschapHist-naam rdfs:label "Naam"@nl, "Naam (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:huwelijkPartnerschapHist;
+    brp:historischeVariantVan brpgrp:huwelijkPartnerschap-naam;
+    skos:notation "55.02";
+    brp:behoortTotCategorie brpcat:huwelijkPartnerschapHist.
+brprub:adellijkeTitelPredicaatPartnerHist rdfs:label "Adellijke titel/predicaat (Huwelijk/geregistreerd partnerschap, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschapHist-naam;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschapHist-naam;
+    brp:element brpelm:adellijkeTitelPredicaat;
+    brp:rubrieknummer "55.02.20";
+    brp:historischeVariantVan brprub:adellijkeTitelPredicaatPartner.
+brprub:voorvoegselGeslachtsnaamPartnerHist rdfs:label "Voorvoegsel geslachtsnaam (Huwelijk/geregistreerd partnerschap, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschapHist-naam;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschapHist-naam;
+    brp:element brpelm:voorvoegselGeslachtsnaam;
+    brp:rubrieknummer "55.02.30";
+    brp:historischeVariantVan brprub:voorvoegselGeslachtsnaamPartner.
+brprub:geslachtsnaamPartnerHist rdfs:label "Geslachtsnaam (Huwelijk/geregistreerd partnerschap, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschapHist-naam;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschapHist-naam;
+    brp:element brpelm:geslachtsnaam;
+    brp:rubrieknummer "55.02.40";
+    brp:historischeVariantVan brprub:geslachtsnaamPartner.
+brprub:geslachtsaanduidingPartnerHist rdfs:label "Geslachtsaanduiding (Huwelijk/geregistreerd partnerschap, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschapHist-geslacht;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschapHist-geslacht;
+    brp:element brpelm:geslachtsaanduiding;
+    brp:rubrieknummer "55.04.10";
+    brp:historischeVariantVan brprub:geslachtsaanduidingPartner.
+brpgrp:huwelijkPartnerschapHist-geslacht rdfs:label "Geslacht"@nl, "Geslacht (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:huwelijkPartnerschapHist;
+    brp:historischeVariantVan brpgrp:huwelijkPartnerschap-geslacht;
+    skos:notation "55.04";
+    brp:behoortTotCategorie brpcat:huwelijkPartnerschapHist.
+brprub:plaatsHuwelijkssluitingPartnerHist rdfs:label "Plaats huwelijkssluiting/aangaan geregistreerd partnerschap (Huwelijk/geregistreerd partnerschap, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschapHist-huwelijkssluiting;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschapHist-huwelijkssluiting;
+    brp:element brpelm:plaatsHuwelijkssluiting;
+    brp:rubrieknummer "55.06.20";
+    brp:historischeVariantVan brprub:plaatsHuwelijkssluitingPartner.
+brprub:landHuwelijkssluitingPartnerHist rdfs:label "Land huwelijkssluiting/aangaan geregistreerd partnerschap (Huwelijk/geregistreerd partnerschap, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschapHist-huwelijkssluiting;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschapHist-huwelijkssluiting;
+    brp:element brpelm:landHuwelijkssluiting;
+    brp:rubrieknummer "55.06.30";
+    brp:historischeVariantVan brprub:landHuwelijkssluitingPartner.
+brprub:datumOntbindingHuwelijkPartnerHist rdfs:label "Datum ontbinding huwelijk/geregistreerd partnerschap (Huwelijk/geregistreerd partnerschap, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschapHist-ontbindingHuwelijk;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschapHist-ontbindingHuwelijk;
+    brp:element brpelm:datumOntbindingHuwelijk;
+    brp:rubrieknummer "55.07.10";
+    brp:historischeVariantVan brprub:datumOntbindingHuwelijkPartner.
+brpgrp:huwelijkPartnerschapHist-ontbindingHuwelijk rdfs:label "Ontbinding huwelijk/geregistreerd partnerschap"@nl, "Ontbinding huwelijk/geregistreerd partnerschap (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:huwelijkPartnerschapHist;
+    brp:historischeVariantVan brpgrp:huwelijkPartnerschap-ontbindingHuwelijk;
+    skos:notation "55.07";
+    brp:behoortTotCategorie brpcat:huwelijkPartnerschapHist.
+brprub:plaatsOntbindingHuwelijkPartnerHist rdfs:label "Plaats ontbinding huwelijk/geregistreerd partnerschap (Huwelijk/geregistreerd partnerschap, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschapHist-ontbindingHuwelijk;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschapHist-ontbindingHuwelijk;
+    brp:element brpelm:plaatsOntbindingHuwelijk;
+    brp:rubrieknummer "55.07.20";
+    brp:historischeVariantVan brprub:plaatsOntbindingHuwelijkPartner.
+brprub:landOntbindingHuwelijkPartnerHist rdfs:label "Land ontbinding huwelijk/geregistreerd partnerschap (Huwelijk/geregistreerd partnerschap, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschapHist-ontbindingHuwelijk;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschapHist-ontbindingHuwelijk;
+    brp:element brpelm:landOntbindingHuwelijk;
+    brp:rubrieknummer "55.07.30";
+    brp:historischeVariantVan brprub:landOntbindingHuwelijkPartner.
+brprub:redenOntbindingHuwelijkPartnerHist rdfs:label "Reden ontbinding huwelijk/geregistreerd partnerschap (Huwelijk/geregistreerd partnerschap, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschapHist-ontbindingHuwelijk;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschapHist-ontbindingHuwelijk;
+    brp:element brpelm:redenOntbindingHuwelijk;
+    brp:rubrieknummer "55.07.40";
+    brp:historischeVariantVan brprub:redenOntbindingHuwelijkPartner.
+brprub:soortVerbintenisPartnerHist rdfs:label "Soort verbintenis (Huwelijk/geregistreerd partnerschap, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschapHist-soortVerbintenis;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschapHist-soortVerbintenis;
+    brp:element brpelm:soortVerbintenis;
+    brp:rubrieknummer "55.15.10";
+    brp:historischeVariantVan brprub:soortVerbintenisPartner.
+brpgrp:huwelijkPartnerschapHist-soortVerbintenis rdfs:label "Soort verbintenis"@nl, "Soort verbintenis (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:huwelijkPartnerschapHist;
+    brp:historischeVariantVan brpgrp:huwelijkPartnerschap-soortVerbintenis;
+    skos:notation "55.15";
+    brp:behoortTotCategorie brpcat:huwelijkPartnerschapHist.
+brprub:registergemeenteAktePartnerHist rdfs:label "Registergemeente akte (Huwelijk/geregistreerd partnerschap, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschapHist-akte;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschapHist-akte;
+    brp:element brpelm:registergemeenteAkte;
+    brp:rubrieknummer "55.81.10";
+    brp:historischeVariantVan brprub:registergemeenteAktePartner.
+brpgrp:huwelijkPartnerschapHist-akte rdfs:label "Akte"@nl, "Akte (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:huwelijkPartnerschapHist;
+    brp:historischeVariantVan brpgrp:huwelijkPartnerschap-akte;
+    skos:notation "55.81";
+    brp:behoortTotCategorie brpcat:huwelijkPartnerschapHist.
+brprub:aktenummerPartnerHist rdfs:label "Aktenummer (Huwelijk/geregistreerd partnerschap, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschapHist-akte;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschapHist-akte;
+    brp:element brpelm:aktenummer;
+    brp:rubrieknummer "55.81.20";
+    brp:historischeVariantVan brprub:aktenummerPartner.
+brprub:gemeenteDocumentPartnerHist rdfs:label "Gemeente document (Huwelijk/geregistreerd partnerschap, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschapHist-document;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschapHist-document;
+    brp:element brpelm:gemeenteDocument;
+    brp:rubrieknummer "55.82.10";
+    brp:historischeVariantVan brprub:gemeenteDocumentPartner.
+brpgrp:huwelijkPartnerschapHist-document rdfs:label "Document"@nl, "Document (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:huwelijkPartnerschapHist;
+    brp:historischeVariantVan brpgrp:huwelijkPartnerschap-document;
+    skos:notation "55.82";
+    brp:behoortTotCategorie brpcat:huwelijkPartnerschapHist.
+brprub:datumDocumentPartnerHist rdfs:label "Datum document (Huwelijk/geregistreerd partnerschap, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschapHist-document;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschapHist-document;
+    brp:element brpelm:datumDocument;
+    brp:rubrieknummer "55.82.20";
+    brp:historischeVariantVan brprub:datumDocumentPartner.
+brprub:beschrijvingDocumentPartnerHist rdfs:label "Beschrijving document (Huwelijk/geregistreerd partnerschap, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschapHist-document;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschapHist-document;
+    brp:element brpelm:beschrijvingDocument;
+    brp:rubrieknummer "55.82.30";
+    brp:historischeVariantVan brprub:beschrijvingDocumentPartner.
+brprub:ingangsdatumGeldigheidPartnerHist rdfs:label "Ingangsdatum geldigheid (Huwelijk/geregistreerd partnerschap, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschapHist-geldigheid;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschapHist-geldigheid;
+    brp:element brpelm:ingangsdatumGeldigheid;
+    brp:rubrieknummer "55.85.10";
+    brp:historischeVariantVan brprub:ingangsdatumGeldigheidPartner.
+brpgrp:huwelijkPartnerschapHist-geldigheid rdfs:label "Geldigheid"@nl, "Geldigheid (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:huwelijkPartnerschapHist;
+    brp:historischeVariantVan brpgrp:huwelijkPartnerschap-geldigheid;
+    skos:notation "55.85";
+    brp:behoortTotCategorie brpcat:huwelijkPartnerschapHist.
+brprub:datumVanOpnemingPartnerHist rdfs:label "Datum van opneming (Huwelijk/geregistreerd partnerschap, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:huwelijkPartnerschapHist-opneming;
+    brp:behoortTotGroep brpgrp:huwelijkPartnerschapHist-opneming;
+    brp:element brpelm:datumVanOpneming;
+    brp:rubrieknummer "55.86.10";
+    brp:historischeVariantVan brprub:datumVanOpnemingPartner.
+brpgrp:huwelijkPartnerschapHist-opneming rdfs:label "Opneming"@nl, "Opneming (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:huwelijkPartnerschapHist;
+    brp:historischeVariantVan brpgrp:huwelijkPartnerschap-opneming;
+    skos:notation "55.86";
+    brp:behoortTotCategorie brpcat:huwelijkPartnerschapHist.
+brprub:datumEersteInschrijvingBRPInschrijving rdfs:label "Datum eerste inschrijving GBA/BRP (Inschrijving)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:inschrijving-eersteInschrijving;
+    brp:behoortTotGroep brpgrp:inschrijving-eersteInschrijving;
+    brp:element brpelm:datumEersteInschrijvingBRP;
+    brp:rubrieknummer "07.68.10".
+brpgrp:inschrijving-eersteInschrijving rdfs:label "Eerste inschrijving BRP"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:inschrijving;
+    skos:notation "07.68";
+    brp:behoortTotCategorie brpcat:inschrijving.
+brpelm:datumEersteInschrijvingBRP rdfs:label "Datum eerste inschrijving GBA/BRP"@nl;
+    a brp:Element;
+    rdfs:comment "De datum waarop de persoonslijst voor het eerst in de GBA/BRP is ingeschreven."@nl.
+brprub:gemeenteWaarDePKZichBevindtInschrijving rdfs:label "Gemeente waar de PK zich bevindt (Inschrijving)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:inschrijving-pkGegevens;
+    brp:behoortTotGroep brpgrp:inschrijving-pkGegevens;
+    brp:element brpelm:gemeenteWaarDePKZichBevindt;
+    brp:rubrieknummer "07.69.10".
+brpgrp:inschrijving-pkGegevens rdfs:label "PK-gegevens"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:inschrijving;
+    skos:notation "07.69";
+    brp:behoortTotCategorie brpcat:inschrijving.
+brpelm:gemeenteWaarDePKZichBevindt rdfs:label "Gemeente waar de PK zich bevindt"@nl;
+    a brp:Element;
+    rdfs:comment "De gemeente waar de persoonskaart (PK) zich bevindt."@nl.
+brprub:pkGegevensMeegeconverteerdInschrijving rdfs:label "PK-gegevens meegeconverteerd (Inschrijving)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:inschrijving-pkConversie;
+    brp:behoortTotGroep brpgrp:inschrijving-pkConversie;
+    brp:element brpelm:pkGegevensMeegeconverteerd;
+    brp:rubrieknummer "07.87.10".
+brpgrp:inschrijving-pkConversie rdfs:label "PK-conversie"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:inschrijving;
+    skos:notation "07.87";
+    brp:behoortTotCategorie brpcat:inschrijving.
+brpelm:pkGegevensMeegeconverteerd rdfs:label "PK-gegevens meegeconverteerd"@nl;
+    a brp:Element;
+    rdfs:comment "Indicatie of PK-gegevens volledig zijn meegeconverteerd naar de GBA."@nl.
+brprub:adellijkeTitelPredicaatKind rdfs:label "Adellijke titel/predicaat (Kind)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:kind-naam;
+    brp:behoortTotGroep brpgrp:kind-naam;
+    brp:element brpelm:adellijkeTitelPredicaat;
+    brp:rubrieknummer "09.02.20".
+brprub:geboorteplaatsKind rdfs:label "Geboorteplaats (Kind)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:kind-geboorte;
+    brp:behoortTotGroep brpgrp:kind-geboorte;
+    brp:element brpelm:geboorteplaats;
+    brp:rubrieknummer "09.03.20".
+brprub:geboortelandKind rdfs:label "Geboorteland (Kind)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:kind-geboorte;
+    brp:behoortTotGroep brpgrp:kind-geboorte;
+    brp:element brpelm:geboorteland;
+    brp:rubrieknummer "09.03.30".
+brprub:registergemeenteAkteKind rdfs:label "Registergemeente akte (Kind)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:kind-akte;
+    brp:behoortTotGroep brpgrp:kind-akte;
+    brp:element brpelm:registergemeenteAkte;
+    brp:rubrieknummer "09.81.10".
+brpgrp:kind-akte rdfs:label "Akte"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:kind;
+    skos:notation "09.81";
+    brp:behoortTotCategorie brpcat:kind.
+brprub:aktenummerKind rdfs:label "Aktenummer (Kind)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:kind-akte;
+    brp:behoortTotGroep brpgrp:kind-akte;
+    brp:element brpelm:aktenummer;
+    brp:rubrieknummer "09.81.20".
+brprub:gemeenteDocumentKind rdfs:label "Gemeente document (Kind)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:kind-document;
+    brp:behoortTotGroep brpgrp:kind-document;
+    brp:element brpelm:gemeenteDocument;
+    brp:rubrieknummer "09.82.10".
+brpgrp:kind-document rdfs:label "Document"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:kind;
+    skos:notation "09.82";
+    brp:behoortTotCategorie brpcat:kind.
+brprub:datumDocumentKind rdfs:label "Datum document (Kind)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:kind-document;
+    brp:behoortTotGroep brpgrp:kind-document;
+    brp:element brpelm:datumDocument;
+    brp:rubrieknummer "09.82.20".
+brprub:beschrijvingDocumentKind rdfs:label "Beschrijving document (Kind)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:kind-document;
+    brp:behoortTotGroep brpgrp:kind-document;
+    brp:element brpelm:beschrijvingDocument;
+    brp:rubrieknummer "09.82.30".
+brprub:ingangsdatumGeldigheidKind rdfs:label "Ingangsdatum geldigheid (Kind)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:kind-geldigheid;
+    brp:behoortTotGroep brpgrp:kind-geldigheid;
+    brp:element brpelm:ingangsdatumGeldigheid;
+    brp:rubrieknummer "09.85.10".
+brpgrp:kind-geldigheid rdfs:label "Geldigheid"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:kind;
+    skos:notation "09.85";
+    brp:behoortTotCategorie brpcat:kind.
+brprub:datumVanOpnemingKind rdfs:label "Datum van opneming (Kind)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:kind-opneming;
+    brp:behoortTotGroep brpgrp:kind-opneming;
+    brp:element brpelm:datumVanOpneming;
+    brp:rubrieknummer "09.86.10".
+brpgrp:kind-opneming rdfs:label "Opneming"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:kind;
+    skos:notation "09.86";
+    brp:behoortTotCategorie brpcat:kind.
+brprub:registratieBetrekkingKind rdfs:label "Registratie betrekking (Kind)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:kind-verwijzingSysteem;
+    brp:behoortTotGroep brpgrp:kind-verwijzingSysteem;
+    brp:element brpelm:registratieBetrekking;
+    brp:rubrieknummer "09.89.10".
+brpgrp:kind-verwijzingSysteem rdfs:label "Verwijzing / systeem"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:kind;
+    skos:notation "09.89";
+    brp:behoortTotCategorie brpcat:kind.
+brpelm:registratieBetrekking rdfs:label "Registratie betrekking"@nl;
+    a brp:Element;
+    rdfs:comment "Registratie betrekking: geeft aan of het kind levenloos geboren is (L)."@nl.
+brprub:anummerKindHist rdfs:label "A-nummer (Kind, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:kindHist-identificatienummers;
+    brp:behoortTotGroep brpgrp:kindHist-identificatienummers;
+    brp:element brpelm:anummer;
+    brp:rubrieknummer "59.01.10";
+    brp:historischeVariantVan brprub:anummerKind.
+brpgrp:kindHist-identificatienummers rdfs:label "Identificatienummers"@nl, "Identificatienummers (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:kindHist;
+    brp:historischeVariantVan brpgrp:kind-identificatienummers;
+    skos:notation "59.01";
+    brp:behoortTotCategorie brpcat:kindHist.
+brprub:burgerservicenummerKindHist rdfs:label "Burgerservicenummer (Kind, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:kindHist-identificatienummers;
+    brp:behoortTotGroep brpgrp:kindHist-identificatienummers;
+    brp:element brpelm:burgerservicenummer;
+    brp:rubrieknummer "59.01.20";
+    brp:historischeVariantVan brprub:burgerservicenummerKind.
+brprub:voornamenKindHist rdfs:label "Voornamen (Kind, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:kindHist-naam;
+    brp:behoortTotGroep brpgrp:kindHist-naam;
+    brp:element brpelm:voornamen;
+    brp:rubrieknummer "59.02.10";
+    brp:historischeVariantVan brprub:voornamenKind.
+brpgrp:kindHist-naam rdfs:label "Naam"@nl, "Naam (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:kindHist;
+    brp:historischeVariantVan brpgrp:kind-naam;
+    skos:notation "59.02";
+    brp:behoortTotCategorie brpcat:kindHist.
+brprub:adellijkeTitelPredicaatKindHist rdfs:label "Adellijke titel/predicaat (Kind, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:kindHist-naam;
+    brp:behoortTotGroep brpgrp:kindHist-naam;
+    brp:element brpelm:adellijkeTitelPredicaat;
+    brp:rubrieknummer "59.02.20";
+    brp:historischeVariantVan brprub:adellijkeTitelPredicaatKind.
+brprub:voorvoegselGeslachtsnaamKindHist rdfs:label "Voorvoegsel geslachtsnaam (Kind, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:kindHist-naam;
+    brp:behoortTotGroep brpgrp:kindHist-naam;
+    brp:element brpelm:voorvoegselGeslachtsnaam;
+    brp:rubrieknummer "59.02.30";
+    brp:historischeVariantVan brprub:voorvoegselGeslachtsnaamKind.
+brprub:geslachtsnaamKindHist rdfs:label "Geslachtsnaam (Kind, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:kindHist-naam;
+    brp:behoortTotGroep brpgrp:kindHist-naam;
+    brp:element brpelm:geslachtsnaam;
+    brp:rubrieknummer "59.02.40";
+    brp:historischeVariantVan brprub:geslachtsnaamKind.
+brprub:registergemeenteAkteKindHist rdfs:label "Registergemeente akte (Kind, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:kindHist-akte;
+    brp:behoortTotGroep brpgrp:kindHist-akte;
+    brp:element brpelm:registergemeenteAkte;
+    brp:rubrieknummer "59.81.10";
+    brp:historischeVariantVan brprub:registergemeenteAkteKind.
+brpgrp:kindHist-akte rdfs:label "Akte"@nl, "Akte (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:kindHist;
+    brp:historischeVariantVan brpgrp:kind-akte;
+    skos:notation "59.81";
+    brp:behoortTotCategorie brpcat:kindHist.
+brprub:aktenummerKindHist rdfs:label "Aktenummer (Kind, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:kindHist-akte;
+    brp:behoortTotGroep brpgrp:kindHist-akte;
+    brp:element brpelm:aktenummer;
+    brp:rubrieknummer "59.81.20";
+    brp:historischeVariantVan brprub:aktenummerKind.
+brprub:gemeenteDocumentKindHist rdfs:label "Gemeente document (Kind, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:kindHist-document;
+    brp:behoortTotGroep brpgrp:kindHist-document;
+    brp:element brpelm:gemeenteDocument;
+    brp:rubrieknummer "59.82.10";
+    brp:historischeVariantVan brprub:gemeenteDocumentKind.
+brpgrp:kindHist-document rdfs:label "Document"@nl, "Document (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:kindHist;
+    brp:historischeVariantVan brpgrp:kind-document;
+    skos:notation "59.82";
+    brp:behoortTotCategorie brpcat:kindHist.
+brprub:datumDocumentKindHist rdfs:label "Datum document (Kind, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:kindHist-document;
+    brp:behoortTotGroep brpgrp:kindHist-document;
+    brp:element brpelm:datumDocument;
+    brp:rubrieknummer "59.82.20";
+    brp:historischeVariantVan brprub:datumDocumentKind.
+brprub:beschrijvingDocumentKindHist rdfs:label "Beschrijving document (Kind, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:kindHist-document;
+    brp:behoortTotGroep brpgrp:kindHist-document;
+    brp:element brpelm:beschrijvingDocument;
+    brp:rubrieknummer "59.82.30";
+    brp:historischeVariantVan brprub:beschrijvingDocumentKind.
+brprub:ingangsdatumGeldigheidKindHist rdfs:label "Ingangsdatum geldigheid (Kind, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:kindHist-geldigheid;
+    brp:behoortTotGroep brpgrp:kindHist-geldigheid;
+    brp:element brpelm:ingangsdatumGeldigheid;
+    brp:rubrieknummer "59.85.10";
+    brp:historischeVariantVan brprub:ingangsdatumGeldigheidKind.
+brpgrp:kindHist-geldigheid rdfs:label "Geldigheid"@nl, "Geldigheid (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:kindHist;
+    brp:historischeVariantVan brpgrp:kind-geldigheid;
+    skos:notation "59.85";
+    brp:behoortTotCategorie brpcat:kindHist.
+brprub:datumVanOpnemingKindHist rdfs:label "Datum van opneming (Kind, historisch)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:kindHist-opneming;
+    brp:behoortTotGroep brpgrp:kindHist-opneming;
+    brp:element brpelm:datumVanOpneming;
+    brp:rubrieknummer "59.86.10";
+    brp:historischeVariantVan brprub:datumVanOpnemingKind.
+brpgrp:kindHist-opneming rdfs:label "Opneming"@nl, "Opneming (historisch)"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:kindHist;
+    brp:historischeVariantVan brpgrp:kind-opneming;
+    skos:notation "59.86";
+    brp:behoortTotCategorie brpcat:kindHist.
+brprub:soortNederlandsReisdocumentReisdocument rdfs:label "Soort Nederlands reisdocument (Reisdocument)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:reisdocument-nederlandsReisdocument;
+    brp:behoortTotGroep brpgrp:reisdocument-nederlandsReisdocument;
+    brp:element brpelm:soortNederlandsReisdocument;
+    brp:rubrieknummer "12.35.10".
+brpgrp:reisdocument-nederlandsReisdocument rdfs:label "Nederlands reisdocument"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:reisdocument;
+    skos:notation "12.35";
+    brp:behoortTotCategorie brpcat:reisdocument.
+brpelm:soortNederlandsReisdocument rdfs:label "Soort Nederlands reisdocument"@nl;
+    a brp:Element;
+    rdfs:comment "Soort Nederlands reisdocument (code uit Tabel 48)."@nl.
+brprub:nummerNederlandsReisdocumentReisdocument rdfs:label "Nummer Nederlands reisdocument (Reisdocument)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:reisdocument-nederlandsReisdocument;
+    brp:behoortTotGroep brpgrp:reisdocument-nederlandsReisdocument;
+    brp:element brpelm:nummerNederlandsReisdocument;
+    brp:rubrieknummer "12.35.20".
+brpelm:nummerNederlandsReisdocument rdfs:label "Nummer Nederlands reisdocument"@nl;
+    a brp:Element;
+    rdfs:comment "Het nummer van het Nederlandse reisdocument."@nl.
+brprub:datumUitgifteNederlandsReisdocumentReisdocument rdfs:label "Datum uitgifte Nederlands reisdocument (Reisdocument)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:reisdocument-nederlandsReisdocument;
+    brp:behoortTotGroep brpgrp:reisdocument-nederlandsReisdocument;
+    brp:element brpelm:datumUitgifteNederlandsReisdocument;
+    brp:rubrieknummer "12.35.30".
+brpelm:datumUitgifteNederlandsReisdocument rdfs:label "Datum uitgifte Nederlands reisdocument"@nl;
+    a brp:Element;
+    rdfs:comment "De datum waarop het reisdocument is uitgegeven."@nl.
+brprub:autoriteitVanAfgifteNederlandsReisdocumentReisdocument rdfs:label "Autoriteit van afgifte Nederlands reisdocument (Reisdocument)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:reisdocument-nederlandsReisdocument;
+    brp:behoortTotGroep brpgrp:reisdocument-nederlandsReisdocument;
+    brp:element brpelm:autoriteitVanAfgifteNederlandsReisdocument;
+    brp:rubrieknummer "12.35.40".
+brpelm:autoriteitVanAfgifteNederlandsReisdocument rdfs:label "Autoriteit van afgifte Nederlands reisdocument"@nl;
+    a brp:Element;
+    rdfs:comment "De autoriteit die het reisdocument heeft afgegeven."@nl.
+brprub:datumEindeGeldigheidNederlandsReisdocumentReisdocument rdfs:label "Datum einde geldigheid Nederlands reisdocument (Reisdocument)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:reisdocument-nederlandsReisdocument;
+    brp:behoortTotGroep brpgrp:reisdocument-nederlandsReisdocument;
+    brp:element brpelm:datumEindeGeldigheidNederlandsReisdocument;
+    brp:rubrieknummer "12.35.50".
+brpelm:datumEindeGeldigheidNederlandsReisdocument rdfs:label "Datum einde geldigheid Nederlands reisdocument"@nl;
+    a brp:Element;
+    rdfs:comment "De datum waarop de geldigheid van het reisdocument eindigt."@nl.
+brprub:datumInhoudingVermissingNederlandsReisdocumentReisdocument rdfs:label "Datum inhouding/vermissing Nederlands reisdocument (Reisdocument)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:reisdocument-nederlandsReisdocument;
+    brp:behoortTotGroep brpgrp:reisdocument-nederlandsReisdocument;
+    brp:element brpelm:datumInhoudingVermissingNederlandsReisdocument;
+    brp:rubrieknummer "12.35.60".
+brpelm:datumInhoudingVermissingNederlandsReisdocument rdfs:label "Datum inhouding/vermissing Nederlands reisdocument"@nl;
+    a brp:Element;
+    rdfs:comment "De datum van inhouding of vermissing van het reisdocument."@nl.
+brprub:aanduidingInhoudingVermissingNederlandsReisdocumentReisdocument rdfs:label "Aanduiding inhouding/vermissing Nederlands reisdocument (Reisdocument)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:reisdocument-nederlandsReisdocument;
+    brp:behoortTotGroep brpgrp:reisdocument-nederlandsReisdocument;
+    brp:element brpelm:aanduidingInhoudingVermissingNederlandsReisdocument;
+    brp:rubrieknummer "12.35.70".
+brpelm:aanduidingInhoudingVermissingNederlandsReisdocument rdfs:label "Aanduiding inhouding/vermissing Nederlands reisdocument"@nl;
+    a brp:Element;
+    rdfs:comment "Aanduiding of het reisdocument is ingehouden (I) of vermist (V)."@nl.
+brprub:signaleringSreisdocumentReisdocument rdfs:label "Signalering met betrekking tot verstrekken Nederlands reisdocument (Reisdocument)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:reisdocument-signalering;
+    brp:behoortTotGroep brpgrp:reisdocument-signalering;
+    brp:element brpelm:signaleringSreisdocument;
+    brp:rubrieknummer "12.36.10".
+brpgrp:reisdocument-signalering rdfs:label "Signalering"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:reisdocument;
+    skos:notation "12.36";
+    brp:behoortTotCategorie brpcat:reisdocument.
+brpelm:signaleringSreisdocument rdfs:label "Signalering met betrekking tot verstrekken Nederlands reisdocument"@nl;
+    a brp:Element;
+    rdfs:comment "Signalering met betrekking tot het verstrekken van een Nederlands reisdocument."@nl.
+brprub:gemeenteDocumentReisdocument rdfs:label "Gemeente document (Reisdocument)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:reisdocument-document;
+    brp:behoortTotGroep brpgrp:reisdocument-document;
+    brp:element brpelm:gemeenteDocument;
+    brp:rubrieknummer "12.82.10".
+brpgrp:reisdocument-document rdfs:label "Document"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:reisdocument;
+    skos:notation "12.82";
+    brp:behoortTotCategorie brpcat:reisdocument.
+brprub:datumDocumentReisdocument rdfs:label "Datum document (Reisdocument)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:reisdocument-document;
+    brp:behoortTotGroep brpgrp:reisdocument-document;
+    brp:element brpelm:datumDocument;
+    brp:rubrieknummer "12.82.20".
+brprub:beschrijvingDocumentReisdocument rdfs:label "Beschrijving document (Reisdocument)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:reisdocument-document;
+    brp:behoortTotGroep brpgrp:reisdocument-document;
+    brp:element brpelm:beschrijvingDocument;
+    brp:rubrieknummer "12.82.30".
+brprub:ingangsdatumGeldigheidReisdocument rdfs:label "Ingangsdatum geldigheid (Reisdocument)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:reisdocument-geldigheid;
+    brp:behoortTotGroep brpgrp:reisdocument-geldigheid;
+    brp:element brpelm:ingangsdatumGeldigheid;
+    brp:rubrieknummer "12.85.10".
+brpgrp:reisdocument-geldigheid rdfs:label "Geldigheid"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:reisdocument;
+    skos:notation "12.85";
+    brp:behoortTotCategorie brpcat:reisdocument.
+brprub:datumVanOpnemingReisdocument rdfs:label "Datum van opneming (Reisdocument)"@nl;
+    a brp:Rubriek, odrl:Asset;
+    odrl:partOf brpgrp:reisdocument-opneming;
+    brp:behoortTotGroep brpgrp:reisdocument-opneming;
+    brp:element brpelm:datumVanOpneming;
+    brp:rubrieknummer "12.86.10".
+brpgrp:reisdocument-opneming rdfs:label "Opneming"@nl;
+    a brp:Groep, odrl:AssetCollection;
+    odrl:partOf brpcat:reisdocument;
+    skos:notation "12.86";
+    brp:behoortTotCategorie brpcat:reisdocument.
+brp:Groep rdfs:label "Group"@en, "Groep"@nl.
+brpcat:persoon rdfs:label "Persoon"@nl;
+    a odrl:AssetCollection, brp:Categorie;
+    skos:notation "01";
+    rdfs:comment "Gegevens over de ingeschrevene."@nl.
+brp:Element rdfs:label "Element"@en, "Element"@nl.
+brpcat:overlijden rdfs:label "Overlijden"@nl;
+    a odrl:AssetCollection, brp:Categorie;
+    skos:notation "06";
+    rdfs:comment "Gegevens over het overlijden van de ingeschrevene."@nl.
+brpcat:inschrijving rdfs:label "Inschrijving"@nl;
+    a odrl:AssetCollection, brp:Categorie;
+    skos:notation "07";
+    rdfs:comment "Gegevens over de opneming en de status van de persoonslijst."@nl.
+brpcat:verblijfplaats rdfs:label "Verblijfplaats"@nl;
+    a odrl:AssetCollection, brp:Categorie;
+    skos:notation "08";
+    rdfs:comment "Gegevens over het verblijf en adres van de ingeschrevene."@nl.
+brpcat:huwelijkPartnerschap rdfs:label "Huwelijk/geregistreerd partnerschap"@nl;
+    a odrl:AssetCollection, brp:Categorie;
+    skos:notation "05";
+    rdfs:comment "Gegevens over een gesloten of ontbonden huwelijk of geregistreerd partnerschap van de ingeschrevene."@nl.
+brpcat:tijdelijkVerblijfsadres rdfs:label "Tijdelijk verblijfsadres"@nl;
+    a odrl:AssetCollection, brp:Categorie;
+    skos:notation "16";
+    rdfs:comment "Adres waar betrokkene tijdelijk woont tijdens diens verblijf in Nederland."@nl.
+brpcat:tijdelijkVerblijfsadresHist rdfs:label "Tijdelijk verblijfsadres (historisch)"@nl;
+    a odrl:AssetCollection, brp:Categorie;
+    brp:historischeVariantVan brpcat:tijdelijkVerblijfsadres;
+    skos:notation "66";
+    rdfs:comment "Historische variant: adres waar betrokkene tijdelijk woont tijdens diens verblijf in nederland."@nl.
+brpcat:contactgegevens rdfs:label "Contactgegevens"@nl;
+    a odrl:AssetCollection, brp:Categorie;
+    skos:notation "17";
+    rdfs:comment "Telefoonnummer en/of e-mailadres waarop betrokkene bereikbaar is."@nl.
+brpcat:verblijfplaatsHist rdfs:label "Verblijfplaats (historisch)"@nl;
+    a odrl:AssetCollection, brp:Categorie;
+    brp:historischeVariantVan brpcat:verblijfplaats;
+    skos:notation "58";
+    rdfs:comment "Historische variant: gegevens over het verblijf en adres van de ingeschrevene."@nl.
+brpcat:persoonHist rdfs:label "Persoon (historisch)"@nl;
+    a odrl:AssetCollection, brp:Categorie;
+    brp:historischeVariantVan brpcat:persoon;
+    skos:notation "51";
+    rdfs:comment "Historische variant: gegevens over de ingeschrevene."@nl.
+brpcat:nationaliteit rdfs:label "Nationaliteit"@nl;
+    a odrl:AssetCollection, brp:Categorie;
+    skos:notation "04";
+    rdfs:comment "Gegevens over een nationaliteit van de ingeschrevene."@nl.
+brpcat:verblijfstitel rdfs:label "Verblijfstitel"@nl;
+    a odrl:AssetCollection, brp:Categorie;
+    skos:notation "10";
+    rdfs:comment "Gegevens over de verblijfsrechtelijke status van de ingeschrevene."@nl.
+brpcat:verblijfstitelHist rdfs:label "Verblijfstitel (historisch)"@nl;
+    a odrl:AssetCollection, brp:Categorie;
+    brp:historischeVariantVan brpcat:verblijfstitel;
+    skos:notation "60";
+    rdfs:comment "Historische variant: gegevens over de verblijfsrechtelijke status van de ingeschrevene."@nl.
+brpcat:ouder1 rdfs:label "Ouder1"@nl;
+    a odrl:AssetCollection, brp:Categorie;
+    skos:notation "02";
+    rdfs:comment "Gegevens over de ouder1 van de ingeschrevene."@nl.
+brpcat:ouder2 rdfs:label "Ouder2"@nl;
+    a odrl:AssetCollection, brp:Categorie;
+    skos:notation "03";
+    rdfs:comment "Gegevens over de ouder2 van de ingeschrevene."@nl.
+brpcat:gezagsverhouding rdfs:label "Gezagsverhouding"@nl;
+    a odrl:AssetCollection, brp:Categorie;
+    skos:notation "11";
+    rdfs:comment "Gegevens betreffende het gezag over de ingeschrevene."@nl.
+brpcat:kind rdfs:label "Kind"@nl;
+    a odrl:AssetCollection, brp:Categorie;
+    skos:notation "09";
+    rdfs:comment "Gegevens over een kind van de ingeschrevene."@nl.
+brpcat:kiesrecht rdfs:label "Kiesrecht"@nl;
+    a odrl:AssetCollection, brp:Categorie;
+    skos:notation "13";
+    rdfs:comment "Gegevens over het kiesrecht van de ingeschrevene."@nl.
+brpcat:huwelijkPartnerschapHist rdfs:label "Huwelijk/geregistreerd partnerschap (historisch)"@nl;
+    a odrl:AssetCollection, brp:Categorie;
+    brp:historischeVariantVan brpcat:huwelijkPartnerschap;
+    skos:notation "55";
+    rdfs:comment "Historische variant: gegevens over een gesloten of ontbonden huwelijk of geregistreerd partnerschap van de ingeschrevene."@nl.
+brpcat:ouder1Hist rdfs:label "Ouder1 (historisch)"@nl;
+    a odrl:AssetCollection, brp:Categorie;
+    brp:historischeVariantVan brpcat:ouder1;
+    skos:notation "52";
+    rdfs:comment "Historische variant: gegevens over de ouder1 van de ingeschrevene."@nl.
+brpcat:ouder2Hist rdfs:label "Ouder2 (historisch)"@nl;
+    a odrl:AssetCollection, brp:Categorie;
+    brp:historischeVariantVan brpcat:ouder2;
+    skos:notation "53";
+    rdfs:comment "Historische variant: gegevens over de ouder2 van de ingeschrevene."@nl.
+brpcat:nationaliteitHist rdfs:label "Nationaliteit (historisch)"@nl;
+    a odrl:AssetCollection, brp:Categorie;
+    brp:historischeVariantVan brpcat:nationaliteit;
+    skos:notation "54";
+    rdfs:comment "Historische variant: gegevens over een nationaliteit van de ingeschrevene."@nl.
+brpcat:kindHist rdfs:label "Kind (historisch)"@nl;
+    a odrl:AssetCollection, brp:Categorie;
+    brp:historischeVariantVan brpcat:kind;
+    skos:notation "59";
+    rdfs:comment "Historische variant: gegevens over een kind van de ingeschrevene."@nl.
+brpcat:reisdocument rdfs:label "Reisdocument"@nl;
+    a odrl:AssetCollection, brp:Categorie;
+    skos:notation "12";
+    rdfs:comment "Gegevens over een reisdocument van de ingeschrevene."@nl.
+brp:Categorie rdfs:label "Category"@en, "Categorie"@nl.
+brp:kv rdfs:label "Komt voor"@nl;
+    a odrl:Operator;
+    rdfs:comment "De rubriek heeft een waarde op de persoonslijst (is niet leeg)."@nl.
+brp:knv rdfs:label "Komt niet voor"@nl;
+    a odrl:Operator;
+    rdfs:comment "De rubriek heeft geen waarde op de persoonslijst (is leeg)."@nl.
+<https://identifier.overheid.nl/tooi/id/oorg/oorg10103> rdfs:label "Rijksdienst voor Identiteitsgegevens"@nl;
+    skos:prefLabel "Rijksdienst voor Identiteitsgegevens"@nl;
+    dct:source <https://identifier.overheid.nl/tooi/id/oorg/oorg10103>;
+    skos:altLabel "RvIG"@nl.
+apaanbod:duty-inlichtingenplicht rdfs:label "Inlichtingenplicht bij gewijzigde taak of regelgeving"@nl;
+    a odrl:Duty;
+    rdfs:comment "Standaardbepaling in de slotbepalingen van het autorisatiebesluit zelf (aangetroffen in 1.180 van de 1.411 onderzochte besluiten; het artikelnummer verschilt per besluit). De formulering luidt: \"1. De gemeente verstrekt aan de staatssecretaris van Binnenlandse Zaken en Koninkrijksrelaties onverwijld alle nieuw gebleken informatie die betrekking heeft op hetgeen geregeld is in dit besluit. 2. Deze informatie omvat in ieder geval wijzigingen in: a. de taak of de wijze van uitvoering van de taak van de gemeente; b. de regelgeving ten aanzien van de taak of de wijze van uitvoering van de taak van de gemeente; c. de gegevens uit de basisregistratie personen die noodzakelijk zijn voor de uitvoering van de taak van de gemeente.\" (waar \"de gemeente\" staat, noemt het besluit de betrokken afnemer). De bepaling houdt de autorisatie actueel: wijzigt de taak, de regelgeving of de gegevensbehoefte, dan moet het besluit worden aangepast."@nl;
+    dpv:hasLegalBasis <https://wetten.overheid.nl/jci1.3:c:BWBR0033715&artikel=3.2>;
+    odrl:action _:n3-3.
+_:n3-3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> odrl:inform;
+    odrl:informedParty <https://identifier.overheid.nl/tooi/id/oorg/oorg10103>.
+apaanbod:duty-aansluitvoorwaarden rdfs:label "Naleving aansluitvoorwaarden en beveiligingseisen (LO BRP)"@nl;
+    a odrl:Duty;
+    rdfs:comment "De afnemer zorgt dat de berichtuitwisseling met de BRP aan zijn kant verloopt volgens de regels van het stelsel: aansluiting, berichtenverkeer, beheer en informatiebeveiliging. De keten is: artikel 1.11, derde lid, Wet BRP legt die zorgplicht bij \"het overheidsorgaan waaraan of de derde aan wie systematisch gegevens worden verstrekt\"; artikel 1.10 Wet BRP wijst voor de inhoud van die regels naar een algemene maatregel van bestuur; en artikel 5 van het Besluit BRP bepaalt dat een overheidsorgaan en een derde \"er zorg voor dragen dat zij uitvoering geven aan de wet op een wijze die overeenstemt met de systeembeschrijving\". Die systeembeschrijving is het Logisch Ontwerp BRP (artikel 1 jo. 4 Besluit BRP), waarin de concrete aansluit- en beveiligingseisen staan. De minister kan onderzoeken of een afnemer aan die regels voldoet (artikel 1.12 Wet BRP). Deze verplichting staat niet in het autorisatiebesluit zelf; zij volgt rechtstreeks uit wet en besluit."@nl;
+    dct:source <https://www.rvig.nl/lo-brp>;
+    dpv:hasLegalBasis <https://wetten.overheid.nl/jci1.3:c:BWBR0033715&artikel=1.11>, <https://wetten.overheid.nl/jci1.3:c:BWBR0033715&artikel=1.10>, <https://wetten.overheid.nl/jci1.3:c:BWBR0034306&artikel=5>;
+    odrl:action _:n3-0.
+_:n3-0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> apaanbod:nalevenAansluitvoorwaarden.
+apaanbod:duty-protocollering rdfs:label "Protocollering van verstrekkingen (verstrekkersrol)"@nl;
+    a odrl:Duty;
+    rdfs:comment "Artikel 3.11, eerste lid, Wet BRP: \"Het bestuursorgaan dat verantwoordelijk is voor de verstrekking van gegevens houdt gedurende twintig jaren volgend op de verstrekking aantekening van de verstrekking.\" Die plicht rust op de partij die verstrekt — volgens artikel 1.5 Wet BRP de minister voor de centrale voorzieningen en het college van burgemeester en wethouders voor de verstrekkingen die het zelf doet — en is de basis van het inzagerecht van de burger (artikel 3.22, tweede lid, onder a, Wet BRP). LET OP de rolwissel: een gemeente is in dit stelsel tegelijk afnemer (zij krijgt op grond van dit besluit gegevens verstrekt) en bronhouder/verstrekker (zij verstrekt zelf uit de gemeentelijke voorziening, artikel 3.5 e.v.). Protocolleren hoort bij die tweede rol; het volgt niet uit dit autorisatiebesluit. Voor het vastleggen en verantwoorden van het eigen GEBRUIK van ontvangen gegevens gelden de AVG-verantwoordingsplicht (artikel 5, tweede lid, en artikel 30 AVG) en het onderzoeksrecht van de minister (artikel 1.12 Wet BRP)."@nl;
+    dpv:hasLegalBasis <https://wetten.overheid.nl/jci1.3:c:BWBR0033715&artikel=3.11>, <https://wetten.overheid.nl/jci1.3:c:BWBR0033715&artikel=1.5>, <https://wetten.overheid.nl/jci1.3:c:BWBR0033715&artikel=1.12>;
+    odrl:action _:n3-1.
+_:n3-1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> apaanbod:protocolleren.
+apaanbod:duty-geheimhouding rdfs:label "Doelgebonden gebruik en geheimhouding"@nl;
+    a odrl:Duty;
+    rdfs:comment "Twee normen die in de praktijk samen optreden. (1) Doelbinding — het autorisatiebesluit zelf staat alleen een verzoek toe voor de daarin omschreven taak: de standaardformulering luidt dat de afnemer \"slechts om een gegeven verzoekt dat is opgenomen in de bijlage bij dit besluit indien het verzoek gericht is op\" de in het besluit genoemde personen en taken. Welke doelen dat per afnemer zijn, staat als doelbinding bij de afzonderlijke toestemmingen (odrl:purpose met de wettelijke taak als grondslag). (2) Geheimhouding — artikel 1.13 Wet BRP verklaart artikel 37 van de Uitvoeringswet AVG van overeenkomstige toepassing: wie kennisneemt van de persoonsgegevens is verplicht tot geheimhouding, behoudens de wettelijke uitzonderingen. Verder gebruik of doorlevering buiten de omschreven taak valt daarmee buiten wat dit besluit toestaat."@nl;
+    dpv:hasLegalBasis <https://wetten.overheid.nl/jci1.3:c:BWBR0033715&artikel=3.2>, <https://wetten.overheid.nl/jci1.3:c:BWBR0033715&artikel=1.13>, <https://wetten.overheid.nl/jci1.3:c:BWBR0040940&artikel=37>;
+    odrl:action _:n3-2.
+_:n3-2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> apaanbod:geheimhouden.

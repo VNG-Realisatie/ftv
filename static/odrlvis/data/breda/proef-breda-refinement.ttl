@@ -1,0 +1,524 @@
+@prefix odrl:   <http://www.w3.org/ns/odrl/2/> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix dpv:    <https://w3id.org/dpv#> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix apnl:   <https://standaarden.overheid.nl/odrl-ap-nl/> .
+@prefix brp:    <https://data.rijksoverheid.nl/brp/def#> .
+@prefix brprub: <https://data.rijksoverheid.nl/brp/rubriek/> .
+@prefix brpgrp: <https://data.rijksoverheid.nl/brp/groep/> .
+@prefix brpcat: <https://data.rijksoverheid.nl/brp/categorie/> .
+@prefix brpafn: <https://data.rijksoverheid.nl/brp/afnemer/> .
+@prefix brpaut: <https://data.rijksoverheid.nl/brp/autorisatie/> .
+@prefix oorg:   <https://identifier.overheid.nl/tooi/id/oorg/> .
+@prefix apb:    <https://data.rijksoverheid.nl/brp/ap-nl/> .
+@prefix apaanbod: <https://data.rijksoverheid.nl/brp/ap-nl/aanbod/> .
+@prefix apovk:  <https://data.rijksoverheid.nl/brp/ap-nl/overeenkomst/> .
+@prefix apper:  <https://data.rijksoverheid.nl/brp/ap-nl/permissie/> .
+@prefix apset:  <https://data.rijksoverheid.nl/brp/ap-nl/gegevensset/> .
+@prefix apcon:  <https://data.rijksoverheid.nl/brp/ap-nl/voorwaarde/> .
+@prefix apdoel: <https://data.rijksoverheid.nl/brp/ap-nl/doel/> .
+@prefix apdoc:  <https://data.rijksoverheid.nl/brp/ap-nl/besluitdocument/> .
+@prefix apvz:   <https://data.rijksoverheid.nl/brp/ap-nl/verzoek/> .
+@prefix apkan:  <https://data.rijksoverheid.nl/brp/ap-nl/kanaal/> .
+@prefix apdg:   <https://data.rijksoverheid.nl/brp/ap-nl/doelgroep/> .
+@prefix apart:  <https://data.rijksoverheid.nl/brp/ap-nl/artefact/> .
+@prefix applicht: <https://data.rijksoverheid.nl/brp/ap-nl/verplichting/> .
+
+
+# =============================================================================
+# PROEF-TTL (C) — BREDA 510149 IN REFINEMENT-VORM
+#
+# Uittreksel: 10 permissions over 4 taken, gekozen zodat alle vier de
+# verstrekkingsvormen, de plaatsingshandeling, de voorwaardelijke ('v') sets en
+# een burgerzakentaak erin voorkomen. Het volledige besluit telt 33 taken.
+#
+# Nesting per permission: WAAROM (odrl:purpose) -> HOE (odrl:deliveryChannel)
+# -> OVER WIE (doelgroep) -> WAT (odrl:target = gedeelde gegevensset-IRI).
+#
+# Handmatig proefmateriaal voor de koppelvlak-refinement-analyse.
+# Valideer samen met proef-aanbod-refinement.ttl, proef-gaba-gegevenssets.ttl
+# en ttl/offers.ttl (voor de vier duties en apaanbod:doelgroepbeginsel).
+# =============================================================================
+
+apovk:510149-r-v13 a odrl:Agreement ;
+    odrl:uid apovk:510149-r-v13 ;
+    dct:title "Gemeente Breda/Algemene gemeentetaken (proef: refinement-vorm)"@nl ;
+    dct:description "Regelt de systematische verstrekking van BRP-gegevens aan de gemeente Breda. Elke permission bindt een taak (doel) aan een verstrekkingsvorm (kanaal), een doelgroep en de gegevensset die het besluitartikel voor die combinatie noemt. Afnemersindicatie 510149, besluitversie 13."@nl ;
+    skos:editorialNote "PROEFMODELLERING, geen productiedata. IRI apovk:510149-r-v13 wijkt bewust af van de productie-IRI apovk:510149-v13 zodat beide naast elkaar geladen kunnen worden."@nl ,
+        "Uittreksel: 10 van de circa 55 (taak, kanaal)-cellen van dit besluit."@nl ;
+    dct:publisher oorg:oorg10103 ;
+    dct:issued "2026-01-01"^^xsd:date ;
+    odrl:profile apnl:profiel ;
+    prov:wasDerivedFrom apaanbod:systematischeVerstrekking ,
+        brpaut:510149-v13 ,
+        <https://publicaties.rvig.nl/sites/default/files/Besluit/GABA%20BRP/510149%20Autorisatiebesluit%20Gemeente%20Breda%20BRP%20%28GABA%202024%29%2001-07-2024.pdf> ,
+        apdoc:2024-0000366479 ,
+        apdoc:gegevensoverzicht-gemeenten-v11 ,
+        apvz:2024-0000351115 ;
+    dct:valid "2026-01-01/.." ;
+    prov:specializationOf apovk:510149 ;
+    odrl:assigner oorg:oorg10103 ;
+    odrl:assignee brpafn:510149 ;
+    odrl:obligation
+        apaanbod:duty-inlichtingenplicht ,
+        apaanbod:duty-aansluitvoorwaarden ,
+        apaanbod:duty-protocollering ,
+        apaanbod:duty-geheimhouding ;
+    odrl:permission
+        apper:510149-v13-r-belastingen-belastingplichtige-adhoc ,
+        apper:510149-v13-r-belastingen-belastingplichtige-adhoc-overleden ,
+        apper:510149-v13-r-belastingen-erfgenaam-adhoc ,
+        apper:510149-v13-r-belastingen-belastingplichtige-spontaan ,
+        apper:510149-v13-r-belastingen-belastingplichtige-plaatsing ,
+        apper:510149-v13-r-huisvesting-houder-adhoc ,
+        apper:510149-v13-r-huisvesting-houder-adres ,
+        apper:510149-v13-r-handhaving-betrokkene-adhoc ,
+        apper:510149-v13-r-handhaving-nietingezetene-adres-tijdelijk ,
+        apper:510149-v13-r-burgerlijke-stand-adhoc .
+
+# --- voorwaarde bij de 'v'-sets ----------------------------------------------
+
+apcon:510149-v13-r-ingeschrevene-overleden a odrl:Constraint ;
+    rdfs:label "De ingeschrevene is overleden"@nl ;
+    rdfs:comment "Artikel 3, tweede lid, van het besluit. In de Matrix is deze inperking alleen zichtbaar als de markering 'v' in plaats van 'x'; de Matrix zegt niet welke voorwaarde het is."@nl ;
+    odrl:leftOperand brprub:datumOverlijdenOverlijden ;
+    odrl:operator brp:kv ;
+    prov:wasDerivedFrom <https://publicaties.rvig.nl/sites/default/files/Besluit/GABA%20BRP/510149%20Autorisatiebesluit%20Gemeente%20Breda%20BRP%20%28GABA%202024%29%2001-07-2024.pdf#page=2> .
+
+
+apper:510149-v13-r-belastingen-belastingplichtige-adhoc a odrl:Permission ;
+    odrl:uid apper:510149-v13-r-belastingen-belastingplichtige-adhoc ;
+    dct:title "Belastingplichtige — verstrekking op verzoek"@nl ;
+    prov:wasDerivedFrom apaanbod:systematischeVerstrekking ;
+    dpv:hasLegalBasis <https://wetten.overheid.nl/BWBR0005416> ;
+    prov:hadPrimarySource <https://publicaties.rvig.nl/sites/default/files/Besluit/GABA%20BRP/510149%20Autorisatiebesluit%20Gemeente%20Breda%20BRP%20%28GABA%202024%29%2001-07-2024.pdf#page=2> ;
+    rdfs:comment "Grondslag in het besluit: artikel 3, eerste lid — \"De gemeente mag verzoeken om een gegeven in gegevensset 1, 2, 3, 5, 6, 13, 14 of 15\"."@nl ;
+    skos:editorialNote "Doorsnede doel x kanaal x gegevensset komt rechtstreeks uit de bron: het besluitartikel noemt de gegevenssets binnen een artikel dat de verstrekkingsvorm benoemt (\"Verzoek verstrekking gegevens ingeschrevene\"). De GABA Matrix, tabblad (3), geeft voor de rij Gemeentelijke belastingen - Belastingplichtige dezelfde sets 1, 2, 3, 5 en 6 met een x en 13, 14 en 15 met een v (onder voorwaarden)."@nl ;
+    odrl:action [ rdf:value odrl:distribute ;
+        odrl:refinement [ a odrl:Constraint ;
+            rdfs:comment "WAAROM — de taak waarvoor het besluit de verstrekking toestaat."@nl ;
+            odrl:leftOperand odrl:purpose ;
+            odrl:operator odrl:eq ;
+            odrl:rightOperand apdoel:gemeentelijke-belastingen ] ;
+        odrl:refinement [ a odrl:Constraint ;
+            rdfs:comment "HOE — het koppelvlak; geen aparte bevoegdheid maar een uitvoeringsvorm van dezelfde systematische verstrekking."@nl ;
+            odrl:leftOperand odrl:deliveryChannel ;
+            odrl:operator odrl:eq ;
+            odrl:rightOperand apkan:adhoc ] ;
+        odrl:refinement [ a odrl:Constraint ;
+            rdfs:comment "OVER WIE — de doelgroep uit het besluit en de Matrix."@nl ;
+            odrl:leftOperand apaanbod:doelgroepVanIngeschrevene ;
+            odrl:operator odrl:eq ;
+            odrl:rightOperand apdg:belastingplichtige ] ;
+        odrl:refinement [ a odrl:Constraint ;
+            rdfs:comment "WAARLANGS — de machine-uitvoerbare toets: het verwerkingsverzoek moet voldoen aan de module die deze regels afdwingt. De module verklaart zelf (prov:wasDerivedFrom, zie proef-dekking-breda.ttl) welke regels zij uitwerkt."@nl ;
+            odrl:leftOperand apnl:verwerkingsverzoek ;
+            odrl:operator apnl:conformsToPolicy ;
+            odrl:rightOperand apart:authz-gaba-belastingen ] ] ;
+    odrl:target apset:gaba-combi-01-02-03-05-06-v11 ;
+    odrl:duty applicht:510149-v13-d-doeladministratie ,
+        applicht:510149-v13-d-vernietigen-na-afhandeling .
+
+apper:510149-v13-r-belastingen-belastingplichtige-adhoc-overleden a odrl:Permission ;
+    odrl:uid apper:510149-v13-r-belastingen-belastingplichtige-adhoc-overleden ;
+    dct:title "Overleden belastingplichtige — verstrekking op verzoek (aanvullende sets)"@nl ;
+    prov:wasDerivedFrom apaanbod:systematischeVerstrekking ;
+    dpv:hasLegalBasis <https://wetten.overheid.nl/BWBR0005416> ;
+    prov:hadPrimarySource <https://publicaties.rvig.nl/sites/default/files/Besluit/GABA%20BRP/510149%20Autorisatiebesluit%20Gemeente%20Breda%20BRP%20%28GABA%202024%29%2001-07-2024.pdf#page=2> ;
+    rdfs:comment "Grondslag in het besluit: artikel 3, tweede lid — \"Onverminderd het eerste lid mag de gemeente slechts om een gegeven verzoeken in gegevensset 13, 14 of 15 als de ingeschrevene [...] is overleden\"."@nl ;
+    skos:editorialNote "Dit is de 'v'-markering uit de Matrix expliciet gemaakt: sets 13, 14 en 15 staan bij deze rij als v (onder voorwaarden), niet als x. De voorwaarde zelf staat alleen in het besluit; de Matrix zegt niet welke voorwaarde het is."@nl ;
+    odrl:action [ rdf:value odrl:distribute ;
+        odrl:refinement [ a odrl:Constraint ;
+            rdfs:comment "WAAROM — de taak waarvoor het besluit de verstrekking toestaat."@nl ;
+            odrl:leftOperand odrl:purpose ;
+            odrl:operator odrl:eq ;
+            odrl:rightOperand apdoel:gemeentelijke-belastingen ] ;
+        odrl:refinement [ a odrl:Constraint ;
+            rdfs:comment "HOE — het koppelvlak; geen aparte bevoegdheid maar een uitvoeringsvorm van dezelfde systematische verstrekking."@nl ;
+            odrl:leftOperand odrl:deliveryChannel ;
+            odrl:operator odrl:eq ;
+            odrl:rightOperand apkan:adhoc ] ;
+        odrl:refinement [ a odrl:Constraint ;
+            rdfs:comment "OVER WIE — de doelgroep uit het besluit en de Matrix."@nl ;
+            odrl:leftOperand apaanbod:doelgroepVanIngeschrevene ;
+            odrl:operator odrl:eq ;
+            odrl:rightOperand apdg:belastingplichtige ] ;
+        odrl:refinement [ a odrl:Constraint ;
+            rdfs:comment "WAARLANGS — de machine-uitvoerbare toets: het verwerkingsverzoek moet voldoen aan de module die deze regels afdwingt. De module verklaart zelf (prov:wasDerivedFrom, zie proef-dekking-breda.ttl) welke regels zij uitwerkt."@nl ;
+            odrl:leftOperand apnl:verwerkingsverzoek ;
+            odrl:operator apnl:conformsToPolicy ;
+            odrl:rightOperand apart:authz-gaba-belastingen ] ] ;
+    odrl:target apset:gaba-combi-13-14-15-v11 ;
+    odrl:constraint apcon:510149-v13-r-ingeschrevene-overleden ;
+    odrl:duty applicht:510149-v13-d-doeladministratie ,
+        applicht:510149-v13-d-vernietigen-na-afhandeling .
+
+apper:510149-v13-r-belastingen-erfgenaam-adhoc a odrl:Permission ;
+    odrl:uid apper:510149-v13-r-belastingen-erfgenaam-adhoc ;
+    dct:title "Erfgenaam belastingplichtige — verstrekking op verzoek"@nl ;
+    prov:wasDerivedFrom apaanbod:systematischeVerstrekking ;
+    dpv:hasLegalBasis <https://wetten.overheid.nl/BWBR0005416> ;
+    prov:hadPrimarySource <https://publicaties.rvig.nl/sites/default/files/Besluit/GABA%20BRP/510149%20Autorisatiebesluit%20Gemeente%20Breda%20BRP%20%28GABA%202024%29%2001-07-2024.pdf#page=3> ;
+    rdfs:comment "Grondslag in het besluit: artikel 3, derde lid — \"De gemeente mag verzoeken om een gegeven in gegevensset 1, 2, 3, 5 of 6 [...] over de ingeschrevene die een erfgenaam is\"."@nl ;
+    skos:editorialNote "AFWIJKING BESLUIT vs MATRIX: het besluit (18 juni 2024) kent deze doelgroep de sets 1, 2, 3, 5 en 6 toe; de GABA Matrix v1.1 (februari 2026) markeert voor de rij Gemeentelijke belastingen - Erfgenaam belastingplichtige alleen de sets 1, 2 en 3. Hier is het BESLUIT gevolgd, want dat is de rechtsgrond; de afwijking is een versieverschil dat moet worden opgelost voordat de Matrix als normatieve bron wordt gebruikt."@nl ;
+    odrl:action [ rdf:value odrl:distribute ;
+        odrl:refinement [ a odrl:Constraint ;
+            rdfs:comment "WAAROM — de taak waarvoor het besluit de verstrekking toestaat."@nl ;
+            odrl:leftOperand odrl:purpose ;
+            odrl:operator odrl:eq ;
+            odrl:rightOperand apdoel:gemeentelijke-belastingen ] ;
+        odrl:refinement [ a odrl:Constraint ;
+            rdfs:comment "HOE — het koppelvlak; geen aparte bevoegdheid maar een uitvoeringsvorm van dezelfde systematische verstrekking."@nl ;
+            odrl:leftOperand odrl:deliveryChannel ;
+            odrl:operator odrl:eq ;
+            odrl:rightOperand apkan:adhoc ] ;
+        odrl:refinement [ a odrl:Constraint ;
+            rdfs:comment "OVER WIE — de doelgroep uit het besluit en de Matrix."@nl ;
+            odrl:leftOperand apaanbod:doelgroepVanIngeschrevene ;
+            odrl:operator odrl:eq ;
+            odrl:rightOperand apdg:erfgenaam-belastingplichtige ] ;
+        odrl:refinement [ a odrl:Constraint ;
+            rdfs:comment "WAARLANGS — de machine-uitvoerbare toets: het verwerkingsverzoek moet voldoen aan de module die deze regels afdwingt. De module verklaart zelf (prov:wasDerivedFrom, zie proef-dekking-breda.ttl) welke regels zij uitwerkt."@nl ;
+            odrl:leftOperand apnl:verwerkingsverzoek ;
+            odrl:operator apnl:conformsToPolicy ;
+            odrl:rightOperand apart:authz-gaba-belastingen ] ] ;
+    odrl:target apset:gaba-combi-01-02-03-05-06-v11 ;
+    odrl:duty applicht:510149-v13-d-doeladministratie ,
+        applicht:510149-v13-d-vernietigen-na-afhandeling .
+
+apper:510149-v13-r-belastingen-belastingplichtige-spontaan a odrl:Permission ;
+    odrl:uid apper:510149-v13-r-belastingen-belastingplichtige-spontaan ;
+    dct:title "Belastingplichtige — spontane verstrekking"@nl ;
+    prov:wasDerivedFrom apaanbod:systematischeVerstrekking ;
+    dpv:hasLegalBasis <https://wetten.overheid.nl/BWBR0005416> ;
+    prov:hadPrimarySource <https://publicaties.rvig.nl/sites/default/files/Besluit/GABA%20BRP/510149%20Autorisatiebesluit%20Gemeente%20Breda%20BRP%20%28GABA%202024%29%2001-07-2024.pdf#page=25> ;
+    rdfs:comment "Grondslag in het besluit: artikel 59 — \"Zodra de afnemersindicatie [...] is opgenomen worden aan de gemeente eenmaal de gegevens verstrekt die zijn opgenomen in gegevensset 22\"."@nl ;
+    skos:editorialNote "Gegevensset 22 is niet doelspecifiek: het besluit kent EEN spontane set toe voor alle taken samen, en de Matrix heeft voor set 22 geen kolom per taak+doelgroep maar alleen een ja/nee-vlag 'Spontaan'. De doelbinding is hier dus een echte inperking van het gebruik, geen inperking van de gegevens."@nl ;
+    skos:editorialNote "De Matrix markeert 'Spontaan' voor 21 van de 68 taak+doelgroep-rijen; Gemeentelijke belastingen - Belastingplichtige is er een van, Erfgenaam belastingplichtige niet."@nl ;
+    odrl:action [ rdf:value odrl:distribute ;
+        odrl:refinement [ a odrl:Constraint ;
+            rdfs:comment "WAAROM — de taak waarvoor het besluit de verstrekking toestaat."@nl ;
+            odrl:leftOperand odrl:purpose ;
+            odrl:operator odrl:eq ;
+            odrl:rightOperand apdoel:gemeentelijke-belastingen ] ;
+        odrl:refinement [ a odrl:Constraint ;
+            rdfs:comment "HOE — het koppelvlak; geen aparte bevoegdheid maar een uitvoeringsvorm van dezelfde systematische verstrekking."@nl ;
+            odrl:leftOperand odrl:deliveryChannel ;
+            odrl:operator odrl:eq ;
+            odrl:rightOperand apkan:spontaan ] ;
+        odrl:refinement [ a odrl:Constraint ;
+            rdfs:comment "OVER WIE — de doelgroep uit het besluit en de Matrix."@nl ;
+            odrl:leftOperand apaanbod:doelgroepVanIngeschrevene ;
+            odrl:operator odrl:eq ;
+            odrl:rightOperand apdg:belastingplichtige ] ;
+        odrl:refinement [ a odrl:Constraint ;
+            rdfs:comment "WAARLANGS — de machine-uitvoerbare toets: het verwerkingsverzoek moet voldoen aan de module die deze regels afdwingt. De module verklaart zelf (prov:wasDerivedFrom, zie proef-dekking-breda.ttl) welke regels zij uitwerkt."@nl ;
+            odrl:leftOperand apnl:verwerkingsverzoek ;
+            odrl:operator apnl:conformsToPolicy ;
+            odrl:rightOperand apart:authz-gaba-belastingen ] ] ;
+    odrl:target apset:gaba-set22-v11 ;
+    odrl:duty applicht:510149-v13-d-indicatie-verwijderen .
+
+apper:510149-v13-r-belastingen-belastingplichtige-plaatsing a odrl:Permission ;
+    odrl:uid apper:510149-v13-r-belastingen-belastingplichtige-plaatsing ;
+    dct:title "Belastingplichtige — verzoek tot plaatsen afnemersindicatie"@nl ;
+    prov:wasDerivedFrom apaanbod:systematischeVerstrekking ;
+    dpv:hasLegalBasis <https://wetten.overheid.nl/BWBR0005416> ;
+    prov:hadPrimarySource <https://publicaties.rvig.nl/sites/default/files/Besluit/GABA%20BRP/510149%20Autorisatiebesluit%20Gemeente%20Breda%20BRP%20%28GABA%202024%29%2001-07-2024.pdf#page=2> ;
+    rdfs:comment "Grondslag in het besluit: artikel 2 — \"De gemeente mag verzoeken om de afnemersindicatie bij de persoonslijst van een ingeschrevene op te nemen\"."@nl ;
+    skos:editorialNote "GEEN gegevensset: het plaatsingsartikel kent geen gegevens toe. De gegevens volgen uit artikel 59 (gegevensset 22, spontane verstrekking). Het huidige model hangt hier de volledige rubriekenset van de autorisatietabelregel onder (66 leden voor Breda); dat is een technisch feit uit Tabel 35, geen toekenning uit het besluit."@nl ;
+    skos:editorialNote "Geen odrl:deliveryChannel-refinement: plaatsing is in het BRP-domeinprofiel een odrl:use-actie, geen verstrekking."@nl ;
+    odrl:action [ rdf:value brp:adHocPlaatsing ;
+        odrl:refinement [ a odrl:Constraint ;
+            rdfs:comment "WAAROM — de taak waarvoor het besluit de verstrekking toestaat."@nl ;
+            odrl:leftOperand odrl:purpose ;
+            odrl:operator odrl:eq ;
+            odrl:rightOperand apdoel:gemeentelijke-belastingen ] ;
+        odrl:refinement [ a odrl:Constraint ;
+            rdfs:comment "OVER WIE — de doelgroep uit het besluit en de Matrix."@nl ;
+            odrl:leftOperand apaanbod:doelgroepVanIngeschrevene ;
+            odrl:operator odrl:eq ;
+            odrl:rightOperand apdg:belastingplichtige ] ;
+        odrl:refinement [ a odrl:Constraint ;
+            rdfs:comment "WAARLANGS — de machine-uitvoerbare toets: het verwerkingsverzoek moet voldoen aan de module die deze regels afdwingt. De module verklaart zelf (prov:wasDerivedFrom, zie proef-dekking-breda.ttl) welke regels zij uitwerkt."@nl ;
+            odrl:leftOperand apnl:verwerkingsverzoek ;
+            odrl:operator apnl:conformsToPolicy ;
+            odrl:rightOperand apart:authz-gaba-belastingen ] ] ;
+    odrl:target apb:gbav ;
+    odrl:duty applicht:510149-v13-d-indicatie-verwijderen .
+
+apper:510149-v13-r-huisvesting-houder-adhoc a odrl:Permission ;
+    odrl:uid apper:510149-v13-r-huisvesting-houder-adhoc ;
+    dct:title "Houder huisvestingsvergunning — verstrekking op verzoek"@nl ;
+    prov:wasDerivedFrom apaanbod:systematischeVerstrekking ;
+    dpv:hasLegalBasis <https://wetten.overheid.nl/BWBR0034569> ;
+    prov:hadPrimarySource <https://publicaties.rvig.nl/sites/default/files/Besluit/GABA%20BRP/510149%20Autorisatiebesluit%20Gemeente%20Breda%20BRP%20%28GABA%202024%29%2001-07-2024.pdf#page=6> ;
+    rdfs:comment "Grondslag in het besluit: artikel 11 — \"De gemeente mag verzoeken om een gegeven in gegevensset 1, 2, 3, 5, 6, 8, 11, 12, 13, 14 of 15\"."@nl ;
+    skos:editorialNote "Deze setcombinatie is identiek in 336 van de 336 onderzochte gemeentelijke GABA-besluiten en identiek aan de Matrix-rij."@nl ;
+    odrl:action [ rdf:value odrl:distribute ;
+        odrl:refinement [ a odrl:Constraint ;
+            rdfs:comment "WAAROM — de taak waarvoor het besluit de verstrekking toestaat."@nl ;
+            odrl:leftOperand odrl:purpose ;
+            odrl:operator odrl:eq ;
+            odrl:rightOperand apdoel:huisvestingsvergunningen ] ;
+        odrl:refinement [ a odrl:Constraint ;
+            rdfs:comment "HOE — het koppelvlak; geen aparte bevoegdheid maar een uitvoeringsvorm van dezelfde systematische verstrekking."@nl ;
+            odrl:leftOperand odrl:deliveryChannel ;
+            odrl:operator odrl:eq ;
+            odrl:rightOperand apkan:adhoc ] ;
+        odrl:refinement [ a odrl:Constraint ;
+            rdfs:comment "OVER WIE — de doelgroep uit het besluit en de Matrix."@nl ;
+            odrl:leftOperand apaanbod:doelgroepVanIngeschrevene ;
+            odrl:operator odrl:eq ;
+            odrl:rightOperand apdg:houder-huisvestingsvergunning ] ] ;
+    odrl:target apset:gaba-combi-01-02-03-05-06-08-11-12-13-14-15-v11 ;
+    odrl:duty applicht:510149-v13-d-doeladministratie ,
+        applicht:510149-v13-d-vernietigen-na-afhandeling .
+
+apper:510149-v13-r-huisvesting-houder-adres a odrl:Permission ;
+    odrl:uid apper:510149-v13-r-huisvesting-houder-adres ;
+    dct:title "Houder huisvestingsvergunning — adresverstrekking op verzoek"@nl ;
+    prov:wasDerivedFrom apaanbod:systematischeVerstrekking ;
+    dpv:hasLegalBasis <https://wetten.overheid.nl/BWBR0034569> ;
+    prov:hadPrimarySource <https://publicaties.rvig.nl/sites/default/files/Besluit/GABA%20BRP/510149%20Autorisatiebesluit%20Gemeente%20Breda%20BRP%20%28GABA%202024%29%2001-07-2024.pdf#page=7> ;
+    rdfs:comment "Grondslag in het besluit: artikel 12 — \"Verzoek verstrekking gegevens ingeschrevenen op adres [...] gegevensset 20\"."@nl ;
+    skos:editorialNote "AFWIJKING BESLUIT vs MATRIX: 329 van de 336 besluiten kennen bij Huisvestingsvergunningen de ad-hoc-adresverstrekking (gegevensset 20) toe; de GABA Matrix v1.1 markeert voor GEEN ENKELE huisvestingsdoelgroep de kolom 'Gegevensset 20 (ad hoc adres)'. De Matrix is op dit punt onvolledig ten opzichte van de besluiten."@nl ;
+    skos:editorialNote "Enkelvoudige set: geen composiet nodig, de permission wijst rechtstreeks naar apset:gaba-set20-v11."@nl ;
+    odrl:action [ rdf:value odrl:distribute ;
+        odrl:refinement [ a odrl:Constraint ;
+            rdfs:comment "WAAROM — de taak waarvoor het besluit de verstrekking toestaat."@nl ;
+            odrl:leftOperand odrl:purpose ;
+            odrl:operator odrl:eq ;
+            odrl:rightOperand apdoel:huisvestingsvergunningen ] ;
+        odrl:refinement [ a odrl:Constraint ;
+            rdfs:comment "HOE — het koppelvlak; geen aparte bevoegdheid maar een uitvoeringsvorm van dezelfde systematische verstrekking."@nl ;
+            odrl:leftOperand odrl:deliveryChannel ;
+            odrl:operator odrl:eq ;
+            odrl:rightOperand apkan:adhocAdres ] ;
+        odrl:refinement [ a odrl:Constraint ;
+            rdfs:comment "OVER WIE — de doelgroep uit het besluit en de Matrix."@nl ;
+            odrl:leftOperand apaanbod:doelgroepVanIngeschrevene ;
+            odrl:operator odrl:eq ;
+            odrl:rightOperand apdg:houder-huisvestingsvergunning ] ] ;
+    odrl:target apset:gaba-set20-v11 .
+
+apper:510149-v13-r-handhaving-betrokkene-adhoc a odrl:Permission ;
+    odrl:uid apper:510149-v13-r-handhaving-betrokkene-adhoc ;
+    dct:title "Betrokkene bij toezicht/handhaving — verstrekking op verzoek"@nl ;
+    prov:wasDerivedFrom apaanbod:systematischeVerstrekking ;
+    dpv:hasLegalBasis <https://wetten.overheid.nl/BWBR0005537> ;
+    prov:hadPrimarySource <https://publicaties.rvig.nl/sites/default/files/Besluit/GABA%20BRP/510149%20Autorisatiebesluit%20Gemeente%20Breda%20BRP%20%28GABA%202024%29%2001-07-2024.pdf#page=13> ;
+    rdfs:comment "Grondslag in het besluit: artikel 22, eerste lid — \"gegevensset 1, 2, 3, 4 of 5 voor het uitvoeren van de toezichthoudende taak\"."@nl ;
+    skos:editorialNote "Gegevensset 4 bevat categorie 16/66 (tijdelijk verblijfadres) en 17 (contactgegevens); het besluit schort die verstrekking op tot de gemeente er technisch klaar voor is (par. 4.3). Dat is een per-gemeente afwijkende feitelijke situatie bij een verder uniform besluit."@nl ;
+    odrl:action [ rdf:value odrl:distribute ;
+        odrl:refinement [ a odrl:Constraint ;
+            rdfs:comment "WAAROM — de taak waarvoor het besluit de verstrekking toestaat."@nl ;
+            odrl:leftOperand odrl:purpose ;
+            odrl:operator odrl:eq ;
+            odrl:rightOperand apdoel:handhaving-toezicht-en-opsporing ] ;
+        odrl:refinement [ a odrl:Constraint ;
+            rdfs:comment "HOE — het koppelvlak; geen aparte bevoegdheid maar een uitvoeringsvorm van dezelfde systematische verstrekking."@nl ;
+            odrl:leftOperand odrl:deliveryChannel ;
+            odrl:operator odrl:eq ;
+            odrl:rightOperand apkan:adhoc ] ;
+        odrl:refinement [ a odrl:Constraint ;
+            rdfs:comment "OVER WIE — de doelgroep uit het besluit en de Matrix."@nl ;
+            odrl:leftOperand apaanbod:doelgroepVanIngeschrevene ;
+            odrl:operator odrl:eq ;
+            odrl:rightOperand apdg:betrokkene-toezicht-handhaving ] ] ;
+    odrl:target apset:gaba-combi-01-02-03-04-05-v11 ;
+    odrl:duty applicht:510149-v13-d-doeladministratie ,
+        applicht:510149-v13-d-vernietigen-na-afhandeling .
+
+apper:510149-v13-r-handhaving-nietingezetene-adres-tijdelijk a odrl:Permission ;
+    odrl:uid apper:510149-v13-r-handhaving-nietingezetene-adres-tijdelijk ;
+    dct:title "Niet-ingezetene — adresverstrekking op tijdelijk verblijfadres"@nl ;
+    prov:wasDerivedFrom apaanbod:systematischeVerstrekking ;
+    dpv:hasLegalBasis <https://wetten.overheid.nl/BWBR0005537> ;
+    prov:hadPrimarySource <https://publicaties.rvig.nl/sites/default/files/Besluit/GABA%20BRP/510149%20Autorisatiebesluit%20Gemeente%20Breda%20BRP%20%28GABA%202024%29%2001-07-2024.pdf#page=13> ;
+    rdfs:comment "Grondslag in het besluit: artikel 23, tweede lid — \"De gemeente mag verzoeken om een gegeven in gegevensset 21\"."@nl ;
+    skos:editorialNote "Dit is de enige taak+doelgroep in de hele Matrix met een markering in de kolom 'Gegevensset 21 (ad hoc adres voor tijdelijk verblijfadres)' — 1 van 68 rijen. Het onderscheidt zich alleen door het kanaal, niet door het doel: zonder kanaaldimensie is deze regel niet uit te drukken."@nl ;
+    odrl:action [ rdf:value odrl:distribute ;
+        odrl:refinement [ a odrl:Constraint ;
+            rdfs:comment "WAAROM — de taak waarvoor het besluit de verstrekking toestaat."@nl ;
+            odrl:leftOperand odrl:purpose ;
+            odrl:operator odrl:eq ;
+            odrl:rightOperand apdoel:handhaving-toezicht-en-opsporing ] ;
+        odrl:refinement [ a odrl:Constraint ;
+            rdfs:comment "HOE — het koppelvlak; geen aparte bevoegdheid maar een uitvoeringsvorm van dezelfde systematische verstrekking."@nl ;
+            odrl:leftOperand odrl:deliveryChannel ;
+            odrl:operator odrl:eq ;
+            odrl:rightOperand apkan:adhocAdresTijdelijkVerblijfadres ] ;
+        odrl:refinement [ a odrl:Constraint ;
+            rdfs:comment "OVER WIE — de doelgroep uit het besluit en de Matrix."@nl ;
+            odrl:leftOperand apaanbod:doelgroepVanIngeschrevene ;
+            odrl:operator odrl:eq ;
+            odrl:rightOperand apdg:niet-ingezetene-toezicht-handhaving ] ] ;
+    odrl:target apset:gaba-set21-v11 .
+
+apper:510149-v13-r-burgerlijke-stand-adhoc a odrl:Permission ;
+    odrl:uid apper:510149-v13-r-burgerlijke-stand-adhoc ;
+    dct:title "Persoon van wie gegevens nodig zijn voor een akte — verstrekking op verzoek"@nl ;
+    prov:wasDerivedFrom apaanbod:systematischeVerstrekking ;
+    dpv:hasLegalBasis <https://wetten.overheid.nl/BWBR0002656> ;
+    prov:hadPrimarySource <https://publicaties.rvig.nl/sites/default/files/Besluit/GABA%20BRP/510149%20Autorisatiebesluit%20Gemeente%20Breda%20BRP%20%28GABA%202024%29%2001-07-2024.pdf#page=30> ;
+    rdfs:comment "Grondslag in het besluit: artikel 53 — \"De gemeente mag verzoeken om een gegeven in gegevensset 18\"."@nl ;
+    skos:editorialNote "Burgerzakentaak: de Aanvullende toelichting (bijlage A) bepaalt dat deze taak loopt via de AUTORISATIETABELREGEL VOOR BURGERZAKENTAKEN, niet via de GABA-regel. Voor Breda is dat tabelregel 075801, niet 510149. In het huidige model staat deze permission daarom in een andere Agreement (apovk:075801-v6, zonder doelbinding); de bron koppelt hem wel aan hetzelfde besluit. Gegevensset 18 telt 252 rubrieken: vrijwel de hele persoonslijst."@nl ;
+    odrl:action [ rdf:value odrl:distribute ;
+        odrl:refinement [ a odrl:Constraint ;
+            rdfs:comment "WAAROM — de taak waarvoor het besluit de verstrekking toestaat."@nl ;
+            odrl:leftOperand odrl:purpose ;
+            odrl:operator odrl:eq ;
+            odrl:rightOperand apdoel:burgerlijke-stand ] ;
+        odrl:refinement [ a odrl:Constraint ;
+            rdfs:comment "HOE — het koppelvlak; geen aparte bevoegdheid maar een uitvoeringsvorm van dezelfde systematische verstrekking."@nl ;
+            odrl:leftOperand odrl:deliveryChannel ;
+            odrl:operator odrl:eq ;
+            odrl:rightOperand apkan:adhoc ] ;
+        odrl:refinement [ a odrl:Constraint ;
+            rdfs:comment "OVER WIE — de doelgroep uit het besluit en de Matrix."@nl ;
+            odrl:leftOperand apaanbod:doelgroepVanIngeschrevene ;
+            odrl:operator odrl:eq ;
+            odrl:rightOperand apdg:persoon-akte-burgerlijke-stand ] ] ;
+    odrl:target apset:gaba-set18-v11 ;
+    odrl:duty applicht:510149-v13-d-doeladministratie ,
+        applicht:510149-v13-d-vernietigen-na-afhandeling .
+
+
+# =============================================================================
+# VERPLICHTINGEN OP EEN PERMISSION (odrl:duty), naast de vier verplichtingen
+# die NAAST de regels op de overeenkomst hangen (odrl:obligation, uit het
+# aanbod). Het onderscheid is inhoudelijk:
+#
+#   odrl:obligation  — geldt zolang de overeenkomst geldt, los van of er ooit
+#                      één bevraging plaatsvindt (geheimhouding, aansluit-
+#                      voorwaarden, inlichtingenplicht).
+#   odrl:duty        — hangt AAN het gebruik van die ene toestemming: doe je
+#                      de bevraging, dan hoort deze handeling erbij.
+#
+# Alle drie hebben een benoemde IRI met odrl:uid, zodat ze dekbaar zijn (een
+# artefact kan met prov:wasDerivedFrom verklaren dat het er de uitwerking van
+# is) en zodat een protocollering ernaar kan verwijzen.
+#
+# GRONDSLAG PER VERPLICHTING — expliciet gescheiden: wat in het besluit staat
+# en wat proefmodellering is met een grondslag elders.
+# =============================================================================
+
+# --- 1. Vernietigen na afhandeling -------------------------------------------
+# PROEFMODELLERING. Dit besluit kent geen bewaartermijn- of vernietigings-
+# bepaling; die zoekterm levert in de besluittekst niets op. De norm zelf is er
+# wél: de opslagbeperking van artikel 5, eerste lid, onder e, AVG staat niet toe
+# dat opgehaalde persoonsgegevens langer in de werkomgeving blijven staan dan
+# voor de taak nodig is.
+#
+# BEWUST NIET OP ALLE PERMISSIONS: hij hangt aan de ad-hocbevragingen (de
+# gemeente haalt daar zelf gegevens op en houdt ze onder zich), niet aan de
+# spontane verstrekking of de plaatsing van een afnemersindicatie — daar is de
+# BRP-LV de bewegende partij. Dat de plicht niet overal zit, is precies wat een
+# duty-op-permission zichtbaar maakt.
+#
+# En bewust ONGEDEKT: apart:authz-gaba-belastingen wijst deze verplichting niet
+# aan. Een beslispunt op het koppelvlak kan niet controleren of een gemeente
+# gegevens in haar eigen werkomgeving heeft vernietigd; die norm blijft
+# onverkort gelden en is organisatorisch van aard.
+applicht:510149-v13-d-vernietigen-na-afhandeling a odrl:Duty ;
+    odrl:uid applicht:510149-v13-d-vernietigen-na-afhandeling ;
+    rdfs:label "Opgehaalde gegevens vernietigen na afhandeling"@nl ,
+               "Destroy retrieved data once the case is closed"@en ;
+    dct:description "De gemeente verwijdert de op verzoek opgehaalde persoonsgegevens uit haar werkomgeving zodra de taak waarvoor zij zijn opgevraagd is afgehandeld."@nl ,
+                    "The municipality removes personal data retrieved on request from its working environment once the task it was retrieved for has been completed."@en ;
+    dpv:hasLegalBasis <http://data.europa.eu/eli/reg/2016/679/oj> ;
+    rdfs:comment "PROEFMODELLERING: deze verplichting staat NIET in autorisatiebesluit 510149. De grondslag is de opslagbeperking van artikel 5, eerste lid, onder e, AVG (gegevens niet langer bewaren dan nodig voor het doel). Als bron staat de AVG als geheel (haar ELI); het artikelnummer staat hier, omdat een artikel-URI van de AVG niet betrouwbaar te controleren viel. Niet door de module gedekt: een koppelvlak kan niet zien wat er in de werkomgeving van de afnemer gebeurt."@nl ;
+    odrl:action [ rdf:value odrl:delete ] .
+
+# --- 2. Afnemersindicatie verwijderen ----------------------------------------
+# WEL IN HET BESLUIT. Artikel 58 ("Verwijderen afnemersindicatie"): "De
+# afnemersindicatie wordt op verzoek van de gemeente verwijderd als actuele
+# aanduiding bij de persoonslijst van een ingeschrevene. De gemeente verzoekt in
+# ieder geval om de verwijdering als de ingeschrevene niet meer tot één van de
+# categorieën van personen behoort zoals omschreven in de artikelen 2, 4, 6, 8,
+# 10, 14, 16, 18, 20, 29, 31, 35, 38, 40, 43, 45 en 55 van dit besluit." De
+# Aanvullende toelichting herhaalt het als handelingsplicht van de gemeente:
+# "De gemeente dient zelf te verzoeken om verwijdering van de afnemersindicatie."
+#
+# Hangt aan de twee permissions die met de indicatie te maken hebben — het
+# plaatsen ervan en de spontane verstrekking die eruit volgt — en niet aan de
+# ad-hocbevragingen, waar geen indicatie aan te pas komt.
+applicht:510149-v13-d-indicatie-verwijderen a odrl:Duty ;
+    odrl:uid applicht:510149-v13-d-indicatie-verwijderen ;
+    rdfs:label "Afnemersindicatie laten verwijderen zodra de doelbinding vervalt"@nl ,
+               "Have the recipient indication removed once the purpose no longer applies"@en ;
+    dct:description "Behoort een ingeschrevene niet meer tot de doelgroep waarvoor het besluit verstrekking toestaat, dan verzoekt de gemeente zelf om verwijdering van haar afnemersindicatie bij de persoonslijst."@nl ,
+                    "Once a registered person no longer belongs to the group the decision allows disclosure for, the municipality itself requests removal of its recipient indication from that person's record."@en ;
+    dpv:hasLegalBasis <https://wetten.overheid.nl/jci1.3:c:BWBR0033715&artikel=3.2> ;
+    prov:hadPrimarySource <https://publicaties.rvig.nl/sites/default/files/Besluit/GABA%20BRP/510149%20Autorisatiebesluit%20Gemeente%20Breda%20BRP%20%28GABA%202024%29%2001-07-2024.pdf#page=24> ;
+    rdfs:comment "Grondslag in het besluit zelf: artikel 58, \"Verwijderen afnemersindicatie\" — de gemeente verzoekt in ieder geval om verwijdering als de ingeschrevene niet meer tot een van de omschreven categorieen van personen behoort. De Aanvullende toelichting (bijlage A) herhaalt het als handelingsplicht: \"De gemeente dient zelf te verzoeken om verwijdering van de afnemersindicatie.\" Geen proefmodellering dus; alleen de plaatsing IN het ODRL-model (als odrl:duty op de plaatsings- en de spontane permission) is een modelkeuze."@nl ;
+    odrl:action [ rdf:value brp:adHocPlaatsing ] .
+
+# --- 3. Eigen administratie van het doel per bevraging ------------------------
+# PROEFMODELLERING met een grondslag die het besluit wél veronderstelt: "De
+# gemeente beperkt haar vragen om persoonsgegevens tot de persoonslijsten van
+# ingeschrevenen, waarvoor gegevensverstrekking noodzakelijk is voor de
+# uitvoering van de hiervoor vermelde taken" (Aanvullende toelichting). Die
+# beperking is alleen na te leven — en achteraf te verantwoorden — als de
+# gemeente per bevraging vastlegt vóór welke taak zij bevraagt. De expliciete
+# verantwoordingsplicht staat in artikel 5, tweede lid, AVG.
+#
+# DE NUANCE DIE DEZE VERPLICHTING DRAAGT: de administratie is van de GEMEENTE.
+# De BRP-LV mag de doelbinding niet kennen — een verstrekkingsbericht draagt
+# geen doel, en dat hoort ook zo: de verstrekker zou dan een profiel van het
+# gemeentelijk taakgebruik opbouwen. Daarom GEEN odrl:inform met een
+# informedParty: er wordt niets "opgegeven aan" de verstrekker.
+#
+# WEL GEDEKT door apart:authz-gaba-belastingen (zie proef-dekking-breda.ttl):
+# een beslispunt kan controleren DAT er een doel is geadministreerd bij het
+# verzoek, zonder dat doel door te geven. Dat is precies het verschil met
+# verplichting 1 hierboven, die niet dekbaar is.
+applicht:510149-v13-d-doeladministratie a odrl:Duty ;
+    odrl:uid applicht:510149-v13-d-doeladministratie ;
+    rdfs:label "Doel van de bevraging in de eigen administratie vastleggen"@nl ,
+               "Record the purpose of each query in the municipality's own administration"@en ;
+    dct:description "De gemeente legt per bevraging in haar eigen administratie vast voor welke taak zij bevraagt, zodat achteraf te verantwoorden is dat de bevraging binnen het besluit viel. Dit doel wordt niet aan de verstrekker doorgegeven."@nl ,
+                    "For every query the municipality records in its own administration which statutory task it is querying for, so that compliance with the decision can be accounted for afterwards. The purpose is not passed on to the provider."@en ;
+    dpv:hasLegalBasis <https://wetten.overheid.nl/jci1.3:c:BWBR0033715&artikel=3.2> ,
+                      <http://data.europa.eu/eli/reg/2016/679/oj> ;
+    prov:hadPrimarySource <https://publicaties.rvig.nl/sites/default/files/Besluit/GABA%20BRP/510149%20Autorisatiebesluit%20Gemeente%20Breda%20BRP%20%28GABA%202024%29%2001-07-2024.pdf#page=36> ;
+    rdfs:comment "PROEFMODELLERING: het besluit kent geen artikel met deze tekst. Het VERONDERSTELT haar wel — de Aanvullende toelichting bepaalt dat de gemeente haar vragen beperkt tot ingeschrevenen voor wie verstrekking noodzakelijk is voor de vermelde taken, en dat is zonder eigen doeladministratie niet na te leven of te verantwoorden; artikel 5, tweede lid, AVG maakt die verantwoording expliciet. LET OP de richting: de administratie blijft BIJ DE GEMEENTE. De BRP-LV mag de doelbinding niet kennen (een verstrekkingsbericht draagt geen doel), dus dit is nadrukkelijk geen meldplicht aan de verstrekker en er staat daarom geen odrl:informedParty bij. Een beslispunt kan wel controleren DAT er een doel is geadministreerd zonder het te kennen; vandaar dat apart:authz-gaba-belastingen deze verplichting wel uitwerkt en de vernietigingsplicht niet."@nl ;
+    odrl:action [ rdf:value odrl:use ] .
+
+
+# =============================================================================
+# GEVOLG BIJ NIET-NALEVING (odrl:consequence)
+# =============================================================================
+# ODRL kent bij een niet-nagekomen odrl:Duty een odrl:consequence: wat er dan
+# hoort te gebeuren. Het Breda-materiaal had die schakel nog niet; deze
+# annotatie voegt hem toe op de bestaande geheimhoudings-verplichting uit het
+# aanbod, zodat het volledige ODRL-plaatje (permission -> duty -> consequence)
+# in de proef zichtbaar is.
+#
+# WAT ER BEWUST NIET STAAT: intrekking van de autorisatie als gevolg. Dit
+# besluit kent geen sanctiebepaling — artikel 67 gaat over de vervanging van
+# het vorige besluit, niet over intrekking bij een schending — en intrekken is
+# bovendien een BEVOEGDHEID VAN DE VERSTREKKER, niet een verplichting van de
+# gemeente. Het als odrl:consequence modelleren zou de rollen omdraaien.
+#
+# WAT ER WEL STAAT: melden. De melding aan de toezichthouder en, waar nodig, de
+# betrokkene volgt uit de artikelen 33 en 34 AVG. De melding aan RvIG als
+# verstrekker sluit aan bij de inlichtingenplicht uit de slotbepalingen van het
+# besluit (apaanbod:duty-inlichtingenplicht, dezelfde geinformeerde partij).
+apaanbod:duty-geheimhouding odrl:consequence [
+    a odrl:Duty ;
+    rdfs:label "Melding van de schending (datalek)"@nl ,
+               "Report the breach (personal data breach)"@en ;
+    dct:description "Wordt de geheimhouding of het doelgebonden gebruik geschonden, dan meldt de gemeente dat onverwijld aan de verstrekker, naast de melding aan de toezichthouder en zo nodig de betrokkene."@nl ,
+                    "If confidentiality or purpose-bound use is breached, the municipality reports this to the provider without delay, in addition to notifying the supervisory authority and, where required, the data subject."@en ;
+    dpv:hasLegalBasis <http://data.europa.eu/eli/reg/2016/679/oj> ,
+                      <https://wetten.overheid.nl/jci1.3:c:BWBR0033715&artikel=3.2> ;
+    rdfs:comment "PROEFMODELLERING. Autorisatiebesluit 510149 kent geen sanctie- of meldingsbepaling bij een schending van de geheimhouding; de meldplicht volgt uit de AVG (artikel 33: melding aan de Autoriteit Persoonsgegevens binnen 72 uur; artikel 34: mededeling aan de betrokkene bij hoog risico). Als bron staat de AVG als geheel (haar ELI), omdat een artikel-URI van de AVG niet betrouwbaar te controleren viel; de artikelnummers staan hier. Dat RvIG hier de geinformeerde partij is, is de aansluiting bij de inlichtingenplicht uit de slotbepalingen van het besluit: de verstrekker moet weten dat de gegevens die hij verstrekte zijn geraakt. Bewust GEEN intrekking-als-gevolg: het besluit kent die sanctie niet en intrekken is een bevoegdheid van de verstrekker, geen verplichting van de gemeente."@nl ;
+    odrl:action [ rdf:value odrl:inform ;
+        odrl:informedParty oorg:oorg10103 ] ] .

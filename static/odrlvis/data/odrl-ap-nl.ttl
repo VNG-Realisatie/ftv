@@ -1,0 +1,512 @@
+@prefix apnl:   <https://standaarden.overheid.nl/odrl-ap-nl/> .
+@prefix odrl:   <http://www.w3.org/ns/odrl/2/> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix dpv:    <https://w3id.org/dpv#> .
+@prefix prof:   <http://www.w3.org/ns/dx/prof/> .
+@prefix role:   <http://www.w3.org/ns/dx/prof/role/> .
+
+# =============================================================================
+# ODRL-AP-NL — Applicatieprofiel voor toegangsbeleid Nederlandse overheid
+#
+# Werkgroep Federatieve Toegangsverlening (FTV).
+# Status: WERKVERSIE voor simulaties — namespace nog niet uitgegeven.
+#
+# Dit bestand bevat:
+#   (1) de profieldeclaratie apnl:profiel (odrl:Profile + prof:Profile) die
+#       policies via odrl:profile aanhalen, met PROF-resourcebeschrijvingen;
+#   (2) de OWL/RDFS-vocabulaire van het profiel (klassen, properties, left
+#       operand, operator), conform ODRL 2.2 §3.3: elke profielterm is een
+#       skos:Concept met skos:definition. De begrippenlaag volgt NL-SBB
+#       (voorkeursterm, definitie, kader-lidmaatschap, verankering) en is
+#       gevalideerd tegen het NL-SBB-SHACL-profiel;
+#   (3) de SKOS-Collections per termsoort (Profile Best Practices §6) die
+#       machineleesbaar afbakenen welke deelverzameling van ODRL dit profiel
+#       gebruikt.
+#
+# Profiel-IRI ≠ namespace-IRI (bewuste splitsing, Profile Best Practices):
+#   - profiel-IRI  : https://standaarden.overheid.nl/odrl-ap-nl/profiel
+#                    (de waarde van odrl:profile in policies)
+#   - namespace    : https://standaarden.overheid.nl/odrl-ap-nl/  (prefix apnl:)
+#                    (de termen; tevens de ontologie-IRI)
+#
+# Ontwerpuitgangspunt (bindend): het profiel definieert GEEN eigen generieke
+# begrippen (doelbinding, organisatie, dataset). Die worden hergebruikt uit
+# TOOI, DPV, DCAT-AP-NL en NL-SBB. ODRL-AP-NL definieert uitsluitend de
+# ODRL-mappings die nodig zijn om die begrippen in policies te gebruiken.
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 0a. De profieldeclaratie (het ding dat in odrl:profile staat)
+# -----------------------------------------------------------------------------
+
+apnl:profiel a odrl:Profile , prof:Profile ;
+    dct:title "ODRL-AP-NL — Applicatieprofiel toegangsbeleid"@nl ;
+    dct:description """Pragmatisch ODRL 2.2-applicatieprofiel voor het beschrijven
+en delen van toegangsbeleid binnen de Nederlandse overheid. Ontwikkeld in de
+werkgroep Federatieve Toegangsverlening (FTV) als uitwisselformaat voor het
+Register Toegangsbeleid, in samenhang met NLGov AuthZEN (het vraag/antwoord-model)
+en de Authorization Decision Log (verantwoording achteraf)."""@nl ;
+    # Werkversie-plaatshouder: de werkgroep FTV heeft geen eigen TOOI-
+    # identificatie; BZK als stelselverantwoordelijke. (De eerdere waarde
+    # oorg10101 bleek het Nederlands Forensisch Instituut — een vergissing
+    # die onzichtbaar bleef zolang register-URI's ongelabeld getoond werden;
+    # zie examples/labels-tooi.ttl.)
+    dct:publisher <https://identifier.overheid.nl/tooi/id/ministerie/mnre1034> ;
+    dct:issued "2026-07-08"^^xsd:date ;
+    owl:versionInfo "0.2.0-wv" ;
+    prof:isProfileOf <http://www.w3.org/ns/odrl/2/> ;
+    dct:conformsTo <http://www.w3.org/ns/odrl/2/> ;
+    prof:hasToken "odrl-ap-nl" ;
+    rdfs:seeAlso <https://www.w3.org/TR/odrl-model/> , apnl: ;
+    # PROF-resourcebeschrijvingen: welke artefacten horen bij dit profiel en in
+    # welke rol. De artefact-URL's zijn plaatshouders (namespace nog niet
+    # uitgegeven); relatief aan de repository-root: index.html, ontology/,
+    # shapes/, context.jsonld.
+    prof:hasResource [ a prof:ResourceDescriptor ;
+        rdfs:label "Specificatie (mensleesbaar)"@nl ;
+        prof:hasRole role:specification ;
+        dct:format "text/html" ;
+        prof:hasArtifact <https://standaarden.overheid.nl/odrl-ap-nl/index.html> ] ;
+    prof:hasResource [ a prof:ResourceDescriptor ;
+        rdfs:label "Vocabulaire (OWL/RDFS + SKOS)"@nl ;
+        prof:hasRole role:vocabulary ;
+        dct:format "text/turtle" ;
+        prof:hasArtifact <https://standaarden.overheid.nl/odrl-ap-nl/ontology/odrl-ap-nl.ttl> ] ;
+    prof:hasResource [ a prof:ResourceDescriptor ;
+        rdfs:label "SHACL-shapes per conformiteitsverrijking (orthogonaal, elk zelfstandig toetsbaar; afnemer.ttl bevat ook de obligation-doorwerking)"@nl ;
+        prof:hasRole role:validation ;
+        dct:format "text/turtle" ;
+        prof:hasArtifact <https://standaarden.overheid.nl/odrl-ap-nl/shapes/leesbaar.ttl> ,
+            <https://standaarden.overheid.nl/odrl-ap-nl/shapes/afnemer.ttl> ,
+            <https://standaarden.overheid.nl/odrl-ap-nl/shapes/doelbinding.ttl> ,
+            <https://standaarden.overheid.nl/odrl-ap-nl/shapes/uitvoerbaar.ttl> ] ;
+    prof:hasResource [ a prof:ResourceDescriptor ;
+        rdfs:label "JSON-LD-context"@nl ;
+        prof:hasRole role:context ;
+        dct:format "application/ld+json" ;
+        prof:hasArtifact <https://standaarden.overheid.nl/odrl-ap-nl/context.jsonld> ] .
+    # Voorzien maar nog niet geleverd: UI-shapes (formulierdefinities) als aparte
+    # resource met rol role:guidance — zie de sectie Governance van de spec.
+
+# -----------------------------------------------------------------------------
+# 0b. De vocabulaire/namespace (de ontologie-IRI; NIET de profiel-IRI)
+# -----------------------------------------------------------------------------
+
+apnl: a owl:Ontology , skos:ConceptScheme ;
+    dct:title "ODRL-AP-NL-vocabulaire"@nl ;
+    dct:description """De termen (klassen, properties, left operand, operator) van
+het applicatieprofiel ODRL-AP-NL. De profieldeclaratie die policies in
+odrl:profile aanhalen is apnl:profiel; deze namespace-IRI identificeert
+uitsluitend de vocabulaire."""@nl ;
+    # Werkversie-plaatshouder: de werkgroep FTV heeft geen eigen TOOI-
+    # identificatie; BZK als stelselverantwoordelijke. (De eerdere waarde
+    # oorg10101 bleek het Nederlands Forensisch Instituut — een vergissing
+    # die onzichtbaar bleef zolang register-URI's ongelabeld getoond werden;
+    # zie examples/labels-tooi.ttl.)
+    dct:publisher <https://identifier.overheid.nl/tooi/id/ministerie/mnre1034> ;
+    dct:issued "2026-07-08"^^xsd:date ;
+    owl:versionInfo "0.2.0-wv" ;
+    owl:imports <http://www.w3.org/ns/odrl/2/> ;
+    # De begrippenlaag van dit vocabulaire is een begrippenkader conform NL-SBB
+    # (Standaard voor het beschrijven van begrippen, Geonovum 2024): elk begrip
+    # draagt skos:prefLabel@nl, skos:definition@nl en skos:inScheme, en is
+    # verankerd als topbegrip of via skos:broader/skos:related. Gevalideerd
+    # tegen het NL-SBB-SHACL-profiel (shapes/extern/skos-ap-nl.ttl).
+    dct:conformsTo <http://nlbegrip.nl/def/skosapnl#> ;
+    skos:hasTopConcept
+        apnl:PolicyArtifact , apnl:verwerkingsverzoek ,
+        dpv:Purpose ,
+        odrl:use , odrl:purpose , odrl:dateTime , odrl:deliveryChannel ,
+        odrl:eq , odrl:isA , odrl:isAnyOf , odrl:gteq , odrl:lteq ;
+    rdfs:seeAlso apnl:profiel .
+
+# =============================================================================
+# 1. Machine-uitvoerbaar beleid: PolicyArtifact en PolicyBundle
+#
+# conformsToPolicy koppelt een ODRL-beschrijving (het WAT/WAAROM) aan een
+# machine-uitvoerbare regelset (het HOE). Sluit aan op het residual-policy-
+# mechanisme van de FTV-standaard (allowed_residual_policy_types /
+# residual-policy-accept) en op audit_identifiers.policy_version.
+# =============================================================================
+
+apnl:PolicyArtifact a owl:Class , skos:Concept ;
+    rdfs:label "Policy-artefact"@nl ;
+    skos:prefLabel "policy-artefact"@nl ;
+    skos:topConceptOf apnl: ;
+    skos:definition """Een machine-uitvoerbare regelset die een deel van een
+ODRL-AP-NL-policy afdwingbaar maakt. Een artefact is een als Linked Data ontsloten
+verwijzing naar een concreet bestand (Rego-module, Cedar-policyset, OpenFGA-model)
+met een mediatype (dct:format), een downloadlocatie (dcat:downloadURL), een
+entrypoint (apnl:entrypoint) en een integriteitshash (apnl:sha256)."""@nl ;
+    skos:inScheme apnl: ;
+    rdfs:seeAlso apnl:PolicyBundle .
+
+apnl:RegoModule a owl:Class , skos:Concept ;
+    rdfs:subClassOf apnl:PolicyArtifact ;
+    rdfs:label "Rego-module"@nl ;
+    skos:prefLabel "Rego-module"@nl ;
+    skos:broader apnl:PolicyArtifact ;
+    skos:definition "Een OPA/Rego-module als policy-artefact."@nl ;
+    skos:note """Verwacht dct:format \"application/vnd.rego\" en een apnl:entrypoint
+dat naar het te evalueren document/regelpad wijst (bijv.
+\"data.doelbinding.burgerzaken.allow\")."""@nl ;
+    skos:inScheme apnl: .
+
+apnl:CedarPolicySet a owl:Class , skos:Concept ;
+    rdfs:subClassOf apnl:PolicyArtifact ;
+    rdfs:label "Cedar-policyset"@nl ;
+    skos:prefLabel "Cedar-policyset"@nl ;
+    skos:broader apnl:PolicyArtifact ;
+    skos:definition "Een Amazon Cedar-policyset als policy-artefact."@nl ;
+    skos:note "Verwacht dct:format \"application/vnd.cedar\"."@nl ;
+    skos:inScheme apnl: .
+
+apnl:OpenFGAModel a owl:Class , skos:Concept ;
+    rdfs:subClassOf apnl:PolicyArtifact ;
+    rdfs:label "OpenFGA-autorisatiemodel"@nl ;
+    skos:prefLabel "OpenFGA-autorisatiemodel"@nl ;
+    skos:broader apnl:PolicyArtifact ;
+    skos:definition "Een OpenFGA/Zanzibar-relatiemodel als policy-artefact."@nl ;
+    skos:note "Verwacht dct:format \"application/vnd.openfga\"."@nl ;
+    skos:inScheme apnl: .
+
+apnl:PolicyBundle a owl:Class , skos:Concept ;
+    rdfs:label "Policy-bundel"@nl ;
+    skos:prefLabel "policy-bundel"@nl ;
+    skos:related apnl:PolicyArtifact ;
+    skos:definition """Een bundel van policy-artefacten, gemodelleerd als Linked
+Data-entiteit. Correspondeert typisch met een OPA-bundle (.tar.gz) die meerdere
+Rego-modules en databestanden bevat."""@nl ;
+    skos:note """Een bundel bundelt artefacten via apnl:bundles en draagt zelf een
+dct:format, dcat:downloadURL, apnl:entrypoint en apnl:sha256, plus versionering
+via prov:wasRevisionOf."""@nl ;
+    skos:inScheme apnl: ;
+    rdfs:seeAlso apnl:PolicyArtifact .
+
+apnl:bundles a owl:ObjectProperty , skos:Concept ;
+    rdfs:domain apnl:PolicyBundle ;
+    rdfs:range apnl:PolicyArtifact ;
+    rdfs:label "bundelt"@nl ;
+    skos:prefLabel "bundelt"@nl ;
+    skos:related apnl:PolicyBundle ;
+    skos:definition "Koppelt een apnl:PolicyBundle aan de apnl:PolicyArtifact-en die hij bevat."@nl ;
+    skos:inScheme apnl: .
+
+apnl:entrypoint a owl:DatatypeProperty , skos:Concept ;
+    rdfs:range xsd:string ;
+    rdfs:label "entrypoint"@nl ;
+    skos:prefLabel "entrypoint"@nl ;
+    skos:related apnl:PolicyArtifact ;
+    skos:definition """Het instappunt waarop de evaluator het artefact of de bundel
+aanroept. Voor Rego/OPA het query-pad naar het beslisdocument, bijv.
+\"data.doelbinding.burgerzaken.allow\"."""@nl ;
+    skos:inScheme apnl: .
+
+apnl:sha256 a owl:DatatypeProperty , skos:Concept ;
+    rdfs:range xsd:string ;
+    rdfs:label "sha256"@nl ;
+    skos:prefLabel "sha256"@nl ;
+    skos:related apnl:PolicyArtifact ;
+    skos:definition "De SHA-256-hash (hexadecimaal, 64 tekens) van het artefact of de bundel."@nl ;
+    skos:note """Maakt integriteitscontrole en herleidbaarheid mogelijk; kan als
+audit_identifiers.policy_version in een AuthZEN-antwoord worden opgenomen."""@nl ;
+    skos:inScheme apnl: .
+
+# --- GESCHRAPT (aug 2026): apnl:TechnischToetsbaar --------------------------
+# Het profiel kende een marker op de LEFT OPERAND ("kan een beslispunt deze
+# grootheid uberhaupt zien?"). Zij is vervallen. De vraag die zij beantwoordde
+# — wat mag ik van een ongedekte voorwaarde verwachten? — wordt beantwoord door
+# de twee DPV-markers op de VOORWAARDE zelf (dpv:TechnicalMeasure en
+# dpv:OrganisationalMeasure, zie de sectie conformsToPolicy). Die zitten op de
+# juiste korrel: toetsbaarheid is geen eigenschap van een grootheid maar van
+# een voorwaarde bij een beslispunt — dezelfde grootheid is bij de ene PDP wel
+# en bij de andere niet beschikbaar. Twee markeringen die op hetzelfde
+# neerkwamen maar elkaar konden tegenspreken, is er één te veel.
+
+# =============================================================================
+# 2. Left operands
+#
+# Het profiel legt vast dat een inkomend verwerkingsverzoek (een AuthZEN-
+# verzoek) als left operand mag optreden. Dit adresseert het interoperabiliteits-
+# probleem dat evaluatoren (zoals FORCE/UGent) een whitelist van toegestane
+# leftOperands hanteren waarin domeinspecifieke operands ontbreken.
+# =============================================================================
+
+apnl:verwerkingsverzoek a odrl:LeftOperand , skos:Concept ;
+    rdfs:label "verwerkingsverzoek"@nl ;
+    skos:prefLabel "verwerkingsverzoek"@nl ;
+    skos:topConceptOf apnl: ;
+    skos:definition """Het volledige inkomende verwerkingsverzoek (het NLGov
+AuthZEN-verzoek: subject, action, resource, context) als evalueerbare grootheid."""@nl ;
+    skos:note """Gebruikt in het conformsToPolicy-patroon: het verzoek MOET voldoen
+aan de machine-uitvoerbare policy in de rightOperand. Omdat het verwerkingsverzoek
+per definitie het evaluatieverzoek zelf is (en niet de toestand van de wereld),
+staat deze constraint conform de ODRL Formal Semantics in refinement-positie op
+de action (odrl:refinement), niet als odrl:constraint op de rule."""@nl ;
+    skos:inScheme apnl: ;
+    rdfs:seeAlso apnl:conformsToPolicy .
+
+apnl:rolAanvrager a odrl:LeftOperand , skos:Concept ;
+    rdfs:label "rol van de aanvrager"@nl ;
+    skos:prefLabel "rol van de aanvrager"@nl ;
+    skos:definition """De rol die de aanvrager (de persoon of dienst namens wie
+het verwerkingsverzoek wordt gedaan) draagt in het autorisatiesysteem van de
+afnemer, als evalueerbare grootheid."""@nl ;
+    skos:note """Gedeeld constraint-type voor rolgebonden toegang ("aanvrager
+heeft de rol belastingmedewerker"): de LOGISCHE toegangseis, los van de
+technische afdwinging. Dat diezelfde eis ook technisch afgedwongen kan worden
+(bijv. een JWT-rolcheck in een Rego-module via het conformsToPolicy-patroon)
+is secundair; het logische beleid hoort leesbaar in de policy zelf te staan.
+Omdat de rol een eigenschap van het verwerkingsverzoek is (subject-attribuut
+in het NLGov AuthZEN-verzoek), staat deze toets conform de ODRL Formal
+Semantics in refinement-positie op de action, net als odrl:purpose en
+apnl:verwerkingsverzoek."""@nl ;
+    skos:editorialNote """Ter discussie in de werkgroep: rolgebonden toegang is
+generiek genoeg dat hergebruik van een bestaand rol-/functievocabulaire de
+voorkeur verdient boven een profieleigen term; onderzoek loopt (zie de sectie
+Governance). Tot die uitkomst is deze term de werkversie-conventie."""@nl ;
+    skos:inScheme apnl: ;
+    skos:related apnl:verwerkingsverzoek ;
+    rdfs:seeAlso apnl:verwerkingsverzoek .
+
+# =============================================================================
+# 3. Operatoren
+# =============================================================================
+
+apnl:conformsToPolicy a odrl:Operator , skos:Concept ;
+    rdfs:label "voldoet aan beleid"@nl ;
+    skos:prefLabel "voldoet aan beleid"@nl ;
+    skos:related apnl:verwerkingsverzoek ;
+    skos:definition """Operator die geldt indien de leftOperand (een
+apnl:verwerkingsverzoek) voldoet aan de in de rightOperand aangehaalde
+apnl:PolicyArtifact of apnl:PolicyBundle."""@nl ;
+    skos:note """De evaluatie van deze operator wordt gedelegeerd aan de
+betreffende engine (OPA, Cedar, OpenFGA). In termen van de ODRL Formal Semantics:
+de satisfaction state van de refinement is satisfied dan en slechts dan als de
+gedelegeerde engine voor het verwerkingsverzoek toestemming (allow) teruggeeft."""@nl ;
+    skos:inScheme apnl: ;
+    rdfs:seeAlso apnl:verwerkingsverzoek , apnl:PolicyArtifact .
+
+# =============================================================================
+# 4. Compositie: Offer→Agreement-koppeling
+#
+# Het profiel definieert hiervoor GEEN eigen properties: de Agreement verwijst
+# naar het Offer met één standaardrelatie — prov:wasDerivedFrom (MOET;
+# SHACL-getoetst in shapes/afnemer.ttl, de verrijking "per afnemer"), naar een
+# odrl:Offer-getypeerd doelwit. Het eerdere duplicaat dct:references naar
+# datzelfde aanbod (de koppeling uit de ODRL Implementation Best Practices) is
+# geschrapt. De obligation-doorwerking Offer→Agreement wordt
+# eveneens in shapes/afnemer.ttl getoetst; scope-opheffing is een open ontwerpvraag (zie de
+# sectie Compositie van de spec).
+# =============================================================================
+
+# =============================================================================
+# 5. Doelbinding (purpose)
+#
+# Doelbinding wordt NIET als eigen begrip gedefinieerd, en het DOEL evenmin.
+# Het profiel hergebruikt odrl:purpose als leftOperand en verwijst met de
+# rightOperand naar een dpv:Purpose: een verwerkingsdoel uit het Register van
+# Verwerkingsactiviteiten van de afnemer en/of een purpose uit DPV zelf.
+#
+# GESCHRAPT (9 sep 2026): apnl:Verwerkingsdoel, de eigen subklasse van
+# dpv:Purpose die tot dan als "klasse-anker" diende. Zij voegde geen betekenis
+# toe aan dpv:Purpose — de definitie zei zelf al "geen nieuw generiek begrip" —
+# maar dwong wel elke doel-URI, elke shape en elke waardelijst om de
+# AP-NL-variant te kennen naast de DPV-term die iedereen al gebruikt. Eén
+# klasse voor één begrip: dpv:Purpose.
+#
+# Wat het profiel wél bijdraagt aan het doelbegrip is TAAL: een Nederlandse
+# voorkeursterm, een definitie in de context van dit profiel, en een plek in
+# het begrippenkader. Dat staat hieronder als ANNOTATIE op de dpv-IRI — precies
+# zoals sectie 5b dat voor de overgenomen ODRL-kerntermen doet. Zo houden
+# editors en viewer hun Nederlandse labels zonder dat er een tweede klasse voor
+# hetzelfde begrip bestaat.
+# =============================================================================
+
+dpv:Purpose a skos:Concept ;
+    rdfs:label "Verwerkingsdoel"@nl ;
+    skos:prefLabel "verwerkingsdoel"@nl ;
+    skos:topConceptOf apnl: ;
+    skos:definition """Het doel waarvoor persoonsgegevens verwerkt worden: de
+rightOperand van een odrl:purpose-refinement, afkomstig uit een Register van
+Verwerkingsactiviteiten en/of uit DPV."""@nl ;
+    skos:note """Overgenomen uit het Data Privacy Vocabulary; ODRL-AP-NL
+definieert geen eigen doelklasse. De doel-URI MOET overeenkomen met
+action.properties.dpl.core.processing_activity_id in het corresponderende NLGov
+AuthZEN-verzoek. Instanties dragen bij voorkeur een dct:title en een verwijzing
+naar de wettelijke grondslag (dpv:hasLegalBasis, BWB/Juriconnect)."""@nl ;
+    dct:source <https://w3id.org/dpv#Purpose> ;
+    skos:inScheme apnl: .
+
+apnl:doelbindingsverwijzing a owl:AnnotationProperty , skos:Concept ;
+    rdfs:label "doelbindingsverwijzing"@nl ;
+    skos:prefLabel "doelbindingsverwijzing"@nl ;
+    skos:related dpv:Purpose ;
+    skos:definition """Documentatie-annotatie (geen nieuw begrip): de rightOperand
+van een odrl:purpose-refinement verwijst naar een verwerkingsdoel (dpv:Purpose),
+in de praktijk een verwerkingsregister-URI."""@nl ;
+    skos:note """Deze doel-URI MOET overeenkomen met
+action.properties.dpl.core.processing_activity_id in het corresponderende NLGov
+AuthZEN-verzoek. Niet-normatief; wordt in voorbeelden niet als predicaat
+gebruikt."""@nl ;
+    skos:inScheme apnl: ;
+    rdfs:seeAlso dpv:Purpose .
+
+
+# =============================================================================
+# 5b. NL-SBB-annotaties bij de overgenomen ODRL-kerntermen
+#
+# NL-SBB staat toe (en moedigt aan) dat een begrippenkader begrippen uit andere
+# bronnen hergebruikt: een begrip kan via skos:inScheme in meerdere kaders
+# zitten. De hier overgenomen ODRL 2.2-kerntermen krijgen daarom een
+# Nederlandse voorkeursterm en definitie en een plek in het kader, zodat het
+# kader als geheel NL-SBB-conform is en editors/viewers Nederlandse labels
+# hebben. De Engelstalige bron blijft het ODRL 2.2-vocabulaire; machineleesbaar
+# als Turtle op https://www.w3.org/ns/odrl/2/ODRL22.ttl (de term-IRI's zelf
+# resolven met content negotiation).
+# De actiehiërarchie (skos:broader) volgt odrl:includedIn.
+# =============================================================================
+
+odrl:use a skos:Concept ;
+    skos:prefLabel "gebruiken"@nl ;
+    skos:definition "De asset op enigerlei wijze gebruiken; de algemene actie waar de overige acties van dit profiel onder vallen."@nl ;
+    dct:source <https://www.w3.org/TR/odrl-vocab/#term-use> ;
+    skos:inScheme apnl: ; skos:topConceptOf apnl: .
+
+odrl:read a skos:Concept ;
+    skos:prefLabel "raadplegen"@nl ;
+    skos:definition "Gegevens uit de asset verkrijgen zonder deze te wijzigen."@nl ;
+    dct:source <https://www.w3.org/TR/odrl-vocab/#term-read> ;
+    skos:inScheme apnl: ; skos:broader odrl:use .
+
+odrl:distribute a skos:Concept ;
+    skos:prefLabel "verstrekken"@nl ;
+    skos:definition "De asset of kopieën daarvan aan derden beschikbaar stellen."@nl ;
+    dct:source <https://www.w3.org/TR/odrl-vocab/#term-distribute> ;
+    skos:inScheme apnl: ; skos:broader odrl:use .
+
+odrl:inform a skos:Concept ;
+    skos:prefLabel "informeren"@nl ;
+    skos:definition "Een partij in kennis stellen van een gebruik van de asset (plicht-actie, o.a. de inlichtingenplicht)."@nl ;
+    dct:source <https://www.w3.org/TR/odrl-vocab/#term-inform> ;
+    skos:inScheme apnl: ; skos:broader odrl:use .
+
+odrl:purpose a skos:Concept ;
+    skos:prefLabel "doelbinding"@nl ;
+    skos:definition "Left operand: het doel waarvoor de verwerking plaatsvindt (de rightOperand is een verwerkingsdoel)."@nl ;
+    dct:source <https://www.w3.org/TR/odrl-vocab/#term-purpose> ;
+    skos:inScheme apnl: ; skos:topConceptOf apnl: .
+
+odrl:dateTime a skos:Concept ;
+    skos:prefLabel "datum en tijd"@nl ;
+    skos:definition "Left operand: het tijdstip van evaluatie; gebruikt voor tijdvensters (geldig vanaf/tot)."@nl ;
+    dct:source <https://www.w3.org/TR/odrl-vocab/#term-dateTime> ;
+    skos:inScheme apnl: ; skos:topConceptOf apnl: .
+
+odrl:deliveryChannel a skos:Concept ;
+    skos:prefLabel "verstrekkingskanaal"@nl ;
+    skos:definition "Left operand: het kanaal waarlangs de asset wordt geleverd of geraadpleegd."@nl ;
+    dct:source <https://www.w3.org/TR/odrl-vocab/#term-deliveryChannel> ;
+    skos:inScheme apnl: ; skos:topConceptOf apnl: .
+
+odrl:eq a skos:Concept ;
+    skos:prefLabel "is gelijk aan"@nl ;
+    skos:definition "Operator: de left operand is exact gelijk aan de right operand."@nl ;
+    dct:source <https://www.w3.org/TR/odrl-vocab/#term-eq> ;
+    skos:inScheme apnl: ; skos:topConceptOf apnl: .
+
+odrl:isA a skos:Concept ;
+    skos:prefLabel "is een"@nl ;
+    skos:definition "Operator: de left operand is een instantie of verbijzondering van de right operand (taxonomische match, o.a. de DPV-doelhiërarchie)."@nl ;
+    dct:source <https://www.w3.org/TR/odrl-vocab/#term-isA> ;
+    skos:inScheme apnl: ; skos:topConceptOf apnl: .
+
+odrl:isAnyOf a skos:Concept ;
+    skos:prefLabel "is een van"@nl ;
+    skos:definition "Operator: de left operand komt voor in de waardenlijst van de right operand."@nl ;
+    dct:source <https://www.w3.org/TR/odrl-vocab/#term-isAnyOf> ;
+    skos:inScheme apnl: ; skos:topConceptOf apnl: .
+
+odrl:gteq a skos:Concept ;
+    skos:prefLabel "groter dan of gelijk aan"@nl ;
+    skos:definition "Operator: de left operand is groter dan of gelijk aan de right operand (o.a. begin van een tijdvenster)."@nl ;
+    dct:source <https://www.w3.org/TR/odrl-vocab/#term-gteq> ;
+    skos:inScheme apnl: ; skos:topConceptOf apnl: .
+
+odrl:lteq a skos:Concept ;
+    skos:prefLabel "kleiner dan of gelijk aan"@nl ;
+    skos:definition "Operator: de left operand is kleiner dan of gelijk aan de right operand (o.a. einde van een tijdvenster)."@nl ;
+    dct:source <https://www.w3.org/TR/odrl-vocab/#term-lteq> ;
+    skos:inScheme apnl: ; skos:topConceptOf apnl: .
+
+# Brondocument-beschrijvingen (NL-SBB: een bron draagt een naam).
+<https://www.w3.org/TR/odrl-vocab/#term-use> dct:title "ODRL Vocabulary & Expression 2.2: use"@en .
+<https://www.w3.org/TR/odrl-vocab/#term-read> dct:title "ODRL Vocabulary & Expression 2.2: read"@en .
+<https://www.w3.org/TR/odrl-vocab/#term-distribute> dct:title "ODRL Vocabulary & Expression 2.2: distribute"@en .
+<https://www.w3.org/TR/odrl-vocab/#term-inform> dct:title "ODRL Vocabulary & Expression 2.2: inform"@en .
+<https://www.w3.org/TR/odrl-vocab/#term-purpose> dct:title "ODRL Vocabulary & Expression 2.2: purpose"@en .
+<https://www.w3.org/TR/odrl-vocab/#term-dateTime> dct:title "ODRL Vocabulary & Expression 2.2: dateTime"@en .
+<https://www.w3.org/TR/odrl-vocab/#term-deliveryChannel> dct:title "ODRL Vocabulary & Expression 2.2: deliveryChannel"@en .
+<https://www.w3.org/TR/odrl-vocab/#term-eq> dct:title "ODRL Vocabulary & Expression 2.2: eq"@en .
+<https://www.w3.org/TR/odrl-vocab/#term-isA> dct:title "ODRL Vocabulary & Expression 2.2: isA"@en .
+<https://www.w3.org/TR/odrl-vocab/#term-isAnyOf> dct:title "ODRL Vocabulary & Expression 2.2: isAnyOf"@en .
+<https://www.w3.org/TR/odrl-vocab/#term-gteq> dct:title "ODRL Vocabulary & Expression 2.2: gteq"@en .
+<https://www.w3.org/TR/odrl-vocab/#term-lteq> dct:title "ODRL Vocabulary & Expression 2.2: lteq"@en .
+
+# =============================================================================
+# 6. SKOS-Collections per termsoort (Profile Best Practices §6)
+#
+# De collecties bevatten zowel de door dit profiel GEDEFINIEERDE termen als de
+# uit ODRL 2.2 OVERGENOMEN kerntermen. Daarmee is machineleesbaar welke
+# deelverzameling van ODRL een NL-evaluator moet kennen (ODRL 2.2 §3.2).
+# Domeinprofielen (zoals ODRL-BRP) breiden deze collecties uit met eigen
+# acties, operatoren en left operands.
+# =============================================================================
+
+apnl:TermenCollectie a skos:Collection ;
+    skos:prefLabel "ODRL-AP-NL: alle profieltermen"@nl ;
+    skos:definition "Alle door ODRL-AP-NL gedefinieerde en overgenomen termen."@nl ;
+    skos:member
+        # gedefinieerd
+        apnl:PolicyArtifact , apnl:RegoModule , apnl:CedarPolicySet ,
+        apnl:OpenFGAModel , apnl:PolicyBundle ,
+        apnl:bundles , apnl:entrypoint , apnl:sha256 ,
+        apnl:verwerkingsverzoek , apnl:rolAanvrager , apnl:conformsToPolicy ,
+        apnl:doelbindingsverwijzing ,
+        # overgenomen (zie de deelcollecties hieronder)
+        dpv:Purpose ,
+        odrl:read , odrl:use , odrl:distribute , odrl:inform ,
+        odrl:purpose , odrl:dateTime , odrl:deliveryChannel ,
+        odrl:eq , odrl:isA , odrl:isAnyOf , odrl:gteq , odrl:lteq .
+
+apnl:ActieCollectie a skos:Collection ;
+    skos:prefLabel "ODRL-AP-NL: acties"@nl ;
+    skos:definition """De ODRL-kernacties die dit profiel overneemt. Het profiel
+definieert géén eigen acties; domeinprofielen (zoals ODRL-BRP met de
+verstrekkingsvormen) voegen de hunne toe als odrl:Action met odrl:includedIn."""@nl ;
+    skos:member odrl:read , odrl:use , odrl:distribute , odrl:inform .
+
+apnl:LeftOperandCollectie a skos:Collection ;
+    skos:prefLabel "ODRL-AP-NL: left operands"@nl ;
+    skos:definition """De left operands van dit profiel: de profieleigen
+apnl:verwerkingsverzoek en apnl:rolAanvrager (rolgebonden toegang) plus de
+overgenomen kerntermen odrl:purpose (doelbinding), odrl:dateTime
+(tijdvensters) en odrl:deliveryChannel (verstrekkingskanaal)."""@nl ;
+    skos:member apnl:verwerkingsverzoek , apnl:rolAanvrager , odrl:purpose ,
+        odrl:dateTime , odrl:deliveryChannel .
+
+apnl:OperatorCollectie a skos:Collection ;
+    skos:prefLabel "ODRL-AP-NL: operatoren"@nl ;
+    skos:definition """De operatoren van dit profiel: het profieleigen
+apnl:conformsToPolicy plus de overgenomen kerntermen odrl:eq (exacte match),
+odrl:isA (taxonomische match, o.a. DPV-doelhiërarchie), odrl:isAnyOf
+(waardenlijst) en odrl:gteq/odrl:lteq (tijdvensters)."""@nl ;
+    skos:member apnl:conformsToPolicy , odrl:eq , odrl:isA , odrl:isAnyOf ,
+        odrl:gteq , odrl:lteq .

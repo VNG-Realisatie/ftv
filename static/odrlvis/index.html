@@ -1,60 +1,29 @@
 <!doctype html>
+<!-- Het lang-attribuut wordt na de eerste render door de app gezet (?lang=). -->
 <html lang="nl">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ODRL-AP-NL policyviewer</title>
+  <title>ODRL Visualizer</title>
   <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="assets/styles.css">
+  <script type="module" crossorigin src="./assets/index-Ba-_4dcp.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/term-Bf9Hay9m.js">
+  <link rel="modulepreload" crossorigin href="./assets/weergave-7Ju8F6Sa.js">
+  <link rel="modulepreload" crossorigin href="./assets/web-CIriJA05.js">
+  <link rel="modulepreload" crossorigin href="./assets/bronbeheer-BqaFIk81.js">
+  <link rel="modulepreload" crossorigin href="./assets/scrollanker-B_LWXOWq.js">
+  <link rel="modulepreload" crossorigin href="./assets/verken-Cus-vADS.js">
+  <link rel="modulepreload" crossorigin href="./assets/bewerkhaak-DMGFRvlr.js">
+  <link rel="modulepreload" crossorigin href="./assets/kopselectie-CSC_6VT1.js">
+  <link rel="modulepreload" crossorigin href="./assets/formulier-xdQ68INr.js">
+  <link rel="modulepreload" crossorigin href="./assets/verken-model-Bspm_SY4.js">
+  <link rel="stylesheet" crossorigin href="./assets/scrollanker-B819f4ck.css">
+  <link rel="stylesheet" crossorigin href="./assets/verken-DOn2KyCw.css">
+  <link rel="stylesheet" crossorigin href="./assets/bewerkhaak-o84mMer4.css">
+  <link rel="stylesheet" crossorigin href="./assets/formulier-C2wtxdOy.css">
+  <link rel="stylesheet" crossorigin href="./assets/index-BOUbtvjG.css">
 </head>
-<body>
-  <header class="topbar">
-    <div class="brand">
-      <span class="logo">ODRL-AP-NL</span>
-      <span class="subtitle">policyviewer</span>
-    </div>
-    <div class="toolbar">
-      <label class="btn" title="Open lokale .ttl / .jsonld bestanden">
-        Bestand openen
-        <input id="file-input" type="file" accept=".ttl,.jsonld,.json,.turtle,.nt" multiple hidden>
-      </label>
-      <button class="btn" id="reload-examples" title="Laad de voorbeelden uit ../data/">Voorbeelden laden</button>
-      <button class="btn" id="btn-new-policy" title="Start een nieuw drietraps-skelet (Offer + Agreement + Permission)">Nieuw beleid</button>
-      <button class="btn btn-toggle" id="btn-edit-toggle" aria-pressed="false" title="Schakel de bewerken-modus in of uit">Bewerken</button>
-      <button class="btn" id="btn-export-ttl" title="Download de volledige graaf als Turtle">Turtle &#8595;</button>
-      <button class="btn" id="btn-export-jsonld" title="Download de volledige graaf als JSON-LD">JSON-LD &#8595;</button>
-      <span class="dirty" id="dirty-indicator"></span>
-      <span class="status" id="status"></span>
-    </div>
-  </header>
-
-  <main class="layout">
-    <nav class="pane pane-nav" id="nav" aria-label="Navigatie">
-      <div class="pane-head">Beleid</div>
-      <!-- Zoekveld: client-side filter op navigatielabels (schaal: 1.392
-           BRP-besluiten zijn zonder filter niet terug te vinden). -->
-      <div class="nav-filter">
-        <input type="search" id="nav-filter" placeholder="Filter op naam…"
-               aria-label="Filter de navigatie op naam">
-        <span class="nav-count muted" id="nav-count" aria-live="polite"></span>
-      </div>
-      <div class="nav-tree" id="nav-tree"></div>
-    </nav>
-
-    <!-- TWEE PANELEN (aug 2026): navigatie + documentweergave. Het derde
-         paneel toonde de machineleesbare bron (Turtle / JSON-LD / verkennen)
-         naast de mensleesbare weergave; dat is vervallen. De ruwe triples zijn
-         te bekijken via het ⌕ (RDF-verkenner; in de documentweergave een tweede
-         full-page stand van die pagina, hier de meegeleverde Comunica-client
-         in een ander tabblad) en te
-         downloaden met de export-knoppen hierboven. -->
-    <section class="pane pane-doc" id="doc" aria-label="Weergave">
-      <div id="doc-content" class="doc-content"></div>
-    </section>
-  </main>
-
-  <datalist id="dl-labeled"></datalist>
-
-  <script type="module" src="assets/app.js"></script>
-</body>
+<!-- De chrome (kop, hoofdkolom, statusregel) rendert de app zelf in #app: één
+     DOM-eigenaar, geen tweede mountpunt. Zie src/app.tsx. -->
+<body><div id="app"></div></body>
 </html>

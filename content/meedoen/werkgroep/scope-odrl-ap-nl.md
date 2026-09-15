@@ -5,7 +5,6 @@ Title: Scope ODRL-AP-NL
 {{< chapter/section title="" >}}
 # Scope ODRL-AP-NL (15 september 2026)
 
-*Conceptverslag; met een LLM gegenereerd op basis van de opname en door mensen gereviewd.*
 {{< /chapter/section >}}
 
 {{< chapter/section title="Aanwezigen" >}}
@@ -34,6 +33,9 @@ Title: Scope ODRL-AP-NL
 - [Opname](https://github.com/VNG-Realisatie/ftv/raw/refs/heads/main/static/videos/20260915-odrl-ap-nl.mp4)
 - [Presentatie](/ftv/documents/20260915-odrl-ap-nl.pdf)
 - [ODRL Visualisation Note](/ftv/documents/20260824-odrl-visualisation-note.html)
+- [Voorbeeld in de viewer: gegevensleveringsovereenkomst (GLO)](/ftv/odrlvis/?src=voorbeelden/glo-voorbeeld.ttl)
+- [Voorbeeld in de viewer: hardening als machineleesbare afspraak](/ftv/odrlvis/?src=voorbeelden/hardening-voorbeeld.ttl)
+- [Voorbeeld in de viewer: GLO met MIM-gegevensmodellen](/ftv/odrlvis/?src=voorbeelden/glo-mim-voorbeeld.ttl)
 
 {{< /chapter/section >}}
 

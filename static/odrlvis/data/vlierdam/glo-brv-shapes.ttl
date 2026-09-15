@@ -1,0 +1,98 @@
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix sh:     <http://www.w3.org/ns/shacl#> .
+@prefix dash:   <http://datashapes.org/dash#> .
+@prefix cdi:    <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/> .
+@prefix gd:     <https://gegevensdeling.example/def/> .
+@prefix globrv: <https://vlierdam.example/glo/brv/> .
+
+# =============================================================================
+# Twee aanvullende formulier-shapes bij vlierdam-glo-brv.ttl.
+#
+# WAT HIER WEL EN NIET STAAT. glo-shapes.ttl draagt de formulieren van het
+# gespiegelde vocabulaire — overeenkomst, rollen, specificatie, leverset,
+# gegevensmiddel, afspraken, begrippenkader, gegevensset, gegevenstype,
+# waardedomein, codelijst, gegevensveld, mapping en de twee gegevensmodellen.
+# Dat bestand wordt hier NIET aangevuld en niet overschreven. Wat hieronder
+# staan twee klassen die het niet aanraakt en die déze casus nodig heeft; elke
+# shape draagt hieronder haar eigen reden. Een derde kandidaat, de fysieke
+# dataset, is vervallen: het gegevensmiddel en de fysieke dataset zijn in dit
+# voorbeeld één knoop, en die heeft in glo-shapes.ttl al een formulier.
+#
+# GEEN TWEEDE SHAPE OP EEN AL GEDEKTE KLASSE. Bij twee formulier-shapes op
+# dezelfde doelklasse wint de eerst gevonden, en dat zou het rijkere formulier
+# van glo-shapes.ttl kunnen verdringen. De noodzaakregel per gegevenstype
+# (skos:scopeNote, zie vlierdam-glo-brv.ttl §6b) krijgt daarom géén eigen rij op
+# gd:GegevenstypeFormShape: de prijs — een formulier van elf rijen dat zijn plek
+# afstaat aan een formulier van één — is hoger dan de winst.
+#
+# DEZELFDE SUBSET EN DEZELFDE GROEPEN als glo-shapes.ttl: sh:NodeShape +
+# sh:targetClass, sh:property met sh:path (ook sh:inversePath), sh:name,
+# sh:description, sh:order, sh:group, dash:viewer en dash:propertyRole. De
+# groepen zelf worden hier niet opnieuw gedefinieerd; zij komen uit
+# glo-shapes.ttl, dat met dit bestand samen wordt geladen.
+#
+# De shapes staan in de instantie-namespace van dit voorbeeld en niet in de
+# vocabulaire-namespace: zij horen bij deze casus en niet bij het gespiegelde
+# informatiemodel.
+# =============================================================================
+
+# --- Het eenheidstype --------------------------------------------------------
+#
+# WAAROM DEZE CASUS HEM NODIG HEEFT. De eenheid waarover gemeten wordt is in
+# deze levering het VOERTUIG, en niet de houder — dat is de minimalisatie in
+# één knoop. Zonder formulier blijft die knoop een plat label aan het eind van
+# de gegevenstyperij, en juist hier wil een lezer kunnen doorklikken naar de
+# vraag "waarover gaat een regel eigenlijk?". De omgekeerde rij toont meteen
+# alle tien de gegevenstypen die over die eenheid iets zeggen.
+globrv:EenheidstypeFormShape a sh:NodeShape ;
+    sh:targetClass cdi:UnitType ;
+    rdfs:label "Eenheidstypeformulier"@nl , "Unit type form"@en ;
+    sh:property [
+        sh:path rdfs:label ;
+        dash:propertyRole dash:LabelRole ;
+        sh:order 0 ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath cdi:ConceptualVariable_measures_UnitType ] ;
+        sh:name "Gegevenstypen over deze eenheid"@nl ,
+                "Data types about this unit"@en ;
+        sh:description """De gegevenstypen die iets over deze eenheid vastleggen.
+Wat hier niet staat, wordt over deze eenheid niet geleverd."""@nl ;
+        sh:group gd:GroepInhoud ; sh:order 20 ;
+        dash:viewer dash:LabelViewer ;
+    ] .
+
+# --- Het logisch record ------------------------------------------------------
+#
+# WAAROM DEZE CASUS HEM NODIG HEEFT. Het record is de vorm waarin één regel de
+# deur uit gaat: de opsomming van gegevensvelden die samen één geleverde
+# eenheid beschrijven. Voor een levering waarvan de kern is wát er NIET in zit,
+# is dat de plek waar een lezer het zelf kan natellen — tien velden, geen
+# burgerservicenummer, geen kenteken. Zonder formulier is het record een dood
+# label tussen het gegevensmodel en de velden in.
+globrv:LogischRecordFormShape a sh:NodeShape ;
+    sh:targetClass cdi:LogicalRecord ;
+    rdfs:label "Formulier logisch record"@nl , "Logical record form"@en ;
+    sh:property [
+        sh:path rdfs:label ;
+        dash:propertyRole dash:LabelRole ;
+        sh:order 0 ;
+    ] ;
+    sh:property [
+        sh:path cdi:LogicalRecord_has_InstanceVariable ;
+        sh:name "Gegevensvelden in de regel"@nl , "Data fields in the row"@en ;
+        sh:description """De volledige inhoud van één geleverde regel."""@nl ;
+        sh:group gd:GroepStructuur ; sh:order 30 ;
+        dash:viewer dash:LabelViewer ;
+    ] ;
+    sh:property [
+        sh:path [ sh:inversePath cdi:PhysicalSegmentLayout_formats_LogicalRecord ] ;
+        sh:name "Opgemaakt door"@nl , "Formatted by"@en ;
+        sh:group gd:GroepSamenhang ; sh:order 60 ;
+        dash:viewer dash:LabelViewer ;
+    ] .
+
+# Weergavelabels voor cdi:UnitType en cdi:LogicalRecord staan al in
+# glo-vocabulaire.ttl, dat met dit bestand samen wordt geladen; zij worden hier
+# niet herhaald.

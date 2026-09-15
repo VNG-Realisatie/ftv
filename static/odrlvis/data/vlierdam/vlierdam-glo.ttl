@@ -1,0 +1,1463 @@
+@prefix odrl:   <http://www.w3.org/ns/odrl/2/> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix dpv:    <https://w3id.org/dpv#> .
+@prefix org:    <http://www.w3.org/ns/org#> .
+@prefix schema: <https://schema.org/> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix dprod:  <https://www.omg.org/spec/DPROD/dprod/> .
+@prefix cdi:    <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/> .
+@prefix apnl:   <https://standaarden.overheid.nl/odrl-ap-nl/> .
+@prefix vlierdam: <https://vlierdam.example/odrl/> .
+@prefix gd:     <https://gegevensdeling.example/def/> .
+@prefix gdstatus: <https://gegevensdeling.example/def/status/> .
+@prefix gdonderwerp: <https://gegevensdeling.example/def/afspraak/onderwerp/> .
+@prefix gdgrondslag: <https://gegevensdeling.example/def/grondslag/> .
+@prefix gdvrijwillig: <https://gegevensdeling.example/def/grondslag/Vrijwillig/> .
+@prefix gdnamens: <https://gegevensdeling.example/def/namens/> .
+@prefix gdglsonderwerp: <https://gegevensdeling.example/def/glsonderwerp/> .
+@prefix gdglsrol: <https://gegevensdeling.example/def/glsrol/> .
+@prefix gdc:    <https://gegevensdeling.example/def/classificatie/> .
+@prefix glo:    <https://vlierdam.example/glo/> .
+
+# =============================================================================
+# Gemeente Vlierdam (FICTIEF) — de gegevensleveringsovereenkomst onder de
+# bestaande BRP-levering.
+#
+# WAT DIT BESTAND TOEVOEGT. beleid.ttl beschrijft de BESLISPUNTEN van de
+# laadpalenketen: wie mag wat vragen, en wat toetst welke PDP. Wat daar
+# ontbreekt is de laag erboven — de overeenkomst waarin de twee organisaties
+# vastleggen dát er geleverd wordt, waarom dat mag, wie ervoor tekent en welke
+# gegevens er precies over het koppelvlak gaan. Dat is de
+# gegevensleveringsovereenkomst (GLO): de koepel, met daaronder de
+# gegevensleveringsspecificatie (GLS) tot op veldniveau.
+#
+# DE CASUS. Dezelfde als in beleid.ttl: de laadpalenapplicatie van gemeente
+# Vlierdam betrekt via haar outway BRP-gegevens bij de inway van de Rijksdienst
+# voor Identiteitsgegevens. Deze overeenkomst formaliseert díé levering — RvIG
+# als verstrekker, gemeente Vlierdam als ontvanger, doelbinding "Registratie van
+# laadpalen". Alles is fictief; RvIG figureert in dit corpus als fictieve
+# ketenpartner (zie README.md).
+#
+# HET VASTKLIKKEN AAN HET BESTAANDE BELEID is het punt van dit bestand. De
+# overeenkomst verzint geen nieuwe partijen, doelen of velden, maar hergebruikt
+# de IRI's die er al zijn:
+#   - vlierdam:RvIG en vlierdam:GemeenteVlierdam als de twee partijen;
+#   - vlierdam:doelbinding-registratie-laadpalen als het doel van de ontvanger
+#     én als rightOperand van de doelbinding op de toestemming — dezelfde knoop
+#     die de outway-regels in beleid.ttl al afdwingen;
+#   - vlierdam:brp-velden-laadpalen als de gegevensleverset: in het beleid het
+#     doelwit van de regels, hier de dataset die geleverd wordt. Eén ding, twee
+#     rollen, één IRI;
+#   - de zeven veldknopen uit velden.ttl als de GEGEVENSTYPEN van de
+#     specificatie. Er komt geen veld bij dat velden.ttl niet al kent;
+#   - vlierdam:set-rvig-inway als het beslispunt dat de levering bewaakt, en
+#     vlierdam:plicht-vernietiging als de plicht waar de vernietigingsafspraak
+#     van deze overeenkomst naar verwijst.
+# De aanvullingen op die bestaande knopen staan HIER en niet in het bestand waar
+# de knoop vandaan komt; beleid.ttl, velden.ttl, vocabulaire.ttl en openftv.ttl
+# zijn ongewijzigd. Sectie 9 zet ze bij elkaar.
+#
+# VOCABULAIRE EN FORMULIEREN staan in glo-vocabulaire.ttl respectievelijk
+# glo-shapes.ttl. Het vocabulaire is generiek en casusneutraal; wat hier staat is
+# de Vlierdamse casus.
+# =============================================================================
+
+# =============================================================================
+# 1. HET AANBOD
+#
+# De verstrekker biedt gemeenten een standaardlevering aan; een gemeente die
+# aansluit accepteert dat aanbod en daaruit ontstaat de overeenkomst
+# (prov:wasDerivedFrom, de AP-NL-relatie). De deelregel voor plichten: een
+# plicht die de AANBIEDER bindt kan als gedeelde knoop tussen aanbod en
+# overeenkomst staan; een plicht die de ontvanger bindt kan dat niet — in het
+# aanbod is de ontvanger nog onbekend. Zulke plichten staan in het aanbod als
+# ongebonden modelclausule en in de overeenkomst als afspraak met gebonden
+# partij.
+# =============================================================================
+
+glo:aanbod-brp-gemeenten a odrl:Offer ;
+    odrl:uid glo:aanbod-brp-gemeenten ;
+    odrl:profile gd:profiel , apnl:profiel ;
+    dct:title "Aanbod: BRP-bevraging voor gemeentelijke uitvoeringstaken"@nl ,
+              "Offer: population register queries for municipal statutory tasks"@en ;
+    dct:description "De Rijksdienst voor Identiteitsgegevens biedt gemeenten een aansluiting aan waarmee zij, voor een in hun autorisatiebesluit opgenomen taak, gegevens over hun eigen ingezetenen kunnen opvragen uit de basisregistratie personen."@nl ,
+                    "The National Identity Data Agency offers municipalities a connection with which they may retrieve data about their own residents from the population register, for a task listed in their authorisation decision."@en ;
+    dct:publisher vlierdam:RvIG ;
+    odrl:assigner vlierdam:RvIG ;
+    dct:issued "2026-05-18"^^xsd:date ;
+    dct:references glo:standaardafspraken-gemeentelevering ;
+    odrl:permission glo:aanbod-toestemming ;
+    odrl:obligation glo:afspraak-evaluatie ,
+        glo:model-afspraak-opzegtermijn , glo:model-afspraak-vernietiging .
+
+glo:aanbod-toestemming a odrl:Permission ;
+    odrl:uid glo:aanbod-toestemming ;
+    dct:title "Bevragen voor een geautoriseerde taak"@nl ,
+              "Querying for an authorised task"@en ;
+    odrl:target vlierdam:brp-velden-laadpalen ;
+    odrl:action glo:actie-gebruik-laadpalen .
+
+# De standaardafsprakenset als benoemd object: code, versie en het document
+# waarin zij is vastgelegd.
+glo:standaardafspraken-gemeentelevering
+    dct:identifier "SA-GEM-BRP-003" ;
+    dct:title "Standaardafspraken gemeentelijke BRP-aansluitingen, versie 3.0"@nl ,
+              "Standard terms for municipal population register connections, version 3.0"@en ;
+    owl:versionInfo "3.0" ;
+    dct:source <https://vlierdam.example/glo/documenten/standaardafspraken-gem-brp-v3> ;
+    dct:hasPart glo:afspraak-evaluatie ,
+        glo:model-afspraak-opzegtermijn , glo:model-afspraak-vernietiging .
+
+<https://vlierdam.example/glo/documenten/standaardafspraken-gem-brp-v3>
+    dct:title "Standaardafspraken gemeentelijke BRP-aansluitingen v3.0 (plaatshouder)"@nl ,
+              "Standard terms for municipal population register connections v3.0 (placeholder)"@en .
+
+# =============================================================================
+# 2. DE OVEREENKOMST
+# =============================================================================
+
+glo:glo-rvig-vlierdam-2026 a odrl:Agreement , gd:Gegevensleveringsovereenkomst ;
+    odrl:uid glo:glo-rvig-vlierdam-2026 ;
+    odrl:profile gd:profiel , apnl:profiel ;
+    dct:identifier "GLO-RVIG-VLD-2026-001" ;
+    dct:title "GLO BRP-bevraging laadpalen — RvIG en gemeente Vlierdam"@nl ,
+              "Data delivery agreement for charging-station population register queries — RvIG and the municipality of Vlierdam"@en ;
+    dct:description "Gegevensleveringsovereenkomst voor de bevraging van de basisregistratie personen door gemeente Vlierdam, voor de registratie van laadpalen bij woningen van inwoners met een elektrische auto."@nl ,
+                    "Data delivery agreement for queries on the population register by the municipality of Vlierdam, for the registration of charging stations at the homes of residents with an electric vehicle."@en ;
+    dct:issued "2026-09-14"^^xsd:date ;
+    dct:conformsTo <https://vlierdam.example/glo/documenten/model-glo-v2> ;
+    dct:references glo:standaardafspraken-gemeentelevering ,
+        # HET BESLISPUNT DAT DEZE OVEREENKOMST BEWAAKT (beleid.ttl). De
+        # overeenkomst zegt wát er mag; de Set van de RvIG-inway zegt wat de PDP
+        # bij een binnenkomend verzoek toetst. Twee lagen, één levering.
+        vlierdam:set-rvig-inway ;
+    prov:wasDerivedFrom glo:aanbod-brp-gemeenten ;
+
+    schema:validFrom "2026-10-01"^^xsd:date ;
+    schema:validThrough "2029-09-30"^^xsd:date ;
+    gd:heeftStatus gdstatus:akkoord ;
+
+    # De ODRL-laag: de partijen als gewone partij-IRI's, zodat een
+    # ODRL-evaluator deze overeenkomst kan lezen zonder het rolmodel te kennen.
+    odrl:assigner vlierdam:RvIG ;
+    odrl:assignee vlierdam:GemeenteVlierdam ;
+    # De rollaag ernaast: twee rol-objecten, elk met hun eigen doel, grondslag,
+    # akkoordverklaring en eindverantwoordelijke functie. Dat de partij van een
+    # rol dezelfde is als de bijbehorende ODRL-partij is een toets en geen
+    # aanname.
+    gd:heeftRol glo:rol-verstrekker , glo:rol-ontvanger ;
+
+    gd:noodzaak """Om een laadpaal te kunnen toewijzen moet de gemeente weten wie
+er op het opgegeven adres staat ingeschreven en of die persoon inwoner van
+Vlierdam is; zonder die vaststelling kan zij de aanvraag niet aan een
+rechthebbende koppelen en niet toetsen of zij bevoegd is haar te behandelen. De
+bevraging blijft beperkt tot de velden die voor het eerste contact en de
+adrescontrole nodig zijn — identificatie, naam, adres, geboortedatum en gemeente
+van inschrijving. Gegevens over de samenstelling van het huishouden, de
+nationaliteit of het verblijfsrecht zijn voor dit doel niet nodig en worden niet
+geleverd."""@nl ,
+        """To allocate a charging station the municipality must know who is
+registered at the address given and whether that person is a resident of
+Vlierdam; without that it cannot link the application to an entitled person or
+test whether it is competent to handle it. The query is limited to the fields
+needed for first contact and the address check — identification, name, address,
+date of birth and municipality of registration. Data on household composition,
+nationality or residence status are not needed for this purpose and are not
+delivered."""@en ;
+
+    gd:doelVerstrekker glo:doel-verstrekking-brp ;
+    gd:verwerkingsbelang glo:belang-verantwoording ;
+    gd:gegevensleveringsspecificatie glo:gls-brp-laadpalen ;
+    gd:akkoordverklaring glo:akkoord-rvig , glo:akkoord-vlierdam ;
+
+    odrl:permission glo:toestemming-gebruik ;
+    odrl:prohibition glo:verbod-doorlevering ;
+    odrl:obligation glo:plicht-beschikbaarstelling ,
+        glo:afspraak-doelstelling , glo:afspraak-evaluatie ,
+        glo:afspraak-opzegtermijn , glo:afspraak-vernietiging ,
+        glo:afspraak-wijziging , glo:afspraak-geschillen ,
+        glo:afspraak-verrekening .
+
+<https://vlierdam.example/glo/documenten/model-glo-v2>
+    dct:title "Model gegevensleveringsovereenkomst v2 (plaatshouder)"@nl ,
+              "Model data delivery agreement v2 (placeholder)"@en .
+
+# =============================================================================
+# 3. DE REGELS VAN DE OVEREENKOMST
+# =============================================================================
+
+# De toestemming van de ontvanger: gebruik binnen de doelbinding. De actie is
+# dezelfde gedeelde knoop als in het aanbod.
+glo:toestemming-gebruik a odrl:Permission ;
+    odrl:uid glo:toestemming-gebruik ;
+    dct:title "Bevragen en gebruiken voor de registratie van laadpalen"@nl ,
+              "Querying and using for the registration of charging stations"@en ;
+    odrl:target vlierdam:brp-velden-laadpalen ;
+    odrl:assignee vlierdam:GemeenteVlierdam ;
+    odrl:action glo:actie-gebruik-laadpalen .
+
+# DE DOELBINDING IS DEZELFDE KNOOP ALS IN HET BELEID. beleid.ttl legt op de
+# outway-regels de voorwaarde "odrl:purpose eq
+# vlierdam:doelbinding-registratie-laadpalen"; deze overeenkomst gebruikt
+# precies die voorwaarde-vorm en precies die doel-IRI. Wat de overeenkomst
+# toestaat en wat de PDP toetst is daarmee letterlijk hetzelfde doel, en niet
+# twee formuleringen die op elkaar lijken.
+glo:actie-gebruik-laadpalen rdf:value odrl:use ;
+    rdfs:label "gebruiken voor de registratie van laadpalen"@nl ,
+               "use for the registration of charging stations"@en ;
+    odrl:refinement glo:vw-doelbinding-laadpalen .
+
+glo:vw-doelbinding-laadpalen a odrl:Constraint ;
+    rdfs:label "Doel is registratie van laadpalen"@nl ,
+               "Purpose is registration of charging stations"@en ;
+    odrl:leftOperand odrl:purpose ;
+    odrl:operator odrl:eq ;
+    odrl:rightOperand vlierdam:doelbinding-registratie-laadpalen .
+
+# Het doorleververbod. Doorlevering is het delen door de ontvanger met een
+# derde; het verbod daarop is een odrl:Prohibition met odrl:action
+# odrl:distribute, de ontvanger als odrl:assignee en de leverset als
+# odrl:target. Geen eigen profielterm nodig — het patroon is ODRL-baseline.
+glo:verbod-doorlevering a odrl:Prohibition ;
+    odrl:uid glo:verbod-doorlevering ;
+    dct:title "Geen doorlevering aan derden"@nl ,
+              "No onward sharing with third parties"@en ;
+    dct:description "Gemeente Vlierdam deelt de opgehaalde persoonsgegevens niet met een derde. De laadpaalaannemer krijgt van de gemeente het adres waar geplaatst moet worden en niets uit de basisregistratie personen."@nl ,
+                    "The municipality of Vlierdam does not share the retrieved personal data with a third party. The contractor installing the charging station receives from the municipality the address where it is to be placed, and nothing from the population register."@en ;
+    odrl:target vlierdam:brp-velden-laadpalen ;
+    odrl:assignee vlierdam:GemeenteVlierdam ;
+    odrl:action odrl:distribute .
+
+# De verplichting van de verstrekker. Geen leverritme: deze levering volgt op
+# een bevraging, en het moment ligt bij de ontvanger. Wat de verstrekker
+# toezegt is beschikbaarheid — de tijden en de responstijd staan in de
+# gegevensmiddelafspraken.
+glo:plicht-beschikbaarstelling a odrl:Duty , gd:afspraak ;
+    odrl:uid glo:plicht-beschikbaarstelling ;
+    dct:title "Beschikbaarstelling van de bevraagbare gegevens"@nl ,
+              "Making the queryable data available"@en ;
+    dct:description "De Rijksdienst voor Identiteitsgegevens stelt de gegevens uit de leverset bevraagbaar beschikbaar via het koppelvlak, binnen de openstellingstijden en de responstijd die de gegevensmiddelafspraken noemen, en beantwoordt elke bevraging die binnen deze overeenkomst valt."@nl ,
+                    "The National Identity Data Agency makes the data in the delivery set available for querying through the interface, within the opening hours and the response time stated in the delivery medium clauses, and answers every query that falls within this agreement."@en ;
+    dct:subject gdonderwerp:verplichtingen-verstrekker ;
+    odrl:assignee vlierdam:RvIG ;
+    odrl:action odrl:distribute ;
+    odrl:target vlierdam:brp-velden-laadpalen .
+
+# =============================================================================
+# 4. DE AFSPRAKEN
+#
+# Gedeeld met het aanbod (bindt de aanbieder, dus in beide geldig):
+# =============================================================================
+
+glo:afspraak-evaluatie a odrl:Duty , gd:afspraak ;
+    odrl:uid glo:afspraak-evaluatie ;
+    dct:title "Jaarlijkse evaluatie"@nl , "Annual evaluation"@en ;
+    dct:description "Partijen evalueren de afspraken, het bevragingsvolume en de kwaliteit van de antwoorden ten minste eenmaal per jaar, op initiatief van de verstrekker."@nl ,
+                    "The parties evaluate the clauses, the query volume and the quality of the answers at least once a year, at the provider's initiative."@en ;
+    dct:subject gdonderwerp:tussentijdse-evaluatie ;
+    odrl:assignee vlierdam:RvIG ;
+    odrl:action odrl:reviewPolicy .
+
+# Modelclausules in het aanbod: de ontvanger is daar nog onbekend, dus geen
+# gebonden partij en geen gd:afspraak-typering.
+
+glo:model-afspraak-opzegtermijn a odrl:Duty ;
+    odrl:uid glo:model-afspraak-opzegtermijn ;
+    dct:title "Modelclausule: opzegging met drie maanden termijn"@nl ,
+              "Model clause: termination with three months' notice"@en ;
+    dct:description "Opschorting of opzegging gebeurt schriftelijk aan de eindverantwoordelijke functionaris van de andere partij, met een termijn van drie maanden."@nl ,
+                    "Suspension or termination is communicated in writing to the other party's accountable officer, with three months' notice."@en ;
+    dct:subject gdonderwerp:opschorten-opzeggen ;
+    odrl:action odrl:inform .
+
+glo:model-afspraak-vernietiging a odrl:Duty ;
+    odrl:uid glo:model-afspraak-vernietiging ;
+    dct:title "Modelclausule: vernietiging na afhandeling"@nl ,
+              "Model clause: destruction after settlement"@en ;
+    dct:description "De ontvanger vernietigt de opgehaalde gegevens zodra de aanvraag waarvoor zij zijn opgevraagd is afgehandeld."@nl ,
+                    "The recipient destroys the retrieved data once the application they were retrieved for has been settled."@en ;
+    dct:subject gdonderwerp:verplichtingen-ontvanger ;
+    odrl:action odrl:delete .
+
+# In de overeenkomst zelf, met gebonden partij(en):
+
+glo:afspraak-doelstelling a odrl:Duty , gd:afspraak ;
+    odrl:uid glo:afspraak-doelstelling ;
+    dct:title "Waarop deze overeenkomst ziet"@nl , "Scope of this agreement"@en ;
+    dct:description "Deze overeenkomst regelt uitsluitend de bevraging van de basisregistratie personen ten behoeve van de registratie van laadpalen. Voor een andere taak van de gemeente is een eigen overeenkomst nodig, ook als die dezelfde velden zou betreffen."@nl ,
+                    "This agreement covers only queries on the population register for the registration of charging stations. Another municipal task requires an agreement of its own, even if it were to concern the same fields."@en ;
+    dct:subject gdonderwerp:documentdoelstelling ;
+    odrl:assignee vlierdam:RvIG , vlierdam:GemeenteVlierdam ;
+    odrl:action odrl:inform .
+
+glo:afspraak-opzegtermijn a odrl:Duty , gd:afspraak ;
+    odrl:uid glo:afspraak-opzegtermijn ;
+    dct:title "Opzegging met drie maanden termijn"@nl ,
+              "Termination with three months' notice"@en ;
+    dct:description "Opschorting of opzegging gebeurt schriftelijk aan de eindverantwoordelijke functionaris van de andere partij, met een termijn van drie maanden. Deze afspraak bindt beide partijen."@nl ,
+                    "Suspension or termination is communicated in writing to the other party's accountable officer, with three months' notice. This clause binds both parties."@en ;
+    dct:subject gdonderwerp:opschorten-opzeggen ;
+    odrl:assignee vlierdam:RvIG , vlierdam:GemeenteVlierdam ;
+    odrl:action odrl:inform .
+
+# DEZELFDE PLICHT, TWEE LAGEN. beleid.ttl draagt met
+# vlierdam:plicht-vernietiging al de vernietigingsplicht die de twee inways
+# opleggen; die staat daar als organisatorisch geborgde plicht, omdat geen
+# beslispunt kan zien wanneer een zaak is afgehandeld. Wat hier staat is
+# dezelfde verplichting als CONTRACTUELE afspraak: waar het beleid zegt "dit
+# wordt niet technisch afgedwongen", zegt de overeenkomst "en dit is waar de
+# gemeente zich toe verbindt". Bewust een eigen knoop en geen hergebruik: een
+# afspraak in een overeenkomst en een plicht op een beslispunt zijn twee
+# verschillende uitspraken over dezelfde norm. De verwijzing legt de band.
+glo:afspraak-vernietiging a odrl:Duty , gd:afspraak ;
+    odrl:uid glo:afspraak-vernietiging ;
+    dct:title "Vernietiging na afhandeling van de aanvraag"@nl ,
+              "Destruction once the application is settled"@en ;
+    dct:description "Gemeente Vlierdam vernietigt de opgehaalde persoonsgegevens zodra de laadpaalaanvraag in haar zaaksysteem is afgehandeld, en bewaart ze niet langer dan de behandeling vergt."@nl ,
+                    "The municipality of Vlierdam destroys the retrieved personal data once the charging-station application has been settled in its case system, and keeps them no longer than handling them requires."@en ;
+    dct:subject gdonderwerp:verplichtingen-ontvanger ;
+    odrl:assignee vlierdam:GemeenteVlierdam ;
+    odrl:action odrl:delete ;
+    odrl:target vlierdam:brp-velden-laadpalen ;
+    dct:references vlierdam:plicht-vernietiging .
+
+glo:afspraak-wijziging a odrl:Duty , gd:afspraak ;
+    odrl:uid glo:afspraak-wijziging ;
+    dct:title "Wijziging van de leverset of de specificatie"@nl ,
+              "Changing the delivery set or the specification"@en ;
+    dct:description "Een wijziging in de geleverde velden of in de gegevensleveringsspecificatie wordt ten minste twee maanden van tevoren aangekondigd en schriftelijk vastgelegd; de overeenkomst zelf wordt daarbij opnieuw ondertekend."@nl ,
+                    "A change to the delivered fields or to the data delivery specification is announced at least two months in advance and recorded in writing; the agreement itself is signed anew."@en ;
+    dct:subject gdonderwerp:wijzigingsprocedure ;
+    odrl:assignee vlierdam:RvIG , vlierdam:GemeenteVlierdam ;
+    odrl:action odrl:inform .
+
+glo:afspraak-geschillen a odrl:Duty , gd:afspraak ;
+    odrl:uid glo:afspraak-geschillen ;
+    dct:title "Geschillen"@nl , "Disputes"@en ;
+    dct:description "Partijen leggen een geschil eerst voor aan hun eindverantwoordelijke functionarissen. Komen die er binnen zes weken niet uit, dan wordt het geschil voorgelegd aan de beheerder van het afsprakenstelsel."@nl ,
+                    "The parties first put a dispute to their accountable officers. If those do not resolve it within six weeks, the dispute is put to the administrator of the agreement framework."@en ;
+    dct:subject gdonderwerp:geschillen ;
+    odrl:assignee vlierdam:RvIG , vlierdam:GemeenteVlierdam ;
+    odrl:action odrl:inform .
+
+glo:afspraak-verrekening a odrl:Duty , gd:afspraak ;
+    odrl:uid glo:afspraak-verrekening ;
+    dct:title "Kostenverrekening"@nl , "Cost settlement"@en ;
+    dct:description "De gemeente vergoedt jaarlijks de aansluitkosten volgens de tarievenlijst van de verstrekker; er wordt niet per bevraging afgerekend."@nl ,
+                    "The municipality reimburses the annual connection costs according to the provider's price list; queries are not billed individually."@en ;
+    dct:subject gdonderwerp:financieel ;
+    odrl:assignee vlierdam:GemeenteVlierdam ;
+    odrl:action odrl:compensate .
+
+# =============================================================================
+# 5. DOELEN, GRONDSLAGEN EN HET VERWERKINGSBELANG
+# =============================================================================
+
+# Het doel van de VERSTREKKER: zijn eigen vermelding in het verwerkingsregister,
+# met de grondslag eraan. Het is een verstrekkingstaak en geen laadpalentaak —
+# de verstrekker levert, de ontvanger gebruikt.
+glo:doel-verstrekking-brp a dpv:Purpose ;
+    dct:title "Verstrekking aan overheidsorganen met een autorisatiebesluit"@nl ,
+              "Provision to public bodies holding an authorisation decision"@en ;
+    dct:identifier "RVIG-VR-0031" ;
+    dct:description "Vermelding in het verwerkingsregister van de verstrekker: het verstrekken van gegevens uit de basisregistratie personen aan een overheidsorgaan, voor zover dat orgaan daarvoor is geautoriseerd."@nl ,
+                    "Entry in the provider's processing register: providing data from the population register to a public body, insofar as that body is authorised to receive them."@en ;
+    dpv:hasLegalBasis glo:besluit-autorisatie-vlierdam .
+
+# HET AUTORISATIEBESLUIT ALS GRONDSLAG — één knoop, bewust compact.
+# De verstrekking rust niet rechtstreeks op de wet maar op het besluit dat op
+# grond van die wet is genomen: het besluit wijst aan wélk orgaan, voor wélke
+# taak, wélke gegevens mag ontvangen. Dat besluit staat hier als één
+# grondslagknoop met zijn kenmerk, zijn uitgever en de wettelijke bepaling
+# waarop het berust. De INHOUD van het besluit — welke velden de gemeente voor
+# deze taak mag ontvangen — is niet nog eens als besluitstructuur uitgeschreven:
+# dat is precies wat de gegevensleveringsspecificatie hieronder tot op
+# veldniveau doet (zie de noot bij sectie 6).
+glo:besluit-autorisatie-vlierdam a gdgrondslag:Wettelijk ;
+    rdfs:label "Autorisatiebesluit gemeente Vlierdam, taak registratie van laadpalen (fictief)"@nl ,
+               "Authorisation decision for the municipality of Vlierdam, task 'registration of charging stations' (fictitious)"@en ;
+    dct:identifier "AB-VLD-2026-0147" ;
+    dct:description "Het besluit waarmee de verstrekker gemeente Vlierdam autoriseert om voor de taak 'registratie van laadpalen' gegevens uit de basisregistratie personen te ontvangen over haar eigen ingezetenen. Het besluit is genomen op grond van artikel 3.2 van de Wet basisregistratie personen en benoemt de taak, de doelgroep en de te verstrekken gegevens."@nl ,
+                    "The decision by which the provider authorises the municipality of Vlierdam to receive population register data about its own residents for the task 'registration of charging stations'. It is taken under Article 3.2 of the Population Records Act and names the task, the population and the data to be provided."@en ;
+    dct:publisher vlierdam:RvIG ;
+    dct:issued "2026-06-30"^^xsd:date ;
+    dct:source <https://wetten.overheid.nl/jci1.3:c:BWBR0033715&artikel=3.2> .
+
+<https://wetten.overheid.nl/jci1.3:c:BWBR0033715&artikel=3.2>
+    dct:title "Wet basisregistratie personen, artikel 3.2 (wetten.overheid.nl)"@nl ,
+              "Population Records Act, Article 3.2 (wetten.overheid.nl)"@en .
+
+# HET DOEL VAN DE ONTVANGER IS DE BESTAANDE DOELBINDING uit vocabulaire.ttl.
+# Daar staat zij als skos:Concept met haar registernummer, en beleid.ttl toetst
+# er op de outway op. Wat deze overeenkomst toevoegt is haar typering als
+# verwerkingsdoel en de twee grondslagen eronder — meer is niet nodig, want de
+# knoop is er al. Punning op een skos:Concept is in dit corpus het bestaande
+# patroon (vergelijk odrl:purpose als qb:DimensionProperty in vocabulaire.ttl).
+vlierdam:doelbinding-registratie-laadpalen a dpv:Purpose ;
+    dct:description "Vermelding in het verwerkingsregister van gemeente Vlierdam: het beoordelen en afhandelen van aanvragen voor een laadpaal in de openbare ruimte bij de woning van een inwoner met een elektrische auto."@nl ,
+                    "Entry in the processing register of the municipality of Vlierdam: assessing and settling applications for a charging station in public space at the home of a resident with an electric vehicle."@en ;
+    dpv:hasLegalBasis glo:grondslag-gemeentetaak-laadinfrastructuur ,
+        glo:grondslag-vrijwillige-aanvraag .
+
+glo:grondslag-gemeentetaak-laadinfrastructuur a gdgrondslag:Wettelijk ;
+    rdfs:label "Gemeentewet, artikel 160, eerste lid, onder a"@nl ,
+               "Municipalities Act, Article 160(1)(a)"@en ;
+    dct:description "De taak van het college om het dagelijks bestuur van de gemeente te voeren, waaronder de inrichting van de openbare ruimte en de plaatsing van laadinfrastructuur daarin."@nl ,
+                    "The task of the municipal executive to conduct the day-to-day administration of the municipality, including the layout of public space and the placement of charging infrastructure in it."@en ;
+    dct:source <https://wetten.overheid.nl/jci1.3:c:BWBR0005416&artikel=160> .
+
+<https://wetten.overheid.nl/jci1.3:c:BWBR0005416&artikel=160>
+    dct:title "Gemeentewet, artikel 160 (wetten.overheid.nl)"@nl ,
+              "Municipalities Act, Article 160 (wetten.overheid.nl)"@en .
+
+# De tweede grondslagsoort, naast de wettelijke taak: de aanvraag zelf. Niemand
+# is verplicht een laadpaal aan te vragen, en wie het niet doet wordt niet
+# bevraagd. Het bronpatroon eist bij deze soort een verantwoording dat wet- en
+# regelgeving niet in de weg staan; die staat in gdvrijwillig:verantwoording.
+glo:grondslag-vrijwillige-aanvraag a gdgrondslag:Vrijwillig ;
+    rdfs:label "Vrijwillige aanvraag van een laadpaal door de inwoner"@nl ,
+               "Voluntary application for a charging station by the resident"@en ;
+    dct:description "De inwoner vraagt de laadpaal zelf aan; zonder aanvraag vindt er geen bevraging plaats en kan de inwoner de aanvraag op elk moment intrekken."@nl ,
+                    "The resident applies for the charging station themselves; without an application no query takes place, and the resident may withdraw the application at any time."@en ;
+    gdvrijwillig:verantwoording """Voor het in behandeling nemen van een
+laadpaalaanvraag bestaat geen wettelijk voorschrift dat de verwerking voorschrijft
+of beperkt: de Gemeentewet draagt het college het dagelijks bestuur op, maar
+verplicht niet tot dit aanbod. De verwerking gaat niet verder dan de gegevens die
+voor de beoordeling van de aanvraag nodig zijn, begint pas bij de aanvraag en
+eindigt zodra de aanvrager haar intrekt of de aanvraag is afgehandeld."""@nl ,
+        """No statutory rule prescribes or restricts the processing involved in
+handling an application for a charging station: the Municipalities Act charges the
+executive with day-to-day administration but does not require this offer. The
+processing goes no further than the data needed to assess the application, starts
+only with the application, and ends as soon as the applicant withdraws it or the
+application has been settled."""@en .
+
+# Het verwerkingsbelang: een op regelgeving gebaseerd belang dat met de
+# verwerkingen van deze deling is gemoeid. Hier het verantwoordingsbelang van de
+# Archiefwet, dat de bewaartermijn- en vernietigingsafspraak draagt. Getypeerd
+# als wettelijke grondslag, met de regeling in dct:source.
+glo:belang-verantwoording a gdgrondslag:Wettelijk ;
+    rdfs:label "Verantwoordingsbelang (Archiefwet 1995, artikel 3)"@nl ,
+               "Accountability interest (Archives Act 1995, Article 3)"@en ;
+    dct:description "De gemeente is verplicht de stukken van een aanvraag in goede, geordende en toegankelijke staat te bewaren; dit belang bepaalt welk deel van de bevraging in het zaakdossier terechtkomt en wanneer de rest wordt vernietigd."@nl ,
+                    "The municipality is required to keep the records of an application in good, orderly and accessible condition; this interest determines which part of the query ends up in the case file and when the rest is destroyed."@en ;
+    dct:source <https://wetten.overheid.nl/jci1.3:c:BWBR0007376&artikel=3> .
+
+<https://wetten.overheid.nl/jci1.3:c:BWBR0007376&artikel=3>
+    dct:title "Archiefwet 1995, artikel 3 (wetten.overheid.nl)"@nl ,
+              "Archives Act 1995, Article 3 (wetten.overheid.nl)"@en .
+
+# =============================================================================
+# 6. DE ROLLEN, DE AKKOORDVERKLARINGEN EN DE PERSONEN
+# =============================================================================
+
+glo:rol-verstrekker a gd:Verstrekker ;
+    rdfs:label "Verstrekkersrol: Rijksdienst voor Identiteitsgegevens"@nl ,
+               "Provider role: National Identity Data Agency"@en ;
+    gd:partij vlierdam:RvIG ;
+    gd:doelVerstrekker glo:doel-verstrekking-brp ;
+    gd:heeftGrondslag glo:besluit-autorisatie-vlierdam ;
+    gd:eindverantwoordelijkeFunctie glo:functie-directeur ;
+    gd:akkoordverklaring glo:akkoord-rvig .
+
+glo:rol-ontvanger a gd:Ontvanger ;
+    rdfs:label "Ontvangersrol: gemeente Vlierdam"@nl ,
+               "Recipient role: municipality of Vlierdam"@en ;
+    gd:partij vlierdam:GemeenteVlierdam ;
+    # Hetzelfde doel dat de doelbinding op de toestemming als rightOperand
+    # draagt; de doelbinding blijft het normatieve, AP-NL-conforme mechanisme.
+    gd:doelOntvanger vlierdam:doelbinding-registratie-laadpalen ;
+    gd:heeftGrondslag glo:grondslag-gemeentetaak-laadinfrastructuur ,
+        glo:grondslag-vrijwillige-aanvraag ;
+    gd:eindverantwoordelijkeFunctie vlierdam:gemeentesecretaris ;
+    gd:akkoordverklaring glo:akkoord-vlierdam .
+
+glo:akkoord-rvig a gd:Akkoordverklaring , prov:Activity ;
+    rdfs:label "Akkoordverklaring namens de Rijksdienst voor Identiteitsgegevens"@nl ,
+               "Declaration of agreement on behalf of the National Identity Data Agency"@en ;
+    gd:namens vlierdam:RvIG ;
+    gdnamens:verstrekker vlierdam:RvIG ;
+    prov:wasAssociatedWith glo:pif-wiersema ;
+    dct:date "2026-09-08"^^xsd:date .
+
+glo:akkoord-vlierdam a gd:Akkoordverklaring , prov:Activity ;
+    rdfs:label "Akkoordverklaring namens gemeente Vlierdam"@nl ,
+               "Declaration of agreement on behalf of the municipality of Vlierdam"@en ;
+    gd:namens vlierdam:GemeenteVlierdam ;
+    gdnamens:ontvanger vlierdam:GemeenteVlierdam ;
+    prov:wasAssociatedWith glo:pif-molenkamp ;
+    dct:date "2026-09-14"^^xsd:date .
+
+# Persoon in functie = org:Membership: persoon, organisatie en functie in één
+# knoop. Hetzelfde patroon draagt hieronder de contactpersonen van de GLS.
+glo:pif-wiersema a org:Membership ;
+    rdfs:label "T. Wiersema, directeur Rijksdienst voor Identiteitsgegevens"@nl ,
+               "T. Wiersema, director of the National Identity Data Agency"@en ;
+    org:member glo:pers-wiersema ;
+    org:organization vlierdam:RvIG ;
+    org:role glo:functie-directeur .
+
+glo:pif-molenkamp a org:Membership ;
+    rdfs:label "A. Molenkamp, gemeentesecretaris gemeente Vlierdam"@nl ,
+               "A. Molenkamp, municipal clerk of the municipality of Vlierdam"@en ;
+    org:member glo:pers-molenkamp ;
+    org:organization vlierdam:GemeenteVlierdam ;
+    org:role vlierdam:gemeentesecretaris .
+
+glo:pers-wiersema rdfs:label "T. Wiersema"@nl , "T. Wiersema"@en .
+glo:pers-molenkamp rdfs:label "A. Molenkamp"@nl , "A. Molenkamp"@en .
+
+glo:functie-directeur a org:Role ;
+    rdfs:label "directeur"@nl , "director"@en .
+
+# DE FUNCTIE IS DE BESTAANDE BEGRIPSKNOOP. vocabulaire.ttl kent
+# vlierdam:gemeentesecretaris al als skos:Concept — het is de waarde waarmee de
+# diplomatiek-uitzondering in beleid.ttl werkt. Diezelfde functie is hier de
+# eindverantwoordelijke; zij krijgt er alleen de org:Role-typering bij die het
+# ORG-patroon vraagt.
+vlierdam:gemeentesecretaris a org:Role .
+
+# =============================================================================
+# 7. DE GEGEVENSLEVERINGSSPECIFICATIE — DATASETNIVEAU
+#
+# DE SPECIFICATIE IS DE MACHINELEESBARE VORM VAN DE BIJLAGE BIJ HET
+# AUTORISATIEBESLUIT. Een autorisatiebesluit benoemt de taak en somt in een
+# bijlage op welke gegevens het geautoriseerde orgaan voor die taak mag
+# ontvangen. Precies die opsomming staat hieronder — niet als tekstbijlage maar
+# als specificatie tot op veldniveau, met per gegeven zijn begrip, zijn
+# waardetype, zijn waardebereik en zijn plaats in het bericht. Wie wil weten wat
+# "de gegevens uit de bijlage" zijn, klikt hier door in plaats van een document
+# na te lopen; en een controle of de levering binnen het besluit blijft is
+# daarmee een vergelijking van twee lijsten in plaats van een leesoefening.
+# Het besluit zelf blijft één knoop (sectie 5) — de structuur van het besluit
+# wordt hier niet nog eens nagebouwd.
+# =============================================================================
+
+glo:gls-brp-laadpalen a gd:Gegevensleveringsspecificatie ;
+    dct:identifier "GLS-RVIG-VLD-2026-001" ;
+    dct:title "GLS BRP-bevraging laadpalen Vlierdam"@nl ,
+              "Data delivery specification for charging-station population register queries, Vlierdam"@en ;
+    dct:description "De technische en semantische beschrijving van de bevraging: welke personen bevraagd mogen worden, welke gegevens het antwoord bevat, in welk begrippenkader zij staan, en via welk kanaal en in welke vorm zij worden overgedragen."@nl ,
+                    "The technical and semantic description of the query: which persons may be queried, which data the answer contains, in which terminology they are defined, and through which channel and in which form they are transferred."@en ;
+    owl:versionInfo "1.0" ;
+    dprod:purpose "Registratie van laadpalen door gemeente Vlierdam" ;
+    dprod:domain glo:domein-identiteitsgegevens ;
+    dprod:dataProductOwner vlierdam:RvIG ;
+    gd:populatiebeschrijving """Natuurlijke personen die in de basisregistratie
+personen staan ingeschreven met gemeente Vlierdam als gemeente van inschrijving.
+De verstrekker beantwoordt een bevraging alleen voor die groep: een zoekvraag die
+een persoon buiten Vlierdam zou opleveren, levert geen antwoord op. Overleden
+personen en personen met een verstrekkingsbeperking blijven buiten het
+antwoord."""@nl ,
+        """Natural persons registered in the population register with the
+municipality of Vlierdam as their municipality of registration. The provider
+answers a query only for that group: a search that would return a person outside
+Vlierdam returns no answer. Deceased persons and persons with a restriction on
+provision are excluded from the answer."""@en ;
+    dct:conformsTo glo:begrippenkader-brp-laadpalen , glo:lgm-brp-laadpalen ;
+    dct:source <https://vlierdam.example/glo/documenten/gls-standaardmodel-v4> ;
+    # DPROD hangt beleid met odrl:hasPolicy aan het dataproduct; het vocabulaire
+    # legt dezelfde band andersom met gd:gegevensleveringsspecificatie. Twee
+    # richtingen, één paar.
+    odrl:hasPolicy glo:glo-rvig-vlierdam-2026 ;
+    dct:references vlierdam:set-rvig-inway ;
+    gd:contactpersoon glo:pif-veenstra , glo:pif-brouwer , glo:pif-said ;
+    gd:classificatie
+        gdc:persoonsgegevens-aanwezig\/bevat-persoonsgegevens ,
+        gdc:type-persoonsgegevens\/bevat-gewone-persoonsgegevens ,
+        gdc:type-persoonsgegevens\/bevat-nationale-identificatienummers ,
+        gdc:verantwoordingsbelang\/ja-moet-tijdelijk-worden-bewaard ,
+        gdc:bbn\/bbn2 ;
+    dprod:outputDataset vlierdam:brp-velden-laadpalen ;
+    dprod:outputPort glo:poort-rvig-inway ;
+    gd:heeftAfspraak
+        glo:glsafspraak-administratieve-kwaliteit ,
+        glo:glsafspraak-communicatie-normaal ,
+        glo:glsafspraak-communicatie-afwijkend ,
+        glo:glsafspraak-communicatie-kwaliteit ,
+        glo:glsafspraak-foutherstel ,
+        glo:glsafspraak-gegevenskwaliteit ,
+        glo:glsafspraak-herleidbaarheid .
+
+<https://vlierdam.example/glo/documenten/gls-standaardmodel-v4>
+    dct:title "Standaardmodel gegevensleveringsspecificatie v4 (plaatshouder)"@nl ,
+              "Standard model for data delivery specifications v4 (placeholder)"@en .
+
+glo:domein-identiteitsgegevens a skos:Concept ;
+    skos:prefLabel "Identiteitsgegevens"@nl , "Identity data"@en ;
+    rdfs:label "Identiteitsgegevens"@nl , "Identity data"@en .
+
+# -----------------------------------------------------------------------------
+# De gegevensleverset: DEZELFDE KNOOP als het doelwit van de regels.
+#
+# velden.ttl kent vlierdam:brp-velden-laadpalen als odrl:AssetCollection — de
+# verzameling velden die de laadpaalaanvraag nodig heeft, met de leden via
+# odrl:partOf. In het beleid is zij het voorwerp van de regels; hier is zij de
+# dataset die geleverd wordt. Eén ding in twee rollen, op één IRI: dat is
+# precies wat DPROD met odrl:hasPolicy bedoelt, en het is de reden dat een lezer
+# van deze overeenkomst en een lezer van het beleid over hetzelfde praten.
+# -----------------------------------------------------------------------------
+
+vlierdam:brp-velden-laadpalen a gd:Gegevensleversetspecificatie ;
+    dct:identifier "GLSS-VLD-BRP-001" ;
+    dct:description "De velden die een bevraging voor een laadpaalaanvraag oplevert: identificatie, naam, adressering, geboortedatum en gemeente van inschrijving."@nl ,
+                    "The fields returned by a query for a charging-station application: identification, name, address lines, date of birth and municipality of registration."@en ;
+    gd:populatiebeschrijving """Eén antwoord per bevraagde persoon. De leverset is
+de doorsnede van wat de laadpaalaanvraag nodig heeft en wat het autorisatiebesluit
+toestaat; een veld dat in geen van beide staat komt er niet in."""@nl ,
+        """One answer per person queried. The delivery set is the intersection of
+what the charging-station application needs and what the authorisation decision
+allows; a field in neither is not included."""@en ;
+    dct:conformsTo glo:lgm-brp-laadpalen ;
+    # DE FILTERREGEL IS DE INGEZETENE-EIS UIT HET BELEID. beleid.ttl legt op de
+    # RvIG-inway de voorwaarde vw-inway-brp-ingezetene: alleen personen met
+    # Vlierdam als gemeente van inschrijving. Dat is precies het gegevenstype
+    # waarop deze leverset is afgebakend, en het staat hier op dezelfde
+    # veld-IRI.
+    gd:filtertOpGegevenstype vlierdam:veld-brp-gemeenteVanInschrijving ;
+    dcat:distribution glo:middel-brp-antwoord ;
+    gd:classificatie
+        gdc:persoonsgegevens-aanwezig\/bevat-persoonsgegevens ,
+        gdc:type-persoonsgegevens\/bevat-gewone-persoonsgegevens ,
+        gdc:type-persoonsgegevens\/bevat-nationale-identificatienummers ,
+        gdc:biv-beschikbaarheid\/midden ,
+        gdc:biv-integriteit\/hoog ,
+        gdc:biv-vertrouwelijkheid\/hoog ,
+        gdc:bbn\/bbn2 ;
+    dct:accessRights gdc:rubriceringsniveau\/vertrouwelijk ;
+    gd:heeftAfspraak glo:leversetafspraak-bewaartermijn ,
+        glo:leversetafspraak-toegang , glo:leversetafspraak-beveiliging .
+
+# -----------------------------------------------------------------------------
+# Het gegevensmiddel en het leverkanaal
+# -----------------------------------------------------------------------------
+
+glo:middel-brp-antwoord a gd:Gegevensmiddelspecificatie ;
+    dct:identifier "GMS-VLD-BRP-001" ;
+    dct:title "JSON-antwoord per bevraging"@nl , "JSON answer per query"@en ;
+    dct:description "Het antwoordbericht op één bevraging: een JSON-document met nul of meer persoonsobjecten, elk met de velden van de leverset."@nl ,
+                    "The answer to a single query: a JSON document with zero or more person objects, each carrying the fields of the delivery set."@en ;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/application/json> ;
+    dprod:isDistributionOf vlierdam:brp-velden-laadpalen ;
+    dct:conformsTo glo:tgm-brp-antwoord ;
+    gd:heeftAfspraak
+        glo:middelafspraak-initiatie , glo:middelafspraak-frequentie ,
+        glo:middelafspraak-actualiteit , glo:middelafspraak-deltaverwerking ,
+        glo:middelafspraak-wijze-van-leveren , glo:middelafspraak-transport ,
+        glo:middelafspraak-middeltype , glo:middelafspraak-samenstelling ,
+        glo:middelafspraak-interpretatie .
+
+# Het leverkanaal is de inway van de verstrekker — hetzelfde koppelvlak waarop
+# beleid.ttl het beslispunt set-rvig-inway legt. De poort draagt dat beleid dus
+# met odrl:hasPolicy: wie hier aanklopt krijgt die Set als PDP.
+glo:poort-rvig-inway a dcat:DataService ;
+    dct:title "Inway basisregistratie personen (koppelvlak)"@nl ,
+              "Population register inway (interface)"@en ;
+    dct:description "Het koppelvlak waarop de bevraging binnenkomt en waarop het beslispunt van de verstrekker beslist of zij beantwoord wordt."@nl ,
+                    "The interface on which the query arrives and on which the provider's decision point decides whether it is answered."@en ;
+    dcat:endpointURL <https://rvig.vlierdam.example/koppelvlak/brp/personen> ;
+    dprod:protocol <https://vlierdam.example/glo/protocol/haalcentraal-brp-personen> ;
+    dprod:securitySchemaType glo:pkioverheid-tweezijdig ;
+    dprod:isAccessServiceOf glo:middel-brp-antwoord ;
+    odrl:hasPolicy vlierdam:set-rvig-inway .
+
+<https://vlierdam.example/glo/protocol/haalcentraal-brp-personen>
+    dct:title "Bevragingsprotocol personen (plaatshouder)"@nl ,
+              "Person query protocol (placeholder)"@en .
+
+glo:pkioverheid-tweezijdig a dprod:SecuritySchemaType ;
+    rdfs:label "Tweezijdig TLS met PKIoverheid-certificaten"@nl ,
+               "Mutual TLS with PKIoverheid certificates"@en .
+
+# -----------------------------------------------------------------------------
+# De zeven GLS-afspraken
+# -----------------------------------------------------------------------------
+
+glo:glsafspraak-administratieve-kwaliteit a gd:glsafspraak ;
+    rdfs:label "Afspraak over administratieve kwaliteit"@nl ,
+               "Clause on administrative quality"@en ;
+    dct:subject gdglsonderwerp:administratieve-kwaliteit ;
+    dct:description "De verstrekker legt per bevraging vast wie vroeg, wanneer en met welke trace-identificatie, en rapporteert per kwartaal het aantal bevragingen, het aantal geweigerde bevragingen en de gemiddelde responstijd aan de ontvanger."@nl ,
+                    "The provider records for each query who asked, when, and with which trace identifier, and reports quarterly to the recipient the number of queries, the number refused and the average response time."@en ;
+    odrl:assignee vlierdam:RvIG .
+
+glo:glsafspraak-communicatie-normaal a gd:glsafspraak ;
+    rdfs:label "Afspraak over communicatie bij een normale bevraging"@nl ,
+               "Clause on communication during a normal query"@en ;
+    dct:subject gdglsonderwerp:communicatie-normale-levering ;
+    dct:description "De verstrekker heeft aan zijn verplichting voldaan zodra het antwoordbericht op het koppelvlak staat. Een bevraging die geen persoon oplevert wordt beantwoord met een leeg resultaat en niet met een foutmelding."@nl ,
+                    "The provider has met its obligation once the answer is on the interface. A query that returns no person is answered with an empty result and not with an error."@en ;
+    odrl:assignee vlierdam:RvIG , vlierdam:GemeenteVlierdam .
+
+glo:glsafspraak-communicatie-afwijkend a gd:glsafspraak ;
+    rdfs:label "Afspraak over communicatie bij een afwijkende bevraging"@nl ,
+               "Clause on communication during a deviating query"@en ;
+    dct:subject gdglsonderwerp:communicatie-afwijkende-levering ;
+    dct:description "Bij een storing die langer dan één werkdag duurt informeert de verstrekker het contactpunt van de ontvanger, met een verwachte hersteltijd. De ontvanger meldt onverklaarbare antwoorden dezelfde werkdag bij het contactpunt van de verstrekker."@nl ,
+                    "For an outage lasting more than one working day the provider informs the recipient's contact point, with an expected recovery time. The recipient reports unexplainable answers to the provider's contact point on the same working day."@en ;
+    odrl:assignee vlierdam:RvIG , vlierdam:GemeenteVlierdam .
+
+glo:glsafspraak-communicatie-kwaliteit a gd:glsafspraak ;
+    rdfs:label "Afspraak over communicatie over kwaliteit"@nl ,
+               "Clause on communication about quality"@en ;
+    dct:subject gdglsonderwerp:communicatie-over-kwaliteit ;
+    dct:description "Vermoedt de ontvanger dat een geleverd gegeven onjuist is, dan meldt hij dat bij de gegevensverantwoordelijke van de verstrekker; correctie van de registratie zelf loopt langs de weg die de wet daarvoor kent en niet langs deze overeenkomst."@nl ,
+                    "If the recipient suspects a delivered value is incorrect, it reports this to the provider's data owner; correcting the register itself follows the statutory route and not this agreement."@en ;
+    odrl:assignee vlierdam:RvIG , vlierdam:GemeenteVlierdam .
+
+glo:glsafspraak-foutherstel a gd:glsafspraak ;
+    rdfs:label "Afspraak over foutherstel door hernieuwde bevraging"@nl ,
+               "Clause on error correction by requerying"@en ;
+    dct:subject gdglsonderwerp:foutherstel-hernieuwde-levering ;
+    dct:description "Een mislukte of afgebroken bevraging wordt opnieuw gesteld met dezelfde trace-identificatie; de verstrekker beschouwt die herhaling niet als een nieuwe bevraging voor de telling."@nl ,
+                    "A failed or aborted query is repeated with the same trace identifier; the provider does not count that repetition as a new query."@en ;
+    odrl:assignee vlierdam:RvIG , vlierdam:GemeenteVlierdam .
+
+glo:glsafspraak-gegevenskwaliteit a gd:glsafspraak ;
+    rdfs:label "Afspraak over gegevenskwaliteit"@nl , "Clause on data quality"@en ;
+    dct:subject gdglsonderwerp:gegevenskwaliteit ;
+    dct:description "Elk antwoord geeft de stand van de registratie op het moment van bevraging en voldoet aan het logisch gegevensmodel; een leeg veld betekent dat het gegeven niet is geregistreerd en niet dat het niet bestaat."@nl ,
+                    "Every answer reflects the state of the register at the moment of the query and conforms to the logical data model; an empty field means the value is not registered, not that it does not exist."@en ;
+    odrl:assignee vlierdam:RvIG .
+
+glo:glsafspraak-herleidbaarheid a gd:glsafspraak ;
+    rdfs:label "Afspraak over maatregelen tegen herleidbaarheid"@nl ,
+               "Clause on measures against traceability"@en ;
+    dct:subject gdglsonderwerp:maatregelen-herleidbaarheid ;
+    dct:description "De ontvanger verrijkt de antwoorden niet met andere bronnen dan de eigen laadpaaladministratie, en publiceert over laadpalen uitsluitend cijfers op buurtniveau met ten minste tien aanvragen."@nl ,
+                    "The recipient does not enrich the answers with sources other than its own charging-station records, and publishes figures on charging stations only at neighbourhood level with at least ten applications."@en ;
+    odrl:assignee vlierdam:GemeenteVlierdam .
+
+# -----------------------------------------------------------------------------
+# De drie gegevensleversetafspraken
+# -----------------------------------------------------------------------------
+
+glo:leversetafspraak-bewaartermijn a gd:leversetafspraak ;
+    rdfs:label "Afspraak over bewaartermijnen"@nl , "Clause on retention periods"@en ;
+    dct:subject gdglsonderwerp:bewaartermijnen ;
+    dct:description "De ontvanger bewaart uit het antwoord alleen het adres en de aanduiding van de aanvrager in het zaakdossier, gedurende de termijn die het verantwoordingsbelang vergt; de overige velden worden na afhandeling van de aanvraag vernietigd."@nl ,
+                    "From the answer the recipient keeps only the address and the applicant's identification in the case file, for the period the accountability interest requires; the remaining fields are destroyed once the application is settled."@en ;
+    odrl:assignee vlierdam:GemeenteVlierdam .
+
+glo:leversetafspraak-toegang a gd:leversetafspraak ;
+    rdfs:label "Afspraak over toegangsgerechtigden"@nl , "Clause on authorised parties"@en ;
+    dct:subject gdglsonderwerp:toegangsgerechtigden ;
+    dct:description "Alleen medewerkers van Burgerzaken die de laadpaalopleiding hebben gevolgd, mogen de bevraging doen en het antwoord inzien; de toewijzing van die rechten loopt via het accountbeheer van de gemeente."@nl ,
+                    "Only Civil Affairs employees who have completed the charging-station training may run the query and view the answer; those rights are granted through the municipality's account management."@en ;
+    odrl:assignee vlierdam:GemeenteVlierdam ;
+    # De personenkring is dezelfde als in het beleid: beleid.ttl kent
+    # vlierdam:medewerkers-burgerzaken als de afnemercollectie van de
+    # applicatieregel.
+    dct:references vlierdam:medewerkers-burgerzaken .
+
+glo:leversetafspraak-beveiliging a gd:leversetafspraak ;
+    rdfs:label "Afspraak over beveiligingsmaatregelen"@nl , "Clause on security measures"@en ;
+    dct:subject gdglsonderwerp:beveiligingsmaatregelen ;
+    dct:description "Het antwoord wordt bij de ontvanger niet buiten het zaaksysteem opgeslagen: geen export naar een werkmap, geen kopie in een rekenblad en geen verzending per e-mail."@nl ,
+                    "At the recipient the answer is not stored outside the case system: no export to a working folder, no copy in a spreadsheet and no transmission by e-mail."@en ;
+    odrl:assignee vlierdam:GemeenteVlierdam .
+
+# -----------------------------------------------------------------------------
+# De negen gegevensmiddelafspraken
+#
+# HIER STAAT DE LEVERINGSVORM, EN NERGENS ANDERS. Deze levering is een
+# bevraging: de ontvanger begint, en er is dus geen leverritme. Dat staat in de
+# initiatie- en de frequentie-afspraak en niet in de klassen erboven — een
+# levering die de verstrekker uit eigen beweging verstuurt zou dezelfde
+# overeenkomst-, rol- en veldlaag hebben en alleen hier anders zijn.
+# -----------------------------------------------------------------------------
+
+glo:middelafspraak-initiatie a gd:middelafspraak ;
+    rdfs:label "Afspraak over de leveringsinitiatie"@nl , "Clause on delivery initiation"@en ;
+    dct:subject gdglsonderwerp:gegevensleveringsinitiatie ;
+    dct:description "De ontvanger initieert: elke levering is het antwoord op een bevraging die de gemeente stelt bij de behandeling van één aanvraag. De verstrekker stuurt uit zichzelf niets."@nl ,
+                    "The recipient initiates: every delivery is the answer to a query the municipality makes while handling one application. The provider sends nothing of its own accord."@en ;
+    odrl:assignee vlierdam:GemeenteVlierdam .
+
+glo:middelafspraak-frequentie a gd:middelafspraak ;
+    rdfs:label "Afspraak over de leveringsfrequentie"@nl , "Clause on delivery frequency"@en ;
+    dct:subject gdglsonderwerp:gegevensleveringsfrequentie ;
+    dct:description "Er is geen vast ritme. Het koppelvlak staat open op werkdagen van 07:00 tot 19:00 uur; de verstrekker beantwoordt een bevraging binnen twee seconden. Boven duizend bevragingen per dag treden partijen in overleg."@nl ,
+                    "There is no fixed rhythm. The interface is open on working days from 07:00 to 19:00; the provider answers a query within two seconds. Above a thousand queries a day the parties confer."@en ;
+    odrl:assignee vlierdam:RvIG , vlierdam:GemeenteVlierdam .
+
+glo:middelafspraak-actualiteit a gd:middelafspraak ;
+    rdfs:label "Afspraak over de actualiteit"@nl , "Clause on currency"@en ;
+    dct:subject gdglsonderwerp:actualiteit-gegevensmiddel ;
+    dct:description "Het antwoord geeft de stand van de registratie op het moment van bevraging; er zit geen peildatum of verwerkingsvertraging tussen."@nl ,
+                    "The answer reflects the state of the register at the moment of the query; there is no reference date or processing delay in between."@en ;
+    odrl:assignee vlierdam:RvIG .
+
+glo:middelafspraak-deltaverwerking a gd:middelafspraak ;
+    rdfs:label "Afspraak over deltaverwerking"@nl , "Clause on delta processing"@en ;
+    dct:subject gdglsonderwerp:deltaverwerking ;
+    dct:description "Er is geen deltalevering en geen abonnement: de gemeente wordt niet op de hoogte gehouden van latere wijzigingen in de gegevens van een bevraagde persoon."@nl ,
+                    "There is no delta delivery and no subscription: the municipality is not kept informed of later changes to the data of a person queried."@en ;
+    odrl:assignee vlierdam:RvIG , vlierdam:GemeenteVlierdam .
+
+glo:middelafspraak-wijze-van-leveren a gd:middelafspraak ;
+    rdfs:label "Afspraak over de wijze van leveren"@nl , "Clause on the method of delivery"@en ;
+    dct:subject gdglsonderwerp:wijze-van-leveren ;
+    dct:description "De gemeente stelt de bevraging via haar eigen outway; de verstrekker beantwoordt haar op zijn inway. Beide partijen beheren hun eigen kant van het koppelvlak."@nl ,
+                    "The municipality issues the query through its own outway; the provider answers it on its inway. Each party manages its own side of the interface."@en ;
+    odrl:assignee vlierdam:RvIG , vlierdam:GemeenteVlierdam .
+
+glo:middelafspraak-transport a gd:middelafspraak ;
+    rdfs:label "Afspraak over de transportkarakteristieken"@nl ,
+               "Clause on transport characteristics"@en ;
+    dct:subject gdglsonderwerp:transportkarakteristieken ;
+    dct:description "HTTPS met tweezijdige TLS op PKIoverheid-certificaten. Elke bevraging draagt de trace-identificatie die het afsprakenstelsel voorschrijft; zonder die identificatie wordt zij niet beantwoord."@nl ,
+                    "HTTPS with mutual TLS on PKIoverheid certificates. Every query carries the trace identifier the agreement framework prescribes; without it, it is not answered."@en ;
+    odrl:assignee vlierdam:RvIG , vlierdam:GemeenteVlierdam ;
+    # De trace-eis is geen eigen vinding van deze overeenkomst: zij komt uit de
+    # koppelvlak-Set van het afsprakenstelsel, die de inway met
+    # odrl:inheritFrom overneemt.
+    dct:references vlierdam:plicht-traceparent .
+
+glo:middelafspraak-middeltype a gd:middelafspraak ;
+    rdfs:label "Afspraak over het gegevensmiddeltype"@nl ,
+               "Clause on the delivery medium type"@en ;
+    dct:subject gdglsonderwerp:gegevensmiddeltype ;
+    dct:description "JSON, UTF-8 gecodeerd, zonder byte-order-mark; datums in ISO 8601 en het burgerservicenummer als tekst, zodat een voorloopnul niet verdwijnt."@nl ,
+                    "JSON, UTF-8 encoded, without byte order mark; dates in ISO 8601 and the citizen service number as text, so that a leading zero is not lost."@en ;
+    odrl:assignee vlierdam:RvIG .
+
+glo:middelafspraak-samenstelling a gd:middelafspraak ;
+    rdfs:label "Afspraak over de samenstelling van het antwoord"@nl ,
+               "Clause on the composition of the answer"@en ;
+    dct:subject gdglsonderwerp:samenstelling-gegevensmiddel ;
+    dct:description "Eén JSON-document met een kopobject (trace-identificatie, tijdstip van beantwoording) en een reeks persoonsobjecten; bij een zoekvraag die meer dan één persoon oplevert bevat de reeks ze alle."@nl ,
+                    "One JSON document with a header object (trace identifier, time of answer) and a series of person objects; when a search returns more than one person, the series contains them all."@en ;
+    odrl:assignee vlierdam:RvIG .
+
+glo:middelafspraak-interpretatie a gd:middelafspraak ;
+    rdfs:label "Afspraak over de interpretatie van het antwoord"@nl ,
+               "Clause on the interpretation of the answer"@en ;
+    dct:subject gdglsonderwerp:interpretatie-gegevensmiddel ;
+    dct:description "De waarde 0000-00-00 in de geboortedatum betekent dat de datum niet volledig bekend is; zij is geen kalenderdatum en wordt niet gebruikt om leeftijd te berekenen."@nl ,
+                    "The value 0000-00-00 in the date of birth means the date is not fully known; it is not a calendar date and is not used to compute age."@en ;
+    odrl:assignee vlierdam:RvIG , vlierdam:GemeenteVlierdam .
+
+# -----------------------------------------------------------------------------
+# Contactpersonen in een GLS-rol (persoon in functie, hetzelfde ORG-patroon als
+# bij de akkoordverklaring)
+# -----------------------------------------------------------------------------
+
+glo:pif-veenstra a org:Membership ;
+    rdfs:label "R. Veenstra, gegevensverantwoordelijke Rijksdienst voor Identiteitsgegevens"@nl ,
+               "R. Veenstra, data owner at the National Identity Data Agency"@en ;
+    org:member glo:pers-veenstra ;
+    org:organization vlierdam:RvIG ;
+    org:role gdglsrol:gegevensverantwoordelijke .
+
+glo:pif-brouwer a org:Membership ;
+    rdfs:label "J. Brouwer, leveringsuitvoerder Rijksdienst voor Identiteitsgegevens"@nl ,
+               "J. Brouwer, delivery operator at the National Identity Data Agency"@en ;
+    org:member glo:pers-brouwer ;
+    org:organization vlierdam:RvIG ;
+    org:role gdglsrol:leveringsuitvoerder .
+
+glo:pif-said a org:Membership ;
+    rdfs:label "N. Said, ontvangstbeheerder gemeente Vlierdam"@nl ,
+               "N. Said, receipt manager of the municipality of Vlierdam"@en ;
+    org:member glo:pers-said ;
+    org:organization vlierdam:GemeenteVlierdam ;
+    org:role gdglsrol:ontvangstbeheerder .
+
+glo:pers-veenstra rdfs:label "R. Veenstra"@nl , "R. Veenstra"@en .
+glo:pers-brouwer rdfs:label "J. Brouwer"@nl , "J. Brouwer"@en .
+glo:pers-said rdfs:label "N. Said"@nl , "N. Said"@en .
+
+# =============================================================================
+# 8. DE GEGEVENSLEVERINGSSPECIFICATIE — VELDLAAG
+#
+# DE GEGEVENSTYPEN ZIJN DE VELDKNOPEN UIT velden.ttl. Daar staan zij als
+# odrl:Asset met odrl:partOf: de dataminimalisatie van het beleid, uitgedrukt
+# als doelwit van de regels. Hier krijgen dezelfde knopen hun semantische kant:
+# welk begrip zij dragen, welk waardetype, welk waardebereik en welke plaats in
+# het bericht. Eén IRI, twee lagen — en daarmee geen ruimte voor het verschil
+# tussen "wat het beleid toestaat" en "wat de specificatie beschrijft".
+#
+# De twee GROEPERENDE veldknopen (vlierdam:veld-brp-naam en
+# vlierdam:veld-brp-adressering) krijgen bewust geen gegevenstype: zij zijn in
+# velden.ttl de ouder van hun deelvelden en dragen zelf geen waarde. Wat
+# geleverd wordt zijn de zeven bladeren.
+#
+# WAT DE DDI-CDI-SERIALISATIE NIET DRAAGT, en hoe dit voorbeeld het oplost:
+#   - de cascade instantievariabele → representatievariabele → conceptuele
+#     variabele bestaat in RDF alleen als specialisatie; er is geen property die
+#     een gegevensveld aan zijn gegevenstype koppelt. Die koppeling loopt hier
+#     over cdi:VariableRelationship, de CDI-eigen relatie tussen variabelen uit
+#     de cascade;
+#   - een classificatieverwijzing op variabeleniveau kent DDI-CDI niet; die
+#     loopt over gd:classificatie;
+#   - cdi:Concept-externalDefinition wijst hier RECHTSTREEKS naar de term-IRI in
+#     plaats van naar een cdi:Reference-knoop met een Reference-uri. Reden: een
+#     IRI is navigeerbaar en een gestructureerde verwijzing met een tekstueel
+#     adres is dat niet — noch in een graafweergave, noch in een query. De prijs
+#     is dat een strikte DDI-CDI-lezer hier een cdi:Reference zou verwachten.
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 8a. Het begrippenkader
+# -----------------------------------------------------------------------------
+
+glo:begrippenkader-brp-laadpalen a gd:Begrippenkader ;
+    dct:identifier "BK-VLD-BRP-001" ;
+    dct:title "Begrippenkader BRP-bevraging laadpalen"@nl ,
+              "Terminology for charging-station population register queries"@en .
+
+glo:term-burgerservicenummer a gd:Term ;
+    skos:inScheme glo:begrippenkader-brp-laadpalen ;
+    skos:prefLabel "burgerservicenummer"@nl , "citizen service number"@en ;
+    skos:definition "Het uniek identificerende nummer van een natuurlijk persoon in de basisregistratie personen."@nl ,
+                    "The uniquely identifying number of a natural person in the population register."@en .
+
+glo:term-voornamen a gd:Term ;
+    skos:inScheme glo:begrippenkader-brp-laadpalen ;
+    skos:prefLabel "voornamen"@nl , "given names"@en ;
+    skos:definition "De voornamen van de persoon zoals zij in de basisregistratie personen zijn opgenomen, in de volgorde waarin zij zijn vastgelegd."@nl ,
+                    "The given names of the person as recorded in the population register, in the order in which they were recorded."@en .
+
+glo:term-geslachtsnaam a gd:Term ;
+    skos:inScheme glo:begrippenkader-brp-laadpalen ;
+    skos:prefLabel "geslachtsnaam"@nl , "surname"@en ;
+    skos:definition "De geslachtsnaam van de persoon, met het voorvoegsel als dat er is."@nl ,
+                    "The surname of the person, including any prefix."@en .
+
+glo:term-adresregel a gd:Term ;
+    skos:inScheme glo:begrippenkader-brp-laadpalen ;
+    skos:prefLabel "adresregel"@nl , "address line"@en ;
+    skos:definition "Eén regel van het adres zoals het op een poststuk zou worden geschreven; de eerste regel draagt straat en huisnummer, de tweede postcode en woonplaats."@nl ,
+                    "One line of the address as it would be written on a postal item; the first line carries street and house number, the second postcode and town."@en .
+
+glo:term-geboortedatum a gd:Term ;
+    skos:inScheme glo:begrippenkader-brp-laadpalen ;
+    skos:prefLabel "geboortedatum"@nl , "date of birth"@en ;
+    skos:definition "De datum waarop de persoon is geboren. De datum kan onvolledig zijn wanneer zij bij de inschrijving niet volledig bekend was."@nl ,
+                    "The date on which the person was born. The date may be incomplete where it was not fully known at registration."@en .
+
+glo:term-gemeente-van-inschrijving a gd:Term ;
+    skos:inScheme glo:begrippenkader-brp-laadpalen ;
+    skos:prefLabel "gemeente van inschrijving"@nl , "municipality of registration"@en ;
+    skos:definition "De gemeente waar de persoon op het moment van bevraging als ingezetene staat ingeschreven."@nl ,
+                    "The municipality in which the person is registered as a resident at the time of the query."@en .
+
+# -----------------------------------------------------------------------------
+# 8b. De structuurlaag
+# -----------------------------------------------------------------------------
+
+# Het logisch gegevensmodel: een brede, tabelvormige structuur met één component
+# per gegevenstype. De component is de ROL die een gegevenstype in de structuur
+# speelt: identificerend of gemeten.
+glo:lgm-brp-laadpalen a gd:LogischGegevensmodel , cdi:WideDataStructure , dct:Standard ;
+    dct:identifier "LGM-VLD-BRP-001" ;
+    rdfs:label "Logisch gegevensmodel BRP-bevraging laadpalen"@nl ,
+               "Logical data model for charging-station population register queries"@en ;
+    cdi:DataStructure_has_DataStructureComponent
+        glo:component-burgerservicenummer , glo:component-voornamen ,
+        glo:component-geslachtsnaam , glo:component-adresregel1 ,
+        glo:component-adresregel2 , glo:component-geboortedatum ,
+        glo:component-gemeente-van-inschrijving .
+
+glo:component-burgerservicenummer a cdi:IdentifierComponent ;
+    rdfs:label "component burgerservicenummer (identificerend)"@nl ,
+               "component citizen service number (identifying)"@en ;
+    cdi:DataStructureComponent-identifier [ cdi:Identifier-uri "https://vlierdam.example/glo/component-burgerservicenummer"^^xsd:anyURI ] ;
+    cdi:DataStructureComponent_isDefinedBy_RepresentedVariable vlierdam:veld-brp-burgerservicenummer .
+
+glo:component-voornamen a cdi:MeasureComponent ;
+    rdfs:label "component voornamen"@nl , "component given names"@en ;
+    cdi:MeasureComponent-name [ cdi:ObjectName-name "voornamen" ] ;
+    cdi:DataStructureComponent_isDefinedBy_RepresentedVariable vlierdam:veld-brp-naam-voornamen .
+
+glo:component-geslachtsnaam a cdi:MeasureComponent ;
+    rdfs:label "component geslachtsnaam"@nl , "component surname"@en ;
+    cdi:MeasureComponent-name [ cdi:ObjectName-name "geslachtsnaam" ] ;
+    cdi:DataStructureComponent_isDefinedBy_RepresentedVariable vlierdam:veld-brp-naam-geslachtsnaam .
+
+glo:component-adresregel1 a cdi:MeasureComponent ;
+    rdfs:label "component adresregel 1"@nl , "component address line 1"@en ;
+    cdi:MeasureComponent-name [ cdi:ObjectName-name "adresregel1" ] ;
+    cdi:DataStructureComponent_isDefinedBy_RepresentedVariable vlierdam:veld-brp-adressering-adresregel1 .
+
+glo:component-adresregel2 a cdi:MeasureComponent ;
+    rdfs:label "component adresregel 2"@nl , "component address line 2"@en ;
+    cdi:MeasureComponent-name [ cdi:ObjectName-name "adresregel2" ] ;
+    cdi:DataStructureComponent_isDefinedBy_RepresentedVariable vlierdam:veld-brp-adressering-adresregel2 .
+
+glo:component-geboortedatum a cdi:MeasureComponent ;
+    rdfs:label "component geboortedatum"@nl , "component date of birth"@en ;
+    cdi:MeasureComponent-name [ cdi:ObjectName-name "geboortedatum" ] ;
+    cdi:DataStructureComponent_isDefinedBy_RepresentedVariable vlierdam:veld-brp-geboorte-datum .
+
+glo:component-gemeente-van-inschrijving a cdi:MeasureComponent ;
+    rdfs:label "component gemeente van inschrijving"@nl , "component municipality of registration"@en ;
+    cdi:MeasureComponent-name [ cdi:ObjectName-name "gemeenteVanInschrijving" ] ;
+    cdi:DataStructureComponent_isDefinedBy_RepresentedVariable vlierdam:veld-brp-gemeenteVanInschrijving .
+
+# De gegevensset: de zeven gegevenstypen als groepering, zonder eigen structuur.
+glo:gegevensset-brp-laadpalen a gd:Gegevensset ;
+    rdfs:label "Gegevensset BRP-bevraging laadpalen"@nl ,
+               "Data set for charging-station population register queries"@en ;
+    cdi:VariableCollection-identifier [ cdi:Identifier-uri "https://vlierdam.example/glo/gegevensset-brp-laadpalen"^^xsd:anyURI ] ;
+    cdi:VariableCollection-name [ cdi:ObjectName-name "GST-VLD-BRP-001" ] ;
+    cdi:VariableCollection-purpose [ cdi:InternationalString-languageSpecificString
+        [ cdi:LanguageString-content "De gegevenstypen die samen het antwoord op een bevraging vormen." ;
+          cdi:LanguageString-language "nl" ] ] ;
+    cdi:VariableCollection_has_ConceptualVariable
+        vlierdam:veld-brp-burgerservicenummer , vlierdam:veld-brp-naam-voornamen ,
+        vlierdam:veld-brp-naam-geslachtsnaam ,
+        vlierdam:veld-brp-adressering-adresregel1 ,
+        vlierdam:veld-brp-adressering-adresregel2 ,
+        vlierdam:veld-brp-geboorte-datum , vlierdam:veld-brp-gemeenteVanInschrijving .
+
+# Het persoonsobject in het antwoord als logisch record.
+glo:record-persoon a cdi:LogicalRecord ;
+    rdfs:label "Persoonsobject in het antwoordbericht"@nl ,
+               "Person object in the answer"@en ;
+    cdi:LogicalRecord-identifier [ cdi:Identifier-uri "https://vlierdam.example/glo/record-persoon"^^xsd:anyURI ] ;
+    cdi:LogicalRecord_has_InstanceVariable
+        glo:gegevensveld-bsn , glo:gegevensveld-voornamen ,
+        glo:gegevensveld-geslachtsnaam , glo:gegevensveld-adresregel1 ,
+        glo:gegevensveld-adresregel2 , glo:gegevensveld-geboortedatum ,
+        glo:gegevensveld-gemeente-van-inschrijving .
+
+# Het technisch gegevensmodel: de fysieke opmaak van het antwoordbericht.
+glo:tgm-brp-antwoord a gd:TechnischGegevensmodel , cdi:PhysicalSegmentLayout , dct:Standard ;
+    dct:identifier "TGM-VLD-BRP-001" ;
+    rdfs:label "Technisch gegevensmodel antwoordbericht (JSON-schema)"@nl ,
+               "Technical data model for the answer (JSON schema)"@en ;
+    cdi:PhysicalSegmentLayout-name [ cdi:ObjectName-name "TGM-VLD-BRP-001" ] ;
+    cdi:PhysicalSegmentLayout-encoding "UTF-8" ;
+    cdi:PhysicalSegmentLayout_formats_LogicalRecord glo:record-persoon .
+
+# Het gegevensmiddel is aan de DPROD-kant de distributie en aan de
+# DDI-CDI-kant de fysieke dataset — dezelfde IRI, twee vocabulaires.
+glo:middel-brp-antwoord a cdi:PhysicalDataSet ;
+    cdi:PhysicalDataSet-physicalFileName "brp-antwoord.json" ;
+    cdi:PhysicalDataSet_has_InstanceVariable
+        glo:gegevensveld-bsn , glo:gegevensveld-voornamen ,
+        glo:gegevensveld-geslachtsnaam , glo:gegevensveld-adresregel1 ,
+        glo:gegevensveld-adresregel2 , glo:gegevensveld-geboortedatum ,
+        glo:gegevensveld-gemeente-van-inschrijving .
+
+# De eenheid waarover gemeten wordt.
+glo:unittype-natuurlijk-persoon a cdi:UnitType ;
+    rdfs:label "natuurlijk persoon"@nl , "natural person"@en ;
+    cdi:Concept-name [ cdi:ObjectName-name "natuurlijkPersoon" ] ;
+    cdi:UnitType-descriptiveText [ cdi:InternationalString-languageSpecificString
+        [ cdi:LanguageString-content "De ingeschreven persoon over wie de bevraging gaat." ;
+          cdi:LanguageString-language "nl" ] ] .
+
+# -----------------------------------------------------------------------------
+# 8c. De zeven gegevenstypen, met hun waardedomein, hun gegevensveld en de
+#     mapping daartussen.
+# -----------------------------------------------------------------------------
+
+# 1 — burgerservicenummer (identificerend, tekstueel)
+vlierdam:veld-brp-burgerservicenummer a gd:Gegevenstype ;
+    cdi:Concept-identifier [ cdi:Identifier-uri "https://vlierdam.example/odrl/veld-brp-burgerservicenummer"^^xsd:anyURI ] ;
+    cdi:Concept-name [ cdi:ObjectName-name "GT-BSN-001" ] ;
+    cdi:Concept-definition [ cdi:InternationalString-languageSpecificString
+        [ cdi:LanguageString-content "Het burgerservicenummer van de bevraagde persoon." ;
+          cdi:LanguageString-language "nl" ] ] ;
+    cdi:Concept-externalDefinition glo:term-burgerservicenummer ;
+    cdi:ConceptualVariable_measures_UnitType glo:unittype-natuurlijk-persoon ;
+    cdi:RepresentedVariable-hasIntendedDataType [
+        cdi:ControlledVocabularyEntry-entryValue "String" ;
+        cdi:ControlledVocabularyEntry-vocabulary [
+            cdi:Reference-uri "https://gegevensdeling.example/def/waardetype"^^xsd:anyURI ] ] ;
+    cdi:RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain glo:waardedomein-bsn ;
+    gd:classificatie
+        gdc:persoonsgegevens-aanwezig\/bevat-persoonsgegevens ,
+        gdc:type-persoonsgegevens\/bevat-nationale-identificatienummers .
+
+glo:waardedomein-bsn a cdi:SubstantiveValueDomain ;
+    rdfs:label "Waardedomein burgerservicenummer"@nl , "Value domain citizen service number"@en ;
+    cdi:ValueDomain-recommendedDataType [ cdi:ControlledVocabularyEntry-entryValue "String" ] ;
+    cdi:SubstantiveValueDomain_isDescribedBy_ValueAndConceptDescription [
+        cdi:ValueAndConceptDescription-description [ cdi:InternationalString-languageSpecificString
+            [ cdi:LanguageString-content "Negen cijfers, elfproef-geldig." ; cdi:LanguageString-language "nl" ] ] ;
+        cdi:ValueAndConceptDescription-regularExpression [
+            cdi:TypedString-content "[0-9]{9}" ;
+            cdi:TypedString-typeOfContent [ cdi:ControlledVocabularyEntry-entryValue "XSD regular expression" ] ] ] .
+
+glo:gegevensveld-bsn a gd:Gegevensveld ;
+    rdfs:label "veld burgerservicenummer"@nl , "field citizen service number"@en ;
+    cdi:Concept-identifier [ cdi:Identifier-uri "https://vlierdam.example/glo/gegevensveld-bsn"^^xsd:anyURI ] ;
+    cdi:Concept-name [ cdi:ObjectName-name "burgerservicenummer" ] ;
+    cdi:InstanceVariable-physicalDataType [ cdi:ControlledVocabularyEntry-entryValue "string" ] ;
+    cdi:InstanceVariable_has_PhysicalSegmentLayout glo:tgm-brp-antwoord ;
+    cdi:InstanceVariable_has_ValueMapping [
+        cdi:ValueMapping-isRequired true ;
+        cdi:ValueMapping-length 9 ;
+        cdi:ValueMapping-physicalDataType [ cdi:ControlledVocabularyEntry-entryValue "string" ] ] .
+
+glo:mapping-bsn a cdi:VariableRelationship ;
+    rdfs:label "Gegevenstypemapping burgerservicenummer"@nl ,
+               "Data type mapping citizen service number"@en ;
+    cdi:VariableRelationship_hasSource_ConceptualVariable vlierdam:veld-brp-burgerservicenummer ;
+    cdi:VariableRelationship_hasTarget_ConceptualVariable glo:gegevensveld-bsn .
+
+# 2 — voornamen (tekstueel)
+vlierdam:veld-brp-naam-voornamen a gd:Gegevenstype ;
+    cdi:Concept-identifier [ cdi:Identifier-uri "https://vlierdam.example/odrl/veld-brp-naam-voornamen"^^xsd:anyURI ] ;
+    cdi:Concept-name [ cdi:ObjectName-name "GT-VOORNAMEN-001" ] ;
+    cdi:Concept-definition [ cdi:InternationalString-languageSpecificString
+        [ cdi:LanguageString-content "De voornamen van de bevraagde persoon, in de vastgelegde volgorde." ;
+          cdi:LanguageString-language "nl" ] ] ;
+    cdi:Concept-externalDefinition glo:term-voornamen ;
+    cdi:ConceptualVariable_measures_UnitType glo:unittype-natuurlijk-persoon ;
+    cdi:RepresentedVariable-hasIntendedDataType [
+        cdi:ControlledVocabularyEntry-entryValue "String" ;
+        cdi:ControlledVocabularyEntry-vocabulary [
+            cdi:Reference-uri "https://gegevensdeling.example/def/waardetype"^^xsd:anyURI ] ] ;
+    cdi:RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain glo:waardedomein-naamtekst ;
+    gd:classificatie
+        gdc:persoonsgegevens-aanwezig\/bevat-persoonsgegevens ,
+        gdc:type-persoonsgegevens\/bevat-gewone-persoonsgegevens .
+
+glo:waardedomein-naamtekst a cdi:SubstantiveValueDomain ;
+    rdfs:label "Waardedomein naamtekst"@nl , "Value domain name text"@en ;
+    cdi:ValueDomain-recommendedDataType [ cdi:ControlledVocabularyEntry-entryValue "String" ] ;
+    cdi:SubstantiveValueDomain_isDescribedBy_ValueAndConceptDescription [
+        cdi:ValueAndConceptDescription-description [ cdi:InternationalString-languageSpecificString
+            [ cdi:LanguageString-content "Vrije tekst, ten hoogste 200 tekens, zoals in de registratie vastgelegd; diakritische tekens blijven staan." ;
+              cdi:LanguageString-language "nl" ] ] ] .
+
+glo:gegevensveld-voornamen a gd:Gegevensveld ;
+    rdfs:label "veld voornamen"@nl , "field given names"@en ;
+    cdi:Concept-identifier [ cdi:Identifier-uri "https://vlierdam.example/glo/gegevensveld-voornamen"^^xsd:anyURI ] ;
+    cdi:Concept-name [ cdi:ObjectName-name "voornamen" ] ;
+    cdi:InstanceVariable-physicalDataType [ cdi:ControlledVocabularyEntry-entryValue "string" ] ;
+    cdi:InstanceVariable_has_PhysicalSegmentLayout glo:tgm-brp-antwoord ;
+    cdi:InstanceVariable_has_ValueMapping [
+        cdi:ValueMapping-isRequired false ;
+        cdi:ValueMapping-maximumLength 200 ] .
+
+glo:mapping-voornamen a cdi:VariableRelationship ;
+    rdfs:label "Gegevenstypemapping voornamen"@nl , "Data type mapping given names"@en ;
+    cdi:VariableRelationship_hasSource_ConceptualVariable vlierdam:veld-brp-naam-voornamen ;
+    cdi:VariableRelationship_hasTarget_ConceptualVariable glo:gegevensveld-voornamen .
+
+# 3 — geslachtsnaam (tekstueel, verplicht)
+vlierdam:veld-brp-naam-geslachtsnaam a gd:Gegevenstype ;
+    cdi:Concept-identifier [ cdi:Identifier-uri "https://vlierdam.example/odrl/veld-brp-naam-geslachtsnaam"^^xsd:anyURI ] ;
+    cdi:Concept-name [ cdi:ObjectName-name "GT-GESLACHTSNAAM-001" ] ;
+    cdi:Concept-definition [ cdi:InternationalString-languageSpecificString
+        [ cdi:LanguageString-content "De geslachtsnaam van de bevraagde persoon, met voorvoegsel." ;
+          cdi:LanguageString-language "nl" ] ] ;
+    cdi:Concept-externalDefinition glo:term-geslachtsnaam ;
+    cdi:ConceptualVariable_measures_UnitType glo:unittype-natuurlijk-persoon ;
+    cdi:RepresentedVariable-hasIntendedDataType [
+        cdi:ControlledVocabularyEntry-entryValue "String" ;
+        cdi:ControlledVocabularyEntry-vocabulary [
+            cdi:Reference-uri "https://gegevensdeling.example/def/waardetype"^^xsd:anyURI ] ] ;
+    cdi:RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain glo:waardedomein-naamtekst ;
+    gd:classificatie
+        gdc:persoonsgegevens-aanwezig\/bevat-persoonsgegevens ,
+        gdc:type-persoonsgegevens\/bevat-gewone-persoonsgegevens .
+
+glo:gegevensveld-geslachtsnaam a gd:Gegevensveld ;
+    rdfs:label "veld geslachtsnaam"@nl , "field surname"@en ;
+    cdi:Concept-identifier [ cdi:Identifier-uri "https://vlierdam.example/glo/gegevensveld-geslachtsnaam"^^xsd:anyURI ] ;
+    cdi:Concept-name [ cdi:ObjectName-name "geslachtsnaam" ] ;
+    cdi:InstanceVariable-physicalDataType [ cdi:ControlledVocabularyEntry-entryValue "string" ] ;
+    cdi:InstanceVariable_has_PhysicalSegmentLayout glo:tgm-brp-antwoord ;
+    cdi:InstanceVariable_has_ValueMapping [
+        cdi:ValueMapping-isRequired true ;
+        cdi:ValueMapping-maximumLength 200 ] .
+
+glo:mapping-geslachtsnaam a cdi:VariableRelationship ;
+    rdfs:label "Gegevenstypemapping geslachtsnaam"@nl , "Data type mapping surname"@en ;
+    cdi:VariableRelationship_hasSource_ConceptualVariable vlierdam:veld-brp-naam-geslachtsnaam ;
+    cdi:VariableRelationship_hasTarget_ConceptualVariable glo:gegevensveld-geslachtsnaam .
+
+# 4 en 5 — de twee adresregels. Zij delen hun begrip en hun waardedomein; wat ze
+# onderscheidt is hun plaats in het bericht.
+vlierdam:veld-brp-adressering-adresregel1 a gd:Gegevenstype ;
+    cdi:Concept-identifier [ cdi:Identifier-uri "https://vlierdam.example/odrl/veld-brp-adressering-adresregel1"^^xsd:anyURI ] ;
+    cdi:Concept-name [ cdi:ObjectName-name "GT-ADRESREGEL1-001" ] ;
+    cdi:Concept-definition [ cdi:InternationalString-languageSpecificString
+        [ cdi:LanguageString-content "De eerste adresregel: straatnaam en huisnummer met toevoeging." ;
+          cdi:LanguageString-language "nl" ] ] ;
+    cdi:Concept-externalDefinition glo:term-adresregel ;
+    cdi:ConceptualVariable_measures_UnitType glo:unittype-natuurlijk-persoon ;
+    cdi:RepresentedVariable-hasIntendedDataType [
+        cdi:ControlledVocabularyEntry-entryValue "String" ;
+        cdi:ControlledVocabularyEntry-vocabulary [
+            cdi:Reference-uri "https://gegevensdeling.example/def/waardetype"^^xsd:anyURI ] ] ;
+    cdi:RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain glo:waardedomein-adresregel ;
+    gd:classificatie
+        gdc:persoonsgegevens-aanwezig\/bevat-persoonsgegevens ,
+        gdc:type-persoonsgegevens\/bevat-gewone-persoonsgegevens .
+
+vlierdam:veld-brp-adressering-adresregel2 a gd:Gegevenstype ;
+    cdi:Concept-identifier [ cdi:Identifier-uri "https://vlierdam.example/odrl/veld-brp-adressering-adresregel2"^^xsd:anyURI ] ;
+    cdi:Concept-name [ cdi:ObjectName-name "GT-ADRESREGEL2-001" ] ;
+    cdi:Concept-definition [ cdi:InternationalString-languageSpecificString
+        [ cdi:LanguageString-content "De tweede adresregel: postcode en woonplaats." ;
+          cdi:LanguageString-language "nl" ] ] ;
+    cdi:Concept-externalDefinition glo:term-adresregel ;
+    cdi:ConceptualVariable_measures_UnitType glo:unittype-natuurlijk-persoon ;
+    cdi:RepresentedVariable-hasIntendedDataType [
+        cdi:ControlledVocabularyEntry-entryValue "String" ;
+        cdi:ControlledVocabularyEntry-vocabulary [
+            cdi:Reference-uri "https://gegevensdeling.example/def/waardetype"^^xsd:anyURI ] ] ;
+    cdi:RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain glo:waardedomein-adresregel ;
+    gd:classificatie
+        gdc:persoonsgegevens-aanwezig\/bevat-persoonsgegevens ,
+        gdc:type-persoonsgegevens\/bevat-gewone-persoonsgegevens .
+
+glo:waardedomein-adresregel a cdi:SubstantiveValueDomain ;
+    rdfs:label "Waardedomein adresregel"@nl , "Value domain address line"@en ;
+    cdi:ValueDomain-recommendedDataType [ cdi:ControlledVocabularyEntry-entryValue "String" ] ;
+    cdi:SubstantiveValueDomain_isDescribedBy_ValueAndConceptDescription [
+        cdi:ValueAndConceptDescription-description [ cdi:InternationalString-languageSpecificString
+            [ cdi:LanguageString-content "Vrije tekst, ten hoogste 80 tekens, opgemaakt volgens de postale schrijfwijze." ;
+              cdi:LanguageString-language "nl" ] ] ] .
+
+glo:gegevensveld-adresregel1 a gd:Gegevensveld ;
+    rdfs:label "veld adresregel 1"@nl , "field address line 1"@en ;
+    cdi:Concept-identifier [ cdi:Identifier-uri "https://vlierdam.example/glo/gegevensveld-adresregel1"^^xsd:anyURI ] ;
+    cdi:Concept-name [ cdi:ObjectName-name "adresregel1" ] ;
+    cdi:InstanceVariable-physicalDataType [ cdi:ControlledVocabularyEntry-entryValue "string" ] ;
+    cdi:InstanceVariable_has_PhysicalSegmentLayout glo:tgm-brp-antwoord ;
+    cdi:InstanceVariable_has_ValueMapping [
+        cdi:ValueMapping-isRequired true ;
+        cdi:ValueMapping-maximumLength 80 ] .
+
+glo:gegevensveld-adresregel2 a gd:Gegevensveld ;
+    rdfs:label "veld adresregel 2"@nl , "field address line 2"@en ;
+    cdi:Concept-identifier [ cdi:Identifier-uri "https://vlierdam.example/glo/gegevensveld-adresregel2"^^xsd:anyURI ] ;
+    cdi:Concept-name [ cdi:ObjectName-name "adresregel2" ] ;
+    cdi:InstanceVariable-physicalDataType [ cdi:ControlledVocabularyEntry-entryValue "string" ] ;
+    cdi:InstanceVariable_has_PhysicalSegmentLayout glo:tgm-brp-antwoord ;
+    cdi:InstanceVariable_has_ValueMapping [
+        cdi:ValueMapping-isRequired true ;
+        cdi:ValueMapping-maximumLength 80 ] .
+
+glo:mapping-adresregel1 a cdi:VariableRelationship ;
+    rdfs:label "Gegevenstypemapping adresregel 1"@nl , "Data type mapping address line 1"@en ;
+    cdi:VariableRelationship_hasSource_ConceptualVariable vlierdam:veld-brp-adressering-adresregel1 ;
+    cdi:VariableRelationship_hasTarget_ConceptualVariable glo:gegevensveld-adresregel1 .
+
+glo:mapping-adresregel2 a cdi:VariableRelationship ;
+    rdfs:label "Gegevenstypemapping adresregel 2"@nl , "Data type mapping address line 2"@en ;
+    cdi:VariableRelationship_hasSource_ConceptualVariable vlierdam:veld-brp-adressering-adresregel2 ;
+    cdi:VariableRelationship_hasTarget_ConceptualVariable glo:gegevensveld-adresregel2 .
+
+# 6 — geboortedatum (datum, met ontbrekendwaarde)
+#
+# DE SCHEIDING SUBSTANTIEF/SENTINEL is de kern van de DDI-CDI-waardetypering:
+# geldige waarden en ontbrekendwaarden zijn twee domeinen, niet één lijst met
+# uitzonderingen. Hier draagt zij de onvolledige geboortedatum, die in een
+# persoonsregistratie een gewoon verschijnsel is.
+vlierdam:veld-brp-geboorte-datum a gd:Gegevenstype ;
+    cdi:Concept-identifier [ cdi:Identifier-uri "https://vlierdam.example/odrl/veld-brp-geboorte-datum"^^xsd:anyURI ] ;
+    cdi:Concept-name [ cdi:ObjectName-name "GT-GEBOORTEDATUM-001" ] ;
+    cdi:Concept-definition [ cdi:InternationalString-languageSpecificString
+        [ cdi:LanguageString-content "De geboortedatum van de bevraagde persoon." ;
+          cdi:LanguageString-language "nl" ] ] ;
+    cdi:Concept-externalDefinition glo:term-geboortedatum ;
+    cdi:ConceptualVariable_measures_UnitType glo:unittype-natuurlijk-persoon ;
+    cdi:RepresentedVariable-hasIntendedDataType [
+        cdi:ControlledVocabularyEntry-entryValue "Date" ;
+        cdi:ControlledVocabularyEntry-vocabulary [
+            cdi:Reference-uri "https://gegevensdeling.example/def/waardetype"^^xsd:anyURI ] ] ;
+    cdi:RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain glo:waardedomein-geboortedatum ;
+    cdi:RepresentedVariable_takesSentinelValuesFrom_SentinelValueDomain glo:waardedomein-geboortedatum-onvolledig ;
+    gd:classificatie
+        gdc:persoonsgegevens-aanwezig\/bevat-persoonsgegevens ,
+        gdc:type-persoonsgegevens\/bevat-gewone-persoonsgegevens .
+
+glo:waardedomein-geboortedatum a cdi:SubstantiveValueDomain ;
+    rdfs:label "Waardedomein geboortedatum"@nl , "Value domain date of birth"@en ;
+    cdi:ValueDomain-recommendedDataType [ cdi:ControlledVocabularyEntry-entryValue "Date" ] ;
+    cdi:SubstantiveValueDomain_isDescribedBy_ValueAndConceptDescription [
+        cdi:ValueAndConceptDescription-description [ cdi:InternationalString-languageSpecificString
+            [ cdi:LanguageString-content "Kalenderdatum, niet in de toekomst ten opzichte van het moment van bevraging." ;
+              cdi:LanguageString-language "nl" ] ] ;
+        cdi:ValueAndConceptDescription-formatPattern [ cdi:ControlledVocabularyEntry-entryValue "JJJJ-MM-DD" ] ] .
+
+glo:waardedomein-geboortedatum-onvolledig a cdi:SentinelValueDomain ;
+    rdfs:label "Ontbrekendwaarden geboortedatum"@nl , "Sentinel values date of birth"@en ;
+    cdi:SentinelValueDomain_takesValuesFrom_EnumerationDomain glo:codelijst-onvolledige-datum .
+
+glo:codelijst-onvolledige-datum a cdi:CodeList ;
+    rdfs:label "Codelijst onvolledige datum"@nl , "Code list for an incomplete date"@en ;
+    cdi:EnumerationDomain-name [ cdi:ObjectName-name "onvolledigeDatum" ] ;
+    cdi:CodeList_has_Code glo:code-datum-onbekend , glo:code-dag-onbekend ;
+    cdi:EnumerationDomain_references_CategorySet glo:categorieen-onvolledige-datum .
+
+glo:code-datum-onbekend a cdi:Code ;
+    rdfs:label "0000-00-00 — datum onbekend"@nl , "0000-00-00 — date unknown"@en ;
+    cdi:Code_denotes_Category glo:categorie-datum-onbekend ;
+    cdi:Code_uses_Notation [ cdi:Notation-content [ cdi:TypedString-content "0000-00-00" ] ] .
+
+glo:code-dag-onbekend a cdi:Code ;
+    rdfs:label "JJJJ-MM-00 — dag onbekend"@nl , "JJJJ-MM-00 — day unknown"@en ;
+    cdi:Code_denotes_Category glo:categorie-dag-onbekend ;
+    cdi:Code_uses_Notation [ cdi:Notation-content [ cdi:TypedString-content "JJJJ-MM-00" ] ] .
+
+glo:categorieen-onvolledige-datum a cdi:CategorySet ;
+    rdfs:label "Categorieën onvolledige datum"@nl , "Categories for an incomplete date"@en ;
+    cdi:ConceptSystem-name [ cdi:ObjectName-name "onvolledigeDatumCategorieen" ] ;
+    cdi:CategorySet_has_Category glo:categorie-datum-onbekend , glo:categorie-dag-onbekend .
+
+glo:categorie-datum-onbekend a cdi:Category ;
+    rdfs:label "datum onbekend"@nl , "date unknown"@en ;
+    cdi:Concept-name [ cdi:ObjectName-name "datumOnbekend" ] ;
+    cdi:Concept-definition [ cdi:InternationalString-languageSpecificString
+        [ cdi:LanguageString-content "De geboortedatum is bij de inschrijving niet vastgesteld." ;
+          cdi:LanguageString-language "nl" ] ] .
+
+glo:categorie-dag-onbekend a cdi:Category ;
+    rdfs:label "dag onbekend"@nl , "day unknown"@en ;
+    cdi:Concept-name [ cdi:ObjectName-name "dagOnbekend" ] ;
+    cdi:Concept-definition [ cdi:InternationalString-languageSpecificString
+        [ cdi:LanguageString-content "Jaar en maand zijn bekend, de dag niet." ;
+          cdi:LanguageString-language "nl" ] ] .
+
+glo:gegevensveld-geboortedatum a gd:Gegevensveld ;
+    rdfs:label "veld geboortedatum"@nl , "field date of birth"@en ;
+    cdi:Concept-identifier [ cdi:Identifier-uri "https://vlierdam.example/glo/gegevensveld-geboortedatum"^^xsd:anyURI ] ;
+    cdi:Concept-name [ cdi:ObjectName-name "geboortedatum" ] ;
+    cdi:InstanceVariable-physicalDataType [ cdi:ControlledVocabularyEntry-entryValue "string (ISO 8601)" ] ;
+    cdi:InstanceVariable_has_PhysicalSegmentLayout glo:tgm-brp-antwoord ;
+    cdi:InstanceVariable_has_ValueMapping [
+        cdi:ValueMapping-isRequired true ;
+        cdi:ValueMapping-format [ cdi:ControlledVocabularyEntry-entryValue "YYYY-MM-DD" ] ] .
+
+glo:mapping-geboortedatum a cdi:VariableRelationship ;
+    rdfs:label "Gegevenstypemapping geboortedatum"@nl , "Data type mapping date of birth"@en ;
+    cdi:VariableRelationship_hasSource_ConceptualVariable vlierdam:veld-brp-geboorte-datum ;
+    cdi:VariableRelationship_hasTarget_ConceptualVariable glo:gegevensveld-geboortedatum .
+
+# 7 — gemeente van inschrijving (CATEGORISCH)
+#
+# Dit is het gegevenstype waarop de leverset is afgebakend: beleid.ttl eist op
+# de inway dat de bevraagde persoon ingezetene van Vlierdam is, en hier is dat
+# de waarde uit een opgesomd waardebereik. Het bereik telt twee waarden en niet
+# één, omdat een antwoord ook een persoon kan betreffen die inmiddels is
+# vertrokken; de verstrekker laat die buiten het antwoord, en de codelijst maakt
+# zichtbaar dat dat een beslissing is en geen onmogelijkheid.
+vlierdam:veld-brp-gemeenteVanInschrijving a gd:GegevenstypeCategorisch ;
+    cdi:Concept-identifier [ cdi:Identifier-uri "https://vlierdam.example/odrl/veld-brp-gemeenteVanInschrijving"^^xsd:anyURI ] ;
+    cdi:Concept-name [ cdi:ObjectName-name "GT-GEMEENTE-001" ] ;
+    cdi:Concept-definition [ cdi:InternationalString-languageSpecificString
+        [ cdi:LanguageString-content "De gemeente waar de bevraagde persoon als ingezetene staat ingeschreven." ;
+          cdi:LanguageString-language "nl" ] ] ;
+    cdi:Concept-externalDefinition glo:term-gemeente-van-inschrijving ;
+    cdi:ConceptualVariable_measures_UnitType glo:unittype-natuurlijk-persoon ;
+    cdi:RepresentedVariable-hasIntendedDataType [
+        cdi:ControlledVocabularyEntry-entryValue "Categorical" ;
+        cdi:ControlledVocabularyEntry-vocabulary [
+            cdi:Reference-uri "https://gegevensdeling.example/def/waardetype"^^xsd:anyURI ] ] ;
+    cdi:RepresentedVariable_takesSubstantiveValuesFrom_SubstantiveValueDomain glo:waardedomein-gemeente ;
+    gd:classificatie
+        gdc:persoonsgegevens-aanwezig\/bevat-persoonsgegevens ,
+        gdc:type-persoonsgegevens\/bevat-gewone-persoonsgegevens .
+
+glo:waardedomein-gemeente a cdi:SubstantiveValueDomain ;
+    rdfs:label "Waardebereik gemeente van inschrijving"@nl ,
+               "Value range municipality of registration"@en ;
+    cdi:ValueDomain-recommendedDataType [ cdi:ControlledVocabularyEntry-entryValue "String" ] ;
+    cdi:SubstantiveValueDomain_takesValuesFrom_EnumerationDomain glo:codelijst-gemeenten .
+
+glo:codelijst-gemeenten a cdi:CodeList ;
+    rdfs:label "Codelijst gemeenten in de bevraging"@nl , "Code list of municipalities in the query"@en ;
+    cdi:EnumerationDomain-name [ cdi:ObjectName-name "gemeenten" ] ;
+    cdi:CodeList_has_Code glo:code-gemeente-vlierdam , glo:code-gemeente-elders ;
+    cdi:EnumerationDomain_references_CategorySet glo:categorieen-gemeente .
+
+glo:code-gemeente-vlierdam a cdi:Code ;
+    rdfs:label "0001 — Vlierdam"@nl , "0001 — Vlierdam"@en ;
+    cdi:Code_denotes_Category glo:categorie-gemeente-vlierdam ;
+    cdi:Code_uses_Notation [ cdi:Notation-content [ cdi:TypedString-content "0001" ] ] .
+
+glo:code-gemeente-elders a cdi:Code ;
+    rdfs:label "9999 — buiten Vlierdam"@nl , "9999 — outside Vlierdam"@en ;
+    cdi:Code_denotes_Category glo:categorie-gemeente-elders ;
+    cdi:Code_uses_Notation [ cdi:Notation-content [ cdi:TypedString-content "9999" ] ] .
+
+glo:categorieen-gemeente a cdi:CategorySet ;
+    rdfs:label "Categorieën gemeente van inschrijving"@nl ,
+               "Categories for municipality of registration"@en ;
+    cdi:ConceptSystem-name [ cdi:ObjectName-name "gemeenteCategorieen" ] ;
+    cdi:CategorySet_has_Category glo:categorie-gemeente-vlierdam , glo:categorie-gemeente-elders .
+
+glo:categorie-gemeente-vlierdam a cdi:Category ;
+    rdfs:label "ingezetene van Vlierdam"@nl , "resident of Vlierdam"@en ;
+    cdi:Concept-name [ cdi:ObjectName-name "vlierdam" ] ;
+    cdi:Category-descriptiveText [ cdi:InternationalString-languageSpecificString
+        [ cdi:LanguageString-content "De persoon staat in Vlierdam ingeschreven; dit is de enige waarde die in een antwoord voorkomt." ;
+          cdi:LanguageString-language "nl" ] ] .
+
+glo:categorie-gemeente-elders a cdi:Category ;
+    rdfs:label "ingezetene van een andere gemeente"@nl , "resident of another municipality"@en ;
+    cdi:Concept-name [ cdi:ObjectName-name "elders" ] ;
+    cdi:Category-descriptiveText [ cdi:InternationalString-languageSpecificString
+        [ cdi:LanguageString-content "De persoon staat elders ingeschreven; de verstrekker laat zo iemand buiten het antwoord, en deze waarde komt in een levering dus niet voor." ;
+          cdi:LanguageString-language "nl" ] ] .
+
+glo:gegevensveld-gemeente-van-inschrijving a gd:Gegevensveld ;
+    rdfs:label "veld gemeente van inschrijving"@nl , "field municipality of registration"@en ;
+    cdi:Concept-identifier [ cdi:Identifier-uri "https://vlierdam.example/glo/gegevensveld-gemeente-van-inschrijving"^^xsd:anyURI ] ;
+    cdi:Concept-name [ cdi:ObjectName-name "gemeenteVanInschrijving" ] ;
+    cdi:InstanceVariable-physicalDataType [ cdi:ControlledVocabularyEntry-entryValue "string" ] ;
+    cdi:InstanceVariable_has_PhysicalSegmentLayout glo:tgm-brp-antwoord ;
+    cdi:InstanceVariable_has_ValueMapping [
+        cdi:ValueMapping-isRequired true ;
+        cdi:ValueMapping-length 4 ] .
+
+glo:mapping-gemeente-van-inschrijving a cdi:VariableRelationship ;
+    rdfs:label "Gegevenstypemapping gemeente van inschrijving"@nl ,
+               "Data type mapping municipality of registration"@en ;
+    cdi:VariableRelationship_hasSource_ConceptualVariable vlierdam:veld-brp-gemeenteVanInschrijving ;
+    cdi:VariableRelationship_hasTarget_ConceptualVariable glo:gegevensveld-gemeente-van-inschrijving .
+
+# De zeven mappings in één structuur.
+glo:variabelestructuur-brp-laadpalen a cdi:VariableStructure ;
+    rdfs:label "Variabelenstructuur BRP-bevraging laadpalen"@nl ,
+               "Variable structure for charging-station population register queries"@en ;
+    cdi:VariableStructure-purpose [ cdi:InternationalString-languageSpecificString
+        [ cdi:LanguageString-content "De gegevenstypemappingen tussen het logisch en het technisch gegevensmodel van de leverset." ;
+          cdi:LanguageString-language "nl" ] ] ;
+    cdi:VariableStructure_structures_VariableCollection glo:gegevensset-brp-laadpalen ;
+    cdi:VariableStructure_has_VariableRelationship
+        glo:mapping-bsn , glo:mapping-voornamen , glo:mapping-geslachtsnaam ,
+        glo:mapping-adresregel1 , glo:mapping-adresregel2 ,
+        glo:mapping-geboortedatum , glo:mapping-gemeente-van-inschrijving .
+
+# =============================================================================
+# 9. WAT DIT BESTAND AAN BESTAANDE KNOPEN TOEVOEGT
+#
+# De aanvullingen staan hierboven op hun inhoudelijke plaats; deze lijst maakt
+# in één oogopslag zichtbaar welke knopen uit de andere vlierdam-bestanden er
+# tripels bij krijgen. Geen van die bestanden is gewijzigd.
+#
+#   vlierdam:brp-velden-laadpalen  (velden.ttl)
+#       + gd:Gegevensleversetspecificatie met code, beschrijving, populatie,
+#         logisch gegevensmodel, filtergegevenstype, gegevensmiddel,
+#         classificaties, rubricering en drie leversetafspraken (sectie 7).
+#   vlierdam:doelbinding-registratie-laadpalen  (vocabulaire.ttl)
+#       + dpv:Purpose met beschrijving en twee grondslagen (sectie 5).
+#   vlierdam:gemeentesecretaris  (vocabulaire.ttl)
+#       + org:Role, zodat de functie als eindverantwoordelijke kan dienen
+#         (sectie 6).
+#   de zeven veldknopen  (velden.ttl)
+#       + gd:Gegevenstype respectievelijk gd:GegevenstypeCategorisch, met
+#         begrip, waardetype, waardedomein en classificaties (sectie 8c).
+#
+# Alleen aangehaald, niet aangevuld: vlierdam:RvIG, vlierdam:GemeenteVlierdam,
+# vlierdam:set-rvig-inway, vlierdam:plicht-vernietiging,
+# vlierdam:plicht-traceparent en vlierdam:medewerkers-burgerzaken.
+# =============================================================================

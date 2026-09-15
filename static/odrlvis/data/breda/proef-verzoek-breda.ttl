@@ -1,0 +1,53 @@
+@prefix odrl:   <http://www.w3.org/ns/odrl/2/> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix apnl:   <https://standaarden.overheid.nl/odrl-ap-nl/> .
+@prefix brp:    <https://data.rijksoverheid.nl/brp/def#> .
+@prefix brprub: <https://data.rijksoverheid.nl/brp/rubriek/> .
+@prefix brpgrp: <https://data.rijksoverheid.nl/brp/groep/> .
+@prefix brpcat: <https://data.rijksoverheid.nl/brp/categorie/> .
+@prefix brpafn: <https://data.rijksoverheid.nl/brp/afnemer/> .
+@prefix brpaut: <https://data.rijksoverheid.nl/brp/autorisatie/> .
+@prefix oorg:   <https://identifier.overheid.nl/tooi/id/oorg/> .
+@prefix bwb:    <https://wetten.overheid.nl/> .
+@prefix apb:    <https://data.rijksoverheid.nl/brp/ap-nl/> .
+@prefix apaanbod: <https://data.rijksoverheid.nl/brp/ap-nl/aanbod/> .
+@prefix apovk:  <https://data.rijksoverheid.nl/brp/ap-nl/overeenkomst/> .
+@prefix apper:  <https://data.rijksoverheid.nl/brp/ap-nl/permissie/> .
+@prefix apset:  <https://data.rijksoverheid.nl/brp/ap-nl/gegevensset/> .
+@prefix apcon:  <https://data.rijksoverheid.nl/brp/ap-nl/voorwaarde/> .
+@prefix apdoel: <https://data.rijksoverheid.nl/brp/ap-nl/doel/> .
+@prefix apdoc:  <https://data.rijksoverheid.nl/brp/ap-nl/besluitdocument/> .
+@prefix apvz:   <https://data.rijksoverheid.nl/brp/ap-nl/verzoek/> .
+@prefix apind:  <https://data.rijksoverheid.nl/brp/ap-nl/indiener/> .
+
+apvz:2024-0000351115 a odrl:Request ;
+    odrl:uid apvz:2024-0000351115 ;
+    dct:title "Autorisatieverzoek het gemeentebestuur van de gemeente Breda (29 mei 2024)"@nl ;
+    dct:description "Verzoek van het gemeentebestuur van de gemeente Breda, gedagtekend 29 mei 2024, om autorisatie voor de systematische verstrekking van gegevens uit de basisregistratie personen (kenmerk 2024-0000351115). Op dit verzoek is beslist in het autorisatiebesluit met kenmerk 2024-0000366479."@nl ;
+    dct:identifier "2024-0000351115" ;
+    skos:notation "2024-0000351115" ;
+    dct:issued "2024-05-29"^^xsd:date ;
+    dct:publisher brpafn:510149 ;
+    prov:wasDerivedFrom apaanbod:systematischeVerstrekking ;
+    odrl:profile apnl:profiel ;
+    prov:hadPrimarySource apdoc:2024-0000366479 ;
+    skos:editorialNote "Mini-Request: uit het besluit zijn alleen de datum, het kenmerk en de indienertekst van het verzoek herleidbaar — de verzoekbrief zelf is niet gepubliceerd. Wélke gegevens, kanalen, doelen of voorwaarden zijn gevraagd, staat er niet in en is daarom niet gemodelleerd."@nl ,
+        "De permission is de minimale regel die ODRL voor een geldige policy vereist: odrl:distribute ('verstrekken'), de profielactie waaronder de BRP-verstrekkingsvormen vallen (odrl:includedIn). Er wordt géén verstrekkingskanaal geclaimd: het verzoek vraagt om autorisatie voor de systematische verstrekking en noemt de vorm niet."@nl ,
+        "De indienertekst is herleid tot de afnemer van het besluit (brpafn:510149); de letterlijke tekst in het besluit luidt: “het gemeentebestuur van de gemeente Breda”."@nl ;
+    odrl:permission apper:verzoek-2024-0000351115 .
+
+brpafn:510149 rdfs:label "Gemeente Breda/Algemene gemeentetaken"@nl .
+
+apper:verzoek-2024-0000351115 a odrl:Permission ;
+    odrl:uid apper:verzoek-2024-0000351115 ;
+    dct:title "Verstrekking uit de basisregistratie personen"@nl ;
+    odrl:action odrl:distribute ;
+    odrl:target apb:gbav ;
+    odrl:assignee brpafn:510149 ;
+    rdfs:comment "Minimale regel van het verzoek: verstrekking uit de BRP aan de indiener. Kanaal, gegevens en doel zijn niet uit de besluittekst af te leiden en worden niet geclaimd."@nl .

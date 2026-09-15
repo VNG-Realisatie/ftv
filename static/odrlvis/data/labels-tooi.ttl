@@ -1,0 +1,60 @@
+# =============================================================================
+# Registerfragment TOOI — labels voor de register-URI's in de voorbeelden
+#
+# Register-URI's (partijen, organisaties) zijn in policies bewust opaak: het
+# label hoort niet in elke policy gedupliceerd te worden, maar komt uit het
+# register zelf (TOOI). Dit bestand is zo'n registerfragment: een kleine
+# companion-graaf die tooling naast de policies laadt, zodat viewers en
+# editors "gemeente Appingedam" kunnen tonen in plaats van "gem:gm0003".
+# De viewer geeft rdfs:label/dct:title uit de geladen graaf voorrang; de
+# editor-dropdowns nemen alles met een rdfs:label op.
+#
+# Labels overgenomen uit TOOI (identifier.overheid.nl, geraadpleegd
+# 2026-08-17); bij twijfel is het register leidend, niet dit bestand.
+# =============================================================================
+
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix gem:    <https://identifier.overheid.nl/tooi/id/gemeente/> .
+@prefix oorg:   <https://identifier.overheid.nl/tooi/id/oorg/> .
+@prefix min:    <https://identifier.overheid.nl/tooi/id/ministerie/> .
+
+gem:gm0003
+    rdfs:label "gemeente Appingedam"@nl ;
+    skos:prefLabel "gemeente Appingedam"@nl ;
+    dct:source <https://identifier.overheid.nl/tooi/id/gemeente/gm0003> .
+
+gem:gm0014
+    rdfs:label "gemeente Groningen"@nl ;
+    skos:prefLabel "gemeente Groningen"@nl ;
+    dct:source <https://identifier.overheid.nl/tooi/id/gemeente/gm0014> .
+
+gem:gm0344
+    rdfs:label "gemeente Utrecht"@nl ;
+    skos:prefLabel "gemeente Utrecht"@nl ;
+    dct:source <https://identifier.overheid.nl/tooi/id/gemeente/gm0344> .
+
+oorg:oorg10103
+    rdfs:label "Rijksdienst voor Identiteitsgegevens"@nl ;
+    skos:prefLabel "Rijksdienst voor Identiteitsgegevens"@nl ;
+    skos:altLabel "RvIG"@nl ;
+    dct:source <https://identifier.overheid.nl/tooi/id/oorg/oorg10103> .
+
+min:mnre1034
+    rdfs:label "ministerie van Binnenlandse Zaken en Koninkrijksrelaties"@nl ;
+    skos:prefLabel "ministerie van Binnenlandse Zaken en Koninkrijksrelaties"@nl ;
+    skos:altLabel "BZK"@nl ;
+    dct:source <https://identifier.overheid.nl/tooi/id/ministerie/mnre1034> .
+
+# Provincies uit de BRO-simulatie (gederefereerd op identifier.overheid.nl,
+# 2026-08-18).
+<https://identifier.overheid.nl/tooi/id/provincie/pv26>
+    rdfs:label "provincie Utrecht"@nl ;
+    skos:prefLabel "provincie Utrecht"@nl ;
+    dct:source <https://identifier.overheid.nl/tooi/id/provincie/pv26> .
+
+<https://identifier.overheid.nl/tooi/id/provincie/pv28>
+    rdfs:label "provincie Zuid-Holland"@nl ;
+    skos:prefLabel "provincie Zuid-Holland"@nl ;
+    dct:source <https://identifier.overheid.nl/tooi/id/provincie/pv28> .

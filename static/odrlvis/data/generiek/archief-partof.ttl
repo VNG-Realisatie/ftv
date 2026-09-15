@@ -1,0 +1,108 @@
+# Archiefvoorbeeld uit de Visualisatie-note, §3 "Named collection hierarchies".
+#
+# Een collectie waarvan de leden zelf weer leden hebben: archief > serie >
+# dossier > stuk, elk lid met een DOMEIN-type naast odrl:Asset en elk van die
+# domeinklassen met een label per taal. Dat is precies wat de viewer nodig
+# heeft om per niveau te groeperen en te tellen; zonder de domeintypen zou
+# elke laag één platte groep zijn.
+#
+# Bedoeld als generieke fixture voor de doorlopende partOf-boom (de echte
+# data-tegenhanger is het BRP-informatiemodel: rubriek > groep > categorie).
+# Opzettelijk klein maar niet triviaal:
+#   - drie niveaus onder het archief, met per niveau meerdere domeintypen
+#     (serie 2 draagt zowel dossiers als een los stuk);
+#   - één GEDEELD stuk onder twee dossiers: een DAG, geen cykel — beide takken
+#     mogen hem tonen;
+#   - één CYKEL (ex:ring1 partOf ex:ring2 partOf ex:ring1): de boom moet daar
+#     eindigen in plaats van door te lopen;
+#   - het lidmaatschap staat in de ODRL-kernrichting (lid odrl:partOf
+#     collectie), behalve bij ex:serie3, dat er via de oude dct:hasPart-
+#     conventie in hangt — beide routes moeten meelezen.
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ex:   <https://example.org/archief/> .
+
+# --- Domeinklassen met een label per taal (note §3) --------------------------
+ex:Series rdfs:label "Series"@en , "Serie"@nl .
+ex:File   rdfs:label "File"@en ,   "Dossier"@nl .
+ex:Record rdfs:label "Record"@en , "Stuk"@nl .
+
+# --- Het archief zelf: de collectie waarop de regel wijst --------------------
+ex:archief1 a odrl:Asset , odrl:AssetCollection ;
+    dct:title "Archief van de gemeentesecretarie"@nl ,
+              "Archive of the municipal secretariat"@en .
+
+# --- Niveau 1: series --------------------------------------------------------
+ex:serie1 a odrl:Asset , ex:Series ;
+    rdfs:label "Serie 1 — Notulen van het college"@nl , "Series 1 — Council minutes"@en ;
+    odrl:partOf ex:archief1 .
+ex:serie2 a odrl:Asset , ex:Series ;
+    rdfs:label "Serie 2 — Bouwvergunningen"@nl , "Series 2 — Building permits"@en ;
+    odrl:partOf ex:archief1 .
+# Dezelfde relatie, maar in de OUDE richting op de collectie.
+ex:archief1 dct:hasPart ex:serie3 .
+ex:serie3 a odrl:Asset , ex:Series ;
+    rdfs:label "Serie 3 — Ingekomen stukken"@nl , "Series 3 — Incoming documents"@en .
+
+# --- Niveau 2: dossiers ------------------------------------------------------
+ex:dossier12 a odrl:Asset , ex:File ;
+    rdfs:label "Dossier 12 — Collegevergaderingen 1952"@nl ,
+               "File 12 — Council meetings 1952"@en ;
+    odrl:partOf ex:serie1 .
+ex:dossier13 a odrl:Asset , ex:File ;
+    rdfs:label "Dossier 13 — Collegevergaderingen 1953"@nl ,
+               "File 13 — Council meetings 1953"@en ;
+    odrl:partOf ex:serie1 .
+ex:dossier44 a odrl:Asset , ex:File ;
+    rdfs:label "Dossier 44 — Vergunning Marktstraat 3"@nl ,
+               "File 44 — Permit Marktstraat 3"@en ;
+    odrl:partOf ex:serie2 .
+
+# --- Niveau 3: stukken -------------------------------------------------------
+ex:stuk7 a odrl:Asset , ex:Record ;
+    rdfs:label "Stuk 7 — Notulen 14 januari 1952"@nl ,
+               "Record 7 — Minutes 14 January 1952"@en ;
+    odrl:partOf ex:dossier12 .
+ex:stuk8 a odrl:Asset , ex:Record ;
+    rdfs:label "Stuk 8 — Bijlage bij de notulen"@nl ,
+               "Record 8 — Annex to the minutes"@en ;
+    odrl:partOf ex:dossier12 .
+ex:stuk9 a odrl:Asset , ex:Record ;
+    rdfs:label "Stuk 9 — Bouwtekening"@nl , "Record 9 — Construction drawing"@en ;
+    odrl:partOf ex:dossier44 .
+# GEDEELD stuk: hangt onder twee dossiers tegelijk. Een DAG, geen cykel.
+ex:stuk10 a odrl:Asset , ex:Record ;
+    rdfs:label "Stuk 10 — Gedeelde correspondentie"@nl ,
+               "Record 10 — Shared correspondence"@en ;
+    odrl:partOf ex:dossier12 , ex:dossier13 .
+# Een los stuk direct onder een serie: een niveau mag gemengd zijn.
+ex:stuk11 a odrl:Asset , ex:Record ;
+    rdfs:label "Stuk 11 — Losse aanvraag zonder dossier"@nl ,
+               "Record 11 — Loose application without a file"@en ;
+    odrl:partOf ex:serie2 .
+
+# --- Een CYKEL in odrl:partOf ------------------------------------------------
+# Niet mooi, wel echt: de boom moet hierop eindigen in plaats van rond te gaan.
+ex:ring1 a odrl:Asset , ex:File ;
+    rdfs:label "Ring 1 (cyclisch dossier)"@nl , "Ring 1 (cyclic file)"@en ;
+    odrl:partOf ex:serie3 .
+ex:ring2 a odrl:Asset , ex:File ;
+    rdfs:label "Ring 2 (cyclisch dossier)"@nl , "Ring 2 (cyclic file)"@en ;
+    odrl:partOf ex:ring1 .
+ex:ring1 odrl:partOf ex:ring2 .
+
+# --- Het beleid dat op het archief wijst -------------------------------------
+ex:archiefbeleid a odrl:Offer ;
+    dct:title "Raadpleging van het gemeentearchief"@nl ,
+              "Consultation of the municipal archive"@en ;
+    dct:description "Aanbod voor raadpleging van het archief van de gemeentesecretarie."@nl ,
+                    "Offer for consultation of the archive of the municipal secretariat."@en ;
+    odrl:assigner ex:gemeente ;
+    odrl:permission [ a odrl:Permission ;
+        odrl:action odrl:read ;
+        odrl:target ex:archief1 ;
+        odrl:assignee ex:onderzoekers ] .
+ex:gemeente rdfs:label "Gemeente Voorbeeld"@nl , "Municipality of Example"@en .
+ex:onderzoekers rdfs:label "Onderzoekers"@nl , "Researchers"@en .

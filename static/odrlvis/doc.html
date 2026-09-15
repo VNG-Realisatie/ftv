@@ -1,66 +1,53 @@
 <!doctype html>
 <html lang="nl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ODRL Visualizer</title>
-  <link rel="icon" href="data:,">
-  <link rel="stylesheet" href="assets/doc.css">
+<meta charset="utf-8">
+<title>ODRL-viewer — verplaatst naar index.html</title>
+<!--
+  DE OUDE INGANG, ALS DOORSTUURBESTAND (deeltraject 4, golf 2).
+
+  Tot de omschakeling was `viewer/doc.html` DE viewer. Sindsdien staat de nieuwe
+  app op dezelfde plek, en die heet `index.html`. Alles wat buiten dit repository
+  naar de oude naam wijst — de voorbeeldlinks op de projectpagina, de deeplinks
+  in de profieldocumentatie, wat er in presentaties en mail is rondgestuurd —
+  blijft daarmee werken.
+
+  HET URL-CONTRACT IS AL BYTE-COMPATIBEL: `src/stores/weergave.ts` leest exact
+  dezelfde twaalf sleutels als het boot-blok van de bevroren viewer. Alleen de
+  bestandsnaam verschilt. Dit bestand hoeft dus niets te VERTALEN; het hoeft
+  alleen niets te VERLIEZEN.
+
+  Daarom `location.search + location.hash` ONGELEZEN doorgeven. Wie de query hier
+  uit elkaar haalt en opnieuw opbouwt, codeert vroeg of laat een teken anders dan
+  de afzender het schreef — en `?src=` draagt hele URL's, mét `%3A%2F%2F`. De
+  hash hoort er net zo goed bij: een deeplink naar een kop in het document valt
+  zonder hem terug op de bovenkant van de pagina.
+
+  `replace` en niet `assign`: de oude URL blijft dan GEEN eigen stap in de
+  geschiedenis. Met `assign` zet één keer terug de lezer op dit bestand, dat hem
+  meteen weer vooruit stuurt — de klassieke redirect-lus in de terugknop.
+
+  Het pad is relatief (`index.html`, geen `/viewer/index.html`): net als de rest
+  van de build is dit bestand pad-onafhankelijk, zodat het ook werkt waar de app
+  niet in de wortel van een host staat.
+
+  Dit bestand staat in `src/public/` en wordt door Vite verbatim in de build
+  gekopieerd; `test/e2e/gevallen/doc-shim.mjs` pint dat het er is en wat het doet.
+  Sloop is golf 4, niet eerder: de deeplinks van buiten zijn niet op te sporen.
+-->
+<meta name="robots" content="noindex">
+<script>
+  location.replace('index.html' + location.search + location.hash);
+</script>
+<style>
+  body { font: 15px/1.5 system-ui, sans-serif; margin: 3rem auto; max-width: 34rem; padding: 0 1rem; }
+</style>
 </head>
 <body>
-  <header class="doc-topbar">
-    <div class="brand">
-      <span class="logo">ODRL Visualizer</span>
-      <span class="subtitle">ODRL-AP-NL</span>
-    </div>
-    <div class="topbar-right">
-      <!-- De policy-dropdown is vervallen (beslissing eigenaar, aug 2026):
-           navigeren gaat via de secties/filters; ?policy=-deeplinks blijven
-           werken en renderPolicySelect() is zonder dit element een no-op. -->
-      <!-- Taalkiezer (audit-punt B16): ?lang=nl|en, default nl. De labels
-           hieronder zijn de enige tekst in deze pagina die NIET uit
-           assets/i18n.js komt — "NL"/"EN" zijn in beide talen gelijk. -->
-      <div class="lang-switch" id="lang-switch" role="group" aria-label="Taal van de weergave">
-        <button class="lang-btn on" type="button" data-lang="nl" aria-pressed="true">NL</button>
-        <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
-      </div>
-      <button class="btn" id="btn-sources" type="button" aria-expanded="false">Bronnen ▾</button>
-    </div>
-  </header>
-
-  <!-- Fold-out: geladen RDF-bronnen + extra bronnen toevoegen (petstore-idee:
-       de "explore"-balk, maar dan voor TTL-URL's en een SPARQL-endpoint). -->
-  <section class="sources-panel" id="sources-panel" hidden>
-    <div class="sources-inner">
-      <div class="sources-col">
-        <div class="sources-label" id="label-sources-loaded">Geladen bronnen</div>
-        <ul class="sources-list" id="sources-list"></ul>
-        <p class="status" id="doc-status"></p>
-      </div>
-      <div class="sources-col">
-        <!-- Eén veld voor alle brontypen: het type (Turtle/JSON-LD-bestand of
-             SPARQL-endpoint) wordt automatisch gedetecteerd, zie
-             assets/source-detect.js. -->
-        <div class="sources-label" id="label-sources-add">Bron toevoegen</div>
-        <form class="sources-form" id="form-add-src">
-          <input type="text" id="input-src"
-                 placeholder="https://…/beleid.ttl of https://…/sparql" required>
-          <button class="btn" id="btn-add-src" type="submit">Toevoegen</button>
-        </form>
-        <p class="sources-note muted" id="src-detect-msg" hidden></p>
-      </div>
-    </div>
-  </section>
-
-  <main class="doc-main" id="doc-main"></main>
-
-  <!-- DE VERKENNER: de TWEEDE full-page stand van deze pagina (?verken=<IRI>).
-       Precies één van deze twee <main>'s is zichtbaar — de andere staat op
-       hidden. Het document en de machineleesbare graaf komen dus nooit naast
-       elkaar te staan; je wisselt van stand, zonder de bronnen te herladen.
-       Zie assets/verken-view.js. -->
-  <main class="doc-main verken-main" id="verken-main" hidden></main>
-
-  <script type="module" src="assets/doc.js"></script>
+<noscript>
+  <p>Deze viewer heeft JavaScript nodig. De pagina is verhuisd naar
+  <a href="index.html">index.html</a> in dezelfde map; de parameters achter het
+  vraagteken werken daar ongewijzigd.</p>
+</noscript>
 </body>
 </html>

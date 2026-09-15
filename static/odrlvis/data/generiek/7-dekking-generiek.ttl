@@ -1,0 +1,264 @@
+@prefix apnl:   <https://standaarden.overheid.nl/odrl-ap-nl/> .
+@prefix odrl:   <http://www.w3.org/ns/odrl/2/> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix dpv:    <https://w3id.org/dpv#> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix schema: <https://schema.org/> .
+@prefix ex:     <https://example.gov.nl/dekking/> .
+
+# =============================================================================
+# ODRL-AP-NL — Voorbeeld 7: DEKKING, generiek herkend
+#
+# ⚠ VOORBEELD / FICTIEF. "Gemeente Nieuwveen", het subsidieregister en de
+#   Rego-module bestaan niet; de wetsverwijzingen zijn illustratief. Dit
+#   bestand dient uitsluitend om het dekkingspatroon te tonen.
+#
+# Waar gaat dit over?
+# -------------------
+# Een policy bevat naast machine-uitvoerbare toetsen ook normatieve, LOGISCHE
+# regels die eersteklas in het beleid horen (eigen odrl:uid, eigen grondslag).
+# Het profiel legt met prov:wasDerivedFrom als data vast wélke van die regels
+# door een uitwerking gedekt worden — zie de ODRL-AP-NL-specificatie,
+# "Dekking" (conformsToPolicy), en de dekkingstoets apnl:RegelDekkingShape.
+#
+# Hoe de viewer dat herkent (linkdoctrine, aug 2026)
+# --------------------------------------------------
+# Een link is gedefinieerd door PREDICAAT + TYPERING VAN HET DOELWIT:
+#
+#     S prov:wasDerivedFrom R   met   R = regel (odrl:Permission/Prohibition/
+#     Duty, of hangend aan odrl:permission/prohibition/obligation) mét odrl:uid
+#     ⟹ S dekt R zelf (wie mag wat met welk doelwit)
+#
+#     S prov:wasDerivedFrom V   met   V = IRI-node, a odrl:Constraint of
+#     a odrl:LogicalConstraint, in odrl:constraint- of odrl:refinement-positie
+#     ⟹ S dwingt VOORWAARDE V af
+#
+# Twee korrels dus. Dat is nodig omdat een Rego- of Cedar-uitwerking in de
+# praktijk vooral voorwaarden uitwerkt; "regel gedekt" alleen zou een regel
+# waarvan één van drie voorwaarden wordt afgedwongen even volledig laten lijken
+# als een regel waarvan alle drie worden afgedwongen. Een BLANK-NODE-voorwaarde
+# heeft geen adres en is dus niet dekbaar — zie ex:toestemming-subsidievaststelling
+# hieronder, waar één voorwaarde benoemd is en één bewust niet.
+#
+# Wat S zélf is, doet er voor de HERKENNING niet toe — dat vertelt S met zijn
+# eigen rdf:type en label. Vandaar dat de dekker hieronder DUBBEL getypeerd is:
+# apnl:RegoModule (profielkennis: dit is een policy-artefact) én
+# schema:SoftwareSourceCode met schema:programmingLanguage (generieke,
+# webbrede typering). Beide labels komen uit de data, niet uit de viewer.
+#
+# Datzelfde predicaat draagt in dit profiel óók de koppeling Agreement→Offer,
+# Agreement→Request en gewone documentherkomst. Die raken de dekking niet:
+# hun doelwitten zijn policies en documenten, geen regels. Ook dat staat
+# hieronder — ex:overeenkomst-nieuwveen leidt af van een aanbod, een verzoek
+# én een besluit-PDF, en géén daarvan levert een dekkingschip op.
+#
+# Wat je moet zien
+# ----------------
+#   • drie verplichtingen met de chip "gedekt door Toegangsregels
+#     subsidieregister (Nieuwveen)" — de tooltip noemt het type-label van de
+#     dekker ("Rego-module") — plus een verken-knop naar die knoop;
+#   • de toestemming zelf gedekt én één gedekte voorwaarde
+#     (ex:vw-doel-subsidievaststelling), naast één voorwaarde die niet dekbaar
+#     is omdat zij een blank node is (het kantooruren-venster);
+#   • één verplichting — de geheimhouding — met de chip "niet gedekt".
+#     Dat is een EERLIJK feit, geen fout: een geheimhoudingsplicht is een
+#     organisatorische norm die geen beslispunt kan afdwingen. Wegmodelleren
+#     om de dekking rond te krijgen is non-conform.
+#
+# Bekijken
+# --------
+#   viewer/?src=../data/generiek/7-dekking-generiek.ttl
+#                  &src=../data/odrl-ap-nl.ttl
+#
+# (het tweede bestand levert de NL-labels van de apnl-termen; zonder dat
+#  bestand toont de viewer eerlijk de curie apnl:RegoModule)
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# De dekkende knoop: één artefact, twee typeringen
+# -----------------------------------------------------------------------------
+
+ex:authz-subsidie a apnl:RegoModule , schema:SoftwareSourceCode ;
+    rdfs:label "authz-subsidie.rego"@nl ;
+    dct:title "Toegangsregels subsidieregister (Nieuwveen)"@nl ;
+    dct:description """FICTIEVE OPA/Rego-module. Controleert of een bevraging van het
+subsidieregister binnen de doelbinding «subsidievaststelling» valt: alleen
+geautoriseerde behandelaars, alleen lopende dossiers, en elke bevraging wordt
+geprotocolleerd."""@nl ;
+    schema:programmingLanguage "Rego" ;
+    dct:format "application/vnd.rego" ;
+    dcat:downloadURL <https://example.gov.nl/dekking/authz-subsidie.rego> ;
+    apnl:entrypoint "data.nieuwveen.subsidie.allow" ;
+    apnl:sha256 "3f9c1b7ae04d5c62b81d0f4a9c7e2a15d38b6047fe9c2213a5d70b8e46f1c9d2" ;
+    dct:issued "2026-05-12"^^xsd:date ;
+
+    # ---- DEKKING -------------------------------------------------------------
+    # Deze module verklaart de uitwerking te zijn van precies deze drie
+    # logische regels. Richting: van de uitwerking naar de regel (de regel is
+    # de bron, de module de afgeleide) — dezelfde richting en hetzelfde
+    # predicaat als Agreement→Offer.
+    prov:wasDerivedFrom
+        ex:regel-doelbinding ,
+        ex:regel-protocollering ,
+        ex:regel-bewaartermijn ,
+        # ... plus de toestemming zelf en één BENOEMDE VOORWAARDE
+        # daarbinnen: de module rekent de doelbindingstoets zelf uit.
+        ex:toestemming-subsidievaststelling ,
+        ex:vw-doel-subsidievaststelling ;
+
+    # dct:references MAG als zwakkere verwijzing naast de dekking staan; als
+    # dekking telt hij bewust NIET (zie de spec).
+    dct:references <https://example.gov.nl/dekking/toelichting-authz.pdf> .
+
+# -----------------------------------------------------------------------------
+# De vier logische regels — eersteklas, elk met eigen odrl:uid
+# -----------------------------------------------------------------------------
+
+ex:regel-doelbinding a odrl:Duty ;
+    odrl:uid ex:regel-doelbinding ;
+    dct:title "Alleen bevragen voor subsidievaststelling"@nl ;
+    dct:description """De gemeente bevraagt het subsidieregister uitsluitend ten
+behoeve van de vaststelling van een lopende subsidieaanvraag."""@nl ;
+    dpv:hasLegalBasis <https://wetten.overheid.nl/BWBR0005537#Titeldeel4.2> ;
+    odrl:action odrl:use .
+
+ex:regel-protocollering a odrl:Duty ;
+    odrl:uid ex:regel-protocollering ;
+    dct:title "Protocolleer elke bevraging"@nl ;
+    dct:description """Van elke bevraging worden aanvrager, tijdstip, dossier en
+doel vastgelegd, zodat achteraf herleidbaar is wie wat heeft ingezien."""@nl ;
+    dpv:hasLegalBasis <https://wetten.overheid.nl/BWBR0005537#Titeldeel4.2> ;
+    odrl:action odrl:inform .
+
+ex:regel-bewaartermijn a odrl:Duty ;
+    odrl:uid ex:regel-bewaartermijn ;
+    dct:title "Verwijder opgehaalde gegevens na afhandeling"@nl ;
+    dct:description """Opgehaalde registergegevens worden uiterlijk 30 dagen na
+afhandeling van de aanvraag uit de werkomgeving verwijderd."""@nl ;
+    dpv:hasLegalBasis <https://wetten.overheid.nl/BWBR0005537#Titeldeel4.2> ;
+    odrl:action odrl:delete .
+
+# En de vierde: BEWUST ONGEDEKT. Geen enkele knoop verklaart de uitwerking
+# hiervan te zijn — een geheimhoudingsplicht rust op mensen, niet op een
+# beslispunt. De viewer meldt dat neutraal ("niet gedekt"), de dekkingstoets
+# levert er een sh:Warning bij, geen violation.
+ex:regel-geheimhouding a odrl:Duty ;
+    odrl:uid ex:regel-geheimhouding ;
+    dct:title "Geheimhouding door de behandelaar"@nl ;
+    dct:description """De behandelaar deelt de uit het register verkregen gegevens
+met niemand buiten het subsidieproces. Organisatorische norm: niet door een
+beslispunt af te dwingen, wel onverkort geldend."""@nl ;
+    dpv:hasLegalBasis <https://wetten.overheid.nl/BWBR0005537#Artikel2:5> ;
+    odrl:action odrl:use .
+
+# -----------------------------------------------------------------------------
+# De policy: één toestemming met de conformsToPolicy-toets + de vier regels
+# -----------------------------------------------------------------------------
+# De conformsToPolicy-refinement maakt de vraag naar dekking pas zinnig: er ís
+# een machine-uitvoerbare laag, dus "niet gedekt" is een mededeling met inhoud.
+# In een policy zonder zo'n laag zwijgt de viewer daarover.
+
+ex:overeenkomst-nieuwveen a odrl:Agreement ;
+    dct:title "Subsidieregister — gemeente Nieuwveen (FICTIEF)"@nl ;
+    dct:description """Fictieve overeenkomst die de doelbinding
+«subsidievaststelling» machine-uitvoerbaar maakt en daarnaast vier logische
+regels draagt. Drie daarvan zijn door authz-subsidie.rego gedekt, de
+geheimhoudingsplicht bewust niet."""@nl ;
+    odrl:uid ex:overeenkomst-nieuwveen ;
+    odrl:profile apnl:profiel ;
+    dct:issued "2026-05-12"^^xsd:date ;
+    odrl:assigner ex:registerhouder ;
+    odrl:assignee ex:gemeente-nieuwveen ;
+
+    # DEZELFDE relatie, drie andere betekenissen — en géén ervan is dekking:
+    # een aanbod en een verzoek zijn policies, een besluit is een document.
+    prov:wasDerivedFrom
+        ex:aanbod-subsidieregister ,
+        ex:verzoek-nieuwveen ,
+        <https://example.gov.nl/dekking/besluit-2026-0412.pdf> ;
+
+    odrl:permission ex:toestemming-subsidievaststelling ;
+    odrl:obligation
+        ex:regel-doelbinding ,
+        ex:regel-protocollering ,
+        ex:regel-bewaartermijn ,
+        ex:regel-geheimhouding .
+
+ex:toestemming-subsidievaststelling a odrl:Permission ;
+    odrl:uid ex:toestemming-subsidievaststelling ;
+    dct:title "Subsidieregister raadplegen voor vaststelling"@nl ;
+    dpv:hasLegalBasis <https://wetten.overheid.nl/BWBR0005537#Titeldeel4.2> ;
+    odrl:action [ rdf:value odrl:read ;
+        # Doelbinding: BENOEMD, dus dekbaar — en gedekt (zie ex:authz-subsidie).
+        odrl:refinement ex:vw-doel-subsidievaststelling ,
+        # Machine-uitvoerbaar: het verwerkingsverzoek moet voldoen aan de module.
+        # Deze refinement is de META-voorwaarde en is nooit dekkingsdoel; zij
+        # blijft daarom een blank node en telt niet mee in de regelstatus.
+        [ a odrl:Constraint ;
+            odrl:leftOperand apnl:verwerkingsverzoek ;
+            odrl:operator apnl:conformsToPolicy ;
+            odrl:rightOperand ex:authz-subsidie ] ] ;
+    # En een voorwaarde die NIET DEKBAAR is: een blank node heeft geen adres,
+    # dus geen enkel artefact kan ernaar wijzen. Wil de publicerende partij
+    # kunnen laten zien dat de module ook dit venster afdwingt, dan moet zij
+    # deze voorwaarde eerst een IRI geven. Zolang dat niet gebeurt, zwijgt de
+    # dekkingstoets erover — geen chip, geen melding, want er valt niets over
+    # te zeggen. De voorwaarde geldt onverkort.
+    odrl:constraint [ a odrl:Constraint ;
+        rdfs:label "Alleen tijdens kantooruren"@nl ;
+        odrl:leftOperand ex:momentVanBevraging ;
+        odrl:operator odrl:eq ;
+        odrl:rightOperand ex:kantooruren ] ;
+    odrl:target ex:subsidieregister .
+
+# De benoemde voorwaarde: een IRI-node met eigen type en label, zodat een
+# artefact haar afzonderlijk kan dekken en een lezer kan zien dát zij wordt
+# afgedwongen — niet alleen dat de regel eromheen bestaat.
+ex:vw-doel-subsidievaststelling a odrl:Constraint ;
+    rdfs:label "Doel is subsidievaststelling"@nl ;
+    odrl:leftOperand odrl:purpose ;
+    odrl:operator odrl:eq ;
+    odrl:rightOperand ex:doel-subsidievaststelling .
+
+ex:momentVanBevraging rdfs:label "moment van bevraging"@nl .
+ex:kantooruren rdfs:label "kantooruren"@nl .
+
+# -----------------------------------------------------------------------------
+# Context: het aanbod, het verzoek en de bijrollen (klein gehouden)
+# -----------------------------------------------------------------------------
+
+ex:aanbod-subsidieregister a odrl:Offer ;
+    odrl:uid ex:aanbod-subsidieregister ;
+    dct:title "Aanbod subsidieregister (FICTIEF)"@nl ;
+    odrl:assigner ex:registerhouder ;
+    odrl:permission [ a odrl:Permission ;
+        dct:title "Raadplegen na doelbinding"@nl ;
+        odrl:action odrl:read ;
+        odrl:target ex:subsidieregister ] .
+
+ex:verzoek-nieuwveen a odrl:Request ;
+    odrl:uid ex:verzoek-nieuwveen ;
+    dct:title "Aansluitverzoek gemeente Nieuwveen (FICTIEF)"@nl ;
+    dct:identifier "NV-2026-0412" ;
+    dct:issued "2026-04-12"^^xsd:date ;
+    odrl:assignee ex:gemeente-nieuwveen .
+
+ex:subsidieregister a dcat:Dataset ;
+    dct:title "Subsidieregister (FICTIEF)"@nl ;
+    dct:description "Fictief register van verstrekte en aangevraagde subsidies."@nl .
+
+ex:doel-subsidievaststelling a dpv:Purpose ;
+    rdfs:label "Subsidievaststelling"@nl ;
+    dct:description "Vaststellen of een aangevraagde subsidie kan worden verleend."@nl .
+
+ex:registerhouder rdfs:label "Registerhouder subsidieregister (FICTIEF)"@nl .
+ex:gemeente-nieuwveen rdfs:label "Gemeente Nieuwveen (FICTIEF)"@nl .
+
+<https://example.gov.nl/dekking/besluit-2026-0412.pdf>
+    dct:title "Aansluitbesluit 2026-0412 (FICTIEF)"@nl .
+<https://example.gov.nl/dekking/toelichting-authz.pdf>
+    dct:title "Toelichting op de toegangsregels (FICTIEF)"@nl .

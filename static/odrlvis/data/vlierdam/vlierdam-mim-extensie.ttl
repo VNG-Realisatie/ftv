@@ -1,0 +1,155 @@
+@prefix mim:    <http://modellen.mim-standaard.nl/def/mim#> .
+@prefix mimx:   <https://gegevensdeling.example/def/mim-ext/> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix vlmim:  <https://vlierdam.example/mim/> .
+@prefix gdc:    <https://gegevensdeling.example/def/classificatie/> .
+
+# =============================================================================
+# DE MIM-EXTENSIE: TWEE METAGEGEVENS OP DE ATTRIBUUTSOORT.
+#
+# WAAROM DIT BESTAND BESTAAT. Twee eisen uit de eisenlijst hebben in MIM 1.2
+# geen drager, en het zijn juist de twee die op MODELNIVEAU thuishoren:
+#
+#   E91 — de noodzaak per veld. Waarom is dít ene gegeven voor dít doel nodig?
+#         De gepubliceerde stapel heeft er evenmin een term voor en behelpt
+#         zich met `skos:scopeNote` met een "NOODZAAK — "-voorvoegsel (zie
+#         vlierdam-glo-brv.ttl). Dit is het ene punt waar de MIM-route NETTER
+#         kan worden dan de bestaande: een eigen metagegeven zegt wat het is,
+#         in plaats van een SKOS-noot die toevallig zo begint.
+#   E90 — de classificaties per gegevenstype (bevat persoonsgegevens ja/nee,
+#         en van welke soort). MIM kent alleen `mim:authentiek`, en dat gaat
+#         over de wettelijke status van het gegeven, niet over de
+#         gevoeligheid ervan.
+#
+# WAAROM DIT MAG, EN WAAR DE GRENS LIGT. De inleiding van MIM 1.2 staat
+# metamodelextensies toe: een domein mag eigen metamodelelementen of
+# metagegevens toevoegen, mits de extensie NIETS VERVANGT wat al in MIM staat,
+# en zij wordt buiten MIM beheerd. Deze extensie voegt twee metagegevens toe en
+# raakt geen enkele bestaande MIM-term.
+#
+# De standaard grenst de route even uitdrukkelijk af: "Een metamodelextensie is
+# expliciet niet bedoeld voor aanvullende constructies die alleen spelen op het
+# niveau van implementatie, of op het niveau van afgeleide technische modellen
+# t.b.v. specifieke interfaces." Daarom staan hier ALLEEN deze twee. De poort,
+# het beslispunt, het uitvoerend artefact, het mediatype en het adres van de
+# dienst — de hele ontsluitingslaag van de casus — mogen langs deze weg niet
+# worden toegevoegd, ook al zou het technisch kunnen. Dat is geen weglating
+# maar de regel van de standaard zelf.
+#
+# VORM. De extensie volgt de omzettingsregels van hoofdstuk 4 van MIM 1.2: een
+# metagegeven met een literal-waarde wordt een `owl:DatatypeProperty`, een
+# metagegeven dat naar een ander ding verwijst een `owl:ObjectProperty`, met
+# `rdfs:label` als naam en `rdfs:comment` als definitie. Het informatiemodel in
+# vlierdam-mim-bronmodel.ttl noemt deze namespace in zijn `mim:mimextensie`.
+#
+# DE INSTANTIETRIPELS STAAN HIER EN NIET IN HET BRONMODEL. Zo blijft de
+# MIM-instantiegraaf zuiver en valideert zij op zichzelf tegen mim.ttl en
+# mim-shapes.ttl; wat de extensie draagt is dan ook zichtbaar de extensie, en
+# niet MIM.
+#
+# Alles is fictief; zie README.md.
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 1. De extensie als beheerd artefact
+# -----------------------------------------------------------------------------
+
+<https://gegevensdeling.example/def/mim-ext/> a owl:Ontology ;
+    rdfs:label "MIM-extensie gegevensdeling"@nl ,
+               "MIM extension for data sharing"@en ;
+    rdfs:comment "Een metamodelextensie op MIM 1.2 met twee metagegevens op de attribuutsoort: de noodzaak van het gegeven voor het doel van de levering, en de classificatie van het gegeven naar gevoeligheid. De extensie vervangt geen enkel MIM-construct en wordt buiten MIM beheerd."@nl ;
+    owl:versionInfo "1.0" ;
+    dct:conformsTo <https://docs.geostandaarden.nl/mim/mim/> ;
+    dct:source <https://docs.geostandaarden.nl/mim/mim/> .
+
+# -----------------------------------------------------------------------------
+# 2. De twee metagegevens
+# -----------------------------------------------------------------------------
+
+mimx:noodzaak a owl:DatatypeProperty ;
+    rdfs:label "noodzaak"@nl , "necessity"@en ;
+    rdfs:comment "De onderbouwing waarom dit gegeven voor het doel van de levering nodig is, en wat er zonder dit gegeven niet kan. Eén onderbouwing per attribuutsoort."@nl ;
+    rdfs:isDefinedBy <https://gegevensdeling.example/def/mim-ext/> ;
+    rdfs:domain mim:Attribuutsoort ;
+    rdfs:range rdf:langString .
+
+mimx:classificatie a owl:ObjectProperty ;
+    rdfs:label "classificatie"@nl , "classification"@en ;
+    rdfs:comment "Een indeling van het gegeven naar gevoeligheid, uit een buiten het model beheerde waardelijst. Een attribuutsoort kan meerdere classificaties dragen."@nl ;
+    rdfs:isDefinedBy <https://gegevensdeling.example/def/mim-ext/> ;
+    rdfs:domain mim:Attribuutsoort ;
+    rdfs:range skos:Concept .
+
+# -----------------------------------------------------------------------------
+# 3. De twee metagegevens toegepast op de zeven attribuutsoorten
+#
+# DE NOODZAAKTEKSTEN ZIJN VOOR DEZE CASUS GESCHREVEN, naar het model van de
+# `skos:scopeNote`-teksten in vlierdam-glo-brv.ttl: één alinea die zegt wat het
+# gegeven bijdraagt aan het doel en wat er zonder dat gegeven niet lukt. De
+# noodzaakbeoordeling van de OVEREENKOMST als geheel staat in vlierdam-glo.ttl
+# op `gd:noodzaak`; deze zeven zijn de uitsplitsing daarvan naar veld. Het doel
+# is de registratie van laadpalen bij woningen van inwoners met een elektrische
+# auto.
+# -----------------------------------------------------------------------------
+
+vlmim:attribuutsoort-burgerservicenummer
+    mimx:noodzaak "De aanvraag moet aan één rechthebbende worden gekoppeld en een laadpaal wordt aan één huishouden toegewezen; zonder een uniek nummer vallen naamgenoten op hetzelfde adres samen en is niet vast te stellen of de aanvrager en de ingeschrevene dezelfde persoon zijn. Het nummer wordt na de toewijzing niet in het laadpaaldossier bewaard."@nl ;
+    mimx:classificatie
+        gdc:persoonsgegevens-aanwezig\/bevat-persoonsgegevens ,
+        gdc:type-persoonsgegevens\/bevat-nationale-identificatienummers .
+
+vlmim:attribuutsoort-voornamen
+    mimx:noodzaak "De gemeente neemt over de plaatsing contact op met de aanvrager en moet die aanspreken zoals hij in de registratie bekend staat; zonder voornamen is een aanschrijving aan een adres met meerdere naamgenoten niet te richten. Voor de raming van het laadvermogen draagt dit gegeven niets bij."@nl ;
+    mimx:classificatie
+        gdc:persoonsgegevens-aanwezig\/bevat-persoonsgegevens ,
+        gdc:type-persoonsgegevens\/bevat-gewone-persoonsgegevens .
+
+vlmim:attribuutsoort-geslachtsnaam
+    mimx:noodzaak "De geslachtsnaam is het gegeven waarmee de aanvraag en de inschrijving op elkaar worden gelegd; het burgerservicenummer bevestigt die koppeling maar staat niet op het aanvraagformulier. Zonder geslachtsnaam kan de behandelaar een aanvraag niet aan een ingeschrevene toewijzen zonder eerst het nummer op te vragen, wat een ruimere bevraging zou vergen."@nl ;
+    mimx:classificatie
+        gdc:persoonsgegevens-aanwezig\/bevat-persoonsgegevens ,
+        gdc:type-persoonsgegevens\/bevat-gewone-persoonsgegevens .
+
+vlmim:attribuutsoort-adresregel1
+    mimx:noodzaak "Een laadpaal wordt in een straat geplaatst en op een adreseenheid aangesloten; straatnaam en huisnummer bepalen bij welk parkeervak de paal komt en op welke netaansluiting hij hoort. Zonder dit gegeven is de aanvraag wel te herleiden tot een persoon maar niet tot een plaats."@nl ;
+    mimx:classificatie
+        gdc:persoonsgegevens-aanwezig\/bevat-persoonsgegevens ,
+        gdc:type-persoonsgegevens\/bevat-gewone-persoonsgegevens .
+
+vlmim:attribuutsoort-adresregel2
+    mimx:noodzaak "Straatnamen komen binnen een gemeente meermaals voor; postcode en woonplaats maken het adres eenduidig en zijn bovendien de sleutel waarmee de aanvraag op het straatsegment van de netbeheerder valt. Zonder deze regel kan een aanvraag aan de verkeerde straat worden toegewezen."@nl ;
+    mimx:classificatie
+        gdc:persoonsgegevens-aanwezig\/bevat-persoonsgegevens ,
+        gdc:type-persoonsgegevens\/bevat-gewone-persoonsgegevens .
+
+vlmim:attribuutsoort-geboortedatum
+    mimx:noodzaak "De regeling stelt de aanvraag open voor meerderjarigen, omdat de plaatsing een gebruiksovereenkomst met de gemeente meebrengt; de geboortedatum is het gegeven waarmee dat wordt vastgesteld. Zij dient ook om naamgenoten op hetzelfde adres te onderscheiden wanneer het burgerservicenummer op het formulier ontbreekt. Voor de raming van het laadvermogen doet zij niet mee, en een onvolledige datum is voldoende zolang het jaar bekend is."@nl ;
+    mimx:classificatie
+        gdc:persoonsgegevens-aanwezig\/bevat-persoonsgegevens ,
+        gdc:type-persoonsgegevens\/bevat-gewone-persoonsgegevens .
+
+vlmim:attribuutsoort-gemeente-van-inschrijving
+    mimx:noodzaak "De gemeente mag alleen laadpalen toewijzen aan haar eigen ingezetenen en moet dat per aanvraag kunnen vaststellen; dit gegeven is de toets. Het is bovendien de grootheid waarop de populatie van de levering is afgebakend: een bevraging die een persoon buiten Vlierdam zou opleveren, levert geen antwoord op. Zonder dit gegeven zou de toets op de bevoegdheid buiten de levering moeten plaatsvinden, op gegevens die de gemeente dan alsnog zou moeten opvragen."@nl ;
+    mimx:classificatie
+        gdc:persoonsgegevens-aanwezig\/bevat-persoonsgegevens ,
+        gdc:type-persoonsgegevens\/bevat-gewone-persoonsgegevens .
+
+# -----------------------------------------------------------------------------
+# 4. Wat deze extensie NIET doet
+#
+# Zij draagt de noodzaakbeoordeling van de OVEREENKOMST niet. Die is vrije
+# tekst over één concrete deling tussen twee genoemde partijen; het
+# dichtstbijzijnde MIM-metagegeven (`mim:toelichting`) hoort bij een
+# modelelement en niet bij een geval, en een extensie die dat zou rechttrekken
+# zou het niveauverschil van hoofdstuk 2 doorbreken in plaats van het metamodel
+# uitbreiden.
+#
+# Zij draagt evenmin de doelbinding, de grondslag, de bewaartermijn of de
+# verstrekkingsbeperking. Dat zijn geen eigenschappen van een gegeven maar van
+# een deling, en zij staan in de gepubliceerde overeenkomst.
+# -----------------------------------------------------------------------------
