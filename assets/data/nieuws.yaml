@@ -118,3 +118,7 @@
   datum: "2026-09-08"
   link: "actueel/nieuws/20260901werkgroepauthzenupdate/"
   beschrijving: "De werkgroep praatte bij over het recente werk bij OpenID AuthZEN voor AI en MCP, integratie met OAuth providers en aanvraagbare toegang."
+- titel: "FTV Werkgroep #27: Scope van ODRL-AP-NL"
+  datum: "2026-09-15"
+  link: "actueel/nieuws/20260915werkgroepodrlscope/"
+  beschrijving: "De werkgroep peilde de scope van ODRL-AP-NL: een minimaal, toonbaar profiel als degelijke basis, met animo om gegevensleveringsovereenkomsten te verkennen."
