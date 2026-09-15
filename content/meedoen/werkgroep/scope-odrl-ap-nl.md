@@ -33,9 +33,11 @@ Title: Scope ODRL-AP-NL
 - [Opname](https://github.com/VNG-Realisatie/ftv/raw/refs/heads/main/static/videos/20260915-odrl-ap-nl.mp4)
 - [Presentatie](/ftv/documents/20260915-odrl-ap-nl.pdf)
 - [ODRL Visualisation Note](/ftv/documents/20260824-odrl-visualisation-note.html)
-- [Voorbeeld in de viewer: GLO met W3C-standaarden](/ftv/odrlvis/?src=voorbeelden/glo-voorbeeld.ttl)
-- [Voorbeeld in de viewer: GLO met NL-standaarden](/ftv/odrlvis/?src=voorbeelden/glo-mim-voorbeeld.ttl)
-- [Voorbeeld in de viewer: hardening als machineleesbare afspraak](/ftv/odrlvis/?src=voorbeelden/hardening-voorbeeld.ttl)
+- Voorbeelden in de viewer:
+  - [Laadpalenvergunningen Vlierdam](/ftv/odrlvis/?src=voorbeelden/vlierdam-voorbeeld.ttl)
+  - [GLO met W3C-standaarden](/ftv/odrlvis/?src=voorbeelden/glo-voorbeeld.ttl)
+  - [GLO met NL-standaarden](/ftv/odrlvis/?src=voorbeelden/glo-mim-voorbeeld.ttl)
+  - [Hardening als machineleesbare afspraak](/ftv/odrlvis/?src=voorbeelden/hardening-voorbeeld.ttl)
 
 {{< /chapter/section >}}
 
