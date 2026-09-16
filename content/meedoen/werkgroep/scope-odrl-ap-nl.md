@@ -32,7 +32,7 @@ Title: Scope ODRL-AP-NL
 
 - [Opname](https://github.com/VNG-Realisatie/ftv/raw/refs/heads/main/static/videos/20260915-odrl-ap-nl.mp4)
 - [Presentatie](/ftv/documents/20260915-odrl-ap-nl.pdf)
-- [ODRL Visualisation Note](/ftv/documents/20260824-odrl-visualisation-note.html)
+- [ODRL Visualisation Note](/ftv/odrlvis/note/)
 - Voorbeelden in de viewer:
   - [Laadpalenvergunningen Vlierdam](/ftv/odrlvis/?src=voorbeelden/vlierdam-voorbeeld.ttl)
   - [GLO met W3C-standaarden](/ftv/odrlvis/?src=voorbeelden/glo-voorbeeld.ttl)

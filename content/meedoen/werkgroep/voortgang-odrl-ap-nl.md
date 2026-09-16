@@ -28,7 +28,7 @@ Title: Voortgang ODRL-AP-NL
 
 - [Opname](https://github.com/VNG-Realisatie/ftv/raw/refs/heads/main/static/videos/20260818-odrl-ap-nl.mp4)
 - [Presentatie](/ftv/documents/20260818-odrl-ap-nl.pdf)
-- [ODRL Visualisation Note](/ftv/documents/20260824-odrl-visualisation-note.html)
+- [ODRL Visualisation Note](/ftv/odrlvis/note/)
 
 {{< /chapter/section >}}
 
@@ -71,7 +71,7 @@ Omdat *Michiel* aanwezig was, heeft hij een **Visualisation Note** kunnen aandra
 
 {{< chapter/section title="Visualisation Note en demo" >}}
 
-*Michiel* licht het voorstel toe: FTV biedt aan die [Visualisation Note](/ftv/documents/20260824-odrl-visualisation-note.html) te schrijven. Het is geen software maar een specificatie-regime: waar moet ODRL aan voldoen om visualiseerbaar (en indirect bewerkbaar) te zijn. Kern is een **labelling-regime** (elk begrip een label, definitie en de metadata om te kunnen visualiseren), **drie lagen** (generiek ODRL; profiel-gedeclareerd via UI-shapes; en een raw vangnet voor data die nergens getoond wordt) en het verwijzen naar de **registers** waar labels uit voortkomen. De basis wil men internationaal krijgen, zodat het geen Nederlands-specifiek verhaal blijft.
+*Michiel* licht het voorstel toe: FTV biedt aan die [Visualisation Note](/ftv/odrlvis/note/) te schrijven. Het is geen software maar een specificatie-regime: waar moet ODRL aan voldoen om visualiseerbaar (en indirect bewerkbaar) te zijn. Kern is een **labelling-regime** (elk begrip een label, definitie en de metadata om te kunnen visualiseren), **drie lagen** (generiek ODRL; profiel-gedeclareerd via UI-shapes; en een raw vangnet voor data die nergens getoond wordt) en het verwijzen naar de **registers** waar labels uit voortkomen. De basis wil men internationaal krijgen, zodat het geen Nederlands-specifiek verhaal blijft.
 
 *Hans Schevers* herkent er een SHACL-model in: een toetsbaar regime waarop je vervolgens een visualisator specificeert. *Michiel* bevestigt: SHACL dwingt af welke relaties nodig zijn, en in de middenlaag koppelen DASH en SHUI de SHACL-structuren aan formulierstructuren.
 
