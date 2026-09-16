@@ -1,0 +1,80 @@
+{
+  "_": [
+    "DE PROFIELBUNDEL VAN DEZE UITROL — ODRL-AP-NL.",
+    "",
+    "odrlvis is sinds 16 sep 2026 een generieke ODRL-viewer: zijn kern kent",
+    "ODRL 2.2 en de W3C-basisvocabulaires, en verder niets. Alles wat een",
+    "PROFIEL toevoegt staat in dit bestand, naast de app in data/. Zonder dit",
+    "bestand is de viewer puur generiek — geen vocabulaire, geen",
+    "registerprefixen, geen artefactherkenning, chrome-taal 'en'.",
+    "",
+    "Wat hier staat is precies wat tot die dag als negen naden IN de viewerkern",
+    "zat (zie scan-nl-verwijzingen.md 2). Het gedrag van de viewer met deze",
+    "bundel gekoppeld is daarmee hetzelfde als daarvoor; dat is de pariteitseis",
+    "van de omschakeling, en de e2e-suite draait erop.",
+    "",
+    "Sleutels zijn alle optioneel. Deze onderstreepte sleutel is commentaar:",
+    "JSON kent het niet, en de viewer negeert wat hij niet kent."
+  ],
+
+  "naam": "ODRL-AP-NL",
+
+  "vocabulaire": [
+    "labels-tooi.ttl",
+    "odrl-ap-nl.ttl"
+  ],
+
+  "prefixes": {
+    "apnl": "https://standaarden.overheid.nl/odrl-ap-nl/",
+    "geonl": "https://standaarden.overheid.nl/odrl-geo-nl/",
+    "tooi": "https://identifier.overheid.nl/tooi/id/",
+    "gem": "https://identifier.overheid.nl/tooi/id/gemeente/",
+    "provincie": "https://identifier.overheid.nl/tooi/id/provincie/",
+    "oorg": "https://identifier.overheid.nl/tooi/id/oorg/",
+    "bwb": "https://wetten.overheid.nl/",
+    "brp": "https://data.rijksoverheid.nl/brp/def#",
+    "brprub": "https://data.rijksoverheid.nl/brp/rubriek/",
+    "brpafn": "https://data.rijksoverheid.nl/brp/afnemer/",
+    "brpaut": "https://data.rijksoverheid.nl/brp/autorisatie/",
+    "apaanbod": "https://data.rijksoverheid.nl/brp/ap-nl/aanbod/",
+    "apovk": "https://data.rijksoverheid.nl/brp/ap-nl/overeenkomst/",
+    "apdoel": "https://data.rijksoverheid.nl/brp/ap-nl/doel/"
+  },
+
+  "artefacten": {
+    "klassen": [
+      "https://standaarden.overheid.nl/odrl-ap-nl/PolicyArtifact",
+      "https://standaarden.overheid.nl/odrl-ap-nl/RegoModule",
+      "https://standaarden.overheid.nl/odrl-ap-nl/CedarPolicySet",
+      "https://standaarden.overheid.nl/odrl-ap-nl/OpenFGAModel"
+    ],
+    "bundelKlasse": "https://standaarden.overheid.nl/odrl-ap-nl/PolicyBundle",
+    "conformsOperator": "https://standaarden.overheid.nl/odrl-ap-nl/conformsToPolicy",
+    "entrypoint": "https://standaarden.overheid.nl/odrl-ap-nl/entrypoint",
+    "sha256": "https://standaarden.overheid.nl/odrl-ap-nl/sha256",
+    "bundles": "https://standaarden.overheid.nl/odrl-ap-nl/bundles"
+  },
+
+  "bewerken": {
+    "defaultProfile": "https://standaarden.overheid.nl/odrl-ap-nl/profiel",
+    "operatoren": [
+      "https://standaarden.overheid.nl/odrl-ap-nl/conformsToPolicy"
+    ],
+    "leftOperands": [
+      "https://standaarden.overheid.nl/odrl-ap-nl/verwerkingsverzoek"
+    ],
+    "partijRegisterBases": [
+      "https://identifier.overheid.nl/tooi/id/"
+    ]
+  },
+
+  "constraintProperties": [
+    "https://standaarden.overheid.nl/odrl-geo-nl/property"
+  ],
+
+  "taal": "nl",
+
+  "formulierShapes": [
+    "shapes/formulier-artefact.ttl"
+  ]
+}
