@@ -1,4 +1,8 @@
 <!doctype html>
+<!-- The ODRL Visualisations note, as published. `odrl-visualisation-note.md`
+     next to this file is the author's source; there is no generator, the two
+     live loose and are maintained by hand in the same pass. This directory is
+     copied into the build by tools/kopieer-meegeleverd.mjs. -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -99,7 +103,7 @@
 with generic tooling: one viewer that renders any policy as a
 readable document, without code per profile or per dataset.</p>
 <p>This note assumes valid ODRL 2.2 policies.
-It lists only the triples a policy needs <strong>on top of that</strong>,
+It lists only the triples a policy needs on top of that,
 so a viewer can name, group, date, link, and trace what it shows.</p>
 <p>Examples are Turtle with the usual prefixes;
 <code>ex:</code> is an example namespace.</p>
@@ -109,7 +113,7 @@ Nothing here is fatal when missing: the failure mode is
 always readability. Each section ends with what the triples
 enable and what is lost without them.</p>
 <h2 id="1-labels">1. Labels</h2>
-<p>Names come from the data — a tool cannot invent them.</p>
+<p>Names come from the data. A tool cannot invent them.</p>
 <ul>
 <li>Every IRI shown to a person <strong>needs</strong> one of:
   <code>rdfs:label</code>, <code>skos:prefLabel</code>, or <code>dct:title</code>.</li>
@@ -158,7 +162,7 @@ agreement, and nothing shows that they all rest on
 a single offer term.</p></div>
 <h2 id="3-named-collection-hierarchies">3. Named collection hierarchies</h2>
 <p>The members of a large collection are rarely a flat list: they sit
-in a hierarchy of named levels from the domain — for example
+in a hierarchy of named levels from the domain, for example
 series, files, and records in an archive.</p>
 <ul>
 <li>Each member <strong>should</strong> carry an <code>rdf:type</code> for its level,
@@ -180,7 +184,7 @@ under meaningful headings.</p></div>
 as one flat group.</p></div>
 <h2 id="4-links-between-policies">4. Links between policies</h2>
 <p>A link between two policies is a <code>prov:wasDerivedFrom</code>
-between two nodes that are both typed as policies —
+between two nodes that are both typed as policies,
 any subclass of <code>odrl:Policy</code>: <code>odrl:Set</code>, <code>odrl:Offer</code>,
 <code>odrl:Agreement</code>, <code>odrl:Request</code>, <code>odrl:Ticket</code>,
 <code>odrl:Assertion</code>. The pair of types gives the link
@@ -287,7 +291,7 @@ can declare that axis:</p>
   <code>odrl:eq</code> and a single right operand.
   Rules without the dimension stay outside the groups.</li>
 <li>With more than one dimension, <code>sh:order</code> on the operand
-  gives the nesting order — lowest order outermost. Dimensions
+  gives the nesting order, lowest order outermost. Dimensions
   without <code>sh:order</code> follow, in a stable but unspecified order.
   A reader may pivot that order in the tool; the declaration
   states the default, not a constraint.</li>
@@ -316,12 +320,12 @@ so tools can group on them without the borrowed
 <code>qb:DimensionProperty</code> declaration.</p>
 </blockquote>
 <h2 id="7-realisation-links">7. Realisation links</h2>
-<p>A policy states what must hold; something else realises it —
-a technical artifact outside the policy, or another element
-of the policy. A realisation link records which node realises
+<p>A policy states what must hold; something else realises it,
+either a technical artifact outside the policy or another
+element of the policy. A realisation link records which node realises
 which element, so that relation can be shown instead of guessed.</p>
-<p>A realisation link is a <code>prov:wasDerivedFrom</code> whose <strong>target</strong>
-gives the link its meaning — the same doctrine as section 4,
+<p>A realisation link is a <code>prov:wasDerivedFrom</code> whose target
+gives the link its meaning, the same doctrine as section 4,
 one level down, aimed at elements rather than at whole policies:</p>
 <div class="tablewrap"><table>
 <thead>
@@ -353,17 +357,17 @@ one level down, aimed at elements rather than at whole policies:</p>
 <li>The reading comes from the target, not the source: deriving from a
   rule or a named condition is what makes the link a realisation link.
   The realising node itself needs only a label and, preferably, a type
-  and description from its own domain (sections 1 and 3) — a policy
+  and description from its own domain (sections 1 and 3): a policy
   bundle, a rule module, a materialised authorisation table. Which
   classes those are is a matter for profiles, not for this note.</li>
-<li>A <strong>rule</strong> is a Permission, Prohibition or Duty with an <code>odrl:uid</code> —
-  those are the three subclasses of <code>odrl:Rule</code>. A Duty counts whichever
+<li>A <strong>rule</strong> is a Permission, Prohibition or Duty with an <code>odrl:uid</code>.
+  Those are the three subclasses of <code>odrl:Rule</code>. A Duty counts whichever
   property carries it: <code>odrl:duty</code> on a permission, a policy-level
   <code>odrl:obligation</code>, or a <code>consequence</code> or <code>remedy</code>.</li>
 <li>A <strong>named condition</strong> is a node typed <code>odrl:Constraint</code> or
   <code>odrl:LogicalConstraint</code> sitting in <code>odrl:constraint</code> or in an
-  <code>odrl:refinement</code> — on a rule, on its action, or on a party or asset
-  collection.</li>
+  <code>odrl:refinement</code> (on a rule, on its action, or on a party or asset
+  collection).</li>
 <li>A derivation that points at a whole <strong>policy</strong> is not a realisation
   link: realisation runs to rules and conditions, one by one. Links between
   policies keep their section 4 meaning, and any other derivation stays plain
@@ -378,12 +382,12 @@ one level down, aimed at elements rather than at whole policies:</p>
 <p><strong>Markers on a rule or a condition.</strong> What may be <em>expected</em> of a rule or of
 one of its conditions is a separate question from what is <em>actually</em> realised,
 and the data can say it. Two markers borrowed from DPV (the W3C Data Privacy
-Vocabulary) do that — a deliberate borrowing like <code>qb:DimensionProperty</code> in
-section 6, and the same punning shape: an extra <code>rdf:type</code> on the instance.</p>
+Vocabulary) do that: a deliberate borrowing like <code>qb:DimensionProperty</code> in
+section 6, and the same punning shape, an extra <code>rdf:type</code> on the instance.</p>
 <ul>
-<li><code>dpv:TechnicalMeasure</code> — a rule or condition typed this <strong>is</strong> the technical
+<li><code>dpv:TechnicalMeasure</code> — a rule or condition typed this is the technical
   measure. It delegates: what stands behind it is named by its IRI right
-  operand, so it is the natural carrier of the realisation links above — they
+  operand, so it is the natural carrier of the realisation links above. They
   then sit in the policy, next to the rule they are about, and the thing behind
   them stays purely descriptive (name, hash, download URL; how such a node is
   presented: section 8). It is never itself the target of a realisation link
@@ -393,21 +397,21 @@ section 6, and the same punning shape: an extra <code>rdf:type</code> on the ins
   outside the machinery: in a work instruction, when accounts are handed out, in
   supervision. It applies undiminished and stays fully visible, but nothing has
   been left undone, so it does not count towards status either.</li>
-<li>A <strong>rule</strong> typed with either marker is secured <strong>as a whole</strong> — not just some
-  aspect of it, but who bears it, what it prescribes and on what — so it falls
-  outside the status <strong>together with all of its named conditions</strong>: nothing is
-  expected of them either.</li>
+<li>A <strong>rule</strong> typed with either marker is secured as a whole, not just some
+  aspect of it: who bears it, what it prescribes and on what. It therefore falls
+  outside the status together with all of its named conditions, of which nothing
+  is expected either.</li>
 <li>An <strong>unmarked</strong> rule or named condition is ordinary normative content: it is
   meant to be enforced technically, and it counts.</li>
 <li>Markers state what may be expected; <code>prov:wasDerivedFrom</code> stays the only
   thing that records what is actually enforced. Marking something
-  organisational is not a way to make it disappear — the requirement stays in
+  organisational is not a way to make it disappear: the requirement stays in
   the policy, only the expectation changes.</li>
 <li>Status per rule is computed, not stored: fully realised = the rule
   itself and every <strong>counting</strong> named condition of it are realised; partly =
   one of the two; not = neither. Counting = unmarked, so "fully realised"
-  means: everything that is meant to be enforceable is enforced. A marked rule
-  has no status at all — there is nothing to compute.</li>
+  means that everything that is meant to be enforceable is enforced. A marked
+  rule has no status at all, because there is nothing to compute.</li>
 </ul>
 <div class="ex"><span class="ex-tag">Example</span><pre><code><span class="tt-s">ex:rule1</span> a odrl:Permission ; odrl:uid ex:rule1 ;
     odrl:action [ rdf:value ex:consult ; odrl:refinement ex:measure1 ] ;
@@ -438,14 +442,14 @@ section 6, and the same punning shape: an extra <code>rdf:type</code> on the ins
 
 <span class="tt-s">ex:duty1</span> a odrl:Duty ; odrl:action ex:restrictSearch .</code></pre></div>
 <div class="kv"><span class="kv-tag">Enables</span><p>Tools can show, per element, what realises it
-and what it realises in turn, and to walk that chain in both directions:
+and what it realises in turn, and walk that chain in both directions:
 from a realising node to the rules and conditions it carries, and from a
 duty back to the conditions that realise it. Conditions that nothing
-enforces stay visible, and the markers let a tool say <em>why</em> — technical
+enforces stay visible, and the markers let a tool say why: technical
 measure, organisational measure, or simply not enforced.</p></div>
 <div class="kv"><span class="kv-tag">Without it</span><p>Realisation can only be guessed at the level of whole
 policies, so a partly enforced rule reads as either fully enforced or
-not at all; and without the markers every unenforced condition reads as an
+not at all. Without the markers, every unenforced condition reads as an
 omission, including the ones nothing was ever going to enforce.</p></div>
 <blockquote>
 <p><strong>Recommendation for ODRL 3</strong> — define a dedicated property for
@@ -468,7 +472,7 @@ a <em>form shape</em> says how to present its properties.</p>
   the classes derived from it.</li>
 <li>The shape <strong>needs</strong> to sit in the same dataset or endpoint as
   the node it describes: tools resolve it together with the data,
-  not from the open web — the same rule labels follow (section 1).</li>
+  not from the open web. Labels follow the same rule (section 1).</li>
 <li>Each <code>sh:property</code> <strong>needs</strong> <code>sh:name</code> per language and
   <code>sh:order</code>; groups of fields <strong>should</strong> use <code>sh:group</code> with a
   labelled <code>sh:PropertyGroup</code>. Groups and ungrouped properties sit
@@ -502,6 +506,18 @@ a <em>form shape</em> says how to present its properties.</p>
   this subset (<code>sh:name</code>, <code>dash:viewer</code>, <code>dash:propertyRole</code>)
   counts as a form shape; a plain validation shape on the same
   class is not a form.</li>
+<li>A tool that names the <em>kind</em> of node — a badge on a collapsed
+  form, a column header, a breadcrumb — takes that name from the
+  shape's <code>sh:targetClass</code>, not from the shape: a shape is a view
+  of a class and is usually named after the view
+  ("GLS form"), while the class carries the name of the thing.
+  The reading order on that class is <code>skos:altLabel</code> (a short
+  form the profile itself writes, such as <code>"GLS"</code>), then its
+  label per section 1. A profile <strong>should</strong> give a class whose
+  name is too long for a badge a <code>skos:altLabel</code>; a tool that
+  shows the short form <strong>needs</strong> to keep the full name reachable
+  (a title, a tooltip). The short form never replaces
+  <code>skos:prefLabel</code> as the preferred term.</li>
 <li>Anything beyond this subset is presentation and stays with
   the tool: colours, monospace, how a note block is boxed.</li>
 </ul>
@@ -522,8 +538,8 @@ a <em>form shape</em> says how to present its properties.</p>
     sh:name <span class="tt-l">"Noot"@nl</span> , <span class="tt-l">"Note"@en</span> ;
     sh:order 9 ; dash:viewer dash:LangStringViewer ] .</code></pre></div>
 <div class="kv"><span class="kv-tag">Enables</span><p>Tools can show unknown domain nodes as a tidy,
-ordered, bilingual form — right fields, right order, links as
-links — without code per profile; when a profile adds a field,
+ordered, bilingual form (right fields, right order, links as
+links) without code per profile; when a profile adds a field,
 the form follows the shape.</p></div>
 <div class="kv"><span class="kv-tag">Without it</span><p>Tools fall back to a bare property list:
 every triple of the node, in arbitrary order, labelled by
