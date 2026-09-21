@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>ODRL Visualizer — verplaatst</title>
+<script>
+// Doorverwijzing voor oude deeplinks (vorm: doc.html?src=data/…). De oude
+// databestanden (data/gedeeld.ttl, data/vlierdam.ttl, breda-proeven) bestaan
+// niet meer; de inhoud leeft door als enkelvoudige voorbeelden. We kiezen het
+// dichtstbijzijnde voorbeeld op basis van de oude src-parameters.
+(function () {
+  var q = new URLSearchParams(location.search);
+  var srcs = q.getAll('src').join(' ').toLowerCase();
+  var doel = '/ftv/odrlvis/';
+  if (srcs.indexOf('hardening') !== -1) doel += '?src=voorbeelden/hardening-voorbeeld.ttl';
+  else if (srcs.indexOf('glo') !== -1 || srcs.indexOf('overeenkomst') !== -1) doel += '?src=voorbeelden/glo-voorbeeld.ttl';
+  else if (srcs.indexOf('vlierdam') !== -1 || srcs.indexOf('gedeeld') !== -1) doel += '?src=voorbeelden/vlierdam-voorbeeld.ttl';
+  location.replace(doel);
+})();
+</script>
+<meta http-equiv="refresh" content="1; url=/ftv/odrlvis/">
+</head>
+<body>
+<p>Deze pagina is verplaatst naar <a href="/ftv/odrlvis/">de ODRL Visualizer</a>.</p>
+</body>
+</html>
