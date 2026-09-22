@@ -1,12 +1,18 @@
-@prefix odrl:  <http://www.w3.org/ns/odrl/2/> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix dct:   <http://purl.org/dc/terms/> .
-@prefix qb:    <http://purl.org/linked-data/cube#> .
-@prefix sh:    <http://www.w3.org/ns/shacl#> .
-@prefix apnl:  <https://standaarden.overheid.nl/odrl-ap-nl/> .
+@prefix apnl: <https://standaarden.overheid.nl/odrl-ap-nl/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dpv: <https://w3id.org/dpv#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vlierdam: <https://vlierdam.example/odrl/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # =============================================================================
 # Gemeente Vlierdam (FICTIEF, OpenFTV-demonstratiecasus) — domeinvocabulaire.
@@ -215,10 +221,6 @@ vlierdam:Veld a owl:Class ;
 # daar: het doel staat in het UITGAANDE verzoek en gaat niet mee naar de inways.
 odrl:purpose a qb:DimensionProperty ;
     sh:order 1 .
-@prefix odrl:  <http://www.w3.org/ns/odrl/2/> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix dct:   <http://purl.org/dc/terms/> .
-@prefix vlierdam: <https://vlierdam.example/odrl/> .
 
 # Dataminimalisatie als TARGET: de toegestane velden zijn AssetCollections;
 # een bevraging buiten de collectie valt buiten de permission.
@@ -273,14 +275,7 @@ vlierdam:veld-brv-klasse a odrl:Asset , vlierdam:Veld ;
     rdfs:label "uitstootklasse"@nl , "emission class"@en .
 # 'diplomatiek' staat hier bewust NIET als veld: het is een filter op de
 # bevraging (een kenmerk van het verzoek), geen gegeven dat wordt opgevraagd.
-@prefix odrl:  <http://www.w3.org/ns/odrl/2/> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
-@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix dct:   <http://purl.org/dc/terms/> .
-@prefix prov:  <http://www.w3.org/ns/prov#> .
-@prefix apnl:  <https://standaarden.overheid.nl/odrl-ap-nl/> .
+
 # LEEN uit DPV (Data Privacy Vocabulary, W3C Data Privacy Vocabularies and
 # Controls CG). Twee markers op een REGEL of op een VOORWAARDE, als extra
 # rdf:type — punning, hetzelfde patroon als qb:DimensionProperty op een left
@@ -297,8 +292,6 @@ vlierdam:veld-brv-klasse a odrl:Asset , vlierdam:Veld ;
 # technisch afgedwongen te worden en telt dus mee. Staat de marker op de REGEL,
 # dan is die regel ALS GEHEEL geborgd: zij telt zelf niet mee én haar benoemde
 # voorwaarden evenmin.
-@prefix dpv:   <https://w3id.org/dpv#> .
-@prefix vlierdam: <https://vlierdam.example/odrl/> .
 
 # =============================================================================
 # Gemeente Vlierdam (FICTIEF) — het laadpalenbeleid als vijf odrl:Sets. Vier
@@ -765,13 +758,6 @@ vlierdam:anker-inway-brv a odrl:Constraint , dpv:TechnicalMeasure ;
     odrl:rightOperand vlierdam:bundle-rdw-pdp1 ;
     prov:wasDerivedFrom vlierdam:regel-inway-brv ,
         vlierdam:plicht-traceparent , vlierdam:vw-traceparent .
-@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix dct:    <http://purl.org/dc/terms/> .
-@prefix prov:   <http://www.w3.org/ns/prov#> .
-@prefix dcat:   <http://www.w3.org/ns/dcat#> .
-@prefix schema: <https://schema.org/> .
-@prefix apnl:   <https://standaarden.overheid.nl/odrl-ap-nl/> .
-@prefix vlierdam: <https://vlierdam.example/odrl/> .
 
 # =============================================================================
 # De ARTEFACTEN bij beleid.ttl: drie Cedar-bundles, één per PDP, plus één

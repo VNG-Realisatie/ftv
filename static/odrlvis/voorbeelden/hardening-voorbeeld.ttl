@@ -1,19 +1,25 @@
+@prefix apnl: <https://standaarden.overheid.nl/odrl-ap-nl/> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dpv: <https://w3id.org/dpv#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix role: <http://www.w3.org/ns/dx/prof/role/> .
+@prefix schema: <https://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vlierdam: <https://vlierdam.example/odrl/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
 # Enkelvoudig voorbeeldbestand: hardening als machineleesbare afspraak
 
 ## --- data/vlierdam/hardening-beleid.ttl ---
-@prefix odrl:   <http://www.w3.org/ns/odrl/2/> .
-@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl:    <http://www.w3.org/2002/07/owl#> .
-@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
-@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
-@prefix dct:    <http://purl.org/dc/terms/> .
-@prefix prov:   <http://www.w3.org/ns/prov#> .
-@prefix dcat:   <http://www.w3.org/ns/dcat#> .
-@prefix schema: <https://schema.org/> .
-@prefix apnl:   <https://standaarden.overheid.nl/odrl-ap-nl/> .
-@prefix dpv:    <https://w3id.org/dpv#> .
-@prefix vlierdam: <https://vlierdam.example/odrl/> .
 
 # =============================================================================
 # HARDENINGSBELEID VLIERDAM (FICTIEF) — een ODRL-voorbeeld van een TECHNISCHE
@@ -69,7 +75,6 @@
 # laadpalenapplicatie zijn verzonnen, net als alle identificatoren hieronder.
 # OpenKAT, NIST/OSCAL, RvIG en RDW zijn echte namen in een fictieve casus.
 # =============================================================================
-
 
 # =============================================================================
 # 0. VOCABULAIRE VAN DIT VOORBEELD
@@ -255,7 +260,6 @@ vlierdam:VerifiableCredential a skos:Concept ;
     skos:definition "Een ondertekende verklaring in de vorm van W3C Verifiable Credentials, verifieerbaar zonder de uitgever te hoeven bevragen."@nl ,
                     "A signed statement in the form of W3C Verifiable Credentials, verifiable without having to query the issuer."@en .
 
-
 # =============================================================================
 # 1. DE DOELWITTEN — de asset-knopen
 #
@@ -345,7 +349,6 @@ vlierdam:pod-laadpalen-beheer a vlierdam:Pod , odrl:Asset ;
     odrl:partOf vlierdam:pods-laadpalenapplicatie ;
     dct:isPartOf vlierdam:laadpalenapplicatie .
 
-
 # =============================================================================
 # 2. DE BELEIDSSET
 #
@@ -377,7 +380,6 @@ vlierdam:set-hardening-vlierdam a odrl:Set ;
     odrl:obligation vlierdam:plicht-hsts ;
     odrl:prohibition vlierdam:verbod-poort-22 ;
     odrl:permission vlierdam:uitzondering-poort-22 .
-
 
 # =============================================================================
 # 3. CASUS 1 — "mijn requests moeten HSTS gebruiken met settings x en y"
@@ -432,7 +434,6 @@ vlierdam:anker-hardening-hsts a odrl:Constraint , dpv:TechnicalMeasure ;
     odrl:rightOperand vlierdam:oscal-hardening-hsts ;
     prov:wasDerivedFrom vlierdam:plicht-hsts ,
         vlierdam:vw-hsts-max-age , vlierdam:vw-hsts-subdomeinen .
-
 
 # =============================================================================
 # 4. CASUS 2 — "mijn pods mogen nooit via poort 22 te bereiken zijn; tenzij
@@ -614,7 +615,6 @@ vlierdam:bewijsstuk-y a vlierdam:VerifieerbaarBewijsstuk ;
     rdfs:comment "FICTIEF stuk in een fictieve casus. Het punt is de VORM: een uitzondering die een uitgever, een kenmerk, een doelwit en een einddatum draagt, en die een verifier kan narekenen zonder de uitgever te bevragen."@nl ,
                  "A FICTIONAL credential in a fictional case. The point is the FORM: an exception carrying an issuer, a reference, a target and an end date, which a verifier can check without querying the issuer."@en .
 
-
 # =============================================================================
 # 5. DE ARTEFACTEN — de OSCAL-laag als aangehaald stuk
 #
@@ -693,17 +693,6 @@ vlierdam:checkId a owl:DatatypeProperty , skos:Concept ;
                     "The C2P Check_Id from the component definition: the concrete check a result refers back to. In this example the name of a fictional OpenKAT boefje."@en .
 
 ## --- data/vlierdam/hardening-shapes.ttl ---
-@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct:    <http://purl.org/dc/terms/> .
-@prefix dcat:   <http://www.w3.org/ns/dcat#> .
-@prefix schema: <https://schema.org/> .
-@prefix sh:     <http://www.w3.org/ns/shacl#> .
-@prefix dash:   <http://datashapes.org/dash#> .
-@prefix odrl:   <http://www.w3.org/ns/odrl/2/> .
-@prefix apnl:   <https://standaarden.overheid.nl/odrl-ap-nl/> .
-@prefix vlierdam: <https://vlierdam.example/odrl/> .
 
 # =============================================================================
 # Formulier-shapes bij hardening-beleid.ttl (Visualisatie-note §8).
@@ -1177,15 +1166,6 @@ about the collection; this row says what that means today."""@en ;
     ] .
 
 ## --- data/vlierdam/vocabulaire.ttl ---
-@prefix odrl:  <http://www.w3.org/ns/odrl/2/> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix dct:   <http://purl.org/dc/terms/> .
-@prefix qb:    <http://purl.org/linked-data/cube#> .
-@prefix sh:    <http://www.w3.org/ns/shacl#> .
-@prefix apnl:  <https://standaarden.overheid.nl/odrl-ap-nl/> .
-@prefix vlierdam: <https://vlierdam.example/odrl/> .
 
 # =============================================================================
 # Gemeente Vlierdam (FICTIEF, OpenFTV-demonstratiecasus) — domeinvocabulaire.
@@ -1396,10 +1376,6 @@ odrl:purpose a qb:DimensionProperty ;
     sh:order 1 .
 
 ## --- data/vlierdam/velden.ttl ---
-@prefix odrl:  <http://www.w3.org/ns/odrl/2/> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix dct:   <http://purl.org/dc/terms/> .
-@prefix vlierdam: <https://vlierdam.example/odrl/> .
 
 # Dataminimalisatie als TARGET: de toegestane velden zijn AssetCollections;
 # een bevraging buiten de collectie valt buiten de permission.
@@ -1456,13 +1432,6 @@ vlierdam:veld-brv-klasse a odrl:Asset , vlierdam:Veld ;
 # bevraging (een kenmerk van het verzoek), geen gegeven dat wordt opgevraagd.
 
 ## --- data/vlierdam/openftv.ttl ---
-@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix dct:    <http://purl.org/dc/terms/> .
-@prefix prov:   <http://www.w3.org/ns/prov#> .
-@prefix dcat:   <http://www.w3.org/ns/dcat#> .
-@prefix schema: <https://schema.org/> .
-@prefix apnl:   <https://standaarden.overheid.nl/odrl-ap-nl/> .
-@prefix vlierdam: <https://vlierdam.example/odrl/> .
 
 # =============================================================================
 # De ARTEFACTEN bij beleid.ttl: drie Cedar-bundles, één per PDP, plus één
@@ -1597,19 +1566,6 @@ vlierdam:bundle-rdw-pdp1 a apnl:CedarPolicySet , schema:SoftwareSourceCode ;
 # doel, niets over de aanleiding.)
 
 ## --- data/odrl-ap-nl.ttl ---
-@prefix apnl:   <https://standaarden.overheid.nl/odrl-ap-nl/> .
-@prefix odrl:   <http://www.w3.org/ns/odrl/2/> .
-@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl:    <http://www.w3.org/2002/07/owl#> .
-@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct:    <http://purl.org/dc/terms/> .
-@prefix dcat:   <http://www.w3.org/ns/dcat#> .
-@prefix prov:   <http://www.w3.org/ns/prov#> .
-@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
-@prefix dpv:    <https://w3id.org/dpv#> .
-@prefix prof:   <http://www.w3.org/ns/dx/prof/> .
-@prefix role:   <http://www.w3.org/ns/dx/prof/role/> .
 
 # =============================================================================
 # ODRL-AP-NL — Applicatieprofiel voor toegangsbeleid Nederlandse overheid
@@ -1957,7 +1913,6 @@ AuthZEN-verzoek. Niet-normatief; wordt in voorbeelden niet als predicaat
 gebruikt."""@nl ;
     skos:inScheme apnl: ;
     rdfs:seeAlso dpv:Purpose .
-
 
 # =============================================================================
 # 5b. NL-SBB-annotaties bij de overgenomen ODRL-kerntermen

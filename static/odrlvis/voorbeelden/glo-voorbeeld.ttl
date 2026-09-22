@@ -1,19 +1,44 @@
+@prefix apnl: <https://standaarden.overheid.nl/odrl-ap-nl/> .
+@prefix cdi: <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dprod: <https://www.omg.org/spec/DPROD/dprod/> .
+@prefix dpv: <https://w3id.org/dpv#> .
+@prefix gd: <https://gegevensdeling.example/def/> .
+@prefix gdafspraak: <https://gegevensdeling.example/def/afspraak/> .
+@prefix gdc: <https://gegevensdeling.example/def/classificatie/> .
+@prefix gdglsonderwerp: <https://gegevensdeling.example/def/glsonderwerp/> .
+@prefix gdglsrol: <https://gegevensdeling.example/def/glsrol/> .
+@prefix gdgrondslag: <https://gegevensdeling.example/def/grondslag/> .
+@prefix gdnamens: <https://gegevensdeling.example/def/namens/> .
+@prefix gdonderwerp: <https://gegevensdeling.example/def/afspraak/onderwerp/> .
+@prefix gdstatus: <https://gegevensdeling.example/def/status/> .
+@prefix gdvrijwillig: <https://gegevensdeling.example/def/grondslag/Vrijwillig/> .
+@prefix gdwaardetype: <https://gegevensdeling.example/def/waardetype/> .
+@prefix gem: <https://identifier.overheid.nl/tooi/id/gemeente/> .
+@prefix glo: <https://vlierdam.example/glo/> .
+@prefix globrv: <https://vlierdam.example/glo/brv/> .
+@prefix min: <https://identifier.overheid.nl/tooi/id/ministerie/> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix oorg: <https://identifier.overheid.nl/tooi/id/oorg/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix role: <http://www.w3.org/ns/dx/prof/role/> .
+@prefix schema: <https://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vlierdam: <https://vlierdam.example/odrl/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
 # Enkelvoudig voorbeeldbestand: GLO-hoofddemo (werkgroep 15 sep 2026)
 
 ## --- data/odrl-ap-nl.ttl ---
-@prefix apnl:   <https://standaarden.overheid.nl/odrl-ap-nl/> .
-@prefix odrl:   <http://www.w3.org/ns/odrl/2/> .
-@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl:    <http://www.w3.org/2002/07/owl#> .
-@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct:    <http://purl.org/dc/terms/> .
-@prefix dcat:   <http://www.w3.org/ns/dcat#> .
-@prefix prov:   <http://www.w3.org/ns/prov#> .
-@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
-@prefix dpv:    <https://w3id.org/dpv#> .
-@prefix prof:   <http://www.w3.org/ns/dx/prof/> .
-@prefix role:   <http://www.w3.org/ns/dx/prof/role/> .
 
 # =============================================================================
 # ODRL-AP-NL — Applicatieprofiel voor toegangsbeleid Nederlandse overheid
@@ -362,7 +387,6 @@ gebruikt."""@nl ;
     skos:inScheme apnl: ;
     rdfs:seeAlso dpv:Purpose .
 
-
 # =============================================================================
 # 5b. NL-SBB-annotaties bij de overgenomen ODRL-kerntermen
 #
@@ -587,9 +611,6 @@ odrl:isA (taxonomische match, o.a. DPV-doelhiërarchie), odrl:isAnyOf
 # viewer die zulke data leest hoort ze leesbaar te tonen. Nieuwe data hoort ze
 # niet te schrijven.
 # =============================================================================
-
-@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 # --- Klassen -----------------------------------------------------------------
 
@@ -857,12 +878,6 @@ odrl:policyUsage        rdfs:label "gebruik van het beleid"@nl , "policy usage e
 # bestand zetten zou dezelfde lijst over twee plekken verdelen zonder dat er
 # iets aan te winnen valt.
 # =============================================================================
-
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix dct:  <http://purl.org/dc/terms/> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix dpv:  <https://w3id.org/dpv#> .
 
 # --- Klassen -----------------------------------------------------------------
 
@@ -1513,13 +1528,6 @@ skos:editorialNote skos:definition
 # 2026-08-17); bij twijfel is het register leidend, niet dit bestand.
 # =============================================================================
 
-@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
-@prefix dct:    <http://purl.org/dc/terms/> .
-@prefix gem:    <https://identifier.overheid.nl/tooi/id/gemeente/> .
-@prefix oorg:   <https://identifier.overheid.nl/tooi/id/oorg/> .
-@prefix min:    <https://identifier.overheid.nl/tooi/id/ministerie/> .
-
 gem:gm0003
     rdfs:label "gemeente Appingedam"@nl ;
     skos:prefLabel "gemeente Appingedam"@nl ;
@@ -1596,15 +1604,6 @@ min:mnre1034
 # van dit bestand); een shape uit de geladen bronnen met dezelfde
 # sh:targetClass wint daarvan.
 # =============================================================================
-@prefix sh:     <http://www.w3.org/ns/shacl#> .
-@prefix dash:   <http://datashapes.org/dash#> .
-@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct:    <http://purl.org/dc/terms/> .
-@prefix dcat:   <http://www.w3.org/ns/dcat#> .
-@prefix schema: <https://schema.org/> .
-@prefix apnl:   <https://standaarden.overheid.nl/odrl-ap-nl/> .
 
 apnl:PolicyArtifactFormShape
     a sh:NodeShape ;
@@ -1748,15 +1747,6 @@ apnl:PolicyArtifactFieldsGroup
     sh:order 10 .
 
 ## --- data/vlierdam/vocabulaire.ttl ---
-@prefix odrl:  <http://www.w3.org/ns/odrl/2/> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix dct:   <http://purl.org/dc/terms/> .
-@prefix qb:    <http://purl.org/linked-data/cube#> .
-@prefix sh:    <http://www.w3.org/ns/shacl#> .
-@prefix apnl:  <https://standaarden.overheid.nl/odrl-ap-nl/> .
-@prefix vlierdam: <https://vlierdam.example/odrl/> .
 
 # =============================================================================
 # Gemeente Vlierdam (FICTIEF, OpenFTV-demonstratiecasus) — domeinvocabulaire.
@@ -1967,10 +1957,6 @@ odrl:purpose a qb:DimensionProperty ;
     sh:order 1 .
 
 ## --- data/vlierdam/velden.ttl ---
-@prefix odrl:  <http://www.w3.org/ns/odrl/2/> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix dct:   <http://purl.org/dc/terms/> .
-@prefix vlierdam: <https://vlierdam.example/odrl/> .
 
 # Dataminimalisatie als TARGET: de toegestane velden zijn AssetCollections;
 # een bevraging buiten de collectie valt buiten de permission.
@@ -2027,14 +2013,7 @@ vlierdam:veld-brv-klasse a odrl:Asset , vlierdam:Veld ;
 # bevraging (een kenmerk van het verzoek), geen gegeven dat wordt opgevraagd.
 
 ## --- data/vlierdam/beleid.ttl ---
-@prefix odrl:  <http://www.w3.org/ns/odrl/2/> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
-@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix dct:   <http://purl.org/dc/terms/> .
-@prefix prov:  <http://www.w3.org/ns/prov#> .
-@prefix apnl:  <https://standaarden.overheid.nl/odrl-ap-nl/> .
+
 # LEEN uit DPV (Data Privacy Vocabulary, W3C Data Privacy Vocabularies and
 # Controls CG). Twee markers op een REGEL of op een VOORWAARDE, als extra
 # rdf:type — punning, hetzelfde patroon als qb:DimensionProperty op een left
@@ -2051,8 +2030,6 @@ vlierdam:veld-brv-klasse a odrl:Asset , vlierdam:Veld ;
 # technisch afgedwongen te worden en telt dus mee. Staat de marker op de REGEL,
 # dan is die regel ALS GEHEEL geborgd: zij telt zelf niet mee én haar benoemde
 # voorwaarden evenmin.
-@prefix dpv:   <https://w3id.org/dpv#> .
-@prefix vlierdam: <https://vlierdam.example/odrl/> .
 
 # =============================================================================
 # Gemeente Vlierdam (FICTIEF) — het laadpalenbeleid als vijf odrl:Sets. Vier
@@ -2521,13 +2498,6 @@ vlierdam:anker-inway-brv a odrl:Constraint , dpv:TechnicalMeasure ;
         vlierdam:plicht-traceparent , vlierdam:vw-traceparent .
 
 ## --- data/vlierdam/openftv.ttl ---
-@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix dct:    <http://purl.org/dc/terms/> .
-@prefix prov:   <http://www.w3.org/ns/prov#> .
-@prefix dcat:   <http://www.w3.org/ns/dcat#> .
-@prefix schema: <https://schema.org/> .
-@prefix apnl:   <https://standaarden.overheid.nl/odrl-ap-nl/> .
-@prefix vlierdam: <https://vlierdam.example/odrl/> .
 
 # =============================================================================
 # De ARTEFACTEN bij beleid.ttl: drie Cedar-bundles, één per PDP, plus één
@@ -2662,31 +2632,6 @@ vlierdam:bundle-rdw-pdp1 a apnl:CedarPolicySet , schema:SoftwareSourceCode ;
 # doel, niets over de aanleiding.)
 
 ## --- data/vlierdam/glo-vocabulaire.ttl ---
-@prefix odrl:   <http://www.w3.org/ns/odrl/2/> .
-@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl:    <http://www.w3.org/2002/07/owl#> .
-@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct:    <http://purl.org/dc/terms/> .
-@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
-@prefix prov:   <http://www.w3.org/ns/prov#> .
-@prefix dpv:    <https://w3id.org/dpv#> .
-@prefix org:    <http://www.w3.org/ns/org#> .
-@prefix schema: <https://schema.org/> .
-@prefix dcat:   <http://www.w3.org/ns/dcat#> .
-@prefix dprod:  <https://www.omg.org/spec/DPROD/dprod/> .
-@prefix cdi:    <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/> .
-@prefix gd:     <https://gegevensdeling.example/def/> .
-@prefix gdstatus: <https://gegevensdeling.example/def/status/> .
-@prefix gdafspraak: <https://gegevensdeling.example/def/afspraak/> .
-@prefix gdonderwerp: <https://gegevensdeling.example/def/afspraak/onderwerp/> .
-@prefix gdgrondslag: <https://gegevensdeling.example/def/grondslag/> .
-@prefix gdvrijwillig: <https://gegevensdeling.example/def/grondslag/Vrijwillig/> .
-@prefix gdnamens: <https://gegevensdeling.example/def/namens/> .
-@prefix gdglsonderwerp: <https://gegevensdeling.example/def/glsonderwerp/> .
-@prefix gdwaardetype: <https://gegevensdeling.example/def/waardetype/> .
-@prefix gdglsrol: <https://gegevensdeling.example/def/glsrol/> .
-@prefix gdc:    <https://gegevensdeling.example/def/classificatie/> .
 
 # =============================================================================
 # Vocabulaire gegevensleveringsovereenkomst — GENERIEK EN CASUSNEUTRAAL.
@@ -3737,19 +3682,6 @@ cdi:PhysicalDataSet rdfs:label "fysieke dataset"@nl , "PhysicalDataSet"@en .
 cdi:ValueAndConceptDescription rdfs:label "waarde- en begripsbeschrijving"@nl , "ValueAndConceptDescription"@en .
 
 ## --- data/vlierdam/glo-shapes.ttl ---
-@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl:    <http://www.w3.org/2002/07/owl#> .
-@prefix dct:    <http://purl.org/dc/terms/> .
-@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
-@prefix prov:   <http://www.w3.org/ns/prov#> .
-@prefix sh:     <http://www.w3.org/ns/shacl#> .
-@prefix dash:   <http://datashapes.org/dash#> .
-@prefix odrl:   <http://www.w3.org/ns/odrl/2/> .
-@prefix dcat:   <http://www.w3.org/ns/dcat#> .
-@prefix dprod:  <https://www.omg.org/spec/DPROD/dprod/> .
-@prefix cdi:    <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/> .
-@prefix gd:     <https://gegevensdeling.example/def/> .
 
 # =============================================================================
 # Formulier-shapes bij glo-vocabulaire.ttl (Visualisatie-note §8).
@@ -4923,32 +4855,6 @@ gd:TechnischGegevensmodelFormShape a sh:NodeShape ;
     ] .
 
 ## --- data/vlierdam/vlierdam-glo.ttl ---
-@prefix odrl:   <http://www.w3.org/ns/odrl/2/> .
-@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl:    <http://www.w3.org/2002/07/owl#> .
-@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct:    <http://purl.org/dc/terms/> .
-@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
-@prefix prov:   <http://www.w3.org/ns/prov#> .
-@prefix dpv:    <https://w3id.org/dpv#> .
-@prefix org:    <http://www.w3.org/ns/org#> .
-@prefix schema: <https://schema.org/> .
-@prefix dcat:   <http://www.w3.org/ns/dcat#> .
-@prefix dprod:  <https://www.omg.org/spec/DPROD/dprod/> .
-@prefix cdi:    <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/> .
-@prefix apnl:   <https://standaarden.overheid.nl/odrl-ap-nl/> .
-@prefix vlierdam: <https://vlierdam.example/odrl/> .
-@prefix gd:     <https://gegevensdeling.example/def/> .
-@prefix gdstatus: <https://gegevensdeling.example/def/status/> .
-@prefix gdonderwerp: <https://gegevensdeling.example/def/afspraak/onderwerp/> .
-@prefix gdgrondslag: <https://gegevensdeling.example/def/grondslag/> .
-@prefix gdvrijwillig: <https://gegevensdeling.example/def/grondslag/Vrijwillig/> .
-@prefix gdnamens: <https://gegevensdeling.example/def/namens/> .
-@prefix gdglsonderwerp: <https://gegevensdeling.example/def/glsonderwerp/> .
-@prefix gdglsrol: <https://gegevensdeling.example/def/glsrol/> .
-@prefix gdc:    <https://gegevensdeling.example/def/classificatie/> .
-@prefix glo:    <https://vlierdam.example/glo/> .
 
 # =============================================================================
 # Gemeente Vlierdam (FICTIEF) — de gegevensleveringsovereenkomst onder de
@@ -6388,39 +6294,15 @@ glo:variabelestructuur-brp-laadpalen a cdi:VariableStructure ;
 # =============================================================================
 
 ## --- data/vlierdam/vlierdam-glo-brv.ttl ---
-@prefix odrl:   <http://www.w3.org/ns/odrl/2/> .
-@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct:    <http://purl.org/dc/terms/> .
-@prefix owl:    <http://www.w3.org/2002/07/owl#> .
-@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
-@prefix prov:   <http://www.w3.org/ns/prov#> .
-@prefix dpv:    <https://w3id.org/dpv#> .
-@prefix org:    <http://www.w3.org/ns/org#> .
-@prefix schema: <https://schema.org/> .
-@prefix dcat:   <http://www.w3.org/ns/dcat#> .
-@prefix dprod:  <https://www.omg.org/spec/DPROD/dprod/> .
-@prefix cdi:    <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/> .
-@prefix apnl:   <https://standaarden.overheid.nl/odrl-ap-nl/> .
 
 # Het NEUTRALE vocabulaire van vlierdam-glo.ttl / glo-shapes.ttl — gespiegeld
 # informatiemodel, generiek gehost. Dit bestand definieert er niets van; het
 # gebruikt het.
-@prefix gd:         <https://gegevensdeling.example/def/> .
-@prefix gdstatus:   <https://gegevensdeling.example/def/status/> .
-@prefix gdonderwerp: <https://gegevensdeling.example/def/afspraak/onderwerp/> .
-@prefix gdglsonderwerp: <https://gegevensdeling.example/def/glsonderwerp/> .
-@prefix gdgrondslag: <https://gegevensdeling.example/def/grondslag/> .
-@prefix gdvrijwillig: <https://gegevensdeling.example/def/grondslag/Vrijwillig/> .
-@prefix gdnamens:   <https://gegevensdeling.example/def/namens/> .
-@prefix gdc:        <https://gegevensdeling.example/def/classificatie/> .
 
 # Het bestaande Vlierdam-corpus (beleid.ttl, vocabulaire.ttl, velden.ttl):
 # partijen en begrippen komen daar vandaan en worden hier hergebruikt.
-@prefix vlierdam: <https://vlierdam.example/odrl/> .
+
 # De instanties van DEZE levering.
-@prefix globrv: <https://vlierdam.example/glo/brv/> .
 
 # =============================================================================
 # Gemeente Vlierdam (FICTIEF) — de gegevensleveringsovereenkomst voor de
@@ -7872,13 +7754,6 @@ skos:scopeNote rdfs:label "noodzaak van dit gegevenstype"@nl ,
 # voor één begrip zien zonder te zeggen welke geldt.
 
 ## --- data/vlierdam/glo-brv-shapes.ttl ---
-@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix dct:    <http://purl.org/dc/terms/> .
-@prefix sh:     <http://www.w3.org/ns/shacl#> .
-@prefix dash:   <http://datashapes.org/dash#> .
-@prefix cdi:    <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/> .
-@prefix gd:     <https://gegevensdeling.example/def/> .
-@prefix globrv: <https://vlierdam.example/glo/brv/> .
 
 # =============================================================================
 # Twee aanvullende formulier-shapes bij vlierdam-glo-brv.ttl.

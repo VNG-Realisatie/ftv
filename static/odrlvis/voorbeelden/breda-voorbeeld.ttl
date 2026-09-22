@@ -1,18 +1,43 @@
+@prefix apaanbod: <https://data.rijksoverheid.nl/brp/ap-nl/aanbod/> .
+@prefix apart: <https://data.rijksoverheid.nl/brp/ap-nl/artefact/> .
+@prefix apb: <https://data.rijksoverheid.nl/brp/ap-nl/> .
+@prefix apcon: <https://data.rijksoverheid.nl/brp/ap-nl/voorwaarde/> .
+@prefix apdg: <https://data.rijksoverheid.nl/brp/ap-nl/doelgroep/> .
+@prefix apdoc: <https://data.rijksoverheid.nl/brp/ap-nl/besluitdocument/> .
+@prefix apdoel: <https://data.rijksoverheid.nl/brp/ap-nl/doel/> .
+@prefix apind: <https://data.rijksoverheid.nl/brp/ap-nl/indiener/> .
+@prefix apkan: <https://data.rijksoverheid.nl/brp/ap-nl/kanaal/> .
+@prefix apnl: <https://standaarden.overheid.nl/odrl-ap-nl/> .
+@prefix apovk: <https://data.rijksoverheid.nl/brp/ap-nl/overeenkomst/> .
+@prefix apper: <https://data.rijksoverheid.nl/brp/ap-nl/permissie/> .
+@prefix applicht: <https://data.rijksoverheid.nl/brp/ap-nl/verplichting/> .
+@prefix apset: <https://data.rijksoverheid.nl/brp/ap-nl/gegevensset/> .
+@prefix apvz: <https://data.rijksoverheid.nl/brp/ap-nl/verzoek/> .
+@prefix brp: <https://data.rijksoverheid.nl/brp/def#> .
+@prefix brpafn: <https://data.rijksoverheid.nl/brp/afnemer/> .
+@prefix brpaut: <https://data.rijksoverheid.nl/brp/autorisatie/> .
+@prefix brpcat: <https://data.rijksoverheid.nl/brp/categorie/> .
+@prefix brpelm: <https://data.rijksoverheid.nl/brp/element/> .
+@prefix brpgrp: <https://data.rijksoverheid.nl/brp/groep/> .
+@prefix brprub: <https://data.rijksoverheid.nl/brp/rubriek/> .
+@prefix bwb: <https://wetten.overheid.nl/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dpv: <https://w3id.org/dpv#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@prefix oorg: <https://identifier.overheid.nl/tooi/id/oorg/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
 # Context voor de Breda-proef: ledenstructuur (labels, typen, groep/categorie-keten)
 # uit brp-odrl/ttl/informatiemodel.ttl en de vier aanbod-duties uit brp-ap-nl/ttl/offers.ttl.
 # GEGENEREERD uittreksel — bron blijft leidend.
-@prefix odrl: <http://www.w3.org/ns/odrl/2/>.
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix dct: <http://purl.org/dc/terms/>.
-@prefix dpv: <https://w3id.org/dpv#>.
-@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
-@prefix brp: <https://data.rijksoverheid.nl/brp/def#>.
-@prefix brprub: <https://data.rijksoverheid.nl/brp/rubriek/>.
-@prefix brpgrp: <https://data.rijksoverheid.nl/brp/groep/>.
-@prefix brpcat: <https://data.rijksoverheid.nl/brp/categorie/>.
-@prefix brpelm: <https://data.rijksoverheid.nl/brp/element/>.
-@prefix apaanbod: <https://data.rijksoverheid.nl/brp/ap-nl/aanbod/>.
 
 brprub:anummerPersoon rdfs:label "A-nummer (Persoon)"@nl;
     a brp:Rubriek, odrl:Asset;
@@ -3185,35 +3210,6 @@ apaanbod:duty-geheimhouding rdfs:label "Doelgebonden gebruik en geheimhouding"@n
     dpv:hasLegalBasis <https://wetten.overheid.nl/jci1.3:c:BWBR0033715&artikel=3.2>, <https://wetten.overheid.nl/jci1.3:c:BWBR0033715&artikel=1.13>, <https://wetten.overheid.nl/jci1.3:c:BWBR0040940&artikel=37>;
     odrl:action _:n3-2.
 _:n3-2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> apaanbod:geheimhouden.
-@prefix odrl:   <http://www.w3.org/ns/odrl/2/> .
-@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct:    <http://purl.org/dc/terms/> .
-@prefix dcat:   <http://www.w3.org/ns/dcat#> .
-@prefix prov:   <http://www.w3.org/ns/prov#> .
-@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
-@prefix apnl:   <https://standaarden.overheid.nl/odrl-ap-nl/> .
-@prefix brp:    <https://data.rijksoverheid.nl/brp/def#> .
-@prefix brprub: <https://data.rijksoverheid.nl/brp/rubriek/> .
-@prefix brpgrp: <https://data.rijksoverheid.nl/brp/groep/> .
-@prefix brpcat: <https://data.rijksoverheid.nl/brp/categorie/> .
-@prefix brpafn: <https://data.rijksoverheid.nl/brp/afnemer/> .
-@prefix brpaut: <https://data.rijksoverheid.nl/brp/autorisatie/> .
-@prefix oorg:   <https://identifier.overheid.nl/tooi/id/oorg/> .
-@prefix apb:    <https://data.rijksoverheid.nl/brp/ap-nl/> .
-@prefix apaanbod: <https://data.rijksoverheid.nl/brp/ap-nl/aanbod/> .
-@prefix apovk:  <https://data.rijksoverheid.nl/brp/ap-nl/overeenkomst/> .
-@prefix apper:  <https://data.rijksoverheid.nl/brp/ap-nl/permissie/> .
-@prefix apset:  <https://data.rijksoverheid.nl/brp/ap-nl/gegevensset/> .
-@prefix apcon:  <https://data.rijksoverheid.nl/brp/ap-nl/voorwaarde/> .
-@prefix apdoel: <https://data.rijksoverheid.nl/brp/ap-nl/doel/> .
-@prefix apdoc:  <https://data.rijksoverheid.nl/brp/ap-nl/besluitdocument/> .
-@prefix apvz:   <https://data.rijksoverheid.nl/brp/ap-nl/verzoek/> .
-@prefix apkan:  <https://data.rijksoverheid.nl/brp/ap-nl/kanaal/> .
-@prefix apdg:   <https://data.rijksoverheid.nl/brp/ap-nl/doelgroep/> .
-
-
 
 # =============================================================================
 # PROEF-TTL (B) — DE GEGEVENSSETS ALS EXTERN GEDEFINIEERDE REGISTERENTITEITEN
@@ -3256,7 +3252,6 @@ apdoc:gegevensoverzicht-gemeenten-v11 a prov:Entity ;
     rdfs:seeAlso <https://publicaties.rvig.nl/sites/default/files/2025-05/Aanvullende%20toelichting%20autorisatie%20gemeenten.pdf> ;
     rdfs:comment "Tabblad (1) Toelichting document geeft 'Versie document 1.1'; de laatste wijzigingsdatum in de bestandseigenschappen is 2026-02-25, publicatiepad /2026-03/."@nl .
 
-
 apset:gaba-set1 a prov:Entity ;
     dct:title "Gegevensset 1 (ad hoc)"@nl ;
     rdfs:comment "Versieloze identiteit van de gegevensset; de versies verwijzen hierheen met prov:specializationOf."@nl ;
@@ -3282,7 +3277,6 @@ brprub:datumOverlijdenOverlijden odrl:partOf apset:gaba-set1-v11 .   # 06.08.10 
 brprub:indicatieGeheimInschrijving odrl:partOf apset:gaba-set1-v11 .   # 07.70.10 Indicatie geheim
 brprub:gemeenteVanInschrijvingVerblijfplaats odrl:partOf apset:gaba-set1-v11 .   # 08.09.10 Gemeente van inschrijving
 
-
 apset:gaba-set2 a prov:Entity ;
     dct:title "Gegevensset 2 (ad hoc)"@nl ;
     rdfs:comment "Versieloze identiteit van de gegevensset; de versies verwijzen hierheen met prov:specializationOf."@nl ;
@@ -3307,7 +3301,6 @@ brprub:voorvoegselGeslachtsnaamPartner odrl:partOf apset:gaba-set2-v11 .   # 05.
 brprub:geslachtsnaamPartner odrl:partOf apset:gaba-set2-v11 .   # 05.02.40 Geslachtsnaam
 brprub:datumHuwelijkssluitingPartner odrl:partOf apset:gaba-set2-v11 .   # 05.06.10 Datum huwelijkssluiting/aangaan partnerschap
 brprub:datumOntbindingHuwelijkPartner odrl:partOf apset:gaba-set2-v11 .   # 05.07.10 Datum ontbinding huwelijk/partnerschap
-
 
 apset:gaba-set3 a prov:Entity ;
     dct:title "Gegevensset 3 (ad hoc)"@nl ;
@@ -3340,7 +3333,6 @@ brprub:landAdresBuitenlandVerblijfplaats odrl:partOf apset:gaba-set3-v11 .   # 0
 brprub:regel1AdresBuitenlandVerblijfplaats odrl:partOf apset:gaba-set3-v11 .   # 08.13.30 Regel 1 adres buitenland
 brprub:regel2AdresBuitenlandVerblijfplaats odrl:partOf apset:gaba-set3-v11 .   # 08.13.40 Regel 2 adres buitenland
 brprub:regel3AdresBuitenlandVerblijfplaats odrl:partOf apset:gaba-set3-v11 .   # 08.13.50 Regel 3 adres buitenland
-
 
 apset:gaba-set4 a prov:Entity ;
     dct:title "Gegevensset 4 (ad hoc)"@nl ;
@@ -3392,7 +3384,6 @@ brprub:geldigVanafTelefoonContactgegevens odrl:partOf apset:gaba-set4-v11 .   # 
 brprub:emailadresContactgegevens odrl:partOf apset:gaba-set4-v11 .   # 17.17.10 Emailadres
 brprub:verificatieIndicatieEmailContactgegevens odrl:partOf apset:gaba-set4-v11 .   # 17.17.20 Verificatie-indicatie
 brprub:geldigVanafEmailContactgegevens odrl:partOf apset:gaba-set4-v11 .   # 17.17.30 Geldig vanaf
-
 
 apset:gaba-set5 a prov:Entity ;
     dct:title "Gegevensset 5 (ad hoc)"@nl ;
@@ -3446,7 +3437,6 @@ brprub:regel1AdresBuitenlandVerblijfplaatsHist odrl:partOf apset:gaba-set5-v11 .
 brprub:regel2AdresBuitenlandVerblijfplaatsHist odrl:partOf apset:gaba-set5-v11 .   # 58.13.40 Regel 2 adres buitenland
 brprub:regel3AdresBuitenlandVerblijfplaatsHist odrl:partOf apset:gaba-set5-v11 .   # 58.13.50 Regel 3 adres buitenland
 
-
 apset:gaba-set6 a prov:Entity ;
     dct:title "Gegevensset 6 (ad hoc)"@nl ;
     rdfs:comment "Versieloze identiteit van de gegevensset; de versies verwijzen hierheen met prov:specializationOf."@nl ;
@@ -3470,7 +3460,6 @@ brprub:datumInschrijvingVerblijfplaatsHist odrl:partOf apset:gaba-set6-v11 .   #
 brprub:datumAanvangAdresBuitenlandVerblijfplaatsHist odrl:partOf apset:gaba-set6-v11 .   # 58.13.20 Datum adres buitenland
 brprub:datumVestigingInNederlandVerblijfplaatsHist odrl:partOf apset:gaba-set6-v11 .   # 58.14.20 Datum vestiging in Nederland
 
-
 apset:gaba-set7 a prov:Entity ;
     dct:title "Gegevensset 7 (ad hoc)"@nl ;
     rdfs:comment "Versieloze identiteit van de gegevensset; de versies verwijzen hierheen met prov:specializationOf."@nl ;
@@ -3492,7 +3481,6 @@ brprub:adellijkeTitelPredicaatPersoonHist odrl:partOf apset:gaba-set7-v11 .   # 
 brprub:voorvoegselGeslachtsnaamPersoonHist odrl:partOf apset:gaba-set7-v11 .   # 51.02.30 Voorvoegsel geslachtsnaam
 brprub:geslachtsnaamPersoonHist odrl:partOf apset:gaba-set7-v11 .   # 51.02.40 Geslachtsnaam
 brprub:aanduidingNaamgebruikPersoonHist odrl:partOf apset:gaba-set7-v11 .   # 51.61.10 Aanduiding naamgebruik
-
 
 apset:gaba-set8 a prov:Entity ;
     dct:title "Gegevensset 8 (ad hoc)"@nl ;
@@ -3521,7 +3509,6 @@ brprub:ingangsdatumVerblijfstitelVerblijfstitelHist odrl:partOf apset:gaba-set8-
 brprub:ingangsdatumGeldigheidVerblijfstitelHist odrl:partOf apset:gaba-set8-v11 .   # 60.85.10 Ingangsdatum geldigheid
 brprub:datumVanOpnemingVerblijfstitelHist odrl:partOf apset:gaba-set8-v11 .   # 60.86.10 Datum opneming
 
-
 apset:gaba-set9 a prov:Entity ;
     dct:title "Gegevensset 9 (ad hoc)"@nl ;
     rdfs:comment "Versieloze identiteit van de gegevensset; de versies verwijzen hierheen met prov:specializationOf."@nl ;
@@ -3538,7 +3525,6 @@ apset:gaba-set9-v11 a odrl:AssetCollection ;
 
 brprub:geboorteplaatsPersoon odrl:partOf apset:gaba-set9-v11 .   # 01.03.20 Geboorteplaats
 brprub:geboortelandPersoon odrl:partOf apset:gaba-set9-v11 .   # 01.03.30 Geboorteland
-
 
 apset:gaba-set10 a prov:Entity ;
     dct:title "Gegevensset 10 (ad hoc)"@nl ;
@@ -3559,7 +3545,6 @@ brprub:geboortelandOuder1 odrl:partOf apset:gaba-set10-v11 .   # 02.03.30 Geboor
 brprub:geboorteplaatsOuder2 odrl:partOf apset:gaba-set10-v11 .   # 03.03.20 Geboorteplaats
 brprub:geboortelandOuder2 odrl:partOf apset:gaba-set10-v11 .   # 03.03.30 Geboorteland
 
-
 apset:gaba-set11 a prov:Entity ;
     dct:title "Gegevensset 11 (ad hoc)"@nl ;
     rdfs:comment "Versieloze identiteit van de gegevensset; de versies verwijzen hierheen met prov:specializationOf."@nl ;
@@ -3576,7 +3561,6 @@ apset:gaba-set11-v11 a odrl:AssetCollection ;
 
 brprub:indicatieCurateleregisterGezagsverhouding odrl:partOf apset:gaba-set11-v11 .   # 11.33.10 Indicatie curateleregister
 
-
 apset:gaba-set12 a prov:Entity ;
     dct:title "Gegevensset 12 (ad hoc)"@nl ;
     rdfs:comment "Versieloze identiteit van de gegevensset; de versies verwijzen hierheen met prov:specializationOf."@nl ;
@@ -3592,7 +3576,6 @@ apset:gaba-set12-v11 a odrl:AssetCollection ;
     dct:isVersionOf apset:gaba-set12 .
 
 brprub:indicatieGezagMinderjarigeGezagsverhouding odrl:partOf apset:gaba-set12-v11 .   # 11.32.10 Indicatie gezag minderjarige
-
 
 apset:gaba-set13 a prov:Entity ;
     dct:title "Gegevensset 13 (ad hoc)"@nl ;
@@ -3621,7 +3604,6 @@ brprub:voorvoegselGeslachtsnaamOuder2 odrl:partOf apset:gaba-set13-v11 .   # 03.
 brprub:geslachtsnaamOuder2 odrl:partOf apset:gaba-set13-v11 .   # 03.02.40 Geslachtsnaam
 brprub:geboortedatumOuder2 odrl:partOf apset:gaba-set13-v11 .   # 03.03.10 Geboortedatum
 
-
 apset:gaba-set14 a prov:Entity ;
     dct:title "Gegevensset 14 (ad hoc)"@nl ;
     rdfs:comment "Versieloze identiteit van de gegevensset; de versies verwijzen hierheen met prov:specializationOf."@nl ;
@@ -3645,7 +3627,6 @@ brprub:geboortedatumPartner odrl:partOf apset:gaba-set14-v11 .   # 05.03.10 Gebo
 brprub:datumHuwelijkssluitingPartner odrl:partOf apset:gaba-set14-v11 .   # 05.06.10 Datum huwelijkssluiting/aangaan partnerschap
 brprub:datumOntbindingHuwelijkPartner odrl:partOf apset:gaba-set14-v11 .   # 05.07.10 Datum ontbinding huwelijk/partnerschap
 
-
 apset:gaba-set15 a prov:Entity ;
     dct:title "Gegevensset 15 (ad hoc)"@nl ;
     rdfs:comment "Versieloze identiteit van de gegevensset; de versies verwijzen hierheen met prov:specializationOf."@nl ;
@@ -3667,7 +3648,6 @@ brprub:voorvoegselGeslachtsnaamKind odrl:partOf apset:gaba-set15-v11 .   # 09.02
 brprub:geslachtsnaamKind odrl:partOf apset:gaba-set15-v11 .   # 09.02.40 Geslachtsnaam
 brprub:geboortedatumKind odrl:partOf apset:gaba-set15-v11 .   # 09.03.10 Geboortedatum
 
-
 apset:gaba-set16 a prov:Entity ;
     dct:title "Gegevensset 16 (ad hoc)"@nl ;
     rdfs:comment "Versieloze identiteit van de gegevensset; de versies verwijzen hierheen met prov:specializationOf."@nl ;
@@ -3684,7 +3664,6 @@ apset:gaba-set16-v11 a odrl:AssetCollection ;
 
 brprub:aanduidingUitgeslotenKiesrechtKiesrecht odrl:partOf apset:gaba-set16-v11 .   # 13.38.10 Aanduiding uitgesloten kiesrecht
 brprub:einddatumUitsluitingKiesrechtKiesrecht odrl:partOf apset:gaba-set16-v11 .   # 13.38.20 Einddatum uitsluiting kiesrecht
-
 
 apset:gaba-set17 a prov:Entity ;
     dct:title "Gegevensset 17 (ad hoc)"@nl ;
@@ -3703,7 +3682,6 @@ apset:gaba-set17-v11 a odrl:AssetCollection ;
 brprub:adellijkeTitelPredicaatPartner odrl:partOf apset:gaba-set17-v11 .   # 05.02.20 Adellijke titel/predikaat
 brprub:datumOntbindingHuwelijkPartner odrl:partOf apset:gaba-set17-v11 .   # 05.07.10 Datum ontbinding huwelijk/partnerschap
 brprub:datumHuwelijkssluitingPartnerHist odrl:partOf apset:gaba-set17-v11 .   # 55.06.10 Datum huwelijkssluiting/aangaan partnerschap
-
 
 apset:gaba-set18 a prov:Entity ;
     dct:title "Gegevensset 18 (ad hoc)"@nl ;
@@ -3972,7 +3950,6 @@ brprub:datumVanOpnemingVerblijfstitelHist odrl:partOf apset:gaba-set18-v11 .   #
 brprub:indicatieGezagMinderjarigeGezagsverhouding odrl:partOf apset:gaba-set18-v11 .   # 11.32.10 Indicatie gezag minderjarige
 brprub:indicatieCurateleregisterGezagsverhouding odrl:partOf apset:gaba-set18-v11 .   # 11.33.10 Indicatie curateleregister
 
-
 apset:gaba-set19 a prov:Entity ;
     dct:title "Gegevensset 19 (ad hoc)"@nl ;
     rdfs:comment "Versieloze identiteit van de gegevensset; de versies verwijzen hierheen met prov:specializationOf."@nl ;
@@ -4056,7 +4033,6 @@ brprub:beschrijvingDocumentReisdocument odrl:partOf apset:gaba-set19-v11 .   # 1
 brprub:ingangsdatumGeldigheidReisdocument odrl:partOf apset:gaba-set19-v11 .   # 12.85.10 Ingangsdatum geldigheid
 brprub:datumVanOpnemingReisdocument odrl:partOf apset:gaba-set19-v11 .   # 12.86.10 Datum opneming
 
-
 apset:gaba-set20 a prov:Entity ;
     dct:title "Gegevensset 20 (ad hoc adres)"@nl ;
     rdfs:comment "Versieloze identiteit van de gegevensset; de versies verwijzen hierheen met prov:specializationOf."@nl ;
@@ -4094,7 +4070,6 @@ brprub:identificatiecodeVerblijfplaatsVerblijfplaats odrl:partOf apset:gaba-set2
 brprub:identificatiecodeNummeraanduidingVerblijfplaats odrl:partOf apset:gaba-set20-v11 .   # 08.11.90 Identificatiecode nummeraanduiding
 brprub:locatiebeschrijvingVerblijfplaats odrl:partOf apset:gaba-set20-v11 .   # 08.12.10 Locatiebeschrijving
 
-
 apset:gaba-set21 a prov:Entity ;
     dct:title "Gegevensset 21 (ad hoc adres voor tijdelijk verblijfadres)"@nl ;
     rdfs:comment "Versieloze identiteit van de gegevensset; de versies verwijzen hierheen met prov:specializationOf."@nl ;
@@ -4128,7 +4103,6 @@ brprub:postcodeTijdelijkVerblijf odrl:partOf apset:gaba-set21-v11 .   # 16.11.60
 brprub:woonplaatsnaamTijdelijkVerblijf odrl:partOf apset:gaba-set21-v11 .   # 16.11.70 Woonplaatsnaam
 brprub:identificatiecodeVerblijfplaatsTijdelijkVerblijf odrl:partOf apset:gaba-set21-v11 .   # 16.11.80 Identificatiecode verblijfplaats
 brprub:identificatiecodeNummeraanduidingTijdelijkVerblijf odrl:partOf apset:gaba-set21-v11 .   # 16.11.90 Identificatiecode nummeraanduiding
-
 
 apset:gaba-set22 a prov:Entity ;
     dct:title "Gegevensset 22 (spontane verstrekkingen)"@nl ;
@@ -4178,7 +4152,6 @@ brprub:regel1AdresBuitenlandVerblijfplaats odrl:partOf apset:gaba-set22-v11 .   
 brprub:regel2AdresBuitenlandVerblijfplaats odrl:partOf apset:gaba-set22-v11 .   # 08.13.40 Regel 2 adres buitenland
 brprub:regel3AdresBuitenlandVerblijfplaats odrl:partOf apset:gaba-set22-v11 .   # 08.13.50 Regel 3 adres buitenland
 
-
 # -----------------------------------------------------------------------------
 # COMPOSIETEN — de unie die een besluitartikel noemt ("een gegeven in
 # gegevensset 1, 2, 3, 5 of 6"). Benoemd naar hun INHOUD, niet naar taak of
@@ -4188,7 +4161,6 @@ brprub:regel3AdresBuitenlandVerblijfplaats odrl:partOf apset:gaba-set22-v11 .   
 # distincte setcombinaties.
 # Lidmaatschap staat op het lid (odrl:partOf), conform apnl:CollectieLidmaatschapShape.
 # -----------------------------------------------------------------------------
-
 
 apset:gaba-combi-01-02-03-05-06-v11 a odrl:AssetCollection ;
     dct:title "Gegevenssets 1, 2, 3, 5 en 6 (ad hoc)"@nl ;
@@ -4202,7 +4174,6 @@ apset:gaba-set3-v11 odrl:partOf apset:gaba-combi-01-02-03-05-06-v11 .
 apset:gaba-set5-v11 odrl:partOf apset:gaba-combi-01-02-03-05-06-v11 .
 apset:gaba-set6-v11 odrl:partOf apset:gaba-combi-01-02-03-05-06-v11 .
 
-
 apset:gaba-combi-13-14-15-v11 a odrl:AssetCollection ;
     dct:title "Gegevenssets 13, 14 en 15 (ad hoc)"@nl ;
     dct:description "De unie van de gegevenssets 13, 14 en 15 uit het Gegevensoverzicht gemeenten v1.1; samen ten hoogste 26 rubrieken. Deze combinatie wordt door een besluitartikel als geheel toegekend."@nl ;
@@ -4212,7 +4183,6 @@ apset:gaba-combi-13-14-15-v11 a odrl:AssetCollection ;
 apset:gaba-set13-v11 odrl:partOf apset:gaba-combi-13-14-15-v11 .
 apset:gaba-set14-v11 odrl:partOf apset:gaba-combi-13-14-15-v11 .
 apset:gaba-set15-v11 odrl:partOf apset:gaba-combi-13-14-15-v11 .
-
 
 apset:gaba-combi-01-02-03-05-06-08-11-12-13-14-15-v11 a odrl:AssetCollection ;
     dct:title "Gegevenssets 1, 2, 3, 5, 6, 8, 11, 12, 13, 14 en 15 (ad hoc)"@nl ;
@@ -4232,7 +4202,6 @@ apset:gaba-set13-v11 odrl:partOf apset:gaba-combi-01-02-03-05-06-08-11-12-13-14-
 apset:gaba-set14-v11 odrl:partOf apset:gaba-combi-01-02-03-05-06-08-11-12-13-14-15-v11 .
 apset:gaba-set15-v11 odrl:partOf apset:gaba-combi-01-02-03-05-06-08-11-12-13-14-15-v11 .
 
-
 apset:gaba-combi-01-02-03-04-05-v11 a odrl:AssetCollection ;
     dct:title "Gegevenssets 1, 2, 3, 4 en 5 (ad hoc)"@nl ;
     dct:description "De unie van de gegevenssets 1, 2, 3, 4 en 5 uit het Gegevensoverzicht gemeenten v1.1; samen ten hoogste 110 rubrieken. Deze combinatie wordt door een besluitartikel als geheel toegekend."@nl ;
@@ -4244,37 +4213,6 @@ apset:gaba-set2-v11 odrl:partOf apset:gaba-combi-01-02-03-04-05-v11 .
 apset:gaba-set3-v11 odrl:partOf apset:gaba-combi-01-02-03-04-05-v11 .
 apset:gaba-set4-v11 odrl:partOf apset:gaba-combi-01-02-03-04-05-v11 .
 apset:gaba-set5-v11 odrl:partOf apset:gaba-combi-01-02-03-04-05-v11 .
-@prefix odrl:   <http://www.w3.org/ns/odrl/2/> .
-@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct:    <http://purl.org/dc/terms/> .
-@prefix dpv:    <https://w3id.org/dpv#> .
-@prefix dcat:   <http://www.w3.org/ns/dcat#> .
-@prefix prov:   <http://www.w3.org/ns/prov#> .
-@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
-@prefix apnl:   <https://standaarden.overheid.nl/odrl-ap-nl/> .
-@prefix qb:     <http://purl.org/linked-data/cube#> .
-@prefix sh:     <http://www.w3.org/ns/shacl#> .
-@prefix brp:    <https://data.rijksoverheid.nl/brp/def#> .
-@prefix brprub: <https://data.rijksoverheid.nl/brp/rubriek/> .
-@prefix brpgrp: <https://data.rijksoverheid.nl/brp/groep/> .
-@prefix brpcat: <https://data.rijksoverheid.nl/brp/categorie/> .
-@prefix brpafn: <https://data.rijksoverheid.nl/brp/afnemer/> .
-@prefix brpaut: <https://data.rijksoverheid.nl/brp/autorisatie/> .
-@prefix oorg:   <https://identifier.overheid.nl/tooi/id/oorg/> .
-@prefix apb:    <https://data.rijksoverheid.nl/brp/ap-nl/> .
-@prefix apaanbod: <https://data.rijksoverheid.nl/brp/ap-nl/aanbod/> .
-@prefix apovk:  <https://data.rijksoverheid.nl/brp/ap-nl/overeenkomst/> .
-@prefix apper:  <https://data.rijksoverheid.nl/brp/ap-nl/permissie/> .
-@prefix apset:  <https://data.rijksoverheid.nl/brp/ap-nl/gegevensset/> .
-@prefix apcon:  <https://data.rijksoverheid.nl/brp/ap-nl/voorwaarde/> .
-@prefix apdoel: <https://data.rijksoverheid.nl/brp/ap-nl/doel/> .
-@prefix apdoc:  <https://data.rijksoverheid.nl/brp/ap-nl/besluitdocument/> .
-@prefix apvz:   <https://data.rijksoverheid.nl/brp/ap-nl/verzoek/> .
-@prefix apkan:  <https://data.rijksoverheid.nl/brp/ap-nl/kanaal/> .
-@prefix apdg:   <https://data.rijksoverheid.nl/brp/ap-nl/doelgroep/> .
-
 
 # =============================================================================
 # PROEF-TTL (A) — AANBOD IN REFINEMENT-VORM
@@ -4333,7 +4271,6 @@ apaanbod:doelgroepVanIngeschrevene a qb:DimensionProperty ;
 odrl:deliveryChannel
     rdfs:label "Verstrekkingskanaal"@nl , "Delivery channel"@en .
 
-
 # --- doelen (uittreksel uit het doelenregister) -------------------------------
 # De vier taken waarvoor proef-breda-refinement.ttl permissions bevat. Overgenomen
 # uit brp-ap-nl/ttl/doelenregister.ttl (gegenereerd uit de besluit-PDF's), zodat
@@ -4358,7 +4295,6 @@ apdoel:burgerlijke-stand a skos:Concept , dpv:Purpose ;
     skos:prefLabel "Burgerlijke stand"@nl ;
     rdfs:label "Burgerlijke stand"@nl .
 
-
 # --- codelijst verstrekkingskanalen ------------------------------------------
 # Bron: Aanvullende toelichting autorisatie gemeenten, bijlage B
 # "Toelichting verstrekkingswijzen" (RvIG, juli 2024) — vier vormen; en de
@@ -4369,7 +4305,6 @@ apkan: a skos:ConceptScheme ;
     dct:description "De wijzen waarop de systematische verstrekking uit de BRP plaatsvindt; waardenlijst voor de rechterzijde van een odrl:deliveryChannel-refinement."@nl ;
     dct:publisher oorg:oorg10103 ;
     dct:source <https://publicaties.rvig.nl/sites/default/files/2025-05/Aanvullende%20toelichting%20autorisatie%20gemeenten.pdf> , <https://www.rvig.nl/sites/default/files/2026-03/GABA%20Matrix.xlsx> .
-
 
 apkan:spontaan a skos:Concept ;
     skos:prefLabel "spontane verstrekking"@nl ;
@@ -4400,7 +4335,6 @@ apkan:selectie a skos:Concept ;
     skos:definition "Eenmalige of periodieke levering van alle persoonslijsten die aan de selectievoorwaarde voldoen. Komt in de GABA NIET voor als verstrekkingsvorm: de Aanvullende toelichting kent alleen de vier bovenstaande vormen, en het besluit bepaalt dat afnemersindicaties uitsluitend op verzoek worden geplaatst."@nl ;
     skos:inScheme apkan: ;
     rdfs:seeAlso brp:selectieGegevensVerstrekking .
-
 
 # --- doelgroepen (uittreksel; bron: Matrix tabblad (3), kolom Doelgroep) ------
 
@@ -4452,7 +4386,6 @@ apdg:persoon-akte-burgerlijke-stand a skos:Concept ;
     skos:inScheme apdg: ;
     dct:source <https://www.rvig.nl/sites/default/files/2026-03/GABA%20Matrix.xlsx> .
 
-
 # --- het ene juridische aanbod ------------------------------------------------
 
 apb:brpDataset odrl:hasPolicy apaanbod:systematischeVerstrekking .
@@ -4490,37 +4423,6 @@ apaanbod:systematischeVerstrekking a odrl:Offer ;
         odrl:action brp:adHocPlaatsing ;
         odrl:target apb:gbav ;
         odrl:constraint apaanbod:doelgroepbeginsel ] .
-@prefix odrl:   <http://www.w3.org/ns/odrl/2/> .
-@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct:    <http://purl.org/dc/terms/> .
-@prefix dpv:    <https://w3id.org/dpv#> .
-@prefix dcat:   <http://www.w3.org/ns/dcat#> .
-@prefix prov:   <http://www.w3.org/ns/prov#> .
-@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
-@prefix apnl:   <https://standaarden.overheid.nl/odrl-ap-nl/> .
-@prefix brp:    <https://data.rijksoverheid.nl/brp/def#> .
-@prefix brprub: <https://data.rijksoverheid.nl/brp/rubriek/> .
-@prefix brpgrp: <https://data.rijksoverheid.nl/brp/groep/> .
-@prefix brpcat: <https://data.rijksoverheid.nl/brp/categorie/> .
-@prefix brpafn: <https://data.rijksoverheid.nl/brp/afnemer/> .
-@prefix brpaut: <https://data.rijksoverheid.nl/brp/autorisatie/> .
-@prefix oorg:   <https://identifier.overheid.nl/tooi/id/oorg/> .
-@prefix apb:    <https://data.rijksoverheid.nl/brp/ap-nl/> .
-@prefix apaanbod: <https://data.rijksoverheid.nl/brp/ap-nl/aanbod/> .
-@prefix apovk:  <https://data.rijksoverheid.nl/brp/ap-nl/overeenkomst/> .
-@prefix apper:  <https://data.rijksoverheid.nl/brp/ap-nl/permissie/> .
-@prefix apset:  <https://data.rijksoverheid.nl/brp/ap-nl/gegevensset/> .
-@prefix apcon:  <https://data.rijksoverheid.nl/brp/ap-nl/voorwaarde/> .
-@prefix apdoel: <https://data.rijksoverheid.nl/brp/ap-nl/doel/> .
-@prefix apdoc:  <https://data.rijksoverheid.nl/brp/ap-nl/besluitdocument/> .
-@prefix apvz:   <https://data.rijksoverheid.nl/brp/ap-nl/verzoek/> .
-@prefix apkan:  <https://data.rijksoverheid.nl/brp/ap-nl/kanaal/> .
-@prefix apdg:   <https://data.rijksoverheid.nl/brp/ap-nl/doelgroep/> .
-@prefix apart:  <https://data.rijksoverheid.nl/brp/ap-nl/artefact/> .
-@prefix applicht: <https://data.rijksoverheid.nl/brp/ap-nl/verplichting/> .
-
 
 # =============================================================================
 # PROEF-TTL (C) — BREDA 510149 IN REFINEMENT-VORM
@@ -4581,7 +4483,6 @@ apcon:510149-v13-r-ingeschrevene-overleden a odrl:Constraint ;
     odrl:leftOperand brprub:datumOverlijdenOverlijden ;
     odrl:operator brp:kv ;
     prov:wasDerivedFrom <https://publicaties.rvig.nl/sites/default/files/Besluit/GABA%20BRP/510149%20Autorisatiebesluit%20Gemeente%20Breda%20BRP%20%28GABA%202024%29%2001-07-2024.pdf#page=2> .
-
 
 apper:510149-v13-r-belastingen-belastingplichtige-adhoc a odrl:Permission ;
     odrl:uid apper:510149-v13-r-belastingen-belastingplichtige-adhoc ;
@@ -4881,7 +4782,6 @@ apper:510149-v13-r-burgerlijke-stand-adhoc a odrl:Permission ;
     odrl:duty applicht:510149-v13-d-doeladministratie ,
         applicht:510149-v13-d-vernietigen-na-afhandeling .
 
-
 # =============================================================================
 # VERPLICHTINGEN OP EEN PERMISSION (odrl:duty), naast de vier verplichtingen
 # die NAAST de regels op de overeenkomst hangen (odrl:obligation, uit het
@@ -4983,7 +4883,6 @@ applicht:510149-v13-d-doeladministratie a odrl:Duty ;
     rdfs:comment "PROEFMODELLERING: het besluit kent geen artikel met deze tekst. Het VERONDERSTELT haar wel — de Aanvullende toelichting bepaalt dat de gemeente haar vragen beperkt tot ingeschrevenen voor wie verstrekking noodzakelijk is voor de vermelde taken, en dat is zonder eigen doeladministratie niet na te leven of te verantwoorden; artikel 5, tweede lid, AVG maakt die verantwoording expliciet. LET OP de richting: de administratie blijft BIJ DE GEMEENTE. De BRP-LV mag de doelbinding niet kennen (een verstrekkingsbericht draagt geen doel), dus dit is nadrukkelijk geen meldplicht aan de verstrekker en er staat daarom geen odrl:informedParty bij. Een beslispunt kan wel controleren DAT er een doel is geadministreerd zonder het te kennen; vandaar dat apart:authz-gaba-belastingen deze verplichting wel uitwerkt en de vernietigingsplicht niet."@nl ;
     odrl:action [ rdf:value odrl:use ] .
 
-
 # =============================================================================
 # GEVOLG BIJ NIET-NALEVING (odrl:consequence)
 # =============================================================================
@@ -5014,33 +4913,6 @@ apaanbod:duty-geheimhouding odrl:consequence [
     rdfs:comment "PROEFMODELLERING. Autorisatiebesluit 510149 kent geen sanctie- of meldingsbepaling bij een schending van de geheimhouding; de meldplicht volgt uit de AVG (artikel 33: melding aan de Autoriteit Persoonsgegevens binnen 72 uur; artikel 34: mededeling aan de betrokkene bij hoog risico). Als bron staat de AVG als geheel (haar ELI), omdat een artikel-URI van de AVG niet betrouwbaar te controleren viel; de artikelnummers staan hier. Dat RvIG hier de geinformeerde partij is, is de aansluiting bij de inlichtingenplicht uit de slotbepalingen van het besluit: de verstrekker moet weten dat de gegevens die hij verstrekte zijn geraakt. Bewust GEEN intrekking-als-gevolg: het besluit kent die sanctie niet en intrekken is een bevoegdheid van de verstrekker, geen verplichting van de gemeente."@nl ;
     odrl:action [ rdf:value odrl:inform ;
         odrl:informedParty oorg:oorg10103 ] ] .
-@prefix odrl:   <http://www.w3.org/ns/odrl/2/> .
-@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
-@prefix dct:    <http://purl.org/dc/terms/> .
-@prefix dcat:   <http://www.w3.org/ns/dcat#> .
-@prefix prov:   <http://www.w3.org/ns/prov#> .
-@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
-@prefix apnl:   <https://standaarden.overheid.nl/odrl-ap-nl/> .
-@prefix brp:    <https://data.rijksoverheid.nl/brp/def#> .
-@prefix brprub: <https://data.rijksoverheid.nl/brp/rubriek/> .
-@prefix brpgrp: <https://data.rijksoverheid.nl/brp/groep/> .
-@prefix brpcat: <https://data.rijksoverheid.nl/brp/categorie/> .
-@prefix brpafn: <https://data.rijksoverheid.nl/brp/afnemer/> .
-@prefix brpaut: <https://data.rijksoverheid.nl/brp/autorisatie/> .
-@prefix oorg:   <https://identifier.overheid.nl/tooi/id/oorg/> .
-@prefix bwb:    <https://wetten.overheid.nl/> .
-@prefix apb:    <https://data.rijksoverheid.nl/brp/ap-nl/> .
-@prefix apaanbod: <https://data.rijksoverheid.nl/brp/ap-nl/aanbod/> .
-@prefix apovk:  <https://data.rijksoverheid.nl/brp/ap-nl/overeenkomst/> .
-@prefix apper:  <https://data.rijksoverheid.nl/brp/ap-nl/permissie/> .
-@prefix apset:  <https://data.rijksoverheid.nl/brp/ap-nl/gegevensset/> .
-@prefix apcon:  <https://data.rijksoverheid.nl/brp/ap-nl/voorwaarde/> .
-@prefix apdoel: <https://data.rijksoverheid.nl/brp/ap-nl/doel/> .
-@prefix apdoc:  <https://data.rijksoverheid.nl/brp/ap-nl/besluitdocument/> .
-@prefix apvz:   <https://data.rijksoverheid.nl/brp/ap-nl/verzoek/> .
-@prefix apind:  <https://data.rijksoverheid.nl/brp/ap-nl/indiener/> .
 
 apvz:2024-0000351115 a odrl:Request ;
     odrl:uid apvz:2024-0000351115 ;
@@ -5067,16 +4939,6 @@ apper:verzoek-2024-0000351115 a odrl:Permission ;
     odrl:target apb:gbav ;
     odrl:assignee brpafn:510149 ;
     rdfs:comment "Minimale regel van het verzoek: verstrekking uit de BRP aan de indiener. Kanaal, gegevens en doel zijn niet uit de besluittekst af te leiden en worden niet geclaimd."@nl .
-@prefix odrl:   <http://www.w3.org/ns/odrl/2/> .
-@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix dct:    <http://purl.org/dc/terms/> .
-@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
-@prefix prov:   <http://www.w3.org/ns/prov#> .
-@prefix schema: <https://schema.org/> .
-@prefix apnl:   <https://standaarden.overheid.nl/odrl-ap-nl/> .
-@prefix apper:  <https://data.rijksoverheid.nl/brp/ap-nl/permissie/> .
-@prefix apart:  <https://data.rijksoverheid.nl/brp/ap-nl/artefact/> .
-@prefix applicht: <https://data.rijksoverheid.nl/brp/ap-nl/verplichting/> .
 
 # PROEFMODELLERING — FICTIEF dekkingsartefact bij de Breda-proef.
 # Doel: het generieke dekkingspatroon (een knoop die prov:wasDerivedFrom een
