@@ -34,11 +34,35 @@ Als we de functies van de beheermodule en de rollen die we erkennen in een autor
 De functies zijn vast, dat is wat er beschikbaar is in de software. De rollen zijn arbitrair, die zijn gekozen als startset en in de identity provider gezet. Door meer rollen bij te maken en daar in policies rechten aan te geven kan de toegang fijnmaziger worden gemaakt.
 {{< /chapter/section >}}
 
-{{< chapter/section title="2. Policies" level="3" >}}
+{{< chapter/section title="2. Attributen" level="3" >}}
 
-Het bovenstaande beleid is omgezet in policies. Er is gekozen voor een policy per rol. Onderstaande voorbeelden zijn in Cedar geschreven.
+Policies maken gebruik van gegevens uit het AuthZEN request. Om policies te kunnen schrijven voor een applicatie, in dit geval OpenFTV manager, is nodig om te weten welke gegevens er beschikbaar (kunnen) zijn. Hieronder een tabel van de  gegevens die de OpenFTV manager meegeeft in een AuthZEN verzoek,
 
-Voor systeembeheerders geldt dat :
+| subject   | action     | resource | context |
+|-----------|------------|----------|---------|
+| principal | read       | policy   |         |
+|           | edit       | context  |         |
+|           | create     | pdp      |         |
+|           | delete     | auditlog |         |
+|           | distribute | setting  |         |
+
+Rollen liggen niet vast, deze komen uit de Identity Provider. In ons geval is dat standaard KeyCloack. Bij levering worden de volgende rollen aangemaakt, met bij elk een enkele gebruiker.
+
+| rol     | gebruiker    |
+|---------|--------------|
+| admin   | admin-user   |
+| author  | author-user  |
+| auditor | auditor-user |
+
+In de praktijk zullen er meer gebruikers zijn, met een persoonsnaam of een applicatienaam. En de relatie tussen rol en gebruiker is niet een op een, dat is veel op veel.
+
+{{< /chapter/section >}}
+
+{{< chapter/section title="3. Policies" level="3" >}}
+
+Het beleid kan hiermee worden omgezet in policies. Er is gekozen voor een policy per rol. Onderstaande voorbeelden zijn in Cedar geschreven, omdat dit deze PDP standaard wordt geleverd. Dit had ook elke andere PDP met bijbehorende taal kunnen zijn.
+
+Voor systeembeheerders geldt dat ze alles mogen zien en daarbovenop instellingen mogen wijzigen. In Cedar:
 
 ```cedar
  permit (
@@ -50,7 +74,35 @@ when {
     principal has roles &&
     (principal.roles == "admin" || principal.roles.contains("admin"))
 };`
+
 ```
+
+Functioneel beheerders mogen alles behalve instellingen wijzigen:
+
+```cedar
+ permit (
+    ...
+)
+when {
+    principal has roles &&
+    (principal.roles == "author" || principal.roles.contains("author"))
+};`
+
+```
+
+Auditors alles zien, behalve instellingen:
+
+```cedar
+ permit (
+    ...
+)
+when {
+    principal has roles &&
+    (principal.roles == "auditor" || principal.roles.contains("auditor"))
+};`
+
+```
+
 
 {{< /chapter/section >}}
 
