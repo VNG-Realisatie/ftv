@@ -30,6 +30,9 @@ type: 'chapter'
 
 {{< /chapter/header >}}
 
+{{< chapter/nextprevious  bg="bg-rhc-color-donkerbruin-50" nextlink="manager_policies" nexttitle="OpenFTV beleid">}}
+{{< /chapter/nextprevious >}}
+
 {{< chapter/section title="OpenFTV" >}}
 
 {{< /chapter/section >}}
@@ -131,3 +134,7 @@ de voortgang te volgen en de code vrij te gebruiken.
 
 https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/open-ftv
 {{< /chapter/section >}}
+
+{{< chapter/nextprevious  bg="bg-rhc-color-donkerbruin-50" nextlink="manager_policies" nexttitle="OpenFTV beleid">}}
+{{< /chapter/nextprevious >}}
+
