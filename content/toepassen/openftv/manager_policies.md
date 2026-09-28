@@ -11,7 +11,7 @@ type: 'chapter'
 
 
 De beheermodule van OpenFTV is zelf ook een applicatie. Deze bevat functionaliteit die niet voor iedereen toegankelijk is. 
-Op deze pagina leggen we het beleid en de bijbehorende policies uit. Dit kan je helpen begrijpen hoe de beheermodule werkt en is ook een voorbeeld van hoe beleid en policies eruit kunnen zien.
+Op deze pagina leggen we het beleid en de bijbehorende policies uit. Dit illustreert hoe de beheermodule werkt en is ook een voorbeeld van hoe beleid en policies eruit kunnen zien.
 {{< /chapter/section >}}
 
 {{< chapter/section title="1. Beleid" level="3" >}}
@@ -32,14 +32,16 @@ Als we de functies van de beheermodule en de rollen die we erkennen in een autor
 | OpenFTV beheerapplicatie instellingen inzien      | X                | X                     |         |   |
 | OpenFTV beheerapplicatie instellingen wijzigen    | X                |                       |         |   |
 
-Deze functies liggen vast, dat is wat er beschikbaar is in de software. De rollen zijn arbitrair, die zijn gekozen als startset en in de identity provider gezet. 
+De functies liggen vast, dat is wat er beschikbaar is in de software. 
+
+De rollen zijn arbitrair, deze zijn gekozen als startset en in de identity provider gezet. 
 Door meer rollen bij te maken en daar in policies rechten aan te geven kan de toegang fijnmaziger worden gemaakt.
 {{< /chapter/section >}}
 
 {{< chapter/section title="2. Attributen" level="3" >}}
 
-Policies maken gebruik van gegevens uit het AuthZEN request. Om policies te kunnen schrijven voor een applicatie, in dit geval OpenFTV manager, is nodig om te weten welke gegevens er beschikbaar (kunnen) zijn. 
-Hieronder een tabel van de gegevens die de OpenFTV manager meegeeft in een AuthZEN verzoek.
+Policies maken gebruik van gegevens uit het AuthZEN-verzoek. Om policies te kunnen schrijven voor een applicatie, in dit geval OpenFTV manager, is nodig om te weten welke gegevens er beschikbaar (kunnen) zijn. 
+Hieronder een tabel van de gegevens die de OpenFTV manager meegeeft in een AuthZEN-verzoek.
 
 | subject   | action     | resource | context |
 |-----------|------------|----------|---------|
@@ -49,7 +51,7 @@ Hieronder een tabel van de gegevens die de OpenFTV manager meegeeft in een AuthZ
 |           | delete     | auditlog |         |
 |           | distribute | setting  |         |
 
-Rollen liggen niet vast, deze komen uit de Identity Provider. In ons geval is dat KeyCloak. Initieel worden de volgende rollen aangemaakt, met de bijhorende gebruiker.
+De rollen liggen zoals gezegd niet vast, die worden beheer in de Identity Provider. In ons geval is dat KeyCloak. Initieel worden de volgende rollen aangemaakt, met de bijhorende gebruikers.
 
 | rol     | gebruiker    |
 |---------|--------------|
@@ -106,6 +108,40 @@ when {
 
 ```
 
+{{< /chapter/section >}}
+
+{{< chapter/section title="4. Toepassen van policies" level="3" >}}
+
+Nu we ons beleid expliciet en uitvoerbaar hebben gemaakt, kan de manager daar gebruik van maken. De web-applicatie zal bij het opbouwen van de schermen aan de PDP vragen welke rechten de gebruiker heeft. 
+
+Als bijvoorbeeld de knop 'instellingen' getoond moet worden, stuurt de manager dit verzoek eerst naar de PDP: 
+```json
+{
+  "subject": {
+    "type": "user",
+    "id": "author-user",
+    "roles": ["author"]
+  },
+  "resource": { 
+    "type": "settings"
+  },
+  "action": {
+    "name": "edit"
+  }
+}
+
+```
+
+Omdat functioneel beheerders geen rechten hebben om de instellingen te wijzigen, wordt dit verzoek afgewezen:
+
+```json
+{
+  "decision": false
+}
+
+```
+
+De applicatie zal de knop 'wijzigen' bij instellingen grijs kleuren en niet klikbaar maken.
 
 {{< /chapter/section >}}
 
