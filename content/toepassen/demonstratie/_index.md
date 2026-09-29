@@ -67,15 +67,18 @@ De gegevens die we bijhouden zijn voor deze opstelling heel simpel gehouden:
     - De gemeente heeft ter dataminimalisatie vastgelegd dat voor laadpaalvergunningen een beperkte deelverzameling van persoons- en voertuiggegevens voldoende is:
         - Persoonsgegevens: BSN, NAW en meerderjarigheid
         - Voertuiggegevens: kenteken en uitstootklasse
-    - Inzage in de vergunningen is toegestaan aan alle medewerkers van de afdeling burgerzaken
-    - Voor het beheer van de vergunningen heeft de gemeente een opleiding gemaakt, en vereist voor aanpassingen aan de registratie dat het bijbehorende examen niet langer dan 1 jaar geleden met goed gevolg is afgelegd.
+    - Inzage in de vergunningen is toegestaan aan alle medewerkers van de afdeling burgerzaken. [Cedar](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/open-ftv/-/blob/main/testdata/apps/gemeente-vlierdam/manager/policies/laadpaal-aanvragen-afdeling.cedar)
+    - Voor het beheer van de vergunningen heeft de gemeente een opleiding gemaakt, en vereist voor aanpassingen aan de registratie dat het bijbehorende examen met goed gevolg is afgelegd. [Cedar](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/open-ftv/-/blob/main/testdata/apps/gemeente-vlierdam/manager/policies/laadpaal-aanvragen-opleiding.cedar)
+    - Het diploma mag niet meer dan een jaar oud zijn. [Cedar](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/open-ftv/-/blob/main/testdata/apps/gemeente-vlierdam/manager/policies/laadpaal-aanvragen-opleiding-verlopen.cedar).
 - BRP:
-    - De gemeente heeft per besluit toestemming van RvIG om in de BRP gegevens op te zoeken.
-    - Grondslag daarvoor is nummer 5, 'om een taak van algemeen belang uit te voeren'
-    - De gemeente mag alleen ingezetenen van de eigen gemeente opzoeken
+    - De gemeente Vlierdam heeft per besluit toestemming van RvIG om in de BRP gegevens op te zoeken.
+    - Grondslag daarvoor is 'taak van algemeen belang of uitoefening van openbaar gezag'
+    - De gemeente mag alleen ingezetenen van de eigen gemeente opzoeken.
+    [Rego](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/open-ftv/-/blob/main/testdata/apps/rvig/manager/policies/brp-access.rego).
 - RDW
     - De gemeente heeft per besluit toestemming van de RDW om voertuigen in de BRV op te zoeken.
-    - Diplomatieke kentekens mogen niet opgezocht worden
+    - Diplomatieke kentekens mogen niet opgezocht worden.
+    [Rego](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/open-ftv/-/blob/main/testdata/apps/rdw/manager/policies/brv-access.rego).
 
 {{< /chapter/section >}}
 
@@ -174,7 +177,7 @@ Anders wordt de vergunning afgewezen met een passende melding.
 
 In de gemeente zijn een aantal diplomatieke voertuigen gekomen, en het is niet meer houdbaar dat daar geen laadpaal op aangevraagd kan worden. Tegelijk wil de gemeente de identiteit van de diplomaten blijven beschermen.
 
-Daarom wordt besloten dat vergunningen voor diplomatieke voertuigen alleen door de gemeentesecretaris ingevoerd mogen worden. De concrete regel is
+Met RDW wordt overeengekomen dat Vlierdam vanaf nu wel diplomatieke kentekens mag inzien, maar op voorwaarde dat de gemeente extra zorgvuldig omgaat met die gegevens. Vlierdam besluit daarom dat vergunningen voor diplomatieke voertuigen alleen door de gemeentesecretaris ingevoerd mogen worden. De concrete regel is:
 - Diplomatieke kentekens mogen alleen opgezocht worden als de afdeling van de gebruiker 'Gemeentesecretaris' zijn.
 
 Het scenario is dat in het beheersysteem de regel wordt veranderd en de wijziging actief wordt gemaakt. Dit zijn de concrete stappen:
@@ -191,10 +194,10 @@ Het scenario is dat in het beheersysteem de regel wordt veranderd en de wijzigin
 
 _Beheer_
 
-| Nr | Gebruiker | Resultaat                                    |
-|----|-----------|----------------------------------------------|
-| 1  | Morty     | Morty mag geen regels aanpassen              |
-| 2  | Rick      | Lukt                                         |
+| Nr | Gebruiker   | Resultaat                            |
+|----|-------------|--------------------------------------|
+| 1  | audit-user  | auditors mogen geen regels aanpassen |
+| 2  | author-user | Lukt                                 |
 
 _Handhaving_
 
@@ -207,16 +210,17 @@ _Handhaving_
 
 Testgeval 1
 
-- Open de de OpenFTV beheersinterface als Morty
-- Zoek de BRV regel die gaat over diplomatieke kentekens
-- Verwijder de regel. 
-Dit lukt niet omdat Morty die rechten niet heeft.
+- Open de de BRV OpenFTV beheersinterface als auditor (audit-user)
+- Zoek de regel die gaat over diplomatieke kentekens ('diplomatieke kentekens afgeschermd')
+- Verwijder de regel.
+Dit lukt niet omdat auditors die rechten niet hebben.
 
 Testgeval 2
 
-- Probeer het opnieuw als Rick
-- Verwijder de regel
-- Maak een nieuwe gemeenteregel met als inhoud de onderstaande Rego code
+- Probeer het opnieuw als functioneel beheerder (author-user)
+- Verwijder de regel 'diplomatieke kentekens afgeschermd'
+- Open de de Vlierdam OpenFTV beheersinterface als functioneel beheerder
+- Zoek de inactieve regel 'diplomatieke kentekens alleen secretaris'
 - Sla de regel op
 - Distribueer de nieuwe regelset
 Dit lukt.
@@ -232,34 +236,6 @@ Testgeval 4
 - Open de Laadpaalapplicatie als Diane
 - Vraag een vergunning aan op 1111EE / 5
 Dit lukt.
-
-_Broncode van de regel die stelt dat alleen gemeentesecretarissen diplomatieke kentekens mogen zien:_
-
-```rego linenums="1" copy=true
-    package authz
-    
-    default allow := false
-    
-    default reason := ""
-    
-    reason := "not a valid subject type" if {
-      input.subject.type != "user"
-    } else := "not a valid user" if {
-      input.subject.type == "user"
-      not input.subject.id in ["Morty", "Beth", "Jerry"]
-    } else := "not certified" if {
-      input.subject.type == "user"
-      input.subject.id == "Morty"
-    } else := "certification expired" if {
-      input.subject.type == "user"
-      input.subject.id == "Jerry"
-    }
-    
-    allow if {
-      input.subject.type == "user"
-      input.subject.id == "Beth"
-    }
-```
 
 {{< /chapter/section >}}
 
