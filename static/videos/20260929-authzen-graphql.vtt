@@ -1,0 +1,550 @@
+WEBVTT
+
+00:00:09.693 --> 00:00:18.923
+<v Michiel Trimpe>niemand van Logius binnen, volgens mij. twee schermen, misschien twee. Nee.</v>
+
+00:00:23.283 --> 00:00:25.283
+<v Wessel Schollmeijer>officieel val ik in die categorie eh volgens mij eh, maar</v>
+
+00:00:27.113 --> 00:00:29.113
+<v Michiel Trimpe>van Logius standaarden bedoel ik, maar inderdaad.</v>
+
+00:00:29.673 --> 00:00:30.113
+<v Wessel Schollmeijer>Oké.</v>
+
+00:00:31.703 --> 00:00:37.583
+<v Michiel Trimpe>open ik gelijk de agenda en dan bieden we gelijk de optie voor dat stukje.</v>
+
+00:00:40.773 --> 00:00:51.453
+<v Michiel Trimpe>dit is de agenda van deze keer. Eh excuses dat ik een keer niks heb rondgemaild. Ik was eh ziek, of ja, ziekjes of in ieder geval niet eh niet 100% gisteren.</v>
+
+00:00:54.253 --> 00:01:05.773
+<v Michiel Trimpe>maar dit is hier de agenda van vandaag. Ehm, beginnen zoals gebruikelijk met welkomst en kennismaking voor de nieuwe gezichten. Eh best een hoop vandaag, want dan kan iedereen de ruimte om zich even te introduceren voor de eerste keer.</v>
+
+00:01:08.123 --> 00:01:48.643
+<v Michiel Trimpe>dus eh we hebben een aantal eh openstaande issues voor AuthZ NL.Gov, maar ook voor Authorization Decision Log. Eh daar zoek ik eh ja, dat zou iemand van Logius standaarden, dus even delen. Kijken wanneer ze binnenkomen. Eh de hoofdpresentatie is GraphQL autorisatie. Eh een presentatie van eh GBO onder andere met Peter Jan en Robert. En afsluiting met eh de planning voor het vervolg. Eh gezien eh de grote hoeveelheid nieuwe gezichten lijkt me goed om daar eh ja, eerst bij de introductie te beginnen en iedereen alle nieuwe leden de kans te geven om zich te introduceren.</v>
+
+00:01:51.103 --> 00:01:55.263
+<v Michiel Trimpe>hier in de fysiek aanwezig. Daniel was het?</v>
+
+00:01:57.373 --> 00:02:51.173
+<v Michiel Trimpe>Eh Daniel Kapteijn, ik zit hier namens eh Dutch Hospital Data. Eh ik ben eh architect eh voor het zogenaamde plugin programma. Dus ik ben een beetje een vreemde eend in de bijt denk ik. Ehm we hebben al een federatief netwerk van 35 ziekenhuizen. schaal. Ehm en één van de grote vraagstukken die wij hebben is via welke standaarden gaan we nou federatief toegangsverlening eh doen. Oké. Ik zou heel graag hierop aanhaken. Ik probeer zelf in het zorgveld mensen ook meer richting IBDS te bewegen. En in de categorie: ga nou in vredesnaam niet het wiel opnieuw uitvinden. Eh dus ik ben vooral heel erg geïnteresseerd en eigenlijk in die zin ook een hulpvraag van laten we echt proberen dit bij elkaar te brengen, want ik zie allemaal custom dingen in de zorg waar ik denk: jongens, niet kloten op je eigen eilandje. Product hebben. Ook mensen in de call knikken. Ja. Dus eh gebruik me daar alsjeblieft voor. Ik zit eh geregeld aan tafel bij</v>
+
+00:02:54.723 --> 00:03:01.773
+<v Michiel Trimpe>Ik ben erg benieuwd. Check. Nou, welkom. Even kijken. Eh Wessel?</v>
+
+00:03:06.863 --> 00:03:30.763
+<v Wessel Schollmeijer>Ja, goedemorgen. En mijn naam is Wessel Schollmeijer. Ehm eh ik ben eh officieel wat je eh wat je noemt content architect bij Logius, maar dan wel domein publicaties. Ehm ehm en eh de de de mensen vanuit de stelselcatalogus hadden gevraagd of ik eh hierbij wilde aansluiten, ook omdat eh sommige van de standaarden die besproken worden eh betrekking hebben op eh mijn vakgebied. Dus vandaar dat ik eh aangesloten ben.</v>
+
+00:03:34.043 --> 00:03:38.403
+<v Michiel Trimpe>Welkom. Ja, en de de standaard is voornamelijk voor jou voornamelijk de ODRL standaard.</v>
+
+00:03:38.773 --> 00:03:50.333
+<v Wessel Schollmeijer>Ja, maar eh hoe heet het nou? Ik ja, eh dat zeer zeker, maar ehm sowieso linked data en eh en datastandaarden is sowieso wel een beetje mijn forté, dus eh hoe heet het nou? Maar voornamelijk ODRL.</v>
+
+00:03:51.533 --> 00:04:06.933
+<v Michiel Trimpe>Ja, ja, voor jou even de duidelijkheid, dus we hebben eh besloten recent dat we om en om een eh IAM focus en een ODRL focus in de werkgroep doen. En vandaag is een dag met de IAM focus. Dus dit zal eh iets aan de andere kant de diepte in duiken. Maar je bent eh hartstikke nog steeds hartstikke welkom.</v>
+
+00:04:07.853 --> 00:04:19.043
+<v Wessel Schollmeijer>Ja, nee, ja, ik had dat begrepen. Ik moet gewoon even kijken. Ik sluit deze keer een eerste keer aan en mocht het nou zijn dat de IAM focus voor mij iets minder interessant is, dan ga ik wel om om bijwonen, maar tot nu toe ben ik er gewoon en eh goedemorgen allemaal.</v>
+
+00:04:19.593 --> 00:04:19.953
+<v Michiel Trimpe>Welkom.</v>
+
+00:04:22.093 --> 00:04:31.173
+<v Michiel Trimpe>Even kijken. Nou, de presentatoren laat ik even tijdens de presentatie zichzelf introduceren. We hebben ook eh BKWI in de zaal.</v>
+
+00:04:34.373 --> 00:05:03.203
+<v Thijs Rijpert>Yes, goedemorgen. Eh ik ben eh Tom Kussen. Ik ben product owner bij BKWI, Bureau Keten Informatisering Werk en Inkomen. Dus we doen de gegevensuitwisseling bij tussen verschillende overheidsinstanties. En eh naast mij zit mijn collega Thijs Rijpert, eh ontwikkelaar. En eh eh wij hebben ook wat ervaring met eh GraphQL. En eh eh ik had eh we zijn eh Michiel tegengekomen twee weken geleden bij het Digilab evenement en zodoende zijn we hier beland.</v>
+
+00:05:08.173 --> 00:05:08.573
+<v Michiel Trimpe></v>
+
+00:05:10.803 --> 00:05:15.603
+<v Michiel Trimpe>natuurlijk wel vaker gezien, maar ik weet niet of je hier nieuw bent.</v>
+
+00:05:16.683 --> 00:05:51.053
+<v Kees Wuister>Eh ik denk dat bij deze nieuw, dus ik zal me even kort instellen. Hoewel een redelijk wat mensen volgens mij mij ook wel kennen. Ik ben eh Kees Wuister. Ik ben nu eh eh informatieanalist bij ehm VECOZO, waar je ook al meerdere zitten en ik eh focus mij dus ook vooral op eh het schrijven van policies en eh policy based access control en daarom ook vanwege nou ja, AuthZ en wij maken ook natuurlijk gebruik van eh GraphQL, dus daarin eh ja, daarom zit ik hier erbij. En ik ben een beetje ter vervanging ook van eh Maria die tot nog toe altijd volgens mij hier bij gezeten.</v>
+
+00:05:53.893 --> 00:05:55.453
+<v Kees Wuister>bij aansluiten.</v>
+
+00:05:57.323 --> 00:06:06.563
+<v Michiel Trimpe>Dan hebben we nog Jeroen en Peter Jan. Ik weet niet wie van jullie of jullie allebei gaan presenteren. Degene die niet gaat presenteren kan zich dan even voorstellen en dan eh</v>
+
+00:06:07.993 --> 00:06:16.593
+<v Jeroen De Kok>Ja, ik zal me wel even voorstellen, want Peter Jan die gaat het meeste presenteren volgens mij. Ik ben Jeroen de Kok, eh softwareontwikkelaar bij Ictu bij het eh project GBN.</v>
+
+00:06:19.513 --> 00:06:22.423
+<v Michiel Trimpe>Nou, welkom allemaal.</v>
+
+00:06:25.863 --> 00:07:35.873
+<v Michiel Trimpe>ik heb nog steeds niemand van eh Logius binnen. Eh één ja, die issue laat ik dan eventjes toch aan hen, want dan kijken we misschien aan het einde als ze wel binnen zijn. Ehm, één vraag die eh sowieso wel, zal ik zo stoppen met delen, want dat is een beetje. Eh één vraag die zij eh sowieso wel stelde is eh dat we bezig zijn met de aanmelding van eh authorization decision log bij Forum Standaardisatie. En één van de vragen daarvoor is eh welke organisaties ondersteunen de standaard reeds? En ik wil graag in de werkgroep vragen eh welke wie ja, welke mensen sowieso voor hun organisatie zouden kunnen zeggen dat ondersteunen wij. Of met wie we daar het gesprek aan kunnen gaan over hoe dat eh ja, die ondersteuning op papier of ja, op papier. Ondersteuning. Ja, die eh binnen de overheid ondersteunen dat authorization decision log een aanbevolen standaard wordt zou gaan worden.</v>
+
+00:07:40.343 --> 00:07:40.863
+<v Michiel Trimpe></v>
+
+00:07:42.873 --> 00:07:49.433
+<v Igor van Haren>Michiel, eh VECOZO is geen overheidsorganisatie, maar je wordt eh wel bij ons in het beleid opgenomen als standaard.</v>
+
+00:07:49.773 --> 00:07:55.893
+<v Michiel Trimpe>Ja. Ja, jullie vallen wel onder de bredere definitie is eh overheid, semi-overheid en uitvoeringsinstanties. En daar horen jullie zeker eh bij.</v>
+
+00:07:56.363 --> 00:07:56.523
+<v Igor van Haren>Ja.</v>
+
+00:08:03.193 --> 00:08:04.153
+<v Michiel Trimpe>Kijken. Peter Jan?</v>
+
+00:08:05.863 --> 00:08:12.623
+<v Peter-Jan Karens>Eh wij hebben het op dit moment ook in onze architectuur opgenomen en eh in onze huidige simulaties passen wij het ook toe.</v>
+
+00:08:13.593 --> 00:08:13.833
+<v Michiel Trimpe>Oké.</v>
+
+00:08:16.903 --> 00:08:24.623
+<v Michiel Trimpe>En nog meer? Dus eh nou ja, misschien met de BKWI kunnen we een keer kijken wat jullie ervan zouden zeggen. Die is er ook al.</v>
+
+00:08:28.133 --> 00:08:29.413
+<v Karl de Boer>Op dit moment hebben we</v>
+
+00:08:28.593 --> 00:08:29.633
+<v Thijs Rijpert>Ja, ik heb ook een eh</v>
+
+00:08:30.403 --> 00:08:40.363
+<v Karl de Boer>implementatie daarvan gemaakt, maar eh wel met een behoorlijke twist eraan, omdat ik me met de of met de standaard zelf eh niet echt goed uit de voeten kom.</v>
+
+00:08:41.533 --> 00:08:46.793
+<v Michiel Trimpe>Oké. Nou, dat horen we dan sowieso graag wat daar eh waar je lessen uit te leren zijn.</v>
+
+00:08:48.673 --> 00:08:53.713
+<v Thijs Rijpert>Op dit moment zijn we binnen BKWI nog heel erg in verkennende fase met betrekking tot eh FTV eh</v>
+
+00:08:55.313 --> 00:08:55.553
+<v Michiel Trimpe></v>
+
+00:08:55.763 --> 00:09:01.763
+<v Thijs Rijpert>Dus zeker geïnteresseerd, maar eh we zijn er we zijn nog aan het kijken hoe we het precies eh hoe hoe we het en of we het kunnen toepassen.</v>
+
+00:09:03.123 --> 00:09:10.593
+<v Michiel Trimpe>Oké. En ik zie Hugo ook nog in de call, maar dat is waarschijnlijk een vergelijkbaar antwoord.</v>
+
+00:09:12.043 --> 00:09:24.843
+<v Hugo Mostard>Ja, klopt. We zijn eh ja, het is interessant, maar eh ja, we zijn als gemeente geen ontwikkel eh ontwikkelaars, dus we wachten gewoon tot de markt of of een open source eh oplossing zich aanbiedt.</v>
+
+00:09:27.393 --> 00:09:27.633
+<v Michiel Trimpe>Oké.</v>
+
+00:09:29.963 --> 00:09:39.793
+<v Michiel Trimpe>Nou, Floris, dan ga ik jou nog wel een keer eh apart vragen. Oké. Nou, dat is in ieder geval dan de de eerste inventarisatie van de aanwezigen vandaag.</v>
+
+00:09:40.913 --> 00:10:05.113
+<v Mark Westbroek>Ja, ja, ik kom ook bij bij Common Ground zullen we gewoon eh volgen eh wat wat er gemaakt wordt in eh in het FTV project, denk ik. We bevelen sowieso het hele FTV aan zoals het eh zo zo zo volledig als het er is, dus. Maar het moet er wel zijn natuurlijk. Dat is het eerste punt. We we hebben nog niet echt de capaciteit om te gaan bouwen, maar</v>
+
+00:10:07.013 --> 00:10:11.093
+<v Michiel Trimpe></v>
+
+00:10:07.033 --> 00:10:13.233
+<v Mark Westbroek>Ja.</v>
+
+00:10:14.173 --> 00:10:31.593
+<v Michiel Trimpe>Nou, super. Dank iedereen voor de inventarisatie. Neel is ook binnen, zie ik. Ehm dus eh Neel, ik moet hem hier gelijk helemaal op de spot te zetten. Eh er was ook een eh een issue voor eh NL Alt Zen of eh Alt Zen NL.</v>
+
+00:10:31.333 --> 00:10:32.213
+<v Nil Barua>Ja, goedemorgen.</v>
+
+00:10:36.333 --> 00:10:42.693
+<v Michiel Trimpe>Eh Neel, heb jij dat issue paraat? Zouden we dat kunnen bespreken? Of moet je even nog wat voorbereiden dat we het aan het einde doen na de presentatie?</v>
+
+00:10:43.043 --> 00:10:46.323
+<v Nil Barua>Als we dat aan het einde kunnen doen, dan eh kunnen we er gezamenlijk naartoe kijken.</v>
+
+00:10:46.923 --> 00:10:50.243
+<v Michiel Trimpe>Oké, dan reserveren we aan het einde nog even een paar minuutjes voor.</v>
+
+00:10:52.443 --> 00:12:26.763
+<v Michiel Trimpe>Oké. Nou, dat waren dan de eh de huishoudelijke mededelingen. En ehm nou, dan is het bij deze tijd om eh het hoofdonderwerp aan te gaan spreken, autorisatie in GraphQL. Ehm, dus bij mij een korte introductie. Eh dat is een presentatie zal gegeven worden door eh vrijwel dus Peter-Jan van eh GBO. Daar ze kunnen zelf even het project kort introduceren. En het gaat over de vraag hoe hoe passen we autorisatie toe op eh GraphQL? En vanuit de specifieke GBO eh insteek eigenlijk ook over dus wanneer je dit generiek ontsluit. Dus in een situatie waar je niet zelf per se de aanbieder bent, maar net zoals bijvoorbeeld Open FTV er HTTP verkeer binnen krijgt en je HTTP gaat routeren, hoe ga je daarmee om met GraphQL? Eh interessant onderwerp omdat ja, nou meerdere partijen binnen de overheid mee bezig zijn. Gelukkig allemaal aan tafel, IVLZ, BKWI eh en GBO. En ehm nou, ik denk dat het belangrijk is voor alle partijen ook om naar de standaardisatie sowieso op gebruik van GraphQL in de brede zin te vinden. Ik ben in ieder geval blij om zo'n eh ja, dus hier een podium aan te bieden om te kijken of we dat voor GraphQL kunnen doen. En nou, concreet is het voorstel ook geloof ik dus een een standaard die eventueel geïmplementeerd zou kunnen worden in een PDP, net zoals de Cozy standaard die recentelijk internationaal is voorgesteld. Ja, dus het heeft ook uiteindelijk een mogelijk impact op het Open FTV product zelf.</v>
+
+00:12:28.803 --> 00:12:36.603
+<v Michiel Trimpe>En eh dat was als als korte opener eh ja, met dat als korte opener wil ik het woord eigenlijk aan eh Peter-Jan geven.</v>
+
+00:12:38.833 --> 00:12:58.643
+<v Peter-Jan Karens>Ja, dankjewel. Ehm ik denk dat het eerst leuk is als we even eh wat vertellen over wat we überhaupt doen met eh GBO. Govert heeft daar een korte presentatie voor voorbereid. En dan zal ik daarna ehm ja, in het onderwerp eh eh duiken. Dus ik denk dat we daar eerst 10 minuutjes en een kwartier even bij stil staan.</v>
+
+00:13:00.323 --> 00:13:13.723
+<v Govert Claus>Ja, dat wil ik eh graag eventjes doen. Dan krijgen jullie iets meer beeld ook bij de situatie waar we aan werken, waar GBO eigenlijk voor staat en eh de uitdagingen die we proberen op te lossen. Ik heb daar een presentatie voor en die probeer ik nu te delen.</v>
+
+00:13:15.833 --> 00:13:16.233
+<v Govert Claus>En</v>
+
+00:13:18.583 --> 00:13:20.183
+<v Govert Claus>Even kijken, dat zit</v>
+
+00:13:27.213 --> 00:13:34.993
+<v Govert Claus>hier. Ja. Even zien. Als het goed is wordt mijn scherm nu gedeeld. Klopt dat?</v>
+
+00:13:35.403 --> 00:13:35.883
+<v Peter-Jan Karens>Yes.</v>
+
+00:13:36.113 --> 00:13:47.153
+<v Govert Claus>Oké. Dit is een eh presentatie die we vaker geven. Ik heb daar een een een een deel uit overgenomen. Eh het gaat dus over</v>
+
+00:13:50.343 --> 00:15:34.043
+<v Govert Claus>onderwerp ga ik gebruiken. Wat wat is gemeenschappelijke bronontsluiting? De andere onderwerpen worden overigens vanmiddag behandeld in de gezamenlijke bijeenkomst Netwerk van Datastelsels en EU Datanetwerk. Ik weet niet of een aantal van jullie daar misschien naartoe gaat. Als jullie daar naartoe gaan, ga dan om 2 uur naar de sessie die je hier in het beeld ziet. Daar wordt eh helemaal ingegaan op eh op GBO, wat dat precies is, wat eh de planning is ook, hoe we het gaan aanpakken, enzovoorts. Ik eh beperk het nu eventjes gewoon tot wat eh GBO zelf is, want anders dan eh praat ik het hele uur vol. Het is natuurlijk heel erg interessant, maar ik denk dat we ook eh het over GraphQL moeten gaan hebben. De achtergrond is eh ja, we willen maatschappelijke waarde creëren en eh burgers in staat stellen hun persoonsgegevens digitaal te delen. De de achtergrond van GBO komt ook uit eh het programma Regie op gegevens. Ehm, dat is een beetje de basis geweest. Eh we hebben gekeken naar een aantal gegevensstromen die die bediend moeten worden. Eh drie zijn het er. Eh je ziet ze rechts in beeld, de EDI-wallet, SDG OOTS, allebei Europese ontwikkelingen waar Nederlandse overheden ook aan moeten voldoen. En iets dat wij DVTP noemen, dat eh staat voor data delen via toestemming met private dienstverleners. Een hele mond vol. Daarom is DVTP iets korter. Eh het delen van gegevens vanuit overheidsbronnen met private dienstverleners. Daar daar hebben we ook iets voor bedacht om dat eh op een gemeenschappelijke manier in te richten. Het zijn allemaal eh gegevensdelingen die geïnitieerd worden door de burger. Eh maar het grappige is wel, we hebben wel het burgerperspectief voorlopig nog even buitenscoop gelaten.</v>
+
+00:15:36.483 --> 00:18:51.193
+<v Govert Claus>burger, maar dat heeft niet onze prioriteit gehad tot nu toe in ieder geval. Het gaat echt om de bronontsluiting. Nou, hoe gaat dat nu? Alle bronhouders moeten die verschillende gegevensstromen eh eh eh voeden, zeg maar, gegevens ontsluiten voor die kanalen. En verzinnen daar vaak dan eh zelf oplossingen voor. Je krijgt een hoop lijntjes. Een hoop eh werk wat eigenlijk bij alle bronhouders uitgevoerd moet gaan worden, wat natuurlijk zonde is van de tijd en de energie. Dus eh nou, we hebben gekeken vorig jaar al van eh eh wat wat behelst dat nou eigenlijk? En in de basis is het eigenlijk allemaal ongeveer hetzelfde. Je hebt overal te maken met eh eh zaken als autorisatie, als lokalisatie, als eh eventuele eh omzettingen van gegevens. Het verschil zit wel in de invulling van de functies en de standaarden die worden voorgeschreven hè. Vanuit Europa wordt een hoop voorgeschreven waar je aan moet voldoen. Nou, we hebben dat geanalyseerd. Nou, er worden daar allerlei afkortingen genoemd waar we naar gekeken hebben vorig jaar. En zijn gekomen tot ja, iets wat wij dan de gemeenschappelijke bronontsluiting noemen. Een een een mogelijke oplossing om eh op op een gemeenschappelijke manier alle bronnen op op eenzelfde manier te ontsluiten eh waarmee die verschillende gegevens eh stromen gevoed kunnen worden. Nou is dit plaatje, dit is het plaatje wat wij tot nu toe gebruiken bij eh het presenteren van GBO, maar eigenlijk klopt het niet helemaal. Ik heb er een een een kleine variant op gemaakt die het misschien iets duidelijker maakt. Het paarse blokje GBO wat je links naast de bronhouder ziet, dat is de een een een set afspraken en eh standaarden die wij eh voorschrijven zeg maar, die de bronhouder moet implementeren. En als de bronhouder dat doet, dan zorgen wij ervoor dat de verschillende gegevensstromen via die ontsluiting gevoed kunnen gaan worden. Er komt dus niet een voorziening ofzo hè, of of een applicatie of zoiets van GBO van als je daarop aansluit, dan ben je klaar. Nee, de bronhouder moet dat zelf doen. Maar wij gaan wel eh ze daarbij helpen, onder andere met een referentie implementatie en gewoon met een eh een eh eh specificaties van hoe dat eruit moet gaan zien. En aan de andere kant, bij de gegevensstromen, eh gaan we daar waar nodig ook voorzieningen inrichten om die eh eh stromen te kunnen voeden. Dus voor de EDI-wallet hebben we een aantal voorzieningen eh in de planning om ervoor te zorgen dat vanuit die gemeenschappelijke bronontsluiting eh die gegevensstroom gevoed kan gaan worden. En dat geldt ook voor SDG OOTS. Nou, de OOTS, er is al een basisinrichting OOTS in Nederland. Daar gaan we op aansluiten. Die doet eigenlijk bijna alles al. Misschien dat er nog een semantische vertaling nodig is. En dat zouden wij dan kunnen gaan eh regelen. Voor DvTP is er wel het een en ander nodig om ervoor te zorgen dat die private dienstverleners de gegevens op de juiste manier kunnen verwerken volgens eh alle eisen en eh wetten die ervoor gelden. En we houden al een klein beetje rekening met eventuele nieuwe toepassingen. Eh de de EBW, die de eh business wallet, zit eraan te komen vanuit Europa. Daar kijken we al met een schuin oog naar om te zien of we dat ook kunnen bedienen. En zo zullen er meer toepassingen zijn die we ook graag voeden.</v>
+
+00:18:56.163 --> 00:19:31.323
+<v Govert Claus>Nou, in tekst, oh dit bouwt op. Dat had ik niet verwacht. Ik zal ze meteen eventjes allemaal eh zo. In tekst komt het erop neer dat we dus één gestandaardiseerde ontsluiting eh gaan beschrijven. En dat is een samenhangende set van generieke afspraken, standaarden en ook misschien wel wat voorzieningen. Het is dus niet één voorziening. Het is ook niet de bedoeling dat GBO een nieuw stelsel wordt of iets dergelijks. Het is gewoon een een verzameling van eh afspraken, standaarden en voorzieningen. En als je die gebruikt, dan garanderen wij dat je die verschillende gegevensstromen kan voeden.</v>
+
+00:19:33.743 --> 00:19:52.403
+<v Govert Claus>Nou, we eh voorzien ook een aantal centrale voorzieningen om die verschillende kanalen te kunnen bedienen. Eh ook daar geldt overigens voor, er is geen enkele verplichting om die te gebruiken. Het maakt het alleen maar makkelijker. En wat heel belangrijk is in onze concept is dat de bronhouder wel gewoon de regie houdt. Kiest zelf ervoor wat hij wel en niet gebruikt. Ehm en hoe dat gebruikt wordt.</v>
+
+00:19:54.803 --> 00:19:56.003
+<v Govert Claus>De voordelen die we daarin zien.</v>
+
+00:19:58.223 --> 00:20:23.903
+<v Govert Claus>Nou, minder maatwerk, geen ad-hoc implementaties. Eh je sluit aan op Europese standaarden. We halen de complexiteit van die Europese standaarden ook weg bij de bronhouders. Eh meer uniformiteit, interoperabiliteit. De implementatielast verwachten we dat die lager is. En we verwachten ook, hè, dat er, kijken we dus met een schuin oog ook al naar, dat we</v>
+
+00:20:27.953 --> 00:21:03.493
+<v Govert Claus>ontwikkeld hebben. Eh in het paars daar is de link naar dat globale ontwerp. Eh ik neem aan dat deze presentatie ook gewoon gedeeld kan gaan worden na afloop eh met met jullie allemaal, dan kan je er ook gewoon heen klikken. Nou, het plaatje wat je hier ziet, ik weet niet of het helemaal leesbaar is, maar je ziet hier links eh eh de bron. Hè, we richten ons op overheidsbronnen in het eh blauw. Eh wij schrijven een aantal eh standaarden en en eh afspraken voor en dat is dat GBO basis waar de bronhouder zich aan moet voldoen, die die moet implementeren.</v>
+
+00:21:06.663 --> 00:23:35.263
+<v Govert Claus>Wij willen eigenlijk ook, het onderste van die blokjes in de GBO basis, dat is eh de GBO tools hebben we het even genoemd. Wat ondersteuning. Eh één van de dingen die wij eh willen eh toepassen is GraphQL en we weten dat nog lang niet alle overheidsbronnen dat ondersteunen. We overwegen om daar eh ook gewoon bij te helpen om een tool eh beschikbaar te stellen om eventuele bestaande API's om te zetten naar GraphQL. Als je al een REST API hebt bijvoorbeeld om dat om daar een GraphQL eh interface voor eh te maken. En dan rechts zie je de drie gegevensstromen die we nu in beeld hebben. Het EDI Wallet kanaal, het Ouds kanaal en het DVTP kanaal. De groene blokjes in die kanalen, dat zijn die centrale voorzieningen die we willen gaan aanbieden om ervoor te zorgen dat die kanalen ook eh goed bediend kunnen worden. En misschien is het handig als ik naar het volgende plaatje ga, want dan wordt het iets concreter hoe dat dan ingevuld kan gaan worden. Nou, rechts weer die eh verschillende kanalen en nu in het, nou wat is het voor een kleur, een soort oranje, de voorzieningen die wij voor ogen hebben en eh voor het EDI Wallet kanaal eh overwegen we om een eh authentic source interface provider in te richten om eh QTSPs eh eh toegang te geven tot de gegevens die zij nodig hebben om attestaties uit te geven. We overwegen ook om een PubEAA provider in te richten, zodat overheidsbronnen zelf attestaties kunnen uitgeven. Voor het Ouds kanaal sluiten we aan op de basisinrichting Ouds. Die doet eigenlijk het meeste werk al. Eh we hebben nog wel eh voorzien in een eventuele Ouds adapter hebben we het even genoemd daarvoor. En dat is eigenlijk alleen voor een eventuele semantische mapping van de gegevens naar het eh gewenste formaat wat eh wat Ouds graag wil. En onderin eh voor het DVTP kanaal ehm het het beschikbaar stellen van overheidsgegevens aan private dienstverleners voorzien we een eh toestemmingsvoorziening. Want eh die gegevens moeten met toestemming gedeeld worden. En eh daaraan gekoppeld ook een pseudonimiseringsvoorziening. Eh eh private dienstverleners mogen eigenlijk geen BSN gebruiken, terwijl eh alle administraties van overheidsbronnen gebaseerd zijn op BSN. Dus dat BSN heb je wel nodig om gegevens op te kunnen vragen. Nou, eh als de private dienstverlener dat gegeven niet mag hebben, dan heb je iets nodig om om toch eh daarmee te kunnen werken. Nou, wij voorzien daarin met de pseudonimiseringsvoorziening en we willen daar gewoon BSNK voor hergebruiken, een bestaande pseudonimiseringsvoorziening van eh van Logius.</v>
+
+00:23:39.533 --> 00:23:48.293
+<v Govert Claus>Dit is wat eh wat we aan het inrichten zijn. Eh als het goed is kan ik hier op klikken, maar ik weet niet of jullie nu dit zien. Nee, dat zien jullie niet. Wacht, ik ga dat eventjes</v>
+
+00:23:50.353 --> 00:24:03.013
+<v Govert Claus>op een ander, ik ga even dit delen stoppen, want ik wil even naar een ander scherm, namelijk naar presentatie stoppen. het globale ontwerp, omdat ik even één dingetje nog wil laten zien voordat ik het woord aan Peter Jan ga geven.</v>
+
+00:24:08.243 --> 00:24:12.663
+<v Govert Claus>Wat ik nog even wil laten zien is eh ehm</v>
+
+00:24:14.703 --> 00:24:38.863
+<v Govert Claus>ja, hoe hoe die verschillende componenten die we nu voorzien hebben ingericht gaan worden. En sowieso hè, het het gros van wat wij eh willen gaan gebruiken, dat zijn bestaande eh afspraken, standaarden en voorzieningen. Het lijstje in in het globaal in het globaal ontwerp is een lijstje opgenomen, bouwstenen die hergebruikt worden. Ik zal ze niet allemaal noemen, maar je ziet er heel veel. Nou, AuthZEN staat er ook bij. En ook die authorization decision log.</v>
+
+00:24:41.123 --> 00:24:47.963
+<v Govert Claus>Nou, waar we nog aan werken en aan het uitwerken zijn, dat is eh GraphQL. Dat willen we graag gebruiken als bevragingsmechanisme.</v>
+
+00:24:50.293 --> 00:25:04.603
+<v Govert Claus>een P-bak oplossing voor eh het eh afdwingen van toestemming en grondslag. Nou, die Ouds aansluiting waar ik het net over had, dat is een heel kort hoofdstukje, zoals je ziet, omdat het eigenlijk het gros daar al eh gebeurt. Iets rondom het uitgeven van</v>
+
+00:25:06.653 --> 00:25:48.413
+<v Govert Claus>beheer. Ik heb het nu nog over iets over. Eh dit is het globaal ontwerp. Hier wordt alleen beschreven wat we gaan uitwerken. Er is al een een start van een project start architectuur waar het al iets verder uitgewerkt wordt. En ook een technisch ontwerp eh zijn we nu mee bezig om dit ook daadwerkelijk uit te werken. Het is ook de bedoeling om ook daadwerkelijk dit te gaan bouwen en uit te gaan testen in een aantal pilots. Eh om het daarna eind volgend jaar echt ja, pre-productioneel noemen we het, eh beschikbaar te gaan stellen om het ook daadwerkelijk te gaan gebruiken. Dus het gaat verder dan alleen papier. We willen het ook echt gaan bouwen en gaan gaan uitproberen en eh toepassen.</v>
+
+00:25:51.783 --> 00:25:54.063
+<v Govert Claus>Zijn hier vragen over?</v>
+
+00:25:57.573 --> 00:25:59.373
+<v Govert Claus>Oh, toch wel. Nil.</v>
+
+00:26:02.623 --> 00:26:05.625
+<v Nil Barua>maar ik heb wel een aanvulling.</v>
+
+00:26:04.503 --> 00:26:04.863
+<v Govert Claus>Ja.</v>
+
+00:26:05.625 --> 00:26:40.893
+<v Nil Barua>Die hadden vanuit GBO ons natuurlijk eh benaderd eh bij die koppeling om GraphQL te standaardiseren. Dus hier is ook eh gelijk een oproep naar eh alle mensen hier om eh als je wil nadenken over hoe GraphQL eh gestandaardiseerd kan worden binnen API's, vooral binnen machine to machine eh API's. Eh kom dan alsjeblieft deelnemen bij de kennisplatform API's op eh ik dacht 5 november. En dat wordt dan door Geonovum wordt dat eh georganiseerd. En het is de bedoeling dan dat we vanuit daar een eh mooie opzet kunnen kunnen opzetten om GraphQL eh binnen die koppeling hopelijk eh te standaardiseren.</v>
+
+00:26:42.593 --> 00:26:48.018
+<v Karl de Boer>in de chat. Waarom GraphQL en niet gewoon rest met eh bijvoorbeeld eh fields als eh</v>
+
+00:26:42.643 --> 00:26:45.123
+<v Govert Claus>Ja, ik had een vraag gesteld</v>
+
+00:26:48.018 --> 00:26:51.273
+<v Karl de Boer>selectiemechanisme.</v>
+
+00:26:51.763 --> 00:27:24.813
+<v Govert Claus>Ja, ehm wij wij wij kiezen nu of stellen nu eigenlijk GraphQL voor eh omdat ja, een aantal aantal vraagstukken met GraphQL eenvoudiger te beantwoorden zijn dan met met met eh een rest oplossing. En dat heeft er vooral mee te maken dat dat je met één ontsluiting eigenlijk verschillende bron of verschillende gegevensstromen wil bedienen. En eh GraphQL daar eigenlijk de de de ja, het meest flexibel in is. Eh ook op het gebied van dataminimalisatie biedt GraphQL gewoon eigenlijk de de ja, de wat ons betreft de de beste oplossing. Vandaar dat we daar nu naar aan het kijken zijn.</v>
+
+00:27:25.683 --> 00:27:30.483
+<v Karl de Boer>Ja, maar ik voorzie dat we dan weer GraphQL naar rest adapters gaan krijgen, aangezien iedereen op rest zit. Ehm</v>
+
+00:27:31.143 --> 00:27:31.383
+<v Govert Claus>En</v>
+
+00:27:32.303 --> 00:27:40.023
+<v Karl de Boer>Digikoppeling zelf is al behoorlijk zwaar in eh die heeft al ondersteunt al heel veel standaarden, dus ik denk van bedenk je wel goed eh voor je er weer eentje bij zet.</v>
+
+00:27:41.433 --> 00:28:00.783
+<v Govert Claus>Ja, we gaan het proberen. Eh wij zijn tot nu toe nog ervan overtuigd dat GraphQL echt meerwaarde biedt, maar het zou zomaar kunnen zijn en vandaar dat we ook die pilots gaan uitvoeren dat we toch terugvallen op een op een op een eh op een rest oplossing. Eh vooralsnog willen we toch echt proberen om het eh met GraphQL eh in te gaan richten.</v>
+
+00:28:02.103 --> 00:28:08.175
+<v Peter-Jan Karens>Ja, ik denk ook belangrijke nuance is natuurlijk dat GraphQL niet rest gaat vervangen zoals rest in de geschiedenis eh hè de de oudere die koppeling soap eh eh koppelvlakken zou vervangen.</v>
+
+00:28:05.833 --> 00:28:06.273
+<v Govert Claus>Ja.</v>
+
+00:28:08.175 --> 00:28:47.373
+<v Peter-Jan Karens>Wat ons betreft eh heb je allemaal verschillende soorten API standaarden die vaak voor 80 of 90% zelfs eh identiek zijn en zeg maar wat je ermee kan of wat je ermee kan toepassen. En wij zouden eigenlijk graag willen zien dat er een verbreding komt eh van van verschillende API standaarden die je kan gebruiken, mits ze daar de juiste toepassingen voor hebben. Dus het is ook zeker niet de bedoeling dat GraphQL weer rest gaat vervangen ofzo. Het zijn gewoon dingen die naast elkaar kunnen bestaan. En specifiek de toepassingen die wij hebben waarin filtering en dataminimalisatie en heel veel verschillende afnemers zeg maar eh belangrijk zijn, hebben we daarvoor nu gekozen inderdaad.</v>
+
+00:28:51.553 --> 00:28:55.493
+<v Govert Claus>Mark, ik zie jouw handje. Of hij is van Daniel, dat weet ik niet. Ah, ja.</v>
+
+00:28:54.263 --> 00:28:54.343
+<v Michiel Trimpe></v>
+
+00:28:58.963 --> 00:28:59.763
+<v Govert Claus>hier hè?</v>
+
+00:28:59.263 --> 00:29:12.983
+<v Michiel Trimpe>Eh ja, super interessant. Ehm een hele algemene vraag. Is hier überhaupt gekeken naar gezondheidsgegevens die dan via door de burger worden opgevraagd? Eh of is het echt in een heel ander domein?</v>
+
+00:29:14.293 --> 00:29:36.333
+<v Govert Claus>Het is voorlopig eh niet specifiek voor een bepaald domein hè. We we bekijken naar overheidsbronnen in het algemeen. Ik moet zeggen, we hebben nog niet specifiek gekeken naar eh gezondheids- of zorggegevens. Ehm we hebben denk ik in onze pilots daar ook geen eh voorbeelden van. Nee hè? Nee, ik zie Peter Jan ook schudden. Dus nee.</v>
+
+00:29:36.063 --> 00:29:45.316
+<v Michiel Trimpe>Ik kan me voorstellen dat ziekenhuizen die die vallen echt strikt onder andere, maar bijvoorbeeld sociaal domein, typisch wat dus inderdaad de uitvoering van de WMO ligt bij de gemeentes en dat is een beetje de twilight zone waar ik continu in zit.</v>
+
+00:29:44.963 --> 00:29:45.243
+<v Govert Claus>Ja.</v>
+
+00:29:45.316 --> 00:29:53.463
+<v Michiel Trimpe>Dat dat zou dan theoretisch wel over deze infrastructuur, want dat de de gemeentes</v>
+
+00:29:52.383 --> 00:29:58.763
+<v Govert Claus></v>
+
+00:29:55.273 --> 00:29:56.353
+<v Peter-Jan Karens>Ja, dat zou kunnen.</v>
+
+00:29:59.273 --> 00:30:22.013
+<v Peter-Jan Karens>Maar dat zijn geluiden voor mij. Ik ik ik ga daar niet over, maar dat in ieder geval dat bijvoorbeeld in de WLZ wordt gedaan, hè. Dus daar wordt ook gebruik gemaakt van eh API-gebaseerd uitwisselen op basis van GraphQL. Dat er ook wel gekeken wordt of dat verbreed kan worden richting andere stelsels zoals de WMO. Maar eh ja, daar daar ik ik weet niet of iemand anders daar meer informatie over heeft, Igor bijvoorbeeld, maar dat eh</v>
+
+00:30:21.943 --> 00:30:24.848
+<v Igor van Haren>Dat loopt eh, dat loopt op dit moment ook eh.</v>
+
+00:30:24.513 --> 00:30:24.673
+<v Peter-Jan Karens>Ja.</v>
+
+00:30:24.848 --> 00:30:35.343
+<v Igor van Haren>Hè, dus ze zijn aan het kijken of het datamodel van de WLZ ook toepasbaar gaat zijn binnen de WMO en de jeugdzorg.</v>
+
+00:30:37.463 --> 00:30:41.943
+<v Igor van Haren>eh en het netwerkmodel wat daar binnen de WLZ eh ehm actief is, dat dat ook bij de WMO en jeugdzorg eh dan wordt toegepast.</v>
+
+00:30:42.943 --> 00:30:55.413
+<v Michiel Trimpe>Daniel, sowieso aan jullie, jou, jullie gaan koppelen. Graag, want ik wil graag meer weten over dat WLZ datamodel. Dat dat ken ik niet. Dan gaan we jullie koppelen. Volgens mij hebben jullie veel om eh te bespreken samen.</v>
+
+00:30:55.283 --> 00:31:00.283
+<v Karl de Boer>Ik begrijp dat dat wel een kwestie van een hele lange adem wordt eh, de WMO en jeugd in het netwerkmodel, maar</v>
+
+00:31:00.723 --> 00:31:01.323
+<v Michiel Trimpe>Nou eh</v>
+
+00:31:01.013 --> 00:31:15.413
+<v Igor van Haren>dat dat loopt nu wel al hè, dus eh het datamodel wordt nu al eh bekeken en ehm ik ik ik denk dat dat nog dat dat heel lang, ja, wat is heel lang? Dat gaat wel een paar jaar duren in ieder geval. Eh</v>
+
+00:31:17.823 --> 00:31:19.223
+<v Igor van Haren>Ehm dat dat is niet dit jaar.</v>
+
+00:31:20.823 --> 00:31:24.863
+<v Michiel Trimpe>Ja, maar elke olifant wordt per hapje gegeten. Ik zal heel even</v>
+
+00:31:23.093 --> 00:31:26.653
+<v Karl de Boer>zijn leveranciers die moeten mij meewerken in dit geval.</v>
+
+00:31:27.133 --> 00:31:29.006
+<v Michiel Trimpe>Nou, ik wil eh</v>
+
+00:31:27.513 --> 00:31:28.033
+<v Igor van Haren>Ja.</v>
+
+00:31:29.006 --> 00:31:32.661
+<v Michiel Trimpe>ik weet ongeveer waar de presentatie over gaat en ik denk dat als we er niet de ruimte qua tijd voor nemen dat hij niet tot zijn recht gaat komen.</v>
+
+00:31:32.133 --> 00:31:32.453
+<v Govert Claus>Hm.</v>
+
+00:31:32.661 --> 00:31:38.813
+<v Michiel Trimpe>Dus ik wil Wessel nog even een laatste antwoord vraag laten stellen en dan naar de inhoudelijke</v>
+
+00:31:38.823 --> 00:31:57.143
+<v Wessel Schollmeijer>Ja, eh hoe heet het nou, misschien niet helemaal van toepassing, maar ehm eh hoe hoe zit het met met eh met de de de betekenis? Eh het het samenbrengen van meerdere GraphQL endpoints en API eh hoe heet het nou eh ehm en een schema heeft geen betekenis. Dus dus dus is dat een factor waar jullie waar jullie eh rekening mee houden?</v>
+
+00:31:58.233 --> 00:32:20.623
+<v Govert Claus>Ja, we we hebben een speciaal of speciaal, een specifiek stuk semantiek. Als je naar de, ik heb een link gedeeld in de chat naar het globaal ontwerp. Bovenin in het menu staan de andere onderwerpen waar we naar kijken en één daarvan is semantiek. Eh juist om om dit soort vraagstukken inderdaad aan te pakken. Dus daar daar daar wordt specifiek naar gekeken. Ik heb er nog geen oplossing voor of zoiets, maar we zijn er wel eh het heeft aandacht. Ja.</v>
+
+00:32:21.353 --> 00:32:25.689
+<v Wessel Schollmeijer>Ja, nou ja, JSON-LD wellicht hè, hoe heet het nou, uit je GraphQL endpoint</v>
+
+00:32:21.753 --> 00:32:22.513
+<v Peter-Jan Karens>Ja.</v>
+
+00:32:24.363 --> 00:32:24.723
+<v Govert Claus>Ja.</v>
+
+00:32:25.689 --> 00:32:31.753
+<v Wessel Schollmeijer>en dan heb je in ieder geval iets van betekenis. Hm hm. Ja, oké. Nou ja, dat dat kan in ieder geval eh</v>
+
+00:32:30.413 --> 00:32:37.012
+<v Govert Claus>Ja, daar wordt aan gewerkt. Ja, misschien is het goed om inderdaad nu een stapje naar naar Peter-Jan te zetten, anders dan zijn we hier te veel tijd mee kwijt.</v>
+
+00:32:34.603 --> 00:32:37.133
+<v Peter-Jan Karens>Ja.</v>
+
+00:32:37.012 --> 00:32:39.263
+<v Govert Claus>Ja.</v>
+
+00:32:41.663 --> 00:32:46.343
+<v Peter-Jan Karens>Even kijken. Zien jullie dit? Denk het wel. Anders werkt Teams niet.</v>
+
+00:32:49.053 --> 00:34:55.733
+<v Peter-Jan Karens>Ehm ja, wat heb ik gedaan? Wat ga ik vandaag laten zien? Eh op basis van hetgeen wat wij dus op dit moment aan het ontwerpen zijn, zijn wij ook eh ja, hebben we een soort simulatieomgeving. Die trouwens ook op het eh de simulatieomgeving van eh van FDS draait. En daar zijn wij verschillende uitwisselingsstromen aan het simuleren, zo goed mogelijk volgens de architectuur die wij hebben. En eh ja, wij kregen op een gegeven moment hadden we de vraag intern van oké, als we hè, conform FTV eh FTV EAM willen toepassen in combinatie met GraphQL, hoe zou dat er dan uitzien? Want dat is niet per se eh zo rechttoe rechtaan als je dat met REST zou doen. Dus dit is voornamelijk een eerste voorstel. Dit is nou nogmaals, zie dit niet als een mij die zegt dat alles zo moet werken, maar dit is een eerste voorstel van in hoe zoiets zou kunnen werken. En ik zou het heel erg interessant vinden om met andere partijen hier in de werkgroep eh verder aan te werken. Ehm, denk ik belangrijk om te weten, nou ja, zoals ik net ook al gezegd, binnen de WLZ zijn ze hier zelfs al wat langer mee bezig. Dus ik hoop dat zij hier ook wat van terugzien van hun eigen gedachtegoed. Ehm, nou ja, dat dus. Ehm ja, even kort voorgesteld. Ik ben de lead architect van programma GBO. Hè, wij werken dus vanuit eh origineel vanuit WZK, eh denk ik vanuit WZK straks aan aan eh GBO bij ICTU. Nou, ik heb het even met een beetje de doelen van ons eh van ons programma uitgelegd. Ehm, waarom GraphQL? Waarom GraphQL combineren met FTV? Nou ja, wat heel fijn is aan aan GraphQL is dat eigenlijk de manier waarop je de API specificeert, zich heel erg leent voor hergebruik. Dus als je kijkt in het wild, dus dan heb ik het even over commerciële partijen, zeg maar, de niet-overheden, eh die wat iets meer cutting edge eh bezig zijn met eh techniek. Dan zie je dat GraphQL voornamelijk wordt ingezet, zeg maar, voor API-koppelvlakken waarvan men eigenlijk niet precies weet wie de afnemer is. Hè, dat zouden zomaar 50 verschillende soorten afnemers kunnen zijn. En die willen allemaal een ander stukje van die API consumeren. Die willen bepaalde velden wel of niet hebben. En nou ja, GraphQL leent zich daar heel erg voor.</v>
+
+00:34:58.293 --> 00:39:15.193
+<v Peter-Jan Karens>uitleggen hoe het werkt, maar daarna ga ik er wel snel weer eh verder. Is dat je dus kan kiezen wat je queryt. Dus het is feitelijk is GraphQL een soort querytaal eh die uiteindelijk JSON teruggeeft. Hè, dus de output is heel vergelijkbaar met een eh REST eh JSON API, maar de input, de query, die ziet er anders uit. En eh dat zorgt er dus voor dat je kan filteren, parameters kan doorgeven, kan pagineren, dat soort dingen. Maar we hadden net natuurlijk de vraag van hé, dit zou je natuurlijk ook met REST kunnen doen. Dat klopt. Het fijne is alleen, dit is echt een gestandaardiseerde protocol zeg maar. En in REST heb je heel veel verschillende, je kan dat op 20 verschillende manieren oplossen. Je hebt allemaal initiatieven. En eigenlijk als je zo'n initiatief adopteert, dan voldoe je ook eigenlijk meteen al niet meer aan de, tenminste niet meteen, maar vaak niet meer echt aan de REST design eh guidelines. Eh en moet je dat eigenlijk weer als een nieuwe soort ehm ja, standaard zou je dat eigenlijk moeten gaan beschrijven. En als je dan filtert en dit en dat met REST. GraphQL doet dat dus al en wordt dus al ruim 10 jaar door echt hele grote bedrijven gebruikt, succesvol in productie. Dus dat is waarom wij daar toch naartoe leunen. Ehm nou ja, omdat we dus hè, in principe een API eenmalig kunnen ontsluiten, daaraan kunnen werken, is het natuurlijk wel heel interessant als je dan zeg maar gaandeweg kan beslissen van oh, ik heb hier een nieuwe partij, een nieuwe koppeling, een nieuwe use case, dat je dan kan verzinnen van oké, wie mag dan waarbij? En dan EAM eh EAM leent zich daar natuurlijk heel erg goed voor, omdat je eigenlijk feitelijk de autorisatie flexibel inricht naast de API in plaats van dat het hard in de API geprogrammeerd wordt. Ehm dus daarom vinden wij die die combinatie heel erg interessant. Hè, dus je zou de API kunnen blootstellen, een paar velden en een paar objecten aan de eerste partij eh kunnen kunnen autoriseren. En dan komt er een tweede use case bij en een derde use case bij en zo kan je langzaamaan beslissen wie wat mag afnemen van jou. Dat betekent dus als je eh een nieuwe use case hebt, dat je in principe gewoon kan kiezen om bijvoorbeeld maar twee velden van een paar bepaald bestaand object door te geven. En dan hoef je alleen maar wat policies voor te schrijven. Je kan meteen weer door. Dus het maakt het gewoon een stuk flexibeler, doorlooptijd is hoger. En je zou dus ook de mensen die over autorisatie en het gebruik van de API gaan, dat zou ook een andere mensen kunnen zijn dan de mensen die de API eh schrijven. Nou, hoe hoe werkt GraphQL? Eh het begint altijd met een schema. En een schema heeft een aantal root objecten. Dat zijn queries, mutaties, maar we gaan het vandaag even alleen over query hebben. Dus mutaties kan je eh dingen mee veranderen. Query kan je dingen mee ophalen. Eh voor het gemak heb ik me even tot queries hier eh gehouden. Ik denk dat we echt ook wel met mutaties en andere dingen kunnen doen. Maar eh ja, dit is al best wel een een redelijk voorstel denk ik. Dus ehm ja, je publiceert dus een eh een een je hebt een schema. En hoe dat in GraphQL werkt is, als je dat echt helemaal op de juiste native manier zou doen, je kan inderdaad ook API's vertalen naar GraphQL, dan gaat dat weer net anders qua werkwijze, dat je eigenlijk altijd eerst een schema definieert. Dus je definieert eigenlijk de data die je wil eh delen. Ehm nou ja, met met types erbij. Eh objecten of types kunnen weer eh velden hebben met daarin andere types. Dus bijvoorbeeld hè, dit persoon, er zit een adres in en een adres heeft weer zijn eigen velden. Maar wat interessant is is dat velden ehm ook, en dat is eigenlijk zie je dat onder die hoofdquery hier van persoon, kunnen ook argumenten hebben. Die kan je parameters meegeven. Dus je kan de output van een eh bepaald eh object die je wil ophalen, kan je parametriseren. Dus je kan bijvoorbeeld eh inkomens ophalen uit een bepaald jaar. Eh je kan filteren, als een soort van where. Nou ja, dus dat is allemaal heel erg handig. En je kan je voorstellen dat je hier ook paginering en andere soort eh filter dingen mee kan toevoegen. Nou, hoe werkt dat dan? Ik eh doe, ik geef dit als query mee. Dit is hoe een GraphQL query eruit ziet. En hier wil ik een persoon ophalen met dit BSN. En ik wil daarvan het naam eh en uit het object inkomens die daar dan in zit, wil ik het jaar en bedrag hebben. Nou, dan krijg ik precies van de API in JSON krijg ik dat terug. Hè, dus je krijgt in JSON volgens een bekend formaat krijg je dan een eh response. Ik heb hier dus niet adres opgevraagd hè, want dat had ook gekund. Dus die krijg ik dan ook niet.</v>
+
+00:39:17.513 --> 00:42:48.243
+<v Peter-Jan Karens>als je zo'n request daadwerkelijk doet. En hier gaan we beginnen we al een beetje te zien eh wat eventueel de uitdagingen zijn als je dit wilt parsen, zeg maar, en een policies op wilt toepassen. Nou, het is in dit geval een een POST. Er zijn ook andere manieren om dit te doen, maar dit is de meest gangbare eh manier. Eh nou, je zegt ik wil graag JSON terug hebben. En de query wordt eigenlijk platgemaakt en eh nou ja, als een string meegegeven. En je ziet dat dat dus eh niet direct één op één makkelijk te parsen is, zeg maar, als een JSON ofzo, want dat is het dus niet, hè. Het is een de GraphQL Query Language string. De variabeles worden netjes meegegeven als een los eh JSON object. En ehm nou ja, wat wat dus één van de uitdagingen is, is dat alle verzoeken allemaal naar hetzelfde endpoint gaan. In dit geval /graphql. Dus je kan al aan de URL kan je niet zien, zeg maar, wat voor verzoek dit is. Dat moet je echt op basis van de query eh moet je dat dus doen. Dus dat betekent als je bijvoorbeeld hè, zoals nu in FSC, in de Open FSC componenten een AuthZEN-hook is eh gemaakt op HTTP-verkeer richting bijvoorbeeld OpenFTV te sturen of een andere eh AuthZEN-compatible PDP, dat je dat in principe dus gewoon letterlijk dit meekrijgt. Nou ja, wat betekent dus dat je eigenlijk die hele eh logica van GraphQL daarmee afwentelt richting eh nou ja, die PDP. En dat is eh niet per se heel eh handig. Ehm, nou, GraphQL, we hadden net, er werden er al een aantal dingen genoemd, zoals schema stitching en federeren en dat soort dingen. Ik zal er heel even kort op ingaan. Er zijn eigenlijk drie verschillende manieren, wat mij betreft, en misschien zijn er wel heel veel meer, maar uit van de basaal, hoe je überhaupt autorisatie kan verwerken of of kan toepassen op je GraphQL API. Nou, je kan voor het endpoint, in dit geval, een een PEP plaatsen, een gateway, die autorisatieverzoeken uitvoert. Hè, dus die die ziet wat we wij net zagen, die krijgt die POST binnen met die query erin en die gaat dat daarna dan beslissen of dat dan wel of niet mag en die laat daarna de query door. Je zou natuurlijk ook kunnen zeggen van hé, hè, hoe GraphQL eigenlijk werkt, je hebt dat dat schema. En je moet eigenlijk per object of soms per veld kan je daarna resolvers implementeren. Dus dat zijn eigenlijk, dat is de code, die implementatie van hoe je die objecten ophalen. Het is ook heel erg logisch om bijvoorbeeld daar eh autorisaties toe te passen. En ook daar zou je bijvoorbeeld een combinatie kunnen maken met FTV. En je hebt ook iets waar we net al heel kort eventjes het over hadden, schema stitching of schema federatie, of GraphQL federatie. En dat betekent eigenlijk dat verschillende teams over een organisatie hun eigen GraphQL endpoints en hun eigen stukken schema eigenlijk bijhouden, daar verantwoordelijk voor zijn, en dat die dan eigenlijk gecombineerd worden in één grotere GraphQL eh eh endpoint. En wat het leuke daarvan is, dat je dus ook vanuit verschillende objecten dan eigenlijk tussen de verschillende schema data in één keer kan ophalen. Nou, je kan je ook voorstellen dat daar wel allemaal patronen mogelijk zijn om autorisatie toe te passen. Vandaag ga ik het wel echt alleen hebben over GraphQL autorisatie die we voor het endpoint plaatsen. Dus we hebben een arbitraire GraphQL API waar we het schema van weten. Die wordt wellicht door mijn team, niet door mijn team of door een hele andere organisatie beheerd. En ik wil de autorisaties op toepassen. Daar komen een aantal uitgangspunten of design constraints uit. Weet dus dat het echt alleen hierover gaat en dat je dit ook op andere manieren zou kunnen oplossen. Je kan ze ook combineren natuurlijk, hè. Dus je zou ook een gefedereerde GraphQL eh API kunnen hebben waar we dan dit zo voorzetten. Maar vandaag gaan we het gewoon hebben over: ik heb een endpoint en die wil ik beveiligen met FTV. Nou, ik heb een aantal uitgangspunten geformuleerd, want ehm ja, anders eh ga je er niet komen. Ehm</v>
+
+00:42:50.333 --> 00:44:55.363
+<v Peter-Jan Karens>Eh in principe moet die mapper elke geldige GraphQL query kunnen verwerken conform de GraphQL core standaard die op dit moment live staat. Dus dat moet gewoon allemaal werken. Als er toch op een of andere manier queries gedaan worden die niet helemaal eh oké zijn, dan moeten die gewoon een error teruggeven. Of als we daar arbitrair of eh ambigue informatie in krijgen. Nou, we hebben er hiervoor gekozen om te zeggen, volgens het model zoals we dat graag willen hanteren, dat de policies ehm die bepalen de toegang. Dus dat betekent dat in principe de API's gewoon de API, die moet gewoon vragen beantwoorden en de policy bepaalt de toegang. Hier zou je anders over kunnen denken, maar dat is even voor omwille van dit ontwerp hebben we dat eh besloten. Dat betekent dus dat de policies in de PAP aan de PDP worden geleverd. Uiteindelijk een query, die zou je in theorie deels kunnen laten doorgaan. Eh er zijn allemaal dingen voor kunnen verzinnen. Puur om het simpel te houden hebben we dat even niet gedaan voor dit ontwerp. Je hè, je zou je dingen voor kunnen verzinnen. Dus dat betekent als je één query doet, dan gaat er één authorization verzoek en die wordt uiteindelijk wel of niet goedgekeurd. Ehm nou, omdat je bij GraphQL, dat is ook een interessant eigenschap van eh GraphQL geen versies hebt. Ik bedoel, dat zijn nu kunnen doen, maar het is in principe een versieloos eh eh protocol, betekent dat je eigenlijk over de tijd heen velden kan toevoegen of kan deprecaten. Nou, heb je allemaal manieren voor om dat netjes te doen. Maar dat betekent dus feitelijk dat een object opeens meerdere velden kan hebben ten opzichte dat jij die policies schreef. Eh daarom gaan we er vanuit dat we deny by default doen. Dus we gaan echt opbouwen welke velden mag jij queryen, welke objecten mag jij zien. Dingen die niet in de policies beschreven worden, kan je gewoon simpelweg niet ophalen. Ehm nou, daarna ook om even te kijken hoe dat zou werken, zeggen we van, het zou dus kunnen zijn dat de bron, dus de GraphQL API en de policies door verschillende teams worden beheerd en ook een andere cyclus hebben. Dus dat die niet per se samen gedeployed worden. En uiteindelijk eh wordt het verzoek wat gestuurd wordt dus, hè, naar de PDP in de authorization verzoek, dat is het verzoek wat eruit eh gevoerd wordt. Dus dat zijn even de uitgangspunten.</v>
+
+00:44:53.973 --> 00:44:55.333
+<v Mark Westbroek>Sorry, ik had een vraag.</v>
+
+00:44:56.833 --> 00:44:57.153
+<v Peter-Jan Karens>Sorry?</v>
+
+00:45:00.123 --> 00:45:04.163
+<v Mark Westbroek>de combinatie tussen de autorisatie GBO</v>
+
+00:45:03.063 --> 00:45:07.263
+<v Peter-Jan Karens>En ehm Sorry Mark. Eh zo.</v>
+
+00:45:04.923 --> 00:45:06.283
+<v Michiel Trimpe>Ik kan hem niet helemaal verstaan.</v>
+
+00:45:09.963 --> 00:45:27.123
+<v Peter-Jan Karens>We hebben ook naar alle alternatieven gekeken. Nou, COAZ, dat is net eh nieuw. Daar werden we enthousiast van. Het vervelende alleen, COAZ is echt een harde één-op-één eh mapping taal. Dat is echt vrij simpel. Dus als je een soort fan-out wilt doen of iets ingewikkelder, of dingen wilt combineren, dan kan dat helaas niet.</v>
+
+00:45:26.093 --> 00:45:29.493
+<v Mark Westbroek>Is een samenvatting van de... Oké. Dat is goed.</v>
+
+00:45:31.143 --> 00:46:03.893
+<v Peter-Jan Karens>Eh Mark, zou jij je microfoon willen muten? Dankjewel. Ehm, dus dat kan helaas niet, want dat zou wel heel interessant zijn geweest, maar in ieder geval, we hebben nog niet gezien hoe je dat zou kunnen laten werken. Eh je zou natuurlijk in de PEP zou je ook iets kunnen doen, iets wat wij eh laten zien. Alleen eh wij willen eigenlijk dat de de PEP een soort, ja, standaard component blijft, als dat even zou kunnen. Bijvoorbeeld OpenFSC of een Kong of een whatever. Nou ja, COAZ was een manier dus om straks op een standaard manier daar dingen aan toe te voegen, maar</v>
+
+00:46:07.333 --> 00:50:26.693
+<v Peter-Jan Karens>schema bij de policies blijft. En aangezien traditioneel gezien de PEP geen dingen uit de PAP haalt, dus geen policies inlaat, maar de PDP die inlaat, is het logischer volgens in ieder geval het ontwerp wat wij hebben om dat meer richting de PDP te schuiven. Ook hier kan je discussie over hebben. En waar we dus achter kwamen is van oké, stel je voor je zegt van hè, ik stuur gewoon de hele GraphQL query stuur ik naar de eh eh naar de PDP toe. Kan kan kunnen we niet de policy taal dat parsen? Nou, dat hebben we al geprobeerd. Eh dat zou je namelijk alleen in OPA kunnen doen. Die heeft een native GraphQL plugin of een module. Ehm maar ook dan om dat te laten werken en bepaalde informatie toe te voegen hebben we op een gegeven moment echt letterlijk 1000 regels aan eh Rego code, een soort mega boilerplate en die zouden we dan met elkaar moeten delen. Nou ja, dat is niet niet ideaal. En je sluit daarmee ook andere engines uit hè, zoals OpenFGA of Cedar. En dit ontwerp probeert dat dus wel eh toe te staan. Zoals het voorstel eigenlijk dat een Authzen verzoek wat binnenkomt, waar dus gewoon rauw een HTTP verzoek in zit, gelezen wordt, het schema geparsed wordt, de query geparsed wordt, informatie wordt toegevoegd, een soort veldlijst aan het Authzen verzoek. Het wordt eigenlijk verrijkt. En dat gaat dan richting de PDP. En dat geeft de PDP dan de mogelijkheid om een lijst door te werken eh met met velden waarin ja, dan de verrijkte informatie staat. Dat betekent dus dat de PDP geen GraphQL meer hoeft te snappen. Dat is eigenlijk een beetje wat we hiermee doen. Eh en dat betekent ook dat je dit als een soort middleware voor je PDP zou kunnen zetten. Je zou het in je PDP als een soort tussenlaagje kunnen stoppen. Ehm de huidige versie van dit is echt volledig generiek, dus je zou dit letterlijk als HTTP middleware voor een bestaande policy engine kunnen zetten die ook Authzen eh begrijpt. Grappig zelfs dat dat voor Authzen eh vaak nodig is. Dat betekent dat de mapper wel het schema kent, ehm maar we proberen nog weg te blijven van de policies zelf. Nou ja, ook dat eh is een eh een beslissing. Hoe werkt dat dan? Als je dan deze query aan de linkerkant doet, dan maakt hij daar eigenlijk van dus een eh ja, een soort fields object in JSON en daarin laat hij dat zien. Eh wat voor eh type veld er wordt opgevraagd, eh of er argumenten worden meegegeven. Ehm en of je aan het einde bent zeg maar van de graaf, want dit is natuurlijk een soort graaf, dus dat is dat leaf true false. En wat voor type het is. En met deze informatie kan je best wel veel dingen doen en veilig afhandelen. En dit wordt eigenlijk verrijkt hè, dus dat wordt dan toegevoegd aan een bestaand Authzen request. Ehm nou, hoe zou dat dan werken? Je kan die mapper definiëren. Dat heb ik ook gedaan. Ik heb een spec daarvoor geschreven, een hele eh grove eerste versie. Die kan ik later delen, maar daar ga ik nu niet doorheen lopen, want het is heel veel tekst. Maar die mapper die doet dus eigenlijk wel wat we net hebben gezien. En ehm daarna krijg je ook opties om policies te schrijven. En we daar even over nagedacht van goh, hoe zou je dan veilig policies kunnen beschrijven? Nou, waarschijnlijk is het goed om eh te kijken naar wat voor types eh je wil blootgeven en velden. En eh je zou dus bijvoorbeeld kunnen zeggen als je dit object aan de linkerkant hebt, dus een persoon, hè, met een adres en een inkomen erin, zou je bijvoorbeeld kunnen zeggen: oké, je mag query.persoon, daar mag je hè, die mag je queryen, mits je aan een bepaalde conditie voldoet. Als je dit niet zou hebben, zou je die query al niet kunnen doen. Nou, daarnaast zitten de velden in. En daar hebben we toevallig een andere regel voor. Dit zou net zo goed één hele grote regel kunnen zijn, maar even voor het idee. En dan zeggen we in de velden persoon.naam en persoon.adres. Daar mag je bij. En ehm het hele blok adres, het hele type adres, als je daar eenmaal in kan, dan mag je die gewoon helemaal zien. Dat eh gaan we niet los beschrijven. Dus je zou zowel op type niveau een soort van hè, eh grove regel kunnen zetten of je kan die echt op veldniveau doen. Belangrijkste hierin is dat eh bijvoorbeeld hè, je hebt een persoon, stel je voor we hadden gezegd type persoon mag je queryen, dan mag je nooit zomaar adres in, want GraphQL is dus recursief, dus je kunt heel makkelijk in theorie zou je van objecten weer terug in parents kunnen gaan, et cetera. Ehm dat moet je dus altijd echt expliciet zeg maar definiëren. Nou, dat betekent dus dat je elke policy engine in principe kan gebruiken. Ik heb er algemeen mee geëxperimenteerd, maar niet elke policy engine werkt hetzelfde, dus dat betekent niet dat het allemaal net zo makkelijk is. Ehm nou, om deze want dit dit hoe dat werkt en je ziet dus dat voor inkomen bijvoorbeeld geen regel hebben toegepast.</v>
+
+00:50:28.903 --> 00:50:53.293
+<v Peter-Jan Karens>dit hoe dat werkt en je ziet dus dat voor inkomen bijvoorbeeld geen regel hebben toegepast. Als we dan een query doen, hier links bijvoorbeeld deze query, dan zou je dus zien dat al deze velden, mits wij de juiste OIN of whatever hebben wat we in die conditie hebben gestopt, dat dit een geldige query is. Maar je gaat bijvoorbeeld inkomens ophalen. Nou, voor inkomens hebben we geen regel gespecificeerd.</v>
+
+00:50:57.503 --> 00:53:27.293
+<v Peter-Jan Karens>als er policies voor zijn en die policies die geven een allow terug, dan mag de query. Als één veld niet mag, volledig gedenaaid. Dus er zijn geen halve queries mogelijk. Het is gewoon alles of niets. Dat betekent dus dat je wel duidelijke error codes moet teruggeven. Nou, daar hebben we ook wat eh voor opgeschreven wat je richting zeg maar de gebruiker kan laten zien en wat je misschien ook in je decision log zou eh wegschrijven. En je ziet in principe de eerste weigering dan die eh voor die eh die veroorzaakt dat de query niet mag, die krijg je dan terug. Dus dit is bijvoorbeeld voor die inkomens hè, field not permitted en dan eh bij. Ehm, omdat je dus een argumenten ook kan meegeven in GraphQL, eh zou je dus condities kunnen checken. Dus hier weer pseudocode, je zegt van nou prima, je mag inkomens ophalen, maar alleen als het tot en met het jaar 2024 is. Nou, als je dan dus deze query doet, hè 24, dan mag dat. Als je 2025 doet, deny. Inkomens zou een default parameter kunnen hebben. Dus als je daar geen parameter meegeeft, zou je bijvoorbeeld kunnen zeggen per default is dat tot 2024. Ehm, daar hebben we van bedacht dat we dat niet gaan toestaan, omdat dat eh nou ja, ambigu is. In die query zelf weet je dan niet precies wat er ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge-- ge- ge- ge- ge- a- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge-- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge-- ge- ge-- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge-- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge-- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge-- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge-- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge-- ge- ge-- ge- ge- ge-- ge- ge- ge- ge- ge- ge- ge- ge- ge-- ge- ge- ge-- ge-- ge-- ge- ge- ge- ge- ge- ge-- ge-- ge- ge- ge- ge- ge- ge- ge- ge- ge-- ge- ge- ge- ge- ge- ge- ge- ge-- ge-- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge-- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge-- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge-- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge- ge--/v></v>
+
+00:53:31.553 --> 00:53:33.553
+<v Michiel Trimpe>Ja, ik ga het heel snel afronden dan. Geef me 30 seconden.</v>
+
+00:53:32.593 --> 00:53:34.673
+<v Peter-Jan Karens></v>
+
+00:53:35.613 --> 00:53:45.613
+<v Michiel Trimpe>Ja, wil wilde ook nog iets. Ik heb trouwens al een gesprek gedaan over eh de ADL ondersteuning. Is dat wat jij in de laatste 5 minuten wilde aankondigen of wil je nog wat wat die nog wat breder?</v>
+
+00:53:46.973 --> 00:53:48.293
+<v Nil Barua>Nee, het was het was iets breder.</v>
+
+00:53:49.313 --> 00:53:50.633
+<v Michiel Trimpe>Ja, precies. Dan moet je dus voor het aanmeldformulier nog</v>
+
+00:53:50.173 --> 00:53:55.270
+<v Nil Barua>wat draagvlak aanvragen.</v>
+
+00:53:52.093 --> 00:53:52.453
+<v Michiel Trimpe>En ik wou dat</v>
+
+00:53:55.270 --> 00:54:00.493
+<v Nil Barua>in deze werkgroep eh navragen als ik als eh als de tijd eh als de tijd het schikt en</v>
+
+00:53:59.733 --> 00:54:07.363
+<v Michiel Trimpe>Ik stel en ik denk Peter Jan, ik denk dat je op zich de essentie nu wel goed neer hebt gezet. Klopt dat?</v>
+
+00:54:07.333 --> 00:54:11.403
+<v Peter-Jan Karens>Ik ga het heel snel afronden dan. Geef me 30 seconden. Ehm, wat het eh de de benefit is van zo'n mapper is dat je uiteindelijk in je regocode of Cedar code of whatever, niet dus heel veel boilerplate krijgt om met GraphQL te werken. Dat betekent dat de</v>
+
+00:54:08.663 --> 00:54:09.703
+<v Michiel Trimpe>Ja.</v>
+
+00:54:13.093 --> 00:54:56.556
+<v Peter-Jan Karens>rego die je hier ziet en hier ziet, dit is het. Dit dit is de enige regocode die je hoeft te schrijven om met GraphQL om te gaan. Dus dat is een een voordeel. Ehm nou, je hebt allemaal randgevallen, fragments, alias, dingen, ondersteunt hij allemaal, omdat we die mapper gebruiken en die ondersteunt dat. Dus dat is allemaal uitgepakt en netjes gedaan. alias et cetera. staat ook in de spec. Eh er zijn allemaal dingen die niet mogen, want dat is niet handig of ambigu. Dus die worden dan ook afgekeurd door de mapper, dus die komen er ook niet doorheen. Ehm nou, dit is even voor nu niet belangrijk.</v>
+
+00:54:55.403 --> 00:54:55.563
+<v Michiel Trimpe>Ja.</v>
+
+00:54:56.556 --> 00:55:08.133
+<v Peter-Jan Karens>Dat was het. Ehm, ik heb een eh een een losse HTML, een soort spec geschreven, een RFC spec, die ga ik ook delen met jullie. Daarin wordt het helemaal uitgelegd hoe de mapper zou moeten werken, hoe je policy zou moeten schrijven. Ehm nou ja, open uitnodiging om je verder over te praten.</v>
+
+00:55:09.713 --> 00:55:34.733
+<v Michiel Trimpe>Ja, en ik zou sowieso willen voorstellen, ik denk dat je gewoon nog een een hele diepteslag meer mogelijk is. En wellicht ook wenselijk. En ik denk sowieso met PKI en IBLZ lijkt me goed dat jullie samen naar kijken van hé, wat wat vinden we hier nou, zeg maar inhoudelijk van als we nog dieper kijken. En dus ook voor iedereen eh elders die interesse heeft in GraphQL, eh meld je dan expliciet aan, dan zorgen we dat je daarin meeneemt. Dan kunnen we daar over vier weken verder.</v>
+
+00:55:37.773 --> 00:55:41.930
+<v Michiel Trimpe>Ja, echt super. Dankjewel. Heel mooi, heel diep. Jammer dat we er net ja, niet meer tijd kunnen toveren, maar echt heel eh</v>
+
+00:55:38.873 --> 00:55:39.413
+<v Peter-Jan Karens>Dankjewel.</v>
+
+00:55:41.930 --> 00:55:46.653
+<v Michiel Trimpe>Ja. Ja.</v>
+
+00:55:46.243 --> 00:55:58.723
+<v Peter-Jan Karens>die een keer nog wel over verder wil praten. Ik zal Michiel de onderliggende documenten sturen, want deze presentatie is vrij hoog over, maar er is een hele spec die ik geschreven heb en eh nou ja, daar kunnen we dan inderdaad verder eh over discussiëren.</v>
+
+00:55:59.303 --> 00:56:34.763
+<v Michiel Trimpe>Ik zal snel de notule posten en een mail rondsturen met de links. Is het logisch om hier ook in het Mattermost kanaal van Federatief Toegankelijk? Ja, die zal ik ook weer in de mail. Misschien is dat ook een goede. Bijna iedereen heeft er toegang toe en dan zijn worden de vragen ook door anderen gelezen. De vragen aan Peter-Jan kunnen andere mensen het antwoord lezen. En is dat een interessante discussie. Dus Ja. zal ik ook in de mail. En de presentatie rondmailen. Ja. Ja, en als je dan een link naar het Mattermost kanaal nog even voor de zekerheid bijzet. Oké. een goede uitnodiging is om te zorgen dat je Ja. de vragen en antwoorden met iedereen gedeeld worden. Ja. Laat ik de mail regelen dat ik in ieder geval de twee minuten voor zijn. Ja.</v>
+
+00:56:35.643 --> 00:57:21.613
+<v Nil Barua>Twee minuten. Ik heb eh een set met vragen. Ehm wij wij beheren de de standaard FTV en we moeten daarvoor dus een aantal formulieren invullen en één van die vragen die vereist is dat we draagvlak hebben vanuit onze stakeholders. Nou zijn we hier met eh de werkgroep, dus ik denk wel dat we de grootste grootste groep eh stakeholders hier hebben. Dus mijn vraag was ehm of wij van de eh de de de leden die zich nu in de werkgroep eh bevinden ehm of we jullie eh in dit aanmeldformulier mogen benoemen om te zeggen dat jullie staan onder andere achter de aanmelding van de standaard, achter de adoptie ervan, achter een mogelijke verplichting ehm en of jullie natuurlijk eh positief zijn eh achter achter het gebruik van de standaard.</v>
+
+00:57:23.863 --> 00:57:30.023
+<v Nil Barua>En als ik bezwaren hoor dan eh laat het graag weten, maar als ik niks hoor dan eh vul ik jullie naam alvast in.</v>
+
+00:57:34.223 --> 00:57:35.543
+<v Nil Barua>Volgens mij geen bezwaren.</v>
+
+00:57:35.813 --> 00:57:38.253
+<v Thijs Rijpert>Wij komen hier later met een reactie op.</v>
+
+00:57:38.623 --> 00:57:41.823
+<v Nil Barua>Oké. Prima.</v>
+
+00:57:42.853 --> 00:57:45.093
+<v Peter-Jan Karens>Dit was de ADL of de AOFN eh sorry.</v>
+
+00:57:45.803 --> 00:57:47.483
+<v Michiel Trimpe>Ja, het gaat om de hele</v>
+
+00:57:46.013 --> 00:57:48.733
+<v Nil Barua>Ja, het gaat om beide. Ja.</v>
+
+00:57:48.543 --> 00:57:49.423
+<v Peter-Jan Karens>Ah, oké.</v>
+
+00:57:51.623 --> 00:58:07.203
+<v Nil Barua>Oké, dan komen we bij jullie terug eh Thijs. En voor de rest vul ik het in. Mocht het achteraf toch niet eh goed zijn, laat het gewoon eh gerust weten via de mail. Je kan ons eh bereiken op eh API.logius.nl. En eh dank jullie wel, dat was het.</v>
+
+00:58:09.333 --> 00:58:09.453
+<v Michiel Trimpe>Oké.</v>
+
+00:58:11.693 --> 00:58:38.933
+<v Michiel Trimpe>Dan nog een laatste aankondiging op de valreep. Ik ben van plan om de ODRL workshop waarschijnlijk volgende week dinsdag te gaan doen. Eh we hebben al een ruimte in Den Haag, maar wellicht kan ik ook een ruimte in Utrecht eh mailen, regelen. Als je nog geen datumprikker hebt ingevuld, maar wel aanwezig wil zijn, eh laat het me dan weten of vul alsnog de datum of ja, laat het me dan weten. Dan neem ik je mee in de aanmelding. Maar verder update ik alleen de mensen die zich aangemeld hebben.</v>
+
+00:58:41.863 --> 00:59:04.133
+<v Michiel Trimpe>Oké. Nou, een hoop laatste dingetjes op de op de valreep nog. Ehm maar eh ja, dat was eh Peter-Jan, eh Govert, super bedankt voor de presentatie. Was echt heel mooi, heel ja, diep inhoudelijk. Dus dat is fijn om te zien. En dan eh ja, ik denk dat we er over vier weken verder gaan en hopelijk dan in de tussentijd om nog meer diepgang kunnen vinden hierop.</v>
+
+00:59:08.063 --> 00:59:09.183
+<v Michiel Trimpe>Oké. Dankjewel en een fijne dag.</v>
+
+00:59:08.713 --> 00:59:11.083
+<v Thijs Rijpert>Ja. Dankjewel.</v>
+
+00:59:11.933 --> 00:59:12.893
+<v Mark Westbroek>Super.</v>
+
+00:59:13.723 --> 00:59:14.053
+<v Guus van der Meer>Dankjewel.</v>

@@ -47,13 +47,14 @@ De werkgroep vindt elke twee weken plaats op **dinsdag van 10:00 tot 11:00**, on
 
 Data komende werkgroepen:
 
-- [29 september: AuthZEN & GraphQL](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/9592e774-d176-491a-bf02-f88aabb12f14/werkgroep-federatieve-toegangsverlening-authzen-graphql)
 - [13 oktober: ODRL & Linked Data](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/b88d64d6-8c6a-426e-a5cf-2510833dbcc9/werkgroep-federatieve-toegangsverlening-odrl-linked-data)
+- [27 oktober: IAM-editie](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/b12fba4a-b56b-4a12-8124-f453d3ebf3f8/werkgroep-federatieve-toegangsverlening-iam-editie)
 
 ### Notulen
 
 2026
 
+- 29 september: AuthZEN & GraphQL ([Notulen]({{% relref "authzen-graphql" %}}))
 - 15 september: Scope ODRL-AP-NL ([Notulen]({{% relref "scope-odrl-ap-nl" %}}))
 - 1 september: AuthZEN update ([Notulen]({{% relref "authzen-update" %}}))
 - 18 augustus: Voortgang ODRL-AP-NL ([Notulen]({{% relref "voortgang-odrl-ap-nl" %}}))
