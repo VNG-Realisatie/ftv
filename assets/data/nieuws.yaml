@@ -122,3 +122,7 @@
   datum: "2026-09-15"
   link: "actueel/nieuws/20260915werkgroepodrlscope/"
   beschrijving: "De werkgroep peilde de scope van ODRL-AP-NL: een minimaal, toonbaar profiel als degelijke basis, met animo om gegevensleveringsovereenkomsten te verkennen."
+- titel: "FTV Werkgroep #28: AuthZEN & GraphQL"
+  datum: "2026-09-29"
+  link: "actueel/nieuws/20260929werkgroepauthzengraphql/"
+  beschrijving: "GBO presenteerde een voorstel voor AuthZEN-autorisatie op GraphQL: een mapper die query's vertaalt naar velden waar policies over beslissen."
