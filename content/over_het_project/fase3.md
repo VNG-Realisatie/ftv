@@ -77,7 +77,9 @@ Voor 2026 zijn de volgende activiteiten voorzien:
 
 {{< chapter/section title="Resultaten" level="3">}}
 
-- 6 Maart 2026: aanbieding NL GOV AuthZEN aan Forum Standaaardisatie
+- 6 Maart 2026: aanbieding NLGOV AuthZEN aan Forum Standaaardisatie
+- 28 augustus 2026: vaststelling NLGOV AuthZEN door PGDI
+- 7 september: oplevering OpenFTV aan FDS Simulatieomgeving
 
 {{< /chapter/section >}}
 
