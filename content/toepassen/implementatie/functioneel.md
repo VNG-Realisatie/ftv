@@ -8,8 +8,8 @@ type: 'chapter'
 
 {{< chapter/section title="Functioneel overzicht" >}}
 
-Voor een goed werkende oplossing voor Federatieve Toegangsverlening (FTV) zijn afspraken nodig over beheer en handhaving.
-Wat komt er kijken bij het toepassen en beheren van toegangsregels?
+Voor een goed werkende EMA-oplossing zijn afspraken nodig over beheer en handhaving. Wat komt er kijken bij het toepassen en beheren van toegangsregels? En wie doet wat?
+
 {{< /chapter/section >}}
 
 {{< chapter/section title="1. Handhaving" level="3" >}}
@@ -34,7 +34,7 @@ De beheerfuncties worden gebruikt om het beleid courant te houden en het hele pr
 
 #### Beveiliging
 
-Het beheer van de toegangsregels heeft zelf ook goede beveiliging nodig. Hiermee wordt de toegang voor beheerders bepaald, met rollen, rechten en policies. Dit kan hetzelfde systeem zijn als het beveiligt, of een apart systeem.
+Het beheer van de toegangsregels heeft zelf ook goede beveiliging nodig. Hiermee wordt de toegang voor beheerders bepaald, met rollen, rechten en policies. Als voorbeeld kunnen [de beleidsregels van OpenFTV](../../openftv/manager_policies) dienen.
 
 #### Regels opstellen
 

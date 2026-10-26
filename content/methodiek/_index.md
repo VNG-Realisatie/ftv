@@ -51,7 +51,7 @@ FTV bouwt voort op internationale en open standaarden.
               Register Toegangsbeleid
            </h2>
             <p class="utrecht-paragraph">
-                Een standaard voor opslag en inzage in toegangsbeleid.
+                Een standaard voor opslag van en inzage in toegangsbeleid.
             </p>
         </a>
     </div>

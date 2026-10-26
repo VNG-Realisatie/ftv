@@ -87,7 +87,7 @@ In dit voorbeeld zien we links een gegevensuitwisseling. Een client haalt een to
 
 Rechts zien we het beheer en de opslag van de policies, centraal. Policies worden daar opgesteld, gecontroleerd en voorzien van versiebeheer. Zodra een wijziging van kracht moet zijn, gaat de juiste versie van de policy automatisch naar de plekken waar deze gehandhaafd moet worden.
 
-De verantwoordelijkheden die onder handhaving en beheer vallen zijn verder uitgewerkt in de [functionele beschrijving](/ftv/toepassen/functioneel).
+De verantwoordelijkheden die onder handhaving en beheer vallen zijn verder uitgewerkt in de [functionele beschrijving](/ftv/toepassen/implementatie/functioneel).
 
 {{< /chapter/section >}}
 
