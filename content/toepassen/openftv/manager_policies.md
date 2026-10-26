@@ -75,7 +75,7 @@ De policies zijn geschreven in Cedar, waarmee de demonstratieomgeving standaard 
 
 Om te beginnen mogen beleidsregels ingezien worden door alle gebruikers met een van de OpenFTV-rollen. Onderstaande policy geld voor aanvragen met:
 
-- de identiteit waarmee aangemeld wordt een gebruiker is ('user'), en niet een applicatie ('`app`')
+- de identiteit waarmee aangemeld wordt een gebruiker is (`user`), en niet een applicatie ('`app`'). De app-identiteiten zijn bedoeld voor toegang door externe applicaties.
 - de actie lezen (`read`)
 - een policy als datgene dat gelezen wil worden ('`policy`')
 
