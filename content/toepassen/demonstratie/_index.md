@@ -34,6 +34,9 @@ type: 'chapter'
 
 {{< /chapter/section >}}
 
+{{< chapter/nextprevious  bg="bg-rhc-color-donkerbruin-50" nextlink="manager_policies" nexttitle="Beleidsregels van het laadpaalvergunningensysteem">}}
+{{< /chapter/nextprevious >}}
+
 {{< chapter/section title="Onderwerp" level="3">}}
 In deze use case ziet de gemeente Vlierdam dat er veel laadpalen bijkomen, en maakt zich zorgen over de capaciteit van het elektriciteitsnet en de impact op de omgeving.
 Daarom wordt er een vergunning vereist voor het plaatsen. Burgers kunnen een vergunning aanvragen. 
@@ -47,7 +50,7 @@ De enige handeling op het zaaktype is vooralsnog 'aanvragen', en de vergunning k
 
 {{< chapter/section title="Opstelling" level="3"  >}}
 
-De basis is de [proefopstelling](../proefopstelling). Daar voegen we een registratie aan toe, namelijk die van laadpalen. Daarvoor wordt een database gebruikt met een bijpassende service waarmee laadpalen kunnen worden toegevoegd.
+De basis is de [proefopstelling](../proefopstelling). Daar voegen we een registratie aan toe, namelijk die van laadpaalvergunningen. Daarvoor wordt een database gebruikt met een bijpassende service waarmee laadpaalvergunningen kunnen worden toegevoegd.
 
 {{< img-url "diagrams/usecase-opstelling.svg" "Proefopstelling zaaksysteem" >}}
 
@@ -62,27 +65,30 @@ De gegevens die we bijhouden zijn voor deze opstelling heel simpel gehouden:
 
 {{< chapter/section title="Regels" level="3">}}
 
+De beleidsregels die gelden voor toegang komen voort uit gemeentelijk beleid en afspraken die de gemeente heeft gemaakt met het RvIG en de RDW. Dit zijn ze allemaal:
+
 - Zaaksysteem
     - Doelbinding is de registratie van vergunningen, waarvoor de gemeente een besluit heeft aangenomen.
     - De gemeente heeft ter dataminimalisatie vastgelegd dat voor laadpaalvergunningen een beperkte deelverzameling van persoons- en voertuiggegevens voldoende is:
         - Persoonsgegevens: BSN, NAW en meerderjarigheid
         - Voertuiggegevens: kenteken en uitstootklasse
-    - Inzage in de vergunningen is toegestaan aan alle medewerkers van de afdeling burgerzaken. [Cedar](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/open-ftv/-/blob/main/testdata/apps/gemeente-vlierdam/manager/policies/laadpaal-aanvragen-afdeling.cedar)
-    - Voor het beheer van de vergunningen heeft de gemeente een opleiding gemaakt, en vereist voor aanpassingen aan de registratie dat het bijbehorende examen met goed gevolg is afgelegd. [Cedar](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/open-ftv/-/blob/main/testdata/apps/gemeente-vlierdam/manager/policies/laadpaal-aanvragen-opleiding.cedar)
-    - Het diploma mag niet meer dan een jaar oud zijn. [Cedar](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/open-ftv/-/blob/main/testdata/apps/gemeente-vlierdam/manager/policies/laadpaal-aanvragen-opleiding-verlopen.cedar).
+    - Voor het beheer van de vergunningen heeft de gemeente een opleiding gemaakt, en vereist voor aanpassingen aan de registratie dat het bijbehorende examen met goed gevolg is afgelegd. 
+    - Het diploma mag niet meer dan een jaar oud zijn.
 - BRP:
     - De gemeente Vlierdam heeft per besluit toestemming van RvIG om in de BRP gegevens op te zoeken.
     - Grondslag daarvoor is 'taak van algemeen belang of uitoefening van openbaar gezag'
     - De gemeente mag alleen ingezetenen van de eigen gemeente opzoeken.
-    [Rego](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/open-ftv/-/blob/main/testdata/apps/rvig/manager/policies/brp-access.rego).
 - RDW
     - De gemeente heeft per besluit toestemming van de RDW om voertuigen in de BRV op te zoeken.
     - Diplomatieke kentekens mogen niet opgezocht worden.
-    [Rego](https://gitlab.com/digilab.overheid.nl/ecosystem/ftv/open-ftv/-/blob/main/testdata/apps/rdw/manager/policies/brv-access.rego).
+
+Lees op een apart pagina hoe deze regels [uitgewerkt zijn in technische beleidsregels](laadpaal_policies).
 
 {{< /chapter/section >}}
 
 {{< chapter/section title="Scenarios" level="3">}}
+
+We kunnen de opstelling en de policies testen door verschillende scenarios uit te voeren.
 
 {{< /chapter/section >}}
 
@@ -97,6 +103,8 @@ Anders wordt de vergunning afgewezen met een passende melding.
 
 ##### Testgevallen
 
+We zetten de volgende gegevens in het systeem om tests mee uit te kunnen voeren:
+
 | Nr | Gebruiker | Postcode | Huisnummer | Resultaat                                          |
 |:---|-----------|----------|------------|----------------------------------------------------|
 | 1  | Rick      | 1111AA   | 1          | Rick niet geautoriseerd vanwege afdeling           |
@@ -110,64 +118,71 @@ Anders wordt de vergunning afgewezen met een passende melding.
 | 9  | Jerry     | 1111AA   | 1          | Reeds laadpaal aanwezig                            |
 | 10 | Jerry     | 1111BB   | 2          | Toegekend                                          |
 
-##### De testgevallen stap voor stap 
+##### Stap voor stap door de testgevallen lopen
 
-- Open twee tabbladen:
+- Open in drie verschillende tabbladen:
 
-  1. De [laadpalenapplicatie](https://laadpalen.ftv.apps.digilab.network/behandelaar) van gemeente Vlierdam
-  2. De [OpenFTV manager interface](https://gemeente.ftv.apps.digilab.network/) van gemeente Vlierdam
+  1. Het [Zaaksysteem Laadpalen](https://openftv-vlierdam.simulatie.datastelsel.nl/behandelaar) van de gemeente Vlierdam
+  2. De [OpenFTV manager](https://openftv-vlierdam-beheer.simulatie.datastelsel.nl) van de gemeente Vlierdam
+  3. De [OpenFTV manager](https://openftv-brp-beheer.simulatie.datastelsel.nl) van het RvIG
   
+De links boven gaan naar de Simulatieomgeving van het Federatief Datastelsel. Als deze links niet werken of de toegang is niet verleend, neem dan contact met ons op.
+
 - Testcase 1: 
-  - in de laadpalenapplicatie:
-    - selecteer gebruiker Rick
-    - ga naar het scherm 'aanvragen vergunning'
-    - voer de postcode en het huisnummer in
-    - controleer dat een melding komt: gebruiker rick werkt niet op de afdeling burgerzaken
+  - in het Zaaksysteem Laadpalen:
+    - selecteer rechtsboven gebruiker Rick (dat is initieel al zo)
+    - druk op 'Nieuwe aanvraag'
+    - voer de postcode 1111AA en het huisnummer 1 in, en druk op 'Aanvraag indienen'
+    - controleer dat een melding komt: 'Rick niet geautoriseerd vanwege afdeling'
   - in de OpenFTV manager: 
-    - selecteer gebruiker Rick
-    - ga naar de audit log
-    - controleer dat er een regel is bijgekomen met de tijd van zojuist, als afwijzing, en met dezelfde publieke melding
-    - controleer ook dat er een niet-publieke melding is waarbij het nummer van de policy staat die de aanvraag heeft afgewezen
+    - log in als gebruiker 'audit_user', met als wachtwoord 'password'
+    - kies in het menu voor 'Logboek'
+    - controleer dat er een regel is bijgekomen met de tijd van zojuist, met als beslissing 'afwijzing', en als reden 'afdeling'. Door te klikken op de regel zijn de detail van het verzoek en het antwoord te zien.
+  - In het zaaksysteem staat ook een link die direct naar het logboek gaat met de juiste regel als enige in het filter.
 - Testcase 2: 
-  - Kies in de laadpalenapplicatie gebruik Morty en herhaal de aanvraag
+  - Kies in het Zaaksysteem Laadpalen gebruiker Morty en herhaal de aanvraag
   - Melding dat Morty geen opleiding heeft
 - Testcase 3:
   - Herhaal als Beth, en de melding zegt dat haar opleiding verlopen is.
 - Testcase 4:
-  - in de laadpalenapplicatie:
-    - Selecteer Jerry en voer de aanvraag in. De aanvraag wordt geaccepteerd.
-    - Ga naar het scherm 'beoordelen aanvraag'
-    - Druk op 'Controle BRP'
-    - Melding dat de persoon niet gevonden is
-  - in de OpenFTV manager
+  - in het Zaaksysteem Laadpalen
+    - Selecteer Jerry en voer postcode 1111FF en huisnummer 11 in, dus een ander huisnummer. De aanvraag wordt geaccepteerd.
+    - Scroll omlaag en druk op 'BRP Controle'
+    - Melding dat er geen bewoners zijn gevonden. Dit omdat niemand op dat adres geregistreerd staat.
+  - in de OpenFTV manager van Vlierdam
+    - controleer dat er een regel is bijgekomen dat uitgaand verkeerd naar RvIG toegestaan is
+  - in de OpenFTV manager van RvIG
     - controleer dat er een regel is bijgekomen dat de toegang tot de BRP verleend is
 - Testcase 5:
-  - In de laadpalenapplicatie:
-    - Voer een nieuwe aanvraag in met het andere adres
+  - In het Zaaksysteem Laadpalen:
+    - Voer een nieuwe aanvraag in met postcode 2222JJ en huisnummer 101
     - Controleer BRP
-    - Melding dat het adres niet in de gemeente ligt
-  - In de OpenFTV manager:
-    - Controleer dat er een regel is bijgekomen dat de toegang tot de BRP verleend is
-    - En een regel dat het BRP-antwoord niet doorgegeven wordt omdat het adres niet in de gemeente is
+    - Melding dat er geen bewoners zijn gevonden. Dit is omdat die postcode niet in de gemeente Vlierdam ligt.
+  - in de OpenFTV manager van Vlierdam
+    - controleer dat er een regel is bijgekomen dat uitgaand verkeerd naar BRP toegestaan is
+  - in de OpenFTV manager van RvIG
+    - controleer dat er een regel is bijgekomen dat de toegang tot de BRP verleend is
 - Testcase 6:
-  - In de laadpalenapplicatie:
-    - Voer de aanvraag in en controleer BRP. Dat gaat goed.
+  - In het Zaaksysteem Laadpalen:
+    - Voer een aanvraag in voor 1111DD, nummer 4 en controleer BRP. Dat gaat goed.
     - Controleer BRV, en er is een melding dat er geen voertuig gevonden is
   - In de OpenFTV manager:
-    - Controleer dat er een regel is bijgekomen dat de toegang tot de BRV verleend is.
+    - Controleer dat er een regel is bijgekomen dat uitgaand verkeerd naar BRV toegestaan is
+  - in de OpenFTV manager van RvIG
+    - controleer dat er een regel is bijgekomen dat de toegang tot de BRV verleend is
 - Testcase 7:
-  - In de laadpalenapplicatie:
-    - Voer de aanvraag, controleer BRP.
+  - In het Zaaksysteem Laadpalen:
+    - Voer de aanvraag in 111CC, nummer 3, controleer BRP.
     - Controleer BRV, en er is een melding dat er geen voertuig is met de juiste uitstootklasse
 - Testcase 8:
-  - In de laadpalenapplicatie:
-    - Voer de aanvraag in en controleer BRP.
+  - In het Zaaksysteem Laadpalen:
+    - Voer de aanvraag in 1111EE, nummer 5 en controleer BRP.
     - Controleer BRV, en er is een melding dat het voertuig afgeschermd is.
   - In de OpenFTV manager:
     - Controleer dat er een regel is bijgekomen dat de toegang tot de BRV verleend is.
     - En een regel dat het BRV-antwoord niet doorgegeven wordt vanwege het diplomatieke kenteken
 - Testcase 9:
-  - De aanvraag wordt direct afgewezen omdat er al een vergunning is op dat adres
+  - De aanvraag 1111AA, nummer 1 wordt direct afgewezen omdat er al een vergunning is op dat adres
 - Testcase 10:
   - De aanvraag lukt en kan worden goedgekeurd
 
