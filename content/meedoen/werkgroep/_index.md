@@ -47,14 +47,14 @@ De werkgroep vindt elke twee weken plaats op **dinsdag van 10:00 tot 11:00**, on
 
 Data komende werkgroepen:
 
-- [6 oktober: Kick-off toegangsbeleid in ODRL-AP-NL (Aristo Utrecht, 9:30-13:00)](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/47df0462-6a21-4608-92da-23f7958c6519/kick-off-toegangsbeleid-in-odrl-ap-nl)
-- [13 oktober: ODRL & Linked Data](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/b88d64d6-8c6a-426e-a5cf-2510833dbcc9/werkgroep-federatieve-toegangsverlening-odrl-linked-data)
-- [27 oktober: IAM-editie](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/b12fba4a-b56b-4a12-8124-f453d3ebf3f8/werkgroep-federatieve-toegangsverlening-iam-editie)
+- [10 november: GraphQL-autorisatie](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/4607dd0b-ed3b-4800-a2cd-07b2a613834c/werkgroep-federatieve-toegangsverlening-graphql-autorisatie)
+- [24 november: ODRL-AP-NL subwerkgroepen](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/events/view/3c0dd0d6-ced0-4c93-a6a7-a8af83f38fb0/werkgroep-federatieve-toegangsverlening-odrl-ap-nl-subwerkgroepen)
 
 ### Notulen
 
 2026
 
+- 27 oktober: Structuur ODRL-AP-NL ([Notulen]({{% relref "structuur-odrl-ap-nl" %}}))
 - 29 september: AuthZEN & GraphQL ([Notulen]({{% relref "authzen-graphql" %}}))
 - 15 september: Scope ODRL-AP-NL ([Notulen]({{% relref "scope-odrl-ap-nl" %}}))
 - 1 september: AuthZEN update ([Notulen]({{% relref "authzen-update" %}}))

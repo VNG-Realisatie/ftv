@@ -1,0 +1,949 @@
+WEBVTT
+
+00:00:05.160 --> 00:00:14.090
+<v Michiel Trimpe>start. Dacht. Dan moet ik even kijken of ik de screen share ook kan starten.</v>
+
+00:00:17.110 --> 00:00:51.530
+<v Michiel Trimpe>Oké. Ehm nou, eh we begonnen net al een beetje met eh Joyce die vroeg of ze wel goed op de lijst stond omdat eh de de mails niet echt goed verstuurd werden de laatste dagen. Allereerst als update, ik ben de afgelopen weken ben ik eh wat ziek geweest. Dus niet heel veel uurtjes kunnen maken. Eh dus vandaar dat er eventjes, nou, op verschillende vlakken wat stilte was en eh dingen niet eh nou ja, opgepakt, gereageerd. Dus het is ook een iets minder voorbereide werkgroep dan normaal. En dan krijg ik soms wel feedback dat ik sowieso iets te veel voorbereide soms, dus misschien is dat niet eens zo heel slecht.</v>
+
+00:00:54.100 --> 00:01:08.460
+<v Michiel Trimpe>betekent dus wel dat de eh het onderwerp wel weer ODRL is. Dus we hadden oorspronkelijk IM op de schema op het schema stond, maar omdat we de vorige eh gemist hebben, is dit gewoon weer een ODRL of alsnog de ODRL bijeenkomst.</v>
+
+00:01:12.230 --> 00:01:35.310
+<v Michiel Trimpe>wel iets van een eh provisorische agenda opgesteld. Eh en eh voornaamste is dat ik denk goed is om de de workshop van 6 oktober te bespreken. Dus we hebben een specifieke ODRL kick-off workshop gehouden in Utrecht met een hoop aanwezigen. Eh dus dat is goed om even hier te delen. Eh en dan eh van daar wat verder te gaan. Eh dus er zijn wat voorstellen gedaan. Heb ik een structuurvoorstelletje gedaan.</v>
+
+00:01:37.870 --> 00:01:56.510
+<v Michiel Trimpe>op die manier verder. Dus dit is een agenda, maar hij is niet heel strikt of eh ver gedetailleerd voorbereid. Volgens mij komt ja, Stas is ook binnen, dus dat heeft ook nog wat over de eh forum forum aanmelding van de organization decision log. Daar is ook gewoon ruimte voor.</v>
+
+00:01:59.380 --> 00:02:01.340
+<v Michiel Trimpe>er nog steeds wat mensen binnen.</v>
+
+00:02:00.150 --> 00:02:01.670
+<v Mark Westbroek>Goedemorgen.</v>
+
+00:02:07.390 --> 00:02:20.870
+<v Michiel Trimpe>Oké. Ehm nou, sowieso eh beginnen we altijd met eh introducties voor eh nieuwe leden. En ik weet in ieder geval dat er één nieuwe eh deelnemer is, Lennart.</v>
+
+00:02:22.910 --> 00:02:24.750
+<v Michiel Trimpe>Zou jij je kort kunnen introduceren?</v>
+
+00:02:26.620 --> 00:03:24.770
+<v Lennart BD>Eh ja, Lennart van Bergen. Ik werk bij de Belastingdienst, bij het CDO Office. En ik hou me vooral bezig met standaarden. Ik schrijf ook een standaard eh metamodel voor informatiemodellen. En ik beheer een metadate administratie waarin alle modellen, gegevensmodellen, kennismodellen en SBB modellen opgeslagen worden. Zodat je die weer kan gebruiken voor allerlei andere administraties en betekenissen. Eh dus eh ODRL is voor mij een beetje nieuw. Ehm maar is voor de belastingdienst wel eh van belang om eh te kunnen bepalen wanneer mag je welke gegevens waarvoor gebruiken. Dat speelt steeds meer. Ehm en eh ik probeer vooral even te kijken wat het nou is en wat wij ermee kunnen. Eh Wessel eh Schollmeijer zei eh volgens mij eh kan het niet zo zijn dat deze standaard niet voor jullie interessant is. Dus eh dat is de aanleiding dat ik eh hier eh ben. Ja, dan moeten we dat dan ook bij trekken. Kijk dat dat geeft wel</v>
+
+00:03:24.410 --> 00:03:25.330
+<v Michiel Trimpe>Ja, dankjewel.</v>
+
+00:03:25.360 --> 00:03:28.360
+<v Lennart BD>een verplichting. Ja, dankzij mijn ziekte</v>
+
+00:03:26.620 --> 00:03:31.380
+<v Michiel Trimpe>spring je ook gelijk in de ODRL bijeenkomst. Dus eh mooi uit. geeft je advies</v>
+
+00:03:30.410 --> 00:03:33.970
+<v Lennart BD>dat eh bijvoorbeeld de nieuwe</v>
+
+00:03:33.220 --> 00:03:33.420
+<v Michiel Trimpe>Oké.</v>
+
+00:03:35.560 --> 00:03:38.120
+<v Michiel Trimpe>mij Wessel, jij hebt je al wel eens eerder geïntroduceerd hier, toch?</v>
+
+00:03:39.950 --> 00:04:17.730
+<v Wessel Schollmeijer>Eh ja, dat klopt. Eh maar Wessel Schollmeijer, dankjewel Lennart trouwens en fijn dat je aangesloten bent dus. Eh hoe heet het nou ehm eh ja, ik eh ik ben ehm eh drie weken terug bij ehm ehm bij de bij de bijeenkomst in Utrecht eh de workshop in Utrecht aanwezig geweest. Dat was mijn eerste aanwezigheid. Ik ben ehm wat je noemt een content architect bij Logius, domein publicaties. En we houden ons heel erg bezig met link data en standaarden en eh ik heb in die workshop daar ook aangegeven dat ik me ehm in ieder geval eh zou willen bemoeien met het link data profiel wat op eh OD eh ODRL APNL eh ehm eh gemaakt gaat worden. Dus eh dus eh dat is mijn aanwezigheid hier.</v>
+
+00:04:20.140 --> 00:04:27.390
+<v Michiel Trimpe>Mooi. En even checken voor mij, ik ken je, Jeroen ken ik allemaal. Jeroen, had jij je hier ook al ooit geïntroduceerd in deze groep?</v>
+
+00:04:29.610 --> 00:04:35.474
+<v Jeroen De Kok>Eh nee, ik denk het niet. Ik was ook in de veronderstelling dat we het over het andere topic gingen hebben, maar maakt niet uit.</v>
+
+00:04:34.900 --> 00:04:36.060
+<v Michiel Trimpe>Je bent niet alleen.</v>
+
+00:04:35.474 --> 00:04:39.320
+<v Jeroen De Kok>Ik ben Jeroen de Kok, ik werk voor het project GBO.</v>
+
+00:04:40.560 --> 00:04:59.080
+<v Michiel Trimpe>Oké. Eh ja, ja, dus als je denkt dit is dan dus niet handig, dan ben je ook welkom om af te af te haken en over twee weken weer aan te haken. Ehm maar we kunnen dan ook eventueel het ADL stukje vervroegen en misschien dan ook bespreken wat we weer voor willen bereiden voor over twee weken.</v>
+
+00:05:03.810 --> 00:05:05.490
+<v Michiel Trimpe>Igor, wat zeg je?</v>
+
+00:05:05.140 --> 00:05:06.690
+<v Igor van Haren>Volgens mij nam die de telefoon op.</v>
+
+00:05:08.340 --> 00:05:09.000
+<v Michiel Trimpe>Ja.</v>
+
+00:05:11.510 --> 00:05:12.190
+<v Jeroen De Kok>Ja.</v>
+
+00:05:15.100 --> 00:05:16.380
+<v Jeroen De Kok>Yes.</v>
+
+00:05:17.010 --> 00:05:21.760
+<v Michiel Trimpe>Ja, oké, kijk, er zitten hier wel wat collega's van WLZ, eh van Zorginstituut en VECOZO en en wij specifiek eigenlijk ook voor EAM.</v>
+
+00:05:21.960 --> 00:05:36.000
+<v Peter-Jan Karens>Ja, nou, de agenda is redelijk vrij, dus we kunnen ehm ik wil dit gewoon eventjes adres of ja, bespreken nu, want ik weet Gideon eh had ook nog een mailtje gestuurd.</v>
+
+00:05:33.880 --> 00:05:34.240
+<v Michiel Trimpe>Ja.</v>
+
+00:05:36.330 --> 00:05:48.630
+<v Michiel Trimpe>Dus ja, als jij zegt dat dat niet op de agenda staat vandaag, dan eh dan kan, maar dan moeten we dat misschien even verschuiven.</v>
+
+00:05:50.640 --> 00:06:04.160
+<v Michiel Trimpe>Ja, ik kan wel wel richting aan kunnen geven, zodat we nu eventjes bespreken wat we dan over twee weken willen bespreken. Want ehm tijdens mijn ziekte was eigenlijk ook de bedoeling dat we met z'n allen net even samen zouden zitten, maar dat is er dus ook nog niet van gekomen.</v>
+
+00:06:06.900 --> 00:06:58.750
+<v Michiel Trimpe>Dus ehm wat dan in het eh EM stuk voornamelijk speelt is eh het GraphQL autorisatieprofiel. Eh hoe gaan we met GraphQL en autorisatie om en hoe eh past dat in eh ons stukje standaardisering. Eh ondertussen is ook met de de FDS architecten gesproken. Nou, Gideon is onder andere eh ehm hoe we hoe dat meespeelt. En ik denk dat de volgende stap, dat is al een beetje besproken, maar is dat we eh met de partijen samen zitten om te kijken eh hoe hoe kijken de verschillende partijen hieraan. Dus wat is het perspectief van IWLz, wat is het perspectief van GBO, wat is het perspectief van FDS. BKWI, weet ik niet of vandaag aanwezig is. Volgens mij niet.</v>
+
+00:06:58.460 --> 00:06:59.820
+<v Peter-Jan Karens>Nee, die willen we dan denk ik ook mee uitnodigen.</v>
+
+00:07:00.190 --> 00:07:01.990
+<v Michiel Trimpe>Eh mijn voorstel zou zijn dat we gewoon echt proberen dat eh nu in de komende twee weken te organiseren.</v>
+
+00:07:04.000 --> 00:07:07.557
+<v Michiel Trimpe>Eigenlijk dat we dat gewoon organiseren en als mensen niet aanwezig kunnen zijn, dan zij dat zo, maar dat we in ieder geval de komende twee weken doen.</v>
+
+00:07:04.340 --> 00:07:04.740
+<v Peter-Jan Karens>Ja.</v>
+
+00:07:07.557 --> 00:07:29.790
+<v Michiel Trimpe>En dat we dan met z'n allen eh daar een uitkomst van hebben van hé, we hebben dit besproken, eh dit is hoe we er met z'n allen naar staan en dat we dan in de werkgroep terugbrengen eh en kijken wat daar eh voor brede beslissingen genomen kunnen worden.</v>
+
+00:07:33.320 --> 00:07:38.410
+<v Peter-Jan Karens>Redelijk voorstel denk ik. Ga jij dat dan straks na deze meeting gewoon proberen te plannen of wat is het idee?</v>
+
+00:07:38.800 --> 00:07:45.030
+<v Michiel Trimpe>Dan stel ik voor dat ik gewoon een datum prikker eruit stuur eh vandaag nog voor het einde van de dag met eh alle deelnemers.</v>
+
+00:07:44.360 --> 00:07:46.260
+<v Peter-Jan Karens>Oké. Super, doen we dat toch zo.</v>
+
+00:07:47.670 --> 00:07:48.590
+<v Michiel Trimpe>Ja, en dan even goed voor Stas voor jou om te benoemen.</v>
+
+00:07:47.920 --> 00:07:49.000
+<v Peter-Jan Karens>Ja.</v>
+
+00:07:49.550 --> 00:08:03.270
+<v Michiel Trimpe>Dus wat daar ook bij zal spelen is de zeg maar de ISA als een standaard eh beheren en ook hoe integreert dit met de bredere standaarden zoals digikoppeling.</v>
+
+00:08:05.560 --> 00:08:05.920
+<v Michiel Trimpe>Ja.</v>
+
+00:08:05.610 --> 00:08:08.650
+<v Stas Mironov>Dat eh specifiek over GraphQL specificatie die twee eh meetings terug. Ja, oké.</v>
+
+00:08:09.090 --> 00:08:09.410
+<v Michiel Trimpe>Ja.</v>
+
+00:08:10.810 --> 00:08:12.370
+<v Stas Mironov>Daar zouden wij waarschijnlijk ook eh het logisch perspectief en misschien het eh</v>
+
+00:08:14.090 --> 00:08:23.430
+<v Michiel Trimpe>ADR eh perspectief bij betrekken. Dus mag ik jou ook mee uitnodigen?</v>
+
+00:08:24.880 --> 00:08:26.320
+<v Stas Mironov>Eh ja, doe maar, zeker.</v>
+
+00:08:26.410 --> 00:08:39.410
+<v Michiel Trimpe>Oké. Doen we dat ook. Dus dat is dan de de vervolgstap voor het EM stuk. Dan eh ja, mijn excuses dat ik het niet eerder eh gecommuniceerd had, maar eh</v>
+
+00:08:38.960 --> 00:08:40.800
+<v Peter-Jan Karens>Maakt niet uit, is ook geregeld. Prima.</v>
+
+00:08:43.440 --> 00:08:53.650
+<v Michiel Trimpe>Oké. Nou, en dan eh voor degene die specifiek hiervoor kwamen, dan eh voel je vrij om eh iets anders te gaan doen in de resterende tijd.</v>
+
+00:08:57.620 --> 00:08:57.820
+<v Michiel Trimpe>Oké.</v>
+
+00:09:03.800 --> 00:09:05.280
+<v Michiel Trimpe>Nou, dat is dan het eerste stuk.</v>
+
+00:09:07.440 --> 00:09:18.840
+<v Michiel Trimpe>Wat zeggen jullie? Wat is handig om eh ook Stas eerst aan het woord te laten over ADL en dan eh de rest de hele rest van de sessie aan ODRL of is ODRL en Stas aan het einde? Stas, wat heb jij liever?</v>
+
+00:09:22.100 --> 00:09:23.220
+<v Stas Mironov>Mij is het om het even.</v>
+
+00:09:26.020 --> 00:09:32.470
+<v Michiel Trimpe>Eh misschien is het wel goed dat we dan gewoon eh nu het het ADL stukje even doen eh van de voor de forum aanmelding.</v>
+
+00:09:34.510 --> 00:09:37.470
+<v Michiel Trimpe>Eh als je daar klaar voor staat, dan kunnen we dat ook even</v>
+
+00:09:39.890 --> 00:10:26.780
+<v Stas Mironov>elke keer als eh als de uitvraag is, dan ben ik er zelf niet. Dan eh vorige keer was eh mijn collega Neil er volgens mij namens mij. Ehm ja, ik kan ik kan ik kan het formulier kan ik delen eh op het scherm of je kan eh maar ik weet nog wel ehm nog eh nog bij de eerste standaard bij OCN. Toen hadden we meerdere werkgroepen, onderling subwerkgroepen eigenlijk. En toen op een gegeven moment kwamen we samen en was er echt een een sessie gewijd aan aan de reikwijdte van van zo'n standaard en wie het zou moeten gebruiken. We hadden toen ook al over over ADL of eh in Nederland was eh de de eh wat was toen eh de term die we gebruikten? toegangsbeslissingen, ja. Ehm</v>
+
+00:10:23.390 --> 00:10:24.310
+<v Michiel Trimpe>toegangsbeslissingen.</v>
+
+00:10:29.010 --> 00:10:40.050
+<v Stas Mironov>dat hadden we besproken, maar ik weet niet of dat ergens dus ehm genotuleerd staat. Ik misschien kunnen we vanaf dat als beginpunt nemen. Kijken van is iedereen daarmee eens? Want dan zijn we snel klaar.</v>
+
+00:10:42.200 --> 00:10:47.917
+<v Michiel Trimpe>er is voor ADL, ik zeg ik zeker nooit een toepassingsgebied eh expliciet besproken</v>
+
+00:10:47.180 --> 00:10:47.580
+<v Stas Mironov>Nee.</v>
+
+00:10:47.917 --> 00:11:15.060
+<v Michiel Trimpe>overeengekomen in de werkgroep. Eh voor OZN was het een veel gevoeliger onderwerp. Omdat daar de ja, de de scope heel breed getrokken kon worden en veel mensen aanraken of specifiek. Bij ADL leek daar minder gevoeligheid te zitten. Ehm dus ik denk Gideon zit in de call vandaag. Dus ehm ik denk dat we dat eh wellicht gewoon even kunnen bespreken en afstemmen en misschien redelijk snel akkoord.</v>
+
+00:11:18.520 --> 00:11:18.960
+<v Stas Mironov>Prima.</v>
+
+00:11:18.660 --> 00:11:20.740
+<v Michiel Trimpe>dan is het wel goed om het even op het scherm te zetten.</v>
+
+00:11:20.580 --> 00:11:21.500
+<v Stas Mironov>Ja, zeker.</v>
+
+00:11:23.540 --> 00:11:24.460
+<v Stas Mironov>Even kijken.</v>
+
+00:11:33.140 --> 00:11:36.930
+<v Stas Mironov>Leesbaar? Ik weet niet of ik mijn scherm deel. Nee, of</v>
+
+00:11:36.630 --> 00:11:37.830
+<v Michiel Trimpe>Voor mij is het leesbaar, ja.</v>
+
+00:11:39.870 --> 00:12:26.450
+<v Stas Mironov>Dit zijn dan eh dit is nou voor aanmelding. Dat zijn eh twee vragen die eh er altijd in staan. Misschien goed om even denk ik wat achtergrond te geven voor degene die misschien nieuw zijn. Ehm voor elke standaard eh die wij beheren bij Logius eh op het gebied van gegevensuitwisseling en IAD standaarden zitten bij het eh gegevensuitwisselingsdomein. Ehm proberen we ook aan te melden bij het forum, dan wel als met de status aanbevolen of als toe eh leg uit lijst. Dat is iets meer verplichtend karakter. Eh deze standaarden zijn allemaal aanbevolen, maar vooralsnog heb je een bepaald toepassingsgebied nodig. Ehm en nou, dat is eigenlijk wat we wat ik denk met Michiel eh hadden bedacht. Ehm</v>
+
+00:12:29.400 --> 00:13:04.650
+<v Stas Mironov>wat je hier leest. Ik weet niet of het zo de lading dekt of ja, het het deze vraag je kan het ook gewoon combineren met de vraag over de use cases. Want als je alle use cases hebt gemapt, dan kan je daar mooi een toepassingsgebied voor definiëren. Ehm maar dat dit geeft dus kaders eigenlijk voor de gebruikers van de standaard die voor het eerst ehm ja, zo'n eh toelighoudlijst zien of aanbevolen lijst bij het forum en dan willen ze een beetje een gevoel krijgen voor wanneer gebruik ik het nou eigenlijk? Wanneer moet ik het uitvragen bij een aanbesteding?</v>
+
+00:13:07.770 --> 00:13:14.050
+<v Gideon Zegwaard>Als ik het zo bekijk, is het niet gekoppeld aan de toepassing van OZN, hè? Is dat dat is bewust?</v>
+
+00:13:14.940 --> 00:13:18.100
+<v Michiel Trimpe>Ja, dat is bewust. Je kunt een OZN informatiemodel ook gebruiken zonder</v>
+
+00:13:15.410 --> 00:13:16.210
+<v Stas Mironov>Volgens mij wel.</v>
+
+00:13:18.100 --> 00:13:20.780
+<v Michiel Trimpe>OZN zelf.</v>
+
+00:13:19.980 --> 00:13:32.060
+<v Gideon Zegwaard>Ja, ja, dat dat was zou mijn gedachte ook zijn, hè. Je gewoon als je het helemaal in je applicatie inbouwt, inprogrammeert, kan je het nog steeds loggen op deze manier. Ehm eh maar dat eh just checking the box, zeg maar.</v>
+
+00:13:42.460 --> 00:13:47.900
+<v Michiel Trimpe>Eh en ja, de vraag is eigenlijk: ziet dit eh ziet dit er oké uit voor alle deelnemers? Kan iedereen zich hierin vinden?</v>
+
+00:13:55.150 --> 00:14:30.097
+<v Lennart BD>Ja, ik heb er wel een vraag over, want eh stel dat eh een verzoek aan een API doorreist verder eh de organisatie in. Is eh het toepassingsgebied van de standaard dan ook dat wat wel en niet mag zeg maar meereist verder de organisatie in? Of is het alleen maar van bedoeld om op eh het scheidsvlak waar de API eh leeft, zeg maar, beslissingen eh toe te staan of te weigeren?</v>
+
+00:14:28.120 --> 00:14:28.680
+<v Michiel Trimpe>Dan</v>
+
+00:14:30.097 --> 00:14:39.220
+<v Lennart BD>Je kan je voorstellen, je mag wel verder, maar je moet dan wel aan de volgende afspraken houden als je eh verder de organisatie in reist. Maar dat dat dat blijkt nu niet uit de beschrijving.</v>
+
+00:14:41.640 --> 00:14:46.730
+<v Lennart BD>bij de het aapje</v>
+
+00:14:45.210 --> 00:15:16.760
+<v Gideon Zegwaard>Daar staat ook binnen organisatie hè. En een API call kan natuurlijk leiden tot een onderliggende API call waar waar je dan weer binnen de organisatie hetzelfde patroon krijgt. Volgens mij als ik het zo lees, is het wel netjes gebonden aan het feit dat je een toegangsbeslissing neemt waarover je verantwoording moet kunnen afleggen. En dat kan dat kan natuurlijk gelaagd zijn. Dus dat je een externe API hebt die dat vervolgens weer uitsplitst in onderliggende API's waar je weer opnieuw toegangsbeslissingen overneemt.</v>
+
+00:15:17.740 --> 00:15:21.330
+<v Lennart BD>Dat is wel de intentie van wat hier beschreven is. Oké.</v>
+
+00:15:21.510 --> 00:15:29.473
+<v Gideon Zegwaard>Dus zo lees ik het hè. Ik heb het niet geschreven, maar zo zo zo ik lees het als</v>
+
+00:15:26.550 --> 00:15:27.350
+<v Michiel Trimpe>als er een</v>
+
+00:15:29.473 --> 00:15:31.150
+<v Gideon Zegwaard>als er een API is waar je toegangsbeslissing opneemt, dan pas je dit toe.</v>
+
+00:15:32.800 --> 00:15:45.290
+<v Lennart BD>Ja, misschien raak ik een beetje van de route af door de woorden toe te staan of te weigeren. Dat dat lijkt alsof het geresolved wordt bij de originele aanroep van de API.</v>
+
+00:15:46.700 --> 00:15:48.060
+<v Igor van Haren>Maar het is wel alleen</v>
+
+00:15:47.300 --> 00:15:49.180
+<v Lennart BD>Misschien is dat zit dat in de formulering hoor.</v>
+
+00:15:50.990 --> 00:16:18.060
+<v Igor van Haren>Ik denk dat het wel alleen op die API van toepassing is en dat het dan daaronder nog een andere API is die dat ook doet. Oh, is goed, maar je want anders is dat technisch niet af te dwingen, denk ik. En je moet in die in die in dat record verantwoordt alleen maar deze actie en niet eventueel acties die later plaatsvinden. Dat moeten aparte records voor komen.</v>
+
+00:16:19.790 --> 00:16:20.790
+<v Michiel Trimpe>Zie, dat is toch wel</v>
+
+00:16:21.420 --> 00:16:31.260
+<v Lennart BD>mijn opmerking aan het begin. Ik had verwacht dat de regel wat erom gaat meereist met de verdere afhandeling van het request, hoe diep die ook in de organisatie doordringt.</v>
+
+00:16:34.430 --> 00:16:37.270
+<v Lennart BD>Maar ik kan met beide leven hoor, als maar duidelijk is welke het is.</v>
+
+00:16:34.790 --> 00:17:20.130
+<v Michiel Trimpe>Ja, dus ik heb bewust net eh Gideon benoemde het al met de woorden binnen een organisatie. Eh dat is net één van de dingen waarover gediscussieerd kan worden of dat eh ja, bij hoort of niet. Ik denk inderdaad dat het wel waardevol is om het ook binnen de organisatie te doen. En daarmee impliceerde ik inderdaad de hele keten erachter, dus ook waar verantwoording afgelegd moet worden. Dus een eh ik wil een eh een database query is technisch ook een API verzoek, maar dat is niet iets wat dan binnen een applicatie gebeurt. Daar dat hoef je dan niet te verantwoorden. Maar ik merk dus wel inderdaad aan de ja, de verse perspectieven die binnenkomen dat we dat nog iets misschien nog iets duidelijker kunnen specificeren.</v>
+
+00:17:22.910 --> 00:17:23.150
+<v Stas Mironov>Ja.</v>
+
+00:17:23.880 --> 00:17:39.120
+<v Michiel Trimpe>Ik zou sowieso het ietsje korter maken door gewoon toegangsbeslissingen op API verzoeken en dan kan je die punt erachter zetten, dan hoef je of die nou geheel, gedeeltelijk of helemaal geweigerd worden, kan je dan gewoon weglaten. Het gaat erom dat je toegangsbeslissingen vastlegt.</v>
+
+00:17:41.940 --> 00:17:44.580
+<v Michiel Trimpe>Misschien semantisch, maar dat maakt het wel ietsje compacter, hè.</v>
+
+00:17:47.020 --> 00:17:49.420
+<v Gideon Zegwaard>En je en je mist een D in overstijgende.</v>
+
+00:17:50.110 --> 00:17:52.110
+<v Michiel Trimpe>Ja, dat dat wordt ook al door inderdaad.</v>
+
+00:17:50.200 --> 00:17:52.000
+<v Stas Mironov>Ja.</v>
+
+00:17:53.660 --> 00:17:56.820
+<v Lennart BD>Maar toepas Wat zei je nou? Toelatingsbeslissingen?</v>
+
+00:17:57.810 --> 00:18:00.250
+<v Michiel Trimpe>Toegangsbeslissingen op API verzoeken.</v>
+
+00:18:01.250 --> 00:18:10.500
+<v Lennart BD>Ja, maar die reizen dus niet mee verder door de organisatie in hè. Dat is het woord wat je dan kiest. Toegangsbeslissingen.</v>
+
+00:18:08.040 --> 00:18:08.240
+<v Michiel Trimpe>Nadat je</v>
+
+00:18:10.500 --> 00:18:15.650
+<v Lennart BD>Nadat je toegang hebt, houdt het op met die regel. Die reist niet mee verder door de organisatie. Dat bedoel je.</v>
+
+00:18:13.480 --> 00:18:13.760
+<v Michiel Trimpe>Ja.</v>
+
+00:18:15.590 --> 00:18:17.983
+<v Gideon Zegwaard>Want want dit gaat om het loggen van die beslissing, toch?</v>
+
+00:18:16.300 --> 00:18:16.380
+<v Michiel Trimpe>Ja.</v>
+
+00:18:17.500 --> 00:18:17.620
+<v Lennart BD>Niet</v>
+
+00:18:17.983 --> 00:18:30.430
+<v Gideon Zegwaard>Niet niet om doorgeven van informatie over die beslissing verder upstream. Dat is een ander proces. Dus als ik het begrepen heb, gaat het puur over het loggen van de beslissing om dat te kunnen verantwoorden.</v>
+
+00:18:31.390 --> 00:19:02.010
+<v Michiel Trimpe>Klopt. Ja. Ehm we kunnen nog even kijken of we hier nog gewoon een woord per teksten dit iets direct duidelijker kunnen maken in plaats van impliciet. Eh want dat net voor de de mensen die langer in de werkgroep zitten, zit impliciet al wel de boodschap, maar juist, nou ja, jouw verse verse perspectief Lennart is wat de meer waar dit voor bedoeld is. Dus dat is niet voor We gaan even, ik stel voor dat we gewoon even met Stas ook gaan kijken hoe we specifiek dat aspect nog duidelijker in de tekst kunnen opnemen.</v>
+
+00:19:04.210 --> 00:19:04.270
+<v Lennart BD>Dank je.</v>
+
+00:19:04.470 --> 00:19:07.230
+<v Michiel Trimpe>En er vanuit gaan dat dat verduidelijkt is.</v>
+
+00:19:04.810 --> 00:19:05.090
+<v Stas Mironov>Eh</v>
+
+00:19:08.780 --> 00:19:09.780
+<v Michiel Trimpe>verder is dit akkoord voor iedereen.</v>
+
+00:19:11.030 --> 00:19:36.810
+<v Stas Mironov>Ik ik had nog toch nog wel een vraagje dan. En dat is volgens mij ook één van de in ieder geval daaraan gerelateerd. De issue die volgens mij Guus ooit had eh opgemaakt over ADL. We zeggen nu dit niet doorgeven, maar wat is de reden dat we de trace context eh de hele tijd meegeven? Is het toch wel om die keten op te bouwen? Dus op een gegeven moment</v>
+
+00:19:34.840 --> 00:19:57.770
+<v Michiel Trimpe>En we geven het in principe wel eh door, maar je bent niet verplicht dit helemaal in de diepte van jouw technische infrastructuur door te geven. Dus wat ik noemde en eh ik bedoel eh file system rights zijn ook API calls. Dat ga je echt niet meer verantwoorden. Eh dus er er zit een grens. En eh</v>
+
+00:19:56.640 --> 00:20:02.560
+<v Stas Mironov>En dat hebben we dat moeten we dan hier misschien wat duidelijker op schrijven, maar voor mijn gevoel was dit</v>
+
+00:20:00.420 --> 00:20:00.660
+<v Michiel Trimpe>Ja.</v>
+
+00:20:03.490 --> 00:20:14.410
+<v Stas Mironov>En nu hebben we het de hele tijd over of we het gedeeltelijk toestaan of weigeren. Die Ik snap niet waarom we ja, juist over dit stuk struikelen.</v>
+
+00:20:15.680 --> 00:20:31.240
+<v Michiel Trimpe>Nee, daar daar struikelen we niet zozeer over. We volgens mij struikelt iedereen over precies dus die die onduidelijkheid heet tot tot hoever in de keten gaat dit nu en wat zeggen we hier precies? En dat moeten we eventjes duidelijker neerzetten.</v>
+
+00:20:29.420 --> 00:20:48.780
+<v Gideon Zegwaard>Sorry, en goed beschouwd, daar gaat deze standaard niet hè, dit stuk van de standaard niet over, toch? Dat is outzen zelf hoe je dingen eventueel doorgeeft verder in de keten. Dit gaat er puur om binnen outzen is een toegangsbeslissing genomen en die toegangsbeslissing log je.</v>
+
+00:20:51.680 --> 00:20:55.880
+<v Michiel Trimpe>Ja, nou ja, we zijn het kan dus ook zonder outzen. Eventjes de de wat we nu Ja, ja, het kan ook zonder outzen, maar</v>
+
+00:20:54.670 --> 00:20:59.150
+<v Gideon Zegwaard>dit gaat puur om het loggen van de toegangsbeslissing</v>
+
+00:20:56.920 --> 00:20:57.200
+<v Michiel Trimpe>Ja.</v>
+
+00:20:59.150 --> 00:21:08.830
+<v Gideon Zegwaard>en niet zozeer over wat je in de keten van API calls nog aan opvolgende API calls doorgeeft of niet. Dat is een ander deel van een eventuele standaard.</v>
+
+00:21:06.950 --> 00:21:07.290
+<v Michiel Trimpe>Ja.</v>
+
+00:21:09.890 --> 00:21:11.850
+<v Stas Mironov>Maar je logt toch ook de context?</v>
+
+00:21:13.120 --> 00:21:13.680
+<v Gideon Zegwaard>Zeker.</v>
+
+00:21:14.340 --> 00:21:19.293
+<v Michiel Trimpe>Even om wat we denk ik niet expliciet niet willen, dus zoals je het nu leest</v>
+
+00:21:14.600 --> 00:21:15.040
+<v Stas Mironov>Ja.</v>
+
+00:21:19.293 --> 00:21:47.680
+<v Michiel Trimpe>zou je het theoretisch kunnen interpreteren dat je ook van een een database call of een file system write zou moeten kunnen verantwoorden waarom die toegestaan was. Terwijl dat een heel technisch intern detail is en de verantwoordingsbehoefte die die echt echt is ligt veel meer aan de buitenkant van de schil van hé, we nou ja, op welke toegangsbeleid logisch is dit gedaan. En dat willen wij denk ik even duidelijk krijgen, dus dat we duidelijk neerzetten van waar geldt dit.</v>
+
+00:21:50.110 --> 00:21:57.640
+<v Michiel Trimpe>En niet zo subtiel als dat nu staat. Dat is denk ik wat we aan willen stippen. Daarna kunnen we dan denk ik verder.</v>
+
+00:22:01.070 --> 00:22:03.360
+<v Michiel Trimpe>Ja? Weet je dat voor jou Stas?</v>
+
+00:22:02.900 --> 00:22:08.480
+<v Stas Mironov>Nee, tuurlijk. Nee, maar dan moeten we even kijken hoe we dat dan precies willen formuleren.</v>
+
+00:22:10.680 --> 00:22:25.117
+<v Stas Mironov>Ehm en uiteindelijk was mijn vraag ook, we gaan het over ODRL APNL hebben. We moeten dan dezelfde exercitie gaan doen. Dus ik misschien is het handig om dat ook al vooraf te doen eh voordat je het profiel hebt eh geschapen, omdat je dan weet waar je naartoe werkt.</v>
+
+00:22:24.250 --> 00:22:24.770
+<v Michiel Trimpe>Ja.</v>
+
+00:22:25.117 --> 00:22:26.000
+<v Stas Mironov>Ja.</v>
+
+00:22:27.010 --> 00:22:33.330
+<v Michiel Trimpe>Dat staat op zich eh deels al op de planning vandaag. Was dit jouw hoofdvraag of?</v>
+
+00:22:31.360 --> 00:22:33.560
+<v Stas Mironov>Eh ja, precies. Eh</v>
+
+00:22:34.280 --> 00:22:35.960
+<v Michiel Trimpe>Oké. Ja, en eh</v>
+
+00:22:35.130 --> 00:22:54.120
+<v Stas Mironov>ik had nog een vraag over de business cases eh of de use cases. Dus mochten mensen al idee of ADL al gebruiken of willen gebruiken, dan hoor ik het graag, want dan kunnen we dat ook gewoon opnemen. Want eh een standaard zonder gebruikers is niet echt eh breed gedragen, zeg maar.</v>
+
+00:22:56.800 --> 00:22:59.440
+<v Stas Mironov>Goed, dat dat kan eh dat kan offline.</v>
+
+00:23:01.830 --> 00:23:17.760
+<v Michiel Trimpe>Ja. Ja, en we hebben net GBO en Iwill zit weggestuurd. Ja, Iwill zit er nog deels. Maar eh laten we dat dan even offline verder pakken. Eh misschien eigenlijk volgende sessie meer. Dat is denk ik dan ook eh beter. Oké.</v>
+
+00:23:19.850 --> 00:23:25.290
+<v Michiel Trimpe>Ehm nou, dan waren dat eh de andere intro onderwerpen. En dan eh specifiek naar ODRL.</v>
+
+00:23:27.410 --> 00:23:42.330
+<v Michiel Trimpe>Ehm je gaf net al eigenlijk een een mooi bruggetje van eh we gaan ODRL APNL schrijven. Op 6 oktober hebben we een mooie workshop sessie gehad. Ehm daarin eh nou hebben we een basis besproken. Misschien dat ik even</v>
+
+00:23:45.700 --> 00:23:49.160
+<v Michiel Trimpe>even kijken hoe ik dit kan delen.</v>
+
+00:23:59.580 --> 00:24:01.420
+<v Michiel Trimpe>moet dan even zo denk ik.</v>
+
+00:24:05.110 --> 00:24:06.390
+<v Michiel Trimpe>Nee, dat is verkeerd.</v>
+
+00:24:15.840 --> 00:24:16.760
+<v Michiel Trimpe>Nou, heel professioneel, maar eh</v>
+
+00:24:19.540 --> 00:24:37.530
+<v Michiel Trimpe>En daar hebben we geprobeerd ehm te kijken het het kader van ODRL APNL neer te zetten. Eh en wat er nou precies allemaal echt eh in thuis hoort.</v>
+
+00:24:40.640 --> 00:25:04.200
+<v Michiel Trimpe>Nou, dus dat hadden we eerst het eh het standaard ODRL informatiemodel uitgetekend met eh policy, sets, offers, requests, agreements, duty, permission, prohibition, constraint, eh et cetera. En en een groep gezet van nou, dit is dit is de basis die internationaal al bestaat, maar wat missen wij dan nog als eh Nederlandse overheid context.</v>
+
+00:25:06.370 --> 00:26:08.840
+<v Michiel Trimpe>een aantal dingen uitgekomen van denken: hé, dit dit willen wij bovenop ODRL eh benoemen. Eh natuurlijk eh bijvoorbeeld de grondslag. Eh de de aanvraag plus request. Dus eh ook hoe hoe werkt een cyclus van dingen aanvragen? Dus net als bijvoorbeeld autorisatiebesluiten. Eh wat zijn dan eh bijvoorbeeld voorbeelden van toegestane acties? Dus hoe modelleer je de actie die er eh op uitgevoerd wordt? Dus bijvoorbeeld AVG-verwerkingen. Eh weigeringsgronden werd ook benoemd. Nee, dat is is ook belangrijk. Ehm wat was eh vond ik wel interessant wat als echt overheidsspecifiek werd gezien, is ook eh sets van parties. Dus vaak kan je gewoon echt een technische rol aanwijzen van mensen met deze rol in deze Active Directory. En we binnen de overheid hebben we natuurlijk ook gewoon eh groepen burgers, dus gedefinieerd als alle burgers die attributen X, Y of Z hebben. En dat soort zaken. Ehm machtigingen en agents. Eh die is nog wel</v>
+
+00:26:13.600 --> 00:26:20.200
+<v Michiel Trimpe>eh nou ja, en eh mogelijk bijvoorbeeld standaard omschrijvingen voor prohibitions en obligations.</v>
+
+00:26:22.440 --> 00:27:13.950
+<v Michiel Trimpe>wat ook heel interessant was, wat ook expliciet een aantal keer benoemd werd, het niveau van beleid. Eh want daar was in de in de werkgroep heel veel verschillen van perspectief over. Of in ieder geval eh verwarring over, wanneer mensen op verschillende niveaus praten. Dus sommige mensen hadden het bijvoorbeeld van eh beleid op beleid. Dus eh hoe mag jij tot een gegevensdeling komen? Waar het FDS dan bijvoorbeeld eh afspraken over maakt. Dus dat is beleid, toegangsbeleid. Eh je hebt het eh toegangsbeleid van individuele datasets op juridisch niveau, eh wat je bijvoorbeeld in een eh in een DCAT eh logisch zou pakken. Eh maar je hebt ook beleid op eh technisch attribuutniveau. Als dit attribuut deze waarde heeft, et cetera. Dat werd ook gezien als heel belangrijk dat eh de ODRL standaard heel duidelijk is over welk beleid van of welk niveau van toegangsbeleid hebben we het nu over.</v>
+
+00:27:18.230 --> 00:27:20.830
+<v Michiel Trimpe>één aspect.</v>
+
+00:27:28.320 --> 00:27:29.400
+<v Michiel Trimpe>excuses voor de</v>
+
+00:27:38.430 --> 00:28:19.030
+<v Michiel Trimpe>en een ander aspect wat we zagen was eh het eh link data stuk. Dus eh los van het informatiemodel is het ook belangrijk hoe passen wij in de bredere link data wereld van de overheid. Of eh an sich. Ehm nou met als één van de belangrijkste punten, hoe passen wij eh binnen de DCAT APNL? Eh dus hoe wordt er naar ons verwezen? Hoe verhouden wij ons? Eh maar ook hoe kan je bijvoorbeeld de de ODRL vinden? Eh een aantal eh relatieve eh relevante standaarden, dus de de data privacy vocabulary voor GDPR concepten. Eh de ELI voor legal resource verwijzingen.</v>
+
+00:28:23.200 --> 00:28:28.960
+<v Michiel Trimpe>een aantal EU standaarden, dus CPSV, CPRMV, verifiable credentials.</v>
+
+00:28:31.310 --> 00:28:33.270
+<v Michiel Trimpe>deze sla ik kom ik zo nog even bij.</v>
+
+00:28:38.320 --> 00:28:49.120
+<v Michiel Trimpe>eh nou, dus een eh hoe gaan we om met de NL SPB, eh TOI. Ik kijk even snel doorheen, maar misschien kent ligt nog niet iedereen.</v>
+
+00:28:52.680 --> 00:29:08.090
+<v Michiel Trimpe>NL SPB is bijvoorbeeld de standaard voor eh link data modellering van begrippen in Nederland. Eh kan eventueel ook met grondslagen voor gebruikt worden voor grondslagen. En TOI is</v>
+
+00:29:12.310 --> 00:29:24.260
+<v Michiel Trimpe>verhoudt zich ten opzichte van eh Ozen en zijn Jason LD mapping van informatiemodellen.</v>
+
+00:29:28.170 --> 00:29:43.610
+<v Michiel Trimpe>er is ook een eh rollenrepresentatie vanuit Nora. Nou, en dit zijn allerlei ehm verschillende link data standaarden waarvan we zeggen: hé, die willen we echt expliciet benoemen hoe ODRL AP hierin past en hoe ze deze dienen te gebruiken en waar.</v>
+
+00:29:45.760 --> 00:30:16.190
+<v Michiel Trimpe>En één van de belangrijkste punten was eh de eigenschap van waardelij eigenaarschap van waardelijsten en principes daarin. Dus algemene bijna algemene link data aanpakprincipes, maar ehm nou ja, ga niet eh ga niet zelf direct een link data element verzinnen. Eh probeer het eerst eh zelf te vinden waar het bestaat. Als het niet bestaat, probeer het aan te dragen bij de rechtmatige of de logische eigenaar. En pas als laatste optie eh zelf iets verzinnen.</v>
+
+00:30:20.150 --> 00:30:24.110
+<v Michiel Trimpe>dit waren eigenlijk de</v>
+
+00:30:26.540 --> 00:30:53.150
+<v Michiel Trimpe>Ja, dit is eigenlijk hetzelfde punt, maar de shoot. En dit is eigenlijk waar de de werkgroep samen uitkwam van nou, dit dit is de kern eh die wij willen benoemen. Eh we hebben uiteindelijk eh nou, het ging lekker snel de diepte in, dus we zijn niet toegekomen aan een beslissing van hé, wat is hier nou normatief? Dus welke wat zijn may, shoulds en must musts en hoe kijken we daarnaar? Maar dit is op hoofdlijnen waarvan de werkgroep zei, denk ik dat dit de kern is die ODRL APNL zou moeten dekken.</v>
+
+00:30:56.760 --> 00:31:01.520
+<v Michiel Trimpe>Volgens mij Stas was erbij, Wessel was erbij. Eh</v>
+
+00:31:03.560 --> 00:31:08.360
+<v Michiel Trimpe>vat ik de inhoud zo grofweg goed samen? Zijn er nog dingen van jullie denken: dat heb ik nog gemist?</v>
+
+00:31:10.770 --> 00:31:22.570
+<v Gideon Zegwaard>Ik zou eh MIM eh of eh informatiegegevensmodellen er nog bij zetten. Er is vaak ook een relatie tussen tussen policies en informatiegegevensmodellen. Zeker als je als je ze wil inperken.</v>
+
+00:31:26.750 --> 00:31:27.710
+<v Michiel Trimpe>Ja, zeker, die is</v>
+
+00:31:35.660 --> 00:31:44.080
+<v Michiel Trimpe>Oké. Oh ja, Hans, jij was er ook bij. Eh maar dus voor de aanwezigen, dus de dit dekt verder eh inderdaad de lading van de werkgroep zoals besproken met z'n allen?</v>
+
+00:31:48.640 --> 00:31:48.880
+<v Michiel Trimpe>Oké.</v>
+
+00:31:50.960 --> 00:32:18.360
+<v Michiel Trimpe>Ehm nou mooi. Eh in de werkgroep kwam ook uit dat we eh te denken aan twee eh sub of ja, twee subwerkgroepen die dit dan uit kunnen gaan werken. Eh één die zich richt op het informatiemodel meer en één die zich richt op link data. En een aantal mensen hebben zich al aangemeld. Eh Rens is er niet bij. Wessel zeker. Hans, ik zag jouw naam er niet bij staan trouwens, dus jij had niet, maar jij was wellicht druk.</v>
+
+00:32:20.950 --> 00:32:21.550
+<v Hans Schevers>Mag wel.</v>
+
+00:32:21.880 --> 00:32:39.240
+<v Michiel Trimpe>Ehm maar eh bijvoorbeeld de optionele lijst erbij zetten. Ehm, er zijn er nog mensen die eh niet aanwezig waren bij de werkgroep zelf die wel denken: hé, ik of ik zou hier graag aan mee willen schrijven.</v>
+
+00:32:42.630 --> 00:32:54.550
+<v Govert Claus>Ik ik ga die vraag even neerleggen bij een collega van me bij GBO. Arjen Briene is dat. Die was niet bij de werkgroep volgens mij, maar die heeft dit wel als eh aandachtsgebied, dus ik ga hem eventjes voorstellen om toch even contact op te nemen.</v>
+
+00:32:55.270 --> 00:32:58.268
+<v Michiel Trimpe>Ja, ik heb hem vorige week al gesproken. Ik zit ook maandag</v>
+
+00:32:56.900 --> 00:32:58.580
+<v Govert Claus>Ah, was goed. Kijk.</v>
+
+00:32:58.268 --> 00:33:00.550
+<v Michiel Trimpe>maandag nog een keer met hem.</v>
+
+00:32:59.550 --> 00:32:59.830
+<v Govert Claus>Oké.</v>
+
+00:33:03.200 --> 00:33:06.440
+<v Michiel Trimpe>Dus dat was nog goed om de vraag even expliciet bij hem neer te leggen.</v>
+
+00:33:08.990 --> 00:33:09.270
+<v Michiel Trimpe>Oké.</v>
+
+00:33:10.600 --> 00:33:22.640
+<v Gideon Zegwaard>Als de tijd me gegund is, wil ik wel eh mijn mijn best doen om nog dingetjes te reviewen, maar ik moet het altijd woekeren met mijn tijd, dus het is eh eh was niet gebrek aan interesse, maar dat is puur eh gebrek aan tijd.</v>
+
+00:33:25.490 --> 00:33:26.330
+<v @1>Herkenbaar.</v>
+
+00:33:25.880 --> 00:33:26.160
+<v Michiel Trimpe>Oké.</v>
+
+00:33:27.840 --> 00:33:29.520
+<v Mark Westbroek>Ik zat ook ergens op de lijst, Michiel.</v>
+
+00:33:27.880 --> 00:33:28.360
+<v Michiel Trimpe>Ja.</v>
+
+00:33:30.620 --> 00:33:37.590
+<v Michiel Trimpe>Eh ja, jij stond niet als actieve meeschrijver op de stickies volgens mij. Je bent wel welkom hoor, dus dat als je nu</v>
+
+00:33:37.750 --> 00:33:38.990
+<v Mark Westbroek>Ik had ergens</v>
+
+00:33:39.230 --> 00:33:40.270
+<v Michiel Trimpe>wel ja, wel sorry.</v>
+
+00:33:40.230 --> 00:33:45.030
+<v Mark Westbroek>wel aangegeven. Ja. Ja, precies. Dacht ik al.</v>
+
+00:33:41.550 --> 00:33:52.136
+<v Michiel Trimpe>Ja, wel Mark voor informatiemodel. Ja, dit zijn de Mark, Marieze, Rens en Rob die hebben zich voor informatiemodel opgegeven.</v>
+
+00:33:46.800 --> 00:33:46.880
+<v Mark Westbroek>Ja.</v>
+
+00:33:52.136 --> 00:33:56.390
+<v Michiel Trimpe>En Wessel en Rens voor link data.</v>
+
+00:33:57.440 --> 00:33:57.520
+<v Mark Westbroek>Ja.</v>
+
+00:34:01.460 --> 00:34:01.660
+<v Mark Westbroek>Ja.</v>
+
+00:34:02.530 --> 00:34:22.530
+<v Michiel Trimpe>doen. Eh niet eh de de planning daarvan afhankelijk laten maken. Eh en dan nou, ga ik nu wat ik eigenlijk eh twee weken geleden had moeten doen, de de rest van de de mensen uitnodigen voor een concrete werkgroepsessies.</v>
+
+00:34:29.630 --> 00:34:44.630
+<v Michiel Trimpe>dicht dan alvast even delen. En dat is misschien ook een eh een vraag aan Stas. Dus ik heb een eh een respec opgezet als kapstok voor ODRL APNL. Eh momenteel nog onder de de Digilab GitLab.</v>
+
+00:34:46.660 --> 00:34:54.100
+<v Michiel Trimpe>is dit iets wat eh Stas ook al bij eh Logius op een eh Git zou kunnen? Of hebben jullie daar nog wat processtappen voor nodig voordat dat kan.</v>
+
+00:34:56.320 --> 00:34:56.720
+<v Michiel Trimpe>kan.</v>
+
+00:34:57.210 --> 00:35:04.230
+<v Stas Mironov>Technisch kan alles. Ehm maar we hebben natuurlijk eh ik weet niet hoe Mark nog in de meeting zit. Maar eh</v>
+
+00:35:03.600 --> 00:35:04.240
+<v Michiel Trimpe>Ja, zeker.</v>
+
+00:35:06.230 --> 00:35:39.370
+<v Stas Mironov>eh kort eh over de overdracht gehad. Ehm nu is het wat lastiger aan de kant van Logius intern, ehm omdat we officieel geen opdracht hebben voor ODRL APNL. Dus vandaar dat ik ook niet eh eh buiten dat ik ook niet eh helemaal thuis ben op dit eh eh dit gebied eh dat ik ook niet meeschrijf, meer review, omdat ik officieel dus eigenlijk geen eh ehm uren aan dit mag spenderen, als het ware. Dat dat is een beetje het lastige.</v>
+
+00:35:41.440 --> 00:35:50.000
+<v Stas Mironov>Maar ik zal even kijken of we alvast eh dingen over de schutting kunnen gooien, gewoon op GitHub eh en al inrichten. Want het ziet het komt wel onze kant op, denk ik toch? Dat eh</v>
+
+00:35:51.540 --> 00:35:51.620
+<v Michiel Trimpe>Ja.</v>
+
+00:35:53.770 --> 00:36:12.000
+<v Michiel Trimpe>Ja, dan is denk ik dat goed om eh dat administratieve proces in gang te zetten. Ehm en dan ja, we kunnen het is op zich prima. Het is een een Git repository ook op Digilab, dus eh dat kan over gewoon wanneer er tijd is. Eh maar laten we dat proces dan wel gewoon dan eh nu in gang zetten.</v>
+
+00:36:11.830 --> 00:36:12.110
+<v Stas Mironov>Misschien</v>
+
+00:36:14.280 --> 00:36:19.640
+<v Stas Mironov>een korte vraagje ook administratief. ODRL APNL, staat dat vast?</v>
+
+00:36:14.520 --> 00:36:14.840
+<v Michiel Trimpe>Ja.</v>
+
+00:36:22.340 --> 00:36:33.230
+<v Michiel Trimpe>Hm, dat is de consensus van de werkgroep tot nu toe. Maar als daar echt bezwaar op is of suggesties, eh is nu wel het juiste tijdstip om dat te doen. Ja. Liever eerder dan later.</v>
+
+00:36:36.660 --> 00:36:40.660
+<v Michiel Trimpe>Is er een specifieke reden of de twijfels of is dit ook een algemene</v>
+
+00:36:41.480 --> 00:36:50.748
+<v Stas Mironov>Nee, maar meer voor voor om dingen in gang te zetten ook omdat ik ook bezig ben met de website eh klaarstomen. Ehm is wel handig om om want eerst was het register toegangsbeslissingen.</v>
+
+00:36:47.990 --> 00:36:48.270
+<v Michiel Trimpe>Ja.</v>
+
+00:36:50.748 --> 00:36:58.268
+<v Stas Mironov>Ehm volgens mij kiezen we meer voor afkortingen en Engels in plaats van eh Nederlands, dus</v>
+
+00:36:54.200 --> 00:36:54.440
+<v Michiel Trimpe>Ja.</v>
+
+00:36:58.268 --> 00:36:59.320
+<v Stas Mironov>Ja.</v>
+
+00:36:59.030 --> 00:37:55.270
+<v Michiel Trimpe>Nou, er is het begin is al besloten. Eh dus in het begin is er een discussie geweest over Engels versus Nederlands. Ehm en toen was eigenlijk direct dat eh of direct besloten dat de standaarden in het Engels eh worden. En dat we de termen gaan zorgvuldig vertalen waar relevant. En register toegangsbeleid eh duurde lang voordat we dat konden vertalen eh wat we eerst zaten uit eh register access policies ofzo. Maar toen duidelijk werd dat we op ODRL eh richten, leek ODRL APNL ons de juiste. Eh ook specifiek applicatieprofiel, omdat het geen klassiek ODRL profiel is. Een klassiek ODRL profiel is vaak over de de inhoud. Dus hoe modelleer ik mijn domein in ODRL. Eh maar dat is niet waar we het hier over hebben. Dus dan is die net zoals DCAT APNL, wat ook naar elkaar verwijst, is het echt een applicatieprofiel voor de Nederlandse overheid. Dus vandaar de de naam.</v>
+
+00:38:00.620 --> 00:38:05.420
+<v Michiel Trimpe>Maar eh nou, mocht dat veranderen, eh liever eerder dan later, maar dat lijkt me op zich geen groot probleem.</v>
+
+00:38:09.730 --> 00:38:15.770
+<v Michiel Trimpe>Nou, en dit is even een eh een basis eh voor het document waar we dan in gaan werken.</v>
+
+00:38:18.480 --> 00:38:26.920
+<v Michiel Trimpe>met eh onder andere en dit is dan eh hebben we net al mee begonnen.</v>
+
+00:38:34.340 --> 00:39:18.470
+<v Michiel Trimpe>gezet, maar ik heb het even helemaal opengelaten. Ehm de scope is het goed om hier even te bespreken, want eh dus dat is eigenlijk eh hetzelfde als dat toepassingsgebied. Voor wanneer is ODRL APNL? Eh er zijn bijvoorbeeld ook een aantal casussen waar ODRL ook in gebruikt wordt, maar de vraag is of wij dat hier relevant vinden of mee willen nemen. Dus je hebt bijvoorbeeld het eh Dataspace protocol wat eh ODRL fragmenten gebruikt in de contractonderhandeling. Dus dan definieer je geen heel ODRL beleid, maar gebruik je een stukje van de ODRL standaard eh in een contract wat je afsluit met elkaar technisch.</v>
+
+00:39:21.530 --> 00:39:35.200
+<v Michiel Trimpe>Mijn vraag, willen we dat hier bijvoorbeeld ook meenemen? Of gaat het bij ons meer over het inzicht bieden in toegangsbeleid eh tussen en binnen organisaties eigenlijk. Hetzelfde stukje als ADL.</v>
+
+00:39:39.190 --> 00:39:39.630
+<v Michiel Trimpe>Kan je</v>
+
+00:39:39.350 --> 00:39:44.430
+<v Stas Mironov>je misschien een voorbeeld geven van wat voor contracten hiermee bedoeld?</v>
+
+00:39:46.840 --> 00:39:48.280
+<v Michiel Trimpe>Eh van het Dataspace protocol.</v>
+
+00:39:48.870 --> 00:39:49.190
+<v Stas Mironov>Ja.</v>
+
+00:39:54.310 --> 00:39:55.310
+<v Michiel Trimpe>Oh, ik weet niet of ik die</v>
+
+00:39:57.950 --> 00:39:59.150
+<v Michiel Trimpe>klaar heb staan.</v>
+
+00:40:02.540 --> 00:40:03.620
+<v Stas Mironov>niet per direct hoor, maar</v>
+
+00:40:07.600 --> 00:40:08.280
+<v Michiel Trimpe>Even kijken.</v>
+
+00:40:13.420 --> 00:40:34.210
+<v Michiel Trimpe>Ja, wat dan bijvoorbeeld Dataspace protocol doet is dat je eh zeg maar hier op dit niveau wat dingen eruit eh kan trekken. Dus zeggen het is iets wat niet in een bredere policy zit of wat niet per se aan entiteit toegewezen is. Eh maar je moet aan deze regels voldoen.</v>
+
+00:40:41.180 --> 00:40:42.460
+<v Michiel Trimpe>Ja, nee, die heb ik niet.</v>
+
+00:40:46.990 --> 00:40:48.030
+<v Michiel Trimpe>Nee, ik zoek zelf wel even</v>
+
+00:40:47.150 --> 00:40:48.510
+<v Stas Mironov>Nee, ik zoek zelf wel even</v>
+
+00:40:50.620 --> 00:40:51.700
+<v Stas Mironov>later eh nog even een voorbeeld op.</v>
+
+00:40:50.960 --> 00:41:04.940
+<v Michiel Trimpe>Ja, ehm mijn insteek, of onze en die wil ik even toetsen, dus is eh voornamelijk dat dus ODRL APNL wel bedoeld is voor het inzicht bieden in toegangsbeleid</v>
+
+00:41:08.060 --> 00:41:15.820
+<v Michiel Trimpe>eh van ja, ik wilde zeggen tussen overheidsinstanties, maar niet alleen tussen overheidsinstanties, maar ook eventueel tussen overheidsinstanties en burgers.</v>
+
+00:41:18.130 --> 00:41:18.690
+<v Michiel Trimpe>Eh maar</v>
+
+00:41:23.240 --> 00:41:33.960
+<v Michiel Trimpe>Ik merk dat ik nu eventjes aan het aan het twijfelen ben aan mezelf. Gideon, kun je heb jij misschien een idee? Want dit is natuurlijk ook relevant vanuit FDS.</v>
+
+00:41:36.290 --> 00:41:49.970
+<v Gideon Zegwaard>Ja, vanuit FDS kijk ik vooral kijken we vooral dus naar de de onderlinge transparantie tussen tussen deelnemers hè. Je hebt aanbieders en afnemers en als die toegangsbeleid toepassen, dan moet dat naar elkaar toe eh eh transparant zijn wat ze doen.</v>
+
+00:41:52.040 --> 00:42:29.890
+<v Gideon Zegwaard>Ehm hè, dus dat is de eerste eh eh eerste belang eh bij eh FDS en hoe beter dat ook gekoppeld is aan de eh daadwerkelijke technische executie eh hoe beter hè. Ehm eh en verder, maar dat dat gaat weer een beetje voorbij FDS is natuurlijk ook het eh het transparant maken naar derden en en eh en betrokkenen, dus eh over wie er informatie wordt uitgewisseld. Eh maar dat is een soort van breder doel. Dat is niet direct een primair doel van het FDS. Er als als het goed is zijn er andere partijen die zich daar druk over maken die dan weer bij het FDS eh vereisten neerleggen om dat mogelijk te maken.</v>
+
+00:42:32.330 --> 00:43:00.170
+<v Michiel Trimpe>Ja, we hebben ook wel besproken met een eh een juridisch specialist eh van de Woo. En die was op zich ook heel duidelijk, dus dit dit valt duidelijk onder de Woo verplichtingen. En niet onder de eh de proactieve Woo verplichting. Dus het is niet eh verplicht als organisatie om dit proactief te ontsluiten. Maar wanneer eh je als organisatie een verzoek krijgt om dit te ontsluiten, dan eh ja, dien je dat conform de standaard Woo eh vereisten met open overheid wel te delen.</v>
+
+00:43:03.840 --> 00:43:25.400
+<v Michiel Trimpe>Dus en eh dat is inderdaad goed. Ik denk dat eigenlijk mijn voorstel zou zijn om op die twee verplichtingen ODRL APNL toe te spitsen. Dus eh verantwoording en inzicht eh tussen overheidsorganisaties zoals het FDS dat benoemt. En verantwoording en inzicht naar derden, naar de burger vanuit het open overheidsperspectief.</v>
+
+00:43:29.540 --> 00:43:43.770
+<v Michiel Trimpe>bevinden, dus dan is dat de focus. En dan dus bijvoorbeeld dat dataspace protocol waar het meer een een technisch onderhandelings of ja een een API eh ketentje is, dat dat niet per se in scope is voor ons.</v>
+
+00:43:50.950 --> 00:44:04.760
+<v Michiel Trimpe>Silence silence is consent. Dan eventjes bij deze. Dan eh is dat dus de de scope en het toepassingsgebied. En dat wordt dan dus ook het toepassingsgebied van de standaard.</v>
+
+00:44:08.390 --> 00:44:10.870
+<v Michiel Trimpe>Oh, hebben jullie de hele tijd naar een leeg ding staan kijken.</v>
+
+00:44:12.930 --> 00:44:20.680
+<v Michiel Trimpe>Nou, en dan maakt dat dus ook de doelgroep ehm FDS deelnemers en burgers of belanghebbenden.</v>
+
+00:44:23.200 --> 00:44:44.460
+<v Michiel Trimpe>dat dan de kern van deze sessie. Eh nou, dan doen we het eh het delta principe, dus dat we niet heel ODRL nog een keer gaan herhalen, maar wat daar boven wat wij daar bovenop toevoegen. Eh hier heb ik ruimte gemaakt voor een sectie over het niveau van toegangsbeleid. Dus dat we eh ja die verwarring eh in ieder geval expliciet benoemen.</v>
+
+00:44:49.530 --> 00:45:17.380
+<v Michiel Trimpe>dan heb ik hier verder een kapstok met eigenlijk twee hoofdstukken, het informatiemodel en link data integratie noem ik het even. Voor link data ecosysteem integratie. Ehm dan zeg ik voor dat bij het informatiemodel dat we daar ook dezelfde kapstok als ODRL aanhouden, maar eh de delta's toevoegen. Dus bijvoorbeeld op een policy eh nou, wat is de grondslag? Eh de letterlijke verwijzende verwijzingen naar de wetten.</v>
+
+00:45:19.820 --> 00:45:22.980
+<v Michiel Trimpe>verplichte identifiers wat wij dan toe willen voegen.</v>
+
+00:45:25.090 --> 00:45:25.810
+<v Michiel Trimpe>en versionering.</v>
+
+00:45:28.500 --> 00:45:46.380
+<v Michiel Trimpe>denk ik te veel detail om ze allemaal door te gaan, maar hetzelfde voor eh offer request en agreement. Hetzelfde voor eh parties. Nou, nu zie ik me nu net dat ik dit dus in het Nederlands gedaan heb. Oké, dit moet allemaal naar het Engels. Excuses.</v>
+
+00:45:48.530 --> 00:46:01.010
+<v Michiel Trimpe>dan wordt hier dan parties en party collection. En dit is dan de plek waar we bijvoorbeeld uit kunnen leggen hoe je met een een party collection met refinement iets uit kan drukken als alle burgers met attributen X, Y en Z.</v>
+
+00:46:04.230 --> 00:46:50.250
+<v Michiel Trimpe>de details gaan we dan denk ik door met de detail subgroepen. En dan een aparte link data integratiesessie eh die we dan beginnen met de best practices. Dus eh het eigenaarschap wat we net besproken. En dan eh zou ik voor een aparte sectie voor DCAT-AP-NL, omdat dat een hele belangrijke integratie is. Dan eigenlijk een keten van hoe passen we bij de Nederlandse standaarden? aan Mim dus ook bij komt te staan. Hoe passen we binnen de Europese standaarden? Legal Resource, DPV, eh maar ook CCEV en dergelijke. En dan ook nog de internationale vocabulaires. Ehm nou, DKV, prof, eh ik mis nog een paar stingen.</v>
+
+00:46:56.540 --> 00:47:14.010
+<v Michiel Trimpe>Ja, en dan hebben we nog een open een open vraag. Dus de bij deze dingen die we toevoegen aan het informatiemodel horen soms ook eigen link data URI's. En waar willen we die plaatsen? Willen we die hier in line toevoegen of hier in de link data ecosysteem sectie.</v>
+
+00:47:16.280 --> 00:47:21.040
+<v Michiel Trimpe>dat dit de kapstok is die we met de subwerkgroepen in gaan vullen.</v>
+
+00:47:24.070 --> 00:47:25.710
+<v Michiel Trimpe>Klinkt dat redelijk voor iedereen?</v>
+
+00:47:28.600 --> 00:47:37.160
+<v Gideon Zegwaard>Is is het een idee om in die stappen steeds één of twee concrete cases als als voorbeelden te hanteren?</v>
+
+00:47:39.260 --> 00:47:45.050
+<v Gideon Zegwaard>hè de eh BRP autorisatiebesluit bijvoorbeeld kwam een aantal keer voorbij. Dat je dat je</v>
+
+00:47:47.700 --> 00:47:54.380
+<v Gideon Zegwaard>een soort van eh een lijn ook ziet en het ook steeds kan toetsen aan wat betekent dat dan concreet in een specifiek geval.</v>
+
+00:47:56.480 --> 00:48:00.640
+<v Michiel Trimpe>Ja, ja, dat hebben we net eh ook bij ADRL toegevoegd als een verbetering.</v>
+
+00:48:03.410 --> 00:48:06.170
+<v Michiel Trimpe>hebben we dan één voorbeeld of hebben we er twee nodig?</v>
+
+00:48:03.840 --> 00:48:04.560
+<v Gideon Zegwaard>Ja.</v>
+
+00:48:07.750 --> 00:48:10.820
+<v Gideon Zegwaard>Ja, als als het op verschillende niveaus iets willen doen, dan is het misschien handig</v>
+
+00:48:07.830 --> 00:48:07.950
+<v Michiel Trimpe>Ja.</v>
+
+00:48:10.820 --> 00:48:17.370
+<v Gideon Zegwaard>om om er dan misschien twee te hebben die op een verschillend ander niveau zitten ofzo.</v>
+
+00:48:18.940 --> 00:48:19.140
+<v Michiel Trimpe>Ja.</v>
+
+00:48:23.500 --> 00:48:36.250
+<v Michiel Trimpe>misschien dat de de BRP is natuurlijk het het geijkte voorbeeld. Ehm moet even kijken of dat een belangrijke doelgroep overslaat, maar de BRP kan je natuurlijk ook de verschillende niveaus</v>
+
+00:48:36.090 --> 00:48:36.570
+<v Gideon Zegwaard>Ja.</v>
+
+00:48:39.910 --> 00:48:41.750
+<v Michiel Trimpe>Oké. Ja, eh laten we sowieso eh</v>
+
+00:48:42.320 --> 00:48:54.640
+<v Gideon Zegwaard>En dat hoef je niet een volledige case te hebben. Je kan hem natuurlijk ook gewoon wat versimpelen om eh maar dat puur dat je iets concreets hebt om het steeds op te toetsen en om even weer vaste grond te voelen, om zo maar te zeggen.</v>
+
+00:48:57.840 --> 00:48:58.120
+<v Michiel Trimpe>Oké.</v>
+
+00:49:01.860 --> 00:49:12.580
+<v Michiel Trimpe>Ja, dat ze doen dat ze gewoon een eh net zoals bij de ADL dat we een voorbeeld kiezen van een stukje en dat we dat in de verschillende stappen meenemen en uitwerken als voorbeeld. Dan past dit hierin of past dat daarin.</v>
+
+00:49:15.760 --> 00:49:35.920
+<v Lennart BD>Ik heb nog een vraagje over informatiemodel, want er is een paar keer MIM genoemd. Daar ben ik daar mede-auteur van, dus ik was even benieuwd of jullie hoofdstuk 4 wilde uitwerken met een MIM-model of dat jullie bedoelen als je policies en regels specificeert dat je dan wilt kunnen naar verwijzen naar de gegevens waar die policy op betrekking heeft.</v>
+
+00:49:40.530 --> 00:49:41.210
+<v Lennart BD>Of allebei?</v>
+
+00:49:44.810 --> 00:50:03.580
+<v Michiel Trimpe>Ja, dus de eh MIM was wel eh ja, moeten sowieso bespreken hoe dit met MIM integreert. Eh dit informatiemodel bedoel denk ik specifiek het informatiemodel zoals de internationale ODRL standaard definieert.</v>
+
+00:50:05.240 --> 00:50:12.720
+<v Gideon Zegwaard>Ja, dat is dit dit volgens mij hoofdstuk 4 hier is het informatiemodel van de van de policy registratie zelf.</v>
+
+00:50:13.250 --> 00:50:13.690
+<v Michiel Trimpe>Ja.</v>
+
+00:50:15.090 --> 00:50:16.290
+<v Gideon Zegwaard>Want je hebt</v>
+
+00:50:15.710 --> 00:50:20.350
+<v Lennart BD>Oh, zeg maar metadata. En die metadata kan je beschrijven met standaarden.</v>
+
+00:50:17.480 --> 00:50:23.808
+<v Gideon Zegwaard>Ja, dus je hebt je hebt het in een policy kan je verwijzen naar informatiemodellen van de dataset waar je een</v>
+
+00:50:22.220 --> 00:50:22.300
+<v Lennart BD>Ja.</v>
+
+00:50:23.808 --> 00:50:37.280
+<v Gideon Zegwaard>policy overschrijft. Maar die die policy is zelf ook weer opgebouwd volgens een informatiemodel. En dat is die hoofdstuk 4 hier volgens mij.</v>
+
+00:50:38.100 --> 00:50:41.632
+<v Lennart BD>Ja, vandaar die vraag eh zeg maar. Maar dan kom ik daar nog wel op terug.</v>
+
+00:50:40.580 --> 00:50:43.540
+<v Michiel Trimpe>wanneer eh Ja, was iemand nog een vraag over heeft aan mij dan</v>
+
+00:50:41.632 --> 00:50:45.820
+<v Lennart BD>hou ik me aanbevolen.</v>
+
+00:50:47.180 --> 00:50:49.720
+<v Michiel Trimpe>Ja. Ja, ik zie het inderdaad.</v>
+
+00:50:49.090 --> 00:50:50.610
+<v Mark Westbroek>zou ik even logisch</v>
+
+00:50:51.490 --> 00:51:02.010
+<v Michiel Trimpe>bij dat eh in dit hoofdstuk scharen, maar het is natuurlijk niet link data, het is MIM, dus misschien dat dat dat dat hoofdstuk nog breder verwoord moet worden.</v>
+
+00:51:04.060 --> 00:51:18.140
+<v Mark Westbroek>Ja, in in het in het standaard metamodel van ODRL is is maar een heel vonden we, heel kleine plek ingeruimd voor eh de data waarop het betrekking heeft.</v>
+
+00:51:20.330 --> 00:51:28.736
+<v Mark Westbroek>Dat dat is één één klasje. Eh kom niet op de naam, maar ehm en er is ook niet beschreven hoe je die dan, er is geen standaard hoe je er dan</v>
+
+00:51:25.850 --> 00:51:26.130
+<v Michiel Trimpe>Ja.</v>
+
+00:51:28.736 --> 00:51:36.960
+<v Mark Westbroek>eh naar verwijst. Dus dat dat is volgens mij deel wat we willen graag willen uitbreiden, zodat we wat meer eh handvatten kunnen geven aan mensen die een profiel schrijven, hoe je dan verwijst naar de data, dat je MIM gebruikt of RGM gebruikt of</v>
+
+00:51:38.810 --> 00:51:39.330
+<v Michiel Trimpe>Ja.</v>
+
+00:51:39.250 --> 00:51:39.690
+<v Mark Westbroek>dat</v>
+
+00:51:40.680 --> 00:51:56.810
+<v Michiel Trimpe>Interessant, want die heb ik zeg maar dat ik ook eh hier niet mee heb genomen. Ehm maar daar wordt specifiek aan gewerkt eh in deze context vanuit de DCAT werkgroep met de de VVD's, zoals ze dat noemen, de vocabulary for variable descriptions.</v>
+
+00:51:59.700 --> 00:52:12.020
+<v Michiel Trimpe>Ehm maar dat is dus in wording. Eh dat speelt denk ik sowieso. Ehm dat is een een diep onderwerp wat we vandaag niet echt kunnen adresseren op verschillende vlakken, want ODRL 3 is net gestart.</v>
+
+00:52:14.600 --> 00:52:35.560
+<v Michiel Trimpe>Een deel hiervan is dus dat wij een een ODRL visualization note aan de ODRL 3 aan willen dragen. Er zijn verschillende aspecten waarbij het eh we ook uit zeggen: hé, er is een er zijn een aantal rijdende treinen en we zullen moeten bespreken hoe wij ons daartoe verhouden of wij er alvast in gaan springen of of vooruitlopen of eh andere zaken.</v>
+
+00:52:38.220 --> 00:52:52.210
+<v Michiel Trimpe>Maar dat is eh denk ik dat is lijkt me een wellicht een mooi onderwerp voor de volgende sessie over vier weken. Eh dat we dan hopelijk met de subwerkgroepen daar ook al wat meer de diepte in geweest zijn.</v>
+
+00:52:57.160 --> 00:53:04.690
+<v Michiel Trimpe>Gezien de tijd eh denk ik dat het goed is om eh richting afronden te gaan.</v>
+
+00:53:07.130 --> 00:53:18.250
+<v Michiel Trimpe>Dus we hebben een hoop aangestipt. Ehm een aantal mensen die eh optioneel meegenomen willen worden eh in de subwerkgroepen. Ik ga de subwerkgroepen uitnodigen om samen te komen.</v>
+
+00:53:20.590 --> 00:53:28.310
+<v Michiel Trimpe>krijgen in dit traject niet een beetje gehoord hebt.</v>
+
+00:53:30.740 --> 00:53:40.740
+<v Lennart BD>nog niet echt. Ik zie wel mogelijkheden, maar welke het beste past en of ik dan de beste pas, moet ik nog wel heel even over napraten met jou of iemand anders.</v>
+
+00:53:41.730 --> 00:53:44.970
+<v Michiel Trimpe>Oké, dan plannen we daar gewoon een eh één op één gesprekje voor in.</v>
+
+00:53:47.560 --> 00:53:58.210
+<v Michiel Trimpe>Ehm en dan nog andere aandachtspunten. Ehm nog dingen die eh voor de volgende sessie per se op de agenda moeten naast wat we net al besproken hadden voor de autorisatie.</v>
+
+00:54:04.390 --> 00:54:04.590
+<v Michiel Trimpe>Oké.</v>
+
+00:54:07.780 --> 00:54:09.300
+<v Michiel Trimpe>jij nog aandachtspunten Mark?</v>
+
+00:54:14.230 --> 00:54:24.690
+<v Michiel Trimpe>Dan is eh dit denk ik de voorbij helemaal van slag. Dan zijn we gewoon vier minuten echt eerder op tijd klaar. Maar dat is dit denk ik de werkgroep voor vandaag.</v>
+
+00:54:27.930 --> 00:54:34.710
+<v Michiel Trimpe>Dank jullie allemaal voor jullie aanwezigheid. Ik hoop van jullie onderling nog zien en de rest tot over twee of vier weken.</v>
+
+00:54:38.040 --> 00:54:40.360
+<v Govert Claus>Ja, bedankt. Fijne dag.</v>
+
+00:54:38.160 --> 00:54:38.760
+<v @1></v>
+
+00:54:40.640 --> 00:54:41.490
+<v Hans Schevers></v>
+
+00:54:40.770 --> 00:54:41.130
+<v Stas Mironov></v>
