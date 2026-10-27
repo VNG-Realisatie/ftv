@@ -34,7 +34,7 @@ type: 'chapter'
 
 {{< /chapter/section >}}
 
-{{< chapter/nextprevious  bg="bg-rhc-color-donkerbruin-50" nextlink="manager_policies" nexttitle="Beleidsregels van het laadpaalvergunningensysteem">}}
+{{< chapter/nextprevious  bg="bg-rhc-color-donkerbruin-50" nextlink="laadpaal_policies" nexttitle="Beleidsregels van het laadpaalvergunningensysteem">}}
 {{< /chapter/nextprevious >}}
 
 {{< chapter/section title="Onderwerp" level="3">}}
