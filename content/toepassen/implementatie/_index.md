@@ -36,9 +36,9 @@ In de sectie 'Methodiek' is de werkwijze Externalized Access Management (EAM) be
 
 De volgende pagina's gaan dieper in op een aantal aspecten van een implementatietraject:
 
-1. [Functioneel overzicht](./functioneel). Voor een goed begrip van de rest volgt eerst een beschrijving van de functies die nodig zijn om een compleet EAM-systeem te laten functioneren. Dit kan ook helpen om te controleren dat alle essentiële functies belegd zijn.
+1. [Functioneel overzicht](./functioneel). Een beschrijving van de functies die nodig zijn om een compleet EAM-systeem te laten functioneren. Dit kan helpen om te controleren dat alle essentiële functies belegd zijn.
 2. [Beleidsregels opstellen](./stappenplan). Het opstellen van toegangsregels is meer dan het uitschrijven ervan in de juiste technische taal. Zoals juridische dekking, informeren van de betrokkenen en het testen van het effect van de regels.
 3. [Softwarekeuze](./softwarekeus). Een EAM-systeem bouwt een organisatie in de regel niet zelf. Hoe kom je tot de juiste keus voor jouw situatie?
-
+4. [FDS perspectief](./fds). Hoe EAM en de FTV-standaarden passen in het grotere perspectief van het Federatief Datastelsel.
 
 {{< /chapter/section >}}
