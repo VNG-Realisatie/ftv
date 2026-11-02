@@ -36,9 +36,11 @@ aliases:
 
 ### Doel
 
-ODRL-AP-NL maakt het mogelijk om toegangsbeleid, dat nu verspreid staat in losse autorisatiebesluiten, convenanten en leveringsovereenkomsten, uit te drukken in een vaste en voorspelbare structuur. Elke regel benoemt op dezelfde manier wie toegang krijgt, tot welke gegevens, onder welke voorwaarden, met welk doel en op welke grondslag.
+Toegangsbeleid bepaalt wie onder welke voorwaarden bij gegevens mag. Overheidsorganisaties moeten daarover verantwoording kunnen afleggen. Aan burgers en belanghebbenden vraagt de Wet open overheid dat. Binnen stelsels zoals het Federatief Datastelsel vragen deelnemers het van elkaar, omdat zij alleen met inzicht in elkaars beleid kunnen waarborgen dat gegevens in de hele keten zorgvuldig worden behandeld. Gepubliceerd toegangsbeleid is bovendien de juridische basis voor de technische beleidsregels die de toegang daadwerkelijk controleren.
 
-De basis daarvoor is ODRL. Die standaard biedt één manier van vastleggen, waardoor toegangsbeleid van verschillende systemen, afdelingen en organisaties op dezelfde manier kan worden verzameld en ter inzage aangeboden. Deelnemers van stelsels zoals het Federatief Datastelsel, burgers, juristen en toezichthouders zien zo welk toegangsbeleid geldt zonder de onderliggende documenten te hoeven doorgronden.
+ODRL-AP-NL maakt het mogelijk om dat toegangsbeleid, dat nu verspreid staat in losse autorisatiebesluiten, convenanten en leveringsovereenkomsten, uit te drukken in een vaste en voorspelbare structuur. Elke regel benoemt op dezelfde manier wie toegang krijgt, tot welke gegevens, onder welke voorwaarden, met welk doel en op welke grondslag.
+
+De basis daarvoor is ODRL. Die standaard biedt één manier van vastleggen, waardoor toegangsbeleid van verschillende systemen, afdelingen en organisaties op dezelfde manier kan worden verzameld en ter inzage aangeboden. Deelnemers in datastelsels, burgers, juristen en toezichthouders zien zo welk toegangsbeleid geldt zonder de onderliggende documenten te hoeven doorgronden.
 
 ODRL-AP-NL voegt daar twee dingen aan toe. Het profiel koppelt organisatorisch toegangsbeleid aan het technische toegangsbeleid dat het met AuthZEN uitvoert, en het bedt ODRL in in het Nederlandse stelsel van linked-datastandaarden.
 
