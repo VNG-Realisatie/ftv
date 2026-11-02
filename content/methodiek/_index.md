@@ -46,12 +46,12 @@ FTV bouwt voort op internationale en open standaarden.
         </a>
     </div>
     <div class="section-home-box">
-        <a href="register-toegangsbeleid">
+        <a href="odrl-ap-nl">
            <h2 class="nl-heading nl-heading--level-4 rhc-heading">
-              Register Toegangsbeleid
+              ODRL-AP-NL
            </h2>
             <p class="utrecht-paragraph">
-                Een standaard voor opslag van en inzage in toegangsbeleid.
+                Het Nederlandse profiel op ODRL voor uitlegbaar en vindbaar toegangsbeleid.
             </p>
         </a>
     </div>
@@ -70,6 +70,6 @@ Daarvoor heeft FTV het [NLGOv AuthZEN profiel](authzen-nlgov) opgesteld: een Ned
 
 Om het mogelijk te maken om verleende toegangsbeslissingen te verantwoorden werkt FTV ook aan het [Logboek Toegangsbeslissingen](adl) (Authorization Decision Log). Deze gebruikt het AuthZEN informatiemodel om historische beslissingen te kunnen verantwoorden zonder onnodig beslisgegevens te dupliceren.
 
-Om organisaties, afdelingen en deelnemers aan (federatieve) stelsels inzicht te bieden in wederzijds toegangsbeleid zal FTV in 2026 ook de standaard [Register Toegangsbeleid](register-toegangsbeleid) ontwikkelen.
+Om organisaties, afdelingen en deelnemers aan (federatieve) stelsels inzicht te bieden in wederzijds toegangsbeleid zal FTV in 2026 ook het profiel [ODRL-AP-NL](odrl-ap-nl) ontwikkelen.
 {{< /chapter/section >}}
 --->

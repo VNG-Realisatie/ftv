@@ -23,7 +23,7 @@ title: "De principes van EAM"
 </div> 
 <div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-groen-25">
    <p>
-      <a href="../register-toegangsbeleid">Register toegangsbeleid</a>
+      <a href="../odrl-ap-nl">ODRL-AP-NL</a>
    </p>
 </div> 
 </div>
@@ -134,7 +134,7 @@ De principes van Externalized Authorization Management (EAM) en de PxP-architect
 
 1. **[AuthZEN](../authzen-nlgov)**. Deze standaard omschrijft hoe een toegangsverzoek via de PEP wordt gedaan en hoe het antwoord van de PDP wordt teruggegeven. FTV gebruikt de AuthZEN-standaard als basis.
 2. **[Authorization Decision Log (ADL)](../adl)**. Een standaard voor het bijhouden van genomen toegangsbeslissingen.
-3. **[Register toegangsbeleid](../register-toegangsbeleid)**. Deze standaard beschrijft de eisen die gesteld worden aan de PAP zodat policies goed opgeslagen en opgehaald worden, inclusief versiebeheer.
+3. **[ODRL-AP-NL](../odrl-ap-nl)**. Het Nederlandse profiel op ODRL voor het vastleggen en publiceren van toegangsbeleid, zodat het beleid in de PAP uitlegbaar en vindbaar is.
 
 {{< /chapter/section >}}
 

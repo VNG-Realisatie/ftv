@@ -23,7 +23,7 @@ type: 'chapter'
 </div> 
 <div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-groen-25">
    <p>
-      <a href="../register-toegangsbeleid">Register Toegangsbeleid</a>
+      <a href="../odrl-ap-nl">ODRL-AP-NL</a>
    </p>
 </div> 
 </div>
@@ -95,5 +95,5 @@ Versie 1.0 van Authorization Decision Log is **definitief**. De standaard is aan
 
 {{< /chapter/section >}}
 
-{{< chapter/nextprevious  bg="bg-rhc-color-groen-25" previouslink="../authzen-nlgov" previoustitle="AuthZEN" nextlink="../register-toegangsbeleid" nexttitle="Register toegangsbeleid">}}
+{{< chapter/nextprevious  bg="bg-rhc-color-groen-25" previouslink="../authzen-nlgov" previoustitle="AuthZEN" nextlink="../odrl-ap-nl" nexttitle="ODRL-AP-NL">}}
 {{< /chapter/nextprevious >}}

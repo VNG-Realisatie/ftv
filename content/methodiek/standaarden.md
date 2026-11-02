@@ -32,7 +32,7 @@ Het project FTV werkt aan drie standaarden:
 
 1. [AuthZEN](#authzen)
 2. [Logboek toegangsbeslissingen](#logboek)
-3. [Register toegangsbeleid](#register)
+3. [ODRL-AP-NL](#register)
 
 ![Schema van de drie FTV-standaarden](../methodiek-3-standaarden.png)
 
@@ -109,8 +109,8 @@ FTV is niet het enige project dat werkt aan standaardisatie van toegang. Vind hi
 Het Logboek Toegangsverlening richt zich op het verantwoorden van toegangsverzoeken. Met behulp van de standaard kunnen historische toegangsverzoeken uniform beschikbaar gemaakt worden. Hierbij gaat speciaal aandacht uit naar het voorkomen van ongewenste gegevensduplicatie ([data bij de bron](https://www.digitaleoverheid.nl/data-bij-de-bron/)) met behulp van [betrouwbare bronnen](https://website-digilab-overheid-nl-research-uit-betrouw-e1f39021ce924c.gitlab.io/) en integratie met het [Logboek Dataverwerkingen](https://logius-standaarden.github.io/logboek-dataverwerkingen/) en [FSC - Logging](https://commonground.gitlab.io/standards/fsc/logging/draft-fsc-logging-00.html).
 {{< /chapter/section >}}
 
-{{< chapter/section title="3. Register toegangsbeleid" id="register" level="3">}}
-Het Register Toegangsbeleid gaat definiëren welke eisen er aan een PAP gesteld worden. Denk hierbij aan dat de versies van policies over tijd bewaard blijven en de metadata die die een policy moet en mag hebben.
+{{< chapter/section title="3. ODRL-AP-NL" id="register" level="3">}}
+[ODRL-AP-NL](/ftv/methodiek/odrl-ap-nl/) is het Nederlandse profiel op ODRL voor het vastleggen van toegangsbeleid. Het maakt beleid machineleesbaar en uitlegbaar, en vindbaar via datacatalogi.
 {{< /chapter/section >}}
 
 

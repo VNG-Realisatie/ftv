@@ -23,7 +23,7 @@ type: 'chapter'
 </div> 
 <div class="utrecht-paragraph pt-1 sub-navigation-tab bg-rhc-color-groen-25">
    <p>
-      <a href="../register-toegangsbeleid">Register toegangsbeleid</a>
+      <a href="../odrl-ap-nl">ODRL-AP-NL</a>
    </p>
 </div> 
 </div>
