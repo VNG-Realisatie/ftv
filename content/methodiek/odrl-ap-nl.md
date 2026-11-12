@@ -34,15 +34,21 @@ aliases:
 
 {{< chapter/section title="ODRL-AP-NL">}}
 
-### Doel
+### Overheid, ken en publiceer uw beleid
 
-Toegangsbeleid bepaalt wie onder welke voorwaarden bij gegevens mag. Overheidsorganisaties moeten daarover verantwoording kunnen afleggen. Aan burgers en belanghebbenden vraagt de Wet open overheid dat. Binnen stelsels zoals het Federatief Datastelsel vragen deelnemers het van elkaar, omdat zij alleen met inzicht in elkaars beleid kunnen waarborgen dat gegevens in de hele keten zorgvuldig worden behandeld. Gepubliceerd toegangsbeleid is bovendien de juridische basis voor de technische beleidsregels die de toegang daadwerkelijk controleren.
+Het toegangsbeleid van een organisatie beschrijft wie onder welke voorwaarden bij gegevens mag. Elke organisatie moet het eigen beleid zelf kennen om toegang in te kunnen regelen, en het is daarnaast ook verplicht om anderen inzicht op dat beleid te geven. 
 
-ODRL-AP-NL maakt het mogelijk om dat toegangsbeleid, dat nu verspreid staat in losse autorisatiebesluiten, convenanten en leveringsovereenkomsten, uit te drukken in een vaste en voorspelbare structuur. Elke regel benoemt op dezelfde manier wie toegang krijgt, tot welke gegevens, onder welke voorwaarden, met welk doel en op welke grondslag.
+De Wet open overheid regelt die verantwoording naar burgers, bedrijven en andere belanghebbenden toe. Daarnaast worden in vertrouwensstelsels zoals het Federatief Datastelsel soortgelijke afspraken gemaakt zodat deelnemers elkaar kunnen controleren. Alleen met inzicht in elkaars beleid kunnen ze waarborgen dat gegevens in de hele keten zorgvuldig worden behandeld. 
 
-De basis daarvoor is ODRL. Die standaard biedt één manier van vastleggen, waardoor toegangsbeleid van verschillende systemen, afdelingen en organisaties op dezelfde manier kan worden verzameld en ter inzage aangeboden. Deelnemers in datastelsels, burgers, juristen en toezichthouders zien zo welk toegangsbeleid geldt zonder de onderliggende documenten te hoeven doorgronden.
+Een duidelijk toegangsbeleid is bovendien de juridische basis voor de technische beleidsregels ('policies') die de toegang daadwerkelijk controleren. Door op een formele wijze toegangsbeleid vast te leggen en die aan policies te koppelen is er beide kanten op: welke wetten zijn de basis voor mijn policies, en welke policies garanderen dat mijn wetten gehandhaafd worden?
 
-ODRL-AP-NL voegt daar twee dingen aan toe. Het profiel koppelt organisatorisch toegangsbeleid aan het technische toegangsbeleid dat het met AuthZEN uitvoert, en het bedt ODRL in in het Nederlandse stelsel van linked-datastandaarden.
+{{</ chapter/section >}}
+
+{{< chapter/section title="Een standaard voor toegangsbeleid" level="3">}}
+
+Om beleid eenduidig vast te leggen en uit te wisselen is er een standaard opgesteld gebaseerd op ODRL. ODRL maakt het mogelijk om dat toegangsbeleid, dat nu verspreid staat in losse autorisatiebesluiten, convenanten en leveringsovereenkomsten, uit te drukken in een vaste en voorspelbare structuur. Elke regel benoemt op dezelfde manier wie toegang krijgt, tot welke gegevens, onder welke voorwaarden, met welk doel en op welke grondslag.
+
+Het Nederlandse overheids applicatieprofiel op ODRL, genaamd ODRL-AP-NL, voegt daar twee dingen aan toe. Het profiel koppelt organisatorisch toegangsbeleid aan het technische toegangsbeleid dat het met AuthZEN uitvoert, en het bedt ODRL in in het Nederlandse stelsel van linked-datastandaarden.
 
 ### Een sluitende verantwoordingsketen
 
@@ -56,7 +62,7 @@ Elke schakel verwijst naar de volgende. Vanaf de beschrijving van een dataset is
 
 [ODRL (Open Digital Rights Language)](https://www.w3.org/TR/odrl-model/) is een W3C-standaard voor het uitdrukken van rechten, plichten en beleid, vanuit het juridische perspectief van wie wat mag, met welk doel en op welke grondslag. ODRL is bovendien verankerd in [DCAT](https://www.w3.org/TR/vocab-dcat-3/), de standaard voor datacatalogi. Toegangsbeleid in ODRL-AP-NL past daardoor in bestaande catalogi die [DCAT-AP-NL](https://geonovum.github.io/DCAT-AP-NL30/) volgen. Wie een dataset vindt, vindt ook het beleid dat erop geldt.
 
-ODRL is machineleesbaar, maar niet zonder meer machine-uitvoerbaar. De technische uitvoering staat los van ODRL-AP-NL. Organisaties kiezen zelf hun beleidstaal, net zoals de overheid niet standaardiseert op een programmeertaal. Wie beleid en uitvoering wil koppelen, legt in het beleid vast met welk [NLGov AuthZEN](../authzen-nlgov)-informatiemodel een toegangsverzoek wordt uitgedrukt en welke technische policy dat verzoek evalueert.
+ODRL is machineleesbaar, maar niet zonder meer machine-uitvoerbaar. De technische uitvoering in policies staat los van ODRL. Organisaties kiezen zelf hun policy-taal, net zoals de overheid niet standaardiseert op een programmeertaal. Wie beleid en uitvoering wil koppelen, legt in het beleid vast met welk [NLGov AuthZEN](../authzen-nlgov)-informatiemodel een toegangsverzoek wordt uitgedrukt en welke technische policy dat verzoek evalueert.
 
 ### Opbouw van het profiel
 
