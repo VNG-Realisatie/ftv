@@ -76,6 +76,12 @@ Bepaal per attribuut of de informatie beschikbaar is voor de beslismodule. Soms 
 Als de use case, requirements en attributen beschreven zijn, is duidelijk wat er in de policies moet komen.
 Voor deze technische vertaling van de eerdere stappen naar taken die de software moet uitvoeren, is specialistische kennis nodig. Bijvoorbeeld van de regeltaal en van de gegevensmodellen van subject, actie, resource en context. Zijn de specificaties goed uitgewerkt? Dan is vooraf al duidelijk of de policies technisch haalbaar zijn.
 
+Voorbeelden van regels die in policies zijn omgezet zijn:
+
+- [Policies van de OpenFTV beheermodule](../../openftv/manager_policies)
+- [Policies van de demonstratie over laadpalen](../../demonstratie/laadpaal_policies)
+- Instructies over hoe een [eigen regeling toe te voegen](./regeling_toevoegen)
+
 #### Stap 5. Test de toegangsregels
 
 Goede tests beginnen met slimme testdata. De testset moet zoveel mogelijk situaties afdekken: gevallen waarin toegang wél toegestaan is en situaties waarin dat niet zo is.
