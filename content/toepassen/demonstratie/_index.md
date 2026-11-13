@@ -190,7 +190,7 @@ De links boven gaan naar de Simulatieomgeving van het Federatief Datastelsel. Al
 
 {{< chapter/section title="Scenario 2: diplomatieke kentekens toelaten (beheer)" level="4" >}}
 
-In de gemeente zijn een aantal diplomatieke voertuigen gekomen, en het is niet meer houdbaar dat daar geen laadpaal op aangevraagd kan worden. Tegelijk wil de gemeente de identiteit van de diplomaten blijven beschermen.
+In de gemeente zijn een aantal diplomatieke voertuigen gekomen, en het is niet meer houdbaar dat daar geen laadpaal op aangevraagd kunnen worden. Tegelijk wil de gemeente de identiteit van de diplomaten blijven beschermen.
 
 Met RDW wordt overeengekomen dat Vlierdam vanaf nu wel diplomatieke kentekens mag inzien, maar op voorwaarde dat de gemeente extra zorgvuldig omgaat met die gegevens. Vlierdam besluit daarom dat vergunningen voor diplomatieke voertuigen alleen door de gemeentesecretaris ingevoerd mogen worden. De concrete regel is:
 - Diplomatieke kentekens mogen alleen opgezocht worden als de afdeling van de gebruiker 'Gemeentesecretaris' zijn.
@@ -225,19 +225,22 @@ _Handhaving_
 
 Testgeval 1
 
-- Open de de BRV OpenFTV beheersinterface als auditor (audit-user)
+- Open de de RDW OpenFTV beheersinterface als auditor (audit-user)
 - Zoek de regel die gaat over diplomatieke kentekens ('diplomatieke kentekens afgeschermd')
-- Verwijder de regel.
-Dit lukt niet omdat auditors die rechten niet hebben.
+- Het aanpassen lukt niet (er is geen knop 'bewerken') omdat auditors die rechten niet hebben.
 
 Testgeval 2
 
 - Probeer het opnieuw als functioneel beheerder (author-user)
-- Verwijder de regel 'diplomatieke kentekens afgeschermd'
+- Maak een nieuwe conceptversie van de regel
+- Maak de inhoud leeg
+- Maak dat concept definitief
+- Publiceer de nieuwe versie
+
 - Open de de Vlierdam OpenFTV beheersinterface als functioneel beheerder
-- Zoek de inactieve regel 'diplomatieke kentekens alleen secretaris'
-- Sla de regel op
-- Distribueer de nieuwe regelset
+- Zoek de regel 'Diplomatieke kentekens alleen door secretaris', die alleen in concept bestaat
+- Maak de conceptversie defintief
+- Publiceer de nieuwe versie
 Dit lukt.
 
 Testgeval 3
@@ -276,7 +279,7 @@ In normaal gebruik zijn er geen afwijzingen. Een medewerker zou niet moeten prob
 
 _Scenario_
 
-Auditor filtert de audit log op afwijzingen en de periode die hij wil onderzoeken, en exporteert de data naar Excelformaat.
+Auditor filtert de audit log op afwijzingen en de periode die hij wil onderzoeken, en exporteert de data naar Excel-formaat.
 
 **3c. Het lukt een medewerker niet om een aanvraag in te dienen.**
 
