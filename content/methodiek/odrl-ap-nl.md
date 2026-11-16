@@ -66,7 +66,12 @@ ODRL is machineleesbaar, maar niet zonder meer machine-uitvoerbaar. De technisch
 
 ### Opbouw van het profiel
 
-Het profiel herhaalt ODRL niet, maar beschrijft in twee delen wat de Nederlandse overheid eraan toevoegt. Het informatiemodel volgt de indeling van ODRL en voegt per klasse de Nederlandse toevoegingen toe, zoals grondslag en wetsverwijzingen bij een regel, verplichte identificatie en versionering van beleid, en groepen burgers als partij. De inbedding in het linked-dataveld regelt het eigenaarschap van beleid, de aansluiting op DCAT-AP-NL en het gebruik van vocabulaires zoals [DPV (Data Privacy Vocabulary)](https://w3id.org/dpv) voor doel en grondslag. Toetsregels (SHACL) controleren of beleid aan het profiel voldoet.
+Het profiel herhaalt ODRL niet, maar beschrijft wat de Nederlandse overheid eraan toevoegt. Het bestaat uit twee delen:
+
+1. **Het informatiemodel.** Beschrijft de Nederlandse toevoegingen aan het model, zoals grondslag en versionering van beleid, identificatie van overheidsorganisaties en doelgroepen, doelbinding en de koppeling van organisatorisch aan technisch toegangsbeleid middels [NLGov AuthZEN](../authzen-nlgov).
+2. **De inbedding in de linked-datawereld.** Van Nederlandse standaarden zoals [TOOI](https://standaarden.overheid.nl/tooi) en [NL-SBB](https://docs.geostandaarden.nl/nl-sbb/nl-sbb/), via Europese als [DPV](https://w3id.org/dpv) en [ELI](https://eur-lex.europa.eu/eli-register/about.html), tot internationale als [PROV](https://www.w3.org/TR/prov-o/) en [SKOS](https://www.w3.org/TR/skos-reference/). Extra aandacht gaat naar [DCAT-AP-NL](https://geonovum.github.io/DCAT-AP-NL30/), zodat beleid vindbaar is bij de datasets waarop het van toepassing is.
+
+Toetsregels (SHACL) controleren of beleid aan het profiel voldoet.
 
 Beleid moet ook te tonen zijn. Samen met de internationale ODRL-gemeenschap werkt FTV daarom aan een W3C-richtlijn voor de visualisatie van toegangsbeleid, opgenomen in het [voorstel voor ODRL 3](https://w3c.github.io/odrl/w3c-wg-draft-charter-2026/dpwg-draft-charter.html). Lees de [ODRL Visualisation Note](/ftv/odrlvis/note/) of bekijk het [toegangsbeleid van de fictieve gemeente Vlierdam in de ODRL Visualizer](/ftv/odrlvis/?src=voorbeelden/vlierdam-voorbeeld.ttl).
 
