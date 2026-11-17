@@ -76,6 +76,15 @@ Dit zijn echter alleen deelvoorzieningen waarmee regels runtime toegepast kunnen
 Lopende het project wordt door FTV een marktonderzoek van [commerciële oplossingen](/ftv/onderzoek/status_techniek/producten#closed) gedaan. Dit gebeurt door eigen tests en vooral door gesprekken met de leveranciers zelf. Er wordt gekeken naar compleetheid, adoptie van standaarden en koppelingen naar aanpalende systemen zoals Identity and Access Management (IAM). [Het resultaat van het onderzoek]({{< param baseDirectory >}}toepassen/softwarekeus) zal geen koopadvies worden, maar een handreiking over hoe tot een keus te komen.
 {{< /chapter/section >}}
 
+{{< chapter/section title="API-gateways" link="../status_techniek/producten/gateways" level="4">}}
+
+Een PDP beslist, maar de beslissing moet ook worden afgedwongen door een Policy Enforcement Point (PEP). Bij API's ligt die meestal in de API-gateway. Van de veertien [onderzochte gateways](/ftv/onderzoek/status_techniek/producten/gateways) hebben er drie AuthZEN ingebouwd: Open FSC, Zuplo (Enterprise) en Traefik Hub. Voor Tyk en APISIX bestaan plug-ins, en de meeste andere gateways bieden een mechanisme waarmee AuthZEN toe te voegen is.
+
+**Geen enkele gateway voert verplichtingen (obligations) uit of beoordeelt het antwoord van de dienst**. Bestaande AuthZEN-koppelingen controleren alleen het verzoek. Voor bijvoorbeeld het weglaten van velden is altijd een eigen uitbreiding nodig. Bij open source gateways zoals Envoy, Istio, Tyk en APISIX kan daarvoor de code van OpenFTV hergebruikt worden.
+
+**Open FSC verdient de meeste aandacht**. Het is al in gebruik bij de overheid en spreekt al AuthZEN, maar laat een toestemming met verplichtingen ongemerkt door. Het advies is dit bij RINIS aan te kaarten en als volgende stap de inway van Open FSC en Envoy in de [Proefopstelling](/ftv/toepassen/proefopstelling) te beproeven.
+{{< /chapter/section >}}
+
 {{< chapter/section title="2. Status bij de Nederlandse overheid" >}}
 
 {{< /chapter/section >}}
