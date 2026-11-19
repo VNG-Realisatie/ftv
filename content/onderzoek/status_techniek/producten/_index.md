@@ -61,7 +61,7 @@ Een PDP beslist, maar de beslissing moet ook worden afgedwongen. Bij API's gebeu
 
 | Gateway | Ondersteunt AuthZEN? | Toe te voegen via |
 |---|---|---|
-| Open FSC | Ja, in inway en outway, alleen het verzoek | Aanpassing in Open FSC (RINIS) |
+| OpenFSC | Ja, in inway en outway, alleen het verzoek | Aanpassing in OpenFSC (RINIS) |
 | Broadcom Layer7 | Niet openbaar, wel in de interop | Policies, Java-assertions (licentie nodig) |
 | Tyk | Plug-in uit de interop | Go-plug-ins |
 | Envoy en Istio | Nee | `ext_authz` en `ext_proc` |
@@ -75,7 +75,7 @@ Een PDP beslist, maar de beslissing moet ook worden afgedwongen. Bij API's gebeu
 | NGINX | Nee | njs (JavaScript) |
 | Traefik | Ja in Traefik Hub (commercieel) | Go-plug-ins |
 
-Geen van de bestaande AuthZEN-koppelingen kijkt naar het antwoord van de dienst of voert verplichtingen uit, zoals het weglaten van velden. Dat kan alleen met een eigen uitbreiding. Open FSC verdient daarbij de meeste aandacht: het is al in gebruik en spreekt al AuthZEN, maar laat een toestemming met verplichtingen ongemerkt door.
+Geen van de bestaande AuthZEN-koppelingen kijkt naar het antwoord van de dienst of voert verplichtingen uit, zoals het weglaten van velden. Dat kan alleen met een eigen uitbreiding. OpenFSC verdient daarbij de meeste aandacht: het is al in gebruik en spreekt al AuthZEN, maar laat een toestemming met verplichtingen ongemerkt door.
 
 Zie [API-gateways als PEP](gateways) voor de uitwerking per gateway en het advies voor de Proefopstelling.
 {{< /chapter/section >}}
