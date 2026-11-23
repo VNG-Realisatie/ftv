@@ -126,3 +126,7 @@
   datum: "2026-09-29"
   link: "actueel/nieuws/20260929werkgroepauthzengraphql/"
   beschrijving: "GBO presenteerde een voorstel voor AuthZEN-autorisatie op GraphQL: een mapper die query's vertaalt naar velden waar policies over beslissen."
+- titel: "FTV Werkgroep #30: GraphQL-autorisatie & ADL"
+  datum: "2026-11-10"
+  link: "actueel/nieuws/20261110werkgroepgraphqladl/"
+  beschrijving: "De werkgroep bepaalde haar standpunt over GraphQL en dataminimalisatie, biedt het GraphQL-profiel aan bij OpenID AuthZEN en legde de wijzigingen voor ADL 1.1 vast."
