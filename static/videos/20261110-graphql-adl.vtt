@@ -1,0 +1,1006 @@
+WEBVTT
+
+00:00:07.525 --> 00:00:14.755
+<v Michiel Trimpe>de officiële starttijd.</v>
+
+00:00:19.695 --> 00:00:41.885
+<v Michiel Trimpe>Dus, ehm nou, dit is de agenda voor vandaag. Eh gisteren ook eh toegestuurd. Dus dit is weer de de IAM focused editie van FTV. Ehm dit keer met het vervolg van de GraphQL autorisatie. Nou, en had uiteindelijk ook een stukje in de titel gemoeten en wat authorization decision log eh voortgang.</v>
+
+00:00:44.705 --> 00:00:53.035
+<v Michiel Trimpe>geen kennismaking nodig. Ehm en het eerste onderwerp is het de terugkoppeling en het vervolg van eh GraphQL.</v>
+
+00:00:56.475 --> 00:01:28.045
+<v Michiel Trimpe>log komen we zo direct wel op. En ik denk dat ik gelijk met eh presentatie begin. Ik zie ook een hoop mensen die aanwezig waren bij de meeting in de call. Eh dus ik heb geprobeerd dingen samen te vatten. Eh maar ik had alleen eh ja, de meeting niet opgenomen en dat voelt tegenwoordig dan gelijk heel erg onvoorbereid. Dus ik heb uit het geheugen geprobeerd zo goed mogelijk samen te vatten. Eh maar corrigeer me vooral of vul het aan. Deze meeting wordt wel opgenomen, dus dan kunnen we dat in de official record mee opnemen.</v>
+
+00:01:30.315 --> 00:01:55.255
+<v Michiel Trimpe>Ehm nou, we hebben eh met z'n allen gezeten op eh 29 september om eh over GraphQL autorisatie te praten. Eh dus dat waren GBO was vertegenwoordigd, VECOZO, iWlz, BKWI, FDS, Logius, Kennisplatform API's en FTV. Dus een breed gremium. Iedereen die er wat over te zeggen heeft was aanwezig, dus dat is mooi.</v>
+
+00:01:58.535 --> 00:02:10.555
+<v Michiel Trimpe>Ehm nou, wat daar de allereerste opzet was is ehm nou, het eh het GBO FTV profiel. En eh dat zien we eigenlijk als een een evenknie van het REST API Gateway profiel.</v>
+
+00:02:12.565 --> 00:02:26.115
+<v Michiel Trimpe>heeft AuthZEN vorig jaar als een draft opgezet. Ehm dat moet nog officieel worden. Maar eh dat is in ieder geval wanneer je een verzoek binnenkijkt op een binnenkrijgt op een API gateway...</v>
+
+00:02:28.835 --> 00:02:46.735
+<v Michiel Trimpe>kan je dat eh vertalen naar AuthZEN. En GBO heeft eigenlijk een vergelijkbaar profiel geschreven voor GraphQL. Dus dat is vanuit het perspectief van eh zeg maar een API gateway die iets binnenkrijgt en wel het schema kent, maar verder niks inhoudelijks weet over het verzoek.</v>
+
+00:02:49.835 --> 00:03:19.695
+<v Michiel Trimpe>eh beide in beide gevallen kent de API gateway het schema, maar bij REST pak je bijvoorbeeld de de Open API spec. Dan map je de requests naar operations en dan kan je aangeven dit verzoek hoort bij deze operations. En het GraphQL voorstel doet eigenlijk hetzelfde, maar dan map het schema eh op query type, velden en argumenten. En eh nou ja, zo hoeft de PDP logica, dus de policy, geen complexe GraphQL logica te begrijpen.</v>
+
+00:03:22.755 --> 00:03:29.835
+<v Michiel Trimpe>voldoende duidelijk voor iedereen in de call? We hebben er natuurlijk al een keer eerder over gesproken, dus dan ga ik een beetje snel doorheen ga.</v>
+
+00:03:34.615 --> 00:04:00.805
+<v Michiel Trimpe>Nou, één van de belangrijke dingen uit de meeting was eh feedback ophalen. Eh dus ehm nou, iWlz en BKWI waren allebei aanwezig. Eh iWlz eh heeft het profiel ook echt beproefd in een POC. Eh en hun conclusie was dat eh de autorisatie van GraphQL bevragingen veel eenvoudiger samen te vatten was in policies. Dat de policies simpeler waren en beter te begrijpen.</v>
+
+00:04:03.735 --> 00:04:21.135
+<v Michiel Trimpe>heeft ook naar het profiel gekeken. Eh zij vonden het interessant en eh het leek op zich passend. Eh ware het niet dat zij momenteel nog geen dataminimalisatie ondersteunen op hun eh ontsluitingen. Dus dit profiel is voor hen vandaag nog niet relevant.</v>
+
+00:04:27.675 --> 00:04:38.285
+<v Michiel Trimpe>de eerste helft van de meeting de feedback verzamelen van de mensen die met GraphQL werken. Dus die was positief. Ehm dus iWlz was zelfs enthousiast als ik het zo mag zeggen.</v>
+
+00:04:40.465 --> 00:05:03.145
+<v Michiel Trimpe>Ehm maar de tweede helft kwam ook ter sprake. Dus eh wanneer wij een standaard of deze zouden gaan standaardiseren, dan eh nemen we het op in de Nederlandse standaarden keten. Maar er was nog een bredere vraag over GraphQL in de overheidsstandaarden. En de conclusie daar was eh dat het eh gebruik van GraphQL...</v>
+
+00:05:06.155 --> 00:05:26.835
+<v Michiel Trimpe>dataminimalisatie is wel een puzzelstuk bij FDS. Eh maar er is momenteel geen GDI standaard om daarnaar te kunnen verwijzen. En dat liep eh ja, niet de open vraag: waar hoort GraphQL eigenlijk thuis?</v>
+
+00:05:29.295 --> 00:05:32.795
+<v Michiel Trimpe>ondertussen iedereen nog akkoord met de samenvatting? Ik zie Gideon ook.</v>
+
+00:05:35.765 --> 00:06:06.275
+<v Gideon Zegwaard>Nou, de het het het is een beetje grijs gebied ehm eh hoe je GraphQL eh moet interpreteren in combinatie met Digikoppeling hè, want Digikoppeling heeft weliswaar een eh een bereik hè, dus eh het eh het uit het boven over sectoren heen uitwisselen van eh data en Digikoppeling heb je een REST API profiel. En of GraphQL nou past in het REST API profiel, dat is iets wat niet heel makkelijk te beantwoorden is.</v>
+
+00:06:07.705 --> 00:06:10.635
+<v Michiel Trimpe>Inderdaad.</v>
+
+00:06:12.725 --> 00:06:17.965
+<v Michiel Trimpe>Dat is dan inderdaad wat ik bedoelde met niet uitgesloten, maar ook niet uitgeschreven. Het is niet, ja, niet duidelijk.</v>
+
+00:06:20.395 --> 00:06:42.755
+<v Michiel Trimpe>aanpassen. Maar inderdaad, je noemt al Digikoppeling. Eh en dan kwam eigenlijk de vraag. Ehm maar ja, eh waar zou eh zouden we dit verwachten? En dan heb ik een aantal eh opties benoemd. Misschien kun je wel misschien? Zou je misschien de deur dicht kunnen doen? Want er zijn nu wat schoonmakers en dan hoor ik het niet zo goed.</v>
+
+00:06:46.125 --> 00:06:58.965
+<v Michiel Trimpe>Ehm, we hadden eh het benoemd door onder andere Gideon, eh nou dat je zou kunnen zeggen dat de REST API Design Rules GraphQL al toestaat, want er is de ruimte voor een open query functionaliteit.</v>
+
+00:07:01.875 --> 00:07:17.875
+<v Michiel Trimpe>Maar dat is een beetje creatief creatief omgaan. Het is natuurlijk niet RESTful, het is niet resource-oriented. Ehm en het ja, dekt ook niet echt de behoefte. Je hebt dan nog steeds eigenlijk dit probleem. Dus wanneer je dat zegt, zou dat echt uitgeschreven moeten worden.</v>
+
+00:07:20.115 --> 00:07:39.425
+<v Michiel Trimpe>Eh een alternatief zou zijn dat eh de REST API's eigenlijk verbreed worden tot de Web API Design Rules, met daaronder eh GraphQL en REST. Eh er werd besproken dat eh de de GraphQL standaardisatie zijn eigen standaard in de GDI eh zou kunnen worden.</v>
+
+00:07:41.645 --> 00:08:00.675
+<v Michiel Trimpe>Ja, en dit is dan eigenlijk een orthogonale vraag. Ehm die kan dan benoemd worden of onderdeel uitmaken van Digikoppeling. Eh Ja, dat is eigenlijk de vraag. Dus of die voorgaande standaarden kunnen benoemd worden in Digikoppeling. En een ander alternatief zou nog zijn dat eh dit direct in Digikoppeling benoemd wordt, eh maar niet in de andere standaarden.</v>
+
+00:08:03.235 --> 00:08:19.155
+<v Michiel Trimpe>En tot slot was er ook nog de optie om dit eh internationaal aan te bieden als een profiel bij OpenID AuthZEN. En dan kan je naar een internationale standaard verwijzen. Dan kun je die bijvoorbeeld vanuit Digikoppeling eh benoemen, maar dit geldt eigenlijk alleen voor ons FTV-stukje.</v>
+
+00:08:26.415 --> 00:09:07.685
+<v Michiel Trimpe>Ehm nou, Kennisplatform was dus ook aanwezig. Eh en voor de duidelijkheid, zij beheren de REST API Design Rules, dus vandaar hun betrokkenheid. Eh ze gaven aan dat GraphQL eigenlijk vanaf het begin van Kennisplatform API op de onderwer- onderwerpenlijst staat. Eh maar dat het nooit bovenaan de prioritering is gekomen. Eh dus dat het onvoldoende momentum had. Eh nu lijkt er dus wel het momentum te zijn, want van een aantal kanten wordt er gewoon stevig om gevraagd. En daar is afgesproken dat Kennisplatform ehm dit voor gaat dragen of een GraphQL werkgroep, wat voor vorm dan ook, voor gaat dragen aan de stuurgroep. Eh wel dat er eh praktische en organisatorische hulp welkom is.</v>
+
+00:09:09.835 --> 00:09:10.195
+<v Michiel Trimpe>Gideon.</v>
+
+00:09:11.525 --> 00:09:47.455
+<v Gideon Zegwaard>Ja, nou hier hebben we nog eh wel over gehad en één van de dingen die we juist doen is dat we dataminimalisatie gaan voordragen waarbij GraphQL een een een goede invulling kan zijn, maar wellicht niet de enige en wellicht ook niet de meest voor de de de de degene waar uiteindelijk de voorkeur naar uitgaat als je dat toe moet passen. Dus eh volgens mij hebben we het wel zo besproken hè, dat de de de functionele behoefte dat dat eh voorop zou moeten staan. Ehm en daar kan GraphQL een hele goede eh invulling voor zijn. Eh eh maar dat</v>
+
+00:09:50.115 --> 00:10:22.675
+<v Michiel Trimpe>Dat is inderdaad dan eh de insteek, ik noem het al volgens mij noemde ik het al een aantal keer. Nee, nog niet. Ja, hier dan dataminimalisatie. Ja, maar dat we hebben het ook besproken dat zeg maar wat eh GraphQL echt eh gewoon toevoegt boven wat er nu is aan standaardisatie is voornamelijk dataminimalisatie. Dus het eh de manier om stukken uit eh Peter Jan, misschien ga ik nu proberen te beantwoorden wat jij wil beantwoorden.</v>
+
+00:10:24.155 --> 00:10:55.025
+<v Peter-Jan Karens>Ja, ik ben benieuwd Gideon, want we hadden natuurlijk die sessie voor FTV waar we ongeveer wat hadden besproken. Alleen toen donderdag was er een sessie voor GraphQL bij Kennisplatform API's. Daar werd echt heel expliciet A over GraphQL verteld, want daar ging de sessie over. En er waren ook echt best wel een hoop partijen die specifiek vroegen om GraphQL standaardisatie. Dus ik weet nu niet, is jouw conclusie op basis van de meeting eh waar wij samen zeg maar eh op locatie waren of is die conclusie op basis van afgelopen donderdag?</v>
+
+00:10:55.985 --> 00:11:01.345
+<v Gideon Zegwaard>Die conclusie afgelopen donderdag was ik daar niet bij, dus dat is alleen op basis van de sessie waar wij samen zijn geweest.</v>
+
+00:11:01.535 --> 00:11:42.225
+<v Peter-Jan Karens>Ja, precies, want dan wat wat ik dus denk wat er gebeurd is dat we dachten van nou, we moeten nog maar kijken hoe kansrijk het is om GraphQL als een werkgroep eh te starten. Misschien moeten we dat breder pakken. Maar ik heb nu de indruk dat er dusdanig veel momentum op GraphQL als een onderwerp was, omdat dat sowieso gewoon gebruikt gaat worden of gebruikt wordt, laat ik het zo zeggen. Eh ook door andere partijen dan bijvoorbeeld eh GBO. Dat daar eigenlijk voldoende animo was om specifiek dat onderwerp te doen. Dus dat is even hoe ik daar weer wegging, dat ik dacht oh, schijnbaar is er voldoende tractie om misschien specifiek over GraphQL nog te praten en dan is even de vraag wat dat dan weer met dat andere onderwerp doet. Ehm, ik weet niet Michiel hoe jij dat geïnterpreteerd had.</v>
+
+00:11:43.105 --> 00:12:47.525
+<v Michiel Trimpe>Ja, ik denk gelijk gelijk. Dus ik heb ehm deze slide heb ik inderdaad mijn mijn kennis van de volgende meeting ook al een beetje meegenomen om deze inkleuring te geven. Maar wat Gideon zegt is inderdaad eh juist dus in de meeting die we nu expliciet bespreken werd eh ook met kennisplatform afgesproken dat zij dataminimalisatie aan gingen bieden met eh als als onderwerp met GraphQL als verwacht uitwerking. Ehm en ik had eigenlijk beter een aparte slide op kunnen zetten. Het is sindsdien ook besproken op het kennisplatform eh de de kwartaalbijeenkomst van het kennisplatform API. En daar is ook een sessie geweest over GraphQL. Eh daar heeft Joost Farla, die heeft een aantal blogposts uitgeschreven. Ik weet niet of iedereen die kent hier. Vast. En Joost wel, want ook de in de blogpost. Dus nou ja, een aantal goede blogposts die de voor- en nadelen eh en de krachten van GraphQL versus rest wat uitdiepen. En die sessie werd ook afgesloten met inderdaad de vraag eh wat wat is de verwachting van de eh ja, de kennisplatform aan van van de aanwezigen bij het platform rondom GraphQL standaardisatie.</v>
+
+00:12:49.835 --> 00:13:19.385
+<v Michiel Trimpe>En daar kwam inderdaad heel duidelijk naar voren dat er gewoon eh behoefte is van partijen die met GraphQL bezig zijn of bezig willen om hè, daar standaarden voor op te zetten. Ook om gewoon klassiek af te stemmen met elkaar. Dat was een bredere behoefte dan alleen dataminimalisatie. Ehm en dat dat is eigenlijk een vergelijkbare behoefte als waarmee ooit de rest API design rules an sich ook begonnen zijn.</v>
+
+00:13:21.435 --> 00:13:23.315
+<v Michiel Trimpe>voor de verdediging.</v>
+
+00:13:21.475 --> 00:13:23.355
+<v Gideon Zegwaard>Ja, ik voor de verdediging.</v>
+
+00:13:24.425 --> 00:13:28.926
+<v Michiel Trimpe>om het af te maken. Dus voor de duidelijkheid is dat wat uit de zaal kwam.</v>
+
+00:13:26.035 --> 00:13:26.195
+<v Gideon Zegwaard>Ja.</v>
+
+00:13:28.926 --> 00:13:43.805
+<v Michiel Trimpe>Eh en is dus nog steeds dat aan eh is het kennisplatform API nu is om te kiezen eh of ze de werkgroep in gaan vullen. Met die lijkt beslissing lijkt al genomen. En dan is het toch aan hen om dan ook de kadering van de werkgroep te bepalen.</v>
+
+00:13:47.355 --> 00:14:12.075
+<v Gideon Zegwaard>Dat lijkt me inderdaad aan hen. Ehm wat ik me nog wel even langs deze weg dan meegeven is dat het eigenlijk kijk, vanuit FDS hebben wij een behoefte om eh ehm eh sturing te geven op het gebied van dataminimalisatie. En dan kan je de stukken van Joost Farla leest, dan eh ehm nou, dan heeft hij eh geeft hij aan dat er voor bepaalde use cases die buiten het functionele bereik van FDS liggen eh prima ehm eh argumenten voor GraphQL te geven zijn.</v>
+
+00:14:14.715 --> 00:14:24.625
+<v Gideon Zegwaard>Eh maar is die eh zijn er juist kritische noten ook over eh eh in de in de context van toegangsverlening en ehm dataminimalisatie.</v>
+
+00:14:28.795 --> 00:14:35.795
+<v Gideon Zegwaard>Ehm dus het het zou onhandig zijn als ehm eh als vervolgens een GraphQL pad ingaat</v>
+
+00:14:37.995 --> 00:14:46.635
+<v Gideon Zegwaard>en dat er vervolgens ehm dat weer niet afdekt ehm of niet goed afdekt waar we vanuit FDS en ook GBO behoefte</v>
+
+00:14:51.735 --> 00:14:51.815
+<v Michiel Trimpe></v>
+
+00:14:53.845 --> 00:15:05.505
+<v Michiel Trimpe>kunnen we kijken of we een eh een korte positie vanuit de FTV werkgroep in dit eh expliciet in dit proces in kunnen brengen. En is dat eh iets handigs om te doen.</v>
+
+00:15:09.005 --> 00:15:28.515
+<v Gideon Zegwaard>Ja, want als als bottom line er een een GraphQL profiel uitkomt, maar vervolgens wordt er vanuit Digikoppeling gezegd van eh we zien nog steeds eh eh we nemen het niet op in Digikoppeling omdat we vanuit security eh oogpunt nog allerhande eh eh reserves hebben, dan dan eh dan schieten we nog dan hebben we er nog niks zeg maar.</v>
+
+00:15:33.785 --> 00:15:53.035
+<v Igor van Haren>Ik ik zie eerlijk gezegd daar niet heel veel verschil ten opzichte van rest allemaal. Dus maar ja, het is alleen iets makkelijker mogelijk binnen GraphQL om data minimalisatie te doen dan bij een gewone rest interface. Ehm maar voor de rest qua security en dergelijke kan je allemaal hetzelfde toepassen. Ehm</v>
+
+00:15:55.635 --> 00:15:56.995
+<v Gideon Zegwaard>Maar Joost</v>
+
+00:15:55.635 --> 00:16:01.646
+<v Igor van Haren>is ook een rest interface. maar is een specifieke een bijzondering van een rest interface.</v>
+
+00:15:59.025 --> 00:15:59.345
+<v Gideon Zegwaard>Ja.</v>
+
+00:16:01.646 --> 00:16:03.395
+<v Igor van Haren></v>
+
+00:16:04.005 --> 00:16:32.105
+<v Gideon Zegwaard>Ja, maar Joost noemt in zijn stuk best wel een paar eh eh zorgpunten hè. Dus dat je queries kan opstellen die eh die tot eh overmatige belasting van je server kunnen leiden. Eh dat je dat er eventueel functionele mogelijkheden zijn eh die die ja, hoe meer functionele mogelijkheden, hoe meer hoe groter je aanvalsoppervlak vanuit security oogpunt is. En dat soort dat soort zorgpunten moeten geadresseerd zijn als we het willen toepassen voor data minimalisatie. En</v>
+
+00:16:32.125 --> 00:16:41.245
+<v Igor van Haren>Ik denk dat je die allemaal moet benoemen, want die kan je allemaal afvangen en die kan je afvangen in een bepaalde standaard eh of eh in ieder geval ja, als je het ook benoemt.</v>
+
+00:16:42.385 --> 00:16:42.945
+<v Gideon Zegwaard>Ja, misschien is</v>
+
+00:16:42.915 --> 00:16:43.875
+<v Igor van Haren>Ja.</v>
+
+00:16:43.785 --> 00:16:47.081
+<v Gideon Zegwaard>Ik zeg niet dat er geen oplossing voor is, maar waar ik voor wil waken</v>
+
+00:16:44.275 --> 00:16:45.195
+<v Michiel Trimpe></v>
+
+00:16:47.081 --> 00:16:59.635
+<v Gideon Zegwaard>is dat die eh dat we het doel waarvoor we het willen gebruiken, die data minimalisatie, dat dat nog steeds eh eh het het doel akkoord van van het toepassen van die GraphQL.</v>
+
+00:16:57.555 --> 00:16:59.235
+<v Igor van Haren></v>
+
+00:17:02.105 --> 00:17:19.145
+<v Michiel Trimpe>Misschien, ik ik heb een idee of tenminste eh het is een beetje ad hoc. Ik had het was niet voorbereid, maar ehm wat wat mijn conclusie ook in dit verhaal is en inderdaad eh GraphQL eh is gewoon ook een brede spec, net zoals rest trouwens, waar heel veel impliciet aanhangt en bij kan.</v>
+
+00:17:21.885 --> 00:18:54.035
+<v Michiel Trimpe>Dus eh er is heel veel wat gekaderd kan en moet worden. Eh ja, net zoals in rest, ga je wel e-tags, doe je dit niet. Eh hoe doen we je met security authorization? Dus er zit veel omheen. Wat ik wel zeg, eh wat ik de conclusie waar ik tot ben gekomen is als je het stript en je kijkt gewoon naar een eh een simpele GraphQL eigenlijk een get equivalent van één statisch schema zonder dynamische expansions of wat dan ook, dan is het eigenlijk gewoon hetzelfde als een simpele get request op een rest API, maar met de mogelijkheid om specifieke velden aan te geven die je wel wil ontvangen. Ehm en in die casus eh geloven wij dat de beveilig geloof ik, sorry, dat is even een opzet. Eh denk ik dat de beveiliging van GraphQL net zo goed ingeregeld kan worden als die van rest. En dat het wel een een internationale vorm van data minimalisatie biedt. En dan heel fijnmazig, dus in dit specifieke geval een simpel GraphQL bevraging met een statisch schema, zonder resolvers, zonder andere complexiteit, geloven wij dat het equivalent kan zijn. En los daarvan hebben we ook het statement als FTV werkgroep, wat Gideon, dat we het sowieso heel belangrijk vinden dat data minimalisatie ondersteund wordt, omdat in principe elk verzoek aan hoort te geven welke data zij willen ontvangen.</v>
+
+00:18:57.565 --> 00:19:00.921
+<v Rob van Dort>En het is ook een belangrijk eh iets dat eh binnen GraphQL zeg maar de data minimalisatie</v>
+
+00:18:59.115 --> 00:18:59.125
+<v Gideon Zegwaard></v>
+
+00:19:00.921 --> 00:19:19.995
+<v Rob van Dort>is een ingebouwd concept hè. Dat dat dat is een onderdeel van de eh van de spec zeg maar. Terwijl wat we met de rest doen is het in de constructie die we er bovenop hebben gemonteerd. Hè, en dat is eh zelden is dat een eh ja, een goed en robuust eh</v>
+
+00:19:24.235 --> 00:20:10.505
+<v Gideon Zegwaard>één dataminimalisatie meer in zich heeft om ook te adresseren. We met een oplossing zouden kunnen uitkomen waar wij dan weer in deze context weinig aan hebben. Hè, dus als het daar ingeperkt wordt tussen alleen eh client-server eh verkeer eh tussen een eh tussen een server component en een eh single page application. Hè, dus binnen één applicatie, daar hebben we niet zoveel aan in de context van Digikoppeling. Als het daarop wordt gepositioneerd of als dat de reikwijdte is. Dat wilde ik alleen meegeven, dus dat je op moet passen dat in als zo'n GraphQL werkgroep aan de gang gaat, dat eh de reikwijdte eh niet op een reikwijdte terechtkomt waar we in deze context niet zoveel aan hebben.</v>
+
+00:20:15.215 --> 00:21:09.415
+<v Peter-Jan Karens>Nou, helemaal eens Gideon. Zeker ook als ik kijk wat ze bij de WLZ doen en wat wij willen doen is het server-to-server uitwisselingen eh op basis van GraphQL. Dus kijk als de initiële kadering van van de werkgroep al heel erg beperkt wordt hè, want er was op een gegeven moment had Frank het over het het queryen van open data bijvoorbeeld. Dat vond hij dan ja, daar daar zijn we niet mee geholpen. Maar in ieder geval, ik had op hè, even omdat ik ik was daar donderdag. Ik had het idee dat het veel breder eh gepresenteerd werd. Ik was het ook niet helemaal met alles eens wat Joost vertelde, wel met een hoop, maar niet met alles. En ik denk dan juist ook dat zo'n werkgroep ook de plek is om dan te kijken van goh, hoe kijken we er dan echt met z'n allen naar en wat is dan verstandig en waar komen we dan op uit? Dat zal denk ik in fases uitgewerkt moeten gaan worden. Ehm, maar ja, wat ik zei, er was dusdanig veel animo voor dat het ook een beetje gek zou zijn om het dan niet eh niet te doen, zeg maar. Dus dat ja.</v>
+
+00:21:12.485 --> 00:21:28.945
+<v Michiel Trimpe>Wat ik ook hoor zeggen is dat eigenlijk ook zeggen dat de de feedback eh zeg maar overheidsbreed ingewonnen moet worden. Dus net zoals we hier samen zitten met eh iedereen, is iedereen is uitgenodigd, iedereen is welkom, dat er een brede open discussie ontstaat die verder gaat dan de</v>
+
+00:21:31.055 --> 00:21:32.655
+<v Michiel Trimpe>de beheerders van standaarden.</v>
+
+00:21:36.455 --> 00:21:50.355
+<v Michiel Trimpe>Dat lijkt me ook een goede om mee te nemen. Dus even samenvattend, dus als eh FTV als werkgroep kunnen wij zeggen: wij vinden het heel belangrijk dat eh wij vinden het belangrijk dat bij elk verzoek aangegeven wordt welke data opgevraagd wordt.</v>
+
+00:21:52.825 --> 00:22:34.885
+<v Michiel Trimpe>Eh nou, we vinden het belangrijk dat daar goede toegangsverlening op gebeurt. Eh wij geloven dat het mogelijk is eh of eh als we kijken naar GraphQL dat een een kleinere gekaderde variant dat dat equivalent qua veiligheid kan zijn als eh REST. Dus dat GraphQL dan qua veiligheid equivalent kan zijn aan REST in die kleine kadering. En dat wij de wens hebben dat binnen de GraphQL of binnen de werkgroep, hoe die dan ook gaat heten, waar die dan ook over gaat, dat dit dataminimalisatieprobleem geadresseerd wordt en dat het door een breed stakeholdersveld over de hele overheid besproken en getoetst en gedragen wordt. Zou dat een statement waar we met z'n allen achter kunnen staan?</v>
+
+00:22:38.425 --> 00:22:46.515
+<v Michiel Trimpe>Kijk. Oké. Ik had nog wat meer presentatie voorbereid, maar eigenlijk denk ik dat we</v>
+
+00:22:50.015 --> 00:23:08.975
+<v Michiel Trimpe>Ja. Nou, ik had nog maar één slide. Oké, dus ik denk dat dat het statement is wat wij dan als als werkgroep kunnen aanbieden. En als werkgroep ehm kunnen wij nog beslissen over ehm het GraphQL-profiel wat nu gemaakt is, of wij dat willen strippen van de Nederlandse context en aan willen bieden bij AuthZEN internationaal.</v>
+
+00:23:11.915 --> 00:23:39.785
+<v Michiel Trimpe>Dat lijkt mij eh op zich een interessante kans. Ehm wanneer het een internationale standaard zou worden, dan scheelt dat ons natuurlijk beheer eh en maakt het makkelijker en maakt de adoptie breder, groter. Ehm het is natuurlijk eh punching above your weight, een een stelletje Nederlanders die proberen de GraphQL autorisatiestandaard van de wereld neer te zetten, maar who knows, it might work. Hoe kijken jullie daar tegenaan? Eh wel doen of eh dan haal je teveel hooi op de vork, wat haal je op de hals?</v>
+
+00:23:43.845 --> 00:23:44.925
+<v Rob van Dort>Nobel streven.</v>
+
+00:23:45.765 --> 00:24:07.165
+<v Igor van Haren>Ik denk dat we het vooral kunnen toetsen eerst. Hoe hoe eh en wat hierna als zij zij met open armen ontvangen, dan eh denk ik niet dat we teveel hooi op ons vork. Als zij hier terughoudend erin zijn en we moeten er echt gigantisch hard aan trekken om het eh dat dan denk ik dat we moeten overwegen, hè, heroverwegen.</v>
+
+00:24:10.305 --> 00:24:16.185
+<v Michiel Trimpe>Ja. Nee, dat sowieso. Dus eh niet pushen, maar aan dus niet pushen, maar aanbieden.</v>
+
+00:24:18.635 --> 00:24:18.835
+<v Michiel Trimpe>Ja.</v>
+
+00:24:18.985 --> 00:24:28.615
+<v Axel van der Minne>dat het over de om de Nederlandse, maar waar praten we over?</v>
+
+00:24:29.945 --> 00:24:52.414
+<v Michiel Trimpe>het is nu het is momenteel een eh redelijk groot document, omdat het ook alle Nederlandse toepassingscases uitlegt en de context en de kadering. Dus ik verwacht dat het voornamelijk echt strippen is en gewoon het technische element achterlaten. Ehm en ik denk dat er ja, dat het voornamelijk echt wegstrepen is en niet heel veel aanpassen. Maar ik heb het werk nog niet echt gedaan, dus ehm</v>
+
+00:24:50.735 --> 00:24:50.855
+<v Axel van der Minne></v>
+
+00:24:52.414 --> 00:25:00.469
+<v Michiel Trimpe>ook wat mij betreft ehm is de toezegging niet dat we dit gaan doen. Maar dat we ons best gaan doen om te kijken of we binnen de resterende tijd en capaciteit dit nog neer kunnen zetten.</v>
+
+00:24:56.415 --> 00:24:56.815
+<v Axel van der Minne>Nee.</v>
+
+00:25:00.469 --> 00:25:02.655
+<v Michiel Trimpe>dit nog neer kunnen zetten.</v>
+
+00:25:05.515 --> 00:25:19.725
+<v Michiel Trimpe>En het mooie hiervan is als dit dus eenmaal speelt, eh dan is AuthZEN ehm die werkgroep, er zitten heel veel leveranciers in. En die hebben ook heel veel contacten. En dan is dat een hele mooie brug om met de GraphQL leveranciers ook in kwijt te raken.</v>
+
+00:25:21.815 --> 00:25:29.655
+<v Michiel Trimpe>wat Igor zegt, als het eh omarmd wordt, als het trekker wordt, dan laten we het gewoon waar het is.</v>
+
+00:25:32.965 --> 00:25:33.205
+<v Michiel Trimpe>Oké.</v>
+
+00:25:36.225 --> 00:25:36.665
+<v Michiel Trimpe>Mooi.</v>
+
+00:25:38.945 --> 00:25:43.745
+<v Michiel Trimpe>Eh zijn er over dit onderwerp nog mensen iets eh kwijt willen of daarvoor willen brengen?</v>
+
+00:25:48.835 --> 00:26:00.675
+<v Michiel Trimpe>Oké. Dan eh gaan we door naar eh de authorization decision log. Dan wil ik beginnen met wat eh zeg maar huishoudelijk werk. Er zijn een aantal issues ge-</v>
+
+00:26:03.705 --> 00:26:04.265
+<v Michiel Trimpe>opend.</v>
+
+00:26:07.335 --> 00:27:04.845
+<v Michiel Trimpe>en die hebben we een soort van niet helemaal of ja, een soort van beantwoord, maar niet echt gemarkeerd als gesloten. Eh ik weet niet of mensen gekeken hebben, maar ik ga er toch maar even doorheen. Ehm dus eh Pim Gaemers van eh FSC onder andere, benoemde dat wij in de informatieve sectie Security and Integrity, dat een aantal maatregelen beschrijven over hoe je om zou moeten gaan met je authorization decision logs. Eh maar dat is een informatieve sectie en geen normatieve sectie. Dus het is mogelijk dat partijen dit eh anders implementeren intern. Eh en dat je dus ook als eh nou ja, als iemand aangeeft: wij implementeren een authorization decision log, dat je dan nog niet per se in welke mate er intern binnen de organisatie met die log eh verantwoord omgegaan wordt.</v>
+
+00:27:07.565 --> 00:27:15.045
+<v Michiel Trimpe>een aantal specifieke voorbeelden die eh Pim noemt, maar dit is denk ik de ja, de essentie van de feedback.</v>
+
+00:27:21.165 --> 00:27:28.565
+<v Michiel Trimpe>mijn antwoord destijds is dat we ehm nou, we hebben hier bewust voor gekozen hebben om dit geen normatieve sectie te maken.</v>
+
+00:27:30.665 --> 00:28:01.045
+<v Michiel Trimpe>deels omdat het heel moeilijk is om hier normen op te zetten, omdat het heel organisatiespecifiek is. Of ja, deels, grotendeels eigenlijk, omdat het eh heel organisatiespecifiek is. Eh dus eh je logs kunnen meer of minder gevoelig zijn, je organisatie kan op verschillende manieren gestructureerd zijn. En wij zagen niet echt een aanknopingspunt waarvan we konden zeggen: dit is altijd waar. Ik zie trouwens een duimpje, maar was dat Pim? Oh, dat is Pim zelf. Dat had ik nog niet gezien, dus dat is een bepaalde mate van eh support.</v>
+
+00:28:04.725 --> 00:28:32.705
+<v Michiel Trimpe>Maar het is natuurlijk wel waar dat wij eh dus bijvoorbeeld naar een een ADL 1.1 of 1. of 2.0 zouden kunnen kijken of we dat willen doen. Wat er nu staat is besproken met de IBD. Eh en wat er nu staat is ook deels op hun aanraden. Dus dat wij uiteindelijk zeggen: dit en dit en dit moet je behandelen of dit zijn aandachtspunten waarvan wij zeggen: hier moet je naar kijken. Maar dat wij in de standaard verder niet afdwingen hoe jij als organisatie hieromheen moet gaan.</v>
+
+00:28:36.275 --> 00:28:51.115
+<v Michiel Trimpe>staan wij als werkgroep achter dit standpunt? Dus Pim kon er eh op zich mee leven, maar gaf aan dat eh eigenlijk een keer holistisch naar alle standaarden gekeken moet worden, dus want FSC, FTV en LDV hebben ook logs.</v>
+
+00:28:55.315 --> 00:29:17.825
+<v Michiel Trimpe>En ik denk eigenlijk, ik zou willen vragen: als wij als werkgroep nog steeds staan achter de boodschap: dit is echt iets voor je eigen organisatie, dit is niet iets wat wij moeten normeren, denk ik dat we dit issue gewoon moeten sluiten. Eh maar dat wil ik bij jullie toetsen om ook de ruimte te laten als jullie zeggen: nee, dit moeten we er echt wel bij en dit willen we juist in ADL</v>
+
+00:29:21.265 --> 00:29:42.855
+<v Stas Mironov>klopt. Ehm en daar werd er niet echt hoopig op gereageerd. Dat was het echt meer een issue van eh van elke partij zelf. Dus eh daar is niks mee gedaan. Je ziet ook dat Pim voorstelt om holistisch te kijken, maar dat lukt dan niet als we nu al van mening verschillen.</v>
+
+00:29:45.035 --> 00:29:53.315
+<v Michiel Trimpe>verschillen ze van mening? Want in principe hoor je zeggen zij dus hetzelfde. Ze willen ze hebben vinden het ook niet de moeite waard om het holistisch te bekijken en ze zeggen ook het hoort niet bij de standaard.</v>
+
+00:29:54.055 --> 00:29:59.135
+<v Stas Mironov>Klopt, maar daarom, ik weet nog niet wat de werkgroep gaat eh reageren, maar ik geef het alleen als een eh</v>
+
+00:29:59.325 --> 00:30:00.005
+<v Michiel Trimpe>Ja, super.</v>
+
+00:30:00.895 --> 00:30:01.495
+<v Stas Mironov>mededeling.</v>
+
+00:30:09.775 --> 00:30:12.135
+<v Michiel Trimpe>Iemand heeft uit zichzelf de behoefte hier om op te reageren?</v>
+
+00:30:13.035 --> 00:31:00.365
+<v Peter-Jan Karens>Nou, Michiel, ik ik vind het zelf verwarrend/ het gaat denk ik een hoop eh ruis/inconsistenties opleveren als we continu delen van andere standaarden en eisen in aanliggende standaarden benoemen. Dus ja, ik zie zelf niet direct het punt om hier over een ander onderdeel van de architectuur te praten terwijl dat niet volgens mij hier direct heel veel verandert. Eh en ik denk dat je dit in de paraplu van andere standaarden moet zien die je allemaal tegelijk toepast. En dan zou ik zeggen als ja, als dit soort dingen al op een andere plek wordt. Dus ik ja, ik denk best case is het een fijne verduidelijking. Worst case gaat dit weer uit de pas lopen met eigenlijk het stuk waar het in hoort. En dan ja, ik zou zeggen volgens mij hoort het er niet in, maar</v>
+
+00:31:03.675 --> 00:31:08.635
+<v Michiel Trimpe>We hebben ook nog de optie om eh in de pas te gaan lopen door de hele sectie eruit te slopen.</v>
+
+00:31:10.965 --> 00:31:21.515
+<v Michiel Trimpe>Ja, dit werd wel aangeraden door de IBD. En op zich kan ik me er niet of informatieve wel leven. Zullen we dat? Vinden we het oké om het wel te houden?</v>
+
+00:31:25.955 --> 00:31:39.205
+<v Michiel Trimpe>Even misschien een eh thumbs up, thumbs down. Dus wacht, de eerste even de vraag. Eh volgens mij zijn we er dus allemaal mee eens dat we inderdaad niet normatief over de informatiehuishouding van het ADL zelf gaan praten.</v>
+
+00:31:41.035 --> 00:31:50.155
+<v Gideon Zegwaard>Is is in het normatieve deel al benoemd dat dit een eh dat het eigenlijk een breder eh vraagstuk is over meerdere vormen van logging.</v>
+
+00:31:52.205 --> 00:31:54.845
+<v Michiel Trimpe>Het is niet in het normatieve stuk benoemd. Dus het normatieve stuk</v>
+
+00:31:53.935 --> 00:31:55.935
+<v Gideon Zegwaard>Sorry, in in sorry, in het informatieve stuk.</v>
+
+00:31:59.505 --> 00:32:02.025
+<v Michiel Trimpe>Dat weet ik eigenlijk niet.</v>
+
+00:32:02.635 --> 00:32:08.435
+<v Gideon Zegwaard>Want daarmee zou je als je als je dat opneemt, zou je daarmee ook verantwoorden waarom het informatief is.</v>
+
+00:32:14.945 --> 00:32:16.065
+<v Michiel Trimpe>Ik denk</v>
+
+00:32:18.615 --> 00:32:19.615
+<v Michiel Trimpe>deze.</v>
+
+00:32:20.535 --> 00:32:32.615
+<v Gideon Zegwaard>Want dan is wellicht een zinnetje opnemen dat dit eh dat dit eh algemener vraagstuk is voor wat voor voor meer vormen van logging eh in je systeem geldt. Eh ja.</v>
+
+00:32:33.895 --> 00:32:34.175
+<v Michiel Trimpe>Ja.</v>
+
+00:32:36.325 --> 00:32:39.005
+<v Gideon Zegwaard>een een een een goede duiding waarom je het informatief houdt.</v>
+
+00:32:41.405 --> 00:32:53.045
+<v Michiel Trimpe>Ja. Oké, dit is momenteel de introductie sectie. Dus daar staat niet dat het een een algemene dat dit algemeen geldt voor alle logs. Dus dat kunnen we hier nog explicieter aan toevoegen.</v>
+
+00:32:55.935 --> 00:32:57.895
+<v Michiel Trimpe>Oké. Dan doen we dat.</v>
+
+00:33:01.115 --> 00:33:10.355
+<v Michiel Trimpe>Nou, dus wij blijven er akkoord, maar we houden de sectie wel dus. Even even thumbs up, thumbs down. Eh houden we de sectie? Ja, nee.</v>
+
+00:33:19.255 --> 00:33:24.445
+<v Michiel Trimpe>Oké. Ja, we houden de sectie. Super. Nou, en dan het het volgende stukje is ehm</v>
+
+00:33:27.975 --> 00:33:43.565
+<v Michiel Trimpe>huishoudelijk of ja, huishoudelijk. Eh dus het is een informatieve sectie. Eh op basis van deze feedback ging ik ook kijken en stonden er een aantal musts in hoofdletter hoofdletters in. En dat is natuurlijk dat kan niet. Dus die heb ik ook aangepast naar kleine lettertjes.</v>
+
+00:33:45.605 --> 00:33:50.645
+<v Michiel Trimpe>Is dat acceptabel dat het nog steeds wel should en must must zijn, maar nu in kleine lettertjes?</v>
+
+00:33:55.835 --> 00:34:15.695
+<v Michiel Trimpe>Ik zie geen feedback. Oké, dus dan ga ik dit nog uitbreiden met eh de introductie sectie van het niet normatieve eh iets explicieter benoemen dat dit zeg maar algemeen geldt voor alle logs. Dus dat eh wij daar niet de standaard voor zijn. En dan gaat deze PR wat mij betreft eh</v>
+
+00:34:17.495 --> 00:34:37.325
+<v Peter-Jan Karens>Eh, volgens mij helemaal bovenaan kwam bij een conformance wordt er eh, dat is echt helemaal bovenaan zeg maar. Eh, die tweede zeg maar, ja precies. Hier staat vrij duidelijk volgens mij hoe het toegepast moet worden. Is dit om dan, omdat dit dan niet die specifieke keywords waren, zoals bedoeld hier?</v>
+
+00:34:38.545 --> 00:34:41.699
+<v Michiel Trimpe>eh betekent en wat hier ook staat is dat als je het in hoofdletters schrijft</v>
+
+00:34:39.175 --> 00:34:39.255
+<v Peter-Jan Karens>Nee,</v>
+
+00:34:41.699 --> 00:34:46.465
+<v Michiel Trimpe>en dan is het normatief.</v>
+
+00:34:46.965 --> 00:34:47.965
+<v Peter-Jan Karens>Ah, oké, oké.</v>
+
+00:34:48.575 --> 00:34:51.655
+<v Michiel Trimpe>de sectie begint met this section is non-normative.</v>
+
+00:34:52.835 --> 00:34:53.595
+<v Peter-Jan Karens>Ik snap het, oké, sorry.</v>
+
+00:34:56.035 --> 00:34:56.595
+<v Peter-Jan Karens>Duidelijk.</v>
+
+00:34:56.205 --> 00:35:06.645
+<v Michiel Trimpe>Dat spreekt elkaar tegen. Waarom ik nog even checkte is, ik heb het alleen lowercase gemaakt. En sommige specs zeggen eigenlijk moet je ook in lowercase must en should als woorden voorkomen.</v>
+
+00:35:08.845 --> 00:35:09.485
+<v Michiel Trimpe>ja</v>
+
+00:35:09.545 --> 00:35:16.345
+<v Peter-Jan Karens>nou ja, dat was mijn reactie een beetje. Volgens mij zijn dit gewoon de keywords, punt. Maar ik zou niet weten exact eh wat de bedoeling is.</v>
+
+00:35:17.565 --> 00:35:17.845
+<v Michiel Trimpe>Ja.</v>
+
+00:35:18.055 --> 00:35:19.015
+<v Peter-Jan Karens>Ja.</v>
+
+00:35:18.845 --> 00:35:25.005
+<v Michiel Trimpe>Ik kan nog even kijken of ik ze kan herschrijven. Dan doe ik het helemaal netjes. Als ik toch nog eh niet klaar was en in de sectie</v>
+
+00:35:24.585 --> 00:35:37.585
+<v Peter-Jan Karens>is in ieder geval als je op die eh BCP14 klikt, dan heb je meteen die eh heb je RFC 8174, die gaat over ambiguity of eh uppercase versus lowercase. Dus nou ja, misschien staat daar nog wel nuttigs in.</v>
+
+00:35:38.595 --> 00:35:45.295
+<v Michiel Trimpe>Oké. Ik ga het mijn huiswerk net netter doen. Ik ga ook nog de musts en de shoulds herschrijven in andere woorden.</v>
+
+00:35:47.685 --> 00:35:54.685
+<v Michiel Trimpe>qua intentie volgens mij akkoord met iedereen. Dus dan ga ik die PR gewoon klaarzetten voor 1.1.</v>
+
+00:35:59.385 --> 00:36:09.805
+<v Michiel Trimpe>Nou, en de volgende is ehm ondersteuning voor de redactie van log records.</v>
+
+00:36:13.175 --> 00:36:13.495
+<v Michiel Trimpe>kijken.</v>
+
+00:36:16.415 --> 00:36:19.215
+<v Michiel Trimpe>stond al opgenomen.</v>
+
+00:36:22.235 --> 00:36:26.035
+<v Michiel Trimpe>dat eh in de ADL core request en ADL core response</v>
+
+00:36:28.605 --> 00:36:42.245
+<v Michiel Trimpe>dat die nou ja, conform AuthZEN zouden moeten zijn. Ehm, unless privacy considerations require portions to be omitted. En er staat ergens anders ook nog dat nou ja, dat je dus eh data weg mag laten.</v>
+
+00:36:44.815 --> 00:37:18.575
+<v Michiel Trimpe>werd het niet beschreven hoe je dat dan moet markeren. Dus dat kan de situatie opleveren dat jij een ADL eh record ziet waar informatie ontbreekt of wat eh niet eens AuthZEN specifiek conform is, omdat eh de user subject ID is weggehaald bijvoorbeeld. Maar dat je dat niet eh uit de context van het log record zelf op kan maken. En dat is natuurlijk minder ideaal, want dan dat kan eh verkeerde interpretatie ondersteunen ja, veroorzaken.</v>
+
+00:37:21.085 --> 00:37:23.365
+<v Michiel Trimpe>En nu is er ook</v>
+
+00:37:28.065 --> 00:38:00.055
+<v Michiel Trimpe>Ehm, nu is er ook eh een OPA decision log standaard. Eh, daar zijn we deels op geïnspireerd, maar dat is een eh een standaard die nou ja, vanuit vendoren denkt en die niet aan data bij de bron doet. Dus daar zit altijd alle data echt in de log, want dat willen wij vaak niet. Dus dat is waarom authorization decision log apart is ontstaan. Maar OPA gebruikt al de erased en masked conventie daarvoor. Dus dat zijn, ik denk misschien kan ik het beste</v>
+
+00:38:05.245 --> 00:38:44.045
+<v Michiel Trimpe>Ehm, dus wat je dan krijgt is eh dat de PDP bij het eh wegschrijven van het log record, dus eh idealiter gewoon voordat het opslag raakt, eh bepaalde data wist of markeert. Eh in het log record zelf krijg je dan de velden ADL.redact.erased en ADL.redact.erased voor iets dat gewist is. En ADL.redact.masked voor iets dat gemaskeerd is. Dus waar nog wel data in staat, maar die eh als die gemaskeerd is, niet meer herleidbaar is. Dus dat kan je denken aan een vervangende marker, een keyed hash, een pseudoniem of eh gedeeltelijke waarde, zoals de laatste paar cijfers.</v>
+
+00:38:47.965 --> 00:39:28.935
+<v Michiel Trimpe>Ja, dus dit de bronreferenties blijf je gewoon nog houden. Eh maar wanneer je dus dat ziet kan de lezer het record als bewust onvolledig beschouwen. Wat erbij ook nog benoemd is eh voor LDV onder andere, is dat je hiermee ook dingen uit eh bijvoorbeeld de authorization decision log kan verwijderen, zoals het BSN. En maar je op basis van eh koppeling met trace en span ID mogelijk alsnog in LDV het BSN erbij kan zoeken indien nodig. Of vice versa. Dus dat je wanneer eh in LDV is het besluit bepaalde data niet op te nemen, maar de koppeling met ADL kan gebruiken om die data alsnog later beschikbaar te maken.</v>
+
+00:39:30.885 --> 00:39:58.135
+<v Marcel Molenaar>wat je nu zegt dat daar heb ik een vraagje over. Ik ben er later bij gekomen. Als jullie het er al over gehad hebben dan eh moet je het maar zeggen hoor, maar eh ik zie inderdaad eh ook ook meerdere logdoelen hè, voor eh eh voor compliance of audit trail of wat dan ook, maar ook voor incident management en dat soort dingen. En ik kan me voorstellen in de ene wel en de ander niet, maar maar die kunnen dus op deze manier dan wel met elkaar gekoppeld worden. Is dat eh hiervoor de bedoeling?</v>
+
+00:40:01.255 --> 00:40:05.295
+<v Michiel Trimpe>dat was niet de bedoeling, maar is wel iets wat je hier ook mee kan. Dat is niet waarom het is.</v>
+
+00:40:04.225 --> 00:40:06.255
+<v Marcel Molenaar>Nou ja, ik ik noem het</v>
+
+00:40:06.695 --> 00:40:21.375
+<v Michiel Trimpe>voorbeeld van twee verschillende eh logs, dus bijvoorbeeld logboek dataverwerkingen die ehm bedoeld is voor verantwoording naar de burger eh en authorization decision log voor eh incident management en verantwoording binnen de organisatie. Dat je ook dat soort standaarden kan koppelen.</v>
+
+00:40:22.935 --> 00:40:26.615
+<v Marcel Molenaar>Nee, want ik ik ik zie namelijk in principe</v>
+
+00:40:23.035 --> 00:40:23.515
+<v Michiel Trimpe>Ja.</v>
+
+00:40:28.335 --> 00:40:59.565
+<v Marcel Molenaar>je hebt eigenlijk drie doelen zoals ik ze nu zie. Misschien is is het ook niet compleet, maar inderdaad voor incident management, eentje voor audit trail achtige compliance achtige dingen en eentje voor operationele dingen. Eh van hé, eh als die als dus meer beschikbaarheid van je van je voorzieningen natuurlijk. En en ja, in de ene wil je heel andere data hebben dan de ander. Tenminste, sommige data wil je per se niet in je operationele log hebben ofzo, weet je wel? Dat eh dus daar dacht ik aan, maar</v>
+
+00:40:59.175 --> 00:41:43.365
+<v Michiel Trimpe>Ja. Ehm Ja, de we we hebben we hebben expliciet eh we hadden ook al feedback gekregen op het voorstel en één van de voorstellen benoemde expliciet dat verschillende componenten eh verschillende maten van redactie toe kunnen passen. Dat dat ook op hetzelfde record kan gebeuren. Ehm dat heeft dat erin gestaan, maar dat hadden we er ook weer uitgehaald, omdat ergens eh zeg maar dit dit omschrijft gewoon hoe zo'n record eruit moet zien. Ja. Dat je het in meerdere componenten doet, dat kun je zelf beslissen. Maar misschien als jij dit zo benoemt, is het misschien juist goed om dat weer terug te zetten. Dus dat we expliciet inderdaad uitschrijven dat dezelfde log door verschillende componenten in verschillende maten van redactie</v>
+
+00:41:45.405 --> 00:41:45.485
+<v Marcel Molenaar>Ja.</v>
+
+00:41:45.995 --> 00:41:46.875
+<v Michiel Trimpe>geslagen kan worden.</v>
+
+00:41:47.595 --> 00:41:57.955
+<v Marcel Molenaar>Ja, ik kan me daar iets bij voorstellen. Ik vind het moeilijk om eh om er uitspraken over te doen, maar ik vroeg me eigenlijk meer af of jullie er ook zo over dachten over dachten. Dat is eigenlijk eh de achtergrond achter mijn vraag.</v>
+
+00:41:59.915 --> 00:42:22.725
+<v Michiel Trimpe>Ja, nou daar hadden we nog niet over nagedacht, maar het is een hele geldige case. Ehm en we hadden dus al wel inderdaad we nagedacht over zeg maar als eh systeem A de volledige log wegschrijft gewoon om nou weet ik wat voor reden dan ook, maar eh systeem B dat verder moet redact eh redacteren. Eh dat je dat dan zo op kan bouwen in die zin.</v>
+
+00:42:23.325 --> 00:42:28.205
+<v Marcel Molenaar>Oh, dat is ook slim ja. Oh, die daar daar had ik weer niet aan gedacht, dus dat eh</v>
+
+00:42:26.485 --> 00:42:30.285
+<v Michiel Trimpe>Ja, precies, maar dat is uiteindelijk technisch is dat dezelfde functionaliteit. Igor?</v>
+
+00:42:32.605 --> 00:42:52.775
+<v Igor van Haren>bij eh onze juristen hebben altijd dit eh ook bij ons bekeken die ADL en die hadden op een gegeven moment besloten dat de trace ID een persoonsgegeven werd, omdat hij te relateren was uiteindelijk via een andere log eh aan een persoon.</v>
+
+00:42:55.485 --> 00:43:25.015
+<v Igor van Haren>Dat was dus onmenselijk, want de één is operationeel en de ander is voor audit doeleinden. Ehm daar hebben we een maatregelen moeten treffen van die juristen om om daadwerkelijk in functie ook het onmogelijk te maken dat de dat die relatie gelegd kan worden. Ehm want kan je indirect een relatie leggen met een persoon, dan wordt iets anders een afgeleide ook in één keer een persoons</v>
+
+00:43:28.125 --> 00:43:31.045
+<v Igor van Haren>kenmerk, een privacy gevoelige data.</v>
+
+00:43:36.415 --> 00:43:59.894
+<v Marcel Molenaar>kan komen natuurlijk. Dus want je wil eigenlijk, hé, de de mensen die inderdaad over die audit trail gaan, die mogen dat misschien wel zien, want die hebben, weet ik veel, een eh eh eh een NDA getekend of wat dan ook daarover en die moeten echt dingen uitzoeken</v>
+
+00:43:59.225 --> 00:44:03.354
+<v Igor van Haren>Ja, of een juridische aandacht. echt heel erg ver in</v>
+
+00:43:59.894 --> 00:44:01.135
+<v Marcel Molenaar>Ja.</v>
+
+00:44:03.354 --> 00:44:06.535
+<v Igor van Haren>eh vind ik, hè, ehm eh zeg een een</v>
+
+00:44:08.975 --> 00:44:25.525
+<v Igor van Haren>als het kan, zeg maar, dan wordt het een persoonsgegeven. En eh dus wij moeten het echt zo goed als onmogelijk maken. En dan moet je dus over functies heen moet je dus dat gaan eh gaan doen en liefst zelfs over organisaties heen.</v>
+
+00:44:27.715 --> 00:44:29.995
+<v Igor van Haren>Het is een opmerking verder niet eh, maar</v>
+
+00:44:32.725 --> 00:44:39.385
+<v Igor van Haren>ik ik verwacht dat andere organisaties daar ook als juristen daarnaar gaan kijken, ook tegenaan gaan lopen.</v>
+
+00:44:40.495 --> 00:44:54.175
+<v Michiel Trimpe></v>
+
+00:44:56.615 --> 00:45:00.935
+<v Michiel Trimpe>denk dat we vandaag niet de ruimte hebben om die discussie ook de diepte in te gaan. Hij is wel waardevol.</v>
+
+00:45:03.395 --> 00:45:22.205
+<v Michiel Trimpe>Maar misschien Stas, is het een idee om die ook eens een keer met Tim te koppelen? Want dit heeft daar ook natuurlijk impact. Dat is ook eh LDV ziet de trace ID's juist als een manier om verantwoording naar de burger toe mogelijk te maken. Dus als je dat onmogelijk maakt vanuit het idee dat het herleidbaar is, dan denk ik dat ook aan tegen.</v>
+
+00:45:25.215 --> 00:45:53.005
+<v Gideon Zegwaard>het is ook niet eh tenminste eh je kan tot de conclusie komen dat het persoonsgegevens zijn, maar dat wil nog niet zeggen dat je dan die traceerbaarheid wil wegnemen. Je moet er alleen voor zorgen dat je dan eh maatregelen hebt genomen dat het niet op een onjuiste manier gebruikt kan worden. Hè, dus ik zou ook zeggen, je hoeft je hoeft ook niet je in bochten te wringen om iets geen persoonsgegevens te laten zijn. Je moet er alleen mee dealen dat het persoonsgegevens zijn.</v>
+
+00:45:55.115 --> 00:45:58.959
+<v Igor van Haren>Ja, en dat dat is vaak operationeel, zeg maar eh</v>
+
+00:45:55.755 --> 00:45:56.095
+<v Axel van der Minne>Precies.</v>
+
+00:45:58.959 --> 00:46:14.641
+<v Igor van Haren>een een iemand die eh ehm in een observability tool naar die trace ID's gaat kijken om traces, om eventueel ja, die die is dan in principe met persoonsgegevens bezig. En en ja.</v>
+
+00:46:14.105 --> 00:46:14.465
+<v Axel van der Minne>Ja.</v>
+
+00:46:14.135 --> 00:46:15.055
+<v Michiel Trimpe>Ja.</v>
+
+00:46:14.641 --> 00:46:26.965
+<v Igor van Haren>En dan moet je tot een minimum en je moet verantwoorden waarom je met persoonsgegevens bezig bent enzovoort enzovoort. Dus je wilt heel soms dus dat niet als een persoonsgegeven eh in een bepaalde log eh</v>
+
+00:46:28.405 --> 00:46:30.685
+<v Gideon Zegwaard>Ja, ja, dus dit is</v>
+
+00:46:28.615 --> 00:46:33.685
+<v Michiel Trimpe>precies waar die niet normatieve sectie van net inderdaad over gaat.</v>
+
+00:46:28.735 --> 00:46:29.175
+<v Igor van Haren>Ja.</v>
+
+00:46:33.685 --> 00:46:34.295
+<v Michiel Trimpe>Ja.</v>
+
+00:46:34.635 --> 00:46:34.715
+<v Marcel Molenaar>Ja.</v>
+
+00:46:35.625 --> 00:46:37.385
+<v Igor van Haren>Soms krijg je er jeuk van, hè, maar</v>
+
+00:46:38.975 --> 00:46:39.335
+<v Michiel Trimpe>Ja.</v>
+
+00:46:39.105 --> 00:46:39.745
+<v Axel van der Minne>Nee, maar</v>
+
+00:46:39.725 --> 00:46:39.845
+<v Igor van Haren>Ja.</v>
+
+00:46:40.325 --> 00:46:41.285
+<v Michiel Trimpe>maar het is wel goed.</v>
+
+00:46:40.675 --> 00:46:51.495
+<v Marcel Molenaar>Maar ik ik ik denk zelf dat het eerlijk gezegd dat het pas eh eh eh persoonlijke data dat je het zo zou moeten zien als je ook de mogelijkheid hebt om bij die</v>
+
+00:46:53.575 --> 00:47:01.211
+<v Marcel Molenaar>die die gerelateerde persoonlijke data te komen. Zo niet, dan is het eigenlijk niet echt ja, eh eh hoe het tenzij je met correlatie</v>
+
+00:46:58.705 --> 00:46:59.265
+<v Axel van der Minne>Ja.</v>
+
+00:47:01.211 --> 00:47:16.205
+<v Marcel Molenaar>allerlei dingen bij elkaar kan zetten en dat je daar weer wat uit kan halen, maar maar normaal gesproken als je dan niet aan de aan de eindpersoon kan koppelen, dan zou ik dat zeggen van niet. Maar en en dat kan je weer met toegangsrechten op die logs natuurlijk regelen. Dus daar ik denk dat we daarin moeten zoeken.</v>
+
+00:47:15.305 --> 00:47:15.585
+<v Axel van der Minne>Ja.</v>
+
+00:47:16.445 --> 00:47:29.854
+<v Marcel Molenaar>Ik denk dat het hele terechte overwegingen zijn, maar dat we nou ja, je je moet ehm we we hebben een plicht om fraude te kunnen onderzoeken. Dus je kan niet zeggen dat we daarom niks mee kunnen.</v>
+
+00:47:27.855 --> 00:47:28.255
+<v Axel van der Minne>Ja.</v>
+
+00:47:29.854 --> 00:47:32.165
+<v Marcel Molenaar>Dat er zit wel een afweging in. Ja.</v>
+
+00:47:31.535 --> 00:47:36.442
+<v Igor van Haren>Klopt allemaal, maar het het het muurtje ertussen, hoe hoog moet het muurtje worden?</v>
+
+00:47:32.315 --> 00:47:32.715
+<v Axel van der Minne>Ja.</v>
+
+00:47:36.442 --> 00:47:41.642
+<v Igor van Haren>Dat is de vraag die wij tegen die juristen hebben gesteld. Eh hoeveel moeite moet je</v>
+
+00:47:38.875 --> 00:47:41.285
+<v Marcel Molenaar>Ja.</v>
+
+00:47:41.642 --> 00:47:50.125
+<v Igor van Haren>iemand mag iemand nemen om niet tot die correlatie te komen. Ja.</v>
+
+00:47:50.665 --> 00:47:52.465
+<v Marcel Molenaar>Maar een terechte vraag lijkt me.</v>
+
+00:47:54.135 --> 00:48:10.455
+<v Axel van der Minne>En leuk is die exacte dezelfde discussies voeren wij hier ook. Dus eh om om al hè, dus dus het het loggen dat dat dat is het punt niet, maar eh eh het ontsluiten van die log, het gebruiken ervan. Ja, daar daar daar daar zijn heel veel daar wordt heel scherp scherp op gekeken, laat ik het zo formuleren.</v>
+
+00:48:13.135 --> 00:48:21.935
+<v Michiel Trimpe>Misschien is dat ook wel dan een goed teken dat we het hier in de log dat niet benoemen en dat we dus expliciet hier in de log zeggen: dit gaat over het log formaat.</v>
+
+00:48:24.845 --> 00:48:29.525
+<v Michiel Trimpe>Dus dat</v>
+
+00:48:30.535 --> 00:48:44.615
+<v Axel van der Minne>dan zit je echt in die security hoek en en dan mag je dat bekijken. Ja, maar het het eventjes de burgers laten zien, nee, daar zijn we nog lang niet.</v>
+
+00:48:40.925 --> 00:48:41.245
+<v Michiel Trimpe>Ja.</v>
+
+00:48:45.795 --> 00:48:56.397
+<v Marcel Molenaar>tussen incident management en en audit trail, dus compliance management, daar zou ik ook nog wel een verschil tussen willen maken hoor.</v>
+
+00:48:53.455 --> 00:48:54.575
+<v Axel van der Minne>speelt ook.</v>
+
+00:48:56.397 --> 00:48:59.986
+<v Marcel Molenaar>Dus ik denk dat in het algemeen maar</v>
+
+00:48:58.455 --> 00:48:59.695
+<v Axel van der Minne>Klopt.</v>
+
+00:48:59.986 --> 00:49:14.135
+<v Marcel Molenaar>ik ik ben het met iedereen eens hier verder, maar ik vraag me dan wel af, moeten we niet een aparte standaard hebben over hiervoor ofzo, weet je wel, van hoe je nou met die verschillende dingen omgaat en dat moet misschien los hiervan komen, maar ik</v>
+
+00:49:13.415 --> 00:49:17.605
+<v Michiel Trimpe>Dit is precies wat jij inderdaad gemist hebt omdat je langer aangehaakt hebt.</v>
+
+00:49:17.195 --> 00:49:18.555
+<v Marcel Molenaar>Ja, sorry.</v>
+
+00:49:17.605 --> 00:49:26.938
+<v Michiel Trimpe>toevallig vanuit een hele andere invalshoek je net hiervoor over gehad. Eh en inderdaad, daar zijn heel veel manieren voor om dat in te vullen.</v>
+
+00:49:26.915 --> 00:49:27.035
+<v Marcel Molenaar>Ja.</v>
+
+00:49:26.938 --> 00:49:32.135
+<v Michiel Trimpe>Eh maar dat is dus teveel manieren, zeker hoort niet in deze log thuis, was de conclusie. Peter-Jan.</v>
+
+00:49:31.945 --> 00:49:33.385
+<v Marcel Molenaar>Eens, ja, oké.</v>
+
+00:49:34.165 --> 00:49:44.682
+<v Peter-Jan Karens>Volgens mij was de vraag natuurlijk wel van oké, stel je wilt maskeren of erasen in je logs, hoe doe je dat dan? En is dit dan de manier om het te doen, toch? Dat dat is uiteindelijk de de vraag achterliggende.</v>
+
+00:49:43.405 --> 00:49:43.685
+<v Michiel Trimpe>Ja.</v>
+
+00:49:44.682 --> 00:49:52.445
+<v Peter-Jan Karens>Ja, ik denk dat het gewoon goed is dat dat gewoon netjes beschreven is persoonlijk. En dan ja, wat je daarmee doet is een tweede volgens mij.</v>
+
+00:49:54.695 --> 00:49:58.405
+<v Peter-Jan Karens>Jeroen, vinden wij wat van dit voorstel nog eh tenminste Jeroen of ja.</v>
+
+00:50:00.925 --> 00:50:03.485
+<v Jeroen De Kok>Nee, nee, verder vind ik het gewoon prima.</v>
+
+00:50:04.205 --> 00:50:13.805
+<v Michiel Trimpe>Uiteindelijk is ook het enige wat we doen is eigenlijk de de de OPA conventie adopteren en een namespace geven eh en het gedrag eh iets beter definiëren.</v>
+
+00:50:16.365 --> 00:50:20.965
+<v Michiel Trimpe>er zit nog wel een belangrijke vervolgkeuze aan vast.</v>
+
+00:50:24.535 --> 00:50:27.375
+<v Michiel Trimpe>eh en dat is namelijk eh normativiteit.</v>
+
+00:50:29.535 --> 00:50:45.615
+<v Michiel Trimpe>Ehm dus de eerste spec 1.0 verplichte dit of ja, we gaf hier geen standaard formaat voor. Eh en we kunnen dus twee dingen doen. We kunnen zeggen eh het is een must. Eh je moet als je redacteert of eh erased, dan moet je dat op deze manier markeren.</v>
+
+00:50:48.515 --> 00:50:55.755
+<v Michiel Trimpe>Ehm dan is het een breaking change. Eh of we kunnen zeggen: you should. Eh dit raden we aan. Eh dit dit hoor je te doen.</v>
+
+00:50:58.095 --> 00:51:06.855
+<v Michiel Trimpe>Ehm maar als je het weglaat, is dat toegestaan. En dan is het een minor change. En dat is op zich wel een belangrijke keuze hoe wat vinden we hiervan? Hoe kijken we hier tegenaan?</v>
+
+00:51:14.205 --> 00:51:18.205
+<v Michiel Trimpe>Stas, ik zou sowieso van jou feedback willen als standaardbeheerder.</v>
+
+00:51:22.145 --> 00:51:38.305
+<v Stas Mironov>Nou, het is vooral aan de aan de werkgroep en later dan het technisch overleg van wie wie wordt hierdoor geraakt? Hoeveel implementeerders heb je? Als niemand het heeft geïmplementeerd, dan eh lijkt me als iedereen voor is, dan zou ik gewoon voor de harde eis gaan.</v>
+
+00:51:42.125 --> 00:51:44.725
+<v Michiel Trimpe>En dan een 2.0 versie ervan maken ook als version.</v>
+
+00:51:45.365 --> 00:51:45.765
+<v Stas Mironov>Ja.</v>
+
+00:51:46.825 --> 00:51:49.945
+<v Michiel Trimpe>Oké. Hoe kijkt de rest er tegenaan?</v>
+
+00:51:55.615 --> 00:52:39.245
+<v Gideon Zegwaard>Ja, ik ben een beetje gereserveerd in breaking changes eh ehm aan het begin van een standaard, omdat eh dat eh nou ja, dat maakt mensen ook weer onrustig. Dat eh eh iets gemaakt hebben en eh binnen een half jaar of een jaar is alweer een volgende versie met eh breaking changes erin. Dus ik ik ben daar wat bezorgd over over dat aspect. En zou vanuit dat perspectief eerder denken van doe hou hem nu non-breaking, maar zet hem op de lijst voor eh eh als er als je toch naar een 2.0 gaat op een wat meer termijn om hem dan eh eh naar must eh te upgraden. En dan proberen te vermijden om eh binnen een jaar al breaking changes te hebben op een standaard.</v>
+
+00:52:46.055 --> 00:52:47.135
+<v Rob van Dort>Lijkt me verstandig.</v>
+
+00:52:46.435 --> 00:52:46.835
+<v Michiel Trimpe>Ja.</v>
+
+00:52:49.795 --> 00:52:52.195
+<v Marcel Molenaar>Eh Michiel, ik denk dat je uit praat, maar we horen je niet meer.</v>
+
+00:52:54.225 --> 00:52:59.265
+<v Michiel Trimpe>Nee, eh ik ik begon te praten, maar</v>
+
+00:52:55.375 --> 00:52:59.415
+<v Marcel Molenaar>Oh, we horen je toch wel. Ja ja ja ja ja. Ik dacht even dat je aan het praten was.</v>
+
+00:53:01.405 --> 00:53:03.565
+<v Michiel Trimpe>Dat klopt, maar ik slikte het in voordat er iets uitkwam.</v>
+
+00:53:07.995 --> 00:53:23.575
+<v Michiel Trimpe>Ja, ja, dus Stas en Gideon geven precies inderdaad eh eh het het krachtenveld aan, de voor- en de nadelen. Puristisch is het eh 2.0, communicatietechnisch en gevoels-technisch is eh misschien minor handiger. Rob, jij neigt dus meer naar de minor.</v>
+
+00:53:27.865 --> 00:53:29.465
+<v Michiel Trimpe>Ja.</v>
+
+00:53:29.455 --> 00:53:44.546
+<v Stas Mironov>dat het ook prima is om gewoon als een minor toe te voegen. Ehm zouden we het misschien wel vaker moeten doen om eerst eh changes eh recommended is ook natuurlijk zo'n keyword om zo eh eh te beproeven en dan alsnog toe te voegen.</v>
+
+00:53:44.055 --> 00:53:44.375
+<v Michiel Trimpe>Ja.</v>
+
+00:53:44.546 --> 00:53:48.336
+<v Stas Mironov>En over een jaar misschien als we meer major breaking changes hebben,</v>
+
+00:53:44.805 --> 00:53:45.205
+<v Michiel Trimpe>Ja.</v>
+
+00:53:48.336 --> 00:53:54.055
+<v Stas Mironov>dan bundel je ze in een 2.0. Is op zich ook eh logisch.</v>
+
+00:53:52.715 --> 00:53:53.355
+<v Michiel Trimpe>Ja.</v>
+
+00:53:55.445 --> 00:53:57.725
+<v Michiel Trimpe>Ja, ik zei should, maar het moest recommended zijn inderdaad.</v>
+
+00:54:01.155 --> 00:54:10.875
+<v Michiel Trimpe>Oké, dan eh gaan we het eh afzwakken naar een recommended, zodat er een 1.1 kan. Eh maar verwachten we zien we dat als een een oploop naar een must in een 2.0.</v>
+
+00:54:15.145 --> 00:54:28.015
+<v Michiel Trimpe>Oké. Nou, three minutes to spare. Eh was dat dan de werkgroep? Ehm volgende sessie is ODRL focused weer. Zijn er nog vragen wat verder ter tafel komt? Ik zie Stas. Ja.</v>
+
+00:54:30.155 --> 00:54:43.125
+<v Stas Mironov>misschien wel voor mij of voor ons de belangrijkste de de functioneel toepassingsgebied. Hadden we natuurlijk aangepast, omdat er commentaar was vorige keer.</v>
+
+00:54:43.795 --> 00:54:44.795
+<v Michiel Trimpe>Je hebt helemaal gelijk.</v>
+
+00:54:47.065 --> 00:54:50.745
+<v Michiel Trimpe>Eh kun jij die slide zo tevoorschijn toveren? Ik moet hem zelf even op moeten zoeken.</v>
+
+00:54:47.205 --> 00:54:47.925
+<v Stas Mironov>Ja.</v>
+
+00:54:52.475 --> 00:54:53.475
+<v Michiel Trimpe>misschien ben ik er ook wel snel.</v>
+
+00:55:01.125 --> 00:55:02.005
+<v Michiel Trimpe>Ja, ik denk dat ik er ook snel ben.</v>
+
+00:55:01.135 --> 00:55:05.875
+<v Stas Mironov>Ik zet hem in de chat.</v>
+
+00:55:09.035 --> 00:55:09.795
+<v Stas Mironov>makkelijkst.</v>
+
+00:55:12.535 --> 00:55:19.855
+<v Stas Mironov>Want eh het probleem vorige keer was dat we struikelden over de volgorde van</v>
+
+00:55:27.005 --> 00:55:40.215
+<v Stas Mironov>waar je waar de organisatiekaders zeg maar ophouden. Hoe het was opgeschreven. Ik begreep toen nog steeds eigenlijk zelf nog steeds niet wat de verwarring was van eh van de meneer van de belastingdienst. Maar volgens mij jij en Gideon wel, dus.</v>
+
+00:55:41.635 --> 00:56:13.385
+<v Michiel Trimpe>Ja, dat was dus voornamelijk over zeg maar hoe hoe diep de organisatie in is dit van toepassing. En daar was ons antwoord op, ja, zo zo diep als je eh er verantwoording over af moet leggen eh conform de besluiten van je organisatie. Dus dat eh jullie kunnen mijn scherm zien?</v>
+
+00:56:16.285 --> 00:56:23.005
+<v Michiel Trimpe>Ehm zowel binnen een organisatie als in organisatie overschrijdende overstijgende verwerkingsketens zoals het federatief datastelsel.</v>
+
+00:56:25.355 --> 00:56:35.115
+<v Michiel Trimpe>Eh en dan de vraag is dus dekt die feedback af? Want nu is het expliciet wanneer verantwoording afgelegd moet kunnen worden. Eh maar kunnen we in dit aangepaste voorstel ons nog steeds vinden als werkgroep?</v>
+
+00:56:43.775 --> 00:56:51.565
+<v Michiel Trimpe>Ik zie allemaal knikjes. En geen tegenspraak. Dus dan wordt dit het voorgestelde functioneel toepassingsgebied.</v>
+
+00:56:53.645 --> 00:56:57.595
+<v Michiel Trimpe>Hartstikke mooi. Dankjewel Stas. Ik was hem helemaal vergeten. Peter Jan?</v>
+
+00:56:57.425 --> 00:57:11.055
+<v Peter-Jan Karens>Een korte vraag nog Michiel. Er wordt dus hier nu wel expliciet eh besloten om het dan te scopen op API verzoeken. Want in theorie zou je natuurlijk PXP kunnen toepassen op allerlei soorten processen. Eh ja.</v>
+
+00:57:12.535 --> 00:57:24.975
+<v Michiel Trimpe>Nou, eh elk bijna altijd wel een API verzoek, dus niet rest API verzoeken. Dus dit is ook eh dit zou ook een een database call of een file system call kunnen zijn theoretisch als jij daar verantwoording over af wil leggen.</v>
+
+00:57:26.255 --> 00:57:31.975
+<v Peter-Jan Karens>Ja, ik zat even te denken waar zou je Ozen allemaal voor kunnen gebruiken. Dat was het meer. En in theorie is het natuurlijk vrij abstract.</v>
+
+00:57:32.445 --> 00:57:39.205
+<v Michiel Trimpe>Ja, het is bewust geen rest API of web API verzoek, maar API in de zin van application programming interface.</v>
+
+00:57:38.735 --> 00:57:39.335
+<v Peter-Jan Karens>Ja, oké.</v>
+
+00:57:40.485 --> 00:57:43.449
+<v Michiel Trimpe>Zo is Ozen zelf ook opgezet. Dus dat is ook waarom we daarop</v>
+
+00:57:43.325 --> 00:57:44.205
+<v Peter-Jan Karens>Oké, oké, oké.</v>
+
+00:57:43.449 --> 00:57:55.425
+<v Michiel Trimpe>bouwen. In onze context zullen dat meestal restverzoeken zijn of HTTP verzoeken zijn. Ehm maar het kan ook GRPC of wat ik zeg, eh file system rights kan ook.</v>
+
+00:57:57.185 --> 00:58:24.775
+<v Marcel Molenaar>Ja, ik eh ik kan me ook voorstellen dat het inderdaad makkelijk tot tot verwarring leidt, want dat is waarschijnlijk waarom eh waarom het net ook werd genoemd. En ook bij binnen onze organisatie zal niet iedereen dat zo direct zien. Dus als er een verklarende woordenlijst is, is misschien handig om dat daar misschien nog eens even in te noemen, maar ik weet niet, misschien bestaat dat al, maar dat eh gewoon om om om eh om te voorkomen dat je misverstanden krijgt, weet je wel.</v>
+
+00:58:25.605 --> 00:58:27.115
+<v Michiel Trimpe>Ja, die kunnen we misschien wel in de terminologie</v>
+
+00:58:26.095 --> 00:58:26.655
+<v Marcel Molenaar>Ja.</v>
+
+00:58:27.115 --> 00:58:29.085
+<v Michiel Trimpe>in de standaard expliciet opnemen. Ja.</v>
+
+00:58:29.525 --> 00:58:31.845
+<v Marcel Molenaar>wat er allemaal gezegd is.</v>
+
+00:58:32.175 --> 00:58:37.575
+<v Michiel Trimpe>Ja. Het is 11:11 trouwens, dus voor iedereen ehm voel je vrij om naar de volgende meeting door te gaan.</v>
+
+00:58:42.245 --> 00:58:42.615
+<v Igor van Haren>Dankjewel.</v>
+
+00:58:43.065 --> 00:58:55.645
+<v Michiel Trimpe>Maar inderdaad, dat kunnen we nog even expliciet toevoegen, dan is het in ieder geval duidelijk wat daar bedoeld is en dan kan je verwijzen naar functioneel toepassingsgebied zegt API en in de spec wordt API gedefinieerd als</v>
+
+00:58:58.625 --> 00:58:59.065
+<v Marcel Molenaar>Ja.</v>
+
+00:58:58.935 --> 00:59:17.215
+<v Stas Mironov>Ik vind het wel goede feedback, want eh de partijen die dan dit gaan lezen op de pastoeligheidlijst, die gaan misschien nog niet eens de standaard in om die terminologie te bekijken of de woordenlijst of wat dan ook. Dus ergens heeft het ook voordelen om het gewoon hier al</v>
+
+00:59:17.945 --> 00:59:22.745
+<v Michiel Trimpe>Ja, maar hoeveel woordjes dit? Ja, maar de rest van de standaard dan</v>
+
+00:59:18.205 --> 00:59:31.045
+<v Stas Mironov>Ja, want het wordt vaak vermeden. Eh waarom de toepassingsgebied van die gekoppelingen et cetera ook allemaal best wel vaag en eh van OAF.</v>
+
+00:59:33.805 --> 00:59:43.205
+<v Peter-Jan Karens>Ja, je zou ook gewoon kunnen zeggen toegang wat wat wat is er mis mee als je er toegangsbeslissingen van maakt zonder die verbijzondering naar API verzoeken of was het zo eerst? Dat weet ik dus niet.</v>
+
+00:59:44.775 --> 00:59:52.735
+<v Michiel Trimpe>Nou, eh ik weet niet of ik eh wil dat wij een toegangsbeslissing voor eh het het binnenlaten in een kantoorgebouw</v>
+
+00:59:52.205 --> 00:59:56.765
+<v Peter-Jan Karens>Ja, nou ja, precies, dan krijg je dat natuurlijk. Krijg je die interpretatie. Dus ik eh</v>
+
+00:59:57.055 --> 01:00:02.316
+<v Marcel Molenaar>Nou, dat dat kan je ook afvragen, want als als je dat weer automatiseert, dan wil je misschien ook wel zoiets hebben, hè. Dus</v>
+
+01:00:02.045 --> 01:00:05.205
+<v Michiel Trimpe>Dan zit er een API aan. Dan zit er een API aan.</v>
+
+01:00:02.316 --> 01:00:21.975
+<v Marcel Molenaar>Ja, ja. Ja, maar goed, maar nou maar die API heb je dan wel ergens, maar niet op het punt van waar mensen het merken. Dus eh want dat is gewoon een eh ja, een kaartje. Oh, ik heb mijn kaartje toch bij me. Weet je. Dus maar goed, ik wilde ik moet er ook niet teveel op ingaan.</v>
+
+01:00:20.775 --> 01:00:32.455
+<v Michiel Trimpe>de juiste standaard is voor een beveiligingsbeambte die een formulier invult en een handtekening zet. Dus dat tijdens deze standaard denk ik niet de juiste woord.</v>
+
+01:00:32.725 --> 01:00:34.525
+<v Marcel Molenaar>Nee, misschien niet helemaal. Je hebt wel een punt.</v>
+
+01:00:37.395 --> 01:00:37.475
+<v Peter-Jan Karens>Ja.</v>
+
+01:00:37.505 --> 01:00:45.465
+<v Michiel Trimpe>Dus zodra dat een formulier wordt wat verzonden wordt naar een andere ding over een eh een IBM Telnet protocol, dan wel?</v>
+
+01:00:48.335 --> 01:00:58.305
+<v Peter-Jan Karens>Dit is wel letterlijk de eerste zin uit het abstract in het Nederlands, dus ja, ik bedoel het het ja, het is wel wat er gewoon staat, zeg maar. Dus ik zou ook niet per se weten hoe je het dan beter doet hoor, maar</v>
+
+01:01:01.745 --> 01:01:03.505
+<v Michiel Trimpe>Ja, bedoel je de eerste zin uit het abstract?</v>
+
+01:01:04.315 --> 01:01:22.845
+<v Peter-Jan Karens>Ja, dus deze zin hè, 1.11 is letterlijk de Nederlandse vertaling min of meer van eh de eerste zin van de abstract van de standaard zelf. Dus ja, daar staat ook eh defines a method for locking eh authorization decisions to allow or deny API requests. Nou ja, dat is letterlijk dan de vertaling toch, ja.</v>
+
+01:01:24.065 --> 01:01:24.145
+<v Michiel Trimpe>Ja.</v>
+
+01:01:27.375 --> 01:01:39.375
+<v Peter-Jan Karens>Nee, het is inderdaad meer als je het op de standaardenlijst zou zien staan in isolatie van de standaard en de, maar ja, dat is met veel dingen I guess gewoon zo. Dat je toch even verder moet gaan lezen dan alleen de twee regels.</v>
+
+01:01:41.275 --> 01:01:50.925
+<v Michiel Trimpe>Ja. Nou, we hebben wel goede dus ook in de abstract kunnen we dit dan explicieter maken. Dat zou grappig dat het inderdaad letterlijk vertaling is, maar we zijn er via een eh een omweg zijn we dan terug op beland.</v>
+
+01:01:50.965 --> 01:01:51.205
+<v Peter-Jan Karens>Ja.</v>
+
+01:01:51.505 --> 01:02:21.015
+<v Marcel Molenaar>Ja. Nou, ik denk ook dat voor een deel is een een hoop van de standaarden ook van Open ID en alles, hè, weet je wel. Die zijn als jij niet echt een specialist bent op dat gebied zijn ze soms heel moeilijk leesbaar en dat is misschien een algemeen ding. En moet je dat in deze nou helemaal gaan oplossen? Dat is wel wat anders, hè. Dat eh maar ik denk wel dat het een algemeen eh eh punt is, ja, van eh wat het wel moeilijker maakt om al die standaarden goed te gebruiken. Ja.</v>
+
+01:02:23.255 --> 01:02:41.765
+<v Michiel Trimpe>Ja. Nee, zeker. Oké, maar dan denk ik dat we qua acties wel duidelijk hebben. Dus we gaan eh in de terminologie en in de abstract gaan we dat gaan we daar nog iets verduidelijken. Dus daar is wel ruimte voor een langer zinnetje, not limited to rest but. Dus dat zullen we nog doen. En dat kan in diezelfde 1.1 nog mee.</v>
+
+01:02:42.465 --> 01:02:44.825
+<v Stas Mironov>Kan ook als een patch als je dat los wil doen.</v>
+
+01:02:45.665 --> 01:02:49.985
+<v Michiel Trimpe>Ja. Ja, kan allebei. Ja, nee, 1.1 is wel netjes. Prima.</v>
+
+01:02:50.375 --> 01:02:50.815
+<v Stas Mironov>Ja.</v>
+
+01:02:51.885 --> 01:03:19.095
+<v Michiel Trimpe>En die 1.1 wordt Oh ja, de 1.1 valt ook door de. Ik zou zeggen gewoon in 1.1. En dan is het wat dat betreft dan ook voor mij de sessie voorbij. Eh want ik ga ook nog naar het Common Ground Fieldlab even nog aanhaken bij een open FTV workshop die daar gegeven wordt. FTV workshop. Dus dan eh dank ik jullie allemaal voor jullie aanwezigheid. En eh tot over twee weken.</v>
+
+01:03:17.845 --> 01:03:20.815
+<v Marcel Molenaar>Bedankt. Tot ziens.</v>
+
+01:03:21.335 --> 01:03:21.895
+<v Stas Mironov>Doeg.</v>
+
+01:03:21.475 --> 01:03:21.795
+<v Peter-Jan Karens>Volgende.</v>
+
+01:03:24.015 --> 01:03:24.535
+<v Stas Mironov>Michiel.</v>
+
+01:03:26.645 --> 01:03:29.322
+<v Stas Mironov>Tim is ook op de Common Ground</v>
+
+01:03:26.655 --> 01:03:27.095
+<v Michiel Trimpe>Hey.</v>
+
+01:03:29.322 --> 01:03:32.485
+<v Stas Mironov>maar misschien kan je hem zelf nog eh</v>
+
+01:03:34.275 --> 01:03:36.395
+<v Michiel Trimpe>juridische stukken, stukken.</v>
+
+01:03:34.535 --> 01:03:34.695
+<v Stas Mironov>Ja.</v>
+
+01:03:37.575 --> 01:03:41.935
+<v Stas Mironov>eh over ja, over persoonsgegeven eh of die feedback ook al</v>
+
+01:03:42.845 --> 01:03:46.445
+<v Michiel Trimpe>Dat is denk ik meer dat dat zal je wel vaker gehad hebben, dat is meer een</v>
+
+01:03:47.155 --> 01:03:54.755
+<v Stas Mironov>Ja, dat dat denk ik ook. Alleen ik ik heb daar nog niet eh mee eh te maken gehad. Maar ik snap het wel heel goed hoe dat wordt gerelateerd eh</v>
+
+01:03:57.625 --> 01:04:13.025
+<v Michiel Trimpe>Nee, ik ik weet niet of Tim daarin betrokken wil worden. Ik zal ik zal het zo met hem eh me offeren, eh aanbieden. Maar het moet niet zo zijn dat er eh rond gaat zingen dat eh gebruik van Trace ID alles eh contaminate omdat het traceable is.</v>
+
+01:04:13.015 --> 01:04:21.625
+<v Stas Mironov>Maar daarom als die als hij eerder die discussies hebben gevoerd, misschien goed om gewoon even te vragen hoe eh toen werd eh gepositioneerd.</v>
+
+01:04:23.125 --> 01:04:29.005
+<v Michiel Trimpe>Ik denk ook eerlijk gezegd als zij zelf niet de behoefte hebben om elkaar op te zoeken dan</v>
+
+01:04:28.775 --> 01:04:31.415
+<v Stas Mironov>Ja, dan nou prima. Ik ik dacht ik zeg het even.</v>
+
+01:04:31.975 --> 01:04:33.455
+<v Michiel Trimpe>Nee, ik al. Ja, ik ben het goed. Top. Dankjewel.</v>
+
+01:04:33.095 --> 01:04:35.615
+<v Stas Mironov>Oké. Doei doei.</v>
