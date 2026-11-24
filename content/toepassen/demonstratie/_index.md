@@ -63,6 +63,24 @@ De gegevens die we bijhouden zijn voor deze opstelling heel simpel gehouden:
 
 {{< /chapter/section >}}
 
+{{< chapter/section title="Toegang tot de demonstratieomgeving" level="4"  >}}
+
+De demonstratie is te zien op de Simulatieomgeving van het FDS. Lees hier voor neer achtergrond over het [FDS](https://realisatieibds.nl/page/view/8852ee2a-a28a-4b91-9f3e-aab229bbe07f/federatief-datastelsel) en de [simulatieomgeving](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/wiki/view/6895274f-9b9c-4de4-b821-8b222d864ba9/de-simulatieomgeving-van-het-fds).
+
+- Begin op de [startpagina](https://openftv-vlierdam.simulatie.datastelsel.nl/). Daar zijn links naar verschillende onderdelen te vinden.
+- Op het zaaksysteem kan de gewenste gebruiker rechstboven gekozen worden, een wachtwoord is niet nodig.
+- Op de OpenFTV-beheeromgevingen moet ingelogd worden. Afhankelijk van de rol die past bij het testgeval kan ingelogd wordn met:
+
+    | Rol                   | Gebruikersnaam | Wachtwoord |
+    |-----------------------|----------------|------------|
+    | Functioneel beheerder | author-user    | password   |
+    | Auditor               |  audit-user    | password   |
+    | Systeembeheerder      |  admin-user    | password   |
+
+Als de links niet werken of de accounts geven niet de juiste toegang, neem dan contact met ons op via [Mattermost](https://digilab.overheid.nl/chat/digilab/channels/federatieve-toegangsverlening) of [mail](mailto:ftv@ictu.nl).
+
+{{< /chapter/section >}}
+
 {{< chapter/section title="Regels" level="3">}}
 
 De beleidsregels die gelden voor toegang komen voort uit gemeentelijk beleid en afspraken die de gemeente heeft gemaakt met het RvIG en de RDW. Dit zijn ze allemaal:
@@ -120,13 +138,7 @@ We zetten de volgende gegevens in het systeem om tests mee uit te kunnen voeren:
 
 ##### Stap voor stap door de testgevallen lopen
 
-- Open in drie verschillende tabbladen:
-
-  1. Het [Zaaksysteem Laadpalen](https://openftv-vlierdam.simulatie.datastelsel.nl/behandelaar) van de gemeente Vlierdam
-  2. De [OpenFTV manager](https://openftv-vlierdam-beheer.simulatie.datastelsel.nl) van de gemeente Vlierdam
-  3. De [OpenFTV manager](https://openftv-brp-beheer.simulatie.datastelsel.nl) van het RvIG
-  
-De links boven gaan naar de Simulatieomgeving van het Federatief Datastelsel. Als deze links niet werken of de toegang is niet verleend, neem dan contact met ons op.
+Open eerst de demonstratieomgeving met de links zoals boven beschreven.
 
 - Testcase 1: 
   - in het Zaaksysteem Laadpalen:
@@ -135,7 +147,7 @@ De links boven gaan naar de Simulatieomgeving van het Federatief Datastelsel. Al
     - voer de postcode 1111AA en het huisnummer 1 in, en druk op 'Aanvraag indienen'
     - controleer dat een melding komt: 'Rick niet geautoriseerd vanwege afdeling'
   - in de OpenFTV manager: 
-    - log in als gebruiker 'audit_user', met als wachtwoord 'password'
+    - log in als auditor
     - kies in het menu voor 'Logboek'
     - controleer dat er een regel is bijgekomen met de tijd van zojuist, met als beslissing 'afwijzing', en als reden 'afdeling'. Door te klikken op de regel zijn de detail van het verzoek en het antwoord te zien.
   - In het zaaksysteem staat ook een link die direct naar het logboek gaat met de juiste regel als enige in het filter.
@@ -149,26 +161,26 @@ De links boven gaan naar de Simulatieomgeving van het Federatief Datastelsel. Al
     - Selecteer Jerry en voer postcode 1111FF en huisnummer 11 in, dus een ander huisnummer. De aanvraag wordt geaccepteerd.
     - Scroll omlaag en druk op 'BRP Controle'
     - Melding dat er geen bewoners zijn gevonden. Dit omdat niemand op dat adres geregistreerd staat.
-  - in de OpenFTV manager van Vlierdam
-    - controleer dat er een regel is bijgekomen dat uitgaand verkeerd naar RvIG toegestaan is
-  - in de OpenFTV manager van RvIG
-    - controleer dat er een regel is bijgekomen dat de toegang tot de BRP verleend is
+  - in de OpenFTV manager van Vlierdame, als auditor
+    - controleer dat er een logboekregel is bijgekomen dat uitgaand verkeerd naar RvIG toegestaan is
+  - in de OpenFTV manager van RvIG, als auditor
+    - controleer dat er een logboekregel is bijgekomen dat de toegang tot de BRP verleend is
 - Testcase 5:
   - In het Zaaksysteem Laadpalen:
     - Voer een nieuwe aanvraag in met postcode 2222JJ en huisnummer 101
     - Controleer BRP
     - Melding dat er geen bewoners zijn gevonden. Dit is omdat die postcode niet in de gemeente Vlierdam ligt.
-  - in de OpenFTV manager van Vlierdam
+  - in de OpenFTV manager van Vlierdam, als auditor
     - controleer dat er een regel is bijgekomen dat uitgaand verkeerd naar BRP toegestaan is
-  - in de OpenFTV manager van RvIG
+  - in de OpenFTV manager van RvIG, als auditor
     - controleer dat er een regel is bijgekomen dat de toegang tot de BRP verleend is
 - Testcase 6:
   - In het Zaaksysteem Laadpalen:
     - Voer een aanvraag in voor 1111DD, nummer 4 en controleer BRP. Dat gaat goed.
     - Controleer BRV, en er is een melding dat er geen voertuig gevonden is
-  - In de OpenFTV manager:
+  - In de OpenFTV manager, als auditor
     - Controleer dat er een regel is bijgekomen dat uitgaand verkeerd naar BRV toegestaan is
-  - in de OpenFTV manager van RvIG
+  - in de OpenFTV manager van RvIG, als auditor
     - controleer dat er een regel is bijgekomen dat de toegang tot de BRV verleend is
 - Testcase 7:
   - In het Zaaksysteem Laadpalen:
@@ -178,7 +190,7 @@ De links boven gaan naar de Simulatieomgeving van het Federatief Datastelsel. Al
   - In het Zaaksysteem Laadpalen:
     - Voer de aanvraag in 1111EE, nummer 5 en controleer BRP.
     - Controleer BRV, en er is een melding dat het voertuig afgeschermd is.
-  - In de OpenFTV manager:
+  - In de OpenFTV manager, als auditor
     - Controleer dat er een regel is bijgekomen dat de toegang tot de BRV verleend is.
     - En een regel dat het BRV-antwoord niet doorgegeven wordt vanwege het diplomatieke kenteken
 - Testcase 9:
